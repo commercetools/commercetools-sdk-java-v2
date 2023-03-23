@@ -39,6 +39,7 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -46,6 +47,7 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
 
     /**
      *  <p><code>"Tax category $taxCategoryId is missing a tax rate for country $countriesAndStates."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -53,6 +55,7 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of the TaxCategory.</p>
+     * @return taxCategoryId
      */
     @NotNull
     @JsonProperty("taxCategoryId")
@@ -60,6 +63,7 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -67,6 +71,7 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
 
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
+     * @return state
      */
 
     @JsonProperty("state")

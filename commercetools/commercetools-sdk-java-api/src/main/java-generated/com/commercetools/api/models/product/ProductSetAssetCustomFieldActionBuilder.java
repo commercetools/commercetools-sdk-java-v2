@@ -45,6 +45,8 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductSetAssetCustomFieldActionBuilder variantId(@Nullable final Long variantId) {
@@ -54,6 +56,8 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductSetAssetCustomFieldActionBuilder sku(@Nullable final String sku) {
@@ -63,6 +67,8 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetAssetCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
@@ -72,6 +78,8 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public ProductSetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
@@ -81,6 +89,8 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public ProductSetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {
@@ -90,6 +100,8 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductSetAssetCustomFieldActionBuilder name(final String name) {
@@ -99,6 +111,8 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public ProductSetAssetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

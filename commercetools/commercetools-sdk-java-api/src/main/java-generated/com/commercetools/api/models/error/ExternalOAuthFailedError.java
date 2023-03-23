@@ -33,6 +33,7 @@ public interface ExternalOAuthFailedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface ExternalOAuthFailedError extends ErrorObject {
 
     /**
      *  <p>Plain text description detailing the external OAuth error. For example, <code>"External OAuth did not respond in time."</code>.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

@@ -37,6 +37,7 @@ public interface CustomerTitleSetMessage extends Message {
 
     /**
      *  <p>The <code>title</code> that was set during the Set Title update action.</p>
+     * @return title
      */
 
     @JsonProperty("title")

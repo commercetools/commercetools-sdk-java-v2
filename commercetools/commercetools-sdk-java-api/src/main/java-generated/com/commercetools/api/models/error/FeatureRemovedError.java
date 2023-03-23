@@ -33,6 +33,7 @@ public interface FeatureRemovedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface FeatureRemovedError extends ErrorObject {
 
     /**
      *  <p>Description of the feature that is removed.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

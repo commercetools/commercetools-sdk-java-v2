@@ -25,6 +25,8 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param name
+     * @return Builder
      */
 
     public TaxCategoryChangeNameActionBuilder name(final String name) {

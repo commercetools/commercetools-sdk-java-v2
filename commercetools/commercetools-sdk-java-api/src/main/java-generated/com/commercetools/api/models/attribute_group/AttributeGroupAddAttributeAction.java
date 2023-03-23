@@ -34,6 +34,7 @@ public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAc
 
     /**
      *  <p>Value to add.</p>
+     * @return attribute
      */
     @NotNull
     @Valid

@@ -38,6 +38,8 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
      *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
      *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
      *  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p>
+     * @param centAmount
+     * @return Builder
      */
 
     public HighPrecisionMoneyDraftBuilder centAmount(@Nullable final Long centAmount) {
@@ -47,6 +49,8 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
+     * @param currencyCode
+     * @return Builder
      */
 
     public HighPrecisionMoneyDraftBuilder currencyCode(final String currencyCode) {
@@ -56,6 +60,8 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
 
     /**
      *  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>
+     * @param fractionDigits
+     * @return Builder
      */
 
     public HighPrecisionMoneyDraftBuilder fractionDigits(final Integer fractionDigits) {
@@ -65,6 +71,8 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
 
     /**
      *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     * @param preciseAmount
+     * @return Builder
      */
 
     public HighPrecisionMoneyDraftBuilder preciseAmount(final Long preciseAmount) {

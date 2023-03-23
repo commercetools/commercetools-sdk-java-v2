@@ -31,6 +31,8 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
 
     /**
      *
+     * @param firstName
+     * @return Builder
      */
 
     public CustomerLabelBuilder firstName(final String firstName) {
@@ -40,6 +42,8 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
 
     /**
      *
+     * @param lastName
+     * @return Builder
      */
 
     public CustomerLabelBuilder lastName(final String lastName) {
@@ -49,6 +53,8 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
 
     /**
      *
+     * @param customerNumber
+     * @return Builder
      */
 
     public CustomerLabelBuilder customerNumber(final String customerNumber) {

@@ -61,6 +61,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder id(final String id) {
@@ -70,6 +72,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder version(final Long version) {
@@ -79,6 +83,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -88,6 +94,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -97,6 +105,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder lastModifiedBy(
@@ -107,6 +116,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder lastModifiedBy(
@@ -117,6 +128,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder createdBy(
@@ -127,6 +139,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder createdBy(
@@ -137,6 +151,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -146,6 +162,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -155,6 +173,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder resource(
@@ -165,6 +184,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,6 +195,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,6 +208,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,6 +220,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder removedImageUrls(final String... removedImageUrls) {
@@ -205,6 +231,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -214,6 +242,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -226,6 +256,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder currentProjection(
@@ -237,6 +268,8 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
+     * @param currentProjection
+     * @return Builder
      */
 
     public ProductDeletedMessageBuilder currentProjection(

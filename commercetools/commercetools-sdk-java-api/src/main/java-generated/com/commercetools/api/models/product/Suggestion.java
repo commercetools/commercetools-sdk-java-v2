@@ -31,6 +31,7 @@ public interface Suggestion {
 
     /**
      *  <p>The suggested text.</p>
+     * @return text
      */
     @NotNull
     @JsonProperty("text")

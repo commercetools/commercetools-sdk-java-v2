@@ -25,6 +25,8 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
+     * @param roles
+     * @return Builder
      */
 
     public ChannelRemoveRolesActionBuilder roles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
@@ -34,6 +36,8 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
+     * @param roles
+     * @return Builder
      */
 
     public ChannelRemoveRolesActionBuilder roles(
@@ -44,6 +48,8 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
+     * @param roles
+     * @return Builder
      */
 
     public ChannelRemoveRolesActionBuilder plusRoles(

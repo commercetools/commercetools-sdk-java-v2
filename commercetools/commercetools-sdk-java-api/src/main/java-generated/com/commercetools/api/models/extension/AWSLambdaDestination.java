@@ -35,6 +35,7 @@ public interface AWSLambdaDestination extends ExtensionDestination {
 
     /**
      *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>. Use the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;:&lt;functionAlias/version&gt;</code> to point to a specific version of the function.</p>
+     * @return arn
      */
     @NotNull
     @JsonProperty("arn")
@@ -42,6 +43,7 @@ public interface AWSLambdaDestination extends ExtensionDestination {
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @return accessKey
      */
     @NotNull
     @JsonProperty("accessKey")
@@ -49,6 +51,7 @@ public interface AWSLambdaDestination extends ExtensionDestination {
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @return accessSecret
      */
     @NotNull
     @JsonProperty("accessSecret")

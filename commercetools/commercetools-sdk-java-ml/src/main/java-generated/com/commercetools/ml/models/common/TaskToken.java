@@ -32,6 +32,7 @@ public interface TaskToken {
 
     /**
      *  <p>The ID for the task. Used to find the status of the task.</p>
+     * @return taskId
      */
     @NotNull
     @JsonProperty("taskId")
@@ -39,6 +40,7 @@ public interface TaskToken {
 
     /**
      *  <p>The URI path to poll for the status of the task.</p>
+     * @return uriPath
      */
     @NotNull
     @JsonProperty("uriPath")

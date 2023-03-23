@@ -31,6 +31,7 @@ public class QuoteRequestSetCustomTypeActionBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Defines the Type that extends the QuoteRequest with Custom Fields. If absent, any existing Type and Custom Fields are removed from the QuoteRequest.</p>
+     * @return Builder
      */
 
     public QuoteRequestSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class QuoteRequestSetCustomTypeActionBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Defines the Type that extends the QuoteRequest with Custom Fields. If absent, any existing Type and Custom Fields are removed from the QuoteRequest.</p>
+     * @param type
+     * @return Builder
      */
 
     public QuoteRequestSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class QuoteRequestSetCustomTypeActionBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Sets the Custom Fields fields for the QuoteRequest.</p>
+     * @return Builder
      */
 
     public QuoteRequestSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class QuoteRequestSetCustomTypeActionBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Sets the Custom Fields fields for the QuoteRequest.</p>
+     * @param fields
+     * @return Builder
      */
 
     public QuoteRequestSetCustomTypeActionBuilder fields(

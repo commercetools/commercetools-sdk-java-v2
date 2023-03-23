@@ -28,6 +28,8 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
 
     /**
      *
+     * @param editVersion
+     * @return Builder
      */
 
     public OrderEditApplyBuilder editVersion(final Long editVersion) {
@@ -37,6 +39,8 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
 
     /**
      *
+     * @param resourceVersion
+     * @return Builder
      */
 
     public OrderEditApplyBuilder resourceVersion(final Long resourceVersion) {

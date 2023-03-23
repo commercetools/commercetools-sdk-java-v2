@@ -34,6 +34,7 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
 
     /**
      *  <p><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

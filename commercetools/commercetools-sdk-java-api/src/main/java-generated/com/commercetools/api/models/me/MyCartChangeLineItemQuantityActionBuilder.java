@@ -37,6 +37,8 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public MyCartChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
@@ -47,6 +49,8 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public MyCartChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
@@ -57,6 +61,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     * @return Builder
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalPrice(
@@ -68,6 +73,8 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     * @param externalPrice
+     * @return Builder
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalPrice(
@@ -78,6 +85,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @return Builder
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(
@@ -90,6 +98,8 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @param externalTotalPrice
+     * @return Builder
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(

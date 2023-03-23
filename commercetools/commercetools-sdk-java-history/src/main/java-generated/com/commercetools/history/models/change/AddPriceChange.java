@@ -38,6 +38,7 @@ public interface AddPriceChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -45,6 +46,7 @@ public interface AddPriceChange extends Change {
 
     /**
      *  <p>Update action for adding prices</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -52,6 +54,7 @@ public interface AddPriceChange extends Change {
 
     /**
      *
+     * @return catalogData
      */
     @NotNull
     @JsonProperty("catalogData")
@@ -59,6 +62,7 @@ public interface AddPriceChange extends Change {
 
     /**
      *
+     * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
@@ -66,6 +70,7 @@ public interface AddPriceChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

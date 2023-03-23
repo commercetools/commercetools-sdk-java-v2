@@ -46,6 +46,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Unique identifier of the Review.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -53,6 +54,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Current version of the Review.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -60,6 +62,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Date and time (UTC) the Review was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -67,6 +70,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Date and time (UTC) the Review was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -74,6 +78,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -81,6 +86,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -88,6 +94,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>User-defined unique identifier of the Review.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -95,6 +102,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>&nbsp;+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
+     * @return uniquenessValue
      */
 
     @JsonProperty("uniquenessValue")
@@ -102,6 +110,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Language in which the content of the Review is written.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")
@@ -109,6 +118,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Name of the author.</p>
+     * @return authorName
      */
 
     @JsonProperty("authorName")
@@ -116,6 +126,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Title of the Review.</p>
+     * @return title
      */
 
     @JsonProperty("title")
@@ -123,6 +134,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Content of the Review.</p>
+     * @return text
      */
 
     @JsonProperty("text")
@@ -130,6 +142,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     * @return target
      */
     @Valid
     @JsonProperty("target")
@@ -137,6 +150,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     * @return includedInStatistics
      */
     @NotNull
     @JsonProperty("includedInStatistics")
@@ -144,6 +158,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Rating of the Product or Channel.</p>
+     * @return rating
      */
 
     @JsonProperty("rating")
@@ -151,6 +166,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -158,6 +174,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Customer who created the Review.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -165,6 +182,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
 
     /**
      *  <p>Custom Fields of the Review.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

@@ -33,6 +33,7 @@ public interface ParcelItems {
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -40,6 +41,7 @@ public interface ParcelItems {
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")

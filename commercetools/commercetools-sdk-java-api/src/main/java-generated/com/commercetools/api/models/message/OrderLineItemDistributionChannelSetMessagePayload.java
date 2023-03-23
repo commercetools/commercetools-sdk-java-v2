@@ -35,6 +35,7 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -42,6 +43,7 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
 
     /**
      *  <p>Distribution Channel that was set.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")

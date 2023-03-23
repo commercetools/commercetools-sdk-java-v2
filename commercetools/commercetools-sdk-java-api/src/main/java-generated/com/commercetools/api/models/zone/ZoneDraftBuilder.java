@@ -37,6 +37,8 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Zone.</p>
+     * @param key
+     * @return Builder
      */
 
     public ZoneDraftBuilder key(@Nullable final String key) {
@@ -46,6 +48,8 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>Name of the Zone.</p>
+     * @param name
+     * @return Builder
      */
 
     public ZoneDraftBuilder name(final String name) {
@@ -55,6 +59,8 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>Description of the Zone.</p>
+     * @param description
+     * @return Builder
      */
 
     public ZoneDraftBuilder description(@Nullable final String description) {
@@ -64,6 +70,8 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param locations
+     * @return Builder
      */
 
     public ZoneDraftBuilder locations(@Nullable final com.commercetools.api.models.zone.Location... locations) {
@@ -73,6 +81,8 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param locations
+     * @return Builder
      */
 
     public ZoneDraftBuilder locations(
@@ -83,6 +93,8 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param locations
+     * @return Builder
      */
 
     public ZoneDraftBuilder plusLocations(@Nullable final com.commercetools.api.models.zone.Location... locations) {
@@ -95,6 +107,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @return Builder
      */
 
     public ZoneDraftBuilder plusLocations(
@@ -108,6 +121,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @return Builder
      */
 
     public ZoneDraftBuilder withLocations(

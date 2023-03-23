@@ -61,6 +61,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder id(final String id) {
@@ -70,6 +72,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder version(final Long version) {
@@ -79,6 +83,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -88,6 +94,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -97,6 +105,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder lastModifiedBy(
@@ -107,6 +116,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder lastModifiedBy(
@@ -117,6 +128,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder createdBy(
@@ -127,6 +139,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder createdBy(
@@ -137,6 +151,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -146,6 +162,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -155,6 +173,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder resource(
@@ -165,6 +184,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,6 +195,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,6 +208,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,6 +220,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>The slug of the Category after the Change Slug update action.</p>
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder slug(
@@ -206,6 +231,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>The slug of the Category after the Change Slug update action.</p>
+     * @param slug
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -215,6 +242,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>The slug of the Category before the Change Slug update action.</p>
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder oldSlug(
@@ -225,6 +253,8 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
 
     /**
      *  <p>The slug of the Category before the Change Slug update action.</p>
+     * @param oldSlug
+     * @return Builder
      */
 
     public CategorySlugChangedMessageBuilder oldSlug(

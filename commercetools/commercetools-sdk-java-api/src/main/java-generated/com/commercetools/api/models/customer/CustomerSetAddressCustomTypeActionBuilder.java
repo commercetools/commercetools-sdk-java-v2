@@ -34,6 +34,8 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>User-defined unique identifier of the Address to be updated.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public CustomerSetAddressCustomTypeActionBuilder addressId(final String addressId) {
@@ -43,6 +45,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @return Builder
      */
 
     public CustomerSetAddressCustomTypeActionBuilder type(
@@ -53,6 +56,8 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public CustomerSetAddressCustomTypeActionBuilder type(
@@ -63,6 +68,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     * @return Builder
      */
 
     public CustomerSetAddressCustomTypeActionBuilder fields(
@@ -73,6 +79,8 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CustomerSetAddressCustomTypeActionBuilder fields(

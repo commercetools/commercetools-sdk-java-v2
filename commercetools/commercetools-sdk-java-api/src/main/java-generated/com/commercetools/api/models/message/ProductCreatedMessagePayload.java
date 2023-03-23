@@ -35,6 +35,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     * @return productProjection
      */
     @NotNull
     @Valid

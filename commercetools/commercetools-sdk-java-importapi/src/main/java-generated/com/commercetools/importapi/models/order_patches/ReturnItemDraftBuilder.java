@@ -39,6 +39,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public ReturnItemDraftBuilder quantity(final Double quantity) {
@@ -48,6 +50,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public ReturnItemDraftBuilder lineItemId(@Nullable final String lineItemId) {
@@ -57,6 +61,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public ReturnItemDraftBuilder customLineItemId(@Nullable final String customLineItemId) {
@@ -66,6 +72,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *
+     * @param comment
+     * @return Builder
      */
 
     public ReturnItemDraftBuilder comment(@Nullable final String comment) {
@@ -75,6 +83,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     * @param shipmentState
+     * @return Builder
      */
 
     public ReturnItemDraftBuilder shipmentState(

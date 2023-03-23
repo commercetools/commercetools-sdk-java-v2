@@ -54,6 +54,7 @@ public interface CartDiscount
 
     /**
      *  <p>Unique identifier of the CartDiscount.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -61,6 +62,7 @@ public interface CartDiscount
 
     /**
      *  <p>Current version of the CartDiscount.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -68,6 +70,7 @@ public interface CartDiscount
 
     /**
      *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -75,6 +78,7 @@ public interface CartDiscount
 
     /**
      *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -82,6 +86,7 @@ public interface CartDiscount
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -89,6 +94,7 @@ public interface CartDiscount
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -96,6 +102,7 @@ public interface CartDiscount
 
     /**
      *  <p>Name of the CartDiscount.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -104,6 +111,7 @@ public interface CartDiscount
 
     /**
      *  <p>User-defined unique identifier of the CartDiscount.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -111,6 +119,7 @@ public interface CartDiscount
 
     /**
      *  <p>Description of the CartDiscount.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -118,6 +127,7 @@ public interface CartDiscount
 
     /**
      *  <p>Effect of the CartDiscount.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -126,6 +136,7 @@ public interface CartDiscount
 
     /**
      *  <p>Valid Cart Predicate.</p>
+     * @return cartPredicate
      */
     @NotNull
     @JsonProperty("cartPredicate")
@@ -133,6 +144,7 @@ public interface CartDiscount
 
     /**
      *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     * @return target
      */
     @Valid
     @JsonProperty("target")
@@ -140,6 +152,7 @@ public interface CartDiscount
 
     /**
      *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     * @return sortOrder
      */
     @NotNull
     @JsonProperty("sortOrder")
@@ -147,6 +160,7 @@ public interface CartDiscount
 
     /**
      *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
+     * @return isActive
      */
     @NotNull
     @JsonProperty("isActive")
@@ -154,6 +168,7 @@ public interface CartDiscount
 
     /**
      *  <p>Date and time (UTC) from which the Discount is effective.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -161,6 +176,7 @@ public interface CartDiscount
 
     /**
      *  <p>Date and time (UTC) until which the Discount is effective.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -168,6 +184,7 @@ public interface CartDiscount
 
     /**
      *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
+     * @return requiresDiscountCode
      */
     @NotNull
     @JsonProperty("requiresDiscountCode")
@@ -175,6 +192,7 @@ public interface CartDiscount
 
     /**
      *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     * @return references
      */
     @NotNull
     @Valid
@@ -183,6 +201,7 @@ public interface CartDiscount
 
     /**
      *  <p>Indicates whether the application of the CartDiscount causes other discounts to be ignored.</p>
+     * @return stackingMode
      */
     @NotNull
     @JsonProperty("stackingMode")
@@ -190,6 +209,7 @@ public interface CartDiscount
 
     /**
      *  <p>Custom Fields of the CartDiscount.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

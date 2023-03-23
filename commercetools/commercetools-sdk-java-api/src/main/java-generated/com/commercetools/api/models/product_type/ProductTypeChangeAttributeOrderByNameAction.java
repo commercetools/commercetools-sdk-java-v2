@@ -33,6 +33,7 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
 
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
+     * @return attributeNames
      */
     @NotNull
     @JsonProperty("attributeNames")

@@ -29,6 +29,8 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
 
     /**
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public MyShoppingListChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
@@ -38,6 +40,8 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
 
     /**
      *  <p>New value to set. If <code>0</code>, the ShoppingListLineItem is removed from the ShoppingList.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public MyShoppingListChangeLineItemQuantityActionBuilder quantity(final Long quantity) {

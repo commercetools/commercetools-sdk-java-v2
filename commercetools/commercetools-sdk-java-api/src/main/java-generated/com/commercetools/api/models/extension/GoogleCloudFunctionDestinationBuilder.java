@@ -25,6 +25,8 @@ public class GoogleCloudFunctionDestinationBuilder implements Builder<GoogleClou
 
     /**
      *  <p>URL to the target function.</p>
+     * @param url
+     * @return Builder
      */
 
     public GoogleCloudFunctionDestinationBuilder url(final String url) {

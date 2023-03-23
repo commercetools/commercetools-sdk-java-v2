@@ -33,6 +33,8 @@ public class CartSetShippingCustomFieldActionBuilder implements Builder<CartSetS
 
     /**
      *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public CartSetShippingCustomFieldActionBuilder shippingKey(@Nullable final String shippingKey) {
@@ -42,6 +44,8 @@ public class CartSetShippingCustomFieldActionBuilder implements Builder<CartSetS
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public CartSetShippingCustomFieldActionBuilder name(final String name) {
@@ -51,6 +55,8 @@ public class CartSetShippingCustomFieldActionBuilder implements Builder<CartSetS
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public CartSetShippingCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

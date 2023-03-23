@@ -30,6 +30,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -37,6 +38,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -44,6 +46,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -51,6 +54,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

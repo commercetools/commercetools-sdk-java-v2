@@ -32,6 +32,7 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
 
     /**
      *  <p>Custom Fields defined for the Address.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -39,6 +40,7 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
 
     /**
      *
+     * @return id
      */
 
     @JsonProperty("id")

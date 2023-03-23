@@ -36,6 +36,7 @@ public interface AssignedProductSelectionPagedQueryResponse
 
     /**
      *  <p>Number of results requested.</p>
+     * @return limit
      */
     @NotNull
     @JsonProperty("limit")
@@ -43,6 +44,7 @@ public interface AssignedProductSelectionPagedQueryResponse
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
     @NotNull
     @JsonProperty("offset")
@@ -50,6 +52,7 @@ public interface AssignedProductSelectionPagedQueryResponse
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -57,6 +60,7 @@ public interface AssignedProductSelectionPagedQueryResponse
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
      */
 
     @JsonProperty("total")
@@ -64,6 +68,7 @@ public interface AssignedProductSelectionPagedQueryResponse
 
     /**
      *  <p>References to ProductSelection that are assigned to the Product.</p>
+     * @return results
      */
     @NotNull
     @Valid

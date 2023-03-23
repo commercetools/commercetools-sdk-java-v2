@@ -70,6 +70,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder id(final String id) {
@@ -79,6 +81,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder version(final Long version) {
@@ -88,6 +92,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -97,6 +103,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -106,6 +114,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder lastModifiedBy(
@@ -116,6 +125,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder lastModifiedBy(
@@ -126,6 +137,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder createdBy(
@@ -136,6 +148,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder createdBy(
@@ -146,6 +160,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -155,6 +171,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -164,6 +182,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder resource(
@@ -174,6 +193,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -183,6 +204,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,6 +217,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder resourceUserProvidedIdentifiers(
@@ -205,6 +229,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder variantId(final Long variantId) {
@@ -214,6 +240,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Unique identifier of the Price.</p>
+     * @param priceId
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder priceId(@Nullable final String priceId) {
@@ -223,6 +251,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
+     * @param oldKey
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder oldKey(@Nullable final String oldKey) {
@@ -232,6 +262,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder key(@Nullable final String key) {
@@ -241,6 +273,8 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPriceKeySetMessageBuilder staged(final Boolean staged) {

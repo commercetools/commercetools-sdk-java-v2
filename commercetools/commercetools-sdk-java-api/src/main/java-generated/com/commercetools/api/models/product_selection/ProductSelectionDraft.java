@@ -35,6 +35,7 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
 
     /**
      *  <p>User-defined unique identifier for the ProductSelection.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -42,6 +43,7 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
 
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
 
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -57,6 +60,7 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
 
     /**
      *  <p>Type of the Product Selection.</p>
+     * @return type
      */
 
     @JsonProperty("type")

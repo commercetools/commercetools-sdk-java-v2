@@ -46,6 +46,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -53,6 +54,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
 
     /**
      *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -60,6 +62,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
 
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -70,6 +73,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
      *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
      *  </ul>
+     * @return missingRole
      */
     @NotNull
     @JsonProperty("missingRole")

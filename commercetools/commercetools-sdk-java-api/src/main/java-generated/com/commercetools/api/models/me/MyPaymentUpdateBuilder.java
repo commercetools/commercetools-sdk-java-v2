@@ -29,6 +29,8 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyPaymentUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyPaymentUpdateBuilder actions(final com.commercetools.api.models.me.MyPaymentUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyPaymentUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyPaymentUpdateBuilder plusActions(final com.commercetools.api.models.me.MyPaymentUpdateAction... actions) {
@@ -69,6 +77,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
+     * @return Builder
      */
 
     public MyPaymentUpdateBuilder plusActions(
@@ -82,6 +91,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
+     * @return Builder
      */
 
     public MyPaymentUpdateBuilder withActions(

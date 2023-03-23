@@ -30,6 +30,8 @@ public class ShippingMethodResourceIdentifierBuilder implements Builder<Shipping
 
     /**
      *  <p>Unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public ShippingMethodResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class ShippingMethodResourceIdentifierBuilder implements Builder<Shipping
 
     /**
      *  <p>User-defined unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public ShippingMethodResourceIdentifierBuilder key(@Nullable final String key) {

@@ -31,6 +31,7 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
 
     /**
      *  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
+     * @return Builder
      */
 
     public CartDiscountSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
 
     /**
      *  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
+     * @param type
+     * @return Builder
      */
 
     public CartDiscountSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
 
     /**
      *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
+     * @return Builder
      */
 
     public CartDiscountSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
 
     /**
      *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CartDiscountSetCustomTypeActionBuilder fields(

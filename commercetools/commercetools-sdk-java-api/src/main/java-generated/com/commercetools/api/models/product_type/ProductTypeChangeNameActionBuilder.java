@@ -25,6 +25,8 @@ public class ProductTypeChangeNameActionBuilder implements Builder<ProductTypeCh
 
     /**
      *  <p>New value to set.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductTypeChangeNameActionBuilder name(final String name) {

@@ -31,6 +31,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
 
     /**
      *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     * @return Builder
      */
 
     public CustomerGroupSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
 
     /**
      *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     * @param type
+     * @return Builder
      */
 
     public CustomerGroupSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     * @return Builder
      */
 
     public CustomerGroupSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CustomerGroupSetCustomTypeActionBuilder fields(

@@ -32,6 +32,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
 
     /**
      *  <p>Name of the APIClient.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -39,6 +40,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
 
     /**
      *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     * @return scope
      */
     @NotNull
     @JsonProperty("scope")
@@ -46,6 +48,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
 
     /**
      *  <p>If set, the Client will be deleted after the specified amount of days.</p>
+     * @return deleteDaysAfterCreation
      */
 
     @JsonProperty("deleteDaysAfterCreation")
@@ -53,6 +56,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
 
     /**
      *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     * @return accessTokenValiditySeconds
      */
 
     @JsonProperty("accessTokenValiditySeconds")
@@ -60,6 +64,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
 
     /**
      *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
+     * @return refreshTokenValiditySeconds
      */
 
     @JsonProperty("refreshTokenValiditySeconds")

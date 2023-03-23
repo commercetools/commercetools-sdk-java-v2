@@ -34,6 +34,7 @@ public interface TaxPortion {
 
     /**
      *  <p>Name of the tax portion.</p>
+     * @return name
      */
 
     @JsonProperty("name")
@@ -41,6 +42,7 @@ public interface TaxPortion {
 
     /**
      *  <p>A number in the range 0-1.</p>
+     * @return rate
      */
     @NotNull
     @JsonProperty("rate")
@@ -48,6 +50,7 @@ public interface TaxPortion {
 
     /**
      *  <p>Money value of the tax portion.</p>
+     * @return amount
      */
     @NotNull
     @Valid

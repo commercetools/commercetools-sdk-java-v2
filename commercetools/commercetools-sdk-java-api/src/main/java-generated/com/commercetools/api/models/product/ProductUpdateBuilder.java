@@ -29,6 +29,8 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Expected version of the Product on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ProductUpdateBuilder actions(final com.commercetools.api.models.product.ProductUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ProductUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ProductUpdateBuilder plusActions(final com.commercetools.api.models.product.ProductUpdateAction... actions) {
@@ -69,6 +77,7 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
+     * @return Builder
      */
 
     public ProductUpdateBuilder plusActions(
@@ -82,6 +91,7 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
+     * @return Builder
      */
 
     public ProductUpdateBuilder withActions(

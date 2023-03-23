@@ -26,6 +26,8 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
+     * @param values
+     * @return Builder
      */
 
     public CustomFieldEnumTypeBuilder values(final com.commercetools.api.models.type.CustomFieldEnumValue... values) {
@@ -35,6 +37,8 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
+     * @param values
+     * @return Builder
      */
 
     public CustomFieldEnumTypeBuilder values(
@@ -45,6 +49,8 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
+     * @param values
+     * @return Builder
      */
 
     public CustomFieldEnumTypeBuilder plusValues(
@@ -58,6 +64,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
+     * @return Builder
      */
 
     public CustomFieldEnumTypeBuilder plusValues(
@@ -71,6 +78,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
+     * @return Builder
      */
 
     public CustomFieldEnumTypeBuilder withValues(

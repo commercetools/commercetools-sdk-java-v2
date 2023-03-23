@@ -30,6 +30,7 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
 
     /**
      *
+     * @return locale
      */
 
     @JsonProperty("locale")

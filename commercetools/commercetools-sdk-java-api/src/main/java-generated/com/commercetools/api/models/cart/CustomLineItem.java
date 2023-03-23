@@ -47,6 +47,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -54,6 +55,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Name of the Custom Line Item.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -62,6 +64,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Money value of the Custom Line Item.</p>
+     * @return money
      */
     @NotNull
     @Valid
@@ -70,6 +73,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -78,6 +82,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -86,6 +91,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It matches the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @return slug
      */
     @NotNull
     @JsonProperty("slug")
@@ -93,6 +99,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Number of Custom Line Items in the Cart.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -100,6 +107,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>State of the Custom Line Item in the Cart.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -108,6 +116,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -118,6 +127,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
      *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using ExternalTaxRateDraft.</li>
      *  </ul>
+     * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
@@ -125,6 +135,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
+     * @return discountedPricePerQuantity
      */
     @NotNull
     @Valid
@@ -133,6 +144,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Custom Fields of the Custom Line Item.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -140,6 +152,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")
@@ -147,6 +160,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
+     * @return priceMode
      */
     @NotNull
     @JsonProperty("priceMode")

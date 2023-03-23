@@ -35,6 +35,7 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
      */
     @NotNull
     @Valid

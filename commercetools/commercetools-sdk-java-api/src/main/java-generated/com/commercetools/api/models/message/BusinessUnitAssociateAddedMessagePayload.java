@@ -35,6 +35,7 @@ public interface BusinessUnitAssociateAddedMessagePayload extends MessagePayload
 
     /**
      *  <p>The Associate that was added to the Business Unit.</p>
+     * @return associate
      */
     @NotNull
     @Valid

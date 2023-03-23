@@ -31,6 +31,7 @@ public interface AttributeValue {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -38,6 +39,7 @@ public interface AttributeValue {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

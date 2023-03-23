@@ -26,6 +26,7 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
 
     /**
      *  <p>Order that has been deleted.</p>
+     * @return Builder
      */
 
     public OrderDeletedMessagePayloadBuilder order(
@@ -36,6 +37,8 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
 
     /**
      *  <p>Order that has been deleted.</p>
+     * @param order
+     * @return Builder
      */
 
     public OrderDeletedMessagePayloadBuilder order(final com.commercetools.api.models.order.Order order) {

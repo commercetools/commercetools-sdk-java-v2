@@ -32,6 +32,7 @@ public interface GeoLocation {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -39,6 +40,7 @@ public interface GeoLocation {
 
     /**
      *
+     * @return coordinates
      */
     @NotNull
     @JsonProperty("coordinates")

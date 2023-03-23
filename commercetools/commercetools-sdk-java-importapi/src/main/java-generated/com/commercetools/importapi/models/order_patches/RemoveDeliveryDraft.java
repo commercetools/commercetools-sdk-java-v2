@@ -31,6 +31,7 @@ public interface RemoveDeliveryDraft extends io.vrap.rmf.base.client.Draft<Remov
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

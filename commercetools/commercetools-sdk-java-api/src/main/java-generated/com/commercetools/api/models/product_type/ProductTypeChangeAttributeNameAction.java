@@ -35,6 +35,7 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -43,6 +44,7 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     /**
      *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     * @return newAttributeName
      */
     @NotNull
     @JsonProperty("newAttributeName")

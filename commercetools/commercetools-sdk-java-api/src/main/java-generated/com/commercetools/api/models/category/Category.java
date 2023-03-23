@@ -49,6 +49,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Unique identifier of the Category.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -56,6 +57,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Current version of the Category.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -63,6 +65,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Date and time (UTC) the Category was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -70,6 +73,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Date and time (UTC) the Category was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -77,6 +81,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -84,6 +89,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -91,6 +97,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Name of the Category.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -99,6 +106,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -107,6 +115,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Description of the Category.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -114,6 +123,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
+     * @return ancestors
      */
     @NotNull
     @Valid
@@ -122,6 +132,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Parent Category of this Category.</p>
+     * @return parent
      */
     @Valid
     @JsonProperty("parent")
@@ -129,6 +140,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     * @return orderHint
      */
     @NotNull
     @JsonProperty("orderHint")
@@ -136,6 +148,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -143,6 +156,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @return metaTitle
      */
     @Valid
     @JsonProperty("metaTitle")
@@ -150,6 +164,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @return metaDescription
      */
     @Valid
     @JsonProperty("metaDescription")
@@ -157,6 +172,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @return metaKeywords
      */
     @Valid
     @JsonProperty("metaKeywords")
@@ -164,6 +180,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Custom Fields for the Category.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -171,6 +188,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>Media related to the Category.</p>
+     * @return assets
      */
     @Valid
     @JsonProperty("assets")
@@ -178,6 +196,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     /**
      *  <p>User-defined unique identifier of the Category.</p>
+     * @return key
      */
 
     @JsonProperty("key")

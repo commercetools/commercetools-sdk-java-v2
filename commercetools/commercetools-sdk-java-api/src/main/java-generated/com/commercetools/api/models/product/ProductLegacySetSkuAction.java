@@ -33,6 +33,7 @@ public interface ProductLegacySetSkuAction extends ProductUpdateAction {
 
     /**
      *
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -40,6 +41,7 @@ public interface ProductLegacySetSkuAction extends ProductUpdateAction {
 
     /**
      *
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")

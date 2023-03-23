@@ -28,6 +28,8 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
 
     /**
      *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
+     * @param stagedQuoteState
+     * @return Builder
      */
 
     public StagedQuoteStateChangedMessagePayloadBuilder stagedQuoteState(
@@ -38,6 +40,8 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
 
     /**
      *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
+     * @param oldStagedQuoteState
+     * @return Builder
      */
 
     public StagedQuoteStateChangedMessagePayloadBuilder oldStagedQuoteState(

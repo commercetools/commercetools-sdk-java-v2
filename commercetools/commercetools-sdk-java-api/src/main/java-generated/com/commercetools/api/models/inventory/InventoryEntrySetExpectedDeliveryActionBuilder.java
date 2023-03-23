@@ -28,6 +28,8 @@ public class InventoryEntrySetExpectedDeliveryActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param expectedDelivery
+     * @return Builder
      */
 
     public InventoryEntrySetExpectedDeliveryActionBuilder expectedDelivery(

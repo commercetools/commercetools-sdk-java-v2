@@ -36,6 +36,7 @@ public interface ChangeTaxModeChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface ChangeTaxModeChange extends Change {
 
     /**
      *  <p>Shape of the action for <code>changeTaxMode</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface ChangeTaxModeChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -57,6 +60,7 @@ public interface ChangeTaxModeChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

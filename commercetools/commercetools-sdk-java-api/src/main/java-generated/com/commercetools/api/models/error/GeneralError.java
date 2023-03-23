@@ -34,6 +34,7 @@ public interface GeneralError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface GeneralError extends ErrorObject {
 
     /**
      *  <p>Description about any known details of the problem, for example, <code>"Write operations are temporarily unavailable"</code>.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

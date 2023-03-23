@@ -31,6 +31,8 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public CartSetLineItemTotalPriceActionBuilder lineItemId(final String lineItemId) {
@@ -40,6 +42,7 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     * @return Builder
      */
 
     public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(
@@ -52,6 +55,8 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     * @param externalTotalPrice
+     * @return Builder
      */
 
     public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(

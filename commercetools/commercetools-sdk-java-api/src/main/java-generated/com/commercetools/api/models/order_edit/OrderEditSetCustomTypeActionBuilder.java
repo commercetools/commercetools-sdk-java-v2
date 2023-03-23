@@ -31,6 +31,7 @@ public class OrderEditSetCustomTypeActionBuilder implements Builder<OrderEditSet
 
     /**
      *  <p>Defines the Type that extends the OrderEdit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the OrderEdit.</p>
+     * @return Builder
      */
 
     public OrderEditSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class OrderEditSetCustomTypeActionBuilder implements Builder<OrderEditSet
 
     /**
      *  <p>Defines the Type that extends the OrderEdit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the OrderEdit.</p>
+     * @param type
+     * @return Builder
      */
 
     public OrderEditSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class OrderEditSetCustomTypeActionBuilder implements Builder<OrderEditSet
 
     /**
      *  <p>Sets the Custom Fields fields for the OrderEdit.</p>
+     * @return Builder
      */
 
     public OrderEditSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class OrderEditSetCustomTypeActionBuilder implements Builder<OrderEditSet
 
     /**
      *  <p>Sets the Custom Fields fields for the OrderEdit.</p>
+     * @param fields
+     * @return Builder
      */
 
     public OrderEditSetCustomTypeActionBuilder fields(

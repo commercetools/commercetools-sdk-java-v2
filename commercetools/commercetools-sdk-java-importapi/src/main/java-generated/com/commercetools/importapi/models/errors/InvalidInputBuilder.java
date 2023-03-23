@@ -25,6 +25,8 @@ public class InvalidInputBuilder implements Builder<InvalidInput> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public InvalidInputBuilder message(final String message) {

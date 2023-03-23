@@ -29,6 +29,8 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public DiscountCodeUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
+     * @param actions
+     * @return Builder
      */
 
     public DiscountCodeUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
+     * @param actions
+     * @return Builder
      */
 
     public DiscountCodeUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
+     * @param actions
+     * @return Builder
      */
 
     public DiscountCodeUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
+     * @return Builder
      */
 
     public DiscountCodeUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
+     * @return Builder
      */
 
     public DiscountCodeUpdateBuilder withActions(

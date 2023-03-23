@@ -36,6 +36,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -43,6 +44,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
 
     /**
      *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -50,6 +52,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
 
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
+     * @return subject
      */
     @NotNull
     @JsonProperty("subject")
@@ -57,6 +60,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
+     * @return itemId
      */
     @NotNull
     @JsonProperty("itemId")

@@ -30,6 +30,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
+     * @return Builder
      */
 
     public ProductSelectionProductExcludedMessagePayloadBuilder product(
@@ -40,6 +41,8 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductSelectionProductExcludedMessagePayloadBuilder product(
@@ -50,6 +53,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     * @return Builder
      */
 
     public ProductSelectionProductExcludedMessagePayloadBuilder variantExclusion(
@@ -62,6 +66,8 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     * @param variantExclusion
+     * @return Builder
      */
 
     public ProductSelectionProductExcludedMessagePayloadBuilder variantExclusion(

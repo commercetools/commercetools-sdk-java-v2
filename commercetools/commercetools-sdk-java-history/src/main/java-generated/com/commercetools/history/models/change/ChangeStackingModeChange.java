@@ -36,6 +36,7 @@ public interface ChangeStackingModeChange extends Change {
 
     /**
      *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -43,6 +44,7 @@ public interface ChangeStackingModeChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface ChangeStackingModeChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -57,6 +60,7 @@ public interface ChangeStackingModeChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

@@ -26,6 +26,7 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public ProductDiscountChangeNameActionBuilder name(
@@ -36,6 +37,8 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductDiscountChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

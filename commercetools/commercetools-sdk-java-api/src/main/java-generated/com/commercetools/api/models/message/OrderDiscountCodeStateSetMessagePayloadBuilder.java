@@ -35,6 +35,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
 
     /**
      *  <p>DiscountCode that changed due to the recalculation.</p>
+     * @return Builder
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
@@ -46,6 +47,8 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
 
     /**
      *  <p>DiscountCode that changed due to the recalculation.</p>
+     * @param discountCode
+     * @return Builder
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
@@ -56,6 +59,8 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
 
     /**
      *  <p>DiscountCodeState after the recalculation.</p>
+     * @param state
+     * @return Builder
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder state(
@@ -66,6 +71,8 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
 
     /**
      *  <p>DiscountCodeState before the recalculation.</p>
+     * @param oldState
+     * @return Builder
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder oldState(

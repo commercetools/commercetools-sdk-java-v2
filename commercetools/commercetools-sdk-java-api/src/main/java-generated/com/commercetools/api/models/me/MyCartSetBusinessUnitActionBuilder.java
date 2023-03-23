@@ -26,6 +26,7 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
 
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must have Buyer access to the Business Unit.</p>
+     * @return Builder
      */
 
     public MyCartSetBusinessUnitActionBuilder businessUnit(
@@ -38,6 +39,8 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
 
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must have Buyer access to the Business Unit.</p>
+     * @param businessUnit
+     * @return Builder
      */
 
     public MyCartSetBusinessUnitActionBuilder businessUnit(

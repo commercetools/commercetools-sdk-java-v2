@@ -26,6 +26,7 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
 
     /**
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
+     * @return Builder
      */
 
     public StoreRemoveProductSelectionActionBuilder productSelection(
@@ -38,6 +39,8 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
 
     /**
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
+     * @param productSelection
+     * @return Builder
      */
 
     public StoreRemoveProductSelectionActionBuilder productSelection(

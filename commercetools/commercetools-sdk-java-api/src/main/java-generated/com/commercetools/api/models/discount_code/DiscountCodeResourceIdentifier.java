@@ -32,6 +32,7 @@ public interface DiscountCodeResourceIdentifier
 
     /**
      *  <p>Unique identifier of the referenced DiscountCode. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface DiscountCodeResourceIdentifier
 
     /**
      *  <p>User-defined unique identifier of the referenced DiscountCode. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
      */
 
     @JsonProperty("key")

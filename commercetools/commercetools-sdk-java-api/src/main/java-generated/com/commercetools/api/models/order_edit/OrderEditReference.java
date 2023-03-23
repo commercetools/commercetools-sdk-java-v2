@@ -35,6 +35,7 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
 
     /**
      *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
 
     /**
      *  <p>Unique identifier of the referenced OrderEdit.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

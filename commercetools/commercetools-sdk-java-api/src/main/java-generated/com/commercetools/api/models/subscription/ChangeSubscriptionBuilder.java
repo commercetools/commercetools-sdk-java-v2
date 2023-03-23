@@ -25,6 +25,8 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
 
     /**
      *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     * @param resourceTypeId
+     * @return Builder
      */
 
     public ChangeSubscriptionBuilder resourceTypeId(

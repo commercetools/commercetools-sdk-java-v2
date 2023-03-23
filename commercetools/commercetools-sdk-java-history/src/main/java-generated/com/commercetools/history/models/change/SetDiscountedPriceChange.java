@@ -40,6 +40,7 @@ public interface SetDiscountedPriceChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -47,6 +48,7 @@ public interface SetDiscountedPriceChange extends Change {
 
     /**
      *  <p>Update action for <code>setDiscountedPrice</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -54,6 +56,7 @@ public interface SetDiscountedPriceChange extends Change {
 
     /**
      *
+     * @return catalogData
      */
     @NotNull
     @JsonProperty("catalogData")
@@ -61,6 +64,7 @@ public interface SetDiscountedPriceChange extends Change {
 
     /**
      *
+     * @return variant
      */
     @NotNull
     @JsonProperty("variant")
@@ -68,6 +72,7 @@ public interface SetDiscountedPriceChange extends Change {
 
     /**
      *
+     * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
@@ -75,6 +80,7 @@ public interface SetDiscountedPriceChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid
@@ -83,6 +89,7 @@ public interface SetDiscountedPriceChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

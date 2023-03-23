@@ -39,6 +39,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>Name of the APIClient.</p>
+     * @param name
+     * @return Builder
      */
 
     public ApiClientDraftBuilder name(final String name) {
@@ -48,6 +50,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     * @param scope
+     * @return Builder
      */
 
     public ApiClientDraftBuilder scope(final String scope) {
@@ -57,6 +61,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>If set, the Client will be deleted after the specified amount of days.</p>
+     * @param deleteDaysAfterCreation
+     * @return Builder
      */
 
     public ApiClientDraftBuilder deleteDaysAfterCreation(@Nullable final Long deleteDaysAfterCreation) {
@@ -66,6 +72,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     * @param accessTokenValiditySeconds
+     * @return Builder
      */
 
     public ApiClientDraftBuilder accessTokenValiditySeconds(@Nullable final Integer accessTokenValiditySeconds) {
@@ -75,6 +83,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
+     * @param refreshTokenValiditySeconds
+     * @return Builder
      */
 
     public ApiClientDraftBuilder refreshTokenValiditySeconds(@Nullable final Integer refreshTokenValiditySeconds) {

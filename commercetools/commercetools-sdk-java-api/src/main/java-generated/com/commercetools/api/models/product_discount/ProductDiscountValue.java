@@ -36,6 +36,7 @@ public interface ProductDiscountValue {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

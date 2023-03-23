@@ -28,6 +28,8 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
 
     /**
      *
+     * @param customerEmail
+     * @return Builder
      */
 
     public OrderLabelBuilder customerEmail(final String customerEmail) {
@@ -37,6 +39,8 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
 
     /**
      *
+     * @param orderNumber
+     * @return Builder
      */
 
     public OrderLabelBuilder orderNumber(final String orderNumber) {

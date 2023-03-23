@@ -26,6 +26,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
 
     /**
      *
+     * @return Builder
      */
 
     public LocalizedLabelBuilder value(
@@ -36,6 +37,8 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizedLabelBuilder value(final com.commercetools.history.models.common.LocalizedString value) {

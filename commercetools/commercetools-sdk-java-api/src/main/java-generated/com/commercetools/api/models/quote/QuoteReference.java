@@ -34,6 +34,7 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
 
     /**
      *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")

@@ -28,6 +28,7 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
@@ -39,6 +40,8 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(

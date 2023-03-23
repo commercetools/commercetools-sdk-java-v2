@@ -29,6 +29,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditPreviewSuccessBuilder preview(
@@ -39,6 +40,8 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @param preview
+     * @return Builder
      */
 
     public OrderEditPreviewSuccessBuilder preview(final com.commercetools.api.models.order_edit.StagedOrder preview) {
@@ -48,6 +51,8 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @param messagePayloads
+     * @return Builder
      */
 
     public OrderEditPreviewSuccessBuilder messagePayloads(
@@ -58,6 +63,8 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @param messagePayloads
+     * @return Builder
      */
 
     public OrderEditPreviewSuccessBuilder messagePayloads(
@@ -68,6 +75,8 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @param messagePayloads
+     * @return Builder
      */
 
     public OrderEditPreviewSuccessBuilder plusMessagePayloads(
@@ -81,6 +90,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditPreviewSuccessBuilder plusMessagePayloads(
@@ -95,6 +105,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditPreviewSuccessBuilder withMessagePayloads(

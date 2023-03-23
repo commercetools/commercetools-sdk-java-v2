@@ -40,6 +40,8 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>HTTP status code corresponding to the error.</p>
+     * @param statusCode
+     * @return Builder
      */
 
     public AuthErrorResponseBuilder statusCode(final Integer statusCode) {
@@ -49,6 +51,8 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>First error message in the <code>errors</code> array.</p>
+     * @param message
+     * @return Builder
      */
 
     public AuthErrorResponseBuilder message(final String message) {
@@ -58,6 +62,8 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @param errors
+     * @return Builder
      */
 
     public AuthErrorResponseBuilder errors(final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -67,6 +73,8 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @param errors
+     * @return Builder
      */
 
     public AuthErrorResponseBuilder errors(
@@ -77,6 +85,8 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @param errors
+     * @return Builder
      */
 
     public AuthErrorResponseBuilder plusErrors(final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -89,6 +99,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @return Builder
      */
 
     public AuthErrorResponseBuilder plusErrors(
@@ -102,6 +113,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @return Builder
      */
 
     public AuthErrorResponseBuilder withErrors(
@@ -113,6 +125,8 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     * @param error
+     * @return Builder
      */
 
     public AuthErrorResponseBuilder error(final String error) {
@@ -122,6 +136,8 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Plain text description of the first error.</p>
+     * @param error_description
+     * @return Builder
      */
 
     public AuthErrorResponseBuilder error_description(@Nullable final String error_description) {

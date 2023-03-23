@@ -31,6 +31,8 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
 
     /**
      *  <p>Shape of the action for <code>setCustomerEmail</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomerEmailChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomerEmailChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomerEmailChangeBuilder nextValue(final String nextValue) {

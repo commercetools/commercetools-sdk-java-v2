@@ -33,6 +33,7 @@ public interface MyCustomerChangePassword {
 
     /**
      *  <p>Expected version of the Customer on which the changes should be applied.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface MyCustomerChangePassword {
     /**
      *  <p>Current password of the Customer.</p>
      *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+     * @return currentPassword
      */
     @NotNull
     @JsonProperty("currentPassword")
@@ -48,6 +50,7 @@ public interface MyCustomerChangePassword {
 
     /**
      *  <p>New password to be set.</p>
+     * @return newPassword
      */
     @NotNull
     @JsonProperty("newPassword")

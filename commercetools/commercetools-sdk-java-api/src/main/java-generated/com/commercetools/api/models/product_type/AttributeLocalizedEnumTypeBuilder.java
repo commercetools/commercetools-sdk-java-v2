@@ -26,6 +26,8 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @param values
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder values(
@@ -36,6 +38,8 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @param values
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder values(
@@ -46,6 +50,8 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @param values
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder plusValues(
@@ -59,6 +65,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder plusValues(
@@ -73,6 +80,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder withValues(

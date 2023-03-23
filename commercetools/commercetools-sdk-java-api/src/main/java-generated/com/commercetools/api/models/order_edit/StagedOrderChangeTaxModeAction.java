@@ -35,6 +35,7 @@ public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction 
 
     /**
      *  <p>Indicates how taxes are set on the Cart.</p>
+     * @return taxMode
      */
     @NotNull
     @JsonProperty("taxMode")

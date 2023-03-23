@@ -35,6 +35,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
 
     /**
      *
+     * @return errors
      */
     @NotNull
     @Valid

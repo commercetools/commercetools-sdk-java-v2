@@ -31,6 +31,8 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeChangeEnumKeyActionBuilder attributeName(final String attributeName) {
@@ -40,6 +42,8 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
 
     /**
      *  <p>Existing key to be changed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductTypeChangeEnumKeyActionBuilder key(final String key) {
@@ -49,6 +53,8 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
 
     /**
      *  <p>New key to be set.</p>
+     * @param newKey
+     * @return Builder
      */
 
     public ProductTypeChangeEnumKeyActionBuilder newKey(final String newKey) {

@@ -94,6 +94,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Unique identifier of the Product.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductProjectionBuilder id(final String id) {
@@ -103,6 +105,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Current version of the Product.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductProjectionBuilder version(final Long version) {
@@ -112,6 +116,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Date and time (UTC) the ProductProjection was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProductProjectionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -121,6 +127,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Date and time (UTC) the ProductProjection was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ProductProjectionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -130,6 +138,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductProjectionBuilder key(@Nullable final String key) {
@@ -139,6 +149,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The ProductType defining the Attributes of the Product.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder productType(
@@ -150,6 +161,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The ProductType defining the Attributes of the Product.</p>
+     * @param productType
+     * @return Builder
      */
 
     public ProductProjectionBuilder productType(
@@ -160,6 +173,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder name(
@@ -170,6 +184,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductProjectionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -179,6 +195,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder description(
@@ -189,6 +206,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @param description
+     * @return Builder
      */
 
     public ProductProjectionBuilder description(
@@ -199,6 +218,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder slug(
@@ -209,6 +229,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     * @param slug
+     * @return Builder
      */
 
     public ProductProjectionBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -218,6 +240,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductProjectionBuilder categories(
@@ -228,6 +252,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductProjectionBuilder categories(
@@ -238,6 +264,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductProjectionBuilder plusCategories(
@@ -251,6 +279,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder plusCategories(
@@ -264,6 +293,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder withCategories(
@@ -275,6 +305,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Order of Product in Categories.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder categoryOrderHints(
@@ -286,6 +317,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Order of Product in Categories.</p>
+     * @param categoryOrderHints
+     * @return Builder
      */
 
     public ProductProjectionBuilder categoryOrderHints(
@@ -296,6 +329,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder metaTitle(
@@ -306,6 +340,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @param metaTitle
+     * @return Builder
      */
 
     public ProductProjectionBuilder metaTitle(
@@ -316,6 +352,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder metaDescription(
@@ -326,6 +363,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @param metaDescription
+     * @return Builder
      */
 
     public ProductProjectionBuilder metaDescription(
@@ -336,6 +375,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder metaKeywords(
@@ -346,6 +386,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param metaKeywords
+     * @return Builder
      */
 
     public ProductProjectionBuilder metaKeywords(
@@ -356,6 +398,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder searchKeywords(
@@ -366,6 +409,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param searchKeywords
+     * @return Builder
      */
 
     public ProductProjectionBuilder searchKeywords(
@@ -376,6 +421,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p><code>true</code> if the staged data is different from the current data.</p>
+     * @param hasStagedChanges
+     * @return Builder
      */
 
     public ProductProjectionBuilder hasStagedChanges(@Nullable final Boolean hasStagedChanges) {
@@ -385,6 +432,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p><code>true</code> if the Product is published.</p>
+     * @param published
+     * @return Builder
      */
 
     public ProductProjectionBuilder published(@Nullable final Boolean published) {
@@ -394,6 +443,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder masterVariant(
@@ -404,6 +454,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     * @param masterVariant
+     * @return Builder
      */
 
     public ProductProjectionBuilder masterVariant(
@@ -414,6 +466,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductProjectionBuilder variants(final com.commercetools.api.models.product.ProductVariant... variants) {
@@ -423,6 +477,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductProjectionBuilder variants(
@@ -433,6 +489,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductProjectionBuilder plusVariants(
@@ -446,6 +504,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder plusVariants(
@@ -459,6 +518,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder withVariants(
@@ -470,6 +530,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The TaxCategory of the Product.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder taxCategory(
@@ -481,6 +542,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The TaxCategory of the Product.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public ProductProjectionBuilder taxCategory(
@@ -491,6 +554,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>State of the Product.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder state(
@@ -501,6 +565,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>State of the Product.</p>
+     * @param state
+     * @return Builder
      */
 
     public ProductProjectionBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -510,6 +576,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Review statistics of the Product.</p>
+     * @return Builder
      */
 
     public ProductProjectionBuilder reviewRatingStatistics(
@@ -522,6 +589,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Review statistics of the Product.</p>
+     * @param reviewRatingStatistics
+     * @return Builder
      */
 
     public ProductProjectionBuilder reviewRatingStatistics(
@@ -532,6 +601,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     * @param priceMode
+     * @return Builder
      */
 
     public ProductProjectionBuilder priceMode(

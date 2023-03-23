@@ -33,6 +33,7 @@ public interface ShoppingListChangeLineItemsOrderAction extends ShoppingListUpda
 
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s in the desired new order.</p>
+     * @return lineItemOrder
      */
     @NotNull
     @JsonProperty("lineItemOrder")

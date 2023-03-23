@@ -38,6 +38,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -45,6 +46,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
 
     /**
      *  <p>Update action for <code>changePlainEnumValueOrder</code> on product types</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -52,6 +54,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -59,6 +62,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -67,6 +71,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

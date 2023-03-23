@@ -26,6 +26,7 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
 
     /**
      *  <p>Address that was added during the Add Address update action.</p>
+     * @return Builder
      */
 
     public CustomerAddressAddedMessagePayloadBuilder address(
@@ -36,6 +37,8 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
 
     /**
      *  <p>Address that was added during the Add Address update action.</p>
+     * @param address
+     * @return Builder
      */
 
     public CustomerAddressAddedMessagePayloadBuilder address(

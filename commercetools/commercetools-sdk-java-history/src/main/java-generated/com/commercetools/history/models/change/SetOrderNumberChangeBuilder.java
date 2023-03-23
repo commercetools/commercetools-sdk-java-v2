@@ -31,6 +31,8 @@ public class SetOrderNumberChangeBuilder implements Builder<SetOrderNumberChange
 
     /**
      *  <p>Shape of the action for <code>setOrderNumber</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetOrderNumberChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetOrderNumberChangeBuilder implements Builder<SetOrderNumberChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetOrderNumberChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetOrderNumberChangeBuilder implements Builder<SetOrderNumberChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetOrderNumberChangeBuilder nextValue(final String nextValue) {

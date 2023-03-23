@@ -33,6 +33,7 @@ public interface OrderShippingAddressSetMessagePayload extends OrderMessagePaylo
 
     /**
      *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -40,6 +41,7 @@ public interface OrderShippingAddressSetMessagePayload extends OrderMessagePaylo
 
     /**
      *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     * @return oldAddress
      */
     @Valid
     @JsonProperty("oldAddress")

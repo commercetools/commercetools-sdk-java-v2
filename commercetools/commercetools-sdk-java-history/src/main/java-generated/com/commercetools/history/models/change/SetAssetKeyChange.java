@@ -38,6 +38,7 @@ public interface SetAssetKeyChange extends Change {
 
     /**
      *  <p>Update action for <code>setAssetKey</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -45,6 +46,7 @@ public interface SetAssetKeyChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -52,6 +54,7 @@ public interface SetAssetKeyChange extends Change {
 
     /**
      *
+     * @return asset
      */
     @NotNull
     @Valid
@@ -60,6 +63,7 @@ public interface SetAssetKeyChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -67,6 +71,7 @@ public interface SetAssetKeyChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

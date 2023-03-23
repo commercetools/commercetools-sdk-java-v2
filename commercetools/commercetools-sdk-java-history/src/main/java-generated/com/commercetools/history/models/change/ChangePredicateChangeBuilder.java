@@ -31,6 +31,8 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
 
     /**
      *  <p>Shape of the action for <code>changePredicate</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangePredicateChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangePredicateChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangePredicateChangeBuilder nextValue(final String nextValue) {

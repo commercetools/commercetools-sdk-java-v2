@@ -25,6 +25,8 @@ public class MyQuoteChangeMyQuoteStateActionBuilder implements Builder<MyQuoteCh
 
     /**
      *  <p>New state to be set for the Quote.</p>
+     * @param quoteState
+     * @return Builder
      */
 
     public MyQuoteChangeMyQuoteStateActionBuilder quoteState(

@@ -35,6 +35,7 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @return removedImageUrls
      */
     @NotNull
     @JsonProperty("removedImageUrls")
@@ -42,6 +43,7 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
+     * @return currentProjection
      */
     @Valid
     @JsonProperty("currentProjection")

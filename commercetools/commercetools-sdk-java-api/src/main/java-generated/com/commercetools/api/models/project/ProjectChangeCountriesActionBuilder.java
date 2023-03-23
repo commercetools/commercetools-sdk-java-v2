@@ -25,6 +25,8 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param countries
+     * @return Builder
      */
 
     public ProjectChangeCountriesActionBuilder countries(final String... countries) {
@@ -34,6 +36,8 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param countries
+     * @return Builder
      */
 
     public ProjectChangeCountriesActionBuilder countries(final java.util.List<String> countries) {
@@ -43,6 +47,8 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param countries
+     * @return Builder
      */
 
     public ProjectChangeCountriesActionBuilder plusCountries(final String... countries) {

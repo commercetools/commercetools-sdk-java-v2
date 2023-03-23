@@ -29,6 +29,8 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
 
     /**
      *  <p>ShipmentState after the Change Shipment State update action.</p>
+     * @param shipmentState
+     * @return Builder
      */
 
     public OrderShipmentStateChangedMessagePayloadBuilder shipmentState(
@@ -39,6 +41,8 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
 
     /**
      *  <p>ShipmentState before the Change Shipment State update action.</p>
+     * @param oldShipmentState
+     * @return Builder
      */
 
     public OrderShipmentStateChangedMessagePayloadBuilder oldShipmentState(

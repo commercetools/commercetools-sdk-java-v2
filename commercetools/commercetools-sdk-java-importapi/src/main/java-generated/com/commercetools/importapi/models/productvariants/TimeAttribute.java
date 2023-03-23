@@ -34,6 +34,7 @@ public interface TimeAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

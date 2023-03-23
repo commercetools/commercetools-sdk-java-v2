@@ -43,6 +43,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     * @return productType
      */
     @NotNull
     @Valid
@@ -51,6 +52,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid
@@ -59,6 +61,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -67,6 +70,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Product.description</code>.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -74,6 +78,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @return categories
      */
     @Valid
     @JsonProperty("categories")
@@ -86,6 +91,7 @@ public interface ProductDraftImport extends ImportResource {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return metaTitle
      */
     @Valid
     @JsonProperty("metaTitle")
@@ -98,6 +104,7 @@ public interface ProductDraftImport extends ImportResource {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return metaDescription
      */
     @Valid
     @JsonProperty("metaDescription")
@@ -110,6 +117,7 @@ public interface ProductDraftImport extends ImportResource {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return metaKeywords
      */
     @Valid
     @JsonProperty("metaKeywords")
@@ -117,6 +125,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     * @return masterVariant
      */
     @Valid
     @JsonProperty("masterVariant")
@@ -124,6 +133,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>An array of related Product Variants.</p>
+     * @return variants
      */
     @Valid
     @JsonProperty("variants")
@@ -131,6 +141,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -154,6 +165,7 @@ public interface ProductDraftImport extends ImportResource {
      *    ]
      *  }
      *  </code></pre>
+     * @return searchKeywords
      */
     @Valid
     @JsonProperty("searchKeywords")
@@ -161,6 +173,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -168,6 +181,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     * @return publish
      */
 
     @JsonProperty("publish")
@@ -175,6 +189,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     * @return priceMode
      */
 
     @JsonProperty("priceMode")

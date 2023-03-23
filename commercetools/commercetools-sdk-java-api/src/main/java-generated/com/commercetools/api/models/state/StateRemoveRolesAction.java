@@ -33,6 +33,7 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
 
     /**
      *  <p>Roles to remove from the State.</p>
+     * @return roles
      */
     @NotNull
     @JsonProperty("roles")

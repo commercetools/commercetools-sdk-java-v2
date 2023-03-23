@@ -35,6 +35,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
@@ -44,6 +46,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -54,6 +57,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @param type
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -64,6 +69,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(
@@ -74,6 +80,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(

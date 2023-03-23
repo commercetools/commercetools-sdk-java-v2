@@ -34,6 +34,7 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -41,6 +42,7 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -48,6 +50,7 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
 
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")

@@ -37,6 +37,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -44,6 +45,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
 
     /**
      *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -51,6 +53,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
 
     /**
      *  <p>Conflicting Embedded Price.</p>
+     * @return conflictingPrice
      */
     @NotNull
     @Valid

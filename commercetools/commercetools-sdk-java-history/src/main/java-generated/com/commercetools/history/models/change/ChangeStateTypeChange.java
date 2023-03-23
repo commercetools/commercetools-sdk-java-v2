@@ -36,6 +36,7 @@ public interface ChangeStateTypeChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface ChangeStateTypeChange extends Change {
 
     /**
      *  <p>Update action for <code>changeType</code> on state</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface ChangeStateTypeChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -57,6 +60,7 @@ public interface ChangeStateTypeChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

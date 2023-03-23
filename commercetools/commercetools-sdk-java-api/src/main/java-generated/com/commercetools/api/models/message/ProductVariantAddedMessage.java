@@ -43,6 +43,7 @@ public interface ProductVariantAddedMessage extends Message {
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @return variant
      */
     @NotNull
     @Valid
@@ -51,6 +52,7 @@ public interface ProductVariantAddedMessage extends Message {
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")

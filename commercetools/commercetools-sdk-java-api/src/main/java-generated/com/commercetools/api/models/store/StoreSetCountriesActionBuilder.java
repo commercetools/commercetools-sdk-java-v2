@@ -28,6 +28,8 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreSetCountriesActionBuilder countries(
@@ -38,6 +40,8 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreSetCountriesActionBuilder countries(
@@ -48,6 +52,8 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreSetCountriesActionBuilder plusCountries(
@@ -61,6 +67,7 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
+     * @return Builder
      */
 
     public StoreSetCountriesActionBuilder plusCountries(
@@ -74,6 +81,7 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
+     * @return Builder
      */
 
     public StoreSetCountriesActionBuilder withCountries(

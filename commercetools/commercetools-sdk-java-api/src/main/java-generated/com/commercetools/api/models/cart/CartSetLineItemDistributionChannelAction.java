@@ -35,6 +35,7 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -45,6 +46,7 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
      *  </ul>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")

@@ -31,6 +31,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ProductSetMetaKeywordsActionBuilder metaKeywords(
@@ -41,6 +42,8 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param metaKeywords
+     * @return Builder
      */
 
     public ProductSetMetaKeywordsActionBuilder metaKeywords(
@@ -51,6 +54,8 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
 
     /**
      *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetMetaKeywordsActionBuilder staged(@Nullable final Boolean staged) {

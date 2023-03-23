@@ -38,6 +38,7 @@ public interface ChangeTargetChangeValue {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

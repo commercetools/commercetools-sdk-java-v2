@@ -35,6 +35,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
 
     /**
      *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
 
     /**
      *  <p>Unique identifier of the referenced Payment.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

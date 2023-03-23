@@ -28,6 +28,8 @@ public class SubRateBuilder implements Builder<SubRate> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public SubRateBuilder name(final String name) {
@@ -37,6 +39,8 @@ public class SubRateBuilder implements Builder<SubRate> {
 
     /**
      *
+     * @param amount
+     * @return Builder
      */
 
     public SubRateBuilder amount(final Double amount) {

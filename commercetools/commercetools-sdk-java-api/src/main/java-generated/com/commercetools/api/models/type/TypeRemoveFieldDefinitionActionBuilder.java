@@ -25,6 +25,8 @@ public class TypeRemoveFieldDefinitionActionBuilder implements Builder<TypeRemov
 
     /**
      *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public TypeRemoveFieldDefinitionActionBuilder fieldName(final String fieldName) {

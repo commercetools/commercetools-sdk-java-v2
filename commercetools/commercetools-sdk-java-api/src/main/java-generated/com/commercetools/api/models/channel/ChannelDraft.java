@@ -37,6 +37,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -44,6 +45,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     * @return roles
      */
 
     @JsonProperty("roles")
@@ -51,6 +53,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Name of the Channel.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -58,6 +61,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Description of the Channel.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -65,6 +69,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Address where the Channel is located.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -72,6 +77,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Custom fields defined for the Channel.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -79,6 +85,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     * @return geoLocation
      */
     @Valid
     @JsonProperty("geoLocation")

@@ -59,6 +59,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder id(final String id) {
@@ -68,6 +70,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder version(final Long version) {
@@ -77,6 +81,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -86,6 +92,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder lastModifiedAt(
@@ -96,6 +104,7 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder lastModifiedBy(
@@ -106,6 +115,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder lastModifiedBy(
@@ -116,6 +127,7 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder createdBy(
@@ -126,6 +138,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder createdBy(
@@ -136,6 +150,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,6 +161,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder resource(
@@ -155,6 +173,7 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder resource(
@@ -165,6 +184,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,6 +195,7 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,6 +208,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,6 +220,7 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>The address that was set as the default shipping address.</p>
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder address(
@@ -206,6 +231,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageBuilder
 
     /**
      *  <p>The address that was set as the default shipping address.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessageBuilder address(

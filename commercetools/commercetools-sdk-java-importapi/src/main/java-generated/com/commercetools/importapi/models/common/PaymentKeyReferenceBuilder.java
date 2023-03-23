@@ -25,6 +25,8 @@ public class PaymentKeyReferenceBuilder implements Builder<PaymentKeyReference> 
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public PaymentKeyReferenceBuilder key(final String key) {

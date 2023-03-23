@@ -32,6 +32,7 @@ public interface MyCustomerResetPassword {
 
     /**
      *  <p>Value of the token to reset the Customer password.</p>
+     * @return tokenValue
      */
     @NotNull
     @JsonProperty("tokenValue")
@@ -39,6 +40,7 @@ public interface MyCustomerResetPassword {
 
     /**
      *  <p>New password to be set.</p>
+     * @return newPassword
      */
     @NotNull
     @JsonProperty("newPassword")

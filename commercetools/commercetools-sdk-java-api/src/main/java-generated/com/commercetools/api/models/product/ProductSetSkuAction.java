@@ -33,6 +33,7 @@ public interface ProductSetSkuAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -40,6 +41,7 @@ public interface ProductSetSkuAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -47,6 +49,7 @@ public interface ProductSetSkuAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

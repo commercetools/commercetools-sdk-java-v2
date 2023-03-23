@@ -34,6 +34,8 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     /**
      *
+     * @param query
+     * @return Builder
      */
 
     public GraphQLRequestBuilder query(final String query) {
@@ -43,6 +45,8 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     /**
      *
+     * @param operationName
+     * @return Builder
      */
 
     public GraphQLRequestBuilder operationName(@Nullable final String operationName) {
@@ -52,6 +56,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     /**
      *
+     * @return Builder
      */
 
     public GraphQLRequestBuilder variables(
@@ -62,6 +67,8 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     /**
      *
+     * @param variables
+     * @return Builder
      */
 
     public GraphQLRequestBuilder variables(

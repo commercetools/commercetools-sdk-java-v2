@@ -34,6 +34,7 @@ public interface ProductTypeDraft
 
     /**
      *  <p>User-defined unique identifier for the ProductType.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -41,6 +42,7 @@ public interface ProductTypeDraft
 
     /**
      *  <p>Name of the ProductType.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -48,6 +50,7 @@ public interface ProductTypeDraft
 
     /**
      *  <p>Description of the ProductType.</p>
+     * @return description
      */
     @NotNull
     @JsonProperty("description")
@@ -55,6 +58,7 @@ public interface ProductTypeDraft
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")

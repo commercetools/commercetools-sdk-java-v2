@@ -29,6 +29,8 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public CartChangeCustomLineItemPriceModeActionBuilder customLineItemId(final String customLineItemId) {
@@ -38,6 +40,8 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param mode
+     * @return Builder
      */
 
     public CartChangeCustomLineItemPriceModeActionBuilder mode(

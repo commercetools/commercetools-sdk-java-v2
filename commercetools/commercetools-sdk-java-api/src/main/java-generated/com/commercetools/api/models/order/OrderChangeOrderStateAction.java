@@ -33,6 +33,7 @@ public interface OrderChangeOrderStateAction extends OrderUpdateAction {
 
     /**
      *
+     * @return orderState
      */
     @NotNull
     @JsonProperty("orderState")

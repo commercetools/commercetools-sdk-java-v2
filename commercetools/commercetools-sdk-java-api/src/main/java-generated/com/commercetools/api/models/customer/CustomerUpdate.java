@@ -34,6 +34,7 @@ public interface CustomerUpdate extends
 
     /**
      *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface CustomerUpdate extends
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
+     * @return actions
      */
     @NotNull
     @Valid

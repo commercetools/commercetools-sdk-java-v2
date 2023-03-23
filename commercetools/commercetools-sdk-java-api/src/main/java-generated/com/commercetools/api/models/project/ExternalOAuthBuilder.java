@@ -28,6 +28,8 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
 
     /**
      *  <p>URL with authorization header.</p>
+     * @param url
+     * @return Builder
      */
 
     public ExternalOAuthBuilder url(final String url) {
@@ -37,6 +39,8 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
 
     /**
      *  <p>Must not contain any leading or trailing whitespaces. Partially hidden on retrieval.</p>
+     * @param authorizationHeader
+     * @return Builder
      */
 
     public ExternalOAuthBuilder authorizationHeader(final String authorizationHeader) {

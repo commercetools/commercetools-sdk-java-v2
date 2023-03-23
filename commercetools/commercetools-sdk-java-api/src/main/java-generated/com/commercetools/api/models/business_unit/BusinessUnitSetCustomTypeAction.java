@@ -34,6 +34,7 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
 
     /**
      *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
 
     /**
      *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

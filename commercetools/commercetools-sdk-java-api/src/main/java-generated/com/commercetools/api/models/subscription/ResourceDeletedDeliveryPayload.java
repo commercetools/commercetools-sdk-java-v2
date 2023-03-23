@@ -37,6 +37,7 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Last seen version of the resource.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -44,6 +45,7 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Date and time (UTC) the resource was last deleted.</p>
+     * @return modifiedAt
      */
     @NotNull
     @JsonProperty("modifiedAt")
@@ -51,6 +53,7 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     * @return dataErasure
      */
 
     @JsonProperty("dataErasure")

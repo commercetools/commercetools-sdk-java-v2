@@ -29,6 +29,8 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public StagedOrderSetParcelItemsActionBuilder parcelId(final String parcelId) {
@@ -38,6 +40,8 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderSetParcelItemsActionBuilder items(
@@ -48,6 +52,8 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderSetParcelItemsActionBuilder items(
@@ -58,6 +64,8 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderSetParcelItemsActionBuilder plusItems(
@@ -71,6 +79,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetParcelItemsActionBuilder plusItems(
@@ -84,6 +93,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetParcelItemsActionBuilder withItems(

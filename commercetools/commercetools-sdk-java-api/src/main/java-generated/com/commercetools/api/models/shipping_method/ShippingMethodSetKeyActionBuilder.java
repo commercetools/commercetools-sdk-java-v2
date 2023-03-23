@@ -27,6 +27,8 @@ public class ShippingMethodSetKeyActionBuilder implements Builder<ShippingMethod
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ShippingMethodSetKeyActionBuilder key(@Nullable final String key) {

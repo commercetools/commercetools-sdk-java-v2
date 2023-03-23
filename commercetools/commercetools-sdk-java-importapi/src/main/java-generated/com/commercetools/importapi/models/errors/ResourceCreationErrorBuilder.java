@@ -30,6 +30,8 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public ResourceCreationErrorBuilder message(final String message) {
@@ -39,6 +41,8 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
 
     /**
      *
+     * @param resource
+     * @return Builder
      */
 
     public ResourceCreationErrorBuilder resource(@Nullable final java.lang.Object resource) {

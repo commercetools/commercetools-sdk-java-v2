@@ -30,6 +30,7 @@ public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
+     * @return firstName
      */
 
     @JsonProperty("firstName")

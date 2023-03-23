@@ -40,6 +40,8 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public OrderPagedQueryResponseBuilder limit(final Long limit) {
@@ -49,6 +51,8 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
+     * @param count
+     * @return Builder
      */
 
     public OrderPagedQueryResponseBuilder count(final Long count) {
@@ -58,6 +62,8 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
+     * @param total
+     * @return Builder
      */
 
     public OrderPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -67,6 +73,8 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public OrderPagedQueryResponseBuilder offset(final Long offset) {
@@ -76,6 +84,8 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public OrderPagedQueryResponseBuilder results(final com.commercetools.api.models.order.Order... results) {
@@ -85,6 +95,8 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public OrderPagedQueryResponseBuilder results(
@@ -95,6 +107,8 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public OrderPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.order.Order... results) {
@@ -107,6 +121,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
+     * @return Builder
      */
 
     public OrderPagedQueryResponseBuilder plusResults(
@@ -120,6 +135,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
+     * @return Builder
      */
 
     public OrderPagedQueryResponseBuilder withResults(

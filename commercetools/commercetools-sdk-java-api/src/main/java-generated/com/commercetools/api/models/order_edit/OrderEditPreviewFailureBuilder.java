@@ -26,6 +26,8 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
+     * @param errors
+     * @return Builder
      */
 
     public OrderEditPreviewFailureBuilder errors(final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -35,6 +37,8 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
+     * @param errors
+     * @return Builder
      */
 
     public OrderEditPreviewFailureBuilder errors(
@@ -45,6 +49,8 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
+     * @param errors
+     * @return Builder
      */
 
     public OrderEditPreviewFailureBuilder plusErrors(final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -57,6 +63,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditPreviewFailureBuilder plusErrors(
@@ -70,6 +77,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditPreviewFailureBuilder withErrors(

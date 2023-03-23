@@ -30,6 +30,7 @@ public interface MyCartSetCustomerEmailAction extends MyCartUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return email
      */
 
     @JsonProperty("email")

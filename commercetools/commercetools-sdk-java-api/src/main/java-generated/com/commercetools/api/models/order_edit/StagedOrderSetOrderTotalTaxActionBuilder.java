@@ -32,6 +32,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return Builder
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTotalGross(
@@ -43,6 +44,8 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param externalTotalGross
+     * @return Builder
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTotalGross(
@@ -53,6 +56,8 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param externalTaxPortions
+     * @return Builder
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTaxPortions(
@@ -63,6 +68,8 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param externalTaxPortions
+     * @return Builder
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTaxPortions(
@@ -73,6 +80,8 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param externalTaxPortions
+     * @return Builder
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder plusExternalTaxPortions(
@@ -86,6 +95,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder plusExternalTaxPortions(
@@ -100,6 +110,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder withExternalTaxPortions(

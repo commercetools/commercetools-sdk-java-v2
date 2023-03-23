@@ -36,6 +36,7 @@ public interface OrderSetDeliveryCustomTypeAction extends OrderUpdateAction {
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -43,6 +44,7 @@ public interface OrderSetDeliveryCustomTypeAction extends OrderUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface OrderSetDeliveryCustomTypeAction extends OrderUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

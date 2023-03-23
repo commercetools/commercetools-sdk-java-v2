@@ -30,6 +30,8 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public TypeChangeLocalizedEnumValueLabelActionBuilder fieldName(final String fieldName) {
@@ -39,6 +41,7 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public TypeChangeLocalizedEnumValueLabelActionBuilder value(
@@ -49,6 +52,8 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param value
+     * @return Builder
      */
 
     public TypeChangeLocalizedEnumValueLabelActionBuilder value(

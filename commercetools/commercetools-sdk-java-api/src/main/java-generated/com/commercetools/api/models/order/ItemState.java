@@ -34,6 +34,7 @@ public interface ItemState {
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -41,6 +42,7 @@ public interface ItemState {
 
     /**
      *
+     * @return state
      */
     @NotNull
     @Valid

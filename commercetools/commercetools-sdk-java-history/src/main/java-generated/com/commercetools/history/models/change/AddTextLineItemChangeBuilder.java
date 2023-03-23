@@ -29,6 +29,8 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public AddTextLineItemChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
 
     /**
      *
+     * @return Builder
      */
 
     public AddTextLineItemChangeBuilder nextValue(
@@ -48,6 +51,8 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddTextLineItemChangeBuilder nextValue(

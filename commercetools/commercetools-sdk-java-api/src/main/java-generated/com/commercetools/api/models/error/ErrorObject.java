@@ -104,6 +104,7 @@ public interface ErrorObject {
 
     /**
      *  <p>Error identifier.</p>
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -111,6 +112,7 @@ public interface ErrorObject {
 
     /**
      *  <p>Plain text description of the cause of the error.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

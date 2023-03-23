@@ -31,6 +31,8 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public AddStateRolesChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddStateRolesChangeBuilder previousValue(
@@ -50,6 +54,8 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddStateRolesChangeBuilder previousValue(
@@ -60,6 +66,8 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddStateRolesChangeBuilder plusPreviousValue(
@@ -73,6 +81,8 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddStateRolesChangeBuilder nextValue(final com.commercetools.history.models.common.StateRole... nextValue) {
@@ -82,6 +92,8 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddStateRolesChangeBuilder nextValue(
@@ -92,6 +104,8 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddStateRolesChangeBuilder plusNextValue(

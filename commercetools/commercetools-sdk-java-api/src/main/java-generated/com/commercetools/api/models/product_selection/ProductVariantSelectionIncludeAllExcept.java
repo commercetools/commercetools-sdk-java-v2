@@ -33,6 +33,7 @@ public interface ProductVariantSelectionIncludeAllExcept extends ProductVariantS
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +41,7 @@ public interface ProductVariantSelectionIncludeAllExcept extends ProductVariantS
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @return skus
      */
     @NotNull
     @JsonProperty("skus")

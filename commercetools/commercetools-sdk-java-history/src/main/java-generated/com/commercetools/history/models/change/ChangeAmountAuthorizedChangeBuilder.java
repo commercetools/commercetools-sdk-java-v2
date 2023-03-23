@@ -32,6 +32,8 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
 
     /**
      *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeAmountAuthorizedChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeAmountAuthorizedChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeAmountAuthorizedChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeAmountAuthorizedChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeAmountAuthorizedChangeBuilder nextValue(

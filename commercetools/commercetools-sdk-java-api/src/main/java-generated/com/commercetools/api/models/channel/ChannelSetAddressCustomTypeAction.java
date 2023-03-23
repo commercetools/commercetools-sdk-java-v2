@@ -34,6 +34,7 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

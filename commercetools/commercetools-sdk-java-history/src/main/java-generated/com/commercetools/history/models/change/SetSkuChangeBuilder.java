@@ -34,6 +34,8 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     /**
      *  <p>Update action for <code>setSku</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetSkuChangeBuilder change(final String change) {
@@ -43,6 +45,8 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public SetSkuChangeBuilder catalogData(final String catalogData) {
@@ -52,6 +56,8 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetSkuChangeBuilder previousValue(final String previousValue) {
@@ -61,6 +67,8 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetSkuChangeBuilder nextValue(final String nextValue) {

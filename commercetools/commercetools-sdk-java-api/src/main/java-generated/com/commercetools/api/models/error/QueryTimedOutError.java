@@ -34,6 +34,7 @@ public interface QueryTimedOutError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface QueryTimedOutError extends ErrorObject {
 
     /**
      *  <p><code>"The query timed out. If your query constantly times out, please check that it follows the performance best practices (see https://docs.commercetools.com/api/predicates/query#performance-considerations)."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

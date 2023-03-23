@@ -35,6 +35,7 @@ public interface SyncInfo {
 
     /**
      *  <p>Connection to a particular synchronization destination.</p>
+     * @return channel
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface SyncInfo {
 
     /**
      *  <p>Can be used to reference an external order instance, file etc.</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -50,6 +52,7 @@ public interface SyncInfo {
 
     /**
      *
+     * @return syncedAt
      */
     @NotNull
     @JsonProperty("syncedAt")

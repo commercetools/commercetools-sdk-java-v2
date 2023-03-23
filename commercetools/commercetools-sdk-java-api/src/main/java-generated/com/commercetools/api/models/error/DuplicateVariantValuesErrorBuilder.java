@@ -31,6 +31,8 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p><code>"A duplicate combination of the variant values (sku, key, images, prices, attributes) exists."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DuplicateVariantValuesErrorBuilder message(final String message) {
@@ -61,6 +63,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
+     * @return Builder
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(
@@ -71,6 +74,8 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
+     * @param variantValues
+     * @return Builder
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(

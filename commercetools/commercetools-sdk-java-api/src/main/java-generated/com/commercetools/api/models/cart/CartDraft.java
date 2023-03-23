@@ -39,6 +39,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Currency the Cart uses.</p>
+     * @return currency
      */
     @NotNull
     @JsonProperty("currency")
@@ -46,6 +47,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>User-defined unique identifier for the Cart.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -53,6 +55,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     * @return customerId
      */
 
     @JsonProperty("customerId")
@@ -60,6 +63,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Email address of the Customer that the Cart belongs to.</p>
+     * @return customerEmail
      */
 
     @JsonProperty("customerEmail")
@@ -68,6 +72,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     /**
      *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
      *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -75,6 +80,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Anonymous session associated with the Cart.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")
@@ -82,6 +88,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     * @return businessUnit
      */
     @Valid
     @JsonProperty("businessUnit")
@@ -89,6 +96,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")
@@ -96,6 +104,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Line Items to add to the Cart.</p>
+     * @return lineItems
      */
     @Valid
     @JsonProperty("lineItems")
@@ -103,6 +112,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Custom Line Items to add to the Cart.</p>
+     * @return customLineItems
      */
     @Valid
     @JsonProperty("customLineItems")
@@ -110,6 +120,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Determines how Tax Rates are set.</p>
+     * @return taxMode
      */
 
     @JsonProperty("taxMode")
@@ -117,6 +128,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> TaxMode.</p>
+     * @return externalTaxRateForShippingMethod
      */
     @Valid
     @JsonProperty("externalTaxRateForShippingMethod")
@@ -124,6 +136,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxRoundingMode
      */
 
     @JsonProperty("taxRoundingMode")
@@ -131,6 +144,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxCalculationMode
      */
 
     @JsonProperty("taxCalculationMode")
@@ -138,6 +152,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
+     * @return inventoryMode
      */
 
     @JsonProperty("inventoryMode")
@@ -145,6 +160,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @return billingAddress
      */
     @Valid
     @JsonProperty("billingAddress")
@@ -152,6 +168,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @return shippingAddress
      */
     @Valid
     @JsonProperty("shippingAddress")
@@ -159,6 +176,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Shipping Method for a Cart with <code>Single</code> ShippingMode. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     * @return shippingMethod
      */
     @Valid
     @JsonProperty("shippingMethod")
@@ -171,6 +189,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -181,6 +200,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
      *   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
      *   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
      *  </ul>
+     * @return shippingMode
      */
 
     @JsonProperty("shippingMode")
@@ -188,6 +208,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return customShipping
      */
     @Valid
     @JsonProperty("customShipping")
@@ -195,6 +216,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shipping
      */
     @Valid
     @JsonProperty("shipping")
@@ -203,6 +225,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return itemShippingAddresses
      */
     @Valid
     @JsonProperty("itemShippingAddresses")
@@ -210,6 +233,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     * @return discountCodes
      */
 
     @JsonProperty("discountCodes")
@@ -217,6 +241,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -224,6 +249,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")
@@ -231,6 +257,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Indicates how the Cart was created.</p>
+     * @return origin
      */
 
     @JsonProperty("origin")
@@ -239,6 +266,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. If not provided, the default value for this field configured in Project settings is assigned.</p>
      *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
+     * @return deleteDaysAfterLastModification
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
@@ -246,6 +274,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Custom Fields for the Cart.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

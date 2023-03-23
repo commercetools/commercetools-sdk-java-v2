@@ -37,6 +37,7 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
 
     /**
      *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     * @return email
      */
 
     @JsonProperty("email")
@@ -44,6 +45,7 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
 
     /**
      *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     * @return oldEmail
      */
 
     @JsonProperty("oldEmail")

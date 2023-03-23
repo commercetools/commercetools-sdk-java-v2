@@ -34,6 +34,8 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public StagedOrderSetParcelCustomTypeActionBuilder parcelId(final String parcelId) {
@@ -43,6 +45,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     * @return Builder
      */
 
     public StagedOrderSetParcelCustomTypeActionBuilder type(
@@ -53,6 +56,8 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     * @param type
+     * @return Builder
      */
 
     public StagedOrderSetParcelCustomTypeActionBuilder type(
@@ -63,6 +68,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     * @return Builder
      */
 
     public StagedOrderSetParcelCustomTypeActionBuilder fields(
@@ -73,6 +79,8 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StagedOrderSetParcelCustomTypeActionBuilder fields(

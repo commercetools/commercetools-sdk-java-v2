@@ -38,6 +38,8 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ReferencedResourceNotFoundErrorBuilder message(final String message) {
@@ -68,6 +70,8 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p>Type of referenced resource.</p>
+     * @param typeId
+     * @return Builder
      */
 
     public ReferencedResourceNotFoundErrorBuilder typeId(
@@ -78,6 +82,8 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p>Unique identifier of the referenced resource, if known.</p>
+     * @param id
+     * @return Builder
      */
 
     public ReferencedResourceNotFoundErrorBuilder id(@Nullable final String id) {
@@ -87,6 +93,8 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p>User-defined unique identifier of the referenced resource, if known.</p>
+     * @param key
+     * @return Builder
      */
 
     public ReferencedResourceNotFoundErrorBuilder key(@Nullable final String key) {

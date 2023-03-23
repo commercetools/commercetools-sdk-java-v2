@@ -34,6 +34,7 @@ public interface CustomerGroupUpdate extends
 
     /**
      *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface CustomerGroupUpdate extends
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
+     * @return actions
      */
     @NotNull
     @Valid

@@ -45,6 +45,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return name
      */
     @NotNull
     @Valid
@@ -53,6 +54,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return money
      */
     @NotNull
     @Valid
@@ -61,6 +63,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -68,6 +71,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -76,6 +80,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return slug
      */
     @NotNull
     @JsonProperty("slug")
@@ -83,6 +88,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -90,6 +96,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -97,6 +104,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *  <p>References a tax category by key.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -104,6 +112,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
@@ -111,6 +120,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -118,6 +128,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return discountedPricePerQuantity
      */
     @Valid
     @JsonProperty("discountedPricePerQuantity")
@@ -125,6 +136,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
 
     /**
      *
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")

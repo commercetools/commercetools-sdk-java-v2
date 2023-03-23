@@ -33,6 +33,7 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
 
     /**
      *
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

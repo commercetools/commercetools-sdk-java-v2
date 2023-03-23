@@ -35,6 +35,8 @@ public class ShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @param textLineItemId
+     * @return Builder
      */
 
     public ShoppingListSetTextLineItemCustomTypeActionBuilder textLineItemId(final String textLineItemId) {
@@ -44,6 +46,7 @@ public class ShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     * @return Builder
      */
 
     public ShoppingListSetTextLineItemCustomTypeActionBuilder type(
@@ -54,6 +57,8 @@ public class ShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     * @param type
+     * @return Builder
      */
 
     public ShoppingListSetTextLineItemCustomTypeActionBuilder type(
@@ -64,6 +69,7 @@ public class ShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
+     * @return Builder
      */
 
     public ShoppingListSetTextLineItemCustomTypeActionBuilder fields(
@@ -74,6 +80,8 @@ public class ShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
+     * @param fields
+     * @return Builder
      */
 
     public ShoppingListSetTextLineItemCustomTypeActionBuilder fields(

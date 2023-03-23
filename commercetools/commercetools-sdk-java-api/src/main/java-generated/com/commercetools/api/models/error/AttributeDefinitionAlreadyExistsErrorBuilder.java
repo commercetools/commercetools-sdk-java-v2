@@ -36,6 +36,8 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p><code>"An attribute definition with name $attributeName already exists on product type $productTypeName."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder message(final String message) {
@@ -66,6 +68,8 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
+     * @param conflictingProductTypeId
+     * @return Builder
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingProductTypeId(
@@ -76,6 +80,8 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p>Name of the Product Type containing the conflicting name.</p>
+     * @param conflictingProductTypeName
+     * @return Builder
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingProductTypeName(
@@ -86,6 +92,8 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
+     * @param conflictingAttributeName
+     * @return Builder
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingAttributeName(

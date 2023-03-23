@@ -32,6 +32,7 @@ public interface EnumValue {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -39,6 +40,7 @@ public interface EnumValue {
 
     /**
      *
+     * @return label
      */
     @NotNull
     @JsonProperty("label")

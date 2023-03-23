@@ -61,6 +61,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductVariantBuilder id(final Long id) {
@@ -70,6 +72,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>User-defined unique SKU of the Product Variant.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductVariantBuilder sku(@Nullable final String sku) {
@@ -80,6 +84,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     /**
      *  <p>User-defined unique identifier of the ProductVariant.</p>
      *  <p>This is different from Product <code>key</code>.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductVariantBuilder key(@Nullable final String key) {
@@ -89,6 +95,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductVariantBuilder prices(@Nullable final com.commercetools.api.models.common.Price... prices) {
@@ -98,6 +106,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductVariantBuilder prices(
@@ -108,6 +118,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductVariantBuilder plusPrices(@Nullable final com.commercetools.api.models.common.Price... prices) {
@@ -120,6 +132,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder plusPrices(
@@ -133,6 +146,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder withPrices(
@@ -144,6 +158,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductVariantBuilder attributes(
@@ -154,6 +170,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductVariantBuilder attributes(
@@ -164,6 +182,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductVariantBuilder plusAttributes(
@@ -177,6 +197,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder plusAttributes(
@@ -190,6 +211,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder withAttributes(
@@ -201,6 +223,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder price(
@@ -211,6 +234,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param price
+     * @return Builder
      */
 
     public ProductVariantBuilder price(@Nullable final com.commercetools.api.models.common.Price price) {
@@ -220,6 +245,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
+     * @param images
+     * @return Builder
      */
 
     public ProductVariantBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -229,6 +256,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
+     * @param images
+     * @return Builder
      */
 
     public ProductVariantBuilder images(
@@ -239,6 +268,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
+     * @param images
+     * @return Builder
      */
 
     public ProductVariantBuilder plusImages(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -251,6 +282,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder plusImages(
@@ -264,6 +296,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder withImages(
@@ -275,6 +308,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
+     * @param assets
+     * @return Builder
      */
 
     public ProductVariantBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -284,6 +319,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
+     * @param assets
+     * @return Builder
      */
 
     public ProductVariantBuilder assets(
@@ -294,6 +331,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
+     * @param assets
+     * @return Builder
      */
 
     public ProductVariantBuilder plusAssets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -306,6 +345,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder plusAssets(
@@ -319,6 +359,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder withAssets(
@@ -330,6 +371,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder availability(
@@ -341,6 +383,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     * @param availability
+     * @return Builder
      */
 
     public ProductVariantBuilder availability(
@@ -351,6 +395,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
+     * @param isMatchingVariant
+     * @return Builder
      */
 
     public ProductVariantBuilder isMatchingVariant(@Nullable final Boolean isMatchingVariant) {
@@ -360,6 +406,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder scopedPrice(
@@ -370,6 +417,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     * @param scopedPrice
+     * @return Builder
      */
 
     public ProductVariantBuilder scopedPrice(
@@ -380,6 +429,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection.</p>
+     * @param scopedPriceDiscounted
+     * @return Builder
      */
 
     public ProductVariantBuilder scopedPriceDiscounted(@Nullable final Boolean scopedPriceDiscounted) {

@@ -44,6 +44,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>Unique identifier of the ProductType.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -51,6 +52,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>Current version of the ProductType.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -58,6 +60,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>Date and time (UTC) the ProductType was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -65,6 +68,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>Date and time (UTC) the ProductType was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -72,6 +76,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -79,6 +84,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -86,6 +92,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>User-defined unique identifier of the ProductType.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -93,6 +100,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>Name of the ProductType.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -100,6 +108,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>Description of the ProductType.</p>
+     * @return description
      */
     @NotNull
     @JsonProperty("description")
@@ -107,6 +116,7 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")

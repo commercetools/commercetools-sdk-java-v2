@@ -26,6 +26,8 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueFixedBuilder money(final com.commercetools.api.models.common.CentPrecisionMoney... money) {
@@ -35,6 +37,8 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueFixedBuilder money(
@@ -45,6 +49,8 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueFixedBuilder plusMoney(
@@ -58,6 +64,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @return Builder
      */
 
     public CartDiscountValueFixedBuilder plusMoney(
@@ -71,6 +78,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @return Builder
      */
 
     public CartDiscountValueFixedBuilder withMoney(

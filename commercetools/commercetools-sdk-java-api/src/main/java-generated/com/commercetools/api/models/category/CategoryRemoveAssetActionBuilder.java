@@ -30,6 +30,8 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
 
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public CategoryRemoveAssetActionBuilder assetId(@Nullable final String assetId) {
@@ -39,6 +41,8 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
 
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public CategoryRemoveAssetActionBuilder assetKey(@Nullable final String assetKey) {

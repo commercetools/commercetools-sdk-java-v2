@@ -32,6 +32,8 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public RemoveTextLineItemChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveTextLineItemChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveTextLineItemChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveTextLineItemChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveTextLineItemChangeBuilder nextValue(

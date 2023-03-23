@@ -26,6 +26,7 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
 
     /**
      *  <p>Customer that was created.</p>
+     * @return Builder
      */
 
     public CustomerCreatedMessagePayloadBuilder customer(
@@ -36,6 +37,8 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
 
     /**
      *  <p>Customer that was created.</p>
+     * @param customer
+     * @return Builder
      */
 
     public CustomerCreatedMessagePayloadBuilder customer(

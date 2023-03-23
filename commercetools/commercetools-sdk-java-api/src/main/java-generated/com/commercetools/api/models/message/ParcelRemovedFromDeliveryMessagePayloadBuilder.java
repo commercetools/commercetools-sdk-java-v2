@@ -35,6 +35,8 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @param deliveryId
+     * @return Builder
      */
 
     public ParcelRemovedFromDeliveryMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -44,6 +46,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
+     * @return Builder
      */
 
     public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel(
@@ -54,6 +57,8 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
+     * @param parcel
+     * @return Builder
      */
 
     public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel(
@@ -64,6 +69,8 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public ParcelRemovedFromDeliveryMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {

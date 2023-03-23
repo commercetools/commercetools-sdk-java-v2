@@ -29,6 +29,8 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
 
     /**
      *
+     * @param totalNet
+     * @return Builder
      */
 
     public CustomLineItemTaxedPriceBuilder totalNet(
@@ -39,6 +41,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemTaxedPriceBuilder totalNet(
@@ -49,6 +52,8 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
 
     /**
      *
+     * @param totalGross
+     * @return Builder
      */
 
     public CustomLineItemTaxedPriceBuilder totalGross(
@@ -59,6 +64,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemTaxedPriceBuilder totalGross(

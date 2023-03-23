@@ -34,6 +34,7 @@ public interface DateField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

@@ -34,6 +34,7 @@ public interface ReviewLabel extends Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface ReviewLabel extends Label {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -48,6 +50,7 @@ public interface ReviewLabel extends Label {
 
     /**
      *
+     * @return title
      */
     @NotNull
     @JsonProperty("title")

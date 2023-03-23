@@ -34,6 +34,7 @@ public interface ProductVariantDraft
 
     /**
      *  <p>User-defined unique SKU of the Product Variant.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -41,6 +42,7 @@ public interface ProductVariantDraft
 
     /**
      *  <p>User-defined unique identifier for the ProductVariant.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -48,6 +50,7 @@ public interface ProductVariantDraft
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return prices
      */
     @Valid
     @JsonProperty("prices")
@@ -55,6 +58,7 @@ public interface ProductVariantDraft
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")
@@ -62,6 +66,7 @@ public interface ProductVariantDraft
 
     /**
      *  <p>Images for the Product Variant.</p>
+     * @return images
      */
     @Valid
     @JsonProperty("images")
@@ -69,6 +74,7 @@ public interface ProductVariantDraft
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     * @return assets
      */
     @Valid
     @JsonProperty("assets")

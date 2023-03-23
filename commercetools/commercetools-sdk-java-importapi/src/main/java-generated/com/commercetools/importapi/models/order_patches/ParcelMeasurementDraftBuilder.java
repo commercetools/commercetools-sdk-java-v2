@@ -31,6 +31,8 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public ParcelMeasurementDraftBuilder parcelId(final String parcelId) {
@@ -40,6 +42,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelMeasurementDraftBuilder measurements(
@@ -51,6 +54,8 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
 
     /**
      *
+     * @param measurements
+     * @return Builder
      */
 
     public ParcelMeasurementDraftBuilder measurements(

@@ -37,6 +37,7 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")

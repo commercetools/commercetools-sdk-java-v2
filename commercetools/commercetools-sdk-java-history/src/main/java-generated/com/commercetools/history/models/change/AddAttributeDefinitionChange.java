@@ -36,6 +36,7 @@ public interface AddAttributeDefinitionChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface AddAttributeDefinitionChange extends Change {
 
     /**
      *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface AddAttributeDefinitionChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

@@ -36,6 +36,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the Embedded Price to update.</p>
+     * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
@@ -43,6 +44,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

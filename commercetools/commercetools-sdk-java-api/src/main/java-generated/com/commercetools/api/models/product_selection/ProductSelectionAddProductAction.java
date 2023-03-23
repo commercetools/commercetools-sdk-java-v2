@@ -36,6 +36,7 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
 
     /**
      *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     * @return variantSelection
      */
     @Valid
     @JsonProperty("variantSelection")

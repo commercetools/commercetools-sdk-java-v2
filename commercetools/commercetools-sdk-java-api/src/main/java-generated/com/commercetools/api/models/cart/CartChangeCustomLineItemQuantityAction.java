@@ -35,6 +35,7 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -43,6 +44,7 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Custom Line Item is removed from the Cart.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

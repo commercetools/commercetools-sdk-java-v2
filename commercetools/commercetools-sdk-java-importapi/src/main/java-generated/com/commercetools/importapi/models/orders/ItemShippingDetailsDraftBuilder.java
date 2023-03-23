@@ -26,6 +26,8 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @param targets
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -36,6 +38,8 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @param targets
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -46,6 +50,8 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @param targets
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -59,6 +65,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -73,6 +80,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder withTargets(

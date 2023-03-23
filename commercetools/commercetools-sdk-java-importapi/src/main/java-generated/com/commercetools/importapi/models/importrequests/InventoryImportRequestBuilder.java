@@ -26,6 +26,8 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public InventoryImportRequestBuilder resources(
@@ -36,6 +38,8 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public InventoryImportRequestBuilder resources(
@@ -46,6 +50,8 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public InventoryImportRequestBuilder plusResources(
@@ -59,6 +65,7 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
+     * @return Builder
      */
 
     public InventoryImportRequestBuilder plusResources(
@@ -73,6 +80,7 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
+     * @return Builder
      */
 
     public InventoryImportRequestBuilder withResources(

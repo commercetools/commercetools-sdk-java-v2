@@ -25,6 +25,8 @@ public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public UnpublishChangeBuilder change(final String change) {

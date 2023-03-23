@@ -28,6 +28,8 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderSetReturnInfoActionBuilder items(
@@ -38,6 +40,8 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderSetReturnInfoActionBuilder items(
@@ -48,6 +52,8 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderSetReturnInfoActionBuilder plusItems(
@@ -61,6 +67,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
+     * @return Builder
      */
 
     public OrderSetReturnInfoActionBuilder plusItems(
@@ -74,6 +81,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
+     * @return Builder
      */
 
     public OrderSetReturnInfoActionBuilder withItems(

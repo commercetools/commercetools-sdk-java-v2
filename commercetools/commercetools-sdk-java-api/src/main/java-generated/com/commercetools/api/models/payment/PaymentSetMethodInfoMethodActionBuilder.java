@@ -27,6 +27,8 @@ public class PaymentSetMethodInfoMethodActionBuilder implements Builder<PaymentS
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param method
+     * @return Builder
      */
 
     public PaymentSetMethodInfoMethodActionBuilder method(@Nullable final String method) {

@@ -30,6 +30,8 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder attributeName(final String attributeName) {
@@ -39,6 +41,8 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @param values
+     * @return Builder
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values(
@@ -49,6 +53,8 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @param values
+     * @return Builder
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values(
@@ -59,6 +65,8 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @param values
+     * @return Builder
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder plusValues(
@@ -72,6 +80,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @return Builder
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder plusValues(
@@ -86,6 +95,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @return Builder
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder withValues(

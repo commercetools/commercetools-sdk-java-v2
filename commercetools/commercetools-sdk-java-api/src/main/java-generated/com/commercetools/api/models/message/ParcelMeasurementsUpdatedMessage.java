@@ -43,6 +43,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -50,6 +51,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -57,6 +59,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
 
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     * @return measurements
      */
     @Valid
     @JsonProperty("measurements")
@@ -64,6 +67,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")

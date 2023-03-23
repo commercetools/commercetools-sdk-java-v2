@@ -36,6 +36,7 @@ public interface SnsDestination extends Destination {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @return accessKey
      */
 
     @JsonProperty("accessKey")
@@ -43,6 +44,7 @@ public interface SnsDestination extends Destination {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @return accessSecret
      */
 
     @JsonProperty("accessSecret")
@@ -50,6 +52,7 @@ public interface SnsDestination extends Destination {
 
     /**
      *  <p>Amazon Resource Name (ARN) of the topic.</p>
+     * @return topicArn
      */
     @NotNull
     @JsonProperty("topicArn")
@@ -57,6 +60,7 @@ public interface SnsDestination extends Destination {
 
     /**
      *  <p>Defines the method of authentication for the SNS topic.</p>
+     * @return authenticationMode
      */
 
     @JsonProperty("authenticationMode")

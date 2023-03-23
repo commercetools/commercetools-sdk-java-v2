@@ -29,6 +29,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Expected version of the Zone on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public ZoneUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ZoneUpdateBuilder actions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ZoneUpdateBuilder actions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
@@ -56,6 +62,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ZoneUpdateBuilder plusActions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
@@ -68,6 +76,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
+     * @return Builder
      */
 
     public ZoneUpdateBuilder plusActions(
@@ -81,6 +90,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
+     * @return Builder
      */
 
     public ZoneUpdateBuilder withActions(

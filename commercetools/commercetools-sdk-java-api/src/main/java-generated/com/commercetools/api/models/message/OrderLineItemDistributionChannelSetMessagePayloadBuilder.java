@@ -32,6 +32,8 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -41,6 +43,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
 
     /**
      *  <p>Distribution Channel that was set.</p>
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder distributionChannel(
@@ -52,6 +55,8 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
 
     /**
      *  <p>Distribution Channel that was set.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder distributionChannel(

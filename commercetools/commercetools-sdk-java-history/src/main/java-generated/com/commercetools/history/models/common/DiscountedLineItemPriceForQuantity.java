@@ -33,6 +33,7 @@ public interface DiscountedLineItemPriceForQuantity {
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -40,6 +41,7 @@ public interface DiscountedLineItemPriceForQuantity {
 
     /**
      *
+     * @return discountedPrice
      */
     @NotNull
     @Valid

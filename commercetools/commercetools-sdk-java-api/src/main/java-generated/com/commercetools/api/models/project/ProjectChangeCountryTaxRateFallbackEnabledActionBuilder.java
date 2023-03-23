@@ -26,6 +26,8 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
 
     /**
      *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     * @param countryTaxRateFallbackEnabled
+     * @return Builder
      */
 
     public ProjectChangeCountryTaxRateFallbackEnabledActionBuilder countryTaxRateFallbackEnabled(

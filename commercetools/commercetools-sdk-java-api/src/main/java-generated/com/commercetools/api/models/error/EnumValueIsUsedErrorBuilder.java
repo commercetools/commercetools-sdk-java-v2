@@ -27,6 +27,8 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
 
     /**
      *  <p><code>"$enumKeysTranscript is used by some products and cannot be deleted because the $attributeName attribute is required."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public EnumValueIsUsedErrorBuilder message(final String message) {

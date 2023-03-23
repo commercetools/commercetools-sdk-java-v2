@@ -25,6 +25,8 @@ public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldRefer
 
     /**
      *  <p>Resource type the Custom Field can reference.</p>
+     * @param referenceTypeId
+     * @return Builder
      */
 
     public CustomFieldReferenceTypeBuilder referenceTypeId(

@@ -27,6 +27,7 @@ public class BusinessUnitShippingAddressAddedMessagePayloadBuilder
 
     /**
      *  <p>The address that was added to the Business Unit as shipping address.</p>
+     * @return Builder
      */
 
     public BusinessUnitShippingAddressAddedMessagePayloadBuilder address(
@@ -37,6 +38,8 @@ public class BusinessUnitShippingAddressAddedMessagePayloadBuilder
 
     /**
      *  <p>The address that was added to the Business Unit as shipping address.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitShippingAddressAddedMessagePayloadBuilder address(

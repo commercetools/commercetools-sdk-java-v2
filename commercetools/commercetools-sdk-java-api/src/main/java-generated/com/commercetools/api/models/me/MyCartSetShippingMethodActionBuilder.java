@@ -32,6 +32,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @return Builder
      */
 
     public MyCartSetShippingMethodActionBuilder shippingMethod(
@@ -45,6 +46,8 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @param shippingMethod
+     * @return Builder
      */
 
     public MyCartSetShippingMethodActionBuilder shippingMethod(
@@ -55,6 +58,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
 
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @return Builder
      */
 
     public MyCartSetShippingMethodActionBuilder externalTaxRate(
@@ -66,6 +70,8 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
 
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public MyCartSetShippingMethodActionBuilder externalTaxRate(

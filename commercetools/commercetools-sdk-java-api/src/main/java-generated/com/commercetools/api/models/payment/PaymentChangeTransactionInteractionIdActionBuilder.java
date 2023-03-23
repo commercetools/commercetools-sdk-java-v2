@@ -29,6 +29,8 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @param transactionId
+     * @return Builder
      */
 
     public PaymentChangeTransactionInteractionIdActionBuilder transactionId(final String transactionId) {
@@ -38,6 +40,8 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
 
     /**
      *  <p>New value to set.</p>
+     * @param interactionId
+     * @return Builder
      */
 
     public PaymentChangeTransactionInteractionIdActionBuilder interactionId(final String interactionId) {

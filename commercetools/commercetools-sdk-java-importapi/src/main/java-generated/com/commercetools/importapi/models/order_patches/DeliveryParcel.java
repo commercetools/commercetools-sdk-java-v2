@@ -35,6 +35,7 @@ public interface DeliveryParcel {
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -42,6 +43,7 @@ public interface DeliveryParcel {
 
     /**
      *
+     * @return measurements
      */
     @Valid
     @JsonProperty("measurements")
@@ -49,6 +51,7 @@ public interface DeliveryParcel {
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")
@@ -56,6 +59,7 @@ public interface DeliveryParcel {
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")

@@ -26,6 +26,7 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
 
     /**
      *  <p>New parent unit of the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitChangeParentUnitActionBuilder parentUnit(
@@ -38,6 +39,8 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
 
     /**
      *  <p>New parent unit of the Business Unit.</p>
+     * @param parentUnit
+     * @return Builder
      */
 
     public BusinessUnitChangeParentUnitActionBuilder parentUnit(

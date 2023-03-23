@@ -33,6 +33,8 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
+     * @param message
+     * @return Builder
      */
 
     public PriceChangedErrorBuilder message(final String message) {
@@ -63,6 +65,8 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public PriceChangedErrorBuilder lineItems(final String... lineItems) {
@@ -72,6 +76,8 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public PriceChangedErrorBuilder lineItems(final java.util.List<String> lineItems) {
@@ -81,6 +87,8 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public PriceChangedErrorBuilder plusLineItems(final String... lineItems) {
@@ -93,6 +101,8 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
+     * @param shipping
+     * @return Builder
      */
 
     public PriceChangedErrorBuilder shipping(final Boolean shipping) {

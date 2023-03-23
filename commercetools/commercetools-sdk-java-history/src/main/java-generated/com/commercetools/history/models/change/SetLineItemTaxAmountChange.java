@@ -42,6 +42,7 @@ public interface SetLineItemTaxAmountChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -49,6 +50,7 @@ public interface SetLineItemTaxAmountChange extends Change {
 
     /**
      *  <p>Update action for <code>setLineItemTaxAmount</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -56,6 +58,7 @@ public interface SetLineItemTaxAmountChange extends Change {
 
     /**
      *
+     * @return lineItem
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface SetLineItemTaxAmountChange extends Change {
 
     /**
      *
+     * @return variant
      */
     @NotNull
     @JsonProperty("variant")
@@ -71,6 +75,7 @@ public interface SetLineItemTaxAmountChange extends Change {
 
     /**
      *
+     * @return taxMode
      */
     @NotNull
     @JsonProperty("taxMode")
@@ -78,6 +83,7 @@ public interface SetLineItemTaxAmountChange extends Change {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -86,6 +92,7 @@ public interface SetLineItemTaxAmountChange extends Change {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return previousValue
      */
     @NotNull
     @Valid

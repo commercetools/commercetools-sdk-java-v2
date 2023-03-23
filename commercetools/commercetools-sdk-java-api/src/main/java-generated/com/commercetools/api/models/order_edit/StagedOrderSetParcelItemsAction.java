@@ -37,6 +37,7 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -44,6 +45,7 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid

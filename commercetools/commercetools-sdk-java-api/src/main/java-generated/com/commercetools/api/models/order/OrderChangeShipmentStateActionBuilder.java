@@ -27,6 +27,8 @@ public class OrderChangeShipmentStateActionBuilder implements Builder<OrderChang
 
     /**
      *
+     * @param shipmentState
+     * @return Builder
      */
 
     public OrderChangeShipmentStateActionBuilder shipmentState(

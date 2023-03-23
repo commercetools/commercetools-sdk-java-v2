@@ -39,6 +39,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -46,6 +47,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
 
     /**
      *  <p>Update action for <code>setTextLineItemCustomType</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -53,6 +55,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
 
     /**
      *
+     * @return textLineItem
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -69,6 +73,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

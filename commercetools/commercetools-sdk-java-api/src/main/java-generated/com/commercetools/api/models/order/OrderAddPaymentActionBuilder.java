@@ -26,6 +26,7 @@ public class OrderAddPaymentActionBuilder implements Builder<OrderAddPaymentActi
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @return Builder
      */
 
     public OrderAddPaymentActionBuilder payment(
@@ -37,6 +38,8 @@ public class OrderAddPaymentActionBuilder implements Builder<OrderAddPaymentActi
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @param payment
+     * @return Builder
      */
 
     public OrderAddPaymentActionBuilder payment(

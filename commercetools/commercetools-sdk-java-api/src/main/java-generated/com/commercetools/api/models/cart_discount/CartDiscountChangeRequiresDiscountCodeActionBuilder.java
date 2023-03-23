@@ -26,6 +26,8 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
+     * @param requiresDiscountCode
+     * @return Builder
      */
 
     public CartDiscountChangeRequiresDiscountCodeActionBuilder requiresDiscountCode(

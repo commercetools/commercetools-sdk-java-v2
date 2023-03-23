@@ -58,6 +58,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Unique identifier of the ProductSelection.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductSelectionBuilder id(final String id) {
@@ -67,6 +69,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Current version of the ProductSelection.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductSelectionBuilder version(final Long version) {
@@ -76,6 +80,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProductSelectionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -85,6 +91,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ProductSelectionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -94,6 +102,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductSelectionBuilder lastModifiedBy(
@@ -104,6 +113,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ProductSelectionBuilder lastModifiedBy(
@@ -114,6 +125,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductSelectionBuilder createdBy(
@@ -124,6 +136,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ProductSelectionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -133,6 +147,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>User-defined unique identifier of the ProductSelection.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductSelectionBuilder key(@Nullable final String key) {
@@ -142,6 +158,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Name of the ProductSelection.</p>
+     * @return Builder
      */
 
     public ProductSelectionBuilder name(
@@ -152,6 +169,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Name of the ProductSelection.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductSelectionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -161,6 +180,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
+     * @param productCount
+     * @return Builder
      */
 
     public ProductSelectionBuilder productCount(final Integer productCount) {
@@ -170,6 +191,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @param type
+     * @return Builder
      */
 
     public ProductSelectionBuilder type(
@@ -180,6 +203,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Custom Fields of the ProductSelection.</p>
+     * @return Builder
      */
 
     public ProductSelectionBuilder custom(
@@ -190,6 +214,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Custom Fields of the ProductSelection.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ProductSelectionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

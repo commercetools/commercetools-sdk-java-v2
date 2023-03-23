@@ -30,6 +30,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      *  <p>Product that was added to the Product Selection.</p>
+     * @return Builder
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder product(
@@ -40,6 +41,8 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      *  <p>Product that was added to the Product Selection.</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder product(
@@ -50,6 +53,8 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
+     * @param variantSelection
+     * @return Builder
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(
@@ -60,6 +65,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
+     * @return Builder
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(

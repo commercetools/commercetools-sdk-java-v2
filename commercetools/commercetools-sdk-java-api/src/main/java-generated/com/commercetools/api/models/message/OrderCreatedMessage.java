@@ -42,6 +42,7 @@ public interface OrderCreatedMessage extends OrderMessage {
 
     /**
      *  <p>Order that was created.</p>
+     * @return order
      */
     @NotNull
     @Valid

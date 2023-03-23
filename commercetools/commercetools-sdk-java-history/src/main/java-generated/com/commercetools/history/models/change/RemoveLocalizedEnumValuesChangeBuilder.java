@@ -32,6 +32,8 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     /**
      *  <p>Update action for <code>removeEnumValues</code> on product types</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder attributeName(final String attributeName) {
@@ -50,6 +54,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder previousValue(
@@ -61,6 +66,8 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder previousValue(

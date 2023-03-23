@@ -26,6 +26,8 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
+     * @param values
+     * @return Builder
      */
 
     public CustomFieldLocalizedEnumTypeBuilder values(
@@ -36,6 +38,8 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
+     * @param values
+     * @return Builder
      */
 
     public CustomFieldLocalizedEnumTypeBuilder values(
@@ -46,6 +50,8 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
+     * @param values
+     * @return Builder
      */
 
     public CustomFieldLocalizedEnumTypeBuilder plusValues(
@@ -59,6 +65,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
+     * @return Builder
      */
 
     public CustomFieldLocalizedEnumTypeBuilder plusValues(
@@ -73,6 +80,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
+     * @return Builder
      */
 
     public CustomFieldLocalizedEnumTypeBuilder withValues(

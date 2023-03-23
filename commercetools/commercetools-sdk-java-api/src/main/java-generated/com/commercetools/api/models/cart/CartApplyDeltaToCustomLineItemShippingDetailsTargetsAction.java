@@ -35,6 +35,7 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -42,6 +43,7 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @return targetsDelta
      */
     @NotNull
     @Valid

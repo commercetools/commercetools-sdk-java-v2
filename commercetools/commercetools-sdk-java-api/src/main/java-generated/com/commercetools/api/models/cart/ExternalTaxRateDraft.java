@@ -34,6 +34,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *  <p>Name of the Tax Rate.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -45,6 +46,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
      *   <li>If no <code>subRates</code> are specified, a value must be defined.</li>
      *   <li>If <code>subRates</code> are specified, this can be omitted or its value must be the sum of all <code>subRates</code> amounts.</li>
      *  </ul>
+     * @return amount
      */
 
     @JsonProperty("amount")
@@ -55,6 +57,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
      *   <li>If set to <code>false</code>, the related price is considered the net price and the provided <code>amount</code> is applied to calculate the gross price.</li>
      *   <li>If set to <code>true</code>, the related price is considered the gross price, and the provided <code>amount</code> is applied to calculate the net price.</li>
      *  </ul>
+     * @return includedInPrice
      */
 
     @JsonProperty("includedInPrice")
@@ -62,6 +65,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *  <p>Country for which the tax applies.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -69,6 +73,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *  <p>State within the specified country.</p>
+     * @return state
      */
 
     @JsonProperty("state")
@@ -76,6 +81,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @return subRates
      */
     @Valid
     @JsonProperty("subRates")

@@ -29,6 +29,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder message(final String message) {
@@ -38,6 +40,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
+     * @param attributes
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder attributes(
@@ -48,6 +52,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
+     * @param attributes
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder attributes(
@@ -58,6 +64,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
+     * @param attributes
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
@@ -71,6 +79,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
@@ -85,6 +94,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder withAttributes(

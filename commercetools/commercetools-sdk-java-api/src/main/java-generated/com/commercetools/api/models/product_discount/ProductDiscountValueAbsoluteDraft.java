@@ -36,6 +36,7 @@ public interface ProductDiscountValueAbsoluteDraft
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @return money
      */
     @NotNull
     @Valid

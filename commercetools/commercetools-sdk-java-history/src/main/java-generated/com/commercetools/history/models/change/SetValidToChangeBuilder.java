@@ -31,6 +31,8 @@ public class SetValidToChangeBuilder implements Builder<SetValidToChange> {
 
     /**
      *  <p>Shape of the action for <code>setValidTo</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetValidToChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetValidToChangeBuilder implements Builder<SetValidToChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetValidToChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetValidToChangeBuilder implements Builder<SetValidToChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetValidToChangeBuilder nextValue(final String nextValue) {

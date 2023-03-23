@@ -33,6 +33,7 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
 
     /**
      *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     * @return status
      */
     @NotNull
     @JsonProperty("status")

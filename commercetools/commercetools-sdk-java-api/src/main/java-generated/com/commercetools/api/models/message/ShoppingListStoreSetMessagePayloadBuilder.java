@@ -26,6 +26,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
 
     /**
      *  <p>Reference to a Store by its key.</p>
+     * @return Builder
      */
 
     public ShoppingListStoreSetMessagePayloadBuilder store(
@@ -36,6 +37,8 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
 
     /**
      *  <p>Reference to a Store by its key.</p>
+     * @param store
+     * @return Builder
      */
 
     public ShoppingListStoreSetMessagePayloadBuilder store(

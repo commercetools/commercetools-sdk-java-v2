@@ -35,6 +35,7 @@ public interface CustomerAddStoreAction extends CustomerUpdateAction {
 
     /**
      *  <p>ResourceIdentifier of the Store to add.</p>
+     * @return store
      */
     @NotNull
     @Valid

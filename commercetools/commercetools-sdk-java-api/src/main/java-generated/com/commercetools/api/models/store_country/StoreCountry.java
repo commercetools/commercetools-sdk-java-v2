@@ -31,6 +31,7 @@ public interface StoreCountry {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return code
      */
     @NotNull
     @JsonProperty("code")

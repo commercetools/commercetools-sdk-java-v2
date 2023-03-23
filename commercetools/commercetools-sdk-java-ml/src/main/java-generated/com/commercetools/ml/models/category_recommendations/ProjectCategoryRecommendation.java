@@ -35,6 +35,7 @@ public interface ProjectCategoryRecommendation {
 
     /**
      *  <p>A category that is recommended for a product.</p>
+     * @return category
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface ProjectCategoryRecommendation {
 
     /**
      *  <p>Probability score for the category recommendation.</p>
+     * @return confidence
      */
     @NotNull
     @JsonProperty("confidence")
@@ -50,6 +52,7 @@ public interface ProjectCategoryRecommendation {
 
     /**
      *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
+     * @return path
      */
     @NotNull
     @JsonProperty("path")

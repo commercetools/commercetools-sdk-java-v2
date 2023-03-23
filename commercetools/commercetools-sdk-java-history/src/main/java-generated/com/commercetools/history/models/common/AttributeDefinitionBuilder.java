@@ -47,6 +47,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder type(
@@ -57,6 +58,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder type(final com.commercetools.history.models.common.AttributeType type) {
@@ -66,6 +69,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     * @param name
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder name(final String name) {
@@ -75,6 +80,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder label(
@@ -85,6 +91,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param label
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder label(final com.commercetools.history.models.common.LocalizedString label) {
@@ -94,6 +102,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Whether the attribute is required to have a value.</p>
+     * @param isRequired
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {
@@ -103,6 +113,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param attributeConstraint
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder attributeConstraint(
@@ -113,6 +125,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder inputTip(
@@ -123,6 +136,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param inputTip
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder inputTip(final com.commercetools.history.models.common.LocalizedString inputTip) {
@@ -132,6 +147,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param inputHint
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder inputHint(final com.commercetools.history.models.common.TextInputHint inputHint) {
@@ -141,6 +158,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     * @param isSearchable
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder isSearchable(final Boolean isSearchable) {

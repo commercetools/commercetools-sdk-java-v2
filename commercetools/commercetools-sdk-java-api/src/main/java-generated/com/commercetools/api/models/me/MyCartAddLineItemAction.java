@@ -40,6 +40,7 @@ public interface MyCartAddLineItemAction
     /**
      *  <p><code>id</code> of the Product.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @return productId
      */
 
     @JsonProperty("productId")
@@ -49,6 +50,7 @@ public interface MyCartAddLineItemAction
      *  <p><code>id</code> of the ProductVariant in the Product.</p>
      *  <p>If not given, the Master Variant is used.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -57,6 +59,7 @@ public interface MyCartAddLineItemAction
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -64,6 +67,7 @@ public interface MyCartAddLineItemAction
 
     /**
      *  <p>Number of Line Items to add to the Cart.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -72,6 +76,7 @@ public interface MyCartAddLineItemAction
     /**
      *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
+     * @return addedAt
      */
 
     @JsonProperty("addedAt")
@@ -79,6 +84,7 @@ public interface MyCartAddLineItemAction
 
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")
@@ -86,6 +92,7 @@ public interface MyCartAddLineItemAction
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -93,6 +100,7 @@ public interface MyCartAddLineItemAction
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")
@@ -100,6 +108,7 @@ public interface MyCartAddLineItemAction
 
     /**
      *  <p>Custom Fields for the Line Item.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

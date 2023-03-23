@@ -31,6 +31,8 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public StagedOrderSetLineItemPriceActionBuilder lineItemId(final String lineItemId) {
@@ -41,6 +43,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return Builder
      */
 
     public StagedOrderSetLineItemPriceActionBuilder externalPrice(
@@ -52,6 +55,8 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param externalPrice
+     * @return Builder
      */
 
     public StagedOrderSetLineItemPriceActionBuilder externalPrice(

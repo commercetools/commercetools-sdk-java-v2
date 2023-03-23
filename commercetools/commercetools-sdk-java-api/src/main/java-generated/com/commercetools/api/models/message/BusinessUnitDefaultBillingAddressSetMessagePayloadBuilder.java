@@ -29,6 +29,7 @@ public class BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder
 
     /**
      *  <p>The address that was set as the default billing address.</p>
+     * @return Builder
      */
 
     public BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder address(
@@ -39,6 +40,8 @@ public class BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder
 
     /**
      *  <p>The address that was set as the default billing address.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder address(

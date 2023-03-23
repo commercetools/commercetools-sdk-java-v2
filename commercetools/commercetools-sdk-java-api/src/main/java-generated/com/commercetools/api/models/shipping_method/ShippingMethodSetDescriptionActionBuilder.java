@@ -28,6 +28,8 @@ public class ShippingMethodSetDescriptionActionBuilder implements Builder<Shippi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description
+     * @return Builder
      */
 
     public ShippingMethodSetDescriptionActionBuilder description(@Nullable final String description) {

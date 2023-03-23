@@ -37,6 +37,7 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -44,6 +45,7 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
 
     /**
      *  <p><code>"An attribute definition with name $attributeName already exists on product type $productTypeName."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -51,6 +53,7 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
+     * @return conflictingProductTypeId
      */
     @NotNull
     @JsonProperty("conflictingProductTypeId")
@@ -58,6 +61,7 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
 
     /**
      *  <p>Name of the Product Type containing the conflicting name.</p>
+     * @return conflictingProductTypeName
      */
     @NotNull
     @JsonProperty("conflictingProductTypeName")
@@ -65,6 +69,7 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
+     * @return conflictingAttributeName
      */
     @NotNull
     @JsonProperty("conflictingAttributeName")

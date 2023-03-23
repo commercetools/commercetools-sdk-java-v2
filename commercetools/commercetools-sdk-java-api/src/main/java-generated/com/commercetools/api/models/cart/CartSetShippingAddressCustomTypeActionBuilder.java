@@ -31,6 +31,7 @@ public class CartSetShippingAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     * @return Builder
      */
 
     public CartSetShippingAddressCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class CartSetShippingAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public CartSetShippingAddressCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class CartSetShippingAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     * @return Builder
      */
 
     public CartSetShippingAddressCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class CartSetShippingAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CartSetShippingAddressCustomTypeActionBuilder fields(

@@ -29,6 +29,8 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeAddLocalizedEnumValueActionBuilder attributeName(final String attributeName) {
@@ -38,6 +40,7 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
 
     /**
      *  <p>Value to append to the array.</p>
+     * @return Builder
      */
 
     public ProductTypeAddLocalizedEnumValueActionBuilder value(
@@ -49,6 +52,8 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param value
+     * @return Builder
      */
 
     public ProductTypeAddLocalizedEnumValueActionBuilder value(

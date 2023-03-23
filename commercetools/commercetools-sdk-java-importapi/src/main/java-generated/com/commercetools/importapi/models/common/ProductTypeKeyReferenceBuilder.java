@@ -25,6 +25,8 @@ public class ProductTypeKeyReferenceBuilder implements Builder<ProductTypeKeyRef
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public ProductTypeKeyReferenceBuilder key(final String key) {

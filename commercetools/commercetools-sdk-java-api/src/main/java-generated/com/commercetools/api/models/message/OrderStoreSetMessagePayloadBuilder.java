@@ -28,6 +28,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
 
     /**
      *  <p>Store that was set.</p>
+     * @return Builder
      */
 
     public OrderStoreSetMessagePayloadBuilder store(
@@ -38,6 +39,8 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
 
     /**
      *  <p>Store that was set.</p>
+     * @param store
+     * @return Builder
      */
 
     public OrderStoreSetMessagePayloadBuilder store(

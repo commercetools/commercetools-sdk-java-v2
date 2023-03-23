@@ -70,6 +70,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder customer(
@@ -81,6 +82,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
+     * @param customer
+     * @return Builder
      */
 
     public PaymentDraftBuilder customer(
@@ -91,6 +94,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Anonymous session associated with the Payment.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public PaymentDraftBuilder anonymousId(@Nullable final String anonymousId) {
@@ -100,6 +105,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @param externalId
+     * @return Builder
      */
 
     public PaymentDraftBuilder externalId(@Nullable final String externalId) {
@@ -109,6 +116,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
+     * @param interfaceId
+     * @return Builder
      */
 
     public PaymentDraftBuilder interfaceId(@Nullable final String interfaceId) {
@@ -118,6 +127,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder amountPlanned(
@@ -128,6 +138,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param amountPlanned
+     * @return Builder
      */
 
     public PaymentDraftBuilder amountPlanned(final com.commercetools.api.models.common.Money amountPlanned) {
@@ -137,6 +149,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder amountAuthorized(
@@ -147,6 +160,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param amountAuthorized
+     * @return Builder
      */
 
     public PaymentDraftBuilder amountAuthorized(
@@ -157,6 +172,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
+     * @param authorizedUntil
+     * @return Builder
      */
 
     public PaymentDraftBuilder authorizedUntil(@Nullable final String authorizedUntil) {
@@ -166,6 +183,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder amountPaid(
@@ -176,6 +194,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param amountPaid
+     * @return Builder
      */
 
     public PaymentDraftBuilder amountPaid(@Nullable final com.commercetools.api.models.common.Money amountPaid) {
@@ -185,6 +205,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder amountRefunded(
@@ -195,6 +216,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param amountRefunded
+     * @return Builder
      */
 
     public PaymentDraftBuilder amountRefunded(
@@ -205,6 +228,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder paymentMethodInfo(
@@ -216,6 +240,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param paymentMethodInfo
+     * @return Builder
      */
 
     public PaymentDraftBuilder paymentMethodInfo(
@@ -226,6 +252,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Current status of the Payment.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder paymentStatus(
@@ -236,6 +263,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Current status of the Payment.</p>
+     * @param paymentStatus
+     * @return Builder
      */
 
     public PaymentDraftBuilder paymentStatus(
@@ -246,6 +275,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions
+     * @return Builder
      */
 
     public PaymentDraftBuilder transactions(
@@ -256,6 +287,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions
+     * @return Builder
      */
 
     public PaymentDraftBuilder transactions(
@@ -266,6 +299,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions
+     * @return Builder
      */
 
     public PaymentDraftBuilder plusTransactions(
@@ -279,6 +314,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder plusTransactions(
@@ -292,6 +328,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder withTransactions(
@@ -303,6 +340,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param interfaceInteractions
+     * @return Builder
      */
 
     public PaymentDraftBuilder interfaceInteractions(
@@ -313,6 +352,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param interfaceInteractions
+     * @return Builder
      */
 
     public PaymentDraftBuilder interfaceInteractions(
@@ -323,6 +364,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param interfaceInteractions
+     * @return Builder
      */
 
     public PaymentDraftBuilder plusInterfaceInteractions(
@@ -336,6 +379,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder plusInterfaceInteractions(
@@ -350,6 +394,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder withInterfaceInteractions(
@@ -362,6 +407,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
+     * @return Builder
      */
 
     public PaymentDraftBuilder custom(
@@ -372,6 +418,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
+     * @param custom
+     * @return Builder
      */
 
     public PaymentDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -381,6 +429,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Payment.</p>
+     * @param key
+     * @return Builder
      */
 
     public PaymentDraftBuilder key(@Nullable final String key) {

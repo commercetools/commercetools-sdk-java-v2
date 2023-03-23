@@ -32,6 +32,8 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public StagedQuoteLabelBuilder key(final String key) {
@@ -41,6 +43,7 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
+     * @return Builder
      */
 
     public StagedQuoteLabelBuilder customer(
@@ -51,6 +54,8 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
+     * @param customer
+     * @return Builder
      */
 
     public StagedQuoteLabelBuilder customer(final com.commercetools.history.models.common.Reference customer) {
@@ -60,6 +65,7 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
+     * @return Builder
      */
 
     public StagedQuoteLabelBuilder quoteRequest(
@@ -70,6 +76,8 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
+     * @param quoteRequest
+     * @return Builder
      */
 
     public StagedQuoteLabelBuilder quoteRequest(final com.commercetools.history.models.common.Reference quoteRequest) {

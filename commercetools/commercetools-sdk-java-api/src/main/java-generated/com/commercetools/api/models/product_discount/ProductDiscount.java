@@ -50,6 +50,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Unique identifier of the ProductDiscount.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -57,6 +58,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Current version of the ProductDiscount.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -64,6 +66,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -71,6 +74,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -78,6 +82,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -85,6 +90,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -92,6 +98,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Name of the ProductDiscount.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -100,6 +107,7 @@ public interface ProductDiscount
 
     /**
      *  <p>User-defined unique identifier of the ProductDiscount.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -107,6 +115,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Description of the ProductDiscount.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -114,6 +123,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Type of Discount and its corresponding value.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -122,6 +132,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Valid ProductDiscount predicate.</p>
+     * @return predicate
      */
     @NotNull
     @JsonProperty("predicate")
@@ -129,6 +140,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>
+     * @return sortOrder
      */
     @NotNull
     @JsonProperty("sortOrder")
@@ -136,6 +148,7 @@ public interface ProductDiscount
 
     /**
      *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+     * @return isActive
      */
     @NotNull
     @JsonProperty("isActive")
@@ -143,6 +156,7 @@ public interface ProductDiscount
 
     /**
      *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+     * @return references
      */
     @NotNull
     @Valid
@@ -151,6 +165,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -158,6 +173,7 @@ public interface ProductDiscount
 
     /**
      *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")

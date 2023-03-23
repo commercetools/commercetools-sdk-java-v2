@@ -33,6 +33,7 @@ public interface DiscountedLineItemPriceForQuantity {
 
     /**
      *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -40,6 +41,7 @@ public interface DiscountedLineItemPriceForQuantity {
 
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
+     * @return discountedPrice
      */
     @NotNull
     @Valid

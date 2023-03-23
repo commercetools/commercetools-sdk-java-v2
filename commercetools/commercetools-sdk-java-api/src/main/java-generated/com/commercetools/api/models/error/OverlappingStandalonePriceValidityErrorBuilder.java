@@ -61,6 +61,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p><code>Two standalone prices have overlapping validity periods."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder message(final String message) {
@@ -91,6 +93,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Reference to the conflicting Standalone Price.</p>
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
@@ -103,6 +106,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Reference to the conflicting Standalone Price.</p>
+     * @param conflictingStandalonePrice
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
@@ -113,6 +118,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
+     * @param sku
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder sku(final String sku) {
@@ -122,6 +129,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Currency code of the country.</p>
+     * @param currency
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder currency(final String currency) {
@@ -131,6 +140,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @param country
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder country(@Nullable final String country) {
@@ -140,6 +151,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
@@ -152,6 +164,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
@@ -162,6 +176,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Channel for which the Standalone Price is valid.</p>
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
@@ -173,6 +188,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Channel for which the Standalone Price is valid.</p>
+     * @param channel
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
@@ -183,6 +200,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Date and time (UTC) from which the Standalone Price is valid.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -192,6 +211,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Date and time (UTC) until which the Standalone Price is valid.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder validUntil(
@@ -202,6 +223,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Date and time (UTC) from which the conflicting Standalone Price is valid.</p>
+     * @param conflictingValidFrom
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidFrom(
@@ -212,6 +235,8 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Date and time (UTC) until which the conflicting Standalone Price is valid.</p>
+     * @param conflictingValidUntil
+     * @return Builder
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidUntil(

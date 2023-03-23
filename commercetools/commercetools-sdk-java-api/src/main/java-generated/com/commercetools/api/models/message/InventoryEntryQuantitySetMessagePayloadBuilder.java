@@ -41,6 +41,8 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
+     * @param oldQuantityOnStock
+     * @return Builder
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder oldQuantityOnStock(final Long oldQuantityOnStock) {
@@ -50,6 +52,8 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
+     * @param newQuantityOnStock
+     * @return Builder
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder newQuantityOnStock(final Long newQuantityOnStock) {
@@ -59,6 +63,8 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
+     * @param oldAvailableQuantity
+     * @return Builder
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder oldAvailableQuantity(final Long oldAvailableQuantity) {
@@ -68,6 +74,8 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
+     * @param newAvailableQuantity
+     * @return Builder
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder newAvailableQuantity(final Long newAvailableQuantity) {
@@ -77,6 +85,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     * @return Builder
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(
@@ -87,6 +96,8 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(

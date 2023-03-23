@@ -33,6 +33,8 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @param transactionId
+     * @return Builder
      */
 
     public PaymentSetTransactionCustomFieldActionBuilder transactionId(final String transactionId) {
@@ -42,6 +44,8 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public PaymentSetTransactionCustomFieldActionBuilder name(final String name) {
@@ -51,6 +55,8 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public PaymentSetTransactionCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

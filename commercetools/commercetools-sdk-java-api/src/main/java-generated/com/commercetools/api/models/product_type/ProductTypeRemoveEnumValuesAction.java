@@ -35,6 +35,7 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -42,6 +43,7 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
 
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     * @return keys
      */
     @NotNull
     @JsonProperty("keys")

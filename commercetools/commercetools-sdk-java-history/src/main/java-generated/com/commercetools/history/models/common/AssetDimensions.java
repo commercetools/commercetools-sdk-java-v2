@@ -32,6 +32,7 @@ public interface AssetDimensions {
 
     /**
      *
+     * @return w
      */
     @NotNull
     @JsonProperty("w")
@@ -39,6 +40,7 @@ public interface AssetDimensions {
 
     /**
      *
+     * @return h
      */
     @NotNull
     @JsonProperty("h")

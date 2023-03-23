@@ -34,6 +34,7 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -41,6 +42,7 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
 
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     * @return keys
      */
     @NotNull
     @JsonProperty("keys")

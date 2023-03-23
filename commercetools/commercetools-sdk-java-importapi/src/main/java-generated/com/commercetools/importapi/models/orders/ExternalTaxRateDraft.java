@@ -34,6 +34,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -41,6 +42,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *
+     * @return amount
      */
 
     @JsonProperty("amount")
@@ -48,6 +50,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -55,6 +58,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *
+     * @return state
      */
 
     @JsonProperty("state")
@@ -62,6 +66,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *
+     * @return subRates
      */
     @Valid
     @JsonProperty("subRates")
@@ -69,6 +74,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     /**
      *
+     * @return includedInPrice
      */
 
     @JsonProperty("includedInPrice")

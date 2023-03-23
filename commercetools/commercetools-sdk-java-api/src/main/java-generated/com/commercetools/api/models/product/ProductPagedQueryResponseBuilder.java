@@ -40,6 +40,8 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public ProductPagedQueryResponseBuilder limit(final Long limit) {
@@ -49,6 +51,8 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public ProductPagedQueryResponseBuilder offset(final Long offset) {
@@ -58,6 +62,8 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @param count
+     * @return Builder
      */
 
     public ProductPagedQueryResponseBuilder count(final Long count) {
@@ -67,6 +73,8 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total
+     * @return Builder
      */
 
     public ProductPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -76,6 +84,8 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     /**
      *  <p>Products matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ProductPagedQueryResponseBuilder results(final com.commercetools.api.models.product.Product... results) {
@@ -85,6 +95,8 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     /**
      *  <p>Products matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ProductPagedQueryResponseBuilder results(
@@ -95,6 +107,8 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     /**
      *  <p>Products matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ProductPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.product.Product... results) {
@@ -107,6 +121,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     /**
      *  <p>Products matching the query.</p>
+     * @return Builder
      */
 
     public ProductPagedQueryResponseBuilder plusResults(
@@ -120,6 +135,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     /**
      *  <p>Products matching the query.</p>
+     * @return Builder
      */
 
     public ProductPagedQueryResponseBuilder withResults(

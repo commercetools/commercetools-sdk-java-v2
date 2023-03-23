@@ -53,6 +53,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -60,6 +61,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Current version of the Business Unit.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -67,6 +69,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Date and time (UTC) the Business Unit was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -74,6 +77,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Date and time (UTC) the Business Unit was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -81,6 +85,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -88,6 +93,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -95,6 +101,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>User-defined unique identifier of the Business Unit.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -102,6 +109,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     * @return status
      */
     @NotNull
     @JsonProperty("status")
@@ -111,6 +119,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return stores
      */
     @Valid
     @JsonProperty("stores")
@@ -118,6 +127,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent.</p>
+     * @return storeMode
      */
     @NotNull
     @JsonProperty("storeMode")
@@ -125,6 +135,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Type of the Business Unit indicating its position in a hierarchy.</p>
+     * @return unitType
      */
     @NotNull
     @JsonProperty("unitType")
@@ -132,6 +143,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Name of the Business Unit.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -139,6 +151,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Email address of the Business Unit.</p>
+     * @return contactEmail
      */
 
     @JsonProperty("contactEmail")
@@ -146,6 +159,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -153,6 +167,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return addresses
      */
     @NotNull
     @Valid
@@ -161,6 +176,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @return shippingAddressIds
      */
 
     @JsonProperty("shippingAddressIds")
@@ -168,6 +184,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Unique identifier of the address used as the default shipping address.</p>
+     * @return defaultShippingAddressId
      */
 
     @JsonProperty("defaultShippingAddressId")
@@ -175,6 +192,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @return billingAddressIds
      */
 
     @JsonProperty("billingAddressIds")
@@ -182,6 +200,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Unique identifier of the address used as the default billing address.</p>
+     * @return defaultBillingAddressId
      */
 
     @JsonProperty("defaultBillingAddressId")
@@ -189,6 +208,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @return associates
      */
     @NotNull
     @Valid
@@ -197,6 +217,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Parent unit of the Business Unit. Only present when the <code>unitType</code> is <code>Division</code>.</p>
+     * @return parentUnit
      */
     @Valid
     @JsonProperty("parentUnit")
@@ -204,6 +225,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
+     * @return topLevelUnit
      */
     @NotNull
     @Valid

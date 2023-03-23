@@ -28,6 +28,7 @@ public interface SimilarityMeasures {
 
     /**
      *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
+     * @return name
      */
 
     @JsonProperty("name")
@@ -35,6 +36,7 @@ public interface SimilarityMeasures {
 
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+     * @return description
      */
 
     @JsonProperty("description")
@@ -42,6 +44,7 @@ public interface SimilarityMeasures {
 
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+     * @return attribute
      */
 
     @JsonProperty("attribute")
@@ -49,6 +52,7 @@ public interface SimilarityMeasures {
 
     /**
      *  <p>Importance of the number of product variants in overall similarity.</p>
+     * @return variantCount
      */
 
     @JsonProperty("variantCount")
@@ -56,6 +60,7 @@ public interface SimilarityMeasures {
 
     /**
      *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
+     * @return price
      */
 
     @JsonProperty("price")

@@ -42,6 +42,7 @@ public interface InventoryEntryCreatedMessage extends Message {
 
     /**
      *  <p>InventoryEntry that was created.</p>
+     * @return inventoryEntry
      */
     @NotNull
     @Valid

@@ -25,6 +25,8 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param currencies
+     * @return Builder
      */
 
     public ProjectChangeCurrenciesActionBuilder currencies(final String... currencies) {
@@ -34,6 +36,8 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param currencies
+     * @return Builder
      */
 
     public ProjectChangeCurrenciesActionBuilder currencies(final java.util.List<String> currencies) {
@@ -43,6 +47,8 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param currencies
+     * @return Builder
      */
 
     public ProjectChangeCurrenciesActionBuilder plusCurrencies(final String... currencies) {

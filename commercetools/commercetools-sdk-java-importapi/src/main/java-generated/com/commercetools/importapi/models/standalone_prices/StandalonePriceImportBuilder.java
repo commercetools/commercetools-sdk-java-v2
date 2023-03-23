@@ -58,6 +58,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>User-defined unique identifier for the Standalone Price.</p>
+     * @param key
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder key(final String key) {
@@ -67,6 +69,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
+     * @param sku
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder sku(final String sku) {
@@ -76,6 +80,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     * @param value
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -85,6 +91,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder value(
@@ -95,6 +102,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the country for which this Price is valid.</p>
+     * @param country
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder country(@Nullable final String country) {
@@ -104,6 +113,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder customerGroup(
@@ -116,6 +126,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder customerGroup(
@@ -126,6 +138,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder channel(
@@ -136,6 +149,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     * @param channel
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder channel(
@@ -146,6 +161,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the date from which the Price is valid.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -155,6 +172,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the date until the Price is valid.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -164,6 +183,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder tiers(
@@ -174,6 +195,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder tiers(
@@ -184,6 +207,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder plusTiers(
@@ -197,6 +222,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder plusTiers(
@@ -210,6 +236,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder withTiers(
@@ -221,6 +248,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder discounted(
@@ -231,6 +259,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder discounted(
@@ -241,6 +271,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder custom(
@@ -251,6 +282,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param custom
+     * @return Builder
      */
 
     public StandalonePriceImportBuilder custom(

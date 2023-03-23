@@ -25,6 +25,8 @@ public class CartDiscountChangeStackingModeActionBuilder implements Builder<Cart
 
     /**
      *  <p>New value to set.</p>
+     * @param stackingMode
+     * @return Builder
      */
 
     public CartDiscountChangeStackingModeActionBuilder stackingMode(

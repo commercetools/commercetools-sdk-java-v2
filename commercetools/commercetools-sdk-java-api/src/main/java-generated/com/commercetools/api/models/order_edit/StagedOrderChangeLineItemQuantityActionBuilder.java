@@ -38,6 +38,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
@@ -47,6 +49,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
@@ -57,6 +61,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return Builder
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
@@ -68,6 +73,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param externalPrice
+     * @return Builder
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
@@ -78,6 +85,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(
@@ -90,6 +98,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     /**
      *
+     * @param externalTotalPrice
+     * @return Builder
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(

@@ -100,6 +100,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     /**
      *  <p>Unique identifier of the Address.</p>
      *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
+     * @param id
+     * @return Builder
      */
 
     public BaseAddressBuilder id(@Nullable final String id) {
@@ -109,6 +111,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
+     * @param key
+     * @return Builder
      */
 
     public BaseAddressBuilder key(@Nullable final String key) {
@@ -118,6 +122,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Name of the country.</p>
+     * @param country
+     * @return Builder
      */
 
     public BaseAddressBuilder country(final String country) {
@@ -127,6 +133,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Title of the contact, for example 'Dr.'</p>
+     * @param title
+     * @return Builder
      */
 
     public BaseAddressBuilder title(@Nullable final String title) {
@@ -136,6 +144,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     * @param salutation
+     * @return Builder
      */
 
     public BaseAddressBuilder salutation(@Nullable final String salutation) {
@@ -145,6 +155,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Given name (first name) of the contact.</p>
+     * @param firstName
+     * @return Builder
      */
 
     public BaseAddressBuilder firstName(@Nullable final String firstName) {
@@ -154,6 +166,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Family name (last name) of the contact.</p>
+     * @param lastName
+     * @return Builder
      */
 
     public BaseAddressBuilder lastName(@Nullable final String lastName) {
@@ -163,6 +177,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Name of the street.</p>
+     * @param streetName
+     * @return Builder
      */
 
     public BaseAddressBuilder streetName(@Nullable final String streetName) {
@@ -172,6 +188,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Street number.</p>
+     * @param streetNumber
+     * @return Builder
      */
 
     public BaseAddressBuilder streetNumber(@Nullable final String streetNumber) {
@@ -181,6 +199,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Further information on the street address.</p>
+     * @param additionalStreetInfo
+     * @return Builder
      */
 
     public BaseAddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
@@ -190,6 +210,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Postal code.</p>
+     * @param postalCode
+     * @return Builder
      */
 
     public BaseAddressBuilder postalCode(@Nullable final String postalCode) {
@@ -199,6 +221,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Name of the city.</p>
+     * @param city
+     * @return Builder
      */
 
     public BaseAddressBuilder city(@Nullable final String city) {
@@ -208,6 +232,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Name of the region.</p>
+     * @param region
+     * @return Builder
      */
 
     public BaseAddressBuilder region(@Nullable final String region) {
@@ -217,6 +243,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Name of the state, for example, Colorado.</p>
+     * @param state
+     * @return Builder
      */
 
     public BaseAddressBuilder state(@Nullable final String state) {
@@ -226,6 +254,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Name of the company.</p>
+     * @param company
+     * @return Builder
      */
 
     public BaseAddressBuilder company(@Nullable final String company) {
@@ -235,6 +265,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Name of the department.</p>
+     * @param department
+     * @return Builder
      */
 
     public BaseAddressBuilder department(@Nullable final String department) {
@@ -244,6 +276,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Number or name of the building.</p>
+     * @param building
+     * @return Builder
      */
 
     public BaseAddressBuilder building(@Nullable final String building) {
@@ -253,6 +287,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Number or name of the apartment.</p>
+     * @param apartment
+     * @return Builder
      */
 
     public BaseAddressBuilder apartment(@Nullable final String apartment) {
@@ -262,6 +298,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Post office box number.</p>
+     * @param pOBox
+     * @return Builder
      */
 
     public BaseAddressBuilder pOBox(@Nullable final String pOBox) {
@@ -271,6 +309,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Phone number of the contact.</p>
+     * @param phone
+     * @return Builder
      */
 
     public BaseAddressBuilder phone(@Nullable final String phone) {
@@ -280,6 +320,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Mobile phone number of the contact.</p>
+     * @param mobile
+     * @return Builder
      */
 
     public BaseAddressBuilder mobile(@Nullable final String mobile) {
@@ -289,6 +331,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Email address of the contact.</p>
+     * @param email
+     * @return Builder
      */
 
     public BaseAddressBuilder email(@Nullable final String email) {
@@ -298,6 +342,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Fax number of the contact.</p>
+     * @param fax
+     * @return Builder
      */
 
     public BaseAddressBuilder fax(@Nullable final String fax) {
@@ -307,6 +353,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>Further information on the Address.</p>
+     * @param additionalAddressInfo
+     * @return Builder
      */
 
     public BaseAddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
@@ -316,6 +364,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     /**
      *  <p>ID for the contact used in an external system.</p>
+     * @param externalId
+     * @return Builder
      */
 
     public BaseAddressBuilder externalId(@Nullable final String externalId) {

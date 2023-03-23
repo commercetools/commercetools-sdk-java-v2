@@ -55,6 +55,7 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

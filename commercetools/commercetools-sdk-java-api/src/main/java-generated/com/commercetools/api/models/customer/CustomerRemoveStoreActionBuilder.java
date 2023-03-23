@@ -26,6 +26,7 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
 
     /**
      *  <p>ResourceIdentifier of the Store to remove.</p>
+     * @return Builder
      */
 
     public CustomerRemoveStoreActionBuilder store(
@@ -36,6 +37,8 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
 
     /**
      *  <p>ResourceIdentifier of the Store to remove.</p>
+     * @param store
+     * @return Builder
      */
 
     public CustomerRemoveStoreActionBuilder store(

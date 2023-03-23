@@ -33,6 +33,7 @@ public interface GoogleCloudFunctionDestination extends ExtensionDestination {
 
     /**
      *  <p>URL to the target function.</p>
+     * @return url
      */
     @NotNull
     @JsonProperty("url")

@@ -33,6 +33,8 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to remove.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductRemoveVariantActionBuilder id(@Nullable final Long id) {
@@ -42,6 +44,8 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to remove.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductRemoveVariantActionBuilder sku(@Nullable final String sku) {
@@ -51,6 +55,8 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
 
     /**
      *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductRemoveVariantActionBuilder staged(@Nullable final Boolean staged) {

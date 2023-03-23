@@ -35,6 +35,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
 
     /**
      *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
 
     /**
      *  <p>Unique identifier of the referenced TaxCategory.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

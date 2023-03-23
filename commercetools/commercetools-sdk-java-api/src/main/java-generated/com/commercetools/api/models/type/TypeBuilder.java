@@ -58,6 +58,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Unique identifier of the Type.</p>
+     * @param id
+     * @return Builder
      */
 
     public TypeBuilder id(final String id) {
@@ -67,6 +69,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Current version of the Type.</p>
+     * @param version
+     * @return Builder
      */
 
     public TypeBuilder version(final Long version) {
@@ -76,6 +80,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Date and time (UTC) the Type was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public TypeBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -85,6 +91,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Date and time (UTC) the Type was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public TypeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -94,6 +102,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public TypeBuilder lastModifiedBy(
@@ -104,6 +113,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public TypeBuilder lastModifiedBy(
@@ -114,6 +125,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public TypeBuilder createdBy(
@@ -124,6 +136,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public TypeBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -133,6 +147,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>User-defined unique identifier of the Type.</p>
+     * @param key
+     * @return Builder
      */
 
     public TypeBuilder key(final String key) {
@@ -142,6 +158,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Name of the Type.</p>
+     * @return Builder
      */
 
     public TypeBuilder name(
@@ -152,6 +169,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Name of the Type.</p>
+     * @param name
+     * @return Builder
      */
 
     public TypeBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -161,6 +180,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Description of the Type.</p>
+     * @return Builder
      */
 
     public TypeBuilder description(
@@ -171,6 +191,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Description of the Type.</p>
+     * @param description
+     * @return Builder
      */
 
     public TypeBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -180,6 +202,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @param resourceTypeIds
+     * @return Builder
      */
 
     public TypeBuilder resourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
@@ -189,6 +213,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @param resourceTypeIds
+     * @return Builder
      */
 
     public TypeBuilder resourceTypeIds(
@@ -199,6 +225,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @param resourceTypeIds
+     * @return Builder
      */
 
     public TypeBuilder plusResourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
@@ -211,6 +239,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param fieldDefinitions
+     * @return Builder
      */
 
     public TypeBuilder fieldDefinitions(final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
@@ -220,6 +250,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param fieldDefinitions
+     * @return Builder
      */
 
     public TypeBuilder fieldDefinitions(
@@ -230,6 +262,8 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param fieldDefinitions
+     * @return Builder
      */
 
     public TypeBuilder plusFieldDefinitions(
@@ -243,6 +277,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @return Builder
      */
 
     public TypeBuilder plusFieldDefinitions(
@@ -256,6 +291,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @return Builder
      */
 
     public TypeBuilder withFieldDefinitions(

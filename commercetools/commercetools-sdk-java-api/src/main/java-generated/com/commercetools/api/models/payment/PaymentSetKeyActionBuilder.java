@@ -27,6 +27,8 @@ public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> 
 
     /**
      *  <p>Value to set. If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public PaymentSetKeyActionBuilder key(@Nullable final String key) {

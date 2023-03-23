@@ -33,6 +33,7 @@ public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestU
 
     /**
      *  <p>New state to be set for the Quote Request.</p>
+     * @return quoteRequestState
      */
     @NotNull
     @JsonProperty("quoteRequestState")

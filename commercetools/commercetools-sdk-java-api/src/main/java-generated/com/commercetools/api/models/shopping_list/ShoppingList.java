@@ -50,6 +50,7 @@ public interface ShoppingList
 
     /**
      *  <p>Unique identifier of the ShoppingList.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -57,6 +58,7 @@ public interface ShoppingList
 
     /**
      *  <p>Current version of the ShoppingList.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -64,6 +66,7 @@ public interface ShoppingList
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -72,6 +75,7 @@ public interface ShoppingList
 
     /**
      *  <p>User-defined unique identifier of the ShoppingList.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -79,6 +83,7 @@ public interface ShoppingList
 
     /**
      *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -86,6 +91,7 @@ public interface ShoppingList
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     * @return slug
      */
     @Valid
     @JsonProperty("slug")
@@ -93,6 +99,7 @@ public interface ShoppingList
 
     /**
      *  <p>Description of the ShoppingList.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -100,6 +107,7 @@ public interface ShoppingList
 
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     * @return lineItems
      */
     @NotNull
     @Valid
@@ -108,6 +116,7 @@ public interface ShoppingList
 
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     * @return textLineItems
      */
     @NotNull
     @Valid
@@ -116,6 +125,7 @@ public interface ShoppingList
 
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     * @return deleteDaysAfterLastModification
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
@@ -123,6 +133,7 @@ public interface ShoppingList
 
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")
@@ -130,6 +141,7 @@ public interface ShoppingList
 
     /**
      *  <p>Store to which the ShoppingList is assigned.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")
@@ -137,6 +149,7 @@ public interface ShoppingList
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -144,6 +157,7 @@ public interface ShoppingList
 
     /**
      *  <p>Date and time (UTC) the ShoppingList was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -151,6 +165,7 @@ public interface ShoppingList
 
     /**
      *  <p>Date and time (UTC) the ShoppingList was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -158,6 +173,7 @@ public interface ShoppingList
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -165,6 +181,7 @@ public interface ShoppingList
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")

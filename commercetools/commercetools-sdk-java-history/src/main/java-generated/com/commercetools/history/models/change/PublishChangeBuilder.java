@@ -25,6 +25,8 @@ public class PublishChangeBuilder implements Builder<PublishChange> {
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public PublishChangeBuilder change(final String change) {

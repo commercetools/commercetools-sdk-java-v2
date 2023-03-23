@@ -36,6 +36,7 @@ public interface Shipping {
 
     /**
      *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
      */
     @NotNull
     @JsonProperty("shippingKey")
@@ -43,6 +44,7 @@ public interface Shipping {
 
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
+     * @return shippingInfo
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface Shipping {
 
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @return shippingAddress
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface Shipping {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -71,6 +75,7 @@ public interface Shipping {
 
     /**
      *  <p>Custom Fields of Shipping.</p>
+     * @return shippingCustomFields
      */
     @Valid
     @JsonProperty("shippingCustomFields")

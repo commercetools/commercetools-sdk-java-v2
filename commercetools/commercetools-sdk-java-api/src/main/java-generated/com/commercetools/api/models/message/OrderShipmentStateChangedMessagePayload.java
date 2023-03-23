@@ -35,6 +35,7 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
 
     /**
      *  <p>ShipmentState after the Change Shipment State update action.</p>
+     * @return shipmentState
      */
     @NotNull
     @JsonProperty("shipmentState")
@@ -42,6 +43,7 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
 
     /**
      *  <p>ShipmentState before the Change Shipment State update action.</p>
+     * @return oldShipmentState
      */
     @NotNull
     @JsonProperty("oldShipmentState")

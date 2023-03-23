@@ -29,6 +29,8 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyCustomerUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyCustomerUpdateBuilder actions(final com.commercetools.api.models.me.MyCustomerUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyCustomerUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyCustomerUpdateBuilder plusActions(
@@ -70,6 +78,7 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
+     * @return Builder
      */
 
     public MyCustomerUpdateBuilder plusActions(
@@ -83,6 +92,7 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
+     * @return Builder
      */
 
     public MyCustomerUpdateBuilder withActions(

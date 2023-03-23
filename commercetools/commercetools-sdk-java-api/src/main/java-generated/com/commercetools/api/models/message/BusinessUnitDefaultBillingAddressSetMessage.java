@@ -40,6 +40,7 @@ public interface BusinessUnitDefaultBillingAddressSetMessage extends Message {
 
     /**
      *  <p>The address that was set as the default billing address.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")

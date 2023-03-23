@@ -35,6 +35,7 @@ public interface MoneyAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid

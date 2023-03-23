@@ -30,6 +30,7 @@ public interface ProductVariantAvailability {
 
     /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     * @return channels
      */
     @Valid
     @JsonProperty("channels")
@@ -37,6 +38,7 @@ public interface ProductVariantAvailability {
 
     /**
      *  <p>Indicates whether a Product Variant is in stock.</p>
+     * @return isOnStock
      */
 
     @JsonProperty("isOnStock")
@@ -44,6 +46,7 @@ public interface ProductVariantAvailability {
 
     /**
      *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
+     * @return restockableInDays
      */
 
     @JsonProperty("restockableInDays")
@@ -51,6 +54,7 @@ public interface ProductVariantAvailability {
 
     /**
      *  <p>Number of items of the Product Variant that are in stock.</p>
+     * @return availableQuantity
      */
 
     @JsonProperty("availableQuantity")

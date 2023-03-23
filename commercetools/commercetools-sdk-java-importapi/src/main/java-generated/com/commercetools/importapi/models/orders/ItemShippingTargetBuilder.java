@@ -28,6 +28,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public ItemShippingTargetBuilder addressKey(final String addressKey) {
@@ -37,6 +39,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public ItemShippingTargetBuilder quantity(final Double quantity) {

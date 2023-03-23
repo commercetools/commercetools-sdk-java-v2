@@ -31,6 +31,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
 
     /**
      *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
+     * @return Builder
      */
 
     public ReviewSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
 
     /**
      *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
+     * @param type
+     * @return Builder
      */
 
     public ReviewSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
 
     /**
      *  <p>Sets the Custom Fields fields for the Review.</p>
+     * @return Builder
      */
 
     public ReviewSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
 
     /**
      *  <p>Sets the Custom Fields fields for the Review.</p>
+     * @param fields
+     * @return Builder
      */
 
     public ReviewSetCustomTypeActionBuilder fields(

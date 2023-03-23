@@ -26,6 +26,7 @@ public class BusinessUnitStoreAddedMessagePayloadBuilder implements Builder<Busi
 
     /**
      *  <p>The Store that was added to the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreAddedMessagePayloadBuilder store(
@@ -36,6 +37,8 @@ public class BusinessUnitStoreAddedMessagePayloadBuilder implements Builder<Busi
 
     /**
      *  <p>The Store that was added to the Business Unit.</p>
+     * @param store
+     * @return Builder
      */
 
     public BusinessUnitStoreAddedMessagePayloadBuilder store(

@@ -52,6 +52,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>User-defined unique identifier of the custom Shipping Method in the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param key
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder key(final String key) {
@@ -61,6 +63,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Name of the custom Shipping Method.</p>
+     * @param shippingMethodName
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder shippingMethodName(final String shippingMethodName) {
@@ -70,6 +74,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder shippingAddress(
@@ -80,6 +85,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @param shippingAddress
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder shippingAddress(
@@ -90,6 +97,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Determines the shipping price.</p>
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder shippingRate(
@@ -101,6 +109,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Determines the shipping price.</p>
+     * @param shippingRate
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder shippingRate(
@@ -116,6 +126,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder shippingRateInput(
@@ -131,6 +143,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder shippingRateInput(
@@ -142,6 +155,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder taxCategory(
@@ -154,6 +168,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder taxCategory(
@@ -164,6 +180,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder externalTaxRate(
@@ -175,6 +192,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder externalTaxRate(
@@ -185,6 +204,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param deliveries
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder deliveries(
@@ -195,6 +216,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param deliveries
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder deliveries(
@@ -205,6 +228,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param deliveries
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder plusDeliveries(
@@ -218,6 +243,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder plusDeliveries(
@@ -231,6 +257,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder withDeliveries(
@@ -242,6 +269,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder custom(
@@ -252,6 +280,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CustomShippingDraftBuilder custom(

@@ -34,6 +34,7 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
 
     /**
      *  <p>Sets the money value for the discounted price.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
 
     /**
      *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     * @return discount
      */
     @NotNull
     @Valid

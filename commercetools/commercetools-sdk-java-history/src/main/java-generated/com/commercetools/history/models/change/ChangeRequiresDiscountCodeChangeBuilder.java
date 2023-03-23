@@ -31,6 +31,8 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
 
     /**
      *  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeRequiresDiscountCodeChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeRequiresDiscountCodeChangeBuilder previousValue(final Boolean previousValue) {
@@ -49,6 +53,8 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeRequiresDiscountCodeChangeBuilder nextValue(final Boolean nextValue) {

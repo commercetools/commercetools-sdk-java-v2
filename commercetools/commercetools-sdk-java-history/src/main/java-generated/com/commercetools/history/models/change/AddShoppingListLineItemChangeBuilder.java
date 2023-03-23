@@ -32,6 +32,8 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public AddShoppingListLineItemChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
+     * @return Builder
      */
 
     public AddShoppingListLineItemChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddShoppingListLineItemChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
+     * @return Builder
      */
 
     public AddShoppingListLineItemChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddShoppingListLineItemChangeBuilder nextValue(

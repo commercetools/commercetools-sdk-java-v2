@@ -31,6 +31,8 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
 
     /**
      *  <p>Unique identifier of the referenced ShoppingList.</p>
+     * @param id
+     * @return Builder
      */
 
     public ShoppingListReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
 
     /**
      *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     * @return Builder
      */
 
     public ShoppingListReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
 
     /**
      *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     * @param obj
+     * @return Builder
      */
 
     public ShoppingListReferenceBuilder obj(

@@ -38,6 +38,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -46,6 +47,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @return productSelection
      */
     @NotNull
     @Valid
@@ -55,6 +57,7 @@ public interface ProductSelectionAssignment {
     /**
      *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     * @return variantSelection
      */
     @Valid
     @JsonProperty("variantSelection")
@@ -63,6 +66,7 @@ public interface ProductSelectionAssignment {
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     * @return variantExclusion
      */
     @Valid
     @JsonProperty("variantExclusion")

@@ -29,6 +29,8 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public DiscountedLineItemPriceForQuantityBuilder quantity(final Integer quantity) {
@@ -38,6 +40,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
@@ -50,6 +53,8 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
 
     /**
      *
+     * @param discountedPrice
+     * @return Builder
      */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(

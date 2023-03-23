@@ -36,6 +36,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -43,6 +44,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
 
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
+     * @return parcel
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")

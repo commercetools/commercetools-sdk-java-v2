@@ -26,6 +26,8 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
 
     /**
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     * @param productSelection
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessagePayloadBuilder productSelection(
@@ -36,6 +38,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
 
     /**
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessagePayloadBuilder productSelection(

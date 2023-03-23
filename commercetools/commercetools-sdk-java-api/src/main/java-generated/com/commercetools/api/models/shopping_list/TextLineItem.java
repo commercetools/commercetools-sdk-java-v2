@@ -38,6 +38,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
 
     /**
      *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
+     * @return addedAt
      */
     @NotNull
     @JsonProperty("addedAt")
@@ -45,6 +46,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
 
     /**
      *  <p>Custom Fields of the TextLineItem.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -52,6 +54,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -59,6 +62,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
 
     /**
      *  <p>Unique identifier of the TextLineItem.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -66,6 +70,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -74,6 +79,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
 
     /**
      *  <p>Number of entries in the TextLineItem.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

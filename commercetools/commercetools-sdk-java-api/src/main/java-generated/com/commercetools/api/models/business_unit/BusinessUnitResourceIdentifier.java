@@ -32,6 +32,7 @@ public interface BusinessUnitResourceIdentifier
 
     /**
      *  <p>Unique identifier of the referenced BusinessUnit. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface BusinessUnitResourceIdentifier
 
     /**
      *  <p>Unique key of the referenced BusinessUnit. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
      */
 
     @JsonProperty("key")

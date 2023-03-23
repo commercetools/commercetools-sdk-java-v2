@@ -32,6 +32,7 @@ public interface KeyReference {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -39,6 +40,7 @@ public interface KeyReference {
 
     /**
      *
+     * @return typeId
      */
     @NotNull
     @JsonProperty("typeId")

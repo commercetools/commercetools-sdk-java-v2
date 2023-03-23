@@ -37,6 +37,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Unique identifier of this Price.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -44,6 +45,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -51,6 +53,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Money value of this Price.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Country for which this Price is valid.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -66,6 +70,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -73,6 +78,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -80,6 +86,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Date and time from which this Price is valid.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -87,6 +94,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -94,6 +102,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -101,6 +110,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @return tiers
      */
     @Valid
     @JsonProperty("tiers")
@@ -108,6 +118,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Custom Fields defined for the Price.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

@@ -28,6 +28,7 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return Builder
      */
 
     public CartSetCustomerGroupActionBuilder customerGroup(
@@ -40,6 +41,8 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public CartSetCustomerGroupActionBuilder customerGroup(

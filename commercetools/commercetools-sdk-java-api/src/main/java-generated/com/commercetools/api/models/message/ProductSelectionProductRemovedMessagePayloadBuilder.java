@@ -27,6 +27,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
 
     /**
      *  <p>Product that was removed from the Product Selection.</p>
+     * @return Builder
      */
 
     public ProductSelectionProductRemovedMessagePayloadBuilder product(
@@ -37,6 +38,8 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
 
     /**
      *  <p>Product that was removed from the Product Selection.</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductSelectionProductRemovedMessagePayloadBuilder product(

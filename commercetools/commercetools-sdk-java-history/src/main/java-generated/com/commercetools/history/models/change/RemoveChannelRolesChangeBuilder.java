@@ -31,6 +31,8 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public RemoveChannelRolesChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveChannelRolesChangeBuilder previousValue(
@@ -50,6 +54,8 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveChannelRolesChangeBuilder previousValue(
@@ -60,6 +66,8 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveChannelRolesChangeBuilder plusPreviousValue(
@@ -73,6 +81,8 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveChannelRolesChangeBuilder nextValue(
@@ -83,6 +93,8 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveChannelRolesChangeBuilder nextValue(
@@ -93,6 +105,8 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveChannelRolesChangeBuilder plusNextValue(

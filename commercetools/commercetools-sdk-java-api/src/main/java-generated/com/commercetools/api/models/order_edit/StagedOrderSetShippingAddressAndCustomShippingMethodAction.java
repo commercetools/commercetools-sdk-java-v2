@@ -41,6 +41,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
      */
     @NotNull
     @Valid
@@ -49,6 +50,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
 
     /**
      *
+     * @return shippingMethodName
      */
     @NotNull
     @JsonProperty("shippingMethodName")
@@ -56,6 +58,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
 
     /**
      *
+     * @return shippingRate
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -71,6 +75,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")

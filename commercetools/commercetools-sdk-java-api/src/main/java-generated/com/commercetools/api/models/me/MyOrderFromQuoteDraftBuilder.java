@@ -33,6 +33,8 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
 
     /**
      *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     * @param id
+     * @return Builder
      */
 
     public MyOrderFromQuoteDraftBuilder id(final String id) {
@@ -42,6 +44,8 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
 
     /**
      *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyOrderFromQuoteDraftBuilder version(final Long version) {
@@ -51,6 +55,8 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
 
     /**
      *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
+     * @param quoteStateToAccepted
+     * @return Builder
      */
 
     public MyOrderFromQuoteDraftBuilder quoteStateToAccepted(@Nullable final Boolean quoteStateToAccepted) {

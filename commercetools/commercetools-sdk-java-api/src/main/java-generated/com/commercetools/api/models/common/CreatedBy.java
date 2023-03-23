@@ -31,6 +31,7 @@ public interface CreatedBy extends ClientLogging {
 
     /**
      *  <p><code>id</code> of the APIClient which created the resource.</p>
+     * @return clientId
      */
 
     @JsonProperty("clientId")
@@ -38,6 +39,7 @@ public interface CreatedBy extends ClientLogging {
 
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @return externalUserId
      */
 
     @JsonProperty("externalUserId")
@@ -45,6 +47,7 @@ public interface CreatedBy extends ClientLogging {
 
     /**
      *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -52,6 +55,7 @@ public interface CreatedBy extends ClientLogging {
 
     /**
      *  <p>Indicates the anonymous session during which the resource was created.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")

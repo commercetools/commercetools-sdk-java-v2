@@ -35,6 +35,7 @@ public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
      */
 
     @JsonProperty("assetId")
@@ -42,6 +43,7 @@ public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
      */
 
     @JsonProperty("assetKey")
@@ -49,6 +51,7 @@ public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
+     * @return sources
      */
     @NotNull
     @Valid

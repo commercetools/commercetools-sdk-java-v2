@@ -32,6 +32,7 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return shippingRateInputType
      */
     @Valid
     @JsonProperty("shippingRateInputType")

@@ -46,6 +46,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public TaxRateBuilder id(@Nullable final String id) {
@@ -55,6 +57,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public TaxRateBuilder name(final String name) {
@@ -64,6 +68,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param amount
+     * @return Builder
      */
 
     public TaxRateBuilder amount(final Double amount) {
@@ -73,6 +79,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param includedInPrice
+     * @return Builder
      */
 
     public TaxRateBuilder includedInPrice(final Boolean includedInPrice) {
@@ -82,6 +90,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @param country
+     * @return Builder
      */
 
     public TaxRateBuilder country(final String country) {
@@ -91,6 +101,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public TaxRateBuilder state(@Nullable final String state) {
@@ -100,6 +112,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param subRates
+     * @return Builder
      */
 
     public TaxRateBuilder subRates(@Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
@@ -109,6 +123,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param subRates
+     * @return Builder
      */
 
     public TaxRateBuilder subRates(
@@ -119,6 +135,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param subRates
+     * @return Builder
      */
 
     public TaxRateBuilder plusSubRates(@Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
@@ -131,6 +149,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @return Builder
      */
 
     public TaxRateBuilder plusSubRates(
@@ -144,6 +163,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @return Builder
      */
 
     public TaxRateBuilder withSubRates(

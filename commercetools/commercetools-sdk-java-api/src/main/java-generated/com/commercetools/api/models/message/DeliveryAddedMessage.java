@@ -42,6 +42,7 @@ public interface DeliveryAddedMessage extends OrderMessage {
 
     /**
      *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     * @return delivery
      */
     @NotNull
     @Valid
@@ -50,6 +51,7 @@ public interface DeliveryAddedMessage extends OrderMessage {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")

@@ -26,6 +26,7 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
 
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
+     * @return Builder
      */
 
     public ShippingMethodAddZoneActionBuilder zone(
@@ -36,6 +37,8 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
 
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
+     * @param zone
+     * @return Builder
      */
 
     public ShippingMethodAddZoneActionBuilder zone(

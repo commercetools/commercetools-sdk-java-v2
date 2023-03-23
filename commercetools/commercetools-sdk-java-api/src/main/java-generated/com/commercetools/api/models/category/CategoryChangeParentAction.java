@@ -34,6 +34,7 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
 
     /**
      *  <p>New value to set as parent.</p>
+     * @return parent
      */
     @NotNull
     @Valid

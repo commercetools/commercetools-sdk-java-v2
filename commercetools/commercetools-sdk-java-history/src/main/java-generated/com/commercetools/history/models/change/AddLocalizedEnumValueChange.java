@@ -38,6 +38,7 @@ public interface AddLocalizedEnumValueChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -45,6 +46,7 @@ public interface AddLocalizedEnumValueChange extends Change {
 
     /**
      *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -52,6 +54,7 @@ public interface AddLocalizedEnumValueChange extends Change {
 
     /**
      *  <p>The name of the field definition updated.</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -59,6 +62,7 @@ public interface AddLocalizedEnumValueChange extends Change {
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -66,6 +70,7 @@ public interface AddLocalizedEnumValueChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

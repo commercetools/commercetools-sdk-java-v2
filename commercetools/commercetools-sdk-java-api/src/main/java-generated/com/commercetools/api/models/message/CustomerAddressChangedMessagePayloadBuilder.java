@@ -26,6 +26,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>Address that was set during the Change Address update action.</p>
+     * @return Builder
      */
 
     public CustomerAddressChangedMessagePayloadBuilder address(
@@ -36,6 +37,8 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>Address that was set during the Change Address update action.</p>
+     * @param address
+     * @return Builder
      */
 
     public CustomerAddressChangedMessagePayloadBuilder address(

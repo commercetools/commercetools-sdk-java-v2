@@ -33,6 +33,7 @@ public interface CustomFields {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface CustomFields {
 
     /**
      *  <p>A valid JSON object, based on FieldDefinition.</p>
+     * @return fields
      */
     @NotNull
     @Valid

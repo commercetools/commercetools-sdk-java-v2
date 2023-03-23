@@ -35,6 +35,7 @@ public interface SetOrderNumberChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -42,6 +43,7 @@ public interface SetOrderNumberChange extends Change {
 
     /**
      *  <p>Shape of the action for <code>setOrderNumber</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -49,6 +51,7 @@ public interface SetOrderNumberChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -56,6 +59,7 @@ public interface SetOrderNumberChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

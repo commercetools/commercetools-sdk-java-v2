@@ -29,6 +29,8 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public QuoteRequestLabelBuilder key(final String key) {
@@ -38,6 +40,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
 
     /**
      *
+     * @return Builder
      */
 
     public QuoteRequestLabelBuilder customer(
@@ -48,6 +51,8 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
 
     /**
      *
+     * @param customer
+     * @return Builder
      */
 
     public QuoteRequestLabelBuilder customer(final com.commercetools.history.models.common.Reference customer) {

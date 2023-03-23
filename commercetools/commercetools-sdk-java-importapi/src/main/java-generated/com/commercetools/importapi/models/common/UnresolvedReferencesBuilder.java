@@ -28,6 +28,8 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public UnresolvedReferencesBuilder key(final String key) {
@@ -37,6 +39,8 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
 
     /**
      *  <p>The type of the referenced resource.</p>
+     * @param typeId
+     * @return Builder
      */
 
     public UnresolvedReferencesBuilder typeId(final com.commercetools.importapi.models.common.ReferenceType typeId) {

@@ -31,6 +31,8 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
 
     /**
      *  <p>URL to the target destination.</p>
+     * @param url
+     * @return Builder
      */
 
     public HttpDestinationBuilder url(final String url) {
@@ -40,6 +42,8 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
 
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     * @param authentication
+     * @return Builder
      */
 
     public HttpDestinationBuilder authentication(
@@ -50,6 +54,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
 
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     * @return Builder
      */
 
     public HttpDestinationBuilder authentication(

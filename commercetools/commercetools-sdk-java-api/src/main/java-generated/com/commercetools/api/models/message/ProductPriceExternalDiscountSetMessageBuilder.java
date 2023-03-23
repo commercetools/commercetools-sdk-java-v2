@@ -73,6 +73,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder id(final String id) {
@@ -82,6 +84,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder version(final Long version) {
@@ -91,6 +95,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -100,6 +106,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -109,6 +117,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedBy(
@@ -119,6 +128,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedBy(
@@ -129,6 +140,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder createdBy(
@@ -139,6 +151,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder createdBy(
@@ -149,6 +163,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -158,6 +174,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resource(
@@ -168,6 +186,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resource(
@@ -178,6 +197,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -187,6 +208,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -199,6 +221,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -209,6 +233,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Unique identifier of the Product Variant for which the Discount was set.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder variantId(final Integer variantId) {
@@ -218,6 +244,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Key of the Product Variant for which the Discount was set.</p>
+     * @param variantKey
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder variantKey(@Nullable final String variantKey) {
@@ -227,6 +255,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>SKU of the Product Variant for which Discount was set.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder sku(@Nullable final String sku) {
@@ -236,6 +266,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Unique identifier of the Price.</p>
+     * @param priceId
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder priceId(final String priceId) {
@@ -245,6 +277,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder discounted(
@@ -255,6 +288,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder discounted(
@@ -265,6 +300,8 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder staged(final Boolean staged) {

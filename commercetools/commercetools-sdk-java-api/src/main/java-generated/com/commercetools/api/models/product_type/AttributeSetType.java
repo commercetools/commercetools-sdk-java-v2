@@ -34,6 +34,7 @@ public interface AttributeSetType extends AttributeType {
 
     /**
      *  <p>Attribute type of the elements in the set.</p>
+     * @return elementType
      */
     @NotNull
     @Valid

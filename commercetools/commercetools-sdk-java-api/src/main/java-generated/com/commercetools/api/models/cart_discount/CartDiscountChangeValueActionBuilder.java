@@ -26,6 +26,8 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>New value to set.</p>
+     * @param value
+     * @return Builder
      */
 
     public CartDiscountChangeValueActionBuilder value(
@@ -36,6 +38,7 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>New value to set.</p>
+     * @return Builder
      */
 
     public CartDiscountChangeValueActionBuilder value(

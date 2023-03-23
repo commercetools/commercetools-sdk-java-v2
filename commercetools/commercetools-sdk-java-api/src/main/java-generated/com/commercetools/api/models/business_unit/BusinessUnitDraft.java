@@ -40,6 +40,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>User-defined unique identifier for the Business Unit.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -47,6 +48,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     * @return status
      */
 
     @JsonProperty("status")
@@ -56,6 +58,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
      *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return stores
      */
     @Valid
     @JsonProperty("stores")
@@ -63,6 +66,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for Companies and defaults to <code>FromParent</code> for Divisions.</p>
+     * @return storeMode
      */
 
     @JsonProperty("storeMode")
@@ -70,6 +74,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Type of the Business Unit indicating its position in a hierarchy.</p>
+     * @return unitType
      */
     @NotNull
     @JsonProperty("unitType")
@@ -77,6 +82,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Name of the Business Unit.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -84,6 +90,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Email address of the Business Unit.</p>
+     * @return contactEmail
      */
 
     @JsonProperty("contactEmail")
@@ -91,6 +98,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @return associates
      */
     @Valid
     @JsonProperty("associates")
@@ -98,6 +106,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return addresses
      */
     @Valid
     @JsonProperty("addresses")
@@ -105,6 +114,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @return shippingAddresses
      */
 
     @JsonProperty("shippingAddresses")
@@ -112,6 +122,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
+     * @return defaultShippingAddress
      */
 
     @JsonProperty("defaultShippingAddress")
@@ -119,6 +130,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @return billingAddresses
      */
 
     @JsonProperty("billingAddresses")
@@ -126,6 +138,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
+     * @return defaultBillingAddress
      */
 
     @JsonProperty("defaultBillingAddress")
@@ -133,6 +146,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

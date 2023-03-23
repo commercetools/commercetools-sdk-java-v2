@@ -26,6 +26,7 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
 
     /**
      *  <p>Reference to a DiscountCode.</p>
+     * @return Builder
      */
 
     public StagedOrderRemoveDiscountCodeActionBuilder discountCode(
@@ -37,6 +38,8 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
 
     /**
      *  <p>Reference to a DiscountCode.</p>
+     * @param discountCode
+     * @return Builder
      */
 
     public StagedOrderRemoveDiscountCodeActionBuilder discountCode(

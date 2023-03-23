@@ -40,6 +40,8 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public StagedOrderRemoveLineItemActionBuilder lineItemId(final String lineItemId) {
@@ -49,6 +51,8 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public StagedOrderRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -59,6 +63,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return Builder
      */
 
     public StagedOrderRemoveLineItemActionBuilder externalPrice(
@@ -70,6 +75,8 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param externalPrice
+     * @return Builder
      */
 
     public StagedOrderRemoveLineItemActionBuilder externalPrice(
@@ -80,6 +87,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderRemoveLineItemActionBuilder externalTotalPrice(
@@ -92,6 +100,8 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param externalTotalPrice
+     * @return Builder
      */
 
     public StagedOrderRemoveLineItemActionBuilder externalTotalPrice(
@@ -102,6 +112,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @return Builder
      */
 
     public StagedOrderRemoveLineItemActionBuilder shippingDetailsToRemove(
@@ -114,6 +125,8 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param shippingDetailsToRemove
+     * @return Builder
      */
 
     public StagedOrderRemoveLineItemActionBuilder shippingDetailsToRemove(

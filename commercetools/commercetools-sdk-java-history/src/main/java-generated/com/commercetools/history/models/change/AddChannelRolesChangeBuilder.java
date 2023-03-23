@@ -31,6 +31,8 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public AddChannelRolesChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddChannelRolesChangeBuilder previousValue(
@@ -50,6 +54,8 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddChannelRolesChangeBuilder previousValue(
@@ -60,6 +66,8 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddChannelRolesChangeBuilder plusPreviousValue(
@@ -73,6 +81,8 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddChannelRolesChangeBuilder nextValue(
@@ -83,6 +93,8 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddChannelRolesChangeBuilder nextValue(
@@ -93,6 +105,8 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddChannelRolesChangeBuilder plusNextValue(

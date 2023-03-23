@@ -25,6 +25,8 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
 
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
+     * @param assetOrder
+     * @return Builder
      */
 
     public CategoryChangeAssetOrderActionBuilder assetOrder(final String... assetOrder) {
@@ -34,6 +36,8 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
 
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
+     * @param assetOrder
+     * @return Builder
      */
 
     public CategoryChangeAssetOrderActionBuilder assetOrder(final java.util.List<String> assetOrder) {
@@ -43,6 +47,8 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
 
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
+     * @param assetOrder
+     * @return Builder
      */
 
     public CategoryChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {

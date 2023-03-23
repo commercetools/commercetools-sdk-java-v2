@@ -27,6 +27,8 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
 
     /**
      *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
+     * @param customerId
+     * @return Builder
      */
 
     public CartSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {

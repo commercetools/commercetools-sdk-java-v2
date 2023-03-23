@@ -29,6 +29,8 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *  <p>The probability of product similarity.</p>
+     * @param confidence
+     * @return Builder
      */
 
     public SimilarProductPairBuilder confidence(final Double confidence) {
@@ -38,6 +40,8 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
+     * @param products
+     * @return Builder
      */
 
     public SimilarProductPairBuilder products(
@@ -48,6 +52,8 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
+     * @param products
+     * @return Builder
      */
 
     public SimilarProductPairBuilder products(
@@ -58,6 +64,8 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
+     * @param products
+     * @return Builder
      */
 
     public SimilarProductPairBuilder plusProducts(
@@ -71,6 +79,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
+     * @return Builder
      */
 
     public SimilarProductPairBuilder plusProducts(
@@ -85,6 +94,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
+     * @return Builder
      */
 
     public SimilarProductPairBuilder withProducts(

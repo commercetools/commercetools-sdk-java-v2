@@ -38,6 +38,7 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -45,6 +46,7 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
 
     /**
      *
+     * @return predicate
      */
     @NotNull
     @JsonProperty("predicate")
@@ -52,6 +54,7 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
 
     /**
      *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     * @return triggerQuantity
      */
     @NotNull
     @JsonProperty("triggerQuantity")
@@ -59,6 +62,7 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
 
     /**
      *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     * @return discountedQuantity
      */
     @NotNull
     @JsonProperty("discountedQuantity")
@@ -66,6 +70,7 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
 
     /**
      *  <p>Maximum number of applications of this discount.</p>
+     * @return maxOccurrence
      */
     @NotNull
     @JsonProperty("maxOccurrence")
@@ -73,6 +78,7 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
 
     /**
      *
+     * @return selectionMode
      */
     @NotNull
     @JsonProperty("selectionMode")

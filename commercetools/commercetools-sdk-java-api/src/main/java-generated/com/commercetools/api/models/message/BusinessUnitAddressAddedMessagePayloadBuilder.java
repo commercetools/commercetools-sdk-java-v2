@@ -26,6 +26,7 @@ public class BusinessUnitAddressAddedMessagePayloadBuilder implements Builder<Bu
 
     /**
      *  <p>The address that was added to the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitAddressAddedMessagePayloadBuilder address(
@@ -36,6 +37,8 @@ public class BusinessUnitAddressAddedMessagePayloadBuilder implements Builder<Bu
 
     /**
      *  <p>The address that was added to the Business Unit.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitAddressAddedMessagePayloadBuilder address(

@@ -32,6 +32,8 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>
+     * @param change
+     * @return Builder
      */
 
     public SetDefaultBillingAddressChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *
+     * @return Builder
      */
 
     public SetDefaultBillingAddressChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetDefaultBillingAddressChangeBuilder nextValue(
@@ -61,6 +66,7 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *
+     * @return Builder
      */
 
     public SetDefaultBillingAddressChangeBuilder previousValue(
@@ -71,6 +77,8 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetDefaultBillingAddressChangeBuilder previousValue(

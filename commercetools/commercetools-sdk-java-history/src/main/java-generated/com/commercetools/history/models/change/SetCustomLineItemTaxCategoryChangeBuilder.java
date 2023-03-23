@@ -38,6 +38,8 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder change(final String change) {
@@ -47,6 +49,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(
@@ -58,6 +61,8 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @param customLineItem
+     * @return Builder
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(
@@ -68,6 +73,8 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItemId(final String customLineItemId) {
@@ -77,6 +84,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
@@ -87,6 +95,8 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
@@ -97,6 +107,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder previousValue(
@@ -107,6 +118,8 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder previousValue(

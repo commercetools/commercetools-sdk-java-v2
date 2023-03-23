@@ -25,6 +25,8 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
     /**
      *
+     * @param inputs
+     * @return Builder
      */
 
     public CustomTokenizerBuilder inputs(final String... inputs) {
@@ -34,6 +36,8 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
     /**
      *
+     * @param inputs
+     * @return Builder
      */
 
     public CustomTokenizerBuilder inputs(final java.util.List<String> inputs) {
@@ -43,6 +47,8 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
     /**
      *
+     * @param inputs
+     * @return Builder
      */
 
     public CustomTokenizerBuilder plusInputs(final String... inputs) {

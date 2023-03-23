@@ -31,6 +31,8 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public ParcelItemsBuilder parcelId(final String parcelId) {
@@ -40,6 +42,8 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public ParcelItemsBuilder items(@Nullable final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -49,6 +53,8 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public ParcelItemsBuilder items(
@@ -59,6 +65,8 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public ParcelItemsBuilder plusItems(
@@ -72,6 +80,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelItemsBuilder plusItems(
@@ -85,6 +94,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelItemsBuilder withItems(

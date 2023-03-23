@@ -25,6 +25,8 @@ public class SuggestionBuilder implements Builder<Suggestion> {
 
     /**
      *  <p>The suggested text.</p>
+     * @param text
+     * @return Builder
      */
 
     public SuggestionBuilder text(final String text) {

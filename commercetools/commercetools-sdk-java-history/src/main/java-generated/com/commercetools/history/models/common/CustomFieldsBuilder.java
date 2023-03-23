@@ -29,6 +29,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     /**
      *
+     * @return Builder
      */
 
     public CustomFieldsBuilder type(
@@ -39,6 +40,8 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public CustomFieldsBuilder type(final com.commercetools.history.models.common.Reference type) {
@@ -48,6 +51,8 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     /**
      *  <p>A valid JSON object, based on FieldDefinition.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CustomFieldsBuilder fields(final java.lang.Object fields) {

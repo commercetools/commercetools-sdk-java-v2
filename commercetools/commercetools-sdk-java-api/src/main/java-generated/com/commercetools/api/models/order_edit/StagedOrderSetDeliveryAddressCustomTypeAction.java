@@ -37,6 +37,7 @@ public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrd
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -44,6 +45,7 @@ public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrd
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -51,6 +53,7 @@ public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrd
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

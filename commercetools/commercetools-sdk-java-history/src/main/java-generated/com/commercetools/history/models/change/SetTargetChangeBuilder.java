@@ -32,6 +32,8 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *  <p>Shape of the action for <code>setTarget</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetTargetChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetTargetChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTargetChangeBuilder previousValue(final com.commercetools.history.models.common.Reference previousValue) {
@@ -60,6 +65,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetTargetChangeBuilder nextValue(
@@ -70,6 +76,8 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTargetChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {

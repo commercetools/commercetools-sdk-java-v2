@@ -39,6 +39,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -47,6 +48,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     /**
      *  <p>User-defined unique identifier for a Customer. Once set, it cannot be changed.</p>
      *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     * @return customerNumber
      */
 
     @JsonProperty("customerNumber")
@@ -54,6 +56,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -61,6 +64,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Email address of the Customer that must be unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     * @return email
      */
     @NotNull
     @JsonProperty("email")
@@ -68,6 +72,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Provide the Customer's password in plain text. The API stores passwords in an encrypted format.</p>
+     * @return password
      */
 
     @JsonProperty("password")
@@ -75,6 +80,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Given name (first name) of the Customer.</p>
+     * @return firstName
      */
 
     @JsonProperty("firstName")
@@ -82,6 +88,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Family name (last name) of the Customer.</p>
+     * @return lastName
      */
 
     @JsonProperty("lastName")
@@ -89,6 +96,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Middle name of the Customer.</p>
+     * @return middleName
      */
 
     @JsonProperty("middleName")
@@ -96,6 +104,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     * @return title
      */
 
     @JsonProperty("title")
@@ -103,6 +112,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Deprecated since an anonymous Cart can be identified by its <code>id</code> or external <code>key</code>.</p>
+     * @return anonymousCartId
      */
     @Deprecated
     @JsonProperty("anonymousCartId")
@@ -110,6 +120,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     * @return anonymousCart
      */
     @Valid
     @JsonProperty("anonymousCart")
@@ -117,6 +128,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")
@@ -124,6 +136,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Date of birth of the Customer.</p>
+     * @return dateOfBirth
      */
 
     @JsonProperty("dateOfBirth")
@@ -131,6 +144,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     * @return companyName
      */
 
     @JsonProperty("companyName")
@@ -138,6 +152,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Unique VAT ID of the Customer.</p>
+     * @return vatId
      */
 
     @JsonProperty("vatId")
@@ -145,6 +160,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Addresses of the Customer.</p>
+     * @return addresses
      */
     @Valid
     @JsonProperty("addresses")
@@ -152,6 +168,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @return defaultShippingAddress
      */
 
     @JsonProperty("defaultShippingAddress")
@@ -159,6 +176,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of these addresses.</p>
+     * @return shippingAddresses
      */
 
     @JsonProperty("shippingAddresses")
@@ -166,6 +184,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @return defaultBillingAddress
      */
 
     @JsonProperty("defaultBillingAddress")
@@ -173,6 +192,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the IDs of these addresses.</p>
+     * @return billingAddresses
      */
 
     @JsonProperty("billingAddresses")
@@ -180,6 +200,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the email verification afterwards.</p>
+     * @return isEmailVerified
      */
 
     @JsonProperty("isEmailVerified")
@@ -187,6 +208,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Sets the CustomerGroup for the Customer.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -194,6 +216,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Custom Fields for the Customer.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -201,6 +224,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")
@@ -208,6 +232,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     * @return salutation
      */
 
     @JsonProperty("salutation")
@@ -219,6 +244,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
+     * @return stores
      */
     @Valid
     @JsonProperty("stores")
@@ -229,6 +255,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
      *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
      *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
      *  </ul>
+     * @return authenticationMode
      */
 
     @JsonProperty("authenticationMode")

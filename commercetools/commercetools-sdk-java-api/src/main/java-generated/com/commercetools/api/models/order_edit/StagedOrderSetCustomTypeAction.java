@@ -35,6 +35,7 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
 
     /**
      *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -42,6 +43,7 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
 
     /**
      *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

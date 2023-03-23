@@ -30,6 +30,7 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -37,6 +38,7 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -44,6 +46,7 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -51,6 +54,7 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the Asset to remove.</p>
+     * @return assetId
      */
 
     @JsonProperty("assetId")
@@ -58,6 +62,7 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>key</code> of the Asset to remove.</p>
+     * @return assetKey
      */
 
     @JsonProperty("assetKey")

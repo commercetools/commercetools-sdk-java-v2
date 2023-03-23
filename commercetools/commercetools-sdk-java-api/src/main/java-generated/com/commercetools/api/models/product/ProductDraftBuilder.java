@@ -76,6 +76,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder productType(
@@ -88,6 +89,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
+     * @param productType
+     * @return Builder
      */
 
     public ProductDraftBuilder productType(
@@ -98,6 +101,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder name(
@@ -108,6 +112,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -117,6 +123,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder slug(
@@ -127,6 +134,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @param slug
+     * @return Builder
      */
 
     public ProductDraftBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -136,6 +145,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductDraftBuilder key(@Nullable final String key) {
@@ -145,6 +156,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder description(
@@ -155,6 +167,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @param description
+     * @return Builder
      */
 
     public ProductDraftBuilder description(
@@ -165,6 +179,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductDraftBuilder categories(
@@ -175,6 +191,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductDraftBuilder categories(
@@ -185,6 +203,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductDraftBuilder plusCategories(
@@ -198,6 +218,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder plusCategories(
@@ -212,6 +233,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder withCategories(
@@ -224,6 +246,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder categoryOrderHints(
@@ -235,6 +258,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @param categoryOrderHints
+     * @return Builder
      */
 
     public ProductDraftBuilder categoryOrderHints(
@@ -245,6 +270,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder metaTitle(
@@ -255,6 +281,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @param metaTitle
+     * @return Builder
      */
 
     public ProductDraftBuilder metaTitle(
@@ -265,6 +293,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Description of the Product displayed in search results.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder metaDescription(
@@ -275,6 +304,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Description of the Product displayed in search results.</p>
+     * @param metaDescription
+     * @return Builder
      */
 
     public ProductDraftBuilder metaDescription(
@@ -285,6 +316,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder metaKeywords(
@@ -295,6 +327,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param metaKeywords
+     * @return Builder
      */
 
     public ProductDraftBuilder metaKeywords(
@@ -305,6 +339,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder masterVariant(
@@ -316,6 +351,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     * @param masterVariant
+     * @return Builder
      */
 
     public ProductDraftBuilder masterVariant(
@@ -326,6 +363,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductDraftBuilder variants(
@@ -336,6 +375,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductDraftBuilder variants(
@@ -346,6 +387,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductDraftBuilder plusVariants(
@@ -359,6 +402,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder plusVariants(
@@ -372,6 +416,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder withVariants(
@@ -383,6 +428,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The Tax Category to be assigned to the Product.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder taxCategory(
@@ -395,6 +441,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The Tax Category to be assigned to the Product.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public ProductDraftBuilder taxCategory(
@@ -405,6 +453,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder searchKeywords(
@@ -415,6 +464,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param searchKeywords
+     * @return Builder
      */
 
     public ProductDraftBuilder searchKeywords(
@@ -425,6 +476,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>State to be assigned to the Product.</p>
+     * @return Builder
      */
 
     public ProductDraftBuilder state(
@@ -435,6 +487,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>State to be assigned to the Product.</p>
+     * @param state
+     * @return Builder
      */
 
     public ProductDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
@@ -444,6 +498,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     * @param publish
+     * @return Builder
      */
 
     public ProductDraftBuilder publish(@Nullable final Boolean publish) {
@@ -453,6 +509,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Specifies the type of prices used when looking up a price for the Product.</p>
+     * @param priceMode
+     * @return Builder
      */
 
     public ProductDraftBuilder priceMode(

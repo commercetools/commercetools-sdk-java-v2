@@ -34,6 +34,7 @@ public interface TypedMoneyDraft extends Money {
 
     /**
      *
+     * @return type
      */
 
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface TypedMoneyDraft extends Money {
 
     /**
      *  <p>Must be equal to the default number of fraction digits for the specified currency.</p>
+     * @return fractionDigits
      */
 
     @JsonProperty("fractionDigits")

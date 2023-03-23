@@ -32,6 +32,8 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public ChangeQuantityChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeQuantityChangeBuilder nextValue(
@@ -52,6 +55,8 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeQuantityChangeBuilder nextValue(
@@ -62,6 +67,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeQuantityChangeBuilder previousValue(
@@ -74,6 +80,8 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeQuantityChangeBuilder previousValue(

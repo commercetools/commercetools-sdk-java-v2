@@ -25,6 +25,8 @@ public class ProductVariantKeyReferenceBuilder implements Builder<ProductVariant
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public ProductVariantKeyReferenceBuilder key(final String key) {

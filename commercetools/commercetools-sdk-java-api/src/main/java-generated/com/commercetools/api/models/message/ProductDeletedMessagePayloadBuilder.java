@@ -31,6 +31,8 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductDeletedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -40,6 +42,8 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductDeletedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -49,6 +53,8 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductDeletedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -61,6 +67,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
+     * @return Builder
      */
 
     public ProductDeletedMessagePayloadBuilder currentProjection(
@@ -72,6 +79,8 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
+     * @param currentProjection
+     * @return Builder
      */
 
     public ProductDeletedMessagePayloadBuilder currentProjection(

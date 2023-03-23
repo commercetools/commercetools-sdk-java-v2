@@ -37,6 +37,7 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to append.</p>
+     * @return supplyChannel
      */
     @NotNull
     @Valid

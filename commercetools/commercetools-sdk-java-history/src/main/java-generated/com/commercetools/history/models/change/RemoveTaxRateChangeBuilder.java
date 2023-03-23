@@ -32,6 +32,8 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveTaxRateChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public RemoveTaxRateChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveTaxRateChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public RemoveTaxRateChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveTaxRateChangeBuilder nextValue(final com.commercetools.history.models.common.TaxRate nextValue) {

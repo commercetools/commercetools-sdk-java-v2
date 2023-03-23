@@ -30,6 +30,8 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public BooleanSetAttributeBuilder name(@Nullable final String name) {
@@ -39,6 +41,8 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public BooleanSetAttributeBuilder value(final Boolean... value) {
@@ -48,6 +52,8 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public BooleanSetAttributeBuilder value(final java.util.List<Boolean> value) {
@@ -57,6 +63,8 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public BooleanSetAttributeBuilder plusValue(final Boolean... value) {

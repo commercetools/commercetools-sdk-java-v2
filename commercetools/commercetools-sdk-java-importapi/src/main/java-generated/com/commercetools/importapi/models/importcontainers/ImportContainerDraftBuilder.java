@@ -30,6 +30,8 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
 
     /**
      *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     * @param key
+     * @return Builder
      */
 
     public ImportContainerDraftBuilder key(final String key) {
@@ -39,6 +41,8 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
 
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @param resourceType
+     * @return Builder
      */
 
     public ImportContainerDraftBuilder resourceType(

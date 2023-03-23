@@ -38,6 +38,8 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomLineItemMoneyChangeBuilder change(final String change) {
@@ -47,6 +49,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemMoneyChangeBuilder customLineItem(
@@ -58,6 +61,8 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @param customLineItem
+     * @return Builder
      */
 
     public SetCustomLineItemMoneyChangeBuilder customLineItem(
@@ -68,6 +73,8 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public SetCustomLineItemMoneyChangeBuilder customLineItemId(final String customLineItemId) {
@@ -77,6 +84,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemMoneyChangeBuilder nextValue(
@@ -87,6 +95,8 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomLineItemMoneyChangeBuilder nextValue(
@@ -97,6 +107,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemMoneyChangeBuilder previousValue(
@@ -107,6 +118,8 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomLineItemMoneyChangeBuilder previousValue(

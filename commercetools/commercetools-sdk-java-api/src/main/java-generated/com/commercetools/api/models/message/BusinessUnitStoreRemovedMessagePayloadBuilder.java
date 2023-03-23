@@ -26,6 +26,7 @@ public class BusinessUnitStoreRemovedMessagePayloadBuilder implements Builder<Bu
 
     /**
      *  <p>The Store that was removed from the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreRemovedMessagePayloadBuilder store(
@@ -36,6 +37,8 @@ public class BusinessUnitStoreRemovedMessagePayloadBuilder implements Builder<Bu
 
     /**
      *  <p>The Store that was removed from the Business Unit.</p>
+     * @param store
+     * @return Builder
      */
 
     public BusinessUnitStoreRemovedMessagePayloadBuilder store(

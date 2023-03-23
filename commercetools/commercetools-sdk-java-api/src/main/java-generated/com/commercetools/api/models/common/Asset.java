@@ -35,6 +35,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
 
     /**
      *  <p>Unique identifier of the Asset.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -42,6 +43,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
 
     /**
      *
+     * @return sources
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
 
     /**
      *  <p>Name of the Asset.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -58,6 +61,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
 
     /**
      *  <p>Description of the Asset.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -65,6 +69,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
      */
 
     @JsonProperty("tags")
@@ -72,6 +77,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
 
     /**
      *  <p>Custom Fields defined for the Asset.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -79,6 +85,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
 
     /**
      *  <p>User-defined unique identifier of the Asset.</p>
+     * @return key
      */
 
     @JsonProperty("key")

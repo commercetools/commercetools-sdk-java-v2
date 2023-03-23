@@ -25,6 +25,8 @@ public class CartRemoveShippingMethodActionBuilder implements Builder<CartRemove
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method to remove from the Cart.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public CartRemoveShippingMethodActionBuilder shippingKey(final String shippingKey) {

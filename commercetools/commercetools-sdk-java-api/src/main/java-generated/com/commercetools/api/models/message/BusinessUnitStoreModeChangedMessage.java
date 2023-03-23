@@ -46,6 +46,7 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @return stores
      */
     @NotNull
     @Valid
@@ -54,6 +55,7 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
 
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     * @return storeMode
      */
     @NotNull
     @JsonProperty("storeMode")
@@ -61,6 +63,7 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @return oldStores
      */
     @NotNull
     @Valid
@@ -69,6 +72,7 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
 
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     * @return oldStoreMode
      */
     @NotNull
     @JsonProperty("oldStoreMode")

@@ -35,6 +35,7 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return distributionChannel
      */
     @NotNull
     @Valid

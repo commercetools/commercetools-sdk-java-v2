@@ -25,6 +25,8 @@ public class ContentionErrorBuilder implements Builder<ContentionError> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public ContentionErrorBuilder message(final String message) {

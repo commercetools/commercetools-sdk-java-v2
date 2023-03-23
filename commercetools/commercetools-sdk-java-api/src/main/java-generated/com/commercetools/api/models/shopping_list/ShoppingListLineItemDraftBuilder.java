@@ -43,6 +43,8 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
 
     /**
      *  <p>Unique identifier of a Product.</p>
+     * @param productId
+     * @return Builder
      */
 
     public ShoppingListLineItemDraftBuilder productId(@Nullable final String productId) {
@@ -52,6 +54,8 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
 
     /**
      *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ShoppingListLineItemDraftBuilder variantId(@Nullable final Long variantId) {
@@ -61,6 +65,8 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ShoppingListLineItemDraftBuilder sku(@Nullable final String sku) {
@@ -70,6 +76,8 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
 
     /**
      *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public ShoppingListLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -79,6 +87,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
 
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @return Builder
      */
 
     public ShoppingListLineItemDraftBuilder custom(
@@ -89,6 +98,8 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
 
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ShoppingListLineItemDraftBuilder custom(
@@ -99,6 +110,8 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public ShoppingListLineItemDraftBuilder quantity(@Nullable final Long quantity) {

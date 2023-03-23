@@ -52,6 +52,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>User-defined identifier for the custom Shipping Method that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder shippingKey(final String shippingKey) {
@@ -61,6 +63,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Name of the custom Shipping Method.</p>
+     * @param shippingMethodName
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder shippingMethodName(final String shippingMethodName) {
@@ -70,6 +74,7 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder shippingAddress(
@@ -80,6 +85,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @param shippingAddress
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder shippingAddress(
@@ -90,6 +97,7 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Determines the shipping price.</p>
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder shippingRate(
@@ -101,6 +109,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Determines the shipping price.</p>
+     * @param shippingRate
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder shippingRate(
@@ -116,6 +126,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder shippingRateInput(
@@ -131,6 +143,7 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder shippingRateInput(
@@ -142,6 +155,7 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder taxCategory(
@@ -154,6 +168,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder taxCategory(
@@ -164,6 +180,7 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder externalTaxRate(
@@ -175,6 +192,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder externalTaxRate(
@@ -185,6 +204,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param deliveries
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder deliveries(
@@ -195,6 +216,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param deliveries
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder deliveries(
@@ -205,6 +228,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param deliveries
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder plusDeliveries(
@@ -218,6 +243,7 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder plusDeliveries(
@@ -231,6 +257,7 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder withDeliveries(
@@ -242,6 +269,7 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder custom(
@@ -252,6 +280,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     /**
      *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CartAddCustomShippingMethodActionBuilder custom(

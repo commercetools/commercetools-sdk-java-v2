@@ -25,6 +25,8 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
 
     /**
      *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
+     * @param myBusinessUnitStatusOnCreation
+     * @return Builder
      */
 
     public BusinessUnitConfigurationBuilder myBusinessUnitStatusOnCreation(

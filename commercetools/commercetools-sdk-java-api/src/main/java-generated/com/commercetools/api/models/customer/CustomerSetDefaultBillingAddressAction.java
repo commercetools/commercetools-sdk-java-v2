@@ -30,6 +30,7 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
 
     /**
      *  <p><code>id</code> of the Address to become the default billing address.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -37,6 +38,7 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
 
     /**
      *  <p><code>key</code> of the Address to become the default billing address.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")

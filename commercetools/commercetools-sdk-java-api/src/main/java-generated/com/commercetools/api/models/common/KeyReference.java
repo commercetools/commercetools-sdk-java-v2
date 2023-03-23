@@ -37,6 +37,7 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Type of referenced resource.</p>
+     * @return typeId
      */
     @NotNull
     @JsonProperty("typeId")
@@ -44,6 +45,7 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>User-defined unique and immutable key of the referenced resource.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

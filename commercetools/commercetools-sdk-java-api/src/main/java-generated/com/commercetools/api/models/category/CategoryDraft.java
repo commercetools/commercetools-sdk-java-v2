@@ -37,6 +37,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Name of the Category.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -53,6 +55,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Description of the Category.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -60,6 +63,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Parent Category of the Category. The parent can be set by its <code>id</code> or <code>key</code>.</p>
+     * @return parent
      */
     @Valid
     @JsonProperty("parent")
@@ -67,6 +71,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree. If not set, a random value will be assigned.</p>
+     * @return orderHint
      */
 
     @JsonProperty("orderHint")
@@ -74,6 +79,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -81,6 +87,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @return metaTitle
      */
     @Valid
     @JsonProperty("metaTitle")
@@ -88,6 +95,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @return metaDescription
      */
     @Valid
     @JsonProperty("metaDescription")
@@ -95,6 +103,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @return metaKeywords
      */
     @Valid
     @JsonProperty("metaKeywords")
@@ -102,6 +111,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Custom Fields for the Category.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -109,6 +119,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Media related to the Category.</p>
+     * @return assets
      */
     @Valid
     @JsonProperty("assets")
@@ -116,6 +127,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     * @return key
      */
 
     @JsonProperty("key")

@@ -33,6 +33,7 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
 
     /**
      *
+     * @return score
      */
     @NotNull
     @JsonProperty("score")

@@ -29,6 +29,8 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
 
     /**
      *  <p>Update action for <code>addDiscountCode</code></p>
+     * @param change
+     * @return Builder
      */
 
     public AddDiscountCodeChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
 
     /**
      *
+     * @return Builder
      */
 
     public AddDiscountCodeChangeBuilder nextValue(
@@ -48,6 +51,8 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddDiscountCodeChangeBuilder nextValue(

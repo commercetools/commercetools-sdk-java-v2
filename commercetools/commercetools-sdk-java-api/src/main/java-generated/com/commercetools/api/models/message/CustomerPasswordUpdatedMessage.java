@@ -40,6 +40,7 @@ public interface CustomerPasswordUpdatedMessage extends Message {
 
     /**
      *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
+     * @return reset
      */
     @NotNull
     @JsonProperty("reset")

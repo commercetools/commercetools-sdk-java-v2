@@ -35,6 +35,7 @@ public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
 
     /**
      *  <p>New value to set.</p>
+     * @return name
      */
     @NotNull
     @Valid

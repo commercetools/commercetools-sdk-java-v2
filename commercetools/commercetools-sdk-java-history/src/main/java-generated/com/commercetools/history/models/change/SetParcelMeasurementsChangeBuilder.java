@@ -35,6 +35,8 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *  <p>Update action for <code>setParcelMeasurements</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetParcelMeasurementsChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelMeasurementsChangeBuilder parcel(
@@ -55,6 +58,8 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
+     * @param parcel
+     * @return Builder
      */
 
     public SetParcelMeasurementsChangeBuilder parcel(
@@ -65,6 +70,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelMeasurementsChangeBuilder nextValue(
@@ -75,6 +81,8 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetParcelMeasurementsChangeBuilder nextValue(
@@ -85,6 +93,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelMeasurementsChangeBuilder previousValue(
@@ -96,6 +105,8 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetParcelMeasurementsChangeBuilder previousValue(

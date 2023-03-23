@@ -33,6 +33,7 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")

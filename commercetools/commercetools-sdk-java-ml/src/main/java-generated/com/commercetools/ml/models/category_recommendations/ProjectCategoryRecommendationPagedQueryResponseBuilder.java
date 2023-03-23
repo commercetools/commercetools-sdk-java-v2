@@ -39,6 +39,8 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param count
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder count(final Long count) {
@@ -48,6 +50,8 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param total
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder total(final Long total) {
@@ -57,6 +61,8 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder offset(final Long offset) {
@@ -66,6 +72,8 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
@@ -76,6 +84,8 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
@@ -86,6 +96,8 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder plusResults(
@@ -99,6 +111,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder plusResults(
@@ -114,6 +127,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder withResults(
@@ -127,6 +141,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder meta(
@@ -140,6 +155,8 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param meta
+     * @return Builder
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder meta(

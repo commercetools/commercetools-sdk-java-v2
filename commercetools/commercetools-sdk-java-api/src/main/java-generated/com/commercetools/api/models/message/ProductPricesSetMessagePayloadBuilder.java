@@ -32,6 +32,8 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPricesSetMessagePayloadBuilder variantId(final Long variantId) {
@@ -41,6 +43,8 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductPricesSetMessagePayloadBuilder prices(final com.commercetools.api.models.common.Price... prices) {
@@ -50,6 +54,8 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductPricesSetMessagePayloadBuilder prices(
@@ -60,6 +66,8 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductPricesSetMessagePayloadBuilder plusPrices(final com.commercetools.api.models.common.Price... prices) {
@@ -72,6 +80,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @return Builder
      */
 
     public ProductPricesSetMessagePayloadBuilder plusPrices(
@@ -85,6 +94,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @return Builder
      */
 
     public ProductPricesSetMessagePayloadBuilder withPrices(
@@ -96,6 +106,8 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPricesSetMessagePayloadBuilder staged(final Boolean staged) {

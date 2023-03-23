@@ -38,6 +38,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.sku</code>.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -45,6 +46,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+     * @return isMasterVariant
      */
     @NotNull
     @JsonProperty("isMasterVariant")
@@ -52,6 +54,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")
@@ -59,6 +62,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     * @return images
      */
     @Valid
     @JsonProperty("images")
@@ -66,6 +70,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     * @return assets
      */
     @Valid
     @JsonProperty("assets")
@@ -73,6 +78,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     * @return publish
      */
 
     @JsonProperty("publish")
@@ -80,6 +86,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     * @return product
      */
     @NotNull
     @Valid

@@ -31,6 +31,8 @@ public class MyBusinessUnitAddShippingAddressIdActionBuilder
 
     /**
      *  <p>ID of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public MyBusinessUnitAddShippingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -40,6 +42,8 @@ public class MyBusinessUnitAddShippingAddressIdActionBuilder
 
     /**
      *  <p>Key of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public MyBusinessUnitAddShippingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

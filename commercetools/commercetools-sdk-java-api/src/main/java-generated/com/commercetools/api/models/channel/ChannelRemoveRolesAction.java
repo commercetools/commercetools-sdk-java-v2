@@ -33,6 +33,7 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to remove from the array.</p>
+     * @return roles
      */
     @NotNull
     @JsonProperty("roles")

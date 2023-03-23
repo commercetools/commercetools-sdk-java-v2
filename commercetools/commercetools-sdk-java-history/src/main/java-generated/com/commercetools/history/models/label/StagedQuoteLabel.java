@@ -37,6 +37,7 @@ public interface StagedQuoteLabel extends Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface StagedQuoteLabel extends Label {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -51,6 +53,7 @@ public interface StagedQuoteLabel extends Label {
 
     /**
      *
+     * @return customer
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface StagedQuoteLabel extends Label {
 
     /**
      *
+     * @return quoteRequest
      */
     @NotNull
     @Valid

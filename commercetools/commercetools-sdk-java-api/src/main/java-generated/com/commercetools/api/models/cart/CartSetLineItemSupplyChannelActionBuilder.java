@@ -31,6 +31,8 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public CartSetLineItemSupplyChannelActionBuilder lineItemId(final String lineItemId) {
@@ -43,6 +45,7 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
      *  </ul>
+     * @return Builder
      */
 
     public CartSetLineItemSupplyChannelActionBuilder supplyChannel(
@@ -57,6 +60,8 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
      *  </ul>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public CartSetLineItemSupplyChannelActionBuilder supplyChannel(

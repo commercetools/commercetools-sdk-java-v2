@@ -35,6 +35,7 @@ public interface DiscountedLineItemPortion {
 
     /**
      *  <p>References a cart discount by key.</p>
+     * @return discount
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface DiscountedLineItemPortion {
 
     /**
      *
+     * @return discountedAmount
      */
     @NotNull
     @Valid

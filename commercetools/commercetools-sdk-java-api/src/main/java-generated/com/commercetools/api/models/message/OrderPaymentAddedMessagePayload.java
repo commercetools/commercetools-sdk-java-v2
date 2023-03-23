@@ -35,6 +35,7 @@ public interface OrderPaymentAddedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Payment that was added to the Order.</p>
+     * @return payment
      */
     @NotNull
     @Valid

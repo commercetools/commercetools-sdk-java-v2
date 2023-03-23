@@ -35,6 +35,7 @@ public interface TaxRate {
 
     /**
      *
+     * @return id
      */
 
     @JsonProperty("id")
@@ -42,6 +43,7 @@ public interface TaxRate {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -49,6 +51,7 @@ public interface TaxRate {
 
     /**
      *
+     * @return amount
      */
     @NotNull
     @JsonProperty("amount")
@@ -56,6 +59,7 @@ public interface TaxRate {
 
     /**
      *
+     * @return includedInPrice
      */
     @NotNull
     @JsonProperty("includedInPrice")
@@ -63,6 +67,7 @@ public interface TaxRate {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -70,6 +75,7 @@ public interface TaxRate {
 
     /**
      *
+     * @return state
      */
 
     @JsonProperty("state")
@@ -77,6 +83,7 @@ public interface TaxRate {
 
     /**
      *
+     * @return subRates
      */
     @Valid
     @JsonProperty("subRates")

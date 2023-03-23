@@ -39,6 +39,7 @@ public interface ChangeTransactionStateChange extends Change {
 
     /**
      *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -46,6 +47,7 @@ public interface ChangeTransactionStateChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -53,6 +55,7 @@ public interface ChangeTransactionStateChange extends Change {
 
     /**
      *
+     * @return transaction
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface ChangeTransactionStateChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -68,6 +72,7 @@ public interface ChangeTransactionStateChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

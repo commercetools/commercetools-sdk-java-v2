@@ -25,6 +25,8 @@ public class FieldTypeBuilder implements Builder<FieldType> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public FieldTypeBuilder name(final String name) {

@@ -35,6 +35,7 @@ public interface ProductTypeImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductType.name</code>.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -42,6 +43,7 @@ public interface ProductTypeImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductType.description</code>.</p>
+     * @return description
      */
     @NotNull
     @JsonProperty("description")
@@ -49,6 +51,7 @@ public interface ProductTypeImport extends ImportResource {
 
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")

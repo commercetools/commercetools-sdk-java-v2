@@ -38,6 +38,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public ImportOperationPagedResponseBuilder limit(final Integer limit) {
@@ -47,6 +49,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public ImportOperationPagedResponseBuilder offset(final Long offset) {
@@ -56,6 +60,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The actual number of results returned.</p>
+     * @param count
+     * @return Builder
      */
 
     public ImportOperationPagedResponseBuilder count(final Long count) {
@@ -65,6 +71,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The total number of import operations matching the query.</p>
+     * @param total
+     * @return Builder
      */
 
     public ImportOperationPagedResponseBuilder total(final Long total) {
@@ -74,6 +82,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ImportOperationPagedResponseBuilder results(
@@ -84,6 +94,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ImportOperationPagedResponseBuilder results(
@@ -94,6 +106,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ImportOperationPagedResponseBuilder plusResults(
@@ -107,6 +121,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
+     * @return Builder
      */
 
     public ImportOperationPagedResponseBuilder plusResults(
@@ -121,6 +136,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
+     * @return Builder
      */
 
     public ImportOperationPagedResponseBuilder withResults(

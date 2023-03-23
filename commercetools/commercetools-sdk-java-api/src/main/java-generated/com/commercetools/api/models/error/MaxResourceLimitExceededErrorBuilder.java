@@ -30,6 +30,8 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
 
     /**
      *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public MaxResourceLimitExceededErrorBuilder message(final String message) {
@@ -60,6 +62,8 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
 
     /**
      *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
+     * @param exceededResource
+     * @return Builder
      */
 
     public MaxResourceLimitExceededErrorBuilder exceededResource(

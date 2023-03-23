@@ -28,6 +28,7 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ChannelSetAddressActionBuilder address(
@@ -38,6 +39,8 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param address
+     * @return Builder
      */
 
     public ChannelSetAddressActionBuilder address(

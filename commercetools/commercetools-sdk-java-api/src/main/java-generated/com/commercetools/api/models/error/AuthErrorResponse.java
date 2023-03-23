@@ -35,6 +35,7 @@ public interface AuthErrorResponse extends ErrorResponse {
 
     /**
      *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     * @return error
      */
     @NotNull
     @JsonProperty("error")
@@ -42,6 +43,7 @@ public interface AuthErrorResponse extends ErrorResponse {
 
     /**
      *  <p>Plain text description of the first error.</p>
+     * @return error_description
      */
 
     @JsonProperty("error_description")
@@ -49,6 +51,7 @@ public interface AuthErrorResponse extends ErrorResponse {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @return errors
      */
     @NotNull
     @Valid

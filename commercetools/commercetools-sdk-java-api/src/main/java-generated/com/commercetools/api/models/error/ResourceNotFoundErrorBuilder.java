@@ -27,6 +27,8 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
 
     /**
      *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ResourceNotFoundErrorBuilder message(final String message) {

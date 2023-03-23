@@ -35,6 +35,7 @@ public interface LocalizedStringSetField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid

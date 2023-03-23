@@ -32,6 +32,7 @@ public interface ShoppingListResourceIdentifier
 
     /**
      *  <p>Unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface ShoppingListResourceIdentifier
 
     /**
      *  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
      */
 
     @JsonProperty("key")

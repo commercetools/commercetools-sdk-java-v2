@@ -42,6 +42,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -49,6 +50,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p><code>Two standalone prices have overlapping validity periods."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -56,6 +58,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>Reference to the conflicting Standalone Price.</p>
+     * @return conflictingStandalonePrice
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
+     * @return sku
      */
     @NotNull
     @JsonProperty("sku")
@@ -71,6 +75,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>Currency code of the country.</p>
+     * @return currency
      */
     @NotNull
     @JsonProperty("currency")
@@ -78,6 +83,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -85,6 +91,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -92,6 +99,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>Channel for which the Standalone Price is valid.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -99,6 +107,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>Date and time (UTC) from which the Standalone Price is valid.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -106,6 +115,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>Date and time (UTC) until which the Standalone Price is valid.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -113,6 +123,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>Date and time (UTC) from which the conflicting Standalone Price is valid.</p>
+     * @return conflictingValidFrom
      */
 
     @JsonProperty("conflictingValidFrom")
@@ -120,6 +131,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
     /**
      *  <p>Date and time (UTC) until which the conflicting Standalone Price is valid.</p>
+     * @return conflictingValidUntil
      */
 
     @JsonProperty("conflictingValidUntil")

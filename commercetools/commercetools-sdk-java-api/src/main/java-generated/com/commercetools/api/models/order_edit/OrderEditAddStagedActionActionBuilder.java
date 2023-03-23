@@ -26,6 +26,8 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
 
     /**
      *
+     * @param stagedAction
+     * @return Builder
      */
 
     public OrderEditAddStagedActionActionBuilder stagedAction(
@@ -36,6 +38,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditAddStagedActionActionBuilder stagedAction(

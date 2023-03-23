@@ -33,6 +33,7 @@ public interface TaxedPrice {
 
     /**
      *
+     * @return totalNet
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface TaxedPrice {
 
     /**
      *
+     * @return totalGross
      */
     @NotNull
     @Valid

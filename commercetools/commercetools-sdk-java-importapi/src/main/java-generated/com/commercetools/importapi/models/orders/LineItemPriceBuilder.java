@@ -52,6 +52,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.value</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public LineItemPriceBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -61,6 +63,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.value</code>.</p>
+     * @return Builder
      */
 
     public LineItemPriceBuilder value(
@@ -71,6 +74,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.county</code>.</p>
+     * @param country
+     * @return Builder
      */
 
     public LineItemPriceBuilder country(@Nullable final String country) {
@@ -80,6 +85,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.validFrom</code>.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public LineItemPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -89,6 +96,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.validUntil</code>.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public LineItemPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -98,6 +107,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a customer group by key.</p>
+     * @return Builder
      */
 
     public LineItemPriceBuilder customerGroup(
@@ -110,6 +120,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a customer group by key.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public LineItemPriceBuilder customerGroup(
@@ -120,6 +132,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a channel by key.</p>
+     * @return Builder
      */
 
     public LineItemPriceBuilder channel(
@@ -130,6 +143,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a channel by key.</p>
+     * @param channel
+     * @return Builder
      */
 
     public LineItemPriceBuilder channel(
@@ -140,6 +155,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @return Builder
      */
 
     public LineItemPriceBuilder discounted(
@@ -150,6 +166,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public LineItemPriceBuilder discounted(
@@ -160,6 +178,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public LineItemPriceBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -169,6 +189,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public LineItemPriceBuilder tiers(
@@ -179,6 +201,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public LineItemPriceBuilder plusTiers(
@@ -192,6 +216,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @return Builder
      */
 
     public LineItemPriceBuilder plusTiers(
@@ -205,6 +230,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @return Builder
      */
 
     public LineItemPriceBuilder withTiers(
@@ -216,6 +242,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.custom</code>.</p>
+     * @return Builder
      */
 
     public LineItemPriceBuilder custom(
@@ -226,6 +253,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.custom</code>.</p>
+     * @param custom
+     * @return Builder
      */
 
     public LineItemPriceBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {

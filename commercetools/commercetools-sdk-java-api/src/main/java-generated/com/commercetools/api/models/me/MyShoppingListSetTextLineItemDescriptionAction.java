@@ -35,6 +35,7 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @return textLineItemId
      */
     @NotNull
     @JsonProperty("textLineItemId")
@@ -42,6 +43,7 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")

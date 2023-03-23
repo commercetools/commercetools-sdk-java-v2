@@ -41,6 +41,7 @@ public interface MyPaymentUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

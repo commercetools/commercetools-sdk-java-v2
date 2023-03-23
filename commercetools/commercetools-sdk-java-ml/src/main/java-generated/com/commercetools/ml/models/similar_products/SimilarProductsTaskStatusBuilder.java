@@ -34,6 +34,8 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public SimilarProductsTaskStatusBuilder state(final com.commercetools.ml.models.common.TaskStatusEnum state) {
@@ -43,6 +45,8 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
+     * @param expires
+     * @return Builder
      */
 
     public SimilarProductsTaskStatusBuilder expires(@Nullable final java.time.ZonedDateTime expires) {
@@ -52,6 +56,7 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+     * @return Builder
      */
 
     public SimilarProductsTaskStatusBuilder result(
@@ -64,6 +69,8 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+     * @param result
+     * @return Builder
      */
 
     public SimilarProductsTaskStatusBuilder result(

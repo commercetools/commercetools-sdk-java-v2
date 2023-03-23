@@ -38,6 +38,7 @@ public interface RemoveShippingAddressIdChange extends Change {
 
     /**
      *  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -45,6 +46,7 @@ public interface RemoveShippingAddressIdChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -52,6 +54,7 @@ public interface RemoveShippingAddressIdChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -59,6 +62,7 @@ public interface RemoveShippingAddressIdChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -66,6 +70,7 @@ public interface RemoveShippingAddressIdChange extends Change {
 
     /**
      *
+     * @return address
      */
     @NotNull
     @Valid

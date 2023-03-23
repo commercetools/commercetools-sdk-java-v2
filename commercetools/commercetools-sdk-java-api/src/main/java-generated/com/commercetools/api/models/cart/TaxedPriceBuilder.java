@@ -37,6 +37,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Total net price of the Cart or Order.</p>
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalNet(
@@ -47,6 +48,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Total net price of the Cart or Order.</p>
+     * @param totalNet
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalNet(final com.commercetools.api.models.common.CentPrecisionMoney totalNet) {
@@ -56,6 +59,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Total gross price of the Cart or Order.</p>
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalGross(
@@ -66,6 +70,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Total gross price of the Cart or Order.</p>
+     * @param totalGross
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalGross(final com.commercetools.api.models.common.CentPrecisionMoney totalGross) {
@@ -76,6 +82,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions
+     * @return Builder
      */
 
     public TaxedPriceBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
@@ -86,6 +94,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions
+     * @return Builder
      */
 
     public TaxedPriceBuilder taxPortions(
@@ -97,6 +107,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions
+     * @return Builder
      */
 
     public TaxedPriceBuilder plusTaxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
@@ -110,6 +122,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @return Builder
      */
 
     public TaxedPriceBuilder plusTaxPortions(
@@ -124,6 +137,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @return Builder
      */
 
     public TaxedPriceBuilder withTaxPortions(
@@ -136,6 +150,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Total tax applicable for the Cart or Order.</p>
      *  <p>Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalTax(
@@ -147,6 +162,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Total tax applicable for the Cart or Order.</p>
      *  <p>Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param totalTax
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalTax(@Nullable final com.commercetools.api.models.common.CentPrecisionMoney totalTax) {

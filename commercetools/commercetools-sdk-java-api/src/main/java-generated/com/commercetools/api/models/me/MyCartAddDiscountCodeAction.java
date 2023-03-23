@@ -35,6 +35,7 @@ public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
 
     /**
      *  <p><code>code</code> of a DiscountCode.</p>
+     * @return code
      */
     @NotNull
     @JsonProperty("code")

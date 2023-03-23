@@ -29,6 +29,8 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Expected version of the InventoryEntry on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public InventoryEntryUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
+     * @param actions
+     * @return Builder
      */
 
     public InventoryEntryUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
+     * @param actions
+     * @return Builder
      */
 
     public InventoryEntryUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
+     * @param actions
+     * @return Builder
      */
 
     public InventoryEntryUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
+     * @return Builder
      */
 
     public InventoryEntryUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
+     * @return Builder
      */
 
     public InventoryEntryUpdateBuilder withActions(

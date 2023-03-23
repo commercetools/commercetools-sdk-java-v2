@@ -27,6 +27,8 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
 
     /**
      *  <p>Plain text description of the constraints that were violated.</p>
+     * @param message
+     * @return Builder
      */
 
     public InternalConstraintViolatedErrorBuilder message(final String message) {

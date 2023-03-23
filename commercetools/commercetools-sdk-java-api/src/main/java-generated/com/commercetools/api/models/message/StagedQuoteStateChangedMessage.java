@@ -42,6 +42,7 @@ public interface StagedQuoteStateChangedMessage extends Message {
 
     /**
      *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
+     * @return stagedQuoteState
      */
     @NotNull
     @JsonProperty("stagedQuoteState")
@@ -49,6 +50,7 @@ public interface StagedQuoteStateChangedMessage extends Message {
 
     /**
      *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
+     * @return oldStagedQuoteState
      */
     @NotNull
     @JsonProperty("oldStagedQuoteState")

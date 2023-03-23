@@ -26,6 +26,7 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
 
     /**
      *  <p>Value to append.</p>
+     * @return Builder
      */
 
     public StoreAddSupplyChannelActionBuilder supplyChannel(
@@ -37,6 +38,8 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
 
     /**
      *  <p>Value to append.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public StoreAddSupplyChannelActionBuilder supplyChannel(

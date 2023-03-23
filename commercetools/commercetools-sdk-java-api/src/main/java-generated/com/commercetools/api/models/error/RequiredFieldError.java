@@ -34,6 +34,7 @@ public interface RequiredFieldError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface RequiredFieldError extends ErrorObject {
 
     /**
      *  <p><code>"A value is required for field $field."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -48,6 +50,7 @@ public interface RequiredFieldError extends ErrorObject {
 
     /**
      *  <p>Name of the field missing the value.</p>
+     * @return field
      */
     @NotNull
     @JsonProperty("field")

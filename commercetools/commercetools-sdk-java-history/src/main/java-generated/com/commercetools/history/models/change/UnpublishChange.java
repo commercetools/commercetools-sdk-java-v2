@@ -33,6 +33,7 @@ public interface UnpublishChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +41,7 @@ public interface UnpublishChange extends Change {
 
     /**
      *
+     * @return change
      */
     @NotNull
     @JsonProperty("change")

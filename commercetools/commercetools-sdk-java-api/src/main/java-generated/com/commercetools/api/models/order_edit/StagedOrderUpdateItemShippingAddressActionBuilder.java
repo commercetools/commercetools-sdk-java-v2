@@ -27,6 +27,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return Builder
      */
 
     public StagedOrderUpdateItemShippingAddressActionBuilder address(
@@ -37,6 +38,8 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address
+     * @return Builder
      */
 
     public StagedOrderUpdateItemShippingAddressActionBuilder address(

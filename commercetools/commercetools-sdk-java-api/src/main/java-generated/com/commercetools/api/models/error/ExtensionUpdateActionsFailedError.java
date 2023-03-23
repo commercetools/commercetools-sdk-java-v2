@@ -36,6 +36,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -43,6 +44,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
     /**
      *  <p><code>"The extension returned update actions that could not be executed."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -50,6 +52,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
     /**
      *  <p>User-defined localized description of the error.</p>
+     * @return localizedMessage
      */
     @Valid
     @JsonProperty("localizedMessage")
@@ -57,6 +60,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
     /**
      *  <p>Any information that should be returned to the API caller.</p>
+     * @return extensionExtraInfo
      */
     @Valid
     @JsonProperty("extensionExtraInfo")
@@ -64,6 +68,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @return extensionErrors
      */
     @NotNull
     @Valid

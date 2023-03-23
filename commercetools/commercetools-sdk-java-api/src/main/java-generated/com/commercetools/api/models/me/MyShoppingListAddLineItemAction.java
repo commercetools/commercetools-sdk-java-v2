@@ -35,6 +35,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -42,6 +43,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
 
     /**
      *  <p>Unique identifier of a Product.</p>
+     * @return productId
      */
 
     @JsonProperty("productId")
@@ -49,6 +51,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
 
     /**
      *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -56,6 +59,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -63,6 +67,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @return addedAt
      */
 
     @JsonProperty("addedAt")
@@ -70,6 +75,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
 
     /**
      *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

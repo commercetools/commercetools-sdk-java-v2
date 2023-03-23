@@ -33,6 +33,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
 
     /**
      *  <p>Money value of the ShippingRate.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
 
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @return freeAbove
      */
     @Valid
     @JsonProperty("freeAbove")
@@ -48,6 +50,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @return tiers
      */
     @Valid
     @JsonProperty("tiers")

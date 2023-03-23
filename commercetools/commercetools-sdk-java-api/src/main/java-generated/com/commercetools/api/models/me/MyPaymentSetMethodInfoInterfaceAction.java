@@ -33,6 +33,7 @@ public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAc
 
     /**
      *  <p>Value to set. Once set, the <code>paymentInterface</code> of the <code>paymentMethodInfo</code> cannot be changed.</p>
+     * @return interface
      */
     @NotNull
     @JsonProperty("interface")

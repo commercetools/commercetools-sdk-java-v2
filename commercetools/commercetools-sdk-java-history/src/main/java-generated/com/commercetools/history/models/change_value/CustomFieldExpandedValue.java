@@ -34,6 +34,7 @@ public interface CustomFieldExpandedValue {
 
     /**
      *  <p>Name of a custom field.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -41,6 +42,7 @@ public interface CustomFieldExpandedValue {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")
@@ -48,6 +50,7 @@ public interface CustomFieldExpandedValue {
 
     /**
      *
+     * @return label
      */
     @NotNull
     @Valid

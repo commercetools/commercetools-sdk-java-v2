@@ -28,6 +28,7 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
 
     /**
      *  <p>ResourceIdentifier to a Store.</p>
+     * @return Builder
      */
 
     public OrderSetStoreActionBuilder store(
@@ -38,6 +39,8 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
 
     /**
      *  <p>ResourceIdentifier to a Store.</p>
+     * @param store
+     * @return Builder
      */
 
     public OrderSetStoreActionBuilder store(

@@ -34,6 +34,7 @@ public interface ProductSelectionUpdate extends
 
     /**
      *
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface ProductSelectionUpdate extends
 
     /**
      *
+     * @return actions
      */
     @NotNull
     @Valid

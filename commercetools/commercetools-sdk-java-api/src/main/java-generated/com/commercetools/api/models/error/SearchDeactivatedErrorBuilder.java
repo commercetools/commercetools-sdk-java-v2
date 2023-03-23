@@ -27,6 +27,8 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
 
     /**
      *  <p><code>"The endpoint is deactivated for this project. Please enable it via the Project endpoint, via the Merchant Center in the Project settings, or reach out to Support to enable it."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public SearchDeactivatedErrorBuilder message(final String message) {

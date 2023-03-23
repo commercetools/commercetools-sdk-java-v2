@@ -31,6 +31,8 @@ public class CartReferenceBuilder implements Builder<CartReference> {
 
     /**
      *  <p>Unique identifier of the referenced Cart.</p>
+     * @param id
+     * @return Builder
      */
 
     public CartReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
 
     /**
      *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     * @return Builder
      */
 
     public CartReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class CartReferenceBuilder implements Builder<CartReference> {
 
     /**
      *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     * @param obj
+     * @return Builder
      */
 
     public CartReferenceBuilder obj(@Nullable final com.commercetools.api.models.cart.Cart obj) {

@@ -32,6 +32,8 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *  <p>Shape of the action for <code>setSlug</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetSlugChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetSlugChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetSlugChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetSlugChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetSlugChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {

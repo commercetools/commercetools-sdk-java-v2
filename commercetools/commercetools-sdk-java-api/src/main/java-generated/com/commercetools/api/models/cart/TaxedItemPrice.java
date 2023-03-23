@@ -34,6 +34,7 @@ public interface TaxedItemPrice {
 
     /**
      *  <p>Total net amount of the Line Item or Custom Line Item.</p>
+     * @return totalNet
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface TaxedItemPrice {
 
     /**
      *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
+     * @return totalGross
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface TaxedItemPrice {
 
     /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @return totalTax
      */
     @Valid
     @JsonProperty("totalTax")

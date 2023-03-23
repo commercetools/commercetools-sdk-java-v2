@@ -25,6 +25,8 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public InvalidCredentialsErrorBuilder message(final String message) {

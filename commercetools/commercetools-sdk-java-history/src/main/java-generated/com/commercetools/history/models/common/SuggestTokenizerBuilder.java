@@ -25,6 +25,8 @@ public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public SuggestTokenizerBuilder type(final String type) {

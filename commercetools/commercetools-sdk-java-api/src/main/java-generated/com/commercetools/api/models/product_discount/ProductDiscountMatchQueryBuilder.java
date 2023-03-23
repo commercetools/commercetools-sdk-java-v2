@@ -35,6 +35,8 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>ID of the specified Product.</p>
+     * @param productId
+     * @return Builder
      */
 
     public ProductDiscountMatchQueryBuilder productId(final String productId) {
@@ -44,6 +46,8 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>ID of the specified Product Variant.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductDiscountMatchQueryBuilder variantId(final Integer variantId) {
@@ -53,6 +57,8 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductDiscountMatchQueryBuilder staged(final Boolean staged) {
@@ -62,6 +68,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>Specified Price of the specified Product Variant.</p>
+     * @return Builder
      */
 
     public ProductDiscountMatchQueryBuilder price(
@@ -72,6 +79,8 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>Specified Price of the specified Product Variant.</p>
+     * @param price
+     * @return Builder
      */
 
     public ProductDiscountMatchQueryBuilder price(final com.commercetools.api.models.common.QueryPrice price) {

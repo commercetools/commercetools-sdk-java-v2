@@ -36,6 +36,7 @@ public interface AddInterfaceInteractionChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface AddInterfaceInteractionChange extends Change {
 
     /**
      *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface AddInterfaceInteractionChange extends Change {
 
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
+     * @return nextValue
      */
     @NotNull
     @Valid

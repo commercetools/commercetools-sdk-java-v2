@@ -300,6 +300,7 @@ public interface Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -307,6 +308,7 @@ public interface Change {
 
     /**
      *
+     * @return change
      */
     @NotNull
     @JsonProperty("change")

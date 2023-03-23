@@ -35,6 +35,8 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *  <p>Update action for <code>setSearchKeywords</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetSearchKeywordsChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public SetSearchKeywordsChangeBuilder catalogData(final String catalogData) {
@@ -53,6 +57,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
+     * @return Builder
      */
 
     public SetSearchKeywordsChangeBuilder previousValue(
@@ -63,6 +68,8 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetSearchKeywordsChangeBuilder previousValue(
@@ -73,6 +80,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
+     * @return Builder
      */
 
     public SetSearchKeywordsChangeBuilder nextValue(
@@ -83,6 +91,8 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetSearchKeywordsChangeBuilder nextValue(

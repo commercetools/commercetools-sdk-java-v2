@@ -34,6 +34,7 @@ public interface ProductVariant {
 
     /**
      *  <p>The product that contains this variant.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface ProductVariant {
 
     /**
      *  <p>The state of the product variant.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")
@@ -49,6 +51,7 @@ public interface ProductVariant {
 
     /**
      *  <p>The id of the product variant.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")

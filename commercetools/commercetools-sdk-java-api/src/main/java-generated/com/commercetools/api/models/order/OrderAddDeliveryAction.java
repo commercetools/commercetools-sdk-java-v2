@@ -35,6 +35,7 @@ public interface OrderAddDeliveryAction
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")
@@ -42,6 +43,7 @@ public interface OrderAddDeliveryAction
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")
@@ -49,6 +51,7 @@ public interface OrderAddDeliveryAction
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -56,6 +59,7 @@ public interface OrderAddDeliveryAction
 
     /**
      *
+     * @return parcels
      */
     @Valid
     @JsonProperty("parcels")
@@ -63,6 +67,7 @@ public interface OrderAddDeliveryAction
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

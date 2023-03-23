@@ -31,6 +31,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
+     * @return Builder
      */
 
     public StoreNameSetMessagePayloadBuilder name(
@@ -41,6 +42,8 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
+     * @param name
+     * @return Builder
      */
 
     public StoreNameSetMessagePayloadBuilder name(
@@ -51,6 +54,8 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
+     * @param nameAllLocales
+     * @return Builder
      */
 
     public StoreNameSetMessagePayloadBuilder nameAllLocales(
@@ -61,6 +66,8 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
+     * @param nameAllLocales
+     * @return Builder
      */
 
     public StoreNameSetMessagePayloadBuilder nameAllLocales(
@@ -71,6 +78,8 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
+     * @param nameAllLocales
+     * @return Builder
      */
 
     public StoreNameSetMessagePayloadBuilder plusNameAllLocales(
@@ -84,6 +93,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
+     * @return Builder
      */
 
     public StoreNameSetMessagePayloadBuilder plusNameAllLocales(
@@ -97,6 +107,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
+     * @return Builder
      */
 
     public StoreNameSetMessagePayloadBuilder withNameAllLocales(

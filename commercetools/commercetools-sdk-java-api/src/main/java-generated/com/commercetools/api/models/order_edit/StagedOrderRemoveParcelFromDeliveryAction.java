@@ -34,6 +34,7 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")

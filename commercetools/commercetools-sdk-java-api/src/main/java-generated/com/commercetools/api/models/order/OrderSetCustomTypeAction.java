@@ -34,6 +34,7 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Order with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Order.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

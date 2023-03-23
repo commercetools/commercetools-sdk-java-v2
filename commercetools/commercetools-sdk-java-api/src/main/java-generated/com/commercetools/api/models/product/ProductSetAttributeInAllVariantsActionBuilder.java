@@ -33,6 +33,8 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
 
     /**
      *  <p>The name of the Attribute to set.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductSetAttributeInAllVariantsActionBuilder name(final String name) {
@@ -51,6 +53,8 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
      *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
      *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
      *  </ul>
+     * @param value
+     * @return Builder
      */
 
     public ProductSetAttributeInAllVariantsActionBuilder value(@Nullable final java.lang.Object value) {
@@ -60,6 +64,8 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
 
     /**
      *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetAttributeInAllVariantsActionBuilder staged(@Nullable final Boolean staged) {

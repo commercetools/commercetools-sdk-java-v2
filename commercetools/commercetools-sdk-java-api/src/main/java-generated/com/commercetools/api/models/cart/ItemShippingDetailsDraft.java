@@ -33,6 +33,7 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @return targets
      */
     @NotNull
     @Valid

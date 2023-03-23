@@ -37,6 +37,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @return delivery
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
 
     /**
      *  <p>Parcel that was added to the Delivery.</p>
+     * @return parcel
      */
     @NotNull
     @Valid
@@ -53,6 +55,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")

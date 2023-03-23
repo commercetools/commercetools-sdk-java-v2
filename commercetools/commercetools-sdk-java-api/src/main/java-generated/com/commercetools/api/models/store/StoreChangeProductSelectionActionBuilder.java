@@ -31,6 +31,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
 
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
+     * @return Builder
      */
 
     public StoreChangeProductSelectionActionBuilder productSelection(
@@ -43,6 +44,8 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
 
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
+     * @param productSelection
+     * @return Builder
      */
 
     public StoreChangeProductSelectionActionBuilder productSelection(
@@ -53,6 +56,8 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
 
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     * @param active
+     * @return Builder
      */
 
     public StoreChangeProductSelectionActionBuilder active(@Nullable final Boolean active) {

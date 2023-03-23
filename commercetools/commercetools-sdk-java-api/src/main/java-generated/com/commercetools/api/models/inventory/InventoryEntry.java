@@ -48,6 +48,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Unique identifier of the InventoryEntry.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -55,6 +56,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Current version of the InventoryEntry.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -62,6 +64,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Date and time (UTC) the InventoryEntry was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -69,6 +72,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Date and time (UTC) the InventoryEntry was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -76,6 +80,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -83,6 +88,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -90,6 +96,7 @@ public interface InventoryEntry
 
     /**
      *  <p>User-defined unique identifier of the InventoryEntry.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -97,6 +104,7 @@ public interface InventoryEntry
 
     /**
      *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     * @return sku
      */
     @NotNull
     @JsonProperty("sku")
@@ -104,6 +112,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -111,6 +120,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
+     * @return quantityOnStock
      */
     @NotNull
     @JsonProperty("quantityOnStock")
@@ -118,6 +128,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
+     * @return availableQuantity
      */
     @NotNull
     @JsonProperty("availableQuantity")
@@ -125,6 +136,7 @@ public interface InventoryEntry
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
+     * @return restockableInDays
      */
 
     @JsonProperty("restockableInDays")
@@ -132,6 +144,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Date and time of the next restock.</p>
+     * @return expectedDelivery
      */
 
     @JsonProperty("expectedDelivery")
@@ -139,6 +152,7 @@ public interface InventoryEntry
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

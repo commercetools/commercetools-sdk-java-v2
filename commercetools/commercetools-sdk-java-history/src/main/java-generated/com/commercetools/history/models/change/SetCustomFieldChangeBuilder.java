@@ -35,6 +35,8 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *  <p>Update action for setting a custom field</p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomFieldChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *  <p>Custom field name</p>
+     * @param name
+     * @return Builder
      */
 
     public SetCustomFieldChangeBuilder name(final String name) {
@@ -53,6 +57,8 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *
+     * @param customTypeId
+     * @return Builder
      */
 
     public SetCustomFieldChangeBuilder customTypeId(final String customTypeId) {
@@ -62,6 +68,8 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -71,6 +79,8 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {

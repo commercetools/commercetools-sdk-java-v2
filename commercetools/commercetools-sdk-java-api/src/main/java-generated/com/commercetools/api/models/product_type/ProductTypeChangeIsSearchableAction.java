@@ -34,6 +34,7 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -41,6 +42,7 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
 
     /**
      *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
+     * @return isSearchable
      */
     @NotNull
     @JsonProperty("isSearchable")

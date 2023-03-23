@@ -38,6 +38,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     * @return email
      */
     @NotNull
     @JsonProperty("email")
@@ -45,6 +46,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Password of the Customer.</p>
+     * @return password
      */
     @NotNull
     @JsonProperty("password")
@@ -52,6 +54,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Given name (first name) of the Customer.</p>
+     * @return firstName
      */
 
     @JsonProperty("firstName")
@@ -59,6 +62,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Family name (last name) of the Customer.</p>
+     * @return lastName
      */
 
     @JsonProperty("lastName")
@@ -66,6 +70,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Middle name of the Customer.</p>
+     * @return middleName
      */
 
     @JsonProperty("middleName")
@@ -73,6 +78,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     * @return title
      */
 
     @JsonProperty("title")
@@ -80,6 +86,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     * @return salutation
      */
 
     @JsonProperty("salutation")
@@ -87,6 +94,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Date of birth of the Customer.</p>
+     * @return dateOfBirth
      */
 
     @JsonProperty("dateOfBirth")
@@ -94,6 +102,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Company name of the Customer.</p>
+     * @return companyName
      */
 
     @JsonProperty("companyName")
@@ -101,6 +110,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Unique VAT ID of the Customer.</p>
+     * @return vatId
      */
 
     @JsonProperty("vatId")
@@ -108,6 +118,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Addresses of the Customer.</p>
+     * @return addresses
      */
     @Valid
     @JsonProperty("addresses")
@@ -115,6 +126,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @return defaultShippingAddress
      */
 
     @JsonProperty("defaultShippingAddress")
@@ -122,6 +134,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @return defaultBillingAddress
      */
 
     @JsonProperty("defaultBillingAddress")
@@ -129,6 +142,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Custom Fields for the Customer.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -136,6 +150,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")
@@ -143,6 +158,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
+     * @return stores
      */
     @Valid
     @JsonProperty("stores")

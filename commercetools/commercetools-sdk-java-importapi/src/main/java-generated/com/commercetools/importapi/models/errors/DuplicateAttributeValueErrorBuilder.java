@@ -29,6 +29,8 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public DuplicateAttributeValueErrorBuilder message(final String message) {
@@ -38,6 +40,8 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>The attribute in conflict.</p>
+     * @param attribute
+     * @return Builder
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(
@@ -48,6 +52,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>The attribute in conflict.</p>
+     * @return Builder
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(

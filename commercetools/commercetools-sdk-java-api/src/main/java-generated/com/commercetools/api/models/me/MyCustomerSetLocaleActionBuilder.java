@@ -27,6 +27,8 @@ public class MyCustomerSetLocaleActionBuilder implements Builder<MyCustomerSetLo
 
     /**
      *  <p>Value to set. Must be one of the languages supported by the Project.</p>
+     * @param locale
+     * @return Builder
      */
 
     public MyCustomerSetLocaleActionBuilder locale(@Nullable final String locale) {

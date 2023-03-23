@@ -32,6 +32,7 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
 
     /**
      *
+     * @return paymentState
      */
 
     @JsonProperty("paymentState")

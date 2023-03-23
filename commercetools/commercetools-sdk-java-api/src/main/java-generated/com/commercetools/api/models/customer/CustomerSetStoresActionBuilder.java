@@ -28,6 +28,8 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @param stores
+     * @return Builder
      */
 
     public CustomerSetStoresActionBuilder stores(
@@ -38,6 +40,8 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @param stores
+     * @return Builder
      */
 
     public CustomerSetStoresActionBuilder stores(
@@ -48,6 +52,8 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @param stores
+     * @return Builder
      */
 
     public CustomerSetStoresActionBuilder plusStores(
@@ -61,6 +67,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @return Builder
      */
 
     public CustomerSetStoresActionBuilder plusStores(
@@ -74,6 +81,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @return Builder
      */
 
     public CustomerSetStoresActionBuilder withStores(

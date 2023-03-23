@@ -34,6 +34,7 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @return Builder
      */
 
     public QuoteStateTransitionMessagePayloadBuilder state(
@@ -44,6 +45,8 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @param state
+     * @return Builder
      */
 
     public QuoteStateTransitionMessagePayloadBuilder state(
@@ -54,6 +57,7 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @return Builder
      */
 
     public QuoteStateTransitionMessagePayloadBuilder oldState(
@@ -64,6 +68,8 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @param oldState
+     * @return Builder
      */
 
     public QuoteStateTransitionMessagePayloadBuilder oldState(
@@ -74,6 +80,8 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force
+     * @return Builder
      */
 
     public QuoteStateTransitionMessagePayloadBuilder force(final Boolean force) {

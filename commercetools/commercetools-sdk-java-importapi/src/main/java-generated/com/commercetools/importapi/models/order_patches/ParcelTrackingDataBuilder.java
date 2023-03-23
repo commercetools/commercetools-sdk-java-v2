@@ -31,6 +31,8 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public ParcelTrackingDataBuilder parcelId(final String parcelId) {
@@ -40,6 +42,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelTrackingDataBuilder trackingData(
@@ -50,6 +53,8 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
 
     /**
      *
+     * @param trackingData
+     * @return Builder
      */
 
     public ParcelTrackingDataBuilder trackingData(

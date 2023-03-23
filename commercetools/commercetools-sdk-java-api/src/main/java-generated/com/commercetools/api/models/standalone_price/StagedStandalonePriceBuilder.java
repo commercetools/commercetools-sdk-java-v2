@@ -31,6 +31,8 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
 
     /**
      *  <p>Money value of the StagedStandalonePrice.</p>
+     * @param value
+     * @return Builder
      */
 
     public StagedStandalonePriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -40,6 +42,7 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
 
     /**
      *  <p>Money value of the StagedStandalonePrice.</p>
+     * @return Builder
      */
 
     public StagedStandalonePriceBuilder value(
@@ -50,6 +53,7 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
 
     /**
      *  <p>Discounted price for the StagedStandalonePrice.</p>
+     * @return Builder
      */
 
     public StagedStandalonePriceBuilder discounted(
@@ -60,6 +64,8 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
 
     /**
      *  <p>Discounted price for the StagedStandalonePrice.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public StagedStandalonePriceBuilder discounted(

@@ -35,6 +35,7 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -42,6 +43,7 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
 
     /**
      *  <p><code>"The compared field $fieldName is not present."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -49,6 +51,7 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
 
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
+     * @return errorByExtension
      */
     @NotNull
     @Valid

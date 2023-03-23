@@ -27,6 +27,8 @@ public class ProductSelectionSetKeyActionBuilder implements Builder<ProductSelec
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductSelectionSetKeyActionBuilder key(@Nullable final String key) {

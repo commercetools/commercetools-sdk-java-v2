@@ -26,6 +26,7 @@ public class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public TypeChangeNameActionBuilder name(
@@ -36,6 +37,8 @@ public class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param name
+     * @return Builder
      */
 
     public TypeChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

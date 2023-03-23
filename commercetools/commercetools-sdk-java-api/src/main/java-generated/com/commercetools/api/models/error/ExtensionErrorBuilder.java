@@ -38,6 +38,8 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>Error code caused by the Extension. For example, <code>InvalidField</code>.</p>
+     * @param code
+     * @return Builder
      */
 
     public ExtensionErrorBuilder code(final String code) {
@@ -47,6 +49,8 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>Plain text description of the error.</p>
+     * @param message
+     * @return Builder
      */
 
     public ExtensionErrorBuilder message(final String message) {
@@ -56,6 +60,8 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>Unique identifier of the Extension.</p>
+     * @param extensionId
+     * @return Builder
      */
 
     public ExtensionErrorBuilder extensionId(final String extensionId) {
@@ -65,6 +71,8 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
+     * @param extensionKey
+     * @return Builder
      */
 
     public ExtensionErrorBuilder extensionKey(@Nullable final String extensionKey) {

@@ -34,6 +34,7 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")

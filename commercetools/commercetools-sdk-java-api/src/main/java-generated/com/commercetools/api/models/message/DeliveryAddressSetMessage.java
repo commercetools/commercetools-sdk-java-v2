@@ -42,6 +42,7 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -49,6 +50,7 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
 
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -56,6 +58,7 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
 
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
+     * @return oldAddress
      */
     @Valid
     @JsonProperty("oldAddress")
@@ -63,6 +66,7 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")

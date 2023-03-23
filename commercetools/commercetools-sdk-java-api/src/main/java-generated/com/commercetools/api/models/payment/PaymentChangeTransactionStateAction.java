@@ -34,6 +34,7 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @return transactionId
      */
     @NotNull
     @JsonProperty("transactionId")
@@ -41,6 +42,7 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
 
     /**
      *  <p>New TransactionState.</p>
+     * @return state
      */
     @NotNull
     @JsonProperty("state")

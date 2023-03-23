@@ -39,6 +39,8 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductRemoveAssetActionBuilder variantId(@Nullable final Long variantId) {
@@ -48,6 +50,8 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductRemoveAssetActionBuilder sku(@Nullable final String sku) {
@@ -57,6 +61,8 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductRemoveAssetActionBuilder staged(@Nullable final Boolean staged) {
@@ -66,6 +72,8 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>The <code>id</code> of the Asset to remove.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public ProductRemoveAssetActionBuilder assetId(@Nullable final String assetId) {
@@ -75,6 +83,8 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>The <code>key</code> of the Asset to remove.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public ProductRemoveAssetActionBuilder assetKey(@Nullable final String assetKey) {

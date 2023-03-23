@@ -36,6 +36,7 @@ public interface RecordPagedQueryResponse {
 
     /**
      *  <p>Number of results requested.</p>
+     * @return limit
      */
     @NotNull
     @JsonProperty("limit")
@@ -43,6 +44,7 @@ public interface RecordPagedQueryResponse {
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -50,6 +52,7 @@ public interface RecordPagedQueryResponse {
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     * @return total
      */
     @NotNull
     @JsonProperty("total")
@@ -57,6 +60,7 @@ public interface RecordPagedQueryResponse {
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
     @NotNull
     @JsonProperty("offset")
@@ -64,6 +68,7 @@ public interface RecordPagedQueryResponse {
 
     /**
      *
+     * @return results
      */
     @NotNull
     @Valid

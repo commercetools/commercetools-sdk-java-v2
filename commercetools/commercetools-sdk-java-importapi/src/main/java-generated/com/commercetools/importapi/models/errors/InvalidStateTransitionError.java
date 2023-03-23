@@ -36,6 +36,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
 
     /**
      *  <p>Every Import Operation is assigned with one of the following states.</p>
+     * @return currentState
      */
     @NotNull
     @JsonProperty("currentState")
@@ -43,6 +44,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
 
     /**
      *  <p>Every Import Operation is assigned with one of the following states.</p>
+     * @return newState
      */
     @NotNull
     @JsonProperty("newState")

@@ -34,6 +34,7 @@ public interface ShippingRate {
 
     /**
      *  <p>Currency amount of the ShippingRate.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface ShippingRate {
 
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @return freeAbove
      */
     @Valid
     @JsonProperty("freeAbove")
@@ -49,6 +51,7 @@ public interface ShippingRate {
 
     /**
      *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
+     * @return isMatching
      */
 
     @JsonProperty("isMatching")
@@ -56,6 +59,7 @@ public interface ShippingRate {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @return tiers
      */
     @NotNull
     @Valid

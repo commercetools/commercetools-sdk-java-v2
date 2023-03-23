@@ -37,6 +37,8 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder message(final String message) {
@@ -67,6 +69,8 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Name of the conflicting field.</p>
+     * @param field
+     * @return Builder
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder field(final String field) {
@@ -76,6 +80,8 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Conflicting duplicate value.</p>
+     * @param duplicateValue
+     * @return Builder
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder duplicateValue(final java.lang.Object duplicateValue) {
@@ -85,6 +91,8 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Reference to the resource that has the conflicting value.</p>
+     * @param conflictingResource
+     * @return Builder
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(
@@ -95,6 +103,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Reference to the resource that has the conflicting value.</p>
+     * @return Builder
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(

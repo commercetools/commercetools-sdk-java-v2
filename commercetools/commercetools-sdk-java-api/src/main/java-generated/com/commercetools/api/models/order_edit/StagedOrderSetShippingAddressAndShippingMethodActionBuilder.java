@@ -35,6 +35,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
@@ -45,6 +46,8 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
@@ -55,6 +58,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
@@ -67,6 +71,8 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     * @param shippingMethod
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
@@ -77,6 +83,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(
@@ -88,6 +95,8 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(

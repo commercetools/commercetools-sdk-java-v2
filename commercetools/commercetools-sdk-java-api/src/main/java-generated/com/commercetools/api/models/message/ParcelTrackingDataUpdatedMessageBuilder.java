@@ -67,6 +67,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder id(final String id) {
@@ -76,6 +78,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder version(final Long version) {
@@ -85,6 +89,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -94,6 +100,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -103,6 +111,7 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder lastModifiedBy(
@@ -113,6 +122,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder lastModifiedBy(
@@ -123,6 +134,7 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder createdBy(
@@ -133,6 +145,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder createdBy(
@@ -143,6 +157,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -152,6 +168,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder resource(
@@ -162,6 +180,7 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder resource(
@@ -172,6 +191,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -181,6 +202,7 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -193,6 +215,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -203,6 +227,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @param deliveryId
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder deliveryId(final String deliveryId) {
@@ -212,6 +238,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
+     * @param parcelId
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder parcelId(final String parcelId) {
@@ -221,6 +249,7 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>The Tracking Data that was added to the Parcel.</p>
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder trackingData(
@@ -231,6 +260,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>The Tracking Data that was added to the Parcel.</p>
+     * @param trackingData
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder trackingData(
@@ -241,6 +272,8 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public ParcelTrackingDataUpdatedMessageBuilder shippingKey(@Nullable final String shippingKey) {

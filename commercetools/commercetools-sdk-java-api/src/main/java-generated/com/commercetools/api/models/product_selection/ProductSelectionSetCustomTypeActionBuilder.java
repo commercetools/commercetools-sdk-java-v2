@@ -31,6 +31,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
 
     /**
      *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
+     * @return Builder
      */
 
     public ProductSelectionSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
 
     /**
      *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
+     * @param type
+     * @return Builder
      */
 
     public ProductSelectionSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
 
     /**
      *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
+     * @return Builder
      */
 
     public ProductSelectionSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
 
     /**
      *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
+     * @param fields
+     * @return Builder
      */
 
     public ProductSelectionSetCustomTypeActionBuilder fields(

@@ -33,6 +33,7 @@ public interface Price {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -40,6 +41,7 @@ public interface Price {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid

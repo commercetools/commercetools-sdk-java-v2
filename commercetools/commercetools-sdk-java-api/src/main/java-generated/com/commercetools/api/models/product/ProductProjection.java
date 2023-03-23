@@ -50,6 +50,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Unique identifier of the Product.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -57,6 +58,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Current version of the Product.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -64,6 +66,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -71,6 +74,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Date and time (UTC) the ProductProjection was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -78,6 +82,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Date and time (UTC) the ProductProjection was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -85,6 +90,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>The ProductType defining the Attributes of the Product.</p>
+     * @return productType
      */
     @NotNull
     @Valid
@@ -93,6 +99,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Name of the Product.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -101,6 +108,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Description of the Product.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -108,6 +116,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -116,6 +125,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @return categories
      */
     @NotNull
     @Valid
@@ -124,6 +134,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Order of Product in Categories.</p>
+     * @return categoryOrderHints
      */
     @Valid
     @JsonProperty("categoryOrderHints")
@@ -131,6 +142,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @return metaTitle
      */
     @Valid
     @JsonProperty("metaTitle")
@@ -138,6 +150,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @return metaDescription
      */
     @Valid
     @JsonProperty("metaDescription")
@@ -145,6 +158,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @return metaKeywords
      */
     @Valid
     @JsonProperty("metaKeywords")
@@ -152,6 +166,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @return searchKeywords
      */
     @Valid
     @JsonProperty("searchKeywords")
@@ -159,6 +174,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p><code>true</code> if the staged data is different from the current data.</p>
+     * @return hasStagedChanges
      */
 
     @JsonProperty("hasStagedChanges")
@@ -166,6 +182,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p><code>true</code> if the Product is published.</p>
+     * @return published
      */
 
     @JsonProperty("published")
@@ -173,6 +190,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     * @return masterVariant
      */
     @NotNull
     @Valid
@@ -181,6 +199,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @return variants
      */
     @NotNull
     @Valid
@@ -189,6 +208,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>The TaxCategory of the Product.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -196,6 +216,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>State of the Product.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -203,6 +224,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Review statistics of the Product.</p>
+     * @return reviewRatingStatistics
      */
     @Valid
     @JsonProperty("reviewRatingStatistics")
@@ -210,6 +232,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     * @return priceMode
      */
 
     @JsonProperty("priceMode")

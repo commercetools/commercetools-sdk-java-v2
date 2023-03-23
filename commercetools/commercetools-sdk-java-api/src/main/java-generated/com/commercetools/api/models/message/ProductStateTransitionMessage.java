@@ -43,6 +43,7 @@ public interface ProductStateTransitionMessage extends Message {
 
     /**
      *  <p>Product State after the Transition State update action.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -51,6 +52,7 @@ public interface ProductStateTransitionMessage extends Message {
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @return force
      */
     @NotNull
     @JsonProperty("force")

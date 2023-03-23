@@ -64,6 +64,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Business Unit.</p>
+     * @param key
+     * @return Builder
      */
 
     public CompanyDraftBuilder key(final String key) {
@@ -73,6 +75,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     * @param status
+     * @return Builder
      */
 
     public CompanyDraftBuilder status(
@@ -85,6 +89,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
      *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public CompanyDraftBuilder stores(
@@ -97,6 +103,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
      *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public CompanyDraftBuilder stores(
@@ -109,6 +117,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
      *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public CompanyDraftBuilder plusStores(
@@ -124,6 +134,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
      *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return Builder
      */
 
     public CompanyDraftBuilder plusStores(
@@ -139,6 +150,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
      *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return Builder
      */
 
     public CompanyDraftBuilder withStores(
@@ -150,6 +162,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for Companies and defaults to <code>FromParent</code> for Divisions.</p>
+     * @param storeMode
+     * @return Builder
      */
 
     public CompanyDraftBuilder storeMode(
@@ -160,6 +174,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Name of the Business Unit.</p>
+     * @param name
+     * @return Builder
      */
 
     public CompanyDraftBuilder name(final String name) {
@@ -169,6 +185,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Email address of the Business Unit.</p>
+     * @param contactEmail
+     * @return Builder
      */
 
     public CompanyDraftBuilder contactEmail(@Nullable final String contactEmail) {
@@ -178,6 +196,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public CompanyDraftBuilder associates(
@@ -188,6 +208,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public CompanyDraftBuilder associates(
@@ -198,6 +220,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public CompanyDraftBuilder plusAssociates(
@@ -211,6 +235,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @return Builder
      */
 
     public CompanyDraftBuilder plusAssociates(
@@ -225,6 +250,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @return Builder
      */
 
     public CompanyDraftBuilder withAssociates(
@@ -237,6 +263,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public CompanyDraftBuilder addresses(@Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
@@ -246,6 +274,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public CompanyDraftBuilder addresses(
@@ -256,6 +286,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public CompanyDraftBuilder plusAddresses(
@@ -269,6 +301,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public CompanyDraftBuilder plusAddresses(
@@ -282,6 +315,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public CompanyDraftBuilder withAddresses(
@@ -293,6 +327,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public CompanyDraftBuilder shippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -302,6 +338,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public CompanyDraftBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
@@ -311,6 +349,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public CompanyDraftBuilder plusShippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -323,6 +363,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
+     * @param defaultShippingAddress
+     * @return Builder
      */
 
     public CompanyDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
@@ -332,6 +374,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public CompanyDraftBuilder billingAddresses(@Nullable final Integer... billingAddresses) {
@@ -341,6 +385,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public CompanyDraftBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
@@ -350,6 +396,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public CompanyDraftBuilder plusBillingAddresses(@Nullable final Integer... billingAddresses) {
@@ -362,6 +410,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
+     * @param defaultBillingAddress
+     * @return Builder
      */
 
     public CompanyDraftBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {
@@ -371,6 +421,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @return Builder
      */
 
     public CompanyDraftBuilder custom(
@@ -381,6 +432,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CompanyDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

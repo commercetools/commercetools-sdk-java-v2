@@ -29,6 +29,8 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     /**
      *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
+     * @param change
+     * @return Builder
      */
 
     public AddTaxRateChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public AddTaxRateChangeBuilder nextValue(
@@ -48,6 +51,8 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param nextValue
+     * @return Builder
      */
 
     public AddTaxRateChangeBuilder nextValue(final com.commercetools.history.models.common.TaxRate nextValue) {

@@ -34,6 +34,8 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
 
     /**
      *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
+     * @param status
+     * @return Builder
      */
 
     public SearchIndexingConfigurationValuesBuilder status(
@@ -44,6 +46,8 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
 
     /**
      *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public SearchIndexingConfigurationValuesBuilder lastModifiedAt(
@@ -54,6 +58,7 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public SearchIndexingConfigurationValuesBuilder lastModifiedBy(
@@ -64,6 +69,8 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public SearchIndexingConfigurationValuesBuilder lastModifiedBy(

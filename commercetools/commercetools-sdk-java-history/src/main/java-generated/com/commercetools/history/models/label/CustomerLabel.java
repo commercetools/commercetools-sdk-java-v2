@@ -35,6 +35,7 @@ public interface CustomerLabel extends Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -42,6 +43,7 @@ public interface CustomerLabel extends Label {
 
     /**
      *
+     * @return firstName
      */
     @NotNull
     @JsonProperty("firstName")
@@ -49,6 +51,7 @@ public interface CustomerLabel extends Label {
 
     /**
      *
+     * @return lastName
      */
     @NotNull
     @JsonProperty("lastName")
@@ -56,6 +59,7 @@ public interface CustomerLabel extends Label {
 
     /**
      *
+     * @return customerNumber
      */
     @NotNull
     @JsonProperty("customerNumber")

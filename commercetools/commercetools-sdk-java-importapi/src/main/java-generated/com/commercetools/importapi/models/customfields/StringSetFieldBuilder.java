@@ -25,6 +25,8 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public StringSetFieldBuilder value(final String... value) {
@@ -34,6 +36,8 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public StringSetFieldBuilder value(final java.util.List<String> value) {
@@ -43,6 +47,8 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public StringSetFieldBuilder plusValue(final String... value) {

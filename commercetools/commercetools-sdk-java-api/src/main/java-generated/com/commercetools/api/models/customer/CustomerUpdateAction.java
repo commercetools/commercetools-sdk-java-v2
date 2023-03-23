@@ -64,6 +64,7 @@ public interface CustomerUpdateAction extends com.commercetools.api.models.Resou
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

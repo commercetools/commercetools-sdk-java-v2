@@ -25,6 +25,8 @@ public class UpdateActionBuilder implements Builder<UpdateAction> {
 
     /**
      *
+     * @param action
+     * @return Builder
      */
 
     public UpdateActionBuilder action(final String action) {

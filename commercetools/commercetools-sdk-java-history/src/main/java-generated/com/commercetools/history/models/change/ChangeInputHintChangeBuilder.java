@@ -37,6 +37,8 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeInputHintChangeBuilder change(final String change) {
@@ -46,6 +48,8 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *  <p>The name of the field definition updated.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public ChangeInputHintChangeBuilder fieldName(final String fieldName) {
@@ -55,6 +59,8 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ChangeInputHintChangeBuilder attributeName(final String attributeName) {
@@ -64,6 +70,8 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeInputHintChangeBuilder nextValue(
@@ -74,6 +82,8 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeInputHintChangeBuilder previousValue(

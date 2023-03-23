@@ -31,6 +31,7 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     * @return country
      */
 
     @JsonProperty("country")

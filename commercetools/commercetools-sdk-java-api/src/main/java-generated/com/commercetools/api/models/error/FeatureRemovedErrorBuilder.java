@@ -27,6 +27,8 @@ public class FeatureRemovedErrorBuilder implements Builder<FeatureRemovedError> 
 
     /**
      *  <p>Description of the feature that is removed.</p>
+     * @param message
+     * @return Builder
      */
 
     public FeatureRemovedErrorBuilder message(final String message) {

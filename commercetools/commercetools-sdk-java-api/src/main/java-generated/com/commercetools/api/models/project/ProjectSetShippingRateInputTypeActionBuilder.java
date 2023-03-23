@@ -28,6 +28,8 @@ public class ProjectSetShippingRateInputTypeActionBuilder implements Builder<Pro
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param shippingRateInputType
+     * @return Builder
      */
 
     public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(
@@ -38,6 +40,7 @@ public class ProjectSetShippingRateInputTypeActionBuilder implements Builder<Pro
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(

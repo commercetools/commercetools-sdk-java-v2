@@ -36,6 +36,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -43,6 +44,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
 
     /**
      *  <p>Descriptive localized label of the value.</p>
+     * @return label
      */
     @NotNull
     @Valid

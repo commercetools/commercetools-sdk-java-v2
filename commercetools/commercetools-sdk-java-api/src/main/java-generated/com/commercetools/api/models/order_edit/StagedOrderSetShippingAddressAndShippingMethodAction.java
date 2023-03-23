@@ -38,6 +38,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
      */
     @NotNull
     @Valid
@@ -46,6 +47,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
 
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     * @return shippingMethod
      */
     @Valid
     @JsonProperty("shippingMethod")
@@ -53,6 +55,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")

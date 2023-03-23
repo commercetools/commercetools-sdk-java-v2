@@ -37,6 +37,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder product(
@@ -47,6 +48,8 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @param product
+     * @return Builder
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder product(
@@ -57,6 +60,8 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @param variantId
+     * @return Builder
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder variantId(final Integer variantId) {
@@ -66,6 +71,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
@@ -76,6 +82,8 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @param supplyChannel
+     * @return Builder
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
@@ -86,6 +94,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
@@ -96,6 +105,8 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @param distributionChannel
+     * @return Builder
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(

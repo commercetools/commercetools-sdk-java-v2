@@ -25,6 +25,8 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public OrderRemoveParcelFromDeliveryActionBuilder parcelId(final String parcelId) {

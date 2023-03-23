@@ -33,6 +33,7 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +41,7 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
 
     /**
      *
+     * @return predicate
      */
     @NotNull
     @JsonProperty("predicate")

@@ -33,6 +33,7 @@ public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
 
     /**
      *  <p>New value to set.</p>
+     * @return taxCalculationMode
      */
     @NotNull
     @JsonProperty("taxCalculationMode")

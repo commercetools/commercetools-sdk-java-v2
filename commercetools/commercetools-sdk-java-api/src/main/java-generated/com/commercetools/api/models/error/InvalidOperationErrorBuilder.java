@@ -27,6 +27,8 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
 
     /**
      *  <p>Plain text description of the error.</p>
+     * @param message
+     * @return Builder
      */
 
     public InvalidOperationErrorBuilder message(final String message) {

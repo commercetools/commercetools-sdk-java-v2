@@ -35,6 +35,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
 
     /**
      *  <p>The offending variant values.</p>
+     * @return variantValues
      */
     @NotNull
     @Valid

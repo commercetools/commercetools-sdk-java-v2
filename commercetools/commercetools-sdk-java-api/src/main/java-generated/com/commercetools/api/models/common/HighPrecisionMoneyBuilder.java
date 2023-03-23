@@ -38,6 +38,8 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
+     * @param centAmount
+     * @return Builder
      */
 
     public HighPrecisionMoneyBuilder centAmount(final Long centAmount) {
@@ -47,6 +49,8 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
+     * @param currencyCode
+     * @return Builder
      */
 
     public HighPrecisionMoneyBuilder currencyCode(final String currencyCode) {
@@ -56,6 +60,8 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
+     * @param fractionDigits
+     * @return Builder
      */
 
     public HighPrecisionMoneyBuilder fractionDigits(final Integer fractionDigits) {
@@ -65,6 +71,8 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     * @param preciseAmount
+     * @return Builder
      */
 
     public HighPrecisionMoneyBuilder preciseAmount(final Long preciseAmount) {

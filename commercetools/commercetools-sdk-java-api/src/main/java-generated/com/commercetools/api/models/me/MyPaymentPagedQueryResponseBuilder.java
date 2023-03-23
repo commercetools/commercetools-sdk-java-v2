@@ -40,6 +40,8 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public MyPaymentPagedQueryResponseBuilder limit(final Long limit) {
@@ -49,6 +51,8 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @param count
+     * @return Builder
      */
 
     public MyPaymentPagedQueryResponseBuilder count(final Long count) {
@@ -58,6 +62,8 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total
+     * @return Builder
      */
 
     public MyPaymentPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -67,6 +73,8 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public MyPaymentPagedQueryResponseBuilder offset(final Long offset) {
@@ -76,6 +84,8 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     /**
      *  <p>MyPayments matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public MyPaymentPagedQueryResponseBuilder results(final com.commercetools.api.models.me.MyPayment... results) {
@@ -85,6 +95,8 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     /**
      *  <p>MyPayments matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public MyPaymentPagedQueryResponseBuilder results(
@@ -95,6 +107,8 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     /**
      *  <p>MyPayments matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public MyPaymentPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.me.MyPayment... results) {
@@ -107,6 +121,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     /**
      *  <p>MyPayments matching the query.</p>
+     * @return Builder
      */
 
     public MyPaymentPagedQueryResponseBuilder plusResults(
@@ -120,6 +135,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     /**
      *  <p>MyPayments matching the query.</p>
+     * @return Builder
      */
 
     public MyPaymentPagedQueryResponseBuilder withResults(

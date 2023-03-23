@@ -34,6 +34,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
+     * @return Builder
      */
 
     public AssignedProductReferenceBuilder product(
@@ -44,6 +45,8 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
+     * @param product
+     * @return Builder
      */
 
     public AssignedProductReferenceBuilder product(
@@ -55,6 +58,8 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
      *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
+     * @param variantSelection
+     * @return Builder
      */
 
     public AssignedProductReferenceBuilder variantSelection(
@@ -66,6 +71,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
      *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
+     * @return Builder
      */
 
     public AssignedProductReferenceBuilder variantSelection(
@@ -79,6 +85,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     * @return Builder
      */
 
     public AssignedProductReferenceBuilder variantExclusion(
@@ -92,6 +99,8 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     * @param variantExclusion
+     * @return Builder
      */
 
     public AssignedProductReferenceBuilder variantExclusion(

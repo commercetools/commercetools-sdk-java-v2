@@ -36,6 +36,8 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public CategorySetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
@@ -45,6 +47,8 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public CategorySetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {
@@ -54,6 +58,8 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public CategorySetAssetCustomFieldActionBuilder name(final String name) {
@@ -63,6 +69,8 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public CategorySetAssetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

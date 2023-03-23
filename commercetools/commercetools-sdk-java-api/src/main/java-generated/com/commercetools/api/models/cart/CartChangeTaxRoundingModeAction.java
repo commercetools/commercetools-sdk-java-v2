@@ -33,6 +33,7 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
 
     /**
      *  <p>New value to set.</p>
+     * @return taxRoundingMode
      */
     @NotNull
     @JsonProperty("taxRoundingMode")

@@ -34,6 +34,7 @@ public class BusinessUnitSetAddressCustomTypeActionBuilder implements Builder<Bu
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @return Builder
      */
 
     public BusinessUnitSetAddressCustomTypeActionBuilder type(
@@ -44,6 +45,8 @@ public class BusinessUnitSetAddressCustomTypeActionBuilder implements Builder<Bu
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public BusinessUnitSetAddressCustomTypeActionBuilder type(
@@ -54,6 +57,7 @@ public class BusinessUnitSetAddressCustomTypeActionBuilder implements Builder<Bu
 
     /**
      *  <p>Sets the Custom Fields for the <code>address</code>.</p>
+     * @return Builder
      */
 
     public BusinessUnitSetAddressCustomTypeActionBuilder fields(
@@ -64,6 +68,8 @@ public class BusinessUnitSetAddressCustomTypeActionBuilder implements Builder<Bu
 
     /**
      *  <p>Sets the Custom Fields for the <code>address</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public BusinessUnitSetAddressCustomTypeActionBuilder fields(
@@ -74,6 +80,8 @@ public class BusinessUnitSetAddressCustomTypeActionBuilder implements Builder<Bu
 
     /**
      *  <p>ID of the address to be extended.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public BusinessUnitSetAddressCustomTypeActionBuilder addressId(final String addressId) {

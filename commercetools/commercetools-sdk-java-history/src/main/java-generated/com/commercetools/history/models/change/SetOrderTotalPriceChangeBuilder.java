@@ -32,6 +32,8 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *  <p>Update action for <code>setOrderTotalPrice</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetOrderTotalPriceChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *
+     * @return Builder
      */
 
     public SetOrderTotalPriceChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetOrderTotalPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
@@ -60,6 +65,7 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *
+     * @return Builder
      */
 
     public SetOrderTotalPriceChangeBuilder previousValue(
@@ -70,6 +76,8 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetOrderTotalPriceChangeBuilder previousValue(

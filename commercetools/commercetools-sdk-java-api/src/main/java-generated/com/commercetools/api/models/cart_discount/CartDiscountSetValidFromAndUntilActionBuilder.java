@@ -30,6 +30,8 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public CartDiscountSetValidFromAndUntilActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -39,6 +41,8 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public CartDiscountSetValidFromAndUntilActionBuilder validUntil(

@@ -79,6 +79,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Unique identifier of the Review.</p>
+     * @param id
+     * @return Builder
      */
 
     public ReviewBuilder id(final String id) {
@@ -88,6 +90,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Current version of the Review.</p>
+     * @param version
+     * @return Builder
      */
 
     public ReviewBuilder version(final Long version) {
@@ -97,6 +101,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Date and time (UTC) the Review was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ReviewBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -106,6 +112,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Date and time (UTC) the Review was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ReviewBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -115,6 +123,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ReviewBuilder lastModifiedBy(
@@ -125,6 +134,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ReviewBuilder lastModifiedBy(
@@ -135,6 +146,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ReviewBuilder createdBy(
@@ -145,6 +157,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ReviewBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -154,6 +168,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>User-defined unique identifier of the Review.</p>
+     * @param key
+     * @return Builder
      */
 
     public ReviewBuilder key(@Nullable final String key) {
@@ -163,6 +179,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>&nbsp;+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
+     * @param uniquenessValue
+     * @return Builder
      */
 
     public ReviewBuilder uniquenessValue(@Nullable final String uniquenessValue) {
@@ -172,6 +190,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Language in which the content of the Review is written.</p>
+     * @param locale
+     * @return Builder
      */
 
     public ReviewBuilder locale(@Nullable final String locale) {
@@ -181,6 +201,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Name of the author.</p>
+     * @param authorName
+     * @return Builder
      */
 
     public ReviewBuilder authorName(@Nullable final String authorName) {
@@ -190,6 +212,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Title of the Review.</p>
+     * @param title
+     * @return Builder
      */
 
     public ReviewBuilder title(@Nullable final String title) {
@@ -199,6 +223,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Content of the Review.</p>
+     * @param text
+     * @return Builder
      */
 
     public ReviewBuilder text(@Nullable final String text) {
@@ -208,6 +234,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     * @param target
+     * @return Builder
      */
 
     public ReviewBuilder target(@Nullable final com.commercetools.api.models.common.Reference target) {
@@ -217,6 +245,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     * @return Builder
      */
 
     public ReviewBuilder target(
@@ -227,6 +256,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     * @param includedInStatistics
+     * @return Builder
      */
 
     public ReviewBuilder includedInStatistics(final Boolean includedInStatistics) {
@@ -236,6 +267,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Rating of the Product or Channel.</p>
+     * @param rating
+     * @return Builder
      */
 
     public ReviewBuilder rating(@Nullable final Integer rating) {
@@ -245,6 +278,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @return Builder
      */
 
     public ReviewBuilder state(
@@ -255,6 +289,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @param state
+     * @return Builder
      */
 
     public ReviewBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -264,6 +300,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Customer who created the Review.</p>
+     * @return Builder
      */
 
     public ReviewBuilder customer(
@@ -274,6 +311,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Customer who created the Review.</p>
+     * @param customer
+     * @return Builder
      */
 
     public ReviewBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -283,6 +322,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Custom Fields of the Review.</p>
+     * @return Builder
      */
 
     public ReviewBuilder custom(
@@ -293,6 +333,8 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Custom Fields of the Review.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ReviewBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

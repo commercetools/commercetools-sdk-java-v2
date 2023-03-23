@@ -33,6 +33,7 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return localizedDescription
      */
     @Valid
     @JsonProperty("localizedDescription")

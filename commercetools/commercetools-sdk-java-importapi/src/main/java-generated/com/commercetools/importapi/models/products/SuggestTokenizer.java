@@ -35,6 +35,7 @@ public interface SuggestTokenizer {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

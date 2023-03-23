@@ -43,6 +43,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
+     * @param key
+     * @return Builder
      */
 
     public AssetBuilder key(final String key) {
@@ -52,6 +54,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param sources
+     * @return Builder
      */
 
     public AssetBuilder sources(final com.commercetools.importapi.models.common.AssetSource... sources) {
@@ -61,6 +65,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param sources
+     * @return Builder
      */
 
     public AssetBuilder sources(final java.util.List<com.commercetools.importapi.models.common.AssetSource> sources) {
@@ -70,6 +76,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param sources
+     * @return Builder
      */
 
     public AssetBuilder plusSources(final com.commercetools.importapi.models.common.AssetSource... sources) {
@@ -82,6 +90,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @return Builder
      */
 
     public AssetBuilder plusSources(
@@ -95,6 +104,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @return Builder
      */
 
     public AssetBuilder withSources(
@@ -111,6 +121,7 @@ public class AssetBuilder implements Builder<Asset> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public AssetBuilder name(
@@ -126,6 +137,8 @@ public class AssetBuilder implements Builder<Asset> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param name
+     * @return Builder
      */
 
     public AssetBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -140,6 +153,7 @@ public class AssetBuilder implements Builder<Asset> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public AssetBuilder description(
@@ -155,6 +169,8 @@ public class AssetBuilder implements Builder<Asset> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param description
+     * @return Builder
      */
 
     public AssetBuilder description(
@@ -165,6 +181,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param tags
+     * @return Builder
      */
 
     public AssetBuilder tags(@Nullable final String... tags) {
@@ -174,6 +192,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param tags
+     * @return Builder
      */
 
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
@@ -183,6 +203,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param tags
+     * @return Builder
      */
 
     public AssetBuilder plusTags(@Nullable final String... tags) {
@@ -195,6 +217,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @return Builder
      */
 
     public AssetBuilder custom(
@@ -205,6 +228,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @param custom
+     * @return Builder
      */
 
     public AssetBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {

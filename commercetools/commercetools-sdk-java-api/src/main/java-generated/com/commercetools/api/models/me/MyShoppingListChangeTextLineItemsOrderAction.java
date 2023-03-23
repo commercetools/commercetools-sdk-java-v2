@@ -33,6 +33,7 @@ public interface MyShoppingListChangeTextLineItemsOrderAction extends MyShopping
 
     /**
      *  <p>All existing TextLineItem <code>id</code>s in the desired new order.</p>
+     * @return textLineItemOrder
      */
     @NotNull
     @JsonProperty("textLineItemOrder")

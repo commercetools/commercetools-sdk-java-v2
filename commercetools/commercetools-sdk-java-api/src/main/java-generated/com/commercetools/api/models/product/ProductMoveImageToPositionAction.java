@@ -34,6 +34,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -41,6 +42,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -48,6 +50,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
     /**
      *  <p>The URL of the image to update.</p>
+     * @return imageUrl
      */
     @NotNull
     @JsonProperty("imageUrl")
@@ -55,6 +58,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
     /**
      *  <p>Position in <code>images</code> where the image should be moved. Must be between <code>0</code> and the total number of images minus <code>1</code>.</p>
+     * @return position
      */
     @NotNull
     @JsonProperty("position")
@@ -62,6 +66,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

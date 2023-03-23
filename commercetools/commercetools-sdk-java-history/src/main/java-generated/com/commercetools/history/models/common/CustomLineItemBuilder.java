@@ -44,6 +44,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>The unique ID of this CustomLineItem.</p>
+     * @param id
+     * @return Builder
      */
 
     public CustomLineItemBuilder id(final String id) {
@@ -53,6 +55,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemBuilder name(
@@ -63,6 +66,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public CustomLineItemBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
@@ -72,6 +77,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemBuilder money(
@@ -82,6 +88,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @param money
+     * @return Builder
      */
 
     public CustomLineItemBuilder money(final com.commercetools.history.models.common.Money money) {
@@ -91,6 +99,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemBuilder taxedPrice(
@@ -101,6 +110,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @param taxedPrice
+     * @return Builder
      */
 
     public CustomLineItemBuilder taxedPrice(final com.commercetools.history.models.common.TaxedItemPrice taxedPrice) {
@@ -110,6 +121,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemBuilder totalPrice(
@@ -120,6 +132,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @param totalPrice
+     * @return Builder
      */
 
     public CustomLineItemBuilder totalPrice(final com.commercetools.history.models.common.Money totalPrice) {
@@ -129,6 +143,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     * @param slug
+     * @return Builder
      */
 
     public CustomLineItemBuilder slug(final String slug) {
@@ -138,6 +154,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public CustomLineItemBuilder quantity(final Integer quantity) {

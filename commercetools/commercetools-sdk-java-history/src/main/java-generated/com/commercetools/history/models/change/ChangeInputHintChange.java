@@ -38,6 +38,7 @@ public interface ChangeInputHintChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -45,6 +46,7 @@ public interface ChangeInputHintChange extends Change {
 
     /**
      *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -52,6 +54,7 @@ public interface ChangeInputHintChange extends Change {
 
     /**
      *  <p>The name of the field definition updated.</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -59,6 +62,7 @@ public interface ChangeInputHintChange extends Change {
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -66,6 +70,7 @@ public interface ChangeInputHintChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -73,6 +78,7 @@ public interface ChangeInputHintChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

@@ -36,6 +36,7 @@ public interface ChangeIsSearchableChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface ChangeIsSearchableChange extends Change {
 
     /**
      *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface ChangeIsSearchableChange extends Change {
 
     /**
      *  <p>The name of the updated attribute.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -57,6 +60,7 @@ public interface ChangeIsSearchableChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -64,6 +68,7 @@ public interface ChangeIsSearchableChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

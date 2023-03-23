@@ -39,6 +39,7 @@ public interface ChangeLineItemQuantityChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -46,6 +47,7 @@ public interface ChangeLineItemQuantityChange extends Change {
 
     /**
      *  <p>Update action for <code>changeLineItemQuantity</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -53,6 +55,7 @@ public interface ChangeLineItemQuantityChange extends Change {
 
     /**
      *
+     * @return lineItem
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface ChangeLineItemQuantityChange extends Change {
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -68,6 +72,7 @@ public interface ChangeLineItemQuantityChange extends Change {
 
     /**
      *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -75,6 +80,7 @@ public interface ChangeLineItemQuantityChange extends Change {
 
     /**
      *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

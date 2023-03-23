@@ -37,6 +37,7 @@ public interface TypedMoney extends Money {
 
     /**
      *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -48,6 +49,7 @@ public interface TypedMoney extends Money {
      *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
      *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
      *  </ul>
+     * @return fractionDigits
      */
     @NotNull
     @JsonProperty("fractionDigits")

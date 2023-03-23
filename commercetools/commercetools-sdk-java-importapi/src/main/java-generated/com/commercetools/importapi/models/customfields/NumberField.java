@@ -33,6 +33,7 @@ public interface NumberField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

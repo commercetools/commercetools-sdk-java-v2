@@ -38,6 +38,7 @@ public interface QuoteUpdateAction extends com.commercetools.api.models.Resource
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

@@ -29,6 +29,8 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public FieldDefinitionOrderValueBuilder name(final String name) {
@@ -38,6 +40,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
 
     /**
      *
+     * @return Builder
      */
 
     public FieldDefinitionOrderValueBuilder label(
@@ -48,6 +51,8 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
 
     /**
      *
+     * @param label
+     * @return Builder
      */
 
     public FieldDefinitionOrderValueBuilder label(final com.commercetools.history.models.common.LocalizedString label) {

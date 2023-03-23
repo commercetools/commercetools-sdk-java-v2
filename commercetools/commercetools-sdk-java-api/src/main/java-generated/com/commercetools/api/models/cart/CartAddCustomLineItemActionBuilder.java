@@ -52,6 +52,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder money(
@@ -62,6 +63,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -71,6 +74,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Name of the Custom Line Item.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder name(
@@ -81,6 +85,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Name of the Custom Line Item.</p>
+     * @param name
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -90,6 +96,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -99,6 +107,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @param slug
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder slug(final String slug) {
@@ -109,6 +119,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
      *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder taxCategory(
@@ -122,6 +133,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
      *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder taxCategory(
@@ -132,6 +145,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder externalTaxRate(
@@ -143,6 +157,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder externalTaxRate(
@@ -153,6 +169,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder shippingDetails(
@@ -164,6 +181,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param shippingDetails
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder shippingDetails(
@@ -174,6 +193,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Custom Fields for the Custom Line Item.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder custom(
@@ -184,6 +204,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder custom(
@@ -197,6 +219,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
+     * @param priceMode
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder priceMode(

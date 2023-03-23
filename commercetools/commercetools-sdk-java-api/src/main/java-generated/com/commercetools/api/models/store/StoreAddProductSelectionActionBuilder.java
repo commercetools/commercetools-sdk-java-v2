@@ -31,6 +31,7 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
 
     /**
      *  <p>Product Selection to add to the Store either activated or deactivated.</p>
+     * @return Builder
      */
 
     public StoreAddProductSelectionActionBuilder productSelection(
@@ -43,6 +44,8 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
 
     /**
      *  <p>Product Selection to add to the Store either activated or deactivated.</p>
+     * @param productSelection
+     * @return Builder
      */
 
     public StoreAddProductSelectionActionBuilder productSelection(
@@ -53,6 +56,8 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
 
     /**
      *  <p>Set to <code>true</code> to make all Products assigned to the referenced Product Selection available in the Store.</p>
+     * @param active
+     * @return Builder
      */
 
     public StoreAddProductSelectionActionBuilder active(@Nullable final Boolean active) {

@@ -35,6 +35,8 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
+     * @param change
+     * @return Builder
      */
 
     public AddLocalizedEnumValueChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *  <p>The name of the field definition updated.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public AddLocalizedEnumValueChangeBuilder fieldName(final String fieldName) {
@@ -53,6 +57,8 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public AddLocalizedEnumValueChangeBuilder attributeName(final String attributeName) {
@@ -62,6 +68,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *
+     * @return Builder
      */
 
     public AddLocalizedEnumValueChangeBuilder nextValue(
@@ -73,6 +80,8 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddLocalizedEnumValueChangeBuilder nextValue(

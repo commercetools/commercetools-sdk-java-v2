@@ -32,6 +32,7 @@ public interface ValidFromAndUntilValue {
 
     /**
      *
+     * @return validFrom
      */
     @NotNull
     @JsonProperty("validFrom")
@@ -39,6 +40,7 @@ public interface ValidFromAndUntilValue {
 
     /**
      *
+     * @return validUntil
      */
     @NotNull
     @JsonProperty("validUntil")

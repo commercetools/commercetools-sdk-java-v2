@@ -35,6 +35,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
 
     /**
      *
+     * @return returnTrackingId
      */
 
     @JsonProperty("returnTrackingId")
@@ -42,6 +43,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
 
     /**
      *
+     * @return returnDate
      */
 
     @JsonProperty("returnDate")

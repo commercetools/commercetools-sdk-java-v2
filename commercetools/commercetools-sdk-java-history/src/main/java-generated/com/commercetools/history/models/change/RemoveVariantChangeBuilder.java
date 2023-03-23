@@ -35,6 +35,8 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *  <p>Update action for <code>removeVariant</code></p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveVariantChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public RemoveVariantChangeBuilder catalogData(final String catalogData) {
@@ -53,6 +57,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveVariantChangeBuilder previousValue(
@@ -63,6 +68,8 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveVariantChangeBuilder previousValue(
@@ -73,6 +80,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveVariantChangeBuilder nextValue(
@@ -83,6 +91,8 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveVariantChangeBuilder nextValue(final com.commercetools.history.models.common.Variant nextValue) {

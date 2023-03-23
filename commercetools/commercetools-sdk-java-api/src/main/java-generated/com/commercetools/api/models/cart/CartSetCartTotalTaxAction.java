@@ -35,6 +35,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
 
     /**
      *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     * @return externalTotalGross
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
 
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
+     * @return externalTaxPortions
      */
     @Valid
     @JsonProperty("externalTaxPortions")

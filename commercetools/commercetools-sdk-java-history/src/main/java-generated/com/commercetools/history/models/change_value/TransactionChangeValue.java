@@ -33,6 +33,7 @@ public interface TransactionChangeValue {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -40,6 +41,7 @@ public interface TransactionChangeValue {
 
     /**
      *
+     * @return interactionId
      */
     @NotNull
     @JsonProperty("interactionId")
@@ -47,6 +49,7 @@ public interface TransactionChangeValue {
 
     /**
      *
+     * @return timestamp
      */
     @NotNull
     @JsonProperty("timestamp")

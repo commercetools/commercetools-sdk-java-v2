@@ -32,6 +32,7 @@ public class OrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     * @return Builder
      */
 
     public OrderSetShippingAddressCustomTypeActionBuilder type(
@@ -42,6 +43,8 @@ public class OrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public OrderSetShippingAddressCustomTypeActionBuilder type(
@@ -52,6 +55,7 @@ public class OrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     * @return Builder
      */
 
     public OrderSetShippingAddressCustomTypeActionBuilder fields(
@@ -62,6 +66,8 @@ public class OrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public OrderSetShippingAddressCustomTypeActionBuilder fields(

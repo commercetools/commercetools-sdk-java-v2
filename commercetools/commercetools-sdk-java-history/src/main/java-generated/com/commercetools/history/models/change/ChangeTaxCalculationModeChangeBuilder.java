@@ -31,6 +31,8 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
 
     /**
      *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeTaxCalculationModeChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTaxCalculationModeChangeBuilder previousValue(
@@ -50,6 +54,8 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTaxCalculationModeChangeBuilder nextValue(

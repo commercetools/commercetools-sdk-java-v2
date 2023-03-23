@@ -35,6 +35,7 @@ public interface ReferenceSetAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid

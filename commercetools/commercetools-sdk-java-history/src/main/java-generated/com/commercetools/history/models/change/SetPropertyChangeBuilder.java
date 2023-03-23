@@ -32,6 +32,8 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     /**
      *  <p>Update action for <code>setProperty</code> on custom objects</p>
+     * @param change
+     * @return Builder
      */
 
     public SetPropertyChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     /**
      *  <p>Value path to the property that was changed</p>
+     * @param path
+     * @return Builder
      */
 
     public SetPropertyChangeBuilder path(final String path) {
@@ -50,6 +54,8 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetPropertyChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -59,6 +65,8 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetPropertyChangeBuilder previousValue(final java.lang.Object previousValue) {

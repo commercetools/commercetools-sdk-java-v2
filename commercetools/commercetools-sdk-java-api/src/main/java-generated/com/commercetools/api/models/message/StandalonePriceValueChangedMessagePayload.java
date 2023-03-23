@@ -36,6 +36,7 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
 
     /**
      *  <p>The new value of the updated StandalonePrice.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
 
     /**
      *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")
@@ -51,6 +53,7 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
 
     /**
      *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     * @return oldValue
      */
     @Valid
     @JsonProperty("oldValue")

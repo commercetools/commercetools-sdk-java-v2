@@ -55,6 +55,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -62,6 +63,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p><code>id</code> of the Product the Line Item is based on.</p>
+     * @return productId
      */
     @NotNull
     @JsonProperty("productId")
@@ -75,6 +77,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
      *   <li>Orders when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
      *  </ul>
      *  <p>Present on resources created or updated after 3 December 2021.</p>
+     * @return productKey
      */
 
     @JsonProperty("productKey")
@@ -82,6 +85,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Name of the Product.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -90,6 +94,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p><code>slug</code> of the current version of the Product. Updated automatically if the <code>slug</code> changes. Empty if the Product has been deleted. The <code>productSlug</code> field of LineItem is not expanded when using Reference Expansion.</p>
+     * @return productSlug
      */
     @Valid
     @JsonProperty("productSlug")
@@ -97,6 +102,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Product Type of the Product.</p>
+     * @return productType
      */
     @NotNull
     @Valid
@@ -106,6 +112,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     /**
      *  <p>Holds the data of the Product Variant added to the Cart.</p>
      *  <p>The data is saved at the time the Product Variant is added to the Cart and is not updated automatically when Product Variant data changes. Must be updated using the Recalculate update action.</p>
+     * @return variant
      */
     @NotNull
     @Valid
@@ -114,6 +121,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Price of a Line Item selected from the Product Variant according to the Product <code>priceMode</code>. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -122,6 +130,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Number of Line Items of the given Product Variant present in the Cart.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -129,6 +138,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -137,6 +147,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Discounted price of a single quantity of the Line Item.</p>
+     * @return discountedPricePerQuantity
      */
     @NotNull
     @Valid
@@ -145,6 +156,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Automatically set after <code>taxRate</code> is set.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -152,6 +164,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @return taxedPricePortions
      */
     @NotNull
     @Valid
@@ -160,6 +173,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>State of the Line Item in the Cart.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -171,6 +185,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
      *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Line Items can be set using ExternalTaxRateDraft.</li>
      *  </ul>
+     * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
@@ -178,6 +193,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     * @return perMethodTaxRate
      */
     @NotNull
     @Valid
@@ -186,6 +202,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Identifies Inventory entries that are reserved. The referenced Channel has the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -193,6 +210,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Used to select a Product Price. The referenced Channel has the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")
@@ -200,6 +218,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Indicates how the Price for the Line Item is set.</p>
+     * @return priceMode
      */
     @NotNull
     @JsonProperty("priceMode")
@@ -207,6 +226,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Indicates how the Line Item is added to the Cart.</p>
+     * @return lineItemMode
      */
     @NotNull
     @JsonProperty("lineItemMode")
@@ -214,6 +234,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Inventory mode specific to this Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Only present if the inventory mode is different from the <code>inventoryMode</code> specified on the Cart.</p>
+     * @return inventoryMode
      */
 
     @JsonProperty("inventoryMode")
@@ -221,6 +242,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")
@@ -228,6 +250,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Custom Fields of the Line Item.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -235,6 +258,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Date and time (UTC) the Line Item was added to the Cart.</p>
+     * @return addedAt
      */
 
     @JsonProperty("addedAt")
@@ -242,6 +266,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     /**
      *  <p>Date and time (UTC) the Line Item was last updated.</p>
+     * @return lastModifiedAt
      */
 
     @JsonProperty("lastModifiedAt")

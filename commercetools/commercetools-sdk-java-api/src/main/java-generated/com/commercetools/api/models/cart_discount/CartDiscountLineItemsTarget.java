@@ -33,6 +33,7 @@ public interface CartDiscountLineItemsTarget extends CartDiscountTarget {
 
     /**
      *  <p>Valid LineItem target predicate.</p>
+     * @return predicate
      */
     @NotNull
     @JsonProperty("predicate")

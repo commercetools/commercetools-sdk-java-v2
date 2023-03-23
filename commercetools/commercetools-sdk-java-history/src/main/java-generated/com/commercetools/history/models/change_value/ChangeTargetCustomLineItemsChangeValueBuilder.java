@@ -25,6 +25,8 @@ public class ChangeTargetCustomLineItemsChangeValueBuilder implements Builder<Ch
 
     /**
      *
+     * @param predicate
+     * @return Builder
      */
 
     public ChangeTargetCustomLineItemsChangeValueBuilder predicate(final String predicate) {

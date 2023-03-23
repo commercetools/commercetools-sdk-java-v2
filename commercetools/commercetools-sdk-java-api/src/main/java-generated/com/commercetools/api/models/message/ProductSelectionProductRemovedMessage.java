@@ -42,6 +42,7 @@ public interface ProductSelectionProductRemovedMessage extends Message {
 
     /**
      *  <p>Product that was removed from the Product Selection.</p>
+     * @return product
      */
     @NotNull
     @Valid

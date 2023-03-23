@@ -41,6 +41,8 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public StagedOrderTransitionLineItemStateActionBuilder lineItemId(final String lineItemId) {
@@ -50,6 +52,8 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public StagedOrderTransitionLineItemStateActionBuilder quantity(final Long quantity) {
@@ -59,6 +63,7 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return Builder
      */
 
     public StagedOrderTransitionLineItemStateActionBuilder fromState(
@@ -69,6 +74,8 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param fromState
+     * @return Builder
      */
 
     public StagedOrderTransitionLineItemStateActionBuilder fromState(
@@ -79,6 +86,7 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return Builder
      */
 
     public StagedOrderTransitionLineItemStateActionBuilder toState(
@@ -89,6 +97,8 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param toState
+     * @return Builder
      */
 
     public StagedOrderTransitionLineItemStateActionBuilder toState(
@@ -99,6 +109,8 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *
+     * @param actualTransitionDate
+     * @return Builder
      */
 
     public StagedOrderTransitionLineItemStateActionBuilder actualTransitionDate(

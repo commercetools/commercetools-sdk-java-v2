@@ -35,6 +35,7 @@ public interface HttpDestinationAuthentication {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

@@ -37,6 +37,8 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public DeliveryParcelBuilder deliveryId(final String deliveryId) {
@@ -46,6 +48,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryParcelBuilder measurements(
@@ -57,6 +60,8 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param measurements
+     * @return Builder
      */
 
     public DeliveryParcelBuilder measurements(
@@ -67,6 +72,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryParcelBuilder trackingData(
@@ -77,6 +83,8 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param trackingData
+     * @return Builder
      */
 
     public DeliveryParcelBuilder trackingData(
@@ -87,6 +95,8 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryParcelBuilder items(
@@ -97,6 +107,8 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryParcelBuilder items(
@@ -107,6 +119,8 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryParcelBuilder plusItems(
@@ -120,6 +134,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryParcelBuilder plusItems(
@@ -133,6 +148,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryParcelBuilder withItems(

@@ -85,6 +85,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Unique identifier of the DiscountCode.</p>
+     * @param id
+     * @return Builder
      */
 
     public DiscountCodeBuilder id(final String id) {
@@ -94,6 +96,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Current version of the DiscountCode.</p>
+     * @param version
+     * @return Builder
      */
 
     public DiscountCodeBuilder version(final Long version) {
@@ -103,6 +107,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Date and time (UTC) the DiscountCode was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public DiscountCodeBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -112,6 +118,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Date and time (UTC) the DiscountCode was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public DiscountCodeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -121,6 +129,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public DiscountCodeBuilder lastModifiedBy(
@@ -131,6 +140,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public DiscountCodeBuilder lastModifiedBy(
@@ -141,6 +152,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public DiscountCodeBuilder createdBy(
@@ -151,6 +163,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public DiscountCodeBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -160,6 +174,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Name of the DiscountCode.</p>
+     * @return Builder
      */
 
     public DiscountCodeBuilder name(
@@ -170,6 +185,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Name of the DiscountCode.</p>
+     * @param name
+     * @return Builder
      */
 
     public DiscountCodeBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -179,6 +196,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Description of the DiscountCode.</p>
+     * @return Builder
      */
 
     public DiscountCodeBuilder description(
@@ -189,6 +207,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Description of the DiscountCode.</p>
+     * @param description
+     * @return Builder
      */
 
     public DiscountCodeBuilder description(
@@ -199,6 +219,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p>
+     * @param code
+     * @return Builder
      */
 
     public DiscountCodeBuilder code(final String code) {
@@ -208,6 +230,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @param cartDiscounts
+     * @return Builder
      */
 
     public DiscountCodeBuilder cartDiscounts(
@@ -218,6 +242,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @param cartDiscounts
+     * @return Builder
      */
 
     public DiscountCodeBuilder cartDiscounts(
@@ -228,6 +254,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @param cartDiscounts
+     * @return Builder
      */
 
     public DiscountCodeBuilder plusCartDiscounts(
@@ -241,6 +269,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @return Builder
      */
 
     public DiscountCodeBuilder plusCartDiscounts(
@@ -255,6 +284,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @return Builder
      */
 
     public DiscountCodeBuilder withCartDiscounts(
@@ -267,6 +297,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     * @param cartPredicate
+     * @return Builder
      */
 
     public DiscountCodeBuilder cartPredicate(@Nullable final String cartPredicate) {
@@ -276,6 +308,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Indicates if the DiscountCode is active and can be applied to the Cart.</p>
+     * @param isActive
+     * @return Builder
      */
 
     public DiscountCodeBuilder isActive(final Boolean isActive) {
@@ -285,6 +319,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     * @param references
+     * @return Builder
      */
 
     public DiscountCodeBuilder references(final com.commercetools.api.models.common.Reference... references) {
@@ -294,6 +330,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     * @param references
+     * @return Builder
      */
 
     public DiscountCodeBuilder references(
@@ -304,6 +342,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     * @param references
+     * @return Builder
      */
 
     public DiscountCodeBuilder plusReferences(final com.commercetools.api.models.common.Reference... references) {
@@ -316,6 +356,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     * @return Builder
      */
 
     public DiscountCodeBuilder plusReferences(
@@ -329,6 +370,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     * @return Builder
      */
 
     public DiscountCodeBuilder withReferences(
@@ -340,6 +382,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     * @param maxApplications
+     * @return Builder
      */
 
     public DiscountCodeBuilder maxApplications(@Nullable final Long maxApplications) {
@@ -349,6 +393,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     * @param maxApplicationsPerCustomer
+     * @return Builder
      */
 
     public DiscountCodeBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
@@ -358,6 +404,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Custom Fields of the DiscountCode.</p>
+     * @return Builder
      */
 
     public DiscountCodeBuilder custom(
@@ -368,6 +415,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Custom Fields of the DiscountCode.</p>
+     * @param custom
+     * @return Builder
      */
 
     public DiscountCodeBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -377,6 +426,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Groups to which the DiscountCode belongs to.</p>
+     * @param groups
+     * @return Builder
      */
 
     public DiscountCodeBuilder groups(final String... groups) {
@@ -386,6 +437,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Groups to which the DiscountCode belongs to.</p>
+     * @param groups
+     * @return Builder
      */
 
     public DiscountCodeBuilder groups(final java.util.List<String> groups) {
@@ -395,6 +448,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Groups to which the DiscountCode belongs to.</p>
+     * @param groups
+     * @return Builder
      */
 
     public DiscountCodeBuilder plusGroups(final String... groups) {
@@ -407,6 +462,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Date and time (UTC) from which the DiscountCode is effective.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public DiscountCodeBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -416,6 +473,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Date and time (UTC) until which the DiscountCode is effective.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public DiscountCodeBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -425,6 +484,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Used and managed by the API and must not be used in customer logic. The value can change at any time due to internal and external factors.</p>
+     * @param applicationVersion
+     * @return Builder
      */
 
     public DiscountCodeBuilder applicationVersion(@Nullable final Long applicationVersion) {

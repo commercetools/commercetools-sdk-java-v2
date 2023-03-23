@@ -42,6 +42,7 @@ public interface OrderDiscountCodeRemovedMessage extends OrderMessage {
 
     /**
      *  <p>DiscountCode that was removed.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid

@@ -30,6 +30,8 @@ public class InventoryEntryResourceIdentifierBuilder implements Builder<Inventor
 
     /**
      *  <p>Unique identifier of the referenced InventoryEntry. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public InventoryEntryResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class InventoryEntryResourceIdentifierBuilder implements Builder<Inventor
 
     /**
      *  <p>User-defined unique identifier of the referenced InventoryEntry. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public InventoryEntryResourceIdentifierBuilder key(@Nullable final String key) {

@@ -41,6 +41,7 @@ public interface LineItem {
 
     /**
      *
+     * @return addedAt
      */
     @NotNull
     @JsonProperty("addedAt")
@@ -48,6 +49,7 @@ public interface LineItem {
 
     /**
      *
+     * @return custom
      */
     @NotNull
     @Valid
@@ -56,6 +58,7 @@ public interface LineItem {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -63,6 +66,7 @@ public interface LineItem {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid
@@ -71,6 +75,7 @@ public interface LineItem {
 
     /**
      *
+     * @return productId
      */
     @NotNull
     @JsonProperty("productId")
@@ -78,6 +83,7 @@ public interface LineItem {
 
     /**
      *
+     * @return productSlug
      */
     @NotNull
     @Valid
@@ -86,6 +92,7 @@ public interface LineItem {
 
     /**
      *
+     * @return productType
      */
     @NotNull
     @Valid
@@ -94,6 +101,7 @@ public interface LineItem {
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -101,6 +109,7 @@ public interface LineItem {
 
     /**
      *
+     * @return variant
      */
     @NotNull
     @Valid
@@ -109,6 +118,7 @@ public interface LineItem {
 
     /**
      *
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")

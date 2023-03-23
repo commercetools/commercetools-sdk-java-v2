@@ -33,6 +33,7 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
 
     /**
      *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     * @return active
      */
     @NotNull
     @JsonProperty("active")

@@ -37,6 +37,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
 
     /**
      *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     * @return Builder
      */
 
     public OrderCustomerSetMessagePayloadBuilder customer(
@@ -47,6 +48,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
 
     /**
      *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     * @param customer
+     * @return Builder
      */
 
     public OrderCustomerSetMessagePayloadBuilder customer(
@@ -57,6 +60,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
 
     /**
      *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     * @return Builder
      */
 
     public OrderCustomerSetMessagePayloadBuilder customerGroup(
@@ -69,6 +73,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
 
     /**
      *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public OrderCustomerSetMessagePayloadBuilder customerGroup(
@@ -79,6 +85,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
 
     /**
      *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     * @return Builder
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomer(
@@ -89,6 +96,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
 
     /**
      *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     * @param oldCustomer
+     * @return Builder
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomer(
@@ -99,6 +108,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
 
     /**
      *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     * @return Builder
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(
@@ -111,6 +121,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
 
     /**
      *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     * @param oldCustomerGroup
+     * @return Builder
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(

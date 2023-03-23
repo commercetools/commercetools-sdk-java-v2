@@ -31,6 +31,7 @@ public class StandalonePriceSetCustomTypeActionBuilder implements Builder<Standa
 
     /**
      *  <p>Defines the Type that extends the StandalonePrice with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
+     * @return Builder
      */
 
     public StandalonePriceSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class StandalonePriceSetCustomTypeActionBuilder implements Builder<Standa
 
     /**
      *  <p>Defines the Type that extends the StandalonePrice with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
+     * @param type
+     * @return Builder
      */
 
     public StandalonePriceSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class StandalonePriceSetCustomTypeActionBuilder implements Builder<Standa
 
     /**
      *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
+     * @return Builder
      */
 
     public StandalonePriceSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class StandalonePriceSetCustomTypeActionBuilder implements Builder<Standa
 
     /**
      *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StandalonePriceSetCustomTypeActionBuilder fields(

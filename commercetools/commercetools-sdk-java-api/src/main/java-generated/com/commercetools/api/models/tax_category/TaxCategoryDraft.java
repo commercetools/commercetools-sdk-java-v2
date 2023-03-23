@@ -33,6 +33,7 @@ public interface TaxCategoryDraft
 
     /**
      *  <p>Name of the TaxCategory.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -40,6 +41,7 @@ public interface TaxCategoryDraft
 
     /**
      *  <p>Description of the TaxCategory.</p>
+     * @return description
      */
 
     @JsonProperty("description")
@@ -47,6 +49,7 @@ public interface TaxCategoryDraft
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
+     * @return rates
      */
     @Valid
     @JsonProperty("rates")
@@ -54,6 +57,7 @@ public interface TaxCategoryDraft
 
     /**
      *  <p>User-defined unique identifier for the TaxCategory.</p>
+     * @return key
      */
 
     @JsonProperty("key")

@@ -29,6 +29,8 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
+     * @param version
+     * @return Builder
      */
 
     public ProductSelectionUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public ProductSelectionUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public ProductSelectionUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public ProductSelectionUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
+     * @return Builder
      */
 
     public ProductSelectionUpdateBuilder plusActions(
@@ -86,6 +95,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
+     * @return Builder
      */
 
     public ProductSelectionUpdateBuilder withActions(

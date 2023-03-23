@@ -31,6 +31,8 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public ReferenceAttributeBuilder name(@Nullable final String name) {
@@ -40,6 +42,8 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     /**
      *  <p>References a resource by key.</p>
+     * @param value
+     * @return Builder
      */
 
     public ReferenceAttributeBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
@@ -49,6 +53,7 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     /**
      *  <p>References a resource by key.</p>
+     * @return Builder
      */
 
     public ReferenceAttributeBuilder value(

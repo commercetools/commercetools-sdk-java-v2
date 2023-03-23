@@ -35,6 +35,7 @@ public interface BusinessUnitAssociateChangedMessagePayload extends MessagePaylo
 
     /**
      *  <p>The Associate that was updated.</p>
+     * @return associate
      */
     @NotNull
     @Valid

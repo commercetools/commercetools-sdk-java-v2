@@ -34,6 +34,8 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public ReturnInfoBuilder items(final com.commercetools.api.models.order.ReturnItem... items) {
@@ -43,6 +45,8 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public ReturnInfoBuilder items(final java.util.List<com.commercetools.api.models.order.ReturnItem> items) {
@@ -52,6 +56,8 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public ReturnInfoBuilder plusItems(final com.commercetools.api.models.order.ReturnItem... items) {
@@ -64,6 +70,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
+     * @return Builder
      */
 
     public ReturnInfoBuilder plusItems(
@@ -77,6 +84,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
+     * @return Builder
      */
 
     public ReturnInfoBuilder withItems(
@@ -88,6 +96,8 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     * @param returnTrackingId
+     * @return Builder
      */
 
     public ReturnInfoBuilder returnTrackingId(@Nullable final String returnTrackingId) {
@@ -97,6 +107,8 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
+     * @param returnDate
+     * @return Builder
      */
 
     public ReturnInfoBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {

@@ -35,6 +35,8 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *  <p>Update action for <code>setLineItemDeactivatedAt</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetLineItemDeactivatedAtChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemDeactivatedAtChangeBuilder lineItem(
@@ -56,6 +59,8 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetLineItemDeactivatedAtChangeBuilder lineItem(
@@ -66,6 +71,8 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetLineItemDeactivatedAtChangeBuilder previousValue(final String previousValue) {
@@ -75,6 +82,8 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetLineItemDeactivatedAtChangeBuilder nextValue(final String nextValue) {

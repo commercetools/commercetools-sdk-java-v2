@@ -34,6 +34,7 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @return headerValue
      */
     @NotNull
     @JsonProperty("headerValue")

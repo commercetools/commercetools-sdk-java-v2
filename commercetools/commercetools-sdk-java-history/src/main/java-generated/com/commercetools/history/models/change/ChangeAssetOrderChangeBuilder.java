@@ -32,6 +32,8 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder previousValue(
@@ -51,6 +55,8 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder previousValue(
@@ -61,6 +67,8 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder plusPreviousValue(
@@ -74,6 +82,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder plusPreviousValue(
@@ -88,6 +97,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder withPreviousValue(
@@ -100,6 +110,8 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder nextValue(
@@ -110,6 +122,8 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder nextValue(
@@ -120,6 +134,8 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder plusNextValue(
@@ -133,6 +149,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder plusNextValue(
@@ -146,6 +163,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeAssetOrderChangeBuilder withNextValue(

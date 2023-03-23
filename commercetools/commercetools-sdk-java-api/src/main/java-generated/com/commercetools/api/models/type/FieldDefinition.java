@@ -36,6 +36,7 @@ public interface FieldDefinition {
 
     /**
      *  <p>Data type of the Custom Field to define.</p>
+     * @return type
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface FieldDefinition {
 
     /**
      *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -51,6 +53,7 @@ public interface FieldDefinition {
 
     /**
      *  <p>A human-readable label for the field.</p>
+     * @return label
      */
     @NotNull
     @Valid
@@ -59,13 +62,15 @@ public interface FieldDefinition {
 
     /**
      *  <p>Defines whether the field is required to have a value.</p>
+     * @return required
      */
     @NotNull
     @JsonProperty("required")
     public Boolean getRequired();
 
     /**
-     *  <p>Must be either <code>SingleLine</code> or <code>MultiLine</code>. Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     * @return inputHint
      */
 
     @JsonProperty("inputHint")

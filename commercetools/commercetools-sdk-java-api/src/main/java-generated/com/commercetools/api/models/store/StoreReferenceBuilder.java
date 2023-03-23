@@ -31,6 +31,8 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
 
     /**
      *  <p>Unique ID of the referenced Store.</p>
+     * @param id
+     * @return Builder
      */
 
     public StoreReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
 
     /**
      *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
+     * @return Builder
      */
 
     public StoreReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
 
     /**
      *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
+     * @param obj
+     * @return Builder
      */
 
     public StoreReferenceBuilder obj(@Nullable final com.commercetools.api.models.store.Store obj) {

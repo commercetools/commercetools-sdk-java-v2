@@ -33,6 +33,7 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
 
     /**
      *
+     * @return addressKey
      */
     @NotNull
     @JsonProperty("addressKey")

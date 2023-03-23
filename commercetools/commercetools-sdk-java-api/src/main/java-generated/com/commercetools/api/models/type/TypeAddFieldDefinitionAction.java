@@ -35,6 +35,7 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
 
     /**
      *  <p>Value to append to the array.</p>
+     * @return fieldDefinition
      */
     @NotNull
     @Valid

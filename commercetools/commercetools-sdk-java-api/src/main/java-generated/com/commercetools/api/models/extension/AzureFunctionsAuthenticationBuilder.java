@@ -25,6 +25,8 @@ public class AzureFunctionsAuthenticationBuilder implements Builder<AzureFunctio
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @param key
+     * @return Builder
      */
 
     public AzureFunctionsAuthenticationBuilder key(final String key) {

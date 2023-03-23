@@ -35,6 +35,7 @@ public interface DiscountCodeReference extends Reference, com.commercetools.api.
 
     /**
      *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface DiscountCodeReference extends Reference, com.commercetools.api.
 
     /**
      *  <p>Unique identifier of the referenced DiscountCode.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

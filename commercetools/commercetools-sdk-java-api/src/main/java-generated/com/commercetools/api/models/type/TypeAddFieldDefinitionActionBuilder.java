@@ -26,6 +26,7 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
 
     /**
      *  <p>Value to append to the array.</p>
+     * @return Builder
      */
 
     public TypeAddFieldDefinitionActionBuilder fieldDefinition(
@@ -36,6 +37,8 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param fieldDefinition
+     * @return Builder
      */
 
     public TypeAddFieldDefinitionActionBuilder fieldDefinition(

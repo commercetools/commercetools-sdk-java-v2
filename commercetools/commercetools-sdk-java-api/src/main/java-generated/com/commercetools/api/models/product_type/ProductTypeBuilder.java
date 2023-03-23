@@ -55,6 +55,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Unique identifier of the ProductType.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductTypeBuilder id(final String id) {
@@ -64,6 +66,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Current version of the ProductType.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductTypeBuilder version(final Long version) {
@@ -73,6 +77,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Date and time (UTC) the ProductType was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProductTypeBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -82,6 +88,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Date and time (UTC) the ProductType was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ProductTypeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -91,6 +99,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductTypeBuilder lastModifiedBy(
@@ -101,6 +110,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ProductTypeBuilder lastModifiedBy(
@@ -111,6 +122,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductTypeBuilder createdBy(
@@ -121,6 +133,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ProductTypeBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -130,6 +144,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>User-defined unique identifier of the ProductType.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductTypeBuilder key(@Nullable final String key) {
@@ -139,6 +155,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Name of the ProductType.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductTypeBuilder name(final String name) {
@@ -148,6 +166,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Description of the ProductType.</p>
+     * @param description
+     * @return Builder
      */
 
     public ProductTypeBuilder description(final String description) {
@@ -157,6 +177,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductTypeBuilder attributes(
@@ -167,6 +189,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductTypeBuilder attributes(
@@ -177,6 +201,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductTypeBuilder plusAttributes(
@@ -190,6 +216,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
+     * @return Builder
      */
 
     public ProductTypeBuilder plusAttributes(
@@ -204,6 +231,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
+     * @return Builder
      */
 
     public ProductTypeBuilder withAttributes(

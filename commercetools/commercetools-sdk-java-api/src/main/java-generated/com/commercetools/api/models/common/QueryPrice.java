@@ -36,6 +36,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Unique identifier of the given Price.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -43,6 +44,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Money value of the given Price.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Country for which the given Price is valid.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -58,6 +61,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>CustomerGroup for which the given Price is valid.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -65,6 +69,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -72,6 +77,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Date from which the given Price is valid.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -79,6 +85,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Date until which the given Price is valid.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -86,6 +93,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>DiscountedPrice you specify for the given Price.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -93,6 +101,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Custom Fields for the Price.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -100,6 +109,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     * @return tiers
      */
     @Valid
     @JsonProperty("tiers")

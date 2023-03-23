@@ -25,6 +25,8 @@ public class CartDiscountKeyReferenceBuilder implements Builder<CartDiscountKeyR
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public CartDiscountKeyReferenceBuilder key(final String key) {

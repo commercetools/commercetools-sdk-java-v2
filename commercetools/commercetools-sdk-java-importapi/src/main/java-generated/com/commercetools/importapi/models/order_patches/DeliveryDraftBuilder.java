@@ -34,6 +34,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryDraftBuilder items(final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -43,6 +45,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryDraftBuilder items(
@@ -53,6 +57,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryDraftBuilder plusItems(final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -65,6 +71,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryDraftBuilder plusItems(
@@ -78,6 +85,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryDraftBuilder withItems(
@@ -89,6 +97,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryDraftBuilder address(
@@ -99,6 +108,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param address
+     * @return Builder
      */
 
     public DeliveryDraftBuilder address(@Nullable final com.commercetools.importapi.models.common.Address address) {
@@ -108,6 +119,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryDraftBuilder parcels(
@@ -118,6 +131,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryDraftBuilder parcels(
@@ -128,6 +143,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryDraftBuilder plusParcels(
@@ -141,6 +158,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryDraftBuilder plusParcels(
@@ -155,6 +173,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryDraftBuilder withParcels(

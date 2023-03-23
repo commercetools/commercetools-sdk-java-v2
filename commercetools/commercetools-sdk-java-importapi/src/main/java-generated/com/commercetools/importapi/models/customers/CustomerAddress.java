@@ -34,6 +34,7 @@ public interface CustomerAddress {
 
     /**
      *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -41,6 +42,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return title
      */
 
     @JsonProperty("title")
@@ -48,6 +50,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return salutation
      */
 
     @JsonProperty("salutation")
@@ -55,6 +58,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return firstName
      */
 
     @JsonProperty("firstName")
@@ -62,6 +66,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return lastName
      */
 
     @JsonProperty("lastName")
@@ -69,6 +74,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return streetName
      */
 
     @JsonProperty("streetName")
@@ -76,6 +82,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return streetNumber
      */
 
     @JsonProperty("streetNumber")
@@ -83,6 +90,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return additionalStreetInfo
      */
 
     @JsonProperty("additionalStreetInfo")
@@ -90,6 +98,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return postalCode
      */
 
     @JsonProperty("postalCode")
@@ -97,6 +106,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return city
      */
 
     @JsonProperty("city")
@@ -104,6 +114,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return region
      */
 
     @JsonProperty("region")
@@ -111,6 +122,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return state
      */
 
     @JsonProperty("state")
@@ -118,6 +130,7 @@ public interface CustomerAddress {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -125,6 +138,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return company
      */
 
     @JsonProperty("company")
@@ -132,6 +146,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return department
      */
 
     @JsonProperty("department")
@@ -139,6 +154,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return building
      */
 
     @JsonProperty("building")
@@ -146,6 +162,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return apartment
      */
 
     @JsonProperty("apartment")
@@ -153,6 +170,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return pOBox
      */
 
     @JsonProperty("pOBox")
@@ -160,6 +178,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return phone
      */
 
     @JsonProperty("phone")
@@ -167,6 +186,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return mobile
      */
 
     @JsonProperty("mobile")
@@ -174,6 +194,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return email
      */
 
     @JsonProperty("email")
@@ -181,6 +202,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return fax
      */
 
     @JsonProperty("fax")
@@ -188,6 +210,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return additionalAddressInfo
      */
 
     @JsonProperty("additionalAddressInfo")
@@ -195,6 +218,7 @@ public interface CustomerAddress {
 
     /**
      *
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -202,6 +226,7 @@ public interface CustomerAddress {
 
     /**
      *  <p>Custom Fields for the address.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

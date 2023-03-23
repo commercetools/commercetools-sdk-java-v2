@@ -29,6 +29,8 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
+     * @param key
+     * @return Builder
      */
 
     public ClassificationShippingRateInputBuilder key(final String key) {
@@ -38,6 +40,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
 
     /**
      *  <p>Descriptive localized label of the value.</p>
+     * @return Builder
      */
 
     public ClassificationShippingRateInputBuilder label(
@@ -48,6 +51,8 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
 
     /**
      *  <p>Descriptive localized label of the value.</p>
+     * @param label
+     * @return Builder
      */
 
     public ClassificationShippingRateInputBuilder label(

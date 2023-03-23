@@ -31,6 +31,8 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public ReferenceSetAttributeBuilder name(@Nullable final String name) {
@@ -40,6 +42,8 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public ReferenceSetAttributeBuilder value(final com.commercetools.importapi.models.common.KeyReference... value) {
@@ -49,6 +53,8 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public ReferenceSetAttributeBuilder value(
@@ -59,6 +65,8 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public ReferenceSetAttributeBuilder plusValue(
@@ -72,6 +80,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
 
     /**
      *
+     * @return Builder
      */
 
     public ReferenceSetAttributeBuilder plusValue(
@@ -85,6 +94,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
 
     /**
      *
+     * @return Builder
      */
 
     public ReferenceSetAttributeBuilder withValue(

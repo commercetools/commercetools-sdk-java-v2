@@ -27,6 +27,8 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public AttributeValueBuilder name(final String name) {
@@ -36,6 +38,8 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public AttributeValueBuilder value(final java.lang.Object value) {

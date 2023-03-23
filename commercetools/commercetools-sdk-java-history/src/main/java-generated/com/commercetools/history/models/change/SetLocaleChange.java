@@ -35,6 +35,7 @@ public interface SetLocaleChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -42,6 +43,7 @@ public interface SetLocaleChange extends Change {
 
     /**
      *  <p>Update action for <code>setLocale</code> on reviews</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -49,6 +51,7 @@ public interface SetLocaleChange extends Change {
 
     /**
      *  <p>A locale of IETF language tag.</p>
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -56,6 +59,7 @@ public interface SetLocaleChange extends Change {
 
     /**
      *  <p>A locale of IETF language tag.</p>
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

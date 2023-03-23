@@ -32,6 +32,8 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *  <p>Shape of the action for <code>changeName</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeLocalizedNameChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeLocalizedNameChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeLocalizedNameChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeLocalizedNameChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeLocalizedNameChangeBuilder nextValue(

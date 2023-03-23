@@ -31,6 +31,7 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public LocalizedStringFieldBuilder value(
@@ -46,6 +47,8 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param value
+     * @return Builder
      */
 
     public LocalizedStringFieldBuilder value(final com.commercetools.importapi.models.common.LocalizedString value) {

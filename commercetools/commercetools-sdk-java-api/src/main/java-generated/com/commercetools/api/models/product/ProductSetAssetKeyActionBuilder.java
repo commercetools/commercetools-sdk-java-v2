@@ -39,6 +39,8 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductSetAssetKeyActionBuilder variantId(@Nullable final Long variantId) {
@@ -48,6 +50,8 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductSetAssetKeyActionBuilder sku(@Nullable final String sku) {
@@ -57,6 +61,8 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetAssetKeyActionBuilder staged(@Nullable final Boolean staged) {
@@ -66,6 +72,8 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public ProductSetAssetKeyActionBuilder assetId(final String assetId) {
@@ -75,6 +83,8 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public ProductSetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {

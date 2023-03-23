@@ -25,6 +25,8 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public InsufficientScopeErrorBuilder message(final String message) {

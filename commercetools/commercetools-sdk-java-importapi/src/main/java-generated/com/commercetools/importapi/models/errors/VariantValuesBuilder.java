@@ -34,6 +34,8 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param sku
+     * @return Builder
      */
 
     public VariantValuesBuilder sku(@Nullable final String sku) {
@@ -43,6 +45,8 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param prices
+     * @return Builder
      */
 
     public VariantValuesBuilder prices(final com.commercetools.importapi.models.prices.PriceImport... prices) {
@@ -52,6 +56,8 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param prices
+     * @return Builder
      */
 
     public VariantValuesBuilder prices(
@@ -62,6 +68,8 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param prices
+     * @return Builder
      */
 
     public VariantValuesBuilder plusPrices(final com.commercetools.importapi.models.prices.PriceImport... prices) {
@@ -74,6 +82,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @return Builder
      */
 
     public VariantValuesBuilder plusPrices(
@@ -87,6 +96,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @return Builder
      */
 
     public VariantValuesBuilder withPrices(
@@ -98,6 +108,8 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param attributes
+     * @return Builder
      */
 
     public VariantValuesBuilder attributes(
@@ -108,6 +120,8 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param attributes
+     * @return Builder
      */
 
     public VariantValuesBuilder attributes(
@@ -118,6 +132,8 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param attributes
+     * @return Builder
      */
 
     public VariantValuesBuilder plusAttributes(
@@ -131,6 +147,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @return Builder
      */
 
     public VariantValuesBuilder plusAttributes(
@@ -145,6 +162,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @return Builder
      */
 
     public VariantValuesBuilder withAttributes(

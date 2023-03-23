@@ -41,6 +41,7 @@ public interface OrderPaymentStateChangedMessage extends OrderMessage {
 
     /**
      *  <p>PaymentState after the Change Payment State update action.</p>
+     * @return paymentState
      */
     @NotNull
     @JsonProperty("paymentState")
@@ -48,6 +49,7 @@ public interface OrderPaymentStateChangedMessage extends OrderMessage {
 
     /**
      *  <p>PaymentState before the Change Payment State update action.</p>
+     * @return oldPaymentState
      */
 
     @JsonProperty("oldPaymentState")

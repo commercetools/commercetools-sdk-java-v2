@@ -45,6 +45,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Unique identifier of the Subscription.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -52,6 +53,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Current version of the Subscription.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -59,6 +61,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Date and time (UTC) the Subscription was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -66,6 +69,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Date and time (UTC) the Subscription was last modified.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -73,6 +77,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -80,6 +85,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -87,6 +93,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Change notifications subscribed to.</p>
+     * @return changes
      */
     @NotNull
     @Valid
@@ -95,6 +102,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Messaging service to which the messages are to be sent.</p>
+     * @return destination
      */
     @NotNull
     @Valid
@@ -103,6 +111,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>User-defined unique identifier of the Subscription.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -110,6 +119,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Messages subscribed to.</p>
+     * @return messages
      */
     @NotNull
     @Valid
@@ -118,6 +128,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Format in which the payload is delivered.</p>
+     * @return format
      */
     @NotNull
     @Valid
@@ -126,6 +137,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Status of the Subscription.</p>
+     * @return status
      */
     @NotNull
     @JsonProperty("status")

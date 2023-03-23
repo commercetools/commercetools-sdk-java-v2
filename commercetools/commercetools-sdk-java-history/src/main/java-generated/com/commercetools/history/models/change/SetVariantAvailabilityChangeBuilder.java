@@ -38,6 +38,8 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *  <p>Update action for <code>setVariantAvailability</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetVariantAvailabilityChangeBuilder change(final String change) {
@@ -47,6 +49,8 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public SetVariantAvailabilityChangeBuilder catalogData(final String catalogData) {
@@ -56,6 +60,8 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetVariantAvailabilityChangeBuilder variant(final String variant) {
@@ -65,6 +71,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
+     * @return Builder
      */
 
     public SetVariantAvailabilityChangeBuilder previousValue(
@@ -77,6 +84,8 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetVariantAvailabilityChangeBuilder previousValue(
@@ -87,6 +96,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
+     * @return Builder
      */
 
     public SetVariantAvailabilityChangeBuilder nextValue(
@@ -98,6 +108,8 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetVariantAvailabilityChangeBuilder nextValue(

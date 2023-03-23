@@ -40,6 +40,7 @@ public interface StoreProductSelectionsChangedMessage extends Message {
 
     /**
      *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @return addedProductSelections
      */
     @Valid
     @JsonProperty("addedProductSelections")
@@ -47,6 +48,7 @@ public interface StoreProductSelectionsChangedMessage extends Message {
 
     /**
      *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @return removedProductSelections
      */
     @Valid
     @JsonProperty("removedProductSelections")
@@ -54,6 +56,7 @@ public interface StoreProductSelectionsChangedMessage extends Message {
 
     /**
      *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @return updatedProductSelections
      */
     @Valid
     @JsonProperty("updatedProductSelections")

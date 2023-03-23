@@ -31,6 +31,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
 
     /**
      *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     * @return Builder
      */
 
     public PaymentSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
 
     /**
      *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     * @param type
+     * @return Builder
      */
 
     public PaymentSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
 
     /**
      *  <p>Sets the Custom Fields fields for the Payment.</p>
+     * @return Builder
      */
 
     public PaymentSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
 
     /**
      *  <p>Sets the Custom Fields fields for the Payment.</p>
+     * @param fields
+     * @return Builder
      */
 
     public PaymentSetCustomTypeActionBuilder fields(

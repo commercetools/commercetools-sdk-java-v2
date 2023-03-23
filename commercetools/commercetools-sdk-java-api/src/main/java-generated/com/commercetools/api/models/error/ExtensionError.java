@@ -33,6 +33,7 @@ public interface ExtensionError {
 
     /**
      *  <p>Error code caused by the Extension. For example, <code>InvalidField</code>.</p>
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface ExtensionError {
 
     /**
      *  <p>Plain text description of the error.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -47,6 +49,7 @@ public interface ExtensionError {
 
     /**
      *  <p>Unique identifier of the Extension.</p>
+     * @return extensionId
      */
     @NotNull
     @JsonProperty("extensionId")
@@ -54,6 +57,7 @@ public interface ExtensionError {
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
+     * @return extensionKey
      */
 
     @JsonProperty("extensionKey")

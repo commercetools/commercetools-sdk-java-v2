@@ -26,6 +26,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @return Builder
      */
 
     public OrderRemovePaymentActionBuilder payment(
@@ -37,6 +38,8 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @param payment
+     * @return Builder
      */
 
     public OrderRemovePaymentActionBuilder payment(

@@ -35,6 +35,7 @@ public interface SetShippingRateInputChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -42,6 +43,7 @@ public interface SetShippingRateInputChange extends Change {
 
     /**
      *  <p>Update action for <code>setShippingRateInput</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -49,6 +51,7 @@ public interface SetShippingRateInputChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -56,6 +59,7 @@ public interface SetShippingRateInputChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

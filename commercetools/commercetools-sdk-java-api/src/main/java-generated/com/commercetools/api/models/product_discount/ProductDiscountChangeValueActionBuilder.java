@@ -26,6 +26,8 @@ public class ProductDiscountChangeValueActionBuilder implements Builder<ProductD
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param value
+     * @return Builder
      */
 
     public ProductDiscountChangeValueActionBuilder value(
@@ -36,6 +38,7 @@ public class ProductDiscountChangeValueActionBuilder implements Builder<ProductD
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public ProductDiscountChangeValueActionBuilder value(

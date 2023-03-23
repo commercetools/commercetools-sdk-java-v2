@@ -31,6 +31,7 @@ public interface LastModifiedBy extends ClientLogging {
 
     /**
      *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     * @return clientId
      */
 
     @JsonProperty("clientId")
@@ -38,6 +39,7 @@ public interface LastModifiedBy extends ClientLogging {
 
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @return externalUserId
      */
 
     @JsonProperty("externalUserId")
@@ -45,6 +47,7 @@ public interface LastModifiedBy extends ClientLogging {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -52,6 +55,7 @@ public interface LastModifiedBy extends ClientLogging {
 
     /**
      *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")

@@ -26,6 +26,8 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @param updatedPrices
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices(
@@ -36,6 +38,8 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @param updatedPrices
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices(
@@ -46,6 +50,8 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @param updatedPrices
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder plusUpdatedPrices(
@@ -59,6 +65,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder plusUpdatedPrices(
@@ -74,6 +81,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder withUpdatedPrices(

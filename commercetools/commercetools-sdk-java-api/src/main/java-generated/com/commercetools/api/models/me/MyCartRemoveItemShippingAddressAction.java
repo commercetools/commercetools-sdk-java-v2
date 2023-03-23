@@ -33,6 +33,7 @@ public interface MyCartRemoveItemShippingAddressAction extends MyCartUpdateActio
 
     /**
      *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
+     * @return addressKey
      */
     @NotNull
     @JsonProperty("addressKey")

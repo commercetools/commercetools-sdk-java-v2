@@ -51,6 +51,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Unique ID of the Store.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -58,6 +59,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Current version of the Store.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -65,6 +67,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Date and time (UTC) the Store was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -72,6 +75,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Date and time (UTC) the Store was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -79,6 +83,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -86,6 +91,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -93,6 +99,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>User-defined unique and immutable identifier for the Store.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -100,6 +107,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Name of the Store.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -107,6 +115,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Languages configured for the Store.</p>
+     * @return languages
      */
     @NotNull
     @JsonProperty("languages")
@@ -114,6 +123,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @return countries
      */
     @NotNull
     @Valid
@@ -122,6 +132,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
+     * @return distributionChannels
      */
     @NotNull
     @Valid
@@ -130,6 +141,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
+     * @return supplyChannels
      */
     @NotNull
     @Valid
@@ -144,6 +156,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @return productSelections
      */
     @NotNull
     @Valid
@@ -152,6 +165,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
 
     /**
      *  <p>Custom fields for the Store.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

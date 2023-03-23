@@ -31,6 +31,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")

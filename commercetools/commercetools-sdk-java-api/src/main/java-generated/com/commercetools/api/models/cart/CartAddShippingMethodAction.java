@@ -40,6 +40,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>User-defined identifier for the Shipping that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
      */
     @NotNull
     @JsonProperty("shippingKey")
@@ -47,6 +48,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @return shippingMethod
      */
     @NotNull
     @Valid
@@ -55,6 +57,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the Line Items.</p>
+     * @return shippingAddress
      */
     @NotNull
     @Valid
@@ -68,6 +71,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -75,6 +79,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -82,6 +87,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     * @return deliveries
      */
     @Valid
     @JsonProperty("deliveries")
@@ -89,6 +95,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Custom Fields for the Shipping Method.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

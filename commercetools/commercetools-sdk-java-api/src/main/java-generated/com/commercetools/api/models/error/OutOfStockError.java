@@ -40,6 +40,7 @@ public interface OutOfStockError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -47,6 +48,7 @@ public interface OutOfStockError extends ErrorObject {
 
     /**
      *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -54,6 +56,7 @@ public interface OutOfStockError extends ErrorObject {
 
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
+     * @return lineItems
      */
     @NotNull
     @JsonProperty("lineItems")
@@ -61,6 +64,7 @@ public interface OutOfStockError extends ErrorObject {
 
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
+     * @return skus
      */
     @NotNull
     @JsonProperty("skus")

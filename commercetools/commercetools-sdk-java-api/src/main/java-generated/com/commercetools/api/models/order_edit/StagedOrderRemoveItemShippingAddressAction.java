@@ -34,6 +34,7 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
 
     /**
      *
+     * @return addressKey
      */
     @NotNull
     @JsonProperty("addressKey")

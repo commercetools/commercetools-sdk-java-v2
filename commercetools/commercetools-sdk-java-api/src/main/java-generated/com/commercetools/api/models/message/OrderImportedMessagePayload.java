@@ -35,6 +35,7 @@ public interface OrderImportedMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>Order that was imported.</p>
+     * @return order
      */
     @NotNull
     @Valid

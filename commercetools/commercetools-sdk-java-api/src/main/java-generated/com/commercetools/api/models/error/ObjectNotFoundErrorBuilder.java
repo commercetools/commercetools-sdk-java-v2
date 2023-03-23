@@ -27,6 +27,8 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
 
     /**
      *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ObjectNotFoundErrorBuilder message(final String message) {

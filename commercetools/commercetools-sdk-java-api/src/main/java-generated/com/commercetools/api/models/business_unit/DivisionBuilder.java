@@ -88,6 +88,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>
+     * @param id
+     * @return Builder
      */
 
     public DivisionBuilder id(final String id) {
@@ -97,6 +99,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Current version of the Business Unit.</p>
+     * @param version
+     * @return Builder
      */
 
     public DivisionBuilder version(final Long version) {
@@ -106,6 +110,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Date and time (UTC) the Business Unit was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public DivisionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -115,6 +121,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Date and time (UTC) the Business Unit was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public DivisionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -124,6 +132,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public DivisionBuilder lastModifiedBy(
@@ -134,6 +143,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public DivisionBuilder lastModifiedBy(
@@ -144,6 +155,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public DivisionBuilder createdBy(
@@ -154,6 +166,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public DivisionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -163,6 +177,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>User-defined unique identifier of the Business Unit.</p>
+     * @param key
+     * @return Builder
      */
 
     public DivisionBuilder key(final String key) {
@@ -172,6 +188,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     * @param status
+     * @return Builder
      */
 
     public DivisionBuilder status(final com.commercetools.api.models.business_unit.BusinessUnitStatus status) {
@@ -183,6 +201,8 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public DivisionBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
@@ -194,6 +214,8 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public DivisionBuilder stores(
@@ -206,6 +228,8 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public DivisionBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
@@ -220,6 +244,7 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return Builder
      */
 
     public DivisionBuilder plusStores(
@@ -235,6 +260,7 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return Builder
      */
 
     public DivisionBuilder withStores(
@@ -246,6 +272,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.</p>
+     * @param storeMode
+     * @return Builder
      */
 
     public DivisionBuilder storeMode(final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode) {
@@ -255,6 +283,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Name of the Business Unit.</p>
+     * @param name
+     * @return Builder
      */
 
     public DivisionBuilder name(final String name) {
@@ -264,6 +294,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Email address of the Business Unit.</p>
+     * @param contactEmail
+     * @return Builder
      */
 
     public DivisionBuilder contactEmail(@Nullable final String contactEmail) {
@@ -273,6 +305,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @return Builder
      */
 
     public DivisionBuilder custom(
@@ -283,6 +316,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param custom
+     * @return Builder
      */
 
     public DivisionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -292,6 +327,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public DivisionBuilder addresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -301,6 +338,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public DivisionBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
@@ -310,6 +349,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public DivisionBuilder plusAddresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -322,6 +363,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public DivisionBuilder plusAddresses(
@@ -335,6 +377,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public DivisionBuilder withAddresses(
@@ -346,6 +389,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @param shippingAddressIds
+     * @return Builder
      */
 
     public DivisionBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
@@ -355,6 +400,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @param shippingAddressIds
+     * @return Builder
      */
 
     public DivisionBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
@@ -364,6 +411,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @param shippingAddressIds
+     * @return Builder
      */
 
     public DivisionBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
@@ -376,6 +425,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifier of the address used as the default shipping address.</p>
+     * @param defaultShippingAddressId
+     * @return Builder
      */
 
     public DivisionBuilder defaultShippingAddressId(@Nullable final String defaultShippingAddressId) {
@@ -385,6 +436,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @param billingAddressIds
+     * @return Builder
      */
 
     public DivisionBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
@@ -394,6 +447,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @param billingAddressIds
+     * @return Builder
      */
 
     public DivisionBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
@@ -403,6 +458,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @param billingAddressIds
+     * @return Builder
      */
 
     public DivisionBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
@@ -415,6 +472,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifier of the address used as the default billing address.</p>
+     * @param defaultBillingAddressId
+     * @return Builder
      */
 
     public DivisionBuilder defaultBillingAddressId(@Nullable final String defaultBillingAddressId) {
@@ -424,6 +483,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public DivisionBuilder associates(final com.commercetools.api.models.business_unit.Associate... associates) {
@@ -433,6 +494,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public DivisionBuilder associates(
@@ -443,6 +506,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public DivisionBuilder plusAssociates(final com.commercetools.api.models.business_unit.Associate... associates) {
@@ -455,6 +520,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @return Builder
      */
 
     public DivisionBuilder plusAssociates(
@@ -468,6 +534,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @return Builder
      */
 
     public DivisionBuilder withAssociates(
@@ -479,6 +546,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Parent unit of the Division.</p>
+     * @return Builder
      */
 
     public DivisionBuilder parentUnit(
@@ -490,6 +558,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Parent unit of the Division.</p>
+     * @param parentUnit
+     * @return Builder
      */
 
     public DivisionBuilder parentUnit(
@@ -500,6 +570,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
+     * @return Builder
      */
 
     public DivisionBuilder topLevelUnit(
@@ -512,6 +583,8 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
+     * @param topLevelUnit
+     * @return Builder
      */
 
     public DivisionBuilder topLevelUnit(

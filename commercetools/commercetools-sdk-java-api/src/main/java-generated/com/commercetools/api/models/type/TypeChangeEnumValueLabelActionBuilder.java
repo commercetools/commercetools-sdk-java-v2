@@ -29,6 +29,8 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public TypeChangeEnumValueLabelActionBuilder fieldName(final String fieldName) {
@@ -38,6 +40,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public TypeChangeEnumValueLabelActionBuilder value(
@@ -48,6 +51,8 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param value
+     * @return Builder
      */
 
     public TypeChangeEnumValueLabelActionBuilder value(

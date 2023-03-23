@@ -25,6 +25,8 @@ public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBu
 
     /**
      *  <p>SharedAccessKey is partially hidden on retrieval for security reasons.</p>
+     * @param connectionString
+     * @return Builder
      */
 
     public AzureServiceBusDestinationBuilder connectionString(final String connectionString) {

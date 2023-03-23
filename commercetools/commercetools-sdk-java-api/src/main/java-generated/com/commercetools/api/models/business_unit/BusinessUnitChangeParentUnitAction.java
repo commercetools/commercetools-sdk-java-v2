@@ -34,6 +34,7 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
 
     /**
      *  <p>New parent unit of the Business Unit.</p>
+     * @return parentUnit
      */
     @NotNull
     @Valid

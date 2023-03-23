@@ -38,6 +38,7 @@ public interface ExtensionDestination {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

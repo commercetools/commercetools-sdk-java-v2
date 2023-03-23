@@ -27,6 +27,8 @@ public class CartDiscountSetKeyActionBuilder implements Builder<CartDiscountSetK
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public CartDiscountSetKeyActionBuilder key(@Nullable final String key) {

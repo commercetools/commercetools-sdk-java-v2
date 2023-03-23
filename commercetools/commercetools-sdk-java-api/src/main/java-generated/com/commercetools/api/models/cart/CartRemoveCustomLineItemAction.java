@@ -34,6 +34,7 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
 
     /**
      *  <p><code>id</code> of the Custom Line Item to remove.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")

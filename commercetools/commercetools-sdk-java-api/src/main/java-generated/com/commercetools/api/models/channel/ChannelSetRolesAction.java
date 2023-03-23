@@ -33,6 +33,7 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     * @return roles
      */
     @NotNull
     @JsonProperty("roles")

@@ -31,6 +31,8 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingMethodKey
+     * @return Builder
      */
 
     public MethodTaxRateBuilder shippingMethodKey(final String shippingMethodKey) {
@@ -40,6 +42,7 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
 
     /**
      *  <p>Tax Rate for the Shipping Method.</p>
+     * @return Builder
      */
 
     public MethodTaxRateBuilder taxRate(
@@ -50,6 +53,8 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
 
     /**
      *  <p>Tax Rate for the Shipping Method.</p>
+     * @param taxRate
+     * @return Builder
      */
 
     public MethodTaxRateBuilder taxRate(@Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {

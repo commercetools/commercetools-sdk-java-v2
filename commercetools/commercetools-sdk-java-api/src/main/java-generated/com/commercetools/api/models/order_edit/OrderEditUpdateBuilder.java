@@ -34,6 +34,8 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
+     * @param version
+     * @return Builder
      */
 
     public OrderEditUpdateBuilder version(final Long version) {
@@ -43,6 +45,8 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public OrderEditUpdateBuilder actions(
@@ -53,6 +57,8 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public OrderEditUpdateBuilder actions(
@@ -63,6 +69,8 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public OrderEditUpdateBuilder plusActions(
@@ -76,6 +84,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditUpdateBuilder plusActions(
@@ -90,6 +99,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditUpdateBuilder withActions(
@@ -102,6 +112,8 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
+     * @param dryRun
+     * @return Builder
      */
 
     public OrderEditUpdateBuilder dryRun(@Nullable final Boolean dryRun) {

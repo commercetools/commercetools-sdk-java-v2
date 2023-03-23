@@ -145,6 +145,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Unique identifier of the Cart.</p>
+     * @param id
+     * @return Builder
      */
 
     public CartBuilder id(final String id) {
@@ -154,6 +156,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Current version of the Cart.</p>
+     * @param version
+     * @return Builder
      */
 
     public CartBuilder version(final Long version) {
@@ -163,6 +167,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public CartBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -172,6 +178,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Date and time (UTC) the Cart was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public CartBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -181,6 +189,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>User-defined unique identifier of the Cart.</p>
+     * @param key
+     * @return Builder
      */
 
     public CartBuilder key(@Nullable final String key) {
@@ -190,6 +200,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     * @param customerId
+     * @return Builder
      */
 
     public CartBuilder customerId(@Nullable final String customerId) {
@@ -199,6 +211,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Email address of the Customer that the Cart belongs to.</p>
+     * @param customerEmail
+     * @return Builder
      */
 
     public CartBuilder customerEmail(@Nullable final String customerEmail) {
@@ -208,6 +222,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     * @return Builder
      */
 
     public CartBuilder customerGroup(
@@ -220,6 +235,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public CartBuilder customerGroup(
@@ -230,6 +247,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Anonymous session associated with the Cart.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public CartBuilder anonymousId(@Nullable final String anonymousId) {
@@ -239,6 +258,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     * @return Builder
      */
 
     public CartBuilder businessUnit(
@@ -251,6 +271,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     * @param businessUnit
+     * @return Builder
      */
 
     public CartBuilder businessUnit(
@@ -261,6 +283,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to a Store the Cart belongs to.</p>
+     * @return Builder
      */
 
     public CartBuilder store(
@@ -271,6 +294,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to a Store the Cart belongs to.</p>
+     * @param store
+     * @return Builder
      */
 
     public CartBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
@@ -280,6 +305,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public CartBuilder lineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
@@ -289,6 +316,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public CartBuilder lineItems(final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems) {
@@ -298,6 +327,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public CartBuilder plusLineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
@@ -310,6 +341,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder plusLineItems(
@@ -323,6 +355,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder withLineItems(
@@ -334,6 +367,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public CartBuilder customLineItems(final com.commercetools.api.models.cart.CustomLineItem... customLineItems) {
@@ -343,6 +378,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public CartBuilder customLineItems(
@@ -353,6 +390,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public CartBuilder plusCustomLineItems(final com.commercetools.api.models.cart.CustomLineItem... customLineItems) {
@@ -365,6 +404,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder plusCustomLineItems(
@@ -378,6 +418,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder withCustomLineItems(
@@ -389,6 +430,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
+     * @param totalLineItemQuantity
+     * @return Builder
      */
 
     public CartBuilder totalLineItemQuantity(@Nullable final Long totalLineItemQuantity) {
@@ -399,6 +442,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @return Builder
      */
 
     public CartBuilder totalPrice(
@@ -410,6 +454,8 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @param totalPrice
+     * @return Builder
      */
 
     public CartBuilder totalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
@@ -422,6 +468,7 @@ public class CartBuilder implements Builder<Cart> {
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     * @return Builder
      */
 
     public CartBuilder taxedPrice(
@@ -435,6 +482,8 @@ public class CartBuilder implements Builder<Cart> {
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     * @param taxedPrice
+     * @return Builder
      */
 
     public CartBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
@@ -444,6 +493,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @return Builder
      */
 
     public CartBuilder taxedShippingPrice(
@@ -454,6 +504,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @param taxedShippingPrice
+     * @return Builder
      */
 
     public CartBuilder taxedShippingPrice(
@@ -464,6 +516,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how Tax Rates are set.</p>
+     * @param taxMode
+     * @return Builder
      */
 
     public CartBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
@@ -473,6 +527,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxRoundingMode
+     * @return Builder
      */
 
     public CartBuilder taxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
@@ -482,6 +538,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxCalculationMode
+     * @return Builder
      */
 
     public CartBuilder taxCalculationMode(
@@ -492,6 +550,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how stock quantities are tracked for Line Items in the Cart.</p>
+     * @param inventoryMode
+     * @return Builder
      */
 
     public CartBuilder inventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
@@ -501,6 +561,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Current status of the Cart.</p>
+     * @param cartState
+     * @return Builder
      */
 
     public CartBuilder cartState(final com.commercetools.api.models.cart.CartState cartState) {
@@ -510,6 +572,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder billingAddress(
@@ -520,6 +583,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @param billingAddress
+     * @return Builder
      */
 
     public CartBuilder billingAddress(@Nullable final com.commercetools.api.models.common.Address billingAddress) {
@@ -529,6 +594,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @return Builder
      */
 
     public CartBuilder shippingAddress(
@@ -539,6 +605,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @param shippingAddress
+     * @return Builder
      */
 
     public CartBuilder shippingAddress(@Nullable final com.commercetools.api.models.common.Address shippingAddress) {
@@ -548,6 +616,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates whether the Cart has one or multiple Shipping Methods.</p>
+     * @param shippingMode
+     * @return Builder
      */
 
     public CartBuilder shippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
@@ -557,6 +627,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @return Builder
      */
 
     public CartBuilder shippingInfo(
@@ -567,6 +638,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @param shippingInfo
+     * @return Builder
      */
 
     public CartBuilder shippingInfo(@Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
@@ -576,6 +649,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param shipping
+     * @return Builder
      */
 
     public CartBuilder shipping(final com.commercetools.api.models.cart.Shipping... shipping) {
@@ -585,6 +660,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param shipping
+     * @return Builder
      */
 
     public CartBuilder shipping(final java.util.List<com.commercetools.api.models.cart.Shipping> shipping) {
@@ -594,6 +671,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param shipping
+     * @return Builder
      */
 
     public CartBuilder plusShipping(final com.commercetools.api.models.cart.Shipping... shipping) {
@@ -606,6 +685,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @return Builder
      */
 
     public CartBuilder plusShipping(
@@ -619,6 +699,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @return Builder
      */
 
     public CartBuilder withShipping(
@@ -635,6 +716,8 @@ public class CartBuilder implements Builder<Cart> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public CartBuilder shippingRateInput(
@@ -650,6 +733,7 @@ public class CartBuilder implements Builder<Cart> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @return Builder
      */
 
     public CartBuilder shippingRateInput(
@@ -661,6 +745,8 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public CartBuilder itemShippingAddresses(
@@ -672,6 +758,8 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public CartBuilder itemShippingAddresses(
@@ -683,6 +771,8 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public CartBuilder plusItemShippingAddresses(
@@ -697,6 +787,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder plusItemShippingAddresses(
@@ -711,6 +802,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder withItemShippingAddresses(
@@ -722,6 +814,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param discountCodes
+     * @return Builder
      */
 
     public CartBuilder discountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
@@ -731,6 +825,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param discountCodes
+     * @return Builder
      */
 
     public CartBuilder discountCodes(
@@ -741,6 +837,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param discountCodes
+     * @return Builder
      */
 
     public CartBuilder plusDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
@@ -753,6 +851,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder plusDiscountCodes(
@@ -766,6 +865,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder withDiscountCodes(
@@ -777,6 +877,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param directDiscounts
+     * @return Builder
      */
 
     public CartBuilder directDiscounts(final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
@@ -786,6 +888,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param directDiscounts
+     * @return Builder
      */
 
     public CartBuilder directDiscounts(
@@ -796,6 +900,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param directDiscounts
+     * @return Builder
      */
 
     public CartBuilder plusDirectDiscounts(final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
@@ -808,6 +914,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder plusDirectDiscounts(
@@ -821,6 +928,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder withDirectDiscounts(
@@ -832,6 +940,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param refusedGifts
+     * @return Builder
      */
 
     public CartBuilder refusedGifts(
@@ -842,6 +952,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param refusedGifts
+     * @return Builder
      */
 
     public CartBuilder refusedGifts(
@@ -852,6 +964,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param refusedGifts
+     * @return Builder
      */
 
     public CartBuilder plusRefusedGifts(
@@ -865,6 +979,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder plusRefusedGifts(
@@ -879,6 +994,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder withRefusedGifts(
@@ -891,6 +1007,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Payment information related to the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder paymentInfo(
@@ -901,6 +1018,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Payment information related to the Cart.</p>
+     * @param paymentInfo
+     * @return Builder
      */
 
     public CartBuilder paymentInfo(@Nullable final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
@@ -910,6 +1029,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Used for LineItem Price selection.</p>
+     * @param country
+     * @return Builder
      */
 
     public CartBuilder country(@Nullable final String country) {
@@ -919,6 +1040,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     * @param locale
+     * @return Builder
      */
 
     public CartBuilder locale(@Nullable final String locale) {
@@ -928,6 +1051,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how the Cart was created.</p>
+     * @param origin
+     * @return Builder
      */
 
     public CartBuilder origin(final com.commercetools.api.models.cart.CartOrigin origin) {
@@ -937,6 +1062,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Fields of the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder custom(
@@ -947,6 +1073,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Fields of the Cart.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CartBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -956,6 +1084,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
+     * @param deleteDaysAfterLastModification
+     * @return Builder
      */
 
     public CartBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
@@ -965,6 +1095,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CartBuilder lastModifiedBy(
@@ -975,6 +1106,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public CartBuilder lastModifiedBy(
@@ -985,6 +1118,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CartBuilder createdBy(
@@ -995,6 +1129,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public CartBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {

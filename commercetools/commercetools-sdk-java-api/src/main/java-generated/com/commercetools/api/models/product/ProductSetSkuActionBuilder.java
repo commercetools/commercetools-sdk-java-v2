@@ -33,6 +33,8 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductSetSkuActionBuilder variantId(final Long variantId) {
@@ -42,6 +44,8 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
 
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductSetSkuActionBuilder sku(@Nullable final String sku) {
@@ -51,6 +55,8 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
 
     /**
      *  <p>If <code>true</code>, only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetSkuActionBuilder staged(@Nullable final Boolean staged) {

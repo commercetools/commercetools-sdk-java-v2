@@ -52,6 +52,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p><code>id</code> of the Product.</p>
+     * @param productId
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder productId(@Nullable final String productId) {
@@ -61,6 +63,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder variantId(@Nullable final Long variantId) {
@@ -70,6 +74,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
+     * @param sku
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder sku(@Nullable final String sku) {
@@ -79,6 +85,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p>Number of Product Variants to add to the Cart.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder quantity(@Nullable final Long quantity) {
@@ -89,6 +97,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     /**
      *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -98,6 +108,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder supplyChannel(
@@ -109,6 +120,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder supplyChannel(
@@ -120,6 +133,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder distributionChannel(
@@ -133,6 +147,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder distributionChannel(
@@ -143,6 +159,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder shippingDetails(
@@ -154,6 +171,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @param shippingDetails
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder shippingDetails(
@@ -164,6 +183,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p>Custom Fields for the Cart.</p>
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder custom(
@@ -174,6 +194,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     /**
      *  <p>Custom Fields for the Cart.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

@@ -37,6 +37,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     /**
      *  <p>Describes the Type of the Attribute.</p>
      *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
+     * @return type
      */
     @NotNull
     @Valid
@@ -46,6 +47,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     /**
      *  <p>User-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -53,6 +55,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @return label
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
 
     /**
      *  <p>Set to <code>true</code> if the Attribute is required to have a value on a ProductVariant.</p>
+     * @return isRequired
      */
     @NotNull
     @JsonProperty("isRequired")
@@ -68,6 +72,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
 
     /**
      *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     * @return attributeConstraint
      */
 
     @JsonProperty("attributeConstraint")
@@ -75,6 +80,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
 
     /**
      *  <p>Provides additional information about the Attribute that aids content managers when setting Product details.</p>
+     * @return inputTip
      */
     @Valid
     @JsonProperty("inputTip")
@@ -82,6 +88,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
 
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     * @return inputHint
      */
 
     @JsonProperty("inputHint")
@@ -89,6 +96,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
 
     /**
      *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     * @return isSearchable
      */
 
     @JsonProperty("isSearchable")

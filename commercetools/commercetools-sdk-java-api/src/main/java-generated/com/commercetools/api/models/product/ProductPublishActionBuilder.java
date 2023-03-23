@@ -27,6 +27,8 @@ public class ProductPublishActionBuilder implements Builder<ProductPublishAction
 
     /**
      *  <p><code>All</code> or <code>Prices</code></p>
+     * @param scope
+     * @return Builder
      */
 
     public ProductPublishActionBuilder scope(

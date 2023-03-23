@@ -37,6 +37,7 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -44,6 +45,7 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
 
     /**
      *  <p>Existing key to be changed.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -51,6 +53,7 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
 
     /**
      *  <p>New key to be set.</p>
+     * @return newKey
      */
     @NotNull
     @JsonProperty("newKey")

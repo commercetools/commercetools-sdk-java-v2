@@ -38,6 +38,7 @@ public interface CustomLineItem {
 
     /**
      *  <p>The unique ID of this CustomLineItem.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -45,6 +46,7 @@ public interface CustomLineItem {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid
@@ -53,6 +55,7 @@ public interface CustomLineItem {
 
     /**
      *
+     * @return money
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface CustomLineItem {
 
     /**
      *
+     * @return taxedPrice
      */
     @NotNull
     @Valid
@@ -69,6 +73,7 @@ public interface CustomLineItem {
 
     /**
      *
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -77,6 +82,7 @@ public interface CustomLineItem {
 
     /**
      *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     * @return slug
      */
     @NotNull
     @JsonProperty("slug")
@@ -84,6 +90,7 @@ public interface CustomLineItem {
 
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

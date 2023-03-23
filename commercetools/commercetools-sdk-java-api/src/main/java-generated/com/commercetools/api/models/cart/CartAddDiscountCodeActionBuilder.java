@@ -25,6 +25,8 @@ public class CartAddDiscountCodeActionBuilder implements Builder<CartAddDiscount
 
     /**
      *  <p><code>code</code> of a DiscountCode.</p>
+     * @param code
+     * @return Builder
      */
 
     public CartAddDiscountCodeActionBuilder code(final String code) {

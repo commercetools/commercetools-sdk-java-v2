@@ -34,6 +34,7 @@ public interface StagedQuoteSetCustomTypeAction extends StagedQuoteUpdateAction 
 
     /**
      *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface StagedQuoteSetCustomTypeAction extends StagedQuoteUpdateAction 
 
     /**
      *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

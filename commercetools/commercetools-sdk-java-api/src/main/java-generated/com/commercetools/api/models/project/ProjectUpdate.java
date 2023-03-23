@@ -34,6 +34,7 @@ public interface ProjectUpdate
 
     /**
      *  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface ProjectUpdate
 
     /**
      *  <p>Update actions to be performed on the Project.</p>
+     * @return actions
      */
     @NotNull
     @Valid

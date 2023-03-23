@@ -34,6 +34,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryParcelDraftBuilder measurements(
@@ -45,6 +46,8 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @param measurements
+     * @return Builder
      */
 
     public DeliveryParcelDraftBuilder measurements(
@@ -55,6 +58,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryParcelDraftBuilder trackingData(
@@ -65,6 +69,8 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @param trackingData
+     * @return Builder
      */
 
     public DeliveryParcelDraftBuilder trackingData(
@@ -75,6 +81,8 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryParcelDraftBuilder items(
@@ -85,6 +93,8 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryParcelDraftBuilder items(
@@ -95,6 +105,8 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryParcelDraftBuilder plusItems(
@@ -108,6 +120,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryParcelDraftBuilder plusItems(
@@ -121,6 +134,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryParcelDraftBuilder withItems(

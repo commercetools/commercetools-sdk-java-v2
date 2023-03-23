@@ -35,6 +35,7 @@ public interface QuoteCreatedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Quote that was created.</p>
+     * @return quote
      */
     @NotNull
     @Valid

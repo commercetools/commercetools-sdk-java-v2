@@ -25,6 +25,8 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
 
     /**
      *
+     * @param score
+     * @return Builder
      */
 
     public ScoreShippingRateInputBuilder score(final Double score) {

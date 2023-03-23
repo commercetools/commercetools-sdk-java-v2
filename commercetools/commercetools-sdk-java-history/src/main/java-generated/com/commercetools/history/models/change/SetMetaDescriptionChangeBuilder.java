@@ -32,6 +32,8 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *  <p>Shape of the action for <code>setMetaDescription</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetMetaDescriptionChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *
+     * @return Builder
      */
 
     public SetMetaDescriptionChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetMetaDescriptionChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *
+     * @return Builder
      */
 
     public SetMetaDescriptionChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetMetaDescriptionChangeBuilder nextValue(

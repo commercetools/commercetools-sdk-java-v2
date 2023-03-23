@@ -38,6 +38,8 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCategoryOrderHintChangeBuilder change(final String change) {
@@ -47,6 +49,8 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public SetCategoryOrderHintChangeBuilder catalogData(final String catalogData) {
@@ -56,6 +60,8 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
+     * @param categoryId
+     * @return Builder
      */
 
     public SetCategoryOrderHintChangeBuilder categoryId(final String categoryId) {
@@ -65,6 +71,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
+     * @return Builder
      */
 
     public SetCategoryOrderHintChangeBuilder previousValue(
@@ -76,6 +83,8 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCategoryOrderHintChangeBuilder previousValue(
@@ -86,6 +95,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
+     * @return Builder
      */
 
     public SetCategoryOrderHintChangeBuilder nextValue(
@@ -96,6 +106,8 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCategoryOrderHintChangeBuilder nextValue(

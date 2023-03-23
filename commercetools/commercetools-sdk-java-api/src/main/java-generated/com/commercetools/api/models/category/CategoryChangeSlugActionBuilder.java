@@ -26,6 +26,7 @@ public class CategoryChangeSlugActionBuilder implements Builder<CategoryChangeSl
 
     /**
      *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @return Builder
      */
 
     public CategoryChangeSlugActionBuilder slug(
@@ -36,6 +37,8 @@ public class CategoryChangeSlugActionBuilder implements Builder<CategoryChangeSl
 
     /**
      *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @param slug
+     * @return Builder
      */
 
     public CategoryChangeSlugActionBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {

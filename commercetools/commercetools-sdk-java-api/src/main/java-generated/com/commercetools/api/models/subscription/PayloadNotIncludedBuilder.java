@@ -28,6 +28,8 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
 
     /**
      *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
+     * @param reason
+     * @return Builder
      */
 
     public PayloadNotIncludedBuilder reason(final String reason) {
@@ -37,6 +39,8 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
 
     /**
      *  <p>Value of the <code>type</code> field in the original payload.</p>
+     * @param payloadType
+     * @return Builder
      */
 
     public PayloadNotIncludedBuilder payloadType(final String payloadType) {

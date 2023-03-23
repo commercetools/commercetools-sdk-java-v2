@@ -31,6 +31,8 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
 
     /**
      *  <p>Unique identifier of the referenced ProductType.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductTypeReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
 
     /**
      *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     * @return Builder
      */
 
     public ProductTypeReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
 
     /**
      *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     * @param obj
+     * @return Builder
      */
 
     public ProductTypeReferenceBuilder obj(@Nullable final com.commercetools.api.models.product_type.ProductType obj) {

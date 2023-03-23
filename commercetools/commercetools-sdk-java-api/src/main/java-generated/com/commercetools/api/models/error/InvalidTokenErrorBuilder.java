@@ -27,6 +27,8 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
 
     /**
      *  <p>Plain text description of the cause of the error.</p>
+     * @param message
+     * @return Builder
      */
 
     public InvalidTokenErrorBuilder message(final String message) {

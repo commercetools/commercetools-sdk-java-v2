@@ -33,6 +33,7 @@ public interface SetValueChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +41,7 @@ public interface SetValueChange extends Change {
 
     /**
      *  <p>Update action for <code>setValue</code> on custom objects</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -47,6 +49,7 @@ public interface SetValueChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -54,6 +57,7 @@ public interface SetValueChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

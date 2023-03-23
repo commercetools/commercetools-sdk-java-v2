@@ -26,6 +26,8 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
+     * @param values
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder values(
@@ -36,6 +38,8 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
+     * @param values
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder values(
@@ -46,6 +50,8 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
+     * @param values
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder plusValues(
@@ -59,6 +65,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder plusValues(
@@ -74,6 +81,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
+     * @return Builder
      */
 
     public AttributeLocalizedEnumTypeBuilder withValues(

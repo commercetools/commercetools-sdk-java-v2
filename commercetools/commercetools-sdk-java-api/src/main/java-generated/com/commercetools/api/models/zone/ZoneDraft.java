@@ -32,6 +32,7 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
 
     /**
      *  <p>User-defined unique identifier for the Zone.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -39,6 +40,7 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
 
     /**
      *  <p>Name of the Zone.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -46,6 +48,7 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
 
     /**
      *  <p>Description of the Zone.</p>
+     * @return description
      */
 
     @JsonProperty("description")
@@ -53,6 +56,7 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @return locations
      */
     @Valid
     @JsonProperty("locations")

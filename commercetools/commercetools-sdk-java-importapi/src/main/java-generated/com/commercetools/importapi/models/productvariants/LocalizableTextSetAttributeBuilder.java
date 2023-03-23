@@ -31,6 +31,8 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public LocalizableTextSetAttributeBuilder name(@Nullable final String name) {
@@ -40,6 +42,8 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizableTextSetAttributeBuilder value(
@@ -50,6 +54,8 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizableTextSetAttributeBuilder value(
@@ -60,6 +66,8 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizableTextSetAttributeBuilder plusValue(
@@ -73,6 +81,7 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
+     * @return Builder
      */
 
     public LocalizableTextSetAttributeBuilder plusValue(
@@ -86,6 +95,7 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
+     * @return Builder
      */
 
     public LocalizableTextSetAttributeBuilder withValue(

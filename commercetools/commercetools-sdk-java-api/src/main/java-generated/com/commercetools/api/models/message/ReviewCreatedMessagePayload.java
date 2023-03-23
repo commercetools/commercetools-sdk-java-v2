@@ -35,6 +35,7 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Review that was created.</p>
+     * @return review
      */
     @NotNull
     @Valid

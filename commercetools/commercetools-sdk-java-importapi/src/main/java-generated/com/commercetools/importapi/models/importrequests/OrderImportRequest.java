@@ -35,6 +35,7 @@ public interface OrderImportRequest extends ImportRequest {
 
     /**
      *  <p>The order import resources of this request.</p>
+     * @return resources
      */
     @NotNull
     @Valid

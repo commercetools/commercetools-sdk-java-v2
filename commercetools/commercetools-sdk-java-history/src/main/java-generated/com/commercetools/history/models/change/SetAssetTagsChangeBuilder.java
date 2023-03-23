@@ -35,6 +35,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *  <p>Update action for <code>setAssetTags</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetAssetTagsChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetTagsChangeBuilder asset(
@@ -54,6 +57,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
+     * @param asset
+     * @return Builder
      */
 
     public SetAssetTagsChangeBuilder asset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
@@ -63,6 +68,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAssetTagsChangeBuilder nextValue(final String... nextValue) {
@@ -72,6 +79,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAssetTagsChangeBuilder nextValue(final java.util.List<String> nextValue) {
@@ -81,6 +90,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAssetTagsChangeBuilder plusNextValue(final String... nextValue) {
@@ -93,6 +104,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAssetTagsChangeBuilder previousValue(final String... previousValue) {
@@ -102,6 +115,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAssetTagsChangeBuilder previousValue(final java.util.List<String> previousValue) {
@@ -111,6 +126,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAssetTagsChangeBuilder plusPreviousValue(final String... previousValue) {

@@ -37,6 +37,8 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangePlainEnumValueLabelChangeBuilder change(final String change) {
@@ -46,6 +48,8 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ChangePlainEnumValueLabelChangeBuilder attributeName(final String attributeName) {
@@ -55,6 +59,8 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *  <p>Key of the values that was updated</p>
+     * @param valueKey
+     * @return Builder
      */
 
     public ChangePlainEnumValueLabelChangeBuilder valueKey(final String valueKey) {
@@ -64,6 +70,8 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangePlainEnumValueLabelChangeBuilder previousValue(final String previousValue) {
@@ -73,6 +81,8 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangePlainEnumValueLabelChangeBuilder nextValue(final String nextValue) {

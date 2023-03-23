@@ -76,6 +76,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The unique ID of the StagedQuote.</p>
+     * @param id
+     * @return Builder
      */
 
     public StagedQuoteBuilder id(final String id) {
@@ -85,6 +87,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Current version of the StagedQuote.</p>
+     * @param version
+     * @return Builder
      */
 
     public StagedQuoteBuilder version(final Long version) {
@@ -94,6 +98,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Date and time (UTC) the StagedQuote was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public StagedQuoteBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -103,6 +109,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Date and time (UTC) the StagedQuote was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public StagedQuoteBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -112,6 +120,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>User-specific unique identifier of the staged quote.</p>
+     * @param key
+     * @return Builder
      */
 
     public StagedQuoteBuilder key(@Nullable final String key) {
@@ -121,6 +131,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StagedQuoteBuilder lastModifiedBy(
@@ -131,6 +142,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public StagedQuoteBuilder lastModifiedBy(
@@ -141,6 +154,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StagedQuoteBuilder createdBy(
@@ -151,6 +165,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public StagedQuoteBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -160,6 +176,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Predefined states tracking the status of the Staged Quote.</p>
+     * @param stagedQuoteState
+     * @return Builder
      */
 
     public StagedQuoteBuilder stagedQuoteState(
@@ -170,6 +188,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The Buyer who requested the Quote.</p>
+     * @return Builder
      */
 
     public StagedQuoteBuilder customer(
@@ -180,6 +199,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The Buyer who requested the Quote.</p>
+     * @param customer
+     * @return Builder
      */
 
     public StagedQuoteBuilder customer(
@@ -190,6 +211,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Quote Request related to the Staged Quote.</p>
+     * @return Builder
      */
 
     public StagedQuoteBuilder quoteRequest(
@@ -201,6 +223,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Quote Request related to the Staged Quote.</p>
+     * @param quoteRequest
+     * @return Builder
      */
 
     public StagedQuoteBuilder quoteRequest(
@@ -211,6 +235,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     * @return Builder
      */
 
     public StagedQuoteBuilder quotationCart(
@@ -221,6 +246,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     * @param quotationCart
+     * @return Builder
      */
 
     public StagedQuoteBuilder quotationCart(final com.commercetools.api.models.cart.CartReference quotationCart) {
@@ -230,6 +257,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Expiration date for the Quote.</p>
+     * @param validTo
+     * @return Builder
      */
 
     public StagedQuoteBuilder validTo(@Nullable final java.time.ZonedDateTime validTo) {
@@ -239,6 +268,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Message from the Seller included in the offer.</p>
+     * @param sellerComment
+     * @return Builder
      */
 
     public StagedQuoteBuilder sellerComment(@Nullable final String sellerComment) {
@@ -248,6 +279,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Custom Fields of the Staged Quote.</p>
+     * @return Builder
      */
 
     public StagedQuoteBuilder custom(
@@ -258,6 +290,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Custom Fields of the Staged Quote.</p>
+     * @param custom
+     * @return Builder
      */
 
     public StagedQuoteBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -267,6 +301,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @return Builder
      */
 
     public StagedQuoteBuilder state(
@@ -277,6 +312,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @param state
+     * @return Builder
      */
 
     public StagedQuoteBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -286,6 +323,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     * @param purchaseOrderNumber
+     * @return Builder
      */
 
     public StagedQuoteBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
@@ -295,6 +334,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
+     * @return Builder
      */
 
     public StagedQuoteBuilder businessUnit(
@@ -307,6 +347,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
+     * @param businessUnit
+     * @return Builder
      */
 
     public StagedQuoteBuilder businessUnit(

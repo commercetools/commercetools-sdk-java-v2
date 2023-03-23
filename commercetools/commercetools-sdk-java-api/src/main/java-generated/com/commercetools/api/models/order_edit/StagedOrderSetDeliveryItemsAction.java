@@ -37,6 +37,7 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -44,6 +45,7 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid

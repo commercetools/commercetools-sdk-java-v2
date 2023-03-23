@@ -55,6 +55,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Unique identifier of the Zone.</p>
+     * @param id
+     * @return Builder
      */
 
     public ZoneBuilder id(final String id) {
@@ -64,6 +66,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Current version of the Zone.</p>
+     * @param version
+     * @return Builder
      */
 
     public ZoneBuilder version(final Long version) {
@@ -73,6 +77,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Date and time (UTC) the Zone was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ZoneBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -82,6 +88,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Date and time (UTC) the Zone was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ZoneBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -91,6 +99,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ZoneBuilder lastModifiedBy(
@@ -101,6 +110,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ZoneBuilder lastModifiedBy(
@@ -111,6 +122,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ZoneBuilder createdBy(
@@ -121,6 +133,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ZoneBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -130,6 +144,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>User-defined unique identifier of the Zone.</p>
+     * @param key
+     * @return Builder
      */
 
     public ZoneBuilder key(@Nullable final String key) {
@@ -139,6 +155,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Name of the Zone.</p>
+     * @param name
+     * @return Builder
      */
 
     public ZoneBuilder name(final String name) {
@@ -148,6 +166,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Description of the Zone.</p>
+     * @param description
+     * @return Builder
      */
 
     public ZoneBuilder description(@Nullable final String description) {
@@ -157,6 +177,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param locations
+     * @return Builder
      */
 
     public ZoneBuilder locations(final com.commercetools.api.models.zone.Location... locations) {
@@ -166,6 +188,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param locations
+     * @return Builder
      */
 
     public ZoneBuilder locations(final java.util.List<com.commercetools.api.models.zone.Location> locations) {
@@ -175,6 +199,8 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param locations
+     * @return Builder
      */
 
     public ZoneBuilder plusLocations(final com.commercetools.api.models.zone.Location... locations) {
@@ -187,6 +213,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @return Builder
      */
 
     public ZoneBuilder plusLocations(
@@ -200,6 +227,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @return Builder
      */
 
     public ZoneBuilder withLocations(

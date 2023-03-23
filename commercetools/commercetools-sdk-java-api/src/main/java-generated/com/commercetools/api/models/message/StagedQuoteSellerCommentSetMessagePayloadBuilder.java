@@ -26,6 +26,8 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
 
     /**
      *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     * @param sellerComment
+     * @return Builder
      */
 
     public StagedQuoteSellerCommentSetMessagePayloadBuilder sellerComment(final String sellerComment) {

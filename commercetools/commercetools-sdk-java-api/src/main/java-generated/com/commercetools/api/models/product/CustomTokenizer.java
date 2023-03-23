@@ -33,6 +33,7 @@ public interface CustomTokenizer extends SuggestTokenizer {
 
     /**
      *  <p>Contains custom tokens.</p>
+     * @return inputs
      */
     @NotNull
     @JsonProperty("inputs")

@@ -25,6 +25,8 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateSetFieldBuilder value(final java.time.LocalDate... value) {
@@ -34,6 +36,8 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateSetFieldBuilder value(final java.util.List<java.time.LocalDate> value) {
@@ -43,6 +47,8 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateSetFieldBuilder plusValue(final java.time.LocalDate... value) {

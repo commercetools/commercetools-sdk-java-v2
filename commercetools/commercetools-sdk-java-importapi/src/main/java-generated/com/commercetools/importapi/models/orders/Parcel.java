@@ -34,6 +34,7 @@ public interface Parcel {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -41,6 +42,7 @@ public interface Parcel {
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -48,6 +50,7 @@ public interface Parcel {
 
     /**
      *
+     * @return measurements
      */
     @Valid
     @JsonProperty("measurements")
@@ -55,6 +58,7 @@ public interface Parcel {
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")
@@ -62,6 +66,7 @@ public interface Parcel {
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")

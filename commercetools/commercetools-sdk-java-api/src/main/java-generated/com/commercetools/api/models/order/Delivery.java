@@ -38,6 +38,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -45,6 +46,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -52,6 +54,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @return items
      */
     @NotNull
     @Valid
@@ -60,6 +63,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
 
     /**
      *
+     * @return parcels
      */
     @NotNull
     @Valid
@@ -68,6 +72,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
 
     /**
      *
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -75,6 +80,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

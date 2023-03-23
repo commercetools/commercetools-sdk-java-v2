@@ -35,6 +35,7 @@ public interface BusinessUnitRemoveAssociateAction extends BusinessUnitUpdateAct
 
     /**
      *  <p>Associate to remove.</p>
+     * @return customer
      */
     @NotNull
     @Valid

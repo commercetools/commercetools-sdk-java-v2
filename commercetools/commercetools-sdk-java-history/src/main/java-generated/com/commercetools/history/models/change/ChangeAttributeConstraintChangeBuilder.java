@@ -34,6 +34,8 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public ChangeAttributeConstraintChangeBuilder change(final String change) {
@@ -43,6 +45,8 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
 
     /**
      *  <p>name of the updated attribute</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ChangeAttributeConstraintChangeBuilder attributeName(final String attributeName) {
@@ -52,6 +56,8 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeAttributeConstraintChangeBuilder previousValue(
@@ -62,6 +68,8 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeAttributeConstraintChangeBuilder nextValue(

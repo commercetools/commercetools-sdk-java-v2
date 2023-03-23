@@ -42,6 +42,7 @@ public interface ReturnInfoAddedMessage extends OrderMessage {
 
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
+     * @return returnInfo
      */
     @NotNull
     @Valid

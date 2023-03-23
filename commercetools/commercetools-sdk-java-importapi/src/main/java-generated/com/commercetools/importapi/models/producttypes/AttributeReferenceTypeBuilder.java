@@ -25,6 +25,8 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
 
     /**
      *  <p>The type of the referenced resource.</p>
+     * @param referenceTypeId
+     * @return Builder
      */
 
     public AttributeReferenceTypeBuilder referenceTypeId(

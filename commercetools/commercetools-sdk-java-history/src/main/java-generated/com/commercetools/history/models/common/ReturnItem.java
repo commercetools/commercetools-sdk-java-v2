@@ -38,6 +38,7 @@ public interface ReturnItem {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -45,6 +46,7 @@ public interface ReturnItem {
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -52,6 +54,7 @@ public interface ReturnItem {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -59,6 +62,7 @@ public interface ReturnItem {
 
     /**
      *
+     * @return comment
      */
     @NotNull
     @JsonProperty("comment")
@@ -66,6 +70,7 @@ public interface ReturnItem {
 
     /**
      *
+     * @return shipmentState
      */
     @NotNull
     @JsonProperty("shipmentState")
@@ -73,6 +78,7 @@ public interface ReturnItem {
 
     /**
      *
+     * @return paymentState
      */
     @NotNull
     @JsonProperty("paymentState")
@@ -80,6 +86,7 @@ public interface ReturnItem {
 
     /**
      *
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -87,6 +94,7 @@ public interface ReturnItem {
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")

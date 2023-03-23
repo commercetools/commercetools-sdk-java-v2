@@ -35,6 +35,7 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
 
     /**
      *  <p>ResourceIdentifier of the Store to remove.</p>
+     * @return store
      */
     @NotNull
     @Valid

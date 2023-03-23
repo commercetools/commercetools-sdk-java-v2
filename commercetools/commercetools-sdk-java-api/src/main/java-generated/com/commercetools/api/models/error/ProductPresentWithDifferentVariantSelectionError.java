@@ -39,6 +39,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -46,6 +47,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
 
     /**
      *  <p><code>"Product is already present with the following different $variantSelections."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -53,6 +55,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
 
     /**
      *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     * @return existingVariantSelection
      */
     @NotNull
     @Valid

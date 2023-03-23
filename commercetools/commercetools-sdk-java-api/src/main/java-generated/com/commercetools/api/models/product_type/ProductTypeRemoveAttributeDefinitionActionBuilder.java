@@ -26,6 +26,8 @@ public class ProductTypeRemoveAttributeDefinitionActionBuilder
 
     /**
      *  <p>Name of the Attribute to remove.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductTypeRemoveAttributeDefinitionActionBuilder name(final String name) {

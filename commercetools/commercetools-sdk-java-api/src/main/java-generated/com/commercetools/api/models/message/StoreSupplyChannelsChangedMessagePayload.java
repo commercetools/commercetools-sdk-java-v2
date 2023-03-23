@@ -33,6 +33,7 @@ public interface StoreSupplyChannelsChangedMessagePayload extends MessagePayload
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @return addedSupplyChannels
      */
     @Valid
     @JsonProperty("addedSupplyChannels")
@@ -40,6 +41,7 @@ public interface StoreSupplyChannelsChangedMessagePayload extends MessagePayload
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @return removedSupplyChannels
      */
     @Valid
     @JsonProperty("removedSupplyChannels")

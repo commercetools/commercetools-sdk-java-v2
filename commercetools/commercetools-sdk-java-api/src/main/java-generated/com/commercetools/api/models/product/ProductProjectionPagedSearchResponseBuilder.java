@@ -43,6 +43,8 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder limit(final Long limit) {
@@ -52,6 +54,8 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @param count
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder count(final Long count) {
@@ -61,6 +65,8 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @param total
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder total(@Nullable final Long total) {
@@ -70,6 +76,8 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder offset(final Long offset) {
@@ -79,6 +87,8 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder results(
@@ -89,6 +99,8 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder results(
@@ -99,6 +111,8 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder plusResults(
@@ -112,6 +126,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder plusResults(
@@ -125,6 +140,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder withResults(
@@ -136,6 +152,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder facets(
@@ -146,6 +163,8 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @param facets
+     * @return Builder
      */
 
     public ProductProjectionPagedSearchResponseBuilder facets(

@@ -33,6 +33,7 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")

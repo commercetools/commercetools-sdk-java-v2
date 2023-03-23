@@ -31,6 +31,7 @@ public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpda
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     * @return purchaseOrderNumber
      */
 
     @JsonProperty("purchaseOrderNumber")

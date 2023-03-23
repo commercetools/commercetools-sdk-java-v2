@@ -30,6 +30,8 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
 
     /**
      *  <p>Unique ID of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public StoreResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
 
     /**
      *  <p>Unique key of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public StoreResourceIdentifierBuilder key(@Nullable final String key) {

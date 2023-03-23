@@ -25,6 +25,8 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     * @param isDefault
+     * @return Builder
      */
 
     public ShippingMethodChangeIsDefaultActionBuilder isDefault(final Boolean isDefault) {

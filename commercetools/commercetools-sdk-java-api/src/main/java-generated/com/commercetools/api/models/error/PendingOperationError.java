@@ -34,6 +34,7 @@ public interface PendingOperationError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface PendingOperationError extends ErrorObject {
 
     /**
      *  <p>Plain text description of the error.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

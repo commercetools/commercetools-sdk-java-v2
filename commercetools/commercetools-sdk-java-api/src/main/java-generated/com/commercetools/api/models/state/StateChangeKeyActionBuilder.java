@@ -25,6 +25,8 @@ public class StateChangeKeyActionBuilder implements Builder<StateChangeKeyAction
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param key
+     * @return Builder
      */
 
     public StateChangeKeyActionBuilder key(final String key) {

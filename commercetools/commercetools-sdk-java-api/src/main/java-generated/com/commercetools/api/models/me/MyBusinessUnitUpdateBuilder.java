@@ -29,6 +29,8 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyBusinessUnitUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyBusinessUnitUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyBusinessUnitUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyBusinessUnitUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @return Builder
      */
 
     public MyBusinessUnitUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @return Builder
      */
 
     public MyBusinessUnitUpdateBuilder withActions(

@@ -37,6 +37,8 @@ public class ProductSetProductPriceCustomFieldActionBuilder
 
     /**
      *  <p>The <code>id</code> of the Embedded Price to update.</p>
+     * @param priceId
+     * @return Builder
      */
 
     public ProductSetProductPriceCustomFieldActionBuilder priceId(final String priceId) {
@@ -46,6 +48,8 @@ public class ProductSetProductPriceCustomFieldActionBuilder
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetProductPriceCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
@@ -55,6 +59,8 @@ public class ProductSetProductPriceCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductSetProductPriceCustomFieldActionBuilder name(final String name) {
@@ -64,6 +70,8 @@ public class ProductSetProductPriceCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public ProductSetProductPriceCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

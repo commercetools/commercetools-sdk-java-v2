@@ -44,6 +44,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     /**
      *  <p>Unique identifier of the ReturnItem.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -51,6 +52,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -58,6 +60,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -65,6 +68,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     /**
      *
+     * @return comment
      */
 
     @JsonProperty("comment")
@@ -72,6 +76,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     /**
      *
+     * @return shipmentState
      */
     @NotNull
     @JsonProperty("shipmentState")
@@ -79,6 +84,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     /**
      *
+     * @return paymentState
      */
     @NotNull
     @JsonProperty("paymentState")
@@ -86,6 +92,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     /**
      *  <p>Custom Fields of this return item.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -93,6 +100,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     /**
      *
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -100,6 +108,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")

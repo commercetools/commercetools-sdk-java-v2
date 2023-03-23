@@ -66,6 +66,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder name(
@@ -81,6 +82,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param name
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -90,6 +93,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param money
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder money(final com.commercetools.importapi.models.common.TypedMoney money) {
@@ -99,6 +104,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder money(
@@ -109,6 +115,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder taxedPrice(
@@ -120,6 +127,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param taxedPrice
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder taxedPrice(
@@ -130,6 +139,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param totalPrice
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder totalPrice(
@@ -140,6 +151,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder totalPrice(
@@ -150,6 +162,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param slug
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder slug(final String slug) {
@@ -159,6 +173,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder quantity(final Double quantity) {
@@ -168,6 +184,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder state(
@@ -178,6 +196,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder state(
@@ -188,6 +208,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder plusState(
@@ -201,6 +223,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder plusState(
@@ -214,6 +237,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder withState(
@@ -225,6 +249,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>References a tax category by key.</p>
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder taxCategory(
@@ -236,6 +261,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>References a tax category by key.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder taxCategory(
@@ -246,6 +273,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder taxRate(
@@ -256,6 +284,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param taxRate
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder taxRate(
@@ -266,6 +296,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder externalTaxRate(
@@ -277,6 +308,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder externalTaxRate(
@@ -287,6 +320,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param discountedPricePerQuantity
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder discountedPricePerQuantity(
@@ -297,6 +332,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param discountedPricePerQuantity
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder discountedPricePerQuantity(
@@ -307,6 +344,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param discountedPricePerQuantity
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder plusDiscountedPricePerQuantity(
@@ -320,6 +359,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder plusDiscountedPricePerQuantity(
@@ -334,6 +374,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder withDiscountedPricePerQuantity(
@@ -346,6 +387,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder shippingDetails(
@@ -358,6 +400,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param shippingDetails
+     * @return Builder
      */
 
     public CustomLineItemDraftBuilder shippingDetails(

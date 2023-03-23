@@ -33,6 +33,7 @@ public interface TextSetAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

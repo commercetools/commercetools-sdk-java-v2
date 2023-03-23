@@ -31,6 +31,8 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public ChangeQuoteStateChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeQuoteStateChangeBuilder nextValue(final com.commercetools.history.models.common.QuoteState nextValue) {
@@ -49,6 +53,8 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeQuoteStateChangeBuilder previousValue(

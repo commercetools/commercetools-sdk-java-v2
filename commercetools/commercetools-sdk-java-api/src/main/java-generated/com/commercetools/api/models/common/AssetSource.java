@@ -32,6 +32,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>URI of the AssetSource.</p>
+     * @return uri
      */
     @NotNull
     @JsonProperty("uri")
@@ -39,6 +40,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>User-defined unique identifier of the AssetSource.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -46,6 +48,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Width and height of the AssetSource.</p>
+     * @return dimensions
      */
     @Valid
     @JsonProperty("dimensions")
@@ -53,6 +56,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
+     * @return contentType
      */
 
     @JsonProperty("contentType")

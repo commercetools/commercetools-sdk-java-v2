@@ -30,6 +30,8 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @param textLineItemId
+     * @return Builder
      */
 
     public ShoppingListChangeTextLineItemNameActionBuilder textLineItemId(final String textLineItemId) {
@@ -39,6 +41,7 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public ShoppingListChangeTextLineItemNameActionBuilder name(
@@ -49,6 +52,8 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param name
+     * @return Builder
      */
 
     public ShoppingListChangeTextLineItemNameActionBuilder name(

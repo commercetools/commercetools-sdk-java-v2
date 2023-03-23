@@ -31,6 +31,8 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
 
     /**
      *  <p><code>"Duplicate price key: $priceKey. The price key must be unique per variant."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DuplicatePriceKeyErrorBuilder message(final String message) {
@@ -61,6 +63,7 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
 
     /**
      *  <p>Conflicting Embedded Price.</p>
+     * @return Builder
      */
 
     public DuplicatePriceKeyErrorBuilder conflictingPrice(
@@ -71,6 +74,8 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
 
     /**
      *  <p>Conflicting Embedded Price.</p>
+     * @param conflictingPrice
+     * @return Builder
      */
 
     public DuplicatePriceKeyErrorBuilder conflictingPrice(

@@ -27,6 +27,8 @@ public class AttributeBuilder implements Builder<Attribute> {
 
     /**
      *  <p>Name of the Attribute.</p>
+     * @param name
+     * @return Builder
      */
 
     public AttributeBuilder name(final String name) {
@@ -44,6 +46,8 @@ public class AttributeBuilder implements Builder<Attribute> {
      *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
      *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
      *  </ul>
+     * @param value
+     * @return Builder
      */
 
     public AttributeBuilder value(final java.lang.Object value) {

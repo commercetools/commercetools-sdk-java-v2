@@ -25,6 +25,8 @@ public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGro
 
     /**
      *  <p>New name of the CustomerGroup.</p>
+     * @param name
+     * @return Builder
      */
 
     public CustomerGroupChangeNameActionBuilder name(final String name) {

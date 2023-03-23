@@ -35,6 +35,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
 
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     * @return shippingMethod
      */
     @Valid
     @JsonProperty("shippingMethod")
@@ -42,6 +43,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")

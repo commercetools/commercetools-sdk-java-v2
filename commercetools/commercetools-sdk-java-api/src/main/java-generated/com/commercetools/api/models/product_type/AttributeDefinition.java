@@ -39,6 +39,7 @@ public interface AttributeDefinition {
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
+     * @return type
      */
     @NotNull
     @Valid
@@ -47,6 +48,7 @@ public interface AttributeDefinition {
 
     /**
      *  <p>User-defined name of the Attribute that is unique within the Project.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -54,6 +56,7 @@ public interface AttributeDefinition {
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @return label
      */
     @NotNull
     @Valid
@@ -62,6 +65,7 @@ public interface AttributeDefinition {
 
     /**
      *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
+     * @return isRequired
      */
     @NotNull
     @JsonProperty("isRequired")
@@ -69,6 +73,7 @@ public interface AttributeDefinition {
 
     /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
+     * @return attributeConstraint
      */
     @NotNull
     @JsonProperty("attributeConstraint")
@@ -76,6 +81,7 @@ public interface AttributeDefinition {
 
     /**
      *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
+     * @return inputTip
      */
     @Valid
     @JsonProperty("inputTip")
@@ -83,6 +89,7 @@ public interface AttributeDefinition {
 
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     * @return inputHint
      */
     @NotNull
     @JsonProperty("inputHint")
@@ -91,6 +98,7 @@ public interface AttributeDefinition {
     /**
      *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
      *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     * @return isSearchable
      */
     @NotNull
     @JsonProperty("isSearchable")

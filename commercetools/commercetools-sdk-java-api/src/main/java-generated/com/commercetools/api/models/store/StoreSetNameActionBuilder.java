@@ -28,6 +28,7 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public StoreSetNameActionBuilder name(
@@ -38,6 +39,8 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
 
     /**
      *  <p>Value to set.</p>
+     * @param name
+     * @return Builder
      */
 
     public StoreSetNameActionBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {

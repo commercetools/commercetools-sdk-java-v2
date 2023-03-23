@@ -28,6 +28,7 @@ public class ShoppingListSetDescriptionActionBuilder implements Builder<Shopping
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ShoppingListSetDescriptionActionBuilder description(
@@ -38,6 +39,8 @@ public class ShoppingListSetDescriptionActionBuilder implements Builder<Shopping
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description
+     * @return Builder
      */
 
     public ShoppingListSetDescriptionActionBuilder description(

@@ -29,6 +29,8 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName(final String fieldName) {
@@ -38,6 +40,8 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     * @param keys
+     * @return Builder
      */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final String... keys) {
@@ -47,6 +51,8 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     * @param keys
+     * @return Builder
      */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final java.util.List<String> keys) {
@@ -56,6 +62,8 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     * @param keys
+     * @return Builder
      */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder plusKeys(final String... keys) {

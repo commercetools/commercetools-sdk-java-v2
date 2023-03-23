@@ -30,6 +30,7 @@ public interface StagedQuoteSetSellerCommentAction extends StagedQuoteUpdateActi
 
     /**
      *  <p>If <code>sellerComment</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     * @return sellerComment
      */
 
     @JsonProperty("sellerComment")

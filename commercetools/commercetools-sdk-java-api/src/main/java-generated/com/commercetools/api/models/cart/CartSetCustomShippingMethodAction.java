@@ -38,6 +38,7 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Name of the custom Shipping Method.</p>
+     * @return shippingMethodName
      */
     @NotNull
     @JsonProperty("shippingMethodName")
@@ -45,6 +46,7 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Determines the shipping price.</p>
+     * @return shippingRate
      */
     @NotNull
     @Valid
@@ -53,6 +55,7 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -60,6 +63,7 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")

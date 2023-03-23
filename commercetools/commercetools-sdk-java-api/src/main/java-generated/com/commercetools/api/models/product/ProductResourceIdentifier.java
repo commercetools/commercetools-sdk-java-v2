@@ -32,6 +32,7 @@ public interface ProductResourceIdentifier
 
     /**
      *  <p>Unique identifier of the referenced Product.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface ProductResourceIdentifier
 
     /**
      *  <p>User-defined unique identifier of the referenced Product.</p>
+     * @return key
      */
 
     @JsonProperty("key")

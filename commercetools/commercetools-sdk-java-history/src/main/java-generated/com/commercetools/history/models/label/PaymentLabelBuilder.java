@@ -29,6 +29,8 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public PaymentLabelBuilder key(final String key) {
@@ -38,6 +40,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
 
     /**
      *
+     * @return Builder
      */
 
     public PaymentLabelBuilder amountPlanned(
@@ -48,6 +51,8 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
 
     /**
      *
+     * @param amountPlanned
+     * @return Builder
      */
 
     public PaymentLabelBuilder amountPlanned(final com.commercetools.history.models.common.Money amountPlanned) {

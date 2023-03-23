@@ -26,6 +26,7 @@ public class MyPaymentChangeAmountPlannedActionBuilder implements Builder<MyPaym
 
     /**
      *  <p>New value to set.</p>
+     * @return Builder
      */
 
     public MyPaymentChangeAmountPlannedActionBuilder amount(
@@ -36,6 +37,8 @@ public class MyPaymentChangeAmountPlannedActionBuilder implements Builder<MyPaym
 
     /**
      *  <p>New value to set.</p>
+     * @param amount
+     * @return Builder
      */
 
     public MyPaymentChangeAmountPlannedActionBuilder amount(final com.commercetools.api.models.common.Money amount) {

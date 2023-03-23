@@ -40,6 +40,8 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public TextLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -49,6 +51,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Custom Fields for the TextLineItem.</p>
+     * @return Builder
      */
 
     public TextLineItemDraftBuilder custom(
@@ -59,6 +62,8 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Custom Fields for the TextLineItem.</p>
+     * @param custom
+     * @return Builder
      */
 
     public TextLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -68,6 +73,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @return Builder
      */
 
     public TextLineItemDraftBuilder description(
@@ -78,6 +84,8 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @param description
+     * @return Builder
      */
 
     public TextLineItemDraftBuilder description(
@@ -88,6 +96,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @return Builder
      */
 
     public TextLineItemDraftBuilder name(
@@ -98,6 +107,8 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @param name
+     * @return Builder
      */
 
     public TextLineItemDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -107,6 +118,8 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Number of entries in the TextLineItem.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public TextLineItemDraftBuilder quantity(@Nullable final Long quantity) {

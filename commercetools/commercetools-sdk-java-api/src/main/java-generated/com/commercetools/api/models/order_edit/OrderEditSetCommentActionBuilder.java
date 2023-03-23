@@ -27,6 +27,8 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
 
     /**
      *
+     * @param comment
+     * @return Builder
      */
 
     public OrderEditSetCommentActionBuilder comment(@Nullable final String comment) {

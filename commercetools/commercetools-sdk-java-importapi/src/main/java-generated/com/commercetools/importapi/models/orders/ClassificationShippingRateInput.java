@@ -36,6 +36,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -48,6 +49,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return label
      */
     @NotNull
     @Valid

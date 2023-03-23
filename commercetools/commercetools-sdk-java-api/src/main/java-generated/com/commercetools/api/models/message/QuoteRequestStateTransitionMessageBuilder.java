@@ -64,6 +64,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder id(final String id) {
@@ -73,6 +75,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder version(final Long version) {
@@ -82,6 +86,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -91,6 +97,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -100,6 +108,7 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder lastModifiedBy(
@@ -110,6 +119,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder lastModifiedBy(
@@ -120,6 +131,7 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder createdBy(
@@ -130,6 +142,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder createdBy(
@@ -140,6 +154,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -149,6 +165,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder resource(
@@ -159,6 +177,7 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder resource(
@@ -169,6 +188,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -178,6 +199,7 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -190,6 +212,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -200,6 +224,7 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder state(
@@ -210,6 +235,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @param state
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder state(
@@ -220,6 +247,7 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder oldState(
@@ -230,6 +258,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @param oldState
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder oldState(
@@ -240,6 +270,8 @@ public class QuoteRequestStateTransitionMessageBuilder implements Builder<QuoteR
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force
+     * @return Builder
      */
 
     public QuoteRequestStateTransitionMessageBuilder force(final Boolean force) {

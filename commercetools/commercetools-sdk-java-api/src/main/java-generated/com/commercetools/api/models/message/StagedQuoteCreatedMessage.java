@@ -42,6 +42,7 @@ public interface StagedQuoteCreatedMessage extends Message {
 
     /**
      *  <p>Staged Quote that was created.</p>
+     * @return stagedQuote
      */
     @NotNull
     @Valid

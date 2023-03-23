@@ -31,6 +31,8 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
 
     /**
      *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>. Use the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;:&lt;functionAlias/version&gt;</code> to point to a specific version of the function.</p>
+     * @param arn
+     * @return Builder
      */
 
     public AWSLambdaDestinationBuilder arn(final String arn) {
@@ -40,6 +42,8 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @param accessKey
+     * @return Builder
      */
 
     public AWSLambdaDestinationBuilder accessKey(final String accessKey) {
@@ -49,6 +53,8 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @param accessSecret
+     * @return Builder
      */
 
     public AWSLambdaDestinationBuilder accessSecret(final String accessSecret) {

@@ -43,6 +43,8 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @param projectKey
+     * @return Builder
      */
 
     public ResourceDeletedDeliveryPayloadBuilder projectKey(final String projectKey) {
@@ -52,6 +54,8 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resource(
@@ -62,6 +66,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @return Builder
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resource(
@@ -72,6 +77,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @return Builder
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -84,6 +90,8 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -94,6 +102,8 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>Last seen version of the resource.</p>
+     * @param version
+     * @return Builder
      */
 
     public ResourceDeletedDeliveryPayloadBuilder version(final Long version) {
@@ -103,6 +113,8 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>Date and time (UTC) the resource was last deleted.</p>
+     * @param modifiedAt
+     * @return Builder
      */
 
     public ResourceDeletedDeliveryPayloadBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {
@@ -112,6 +124,8 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     * @param dataErasure
+     * @return Builder
      */
 
     public ResourceDeletedDeliveryPayloadBuilder dataErasure(@Nullable final Boolean dataErasure) {

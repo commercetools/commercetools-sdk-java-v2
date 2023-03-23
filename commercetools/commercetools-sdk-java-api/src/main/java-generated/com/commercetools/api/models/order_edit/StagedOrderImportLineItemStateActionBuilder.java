@@ -29,6 +29,8 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public StagedOrderImportLineItemStateActionBuilder lineItemId(final String lineItemId) {
@@ -38,6 +40,8 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public StagedOrderImportLineItemStateActionBuilder state(
@@ -48,6 +52,8 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public StagedOrderImportLineItemStateActionBuilder state(
@@ -58,6 +64,8 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public StagedOrderImportLineItemStateActionBuilder plusState(
@@ -71,6 +79,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderImportLineItemStateActionBuilder plusState(
@@ -84,6 +93,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderImportLineItemStateActionBuilder withState(

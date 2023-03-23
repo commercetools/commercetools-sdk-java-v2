@@ -27,6 +27,8 @@ public class OrderSetPurchaseOrderNumberActionBuilder implements Builder<OrderSe
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     * @param purchaseOrderNumber
+     * @return Builder
      */
 
     public OrderSetPurchaseOrderNumberActionBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {

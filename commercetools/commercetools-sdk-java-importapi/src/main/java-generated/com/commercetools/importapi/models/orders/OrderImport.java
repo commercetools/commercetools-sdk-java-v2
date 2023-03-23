@@ -43,6 +43,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     * @return orderNumber
      */
     @NotNull
     @JsonProperty("orderNumber")
@@ -50,6 +51,7 @@ public interface OrderImport {
 
     /**
      *
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -57,6 +59,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.customerEmail</code>.</p>
+     * @return customerEmail
      */
 
     @JsonProperty("customerEmail")
@@ -64,6 +67,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.lineItems</code>.</p>
+     * @return lineItems
      */
     @Valid
     @JsonProperty("lineItems")
@@ -71,6 +75,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.customLineItems</code></p>
+     * @return customLineItems
      */
     @Valid
     @JsonProperty("customLineItems")
@@ -78,6 +83,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.totalPrice</code>.</p>
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -86,6 +92,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.taxedPrice</code>.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -93,6 +100,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.shippingAddress</code>.</p>
+     * @return shippingAddress
      */
     @Valid
     @JsonProperty("shippingAddress")
@@ -100,6 +108,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.billingAddress</code>.</p>
+     * @return billingAddress
      */
     @Valid
     @JsonProperty("billingAddress")
@@ -107,6 +116,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -114,6 +124,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.country</code>.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -121,6 +132,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.orderState</code>.</p>
+     * @return orderState
      */
 
     @JsonProperty("orderState")
@@ -128,6 +140,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.shipmentState</code>.</p>
+     * @return shipmentState
      */
 
     @JsonProperty("shipmentState")
@@ -135,6 +148,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.paymentState</code>.</p>
+     * @return paymentState
      */
 
     @JsonProperty("paymentState")
@@ -142,6 +156,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.shippingInfo</code>.</p>
+     * @return shippingInfo
      */
     @Valid
     @JsonProperty("shippingInfo")
@@ -149,6 +164,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.completedAt</code>.</p>
+     * @return completedAt
      */
 
     @JsonProperty("completedAt")
@@ -156,6 +172,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.custom</code>.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -163,6 +180,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.inventoryMode</code>.</p>
+     * @return inventoryMode
      */
 
     @JsonProperty("inventoryMode")
@@ -170,6 +188,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
+     * @return taxRoundingMode
      */
 
     @JsonProperty("taxRoundingMode")
@@ -177,6 +196,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.taxCalculationMode</code>.</p>
+     * @return taxCalculationMode
      */
 
     @JsonProperty("taxCalculationMode")
@@ -184,6 +204,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.origin</code>.</p>
+     * @return origin
      */
 
     @JsonProperty("origin")
@@ -191,6 +212,7 @@ public interface OrderImport {
 
     /**
      *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     * @return itemShippingAddresses
      */
     @Valid
     @JsonProperty("itemShippingAddresses")
@@ -198,6 +220,7 @@ public interface OrderImport {
 
     /**
      *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")
@@ -205,6 +228,7 @@ public interface OrderImport {
 
     /**
      *  <p>Reference to a State in a custom workflow.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")

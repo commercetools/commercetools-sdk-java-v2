@@ -33,6 +33,7 @@ public interface BusinessUnitDefaultShippingAddressSetMessagePayload extends Mes
 
     /**
      *  <p>The address that was set as the default shipping address.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")

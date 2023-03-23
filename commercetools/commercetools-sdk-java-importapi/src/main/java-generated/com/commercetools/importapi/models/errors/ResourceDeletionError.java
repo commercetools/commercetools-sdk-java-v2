@@ -31,6 +31,7 @@ public interface ResourceDeletionError extends ErrorObject {
 
     /**
      *
+     * @return resource
      */
 
     @JsonProperty("resource")

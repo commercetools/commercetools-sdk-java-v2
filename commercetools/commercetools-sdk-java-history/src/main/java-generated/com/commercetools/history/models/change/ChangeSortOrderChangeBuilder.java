@@ -31,6 +31,8 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
 
     /**
      *  <p>Shape of the action for <code>changeSortOrder</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeSortOrderChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeSortOrderChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeSortOrderChangeBuilder nextValue(final String nextValue) {

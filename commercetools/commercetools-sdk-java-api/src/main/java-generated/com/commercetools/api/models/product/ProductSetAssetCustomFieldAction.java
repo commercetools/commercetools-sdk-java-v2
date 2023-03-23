@@ -33,6 +33,7 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -40,6 +41,7 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -47,6 +49,7 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -54,6 +57,7 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
+     * @return assetId
      */
 
     @JsonProperty("assetId")
@@ -61,6 +65,7 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
+     * @return assetKey
      */
 
     @JsonProperty("assetKey")
@@ -68,6 +73,7 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -75,6 +81,7 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
      */
 
     @JsonProperty("value")

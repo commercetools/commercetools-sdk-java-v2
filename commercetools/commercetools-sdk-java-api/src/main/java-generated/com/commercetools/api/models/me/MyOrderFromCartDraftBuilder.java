@@ -28,6 +28,8 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
 
     /**
      *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     * @param id
+     * @return Builder
      */
 
     public MyOrderFromCartDraftBuilder id(final String id) {
@@ -37,6 +39,8 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
 
     /**
      *
+     * @param version
+     * @return Builder
      */
 
     public MyOrderFromCartDraftBuilder version(final Long version) {

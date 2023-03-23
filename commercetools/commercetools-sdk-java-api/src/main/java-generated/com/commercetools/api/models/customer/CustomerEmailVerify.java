@@ -31,6 +31,7 @@ public interface CustomerEmailVerify {
 
     /**
      *  <p>Expected version of the Customer.</p>
+     * @return version
      */
 
     @JsonProperty("version")
@@ -38,6 +39,7 @@ public interface CustomerEmailVerify {
 
     /**
      *  <p>Value of the token to verify Customer email.</p>
+     * @return tokenValue
      */
     @NotNull
     @JsonProperty("tokenValue")

@@ -37,6 +37,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
 
     /**
      *
+     * @return addressKey
      */
     @NotNull
     @JsonProperty("addressKey")
@@ -44,6 +45,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
 
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -51,6 +53,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

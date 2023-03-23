@@ -35,6 +35,7 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -42,6 +43,7 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid

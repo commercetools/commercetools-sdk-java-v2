@@ -26,6 +26,8 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public OrderImportRequestBuilder resources(
@@ -36,6 +38,8 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public OrderImportRequestBuilder resources(
@@ -46,6 +50,8 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public OrderImportRequestBuilder plusResources(
@@ -59,6 +65,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
+     * @return Builder
      */
 
     public OrderImportRequestBuilder plusResources(
@@ -72,6 +79,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
+     * @return Builder
      */
 
     public OrderImportRequestBuilder withResources(

@@ -37,6 +37,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
+     * @param uri
+     * @return Builder
      */
 
     public AssetSourceBuilder uri(final String uri) {
@@ -46,6 +48,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public AssetSourceBuilder key(@Nullable final String key) {
@@ -55,6 +59,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *  <p>The width and height of the Asset Source.</p>
+     * @return Builder
      */
 
     public AssetSourceBuilder dimensions(
@@ -65,6 +70,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *  <p>The width and height of the Asset Source.</p>
+     * @param dimensions
+     * @return Builder
      */
 
     public AssetSourceBuilder dimensions(
@@ -75,6 +82,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
+     * @param contentType
+     * @return Builder
      */
 
     public AssetSourceBuilder contentType(@Nullable final String contentType) {

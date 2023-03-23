@@ -34,6 +34,8 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      *  <p>External reference that identifies the current status of the Payment.</p>
+     * @param interfaceCode
+     * @return Builder
      */
 
     public PaymentStatusDraftBuilder interfaceCode(@Nullable final String interfaceCode) {
@@ -43,6 +45,8 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      *  <p>Text describing the current status of the Payment.</p>
+     * @param interfaceText
+     * @return Builder
      */
 
     public PaymentStatusDraftBuilder interfaceText(@Nullable final String interfaceText) {
@@ -52,6 +56,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return Builder
      */
 
     public PaymentStatusDraftBuilder state(
@@ -62,6 +67,8 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param state
+     * @return Builder
      */
 
     public PaymentStatusDraftBuilder state(

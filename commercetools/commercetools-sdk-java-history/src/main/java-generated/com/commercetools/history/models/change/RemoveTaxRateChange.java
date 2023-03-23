@@ -37,6 +37,7 @@ public interface RemoveTaxRateChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface RemoveTaxRateChange extends Change {
 
     /**
      *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface RemoveTaxRateChange extends Change {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return previousValue
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface RemoveTaxRateChange extends Change {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return nextValue
      */
     @NotNull
     @Valid

@@ -31,6 +31,8 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public StagedOrderSetParcelMeasurementsActionBuilder parcelId(final String parcelId) {
@@ -40,6 +42,7 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetParcelMeasurementsActionBuilder measurements(
@@ -50,6 +53,8 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
 
     /**
      *
+     * @param measurements
+     * @return Builder
      */
 
     public StagedOrderSetParcelMeasurementsActionBuilder measurements(

@@ -31,6 +31,8 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
 
     /**
      *  <p>Shape of the action for <code>setExpectedDelivery</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetExpectedDeliveryChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetExpectedDeliveryChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetExpectedDeliveryChangeBuilder nextValue(final String nextValue) {

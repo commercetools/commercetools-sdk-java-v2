@@ -31,6 +31,8 @@ public class StagedOrderSetParcelTrackingDataActionBuilder implements Builder<St
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public StagedOrderSetParcelTrackingDataActionBuilder parcelId(final String parcelId) {
@@ -40,6 +42,7 @@ public class StagedOrderSetParcelTrackingDataActionBuilder implements Builder<St
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetParcelTrackingDataActionBuilder trackingData(
@@ -50,6 +53,8 @@ public class StagedOrderSetParcelTrackingDataActionBuilder implements Builder<St
 
     /**
      *
+     * @param trackingData
+     * @return Builder
      */
 
     public StagedOrderSetParcelTrackingDataActionBuilder trackingData(

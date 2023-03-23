@@ -33,6 +33,7 @@ public interface InternalConstraintViolatedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface InternalConstraintViolatedError extends ErrorObject {
 
     /**
      *  <p>Plain text description of the constraints that were violated.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

@@ -42,6 +42,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Unique ID of the message.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -49,6 +50,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Last seen version of the resource.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -56,6 +58,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Date and time (UTC) the resource was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -63,6 +66,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Date and time (UTC) the resource was last modified.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -70,6 +74,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Used to ensure all messages of the resource are processed in correct order. The <code>sequenceNumber</code> of the next message of the resource is a successor of the <code>sequenceNumber</code> of the current message.</p>
+     * @return sequenceNumber
      */
     @NotNull
     @JsonProperty("sequenceNumber")
@@ -77,6 +82,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Version of the resource on which the change was performed.</p>
+     * @return resourceVersion
      */
     @NotNull
     @JsonProperty("resourceVersion")
@@ -84,6 +90,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     * @return payloadNotIncluded
      */
     @Valid
     @JsonProperty("payloadNotIncluded")

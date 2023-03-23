@@ -32,6 +32,8 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder nextValue(
@@ -52,6 +55,8 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder nextValue(
@@ -62,6 +67,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder previousValue(
@@ -73,6 +79,8 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder previousValue(

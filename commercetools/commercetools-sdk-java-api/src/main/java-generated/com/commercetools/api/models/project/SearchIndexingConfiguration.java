@@ -30,6 +30,7 @@ public interface SearchIndexingConfiguration {
 
     /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     * @return products
      */
     @Valid
     @JsonProperty("products")
@@ -37,6 +38,7 @@ public interface SearchIndexingConfiguration {
 
     /**
      *  <p>Configuration for the Order Search feature.</p>
+     * @return orders
      */
     @Valid
     @JsonProperty("orders")

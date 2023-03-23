@@ -34,6 +34,7 @@ public interface AssetChangeValue {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -41,6 +42,7 @@ public interface AssetChangeValue {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid

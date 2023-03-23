@@ -40,6 +40,7 @@ public interface StandalonePriceUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

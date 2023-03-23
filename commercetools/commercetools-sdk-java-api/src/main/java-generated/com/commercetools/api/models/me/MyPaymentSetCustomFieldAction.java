@@ -33,6 +33,7 @@ public interface MyPaymentSetCustomFieldAction extends MyPaymentUpdateAction {
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -40,6 +41,7 @@ public interface MyPaymentSetCustomFieldAction extends MyPaymentUpdateAction {
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
      */
 
     @JsonProperty("value")

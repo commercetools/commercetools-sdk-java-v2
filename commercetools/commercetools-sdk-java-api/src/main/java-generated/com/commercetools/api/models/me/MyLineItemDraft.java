@@ -35,6 +35,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p><code>id</code> of the Product.</p>
+     * @return productId
      */
 
     @JsonProperty("productId")
@@ -42,6 +43,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -49,6 +51,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -56,6 +59,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Number of Product Variants to add to the Cart.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -64,6 +68,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     /**
      *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
+     * @return addedAt
      */
 
     @JsonProperty("addedAt")
@@ -71,6 +76,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -79,6 +85,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")
@@ -86,6 +93,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")
@@ -93,6 +101,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Custom Fields for the Cart.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

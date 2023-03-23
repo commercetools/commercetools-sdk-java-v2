@@ -27,6 +27,8 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
 
     /**
      *  <p><code>"The given values must be equal to the existing enum values."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public EnumValuesMustMatchErrorBuilder message(final String message) {

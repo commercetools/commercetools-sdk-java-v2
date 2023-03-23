@@ -25,6 +25,8 @@ public class GenericErrorBuilder implements Builder<GenericError> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public GenericErrorBuilder message(final String message) {

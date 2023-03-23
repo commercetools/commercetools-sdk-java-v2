@@ -26,6 +26,7 @@ public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCount
 
     /**
      *  <p>Value to remove from <code>countries</code>.</p>
+     * @return Builder
      */
 
     public StoreRemoveCountryActionBuilder country(
@@ -36,6 +37,8 @@ public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCount
 
     /**
      *  <p>Value to remove from <code>countries</code>.</p>
+     * @param country
+     * @return Builder
      */
 
     public StoreRemoveCountryActionBuilder country(

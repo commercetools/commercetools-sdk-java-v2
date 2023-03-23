@@ -31,6 +31,8 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
 
     /**
      *  <p>Shape of the action for <code>changeKey</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeKeyChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeKeyChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeKeyChangeBuilder nextValue(final String nextValue) {

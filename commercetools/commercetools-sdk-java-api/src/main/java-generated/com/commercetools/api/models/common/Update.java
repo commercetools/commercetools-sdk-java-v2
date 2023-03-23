@@ -33,6 +33,7 @@ public interface Update extends com.commercetools.api.models.ResourceUpdate<Upda
 
     /**
      *
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -40,6 +41,7 @@ public interface Update extends com.commercetools.api.models.ResourceUpdate<Upda
 
     /**
      *
+     * @return actions
      */
     @NotNull
     @Valid

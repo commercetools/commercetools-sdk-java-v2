@@ -42,6 +42,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>The project containing the project set.</p>
+     * @param projectKey
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder projectKey(final String projectKey) {
@@ -51,6 +53,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
+     * @param productIds
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder productIds(@Nullable final String... productIds) {
@@ -60,6 +64,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
+     * @param productIds
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder productIds(@Nullable final java.util.List<String> productIds) {
@@ -69,6 +75,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
+     * @param productIds
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder plusProductIds(@Nullable final String... productIds) {
@@ -81,6 +89,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
+     * @param productTypeIds
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder productTypeIds(@Nullable final String... productTypeIds) {
@@ -90,6 +100,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
+     * @param productTypeIds
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
@@ -99,6 +111,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
+     * @param productTypeIds
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {
@@ -111,6 +125,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>Specifies use of staged or current product data.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder staged(@Nullable final Boolean staged) {
@@ -120,6 +136,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
+     * @param includeVariants
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder includeVariants(@Nullable final Boolean includeVariants) {
@@ -129,6 +147,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
+     * @param productSetLimit
+     * @return Builder
      */
 
     public ProductSetSelectorBuilder productSetLimit(@Nullable final Long productSetLimit) {

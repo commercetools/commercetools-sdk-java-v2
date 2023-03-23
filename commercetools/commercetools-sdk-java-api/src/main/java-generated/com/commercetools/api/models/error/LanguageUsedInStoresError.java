@@ -34,6 +34,7 @@ public interface LanguageUsedInStoresError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface LanguageUsedInStoresError extends ErrorObject {
 
     /**
      *  <p><code>"Language(s) in use by a store cannot be deleted. Remove them in all the stores of this project first."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

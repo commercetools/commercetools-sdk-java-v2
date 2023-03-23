@@ -31,6 +31,8 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
 
     /**
      *  <p>Shape of the action for <code>setMiddleName</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetMiddleNameChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetMiddleNameChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetMiddleNameChangeBuilder nextValue(final String nextValue) {

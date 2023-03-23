@@ -48,6 +48,7 @@ public interface StoreCreatedMessage extends Message {
 
     /**
      *  <p>The <code>name</code> of the Store that was created.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -55,6 +56,7 @@ public interface StoreCreatedMessage extends Message {
 
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     * @return languages
      */
 
     @JsonProperty("languages")
@@ -62,6 +64,7 @@ public interface StoreCreatedMessage extends Message {
 
     /**
      *  <p>Countries of the Store that was created.</p>
+     * @return countries
      */
     @Valid
     @JsonProperty("countries")
@@ -69,6 +72,7 @@ public interface StoreCreatedMessage extends Message {
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
+     * @return distributionChannels
      */
     @NotNull
     @Valid
@@ -77,6 +81,7 @@ public interface StoreCreatedMessage extends Message {
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
+     * @return supplyChannels
      */
     @NotNull
     @Valid
@@ -85,6 +90,7 @@ public interface StoreCreatedMessage extends Message {
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @return productSelections
      */
     @NotNull
     @Valid
@@ -93,6 +99,7 @@ public interface StoreCreatedMessage extends Message {
 
     /**
      *  <p>Custom Fields on the Store that was created.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

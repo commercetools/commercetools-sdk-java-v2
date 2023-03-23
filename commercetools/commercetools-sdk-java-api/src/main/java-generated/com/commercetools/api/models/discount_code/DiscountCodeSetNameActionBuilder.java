@@ -28,6 +28,7 @@ public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public DiscountCodeSetNameActionBuilder name(
@@ -38,6 +39,8 @@ public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param name
+     * @return Builder
      */
 
     public DiscountCodeSetNameActionBuilder name(

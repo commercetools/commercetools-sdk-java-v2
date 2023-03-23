@@ -29,6 +29,8 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
 
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     * @param active
+     * @return Builder
      */
 
     public StandalonePriceActiveChangedMessagePayloadBuilder active(final Boolean active) {
@@ -38,6 +40,8 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
 
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     * @param oldActive
+     * @return Builder
      */
 
     public StandalonePriceActiveChangedMessagePayloadBuilder oldActive(final Boolean oldActive) {

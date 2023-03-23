@@ -31,6 +31,8 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
 
     /**
      *  <p>Unique identifier of the referenced CustomObject.</p>
+     * @param id
+     * @return Builder
      */
 
     public CustomObjectReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
 
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     * @return Builder
      */
 
     public CustomObjectReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
 
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     * @param obj
+     * @return Builder
      */
 
     public CustomObjectReferenceBuilder obj(

@@ -31,6 +31,8 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
 
     /**
      *  <p>Unique identifier of the referenced Type.</p>
+     * @param id
+     * @return Builder
      */
 
     public TypeReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
 
     /**
      *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     * @return Builder
      */
 
     public TypeReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
 
     /**
      *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     * @param obj
+     * @return Builder
      */
 
     public TypeReferenceBuilder obj(@Nullable final com.commercetools.api.models.type.Type obj) {

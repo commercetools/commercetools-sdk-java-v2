@@ -31,6 +31,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
 
     /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     * @return Builder
      */
 
     public SearchIndexingConfigurationBuilder products(
@@ -43,6 +44,8 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
 
     /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     * @param products
+     * @return Builder
      */
 
     public SearchIndexingConfigurationBuilder products(
@@ -53,6 +56,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
 
     /**
      *  <p>Configuration for the Order Search feature.</p>
+     * @return Builder
      */
 
     public SearchIndexingConfigurationBuilder orders(
@@ -64,6 +68,8 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
 
     /**
      *  <p>Configuration for the Order Search feature.</p>
+     * @param orders
+     * @return Builder
      */
 
     public SearchIndexingConfigurationBuilder orders(

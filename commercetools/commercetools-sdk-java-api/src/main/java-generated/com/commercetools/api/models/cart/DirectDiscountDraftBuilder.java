@@ -31,6 +31,8 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
 
     /**
      *  <p>Defines the effect the Discount will have.</p>
+     * @param value
+     * @return Builder
      */
 
     public DirectDiscountDraftBuilder value(final com.commercetools.api.models.cart_discount.CartDiscountValue value) {
@@ -40,6 +42,7 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
 
     /**
      *  <p>Defines the effect the Discount will have.</p>
+     * @return Builder
      */
 
     public DirectDiscountDraftBuilder value(
@@ -51,6 +54,8 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
     /**
      *  <p>Defines what part of the Cart will be discounted.</p>
      *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
+     * @param target
+     * @return Builder
      */
 
     public DirectDiscountDraftBuilder target(
@@ -62,6 +67,7 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
     /**
      *  <p>Defines what part of the Cart will be discounted.</p>
      *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
+     * @return Builder
      */
 
     public DirectDiscountDraftBuilder target(

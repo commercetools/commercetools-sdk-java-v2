@@ -35,6 +35,7 @@ public interface AttributeGroupDraft
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface AttributeGroupDraft
 
     /**
      *  <p>Description of the AttributeGroup.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -50,6 +52,7 @@ public interface AttributeGroupDraft
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @return attributes
      */
     @NotNull
     @Valid
@@ -58,6 +61,7 @@ public interface AttributeGroupDraft
 
     /**
      *  <p>User-defined unique identifier for the AttributeGroup.</p>
+     * @return key
      */
 
     @JsonProperty("key")

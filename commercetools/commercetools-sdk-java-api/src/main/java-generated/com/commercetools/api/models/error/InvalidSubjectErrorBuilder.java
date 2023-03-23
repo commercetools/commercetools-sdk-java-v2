@@ -27,6 +27,8 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
 
     /**
      *  <p>Plain text description of the cause of the error.</p>
+     * @param message
+     * @return Builder
      */
 
     public InvalidSubjectErrorBuilder message(final String message) {

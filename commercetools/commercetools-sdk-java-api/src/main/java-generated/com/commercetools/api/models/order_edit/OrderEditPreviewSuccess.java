@@ -36,6 +36,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
 
     /**
      *
+     * @return preview
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
 
     /**
      *
+     * @return messagePayloads
      */
     @NotNull
     @Valid

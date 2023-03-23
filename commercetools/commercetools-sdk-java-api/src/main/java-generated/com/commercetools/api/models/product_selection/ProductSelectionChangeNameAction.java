@@ -35,6 +35,7 @@ public interface ProductSelectionChangeNameAction extends ProductSelectionUpdate
 
     /**
      *  <p>The new name to be set for the ProductSelection.</p>
+     * @return name
      */
     @NotNull
     @Valid

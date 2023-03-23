@@ -34,6 +34,7 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")

@@ -35,6 +35,7 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     * @return quoteRequestState
      */
     @NotNull
     @JsonProperty("quoteRequestState")
@@ -42,6 +43,7 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     * @return oldQuoteRequestState
      */
     @NotNull
     @JsonProperty("oldQuoteRequestState")

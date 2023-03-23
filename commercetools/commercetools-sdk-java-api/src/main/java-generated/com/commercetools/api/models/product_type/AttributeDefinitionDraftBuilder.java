@@ -50,6 +50,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     /**
      *  <p>Describes the Type of the Attribute.</p>
      *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
+     * @param type
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder type(final com.commercetools.api.models.product_type.AttributeType type) {
@@ -60,6 +62,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     /**
      *  <p>Describes the Type of the Attribute.</p>
      *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder type(
@@ -71,6 +74,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     /**
      *  <p>User-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
+     * @param name
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder name(final String name) {
@@ -80,6 +85,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder label(
@@ -90,6 +96,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @param label
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
@@ -99,6 +107,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Set to <code>true</code> if the Attribute is required to have a value on a ProductVariant.</p>
+     * @param isRequired
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder isRequired(final Boolean isRequired) {
@@ -108,6 +118,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     * @param attributeConstraint
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder attributeConstraint(
@@ -118,6 +130,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Provides additional information about the Attribute that aids content managers when setting Product details.</p>
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder inputTip(
@@ -128,6 +141,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Provides additional information about the Attribute that aids content managers when setting Product details.</p>
+     * @param inputTip
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder inputTip(
@@ -138,6 +153,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     * @param inputHint
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder inputHint(
@@ -148,6 +165,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     * @param isSearchable
+     * @return Builder
      */
 
     public AttributeDefinitionDraftBuilder isSearchable(@Nullable final Boolean isSearchable) {

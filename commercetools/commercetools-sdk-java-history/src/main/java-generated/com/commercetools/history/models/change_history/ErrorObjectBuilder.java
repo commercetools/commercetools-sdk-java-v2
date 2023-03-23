@@ -28,6 +28,8 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
 
     /**
      *
+     * @param code
+     * @return Builder
      */
 
     public ErrorObjectBuilder code(final String code) {
@@ -37,6 +39,8 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public ErrorObjectBuilder message(final String message) {

@@ -30,6 +30,8 @@ public class MyCustomerRemoveBillingAddressIdActionBuilder implements Builder<My
 
     /**
      *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public MyCustomerRemoveBillingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -39,6 +41,8 @@ public class MyCustomerRemoveBillingAddressIdActionBuilder implements Builder<My
 
     /**
      *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public MyCustomerRemoveBillingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

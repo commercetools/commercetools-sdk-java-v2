@@ -34,6 +34,7 @@ public interface ShippingMethodUpdate extends
 
     /**
      *  <p>Expected version of the ShippingMethod on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface ShippingMethodUpdate extends
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
+     * @return actions
      */
     @NotNull
     @Valid

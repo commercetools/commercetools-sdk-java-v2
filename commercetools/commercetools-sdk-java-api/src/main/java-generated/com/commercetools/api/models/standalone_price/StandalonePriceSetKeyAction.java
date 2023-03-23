@@ -30,6 +30,7 @@ public interface StandalonePriceSetKeyAction extends StandalonePriceUpdateAction
 
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     * @return key
      */
 
     @JsonProperty("key")

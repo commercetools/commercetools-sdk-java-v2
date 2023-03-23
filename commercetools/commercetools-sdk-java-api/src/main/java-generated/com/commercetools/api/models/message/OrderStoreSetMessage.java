@@ -40,6 +40,7 @@ public interface OrderStoreSetMessage extends OrderMessage {
 
     /**
      *  <p>Store that was set.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")

@@ -26,6 +26,7 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @return Builder
      */
 
     public StagedOrderAddPaymentActionBuilder payment(
@@ -37,6 +38,8 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @param payment
+     * @return Builder
      */
 
     public StagedOrderAddPaymentActionBuilder payment(

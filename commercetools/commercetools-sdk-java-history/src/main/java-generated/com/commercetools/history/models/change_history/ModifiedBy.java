@@ -35,6 +35,7 @@ public interface ModifiedBy {
 
     /**
      *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -42,6 +43,7 @@ public interface ModifiedBy {
 
     /**
      *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -49,6 +51,7 @@ public interface ModifiedBy {
 
     /**
      *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -56,6 +59,7 @@ public interface ModifiedBy {
 
     /**
      *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")
@@ -63,6 +67,7 @@ public interface ModifiedBy {
 
     /**
      *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     * @return clientId
      */
 
     @JsonProperty("clientId")
@@ -70,6 +75,7 @@ public interface ModifiedBy {
 
     /**
      *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     * @return isPlatformClient
      */
     @NotNull
     @JsonProperty("isPlatformClient")

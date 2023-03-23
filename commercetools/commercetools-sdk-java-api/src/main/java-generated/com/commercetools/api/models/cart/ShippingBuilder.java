@@ -40,6 +40,8 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public ShippingBuilder shippingKey(final String shippingKey) {
@@ -49,6 +51,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
+     * @return Builder
      */
 
     public ShippingBuilder shippingInfo(
@@ -59,6 +62,8 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
+     * @param shippingInfo
+     * @return Builder
      */
 
     public ShippingBuilder shippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
@@ -68,6 +73,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @return Builder
      */
 
     public ShippingBuilder shippingAddress(
@@ -78,6 +84,8 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @param shippingAddress
+     * @return Builder
      */
 
     public ShippingBuilder shippingAddress(final com.commercetools.api.models.common.Address shippingAddress) {
@@ -92,6 +100,8 @@ public class ShippingBuilder implements Builder<Shipping> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public ShippingBuilder shippingRateInput(
@@ -107,6 +117,7 @@ public class ShippingBuilder implements Builder<Shipping> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @return Builder
      */
 
     public ShippingBuilder shippingRateInput(
@@ -117,6 +128,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Custom Fields of Shipping.</p>
+     * @return Builder
      */
 
     public ShippingBuilder shippingCustomFields(
@@ -127,6 +139,8 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Custom Fields of Shipping.</p>
+     * @param shippingCustomFields
+     * @return Builder
      */
 
     public ShippingBuilder shippingCustomFields(

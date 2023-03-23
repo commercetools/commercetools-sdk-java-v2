@@ -36,6 +36,7 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
 
     /**
      *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
+     * @return transactionId
      */
     @NotNull
     @JsonProperty("transactionId")
@@ -43,6 +44,7 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
 
     /**
      *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
 
     /**
      *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

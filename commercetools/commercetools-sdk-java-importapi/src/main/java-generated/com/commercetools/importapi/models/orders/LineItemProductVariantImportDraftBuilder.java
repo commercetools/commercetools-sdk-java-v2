@@ -40,6 +40,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder productVariant(
@@ -52,6 +53,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     * @param productVariant
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder productVariant(
@@ -62,6 +65,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
+     * @param sku
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder sku(@Nullable final String sku) {
@@ -71,6 +76,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @param prices
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder prices(
@@ -81,6 +88,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @param prices
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder prices(
@@ -91,6 +100,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @param prices
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder plusPrices(
@@ -104,6 +115,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder plusPrices(
@@ -117,6 +129,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder withPrices(
@@ -128,6 +141,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @param attributes
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder attributes(
@@ -138,6 +153,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @param attributes
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder attributes(
@@ -148,6 +165,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @param attributes
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder plusAttributes(
@@ -161,6 +180,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder plusAttributes(
@@ -175,6 +195,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder withAttributes(
@@ -187,6 +208,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @param images
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder images(
@@ -197,6 +220,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @param images
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder images(
@@ -207,6 +232,8 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @param images
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder plusImages(
@@ -220,6 +247,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder plusImages(
@@ -233,6 +261,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @return Builder
      */
 
     public LineItemProductVariantImportDraftBuilder withImages(

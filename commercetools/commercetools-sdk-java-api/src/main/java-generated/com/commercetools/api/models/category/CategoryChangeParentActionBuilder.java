@@ -26,6 +26,7 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
 
     /**
      *  <p>New value to set as parent.</p>
+     * @return Builder
      */
 
     public CategoryChangeParentActionBuilder parent(
@@ -37,6 +38,8 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
 
     /**
      *  <p>New value to set as parent.</p>
+     * @param parent
+     * @return Builder
      */
 
     public CategoryChangeParentActionBuilder parent(

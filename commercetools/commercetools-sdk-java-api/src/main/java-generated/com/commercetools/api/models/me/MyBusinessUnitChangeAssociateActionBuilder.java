@@ -26,6 +26,7 @@ public class MyBusinessUnitChangeAssociateActionBuilder implements Builder<MyBus
 
     /**
      *  <p>The Associate to add.</p>
+     * @return Builder
      */
 
     public MyBusinessUnitChangeAssociateActionBuilder associate(
@@ -36,6 +37,8 @@ public class MyBusinessUnitChangeAssociateActionBuilder implements Builder<MyBus
 
     /**
      *  <p>The Associate to add.</p>
+     * @param associate
+     * @return Builder
      */
 
     public MyBusinessUnitChangeAssociateActionBuilder associate(

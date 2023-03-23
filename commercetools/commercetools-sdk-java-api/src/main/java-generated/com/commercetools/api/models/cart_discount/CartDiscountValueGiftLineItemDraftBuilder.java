@@ -37,6 +37,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder product(
@@ -48,6 +49,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
+     * @param product
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder product(
@@ -58,6 +61,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ProductVariant of the Product.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder variantId(final Long variantId) {
@@ -67,6 +72,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>Channel must have the role <code>InventorySupply</code>.</p>
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(
@@ -78,6 +84,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>Channel must have the role <code>InventorySupply</code>.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(
@@ -88,6 +96,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(
@@ -100,6 +109,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(

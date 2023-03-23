@@ -31,6 +31,8 @@ public class MyBusinessUnitRemoveShippingAddressIdActionBuilder
 
     /**
      *  <p>ID of the shipping address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public MyBusinessUnitRemoveShippingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -40,6 +42,8 @@ public class MyBusinessUnitRemoveShippingAddressIdActionBuilder
 
     /**
      *  <p>Key of the shipping address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public MyBusinessUnitRemoveShippingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

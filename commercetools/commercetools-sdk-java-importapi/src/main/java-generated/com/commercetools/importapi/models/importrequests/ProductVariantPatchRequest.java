@@ -35,6 +35,7 @@ public interface ProductVariantPatchRequest extends ImportRequest {
 
     /**
      *  <p>The product variant patches of this request.</p>
+     * @return patches
      */
     @NotNull
     @Valid

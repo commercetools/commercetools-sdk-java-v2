@@ -31,6 +31,7 @@ public interface Attribute {
 
     /**
      *  <p>Name of the Attribute.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -46,6 +47,7 @@ public interface Attribute {
      *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
      *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
      *  </ul>
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

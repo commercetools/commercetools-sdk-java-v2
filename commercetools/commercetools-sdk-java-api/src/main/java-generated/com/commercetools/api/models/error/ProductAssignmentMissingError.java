@@ -37,6 +37,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -47,6 +48,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
      *  <p><code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code></p>
      *  <p>For Product Selection of type Individual Exclusion, the message is:</p>
      *  <p><code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -54,6 +56,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
+     * @return product
      */
     @NotNull
     @Valid

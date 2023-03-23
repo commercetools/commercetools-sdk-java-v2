@@ -36,6 +36,7 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -43,6 +44,7 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
 
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
+     * @return newValue
      */
     @NotNull
     @Valid

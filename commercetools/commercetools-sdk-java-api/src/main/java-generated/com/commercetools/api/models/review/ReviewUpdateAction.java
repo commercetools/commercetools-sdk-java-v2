@@ -43,6 +43,7 @@ public interface ReviewUpdateAction extends com.commercetools.api.models.Resourc
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

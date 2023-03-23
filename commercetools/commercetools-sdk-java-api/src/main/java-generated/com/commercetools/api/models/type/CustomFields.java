@@ -33,6 +33,7 @@ public interface CustomFields extends CustomFieldsMixin {
 
     /**
      *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     * @return type
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface CustomFields extends CustomFieldsMixin {
 
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @return fields
      */
     @NotNull
     @Valid

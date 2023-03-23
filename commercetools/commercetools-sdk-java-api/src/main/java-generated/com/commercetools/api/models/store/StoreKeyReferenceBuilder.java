@@ -25,6 +25,8 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
 
     /**
      *  <p>Unique and immutable key of the referenced Store.</p>
+     * @param key
+     * @return Builder
      */
 
     public StoreKeyReferenceBuilder key(final String key) {

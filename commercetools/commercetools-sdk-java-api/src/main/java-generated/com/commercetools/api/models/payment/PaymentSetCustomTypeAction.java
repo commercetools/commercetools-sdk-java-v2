@@ -34,6 +34,7 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Payment.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

@@ -30,6 +30,7 @@ public interface BusinessUnitSetContactEmailAction extends BusinessUnitUpdateAct
 
     /**
      *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
+     * @return contactEmail
      */
 
     @JsonProperty("contactEmail")

@@ -33,6 +33,7 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")

@@ -28,6 +28,8 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
 
     /**
      *
+     * @param quantityOnStock
+     * @return Builder
      */
 
     public InventoryQuantityValueBuilder quantityOnStock(final Integer quantityOnStock) {
@@ -37,6 +39,8 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
 
     /**
      *
+     * @param availableQuantity
+     * @return Builder
      */
 
     public InventoryQuantityValueBuilder availableQuantity(final Integer availableQuantity) {

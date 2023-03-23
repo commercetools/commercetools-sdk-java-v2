@@ -35,6 +35,7 @@ public interface CartClassificationType extends ShippingRateInputType {
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @return values
      */
     @NotNull
     @Valid

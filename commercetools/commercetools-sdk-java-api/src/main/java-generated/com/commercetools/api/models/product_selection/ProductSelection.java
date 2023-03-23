@@ -48,6 +48,7 @@ public interface ProductSelection
 
     /**
      *  <p>Unique identifier of the ProductSelection.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -55,6 +56,7 @@ public interface ProductSelection
 
     /**
      *  <p>Current version of the ProductSelection.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -62,6 +64,7 @@ public interface ProductSelection
 
     /**
      *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -69,6 +72,7 @@ public interface ProductSelection
 
     /**
      *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -76,6 +80,7 @@ public interface ProductSelection
 
     /**
      *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -83,6 +88,7 @@ public interface ProductSelection
 
     /**
      *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -90,6 +96,7 @@ public interface ProductSelection
 
     /**
      *  <p>User-defined unique identifier of the ProductSelection.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -97,6 +104,7 @@ public interface ProductSelection
 
     /**
      *  <p>Name of the ProductSelection.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -105,6 +113,7 @@ public interface ProductSelection
 
     /**
      *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
+     * @return productCount
      */
     @NotNull
     @JsonProperty("productCount")
@@ -112,6 +121,7 @@ public interface ProductSelection
 
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -119,6 +129,7 @@ public interface ProductSelection
 
     /**
      *  <p>Custom Fields of the ProductSelection.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

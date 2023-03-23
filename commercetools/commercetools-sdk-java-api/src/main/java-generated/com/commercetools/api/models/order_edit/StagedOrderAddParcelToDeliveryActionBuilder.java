@@ -37,6 +37,8 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder deliveryId(final String deliveryId) {
@@ -46,6 +48,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder measurements(
@@ -56,6 +59,8 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param measurements
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder measurements(
@@ -66,6 +71,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder trackingData(
@@ -76,6 +82,8 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param trackingData
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder trackingData(
@@ -86,6 +94,8 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder items(
@@ -96,6 +106,8 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder items(
@@ -106,6 +118,8 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder plusItems(
@@ -119,6 +133,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder plusItems(
@@ -132,6 +147,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder withItems(

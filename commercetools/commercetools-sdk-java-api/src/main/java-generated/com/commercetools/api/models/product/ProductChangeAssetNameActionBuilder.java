@@ -43,6 +43,8 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductChangeAssetNameActionBuilder variantId(@Nullable final Long variantId) {
@@ -52,6 +54,8 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductChangeAssetNameActionBuilder sku(@Nullable final String sku) {
@@ -61,6 +65,8 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductChangeAssetNameActionBuilder staged(@Nullable final Boolean staged) {
@@ -70,6 +76,8 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public ProductChangeAssetNameActionBuilder assetId(@Nullable final String assetId) {
@@ -79,6 +87,8 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public ProductChangeAssetNameActionBuilder assetKey(@Nullable final String assetKey) {
@@ -88,6 +98,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public ProductChangeAssetNameActionBuilder name(
@@ -98,6 +109,8 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

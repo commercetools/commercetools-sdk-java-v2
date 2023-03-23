@@ -27,6 +27,8 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
 
     /**
      *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public SearchExecutionFailureErrorBuilder message(final String message) {

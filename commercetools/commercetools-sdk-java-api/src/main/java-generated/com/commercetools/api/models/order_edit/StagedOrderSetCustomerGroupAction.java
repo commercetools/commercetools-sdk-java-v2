@@ -34,6 +34,7 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
 
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")

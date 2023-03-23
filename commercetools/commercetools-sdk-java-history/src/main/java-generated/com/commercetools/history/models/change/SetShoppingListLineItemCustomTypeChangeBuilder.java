@@ -36,6 +36,8 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *  <p>Update action for <code>setLineItemCustomType</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder change(final String change) {
@@ -45,6 +47,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder lineItem(
@@ -57,6 +60,8 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder lineItem(
@@ -67,6 +72,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder nextValue(
@@ -77,6 +83,8 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder nextValue(
@@ -87,6 +95,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder previousValue(
@@ -97,6 +106,8 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder previousValue(

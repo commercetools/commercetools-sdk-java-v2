@@ -35,6 +35,7 @@ public interface ProductSelectionType {
 
     /**
      *  <p>The following types of Product Selections are supported:</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

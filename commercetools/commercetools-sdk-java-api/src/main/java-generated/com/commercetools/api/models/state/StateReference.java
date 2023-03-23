@@ -35,6 +35,7 @@ public interface StateReference extends Reference, com.commercetools.api.models.
 
     /**
      *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface StateReference extends Reference, com.commercetools.api.models.
 
     /**
      *  <p>Unique identifier of the referenced State.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

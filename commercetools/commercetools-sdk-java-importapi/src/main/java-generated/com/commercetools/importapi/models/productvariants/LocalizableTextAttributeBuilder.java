@@ -31,6 +31,8 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public LocalizableTextAttributeBuilder name(@Nullable final String name) {
@@ -45,6 +47,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public LocalizableTextAttributeBuilder value(
@@ -60,6 +63,8 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param value
+     * @return Builder
      */
 
     public LocalizableTextAttributeBuilder value(

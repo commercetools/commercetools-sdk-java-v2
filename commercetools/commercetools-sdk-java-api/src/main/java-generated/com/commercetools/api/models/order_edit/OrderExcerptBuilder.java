@@ -34,6 +34,8 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
+     * @param totalPrice
+     * @return Builder
      */
 
     public OrderExcerptBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
@@ -43,6 +45,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderExcerptBuilder totalPrice(
@@ -53,6 +56,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderExcerptBuilder taxedPrice(
@@ -63,6 +67,8 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
+     * @param taxedPrice
+     * @return Builder
      */
 
     public OrderExcerptBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
@@ -72,6 +78,8 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
+     * @param version
+     * @return Builder
      */
 
     public OrderExcerptBuilder version(final Long version) {

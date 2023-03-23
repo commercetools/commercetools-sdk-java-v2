@@ -33,6 +33,7 @@ public interface ChangeValueRelativeChangeValue extends ChangeValueChangeValue {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +41,7 @@ public interface ChangeValueRelativeChangeValue extends ChangeValueChangeValue {
 
     /**
      *
+     * @return permyriad
      */
     @NotNull
     @JsonProperty("permyriad")

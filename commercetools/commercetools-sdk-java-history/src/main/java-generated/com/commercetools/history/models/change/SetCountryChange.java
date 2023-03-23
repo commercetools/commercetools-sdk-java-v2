@@ -35,6 +35,7 @@ public interface SetCountryChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -42,6 +43,7 @@ public interface SetCountryChange extends Change {
 
     /**
      *  <p>Update action for <code>setCountry</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -49,6 +51,7 @@ public interface SetCountryChange extends Change {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -56,6 +59,7 @@ public interface SetCountryChange extends Change {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

@@ -42,6 +42,7 @@ public interface BusinessUnitShippingAddressRemovedMessage extends Message {
 
     /**
      *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
+     * @return address
      */
     @NotNull
     @Valid

@@ -35,6 +35,7 @@ public interface BusinessUnitAddressChangedMessagePayload extends MessagePayload
 
     /**
      *  <p>Updated address of the Business Unit.</p>
+     * @return address
      */
     @NotNull
     @Valid

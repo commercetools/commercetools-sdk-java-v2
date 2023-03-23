@@ -36,6 +36,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
 
     /**
      *  <p>Zone to which the ShippingRate should be added.</p>
+     * @return zone
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
 
     /**
      *  <p>Value to add to <code>shippingRates</code>.</p>
+     * @return shippingRate
      */
     @NotNull
     @Valid

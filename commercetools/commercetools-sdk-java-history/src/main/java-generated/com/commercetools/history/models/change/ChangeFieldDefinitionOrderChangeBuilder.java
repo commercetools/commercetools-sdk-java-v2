@@ -32,6 +32,8 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder previousValue(
@@ -51,6 +55,8 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder previousValue(
@@ -61,6 +67,8 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusPreviousValue(
@@ -74,6 +82,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusPreviousValue(
@@ -88,6 +97,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder withPreviousValue(
@@ -100,6 +110,8 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder nextValue(
@@ -110,6 +122,8 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder nextValue(
@@ -120,6 +134,8 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusNextValue(
@@ -133,6 +149,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusNextValue(
@@ -147,6 +164,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder withNextValue(

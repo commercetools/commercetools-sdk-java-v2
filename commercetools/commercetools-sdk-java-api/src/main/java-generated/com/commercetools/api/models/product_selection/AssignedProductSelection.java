@@ -34,6 +34,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @return productSelection
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface AssignedProductSelection {
     /**
      *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     * @return variantSelection
      */
     @Valid
     @JsonProperty("variantSelection")
@@ -51,6 +53,7 @@ public interface AssignedProductSelection {
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     * @return variantExclusion
      */
     @Valid
     @JsonProperty("variantExclusion")
@@ -58,6 +61,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Date and time (UTC) this assignment was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")

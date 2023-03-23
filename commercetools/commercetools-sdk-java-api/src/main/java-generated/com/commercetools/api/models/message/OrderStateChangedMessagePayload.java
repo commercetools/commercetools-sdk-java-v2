@@ -35,6 +35,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>OrderState after the Change Order State update action.</p>
+     * @return orderState
      */
     @NotNull
     @JsonProperty("orderState")
@@ -42,6 +43,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>OrderState before the Change Order State update action.</p>
+     * @return oldOrderState
      */
     @NotNull
     @JsonProperty("oldOrderState")

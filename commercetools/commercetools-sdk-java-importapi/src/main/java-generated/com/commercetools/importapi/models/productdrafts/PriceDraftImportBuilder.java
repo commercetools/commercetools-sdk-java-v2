@@ -55,6 +55,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public PriceDraftImportBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -64,6 +66,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *
+     * @return Builder
      */
 
     public PriceDraftImportBuilder value(
@@ -74,6 +77,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @param country
+     * @return Builder
      */
 
     public PriceDraftImportBuilder country(@Nullable final String country) {
@@ -83,6 +88,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>References a customer group by key.</p>
+     * @return Builder
      */
 
     public PriceDraftImportBuilder customerGroup(
@@ -95,6 +101,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>References a customer group by key.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public PriceDraftImportBuilder customerGroup(
@@ -105,6 +113,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>References a channel by key.</p>
+     * @return Builder
      */
 
     public PriceDraftImportBuilder channel(
@@ -115,6 +124,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>References a channel by key.</p>
+     * @param channel
+     * @return Builder
      */
 
     public PriceDraftImportBuilder channel(
@@ -125,6 +136,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *
+     * @param validFrom
+     * @return Builder
      */
 
     public PriceDraftImportBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -134,6 +147,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *
+     * @param validUntil
+     * @return Builder
      */
 
     public PriceDraftImportBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -143,6 +158,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The custom fields for this category.</p>
+     * @return Builder
      */
 
     public PriceDraftImportBuilder custom(
@@ -153,6 +169,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The custom fields for this category.</p>
+     * @param custom
+     * @return Builder
      */
 
     public PriceDraftImportBuilder custom(
@@ -163,6 +181,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @return Builder
      */
 
     public PriceDraftImportBuilder discounted(
@@ -173,6 +192,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public PriceDraftImportBuilder discounted(
@@ -183,6 +204,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public PriceDraftImportBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -192,6 +215,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public PriceDraftImportBuilder tiers(
@@ -202,6 +227,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public PriceDraftImportBuilder plusTiers(
@@ -215,6 +242,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @return Builder
      */
 
     public PriceDraftImportBuilder plusTiers(
@@ -228,6 +256,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @return Builder
      */
 
     public PriceDraftImportBuilder withTiers(
@@ -239,6 +268,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>User-defined unique identifier for the Embedded Price.</p>
+     * @param key
+     * @return Builder
      */
 
     public PriceDraftImportBuilder key(@Nullable final String key) {

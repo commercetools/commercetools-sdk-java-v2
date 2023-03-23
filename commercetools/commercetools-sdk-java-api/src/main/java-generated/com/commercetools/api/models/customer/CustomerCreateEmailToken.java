@@ -32,6 +32,7 @@ public interface CustomerCreateEmailToken {
 
     /**
      *  <p>Unique identifier of the Customer.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface CustomerCreateEmailToken {
 
     /**
      *  <p>Expected version of the Customer.</p>
+     * @return version
      */
 
     @JsonProperty("version")
@@ -46,6 +48,7 @@ public interface CustomerCreateEmailToken {
 
     /**
      *  <p>Validity period of the generated token in minutes.</p>
+     * @return ttlMinutes
      */
     @NotNull
     @JsonProperty("ttlMinutes")

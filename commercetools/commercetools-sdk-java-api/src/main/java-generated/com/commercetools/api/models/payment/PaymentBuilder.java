@@ -88,6 +88,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Unique identifier of the Payment.</p>
+     * @param id
+     * @return Builder
      */
 
     public PaymentBuilder id(final String id) {
@@ -97,6 +99,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Current version of the Payment.</p>
+     * @param version
+     * @return Builder
      */
 
     public PaymentBuilder version(final Long version) {
@@ -106,6 +110,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Date and time (UTC) the Payment was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public PaymentBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -115,6 +121,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Date and time (UTC) the Payment was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public PaymentBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -124,6 +132,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public PaymentBuilder lastModifiedBy(
@@ -134,6 +143,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public PaymentBuilder lastModifiedBy(
@@ -144,6 +155,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public PaymentBuilder createdBy(
@@ -154,6 +166,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public PaymentBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -163,6 +177,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
+     * @return Builder
      */
 
     public PaymentBuilder customer(
@@ -173,6 +188,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
+     * @param customer
+     * @return Builder
      */
 
     public PaymentBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -182,6 +199,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Anonymous session associated with the Payment.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public PaymentBuilder anonymousId(@Nullable final String anonymousId) {
@@ -191,6 +210,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @param externalId
+     * @return Builder
      */
 
     public PaymentBuilder externalId(@Nullable final String externalId) {
@@ -200,6 +221,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
+     * @param interfaceId
+     * @return Builder
      */
 
     public PaymentBuilder interfaceId(@Nullable final String interfaceId) {
@@ -209,6 +232,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @return Builder
      */
 
     public PaymentBuilder amountPlanned(
@@ -219,6 +243,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param amountPlanned
+     * @return Builder
      */
 
     public PaymentBuilder amountPlanned(final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned) {
@@ -228,6 +254,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param amountAuthorized
+     * @return Builder
      */
 
     public PaymentBuilder amountAuthorized(
@@ -238,6 +266,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return Builder
      */
 
     public PaymentBuilder amountAuthorized(
@@ -248,6 +277,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
+     * @param authorizedUntil
+     * @return Builder
      */
 
     public PaymentBuilder authorizedUntil(@Nullable final String authorizedUntil) {
@@ -257,6 +288,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param amountPaid
+     * @return Builder
      */
 
     public PaymentBuilder amountPaid(@Nullable final com.commercetools.api.models.common.TypedMoney amountPaid) {
@@ -266,6 +299,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return Builder
      */
 
     public PaymentBuilder amountPaid(
@@ -276,6 +310,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param amountRefunded
+     * @return Builder
      */
 
     public PaymentBuilder amountRefunded(
@@ -286,6 +322,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return Builder
      */
 
     public PaymentBuilder amountRefunded(
@@ -296,6 +333,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return Builder
      */
 
     public PaymentBuilder paymentMethodInfo(
@@ -307,6 +345,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param paymentMethodInfo
+     * @return Builder
      */
 
     public PaymentBuilder paymentMethodInfo(
@@ -317,6 +357,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Current status of the Payment.</p>
+     * @return Builder
      */
 
     public PaymentBuilder paymentStatus(
@@ -327,6 +368,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Current status of the Payment.</p>
+     * @param paymentStatus
+     * @return Builder
      */
 
     public PaymentBuilder paymentStatus(final com.commercetools.api.models.payment.PaymentStatus paymentStatus) {
@@ -336,6 +379,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions
+     * @return Builder
      */
 
     public PaymentBuilder transactions(final com.commercetools.api.models.payment.Transaction... transactions) {
@@ -345,6 +390,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions
+     * @return Builder
      */
 
     public PaymentBuilder transactions(
@@ -355,6 +402,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions
+     * @return Builder
      */
 
     public PaymentBuilder plusTransactions(final com.commercetools.api.models.payment.Transaction... transactions) {
@@ -367,6 +416,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return Builder
      */
 
     public PaymentBuilder plusTransactions(
@@ -380,6 +430,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return Builder
      */
 
     public PaymentBuilder withTransactions(
@@ -391,6 +442,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param interfaceInteractions
+     * @return Builder
      */
 
     public PaymentBuilder interfaceInteractions(
@@ -401,6 +454,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param interfaceInteractions
+     * @return Builder
      */
 
     public PaymentBuilder interfaceInteractions(
@@ -411,6 +466,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param interfaceInteractions
+     * @return Builder
      */
 
     public PaymentBuilder plusInterfaceInteractions(
@@ -424,6 +481,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @return Builder
      */
 
     public PaymentBuilder plusInterfaceInteractions(
@@ -438,6 +496,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @return Builder
      */
 
     public PaymentBuilder withInterfaceInteractions(
@@ -450,6 +509,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
+     * @return Builder
      */
 
     public PaymentBuilder custom(
@@ -460,6 +520,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
+     * @param custom
+     * @return Builder
      */
 
     public PaymentBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -469,6 +531,8 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>User-defined unique identifier of the Payment.</p>
+     * @param key
+     * @return Builder
      */
 
     public PaymentBuilder key(@Nullable final String key) {

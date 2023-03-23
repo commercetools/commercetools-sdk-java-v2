@@ -32,6 +32,8 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     /**
      *  <p>Update action for <code>addEnumValue</code> on types</p>
+     * @param change
+     * @return Builder
      */
 
     public AddEnumValueChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     /**
      *  <p>The name of the field/attribute definition updated.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public AddEnumValueChangeBuilder fieldName(final String fieldName) {
@@ -50,6 +54,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public AddEnumValueChangeBuilder nextValue(
@@ -60,6 +65,8 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddEnumValueChangeBuilder nextValue(

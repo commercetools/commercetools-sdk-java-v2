@@ -40,6 +40,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Type.</p>
+     * @param key
+     * @return Builder
      */
 
     public TypeDraftBuilder key(final String key) {
@@ -49,6 +51,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Name of the Type.</p>
+     * @return Builder
      */
 
     public TypeDraftBuilder name(
@@ -59,6 +62,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Name of the Type.</p>
+     * @param name
+     * @return Builder
      */
 
     public TypeDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -68,6 +73,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Description of the Type.</p>
+     * @return Builder
      */
 
     public TypeDraftBuilder description(
@@ -78,6 +84,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Description of the Type.</p>
+     * @param description
+     * @return Builder
      */
 
     public TypeDraftBuilder description(
@@ -88,6 +96,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @param resourceTypeIds
+     * @return Builder
      */
 
     public TypeDraftBuilder resourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
@@ -97,6 +107,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @param resourceTypeIds
+     * @return Builder
      */
 
     public TypeDraftBuilder resourceTypeIds(
@@ -107,6 +119,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @param resourceTypeIds
+     * @return Builder
      */
 
     public TypeDraftBuilder plusResourceTypeIds(
@@ -120,6 +134,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param fieldDefinitions
+     * @return Builder
      */
 
     public TypeDraftBuilder fieldDefinitions(
@@ -130,6 +146,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param fieldDefinitions
+     * @return Builder
      */
 
     public TypeDraftBuilder fieldDefinitions(
@@ -140,6 +158,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param fieldDefinitions
+     * @return Builder
      */
 
     public TypeDraftBuilder plusFieldDefinitions(
@@ -153,6 +173,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @return Builder
      */
 
     public TypeDraftBuilder plusFieldDefinitions(
@@ -166,6 +187,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @return Builder
      */
 
     public TypeDraftBuilder withFieldDefinitions(

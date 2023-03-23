@@ -35,6 +35,7 @@ public interface CustomerAddressChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Address that was set during the Change Address update action.</p>
+     * @return address
      */
     @NotNull
     @Valid

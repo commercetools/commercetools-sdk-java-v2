@@ -30,6 +30,8 @@ public class ChannelResourceIdentifierBuilder implements Builder<ChannelResource
 
     /**
      *  <p>Unique identifier of the referenced Channel. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public ChannelResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class ChannelResourceIdentifierBuilder implements Builder<ChannelResource
 
     /**
      *  <p>User-defined unique identifier of the referenced Channel. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public ChannelResourceIdentifierBuilder key(@Nullable final String key) {

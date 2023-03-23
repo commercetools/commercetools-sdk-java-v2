@@ -30,6 +30,8 @@ public class TypeResourceIdentifierBuilder implements Builder<TypeResourceIdenti
 
     /**
      *  <p>Unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public TypeResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class TypeResourceIdentifierBuilder implements Builder<TypeResourceIdenti
 
     /**
      *  <p>User-defined unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public TypeResourceIdentifierBuilder key(@Nullable final String key) {

@@ -27,6 +27,8 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
 
     /**
      *  <p><code>"Syntax error while parsing $fieldDefinition."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public SyntaxErrorErrorBuilder message(final String message) {

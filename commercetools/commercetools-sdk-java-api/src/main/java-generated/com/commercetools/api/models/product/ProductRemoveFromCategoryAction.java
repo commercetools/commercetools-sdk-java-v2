@@ -35,6 +35,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
 
     /**
      *  <p>The Category to remove.</p>
+     * @return category
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

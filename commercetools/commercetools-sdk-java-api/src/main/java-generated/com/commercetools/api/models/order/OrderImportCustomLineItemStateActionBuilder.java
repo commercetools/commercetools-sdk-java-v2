@@ -29,6 +29,8 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public OrderImportCustomLineItemStateActionBuilder customLineItemId(final String customLineItemId) {
@@ -38,6 +40,8 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public OrderImportCustomLineItemStateActionBuilder state(
@@ -48,6 +52,8 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public OrderImportCustomLineItemStateActionBuilder state(
@@ -58,6 +64,8 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public OrderImportCustomLineItemStateActionBuilder plusState(
@@ -71,6 +79,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
 
     /**
      *
+     * @return Builder
      */
 
     public OrderImportCustomLineItemStateActionBuilder plusState(
@@ -84,6 +93,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
 
     /**
      *
+     * @return Builder
      */
 
     public OrderImportCustomLineItemStateActionBuilder withState(

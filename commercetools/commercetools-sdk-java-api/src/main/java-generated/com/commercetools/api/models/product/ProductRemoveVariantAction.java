@@ -30,6 +30,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to remove.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -37,6 +38,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to remove.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -44,6 +46,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

@@ -29,6 +29,8 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
 
     /**
      *  <p>Expected version of the QuoteRequest to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public QuoteRequestUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
 
     /**
      *  <p>Update actions to be performed on the QuoteRequest.</p>
+     * @param actions
+     * @return Builder
      */
 
     public QuoteRequestUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
 
     /**
      *  <p>Update actions to be performed on the QuoteRequest.</p>
+     * @param actions
+     * @return Builder
      */
 
     public QuoteRequestUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
 
     /**
      *  <p>Update actions to be performed on the QuoteRequest.</p>
+     * @param actions
+     * @return Builder
      */
 
     public QuoteRequestUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
 
     /**
      *  <p>Update actions to be performed on the QuoteRequest.</p>
+     * @return Builder
      */
 
     public QuoteRequestUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
 
     /**
      *  <p>Update actions to be performed on the QuoteRequest.</p>
+     * @return Builder
      */
 
     public QuoteRequestUpdateBuilder withActions(

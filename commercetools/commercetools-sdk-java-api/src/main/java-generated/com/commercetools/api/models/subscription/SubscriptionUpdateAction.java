@@ -38,6 +38,7 @@ public interface SubscriptionUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

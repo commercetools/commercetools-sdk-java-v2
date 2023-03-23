@@ -34,6 +34,8 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     * @param key
+     * @return Builder
      */
 
     public CustomerGroupDraftBuilder key(@Nullable final String key) {
@@ -43,6 +45,8 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     /**
      *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
+     * @param groupName
+     * @return Builder
      */
 
     public CustomerGroupDraftBuilder groupName(final String groupName) {
@@ -52,6 +56,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
+     * @return Builder
      */
 
     public CustomerGroupDraftBuilder custom(
@@ -62,6 +67,8 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CustomerGroupDraftBuilder custom(

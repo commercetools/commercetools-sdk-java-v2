@@ -40,6 +40,8 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public CustomObjectPagedQueryResponseBuilder limit(final Long limit) {
@@ -49,6 +51,8 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public CustomObjectPagedQueryResponseBuilder offset(final Long offset) {
@@ -58,6 +62,8 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @param count
+     * @return Builder
      */
 
     public CustomObjectPagedQueryResponseBuilder count(final Long count) {
@@ -67,6 +73,8 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     /**
      *  <p>The total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total
+     * @return Builder
      */
 
     public CustomObjectPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -76,6 +84,8 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     /**
      *  <p>CustomObjects matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public CustomObjectPagedQueryResponseBuilder results(
@@ -86,6 +96,8 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     /**
      *  <p>CustomObjects matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public CustomObjectPagedQueryResponseBuilder results(
@@ -96,6 +108,8 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     /**
      *  <p>CustomObjects matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public CustomObjectPagedQueryResponseBuilder plusResults(
@@ -109,6 +123,7 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     /**
      *  <p>CustomObjects matching the query.</p>
+     * @return Builder
      */
 
     public CustomObjectPagedQueryResponseBuilder plusResults(
@@ -122,6 +137,7 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     /**
      *  <p>CustomObjects matching the query.</p>
+     * @return Builder
      */
 
     public CustomObjectPagedQueryResponseBuilder withResults(

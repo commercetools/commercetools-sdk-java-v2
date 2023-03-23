@@ -45,6 +45,7 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
 
     /**
      *  <p>Product for which the Product Variant Selection changed.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -53,6 +54,7 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
 
     /**
      *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     * @return oldVariantSelection
      */
     @NotNull
     @Valid
@@ -61,6 +63,7 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
 
     /**
      *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     * @return newVariantSelection
      */
     @NotNull
     @Valid

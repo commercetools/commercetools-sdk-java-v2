@@ -31,6 +31,7 @@ public interface ChangeSubscription {
 
     /**
      *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     * @return resourceTypeId
      */
     @NotNull
     @JsonProperty("resourceTypeId")

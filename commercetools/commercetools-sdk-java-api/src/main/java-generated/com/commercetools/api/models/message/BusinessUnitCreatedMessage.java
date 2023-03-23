@@ -42,6 +42,7 @@ public interface BusinessUnitCreatedMessage extends Message {
 
     /**
      *  <p>The Business Unit that was created.</p>
+     * @return businessUnit
      */
     @NotNull
     @Valid

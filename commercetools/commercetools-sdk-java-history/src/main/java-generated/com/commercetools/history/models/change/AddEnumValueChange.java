@@ -37,6 +37,7 @@ public interface AddEnumValueChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface AddEnumValueChange extends Change {
 
     /**
      *  <p>Update action for <code>addEnumValue</code> on types</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface AddEnumValueChange extends Change {
 
     /**
      *  <p>The name of the field/attribute definition updated.</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -58,6 +61,7 @@ public interface AddEnumValueChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

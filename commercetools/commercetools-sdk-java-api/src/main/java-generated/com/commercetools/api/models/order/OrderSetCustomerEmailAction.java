@@ -30,6 +30,7 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
 
     /**
      *
+     * @return email
      */
 
     @JsonProperty("email")

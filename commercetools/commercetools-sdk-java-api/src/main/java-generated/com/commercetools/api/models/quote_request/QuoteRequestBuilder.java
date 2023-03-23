@@ -121,6 +121,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Unique identifier of the QuoteRequest.</p>
+     * @param id
+     * @return Builder
      */
 
     public QuoteRequestBuilder id(final String id) {
@@ -130,6 +132,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Current version of the QuoteRequest.</p>
+     * @param version
+     * @return Builder
      */
 
     public QuoteRequestBuilder version(final Long version) {
@@ -139,6 +143,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Date and time (UTC) the QuoteRequest was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public QuoteRequestBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -148,6 +154,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Date and time (UTC) the QuoteRequest was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public QuoteRequestBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -157,6 +165,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>User-defined unique identifier of the QuoteRequest.</p>
+     * @param key
+     * @return Builder
      */
 
     public QuoteRequestBuilder key(@Nullable final String key) {
@@ -166,6 +176,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder lastModifiedBy(
@@ -176,6 +187,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public QuoteRequestBuilder lastModifiedBy(
@@ -186,6 +199,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder createdBy(
@@ -196,6 +210,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public QuoteRequestBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -205,6 +221,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Indicates the current state of the Quote Request in the negotiation process.</p>
+     * @param quoteRequestState
+     * @return Builder
      */
 
     public QuoteRequestBuilder quoteRequestState(
@@ -215,6 +233,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
+     * @param comment
+     * @return Builder
      */
 
     public QuoteRequestBuilder comment(@Nullable final String comment) {
@@ -224,6 +244,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Buyer who raised the request.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder customer(
@@ -234,6 +255,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Buyer who raised the request.</p>
+     * @param customer
+     * @return Builder
      */
 
     public QuoteRequestBuilder customer(final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -243,6 +266,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder customerGroup(
@@ -255,6 +279,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public QuoteRequestBuilder customerGroup(
@@ -265,6 +291,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Store to which the Buyer belongs.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder store(
@@ -275,6 +302,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Store to which the Buyer belongs.</p>
+     * @param store
+     * @return Builder
      */
 
     public QuoteRequestBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
@@ -284,6 +313,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Line Items for which a Quote is requested.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public QuoteRequestBuilder lineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
@@ -293,6 +324,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Line Items for which a Quote is requested.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public QuoteRequestBuilder lineItems(final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems) {
@@ -302,6 +335,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Line Items for which a Quote is requested.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public QuoteRequestBuilder plusLineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
@@ -314,6 +349,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Line Items for which a Quote is requested.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder plusLineItems(
@@ -327,6 +363,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Line Items for which a Quote is requested.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder withLineItems(
@@ -338,6 +375,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Custom Line Items for which a Quote is requested.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public QuoteRequestBuilder customLineItems(
@@ -348,6 +387,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Custom Line Items for which a Quote is requested.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public QuoteRequestBuilder customLineItems(
@@ -358,6 +399,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Custom Line Items for which a Quote is requested.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public QuoteRequestBuilder plusCustomLineItems(
@@ -371,6 +414,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Custom Line Items for which a Quote is requested.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder plusCustomLineItems(
@@ -384,6 +428,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Custom Line Items for which a Quote is requested.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder withCustomLineItems(
@@ -395,6 +440,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     * @param totalPrice
+     * @return Builder
      */
 
     public QuoteRequestBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
@@ -404,6 +451,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder totalPrice(
@@ -414,6 +462,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder taxedPrice(
@@ -424,6 +473,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     * @param taxedPrice
+     * @return Builder
      */
 
     public QuoteRequestBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
@@ -433,6 +484,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder shippingAddress(
@@ -443,6 +495,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     * @param shippingAddress
+     * @return Builder
      */
 
     public QuoteRequestBuilder shippingAddress(
@@ -453,6 +507,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Address used for invoicing.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder billingAddress(
@@ -463,6 +518,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Address used for invoicing.</p>
+     * @param billingAddress
+     * @return Builder
      */
 
     public QuoteRequestBuilder billingAddress(
@@ -473,6 +530,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @param inventoryMode
+     * @return Builder
      */
 
     public QuoteRequestBuilder inventoryMode(
@@ -483,6 +542,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @param taxMode
+     * @return Builder
      */
 
     public QuoteRequestBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
@@ -492,6 +553,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
+     * @param taxRoundingMode
+     * @return Builder
      */
 
     public QuoteRequestBuilder taxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
@@ -501,6 +564,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
+     * @param taxCalculationMode
+     * @return Builder
      */
 
     public QuoteRequestBuilder taxCalculationMode(
@@ -511,6 +576,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Used for Product Variant price selection.</p>
+     * @param country
+     * @return Builder
      */
 
     public QuoteRequestBuilder country(@Nullable final String country) {
@@ -520,6 +587,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Set automatically once the ShippingMethod is set.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder shippingInfo(
@@ -530,6 +598,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Set automatically once the ShippingMethod is set.</p>
+     * @param shippingInfo
+     * @return Builder
      */
 
     public QuoteRequestBuilder shippingInfo(
@@ -540,6 +610,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Log of payment transactions related to the Quote.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder paymentInfo(
@@ -550,6 +621,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Log of payment transactions related to the Quote.</p>
+     * @param paymentInfo
+     * @return Builder
      */
 
     public QuoteRequestBuilder paymentInfo(@Nullable final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
@@ -559,6 +632,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Used to select a ShippingRatePriceTier.</p>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public QuoteRequestBuilder shippingRateInput(
@@ -569,6 +644,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Used to select a ShippingRatePriceTier.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder shippingRateInput(
@@ -579,6 +655,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public QuoteRequestBuilder itemShippingAddresses(
@@ -589,6 +667,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public QuoteRequestBuilder itemShippingAddresses(
@@ -599,6 +679,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public QuoteRequestBuilder plusItemShippingAddresses(
@@ -612,6 +694,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder plusItemShippingAddresses(
@@ -625,6 +708,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder withItemShippingAddresses(
@@ -636,6 +720,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @param directDiscounts
+     * @return Builder
      */
 
     public QuoteRequestBuilder directDiscounts(
@@ -646,6 +732,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @param directDiscounts
+     * @return Builder
      */
 
     public QuoteRequestBuilder directDiscounts(
@@ -656,6 +744,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @param directDiscounts
+     * @return Builder
      */
 
     public QuoteRequestBuilder plusDirectDiscounts(
@@ -669,6 +759,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder plusDirectDiscounts(
@@ -682,6 +773,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder withDirectDiscounts(
@@ -693,6 +785,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Custom Fields of the Quote Request.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder custom(
@@ -703,6 +796,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Custom Fields of the Quote Request.</p>
+     * @param custom
+     * @return Builder
      */
 
     public QuoteRequestBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -712,6 +807,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder state(
@@ -722,6 +818,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @param state
+     * @return Builder
      */
 
     public QuoteRequestBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -731,6 +829,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     * @param purchaseOrderNumber
+     * @return Builder
      */
 
     public QuoteRequestBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
@@ -740,6 +840,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The BusinessUnit for the Quote Request.</p>
+     * @return Builder
      */
 
     public QuoteRequestBuilder businessUnit(
@@ -752,6 +853,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The BusinessUnit for the Quote Request.</p>
+     * @param businessUnit
+     * @return Builder
      */
 
     public QuoteRequestBuilder businessUnit(

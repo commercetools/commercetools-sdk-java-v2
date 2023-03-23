@@ -32,6 +32,8 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *  <p>Update action for <code>setGeoLocation</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetGeoLocationChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetGeoLocationChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetGeoLocationChangeBuilder nextValue(final com.commercetools.history.models.common.GeoLocation nextValue) {
@@ -60,6 +65,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetGeoLocationChangeBuilder previousValue(
@@ -70,6 +76,8 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetGeoLocationChangeBuilder previousValue(

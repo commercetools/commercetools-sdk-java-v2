@@ -33,6 +33,7 @@ public interface SearchIndexingInProgressError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface SearchIndexingInProgressError extends ErrorObject {
 
     /**
      *  <p><code>"The indexing is currently in progress. Please wait until the status is "Activated" to execute search requests."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

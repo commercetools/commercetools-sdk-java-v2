@@ -33,6 +33,7 @@ public interface DiscountedLineItemPrice {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface DiscountedLineItemPrice {
 
     /**
      *
+     * @return includedDiscounts
      */
     @NotNull
     @Valid

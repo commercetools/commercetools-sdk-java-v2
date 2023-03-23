@@ -30,6 +30,8 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
+     * @param addedLanguages
+     * @return Builder
      */
 
     public StoreLanguagesChangedMessagePayloadBuilder addedLanguages(@Nullable final String... addedLanguages) {
@@ -39,6 +41,8 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
+     * @param addedLanguages
+     * @return Builder
      */
 
     public StoreLanguagesChangedMessagePayloadBuilder addedLanguages(
@@ -49,6 +53,8 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
+     * @param addedLanguages
+     * @return Builder
      */
 
     public StoreLanguagesChangedMessagePayloadBuilder plusAddedLanguages(@Nullable final String... addedLanguages) {
@@ -61,6 +67,8 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     * @param removedLanguages
+     * @return Builder
      */
 
     public StoreLanguagesChangedMessagePayloadBuilder removedLanguages(@Nullable final String... removedLanguages) {
@@ -70,6 +78,8 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     * @param removedLanguages
+     * @return Builder
      */
 
     public StoreLanguagesChangedMessagePayloadBuilder removedLanguages(
@@ -80,6 +90,8 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     * @param removedLanguages
+     * @return Builder
      */
 
     public StoreLanguagesChangedMessagePayloadBuilder plusRemovedLanguages(@Nullable final String... removedLanguages) {

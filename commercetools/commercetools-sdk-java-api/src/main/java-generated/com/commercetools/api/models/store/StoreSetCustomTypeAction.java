@@ -34,6 +34,7 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Store.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

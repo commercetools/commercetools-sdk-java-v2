@@ -46,6 +46,7 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -53,6 +54,7 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
 
     /**
      *  <p><code>"The country $country is not configured for the store $store."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -60,6 +62,7 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
 
     /**
      *  <p>Countries configured for the Store.</p>
+     * @return storeCountries
      */
     @NotNull
     @JsonProperty("storeCountries")
@@ -67,6 +70,7 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
 
     /**
      *  <p>The country that is not configured for the Store but referenced on the Cart or Order.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")

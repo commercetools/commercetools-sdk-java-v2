@@ -31,6 +31,7 @@ public interface UpdateAction extends com.commercetools.api.models.ResourceUpdat
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

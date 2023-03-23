@@ -29,6 +29,8 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Expected version of the CartDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public CartDiscountUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
+     * @param actions
+     * @return Builder
      */
 
     public CartDiscountUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
+     * @param actions
+     * @return Builder
      */
 
     public CartDiscountUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
+     * @param actions
+     * @return Builder
      */
 
     public CartDiscountUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
+     * @return Builder
      */
 
     public CartDiscountUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
+     * @return Builder
      */
 
     public CartDiscountUpdateBuilder withActions(

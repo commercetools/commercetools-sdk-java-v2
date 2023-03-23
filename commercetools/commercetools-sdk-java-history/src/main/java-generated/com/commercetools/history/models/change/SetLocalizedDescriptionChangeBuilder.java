@@ -32,6 +32,8 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
 
     /**
      *  <p>Shape of the action for <code>setDescription</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetLocalizedDescriptionChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
 
     /**
      *
+     * @return Builder
      */
 
     public SetLocalizedDescriptionChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetLocalizedDescriptionChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
 
     /**
      *
+     * @return Builder
      */
 
     public SetLocalizedDescriptionChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetLocalizedDescriptionChangeBuilder nextValue(

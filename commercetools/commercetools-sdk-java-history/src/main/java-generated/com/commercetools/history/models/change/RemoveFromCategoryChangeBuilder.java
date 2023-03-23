@@ -35,6 +35,8 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *  <p>Update action for <code>addToCategory</code></p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder category(
@@ -54,6 +57,8 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param category
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder category(final com.commercetools.history.models.common.Reference category) {
@@ -63,6 +68,8 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder previousValue(
@@ -73,6 +80,8 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder previousValue(
@@ -83,6 +92,8 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder plusPreviousValue(
@@ -96,6 +107,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder plusPreviousValue(
@@ -109,6 +121,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder withPreviousValue(
@@ -120,6 +133,8 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder nextValue(
@@ -130,6 +145,8 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder nextValue(
@@ -140,6 +157,8 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder plusNextValue(
@@ -153,6 +172,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder plusNextValue(
@@ -166,6 +186,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveFromCategoryChangeBuilder withNextValue(

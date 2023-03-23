@@ -27,6 +27,8 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
 
     /**
      *  <p>Plain text description of the error.</p>
+     * @param message
+     * @return Builder
      */
 
     public BadGatewayErrorBuilder message(final String message) {

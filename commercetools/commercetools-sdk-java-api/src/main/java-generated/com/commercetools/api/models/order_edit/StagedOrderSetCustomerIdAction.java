@@ -31,6 +31,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
 
     /**
      *
+     * @return customerId
      */
 
     @JsonProperty("customerId")

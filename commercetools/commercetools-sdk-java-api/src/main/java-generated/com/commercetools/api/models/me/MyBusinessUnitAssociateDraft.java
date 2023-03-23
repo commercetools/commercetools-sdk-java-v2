@@ -33,6 +33,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -40,6 +41,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
 
     /**
      *  <p>Customer to create and assign to the Business Unit.</p>
+     * @return customer
      */
     @NotNull
     @Valid

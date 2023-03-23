@@ -30,6 +30,8 @@ public class ProductDiscountResourceIdentifierBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductDiscountResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class ProductDiscountResourceIdentifierBuilder implements Builder<Product
 
     /**
      *  <p>User-defined unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductDiscountResourceIdentifierBuilder key(@Nullable final String key) {

@@ -26,6 +26,8 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public ProductTypeImportRequestBuilder resources(
@@ -36,6 +38,8 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public ProductTypeImportRequestBuilder resources(
@@ -46,6 +50,8 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public ProductTypeImportRequestBuilder plusResources(
@@ -59,6 +65,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
+     * @return Builder
      */
 
     public ProductTypeImportRequestBuilder plusResources(
@@ -73,6 +80,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
+     * @return Builder
      */
 
     public ProductTypeImportRequestBuilder withResources(

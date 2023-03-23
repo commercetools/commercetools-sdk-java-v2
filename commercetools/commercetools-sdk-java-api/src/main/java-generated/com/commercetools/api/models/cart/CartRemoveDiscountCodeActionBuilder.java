@@ -26,6 +26,7 @@ public class CartRemoveDiscountCodeActionBuilder implements Builder<CartRemoveDi
 
     /**
      *  <p>Discount Code to remove from the Cart.</p>
+     * @return Builder
      */
 
     public CartRemoveDiscountCodeActionBuilder discountCode(
@@ -37,6 +38,8 @@ public class CartRemoveDiscountCodeActionBuilder implements Builder<CartRemoveDi
 
     /**
      *  <p>Discount Code to remove from the Cart.</p>
+     * @param discountCode
+     * @return Builder
      */
 
     public CartRemoveDiscountCodeActionBuilder discountCode(

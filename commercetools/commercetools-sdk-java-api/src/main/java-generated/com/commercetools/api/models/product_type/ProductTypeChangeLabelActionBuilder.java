@@ -29,6 +29,8 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeChangeLabelActionBuilder attributeName(final String attributeName) {
@@ -38,6 +40,7 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public ProductTypeChangeLabelActionBuilder label(
@@ -48,6 +51,8 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param label
+     * @return Builder
      */
 
     public ProductTypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {

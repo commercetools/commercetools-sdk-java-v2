@@ -42,6 +42,7 @@ public interface CustomerAddressRemovedMessage extends Message {
 
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
+     * @return address
      */
     @NotNull
     @Valid

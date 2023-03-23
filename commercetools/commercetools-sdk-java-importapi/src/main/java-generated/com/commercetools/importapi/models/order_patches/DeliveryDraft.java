@@ -35,6 +35,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
 
     /**
      *
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -50,6 +52,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
 
     /**
      *
+     * @return parcels
      */
     @NotNull
     @Valid

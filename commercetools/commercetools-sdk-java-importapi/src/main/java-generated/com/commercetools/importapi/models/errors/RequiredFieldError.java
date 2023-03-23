@@ -34,6 +34,7 @@ public interface RequiredFieldError extends ErrorObject {
 
     /**
      *  <p>The name of the field.</p>
+     * @return field
      */
     @NotNull
     @JsonProperty("field")

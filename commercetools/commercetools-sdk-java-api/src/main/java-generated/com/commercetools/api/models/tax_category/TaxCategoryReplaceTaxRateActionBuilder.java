@@ -29,6 +29,8 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
 
     /**
      *  <p>ID of the TaxRate to replace.</p>
+     * @param taxRateId
+     * @return Builder
      */
 
     public TaxCategoryReplaceTaxRateActionBuilder taxRateId(final String taxRateId) {
@@ -38,6 +40,7 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
 
     /**
      *  <p>New TaxRate to replace with.</p>
+     * @return Builder
      */
 
     public TaxCategoryReplaceTaxRateActionBuilder taxRate(
@@ -48,6 +51,8 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
 
     /**
      *  <p>New TaxRate to replace with.</p>
+     * @param taxRate
+     * @return Builder
      */
 
     public TaxCategoryReplaceTaxRateActionBuilder taxRate(

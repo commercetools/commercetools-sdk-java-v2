@@ -34,6 +34,7 @@ public interface EnumValuesMustMatchError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface EnumValuesMustMatchError extends ErrorObject {
 
     /**
      *  <p><code>"The given values must be equal to the existing enum values."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

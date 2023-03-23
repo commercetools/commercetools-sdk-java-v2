@@ -55,6 +55,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>The version of the CloudEvents specification which the event uses.</p>
+     * @param specversion
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder specversion(final String specversion) {
@@ -64,6 +66,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>Unique identifier of the event.</p>
+     * @param id
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder id(final String id) {
@@ -73,6 +77,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the ReferenceTypeId, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder type(final String type) {
@@ -82,6 +88,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>The default REST URI of the ReferenceTypeId that triggered this event, including the project key.</p>
+     * @param source
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder source(final String source) {
@@ -91,6 +99,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>Unique identifier of the resource that triggered the event.</p>
+     * @param subject
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder subject(final String subject) {
@@ -100,6 +110,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>Corresponds to the <code>lastModifiedAt</code> of the resource at the time the event was triggered.</p>
+     * @param time
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder time(final java.time.ZonedDateTime time) {
@@ -109,6 +121,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>Corresponds to the <code>sequenceNumber</code> of a MessageSubscription. Can be used to process messages in the correct order.</p>
+     * @param sequence
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder sequence(@Nullable final String sequence) {
@@ -118,6 +132,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p><code>"Integer"</code></p>
+     * @param sequencetype
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder sequencetype(@Nullable final String sequencetype) {
@@ -127,6 +143,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>The URI from which the message can be retrieved if messages are enabled. Only set for MessageSubscriptions.</p>
+     * @param dataref
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder dataref(@Nullable final String dataref) {
@@ -136,6 +154,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
+     * @param data
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder data(final com.commercetools.api.models.subscription.DeliveryPayload data) {
@@ -145,6 +165,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
+     * @return Builder
      */
 
     public CloudEventsPayloadBuilder data(

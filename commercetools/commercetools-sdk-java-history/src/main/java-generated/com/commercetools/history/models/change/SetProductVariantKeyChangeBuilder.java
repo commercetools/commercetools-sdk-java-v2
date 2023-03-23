@@ -34,6 +34,8 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     /**
      *  <p>Update action for <code>setProductVariantKey</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetProductVariantKeyChangeBuilder change(final String change) {
@@ -43,6 +45,8 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public SetProductVariantKeyChangeBuilder catalogData(final String catalogData) {
@@ -52,6 +56,8 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetProductVariantKeyChangeBuilder previousValue(final String previousValue) {
@@ -61,6 +67,8 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetProductVariantKeyChangeBuilder nextValue(final String nextValue) {

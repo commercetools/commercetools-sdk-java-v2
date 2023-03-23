@@ -45,6 +45,7 @@ public interface CustomerGroup
 
     /**
      *  <p>Unique identifier of the CustomerGroup.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -52,6 +53,7 @@ public interface CustomerGroup
 
     /**
      *  <p>Current version of the CustomerGroup.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -59,6 +61,7 @@ public interface CustomerGroup
 
     /**
      *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -66,6 +69,7 @@ public interface CustomerGroup
 
     /**
      *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -73,6 +77,7 @@ public interface CustomerGroup
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -80,6 +85,7 @@ public interface CustomerGroup
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -87,6 +93,7 @@ public interface CustomerGroup
 
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -94,6 +101,7 @@ public interface CustomerGroup
 
     /**
      *  <p>Unique name of the CustomerGroup.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -101,6 +109,7 @@ public interface CustomerGroup
 
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

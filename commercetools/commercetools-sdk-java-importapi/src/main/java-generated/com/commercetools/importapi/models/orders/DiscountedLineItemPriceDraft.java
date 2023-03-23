@@ -34,6 +34,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
 
     /**
      *
+     * @return includedDiscounts
      */
     @NotNull
     @Valid

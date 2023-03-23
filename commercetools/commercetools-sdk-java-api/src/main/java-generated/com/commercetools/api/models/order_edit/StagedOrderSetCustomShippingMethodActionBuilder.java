@@ -38,6 +38,8 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *
+     * @param shippingMethodName
+     * @return Builder
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder shippingMethodName(final String shippingMethodName) {
@@ -47,6 +49,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder shippingRate(
@@ -58,6 +61,8 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *
+     * @param shippingRate
+     * @return Builder
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder shippingRate(
@@ -68,6 +73,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @return Builder
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder taxCategory(
@@ -80,6 +86,8 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder taxCategory(
@@ -90,6 +98,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return Builder
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder externalTaxRate(
@@ -101,6 +110,8 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder externalTaxRate(

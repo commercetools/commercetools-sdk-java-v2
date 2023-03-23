@@ -35,6 +35,7 @@ public interface OrderDiscountCodeAddedMessagePayload extends OrderMessagePayloa
 
     /**
      *  <p>DiscountCode that was added.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid

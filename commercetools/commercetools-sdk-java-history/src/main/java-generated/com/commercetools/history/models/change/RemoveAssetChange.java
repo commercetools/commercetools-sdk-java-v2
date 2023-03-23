@@ -36,6 +36,7 @@ public interface RemoveAssetChange extends Change {
 
     /**
      *  <p>Update action for <code>removeAsset</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -43,6 +44,7 @@ public interface RemoveAssetChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface RemoveAssetChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

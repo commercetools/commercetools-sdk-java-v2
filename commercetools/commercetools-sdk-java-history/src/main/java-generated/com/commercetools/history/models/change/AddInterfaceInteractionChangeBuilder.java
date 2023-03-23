@@ -29,6 +29,8 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     /**
      *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     * @param change
+     * @return Builder
      */
 
     public AddInterfaceInteractionChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
+     * @return Builder
      */
 
     public AddInterfaceInteractionChangeBuilder nextValue(
@@ -50,6 +53,8 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
+     * @param nextValue
+     * @return Builder
      */
 
     public AddInterfaceInteractionChangeBuilder nextValue(

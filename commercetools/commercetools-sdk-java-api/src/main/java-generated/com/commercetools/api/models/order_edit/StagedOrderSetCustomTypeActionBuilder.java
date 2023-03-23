@@ -31,6 +31,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     * @return Builder
      */
 
     public StagedOrderSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     * @param type
+     * @return Builder
      */
 
     public StagedOrderSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     * @return Builder
      */
 
     public StagedOrderSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StagedOrderSetCustomTypeActionBuilder fields(

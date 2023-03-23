@@ -26,6 +26,7 @@ public class MyBusinessUnitRemoveAssociateActionBuilder implements Builder<MyBus
 
     /**
      *  <p>Associate to remove.</p>
+     * @return Builder
      */
 
     public MyBusinessUnitRemoveAssociateActionBuilder customer(
@@ -37,6 +38,8 @@ public class MyBusinessUnitRemoveAssociateActionBuilder implements Builder<MyBus
 
     /**
      *  <p>Associate to remove.</p>
+     * @param customer
+     * @return Builder
      */
 
     public MyBusinessUnitRemoveAssociateActionBuilder customer(

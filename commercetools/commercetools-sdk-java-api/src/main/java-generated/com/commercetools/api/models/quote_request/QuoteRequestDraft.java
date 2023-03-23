@@ -38,6 +38,7 @@ public interface QuoteRequestDraft
 
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     * @return cart
      */
     @NotNull
     @Valid
@@ -46,6 +47,7 @@ public interface QuoteRequestDraft
 
     /**
      *  <p>Current version of the referenced Cart.</p>
+     * @return cartVersion
      */
     @NotNull
     @JsonProperty("cartVersion")
@@ -53,6 +55,7 @@ public interface QuoteRequestDraft
 
     /**
      *  <p>User-defined unique identifier for the QuoteRequest.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -60,6 +63,7 @@ public interface QuoteRequestDraft
 
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
+     * @return comment
      */
     @NotNull
     @JsonProperty("comment")
@@ -67,6 +71,7 @@ public interface QuoteRequestDraft
 
     /**
      *  <p>Custom Fields to be added to the Quote Request.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -74,6 +79,7 @@ public interface QuoteRequestDraft
 
     /**
      *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -81,6 +87,7 @@ public interface QuoteRequestDraft
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     * @return purchaseOrderNumber
      */
 
     @JsonProperty("purchaseOrderNumber")

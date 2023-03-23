@@ -26,6 +26,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
 
     /**
      *  <p>Payment that was added to the Order.</p>
+     * @return Builder
      */
 
     public OrderPaymentAddedMessagePayloadBuilder payment(
@@ -36,6 +37,8 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
 
     /**
      *  <p>Payment that was added to the Order.</p>
+     * @param payment
+     * @return Builder
      */
 
     public OrderPaymentAddedMessagePayloadBuilder payment(

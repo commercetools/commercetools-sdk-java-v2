@@ -32,6 +32,8 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *  <p>Shape of the action for <code>changeCartDiscounts</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder previousValue(
@@ -51,6 +55,8 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder previousValue(
@@ -61,6 +67,8 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder plusPreviousValue(
@@ -74,6 +82,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder plusPreviousValue(
@@ -87,6 +96,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder withPreviousValue(
@@ -98,6 +108,8 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder nextValue(
@@ -108,6 +120,8 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder nextValue(
@@ -118,6 +132,8 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder plusNextValue(
@@ -131,6 +147,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder plusNextValue(
@@ -144,6 +161,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeCartDiscountsChangeBuilder withNextValue(

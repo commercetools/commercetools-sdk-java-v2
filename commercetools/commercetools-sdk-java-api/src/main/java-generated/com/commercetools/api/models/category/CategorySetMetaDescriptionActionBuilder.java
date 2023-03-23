@@ -28,6 +28,7 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public CategorySetMetaDescriptionActionBuilder metaDescription(
@@ -38,6 +39,8 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
 
     /**
      *  <p>Value to set.</p>
+     * @param metaDescription
+     * @return Builder
      */
 
     public CategorySetMetaDescriptionActionBuilder metaDescription(

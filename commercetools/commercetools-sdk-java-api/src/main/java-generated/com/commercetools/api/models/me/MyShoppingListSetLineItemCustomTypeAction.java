@@ -36,6 +36,7 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
 
     /**
      *  <p>Unique identifier of an existing ShoppingListLineItem in the ShoppingList.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -43,6 +44,7 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
 
     /**
      *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
 
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

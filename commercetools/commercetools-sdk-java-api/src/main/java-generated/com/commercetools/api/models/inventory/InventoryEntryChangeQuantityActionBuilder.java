@@ -25,6 +25,8 @@ public class InventoryEntryChangeQuantityActionBuilder implements Builder<Invent
 
     /**
      *  <p>Value to set for <code>quantityOnStock</code>.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public InventoryEntryChangeQuantityActionBuilder quantity(final Long quantity) {

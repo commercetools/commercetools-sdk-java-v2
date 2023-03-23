@@ -42,6 +42,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>Unique identifier of the Extension.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -49,6 +50,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>Current version of the Extension.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -56,6 +58,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>Date and time (UTC) the Extension was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -63,6 +66,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>Date and time (UTC) the Extension was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -70,6 +74,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -77,6 +82,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -84,6 +90,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -91,6 +98,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
+     * @return destination
      */
     @NotNull
     @Valid
@@ -99,6 +107,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @return triggers
      */
     @NotNull
     @Valid
@@ -107,6 +116,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
 
     /**
      *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     * @return timeoutInMs
      */
 
     @JsonProperty("timeoutInMs")

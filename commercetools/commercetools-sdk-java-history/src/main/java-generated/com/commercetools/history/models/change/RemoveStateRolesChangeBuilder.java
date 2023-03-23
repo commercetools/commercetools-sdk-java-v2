@@ -31,6 +31,8 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public RemoveStateRolesChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveStateRolesChangeBuilder previousValue(
@@ -50,6 +54,8 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveStateRolesChangeBuilder previousValue(
@@ -60,6 +66,8 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveStateRolesChangeBuilder plusPreviousValue(
@@ -73,6 +81,8 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveStateRolesChangeBuilder nextValue(
@@ -83,6 +93,8 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveStateRolesChangeBuilder nextValue(
@@ -93,6 +105,8 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveStateRolesChangeBuilder plusNextValue(

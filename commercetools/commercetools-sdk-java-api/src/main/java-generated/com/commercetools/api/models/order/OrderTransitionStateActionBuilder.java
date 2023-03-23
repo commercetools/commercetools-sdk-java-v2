@@ -31,6 +31,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return Builder
      */
 
     public OrderTransitionStateActionBuilder state(
@@ -41,6 +42,8 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param state
+     * @return Builder
      */
 
     public OrderTransitionStateActionBuilder state(
@@ -51,6 +54,8 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
 
     /**
      *
+     * @param force
+     * @return Builder
      */
 
     public OrderTransitionStateActionBuilder force(@Nullable final Boolean force) {

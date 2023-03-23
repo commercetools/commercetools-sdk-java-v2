@@ -36,6 +36,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
 
     /**
      *  <p>The attribute in conflict.</p>
+     * @return attribute
      */
     @NotNull
     @Valid

@@ -38,6 +38,7 @@ public interface RemoveFromCategoryChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -45,6 +46,7 @@ public interface RemoveFromCategoryChange extends Change {
 
     /**
      *  <p>Update action for <code>addToCategory</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -52,6 +54,7 @@ public interface RemoveFromCategoryChange extends Change {
 
     /**
      *
+     * @return category
      */
     @NotNull
     @Valid
@@ -60,6 +63,7 @@ public interface RemoveFromCategoryChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid
@@ -68,6 +72,7 @@ public interface RemoveFromCategoryChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

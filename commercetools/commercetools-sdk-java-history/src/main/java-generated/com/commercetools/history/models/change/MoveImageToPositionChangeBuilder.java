@@ -35,6 +35,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *  <p>Update actions for moving images</p>
+     * @param change
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder catalogData(final String catalogData) {
@@ -53,6 +57,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder previousValue(
@@ -63,6 +69,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder previousValue(
@@ -73,6 +81,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder plusPreviousValue(
@@ -86,6 +96,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder plusPreviousValue(
@@ -99,6 +110,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder withPreviousValue(
@@ -110,6 +122,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder nextValue(
@@ -120,6 +134,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder nextValue(
@@ -130,6 +146,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder plusNextValue(
@@ -143,6 +161,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder plusNextValue(
@@ -156,6 +175,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @return Builder
      */
 
     public MoveImageToPositionChangeBuilder withNextValue(

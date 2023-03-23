@@ -33,6 +33,7 @@ public interface CentPrecisionMoneyDraft
 
     /**
      *  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>
+     * @return fractionDigits
      */
 
     @JsonProperty("fractionDigits")

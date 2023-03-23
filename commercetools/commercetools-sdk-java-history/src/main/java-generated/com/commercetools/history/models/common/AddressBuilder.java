@@ -97,6 +97,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Unique ID of the Address.</p>
+     * @param id
+     * @return Builder
      */
 
     public AddressBuilder id(final String id) {
@@ -106,6 +108,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public AddressBuilder key(final String key) {
@@ -115,6 +119,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param title
+     * @return Builder
      */
 
     public AddressBuilder title(final String title) {
@@ -124,6 +130,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param salutation
+     * @return Builder
      */
 
     public AddressBuilder salutation(final String salutation) {
@@ -133,6 +141,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param firstName
+     * @return Builder
      */
 
     public AddressBuilder firstName(final String firstName) {
@@ -142,6 +152,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param lastName
+     * @return Builder
      */
 
     public AddressBuilder lastName(final String lastName) {
@@ -151,6 +163,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param streetName
+     * @return Builder
      */
 
     public AddressBuilder streetName(final String streetName) {
@@ -160,6 +174,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param streetNumber
+     * @return Builder
      */
 
     public AddressBuilder streetNumber(final String streetNumber) {
@@ -169,6 +185,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param additionalStreetInfo
+     * @return Builder
      */
 
     public AddressBuilder additionalStreetInfo(final String additionalStreetInfo) {
@@ -178,6 +196,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param postalCode
+     * @return Builder
      */
 
     public AddressBuilder postalCode(final String postalCode) {
@@ -187,6 +207,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param city
+     * @return Builder
      */
 
     public AddressBuilder city(final String city) {
@@ -196,6 +218,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param region
+     * @return Builder
      */
 
     public AddressBuilder region(final String region) {
@@ -205,6 +229,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public AddressBuilder state(final String state) {
@@ -214,6 +240,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @param country
+     * @return Builder
      */
 
     public AddressBuilder country(final String country) {
@@ -223,6 +251,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param company
+     * @return Builder
      */
 
     public AddressBuilder company(final String company) {
@@ -232,6 +262,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param department
+     * @return Builder
      */
 
     public AddressBuilder department(final String department) {
@@ -241,6 +273,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param building
+     * @return Builder
      */
 
     public AddressBuilder building(final String building) {
@@ -250,6 +284,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param apartment
+     * @return Builder
      */
 
     public AddressBuilder apartment(final String apartment) {
@@ -259,6 +295,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param pOBox
+     * @return Builder
      */
 
     public AddressBuilder pOBox(final String pOBox) {
@@ -268,6 +306,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param phone
+     * @return Builder
      */
 
     public AddressBuilder phone(final String phone) {
@@ -277,6 +317,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param mobile
+     * @return Builder
      */
 
     public AddressBuilder mobile(final String mobile) {
@@ -286,6 +328,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param email
+     * @return Builder
      */
 
     public AddressBuilder email(final String email) {
@@ -295,6 +339,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param fax
+     * @return Builder
      */
 
     public AddressBuilder fax(final String fax) {
@@ -304,6 +350,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param additionalAddressInfo
+     * @return Builder
      */
 
     public AddressBuilder additionalAddressInfo(final String additionalAddressInfo) {
@@ -313,6 +361,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param externalId
+     * @return Builder
      */
 
     public AddressBuilder externalId(final String externalId) {

@@ -36,6 +36,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -43,6 +44,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>User-defined unique SKU of the Product Variant.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -51,6 +53,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
     /**
      *  <p>User-defined unique identifier of the ProductVariant.</p>
      *  <p>This is different from Product <code>key</code>.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -58,6 +61,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return prices
      */
     @Valid
     @JsonProperty("prices")
@@ -65,6 +69,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")
@@ -72,6 +77,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     * @return price
      */
     @Valid
     @JsonProperty("price")
@@ -79,6 +85,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Images of the Product Variant.</p>
+     * @return images
      */
     @Valid
     @JsonProperty("images")
@@ -86,6 +93,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
+     * @return assets
      */
     @Valid
     @JsonProperty("assets")
@@ -93,6 +101,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     * @return availability
      */
     @Valid
     @JsonProperty("availability")
@@ -100,6 +109,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
+     * @return isMatchingVariant
      */
 
     @JsonProperty("isMatchingVariant")
@@ -107,6 +117,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     * @return scopedPrice
      */
     @Valid
     @JsonProperty("scopedPrice")
@@ -114,6 +125,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection.</p>
+     * @return scopedPriceDiscounted
      */
 
     @JsonProperty("scopedPriceDiscounted")

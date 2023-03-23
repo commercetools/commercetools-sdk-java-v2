@@ -35,6 +35,7 @@ public interface SetCustomFieldChange extends Change {
 
     /**
      *  <p>Update action for setting a custom field</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -42,6 +43,7 @@ public interface SetCustomFieldChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -49,6 +51,7 @@ public interface SetCustomFieldChange extends Change {
 
     /**
      *  <p>Custom field name</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -56,6 +59,7 @@ public interface SetCustomFieldChange extends Change {
 
     /**
      *
+     * @return customTypeId
      */
     @NotNull
     @JsonProperty("customTypeId")
@@ -63,6 +67,7 @@ public interface SetCustomFieldChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -70,6 +75,7 @@ public interface SetCustomFieldChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

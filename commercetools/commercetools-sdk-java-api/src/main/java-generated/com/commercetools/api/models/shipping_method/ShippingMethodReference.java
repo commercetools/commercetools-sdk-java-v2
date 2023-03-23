@@ -35,6 +35,7 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
 
     /**
      *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
 
     /**
      *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

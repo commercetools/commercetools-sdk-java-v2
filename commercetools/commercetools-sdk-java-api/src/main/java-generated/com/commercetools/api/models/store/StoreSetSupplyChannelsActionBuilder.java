@@ -28,6 +28,8 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreSetSupplyChannelsActionBuilder supplyChannels(
@@ -38,6 +40,8 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreSetSupplyChannelsActionBuilder supplyChannels(
@@ -48,6 +52,8 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
@@ -61,6 +67,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @return Builder
      */
 
     public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
@@ -75,6 +82,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @return Builder
      */
 
     public StoreSetSupplyChannelsActionBuilder withSupplyChannels(

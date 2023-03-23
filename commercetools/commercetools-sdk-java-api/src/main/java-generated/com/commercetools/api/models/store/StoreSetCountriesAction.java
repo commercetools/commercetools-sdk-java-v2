@@ -33,6 +33,7 @@ public interface StoreSetCountriesAction extends StoreUpdateAction {
 
     /**
      *  <p>New value to set.</p>
+     * @return countries
      */
     @Valid
     @JsonProperty("countries")

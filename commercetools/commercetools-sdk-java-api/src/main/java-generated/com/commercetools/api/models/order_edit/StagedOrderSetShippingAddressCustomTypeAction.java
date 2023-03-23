@@ -35,6 +35,7 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -42,6 +43,7 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

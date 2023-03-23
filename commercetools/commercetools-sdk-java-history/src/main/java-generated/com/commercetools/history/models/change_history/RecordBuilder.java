@@ -56,6 +56,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Version of the resource after the change.</p>
+     * @param version
+     * @return Builder
      */
 
     public RecordBuilder version(final Integer version) {
@@ -65,6 +67,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Version of the resource before the change.</p>
+     * @param previousVersion
+     * @return Builder
      */
 
     public RecordBuilder previousVersion(final Integer previousVersion) {
@@ -74,6 +78,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Type of the change (creation, update or deletion).</p>
+     * @param type
+     * @return Builder
      */
 
     public RecordBuilder type(final String type) {
@@ -83,6 +89,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
+     * @return Builder
      */
 
     public RecordBuilder modifiedBy(
@@ -93,6 +100,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
+     * @param modifiedBy
+     * @return Builder
      */
 
     public RecordBuilder modifiedBy(final com.commercetools.history.models.change_history.ModifiedBy modifiedBy) {
@@ -102,6 +111,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Date and time when the change was made.</p>
+     * @param modifiedAt
+     * @return Builder
      */
 
     public RecordBuilder modifiedAt(final String modifiedAt) {
@@ -111,6 +122,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information that describes the resource after the change.</p>
+     * @param label
+     * @return Builder
      */
 
     public RecordBuilder label(final com.commercetools.history.models.label.Label label) {
@@ -120,6 +133,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information that describes the resource after the change.</p>
+     * @return Builder
      */
 
     public RecordBuilder label(
@@ -130,6 +144,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information that describes the resource before the change.</p>
+     * @param previousLabel
+     * @return Builder
      */
 
     public RecordBuilder previousLabel(final com.commercetools.history.models.label.Label previousLabel) {
@@ -139,6 +155,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information that describes the resource before the change.</p>
+     * @return Builder
      */
 
     public RecordBuilder previousLabel(
@@ -149,6 +166,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @param changes
+     * @return Builder
      */
 
     public RecordBuilder changes(final com.commercetools.history.models.change.Change... changes) {
@@ -158,6 +177,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @param changes
+     * @return Builder
      */
 
     public RecordBuilder changes(final java.util.List<com.commercetools.history.models.change.Change> changes) {
@@ -167,6 +188,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @param changes
+     * @return Builder
      */
 
     public RecordBuilder plusChanges(final com.commercetools.history.models.change.Change... changes) {
@@ -179,6 +202,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @return Builder
      */
 
     public RecordBuilder plusChanges(
@@ -192,6 +216,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @return Builder
      */
 
     public RecordBuilder withChanges(
@@ -203,6 +228,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Reference to the changed resource.</p>
+     * @return Builder
      */
 
     public RecordBuilder resource(
@@ -213,6 +239,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Reference to the changed resource.</p>
+     * @param resource
+     * @return Builder
      */
 
     public RecordBuilder resource(final com.commercetools.history.models.common.Reference resource) {
@@ -222,6 +250,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
+     * @param stores
+     * @return Builder
      */
 
     public RecordBuilder stores(final com.commercetools.history.models.common.KeyReference... stores) {
@@ -231,6 +261,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
+     * @param stores
+     * @return Builder
      */
 
     public RecordBuilder stores(final java.util.List<com.commercetools.history.models.common.KeyReference> stores) {
@@ -240,6 +272,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
+     * @param stores
+     * @return Builder
      */
 
     public RecordBuilder plusStores(final com.commercetools.history.models.common.KeyReference... stores) {
@@ -252,6 +286,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
+     * @return Builder
      */
 
     public RecordBuilder plusStores(
@@ -265,6 +300,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
+     * @return Builder
      */
 
     public RecordBuilder withStores(
@@ -276,6 +312,8 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     * @param withoutChanges
+     * @return Builder
      */
 
     public RecordBuilder withoutChanges(final Boolean withoutChanges) {

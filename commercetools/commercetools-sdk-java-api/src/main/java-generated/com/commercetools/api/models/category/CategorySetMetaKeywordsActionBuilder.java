@@ -28,6 +28,7 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public CategorySetMetaKeywordsActionBuilder metaKeywords(
@@ -38,6 +39,8 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Value to set.</p>
+     * @param metaKeywords
+     * @return Builder
      */
 
     public CategorySetMetaKeywordsActionBuilder metaKeywords(

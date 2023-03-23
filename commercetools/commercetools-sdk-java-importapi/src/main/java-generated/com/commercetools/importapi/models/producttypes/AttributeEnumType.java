@@ -34,6 +34,7 @@ public interface AttributeEnumType extends AttributeType {
 
     /**
      *
+     * @return values
      */
     @NotNull
     @Valid

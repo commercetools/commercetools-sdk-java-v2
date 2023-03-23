@@ -35,6 +35,7 @@ public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
 
     /**
      *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
+     * @return address
      */
     @NotNull
     @Valid

@@ -34,6 +34,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p>Shopping List that contains the Line Items to be added.</p>
+     * @return Builder
      */
 
     public CartAddShoppingListActionBuilder shoppingList(
@@ -46,6 +47,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p>Shopping List that contains the Line Items to be added.</p>
+     * @param shoppingList
+     * @return Builder
      */
 
     public CartAddShoppingListActionBuilder shoppingList(
@@ -56,6 +59,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public CartAddShoppingListActionBuilder distributionChannel(
@@ -68,6 +72,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public CartAddShoppingListActionBuilder distributionChannel(
@@ -78,6 +84,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public CartAddShoppingListActionBuilder supplyChannel(
@@ -89,6 +96,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public CartAddShoppingListActionBuilder supplyChannel(

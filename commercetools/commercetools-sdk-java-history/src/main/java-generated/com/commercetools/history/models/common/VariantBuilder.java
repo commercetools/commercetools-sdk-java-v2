@@ -31,6 +31,8 @@ public class VariantBuilder implements Builder<Variant> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public VariantBuilder id(final Integer id) {
@@ -40,6 +42,8 @@ public class VariantBuilder implements Builder<Variant> {
 
     /**
      *
+     * @param sku
+     * @return Builder
      */
 
     public VariantBuilder sku(final String sku) {
@@ -49,6 +53,8 @@ public class VariantBuilder implements Builder<Variant> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public VariantBuilder key(final String key) {

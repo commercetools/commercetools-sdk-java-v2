@@ -32,6 +32,8 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeTargetChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTargetChangeBuilder nextValue(
@@ -51,6 +55,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTargetChangeBuilder nextValue(
@@ -63,6 +68,8 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTargetChangeBuilder previousValue(
@@ -73,6 +80,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTargetChangeBuilder previousValue(

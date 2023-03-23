@@ -37,6 +37,8 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     * @param oldRating
+     * @return Builder
      */
 
     public ReviewRatingSetMessagePayloadBuilder oldRating(@Nullable final Double oldRating) {
@@ -46,6 +48,8 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     * @param newRating
+     * @return Builder
      */
 
     public ReviewRatingSetMessagePayloadBuilder newRating(@Nullable final Double newRating) {
@@ -55,6 +59,8 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     * @param includedInStatistics
+     * @return Builder
      */
 
     public ReviewRatingSetMessagePayloadBuilder includedInStatistics(final Boolean includedInStatistics) {
@@ -64,6 +70,8 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
+     * @param target
+     * @return Builder
      */
 
     public ReviewRatingSetMessagePayloadBuilder target(
@@ -74,6 +82,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
+     * @return Builder
      */
 
     public ReviewRatingSetMessagePayloadBuilder target(

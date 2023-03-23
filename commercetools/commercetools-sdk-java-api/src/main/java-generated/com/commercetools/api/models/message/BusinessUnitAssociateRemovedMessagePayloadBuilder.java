@@ -27,6 +27,7 @@ public class BusinessUnitAssociateRemovedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was removed from the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitAssociateRemovedMessagePayloadBuilder associate(
@@ -37,6 +38,8 @@ public class BusinessUnitAssociateRemovedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was removed from the Business Unit.</p>
+     * @param associate
+     * @return Builder
      */
 
     public BusinessUnitAssociateRemovedMessagePayloadBuilder associate(

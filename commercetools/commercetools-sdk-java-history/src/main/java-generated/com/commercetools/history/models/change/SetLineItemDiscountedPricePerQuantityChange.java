@@ -40,6 +40,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -47,6 +48,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
 
     /**
      *  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -54,6 +56,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
 
     /**
      *
+     * @return lineItem
      */
     @NotNull
     @Valid
@@ -62,6 +65,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
 
     /**
      *
+     * @return variant
      */
     @NotNull
     @JsonProperty("variant")
@@ -69,6 +73,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -77,6 +82,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

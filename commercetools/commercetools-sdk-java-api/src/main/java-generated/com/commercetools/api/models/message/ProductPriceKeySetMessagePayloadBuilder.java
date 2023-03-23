@@ -39,6 +39,8 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPriceKeySetMessagePayloadBuilder variantId(final Long variantId) {
@@ -48,6 +50,8 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *  <p>Unique identifier of the Price.</p>
+     * @param priceId
+     * @return Builder
      */
 
     public ProductPriceKeySetMessagePayloadBuilder priceId(@Nullable final String priceId) {
@@ -57,6 +61,8 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
+     * @param oldKey
+     * @return Builder
      */
 
     public ProductPriceKeySetMessagePayloadBuilder oldKey(@Nullable final String oldKey) {
@@ -66,6 +72,8 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductPriceKeySetMessagePayloadBuilder key(@Nullable final String key) {
@@ -75,6 +83,8 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPriceKeySetMessagePayloadBuilder staged(final Boolean staged) {

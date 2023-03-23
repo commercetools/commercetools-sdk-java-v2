@@ -31,6 +31,8 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
 
     /**
      *  <p>Update action for <code>changeType</code> on state</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeStateTypeChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeStateTypeChangeBuilder previousValue(
@@ -50,6 +54,8 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeStateTypeChangeBuilder nextValue(final com.commercetools.history.models.common.StateType nextValue) {

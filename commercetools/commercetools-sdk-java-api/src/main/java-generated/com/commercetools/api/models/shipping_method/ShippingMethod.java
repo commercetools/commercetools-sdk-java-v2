@@ -50,6 +50,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Unique identifier of the ShippingMethod.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -57,6 +58,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Current version of the ShippingMethod.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -64,6 +66,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Date and time (UTC) the ShippingMethod was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -71,6 +74,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Date and time (UTC) the ShippingMethod was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -78,6 +82,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -85,6 +90,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -92,6 +98,7 @@ public interface ShippingMethod
 
     /**
      *  <p>User-defined unique identifier of the ShippingMethod.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -99,6 +106,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Name of the ShippingMethod.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -106,6 +114,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @return localizedName
      */
     @Valid
     @JsonProperty("localizedName")
@@ -113,6 +122,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Description of the ShippingMethod.</p>
+     * @return description
      */
     @Deprecated
     @JsonProperty("description")
@@ -120,6 +130,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @return localizedDescription
      */
     @Valid
     @JsonProperty("localizedDescription")
@@ -127,6 +138,7 @@ public interface ShippingMethod
 
     /**
      *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     * @return taxCategory
      */
     @NotNull
     @Valid
@@ -135,6 +147,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @return zoneRates
      */
     @NotNull
     @Valid
@@ -143,6 +156,7 @@ public interface ShippingMethod
 
     /**
      *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     * @return isDefault
      */
     @NotNull
     @JsonProperty("isDefault")
@@ -150,6 +164,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     * @return predicate
      */
 
     @JsonProperty("predicate")
@@ -157,6 +172,7 @@ public interface ShippingMethod
 
     /**
      *  <p>Custom Fields of the ShippingMethod.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

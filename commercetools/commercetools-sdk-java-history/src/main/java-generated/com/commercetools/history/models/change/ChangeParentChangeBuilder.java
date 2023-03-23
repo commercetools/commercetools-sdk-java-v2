@@ -32,6 +32,8 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *  <p>Shape of the action for <code>changeParent</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeParentChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeParentChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeParentChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeParentChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeParentChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {

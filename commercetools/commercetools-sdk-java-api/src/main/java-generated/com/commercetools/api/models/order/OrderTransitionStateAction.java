@@ -35,6 +35,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
 
     /**
      *
+     * @return force
      */
 
     @JsonProperty("force")

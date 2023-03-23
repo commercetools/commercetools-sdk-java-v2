@@ -30,6 +30,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -37,6 +38,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -44,6 +46,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -51,6 +54,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
+     * @return assetId
      */
 
     @JsonProperty("assetId")
@@ -58,6 +62,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
+     * @return assetKey
      */
 
     @JsonProperty("assetKey")
@@ -65,6 +70,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
      */
 
     @JsonProperty("tags")

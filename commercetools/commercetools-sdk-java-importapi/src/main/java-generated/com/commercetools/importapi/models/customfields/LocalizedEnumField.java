@@ -33,6 +33,7 @@ public interface LocalizedEnumField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

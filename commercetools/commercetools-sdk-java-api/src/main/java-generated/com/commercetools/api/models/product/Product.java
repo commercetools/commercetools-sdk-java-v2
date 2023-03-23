@@ -47,6 +47,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>Unique identifier of the Product.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -54,6 +55,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>Current version of the Product.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -61,6 +63,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>Date and time (UTC) the Product was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -68,6 +71,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>Date and time (UTC) the Product was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -75,6 +79,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -82,6 +87,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -90,6 +96,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     /**
      *  <p>User-defined unique identifier of the Product.</p>
      *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -97,6 +104,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
+     * @return productType
      */
     @NotNull
     @Valid
@@ -105,6 +113,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>Contains the current and the staged representation of the product information.</p>
+     * @return masterData
      */
     @NotNull
     @Valid
@@ -113,6 +122,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>The TaxCategory of the Product.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -120,6 +130,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>State of the Product.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -127,6 +138,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>Review statistics of the Product.</p>
+     * @return reviewRatingStatistics
      */
     @Valid
     @JsonProperty("reviewRatingStatistics")
@@ -134,6 +146,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>Type of Price to be used when looking up a price for the Product.</p>
+     * @return priceMode
      */
 
     @JsonProperty("priceMode")

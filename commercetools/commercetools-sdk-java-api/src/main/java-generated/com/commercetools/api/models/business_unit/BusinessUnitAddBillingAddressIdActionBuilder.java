@@ -30,6 +30,8 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
 
     /**
      *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public BusinessUnitAddBillingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -39,6 +41,8 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
 
     /**
      *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public BusinessUnitAddBillingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

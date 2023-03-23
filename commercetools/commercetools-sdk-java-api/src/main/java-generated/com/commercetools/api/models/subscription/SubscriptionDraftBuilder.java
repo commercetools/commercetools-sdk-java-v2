@@ -40,6 +40,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
+     * @param changes
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder changes(
@@ -50,6 +52,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
+     * @param changes
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder changes(
@@ -60,6 +64,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
+     * @param changes
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder plusChanges(
@@ -73,6 +79,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder plusChanges(
@@ -87,6 +94,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder withChanges(
@@ -99,6 +107,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messaging service to which the messages are sent.</p>
+     * @param destination
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder destination(
@@ -109,6 +119,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messaging service to which the messages are sent.</p>
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder destination(
@@ -119,6 +130,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Subscription.</p>
+     * @param key
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder key(@Nullable final String key) {
@@ -128,6 +141,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
+     * @param messages
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder messages(
@@ -138,6 +153,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
+     * @param messages
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder messages(
@@ -148,6 +165,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
+     * @param messages
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder plusMessages(
@@ -161,6 +180,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder plusMessages(
@@ -175,6 +195,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder withMessages(
@@ -187,6 +208,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     * @param format
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder format(
@@ -197,6 +220,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     * @return Builder
      */
 
     public SubscriptionDraftBuilder format(

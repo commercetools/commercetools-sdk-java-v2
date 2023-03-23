@@ -55,6 +55,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder name(
@@ -65,6 +66,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -74,6 +77,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder quantity(final Long quantity) {
@@ -83,6 +88,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The cost to add to the cart. The amount can be negative.</p>
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder money(
@@ -93,6 +99,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The cost to add to the cart. The amount can be negative.</p>
+     * @param money
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -102,6 +110,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @param slug
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder slug(final String slug) {
@@ -111,6 +121,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder state(
@@ -121,6 +133,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder state(
@@ -131,6 +145,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder plusState(
@@ -144,6 +160,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder plusState(
@@ -157,6 +174,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder withState(
@@ -168,6 +186,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder taxRate(
@@ -178,6 +197,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @param taxRate
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder taxRate(
@@ -188,6 +209,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder taxCategory(
@@ -200,6 +222,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @param taxCategory
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder taxCategory(
@@ -210,6 +234,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The custom fields.</p>
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder custom(
@@ -220,6 +245,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The custom fields.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder custom(
@@ -230,6 +257,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder shippingDetails(
@@ -241,6 +269,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *
+     * @param shippingDetails
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder shippingDetails(
@@ -254,6 +284,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
+     * @param priceMode
+     * @return Builder
      */
 
     public CustomLineItemImportDraftBuilder priceMode(

@@ -26,6 +26,7 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
 
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
+     * @return Builder
      */
 
     public ReturnInfoAddedMessagePayloadBuilder returnInfo(
@@ -36,6 +37,8 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
 
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
+     * @param returnInfo
+     * @return Builder
      */
 
     public ReturnInfoAddedMessagePayloadBuilder returnInfo(

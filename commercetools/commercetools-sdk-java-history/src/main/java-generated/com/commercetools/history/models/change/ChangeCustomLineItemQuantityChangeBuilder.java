@@ -38,6 +38,8 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder change(final String change) {
@@ -47,6 +49,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder customLineItem(
@@ -58,6 +61,8 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
+     * @param customLineItem
+     * @return Builder
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder customLineItem(
@@ -68,6 +73,8 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder customLineItemId(final String customLineItemId) {
@@ -77,6 +84,8 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
@@ -86,6 +95,8 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {

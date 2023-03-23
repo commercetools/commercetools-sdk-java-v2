@@ -27,6 +27,8 @@ public class ReviewSetTextActionBuilder implements Builder<ReviewSetTextAction> 
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param text
+     * @return Builder
      */
 
     public ReviewSetTextActionBuilder text(@Nullable final String text) {

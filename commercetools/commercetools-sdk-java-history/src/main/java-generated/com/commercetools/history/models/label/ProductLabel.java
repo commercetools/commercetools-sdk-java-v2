@@ -36,6 +36,7 @@ public interface ProductLabel extends Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface ProductLabel extends Label {
 
     /**
      *
+     * @return slug
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface ProductLabel extends Label {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid

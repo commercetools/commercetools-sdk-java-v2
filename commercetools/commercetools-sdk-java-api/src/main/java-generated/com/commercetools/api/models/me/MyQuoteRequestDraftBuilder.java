@@ -31,6 +31,8 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
 
     /**
      *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
+     * @param cartId
+     * @return Builder
      */
 
     public MyQuoteRequestDraftBuilder cartId(final String cartId) {
@@ -40,6 +42,8 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
 
     /**
      *  <p>Current version of the Cart.</p>
+     * @param cartVersion
+     * @return Builder
      */
 
     public MyQuoteRequestDraftBuilder cartVersion(final Long cartVersion) {
@@ -49,6 +53,8 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
 
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
+     * @param comment
+     * @return Builder
      */
 
     public MyQuoteRequestDraftBuilder comment(final String comment) {

@@ -29,6 +29,8 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public StagedQuoteUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StagedQuoteUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StagedQuoteUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StagedQuoteUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
+     * @return Builder
      */
 
     public StagedQuoteUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
+     * @return Builder
      */
 
     public StagedQuoteUpdateBuilder withActions(

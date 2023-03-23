@@ -33,6 +33,7 @@ public interface FilteredFacetResult extends FacetResult {
 
     /**
      *
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -40,6 +41,7 @@ public interface FilteredFacetResult extends FacetResult {
 
     /**
      *
+     * @return productCount
      */
 
     @JsonProperty("productCount")

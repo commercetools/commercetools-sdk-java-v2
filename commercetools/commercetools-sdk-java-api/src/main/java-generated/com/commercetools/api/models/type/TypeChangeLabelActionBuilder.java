@@ -29,6 +29,8 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
 
     /**
      *  <p>Name of the Field Definition to update.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public TypeChangeLabelActionBuilder fieldName(final String fieldName) {
@@ -38,6 +40,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
 
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @return Builder
      */
 
     public TypeChangeLabelActionBuilder label(
@@ -48,6 +51,8 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
 
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @param label
+     * @return Builder
      */
 
     public TypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {

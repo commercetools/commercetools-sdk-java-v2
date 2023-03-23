@@ -42,6 +42,7 @@ public interface InventoryEntryDeletedMessage extends Message {
 
     /**
      *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
+     * @return sku
      */
     @NotNull
     @JsonProperty("sku")
@@ -49,6 +50,7 @@ public interface InventoryEntryDeletedMessage extends Message {
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")

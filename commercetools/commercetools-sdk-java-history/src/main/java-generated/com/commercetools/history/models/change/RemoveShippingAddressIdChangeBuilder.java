@@ -35,6 +35,8 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     /**
      *  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveShippingAddressIdChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveShippingAddressIdChangeBuilder nextValue(final String... nextValue) {
@@ -53,6 +57,8 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveShippingAddressIdChangeBuilder nextValue(final java.util.List<String> nextValue) {
@@ -62,6 +68,8 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveShippingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
@@ -74,6 +82,8 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveShippingAddressIdChangeBuilder previousValue(final String... previousValue) {
@@ -83,6 +93,8 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveShippingAddressIdChangeBuilder previousValue(final java.util.List<String> previousValue) {
@@ -92,6 +104,8 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveShippingAddressIdChangeBuilder plusPreviousValue(final String... previousValue) {
@@ -104,6 +118,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveShippingAddressIdChangeBuilder address(
@@ -114,6 +129,8 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     /**
      *
+     * @param address
+     * @return Builder
      */
 
     public RemoveShippingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {

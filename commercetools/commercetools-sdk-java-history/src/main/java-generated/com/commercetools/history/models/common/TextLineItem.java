@@ -37,6 +37,7 @@ public interface TextLineItem {
 
     /**
      *
+     * @return addedAt
      */
     @NotNull
     @JsonProperty("addedAt")
@@ -44,6 +45,7 @@ public interface TextLineItem {
 
     /**
      *
+     * @return custom
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface TextLineItem {
 
     /**
      *
+     * @return description
      */
     @NotNull
     @Valid
@@ -60,6 +63,7 @@ public interface TextLineItem {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -67,6 +71,7 @@ public interface TextLineItem {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid
@@ -75,6 +80,7 @@ public interface TextLineItem {
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

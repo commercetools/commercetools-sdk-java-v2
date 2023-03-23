@@ -61,6 +61,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder name(
@@ -71,6 +72,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category.</p>
+     * @param name
+     * @return Builder
      */
 
     public CategoryDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -80,6 +83,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder slug(
@@ -90,6 +94,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @param slug
+     * @return Builder
      */
 
     public CategoryDraftBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -99,6 +105,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Description of the Category.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder description(
@@ -109,6 +116,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Description of the Category.</p>
+     * @param description
+     * @return Builder
      */
 
     public CategoryDraftBuilder description(
@@ -119,6 +128,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Parent Category of the Category. The parent can be set by its <code>id</code> or <code>key</code>.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder parent(
@@ -130,6 +140,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Parent Category of the Category. The parent can be set by its <code>id</code> or <code>key</code>.</p>
+     * @param parent
+     * @return Builder
      */
 
     public CategoryDraftBuilder parent(
@@ -140,6 +152,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree. If not set, a random value will be assigned.</p>
+     * @param orderHint
+     * @return Builder
      */
 
     public CategoryDraftBuilder orderHint(@Nullable final String orderHint) {
@@ -149,6 +163,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @param externalId
+     * @return Builder
      */
 
     public CategoryDraftBuilder externalId(@Nullable final String externalId) {
@@ -158,6 +174,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder metaTitle(
@@ -168,6 +185,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @param metaTitle
+     * @return Builder
      */
 
     public CategoryDraftBuilder metaTitle(
@@ -178,6 +197,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder metaDescription(
@@ -188,6 +208,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @param metaDescription
+     * @return Builder
      */
 
     public CategoryDraftBuilder metaDescription(
@@ -198,6 +220,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder metaKeywords(
@@ -208,6 +231,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @param metaKeywords
+     * @return Builder
      */
 
     public CategoryDraftBuilder metaKeywords(
@@ -218,6 +243,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Custom Fields for the Category.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder custom(
@@ -228,6 +254,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Custom Fields for the Category.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CategoryDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -237,6 +265,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param assets
+     * @return Builder
      */
 
     public CategoryDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
@@ -246,6 +276,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param assets
+     * @return Builder
      */
 
     public CategoryDraftBuilder assets(
@@ -256,6 +288,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param assets
+     * @return Builder
      */
 
     public CategoryDraftBuilder plusAssets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
@@ -268,6 +302,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder plusAssets(
@@ -281,6 +316,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @return Builder
      */
 
     public CategoryDraftBuilder withAssets(
@@ -292,6 +328,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     * @param key
+     * @return Builder
      */
 
     public CategoryDraftBuilder key(@Nullable final String key) {

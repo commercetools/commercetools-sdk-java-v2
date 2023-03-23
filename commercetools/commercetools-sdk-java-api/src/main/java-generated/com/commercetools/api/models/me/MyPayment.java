@@ -42,6 +42,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     /**
      *  <p>Unique identifier of the Payment.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -49,6 +50,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     /**
      *  <p>Current version of the Payment.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -56,6 +58,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     /**
      *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -63,6 +66,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     /**
      *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")
@@ -70,6 +74,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @return amountPlanned
      */
     @NotNull
     @Valid
@@ -78,6 +83,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return paymentMethodInfo
      */
     @NotNull
     @Valid
@@ -86,6 +92,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return transactions
      */
     @NotNull
     @Valid
@@ -94,6 +101,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     /**
      *  <p>Custom Fields defined for the Payment.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

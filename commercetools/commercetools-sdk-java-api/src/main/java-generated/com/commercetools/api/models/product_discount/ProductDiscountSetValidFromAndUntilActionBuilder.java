@@ -31,6 +31,8 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
 
     /**
      *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public ProductDiscountSetValidFromAndUntilActionBuilder validFrom(
@@ -41,6 +43,8 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
 
     /**
      *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public ProductDiscountSetValidFromAndUntilActionBuilder validUntil(

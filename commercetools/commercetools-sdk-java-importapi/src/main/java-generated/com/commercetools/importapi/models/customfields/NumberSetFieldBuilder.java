@@ -25,6 +25,8 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public NumberSetFieldBuilder value(final Double... value) {
@@ -34,6 +36,8 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public NumberSetFieldBuilder value(final java.util.List<Double> value) {
@@ -43,6 +47,8 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public NumberSetFieldBuilder plusValue(final Double... value) {

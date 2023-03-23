@@ -32,6 +32,8 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *  <p>Shape of the action for <code>setMetaKeywords</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetMetaKeywordsChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetMetaKeywordsChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetMetaKeywordsChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetMetaKeywordsChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetMetaKeywordsChangeBuilder nextValue(

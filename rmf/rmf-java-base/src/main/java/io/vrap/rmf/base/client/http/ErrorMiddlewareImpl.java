@@ -49,7 +49,12 @@ class ErrorMiddlewareImpl implements ErrorMiddleware {
             }
             if (response != null) {
                 if (response.getStatusCode() >= 400) {
-                    result.completeExceptionally(exceptionFactory.create(request, response));
+                    try {
+                        result.completeExceptionally(exceptionFactory.create(request, response));
+                    }
+                    catch (Exception e) {
+                        result.completeExceptionally(e);
+                    }
                 }
             }
             result.complete(response);

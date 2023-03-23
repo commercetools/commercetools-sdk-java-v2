@@ -79,6 +79,13 @@ public class CartsFixtures {
             cart = operator.apply(cart);
         }
         finally {
+            cart = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .withId(cart.getId())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
+
             deleteCart(cart.getId(), cart.getVersion());
         }
     }

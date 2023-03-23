@@ -89,6 +89,22 @@ public class OrderQueryTests {
         });
     }
 
+    @Test
+    public void searchByString() {
+        ensureOrderSearchIndexing();
+        OrdersFixtures.withOrder(order -> {
+            OrderPagedSearchResponse response = CommercetoolsTestUtils.getProjectApiRoot()
+                    .orders()
+                    .search()
+                    .post("{" + "\"query\": {" + "\"exists\": {" + "\"field\": \"custom.deliveryDate\","
+                            + "\"customType\": \"StringType\"" + "}" + "}," + "\"sort\": [{"
+                            + "\"field\": \"createdAt\"," + "\"order\": \"desc\"" + "}]," + "\"limit\": 20" + "}")
+                    .executeBlocking()
+                    .getBody();
+            Assertions.assertThat(response).isNotNull();
+        });
+    }
+
     private static void ensureOrderSearchIndexing() {
         try {
             Project project = CommercetoolsTestUtils.getProjectApiRoot().get().executeBlocking().getBody();

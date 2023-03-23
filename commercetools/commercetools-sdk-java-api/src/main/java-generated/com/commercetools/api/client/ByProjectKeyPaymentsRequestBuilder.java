@@ -25,6 +25,10 @@ public class ByProjectKeyPaymentsRequestBuilder implements ByProjectKeyPaymentsR
         return new ByProjectKeyPaymentsPost(apiHttpClient, projectKey, paymentDraft);
     }
 
+    public ByProjectKeyPaymentsPostString post(final String paymentDraft) {
+        return new ByProjectKeyPaymentsPostString(apiHttpClient, projectKey, paymentDraft);
+    }
+
     public ByProjectKeyPaymentsPost post(UnaryOperator<com.commercetools.api.models.payment.PaymentDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.payment.PaymentDraftBuilder.of()).build());
     }

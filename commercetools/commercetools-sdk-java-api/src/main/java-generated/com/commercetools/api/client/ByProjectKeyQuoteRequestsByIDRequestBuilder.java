@@ -29,6 +29,10 @@ public class ByProjectKeyQuoteRequestsByIDRequestBuilder {
         return new ByProjectKeyQuoteRequestsByIDPost(apiHttpClient, projectKey, ID, quoteRequestUpdate);
     }
 
+    public ByProjectKeyQuoteRequestsByIDPostString post(final String quoteRequestUpdate) {
+        return new ByProjectKeyQuoteRequestsByIDPostString(apiHttpClient, projectKey, ID, quoteRequestUpdate);
+    }
+
     public ByProjectKeyQuoteRequestsByIDPost post(
             UnaryOperator<com.commercetools.api.models.quote_request.QuoteRequestUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.quote_request.QuoteRequestUpdateBuilder.of()).build());

@@ -23,6 +23,10 @@ public class ByProjectKeyProductDiscountsMatchingRequestBuilder {
         return new ByProjectKeyProductDiscountsMatchingPost(apiHttpClient, projectKey, productDiscountMatchQuery);
     }
 
+    public ByProjectKeyProductDiscountsMatchingPostString post(final String productDiscountMatchQuery) {
+        return new ByProjectKeyProductDiscountsMatchingPostString(apiHttpClient, projectKey, productDiscountMatchQuery);
+    }
+
     public ByProjectKeyProductDiscountsMatchingPost post(
             UnaryOperator<com.commercetools.api.models.product_discount.ProductDiscountMatchQueryBuilder> op) {
         return post(

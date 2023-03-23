@@ -25,6 +25,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyPost(apiHttpClient, projectKey, projectUpdate);
     }
 
+    public ByProjectKeyPostString post(final String projectUpdate) {
+        return new ByProjectKeyPostString(apiHttpClient, projectKey, projectUpdate);
+    }
+
     public ByProjectKeyPost post(UnaryOperator<com.commercetools.api.models.project.ProjectUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.project.ProjectUpdateBuilder.of()).build());
     }

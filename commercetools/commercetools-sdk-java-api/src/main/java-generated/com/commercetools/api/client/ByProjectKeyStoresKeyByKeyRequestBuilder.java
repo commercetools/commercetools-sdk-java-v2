@@ -28,6 +28,10 @@ public class ByProjectKeyStoresKeyByKeyRequestBuilder {
         return new ByProjectKeyStoresKeyByKeyPost(apiHttpClient, projectKey, key, storeUpdate);
     }
 
+    public ByProjectKeyStoresKeyByKeyPostString post(final String storeUpdate) {
+        return new ByProjectKeyStoresKeyByKeyPostString(apiHttpClient, projectKey, key, storeUpdate);
+    }
+
     public ByProjectKeyStoresKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.store.StoreUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.store.StoreUpdateBuilder.of()).build());

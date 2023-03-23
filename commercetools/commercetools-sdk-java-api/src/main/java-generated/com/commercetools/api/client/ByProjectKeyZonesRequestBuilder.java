@@ -25,6 +25,10 @@ public class ByProjectKeyZonesRequestBuilder implements ByProjectKeyZonesRequest
         return new ByProjectKeyZonesPost(apiHttpClient, projectKey, zoneDraft);
     }
 
+    public ByProjectKeyZonesPostString post(final String zoneDraft) {
+        return new ByProjectKeyZonesPostString(apiHttpClient, projectKey, zoneDraft);
+    }
+
     public ByProjectKeyZonesPost post(UnaryOperator<com.commercetools.api.models.zone.ZoneDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.zone.ZoneDraftBuilder.of()).build());
     }

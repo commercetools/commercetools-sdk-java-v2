@@ -28,6 +28,10 @@ public class ByProjectKeyChannelsByIDRequestBuilder {
         return new ByProjectKeyChannelsByIDPost(apiHttpClient, projectKey, ID, channelUpdate);
     }
 
+    public ByProjectKeyChannelsByIDPostString post(final String channelUpdate) {
+        return new ByProjectKeyChannelsByIDPostString(apiHttpClient, projectKey, ID, channelUpdate);
+    }
+
     public ByProjectKeyChannelsByIDPost post(
             UnaryOperator<com.commercetools.api.models.channel.ChannelUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.channel.ChannelUpdateBuilder.of()).build());

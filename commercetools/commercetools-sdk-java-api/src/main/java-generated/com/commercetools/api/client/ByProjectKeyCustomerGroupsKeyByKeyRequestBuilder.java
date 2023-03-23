@@ -29,6 +29,10 @@ public class ByProjectKeyCustomerGroupsKeyByKeyRequestBuilder {
         return new ByProjectKeyCustomerGroupsKeyByKeyPost(apiHttpClient, projectKey, key, customerGroupUpdate);
     }
 
+    public ByProjectKeyCustomerGroupsKeyByKeyPostString post(final String customerGroupUpdate) {
+        return new ByProjectKeyCustomerGroupsKeyByKeyPostString(apiHttpClient, projectKey, key, customerGroupUpdate);
+    }
+
     public ByProjectKeyCustomerGroupsKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.customer_group.CustomerGroupUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.customer_group.CustomerGroupUpdateBuilder.of()).build());

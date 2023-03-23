@@ -29,6 +29,10 @@ public class ByProjectKeyProductSelectionsByIDRequestBuilder {
         return new ByProjectKeyProductSelectionsByIDPost(apiHttpClient, projectKey, ID, productSelectionUpdate);
     }
 
+    public ByProjectKeyProductSelectionsByIDPostString post(final String productSelectionUpdate) {
+        return new ByProjectKeyProductSelectionsByIDPostString(apiHttpClient, projectKey, ID, productSelectionUpdate);
+    }
+
     public ByProjectKeyProductSelectionsByIDPost post(
             UnaryOperator<com.commercetools.api.models.product_selection.ProductSelectionUpdateBuilder> op) {
         return post(

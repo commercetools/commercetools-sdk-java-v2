@@ -26,6 +26,12 @@ public class ByProjectKeyProductDraftsImportContainersByImportContainerKeyReques
             importContainerKey, productDraftImportRequest);
     }
 
+    public ByProjectKeyProductDraftsImportContainersByImportContainerKeyPostString post(
+            final String productDraftImportRequest) {
+        return new ByProjectKeyProductDraftsImportContainersByImportContainerKeyPostString(apiHttpClient, projectKey,
+            importContainerKey, productDraftImportRequest);
+    }
+
     public ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost post(
             UnaryOperator<com.commercetools.importapi.models.importrequests.ProductDraftImportRequestBuilder> op) {
         return post(

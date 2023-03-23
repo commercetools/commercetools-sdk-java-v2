@@ -26,6 +26,11 @@ public class ByProjectKeyProductsImportContainersByImportContainerKeyRequestBuil
             importContainerKey, productImportRequest);
     }
 
+    public ByProjectKeyProductsImportContainersByImportContainerKeyPostString post(final String productImportRequest) {
+        return new ByProjectKeyProductsImportContainersByImportContainerKeyPostString(apiHttpClient, projectKey,
+            importContainerKey, productImportRequest);
+    }
+
     public ByProjectKeyProductsImportContainersByImportContainerKeyPost post(
             UnaryOperator<com.commercetools.importapi.models.importrequests.ProductImportRequestBuilder> op) {
         return post(

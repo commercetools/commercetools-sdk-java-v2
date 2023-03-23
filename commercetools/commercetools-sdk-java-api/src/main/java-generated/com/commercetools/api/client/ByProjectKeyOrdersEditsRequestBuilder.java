@@ -25,6 +25,10 @@ public class ByProjectKeyOrdersEditsRequestBuilder {
         return new ByProjectKeyOrdersEditsPost(apiHttpClient, projectKey, orderEditDraft);
     }
 
+    public ByProjectKeyOrdersEditsPostString post(final String orderEditDraft) {
+        return new ByProjectKeyOrdersEditsPostString(apiHttpClient, projectKey, orderEditDraft);
+    }
+
     public ByProjectKeyOrdersEditsPost post(
             UnaryOperator<com.commercetools.api.models.order_edit.OrderEditDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.order_edit.OrderEditDraftBuilder.of()).build());

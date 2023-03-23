@@ -27,6 +27,10 @@ public class ByProjectKeyMeBusinessUnitsRequestBuilder {
         return new ByProjectKeyMeBusinessUnitsPost(apiHttpClient, projectKey, myBusinessUnitDraft);
     }
 
+    public ByProjectKeyMeBusinessUnitsPostString post(final String myBusinessUnitDraft) {
+        return new ByProjectKeyMeBusinessUnitsPostString(apiHttpClient, projectKey, myBusinessUnitDraft);
+    }
+
     public ByProjectKeyMeBusinessUnitsPost post(
             Function<com.commercetools.api.models.me.MyBusinessUnitDraftBuilder, Builder<? extends com.commercetools.api.models.me.MyBusinessUnitDraft>> op) {
         return post(op.apply(com.commercetools.api.models.me.MyBusinessUnitDraftBuilder.of()).build());

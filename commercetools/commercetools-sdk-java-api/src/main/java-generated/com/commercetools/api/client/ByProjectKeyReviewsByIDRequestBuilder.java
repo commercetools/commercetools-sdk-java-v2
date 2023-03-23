@@ -28,6 +28,10 @@ public class ByProjectKeyReviewsByIDRequestBuilder {
         return new ByProjectKeyReviewsByIDPost(apiHttpClient, projectKey, ID, reviewUpdate);
     }
 
+    public ByProjectKeyReviewsByIDPostString post(final String reviewUpdate) {
+        return new ByProjectKeyReviewsByIDPostString(apiHttpClient, projectKey, ID, reviewUpdate);
+    }
+
     public ByProjectKeyReviewsByIDPost post(UnaryOperator<com.commercetools.api.models.review.ReviewUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.review.ReviewUpdateBuilder.of()).build());
     }

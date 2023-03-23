@@ -29,6 +29,10 @@ public class ByProjectKeyShippingMethodsKeyByKeyRequestBuilder {
         return new ByProjectKeyShippingMethodsKeyByKeyPost(apiHttpClient, projectKey, key, shippingMethodUpdate);
     }
 
+    public ByProjectKeyShippingMethodsKeyByKeyPostString post(final String shippingMethodUpdate) {
+        return new ByProjectKeyShippingMethodsKeyByKeyPostString(apiHttpClient, projectKey, key, shippingMethodUpdate);
+    }
+
     public ByProjectKeyShippingMethodsKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.shipping_method.ShippingMethodUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.shipping_method.ShippingMethodUpdateBuilder.of()).build());

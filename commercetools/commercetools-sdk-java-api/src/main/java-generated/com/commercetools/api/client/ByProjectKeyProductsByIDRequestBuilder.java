@@ -32,6 +32,10 @@ public class ByProjectKeyProductsByIDRequestBuilder {
         return new ByProjectKeyProductsByIDPost(apiHttpClient, projectKey, ID, productUpdate);
     }
 
+    public ByProjectKeyProductsByIDPostString post(final String productUpdate) {
+        return new ByProjectKeyProductsByIDPostString(apiHttpClient, projectKey, ID, productUpdate);
+    }
+
     public ByProjectKeyProductsByIDPost post(
             UnaryOperator<com.commercetools.api.models.product.ProductUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.product.ProductUpdateBuilder.of()).build());

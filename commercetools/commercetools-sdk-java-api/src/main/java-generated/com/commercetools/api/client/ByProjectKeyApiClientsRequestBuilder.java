@@ -25,6 +25,10 @@ public class ByProjectKeyApiClientsRequestBuilder implements ByProjectKeyApiClie
         return new ByProjectKeyApiClientsPost(apiHttpClient, projectKey, apiClientDraft);
     }
 
+    public ByProjectKeyApiClientsPostString post(final String apiClientDraft) {
+        return new ByProjectKeyApiClientsPostString(apiHttpClient, projectKey, apiClientDraft);
+    }
+
     public ByProjectKeyApiClientsPost post(
             UnaryOperator<com.commercetools.api.models.api_client.ApiClientDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.api_client.ApiClientDraftBuilder.of()).build());

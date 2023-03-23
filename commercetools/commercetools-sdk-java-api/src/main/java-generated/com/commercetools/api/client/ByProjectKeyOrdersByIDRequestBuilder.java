@@ -28,6 +28,10 @@ public class ByProjectKeyOrdersByIDRequestBuilder {
         return new ByProjectKeyOrdersByIDPost(apiHttpClient, projectKey, ID, orderUpdate);
     }
 
+    public ByProjectKeyOrdersByIDPostString post(final String orderUpdate) {
+        return new ByProjectKeyOrdersByIDPostString(apiHttpClient, projectKey, ID, orderUpdate);
+    }
+
     public ByProjectKeyOrdersByIDPost post(UnaryOperator<com.commercetools.api.models.order.OrderUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.order.OrderUpdateBuilder.of()).build());
     }

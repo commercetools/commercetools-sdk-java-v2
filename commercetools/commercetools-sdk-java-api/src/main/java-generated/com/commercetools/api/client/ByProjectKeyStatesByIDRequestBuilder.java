@@ -28,6 +28,10 @@ public class ByProjectKeyStatesByIDRequestBuilder {
         return new ByProjectKeyStatesByIDPost(apiHttpClient, projectKey, ID, stateUpdate);
     }
 
+    public ByProjectKeyStatesByIDPostString post(final String stateUpdate) {
+        return new ByProjectKeyStatesByIDPostString(apiHttpClient, projectKey, ID, stateUpdate);
+    }
+
     public ByProjectKeyStatesByIDPost post(UnaryOperator<com.commercetools.api.models.state.StateUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.state.StateUpdateBuilder.of()).build());
     }

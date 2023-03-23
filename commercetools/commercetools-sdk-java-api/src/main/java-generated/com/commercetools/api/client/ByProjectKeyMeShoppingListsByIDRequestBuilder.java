@@ -29,6 +29,10 @@ public class ByProjectKeyMeShoppingListsByIDRequestBuilder {
         return new ByProjectKeyMeShoppingListsByIDPost(apiHttpClient, projectKey, ID, myShoppingListUpdate);
     }
 
+    public ByProjectKeyMeShoppingListsByIDPostString post(final String myShoppingListUpdate) {
+        return new ByProjectKeyMeShoppingListsByIDPostString(apiHttpClient, projectKey, ID, myShoppingListUpdate);
+    }
+
     public ByProjectKeyMeShoppingListsByIDPost post(
             UnaryOperator<com.commercetools.api.models.me.MyShoppingListUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyShoppingListUpdateBuilder.of()).build());

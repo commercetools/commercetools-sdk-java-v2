@@ -29,6 +29,10 @@ public class ByProjectKeyStandalonePricesByIDRequestBuilder {
         return new ByProjectKeyStandalonePricesByIDPost(apiHttpClient, projectKey, ID, standalonePriceUpdate);
     }
 
+    public ByProjectKeyStandalonePricesByIDPostString post(final String standalonePriceUpdate) {
+        return new ByProjectKeyStandalonePricesByIDPostString(apiHttpClient, projectKey, ID, standalonePriceUpdate);
+    }
+
     public ByProjectKeyStandalonePricesByIDPost post(
             UnaryOperator<com.commercetools.api.models.standalone_price.StandalonePriceUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.standalone_price.StandalonePriceUpdateBuilder.of()).build());

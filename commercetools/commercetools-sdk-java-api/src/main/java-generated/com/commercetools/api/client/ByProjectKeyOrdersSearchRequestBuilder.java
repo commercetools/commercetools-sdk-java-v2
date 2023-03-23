@@ -21,6 +21,10 @@ public class ByProjectKeyOrdersSearchRequestBuilder {
         return new ByProjectKeyOrdersSearchPost(apiHttpClient, projectKey, orderSearchRequest);
     }
 
+    public ByProjectKeyOrdersSearchPostString post(final String orderSearchRequest) {
+        return new ByProjectKeyOrdersSearchPostString(apiHttpClient, projectKey, orderSearchRequest);
+    }
+
     public ByProjectKeyOrdersSearchPost post(
             UnaryOperator<com.commercetools.api.models.order.OrderSearchRequestBuilder> op) {
         return post(op.apply(com.commercetools.api.models.order.OrderSearchRequestBuilder.of()).build());

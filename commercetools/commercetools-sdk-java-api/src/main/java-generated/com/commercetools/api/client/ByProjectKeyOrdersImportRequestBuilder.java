@@ -21,6 +21,10 @@ public class ByProjectKeyOrdersImportRequestBuilder {
         return new ByProjectKeyOrdersImportPost(apiHttpClient, projectKey, orderImportDraft);
     }
 
+    public ByProjectKeyOrdersImportPostString post(final String orderImportDraft) {
+        return new ByProjectKeyOrdersImportPostString(apiHttpClient, projectKey, orderImportDraft);
+    }
+
     public ByProjectKeyOrdersImportPost post(
             UnaryOperator<com.commercetools.api.models.order.OrderImportDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.order.OrderImportDraftBuilder.of()).build());

@@ -26,6 +26,10 @@ public class ByProjectKeyMeQuoteRequestsRequestBuilder {
         return new ByProjectKeyMeQuoteRequestsPost(apiHttpClient, projectKey, myQuoteRequestDraft);
     }
 
+    public ByProjectKeyMeQuoteRequestsPostString post(final String myQuoteRequestDraft) {
+        return new ByProjectKeyMeQuoteRequestsPostString(apiHttpClient, projectKey, myQuoteRequestDraft);
+    }
+
     public ByProjectKeyMeQuoteRequestsPost post(
             UnaryOperator<com.commercetools.api.models.me.MyQuoteRequestDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyQuoteRequestDraftBuilder.of()).build());

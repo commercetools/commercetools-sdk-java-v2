@@ -29,6 +29,10 @@ public class ByProjectKeyCategoriesKeyByKeyRequestBuilder {
         return new ByProjectKeyCategoriesKeyByKeyPost(apiHttpClient, projectKey, key, categoryUpdate);
     }
 
+    public ByProjectKeyCategoriesKeyByKeyPostString post(final String categoryUpdate) {
+        return new ByProjectKeyCategoriesKeyByKeyPostString(apiHttpClient, projectKey, key, categoryUpdate);
+    }
+
     public ByProjectKeyCategoriesKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.category.CategoryUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.category.CategoryUpdateBuilder.of()).build());

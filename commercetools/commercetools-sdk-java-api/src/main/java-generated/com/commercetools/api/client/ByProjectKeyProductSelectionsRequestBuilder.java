@@ -26,6 +26,10 @@ public class ByProjectKeyProductSelectionsRequestBuilder implements ByProjectKey
         return new ByProjectKeyProductSelectionsPost(apiHttpClient, projectKey, productSelectionDraft);
     }
 
+    public ByProjectKeyProductSelectionsPostString post(final String productSelectionDraft) {
+        return new ByProjectKeyProductSelectionsPostString(apiHttpClient, projectKey, productSelectionDraft);
+    }
+
     public ByProjectKeyProductSelectionsPost post(
             UnaryOperator<com.commercetools.api.models.product_selection.ProductSelectionDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.product_selection.ProductSelectionDraftBuilder.of()).build());

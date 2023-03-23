@@ -26,6 +26,12 @@ public class ByProjectKeyOrderPatchesImportContainersByImportContainerKeyRequest
             importContainerKey, orderPatchImportRequest);
     }
 
+    public ByProjectKeyOrderPatchesImportContainersByImportContainerKeyPostString post(
+            final String orderPatchImportRequest) {
+        return new ByProjectKeyOrderPatchesImportContainersByImportContainerKeyPostString(apiHttpClient, projectKey,
+            importContainerKey, orderPatchImportRequest);
+    }
+
     public ByProjectKeyOrderPatchesImportContainersByImportContainerKeyPost post(
             UnaryOperator<com.commercetools.importapi.models.importrequests.OrderPatchImportRequestBuilder> op) {
         return post(

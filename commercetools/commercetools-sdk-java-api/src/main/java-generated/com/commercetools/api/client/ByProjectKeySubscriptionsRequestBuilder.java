@@ -26,6 +26,10 @@ public class ByProjectKeySubscriptionsRequestBuilder implements ByProjectKeySubs
         return new ByProjectKeySubscriptionsPost(apiHttpClient, projectKey, subscriptionDraft);
     }
 
+    public ByProjectKeySubscriptionsPostString post(final String subscriptionDraft) {
+        return new ByProjectKeySubscriptionsPostString(apiHttpClient, projectKey, subscriptionDraft);
+    }
+
     public ByProjectKeySubscriptionsPost post(
             UnaryOperator<com.commercetools.api.models.subscription.SubscriptionDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.subscription.SubscriptionDraftBuilder.of()).build());

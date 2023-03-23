@@ -32,6 +32,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder {
             shoppingListUpdate);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPostString post(final String shoppingListUpdate) {
+        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPostString(apiHttpClient, projectKey, storeKey, ID,
+            shoppingListUpdate);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost post(
             UnaryOperator<com.commercetools.api.models.shopping_list.ShoppingListUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.shopping_list.ShoppingListUpdateBuilder.of()).build());

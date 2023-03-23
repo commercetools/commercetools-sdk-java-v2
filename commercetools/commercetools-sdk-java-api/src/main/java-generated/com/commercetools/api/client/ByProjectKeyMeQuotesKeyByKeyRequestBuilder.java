@@ -28,6 +28,10 @@ public class ByProjectKeyMeQuotesKeyByKeyRequestBuilder {
         return new ByProjectKeyMeQuotesKeyByKeyPost(apiHttpClient, projectKey, key, myQuoteUpdate);
     }
 
+    public ByProjectKeyMeQuotesKeyByKeyPostString post(final String myQuoteUpdate) {
+        return new ByProjectKeyMeQuotesKeyByKeyPostString(apiHttpClient, projectKey, key, myQuoteUpdate);
+    }
+
     public ByProjectKeyMeQuotesKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.me.MyQuoteUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyQuoteUpdateBuilder.of()).build());

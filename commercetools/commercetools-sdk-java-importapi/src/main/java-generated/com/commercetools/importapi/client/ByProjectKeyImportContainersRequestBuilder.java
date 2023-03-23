@@ -22,6 +22,10 @@ public class ByProjectKeyImportContainersRequestBuilder {
         return new ByProjectKeyImportContainersPost(apiHttpClient, projectKey, importContainerDraft);
     }
 
+    public ByProjectKeyImportContainersPostString post(final String importContainerDraft) {
+        return new ByProjectKeyImportContainersPostString(apiHttpClient, projectKey, importContainerDraft);
+    }
+
     public ByProjectKeyImportContainersPost post(
             UnaryOperator<com.commercetools.importapi.models.importcontainers.ImportContainerDraftBuilder> op) {
         return post(

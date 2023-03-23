@@ -26,6 +26,10 @@ public class ByProjectKeyTaxCategoriesRequestBuilder implements ByProjectKeyTaxC
         return new ByProjectKeyTaxCategoriesPost(apiHttpClient, projectKey, taxCategoryDraft);
     }
 
+    public ByProjectKeyTaxCategoriesPostString post(final String taxCategoryDraft) {
+        return new ByProjectKeyTaxCategoriesPostString(apiHttpClient, projectKey, taxCategoryDraft);
+    }
+
     public ByProjectKeyTaxCategoriesPost post(
             UnaryOperator<com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder.of()).build());

@@ -29,6 +29,10 @@ public class ByProjectKeyDiscountCodesByIDRequestBuilder {
         return new ByProjectKeyDiscountCodesByIDPost(apiHttpClient, projectKey, ID, discountCodeUpdate);
     }
 
+    public ByProjectKeyDiscountCodesByIDPostString post(final String discountCodeUpdate) {
+        return new ByProjectKeyDiscountCodesByIDPostString(apiHttpClient, projectKey, ID, discountCodeUpdate);
+    }
+
     public ByProjectKeyDiscountCodesByIDPost post(
             UnaryOperator<com.commercetools.api.models.discount_code.DiscountCodeUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.discount_code.DiscountCodeUpdateBuilder.of()).build());

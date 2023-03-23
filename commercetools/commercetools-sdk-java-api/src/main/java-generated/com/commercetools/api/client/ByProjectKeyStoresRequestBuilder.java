@@ -25,6 +25,10 @@ public class ByProjectKeyStoresRequestBuilder implements ByProjectKeyStoresReque
         return new ByProjectKeyStoresPost(apiHttpClient, projectKey, storeDraft);
     }
 
+    public ByProjectKeyStoresPostString post(final String storeDraft) {
+        return new ByProjectKeyStoresPostString(apiHttpClient, projectKey, storeDraft);
+    }
+
     public ByProjectKeyStoresPost post(UnaryOperator<com.commercetools.api.models.store.StoreDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.store.StoreDraftBuilder.of()).build());
     }

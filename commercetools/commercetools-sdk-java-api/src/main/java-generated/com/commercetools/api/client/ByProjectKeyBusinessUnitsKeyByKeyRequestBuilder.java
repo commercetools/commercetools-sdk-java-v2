@@ -29,6 +29,10 @@ public class ByProjectKeyBusinessUnitsKeyByKeyRequestBuilder {
         return new ByProjectKeyBusinessUnitsKeyByKeyPost(apiHttpClient, projectKey, key, businessUnitUpdate);
     }
 
+    public ByProjectKeyBusinessUnitsKeyByKeyPostString post(final String businessUnitUpdate) {
+        return new ByProjectKeyBusinessUnitsKeyByKeyPostString(apiHttpClient, projectKey, key, businessUnitUpdate);
+    }
+
     public ByProjectKeyBusinessUnitsKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.business_unit.BusinessUnitUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.business_unit.BusinessUnitUpdateBuilder.of()).build());

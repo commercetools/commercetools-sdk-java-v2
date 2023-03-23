@@ -29,6 +29,10 @@ public class ByProjectKeyInventoryByIDRequestBuilder {
         return new ByProjectKeyInventoryByIDPost(apiHttpClient, projectKey, ID, inventoryEntryUpdate);
     }
 
+    public ByProjectKeyInventoryByIDPostString post(final String inventoryEntryUpdate) {
+        return new ByProjectKeyInventoryByIDPostString(apiHttpClient, projectKey, ID, inventoryEntryUpdate);
+    }
+
     public ByProjectKeyInventoryByIDPost post(
             UnaryOperator<com.commercetools.api.models.inventory.InventoryEntryUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.inventory.InventoryEntryUpdateBuilder.of()).build());

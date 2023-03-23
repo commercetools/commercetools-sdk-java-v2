@@ -29,6 +29,10 @@ public class ByProjectKeyExtensionsKeyByKeyRequestBuilder {
         return new ByProjectKeyExtensionsKeyByKeyPost(apiHttpClient, projectKey, key, extensionUpdate);
     }
 
+    public ByProjectKeyExtensionsKeyByKeyPostString post(final String extensionUpdate) {
+        return new ByProjectKeyExtensionsKeyByKeyPostString(apiHttpClient, projectKey, key, extensionUpdate);
+    }
+
     public ByProjectKeyExtensionsKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.extension.ExtensionUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.extension.ExtensionUpdateBuilder.of()).build());

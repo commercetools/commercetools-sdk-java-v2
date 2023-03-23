@@ -25,6 +25,10 @@ public class ByProjectKeyCategoriesRequestBuilder implements ByProjectKeyCategor
         return new ByProjectKeyCategoriesPost(apiHttpClient, projectKey, categoryDraft);
     }
 
+    public ByProjectKeyCategoriesPostString post(final String categoryDraft) {
+        return new ByProjectKeyCategoriesPostString(apiHttpClient, projectKey, categoryDraft);
+    }
+
     public ByProjectKeyCategoriesPost post(
             UnaryOperator<com.commercetools.api.models.category.CategoryDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.category.CategoryDraftBuilder.of()).build());

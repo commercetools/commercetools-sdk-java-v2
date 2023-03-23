@@ -29,6 +29,10 @@ public class ByProjectKeySubscriptionsKeyByKeyRequestBuilder {
         return new ByProjectKeySubscriptionsKeyByKeyPost(apiHttpClient, projectKey, key, subscriptionUpdate);
     }
 
+    public ByProjectKeySubscriptionsKeyByKeyPostString post(final String subscriptionUpdate) {
+        return new ByProjectKeySubscriptionsKeyByKeyPostString(apiHttpClient, projectKey, key, subscriptionUpdate);
+    }
+
     public ByProjectKeySubscriptionsKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.subscription.SubscriptionUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.subscription.SubscriptionUpdateBuilder.of()).build());

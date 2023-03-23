@@ -1,0 +1,188 @@
+
+package com.commercetools.api.client;
+
+import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+/**
+ *
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.staged_quote.StagedQuote>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .stagedQuotes()
+ *            .post("")
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class ByProjectKeyStagedQuotesPostString extends
+        StringBodyApiMethod<ByProjectKeyStagedQuotesPostString, com.commercetools.api.models.staged_quote.StagedQuote>
+        implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyStagedQuotesPostString>,
+        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyStagedQuotesPostString>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyStagedQuotesPostString> {
+
+    private String projectKey;
+
+    private String stagedQuoteDraft;
+
+    public ByProjectKeyStagedQuotesPostString(final ApiHttpClient apiHttpClient, String projectKey,
+            String stagedQuoteDraft) {
+        super(apiHttpClient);
+        this.projectKey = projectKey;
+        this.stagedQuoteDraft = stagedQuoteDraft;
+    }
+
+    public ByProjectKeyStagedQuotesPostString(ByProjectKeyStagedQuotesPostString t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.stagedQuoteDraft = t.stagedQuoteDraft;
+    }
+
+    @Override
+    protected ApiHttpRequest buildHttpRequest() {
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
+        String httpRequestPath = String.format("%s/staged-quotes", this.projectKey);
+        if (!params.isEmpty()) {
+            httpRequestPath += "?" + String.join("&", params);
+        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            stagedQuoteDraft.getBytes(StandardCharsets.UTF_8));
+
+    }
+
+    @Override
+    public ApiHttpResponse<com.commercetools.api.models.staged_quote.StagedQuote> executeBlocking(
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.api.models.staged_quote.StagedQuote.class);
+    }
+
+    @Override
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.staged_quote.StagedQuote>> execute(
+            final ApiHttpClient client) {
+        return execute(client, com.commercetools.api.models.staged_quote.StagedQuote.class);
+    }
+
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    public List<String> getExpand() {
+        return this.getQueryParam("expand");
+    }
+
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public <TValue> ByProjectKeyStagedQuotesPostString withExpand(final TValue expand) {
+        return copy().withQueryParam("expand", expand);
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public <TValue> ByProjectKeyStagedQuotesPostString addExpand(final TValue expand) {
+        return copy().addQueryParam("expand", expand);
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyStagedQuotesPostString withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyStagedQuotesPostString addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyStagedQuotesPostString withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyStagedQuotesPostString addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
+     */
+    public <TValue> ByProjectKeyStagedQuotesPostString withExpand(final Collection<TValue> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     */
+    public <TValue> ByProjectKeyStagedQuotesPostString addExpand(final Collection<TValue> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public String getBody() {
+        return stagedQuoteDraft;
+    }
+
+    public ByProjectKeyStagedQuotesPostString withBody(String stagedQuoteDraft) {
+        ByProjectKeyStagedQuotesPostString t = copy();
+        t.stagedQuoteDraft = stagedQuoteDraft;
+        return t;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyStagedQuotesPostString that = (ByProjectKeyStagedQuotesPostString) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(stagedQuoteDraft, that.stagedQuoteDraft)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(stagedQuoteDraft).toHashCode();
+    }
+
+    @Override
+    protected ByProjectKeyStagedQuotesPostString copy() {
+        return new ByProjectKeyStagedQuotesPostString(this);
+    }
+}

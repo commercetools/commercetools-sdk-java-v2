@@ -34,6 +34,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberReque
             storeKey, orderNumber, orderUpdate);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString post(final String orderUpdate) {
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString(apiHttpClient, projectKey,
+            storeKey, orderNumber, orderUpdate);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost post(
             UnaryOperator<com.commercetools.api.models.order.OrderUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.order.OrderUpdateBuilder.of()).build());

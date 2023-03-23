@@ -25,6 +25,10 @@ public class ByProjectKeyTypesRequestBuilder implements ByProjectKeyTypesRequest
         return new ByProjectKeyTypesPost(apiHttpClient, projectKey, typeDraft);
     }
 
+    public ByProjectKeyTypesPostString post(final String typeDraft) {
+        return new ByProjectKeyTypesPostString(apiHttpClient, projectKey, typeDraft);
+    }
+
     public ByProjectKeyTypesPost post(UnaryOperator<com.commercetools.api.models.type.TypeDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.type.TypeDraftBuilder.of()).build());
     }

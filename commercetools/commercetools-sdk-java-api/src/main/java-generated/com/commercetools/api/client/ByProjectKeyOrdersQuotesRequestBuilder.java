@@ -22,6 +22,10 @@ public class ByProjectKeyOrdersQuotesRequestBuilder {
         return new ByProjectKeyOrdersQuotesPost(apiHttpClient, projectKey, orderFromQuoteDraft);
     }
 
+    public ByProjectKeyOrdersQuotesPostString post(final String orderFromQuoteDraft) {
+        return new ByProjectKeyOrdersQuotesPostString(apiHttpClient, projectKey, orderFromQuoteDraft);
+    }
+
     public ByProjectKeyOrdersQuotesPost post(
             UnaryOperator<com.commercetools.api.models.order.OrderFromQuoteDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.order.OrderFromQuoteDraftBuilder.of()).build());

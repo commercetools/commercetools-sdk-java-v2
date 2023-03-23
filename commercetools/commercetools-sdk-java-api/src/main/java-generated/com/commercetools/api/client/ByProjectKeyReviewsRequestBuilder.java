@@ -25,6 +25,10 @@ public class ByProjectKeyReviewsRequestBuilder implements ByProjectKeyReviewsReq
         return new ByProjectKeyReviewsPost(apiHttpClient, projectKey, reviewDraft);
     }
 
+    public ByProjectKeyReviewsPostString post(final String reviewDraft) {
+        return new ByProjectKeyReviewsPostString(apiHttpClient, projectKey, reviewDraft);
+    }
+
     public ByProjectKeyReviewsPost post(UnaryOperator<com.commercetools.api.models.review.ReviewDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.review.ReviewDraftBuilder.of()).build());
     }

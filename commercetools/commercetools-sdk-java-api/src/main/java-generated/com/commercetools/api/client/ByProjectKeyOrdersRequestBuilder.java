@@ -25,6 +25,10 @@ public class ByProjectKeyOrdersRequestBuilder implements ByProjectKeyOrdersReque
         return new ByProjectKeyOrdersPost(apiHttpClient, projectKey, orderFromCartDraft);
     }
 
+    public ByProjectKeyOrdersPostString post(final String orderFromCartDraft) {
+        return new ByProjectKeyOrdersPostString(apiHttpClient, projectKey, orderFromCartDraft);
+    }
+
     public ByProjectKeyOrdersPost post(UnaryOperator<com.commercetools.api.models.order.OrderFromCartDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.order.OrderFromCartDraftBuilder.of()).build());
     }

@@ -22,6 +22,10 @@ public class ByProjectKeySimilaritiesProductsRequestBuilder {
         return new ByProjectKeySimilaritiesProductsPost(apiHttpClient, projectKey, similarProductSearchRequest);
     }
 
+    public ByProjectKeySimilaritiesProductsPostString post(final String similarProductSearchRequest) {
+        return new ByProjectKeySimilaritiesProductsPostString(apiHttpClient, projectKey, similarProductSearchRequest);
+    }
+
     public ByProjectKeySimilaritiesProductsPost post(
             UnaryOperator<com.commercetools.ml.models.similar_products.SimilarProductSearchRequestBuilder> op) {
         return post(

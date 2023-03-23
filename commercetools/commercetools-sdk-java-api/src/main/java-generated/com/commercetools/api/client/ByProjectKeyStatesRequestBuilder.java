@@ -25,6 +25,10 @@ public class ByProjectKeyStatesRequestBuilder implements ByProjectKeyStatesReque
         return new ByProjectKeyStatesPost(apiHttpClient, projectKey, stateDraft);
     }
 
+    public ByProjectKeyStatesPostString post(final String stateDraft) {
+        return new ByProjectKeyStatesPostString(apiHttpClient, projectKey, stateDraft);
+    }
+
     public ByProjectKeyStatesPost post(UnaryOperator<com.commercetools.api.models.state.StateDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.state.StateDraftBuilder.of()).build());
     }

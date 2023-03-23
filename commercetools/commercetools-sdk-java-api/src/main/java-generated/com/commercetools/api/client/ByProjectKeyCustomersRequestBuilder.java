@@ -25,6 +25,10 @@ public class ByProjectKeyCustomersRequestBuilder implements ByProjectKeyCustomer
         return new ByProjectKeyCustomersPost(apiHttpClient, projectKey, customerDraft);
     }
 
+    public ByProjectKeyCustomersPostString post(final String customerDraft) {
+        return new ByProjectKeyCustomersPostString(apiHttpClient, projectKey, customerDraft);
+    }
+
     public ByProjectKeyCustomersPost post(
             UnaryOperator<com.commercetools.api.models.customer.CustomerDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.customer.CustomerDraftBuilder.of()).build());

@@ -21,6 +21,10 @@ public class ByProjectKeyGraphqlRequestBuilder {
         return new ByProjectKeyGraphqlPost(apiHttpClient, projectKey, graphQLRequest);
     }
 
+    public ByProjectKeyGraphqlPostString post(final String graphQLRequest) {
+        return new ByProjectKeyGraphqlPostString(apiHttpClient, projectKey, graphQLRequest);
+    }
+
     public ByProjectKeyGraphqlPost post(UnaryOperator<com.commercetools.api.models.graph_ql.GraphQLRequestBuilder> op) {
         return post(op.apply(com.commercetools.api.models.graph_ql.GraphQLRequestBuilder.of()).build());
     }

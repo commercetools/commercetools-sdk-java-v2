@@ -43,7 +43,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
-     * @param addedAt
+     * @param addedAt value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Custom Fields of the TextLineItem.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Custom Fields of the TextLineItem.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -76,6 +77,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -87,7 +89,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Description of the TextLineItem.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -99,7 +101,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Unique identifier of the TextLineItem.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -110,6 +112,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -121,7 +124,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Name of the TextLineItem.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -132,7 +135,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Number of entries in the TextLineItem.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -167,6 +170,10 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this.quantity;
     }
 
+    /**
+     * builds TextLineItem with checking for non-null required values
+     * @return TextLineItem
+     */
     public TextLineItem build() {
         Objects.requireNonNull(addedAt, TextLineItem.class + ": addedAt is missing");
         Objects.requireNonNull(id, TextLineItem.class + ": id is missing");
@@ -176,7 +183,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * builds TextLineItem without checking for non null required values
+     * builds TextLineItem without checking for non-null required values
+     * @return TextLineItem
      */
     public TextLineItem buildUnchecked() {
         return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);

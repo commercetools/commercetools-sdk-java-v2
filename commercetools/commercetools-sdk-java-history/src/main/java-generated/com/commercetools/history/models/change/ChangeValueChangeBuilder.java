@@ -32,7 +32,7 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -55,6 +55,7 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -102,6 +104,10 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeValueChange with checking for non-null required values
+     * @return ChangeValueChange
+     */
     public ChangeValueChange build() {
         Objects.requireNonNull(change, ChangeValueChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangeValueChange.class + ": nextValue is missing");
@@ -110,7 +116,8 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
     }
 
     /**
-     * builds ChangeValueChange without checking for non null required values
+     * builds ChangeValueChange without checking for non-null required values
+     * @return ChangeValueChange
      */
     public ChangeValueChange buildUnchecked() {
         return new ChangeValueChangeImpl(change, nextValue, previousValue);

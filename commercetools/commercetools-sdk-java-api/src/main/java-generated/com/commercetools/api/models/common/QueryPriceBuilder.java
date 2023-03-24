@@ -55,7 +55,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Unique identifier of the given Price.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -66,6 +66,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Money value of the given Price.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -77,7 +78,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Money value of the given Price.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -88,7 +89,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Country for which the given Price is valid.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -99,6 +100,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>CustomerGroup for which the given Price is valid.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -112,7 +114,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>CustomerGroup for which the given Price is valid.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -124,6 +126,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -135,7 +138,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -146,7 +149,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Date from which the given Price is valid.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -157,7 +160,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Date until which the given Price is valid.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -168,6 +171,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>DiscountedPrice you specify for the given Price.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -179,7 +183,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>DiscountedPrice you specify for the given Price.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -191,6 +195,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Custom Fields for the Price.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -202,7 +207,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Custom Fields for the Price.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -213,7 +218,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -224,7 +229,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -236,7 +241,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -250,6 +255,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -264,6 +270,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -323,6 +330,10 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
         return this.tiers;
     }
 
+    /**
+     * builds QueryPrice with checking for non-null required values
+     * @return QueryPrice
+     */
     public QueryPrice build() {
         Objects.requireNonNull(value, QueryPrice.class + ": value is missing");
         return new QueryPriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,
@@ -330,7 +341,8 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     * builds QueryPrice without checking for non null required values
+     * builds QueryPrice without checking for non-null required values
+     * @return QueryPrice
      */
     public QueryPrice buildUnchecked() {
         return new QueryPriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,

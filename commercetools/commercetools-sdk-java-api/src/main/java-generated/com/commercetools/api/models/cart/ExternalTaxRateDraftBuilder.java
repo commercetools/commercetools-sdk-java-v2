@@ -43,7 +43,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *  <p>Name of the Tax Rate.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
      *   <li>If no <code>subRates</code> are specified, a value must be defined.</li>
      *   <li>If <code>subRates</code> are specified, this can be omitted or its value must be the sum of all <code>subRates</code> amounts.</li>
      *  </ul>
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
      *   <li>If set to <code>false</code>, the related price is considered the net price and the provided <code>amount</code> is applied to calculate the gross price.</li>
      *   <li>If set to <code>true</code>, the related price is considered the gross price, and the provided <code>amount</code> is applied to calculate the net price.</li>
      *  </ul>
-     * @param includedInPrice
+     * @param includedInPrice value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *  <p>Country for which the tax applies.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *  <p>State within the specified country.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -105,7 +105,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
-     * @param subRates
+     * @param subRates value to be set
      * @return Builder
      */
 
@@ -117,7 +117,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
-     * @param subRates
+     * @param subRates value to be set
      * @return Builder
      */
 
@@ -129,7 +129,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
-     * @param subRates
+     * @param subRates value to be set
      * @return Builder
      */
 
@@ -144,6 +144,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param builder function to build the subRates value
      * @return Builder
      */
 
@@ -158,6 +159,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param builder function to build the subRates value
      * @return Builder
      */
 
@@ -196,6 +198,10 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return this.subRates;
     }
 
+    /**
+     * builds ExternalTaxRateDraft with checking for non-null required values
+     * @return ExternalTaxRateDraft
+     */
     public ExternalTaxRateDraft build() {
         Objects.requireNonNull(name, ExternalTaxRateDraft.class + ": name is missing");
         Objects.requireNonNull(country, ExternalTaxRateDraft.class + ": country is missing");
@@ -203,7 +209,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     * builds ExternalTaxRateDraft without checking for non null required values
+     * builds ExternalTaxRateDraft without checking for non-null required values
+     * @return ExternalTaxRateDraft
      */
     public ExternalTaxRateDraft buildUnchecked() {
         return new ExternalTaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);

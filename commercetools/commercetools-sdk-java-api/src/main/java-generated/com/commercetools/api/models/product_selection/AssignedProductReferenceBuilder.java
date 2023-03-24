@@ -34,6 +34,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
      *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
-     * @param variantSelection
+     * @param variantSelection value to be set
      * @return Builder
      */
 
@@ -71,6 +72,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
      *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
+     * @param builder function to build the variantSelection value
      * @return Builder
      */
 
@@ -85,6 +87,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     * @param builder function to build the variantExclusion value
      * @return Builder
      */
 
@@ -99,7 +102,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
-     * @param variantExclusion
+     * @param variantExclusion value to be set
      * @return Builder
      */
 
@@ -123,13 +126,18 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
         return this.variantExclusion;
     }
 
+    /**
+     * builds AssignedProductReference with checking for non-null required values
+     * @return AssignedProductReference
+     */
     public AssignedProductReference build() {
         Objects.requireNonNull(product, AssignedProductReference.class + ": product is missing");
         return new AssignedProductReferenceImpl(product, variantSelection, variantExclusion);
     }
 
     /**
-     * builds AssignedProductReference without checking for non null required values
+     * builds AssignedProductReference without checking for non-null required values
+     * @return AssignedProductReference
      */
     public AssignedProductReference buildUnchecked() {
         return new AssignedProductReferenceImpl(product, variantSelection, variantExclusion);

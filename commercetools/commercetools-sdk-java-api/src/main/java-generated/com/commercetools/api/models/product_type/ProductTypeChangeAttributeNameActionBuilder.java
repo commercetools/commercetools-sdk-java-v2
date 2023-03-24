@@ -28,7 +28,7 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
     /**
      *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
-     * @param newAttributeName
+     * @param newAttributeName value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
         return this.newAttributeName;
     }
 
+    /**
+     * builds ProductTypeChangeAttributeNameAction with checking for non-null required values
+     * @return ProductTypeChangeAttributeNameAction
+     */
     public ProductTypeChangeAttributeNameAction build() {
         Objects.requireNonNull(attributeName,
             ProductTypeChangeAttributeNameAction.class + ": attributeName is missing");
@@ -66,7 +70,8 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
     }
 
     /**
-     * builds ProductTypeChangeAttributeNameAction without checking for non null required values
+     * builds ProductTypeChangeAttributeNameAction without checking for non-null required values
+     * @return ProductTypeChangeAttributeNameAction
      */
     public ProductTypeChangeAttributeNameAction buildUnchecked() {
         return new ProductTypeChangeAttributeNameActionImpl(attributeName, newAttributeName);

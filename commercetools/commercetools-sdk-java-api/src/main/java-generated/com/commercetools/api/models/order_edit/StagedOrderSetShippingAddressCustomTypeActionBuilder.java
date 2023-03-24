@@ -32,6 +32,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -43,7 +44,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -55,6 +56,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -66,7 +68,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -86,12 +88,17 @@ public class StagedOrderSetShippingAddressCustomTypeActionBuilder
         return this.fields;
     }
 
+    /**
+     * builds StagedOrderSetShippingAddressCustomTypeAction with checking for non-null required values
+     * @return StagedOrderSetShippingAddressCustomTypeAction
+     */
     public StagedOrderSetShippingAddressCustomTypeAction build() {
         return new StagedOrderSetShippingAddressCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds StagedOrderSetShippingAddressCustomTypeAction without checking for non null required values
+     * builds StagedOrderSetShippingAddressCustomTypeAction without checking for non-null required values
+     * @return StagedOrderSetShippingAddressCustomTypeAction
      */
     public StagedOrderSetShippingAddressCustomTypeAction buildUnchecked() {
         return new StagedOrderSetShippingAddressCustomTypeActionImpl(type, fields);

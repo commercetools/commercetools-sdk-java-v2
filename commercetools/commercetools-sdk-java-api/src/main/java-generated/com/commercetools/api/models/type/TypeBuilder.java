@@ -58,7 +58,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Unique identifier of the Type.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Current version of the Type.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -80,7 +80,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Date and time (UTC) the Type was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -91,7 +91,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Date and time (UTC) the Type was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -102,6 +102,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -113,7 +114,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -125,6 +126,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -136,7 +138,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -147,7 +149,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>User-defined unique identifier of the Type.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -158,6 +160,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Name of the Type.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -169,7 +172,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Name of the Type.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -180,6 +183,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Description of the Type.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -191,7 +195,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Description of the Type.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -202,7 +206,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
-     * @param resourceTypeIds
+     * @param resourceTypeIds value to be set
      * @return Builder
      */
 
@@ -213,7 +217,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
-     * @param resourceTypeIds
+     * @param resourceTypeIds value to be set
      * @return Builder
      */
 
@@ -225,7 +229,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
-     * @param resourceTypeIds
+     * @param resourceTypeIds value to be set
      * @return Builder
      */
 
@@ -239,7 +243,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
-     * @param fieldDefinitions
+     * @param fieldDefinitions value to be set
      * @return Builder
      */
 
@@ -250,7 +254,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
-     * @param fieldDefinitions
+     * @param fieldDefinitions value to be set
      * @return Builder
      */
 
@@ -262,7 +266,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
-     * @param fieldDefinitions
+     * @param fieldDefinitions value to be set
      * @return Builder
      */
 
@@ -277,6 +281,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param builder function to build the fieldDefinitions value
      * @return Builder
      */
 
@@ -291,6 +296,7 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param builder function to build the fieldDefinitions value
      * @return Builder
      */
 
@@ -348,6 +354,10 @@ public class TypeBuilder implements Builder<Type> {
         return this.fieldDefinitions;
     }
 
+    /**
+     * builds Type with checking for non-null required values
+     * @return Type
+     */
     public Type build() {
         Objects.requireNonNull(id, Type.class + ": id is missing");
         Objects.requireNonNull(version, Type.class + ": version is missing");
@@ -362,7 +372,8 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     * builds Type without checking for non null required values
+     * builds Type without checking for non-null required values
+     * @return Type
      */
     public Type buildUnchecked() {
         return new TypeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description,

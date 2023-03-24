@@ -28,6 +28,7 @@ public class MyCartSetBillingAddressActionBuilder implements Builder<MyCartSetBi
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class MyCartSetBillingAddressActionBuilder implements Builder<MyCartSetBi
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class MyCartSetBillingAddressActionBuilder implements Builder<MyCartSetBi
         return this.address;
     }
 
+    /**
+     * builds MyCartSetBillingAddressAction with checking for non-null required values
+     * @return MyCartSetBillingAddressAction
+     */
     public MyCartSetBillingAddressAction build() {
         return new MyCartSetBillingAddressActionImpl(address);
     }
 
     /**
-     * builds MyCartSetBillingAddressAction without checking for non null required values
+     * builds MyCartSetBillingAddressAction without checking for non-null required values
+     * @return MyCartSetBillingAddressAction
      */
     public MyCartSetBillingAddressAction buildUnchecked() {
         return new MyCartSetBillingAddressActionImpl(address);

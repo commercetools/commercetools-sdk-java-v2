@@ -28,7 +28,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
 
     /**
      *
-     * @param container
+     * @param container value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
         return this.container;
     }
 
+    /**
+     * builds CustomObjectLabel with checking for non-null required values
+     * @return CustomObjectLabel
+     */
     public CustomObjectLabel build() {
         Objects.requireNonNull(key, CustomObjectLabel.class + ": key is missing");
         Objects.requireNonNull(container, CustomObjectLabel.class + ": container is missing");
@@ -63,7 +67,8 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
     }
 
     /**
-     * builds CustomObjectLabel without checking for non null required values
+     * builds CustomObjectLabel without checking for non-null required values
+     * @return CustomObjectLabel
      */
     public CustomObjectLabel buildUnchecked() {
         return new CustomObjectLabelImpl(key, container);

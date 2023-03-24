@@ -31,7 +31,7 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     /**
      *  <p>References a resource by key.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -53,6 +53,7 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     /**
      *  <p>References a resource by key.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
         return this.value;
     }
 
+    /**
+     * builds ReferenceAttribute with checking for non-null required values
+     * @return ReferenceAttribute
+     */
     public ReferenceAttribute build() {
         Objects.requireNonNull(value, ReferenceAttribute.class + ": value is missing");
         return new ReferenceAttributeImpl(name, value);
     }
 
     /**
-     * builds ReferenceAttribute without checking for non null required values
+     * builds ReferenceAttribute without checking for non-null required values
+     * @return ReferenceAttribute
      */
     public ReferenceAttribute buildUnchecked() {
         return new ReferenceAttributeImpl(name, value);

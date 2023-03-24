@@ -37,7 +37,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *  <p>The name of the field definition updated.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *  <p>Key of the values that was updated</p>
-     * @param valueKey
+     * @param valueKey value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -110,6 +110,10 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeEnumValueLabelChange with checking for non-null required values
+     * @return ChangeEnumValueLabelChange
+     */
     public ChangeEnumValueLabelChange build() {
         Objects.requireNonNull(change, ChangeEnumValueLabelChange.class + ": change is missing");
         Objects.requireNonNull(fieldName, ChangeEnumValueLabelChange.class + ": fieldName is missing");
@@ -120,7 +124,8 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * builds ChangeEnumValueLabelChange without checking for non null required values
+     * builds ChangeEnumValueLabelChange without checking for non-null required values
+     * @return ChangeEnumValueLabelChange
      */
     public ChangeEnumValueLabelChange buildUnchecked() {
         return new ChangeEnumValueLabelChangeImpl(change, fieldName, valueKey, previousValue, nextValue);

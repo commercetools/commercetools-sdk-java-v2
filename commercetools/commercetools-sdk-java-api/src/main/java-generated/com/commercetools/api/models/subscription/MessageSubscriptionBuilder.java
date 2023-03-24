@@ -30,7 +30,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
 
     /**
      *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
-     * @param resourceTypeId
+     * @param resourceTypeId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
 
     /**
      *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
-     * @param types
+     * @param types value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
 
     /**
      *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
-     * @param types
+     * @param types value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
 
     /**
      *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
-     * @param types
+     * @param types value to be set
      * @return Builder
      */
 
@@ -85,13 +85,18 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
         return this.types;
     }
 
+    /**
+     * builds MessageSubscription with checking for non-null required values
+     * @return MessageSubscription
+     */
     public MessageSubscription build() {
         Objects.requireNonNull(resourceTypeId, MessageSubscription.class + ": resourceTypeId is missing");
         return new MessageSubscriptionImpl(resourceTypeId, types);
     }
 
     /**
-     * builds MessageSubscription without checking for non null required values
+     * builds MessageSubscription without checking for non-null required values
+     * @return MessageSubscription
      */
     public MessageSubscription buildUnchecked() {
         return new MessageSubscriptionImpl(resourceTypeId, types);

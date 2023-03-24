@@ -31,7 +31,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *  <p>Update action for <code>changeGroups</code> on stores</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -100,7 +100,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -124,6 +124,10 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeGroupsChange with checking for non-null required values
+     * @return ChangeGroupsChange
+     */
     public ChangeGroupsChange build() {
         Objects.requireNonNull(change, ChangeGroupsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeGroupsChange.class + ": previousValue is missing");
@@ -132,7 +136,8 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     }
 
     /**
-     * builds ChangeGroupsChange without checking for non null required values
+     * builds ChangeGroupsChange without checking for non-null required values
+     * @return ChangeGroupsChange
      */
     public ChangeGroupsChange buildUnchecked() {
         return new ChangeGroupsChangeImpl(change, previousValue, nextValue);

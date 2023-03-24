@@ -25,7 +25,7 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
 
     /**
      *  <p>Updated name of the Business Unit.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
         return this.name;
     }
 
+    /**
+     * builds BusinessUnitNameChangedMessagePayload with checking for non-null required values
+     * @return BusinessUnitNameChangedMessagePayload
+     */
     public BusinessUnitNameChangedMessagePayload build() {
         Objects.requireNonNull(name, BusinessUnitNameChangedMessagePayload.class + ": name is missing");
         return new BusinessUnitNameChangedMessagePayloadImpl(name);
     }
 
     /**
-     * builds BusinessUnitNameChangedMessagePayload without checking for non null required values
+     * builds BusinessUnitNameChangedMessagePayload without checking for non-null required values
+     * @return BusinessUnitNameChangedMessagePayload
      */
     public BusinessUnitNameChangedMessagePayload buildUnchecked() {
         return new BusinessUnitNameChangedMessagePayloadImpl(name);

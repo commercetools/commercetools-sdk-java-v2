@@ -26,7 +26,7 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
 
     /**
      *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
-     * @param textLineItemOrder
+     * @param textLineItemOrder value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
 
     /**
      *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
-     * @param textLineItemOrder
+     * @param textLineItemOrder value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
 
     /**
      *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
-     * @param textLineItemOrder
+     * @param textLineItemOrder value to be set
      * @return Builder
      */
 
@@ -65,6 +65,10 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
         return this.textLineItemOrder;
     }
 
+    /**
+     * builds ShoppingListChangeTextLineItemsOrderAction with checking for non-null required values
+     * @return ShoppingListChangeTextLineItemsOrderAction
+     */
     public ShoppingListChangeTextLineItemsOrderAction build() {
         Objects.requireNonNull(textLineItemOrder,
             ShoppingListChangeTextLineItemsOrderAction.class + ": textLineItemOrder is missing");
@@ -72,7 +76,8 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
     }
 
     /**
-     * builds ShoppingListChangeTextLineItemsOrderAction without checking for non null required values
+     * builds ShoppingListChangeTextLineItemsOrderAction without checking for non-null required values
+     * @return ShoppingListChangeTextLineItemsOrderAction
      */
     public ShoppingListChangeTextLineItemsOrderAction buildUnchecked() {
         return new ShoppingListChangeTextLineItemsOrderActionImpl(textLineItemOrder);

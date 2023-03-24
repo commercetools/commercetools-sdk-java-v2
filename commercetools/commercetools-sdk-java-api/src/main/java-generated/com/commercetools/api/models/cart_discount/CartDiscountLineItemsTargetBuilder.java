@@ -25,7 +25,7 @@ public class CartDiscountLineItemsTargetBuilder implements Builder<CartDiscountL
 
     /**
      *  <p>Valid LineItem target predicate.</p>
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CartDiscountLineItemsTargetBuilder implements Builder<CartDiscountL
         return this.predicate;
     }
 
+    /**
+     * builds CartDiscountLineItemsTarget with checking for non-null required values
+     * @return CartDiscountLineItemsTarget
+     */
     public CartDiscountLineItemsTarget build() {
         Objects.requireNonNull(predicate, CartDiscountLineItemsTarget.class + ": predicate is missing");
         return new CartDiscountLineItemsTargetImpl(predicate);
     }
 
     /**
-     * builds CartDiscountLineItemsTarget without checking for non null required values
+     * builds CartDiscountLineItemsTarget without checking for non-null required values
+     * @return CartDiscountLineItemsTarget
      */
     public CartDiscountLineItemsTarget buildUnchecked() {
         return new CartDiscountLineItemsTargetImpl(predicate);

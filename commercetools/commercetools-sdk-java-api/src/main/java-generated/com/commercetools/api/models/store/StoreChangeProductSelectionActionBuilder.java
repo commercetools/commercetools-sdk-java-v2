@@ -31,6 +31,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
 
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
+     * @param builder function to build the productSelection value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
 
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
-     * @param productSelection
+     * @param productSelection value to be set
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
 
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
-     * @param active
+     * @param active value to be set
      * @return Builder
      */
 
@@ -74,6 +75,10 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
         return this.active;
     }
 
+    /**
+     * builds StoreChangeProductSelectionAction with checking for non-null required values
+     * @return StoreChangeProductSelectionAction
+     */
     public StoreChangeProductSelectionAction build() {
         Objects.requireNonNull(productSelection,
             StoreChangeProductSelectionAction.class + ": productSelection is missing");
@@ -81,7 +86,8 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     }
 
     /**
-     * builds StoreChangeProductSelectionAction without checking for non null required values
+     * builds StoreChangeProductSelectionAction without checking for non-null required values
+     * @return StoreChangeProductSelectionAction
      */
     public StoreChangeProductSelectionAction buildUnchecked() {
         return new StoreChangeProductSelectionActionImpl(productSelection, active);

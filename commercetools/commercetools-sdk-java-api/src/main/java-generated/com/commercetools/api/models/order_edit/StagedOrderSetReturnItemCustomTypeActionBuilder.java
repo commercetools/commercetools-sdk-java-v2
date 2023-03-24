@@ -35,7 +35,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *
-     * @param returnItemId
+     * @param returnItemId value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -104,6 +106,10 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
         return this.fields;
     }
 
+    /**
+     * builds StagedOrderSetReturnItemCustomTypeAction with checking for non-null required values
+     * @return StagedOrderSetReturnItemCustomTypeAction
+     */
     public StagedOrderSetReturnItemCustomTypeAction build() {
         Objects.requireNonNull(returnItemId,
             StagedOrderSetReturnItemCustomTypeAction.class + ": returnItemId is missing");
@@ -111,7 +117,8 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
     }
 
     /**
-     * builds StagedOrderSetReturnItemCustomTypeAction without checking for non null required values
+     * builds StagedOrderSetReturnItemCustomTypeAction without checking for non-null required values
+     * @return StagedOrderSetReturnItemCustomTypeAction
      */
     public StagedOrderSetReturnItemCustomTypeAction buildUnchecked() {
         return new StagedOrderSetReturnItemCustomTypeActionImpl(returnItemId, type, fields);

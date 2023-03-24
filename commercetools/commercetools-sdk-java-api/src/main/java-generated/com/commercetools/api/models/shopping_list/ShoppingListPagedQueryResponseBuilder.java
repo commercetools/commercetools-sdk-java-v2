@@ -40,7 +40,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>Actual number of results returned.</p>
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>ShoppingLists matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -96,7 +96,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>ShoppingLists matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -108,7 +108,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>ShoppingLists matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -123,6 +123,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>ShoppingLists matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -137,6 +138,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>ShoppingLists matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -168,6 +170,10 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
         return this.results;
     }
 
+    /**
+     * builds ShoppingListPagedQueryResponse with checking for non-null required values
+     * @return ShoppingListPagedQueryResponse
+     */
     public ShoppingListPagedQueryResponse build() {
         Objects.requireNonNull(limit, ShoppingListPagedQueryResponse.class + ": limit is missing");
         Objects.requireNonNull(count, ShoppingListPagedQueryResponse.class + ": count is missing");
@@ -177,7 +183,8 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     * builds ShoppingListPagedQueryResponse without checking for non null required values
+     * builds ShoppingListPagedQueryResponse without checking for non-null required values
+     * @return ShoppingListPagedQueryResponse
      */
     public ShoppingListPagedQueryResponse buildUnchecked() {
         return new ShoppingListPagedQueryResponseImpl(limit, count, total, offset, results);

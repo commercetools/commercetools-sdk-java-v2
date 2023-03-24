@@ -32,6 +32,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the externalTotalGross value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     * @param externalTotalGross
+     * @param externalTotalGross value to be set
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param externalTaxPortions
+     * @param externalTaxPortions value to be set
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param externalTaxPortions
+     * @param externalTaxPortions value to be set
      * @return Builder
      */
 
@@ -80,7 +81,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param externalTaxPortions
+     * @param externalTaxPortions value to be set
      * @return Builder
      */
 
@@ -95,6 +96,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
 
@@ -110,6 +112,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
 
@@ -130,6 +133,10 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
         return this.externalTaxPortions;
     }
 
+    /**
+     * builds StagedOrderSetOrderTotalTaxAction with checking for non-null required values
+     * @return StagedOrderSetOrderTotalTaxAction
+     */
     public StagedOrderSetOrderTotalTaxAction build() {
         Objects.requireNonNull(externalTotalGross,
             StagedOrderSetOrderTotalTaxAction.class + ": externalTotalGross is missing");
@@ -137,7 +144,8 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     * builds StagedOrderSetOrderTotalTaxAction without checking for non null required values
+     * builds StagedOrderSetOrderTotalTaxAction without checking for non-null required values
+     * @return StagedOrderSetOrderTotalTaxAction
      */
     public StagedOrderSetOrderTotalTaxAction buildUnchecked() {
         return new StagedOrderSetOrderTotalTaxActionImpl(externalTotalGross, externalTaxPortions);

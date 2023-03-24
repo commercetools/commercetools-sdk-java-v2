@@ -30,7 +30,7 @@ public class MyCartRecalculateActionBuilder implements Builder<MyCartRecalculate
      *   <li>Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.</li>
      *   <li>Set to <code>true</code> to update the Line Items' product data (like <code>name</code>, <code>variant</code> and <code>productType</code>) also.</li>
      *  </ul>
-     * @param updateProductData
+     * @param updateProductData value to be set
      * @return Builder
      */
 
@@ -44,12 +44,17 @@ public class MyCartRecalculateActionBuilder implements Builder<MyCartRecalculate
         return this.updateProductData;
     }
 
+    /**
+     * builds MyCartRecalculateAction with checking for non-null required values
+     * @return MyCartRecalculateAction
+     */
     public MyCartRecalculateAction build() {
         return new MyCartRecalculateActionImpl(updateProductData);
     }
 
     /**
-     * builds MyCartRecalculateAction without checking for non null required values
+     * builds MyCartRecalculateAction without checking for non-null required values
+     * @return MyCartRecalculateAction
      */
     public MyCartRecalculateAction buildUnchecked() {
         return new MyCartRecalculateActionImpl(updateProductData);

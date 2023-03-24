@@ -25,6 +25,8 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
 
     /**
      *
+     * @param values properties to be set
+     * @return Builder
      */
 
     public SearchKeywordsBuilder values(
@@ -35,6 +37,9 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
 
     /**
      *
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public SearchKeywordsBuilder addValue(final String key,
@@ -50,12 +55,17 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
         return this.values;
     }
 
+    /**
+     * builds SearchKeywords with checking for non-null required values
+     * @return SearchKeywords
+     */
     public SearchKeywords build() {
         return new SearchKeywordsImpl(values);
     }
 
     /**
-     * builds SearchKeywords without checking for non null required values
+     * builds SearchKeywords without checking for non-null required values
+     * @return SearchKeywords
      */
     public SearchKeywords buildUnchecked() {
         return new SearchKeywordsImpl(values);

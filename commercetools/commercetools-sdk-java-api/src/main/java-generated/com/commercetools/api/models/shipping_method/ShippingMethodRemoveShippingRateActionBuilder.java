@@ -29,6 +29,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     /**
      *  <p>Zone from which the ShippingRate should be removed.</p>
+     * @param builder function to build the zone value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     /**
      *  <p>Zone from which the ShippingRate should be removed.</p>
-     * @param zone
+     * @param zone value to be set
      * @return Builder
      */
 
@@ -52,6 +53,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     /**
      *  <p>Value to remove from <code>shippingRates</code>.</p>
+     * @param builder function to build the shippingRate value
      * @return Builder
      */
 
@@ -64,7 +66,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     /**
      *  <p>Value to remove from <code>shippingRates</code>.</p>
-     * @param shippingRate
+     * @param shippingRate value to be set
      * @return Builder
      */
 
@@ -82,6 +84,10 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
         return this.shippingRate;
     }
 
+    /**
+     * builds ShippingMethodRemoveShippingRateAction with checking for non-null required values
+     * @return ShippingMethodRemoveShippingRateAction
+     */
     public ShippingMethodRemoveShippingRateAction build() {
         Objects.requireNonNull(zone, ShippingMethodRemoveShippingRateAction.class + ": zone is missing");
         Objects.requireNonNull(shippingRate,
@@ -90,7 +96,8 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
     }
 
     /**
-     * builds ShippingMethodRemoveShippingRateAction without checking for non null required values
+     * builds ShippingMethodRemoveShippingRateAction without checking for non-null required values
+     * @return ShippingMethodRemoveShippingRateAction
      */
     public ShippingMethodRemoveShippingRateAction buildUnchecked() {
         return new ShippingMethodRemoveShippingRateActionImpl(zone, shippingRate);

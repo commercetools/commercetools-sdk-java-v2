@@ -32,7 +32,7 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
         return this.previousValue;
     }
 
+    /**
+     * builds SetDefaultBillingAddressChange with checking for non-null required values
+     * @return SetDefaultBillingAddressChange
+     */
     public SetDefaultBillingAddressChange build() {
         Objects.requireNonNull(change, SetDefaultBillingAddressChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetDefaultBillingAddressChange.class + ": nextValue is missing");
@@ -107,7 +113,8 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
     }
 
     /**
-     * builds SetDefaultBillingAddressChange without checking for non null required values
+     * builds SetDefaultBillingAddressChange without checking for non-null required values
+     * @return SetDefaultBillingAddressChange
      */
     public SetDefaultBillingAddressChange buildUnchecked() {
         return new SetDefaultBillingAddressChangeImpl(change, nextValue, previousValue);

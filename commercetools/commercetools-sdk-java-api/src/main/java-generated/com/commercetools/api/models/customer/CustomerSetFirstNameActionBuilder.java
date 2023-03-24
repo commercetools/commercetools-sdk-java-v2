@@ -27,7 +27,7 @@ public class CustomerSetFirstNameActionBuilder implements Builder<CustomerSetFir
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param firstName
+     * @param firstName value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerSetFirstNameActionBuilder implements Builder<CustomerSetFir
         return this.firstName;
     }
 
+    /**
+     * builds CustomerSetFirstNameAction with checking for non-null required values
+     * @return CustomerSetFirstNameAction
+     */
     public CustomerSetFirstNameAction build() {
         return new CustomerSetFirstNameActionImpl(firstName);
     }
 
     /**
-     * builds CustomerSetFirstNameAction without checking for non null required values
+     * builds CustomerSetFirstNameAction without checking for non-null required values
+     * @return CustomerSetFirstNameAction
      */
     public CustomerSetFirstNameAction buildUnchecked() {
         return new CustomerSetFirstNameActionImpl(firstName);

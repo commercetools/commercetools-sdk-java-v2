@@ -38,7 +38,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
-     * @param centAmount
+     * @param centAmount value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
-     * @param currencyCode
+     * @param currencyCode value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
-     * @param fractionDigits
+     * @param fractionDigits value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
-     * @param preciseAmount
+     * @param preciseAmount value to be set
      * @return Builder
      */
 
@@ -96,6 +96,10 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
         return this.preciseAmount;
     }
 
+    /**
+     * builds HighPrecisionMoney with checking for non-null required values
+     * @return HighPrecisionMoney
+     */
     public HighPrecisionMoney build() {
         Objects.requireNonNull(centAmount, HighPrecisionMoney.class + ": centAmount is missing");
         Objects.requireNonNull(currencyCode, HighPrecisionMoney.class + ": currencyCode is missing");
@@ -105,7 +109,8 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     }
 
     /**
-     * builds HighPrecisionMoney without checking for non null required values
+     * builds HighPrecisionMoney without checking for non-null required values
+     * @return HighPrecisionMoney
      */
     public HighPrecisionMoney buildUnchecked() {
         return new HighPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits, preciseAmount);

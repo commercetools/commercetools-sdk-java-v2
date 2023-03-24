@@ -35,7 +35,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     /**
      *  <p><code>true</code> if the Product is published.</p>
-     * @param published
+     * @param published value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     /**
      *  <p>Current (published) data of the Product.</p>
+     * @param builder function to build the current value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     /**
      *  <p>Current (published) data of the Product.</p>
-     * @param current
+     * @param current value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     /**
      *  <p>Staged (unpublished) data of the Product.</p>
+     * @param builder function to build the staged value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     /**
      *  <p>Staged (unpublished) data of the Product.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     /**
      *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
-     * @param hasStagedChanges
+     * @param hasStagedChanges value to be set
      * @return Builder
      */
 
@@ -115,6 +117,10 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
         return this.hasStagedChanges;
     }
 
+    /**
+     * builds ProductCatalogData with checking for non-null required values
+     * @return ProductCatalogData
+     */
     public ProductCatalogData build() {
         Objects.requireNonNull(published, ProductCatalogData.class + ": published is missing");
         Objects.requireNonNull(current, ProductCatalogData.class + ": current is missing");
@@ -124,7 +130,8 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     * builds ProductCatalogData without checking for non null required values
+     * builds ProductCatalogData without checking for non-null required values
+     * @return ProductCatalogData
      */
     public ProductCatalogData buildUnchecked() {
         return new ProductCatalogDataImpl(published, current, staged, hasStagedChanges);

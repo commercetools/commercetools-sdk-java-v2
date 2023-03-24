@@ -27,7 +27,7 @@ public class ProductDiscountSetValidUntilActionBuilder implements Builder<Produc
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ProductDiscountSetValidUntilActionBuilder implements Builder<Produc
         return this.validUntil;
     }
 
+    /**
+     * builds ProductDiscountSetValidUntilAction with checking for non-null required values
+     * @return ProductDiscountSetValidUntilAction
+     */
     public ProductDiscountSetValidUntilAction build() {
         return new ProductDiscountSetValidUntilActionImpl(validUntil);
     }
 
     /**
-     * builds ProductDiscountSetValidUntilAction without checking for non null required values
+     * builds ProductDiscountSetValidUntilAction without checking for non-null required values
+     * @return ProductDiscountSetValidUntilAction
      */
     public ProductDiscountSetValidUntilAction buildUnchecked() {
         return new ProductDiscountSetValidUntilActionImpl(validUntil);

@@ -32,7 +32,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
 
     /**
      *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -44,6 +44,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
 
     /**
      *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
 
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
-     * @param oldShippingRateInput
+     * @param oldShippingRateInput value to be set
      * @return Builder
      */
 
@@ -67,6 +68,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
 
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     * @param builder function to build the oldShippingRateInput value
      * @return Builder
      */
 
@@ -87,12 +89,17 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
         return this.oldShippingRateInput;
     }
 
+    /**
+     * builds OrderShippingRateInputSetMessagePayload with checking for non-null required values
+     * @return OrderShippingRateInputSetMessagePayload
+     */
     public OrderShippingRateInputSetMessagePayload build() {
         return new OrderShippingRateInputSetMessagePayloadImpl(shippingRateInput, oldShippingRateInput);
     }
 
     /**
-     * builds OrderShippingRateInputSetMessagePayload without checking for non null required values
+     * builds OrderShippingRateInputSetMessagePayload without checking for non-null required values
+     * @return OrderShippingRateInputSetMessagePayload
      */
     public OrderShippingRateInputSetMessagePayload buildUnchecked() {
         return new OrderShippingRateInputSetMessagePayloadImpl(shippingRateInput, oldShippingRateInput);

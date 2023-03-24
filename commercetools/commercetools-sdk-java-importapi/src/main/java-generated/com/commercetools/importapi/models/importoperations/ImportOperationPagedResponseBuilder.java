@@ -38,7 +38,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The actual number of results returned.</p>
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The total number of import operations matching the query.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -106,7 +106,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -121,6 +121,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -136,6 +137,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -167,6 +169,10 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
         return this.results;
     }
 
+    /**
+     * builds ImportOperationPagedResponse with checking for non-null required values
+     * @return ImportOperationPagedResponse
+     */
     public ImportOperationPagedResponse build() {
         Objects.requireNonNull(limit, ImportOperationPagedResponse.class + ": limit is missing");
         Objects.requireNonNull(offset, ImportOperationPagedResponse.class + ": offset is missing");
@@ -177,7 +183,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     * builds ImportOperationPagedResponse without checking for non null required values
+     * builds ImportOperationPagedResponse without checking for non-null required values
+     * @return ImportOperationPagedResponse
      */
     public ImportOperationPagedResponse buildUnchecked() {
         return new ImportOperationPagedResponseImpl(limit, offset, count, total, results);

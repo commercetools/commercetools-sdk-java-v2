@@ -26,6 +26,7 @@ public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCount
 
     /**
      *  <p>Value to remove from <code>countries</code>.</p>
+     * @param builder function to build the country value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCount
 
     /**
      *  <p>Value to remove from <code>countries</code>.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCount
         return this.country;
     }
 
+    /**
+     * builds StoreRemoveCountryAction with checking for non-null required values
+     * @return StoreRemoveCountryAction
+     */
     public StoreRemoveCountryAction build() {
         Objects.requireNonNull(country, StoreRemoveCountryAction.class + ": country is missing");
         return new StoreRemoveCountryActionImpl(country);
     }
 
     /**
-     * builds StoreRemoveCountryAction without checking for non null required values
+     * builds StoreRemoveCountryAction without checking for non-null required values
+     * @return StoreRemoveCountryAction
      */
     public StoreRemoveCountryAction buildUnchecked() {
         return new StoreRemoveCountryActionImpl(country);

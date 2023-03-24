@@ -26,7 +26,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
         return this.values;
     }
 
+    /**
+     * builds CartClassificationType with checking for non-null required values
+     * @return CartClassificationType
+     */
     public CartClassificationType build() {
         Objects.requireNonNull(values, CartClassificationType.class + ": values is missing");
         return new CartClassificationTypeImpl(values);
     }
 
     /**
-     * builds CartClassificationType without checking for non null required values
+     * builds CartClassificationType without checking for non-null required values
+     * @return CartClassificationType
      */
     public CartClassificationType buildUnchecked() {
         return new CartClassificationTypeImpl(values);

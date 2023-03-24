@@ -31,7 +31,7 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
 
     /**
      *
+     * @param builder function to build the measurements value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
 
     /**
      *
-     * @param measurements
+     * @param measurements value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
         return this.measurements;
     }
 
+    /**
+     * builds OrderSetParcelMeasurementsAction with checking for non-null required values
+     * @return OrderSetParcelMeasurementsAction
+     */
     public OrderSetParcelMeasurementsAction build() {
         Objects.requireNonNull(parcelId, OrderSetParcelMeasurementsAction.class + ": parcelId is missing");
         return new OrderSetParcelMeasurementsActionImpl(parcelId, measurements);
     }
 
     /**
-     * builds OrderSetParcelMeasurementsAction without checking for non null required values
+     * builds OrderSetParcelMeasurementsAction without checking for non-null required values
+     * @return OrderSetParcelMeasurementsAction
      */
     public OrderSetParcelMeasurementsAction buildUnchecked() {
         return new OrderSetParcelMeasurementsActionImpl(parcelId, measurements);

@@ -33,7 +33,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -44,6 +44,8 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public PriceChangedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,6 +55,9 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public PriceChangedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +70,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -76,7 +81,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -87,7 +92,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -101,7 +106,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -126,6 +131,10 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
         return this.shipping;
     }
 
+    /**
+     * builds PriceChangedError with checking for non-null required values
+     * @return PriceChangedError
+     */
     public PriceChangedError build() {
         Objects.requireNonNull(message, PriceChangedError.class + ": message is missing");
         Objects.requireNonNull(lineItems, PriceChangedError.class + ": lineItems is missing");
@@ -134,7 +143,8 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     * builds PriceChangedError without checking for non null required values
+     * builds PriceChangedError without checking for non-null required values
+     * @return PriceChangedError
      */
     public PriceChangedError buildUnchecked() {
         return new PriceChangedErrorImpl(message, values, lineItems, shipping);

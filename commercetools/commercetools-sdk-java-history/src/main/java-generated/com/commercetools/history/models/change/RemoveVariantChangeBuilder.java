@@ -35,7 +35,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *  <p>Update action for <code>removeVariant</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -91,7 +93,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -116,6 +118,10 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveVariantChange with checking for non-null required values
+     * @return RemoveVariantChange
+     */
     public RemoveVariantChange build() {
         Objects.requireNonNull(change, RemoveVariantChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, RemoveVariantChange.class + ": catalogData is missing");
@@ -125,7 +131,8 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     * builds RemoveVariantChange without checking for non null required values
+     * builds RemoveVariantChange without checking for non-null required values
+     * @return RemoveVariantChange
      */
     public RemoveVariantChange buildUnchecked() {
         return new RemoveVariantChangeImpl(change, catalogData, previousValue, nextValue);

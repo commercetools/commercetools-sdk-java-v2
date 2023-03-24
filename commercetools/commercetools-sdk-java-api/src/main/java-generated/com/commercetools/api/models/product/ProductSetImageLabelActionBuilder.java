@@ -39,7 +39,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
 
     /**
      *  <p>The URL of the image to set the label.</p>
-     * @param imageUrl
+     * @param imageUrl value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
 
     /**
      *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -116,13 +116,18 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
         return this.staged;
     }
 
+    /**
+     * builds ProductSetImageLabelAction with checking for non-null required values
+     * @return ProductSetImageLabelAction
+     */
     public ProductSetImageLabelAction build() {
         Objects.requireNonNull(imageUrl, ProductSetImageLabelAction.class + ": imageUrl is missing");
         return new ProductSetImageLabelActionImpl(sku, variantId, imageUrl, label, staged);
     }
 
     /**
-     * builds ProductSetImageLabelAction without checking for non null required values
+     * builds ProductSetImageLabelAction without checking for non-null required values
+     * @return ProductSetImageLabelAction
      */
     public ProductSetImageLabelAction buildUnchecked() {
         return new ProductSetImageLabelActionImpl(sku, variantId, imageUrl, label, staged);

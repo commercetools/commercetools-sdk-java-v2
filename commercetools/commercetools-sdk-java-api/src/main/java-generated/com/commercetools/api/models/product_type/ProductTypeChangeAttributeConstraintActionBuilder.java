@@ -29,7 +29,7 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
 
     /**
      *  <p><code>None</code></p>
-     * @param newValue
+     * @param newValue value to be set
      * @return Builder
      */
 
@@ -58,6 +58,10 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
         return this.newValue;
     }
 
+    /**
+     * builds ProductTypeChangeAttributeConstraintAction with checking for non-null required values
+     * @return ProductTypeChangeAttributeConstraintAction
+     */
     public ProductTypeChangeAttributeConstraintAction build() {
         Objects.requireNonNull(attributeName,
             ProductTypeChangeAttributeConstraintAction.class + ": attributeName is missing");
@@ -66,7 +70,8 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
     }
 
     /**
-     * builds ProductTypeChangeAttributeConstraintAction without checking for non null required values
+     * builds ProductTypeChangeAttributeConstraintAction without checking for non-null required values
+     * @return ProductTypeChangeAttributeConstraintAction
      */
     public ProductTypeChangeAttributeConstraintAction buildUnchecked() {
         return new ProductTypeChangeAttributeConstraintActionImpl(attributeName, newValue);

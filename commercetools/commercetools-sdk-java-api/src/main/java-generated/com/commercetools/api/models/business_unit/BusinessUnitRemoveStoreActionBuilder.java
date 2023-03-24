@@ -26,6 +26,7 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
 
     /**
      *  <p>Store to remove.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
 
     /**
      *  <p>Store to remove.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
         return this.store;
     }
 
+    /**
+     * builds BusinessUnitRemoveStoreAction with checking for non-null required values
+     * @return BusinessUnitRemoveStoreAction
+     */
     public BusinessUnitRemoveStoreAction build() {
         Objects.requireNonNull(store, BusinessUnitRemoveStoreAction.class + ": store is missing");
         return new BusinessUnitRemoveStoreActionImpl(store);
     }
 
     /**
-     * builds BusinessUnitRemoveStoreAction without checking for non null required values
+     * builds BusinessUnitRemoveStoreAction without checking for non-null required values
+     * @return BusinessUnitRemoveStoreAction
      */
     public BusinessUnitRemoveStoreAction buildUnchecked() {
         return new BusinessUnitRemoveStoreActionImpl(store);

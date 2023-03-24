@@ -32,7 +32,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
         return this.nextValue;
     }
 
+    /**
+     * builds AddOrderLineItemChange with checking for non-null required values
+     * @return AddOrderLineItemChange
+     */
     public AddOrderLineItemChange build() {
         Objects.requireNonNull(change, AddOrderLineItemChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, AddOrderLineItemChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     }
 
     /**
-     * builds AddOrderLineItemChange without checking for non null required values
+     * builds AddOrderLineItemChange without checking for non-null required values
+     * @return AddOrderLineItemChange
      */
     public AddOrderLineItemChange buildUnchecked() {
         return new AddOrderLineItemChangeImpl(change, previousValue, nextValue);

@@ -34,7 +34,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     /**
      *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
-     * @param groupName
+     * @param groupName value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -91,13 +92,18 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
         return this.custom;
     }
 
+    /**
+     * builds CustomerGroupDraft with checking for non-null required values
+     * @return CustomerGroupDraft
+     */
     public CustomerGroupDraft build() {
         Objects.requireNonNull(groupName, CustomerGroupDraft.class + ": groupName is missing");
         return new CustomerGroupDraftImpl(key, groupName, custom);
     }
 
     /**
-     * builds CustomerGroupDraft without checking for non null required values
+     * builds CustomerGroupDraft without checking for non-null required values
+     * @return CustomerGroupDraft
      */
     public CustomerGroupDraft buildUnchecked() {
         return new CustomerGroupDraftImpl(key, groupName, custom);

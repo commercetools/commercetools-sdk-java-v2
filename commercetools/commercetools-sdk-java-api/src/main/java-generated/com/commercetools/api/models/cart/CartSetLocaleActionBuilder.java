@@ -27,7 +27,7 @@ public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> 
 
     /**
      *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> 
         return this.locale;
     }
 
+    /**
+     * builds CartSetLocaleAction with checking for non-null required values
+     * @return CartSetLocaleAction
+     */
     public CartSetLocaleAction build() {
         return new CartSetLocaleActionImpl(locale);
     }
 
     /**
-     * builds CartSetLocaleAction without checking for non null required values
+     * builds CartSetLocaleAction without checking for non-null required values
+     * @return CartSetLocaleAction
      */
     public CartSetLocaleAction buildUnchecked() {
         return new CartSetLocaleActionImpl(locale);

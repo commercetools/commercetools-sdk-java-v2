@@ -32,7 +32,7 @@ public class AddAddressChangeBuilder implements Builder<AddAddressChange> {
 
     /**
      *  <p>Update action for <code>setAddress</code> action.</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class AddAddressChangeBuilder implements Builder<AddAddressChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class AddAddressChangeBuilder implements Builder<AddAddressChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class AddAddressChangeBuilder implements Builder<AddAddressChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class AddAddressChangeBuilder implements Builder<AddAddressChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -97,6 +99,10 @@ public class AddAddressChangeBuilder implements Builder<AddAddressChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds AddAddressChange with checking for non-null required values
+     * @return AddAddressChange
+     */
     public AddAddressChange build() {
         Objects.requireNonNull(change, AddAddressChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddAddressChange.class + ": nextValue is missing");
@@ -105,7 +111,8 @@ public class AddAddressChangeBuilder implements Builder<AddAddressChange> {
     }
 
     /**
-     * builds AddAddressChange without checking for non null required values
+     * builds AddAddressChange without checking for non-null required values
+     * @return AddAddressChange
      */
     public AddAddressChange buildUnchecked() {
         return new AddAddressChangeImpl(change, nextValue, previousValue);

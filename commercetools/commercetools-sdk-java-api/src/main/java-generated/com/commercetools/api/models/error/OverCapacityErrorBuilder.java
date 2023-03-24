@@ -27,7 +27,7 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
 
     /**
      *  <p>Plain text description of the error.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public OverCapacityErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public OverCapacityErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
         return this.values;
     }
 
+    /**
+     * builds OverCapacityError with checking for non-null required values
+     * @return OverCapacityError
+     */
     public OverCapacityError build() {
         Objects.requireNonNull(message, OverCapacityError.class + ": message is missing");
         return new OverCapacityErrorImpl(message, values);
     }
 
     /**
-     * builds OverCapacityError without checking for non null required values
+     * builds OverCapacityError without checking for non-null required values
+     * @return OverCapacityError
      */
     public OverCapacityError buildUnchecked() {
         return new OverCapacityErrorImpl(message, values);

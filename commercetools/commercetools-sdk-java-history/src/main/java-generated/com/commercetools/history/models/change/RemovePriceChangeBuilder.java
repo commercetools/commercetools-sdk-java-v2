@@ -38,7 +38,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     /**
      *  <p>Update action for removing prices</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     /**
      *
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -104,7 +106,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -133,6 +135,10 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds RemovePriceChange with checking for non-null required values
+     * @return RemovePriceChange
+     */
     public RemovePriceChange build() {
         Objects.requireNonNull(change, RemovePriceChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, RemovePriceChange.class + ": catalogData is missing");
@@ -143,7 +149,8 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     * builds RemovePriceChange without checking for non null required values
+     * builds RemovePriceChange without checking for non-null required values
+     * @return RemovePriceChange
      */
     public RemovePriceChange buildUnchecked() {
         return new RemovePriceChangeImpl(change, catalogData, priceId, previousValue, nextValue);

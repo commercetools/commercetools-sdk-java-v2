@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountShippingCostTargetBuilder implements Builder<CartDiscountShippingCostTarget> {
 
+    /**
+     * builds CartDiscountShippingCostTarget with checking for non-null required values
+     * @return CartDiscountShippingCostTarget
+     */
     public CartDiscountShippingCostTarget build() {
         return new CartDiscountShippingCostTargetImpl();
     }
 
     /**
-     * builds CartDiscountShippingCostTarget without checking for non null required values
+     * builds CartDiscountShippingCostTarget without checking for non-null required values
+     * @return CartDiscountShippingCostTarget
      */
     public CartDiscountShippingCostTarget buildUnchecked() {
         return new CartDiscountShippingCostTargetImpl();

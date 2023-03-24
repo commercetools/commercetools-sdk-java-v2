@@ -31,6 +31,7 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
 
     /**
      *  <p>Defines the Type that extends the Customer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Customer.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
 
     /**
      *  <p>Defines the Type that extends the Customer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Customer.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
 
     /**
      *  <p>Sets the Custom Fields fields for the Customer.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
 
     /**
      *  <p>Sets the Custom Fields fields for the Customer.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
         return this.fields;
     }
 
+    /**
+     * builds CustomerSetCustomTypeAction with checking for non-null required values
+     * @return CustomerSetCustomTypeAction
+     */
     public CustomerSetCustomTypeAction build() {
         return new CustomerSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds CustomerSetCustomTypeAction without checking for non null required values
+     * builds CustomerSetCustomTypeAction without checking for non-null required values
+     * @return CustomerSetCustomTypeAction
      */
     public CustomerSetCustomTypeAction buildUnchecked() {
         return new CustomerSetCustomTypeActionImpl(type, fields);

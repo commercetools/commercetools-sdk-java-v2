@@ -37,6 +37,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Reference to a Product.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -48,7 +49,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Reference to a Product.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>ProductVariant of the Product.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -71,6 +72,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -82,7 +84,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -94,6 +96,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -106,7 +109,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -134,6 +137,10 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
         return this.distributionChannel;
     }
 
+    /**
+     * builds CartDiscountValueGiftLineItem with checking for non-null required values
+     * @return CartDiscountValueGiftLineItem
+     */
     public CartDiscountValueGiftLineItem build() {
         Objects.requireNonNull(product, CartDiscountValueGiftLineItem.class + ": product is missing");
         Objects.requireNonNull(variantId, CartDiscountValueGiftLineItem.class + ": variantId is missing");
@@ -141,7 +148,8 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     * builds CartDiscountValueGiftLineItem without checking for non null required values
+     * builds CartDiscountValueGiftLineItem without checking for non-null required values
+     * @return CartDiscountValueGiftLineItem
      */
     public CartDiscountValueGiftLineItem buildUnchecked() {
         return new CartDiscountValueGiftLineItemImpl(product, variantId, supplyChannel, distributionChannel);

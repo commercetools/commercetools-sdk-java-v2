@@ -97,7 +97,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
-     * @param orderNumber
+     * @param orderNumber value to be set
      * @return Builder
      */
 
@@ -108,6 +108,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -120,7 +121,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -132,7 +133,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.customerEmail</code>.</p>
-     * @param customerEmail
+     * @param customerEmail value to be set
      * @return Builder
      */
 
@@ -143,7 +144,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.lineItems</code>.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -155,7 +156,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.lineItems</code>.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -167,7 +168,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.lineItems</code>.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -182,6 +183,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.lineItems</code>.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -197,6 +199,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.lineItems</code>.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -210,7 +213,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.customLineItems</code></p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -222,7 +225,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.customLineItems</code></p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -234,7 +237,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.customLineItems</code></p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -249,6 +252,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.customLineItems</code></p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -264,6 +268,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.customLineItems</code></p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -277,7 +282,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.totalPrice</code>.</p>
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -288,6 +293,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.totalPrice</code>.</p>
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -299,6 +305,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.taxedPrice</code>.</p>
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -310,7 +317,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.taxedPrice</code>.</p>
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -322,6 +329,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.shippingAddress</code>.</p>
+     * @param builder function to build the shippingAddress value
      * @return Builder
      */
 
@@ -333,7 +341,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.shippingAddress</code>.</p>
-     * @param shippingAddress
+     * @param shippingAddress value to be set
      * @return Builder
      */
 
@@ -345,6 +353,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.billingAddress</code>.</p>
+     * @param builder function to build the billingAddress value
      * @return Builder
      */
 
@@ -356,7 +365,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.billingAddress</code>.</p>
-     * @param billingAddress
+     * @param billingAddress value to be set
      * @return Builder
      */
 
@@ -368,6 +377,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -381,7 +391,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.customerGroup</code>.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -393,7 +403,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.country</code>.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -404,7 +414,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.orderState</code>.</p>
-     * @param orderState
+     * @param orderState value to be set
      * @return Builder
      */
 
@@ -416,7 +426,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.shipmentState</code>.</p>
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -428,7 +438,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.paymentState</code>.</p>
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -440,6 +450,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.shippingInfo</code>.</p>
+     * @param builder function to build the shippingInfo value
      * @return Builder
      */
 
@@ -452,7 +463,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.shippingInfo</code>.</p>
-     * @param shippingInfo
+     * @param shippingInfo value to be set
      * @return Builder
      */
 
@@ -464,7 +475,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.completedAt</code>.</p>
-     * @param completedAt
+     * @param completedAt value to be set
      * @return Builder
      */
 
@@ -475,6 +486,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.custom</code>.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -486,7 +498,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.custom</code>.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -497,7 +509,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.inventoryMode</code>.</p>
-     * @param inventoryMode
+     * @param inventoryMode value to be set
      * @return Builder
      */
 
@@ -509,7 +521,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
-     * @param taxRoundingMode
+     * @param taxRoundingMode value to be set
      * @return Builder
      */
 
@@ -521,7 +533,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.taxCalculationMode</code>.</p>
-     * @param taxCalculationMode
+     * @param taxCalculationMode value to be set
      * @return Builder
      */
 
@@ -533,7 +545,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.origin</code>.</p>
-     * @param origin
+     * @param origin value to be set
      * @return Builder
      */
 
@@ -544,7 +556,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -556,7 +568,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -568,7 +580,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -583,6 +595,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -598,6 +611,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -611,6 +625,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -622,7 +637,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -633,6 +648,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Reference to a State in a custom workflow.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -644,7 +660,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Reference to a State in a custom workflow.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -771,6 +787,10 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this.state;
     }
 
+    /**
+     * builds OrderImport with checking for non-null required values
+     * @return OrderImport
+     */
     public OrderImport build() {
         Objects.requireNonNull(orderNumber, OrderImport.class + ": orderNumber is missing");
         Objects.requireNonNull(totalPrice, OrderImport.class + ": totalPrice is missing");
@@ -781,7 +801,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     * builds OrderImport without checking for non null required values
+     * builds OrderImport without checking for non-null required values
+     * @return OrderImport
      */
     public OrderImport buildUnchecked() {
         return new OrderImportImpl(orderNumber, customer, customerEmail, lineItems, customLineItems, totalPrice,

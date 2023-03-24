@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldDateTimeTypeBuilder implements Builder<CustomFieldDateTimeType> {
 
+    /**
+     * builds CustomFieldDateTimeType with checking for non-null required values
+     * @return CustomFieldDateTimeType
+     */
     public CustomFieldDateTimeType build() {
         return new CustomFieldDateTimeTypeImpl();
     }
 
     /**
-     * builds CustomFieldDateTimeType without checking for non null required values
+     * builds CustomFieldDateTimeType without checking for non-null required values
+     * @return CustomFieldDateTimeType
      */
     public CustomFieldDateTimeType buildUnchecked() {
         return new CustomFieldDateTimeTypeImpl();

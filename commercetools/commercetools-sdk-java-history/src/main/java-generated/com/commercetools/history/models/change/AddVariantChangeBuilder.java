@@ -35,7 +35,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
 
     /**
      *  <p>Update action for <code>addVariant</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -115,6 +117,10 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds AddVariantChange with checking for non-null required values
+     * @return AddVariantChange
+     */
     public AddVariantChange build() {
         Objects.requireNonNull(change, AddVariantChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, AddVariantChange.class + ": catalogData is missing");
@@ -124,7 +130,8 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
     }
 
     /**
-     * builds AddVariantChange without checking for non null required values
+     * builds AddVariantChange without checking for non-null required values
+     * @return AddVariantChange
      */
     public AddVariantChange buildUnchecked() {
         return new AddVariantChangeImpl(change, catalogData, previousValue, nextValue);

@@ -82,7 +82,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Unique identifier of the Category.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Current version of the Category.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -104,7 +104,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Date and time (UTC) the Category was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -115,7 +115,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Date and time (UTC) the Category was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -126,6 +126,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -137,7 +138,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -149,6 +150,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -160,7 +162,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -171,6 +173,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -182,7 +185,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -193,6 +196,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -204,7 +208,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -215,6 +219,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Description of the Category.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -226,7 +231,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Description of the Category.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -238,7 +243,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
-     * @param ancestors
+     * @param ancestors value to be set
      * @return Builder
      */
 
@@ -249,7 +254,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
-     * @param ancestors
+     * @param ancestors value to be set
      * @return Builder
      */
 
@@ -261,7 +266,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
-     * @param ancestors
+     * @param ancestors value to be set
      * @return Builder
      */
 
@@ -275,6 +280,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
+     * @param builder function to build the ancestors value
      * @return Builder
      */
 
@@ -289,6 +295,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
+     * @param builder function to build the ancestors value
      * @return Builder
      */
 
@@ -301,6 +308,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Parent Category of this Category.</p>
+     * @param builder function to build the parent value
      * @return Builder
      */
 
@@ -312,7 +320,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Parent Category of this Category.</p>
-     * @param parent
+     * @param parent value to be set
      * @return Builder
      */
 
@@ -323,7 +331,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
-     * @param orderHint
+     * @param orderHint value to be set
      * @return Builder
      */
 
@@ -334,7 +342,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -345,6 +353,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @param builder function to build the metaTitle value
      * @return Builder
      */
 
@@ -356,7 +365,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
-     * @param metaTitle
+     * @param metaTitle value to be set
      * @return Builder
      */
 
@@ -367,6 +376,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @param builder function to build the metaDescription value
      * @return Builder
      */
 
@@ -378,7 +388,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
-     * @param metaDescription
+     * @param metaDescription value to be set
      * @return Builder
      */
 
@@ -390,6 +400,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @param builder function to build the metaKeywords value
      * @return Builder
      */
 
@@ -401,7 +412,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
-     * @param metaKeywords
+     * @param metaKeywords value to be set
      * @return Builder
      */
 
@@ -413,6 +424,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Custom Fields for the Category.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -424,7 +436,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Custom Fields for the Category.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -435,7 +447,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -446,7 +458,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -457,7 +469,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -471,6 +483,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -485,6 +498,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -497,7 +511,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>User-defined unique identifier of the Category.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -593,6 +607,10 @@ public class CategoryBuilder implements Builder<Category> {
         return this.key;
     }
 
+    /**
+     * builds Category with checking for non-null required values
+     * @return Category
+     */
     public Category build() {
         Objects.requireNonNull(id, Category.class + ": id is missing");
         Objects.requireNonNull(version, Category.class + ": version is missing");
@@ -608,7 +626,8 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     * builds Category without checking for non null required values
+     * builds Category without checking for non-null required values
+     * @return Category
      */
     public Category buildUnchecked() {
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,

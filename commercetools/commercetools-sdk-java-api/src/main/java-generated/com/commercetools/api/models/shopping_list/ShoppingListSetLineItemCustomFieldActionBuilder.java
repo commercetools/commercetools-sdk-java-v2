@@ -34,7 +34,7 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
 
     /**
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -78,6 +78,10 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
         return this.value;
     }
 
+    /**
+     * builds ShoppingListSetLineItemCustomFieldAction with checking for non-null required values
+     * @return ShoppingListSetLineItemCustomFieldAction
+     */
     public ShoppingListSetLineItemCustomFieldAction build() {
         Objects.requireNonNull(lineItemId, ShoppingListSetLineItemCustomFieldAction.class + ": lineItemId is missing");
         Objects.requireNonNull(name, ShoppingListSetLineItemCustomFieldAction.class + ": name is missing");
@@ -85,7 +89,8 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
     }
 
     /**
-     * builds ShoppingListSetLineItemCustomFieldAction without checking for non null required values
+     * builds ShoppingListSetLineItemCustomFieldAction without checking for non-null required values
+     * @return ShoppingListSetLineItemCustomFieldAction
      */
     public ShoppingListSetLineItemCustomFieldAction buildUnchecked() {
         return new ShoppingListSetLineItemCustomFieldActionImpl(lineItemId, name, value);

@@ -39,7 +39,7 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *  <p>Unique identifier of the Price.</p>
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
-     * @param oldKey
+     * @param oldKey value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -115,6 +115,10 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
         return this.staged;
     }
 
+    /**
+     * builds ProductPriceKeySetMessagePayload with checking for non-null required values
+     * @return ProductPriceKeySetMessagePayload
+     */
     public ProductPriceKeySetMessagePayload build() {
         Objects.requireNonNull(variantId, ProductPriceKeySetMessagePayload.class + ": variantId is missing");
         Objects.requireNonNull(staged, ProductPriceKeySetMessagePayload.class + ": staged is missing");
@@ -122,7 +126,8 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
     }
 
     /**
-     * builds ProductPriceKeySetMessagePayload without checking for non null required values
+     * builds ProductPriceKeySetMessagePayload without checking for non-null required values
+     * @return ProductPriceKeySetMessagePayload
      */
     public ProductPriceKeySetMessagePayload buildUnchecked() {
         return new ProductPriceKeySetMessagePayloadImpl(variantId, priceId, oldKey, key, staged);

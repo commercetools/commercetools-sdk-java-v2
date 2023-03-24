@@ -26,7 +26,7 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
         return this.resources;
     }
 
+    /**
+     * builds ProductDraftImportRequest with checking for non-null required values
+     * @return ProductDraftImportRequest
+     */
     public ProductDraftImportRequest build() {
         Objects.requireNonNull(resources, ProductDraftImportRequest.class + ": resources is missing");
         return new ProductDraftImportRequestImpl(resources);
     }
 
     /**
-     * builds ProductDraftImportRequest without checking for non null required values
+     * builds ProductDraftImportRequest without checking for non-null required values
+     * @return ProductDraftImportRequest
      */
     public ProductDraftImportRequest buildUnchecked() {
         return new ProductDraftImportRequestImpl(resources);

@@ -25,7 +25,7 @@ public class ProductDiscountValueRelativeBuilder implements Builder<ProductDisco
 
     /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
-     * @param permyriad
+     * @param permyriad value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductDiscountValueRelativeBuilder implements Builder<ProductDisco
         return this.permyriad;
     }
 
+    /**
+     * builds ProductDiscountValueRelative with checking for non-null required values
+     * @return ProductDiscountValueRelative
+     */
     public ProductDiscountValueRelative build() {
         Objects.requireNonNull(permyriad, ProductDiscountValueRelative.class + ": permyriad is missing");
         return new ProductDiscountValueRelativeImpl(permyriad);
     }
 
     /**
-     * builds ProductDiscountValueRelative without checking for non null required values
+     * builds ProductDiscountValueRelative without checking for non-null required values
+     * @return ProductDiscountValueRelative
      */
     public ProductDiscountValueRelative buildUnchecked() {
         return new ProductDiscountValueRelativeImpl(permyriad);

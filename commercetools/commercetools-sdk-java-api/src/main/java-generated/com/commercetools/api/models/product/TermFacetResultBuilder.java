@@ -38,7 +38,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
-     * @param dataType
+     * @param dataType value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
-     * @param missing
+     * @param missing value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
-     * @param other
+     * @param other value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
-     * @param terms
+     * @param terms value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
-     * @param terms
+     * @param terms value to be set
      * @return Builder
      */
 
@@ -104,7 +104,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
-     * @param terms
+     * @param terms value to be set
      * @return Builder
      */
 
@@ -118,6 +118,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @param builder function to build the terms value
      * @return Builder
      */
 
@@ -132,6 +133,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @param builder function to build the terms value
      * @return Builder
      */
 
@@ -162,6 +164,10 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
         return this.terms;
     }
 
+    /**
+     * builds TermFacetResult with checking for non-null required values
+     * @return TermFacetResult
+     */
     public TermFacetResult build() {
         Objects.requireNonNull(dataType, TermFacetResult.class + ": dataType is missing");
         Objects.requireNonNull(missing, TermFacetResult.class + ": missing is missing");
@@ -172,7 +178,8 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * builds TermFacetResult without checking for non null required values
+     * builds TermFacetResult without checking for non-null required values
+     * @return TermFacetResult
      */
     public TermFacetResult buildUnchecked() {
         return new TermFacetResultImpl(dataType, missing, total, other, terms);

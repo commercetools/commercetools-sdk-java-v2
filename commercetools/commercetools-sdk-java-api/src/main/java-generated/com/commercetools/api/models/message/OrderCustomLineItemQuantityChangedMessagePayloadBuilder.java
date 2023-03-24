@@ -32,7 +32,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
 
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
 
     /**
      *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
-     * @param oldQuantity
+     * @param oldQuantity value to be set
      * @return Builder
      */
 
@@ -75,6 +75,10 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
         return this.oldQuantity;
     }
 
+    /**
+     * builds OrderCustomLineItemQuantityChangedMessagePayload with checking for non-null required values
+     * @return OrderCustomLineItemQuantityChangedMessagePayload
+     */
     public OrderCustomLineItemQuantityChangedMessagePayload build() {
         Objects.requireNonNull(customLineItemId,
             OrderCustomLineItemQuantityChangedMessagePayload.class + ": customLineItemId is missing");
@@ -86,7 +90,8 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     * builds OrderCustomLineItemQuantityChangedMessagePayload without checking for non null required values
+     * builds OrderCustomLineItemQuantityChangedMessagePayload without checking for non-null required values
+     * @return OrderCustomLineItemQuantityChangedMessagePayload
      */
     public OrderCustomLineItemQuantityChangedMessagePayload buildUnchecked() {
         return new OrderCustomLineItemQuantityChangedMessagePayloadImpl(customLineItemId, quantity, oldQuantity);

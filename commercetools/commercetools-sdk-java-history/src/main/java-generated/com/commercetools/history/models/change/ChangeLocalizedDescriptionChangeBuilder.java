@@ -32,7 +32,7 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *  <p>Shape of the action for <code>changeDescription</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeLocalizedDescriptionChange with checking for non-null required values
+     * @return ChangeLocalizedDescriptionChange
+     */
     public ChangeLocalizedDescriptionChange build() {
         Objects.requireNonNull(change, ChangeLocalizedDescriptionChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeLocalizedDescriptionChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
     }
 
     /**
-     * builds ChangeLocalizedDescriptionChange without checking for non null required values
+     * builds ChangeLocalizedDescriptionChange without checking for non-null required values
+     * @return ChangeLocalizedDescriptionChange
      */
     public ChangeLocalizedDescriptionChange buildUnchecked() {
         return new ChangeLocalizedDescriptionChangeImpl(change, previousValue, nextValue);

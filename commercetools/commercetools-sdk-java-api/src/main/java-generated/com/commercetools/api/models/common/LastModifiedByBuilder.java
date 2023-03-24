@@ -37,7 +37,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p><code>id</code> of the APIClient which modified the resource.</p>
-     * @param clientId
+     * @param clientId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
-     * @param externalUserId
+     * @param externalUserId value to be set
      * @return Builder
      */
 
@@ -59,6 +59,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p>Indicates the anonymous session during which the resource was modified.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -111,12 +112,17 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
         return this.anonymousId;
     }
 
+    /**
+     * builds LastModifiedBy with checking for non-null required values
+     * @return LastModifiedBy
+     */
     public LastModifiedBy build() {
         return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId);
     }
 
     /**
-     * builds LastModifiedBy without checking for non null required values
+     * builds LastModifiedBy without checking for non-null required values
+     * @return LastModifiedBy
      */
     public LastModifiedBy buildUnchecked() {
         return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId);

@@ -29,7 +29,7 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
         return this.actions;
     }
 
+    /**
+     * builds CustomerGroupUpdate with checking for non-null required values
+     * @return CustomerGroupUpdate
+     */
     public CustomerGroupUpdate build() {
         Objects.requireNonNull(version, CustomerGroupUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, CustomerGroupUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
     }
 
     /**
-     * builds CustomerGroupUpdate without checking for non null required values
+     * builds CustomerGroupUpdate without checking for non-null required values
+     * @return CustomerGroupUpdate
      */
     public CustomerGroupUpdate buildUnchecked() {
         return new CustomerGroupUpdateImpl(version, actions);

@@ -33,7 +33,7 @@ public class CartSetShippingCustomFieldActionBuilder implements Builder<CartSetS
 
     /**
      *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class CartSetShippingCustomFieldActionBuilder implements Builder<CartSetS
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class CartSetShippingCustomFieldActionBuilder implements Builder<CartSetS
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -78,13 +78,18 @@ public class CartSetShippingCustomFieldActionBuilder implements Builder<CartSetS
         return this.value;
     }
 
+    /**
+     * builds CartSetShippingCustomFieldAction with checking for non-null required values
+     * @return CartSetShippingCustomFieldAction
+     */
     public CartSetShippingCustomFieldAction build() {
         Objects.requireNonNull(name, CartSetShippingCustomFieldAction.class + ": name is missing");
         return new CartSetShippingCustomFieldActionImpl(shippingKey, name, value);
     }
 
     /**
-     * builds CartSetShippingCustomFieldAction without checking for non null required values
+     * builds CartSetShippingCustomFieldAction without checking for non-null required values
+     * @return CartSetShippingCustomFieldAction
      */
     public CartSetShippingCustomFieldAction buildUnchecked() {
         return new CartSetShippingCustomFieldActionImpl(shippingKey, name, value);

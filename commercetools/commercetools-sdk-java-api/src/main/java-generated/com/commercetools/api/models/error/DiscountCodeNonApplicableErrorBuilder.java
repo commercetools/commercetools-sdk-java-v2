@@ -47,7 +47,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p><code>"The discountCode $discountCodeId cannot be applied to the cart."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -58,6 +58,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public DiscountCodeNonApplicableErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -67,6 +69,9 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public DiscountCodeNonApplicableErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -79,7 +84,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Discount Code passed to the Cart.</p>
-     * @param discountCode
+     * @param discountCode value to be set
      * @return Builder
      */
 
@@ -90,7 +95,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
-     * @param reason
+     * @param reason value to be set
      * @return Builder
      */
 
@@ -101,7 +106,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Unique identifier of the Discount Code.</p>
-     * @param discountCodeId
+     * @param discountCodeId value to be set
      * @return Builder
      */
 
@@ -112,7 +117,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -123,7 +128,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -134,7 +139,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
-     * @param validityCheckTime
+     * @param validityCheckTime value to be set
      * @return Builder
      */
 
@@ -182,6 +187,10 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
         return this.validityCheckTime;
     }
 
+    /**
+     * builds DiscountCodeNonApplicableError with checking for non-null required values
+     * @return DiscountCodeNonApplicableError
+     */
     public DiscountCodeNonApplicableError build() {
         Objects.requireNonNull(message, DiscountCodeNonApplicableError.class + ": message is missing");
         return new DiscountCodeNonApplicableErrorImpl(message, values, discountCode, reason, discountCodeId, validFrom,
@@ -189,7 +198,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     * builds DiscountCodeNonApplicableError without checking for non null required values
+     * builds DiscountCodeNonApplicableError without checking for non-null required values
+     * @return DiscountCodeNonApplicableError
      */
     public DiscountCodeNonApplicableError buildUnchecked() {
         return new DiscountCodeNonApplicableErrorImpl(message, values, discountCode, reason, discountCodeId, validFrom,

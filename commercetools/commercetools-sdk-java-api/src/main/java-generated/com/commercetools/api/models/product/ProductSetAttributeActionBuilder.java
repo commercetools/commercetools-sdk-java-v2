@@ -39,7 +39,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
 
     /**
      *  <p>The name of the Attribute to set.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
      *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
      *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
      *  </ul>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -92,7 +92,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
 
     /**
      *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -125,13 +125,18 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
         return this.staged;
     }
 
+    /**
+     * builds ProductSetAttributeAction with checking for non-null required values
+     * @return ProductSetAttributeAction
+     */
     public ProductSetAttributeAction build() {
         Objects.requireNonNull(name, ProductSetAttributeAction.class + ": name is missing");
         return new ProductSetAttributeActionImpl(variantId, sku, name, value, staged);
     }
 
     /**
-     * builds ProductSetAttributeAction without checking for non null required values
+     * builds ProductSetAttributeAction without checking for non-null required values
+     * @return ProductSetAttributeAction
      */
     public ProductSetAttributeAction buildUnchecked() {
         return new ProductSetAttributeActionImpl(variantId, sku, name, value, staged);

@@ -29,6 +29,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Cart Discount applicable on the Line Item.</p>
+     * @param builder function to build the discount value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Cart Discount applicable on the Line Item.</p>
-     * @param discount
+     * @param discount value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Money value of the discount applicable.</p>
-     * @param discountedAmount
+     * @param discountedAmount value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Money value of the discount applicable.</p>
+     * @param builder function to build the discountedAmount value
      * @return Builder
      */
 
@@ -82,6 +84,10 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
         return this.discountedAmount;
     }
 
+    /**
+     * builds DiscountedLineItemPortion with checking for non-null required values
+     * @return DiscountedLineItemPortion
+     */
     public DiscountedLineItemPortion build() {
         Objects.requireNonNull(discount, DiscountedLineItemPortion.class + ": discount is missing");
         Objects.requireNonNull(discountedAmount, DiscountedLineItemPortion.class + ": discountedAmount is missing");
@@ -89,7 +95,8 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     * builds DiscountedLineItemPortion without checking for non null required values
+     * builds DiscountedLineItemPortion without checking for non-null required values
+     * @return DiscountedLineItemPortion
      */
     public DiscountedLineItemPortion buildUnchecked() {
         return new DiscountedLineItemPortionImpl(discount, discountedAmount);

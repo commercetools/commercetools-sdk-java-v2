@@ -34,7 +34,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
-     * @param paymentInterface
+     * @param paymentInterface value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      *  <p>Payment method used, for example, credit card, or cash advance.</p>
-     * @param method
+     * @param method value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      *  <p>Localizable name of the payment method.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      *  <p>Localizable name of the payment method.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -91,12 +92,17 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
         return this.name;
     }
 
+    /**
+     * builds PaymentMethodInfo with checking for non-null required values
+     * @return PaymentMethodInfo
+     */
     public PaymentMethodInfo build() {
         return new PaymentMethodInfoImpl(paymentInterface, method, name);
     }
 
     /**
-     * builds PaymentMethodInfo without checking for non null required values
+     * builds PaymentMethodInfo without checking for non-null required values
+     * @return PaymentMethodInfo
      */
     public PaymentMethodInfo buildUnchecked() {
         return new PaymentMethodInfoImpl(paymentInterface, method, name);

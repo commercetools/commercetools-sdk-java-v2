@@ -32,7 +32,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     /**
      *  <p>Update action for <code>removeParcelFromDelivery</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -87,6 +88,10 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveParcelFromDeliveryChange with checking for non-null required values
+     * @return RemoveParcelFromDeliveryChange
+     */
     public RemoveParcelFromDeliveryChange build() {
         Objects.requireNonNull(change, RemoveParcelFromDeliveryChange.class + ": change is missing");
         Objects.requireNonNull(deliveryId, RemoveParcelFromDeliveryChange.class + ": deliveryId is missing");
@@ -95,7 +100,8 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     * builds RemoveParcelFromDeliveryChange without checking for non null required values
+     * builds RemoveParcelFromDeliveryChange without checking for non-null required values
+     * @return RemoveParcelFromDeliveryChange
      */
     public RemoveParcelFromDeliveryChange buildUnchecked() {
         return new RemoveParcelFromDeliveryChangeImpl(change, deliveryId, previousValue);

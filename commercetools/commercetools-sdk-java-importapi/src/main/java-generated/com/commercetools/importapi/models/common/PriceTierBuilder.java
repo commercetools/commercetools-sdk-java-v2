@@ -29,7 +29,7 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     /**
      *  <p>The minimum quantity this price tier is valid for.</p>
-     * @param minimumQuantity
+     * @param minimumQuantity value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -51,6 +51,7 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class PriceTierBuilder implements Builder<PriceTier> {
         return this.value;
     }
 
+    /**
+     * builds PriceTier with checking for non-null required values
+     * @return PriceTier
+     */
     public PriceTier build() {
         Objects.requireNonNull(minimumQuantity, PriceTier.class + ": minimumQuantity is missing");
         Objects.requireNonNull(value, PriceTier.class + ": value is missing");
@@ -75,7 +80,8 @@ public class PriceTierBuilder implements Builder<PriceTier> {
     }
 
     /**
-     * builds PriceTier without checking for non null required values
+     * builds PriceTier without checking for non-null required values
+     * @return PriceTier
      */
     public PriceTier buildUnchecked() {
         return new PriceTierImpl(minimumQuantity, value);

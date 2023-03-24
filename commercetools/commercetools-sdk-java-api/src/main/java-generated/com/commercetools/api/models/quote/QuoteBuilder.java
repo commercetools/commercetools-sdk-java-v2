@@ -133,7 +133,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Unique identifier of the Quote.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -144,7 +144,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Current version of the Quote.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -155,7 +155,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Date and time (UTC) the Quote was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -166,7 +166,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Date and time (UTC) the Quote was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -177,7 +177,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>User-defined unique identifier of the Quote.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -188,6 +188,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -199,7 +200,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -211,6 +212,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -222,7 +224,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -233,6 +235,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Quote Request related to the Quote.</p>
+     * @param builder function to build the quoteRequest value
      * @return Builder
      */
 
@@ -245,7 +248,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Quote Request related to the Quote.</p>
-     * @param quoteRequest
+     * @param quoteRequest value to be set
      * @return Builder
      */
 
@@ -257,6 +260,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Staged Quote related to the Quote.</p>
+     * @param builder function to build the stagedQuote value
      * @return Builder
      */
 
@@ -269,7 +273,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Staged Quote related to the Quote.</p>
-     * @param stagedQuote
+     * @param stagedQuote value to be set
      * @return Builder
      */
 
@@ -280,6 +284,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Buyer who requested the Quote.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -291,7 +296,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Buyer who requested the Quote.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -302,6 +307,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -315,7 +321,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -327,7 +333,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Expiration date for the Quote.</p>
-     * @param validTo
+     * @param validTo value to be set
      * @return Builder
      */
 
@@ -338,7 +344,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Message from the Seller included in the offer.</p>
-     * @param sellerComment
+     * @param sellerComment value to be set
      * @return Builder
      */
 
@@ -349,7 +355,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Message from the Buyer included in the renegotiation request.</p>
-     * @param buyerComment
+     * @param buyerComment value to be set
      * @return Builder
      */
 
@@ -360,6 +366,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Store to which the Buyer belongs.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -371,7 +378,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Store to which the Buyer belongs.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -382,7 +389,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Line Items for which the Quote is requested.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -393,7 +400,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Line Items for which the Quote is requested.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -404,7 +411,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Line Items for which the Quote is requested.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -418,6 +425,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Line Items for which the Quote is requested.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -432,6 +440,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Line Items for which the Quote is requested.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -444,7 +453,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Custom Line Items for which the Quote is requested.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -455,7 +464,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Custom Line Items for which the Quote is requested.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -467,7 +476,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Custom Line Items for which the Quote is requested.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -481,6 +490,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Custom Line Items for which the Quote is requested.</p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -495,6 +505,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Custom Line Items for which the Quote is requested.</p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -507,7 +518,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -518,6 +529,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -529,6 +541,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -540,7 +553,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -551,6 +564,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     * @param builder function to build the shippingAddress value
      * @return Builder
      */
 
@@ -562,7 +576,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
-     * @param shippingAddress
+     * @param shippingAddress value to be set
      * @return Builder
      */
 
@@ -573,6 +587,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Address used for invoicing.</p>
+     * @param builder function to build the billingAddress value
      * @return Builder
      */
 
@@ -584,7 +599,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Address used for invoicing.</p>
-     * @param billingAddress
+     * @param billingAddress value to be set
      * @return Builder
      */
 
@@ -595,7 +610,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
-     * @param inventoryMode
+     * @param inventoryMode value to be set
      * @return Builder
      */
 
@@ -606,7 +621,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
-     * @param taxMode
+     * @param taxMode value to be set
      * @return Builder
      */
 
@@ -617,7 +632,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
-     * @param taxRoundingMode
+     * @param taxRoundingMode value to be set
      * @return Builder
      */
 
@@ -628,7 +643,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
-     * @param taxCalculationMode
+     * @param taxCalculationMode value to be set
      * @return Builder
      */
 
@@ -640,7 +655,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Used for Product Variant price selection.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -651,6 +666,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Set automatically once the ShippingMethod is set.</p>
+     * @param builder function to build the shippingInfo value
      * @return Builder
      */
 
@@ -662,7 +678,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Set automatically once the ShippingMethod is set.</p>
-     * @param shippingInfo
+     * @param shippingInfo value to be set
      * @return Builder
      */
 
@@ -673,6 +689,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Log of payment transactions related to the Quote.</p>
+     * @param builder function to build the paymentInfo value
      * @return Builder
      */
 
@@ -684,7 +701,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Log of payment transactions related to the Quote.</p>
-     * @param paymentInfo
+     * @param paymentInfo value to be set
      * @return Builder
      */
 
@@ -695,7 +712,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Used to select a ShippingRatePriceTier.</p>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -707,6 +724,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Used to select a ShippingRatePriceTier.</p>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -718,7 +736,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -730,7 +748,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -742,7 +760,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -757,6 +775,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -771,6 +790,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -783,7 +803,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
-     * @param directDiscounts
+     * @param directDiscounts value to be set
      * @return Builder
      */
 
@@ -795,7 +815,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
-     * @param directDiscounts
+     * @param directDiscounts value to be set
      * @return Builder
      */
 
@@ -807,7 +827,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
-     * @param directDiscounts
+     * @param directDiscounts value to be set
      * @return Builder
      */
 
@@ -822,6 +842,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @param builder function to build the directDiscounts value
      * @return Builder
      */
 
@@ -836,6 +857,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @param builder function to build the directDiscounts value
      * @return Builder
      */
 
@@ -848,6 +870,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Custom Fields on the Quote.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -859,7 +882,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Custom Fields on the Quote.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -870,7 +893,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>Predefined states tracking the status of the Quote.</p>
-     * @param quoteState
+     * @param quoteState value to be set
      * @return Builder
      */
 
@@ -881,6 +904,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -892,7 +916,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -903,7 +927,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
-     * @param purchaseOrderNumber
+     * @param purchaseOrderNumber value to be set
      * @return Builder
      */
 
@@ -914,6 +938,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The BusinessUnit for the Quote.</p>
+     * @param builder function to build the businessUnit value
      * @return Builder
      */
 
@@ -927,7 +952,7 @@ public class QuoteBuilder implements Builder<Quote> {
 
     /**
      *  <p>The BusinessUnit for the Quote.</p>
-     * @param businessUnit
+     * @param businessUnit value to be set
      * @return Builder
      */
 
@@ -1104,6 +1129,10 @@ public class QuoteBuilder implements Builder<Quote> {
         return this.businessUnit;
     }
 
+    /**
+     * builds Quote with checking for non-null required values
+     * @return Quote
+     */
     public Quote build() {
         Objects.requireNonNull(id, Quote.class + ": id is missing");
         Objects.requireNonNull(version, Quote.class + ": version is missing");
@@ -1126,7 +1155,8 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     * builds Quote without checking for non null required values
+     * builds Quote without checking for non-null required values
+     * @return Quote
      */
     public Quote buildUnchecked() {
         return new QuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, quoteRequest,

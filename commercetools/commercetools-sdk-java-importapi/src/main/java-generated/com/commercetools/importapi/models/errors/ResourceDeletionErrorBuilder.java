@@ -30,7 +30,7 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
 
     /**
      *
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
         return this.resource;
     }
 
+    /**
+     * builds ResourceDeletionError with checking for non-null required values
+     * @return ResourceDeletionError
+     */
     public ResourceDeletionError build() {
         Objects.requireNonNull(message, ResourceDeletionError.class + ": message is missing");
         return new ResourceDeletionErrorImpl(message, resource);
     }
 
     /**
-     * builds ResourceDeletionError without checking for non null required values
+     * builds ResourceDeletionError without checking for non-null required values
+     * @return ResourceDeletionError
      */
     public ResourceDeletionError buildUnchecked() {
         return new ResourceDeletionErrorImpl(message, resource);

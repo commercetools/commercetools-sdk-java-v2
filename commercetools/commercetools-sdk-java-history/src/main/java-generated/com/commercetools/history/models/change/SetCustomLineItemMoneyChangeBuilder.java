@@ -38,7 +38,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *  <p>Update action for <code>setCustomLineItemMoney</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @param builder function to build the customLineItem value
      * @return Builder
      */
 
@@ -61,7 +62,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
-     * @param customLineItem
+     * @param customLineItem value to be set
      * @return Builder
      */
 
@@ -73,7 +74,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -84,6 +85,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -95,7 +97,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -107,6 +109,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -118,7 +121,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -148,6 +151,10 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
         return this.previousValue;
     }
 
+    /**
+     * builds SetCustomLineItemMoneyChange with checking for non-null required values
+     * @return SetCustomLineItemMoneyChange
+     */
     public SetCustomLineItemMoneyChange build() {
         Objects.requireNonNull(change, SetCustomLineItemMoneyChange.class + ": change is missing");
         Objects.requireNonNull(customLineItem, SetCustomLineItemMoneyChange.class + ": customLineItem is missing");
@@ -158,7 +165,8 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     * builds SetCustomLineItemMoneyChange without checking for non null required values
+     * builds SetCustomLineItemMoneyChange without checking for non-null required values
+     * @return SetCustomLineItemMoneyChange
      */
     public SetCustomLineItemMoneyChange buildUnchecked() {
         return new SetCustomLineItemMoneyChangeImpl(change, customLineItem, customLineItemId, nextValue, previousValue);

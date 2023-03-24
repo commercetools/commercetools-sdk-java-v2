@@ -32,7 +32,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
-     * @param addedSupplyChannels
+     * @param addedSupplyChannels value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
-     * @param addedSupplyChannels
+     * @param addedSupplyChannels value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
-     * @param addedSupplyChannels
+     * @param addedSupplyChannels value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param builder function to build the addedSupplyChannels value
      * @return Builder
      */
 
@@ -86,6 +87,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param builder function to build the addedSupplyChannels value
      * @return Builder
      */
 
@@ -99,7 +101,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
-     * @param removedSupplyChannels
+     * @param removedSupplyChannels value to be set
      * @return Builder
      */
 
@@ -111,7 +113,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
-     * @param removedSupplyChannels
+     * @param removedSupplyChannels value to be set
      * @return Builder
      */
 
@@ -123,7 +125,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
-     * @param removedSupplyChannels
+     * @param removedSupplyChannels value to be set
      * @return Builder
      */
 
@@ -138,6 +140,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedSupplyChannels value
      * @return Builder
      */
 
@@ -153,6 +156,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedSupplyChannels value
      * @return Builder
      */
 
@@ -174,12 +178,17 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
         return this.removedSupplyChannels;
     }
 
+    /**
+     * builds StoreSupplyChannelsChangedMessagePayload with checking for non-null required values
+     * @return StoreSupplyChannelsChangedMessagePayload
+     */
     public StoreSupplyChannelsChangedMessagePayload build() {
         return new StoreSupplyChannelsChangedMessagePayloadImpl(addedSupplyChannels, removedSupplyChannels);
     }
 
     /**
-     * builds StoreSupplyChannelsChangedMessagePayload without checking for non null required values
+     * builds StoreSupplyChannelsChangedMessagePayload without checking for non-null required values
+     * @return StoreSupplyChannelsChangedMessagePayload
      */
     public StoreSupplyChannelsChangedMessagePayload buildUnchecked() {
         return new StoreSupplyChannelsChangedMessagePayloadImpl(addedSupplyChannels, removedSupplyChannels);

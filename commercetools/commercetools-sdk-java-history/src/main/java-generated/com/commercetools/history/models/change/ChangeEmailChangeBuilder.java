@@ -31,7 +31,7 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
 
     /**
      *  <p>Shape of the action for <code>changeEmail</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeEmailChange with checking for non-null required values
+     * @return ChangeEmailChange
+     */
     public ChangeEmailChange build() {
         Objects.requireNonNull(change, ChangeEmailChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeEmailChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
     }
 
     /**
-     * builds ChangeEmailChange without checking for non null required values
+     * builds ChangeEmailChange without checking for non-null required values
+     * @return ChangeEmailChange
      */
     public ChangeEmailChange buildUnchecked() {
         return new ChangeEmailChangeImpl(change, previousValue, nextValue);

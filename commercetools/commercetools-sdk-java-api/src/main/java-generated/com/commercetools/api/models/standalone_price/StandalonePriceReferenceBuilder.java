@@ -31,7 +31,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
 
     /**
      *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
 
     /**
      *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
         return this.obj;
     }
 
+    /**
+     * builds StandalonePriceReference with checking for non-null required values
+     * @return StandalonePriceReference
+     */
     public StandalonePriceReference build() {
         Objects.requireNonNull(id, StandalonePriceReference.class + ": id is missing");
         return new StandalonePriceReferenceImpl(id, obj);
     }
 
     /**
-     * builds StandalonePriceReference without checking for non null required values
+     * builds StandalonePriceReference without checking for non-null required values
+     * @return StandalonePriceReference
      */
     public StandalonePriceReference buildUnchecked() {
         return new StandalonePriceReferenceImpl(id, obj);

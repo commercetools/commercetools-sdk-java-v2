@@ -37,7 +37,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -59,6 +59,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -81,7 +82,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -109,13 +110,18 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
         return this.staged;
     }
 
+    /**
+     * builds ProductAddPriceAction with checking for non-null required values
+     * @return ProductAddPriceAction
+     */
     public ProductAddPriceAction build() {
         Objects.requireNonNull(price, ProductAddPriceAction.class + ": price is missing");
         return new ProductAddPriceActionImpl(variantId, sku, price, staged);
     }
 
     /**
-     * builds ProductAddPriceAction without checking for non null required values
+     * builds ProductAddPriceAction without checking for non-null required values
+     * @return ProductAddPriceAction
      */
     public ProductAddPriceAction buildUnchecked() {
         return new ProductAddPriceActionImpl(variantId, sku, price, staged);

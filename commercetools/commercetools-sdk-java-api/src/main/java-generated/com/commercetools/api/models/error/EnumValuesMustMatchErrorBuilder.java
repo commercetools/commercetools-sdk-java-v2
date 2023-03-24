@@ -27,7 +27,7 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
 
     /**
      *  <p><code>"The given values must be equal to the existing enum values."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public EnumValuesMustMatchErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public EnumValuesMustMatchErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
         return this.values;
     }
 
+    /**
+     * builds EnumValuesMustMatchError with checking for non-null required values
+     * @return EnumValuesMustMatchError
+     */
     public EnumValuesMustMatchError build() {
         Objects.requireNonNull(message, EnumValuesMustMatchError.class + ": message is missing");
         return new EnumValuesMustMatchErrorImpl(message, values);
     }
 
     /**
-     * builds EnumValuesMustMatchError without checking for non null required values
+     * builds EnumValuesMustMatchError without checking for non-null required values
+     * @return EnumValuesMustMatchError
      */
     public EnumValuesMustMatchError buildUnchecked() {
         return new EnumValuesMustMatchErrorImpl(message, values);

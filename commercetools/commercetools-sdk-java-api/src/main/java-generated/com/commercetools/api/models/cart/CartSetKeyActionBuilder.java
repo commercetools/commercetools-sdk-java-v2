@@ -27,7 +27,7 @@ public class CartSetKeyActionBuilder implements Builder<CartSetKeyAction> {
 
     /**
      *  <p>Value to set. If empty, any existing key will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CartSetKeyActionBuilder implements Builder<CartSetKeyAction> {
         return this.key;
     }
 
+    /**
+     * builds CartSetKeyAction with checking for non-null required values
+     * @return CartSetKeyAction
+     */
     public CartSetKeyAction build() {
         return new CartSetKeyActionImpl(key);
     }
 
     /**
-     * builds CartSetKeyAction without checking for non null required values
+     * builds CartSetKeyAction without checking for non-null required values
+     * @return CartSetKeyAction
      */
     public CartSetKeyAction buildUnchecked() {
         return new CartSetKeyActionImpl(key);

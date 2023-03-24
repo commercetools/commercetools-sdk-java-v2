@@ -35,7 +35,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *  <p>Update action for <code>setInputTip</code> on product types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *  <p>The name of the updated attribute.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -116,6 +118,10 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds SetInputTipChange with checking for non-null required values
+     * @return SetInputTipChange
+     */
     public SetInputTipChange build() {
         Objects.requireNonNull(change, SetInputTipChange.class + ": change is missing");
         Objects.requireNonNull(attributeName, SetInputTipChange.class + ": attributeName is missing");
@@ -125,7 +131,8 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
     }
 
     /**
-     * builds SetInputTipChange without checking for non null required values
+     * builds SetInputTipChange without checking for non-null required values
+     * @return SetInputTipChange
      */
     public SetInputTipChange buildUnchecked() {
         return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);

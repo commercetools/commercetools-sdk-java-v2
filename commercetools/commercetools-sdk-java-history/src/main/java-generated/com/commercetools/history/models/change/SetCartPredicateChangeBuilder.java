@@ -31,7 +31,7 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
 
     /**
      *  <p>Shape of the action for <code>setCartPredicate</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
         return this.nextValue;
     }
 
+    /**
+     * builds SetCartPredicateChange with checking for non-null required values
+     * @return SetCartPredicateChange
+     */
     public SetCartPredicateChange build() {
         Objects.requireNonNull(change, SetCartPredicateChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetCartPredicateChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
     }
 
     /**
-     * builds SetCartPredicateChange without checking for non null required values
+     * builds SetCartPredicateChange without checking for non-null required values
+     * @return SetCartPredicateChange
      */
     public SetCartPredicateChange buildUnchecked() {
         return new SetCartPredicateChangeImpl(change, previousValue, nextValue);

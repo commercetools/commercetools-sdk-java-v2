@@ -43,7 +43,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     /**
      *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     /**
      *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     /**
      *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -76,7 +77,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     /**
      *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -87,7 +88,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     /**
      *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -98,7 +99,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     /**
      *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
-     * @param clientId
+     * @param clientId value to be set
      * @return Builder
      */
 
@@ -109,7 +110,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     /**
      *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
-     * @param isPlatformClient
+     * @param isPlatformClient value to be set
      * @return Builder
      */
 
@@ -145,6 +146,10 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
         return this.isPlatformClient;
     }
 
+    /**
+     * builds ModifiedBy with checking for non-null required values
+     * @return ModifiedBy
+     */
     public ModifiedBy build() {
         Objects.requireNonNull(id, ModifiedBy.class + ": id is missing");
         Objects.requireNonNull(type, ModifiedBy.class + ": type is missing");
@@ -153,7 +158,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     * builds ModifiedBy without checking for non null required values
+     * builds ModifiedBy without checking for non-null required values
+     * @return ModifiedBy
      */
     public ModifiedBy buildUnchecked() {
         return new ModifiedByImpl(id, type, customer, anonymousId, clientId, isPlatformClient);

@@ -37,6 +37,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     /**
      *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -48,7 +49,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     /**
      *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -60,6 +61,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @param builder function to build the productSelection value
      * @return Builder
      */
 
@@ -73,7 +75,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
-     * @param productSelection
+     * @param productSelection value to be set
      * @return Builder
      */
 
@@ -86,7 +88,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     /**
      *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
-     * @param variantSelection
+     * @param variantSelection value to be set
      * @return Builder
      */
 
@@ -99,6 +101,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     /**
      *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     * @param builder function to build the variantSelection value
      * @return Builder
      */
 
@@ -113,6 +116,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     * @param builder function to build the variantExclusion value
      * @return Builder
      */
 
@@ -127,7 +131,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
-     * @param variantExclusion
+     * @param variantExclusion value to be set
      * @return Builder
      */
 
@@ -155,6 +159,10 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         return this.variantExclusion;
     }
 
+    /**
+     * builds ProductSelectionAssignment with checking for non-null required values
+     * @return ProductSelectionAssignment
+     */
     public ProductSelectionAssignment build() {
         Objects.requireNonNull(product, ProductSelectionAssignment.class + ": product is missing");
         Objects.requireNonNull(productSelection, ProductSelectionAssignment.class + ": productSelection is missing");
@@ -162,7 +170,8 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     * builds ProductSelectionAssignment without checking for non null required values
+     * builds ProductSelectionAssignment without checking for non-null required values
+     * @return ProductSelectionAssignment
      */
     public ProductSelectionAssignment buildUnchecked() {
         return new ProductSelectionAssignmentImpl(product, productSelection, variantSelection, variantExclusion);

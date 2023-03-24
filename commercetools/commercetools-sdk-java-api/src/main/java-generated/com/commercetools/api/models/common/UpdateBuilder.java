@@ -29,7 +29,7 @@ public class UpdateBuilder implements Builder<Update> {
 
     /**
      *
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class UpdateBuilder implements Builder<Update> {
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class UpdateBuilder implements Builder<Update> {
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class UpdateBuilder implements Builder<Update> {
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -76,6 +76,7 @@ public class UpdateBuilder implements Builder<Update> {
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class UpdateBuilder implements Builder<Update> {
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -108,6 +110,10 @@ public class UpdateBuilder implements Builder<Update> {
         return this.actions;
     }
 
+    /**
+     * builds Update with checking for non-null required values
+     * @return Update
+     */
     public Update build() {
         Objects.requireNonNull(version, Update.class + ": version is missing");
         Objects.requireNonNull(actions, Update.class + ": actions is missing");
@@ -115,7 +121,8 @@ public class UpdateBuilder implements Builder<Update> {
     }
 
     /**
-     * builds Update without checking for non null required values
+     * builds Update without checking for non-null required values
+     * @return Update
      */
     public Update buildUnchecked() {
         return new UpdateImpl(version, actions);

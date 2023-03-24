@@ -25,7 +25,7 @@ public class ProductDiscountChangeSortOrderActionBuilder implements Builder<Prod
 
     /**
      *  <p>New value to set. Must not be empty. The string value must be a number between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized.</p>
-     * @param sortOrder
+     * @param sortOrder value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductDiscountChangeSortOrderActionBuilder implements Builder<Prod
         return this.sortOrder;
     }
 
+    /**
+     * builds ProductDiscountChangeSortOrderAction with checking for non-null required values
+     * @return ProductDiscountChangeSortOrderAction
+     */
     public ProductDiscountChangeSortOrderAction build() {
         Objects.requireNonNull(sortOrder, ProductDiscountChangeSortOrderAction.class + ": sortOrder is missing");
         return new ProductDiscountChangeSortOrderActionImpl(sortOrder);
     }
 
     /**
-     * builds ProductDiscountChangeSortOrderAction without checking for non null required values
+     * builds ProductDiscountChangeSortOrderAction without checking for non-null required values
+     * @return ProductDiscountChangeSortOrderAction
      */
     public ProductDiscountChangeSortOrderAction buildUnchecked() {
         return new ProductDiscountChangeSortOrderActionImpl(sortOrder);

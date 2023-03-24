@@ -29,7 +29,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>The URL of the image.</p>
-     * @param imageUrl
+     * @param imageUrl value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
-     * @param productVariants
+     * @param productVariants value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
-     * @param productVariants
+     * @param productVariants value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
-     * @param productVariants
+     * @param productVariants value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
+     * @param builder function to build the productVariants value
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
+     * @param builder function to build the productVariants value
      * @return Builder
      */
 
@@ -111,6 +113,10 @@ public class ResultItemBuilder implements Builder<ResultItem> {
         return this.productVariants;
     }
 
+    /**
+     * builds ResultItem with checking for non-null required values
+     * @return ResultItem
+     */
     public ResultItem build() {
         Objects.requireNonNull(imageUrl, ResultItem.class + ": imageUrl is missing");
         Objects.requireNonNull(productVariants, ResultItem.class + ": productVariants is missing");
@@ -118,7 +124,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-     * builds ResultItem without checking for non null required values
+     * builds ResultItem without checking for non-null required values
+     * @return ResultItem
      */
     public ResultItem buildUnchecked() {
         return new ResultItemImpl(imageUrl, productVariants);

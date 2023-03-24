@@ -40,7 +40,7 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     /**
      *  <p>Actual number of results returned.</p>
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     /**
      *  <p>ProductSelections matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -96,7 +96,7 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     /**
      *  <p>ProductSelections matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -108,7 +108,7 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     /**
      *  <p>ProductSelections matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -123,6 +123,7 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     /**
      *  <p>ProductSelections matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -138,6 +139,7 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     /**
      *  <p>ProductSelections matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -170,6 +172,10 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
         return this.results;
     }
 
+    /**
+     * builds ProductSelectionPagedQueryResponse with checking for non-null required values
+     * @return ProductSelectionPagedQueryResponse
+     */
     public ProductSelectionPagedQueryResponse build() {
         Objects.requireNonNull(limit, ProductSelectionPagedQueryResponse.class + ": limit is missing");
         Objects.requireNonNull(offset, ProductSelectionPagedQueryResponse.class + ": offset is missing");
@@ -179,7 +185,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     * builds ProductSelectionPagedQueryResponse without checking for non null required values
+     * builds ProductSelectionPagedQueryResponse without checking for non-null required values
+     * @return ProductSelectionPagedQueryResponse
      */
     public ProductSelectionPagedQueryResponse buildUnchecked() {
         return new ProductSelectionPagedQueryResponseImpl(limit, offset, count, total, results);

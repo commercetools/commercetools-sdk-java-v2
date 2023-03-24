@@ -25,7 +25,7 @@ public class FieldTypeBuilder implements Builder<FieldType> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class FieldTypeBuilder implements Builder<FieldType> {
         return this.name;
     }
 
+    /**
+     * builds FieldType with checking for non-null required values
+     * @return FieldType
+     */
     public FieldType build() {
         Objects.requireNonNull(name, FieldType.class + ": name is missing");
         return new FieldTypeImpl(name);
     }
 
     /**
-     * builds FieldType without checking for non null required values
+     * builds FieldType without checking for non-null required values
+     * @return FieldType
      */
     public FieldType buildUnchecked() {
         return new FieldTypeImpl(name);

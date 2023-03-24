@@ -30,7 +30,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
 
     /**
      *  <p>Email address on the Order after the Set Customer Email update action.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
 
     /**
      *  <p>Email address on the Order before the Set Customer Email update action.</p>
-     * @param oldEmail
+     * @param oldEmail value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
         return this.oldEmail;
     }
 
+    /**
+     * builds OrderCustomerEmailSetMessagePayload with checking for non-null required values
+     * @return OrderCustomerEmailSetMessagePayload
+     */
     public OrderCustomerEmailSetMessagePayload build() {
         return new OrderCustomerEmailSetMessagePayloadImpl(email, oldEmail);
     }
 
     /**
-     * builds OrderCustomerEmailSetMessagePayload without checking for non null required values
+     * builds OrderCustomerEmailSetMessagePayload without checking for non-null required values
+     * @return OrderCustomerEmailSetMessagePayload
      */
     public OrderCustomerEmailSetMessagePayload buildUnchecked() {
         return new OrderCustomerEmailSetMessagePayloadImpl(email, oldEmail);

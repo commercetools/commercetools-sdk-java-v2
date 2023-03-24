@@ -29,7 +29,7 @@ public class QuoteUpdateBuilder implements Builder<QuoteUpdate> {
 
     /**
      *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class QuoteUpdateBuilder implements Builder<QuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class QuoteUpdateBuilder implements Builder<QuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class QuoteUpdateBuilder implements Builder<QuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class QuoteUpdateBuilder implements Builder<QuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class QuoteUpdateBuilder implements Builder<QuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class QuoteUpdateBuilder implements Builder<QuoteUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds QuoteUpdate with checking for non-null required values
+     * @return QuoteUpdate
+     */
     public QuoteUpdate build() {
         Objects.requireNonNull(version, QuoteUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, QuoteUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class QuoteUpdateBuilder implements Builder<QuoteUpdate> {
     }
 
     /**
-     * builds QuoteUpdate without checking for non null required values
+     * builds QuoteUpdate without checking for non-null required values
+     * @return QuoteUpdate
      */
     public QuoteUpdate buildUnchecked() {
         return new QuoteUpdateImpl(version, actions);

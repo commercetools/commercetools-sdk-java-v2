@@ -27,7 +27,7 @@ public class CustomerSetMiddleNameActionBuilder implements Builder<CustomerSetMi
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param middleName
+     * @param middleName value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerSetMiddleNameActionBuilder implements Builder<CustomerSetMi
         return this.middleName;
     }
 
+    /**
+     * builds CustomerSetMiddleNameAction with checking for non-null required values
+     * @return CustomerSetMiddleNameAction
+     */
     public CustomerSetMiddleNameAction build() {
         return new CustomerSetMiddleNameActionImpl(middleName);
     }
 
     /**
-     * builds CustomerSetMiddleNameAction without checking for non null required values
+     * builds CustomerSetMiddleNameAction without checking for non-null required values
+     * @return CustomerSetMiddleNameAction
      */
     public CustomerSetMiddleNameAction buildUnchecked() {
         return new CustomerSetMiddleNameActionImpl(middleName);

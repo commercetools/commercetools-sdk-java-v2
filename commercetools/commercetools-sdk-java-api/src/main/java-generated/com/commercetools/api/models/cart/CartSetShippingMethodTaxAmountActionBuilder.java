@@ -28,6 +28,7 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param externalTaxAmount
+     * @param externalTaxAmount value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
         return this.externalTaxAmount;
     }
 
+    /**
+     * builds CartSetShippingMethodTaxAmountAction with checking for non-null required values
+     * @return CartSetShippingMethodTaxAmountAction
+     */
     public CartSetShippingMethodTaxAmountAction build() {
         return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
     }
 
     /**
-     * builds CartSetShippingMethodTaxAmountAction without checking for non null required values
+     * builds CartSetShippingMethodTaxAmountAction without checking for non-null required values
+     * @return CartSetShippingMethodTaxAmountAction
      */
     public CartSetShippingMethodTaxAmountAction buildUnchecked() {
         return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);

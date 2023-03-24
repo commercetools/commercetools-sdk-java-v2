@@ -36,7 +36,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
 
     /**
      *  <p>Password of the Customer.</p>
-     * @param password
+     * @param password value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
      *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
      *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no LineItems are merged.</li>
      *  </ul>
-     * @param activeCartSignInMode
+     * @param activeCartSignInMode value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
      *   <li>If <code>false</code>, only the prices, discounts, and tax rates are updated.</li>
      *  </ul>
-     * @param updateProductData
+     * @param updateProductData value to be set
      * @return Builder
      */
 
@@ -103,6 +103,10 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
         return this.updateProductData;
     }
 
+    /**
+     * builds MyCustomerSignin with checking for non-null required values
+     * @return MyCustomerSignin
+     */
     public MyCustomerSignin build() {
         Objects.requireNonNull(email, MyCustomerSignin.class + ": email is missing");
         Objects.requireNonNull(password, MyCustomerSignin.class + ": password is missing");
@@ -110,7 +114,8 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
     }
 
     /**
-     * builds MyCustomerSignin without checking for non null required values
+     * builds MyCustomerSignin without checking for non-null required values
+     * @return MyCustomerSignin
      */
     public MyCustomerSignin buildUnchecked() {
         return new MyCustomerSigninImpl(email, password, activeCartSignInMode, updateProductData);

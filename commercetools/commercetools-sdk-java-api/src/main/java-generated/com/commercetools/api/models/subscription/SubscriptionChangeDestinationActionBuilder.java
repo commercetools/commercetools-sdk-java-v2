@@ -26,7 +26,7 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param destination
+     * @param destination value to be set
      * @return Builder
      */
 
@@ -38,6 +38,7 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the destination value
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
         return this.destination;
     }
 
+    /**
+     * builds SubscriptionChangeDestinationAction with checking for non-null required values
+     * @return SubscriptionChangeDestinationAction
+     */
     public SubscriptionChangeDestinationAction build() {
         Objects.requireNonNull(destination, SubscriptionChangeDestinationAction.class + ": destination is missing");
         return new SubscriptionChangeDestinationActionImpl(destination);
     }
 
     /**
-     * builds SubscriptionChangeDestinationAction without checking for non null required values
+     * builds SubscriptionChangeDestinationAction without checking for non-null required values
+     * @return SubscriptionChangeDestinationAction
      */
     public SubscriptionChangeDestinationAction buildUnchecked() {
         return new SubscriptionChangeDestinationActionImpl(destination);

@@ -32,7 +32,7 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      *  <p><code>"The compared field $fieldName is not present."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -43,6 +43,8 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ExtensionPredicateEvaluationFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -52,6 +54,9 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ExtensionPredicateEvaluationFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -64,6 +69,7 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
+     * @param builder function to build the errorByExtension value
      * @return Builder
      */
 
@@ -75,7 +81,7 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
-     * @param errorByExtension
+     * @param errorByExtension value to be set
      * @return Builder
      */
 
@@ -97,6 +103,10 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
         return this.errorByExtension;
     }
 
+    /**
+     * builds ExtensionPredicateEvaluationFailedError with checking for non-null required values
+     * @return ExtensionPredicateEvaluationFailedError
+     */
     public ExtensionPredicateEvaluationFailedError build() {
         Objects.requireNonNull(message, ExtensionPredicateEvaluationFailedError.class + ": message is missing");
         Objects.requireNonNull(errorByExtension,
@@ -105,7 +115,8 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
     }
 
     /**
-     * builds ExtensionPredicateEvaluationFailedError without checking for non null required values
+     * builds ExtensionPredicateEvaluationFailedError without checking for non-null required values
+     * @return ExtensionPredicateEvaluationFailedError
      */
     public ExtensionPredicateEvaluationFailedError buildUnchecked() {
         return new ExtensionPredicateEvaluationFailedErrorImpl(message, values, errorByExtension);

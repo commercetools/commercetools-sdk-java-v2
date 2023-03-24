@@ -40,7 +40,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     /**
      *  <p>Actual number of results returned.</p>
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     /**
      *  <p>Messages matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     /**
      *  <p>Messages matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -107,7 +107,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     /**
      *  <p>Messages matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -121,6 +121,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     /**
      *  <p>Messages matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -135,6 +136,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     /**
      *  <p>Messages matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -166,6 +168,10 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
         return this.results;
     }
 
+    /**
+     * builds MessagePagedQueryResponse with checking for non-null required values
+     * @return MessagePagedQueryResponse
+     */
     public MessagePagedQueryResponse build() {
         Objects.requireNonNull(limit, MessagePagedQueryResponse.class + ": limit is missing");
         Objects.requireNonNull(count, MessagePagedQueryResponse.class + ": count is missing");
@@ -175,7 +181,8 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     * builds MessagePagedQueryResponse without checking for non null required values
+     * builds MessagePagedQueryResponse without checking for non-null required values
+     * @return MessagePagedQueryResponse
      */
     public MessagePagedQueryResponse buildUnchecked() {
         return new MessagePagedQueryResponseImpl(limit, count, total, offset, results);

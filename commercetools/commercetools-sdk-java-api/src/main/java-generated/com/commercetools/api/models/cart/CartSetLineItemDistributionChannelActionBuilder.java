@@ -32,7 +32,7 @@ public class CartSetLineItemDistributionChannelActionBuilder
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class CartSetLineItemDistributionChannelActionBuilder
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
      *  </ul>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -62,7 +63,7 @@ public class CartSetLineItemDistributionChannelActionBuilder
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
      *  </ul>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -81,13 +82,18 @@ public class CartSetLineItemDistributionChannelActionBuilder
         return this.distributionChannel;
     }
 
+    /**
+     * builds CartSetLineItemDistributionChannelAction with checking for non-null required values
+     * @return CartSetLineItemDistributionChannelAction
+     */
     public CartSetLineItemDistributionChannelAction build() {
         Objects.requireNonNull(lineItemId, CartSetLineItemDistributionChannelAction.class + ": lineItemId is missing");
         return new CartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
     }
 
     /**
-     * builds CartSetLineItemDistributionChannelAction without checking for non null required values
+     * builds CartSetLineItemDistributionChannelAction without checking for non-null required values
+     * @return CartSetLineItemDistributionChannelAction
      */
     public CartSetLineItemDistributionChannelAction buildUnchecked() {
         return new CartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);

@@ -38,7 +38,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
+     * @param builder function to build the customLineItem value
      * @return Builder
      */
 
@@ -61,7 +62,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
-     * @param customLineItem
+     * @param customLineItem value to be set
      * @return Builder
      */
 
@@ -73,7 +74,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -84,7 +85,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -95,7 +96,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -124,6 +125,10 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeCustomLineItemQuantityChange with checking for non-null required values
+     * @return ChangeCustomLineItemQuantityChange
+     */
     public ChangeCustomLineItemQuantityChange build() {
         Objects.requireNonNull(change, ChangeCustomLineItemQuantityChange.class + ": change is missing");
         Objects.requireNonNull(customLineItem,
@@ -137,7 +142,8 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     * builds ChangeCustomLineItemQuantityChange without checking for non null required values
+     * builds ChangeCustomLineItemQuantityChange without checking for non-null required values
+     * @return ChangeCustomLineItemQuantityChange
      */
     public ChangeCustomLineItemQuantityChange buildUnchecked() {
         return new ChangeCustomLineItemQuantityChangeImpl(change, customLineItem, customLineItemId, nextValue,

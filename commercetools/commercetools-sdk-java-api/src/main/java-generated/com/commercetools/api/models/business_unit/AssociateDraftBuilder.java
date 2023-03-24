@@ -29,7 +29,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>Roles the Associate should hold within the Business Unit.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>Roles the Associate should hold within the Business Unit.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>Roles the Associate should hold within the Business Unit.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -66,6 +66,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -78,7 +79,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -96,6 +97,10 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
         return this.customer;
     }
 
+    /**
+     * builds AssociateDraft with checking for non-null required values
+     * @return AssociateDraft
+     */
     public AssociateDraft build() {
         Objects.requireNonNull(roles, AssociateDraft.class + ": roles is missing");
         Objects.requireNonNull(customer, AssociateDraft.class + ": customer is missing");
@@ -103,7 +108,8 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
     }
 
     /**
-     * builds AssociateDraft without checking for non null required values
+     * builds AssociateDraft without checking for non-null required values
+     * @return AssociateDraft
      */
     public AssociateDraft buildUnchecked() {
         return new AssociateDraftImpl(roles, customer);

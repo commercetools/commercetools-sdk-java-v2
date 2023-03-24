@@ -30,7 +30,7 @@ public class MyCustomerAddShippingAddressIdActionBuilder implements Builder<MyCu
 
     /**
      *  <p><code>id</code> of the Address to become a shipping address.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class MyCustomerAddShippingAddressIdActionBuilder implements Builder<MyCu
 
     /**
      *  <p><code>key</code> of the Address to become a shipping address.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class MyCustomerAddShippingAddressIdActionBuilder implements Builder<MyCu
         return this.addressKey;
     }
 
+    /**
+     * builds MyCustomerAddShippingAddressIdAction with checking for non-null required values
+     * @return MyCustomerAddShippingAddressIdAction
+     */
     public MyCustomerAddShippingAddressIdAction build() {
         return new MyCustomerAddShippingAddressIdActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds MyCustomerAddShippingAddressIdAction without checking for non null required values
+     * builds MyCustomerAddShippingAddressIdAction without checking for non-null required values
+     * @return MyCustomerAddShippingAddressIdAction
      */
     public MyCustomerAddShippingAddressIdAction buildUnchecked() {
         return new MyCustomerAddShippingAddressIdActionImpl(addressId, addressKey);

@@ -26,6 +26,7 @@ public class AttributeGroupAddAttributeActionBuilder implements Builder<Attribut
 
     /**
      *  <p>Value to add.</p>
+     * @param builder function to build the attribute value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class AttributeGroupAddAttributeActionBuilder implements Builder<Attribut
 
     /**
      *  <p>Value to add.</p>
-     * @param attribute
+     * @param attribute value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class AttributeGroupAddAttributeActionBuilder implements Builder<Attribut
         return this.attribute;
     }
 
+    /**
+     * builds AttributeGroupAddAttributeAction with checking for non-null required values
+     * @return AttributeGroupAddAttributeAction
+     */
     public AttributeGroupAddAttributeAction build() {
         Objects.requireNonNull(attribute, AttributeGroupAddAttributeAction.class + ": attribute is missing");
         return new AttributeGroupAddAttributeActionImpl(attribute);
     }
 
     /**
-     * builds AttributeGroupAddAttributeAction without checking for non null required values
+     * builds AttributeGroupAddAttributeAction without checking for non-null required values
+     * @return AttributeGroupAddAttributeAction
      */
     public AttributeGroupAddAttributeAction buildUnchecked() {
         return new AttributeGroupAddAttributeActionImpl(attribute);

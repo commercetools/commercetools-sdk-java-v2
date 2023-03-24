@@ -30,7 +30,7 @@ public class MyCustomerSetCustomFieldActionBuilder implements Builder<MyCustomer
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class MyCustomerSetCustomFieldActionBuilder implements Builder<MyCustomer
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class MyCustomerSetCustomFieldActionBuilder implements Builder<MyCustomer
         return this.value;
     }
 
+    /**
+     * builds MyCustomerSetCustomFieldAction with checking for non-null required values
+     * @return MyCustomerSetCustomFieldAction
+     */
     public MyCustomerSetCustomFieldAction build() {
         Objects.requireNonNull(name, MyCustomerSetCustomFieldAction.class + ": name is missing");
         return new MyCustomerSetCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds MyCustomerSetCustomFieldAction without checking for non null required values
+     * builds MyCustomerSetCustomFieldAction without checking for non-null required values
+     * @return MyCustomerSetCustomFieldAction
      */
     public MyCustomerSetCustomFieldAction buildUnchecked() {
         return new MyCustomerSetCustomFieldActionImpl(name, value);

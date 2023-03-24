@@ -32,7 +32,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
      *  </ul>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -62,7 +63,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
      *  </ul>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -81,6 +82,10 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
         return this.distributionChannel;
     }
 
+    /**
+     * builds MyCartSetLineItemDistributionChannelAction with checking for non-null required values
+     * @return MyCartSetLineItemDistributionChannelAction
+     */
     public MyCartSetLineItemDistributionChannelAction build() {
         Objects.requireNonNull(lineItemId,
             MyCartSetLineItemDistributionChannelAction.class + ": lineItemId is missing");
@@ -88,7 +93,8 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     * builds MyCartSetLineItemDistributionChannelAction without checking for non null required values
+     * builds MyCartSetLineItemDistributionChannelAction without checking for non-null required values
+     * @return MyCartSetLineItemDistributionChannelAction
      */
     public MyCartSetLineItemDistributionChannelAction buildUnchecked() {
         return new MyCartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);

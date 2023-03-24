@@ -25,7 +25,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
         return this.value;
     }
 
+    /**
+     * builds NumberSetField with checking for non-null required values
+     * @return NumberSetField
+     */
     public NumberSetField build() {
         Objects.requireNonNull(value, NumberSetField.class + ": value is missing");
         return new NumberSetFieldImpl(value);
     }
 
     /**
-     * builds NumberSetField without checking for non null required values
+     * builds NumberSetField without checking for non-null required values
+     * @return NumberSetField
      */
     public NumberSetField buildUnchecked() {
         return new NumberSetFieldImpl(value);

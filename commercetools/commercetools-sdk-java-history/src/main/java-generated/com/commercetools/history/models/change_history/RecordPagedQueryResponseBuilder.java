@@ -38,7 +38,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *  <p>Actual number of results returned.</p>
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -106,7 +106,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -121,6 +121,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -135,6 +136,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -165,6 +167,10 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         return this.results;
     }
 
+    /**
+     * builds RecordPagedQueryResponse with checking for non-null required values
+     * @return RecordPagedQueryResponse
+     */
     public RecordPagedQueryResponse build() {
         Objects.requireNonNull(limit, RecordPagedQueryResponse.class + ": limit is missing");
         Objects.requireNonNull(count, RecordPagedQueryResponse.class + ": count is missing");
@@ -175,7 +181,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     * builds RecordPagedQueryResponse without checking for non null required values
+     * builds RecordPagedQueryResponse without checking for non-null required values
+     * @return RecordPagedQueryResponse
      */
     public RecordPagedQueryResponse buildUnchecked() {
         return new RecordPagedQueryResponseImpl(limit, count, total, offset, results);

@@ -27,6 +27,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
         return this.address;
     }
 
+    /**
+     * builds StagedOrderUpdateItemShippingAddressAction with checking for non-null required values
+     * @return StagedOrderUpdateItemShippingAddressAction
+     */
     public StagedOrderUpdateItemShippingAddressAction build() {
         Objects.requireNonNull(address, StagedOrderUpdateItemShippingAddressAction.class + ": address is missing");
         return new StagedOrderUpdateItemShippingAddressActionImpl(address);
     }
 
     /**
-     * builds StagedOrderUpdateItemShippingAddressAction without checking for non null required values
+     * builds StagedOrderUpdateItemShippingAddressAction without checking for non-null required values
+     * @return StagedOrderUpdateItemShippingAddressAction
      */
     public StagedOrderUpdateItemShippingAddressAction buildUnchecked() {
         return new StagedOrderUpdateItemShippingAddressActionImpl(address);

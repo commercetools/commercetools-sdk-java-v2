@@ -25,7 +25,7 @@ public class PaymentKeyReferenceBuilder implements Builder<PaymentKeyReference> 
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class PaymentKeyReferenceBuilder implements Builder<PaymentKeyReference> 
         return this.key;
     }
 
+    /**
+     * builds PaymentKeyReference with checking for non-null required values
+     * @return PaymentKeyReference
+     */
     public PaymentKeyReference build() {
         Objects.requireNonNull(key, PaymentKeyReference.class + ": key is missing");
         return new PaymentKeyReferenceImpl(key);
     }
 
     /**
-     * builds PaymentKeyReference without checking for non null required values
+     * builds PaymentKeyReference without checking for non-null required values
+     * @return PaymentKeyReference
      */
     public PaymentKeyReference buildUnchecked() {
         return new PaymentKeyReferenceImpl(key);

@@ -27,7 +27,7 @@ public class ProductSetPriceModeActionBuilder implements Builder<ProductSetPrice
 
     /**
      *  <p>Specifies which type of Prices should be used when looking up a price for the Product.</p>
-     * @param priceMode
+     * @param priceMode value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class ProductSetPriceModeActionBuilder implements Builder<ProductSetPrice
         return this.priceMode;
     }
 
+    /**
+     * builds ProductSetPriceModeAction with checking for non-null required values
+     * @return ProductSetPriceModeAction
+     */
     public ProductSetPriceModeAction build() {
         return new ProductSetPriceModeActionImpl(priceMode);
     }
 
     /**
-     * builds ProductSetPriceModeAction without checking for non null required values
+     * builds ProductSetPriceModeAction without checking for non-null required values
+     * @return ProductSetPriceModeAction
      */
     public ProductSetPriceModeAction buildUnchecked() {
         return new ProductSetPriceModeActionImpl(priceMode);

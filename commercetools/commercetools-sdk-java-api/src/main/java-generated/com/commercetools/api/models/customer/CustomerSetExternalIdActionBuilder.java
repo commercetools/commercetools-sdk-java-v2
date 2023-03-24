@@ -27,7 +27,7 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
         return this.externalId;
     }
 
+    /**
+     * builds CustomerSetExternalIdAction with checking for non-null required values
+     * @return CustomerSetExternalIdAction
+     */
     public CustomerSetExternalIdAction build() {
         return new CustomerSetExternalIdActionImpl(externalId);
     }
 
     /**
-     * builds CustomerSetExternalIdAction without checking for non null required values
+     * builds CustomerSetExternalIdAction without checking for non-null required values
+     * @return CustomerSetExternalIdAction
      */
     public CustomerSetExternalIdAction buildUnchecked() {
         return new CustomerSetExternalIdActionImpl(externalId);

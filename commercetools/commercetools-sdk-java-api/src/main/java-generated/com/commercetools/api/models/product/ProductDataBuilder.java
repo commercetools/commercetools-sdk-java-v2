@@ -58,6 +58,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Name of the Product.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -80,7 +81,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
-     * @param categories
+     * @param categories value to be set
      * @return Builder
      */
 
@@ -91,7 +92,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
-     * @param categories
+     * @param categories value to be set
      * @return Builder
      */
 
@@ -103,7 +104,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
-     * @param categories
+     * @param categories value to be set
      * @return Builder
      */
 
@@ -118,6 +119,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
      * @return Builder
      */
 
@@ -132,6 +134,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
      * @return Builder
      */
 
@@ -144,6 +147,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
 
@@ -156,7 +160,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
-     * @param categoryOrderHints
+     * @param categoryOrderHints value to be set
      * @return Builder
      */
 
@@ -168,6 +172,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -179,7 +184,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Description of the Product.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -191,6 +196,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -202,7 +208,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -213,6 +219,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @param builder function to build the metaTitle value
      * @return Builder
      */
 
@@ -224,7 +231,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
-     * @param metaTitle
+     * @param metaTitle value to be set
      * @return Builder
      */
 
@@ -235,6 +242,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @param builder function to build the metaDescription value
      * @return Builder
      */
 
@@ -246,7 +254,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
-     * @param metaDescription
+     * @param metaDescription value to be set
      * @return Builder
      */
 
@@ -258,6 +266,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param builder function to build the metaKeywords value
      * @return Builder
      */
 
@@ -269,7 +278,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
-     * @param metaKeywords
+     * @param metaKeywords value to be set
      * @return Builder
      */
 
@@ -281,6 +290,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     * @param builder function to build the masterVariant value
      * @return Builder
      */
 
@@ -292,7 +302,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
-     * @param masterVariant
+     * @param masterVariant value to be set
      * @return Builder
      */
 
@@ -303,7 +313,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
-     * @param variants
+     * @param variants value to be set
      * @return Builder
      */
 
@@ -314,7 +324,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
-     * @param variants
+     * @param variants value to be set
      * @return Builder
      */
 
@@ -326,7 +336,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
-     * @param variants
+     * @param variants value to be set
      * @return Builder
      */
 
@@ -340,6 +350,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param builder function to build the variants value
      * @return Builder
      */
 
@@ -354,6 +365,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param builder function to build the variants value
      * @return Builder
      */
 
@@ -366,6 +378,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param builder function to build the searchKeywords value
      * @return Builder
      */
 
@@ -377,7 +390,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
-     * @param searchKeywords
+     * @param searchKeywords value to be set
      * @return Builder
      */
 
@@ -435,6 +448,10 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this.searchKeywords;
     }
 
+    /**
+     * builds ProductData with checking for non-null required values
+     * @return ProductData
+     */
     public ProductData build() {
         Objects.requireNonNull(name, ProductData.class + ": name is missing");
         Objects.requireNonNull(categories, ProductData.class + ": categories is missing");
@@ -447,7 +464,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     * builds ProductData without checking for non null required values
+     * builds ProductData without checking for non-null required values
+     * @return ProductData
      */
     public ProductData buildUnchecked() {
         return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,

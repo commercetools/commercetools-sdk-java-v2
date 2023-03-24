@@ -40,7 +40,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -73,6 +73,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>Value to append.</p>
+     * @param builder function to build the asset value
      * @return Builder
      */
 
@@ -84,7 +85,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>Value to append.</p>
-     * @param asset
+     * @param asset value to be set
      * @return Builder
      */
 
@@ -95,7 +96,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>Position in <code>assets</code> where the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
-     * @param position
+     * @param position value to be set
      * @return Builder
      */
 
@@ -128,13 +129,18 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
         return this.position;
     }
 
+    /**
+     * builds ProductAddAssetAction with checking for non-null required values
+     * @return ProductAddAssetAction
+     */
     public ProductAddAssetAction build() {
         Objects.requireNonNull(asset, ProductAddAssetAction.class + ": asset is missing");
         return new ProductAddAssetActionImpl(variantId, sku, staged, asset, position);
     }
 
     /**
-     * builds ProductAddAssetAction without checking for non null required values
+     * builds ProductAddAssetAction without checking for non-null required values
+     * @return ProductAddAssetAction
      */
     public ProductAddAssetAction buildUnchecked() {
         return new ProductAddAssetActionImpl(variantId, sku, staged, asset, position);

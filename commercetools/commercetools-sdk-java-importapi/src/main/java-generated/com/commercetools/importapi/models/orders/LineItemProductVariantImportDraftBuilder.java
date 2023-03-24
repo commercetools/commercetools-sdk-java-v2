@@ -40,6 +40,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     * @param builder function to build the productVariant value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariant.product</code>.</p>
-     * @param productVariant
+     * @param productVariant value to be set
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -76,7 +77,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -88,7 +89,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -100,7 +101,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -115,6 +116,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -129,6 +131,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -141,7 +144,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -153,7 +156,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -165,7 +168,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -180,6 +183,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -195,6 +199,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -208,7 +213,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -220,7 +225,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -232,7 +237,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -247,6 +252,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @param builder function to build the images value
      * @return Builder
      */
 
@@ -261,6 +267,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @param builder function to build the images value
      * @return Builder
      */
 
@@ -296,12 +303,17 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this.images;
     }
 
+    /**
+     * builds LineItemProductVariantImportDraft with checking for non-null required values
+     * @return LineItemProductVariantImportDraft
+     */
     public LineItemProductVariantImportDraft build() {
         return new LineItemProductVariantImportDraftImpl(productVariant, sku, prices, attributes, images);
     }
 
     /**
-     * builds LineItemProductVariantImportDraft without checking for non null required values
+     * builds LineItemProductVariantImportDraft without checking for non-null required values
+     * @return LineItemProductVariantImportDraft
      */
     public LineItemProductVariantImportDraft buildUnchecked() {
         return new LineItemProductVariantImportDraftImpl(productVariant, sku, prices, attributes, images);

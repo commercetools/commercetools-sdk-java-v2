@@ -28,7 +28,7 @@ public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConf
 
     /**
      *  <p>The image search activation status.</p>
-     * @param status
+     * @param status value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConf
 
     /**
      *
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConf
         return this.lastModifiedAt;
     }
 
+    /**
+     * builds ImageSearchConfigResponse with checking for non-null required values
+     * @return ImageSearchConfigResponse
+     */
     public ImageSearchConfigResponse build() {
         Objects.requireNonNull(status, ImageSearchConfigResponse.class + ": status is missing");
         Objects.requireNonNull(lastModifiedAt, ImageSearchConfigResponse.class + ": lastModifiedAt is missing");
@@ -64,7 +68,8 @@ public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConf
     }
 
     /**
-     * builds ImageSearchConfigResponse without checking for non null required values
+     * builds ImageSearchConfigResponse without checking for non-null required values
+     * @return ImageSearchConfigResponse
      */
     public ImageSearchConfigResponse buildUnchecked() {
         return new ImageSearchConfigResponseImpl(status, lastModifiedAt);

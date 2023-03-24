@@ -30,7 +30,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -72,6 +73,10 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
         return this.money;
     }
 
+    /**
+     * builds StagedOrderChangeCustomLineItemMoneyAction with checking for non-null required values
+     * @return StagedOrderChangeCustomLineItemMoneyAction
+     */
     public StagedOrderChangeCustomLineItemMoneyAction build() {
         Objects.requireNonNull(customLineItemId,
             StagedOrderChangeCustomLineItemMoneyAction.class + ": customLineItemId is missing");
@@ -80,7 +85,8 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     }
 
     /**
-     * builds StagedOrderChangeCustomLineItemMoneyAction without checking for non null required values
+     * builds StagedOrderChangeCustomLineItemMoneyAction without checking for non-null required values
+     * @return StagedOrderChangeCustomLineItemMoneyAction
      */
     public StagedOrderChangeCustomLineItemMoneyAction buildUnchecked() {
         return new StagedOrderChangeCustomLineItemMoneyActionImpl(customLineItemId, money);

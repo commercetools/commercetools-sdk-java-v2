@@ -55,7 +55,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Unique identifier of the ProductType.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Current version of the ProductType.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Date and time (UTC) the ProductType was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -88,7 +88,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Date and time (UTC) the ProductType was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -99,6 +99,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -110,7 +111,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -122,6 +123,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -133,7 +135,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -144,7 +146,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>User-defined unique identifier of the ProductType.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -155,7 +157,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Name of the ProductType.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -166,7 +168,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Description of the ProductType.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -177,7 +179,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -189,7 +191,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -201,7 +203,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -216,6 +218,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -231,6 +234,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Attributes specified for the ProductType.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -286,6 +290,10 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this.attributes;
     }
 
+    /**
+     * builds ProductType with checking for non-null required values
+     * @return ProductType
+     */
     public ProductType build() {
         Objects.requireNonNull(id, ProductType.class + ": id is missing");
         Objects.requireNonNull(version, ProductType.class + ": version is missing");
@@ -298,7 +306,8 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     * builds ProductType without checking for non null required values
+     * builds ProductType without checking for non-null required values
+     * @return ProductType
      */
     public ProductType buildUnchecked() {
         return new ProductTypeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,

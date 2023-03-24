@@ -27,7 +27,7 @@ public class MyCustomerSetTitleActionBuilder implements Builder<MyCustomerSetTit
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class MyCustomerSetTitleActionBuilder implements Builder<MyCustomerSetTit
         return this.title;
     }
 
+    /**
+     * builds MyCustomerSetTitleAction with checking for non-null required values
+     * @return MyCustomerSetTitleAction
+     */
     public MyCustomerSetTitleAction build() {
         return new MyCustomerSetTitleActionImpl(title);
     }
 
     /**
-     * builds MyCustomerSetTitleAction without checking for non null required values
+     * builds MyCustomerSetTitleAction without checking for non-null required values
+     * @return MyCustomerSetTitleAction
      */
     public MyCustomerSetTitleAction buildUnchecked() {
         return new MyCustomerSetTitleActionImpl(title);

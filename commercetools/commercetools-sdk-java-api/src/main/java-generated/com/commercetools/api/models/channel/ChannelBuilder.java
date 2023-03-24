@@ -67,7 +67,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Unique identifier of the Channel.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Current version of the Channel.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Date and time (UTC) the Channel was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -100,7 +100,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Date and time (UTC) the Channel was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -111,6 +111,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -122,7 +123,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -134,6 +135,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -145,7 +147,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -156,7 +158,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>User-defined unique identifier of the Channel.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -167,7 +169,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Roles of the Channel.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -178,7 +180,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Roles of the Channel.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -189,7 +191,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Roles of the Channel.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -203,6 +205,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Name of the Channel.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -214,7 +217,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Name of the Channel.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -225,6 +228,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Description of the Channel.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -236,7 +240,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Description of the Channel.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -247,6 +251,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -258,7 +263,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -269,6 +274,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Statistics about the review ratings taken into account for the Channel.</p>
+     * @param builder function to build the reviewRatingStatistics value
      * @return Builder
      */
 
@@ -282,7 +288,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Statistics about the review ratings taken into account for the Channel.</p>
-     * @param reviewRatingStatistics
+     * @param reviewRatingStatistics value to be set
      * @return Builder
      */
 
@@ -294,6 +300,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Custom Fields defined for the Channel.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -305,7 +312,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Custom Fields defined for the Channel.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -316,7 +323,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
-     * @param geoLocation
+     * @param geoLocation value to be set
      * @return Builder
      */
 
@@ -327,6 +334,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
+     * @param builder function to build the geoLocation value
      * @return Builder
      */
 
@@ -400,6 +408,10 @@ public class ChannelBuilder implements Builder<Channel> {
         return this.geoLocation;
     }
 
+    /**
+     * builds Channel with checking for non-null required values
+     * @return Channel
+     */
     public Channel build() {
         Objects.requireNonNull(id, Channel.class + ": id is missing");
         Objects.requireNonNull(version, Channel.class + ": version is missing");
@@ -412,7 +424,8 @@ public class ChannelBuilder implements Builder<Channel> {
     }
 
     /**
-     * builds Channel without checking for non null required values
+     * builds Channel without checking for non-null required values
+     * @return Channel
      */
     public Channel buildUnchecked() {
         return new ChannelImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, roles, name,

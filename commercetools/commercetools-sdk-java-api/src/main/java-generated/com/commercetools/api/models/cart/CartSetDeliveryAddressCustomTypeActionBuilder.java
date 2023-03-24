@@ -34,7 +34,7 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p><code>id</code> of the Delivery.</p>
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -103,13 +105,18 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
         return this.fields;
     }
 
+    /**
+     * builds CartSetDeliveryAddressCustomTypeAction with checking for non-null required values
+     * @return CartSetDeliveryAddressCustomTypeAction
+     */
     public CartSetDeliveryAddressCustomTypeAction build() {
         Objects.requireNonNull(deliveryId, CartSetDeliveryAddressCustomTypeAction.class + ": deliveryId is missing");
         return new CartSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);
     }
 
     /**
-     * builds CartSetDeliveryAddressCustomTypeAction without checking for non null required values
+     * builds CartSetDeliveryAddressCustomTypeAction without checking for non-null required values
+     * @return CartSetDeliveryAddressCustomTypeAction
      */
     public CartSetDeliveryAddressCustomTypeAction buildUnchecked() {
         return new CartSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);

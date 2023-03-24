@@ -36,7 +36,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p><code>"The attribute with name $attributeName has a different type on product type $productTypeName."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -47,6 +47,8 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -56,6 +58,9 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -68,7 +73,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
-     * @param conflictingProductTypeId
+     * @param conflictingProductTypeId value to be set
      * @return Builder
      */
 
@@ -79,7 +84,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p>Name of the Product Type containing the conflicting name.</p>
-     * @param conflictingProductTypeName
+     * @param conflictingProductTypeName value to be set
      * @return Builder
      */
 
@@ -91,7 +96,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
-     * @param conflictingAttributeName
+     * @param conflictingAttributeName value to be set
      * @return Builder
      */
 
@@ -120,6 +125,10 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
         return this.conflictingAttributeName;
     }
 
+    /**
+     * builds AttributeDefinitionTypeConflictError with checking for non-null required values
+     * @return AttributeDefinitionTypeConflictError
+     */
     public AttributeDefinitionTypeConflictError build() {
         Objects.requireNonNull(message, AttributeDefinitionTypeConflictError.class + ": message is missing");
         Objects.requireNonNull(conflictingProductTypeId,
@@ -133,7 +142,8 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     * builds AttributeDefinitionTypeConflictError without checking for non null required values
+     * builds AttributeDefinitionTypeConflictError without checking for non-null required values
+     * @return AttributeDefinitionTypeConflictError
      */
     public AttributeDefinitionTypeConflictError buildUnchecked() {
         return new AttributeDefinitionTypeConflictErrorImpl(message, values, conflictingProductTypeId,

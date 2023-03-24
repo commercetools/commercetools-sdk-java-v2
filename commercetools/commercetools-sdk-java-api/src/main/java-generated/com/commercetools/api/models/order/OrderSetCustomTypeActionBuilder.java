@@ -31,6 +31,7 @@ public class OrderSetCustomTypeActionBuilder implements Builder<OrderSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Order with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class OrderSetCustomTypeActionBuilder implements Builder<OrderSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Order with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class OrderSetCustomTypeActionBuilder implements Builder<OrderSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Order.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class OrderSetCustomTypeActionBuilder implements Builder<OrderSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Order.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class OrderSetCustomTypeActionBuilder implements Builder<OrderSetCustomTy
         return this.fields;
     }
 
+    /**
+     * builds OrderSetCustomTypeAction with checking for non-null required values
+     * @return OrderSetCustomTypeAction
+     */
     public OrderSetCustomTypeAction build() {
         return new OrderSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds OrderSetCustomTypeAction without checking for non null required values
+     * builds OrderSetCustomTypeAction without checking for non-null required values
+     * @return OrderSetCustomTypeAction
      */
     public OrderSetCustomTypeAction buildUnchecked() {
         return new OrderSetCustomTypeActionImpl(type, fields);

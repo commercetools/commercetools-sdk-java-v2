@@ -29,7 +29,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
 
     /**
      *  <p>Customer to create and assign to the Business Unit.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
 
     /**
      *  <p>Customer to create and assign to the Business Unit.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
         return this.customer;
     }
 
+    /**
+     * builds MyBusinessUnitAssociateDraft with checking for non-null required values
+     * @return MyBusinessUnitAssociateDraft
+     */
     public MyBusinessUnitAssociateDraft build() {
         Objects.requireNonNull(version, MyBusinessUnitAssociateDraft.class + ": version is missing");
         Objects.requireNonNull(customer, MyBusinessUnitAssociateDraft.class + ": customer is missing");
@@ -76,7 +81,8 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     * builds MyBusinessUnitAssociateDraft without checking for non null required values
+     * builds MyBusinessUnitAssociateDraft without checking for non-null required values
+     * @return MyBusinessUnitAssociateDraft
      */
     public MyBusinessUnitAssociateDraft buildUnchecked() {
         return new MyBusinessUnitAssociateDraftImpl(version, customer);

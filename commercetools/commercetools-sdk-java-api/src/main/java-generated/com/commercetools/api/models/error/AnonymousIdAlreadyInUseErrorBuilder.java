@@ -27,7 +27,7 @@ public class AnonymousIdAlreadyInUseErrorBuilder implements Builder<AnonymousIdA
 
     /**
      *  <p><code>"The given anonymous ID is already in use."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class AnonymousIdAlreadyInUseErrorBuilder implements Builder<AnonymousIdA
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public AnonymousIdAlreadyInUseErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class AnonymousIdAlreadyInUseErrorBuilder implements Builder<AnonymousIdA
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public AnonymousIdAlreadyInUseErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class AnonymousIdAlreadyInUseErrorBuilder implements Builder<AnonymousIdA
         return this.values;
     }
 
+    /**
+     * builds AnonymousIdAlreadyInUseError with checking for non-null required values
+     * @return AnonymousIdAlreadyInUseError
+     */
     public AnonymousIdAlreadyInUseError build() {
         Objects.requireNonNull(message, AnonymousIdAlreadyInUseError.class + ": message is missing");
         return new AnonymousIdAlreadyInUseErrorImpl(message, values);
     }
 
     /**
-     * builds AnonymousIdAlreadyInUseError without checking for non null required values
+     * builds AnonymousIdAlreadyInUseError without checking for non-null required values
+     * @return AnonymousIdAlreadyInUseError
      */
     public AnonymousIdAlreadyInUseError buildUnchecked() {
         return new AnonymousIdAlreadyInUseErrorImpl(message, values);

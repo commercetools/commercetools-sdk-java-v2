@@ -26,7 +26,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -97,13 +99,18 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
         return this.actions;
     }
 
+    /**
+     * builds ImageSearchConfigRequest with checking for non-null required values
+     * @return ImageSearchConfigRequest
+     */
     public ImageSearchConfigRequest build() {
         Objects.requireNonNull(actions, ImageSearchConfigRequest.class + ": actions is missing");
         return new ImageSearchConfigRequestImpl(actions);
     }
 
     /**
-     * builds ImageSearchConfigRequest without checking for non null required values
+     * builds ImageSearchConfigRequest without checking for non-null required values
+     * @return ImageSearchConfigRequest
      */
     public ImageSearchConfigRequest buildUnchecked() {
         return new ImageSearchConfigRequestImpl(actions);

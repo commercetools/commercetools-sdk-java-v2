@@ -32,7 +32,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
 
     /**
      *  <p>Update action for <code>setShippingAddress</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
         return this.previousValue;
     }
 
+    /**
+     * builds SetShippingAddressChange with checking for non-null required values
+     * @return SetShippingAddressChange
+     */
     public SetShippingAddressChange build() {
         Objects.requireNonNull(change, SetShippingAddressChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetShippingAddressChange.class + ": nextValue is missing");
@@ -106,7 +112,8 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
     }
 
     /**
-     * builds SetShippingAddressChange without checking for non null required values
+     * builds SetShippingAddressChange without checking for non-null required values
+     * @return SetShippingAddressChange
      */
     public SetShippingAddressChange buildUnchecked() {
         return new SetShippingAddressChangeImpl(change, nextValue, previousValue);

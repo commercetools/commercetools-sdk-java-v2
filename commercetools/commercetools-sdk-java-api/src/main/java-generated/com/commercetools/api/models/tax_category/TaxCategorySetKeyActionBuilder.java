@@ -27,7 +27,7 @@ public class TaxCategorySetKeyActionBuilder implements Builder<TaxCategorySetKey
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class TaxCategorySetKeyActionBuilder implements Builder<TaxCategorySetKey
         return this.key;
     }
 
+    /**
+     * builds TaxCategorySetKeyAction with checking for non-null required values
+     * @return TaxCategorySetKeyAction
+     */
     public TaxCategorySetKeyAction build() {
         return new TaxCategorySetKeyActionImpl(key);
     }
 
     /**
-     * builds TaxCategorySetKeyAction without checking for non null required values
+     * builds TaxCategorySetKeyAction without checking for non-null required values
+     * @return TaxCategorySetKeyAction
      */
     public TaxCategorySetKeyAction buildUnchecked() {
         return new TaxCategorySetKeyActionImpl(key);

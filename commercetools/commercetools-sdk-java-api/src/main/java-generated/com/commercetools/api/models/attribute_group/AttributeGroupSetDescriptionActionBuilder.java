@@ -28,6 +28,7 @@ public class AttributeGroupSetDescriptionActionBuilder implements Builder<Attrib
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class AttributeGroupSetDescriptionActionBuilder implements Builder<Attrib
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class AttributeGroupSetDescriptionActionBuilder implements Builder<Attrib
         return this.description;
     }
 
+    /**
+     * builds AttributeGroupSetDescriptionAction with checking for non-null required values
+     * @return AttributeGroupSetDescriptionAction
+     */
     public AttributeGroupSetDescriptionAction build() {
         return new AttributeGroupSetDescriptionActionImpl(description);
     }
 
     /**
-     * builds AttributeGroupSetDescriptionAction without checking for non null required values
+     * builds AttributeGroupSetDescriptionAction without checking for non-null required values
+     * @return AttributeGroupSetDescriptionAction
      */
     public AttributeGroupSetDescriptionAction buildUnchecked() {
         return new AttributeGroupSetDescriptionActionImpl(description);

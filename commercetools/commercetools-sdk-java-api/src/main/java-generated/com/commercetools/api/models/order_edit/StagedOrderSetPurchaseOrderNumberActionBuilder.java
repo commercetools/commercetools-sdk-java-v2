@@ -28,7 +28,7 @@ public class StagedOrderSetPurchaseOrderNumberActionBuilder
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
-     * @param purchaseOrderNumber
+     * @param purchaseOrderNumber value to be set
      * @return Builder
      */
 
@@ -43,12 +43,17 @@ public class StagedOrderSetPurchaseOrderNumberActionBuilder
         return this.purchaseOrderNumber;
     }
 
+    /**
+     * builds StagedOrderSetPurchaseOrderNumberAction with checking for non-null required values
+     * @return StagedOrderSetPurchaseOrderNumberAction
+     */
     public StagedOrderSetPurchaseOrderNumberAction build() {
         return new StagedOrderSetPurchaseOrderNumberActionImpl(purchaseOrderNumber);
     }
 
     /**
-     * builds StagedOrderSetPurchaseOrderNumberAction without checking for non null required values
+     * builds StagedOrderSetPurchaseOrderNumberAction without checking for non-null required values
+     * @return StagedOrderSetPurchaseOrderNumberAction
      */
     public StagedOrderSetPurchaseOrderNumberAction buildUnchecked() {
         return new StagedOrderSetPurchaseOrderNumberActionImpl(purchaseOrderNumber);

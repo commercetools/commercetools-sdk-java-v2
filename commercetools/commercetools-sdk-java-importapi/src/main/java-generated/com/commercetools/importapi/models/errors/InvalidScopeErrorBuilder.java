@@ -25,7 +25,7 @@ public class InvalidScopeErrorBuilder implements Builder<InvalidScopeError> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class InvalidScopeErrorBuilder implements Builder<InvalidScopeError> {
         return this.message;
     }
 
+    /**
+     * builds InvalidScopeError with checking for non-null required values
+     * @return InvalidScopeError
+     */
     public InvalidScopeError build() {
         Objects.requireNonNull(message, InvalidScopeError.class + ": message is missing");
         return new InvalidScopeErrorImpl(message);
     }
 
     /**
-     * builds InvalidScopeError without checking for non null required values
+     * builds InvalidScopeError without checking for non-null required values
+     * @return InvalidScopeError
      */
     public InvalidScopeError buildUnchecked() {
         return new InvalidScopeErrorImpl(message);

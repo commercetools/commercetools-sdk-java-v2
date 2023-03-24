@@ -29,6 +29,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
+     * @param builder function to build the totalGross value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
-     * @param totalGross
+     * @param totalGross value to be set
      * @return Builder
      */
 
@@ -51,6 +52,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -62,7 +64,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -79,6 +81,10 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
         return this.taxRate;
     }
 
+    /**
+     * builds ExternalTaxAmountDraft with checking for non-null required values
+     * @return ExternalTaxAmountDraft
+     */
     public ExternalTaxAmountDraft build() {
         Objects.requireNonNull(totalGross, ExternalTaxAmountDraft.class + ": totalGross is missing");
         Objects.requireNonNull(taxRate, ExternalTaxAmountDraft.class + ": taxRate is missing");
@@ -86,7 +92,8 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
     }
 
     /**
-     * builds ExternalTaxAmountDraft without checking for non null required values
+     * builds ExternalTaxAmountDraft without checking for non-null required values
+     * @return ExternalTaxAmountDraft
      */
     public ExternalTaxAmountDraft buildUnchecked() {
         return new ExternalTaxAmountDraftImpl(totalGross, taxRate);

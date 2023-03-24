@@ -34,7 +34,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -80,7 +80,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -95,6 +95,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
+     * @param builder function to build the sources value
      * @return Builder
      */
 
@@ -109,6 +110,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
+     * @param builder function to build the sources value
      * @return Builder
      */
 
@@ -133,13 +135,18 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
         return this.sources;
     }
 
+    /**
+     * builds CategorySetAssetSourcesAction with checking for non-null required values
+     * @return CategorySetAssetSourcesAction
+     */
     public CategorySetAssetSourcesAction build() {
         Objects.requireNonNull(sources, CategorySetAssetSourcesAction.class + ": sources is missing");
         return new CategorySetAssetSourcesActionImpl(assetId, assetKey, sources);
     }
 
     /**
-     * builds CategorySetAssetSourcesAction without checking for non null required values
+     * builds CategorySetAssetSourcesAction without checking for non-null required values
+     * @return CategorySetAssetSourcesAction
      */
     public CategorySetAssetSourcesAction buildUnchecked() {
         return new CategorySetAssetSourcesActionImpl(assetId, assetKey, sources);

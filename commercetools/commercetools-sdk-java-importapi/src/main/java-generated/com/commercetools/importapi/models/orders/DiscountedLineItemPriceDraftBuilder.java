@@ -29,6 +29,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
-     * @param includedDiscounts
+     * @param includedDiscounts value to be set
      * @return Builder
      */
 
@@ -63,7 +64,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
-     * @param includedDiscounts
+     * @param includedDiscounts value to be set
      * @return Builder
      */
 
@@ -75,7 +76,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
-     * @param includedDiscounts
+     * @param includedDiscounts value to be set
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param builder function to build the includedDiscounts value
      * @return Builder
      */
 
@@ -105,6 +107,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param builder function to build the includedDiscounts value
      * @return Builder
      */
 
@@ -124,6 +127,10 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this.includedDiscounts;
     }
 
+    /**
+     * builds DiscountedLineItemPriceDraft with checking for non-null required values
+     * @return DiscountedLineItemPriceDraft
+     */
     public DiscountedLineItemPriceDraft build() {
         Objects.requireNonNull(value, DiscountedLineItemPriceDraft.class + ": value is missing");
         Objects.requireNonNull(includedDiscounts,
@@ -132,7 +139,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     * builds DiscountedLineItemPriceDraft without checking for non null required values
+     * builds DiscountedLineItemPriceDraft without checking for non-null required values
+     * @return DiscountedLineItemPriceDraft
      */
     public DiscountedLineItemPriceDraft buildUnchecked() {
         return new DiscountedLineItemPriceDraftImpl(value, includedDiscounts);

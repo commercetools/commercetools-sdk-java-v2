@@ -25,7 +25,7 @@ public class AttributeTypeBuilder implements Builder<AttributeType> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class AttributeTypeBuilder implements Builder<AttributeType> {
         return this.name;
     }
 
+    /**
+     * builds AttributeType with checking for non-null required values
+     * @return AttributeType
+     */
     public AttributeType build() {
         Objects.requireNonNull(name, AttributeType.class + ": name is missing");
         return new AttributeTypeImpl(name);
     }
 
     /**
-     * builds AttributeType without checking for non null required values
+     * builds AttributeType without checking for non-null required values
+     * @return AttributeType
      */
     public AttributeType buildUnchecked() {
         return new AttributeTypeImpl(name);

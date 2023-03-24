@@ -25,6 +25,8 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
 
     /**
      *
+     * @param values properties to be set
+     * @return Builder
      */
 
     public SuggestionResultBuilder values(
@@ -35,6 +37,9 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
 
     /**
      *
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public SuggestionResultBuilder addValue(final String key,
@@ -50,12 +55,17 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
         return this.values;
     }
 
+    /**
+     * builds SuggestionResult with checking for non-null required values
+     * @return SuggestionResult
+     */
     public SuggestionResult build() {
         return new SuggestionResultImpl(values);
     }
 
     /**
-     * builds SuggestionResult without checking for non null required values
+     * builds SuggestionResult without checking for non-null required values
+     * @return SuggestionResult
      */
     public SuggestionResult buildUnchecked() {
         return new SuggestionResultImpl(values);

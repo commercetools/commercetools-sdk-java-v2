@@ -35,7 +35,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *  <p>Update action for <code>setParcelTrackingData</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
+     * @param builder function to build the parcel value
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
-     * @param parcel
+     * @param parcel value to be set
      * @return Builder
      */
 
@@ -70,6 +71,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -93,6 +95,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -104,7 +107,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -130,6 +133,10 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
         return this.previousValue;
     }
 
+    /**
+     * builds SetParcelTrackingDataChange with checking for non-null required values
+     * @return SetParcelTrackingDataChange
+     */
     public SetParcelTrackingDataChange build() {
         Objects.requireNonNull(change, SetParcelTrackingDataChange.class + ": change is missing");
         Objects.requireNonNull(parcel, SetParcelTrackingDataChange.class + ": parcel is missing");
@@ -139,7 +146,8 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     }
 
     /**
-     * builds SetParcelTrackingDataChange without checking for non null required values
+     * builds SetParcelTrackingDataChange without checking for non-null required values
+     * @return SetParcelTrackingDataChange
      */
     public SetParcelTrackingDataChange buildUnchecked() {
         return new SetParcelTrackingDataChangeImpl(change, parcel, nextValue, previousValue);

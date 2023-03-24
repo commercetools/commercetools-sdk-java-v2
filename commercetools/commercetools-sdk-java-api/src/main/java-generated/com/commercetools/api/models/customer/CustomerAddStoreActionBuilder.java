@@ -26,6 +26,7 @@ public class CustomerAddStoreActionBuilder implements Builder<CustomerAddStoreAc
 
     /**
      *  <p>ResourceIdentifier of the Store to add.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CustomerAddStoreActionBuilder implements Builder<CustomerAddStoreAc
 
     /**
      *  <p>ResourceIdentifier of the Store to add.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class CustomerAddStoreActionBuilder implements Builder<CustomerAddStoreAc
         return this.store;
     }
 
+    /**
+     * builds CustomerAddStoreAction with checking for non-null required values
+     * @return CustomerAddStoreAction
+     */
     public CustomerAddStoreAction build() {
         Objects.requireNonNull(store, CustomerAddStoreAction.class + ": store is missing");
         return new CustomerAddStoreActionImpl(store);
     }
 
     /**
-     * builds CustomerAddStoreAction without checking for non null required values
+     * builds CustomerAddStoreAction without checking for non-null required values
+     * @return CustomerAddStoreAction
      */
     public CustomerAddStoreAction buildUnchecked() {
         return new CustomerAddStoreActionImpl(store);

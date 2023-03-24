@@ -40,7 +40,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
 
     /**
      *  <p>Update action for <code>setLineItemCustomField</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
 
     /**
      *
-     * @param customTypeId
+     * @param customTypeId value to be set
      * @return Builder
      */
 
@@ -73,6 +73,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -86,7 +87,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -98,7 +99,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -109,7 +110,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -142,6 +143,10 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
         return this.previousValue;
     }
 
+    /**
+     * builds SetShoppingListLineItemCustomFieldChange with checking for non-null required values
+     * @return SetShoppingListLineItemCustomFieldChange
+     */
     public SetShoppingListLineItemCustomFieldChange build() {
         Objects.requireNonNull(change, SetShoppingListLineItemCustomFieldChange.class + ": change is missing");
         Objects.requireNonNull(name, SetShoppingListLineItemCustomFieldChange.class + ": name is missing");
@@ -156,7 +161,8 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
     }
 
     /**
-     * builds SetShoppingListLineItemCustomFieldChange without checking for non null required values
+     * builds SetShoppingListLineItemCustomFieldChange without checking for non-null required values
+     * @return SetShoppingListLineItemCustomFieldChange
      */
     public SetShoppingListLineItemCustomFieldChange buildUnchecked() {
         return new SetShoppingListLineItemCustomFieldChangeImpl(change, name, customTypeId, lineItem, nextValue,

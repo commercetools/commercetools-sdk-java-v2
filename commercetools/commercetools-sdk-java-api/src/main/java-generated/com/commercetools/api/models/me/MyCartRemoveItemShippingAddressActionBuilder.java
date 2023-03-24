@@ -25,7 +25,7 @@ public class MyCartRemoveItemShippingAddressActionBuilder implements Builder<MyC
 
     /**
      *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class MyCartRemoveItemShippingAddressActionBuilder implements Builder<MyC
         return this.addressKey;
     }
 
+    /**
+     * builds MyCartRemoveItemShippingAddressAction with checking for non-null required values
+     * @return MyCartRemoveItemShippingAddressAction
+     */
     public MyCartRemoveItemShippingAddressAction build() {
         Objects.requireNonNull(addressKey, MyCartRemoveItemShippingAddressAction.class + ": addressKey is missing");
         return new MyCartRemoveItemShippingAddressActionImpl(addressKey);
     }
 
     /**
-     * builds MyCartRemoveItemShippingAddressAction without checking for non null required values
+     * builds MyCartRemoveItemShippingAddressAction without checking for non-null required values
+     * @return MyCartRemoveItemShippingAddressAction
      */
     public MyCartRemoveItemShippingAddressAction buildUnchecked() {
         return new MyCartRemoveItemShippingAddressActionImpl(addressKey);

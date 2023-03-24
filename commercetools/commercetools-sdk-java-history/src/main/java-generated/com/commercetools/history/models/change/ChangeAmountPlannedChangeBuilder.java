@@ -32,7 +32,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeAmountPlannedChange with checking for non-null required values
+     * @return ChangeAmountPlannedChange
+     */
     public ChangeAmountPlannedChange build() {
         Objects.requireNonNull(change, ChangeAmountPlannedChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeAmountPlannedChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
     }
 
     /**
-     * builds ChangeAmountPlannedChange without checking for non null required values
+     * builds ChangeAmountPlannedChange without checking for non-null required values
+     * @return ChangeAmountPlannedChange
      */
     public ChangeAmountPlannedChange buildUnchecked() {
         return new ChangeAmountPlannedChangeImpl(change, previousValue, nextValue);

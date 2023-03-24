@@ -27,7 +27,7 @@ public class CategorySetKeyActionBuilder implements Builder<CategorySetKeyAction
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CategorySetKeyActionBuilder implements Builder<CategorySetKeyAction
         return this.key;
     }
 
+    /**
+     * builds CategorySetKeyAction with checking for non-null required values
+     * @return CategorySetKeyAction
+     */
     public CategorySetKeyAction build() {
         return new CategorySetKeyActionImpl(key);
     }
 
     /**
-     * builds CategorySetKeyAction without checking for non null required values
+     * builds CategorySetKeyAction without checking for non-null required values
+     * @return CategorySetKeyAction
      */
     public CategorySetKeyAction buildUnchecked() {
         return new CategorySetKeyActionImpl(key);

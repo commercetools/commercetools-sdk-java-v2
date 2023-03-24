@@ -25,7 +25,7 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
 
     /**
      *  <p>The <code>email</code> that was set during the Change Email update action.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
         return this.email;
     }
 
+    /**
+     * builds CustomerEmailChangedMessagePayload with checking for non-null required values
+     * @return CustomerEmailChangedMessagePayload
+     */
     public CustomerEmailChangedMessagePayload build() {
         Objects.requireNonNull(email, CustomerEmailChangedMessagePayload.class + ": email is missing");
         return new CustomerEmailChangedMessagePayloadImpl(email);
     }
 
     /**
-     * builds CustomerEmailChangedMessagePayload without checking for non null required values
+     * builds CustomerEmailChangedMessagePayload without checking for non-null required values
+     * @return CustomerEmailChangedMessagePayload
      */
     public CustomerEmailChangedMessagePayload buildUnchecked() {
         return new CustomerEmailChangedMessagePayloadImpl(email);

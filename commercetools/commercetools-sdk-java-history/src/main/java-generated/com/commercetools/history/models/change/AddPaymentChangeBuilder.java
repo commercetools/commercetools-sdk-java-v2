@@ -32,7 +32,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds AddPaymentChange with checking for non-null required values
+     * @return AddPaymentChange
+     */
     public AddPaymentChange build() {
         Objects.requireNonNull(change, AddPaymentChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddPaymentChange.class + ": nextValue is missing");
@@ -106,7 +112,8 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     }
 
     /**
-     * builds AddPaymentChange without checking for non null required values
+     * builds AddPaymentChange without checking for non-null required values
+     * @return AddPaymentChange
      */
     public AddPaymentChange buildUnchecked() {
         return new AddPaymentChangeImpl(change, nextValue, previousValue);

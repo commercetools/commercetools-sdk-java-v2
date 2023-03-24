@@ -55,7 +55,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -66,6 +66,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Money value of this Price.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -77,7 +78,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Money value of this Price.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -88,7 +89,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field if this Price is only valid for the specified country.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -99,6 +100,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -112,7 +114,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -124,6 +126,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -136,7 +139,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -148,7 +151,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -159,7 +162,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -176,6 +179,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
      *   <li>A ProductDiscountValue of type <code>external</code>.</li>
      *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
      *  </ul>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -193,7 +197,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
      *   <li>A ProductDiscountValue of type <code>external</code>.</li>
      *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
      *  </ul>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -205,7 +209,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -216,7 +220,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -228,7 +232,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -242,6 +246,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -256,6 +261,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -268,6 +274,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Custom Fields for the Price.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -279,7 +286,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Custom Fields for the Price.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -337,6 +344,10 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
         return this.custom;
     }
 
+    /**
+     * builds PriceDraft with checking for non-null required values
+     * @return PriceDraft
+     */
     public PriceDraft build() {
         Objects.requireNonNull(value, PriceDraft.class + ": value is missing");
         return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
@@ -344,7 +355,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     * builds PriceDraft without checking for non null required values
+     * builds PriceDraft without checking for non-null required values
+     * @return PriceDraft
      */
     public PriceDraft buildUnchecked() {
         return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,

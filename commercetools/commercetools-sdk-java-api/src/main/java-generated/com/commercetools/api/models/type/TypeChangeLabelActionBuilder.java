@@ -29,7 +29,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
 
     /**
      *  <p>Name of the Field Definition to update.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
 
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
 
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
         return this.label;
     }
 
+    /**
+     * builds TypeChangeLabelAction with checking for non-null required values
+     * @return TypeChangeLabelAction
+     */
     public TypeChangeLabelAction build() {
         Objects.requireNonNull(fieldName, TypeChangeLabelAction.class + ": fieldName is missing");
         Objects.requireNonNull(label, TypeChangeLabelAction.class + ": label is missing");
@@ -75,7 +80,8 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     * builds TypeChangeLabelAction without checking for non null required values
+     * builds TypeChangeLabelAction without checking for non-null required values
+     * @return TypeChangeLabelAction
      */
     public TypeChangeLabelAction buildUnchecked() {
         return new TypeChangeLabelActionImpl(fieldName, label);

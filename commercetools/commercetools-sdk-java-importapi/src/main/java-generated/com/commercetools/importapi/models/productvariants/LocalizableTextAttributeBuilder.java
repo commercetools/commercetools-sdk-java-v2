@@ -31,7 +31,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -47,6 +47,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -63,7 +64,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -82,13 +83,18 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
         return this.value;
     }
 
+    /**
+     * builds LocalizableTextAttribute with checking for non-null required values
+     * @return LocalizableTextAttribute
+     */
     public LocalizableTextAttribute build() {
         Objects.requireNonNull(value, LocalizableTextAttribute.class + ": value is missing");
         return new LocalizableTextAttributeImpl(name, value);
     }
 
     /**
-     * builds LocalizableTextAttribute without checking for non null required values
+     * builds LocalizableTextAttribute without checking for non-null required values
+     * @return LocalizableTextAttribute
      */
     public LocalizableTextAttribute buildUnchecked() {
         return new LocalizableTextAttributeImpl(name, value);

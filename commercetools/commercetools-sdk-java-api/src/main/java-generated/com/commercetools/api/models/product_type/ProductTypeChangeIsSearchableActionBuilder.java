@@ -28,7 +28,7 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
 
     /**
      *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
-     * @param isSearchable
+     * @param isSearchable value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
         return this.isSearchable;
     }
 
+    /**
+     * builds ProductTypeChangeIsSearchableAction with checking for non-null required values
+     * @return ProductTypeChangeIsSearchableAction
+     */
     public ProductTypeChangeIsSearchableAction build() {
         Objects.requireNonNull(attributeName, ProductTypeChangeIsSearchableAction.class + ": attributeName is missing");
         Objects.requireNonNull(isSearchable, ProductTypeChangeIsSearchableAction.class + ": isSearchable is missing");
@@ -63,7 +67,8 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
     }
 
     /**
-     * builds ProductTypeChangeIsSearchableAction without checking for non null required values
+     * builds ProductTypeChangeIsSearchableAction without checking for non-null required values
+     * @return ProductTypeChangeIsSearchableAction
      */
     public ProductTypeChangeIsSearchableAction buildUnchecked() {
         return new ProductTypeChangeIsSearchableActionImpl(attributeName, isSearchable);

@@ -28,6 +28,7 @@ public class ProductDiscountSetDescriptionActionBuilder implements Builder<Produ
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class ProductDiscountSetDescriptionActionBuilder implements Builder<Produ
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class ProductDiscountSetDescriptionActionBuilder implements Builder<Produ
         return this.description;
     }
 
+    /**
+     * builds ProductDiscountSetDescriptionAction with checking for non-null required values
+     * @return ProductDiscountSetDescriptionAction
+     */
     public ProductDiscountSetDescriptionAction build() {
         return new ProductDiscountSetDescriptionActionImpl(description);
     }
 
     /**
-     * builds ProductDiscountSetDescriptionAction without checking for non null required values
+     * builds ProductDiscountSetDescriptionAction without checking for non-null required values
+     * @return ProductDiscountSetDescriptionAction
      */
     public ProductDiscountSetDescriptionAction buildUnchecked() {
         return new ProductDiscountSetDescriptionActionImpl(description);

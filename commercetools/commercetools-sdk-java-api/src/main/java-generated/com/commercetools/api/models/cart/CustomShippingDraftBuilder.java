@@ -52,7 +52,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>User-defined unique identifier of the custom Shipping Method in the Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Name of the custom Shipping Method.</p>
-     * @param shippingMethodName
+     * @param shippingMethodName value to be set
      * @return Builder
      */
 
@@ -74,6 +74,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @param builder function to build the shippingAddress value
      * @return Builder
      */
 
@@ -85,7 +86,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
-     * @param shippingAddress
+     * @param shippingAddress value to be set
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Determines the shipping price.</p>
+     * @param builder function to build the shippingRate value
      * @return Builder
      */
 
@@ -109,7 +111,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Determines the shipping price.</p>
-     * @param shippingRate
+     * @param shippingRate value to be set
      * @return Builder
      */
 
@@ -126,7 +128,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -143,6 +145,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -155,6 +158,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -168,7 +172,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -180,6 +184,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -192,7 +197,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -204,7 +209,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -216,7 +221,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -228,7 +233,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -243,6 +248,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param builder function to build the deliveries value
      * @return Builder
      */
 
@@ -257,6 +263,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param builder function to build the deliveries value
      * @return Builder
      */
 
@@ -269,6 +276,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -280,7 +288,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
 
     /**
      *  <p>Custom Fields for the custom Shipping Method.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -332,6 +340,10 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
         return this.custom;
     }
 
+    /**
+     * builds CustomShippingDraft with checking for non-null required values
+     * @return CustomShippingDraft
+     */
     public CustomShippingDraft build() {
         Objects.requireNonNull(key, CustomShippingDraft.class + ": key is missing");
         Objects.requireNonNull(shippingMethodName, CustomShippingDraft.class + ": shippingMethodName is missing");
@@ -341,7 +353,8 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
     }
 
     /**
-     * builds CustomShippingDraft without checking for non null required values
+     * builds CustomShippingDraft without checking for non-null required values
+     * @return CustomShippingDraft
      */
     public CustomShippingDraft buildUnchecked() {
         return new CustomShippingDraftImpl(key, shippingMethodName, shippingAddress, shippingRate, shippingRateInput,

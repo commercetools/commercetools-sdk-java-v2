@@ -25,7 +25,7 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
 
     /**
      *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
-     * @param interfaceId
+     * @param interfaceId value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
         return this.interfaceId;
     }
 
+    /**
+     * builds PaymentSetInterfaceIdAction with checking for non-null required values
+     * @return PaymentSetInterfaceIdAction
+     */
     public PaymentSetInterfaceIdAction build() {
         Objects.requireNonNull(interfaceId, PaymentSetInterfaceIdAction.class + ": interfaceId is missing");
         return new PaymentSetInterfaceIdActionImpl(interfaceId);
     }
 
     /**
-     * builds PaymentSetInterfaceIdAction without checking for non null required values
+     * builds PaymentSetInterfaceIdAction without checking for non-null required values
+     * @return PaymentSetInterfaceIdAction
      */
     public PaymentSetInterfaceIdAction buildUnchecked() {
         return new PaymentSetInterfaceIdActionImpl(interfaceId);

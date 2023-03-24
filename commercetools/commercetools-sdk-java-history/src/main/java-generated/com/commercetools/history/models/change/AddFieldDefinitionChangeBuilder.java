@@ -29,7 +29,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
 
     /**
      *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
         return this.nextValue;
     }
 
+    /**
+     * builds AddFieldDefinitionChange with checking for non-null required values
+     * @return AddFieldDefinitionChange
+     */
     public AddFieldDefinitionChange build() {
         Objects.requireNonNull(change, AddFieldDefinitionChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddFieldDefinitionChange.class + ": nextValue is missing");
@@ -76,7 +81,8 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     * builds AddFieldDefinitionChange without checking for non null required values
+     * builds AddFieldDefinitionChange without checking for non-null required values
+     * @return AddFieldDefinitionChange
      */
     public AddFieldDefinitionChange buildUnchecked() {
         return new AddFieldDefinitionChangeImpl(change, nextValue);

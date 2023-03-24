@@ -26,6 +26,7 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
         return this.supplyChannel;
     }
 
+    /**
+     * builds StoreRemoveSupplyChannelAction with checking for non-null required values
+     * @return StoreRemoveSupplyChannelAction
+     */
     public StoreRemoveSupplyChannelAction build() {
         Objects.requireNonNull(supplyChannel, StoreRemoveSupplyChannelAction.class + ": supplyChannel is missing");
         return new StoreRemoveSupplyChannelActionImpl(supplyChannel);
     }
 
     /**
-     * builds StoreRemoveSupplyChannelAction without checking for non null required values
+     * builds StoreRemoveSupplyChannelAction without checking for non-null required values
+     * @return StoreRemoveSupplyChannelAction
      */
     public StoreRemoveSupplyChannelAction buildUnchecked() {
         return new StoreRemoveSupplyChannelActionImpl(supplyChannel);

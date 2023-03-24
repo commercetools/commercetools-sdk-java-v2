@@ -30,7 +30,7 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -41,6 +41,7 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
         return this.value;
     }
 
+    /**
+     * builds TypeChangeLocalizedEnumValueLabelAction with checking for non-null required values
+     * @return TypeChangeLocalizedEnumValueLabelAction
+     */
     public TypeChangeLocalizedEnumValueLabelAction build() {
         Objects.requireNonNull(fieldName, TypeChangeLocalizedEnumValueLabelAction.class + ": fieldName is missing");
         Objects.requireNonNull(value, TypeChangeLocalizedEnumValueLabelAction.class + ": value is missing");
@@ -77,7 +82,8 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
     }
 
     /**
-     * builds TypeChangeLocalizedEnumValueLabelAction without checking for non null required values
+     * builds TypeChangeLocalizedEnumValueLabelAction without checking for non-null required values
+     * @return TypeChangeLocalizedEnumValueLabelAction
      */
     public TypeChangeLocalizedEnumValueLabelAction buildUnchecked() {
         return new TypeChangeLocalizedEnumValueLabelActionImpl(fieldName, value);

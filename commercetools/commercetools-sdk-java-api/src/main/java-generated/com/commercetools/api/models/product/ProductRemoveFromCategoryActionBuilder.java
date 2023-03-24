@@ -31,6 +31,7 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
 
     /**
      *  <p>The Category to remove.</p>
+     * @param builder function to build the category value
      * @return Builder
      */
 
@@ -43,7 +44,7 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
 
     /**
      *  <p>The Category to remove.</p>
-     * @param category
+     * @param category value to be set
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
 
     /**
      *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -73,13 +74,18 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
         return this.staged;
     }
 
+    /**
+     * builds ProductRemoveFromCategoryAction with checking for non-null required values
+     * @return ProductRemoveFromCategoryAction
+     */
     public ProductRemoveFromCategoryAction build() {
         Objects.requireNonNull(category, ProductRemoveFromCategoryAction.class + ": category is missing");
         return new ProductRemoveFromCategoryActionImpl(category, staged);
     }
 
     /**
-     * builds ProductRemoveFromCategoryAction without checking for non null required values
+     * builds ProductRemoveFromCategoryAction without checking for non-null required values
+     * @return ProductRemoveFromCategoryAction
      */
     public ProductRemoveFromCategoryAction buildUnchecked() {
         return new ProductRemoveFromCategoryActionImpl(category, staged);

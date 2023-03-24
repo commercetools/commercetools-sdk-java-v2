@@ -32,7 +32,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
-     * @param addedDistributionChannels
+     * @param addedDistributionChannels value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
-     * @param addedDistributionChannels
+     * @param addedDistributionChannels value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
-     * @param addedDistributionChannels
+     * @param addedDistributionChannels value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param builder function to build the addedDistributionChannels value
      * @return Builder
      */
 
@@ -86,6 +87,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param builder function to build the addedDistributionChannels value
      * @return Builder
      */
 
@@ -99,7 +101,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
-     * @param removedDistributionChannels
+     * @param removedDistributionChannels value to be set
      * @return Builder
      */
 
@@ -111,7 +113,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
-     * @param removedDistributionChannels
+     * @param removedDistributionChannels value to be set
      * @return Builder
      */
 
@@ -123,7 +125,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
-     * @param removedDistributionChannels
+     * @param removedDistributionChannels value to be set
      * @return Builder
      */
 
@@ -138,6 +140,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedDistributionChannels value
      * @return Builder
      */
 
@@ -153,6 +156,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedDistributionChannels value
      * @return Builder
      */
 
@@ -174,13 +178,18 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
         return this.removedDistributionChannels;
     }
 
+    /**
+     * builds StoreDistributionChannelsChangedMessagePayload with checking for non-null required values
+     * @return StoreDistributionChannelsChangedMessagePayload
+     */
     public StoreDistributionChannelsChangedMessagePayload build() {
         return new StoreDistributionChannelsChangedMessagePayloadImpl(addedDistributionChannels,
             removedDistributionChannels);
     }
 
     /**
-     * builds StoreDistributionChannelsChangedMessagePayload without checking for non null required values
+     * builds StoreDistributionChannelsChangedMessagePayload without checking for non-null required values
+     * @return StoreDistributionChannelsChangedMessagePayload
      */
     public StoreDistributionChannelsChangedMessagePayload buildUnchecked() {
         return new StoreDistributionChannelsChangedMessagePayloadImpl(addedDistributionChannels,

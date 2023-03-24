@@ -43,7 +43,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -104,6 +104,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -119,6 +120,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -132,7 +134,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -144,7 +146,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -156,7 +158,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -171,6 +173,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -186,6 +189,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -199,7 +203,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -211,7 +215,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -223,7 +227,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -238,6 +242,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param builder function to build the images value
      * @return Builder
      */
 
@@ -252,6 +257,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param builder function to build the images value
      * @return Builder
      */
 
@@ -264,7 +270,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -276,7 +282,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -288,7 +294,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -303,6 +309,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -317,6 +324,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -356,13 +364,18 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this.assets;
     }
 
+    /**
+     * builds ProductVariantDraftImport with checking for non-null required values
+     * @return ProductVariantDraftImport
+     */
     public ProductVariantDraftImport build() {
         Objects.requireNonNull(key, ProductVariantDraftImport.class + ": key is missing");
         return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);
     }
 
     /**
-     * builds ProductVariantDraftImport without checking for non null required values
+     * builds ProductVariantDraftImport without checking for non-null required values
+     * @return ProductVariantDraftImport
      */
     public ProductVariantDraftImport buildUnchecked() {
         return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);

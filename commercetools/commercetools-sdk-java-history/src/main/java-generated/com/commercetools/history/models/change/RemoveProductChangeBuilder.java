@@ -29,7 +29,7 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
 
     /**
      *  <p>Update action for when a product is unassigned from a product selection</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveProductChange with checking for non-null required values
+     * @return RemoveProductChange
+     */
     public RemoveProductChange build() {
         Objects.requireNonNull(change, RemoveProductChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveProductChange.class + ": previousValue is missing");
@@ -76,7 +81,8 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
     }
 
     /**
-     * builds RemoveProductChange without checking for non null required values
+     * builds RemoveProductChange without checking for non-null required values
+     * @return RemoveProductChange
      */
     public RemoveProductChange buildUnchecked() {
         return new RemoveProductChangeImpl(change, previousValue);

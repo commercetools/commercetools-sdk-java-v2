@@ -31,7 +31,7 @@ public class ChangeDescriptionChangeBuilder implements Builder<ChangeDescription
 
     /**
      *  <p>Shape of the action for <code>changeDescription</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeDescriptionChangeBuilder implements Builder<ChangeDescription
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeDescriptionChangeBuilder implements Builder<ChangeDescription
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangeDescriptionChangeBuilder implements Builder<ChangeDescription
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeDescriptionChange with checking for non-null required values
+     * @return ChangeDescriptionChange
+     */
     public ChangeDescriptionChange build() {
         Objects.requireNonNull(change, ChangeDescriptionChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeDescriptionChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangeDescriptionChangeBuilder implements Builder<ChangeDescription
     }
 
     /**
-     * builds ChangeDescriptionChange without checking for non null required values
+     * builds ChangeDescriptionChange without checking for non-null required values
+     * @return ChangeDescriptionChange
      */
     public ChangeDescriptionChange buildUnchecked() {
         return new ChangeDescriptionChangeImpl(change, previousValue, nextValue);

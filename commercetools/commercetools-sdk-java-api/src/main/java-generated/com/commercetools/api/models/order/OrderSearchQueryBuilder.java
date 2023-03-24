@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSearchQueryBuilder implements Builder<OrderSearchQuery> {
 
+    /**
+     * builds OrderSearchQuery with checking for non-null required values
+     * @return OrderSearchQuery
+     */
     public OrderSearchQuery build() {
         return new OrderSearchQueryImpl();
     }
 
     /**
-     * builds OrderSearchQuery without checking for non null required values
+     * builds OrderSearchQuery without checking for non-null required values
+     * @return OrderSearchQuery
      */
     public OrderSearchQuery buildUnchecked() {
         return new OrderSearchQueryImpl();

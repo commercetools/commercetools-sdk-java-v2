@@ -33,7 +33,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     /**
      *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      *  <p>If a quantity is updated to <code>0</code> when defining ItemShippingDetailsDraft, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting ItemShippingDetails.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      *  <p>It connects Line Item quantities with individual shipping addresses.</p>
-     * @param shippingMethodKey
+     * @param shippingMethodKey value to be set
      * @return Builder
      */
 
@@ -79,6 +79,10 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return this.shippingMethodKey;
     }
 
+    /**
+     * builds ItemShippingTarget with checking for non-null required values
+     * @return ItemShippingTarget
+     */
     public ItemShippingTarget build() {
         Objects.requireNonNull(addressKey, ItemShippingTarget.class + ": addressKey is missing");
         Objects.requireNonNull(quantity, ItemShippingTarget.class + ": quantity is missing");
@@ -86,7 +90,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     * builds ItemShippingTarget without checking for non null required values
+     * builds ItemShippingTarget without checking for non-null required values
+     * @return ItemShippingTarget
      */
     public ItemShippingTarget buildUnchecked() {
         return new ItemShippingTargetImpl(addressKey, quantity, shippingMethodKey);

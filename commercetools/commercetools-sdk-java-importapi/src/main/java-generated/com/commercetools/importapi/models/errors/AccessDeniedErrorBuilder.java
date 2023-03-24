@@ -25,7 +25,7 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
         return this.message;
     }
 
+    /**
+     * builds AccessDeniedError with checking for non-null required values
+     * @return AccessDeniedError
+     */
     public AccessDeniedError build() {
         Objects.requireNonNull(message, AccessDeniedError.class + ": message is missing");
         return new AccessDeniedErrorImpl(message);
     }
 
     /**
-     * builds AccessDeniedError without checking for non null required values
+     * builds AccessDeniedError without checking for non-null required values
+     * @return AccessDeniedError
      */
     public AccessDeniedError buildUnchecked() {
         return new AccessDeniedErrorImpl(message);

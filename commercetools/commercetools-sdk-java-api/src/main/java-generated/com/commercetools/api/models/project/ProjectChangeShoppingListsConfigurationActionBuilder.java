@@ -27,6 +27,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
+     * @param builder function to build the shoppingListsConfiguration value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
-     * @param shoppingListsConfiguration
+     * @param shoppingListsConfiguration value to be set
      * @return Builder
      */
 
@@ -54,6 +55,10 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
         return this.shoppingListsConfiguration;
     }
 
+    /**
+     * builds ProjectChangeShoppingListsConfigurationAction with checking for non-null required values
+     * @return ProjectChangeShoppingListsConfigurationAction
+     */
     public ProjectChangeShoppingListsConfigurationAction build() {
         Objects.requireNonNull(shoppingListsConfiguration,
             ProjectChangeShoppingListsConfigurationAction.class + ": shoppingListsConfiguration is missing");
@@ -61,7 +66,8 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     }
 
     /**
-     * builds ProjectChangeShoppingListsConfigurationAction without checking for non null required values
+     * builds ProjectChangeShoppingListsConfigurationAction without checking for non-null required values
+     * @return ProjectChangeShoppingListsConfigurationAction
      */
     public ProjectChangeShoppingListsConfigurationAction buildUnchecked() {
         return new ProjectChangeShoppingListsConfigurationActionImpl(shoppingListsConfiguration);

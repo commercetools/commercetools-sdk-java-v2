@@ -70,7 +70,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Current version of the Project.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>User-defined unique identifier of the Project.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -92,7 +92,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Name of the Project.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -103,7 +103,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Country code of the geographic location.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -114,7 +114,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Country code of the geographic location.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -125,7 +125,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Country code of the geographic location.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -139,7 +139,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Currency code of the country. A Project must have at least one currency.</p>
-     * @param currencies
+     * @param currencies value to be set
      * @return Builder
      */
 
@@ -150,7 +150,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Currency code of the country. A Project must have at least one currency.</p>
-     * @param currencies
+     * @param currencies value to be set
      * @return Builder
      */
 
@@ -161,7 +161,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Currency code of the country. A Project must have at least one currency.</p>
-     * @param currencies
+     * @param currencies value to be set
      * @return Builder
      */
 
@@ -175,7 +175,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Language of the country. A Project must have at least one language.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -186,7 +186,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Language of the country. A Project must have at least one language.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -197,7 +197,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Language of the country. A Project must have at least one language.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -211,7 +211,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Date and time (UTC) the Project was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -222,7 +222,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
-     * @param trialUntil
+     * @param trialUntil value to be set
      * @return Builder
      */
 
@@ -233,6 +233,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Messages Query feature.</p>
+     * @param builder function to build the messages value
      * @return Builder
      */
 
@@ -244,7 +245,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Messages Query feature.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -255,6 +256,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Carts feature.</p>
+     * @param builder function to build the carts value
      * @return Builder
      */
 
@@ -266,7 +268,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Carts feature.</p>
-     * @param carts
+     * @param carts value to be set
      * @return Builder
      */
 
@@ -277,6 +279,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     * @param builder function to build the shoppingLists value
      * @return Builder
      */
 
@@ -289,7 +292,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
-     * @param shoppingLists
+     * @param shoppingLists value to be set
      * @return Builder
      */
 
@@ -301,7 +304,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the tiered shipping rates feature.</p>
-     * @param shippingRateInputType
+     * @param shippingRateInputType value to be set
      * @return Builder
      */
 
@@ -313,6 +316,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     * @param builder function to build the shippingRateInputType value
      * @return Builder
      */
 
@@ -326,6 +330,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     * @param builder function to build the externalOAuth value
      * @return Builder
      */
 
@@ -337,7 +342,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
-     * @param externalOAuth
+     * @param externalOAuth value to be set
      * @return Builder
      */
 
@@ -349,6 +354,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     * @param builder function to build the searchIndexing value
      * @return Builder
      */
 
@@ -362,7 +368,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
-     * @param searchIndexing
+     * @param searchIndexing value to be set
      * @return Builder
      */
 
@@ -374,6 +380,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds configuration specific to Business Units.</p>
+     * @param builder function to build the businessUnits value
      * @return Builder
      */
 
@@ -386,7 +393,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds configuration specific to Business Units.</p>
-     * @param businessUnits
+     * @param businessUnits value to be set
      * @return Builder
      */
 
@@ -462,6 +469,10 @@ public class ProjectBuilder implements Builder<Project> {
         return this.businessUnits;
     }
 
+    /**
+     * builds Project with checking for non-null required values
+     * @return Project
+     */
     public Project build() {
         Objects.requireNonNull(version, Project.class + ": version is missing");
         Objects.requireNonNull(key, Project.class + ": key is missing");
@@ -477,7 +488,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     * builds Project without checking for non null required values
+     * builds Project without checking for non-null required values
+     * @return Project
      */
     public Project buildUnchecked() {
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,

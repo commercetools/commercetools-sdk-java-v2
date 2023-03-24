@@ -38,7 +38,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *  <p>Update action for <code>setVariantAvailability</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -84,7 +85,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -96,6 +97,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -138,6 +140,10 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
         return this.nextValue;
     }
 
+    /**
+     * builds SetVariantAvailabilityChange with checking for non-null required values
+     * @return SetVariantAvailabilityChange
+     */
     public SetVariantAvailabilityChange build() {
         Objects.requireNonNull(change, SetVariantAvailabilityChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetVariantAvailabilityChange.class + ": catalogData is missing");
@@ -148,7 +154,8 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     * builds SetVariantAvailabilityChange without checking for non null required values
+     * builds SetVariantAvailabilityChange without checking for non-null required values
+     * @return SetVariantAvailabilityChange
      */
     public SetVariantAvailabilityChange buildUnchecked() {
         return new SetVariantAvailabilityChangeImpl(change, catalogData, variant, previousValue, nextValue);

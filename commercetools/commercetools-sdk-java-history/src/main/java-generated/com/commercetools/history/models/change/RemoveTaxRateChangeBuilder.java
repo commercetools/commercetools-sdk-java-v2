@@ -32,7 +32,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveTaxRateChange with checking for non-null required values
+     * @return RemoveTaxRateChange
+     */
     public RemoveTaxRateChange build() {
         Objects.requireNonNull(change, RemoveTaxRateChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveTaxRateChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     * builds RemoveTaxRateChange without checking for non null required values
+     * builds RemoveTaxRateChange without checking for non-null required values
+     * @return RemoveTaxRateChange
      */
     public RemoveTaxRateChange buildUnchecked() {
         return new RemoveTaxRateChangeImpl(change, previousValue, nextValue);

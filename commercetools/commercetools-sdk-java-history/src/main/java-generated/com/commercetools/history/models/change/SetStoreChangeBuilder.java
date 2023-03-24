@@ -32,7 +32,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *  <p>Shape of the action for <code>setStore</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -97,6 +99,10 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetStoreChange with checking for non-null required values
+     * @return SetStoreChange
+     */
     public SetStoreChange build() {
         Objects.requireNonNull(change, SetStoreChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetStoreChange.class + ": previousValue is missing");
@@ -105,7 +111,8 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
     }
 
     /**
-     * builds SetStoreChange without checking for non null required values
+     * builds SetStoreChange without checking for non-null required values
+     * @return SetStoreChange
      */
     public SetStoreChange buildUnchecked() {
         return new SetStoreChangeImpl(change, previousValue, nextValue);

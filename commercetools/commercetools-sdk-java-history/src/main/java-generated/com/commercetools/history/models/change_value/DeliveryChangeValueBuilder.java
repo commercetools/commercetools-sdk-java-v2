@@ -32,7 +32,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -69,6 +69,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -83,6 +84,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -95,6 +97,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -106,7 +109,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -117,7 +120,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -128,7 +131,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -140,7 +143,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -154,6 +157,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -168,6 +172,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -190,6 +195,10 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
         return this.parcels;
     }
 
+    /**
+     * builds DeliveryChangeValue with checking for non-null required values
+     * @return DeliveryChangeValue
+     */
     public DeliveryChangeValue build() {
         Objects.requireNonNull(items, DeliveryChangeValue.class + ": items is missing");
         Objects.requireNonNull(address, DeliveryChangeValue.class + ": address is missing");
@@ -198,7 +207,8 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * builds DeliveryChangeValue without checking for non null required values
+     * builds DeliveryChangeValue without checking for non-null required values
+     * @return DeliveryChangeValue
      */
     public DeliveryChangeValue buildUnchecked() {
         return new DeliveryChangeValueImpl(items, address, parcels);

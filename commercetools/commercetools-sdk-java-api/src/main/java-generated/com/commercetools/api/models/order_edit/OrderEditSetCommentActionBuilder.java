@@ -27,7 +27,7 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
 
     /**
      *
-     * @param comment
+     * @param comment value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
         return this.comment;
     }
 
+    /**
+     * builds OrderEditSetCommentAction with checking for non-null required values
+     * @return OrderEditSetCommentAction
+     */
     public OrderEditSetCommentAction build() {
         return new OrderEditSetCommentActionImpl(comment);
     }
 
     /**
-     * builds OrderEditSetCommentAction without checking for non null required values
+     * builds OrderEditSetCommentAction without checking for non-null required values
+     * @return OrderEditSetCommentAction
      */
     public OrderEditSetCommentAction buildUnchecked() {
         return new OrderEditSetCommentActionImpl(comment);

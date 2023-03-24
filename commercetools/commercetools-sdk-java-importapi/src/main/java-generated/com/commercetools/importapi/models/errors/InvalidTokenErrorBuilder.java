@@ -25,7 +25,7 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
         return this.message;
     }
 
+    /**
+     * builds InvalidTokenError with checking for non-null required values
+     * @return InvalidTokenError
+     */
     public InvalidTokenError build() {
         Objects.requireNonNull(message, InvalidTokenError.class + ": message is missing");
         return new InvalidTokenErrorImpl(message);
     }
 
     /**
-     * builds InvalidTokenError without checking for non null required values
+     * builds InvalidTokenError without checking for non-null required values
+     * @return InvalidTokenError
      */
     public InvalidTokenError buildUnchecked() {
         return new InvalidTokenErrorImpl(message);

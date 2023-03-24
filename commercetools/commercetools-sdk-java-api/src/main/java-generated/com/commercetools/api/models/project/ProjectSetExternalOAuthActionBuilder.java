@@ -28,6 +28,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the externalOAuth value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param externalOAuth
+     * @param externalOAuth value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
         return this.externalOAuth;
     }
 
+    /**
+     * builds ProjectSetExternalOAuthAction with checking for non-null required values
+     * @return ProjectSetExternalOAuthAction
+     */
     public ProjectSetExternalOAuthAction build() {
         return new ProjectSetExternalOAuthActionImpl(externalOAuth);
     }
 
     /**
-     * builds ProjectSetExternalOAuthAction without checking for non null required values
+     * builds ProjectSetExternalOAuthAction without checking for non-null required values
+     * @return ProjectSetExternalOAuthAction
      */
     public ProjectSetExternalOAuthAction buildUnchecked() {
         return new ProjectSetExternalOAuthActionImpl(externalOAuth);

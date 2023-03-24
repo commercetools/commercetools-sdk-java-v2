@@ -35,7 +35,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
 
     /**
      *
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
 
     /**
      *
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
 
     /**
      *
+     * @param builder function to build the stagedQuote value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
 
     /**
      *
-     * @param stagedQuote
+     * @param stagedQuote value to be set
      * @return Builder
      */
 
@@ -90,6 +92,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
 
     /**
      *
+     * @param builder function to build the quoteRequest value
      * @return Builder
      */
 
@@ -101,7 +104,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
 
     /**
      *
-     * @param quoteRequest
+     * @param quoteRequest value to be set
      * @return Builder
      */
 
@@ -126,6 +129,10 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
         return this.quoteRequest;
     }
 
+    /**
+     * builds QuoteLabel with checking for non-null required values
+     * @return QuoteLabel
+     */
     public QuoteLabel build() {
         Objects.requireNonNull(key, QuoteLabel.class + ": key is missing");
         Objects.requireNonNull(customer, QuoteLabel.class + ": customer is missing");
@@ -135,7 +142,8 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * builds QuoteLabel without checking for non null required values
+     * builds QuoteLabel without checking for non-null required values
+     * @return QuoteLabel
      */
     public QuoteLabel buildUnchecked() {
         return new QuoteLabelImpl(key, customer, stagedQuote, quoteRequest);

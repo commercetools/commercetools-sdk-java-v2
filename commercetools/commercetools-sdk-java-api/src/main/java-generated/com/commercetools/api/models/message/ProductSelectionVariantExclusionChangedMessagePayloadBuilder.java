@@ -33,6 +33,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product for which the Product Variant Exclusion changed.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product for which the Product Variant Exclusion changed.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -56,6 +57,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     * @param builder function to build the oldVariantExclusion value
      * @return Builder
      */
 
@@ -69,7 +71,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
-     * @param oldVariantExclusion
+     * @param oldVariantExclusion value to be set
      * @return Builder
      */
 
@@ -81,6 +83,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     * @param builder function to build the newVariantExclusion value
      * @return Builder
      */
 
@@ -94,7 +97,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
-     * @param newVariantExclusion
+     * @param newVariantExclusion value to be set
      * @return Builder
      */
 
@@ -116,6 +119,10 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
         return this.newVariantExclusion;
     }
 
+    /**
+     * builds ProductSelectionVariantExclusionChangedMessagePayload with checking for non-null required values
+     * @return ProductSelectionVariantExclusionChangedMessagePayload
+     */
     public ProductSelectionVariantExclusionChangedMessagePayload build() {
         Objects.requireNonNull(product,
             ProductSelectionVariantExclusionChangedMessagePayload.class + ": product is missing");
@@ -128,7 +135,8 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     * builds ProductSelectionVariantExclusionChangedMessagePayload without checking for non null required values
+     * builds ProductSelectionVariantExclusionChangedMessagePayload without checking for non-null required values
+     * @return ProductSelectionVariantExclusionChangedMessagePayload
      */
     public ProductSelectionVariantExclusionChangedMessagePayload buildUnchecked() {
         return new ProductSelectionVariantExclusionChangedMessagePayloadImpl(product, oldVariantExclusion,

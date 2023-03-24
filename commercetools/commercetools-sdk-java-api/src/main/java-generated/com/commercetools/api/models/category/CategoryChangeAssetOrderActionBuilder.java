@@ -25,7 +25,7 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
 
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
-     * @param assetOrder
+     * @param assetOrder value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
 
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
-     * @param assetOrder
+     * @param assetOrder value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
 
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
-     * @param assetOrder
+     * @param assetOrder value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
         return this.assetOrder;
     }
 
+    /**
+     * builds CategoryChangeAssetOrderAction with checking for non-null required values
+     * @return CategoryChangeAssetOrderAction
+     */
     public CategoryChangeAssetOrderAction build() {
         Objects.requireNonNull(assetOrder, CategoryChangeAssetOrderAction.class + ": assetOrder is missing");
         return new CategoryChangeAssetOrderActionImpl(assetOrder);
     }
 
     /**
-     * builds CategoryChangeAssetOrderAction without checking for non null required values
+     * builds CategoryChangeAssetOrderAction without checking for non-null required values
+     * @return CategoryChangeAssetOrderAction
      */
     public CategoryChangeAssetOrderAction buildUnchecked() {
         return new CategoryChangeAssetOrderActionImpl(assetOrder);

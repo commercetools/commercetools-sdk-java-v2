@@ -31,7 +31,7 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
 
     /**
      *  <p>Shape of the action for <code>setValidFrom</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetValidFromChange with checking for non-null required values
+     * @return SetValidFromChange
+     */
     public SetValidFromChange build() {
         Objects.requireNonNull(change, SetValidFromChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetValidFromChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
     }
 
     /**
-     * builds SetValidFromChange without checking for non null required values
+     * builds SetValidFromChange without checking for non-null required values
+     * @return SetValidFromChange
      */
     public SetValidFromChange buildUnchecked() {
         return new SetValidFromChangeImpl(change, previousValue, nextValue);

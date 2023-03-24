@@ -34,7 +34,7 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      *  <p>ID of the address to be extended.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -78,6 +78,10 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
         return this.value;
     }
 
+    /**
+     * builds BusinessUnitSetAddressCustomFieldAction with checking for non-null required values
+     * @return BusinessUnitSetAddressCustomFieldAction
+     */
     public BusinessUnitSetAddressCustomFieldAction build() {
         Objects.requireNonNull(addressId, BusinessUnitSetAddressCustomFieldAction.class + ": addressId is missing");
         Objects.requireNonNull(name, BusinessUnitSetAddressCustomFieldAction.class + ": name is missing");
@@ -85,7 +89,8 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
     }
 
     /**
-     * builds BusinessUnitSetAddressCustomFieldAction without checking for non null required values
+     * builds BusinessUnitSetAddressCustomFieldAction without checking for non-null required values
+     * @return BusinessUnitSetAddressCustomFieldAction
      */
     public BusinessUnitSetAddressCustomFieldAction buildUnchecked() {
         return new BusinessUnitSetAddressCustomFieldActionImpl(addressId, name, value);

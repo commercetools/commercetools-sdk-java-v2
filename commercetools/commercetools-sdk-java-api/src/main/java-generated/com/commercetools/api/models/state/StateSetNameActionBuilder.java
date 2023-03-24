@@ -26,6 +26,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
         return this.name;
     }
 
+    /**
+     * builds StateSetNameAction with checking for non-null required values
+     * @return StateSetNameAction
+     */
     public StateSetNameAction build() {
         Objects.requireNonNull(name, StateSetNameAction.class + ": name is missing");
         return new StateSetNameActionImpl(name);
     }
 
     /**
-     * builds StateSetNameAction without checking for non null required values
+     * builds StateSetNameAction without checking for non-null required values
+     * @return StateSetNameAction
      */
     public StateSetNameAction buildUnchecked() {
         return new StateSetNameActionImpl(name);

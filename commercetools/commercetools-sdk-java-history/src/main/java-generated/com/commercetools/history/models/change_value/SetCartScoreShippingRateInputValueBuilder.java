@@ -28,7 +28,7 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
 
     /**
      *
-     * @param score
+     * @param score value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
         return this.score;
     }
 
+    /**
+     * builds SetCartScoreShippingRateInputValue with checking for non-null required values
+     * @return SetCartScoreShippingRateInputValue
+     */
     public SetCartScoreShippingRateInputValue build() {
         Objects.requireNonNull(type, SetCartScoreShippingRateInputValue.class + ": type is missing");
         Objects.requireNonNull(score, SetCartScoreShippingRateInputValue.class + ": score is missing");
@@ -63,7 +67,8 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
     }
 
     /**
-     * builds SetCartScoreShippingRateInputValue without checking for non null required values
+     * builds SetCartScoreShippingRateInputValue without checking for non-null required values
+     * @return SetCartScoreShippingRateInputValue
      */
     public SetCartScoreShippingRateInputValue buildUnchecked() {
         return new SetCartScoreShippingRateInputValueImpl(type, score);

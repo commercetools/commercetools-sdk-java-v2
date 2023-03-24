@@ -38,7 +38,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
 
     /**
      *  <p>Update action for <code>changeLineItemQuantity</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
 
     /**
      *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -94,7 +95,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
 
     /**
      *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -123,6 +124,10 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeLineItemQuantityChange with checking for non-null required values
+     * @return ChangeLineItemQuantityChange
+     */
     public ChangeLineItemQuantityChange build() {
         Objects.requireNonNull(change, ChangeLineItemQuantityChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, ChangeLineItemQuantityChange.class + ": lineItem is missing");
@@ -133,7 +138,8 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-     * builds ChangeLineItemQuantityChange without checking for non null required values
+     * builds ChangeLineItemQuantityChange without checking for non-null required values
+     * @return ChangeLineItemQuantityChange
      */
     public ChangeLineItemQuantityChange buildUnchecked() {
         return new ChangeLineItemQuantityChangeImpl(change, lineItem, lineItemId, nextValue, previousValue);

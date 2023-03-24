@@ -52,7 +52,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
-     * @param shippingMethodName
+     * @param shippingMethodName value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -74,6 +74,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -85,6 +86,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
+     * @param builder function to build the shippingRate value
      * @return Builder
      */
 
@@ -97,7 +99,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
-     * @param shippingRate
+     * @param shippingRate value to be set
      * @return Builder
      */
 
@@ -109,6 +111,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -120,7 +123,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -132,6 +135,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>References a tax category by key.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -144,7 +148,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>References a tax category by key.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -156,6 +160,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>References a shipping method by key.</p>
+     * @param builder function to build the shippingMethod value
      * @return Builder
      */
 
@@ -169,7 +174,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>References a shipping method by key.</p>
-     * @param shippingMethod
+     * @param shippingMethod value to be set
      * @return Builder
      */
 
@@ -181,7 +186,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -193,7 +198,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -205,7 +210,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -220,6 +225,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     * @param builder function to build the deliveries value
      * @return Builder
      */
 
@@ -234,6 +240,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     * @param builder function to build the deliveries value
      * @return Builder
      */
 
@@ -246,6 +253,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
+     * @param builder function to build the discountedPrice value
      * @return Builder
      */
 
@@ -259,7 +267,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
-     * @param discountedPrice
+     * @param discountedPrice value to be set
      * @return Builder
      */
 
@@ -271,7 +279,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *
-     * @param shippingMethodState
+     * @param shippingMethodState value to be set
      * @return Builder
      */
 
@@ -323,6 +331,10 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this.shippingMethodState;
     }
 
+    /**
+     * builds ShippingInfoImportDraft with checking for non-null required values
+     * @return ShippingInfoImportDraft
+     */
     public ShippingInfoImportDraft build() {
         Objects.requireNonNull(shippingMethodName, ShippingInfoImportDraft.class + ": shippingMethodName is missing");
         Objects.requireNonNull(price, ShippingInfoImportDraft.class + ": price is missing");
@@ -332,7 +344,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * builds ShippingInfoImportDraft without checking for non null required values
+     * builds ShippingInfoImportDraft without checking for non-null required values
+     * @return ShippingInfoImportDraft
      */
     public ShippingInfoImportDraft buildUnchecked() {
         return new ShippingInfoImportDraftImpl(shippingMethodName, price, shippingRate, taxRate, taxCategory,

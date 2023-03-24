@@ -32,7 +32,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -67,6 +68,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -101,6 +103,10 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeReviewRatingStatisticsChange with checking for non-null required values
+     * @return ChangeReviewRatingStatisticsChange
+     */
     public ChangeReviewRatingStatisticsChange build() {
         Objects.requireNonNull(change, ChangeReviewRatingStatisticsChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangeReviewRatingStatisticsChange.class + ": nextValue is missing");
@@ -109,7 +115,8 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     * builds ChangeReviewRatingStatisticsChange without checking for non null required values
+     * builds ChangeReviewRatingStatisticsChange without checking for non-null required values
+     * @return ChangeReviewRatingStatisticsChange
      */
     public ChangeReviewRatingStatisticsChange buildUnchecked() {
         return new ChangeReviewRatingStatisticsChangeImpl(change, nextValue, previousValue);

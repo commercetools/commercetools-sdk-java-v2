@@ -31,7 +31,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -73,13 +74,18 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
         return this.shippingDetails;
     }
 
+    /**
+     * builds OrderSetLineItemShippingDetailsAction with checking for non-null required values
+     * @return OrderSetLineItemShippingDetailsAction
+     */
     public OrderSetLineItemShippingDetailsAction build() {
         Objects.requireNonNull(lineItemId, OrderSetLineItemShippingDetailsAction.class + ": lineItemId is missing");
         return new OrderSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
     }
 
     /**
-     * builds OrderSetLineItemShippingDetailsAction without checking for non null required values
+     * builds OrderSetLineItemShippingDetailsAction without checking for non-null required values
+     * @return OrderSetLineItemShippingDetailsAction
      */
     public OrderSetLineItemShippingDetailsAction buildUnchecked() {
         return new OrderSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);

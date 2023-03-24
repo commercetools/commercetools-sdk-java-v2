@@ -29,6 +29,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
 
     /**
      *
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
 
     /**
      *
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -52,6 +53,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -63,7 +65,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -81,6 +83,10 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
         return this.taxRate;
     }
 
+    /**
+     * builds ShippingMethodTaxAmountChangeValue with checking for non-null required values
+     * @return ShippingMethodTaxAmountChangeValue
+     */
     public ShippingMethodTaxAmountChangeValue build() {
         Objects.requireNonNull(taxedPrice, ShippingMethodTaxAmountChangeValue.class + ": taxedPrice is missing");
         Objects.requireNonNull(taxRate, ShippingMethodTaxAmountChangeValue.class + ": taxRate is missing");
@@ -88,7 +94,8 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     * builds ShippingMethodTaxAmountChangeValue without checking for non null required values
+     * builds ShippingMethodTaxAmountChangeValue without checking for non-null required values
+     * @return ShippingMethodTaxAmountChangeValue
      */
     public ShippingMethodTaxAmountChangeValue buildUnchecked() {
         return new ShippingMethodTaxAmountChangeValueImpl(taxedPrice, taxRate);

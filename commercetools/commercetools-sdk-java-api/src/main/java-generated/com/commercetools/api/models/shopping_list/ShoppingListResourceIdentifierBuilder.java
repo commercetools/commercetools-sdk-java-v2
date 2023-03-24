@@ -30,7 +30,7 @@ public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>Unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingLi
         return this.key;
     }
 
+    /**
+     * builds ShoppingListResourceIdentifier with checking for non-null required values
+     * @return ShoppingListResourceIdentifier
+     */
     public ShoppingListResourceIdentifier build() {
         return new ShoppingListResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds ShoppingListResourceIdentifier without checking for non null required values
+     * builds ShoppingListResourceIdentifier without checking for non-null required values
+     * @return ShoppingListResourceIdentifier
      */
     public ShoppingListResourceIdentifier buildUnchecked() {
         return new ShoppingListResourceIdentifierImpl(id, key);

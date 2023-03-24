@@ -34,6 +34,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @param builder function to build the measurements value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
-     * @param measurements
+     * @param measurements value to be set
      * @return Builder
      */
 
@@ -58,6 +59,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @param builder function to build the trackingData value
      * @return Builder
      */
 
@@ -69,7 +71,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
-     * @param trackingData
+     * @param trackingData value to be set
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -93,7 +95,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -105,7 +107,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -120,6 +122,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -134,6 +137,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -159,12 +163,17 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
         return this.items;
     }
 
+    /**
+     * builds DeliveryParcelDraft with checking for non-null required values
+     * @return DeliveryParcelDraft
+     */
     public DeliveryParcelDraft build() {
         return new DeliveryParcelDraftImpl(measurements, trackingData, items);
     }
 
     /**
-     * builds DeliveryParcelDraft without checking for non null required values
+     * builds DeliveryParcelDraft without checking for non-null required values
+     * @return DeliveryParcelDraft
      */
     public DeliveryParcelDraft buildUnchecked() {
         return new DeliveryParcelDraftImpl(measurements, trackingData, items);

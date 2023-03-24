@@ -28,6 +28,7 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
 
     /**
      *  <p>Value to set. If empty, any existing reference is removed.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
 
     /**
      *  <p>Value to set. If empty, any existing reference is removed.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
         return this.customer;
     }
 
+    /**
+     * builds PaymentSetCustomerAction with checking for non-null required values
+     * @return PaymentSetCustomerAction
+     */
     public PaymentSetCustomerAction build() {
         return new PaymentSetCustomerActionImpl(customer);
     }
 
     /**
-     * builds PaymentSetCustomerAction without checking for non null required values
+     * builds PaymentSetCustomerAction without checking for non-null required values
+     * @return PaymentSetCustomerAction
      */
     public PaymentSetCustomerAction buildUnchecked() {
         return new PaymentSetCustomerActionImpl(customer);

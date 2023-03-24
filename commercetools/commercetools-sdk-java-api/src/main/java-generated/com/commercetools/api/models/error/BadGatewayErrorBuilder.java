@@ -27,7 +27,7 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
 
     /**
      *  <p>Plain text description of the error.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public BadGatewayErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public BadGatewayErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
         return this.values;
     }
 
+    /**
+     * builds BadGatewayError with checking for non-null required values
+     * @return BadGatewayError
+     */
     public BadGatewayError build() {
         Objects.requireNonNull(message, BadGatewayError.class + ": message is missing");
         return new BadGatewayErrorImpl(message, values);
     }
 
     /**
-     * builds BadGatewayError without checking for non null required values
+     * builds BadGatewayError without checking for non-null required values
+     * @return BadGatewayError
      */
     public BadGatewayError buildUnchecked() {
         return new BadGatewayErrorImpl(message, values);

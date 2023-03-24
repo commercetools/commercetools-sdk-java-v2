@@ -27,7 +27,7 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
 
     /**
      *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
-     * @param customerId
+     * @param customerId value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
         return this.customerId;
     }
 
+    /**
+     * builds CartSetCustomerIdAction with checking for non-null required values
+     * @return CartSetCustomerIdAction
+     */
     public CartSetCustomerIdAction build() {
         return new CartSetCustomerIdActionImpl(customerId);
     }
 
     /**
-     * builds CartSetCustomerIdAction without checking for non null required values
+     * builds CartSetCustomerIdAction without checking for non-null required values
+     * @return CartSetCustomerIdAction
      */
     public CartSetCustomerIdAction buildUnchecked() {
         return new CartSetCustomerIdActionImpl(customerId);

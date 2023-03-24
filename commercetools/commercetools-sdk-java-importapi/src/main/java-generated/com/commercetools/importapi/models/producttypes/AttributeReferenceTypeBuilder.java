@@ -25,7 +25,7 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
 
     /**
      *  <p>The type of the referenced resource.</p>
-     * @param referenceTypeId
+     * @param referenceTypeId value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
         return this.referenceTypeId;
     }
 
+    /**
+     * builds AttributeReferenceType with checking for non-null required values
+     * @return AttributeReferenceType
+     */
     public AttributeReferenceType build() {
         Objects.requireNonNull(referenceTypeId, AttributeReferenceType.class + ": referenceTypeId is missing");
         return new AttributeReferenceTypeImpl(referenceTypeId);
     }
 
     /**
-     * builds AttributeReferenceType without checking for non null required values
+     * builds AttributeReferenceType without checking for non-null required values
+     * @return AttributeReferenceType
      */
     public AttributeReferenceType buildUnchecked() {
         return new AttributeReferenceTypeImpl(referenceTypeId);

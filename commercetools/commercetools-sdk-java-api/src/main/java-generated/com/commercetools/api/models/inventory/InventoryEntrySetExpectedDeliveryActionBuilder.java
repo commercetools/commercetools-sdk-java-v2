@@ -28,7 +28,7 @@ public class InventoryEntrySetExpectedDeliveryActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param expectedDelivery
+     * @param expectedDelivery value to be set
      * @return Builder
      */
 
@@ -43,12 +43,17 @@ public class InventoryEntrySetExpectedDeliveryActionBuilder
         return this.expectedDelivery;
     }
 
+    /**
+     * builds InventoryEntrySetExpectedDeliveryAction with checking for non-null required values
+     * @return InventoryEntrySetExpectedDeliveryAction
+     */
     public InventoryEntrySetExpectedDeliveryAction build() {
         return new InventoryEntrySetExpectedDeliveryActionImpl(expectedDelivery);
     }
 
     /**
-     * builds InventoryEntrySetExpectedDeliveryAction without checking for non null required values
+     * builds InventoryEntrySetExpectedDeliveryAction without checking for non-null required values
+     * @return InventoryEntrySetExpectedDeliveryAction
      */
     public InventoryEntrySetExpectedDeliveryAction buildUnchecked() {
         return new InventoryEntrySetExpectedDeliveryActionImpl(expectedDelivery);

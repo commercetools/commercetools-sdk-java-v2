@@ -26,7 +26,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -64,6 +64,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -78,6 +79,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -92,13 +94,18 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
         return this.money;
     }
 
+    /**
+     * builds ChangeValueAbsoluteChangeValue with checking for non-null required values
+     * @return ChangeValueAbsoluteChangeValue
+     */
     public ChangeValueAbsoluteChangeValue build() {
         Objects.requireNonNull(money, ChangeValueAbsoluteChangeValue.class + ": money is missing");
         return new ChangeValueAbsoluteChangeValueImpl(money);
     }
 
     /**
-     * builds ChangeValueAbsoluteChangeValue without checking for non null required values
+     * builds ChangeValueAbsoluteChangeValue without checking for non-null required values
+     * @return ChangeValueAbsoluteChangeValue
      */
     public ChangeValueAbsoluteChangeValue buildUnchecked() {
         return new ChangeValueAbsoluteChangeValueImpl(money);

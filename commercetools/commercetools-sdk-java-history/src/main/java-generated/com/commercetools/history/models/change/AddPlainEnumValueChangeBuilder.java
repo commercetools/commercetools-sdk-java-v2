@@ -32,7 +32,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     /**
      *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     /**
      *  <p>The name of the attribute updated.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -87,6 +88,10 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
         return this.nextValue;
     }
 
+    /**
+     * builds AddPlainEnumValueChange with checking for non-null required values
+     * @return AddPlainEnumValueChange
+     */
     public AddPlainEnumValueChange build() {
         Objects.requireNonNull(change, AddPlainEnumValueChange.class + ": change is missing");
         Objects.requireNonNull(attributeName, AddPlainEnumValueChange.class + ": attributeName is missing");
@@ -95,7 +100,8 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     * builds AddPlainEnumValueChange without checking for non null required values
+     * builds AddPlainEnumValueChange without checking for non-null required values
+     * @return AddPlainEnumValueChange
      */
     public AddPlainEnumValueChange buildUnchecked() {
         return new AddPlainEnumValueChangeImpl(change, attributeName, nextValue);

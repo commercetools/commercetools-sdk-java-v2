@@ -26,7 +26,7 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
 
     /**
      *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
-     * @param sellerComment
+     * @param sellerComment value to be set
      * @return Builder
      */
 
@@ -39,6 +39,10 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
         return this.sellerComment;
     }
 
+    /**
+     * builds StagedQuoteSellerCommentSetMessagePayload with checking for non-null required values
+     * @return StagedQuoteSellerCommentSetMessagePayload
+     */
     public StagedQuoteSellerCommentSetMessagePayload build() {
         Objects.requireNonNull(sellerComment,
             StagedQuoteSellerCommentSetMessagePayload.class + ": sellerComment is missing");
@@ -46,7 +50,8 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
     }
 
     /**
-     * builds StagedQuoteSellerCommentSetMessagePayload without checking for non null required values
+     * builds StagedQuoteSellerCommentSetMessagePayload without checking for non-null required values
+     * @return StagedQuoteSellerCommentSetMessagePayload
      */
     public StagedQuoteSellerCommentSetMessagePayload buildUnchecked() {
         return new StagedQuoteSellerCommentSetMessagePayloadImpl(sellerComment);

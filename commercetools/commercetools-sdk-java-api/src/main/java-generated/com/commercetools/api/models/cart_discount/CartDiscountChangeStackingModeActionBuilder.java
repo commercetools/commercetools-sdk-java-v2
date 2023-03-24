@@ -25,7 +25,7 @@ public class CartDiscountChangeStackingModeActionBuilder implements Builder<Cart
 
     /**
      *  <p>New value to set.</p>
-     * @param stackingMode
+     * @param stackingMode value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class CartDiscountChangeStackingModeActionBuilder implements Builder<Cart
         return this.stackingMode;
     }
 
+    /**
+     * builds CartDiscountChangeStackingModeAction with checking for non-null required values
+     * @return CartDiscountChangeStackingModeAction
+     */
     public CartDiscountChangeStackingModeAction build() {
         Objects.requireNonNull(stackingMode, CartDiscountChangeStackingModeAction.class + ": stackingMode is missing");
         return new CartDiscountChangeStackingModeActionImpl(stackingMode);
     }
 
     /**
-     * builds CartDiscountChangeStackingModeAction without checking for non null required values
+     * builds CartDiscountChangeStackingModeAction without checking for non-null required values
+     * @return CartDiscountChangeStackingModeAction
      */
     public CartDiscountChangeStackingModeAction buildUnchecked() {
         return new CartDiscountChangeStackingModeActionImpl(stackingMode);

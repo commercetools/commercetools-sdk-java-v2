@@ -31,7 +31,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
 
     /**
      *  <p>Update action for <code>changeType</code> on state</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -75,6 +75,10 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeStateTypeChange with checking for non-null required values
+     * @return ChangeStateTypeChange
+     */
     public ChangeStateTypeChange build() {
         Objects.requireNonNull(change, ChangeStateTypeChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeStateTypeChange.class + ": previousValue is missing");
@@ -83,7 +87,8 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
     }
 
     /**
-     * builds ChangeStateTypeChange without checking for non null required values
+     * builds ChangeStateTypeChange without checking for non-null required values
+     * @return ChangeStateTypeChange
      */
     public ChangeStateTypeChange buildUnchecked() {
         return new ChangeStateTypeChangeImpl(change, previousValue, nextValue);

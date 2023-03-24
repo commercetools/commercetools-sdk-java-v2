@@ -31,7 +31,7 @@ public class MyCustomerSetDefaultBillingAddressActionBuilder
 
     /**
      *  <p><code>id</code> of the Address to become the default billing address.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class MyCustomerSetDefaultBillingAddressActionBuilder
 
     /**
      *  <p><code>key</code> of the Address to become the default billing address.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -61,12 +61,17 @@ public class MyCustomerSetDefaultBillingAddressActionBuilder
         return this.addressKey;
     }
 
+    /**
+     * builds MyCustomerSetDefaultBillingAddressAction with checking for non-null required values
+     * @return MyCustomerSetDefaultBillingAddressAction
+     */
     public MyCustomerSetDefaultBillingAddressAction build() {
         return new MyCustomerSetDefaultBillingAddressActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds MyCustomerSetDefaultBillingAddressAction without checking for non null required values
+     * builds MyCustomerSetDefaultBillingAddressAction without checking for non-null required values
+     * @return MyCustomerSetDefaultBillingAddressAction
      */
     public MyCustomerSetDefaultBillingAddressAction buildUnchecked() {
         return new MyCustomerSetDefaultBillingAddressActionImpl(addressId, addressKey);

@@ -28,6 +28,7 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
         return this.name;
     }
 
+    /**
+     * builds PaymentSetMethodInfoNameAction with checking for non-null required values
+     * @return PaymentSetMethodInfoNameAction
+     */
     public PaymentSetMethodInfoNameAction build() {
         return new PaymentSetMethodInfoNameActionImpl(name);
     }
 
     /**
-     * builds PaymentSetMethodInfoNameAction without checking for non null required values
+     * builds PaymentSetMethodInfoNameAction without checking for non-null required values
+     * @return PaymentSetMethodInfoNameAction
      */
     public PaymentSetMethodInfoNameAction buildUnchecked() {
         return new PaymentSetMethodInfoNameActionImpl(name);

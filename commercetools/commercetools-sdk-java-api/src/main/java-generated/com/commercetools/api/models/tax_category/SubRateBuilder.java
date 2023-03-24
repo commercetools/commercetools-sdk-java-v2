@@ -28,7 +28,7 @@ public class SubRateBuilder implements Builder<SubRate> {
 
     /**
      *  <p>Name of the SubRate.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class SubRateBuilder implements Builder<SubRate> {
 
     /**
      *
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class SubRateBuilder implements Builder<SubRate> {
         return this.amount;
     }
 
+    /**
+     * builds SubRate with checking for non-null required values
+     * @return SubRate
+     */
     public SubRate build() {
         Objects.requireNonNull(name, SubRate.class + ": name is missing");
         Objects.requireNonNull(amount, SubRate.class + ": amount is missing");
@@ -63,7 +67,8 @@ public class SubRateBuilder implements Builder<SubRate> {
     }
 
     /**
-     * builds SubRate without checking for non null required values
+     * builds SubRate without checking for non-null required values
+     * @return SubRate
      */
     public SubRate buildUnchecked() {
         return new SubRateImpl(name, amount);

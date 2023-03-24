@@ -25,7 +25,7 @@ public class DiscountCodeKeyReferenceBuilder implements Builder<DiscountCodeKeyR
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class DiscountCodeKeyReferenceBuilder implements Builder<DiscountCodeKeyR
         return this.key;
     }
 
+    /**
+     * builds DiscountCodeKeyReference with checking for non-null required values
+     * @return DiscountCodeKeyReference
+     */
     public DiscountCodeKeyReference build() {
         Objects.requireNonNull(key, DiscountCodeKeyReference.class + ": key is missing");
         return new DiscountCodeKeyReferenceImpl(key);
     }
 
     /**
-     * builds DiscountCodeKeyReference without checking for non null required values
+     * builds DiscountCodeKeyReference without checking for non-null required values
+     * @return DiscountCodeKeyReference
      */
     public DiscountCodeKeyReference buildUnchecked() {
         return new DiscountCodeKeyReferenceImpl(key);

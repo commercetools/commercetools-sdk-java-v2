@@ -34,7 +34,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
 
     /**
      *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
 
     /**
      *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
 
     /**
      *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -104,12 +106,17 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
         return this.fields;
     }
 
+    /**
+     * builds CartSetShippingCustomTypeAction with checking for non-null required values
+     * @return CartSetShippingCustomTypeAction
+     */
     public CartSetShippingCustomTypeAction build() {
         return new CartSetShippingCustomTypeActionImpl(shippingKey, type, fields);
     }
 
     /**
-     * builds CartSetShippingCustomTypeAction without checking for non null required values
+     * builds CartSetShippingCustomTypeAction without checking for non-null required values
+     * @return CartSetShippingCustomTypeAction
      */
     public CartSetShippingCustomTypeAction buildUnchecked() {
         return new CartSetShippingCustomTypeActionImpl(shippingKey, type, fields);

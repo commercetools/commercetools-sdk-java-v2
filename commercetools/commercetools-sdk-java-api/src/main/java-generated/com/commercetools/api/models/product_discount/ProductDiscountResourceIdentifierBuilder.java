@@ -30,7 +30,7 @@ public class ProductDiscountResourceIdentifierBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ProductDiscountResourceIdentifierBuilder implements Builder<Product
 
     /**
      *  <p>User-defined unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class ProductDiscountResourceIdentifierBuilder implements Builder<Product
         return this.key;
     }
 
+    /**
+     * builds ProductDiscountResourceIdentifier with checking for non-null required values
+     * @return ProductDiscountResourceIdentifier
+     */
     public ProductDiscountResourceIdentifier build() {
         return new ProductDiscountResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds ProductDiscountResourceIdentifier without checking for non null required values
+     * builds ProductDiscountResourceIdentifier without checking for non-null required values
+     * @return ProductDiscountResourceIdentifier
      */
     public ProductDiscountResourceIdentifier buildUnchecked() {
         return new ProductDiscountResourceIdentifierImpl(id, key);

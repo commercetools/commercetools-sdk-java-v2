@@ -38,7 +38,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *  <p>Update action for <code>setLineItemDiscountedPrice</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -83,6 +84,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -95,7 +97,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -107,6 +109,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -119,7 +122,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -149,6 +152,10 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
         return this.previousValue;
     }
 
+    /**
+     * builds SetLineItemDiscountedPriceChange with checking for non-null required values
+     * @return SetLineItemDiscountedPriceChange
+     */
     public SetLineItemDiscountedPriceChange build() {
         Objects.requireNonNull(change, SetLineItemDiscountedPriceChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, SetLineItemDiscountedPriceChange.class + ": lineItem is missing");
@@ -159,7 +166,8 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     * builds SetLineItemDiscountedPriceChange without checking for non null required values
+     * builds SetLineItemDiscountedPriceChange without checking for non-null required values
+     * @return SetLineItemDiscountedPriceChange
      */
     public SetLineItemDiscountedPriceChange buildUnchecked() {
         return new SetLineItemDiscountedPriceChangeImpl(change, lineItem, variant, nextValue, previousValue);

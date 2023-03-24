@@ -27,7 +27,7 @@ public class MyPaymentSetMethodInfoMethodActionBuilder implements Builder<MyPaym
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param method
+     * @param method value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class MyPaymentSetMethodInfoMethodActionBuilder implements Builder<MyPaym
         return this.method;
     }
 
+    /**
+     * builds MyPaymentSetMethodInfoMethodAction with checking for non-null required values
+     * @return MyPaymentSetMethodInfoMethodAction
+     */
     public MyPaymentSetMethodInfoMethodAction build() {
         return new MyPaymentSetMethodInfoMethodActionImpl(method);
     }
 
     /**
-     * builds MyPaymentSetMethodInfoMethodAction without checking for non null required values
+     * builds MyPaymentSetMethodInfoMethodAction without checking for non-null required values
+     * @return MyPaymentSetMethodInfoMethodAction
      */
     public MyPaymentSetMethodInfoMethodAction buildUnchecked() {
         return new MyPaymentSetMethodInfoMethodActionImpl(method);

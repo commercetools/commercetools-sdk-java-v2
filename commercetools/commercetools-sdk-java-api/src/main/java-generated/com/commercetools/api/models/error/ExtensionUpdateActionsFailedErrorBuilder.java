@@ -39,7 +39,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p><code>"The extension returned update actions that could not be executed."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -50,6 +50,8 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -59,6 +61,9 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -71,6 +76,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>User-defined localized description of the error.</p>
+     * @param builder function to build the localizedMessage value
      * @return Builder
      */
 
@@ -82,7 +88,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>User-defined localized description of the error.</p>
-     * @param localizedMessage
+     * @param localizedMessage value to be set
      * @return Builder
      */
 
@@ -94,7 +100,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Any information that should be returned to the API caller.</p>
-     * @param extensionExtraInfo
+     * @param extensionExtraInfo value to be set
      * @return Builder
      */
 
@@ -106,7 +112,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
-     * @param extensionErrors
+     * @param extensionErrors value to be set
      * @return Builder
      */
 
@@ -118,7 +124,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
-     * @param extensionErrors
+     * @param extensionErrors value to be set
      * @return Builder
      */
 
@@ -130,7 +136,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
-     * @param extensionErrors
+     * @param extensionErrors value to be set
      * @return Builder
      */
 
@@ -145,6 +151,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param builder function to build the extensionErrors value
      * @return Builder
      */
 
@@ -159,6 +166,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param builder function to build the extensionErrors value
      * @return Builder
      */
 
@@ -191,6 +199,10 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
         return this.extensionErrors;
     }
 
+    /**
+     * builds ExtensionUpdateActionsFailedError with checking for non-null required values
+     * @return ExtensionUpdateActionsFailedError
+     */
     public ExtensionUpdateActionsFailedError build() {
         Objects.requireNonNull(message, ExtensionUpdateActionsFailedError.class + ": message is missing");
         Objects.requireNonNull(extensionErrors,
@@ -200,7 +212,8 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     * builds ExtensionUpdateActionsFailedError without checking for non null required values
+     * builds ExtensionUpdateActionsFailedError without checking for non-null required values
+     * @return ExtensionUpdateActionsFailedError
      */
     public ExtensionUpdateActionsFailedError buildUnchecked() {
         return new ExtensionUpdateActionsFailedErrorImpl(message, values, localizedMessage, extensionExtraInfo,

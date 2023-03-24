@@ -44,7 +44,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>The unique ID of this CustomLineItem.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -55,6 +55,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -66,7 +67,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -77,6 +78,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -88,7 +90,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -99,6 +101,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -110,7 +113,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -121,6 +124,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -132,7 +136,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -143,7 +147,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>A unique String in the cart to identify this CustomLineItem.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -154,7 +158,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -191,6 +195,10 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this.quantity;
     }
 
+    /**
+     * builds CustomLineItem with checking for non-null required values
+     * @return CustomLineItem
+     */
     public CustomLineItem build() {
         Objects.requireNonNull(id, CustomLineItem.class + ": id is missing");
         Objects.requireNonNull(name, CustomLineItem.class + ": name is missing");
@@ -203,7 +211,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     * builds CustomLineItem without checking for non null required values
+     * builds CustomLineItem without checking for non-null required values
+     * @return CustomLineItem
      */
     public CustomLineItem buildUnchecked() {
         return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity);

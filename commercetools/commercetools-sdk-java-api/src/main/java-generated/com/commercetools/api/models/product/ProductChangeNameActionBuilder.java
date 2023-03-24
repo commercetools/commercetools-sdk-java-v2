@@ -31,6 +31,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
 
     /**
      *  <p>Value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
 
     /**
      *  <p>Value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
 
     /**
      *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
         return this.staged;
     }
 
+    /**
+     * builds ProductChangeNameAction with checking for non-null required values
+     * @return ProductChangeNameAction
+     */
     public ProductChangeNameAction build() {
         Objects.requireNonNull(name, ProductChangeNameAction.class + ": name is missing");
         return new ProductChangeNameActionImpl(name, staged);
     }
 
     /**
-     * builds ProductChangeNameAction without checking for non null required values
+     * builds ProductChangeNameAction without checking for non-null required values
+     * @return ProductChangeNameAction
      */
     public ProductChangeNameAction buildUnchecked() {
         return new ProductChangeNameActionImpl(name, staged);

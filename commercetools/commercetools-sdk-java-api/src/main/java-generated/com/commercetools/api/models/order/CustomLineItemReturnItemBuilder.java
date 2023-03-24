@@ -52,7 +52,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *  <p>Unique identifier of the ReturnItem.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -74,7 +74,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
-     * @param comment
+     * @param comment value to be set
      * @return Builder
      */
 
@@ -85,7 +85,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -97,7 +97,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -109,6 +109,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *  <p>Custom Fields of this return item.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -120,7 +121,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *  <p>Custom Fields of this return item.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -132,7 +133,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -143,7 +144,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -154,7 +155,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -201,6 +202,10 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
         return this.customLineItemId;
     }
 
+    /**
+     * builds CustomLineItemReturnItem with checking for non-null required values
+     * @return CustomLineItemReturnItem
+     */
     public CustomLineItemReturnItem build() {
         Objects.requireNonNull(id, CustomLineItemReturnItem.class + ": id is missing");
         Objects.requireNonNull(quantity, CustomLineItemReturnItem.class + ": quantity is missing");
@@ -214,7 +219,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     * builds CustomLineItemReturnItem without checking for non null required values
+     * builds CustomLineItemReturnItem without checking for non-null required values
+     * @return CustomLineItemReturnItem
      */
     public CustomLineItemReturnItem buildUnchecked() {
         return new CustomLineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, custom,

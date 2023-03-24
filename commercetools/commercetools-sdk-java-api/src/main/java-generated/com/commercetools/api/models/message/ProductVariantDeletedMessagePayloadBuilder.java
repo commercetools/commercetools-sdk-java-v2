@@ -31,6 +31,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @param builder function to build the variant value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -76,7 +77,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -97,6 +98,10 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
         return this.removedImageUrls;
     }
 
+    /**
+     * builds ProductVariantDeletedMessagePayload with checking for non-null required values
+     * @return ProductVariantDeletedMessagePayload
+     */
     public ProductVariantDeletedMessagePayload build() {
         Objects.requireNonNull(removedImageUrls,
             ProductVariantDeletedMessagePayload.class + ": removedImageUrls is missing");
@@ -104,7 +109,8 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     * builds ProductVariantDeletedMessagePayload without checking for non null required values
+     * builds ProductVariantDeletedMessagePayload without checking for non-null required values
+     * @return ProductVariantDeletedMessagePayload
      */
     public ProductVariantDeletedMessagePayload buildUnchecked() {
         return new ProductVariantDeletedMessagePayloadImpl(variant, removedImageUrls);

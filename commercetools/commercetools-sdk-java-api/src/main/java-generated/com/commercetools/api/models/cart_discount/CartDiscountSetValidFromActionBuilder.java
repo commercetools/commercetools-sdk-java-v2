@@ -27,7 +27,7 @@ public class CartDiscountSetValidFromActionBuilder implements Builder<CartDiscou
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CartDiscountSetValidFromActionBuilder implements Builder<CartDiscou
         return this.validFrom;
     }
 
+    /**
+     * builds CartDiscountSetValidFromAction with checking for non-null required values
+     * @return CartDiscountSetValidFromAction
+     */
     public CartDiscountSetValidFromAction build() {
         return new CartDiscountSetValidFromActionImpl(validFrom);
     }
 
     /**
-     * builds CartDiscountSetValidFromAction without checking for non null required values
+     * builds CartDiscountSetValidFromAction without checking for non-null required values
+     * @return CartDiscountSetValidFromAction
      */
     public CartDiscountSetValidFromAction buildUnchecked() {
         return new CartDiscountSetValidFromActionImpl(validFrom);

@@ -27,7 +27,7 @@ public class CategorySetExternalIdActionBuilder implements Builder<CategorySetEx
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CategorySetExternalIdActionBuilder implements Builder<CategorySetEx
         return this.externalId;
     }
 
+    /**
+     * builds CategorySetExternalIdAction with checking for non-null required values
+     * @return CategorySetExternalIdAction
+     */
     public CategorySetExternalIdAction build() {
         return new CategorySetExternalIdActionImpl(externalId);
     }
 
     /**
-     * builds CategorySetExternalIdAction without checking for non null required values
+     * builds CategorySetExternalIdAction without checking for non-null required values
+     * @return CategorySetExternalIdAction
      */
     public CategorySetExternalIdAction buildUnchecked() {
         return new CategorySetExternalIdActionImpl(externalId);

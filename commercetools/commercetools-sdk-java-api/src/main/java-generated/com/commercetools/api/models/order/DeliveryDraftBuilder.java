@@ -37,7 +37,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -74,6 +74,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -88,6 +89,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -100,7 +102,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -111,7 +113,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -123,7 +125,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -137,6 +139,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -151,6 +154,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -163,6 +167,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -174,7 +179,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -185,6 +190,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -196,7 +202,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -225,12 +231,17 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
         return this.custom;
     }
 
+    /**
+     * builds DeliveryDraft with checking for non-null required values
+     * @return DeliveryDraft
+     */
     public DeliveryDraft build() {
         return new DeliveryDraftImpl(items, parcels, address, custom);
     }
 
     /**
-     * builds DeliveryDraft without checking for non null required values
+     * builds DeliveryDraft without checking for non-null required values
+     * @return DeliveryDraft
      */
     public DeliveryDraft buildUnchecked() {
         return new DeliveryDraftImpl(items, parcels, address, custom);

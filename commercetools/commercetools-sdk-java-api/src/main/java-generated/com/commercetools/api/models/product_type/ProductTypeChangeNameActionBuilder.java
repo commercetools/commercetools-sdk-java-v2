@@ -25,7 +25,7 @@ public class ProductTypeChangeNameActionBuilder implements Builder<ProductTypeCh
 
     /**
      *  <p>New value to set.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductTypeChangeNameActionBuilder implements Builder<ProductTypeCh
         return this.name;
     }
 
+    /**
+     * builds ProductTypeChangeNameAction with checking for non-null required values
+     * @return ProductTypeChangeNameAction
+     */
     public ProductTypeChangeNameAction build() {
         Objects.requireNonNull(name, ProductTypeChangeNameAction.class + ": name is missing");
         return new ProductTypeChangeNameActionImpl(name);
     }
 
     /**
-     * builds ProductTypeChangeNameAction without checking for non null required values
+     * builds ProductTypeChangeNameAction without checking for non-null required values
+     * @return ProductTypeChangeNameAction
      */
     public ProductTypeChangeNameAction buildUnchecked() {
         return new ProductTypeChangeNameActionImpl(name);

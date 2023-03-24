@@ -29,7 +29,7 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
      *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
-     * @param discounts
+     * @param discounts value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
      *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
-     * @param discounts
+     * @param discounts value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
      *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
-     * @param discounts
+     * @param discounts value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
      *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
+     * @param builder function to build the discounts value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
      *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
+     * @param builder function to build the discounts value
      * @return Builder
      */
 
@@ -108,13 +110,18 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
         return this.discounts;
     }
 
+    /**
+     * builds CartSetDirectDiscountsAction with checking for non-null required values
+     * @return CartSetDirectDiscountsAction
+     */
     public CartSetDirectDiscountsAction build() {
         Objects.requireNonNull(discounts, CartSetDirectDiscountsAction.class + ": discounts is missing");
         return new CartSetDirectDiscountsActionImpl(discounts);
     }
 
     /**
-     * builds CartSetDirectDiscountsAction without checking for non null required values
+     * builds CartSetDirectDiscountsAction without checking for non-null required values
+     * @return CartSetDirectDiscountsAction
      */
     public CartSetDirectDiscountsAction buildUnchecked() {
         return new CartSetDirectDiscountsActionImpl(discounts);

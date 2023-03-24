@@ -25,7 +25,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
         return this.value;
     }
 
+    /**
+     * builds LocalizedEnumSetField with checking for non-null required values
+     * @return LocalizedEnumSetField
+     */
     public LocalizedEnumSetField build() {
         Objects.requireNonNull(value, LocalizedEnumSetField.class + ": value is missing");
         return new LocalizedEnumSetFieldImpl(value);
     }
 
     /**
-     * builds LocalizedEnumSetField without checking for non null required values
+     * builds LocalizedEnumSetField without checking for non-null required values
+     * @return LocalizedEnumSetField
      */
     public LocalizedEnumSetField buildUnchecked() {
         return new LocalizedEnumSetFieldImpl(value);

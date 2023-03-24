@@ -25,7 +25,7 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param currencies
+     * @param currencies value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param currencies
+     * @param currencies value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param currencies
+     * @param currencies value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
         return this.currencies;
     }
 
+    /**
+     * builds ProjectChangeCurrenciesAction with checking for non-null required values
+     * @return ProjectChangeCurrenciesAction
+     */
     public ProjectChangeCurrenciesAction build() {
         Objects.requireNonNull(currencies, ProjectChangeCurrenciesAction.class + ": currencies is missing");
         return new ProjectChangeCurrenciesActionImpl(currencies);
     }
 
     /**
-     * builds ProjectChangeCurrenciesAction without checking for non null required values
+     * builds ProjectChangeCurrenciesAction without checking for non-null required values
+     * @return ProjectChangeCurrenciesAction
      */
     public ProjectChangeCurrenciesAction buildUnchecked() {
         return new ProjectChangeCurrenciesActionImpl(currencies);

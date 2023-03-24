@@ -25,7 +25,7 @@ public class InventoryEntryRemoveQuantityActionBuilder implements Builder<Invent
 
     /**
      *  <p>Value to remove from <code>quantityOnStock</code>.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class InventoryEntryRemoveQuantityActionBuilder implements Builder<Invent
         return this.quantity;
     }
 
+    /**
+     * builds InventoryEntryRemoveQuantityAction with checking for non-null required values
+     * @return InventoryEntryRemoveQuantityAction
+     */
     public InventoryEntryRemoveQuantityAction build() {
         Objects.requireNonNull(quantity, InventoryEntryRemoveQuantityAction.class + ": quantity is missing");
         return new InventoryEntryRemoveQuantityActionImpl(quantity);
     }
 
     /**
-     * builds InventoryEntryRemoveQuantityAction without checking for non null required values
+     * builds InventoryEntryRemoveQuantityAction without checking for non-null required values
+     * @return InventoryEntryRemoveQuantityAction
      */
     public InventoryEntryRemoveQuantityAction buildUnchecked() {
         return new InventoryEntryRemoveQuantityActionImpl(quantity);

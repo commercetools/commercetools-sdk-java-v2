@@ -31,6 +31,7 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
 
     /**
      *  <p>Product Selection to add to the Store either activated or deactivated.</p>
+     * @param builder function to build the productSelection value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
 
     /**
      *  <p>Product Selection to add to the Store either activated or deactivated.</p>
-     * @param productSelection
+     * @param productSelection value to be set
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
 
     /**
      *  <p>Set to <code>true</code> to make all Products assigned to the referenced Product Selection available in the Store.</p>
-     * @param active
+     * @param active value to be set
      * @return Builder
      */
 
@@ -74,6 +75,10 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
         return this.active;
     }
 
+    /**
+     * builds StoreAddProductSelectionAction with checking for non-null required values
+     * @return StoreAddProductSelectionAction
+     */
     public StoreAddProductSelectionAction build() {
         Objects.requireNonNull(productSelection,
             StoreAddProductSelectionAction.class + ": productSelection is missing");
@@ -81,7 +86,8 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
     }
 
     /**
-     * builds StoreAddProductSelectionAction without checking for non null required values
+     * builds StoreAddProductSelectionAction without checking for non-null required values
+     * @return StoreAddProductSelectionAction
      */
     public StoreAddProductSelectionAction buildUnchecked() {
         return new StoreAddProductSelectionActionImpl(productSelection, active);

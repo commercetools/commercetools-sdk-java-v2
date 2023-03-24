@@ -30,7 +30,7 @@ public class ChannelSetAddressCustomFieldActionBuilder implements Builder<Channe
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ChannelSetAddressCustomFieldActionBuilder implements Builder<Channe
 
     /**
      *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Removing a field that does not exist returns an InvalidOperation error.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ChannelSetAddressCustomFieldActionBuilder implements Builder<Channe
         return this.value;
     }
 
+    /**
+     * builds ChannelSetAddressCustomFieldAction with checking for non-null required values
+     * @return ChannelSetAddressCustomFieldAction
+     */
     public ChannelSetAddressCustomFieldAction build() {
         Objects.requireNonNull(name, ChannelSetAddressCustomFieldAction.class + ": name is missing");
         return new ChannelSetAddressCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds ChannelSetAddressCustomFieldAction without checking for non null required values
+     * builds ChannelSetAddressCustomFieldAction without checking for non-null required values
+     * @return ChannelSetAddressCustomFieldAction
      */
     public ChannelSetAddressCustomFieldAction buildUnchecked() {
         return new ChannelSetAddressCustomFieldActionImpl(name, value);

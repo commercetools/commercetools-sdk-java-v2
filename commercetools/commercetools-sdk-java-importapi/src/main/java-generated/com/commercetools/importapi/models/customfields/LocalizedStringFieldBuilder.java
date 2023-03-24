@@ -31,6 +31,7 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -47,7 +48,7 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -60,13 +61,18 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
         return this.value;
     }
 
+    /**
+     * builds LocalizedStringField with checking for non-null required values
+     * @return LocalizedStringField
+     */
     public LocalizedStringField build() {
         Objects.requireNonNull(value, LocalizedStringField.class + ": value is missing");
         return new LocalizedStringFieldImpl(value);
     }
 
     /**
-     * builds LocalizedStringField without checking for non null required values
+     * builds LocalizedStringField without checking for non-null required values
+     * @return LocalizedStringField
      */
     public LocalizedStringField buildUnchecked() {
         return new LocalizedStringFieldImpl(value);

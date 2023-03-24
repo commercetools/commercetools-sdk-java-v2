@@ -31,6 +31,7 @@ public class CartSetShippingAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CartSetShippingAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class CartSetShippingAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class CartSetShippingAddressCustomTypeActionBuilder implements Builder<Ca
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class CartSetShippingAddressCustomTypeActionBuilder implements Builder<Ca
         return this.fields;
     }
 
+    /**
+     * builds CartSetShippingAddressCustomTypeAction with checking for non-null required values
+     * @return CartSetShippingAddressCustomTypeAction
+     */
     public CartSetShippingAddressCustomTypeAction build() {
         return new CartSetShippingAddressCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds CartSetShippingAddressCustomTypeAction without checking for non null required values
+     * builds CartSetShippingAddressCustomTypeAction without checking for non-null required values
+     * @return CartSetShippingAddressCustomTypeAction
      */
     public CartSetShippingAddressCustomTypeAction buildUnchecked() {
         return new CartSetShippingAddressCustomTypeActionImpl(type, fields);

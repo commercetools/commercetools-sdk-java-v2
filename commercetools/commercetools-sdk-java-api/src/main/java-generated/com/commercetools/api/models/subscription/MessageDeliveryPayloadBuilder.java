@@ -55,7 +55,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
-     * @param projectKey
+     * @param projectKey value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -88,6 +89,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
 
@@ -101,7 +103,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
-     * @param resourceUserProvidedIdentifiers
+     * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
 
@@ -113,7 +115,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Unique ID of the message.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -124,7 +126,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Last seen version of the resource.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -135,7 +137,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Date and time (UTC) the resource was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -146,7 +148,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Date and time (UTC) the resource was last modified.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -157,7 +159,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Used to ensure all messages of the resource are processed in correct order. The <code>sequenceNumber</code> of the next message of the resource is a successor of the <code>sequenceNumber</code> of the current message.</p>
-     * @param sequenceNumber
+     * @param sequenceNumber value to be set
      * @return Builder
      */
 
@@ -168,7 +170,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Version of the resource on which the change was performed.</p>
-     * @param resourceVersion
+     * @param resourceVersion value to be set
      * @return Builder
      */
 
@@ -179,6 +181,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     * @param builder function to build the payloadNotIncluded value
      * @return Builder
      */
 
@@ -192,7 +195,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
-     * @param payloadNotIncluded
+     * @param payloadNotIncluded value to be set
      * @return Builder
      */
 
@@ -244,6 +247,10 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
         return this.payloadNotIncluded;
     }
 
+    /**
+     * builds MessageDeliveryPayload with checking for non-null required values
+     * @return MessageDeliveryPayload
+     */
     public MessageDeliveryPayload build() {
         Objects.requireNonNull(projectKey, MessageDeliveryPayload.class + ": projectKey is missing");
         Objects.requireNonNull(resource, MessageDeliveryPayload.class + ": resource is missing");
@@ -258,7 +265,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     * builds MessageDeliveryPayload without checking for non null required values
+     * builds MessageDeliveryPayload without checking for non-null required values
+     * @return MessageDeliveryPayload
      */
     public MessageDeliveryPayload buildUnchecked() {
         return new MessageDeliveryPayloadImpl(projectKey, resource, resourceUserProvidedIdentifiers, id, version,

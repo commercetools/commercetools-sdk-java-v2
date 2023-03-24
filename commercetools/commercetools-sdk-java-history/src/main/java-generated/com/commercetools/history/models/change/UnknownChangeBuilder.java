@@ -29,7 +29,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -72,6 +72,10 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds UnknownChange with checking for non-null required values
+     * @return UnknownChange
+     */
     public UnknownChange build() {
         Objects.requireNonNull(change, UnknownChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, UnknownChange.class + ": previousValue is missing");
@@ -80,7 +84,8 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     }
 
     /**
-     * builds UnknownChange without checking for non null required values
+     * builds UnknownChange without checking for non-null required values
+     * @return UnknownChange
      */
     public UnknownChange buildUnchecked() {
         return new UnknownChangeImpl(change, previousValue, nextValue);

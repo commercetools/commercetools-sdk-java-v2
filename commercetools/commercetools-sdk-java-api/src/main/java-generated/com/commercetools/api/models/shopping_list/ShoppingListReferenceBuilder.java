@@ -31,7 +31,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
 
     /**
      *  <p>Unique identifier of the referenced ShoppingList.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
 
     /**
      *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
 
     /**
      *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
         return this.obj;
     }
 
+    /**
+     * builds ShoppingListReference with checking for non-null required values
+     * @return ShoppingListReference
+     */
     public ShoppingListReference build() {
         Objects.requireNonNull(id, ShoppingListReference.class + ": id is missing");
         return new ShoppingListReferenceImpl(id, obj);
     }
 
     /**
-     * builds ShoppingListReference without checking for non null required values
+     * builds ShoppingListReference without checking for non-null required values
+     * @return ShoppingListReference
      */
     public ShoppingListReference buildUnchecked() {
         return new ShoppingListReferenceImpl(id, obj);

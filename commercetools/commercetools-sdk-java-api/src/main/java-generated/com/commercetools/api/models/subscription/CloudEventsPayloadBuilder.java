@@ -55,7 +55,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>The version of the CloudEvents specification which the event uses.</p>
-     * @param specversion
+     * @param specversion value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>Unique identifier of the event.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the ReferenceTypeId, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -88,7 +88,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>The default REST URI of the ReferenceTypeId that triggered this event, including the project key.</p>
-     * @param source
+     * @param source value to be set
      * @return Builder
      */
 
@@ -99,7 +99,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>Unique identifier of the resource that triggered the event.</p>
-     * @param subject
+     * @param subject value to be set
      * @return Builder
      */
 
@@ -110,7 +110,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>Corresponds to the <code>lastModifiedAt</code> of the resource at the time the event was triggered.</p>
-     * @param time
+     * @param time value to be set
      * @return Builder
      */
 
@@ -121,7 +121,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>Corresponds to the <code>sequenceNumber</code> of a MessageSubscription. Can be used to process messages in the correct order.</p>
-     * @param sequence
+     * @param sequence value to be set
      * @return Builder
      */
 
@@ -132,7 +132,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p><code>"Integer"</code></p>
-     * @param sequencetype
+     * @param sequencetype value to be set
      * @return Builder
      */
 
@@ -143,7 +143,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>The URI from which the message can be retrieved if messages are enabled. Only set for MessageSubscriptions.</p>
-     * @param dataref
+     * @param dataref value to be set
      * @return Builder
      */
 
@@ -154,7 +154,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
-     * @param data
+     * @param data value to be set
      * @return Builder
      */
 
@@ -165,6 +165,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
     /**
      *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
+     * @param builder function to build the data value
      * @return Builder
      */
 
@@ -217,6 +218,10 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
         return this.data;
     }
 
+    /**
+     * builds CloudEventsPayload with checking for non-null required values
+     * @return CloudEventsPayload
+     */
     public CloudEventsPayload build() {
         Objects.requireNonNull(specversion, CloudEventsPayload.class + ": specversion is missing");
         Objects.requireNonNull(id, CloudEventsPayload.class + ": id is missing");
@@ -230,7 +235,8 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
     }
 
     /**
-     * builds CloudEventsPayload without checking for non null required values
+     * builds CloudEventsPayload without checking for non-null required values
+     * @return CloudEventsPayload
      */
     public CloudEventsPayload buildUnchecked() {
         return new CloudEventsPayloadImpl(specversion, id, type, source, subject, time, sequence, sequencetype, dataref,

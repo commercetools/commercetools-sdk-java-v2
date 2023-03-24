@@ -25,7 +25,7 @@ public class OrderKeyReferenceBuilder implements Builder<OrderKeyReference> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class OrderKeyReferenceBuilder implements Builder<OrderKeyReference> {
         return this.key;
     }
 
+    /**
+     * builds OrderKeyReference with checking for non-null required values
+     * @return OrderKeyReference
+     */
     public OrderKeyReference build() {
         Objects.requireNonNull(key, OrderKeyReference.class + ": key is missing");
         return new OrderKeyReferenceImpl(key);
     }
 
     /**
-     * builds OrderKeyReference without checking for non null required values
+     * builds OrderKeyReference without checking for non-null required values
+     * @return OrderKeyReference
      */
     public OrderKeyReference buildUnchecked() {
         return new OrderKeyReferenceImpl(key);

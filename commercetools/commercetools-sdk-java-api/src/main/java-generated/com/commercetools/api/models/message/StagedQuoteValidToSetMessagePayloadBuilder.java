@@ -25,7 +25,7 @@ public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<Stage
 
     /**
      *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
-     * @param validTo
+     * @param validTo value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<Stage
         return this.validTo;
     }
 
+    /**
+     * builds StagedQuoteValidToSetMessagePayload with checking for non-null required values
+     * @return StagedQuoteValidToSetMessagePayload
+     */
     public StagedQuoteValidToSetMessagePayload build() {
         Objects.requireNonNull(validTo, StagedQuoteValidToSetMessagePayload.class + ": validTo is missing");
         return new StagedQuoteValidToSetMessagePayloadImpl(validTo);
     }
 
     /**
-     * builds StagedQuoteValidToSetMessagePayload without checking for non null required values
+     * builds StagedQuoteValidToSetMessagePayload without checking for non-null required values
+     * @return StagedQuoteValidToSetMessagePayload
      */
     public StagedQuoteValidToSetMessagePayload buildUnchecked() {
         return new StagedQuoteValidToSetMessagePayloadImpl(validTo);

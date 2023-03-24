@@ -27,6 +27,7 @@ public class BusinessUnitBillingAddressAddedMessagePayloadBuilder
 
     /**
      *  <p>The address that was added to the Business Unit as billing address.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class BusinessUnitBillingAddressAddedMessagePayloadBuilder
 
     /**
      *  <p>The address that was added to the Business Unit as billing address.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class BusinessUnitBillingAddressAddedMessagePayloadBuilder
         return this.address;
     }
 
+    /**
+     * builds BusinessUnitBillingAddressAddedMessagePayload with checking for non-null required values
+     * @return BusinessUnitBillingAddressAddedMessagePayload
+     */
     public BusinessUnitBillingAddressAddedMessagePayload build() {
         Objects.requireNonNull(address, BusinessUnitBillingAddressAddedMessagePayload.class + ": address is missing");
         return new BusinessUnitBillingAddressAddedMessagePayloadImpl(address);
     }
 
     /**
-     * builds BusinessUnitBillingAddressAddedMessagePayload without checking for non null required values
+     * builds BusinessUnitBillingAddressAddedMessagePayload without checking for non-null required values
+     * @return BusinessUnitBillingAddressAddedMessagePayload
      */
     public BusinessUnitBillingAddressAddedMessagePayload buildUnchecked() {
         return new BusinessUnitBillingAddressAddedMessagePayloadImpl(address);

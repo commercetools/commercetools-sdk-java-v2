@@ -25,7 +25,7 @@ public class ProductDiscountChangeIsActiveActionBuilder implements Builder<Produ
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
-     * @param isActive
+     * @param isActive value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductDiscountChangeIsActiveActionBuilder implements Builder<Produ
         return this.isActive;
     }
 
+    /**
+     * builds ProductDiscountChangeIsActiveAction with checking for non-null required values
+     * @return ProductDiscountChangeIsActiveAction
+     */
     public ProductDiscountChangeIsActiveAction build() {
         Objects.requireNonNull(isActive, ProductDiscountChangeIsActiveAction.class + ": isActive is missing");
         return new ProductDiscountChangeIsActiveActionImpl(isActive);
     }
 
     /**
-     * builds ProductDiscountChangeIsActiveAction without checking for non null required values
+     * builds ProductDiscountChangeIsActiveAction without checking for non-null required values
+     * @return ProductDiscountChangeIsActiveAction
      */
     public ProductDiscountChangeIsActiveAction buildUnchecked() {
         return new ProductDiscountChangeIsActiveActionImpl(isActive);

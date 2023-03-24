@@ -31,7 +31,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
 
     /**
      *  <p>Unique identifier of the referenced Channel.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
 
     /**
      *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
 
     /**
      *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
         return this.obj;
     }
 
+    /**
+     * builds ChannelReference with checking for non-null required values
+     * @return ChannelReference
+     */
     public ChannelReference build() {
         Objects.requireNonNull(id, ChannelReference.class + ": id is missing");
         return new ChannelReferenceImpl(id, obj);
     }
 
     /**
-     * builds ChannelReference without checking for non null required values
+     * builds ChannelReference without checking for non-null required values
+     * @return ChannelReference
      */
     public ChannelReference buildUnchecked() {
         return new ChannelReferenceImpl(id, obj);

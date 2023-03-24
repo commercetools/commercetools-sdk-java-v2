@@ -28,7 +28,7 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
 
     /**
      *
-     * @param typeId
+     * @param typeId value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
         return this.typeId;
     }
 
+    /**
+     * builds KeyReference with checking for non-null required values
+     * @return KeyReference
+     */
     public KeyReference build() {
         Objects.requireNonNull(key, KeyReference.class + ": key is missing");
         Objects.requireNonNull(typeId, KeyReference.class + ": typeId is missing");
@@ -63,7 +67,8 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
     }
 
     /**
-     * builds KeyReference without checking for non null required values
+     * builds KeyReference without checking for non-null required values
+     * @return KeyReference
      */
     public KeyReference buildUnchecked() {
         return new KeyReferenceImpl(key, typeId);

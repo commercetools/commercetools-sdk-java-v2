@@ -27,7 +27,7 @@ public class MyCustomerSetDateOfBirthActionBuilder implements Builder<MyCustomer
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param dateOfBirth
+     * @param dateOfBirth value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class MyCustomerSetDateOfBirthActionBuilder implements Builder<MyCustomer
         return this.dateOfBirth;
     }
 
+    /**
+     * builds MyCustomerSetDateOfBirthAction with checking for non-null required values
+     * @return MyCustomerSetDateOfBirthAction
+     */
     public MyCustomerSetDateOfBirthAction build() {
         return new MyCustomerSetDateOfBirthActionImpl(dateOfBirth);
     }
 
     /**
-     * builds MyCustomerSetDateOfBirthAction without checking for non null required values
+     * builds MyCustomerSetDateOfBirthAction without checking for non-null required values
+     * @return MyCustomerSetDateOfBirthAction
      */
     public MyCustomerSetDateOfBirthAction buildUnchecked() {
         return new MyCustomerSetDateOfBirthActionImpl(dateOfBirth);

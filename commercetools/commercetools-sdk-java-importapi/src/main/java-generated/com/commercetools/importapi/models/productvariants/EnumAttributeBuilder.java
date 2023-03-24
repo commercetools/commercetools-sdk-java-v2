@@ -30,7 +30,7 @@ public class EnumAttributeBuilder implements Builder<EnumAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class EnumAttributeBuilder implements Builder<EnumAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class EnumAttributeBuilder implements Builder<EnumAttribute> {
         return this.value;
     }
 
+    /**
+     * builds EnumAttribute with checking for non-null required values
+     * @return EnumAttribute
+     */
     public EnumAttribute build() {
         Objects.requireNonNull(value, EnumAttribute.class + ": value is missing");
         return new EnumAttributeImpl(name, value);
     }
 
     /**
-     * builds EnumAttribute without checking for non null required values
+     * builds EnumAttribute without checking for non-null required values
+     * @return EnumAttribute
      */
     public EnumAttribute buildUnchecked() {
         return new EnumAttributeImpl(name, value);

@@ -26,6 +26,7 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
 
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
+     * @param builder function to build the returnInfo value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
 
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
-     * @param returnInfo
+     * @param returnInfo value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
         return this.returnInfo;
     }
 
+    /**
+     * builds ReturnInfoAddedMessagePayload with checking for non-null required values
+     * @return ReturnInfoAddedMessagePayload
+     */
     public ReturnInfoAddedMessagePayload build() {
         Objects.requireNonNull(returnInfo, ReturnInfoAddedMessagePayload.class + ": returnInfo is missing");
         return new ReturnInfoAddedMessagePayloadImpl(returnInfo);
     }
 
     /**
-     * builds ReturnInfoAddedMessagePayload without checking for non null required values
+     * builds ReturnInfoAddedMessagePayload without checking for non-null required values
+     * @return ReturnInfoAddedMessagePayload
      */
     public ReturnInfoAddedMessagePayload buildUnchecked() {
         return new ReturnInfoAddedMessagePayloadImpl(returnInfo);

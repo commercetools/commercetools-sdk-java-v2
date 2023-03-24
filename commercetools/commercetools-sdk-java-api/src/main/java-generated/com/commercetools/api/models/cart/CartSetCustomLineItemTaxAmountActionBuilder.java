@@ -31,7 +31,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param externalTaxAmount
+     * @param externalTaxAmount value to be set
      * @return Builder
      */
 
@@ -73,6 +74,10 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
         return this.externalTaxAmount;
     }
 
+    /**
+     * builds CartSetCustomLineItemTaxAmountAction with checking for non-null required values
+     * @return CartSetCustomLineItemTaxAmountAction
+     */
     public CartSetCustomLineItemTaxAmountAction build() {
         Objects.requireNonNull(customLineItemId,
             CartSetCustomLineItemTaxAmountAction.class + ": customLineItemId is missing");
@@ -80,7 +85,8 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
-     * builds CartSetCustomLineItemTaxAmountAction without checking for non null required values
+     * builds CartSetCustomLineItemTaxAmountAction without checking for non-null required values
+     * @return CartSetCustomLineItemTaxAmountAction
      */
     public CartSetCustomLineItemTaxAmountAction buildUnchecked() {
         return new CartSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);

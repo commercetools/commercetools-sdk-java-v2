@@ -29,7 +29,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *
-     * @param text
+     * @param text value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *
+     * @param builder function to build the suggestTokenizer value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *
-     * @param suggestTokenizer
+     * @param suggestTokenizer value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
         return this.suggestTokenizer;
     }
 
+    /**
+     * builds SearchKeyword with checking for non-null required values
+     * @return SearchKeyword
+     */
     public SearchKeyword build() {
         Objects.requireNonNull(text, SearchKeyword.class + ": text is missing");
         Objects.requireNonNull(suggestTokenizer, SearchKeyword.class + ": suggestTokenizer is missing");
@@ -77,7 +82,8 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     * builds SearchKeyword without checking for non null required values
+     * builds SearchKeyword without checking for non-null required values
+     * @return SearchKeyword
      */
     public SearchKeyword buildUnchecked() {
         return new SearchKeywordImpl(text, suggestTokenizer);

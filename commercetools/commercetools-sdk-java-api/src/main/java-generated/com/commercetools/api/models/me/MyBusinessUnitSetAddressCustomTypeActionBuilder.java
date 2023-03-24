@@ -35,6 +35,7 @@ public class MyBusinessUnitSetAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class MyBusinessUnitSetAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -58,6 +59,7 @@ public class MyBusinessUnitSetAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -69,7 +71,7 @@ public class MyBusinessUnitSetAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class MyBusinessUnitSetAddressCustomTypeActionBuilder
 
     /**
      *  <p>ID of the <code>address</code> to be extended.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -104,13 +106,18 @@ public class MyBusinessUnitSetAddressCustomTypeActionBuilder
         return this.addressId;
     }
 
+    /**
+     * builds MyBusinessUnitSetAddressCustomTypeAction with checking for non-null required values
+     * @return MyBusinessUnitSetAddressCustomTypeAction
+     */
     public MyBusinessUnitSetAddressCustomTypeAction build() {
         Objects.requireNonNull(addressId, MyBusinessUnitSetAddressCustomTypeAction.class + ": addressId is missing");
         return new MyBusinessUnitSetAddressCustomTypeActionImpl(type, fields, addressId);
     }
 
     /**
-     * builds MyBusinessUnitSetAddressCustomTypeAction without checking for non null required values
+     * builds MyBusinessUnitSetAddressCustomTypeAction without checking for non-null required values
+     * @return MyBusinessUnitSetAddressCustomTypeAction
      */
     public MyBusinessUnitSetAddressCustomTypeAction buildUnchecked() {
         return new MyBusinessUnitSetAddressCustomTypeActionImpl(type, fields, addressId);

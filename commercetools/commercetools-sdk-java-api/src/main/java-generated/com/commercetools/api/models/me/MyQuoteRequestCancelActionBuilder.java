@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyQuoteRequestCancelActionBuilder implements Builder<MyQuoteRequestCancelAction> {
 
+    /**
+     * builds MyQuoteRequestCancelAction with checking for non-null required values
+     * @return MyQuoteRequestCancelAction
+     */
     public MyQuoteRequestCancelAction build() {
         return new MyQuoteRequestCancelActionImpl();
     }
 
     /**
-     * builds MyQuoteRequestCancelAction without checking for non null required values
+     * builds MyQuoteRequestCancelAction without checking for non-null required values
+     * @return MyQuoteRequestCancelAction
      */
     public MyQuoteRequestCancelAction buildUnchecked() {
         return new MyQuoteRequestCancelActionImpl();

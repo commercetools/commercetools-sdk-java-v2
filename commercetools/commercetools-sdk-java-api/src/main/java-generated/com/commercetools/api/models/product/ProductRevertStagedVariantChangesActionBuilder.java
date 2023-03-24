@@ -26,7 +26,7 @@ public class ProductRevertStagedVariantChangesActionBuilder
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to revert.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class ProductRevertStagedVariantChangesActionBuilder
         return this.variantId;
     }
 
+    /**
+     * builds ProductRevertStagedVariantChangesAction with checking for non-null required values
+     * @return ProductRevertStagedVariantChangesAction
+     */
     public ProductRevertStagedVariantChangesAction build() {
         Objects.requireNonNull(variantId, ProductRevertStagedVariantChangesAction.class + ": variantId is missing");
         return new ProductRevertStagedVariantChangesActionImpl(variantId);
     }
 
     /**
-     * builds ProductRevertStagedVariantChangesAction without checking for non null required values
+     * builds ProductRevertStagedVariantChangesAction without checking for non-null required values
+     * @return ProductRevertStagedVariantChangesAction
      */
     public ProductRevertStagedVariantChangesAction buildUnchecked() {
         return new ProductRevertStagedVariantChangesActionImpl(variantId);

@@ -31,7 +31,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
         return this.address;
     }
 
+    /**
+     * builds StagedOrderSetDeliveryAddressAction with checking for non-null required values
+     * @return StagedOrderSetDeliveryAddressAction
+     */
     public StagedOrderSetDeliveryAddressAction build() {
         Objects.requireNonNull(deliveryId, StagedOrderSetDeliveryAddressAction.class + ": deliveryId is missing");
         return new StagedOrderSetDeliveryAddressActionImpl(deliveryId, address);
     }
 
     /**
-     * builds StagedOrderSetDeliveryAddressAction without checking for non null required values
+     * builds StagedOrderSetDeliveryAddressAction without checking for non-null required values
+     * @return StagedOrderSetDeliveryAddressAction
      */
     public StagedOrderSetDeliveryAddressAction buildUnchecked() {
         return new StagedOrderSetDeliveryAddressActionImpl(deliveryId, address);

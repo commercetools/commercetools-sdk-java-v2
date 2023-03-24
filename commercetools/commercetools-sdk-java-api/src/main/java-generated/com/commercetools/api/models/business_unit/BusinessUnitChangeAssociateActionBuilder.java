@@ -26,6 +26,7 @@ public class BusinessUnitChangeAssociateActionBuilder implements Builder<Busines
 
     /**
      *  <p>New version of an existing Associate.</p>
+     * @param builder function to build the associate value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class BusinessUnitChangeAssociateActionBuilder implements Builder<Busines
 
     /**
      *  <p>New version of an existing Associate.</p>
-     * @param associate
+     * @param associate value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class BusinessUnitChangeAssociateActionBuilder implements Builder<Busines
         return this.associate;
     }
 
+    /**
+     * builds BusinessUnitChangeAssociateAction with checking for non-null required values
+     * @return BusinessUnitChangeAssociateAction
+     */
     public BusinessUnitChangeAssociateAction build() {
         Objects.requireNonNull(associate, BusinessUnitChangeAssociateAction.class + ": associate is missing");
         return new BusinessUnitChangeAssociateActionImpl(associate);
     }
 
     /**
-     * builds BusinessUnitChangeAssociateAction without checking for non null required values
+     * builds BusinessUnitChangeAssociateAction without checking for non-null required values
+     * @return BusinessUnitChangeAssociateAction
      */
     public BusinessUnitChangeAssociateAction buildUnchecked() {
         return new BusinessUnitChangeAssociateActionImpl(associate);

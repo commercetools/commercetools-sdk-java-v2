@@ -28,7 +28,7 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
 
     /**
      *  <p>An English category name that is recommended for a product.</p>
-     * @param categoryName
+     * @param categoryName value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
 
     /**
      *  <p>Probability score for the category recommendation.</p>
-     * @param confidence
+     * @param confidence value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
         return this.confidence;
     }
 
+    /**
+     * builds GeneralCategoryRecommendation with checking for non-null required values
+     * @return GeneralCategoryRecommendation
+     */
     public GeneralCategoryRecommendation build() {
         Objects.requireNonNull(categoryName, GeneralCategoryRecommendation.class + ": categoryName is missing");
         Objects.requireNonNull(confidence, GeneralCategoryRecommendation.class + ": confidence is missing");
@@ -63,7 +67,8 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
     }
 
     /**
-     * builds GeneralCategoryRecommendation without checking for non null required values
+     * builds GeneralCategoryRecommendation without checking for non-null required values
+     * @return GeneralCategoryRecommendation
      */
     public GeneralCategoryRecommendation buildUnchecked() {
         return new GeneralCategoryRecommendationImpl(categoryName, confidence);

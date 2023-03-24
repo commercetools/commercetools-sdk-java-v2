@@ -58,7 +58,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -80,7 +80,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -91,7 +91,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -102,6 +102,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -113,7 +114,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -125,6 +126,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -136,7 +138,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -148,7 +150,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
-     * @param sequenceNumber
+     * @param sequenceNumber value to be set
      * @return Builder
      */
 
@@ -159,7 +161,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -171,6 +173,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -182,7 +185,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
-     * @param resourceVersion
+     * @param resourceVersion value to be set
      * @return Builder
      */
 
@@ -193,6 +196,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
 
@@ -206,7 +210,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
-     * @param resourceUserProvidedIdentifiers
+     * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
 
@@ -218,6 +222,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Transaction that was added to the Payment.</p>
+     * @param builder function to build the transaction value
      * @return Builder
      */
 
@@ -229,7 +234,7 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
 
     /**
      *  <p>Transaction that was added to the Payment.</p>
-     * @param transaction
+     * @param transaction value to be set
      * @return Builder
      */
 
@@ -286,6 +291,10 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
         return this.transaction;
     }
 
+    /**
+     * builds PaymentTransactionAddedMessage with checking for non-null required values
+     * @return PaymentTransactionAddedMessage
+     */
     public PaymentTransactionAddedMessage build() {
         Objects.requireNonNull(id, PaymentTransactionAddedMessage.class + ": id is missing");
         Objects.requireNonNull(version, PaymentTransactionAddedMessage.class + ": version is missing");
@@ -300,7 +309,8 @@ public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTra
     }
 
     /**
-     * builds PaymentTransactionAddedMessage without checking for non null required values
+     * builds PaymentTransactionAddedMessage without checking for non-null required values
+     * @return PaymentTransactionAddedMessage
      */
     public PaymentTransactionAddedMessage buildUnchecked() {
         return new PaymentTransactionAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,

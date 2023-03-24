@@ -37,7 +37,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -76,6 +76,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -102,6 +104,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -113,7 +116,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -125,7 +128,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -137,7 +140,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -149,7 +152,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -164,6 +167,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -178,6 +182,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -190,6 +195,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -201,7 +207,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -231,12 +237,17 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
         return this.custom;
     }
 
+    /**
+     * builds StagedOrderAddDeliveryAction with checking for non-null required values
+     * @return StagedOrderAddDeliveryAction
+     */
     public StagedOrderAddDeliveryAction build() {
         return new StagedOrderAddDeliveryActionImpl(items, address, parcels, custom);
     }
 
     /**
-     * builds StagedOrderAddDeliveryAction without checking for non null required values
+     * builds StagedOrderAddDeliveryAction without checking for non-null required values
+     * @return StagedOrderAddDeliveryAction
      */
     public StagedOrderAddDeliveryAction buildUnchecked() {
         return new StagedOrderAddDeliveryActionImpl(items, address, parcels, custom);

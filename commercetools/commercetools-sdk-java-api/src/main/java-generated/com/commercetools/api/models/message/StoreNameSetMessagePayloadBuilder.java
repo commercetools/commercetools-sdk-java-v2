@@ -31,6 +31,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
-     * @param nameAllLocales
+     * @param nameAllLocales value to be set
      * @return Builder
      */
 
@@ -66,7 +67,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
-     * @param nameAllLocales
+     * @param nameAllLocales value to be set
      * @return Builder
      */
 
@@ -78,7 +79,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
-     * @param nameAllLocales
+     * @param nameAllLocales value to be set
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
+     * @param builder function to build the nameAllLocales value
      * @return Builder
      */
 
@@ -107,6 +109,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Names set for the Store in different locales.</p>
+     * @param builder function to build the nameAllLocales value
      * @return Builder
      */
 
@@ -127,12 +130,17 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
         return this.nameAllLocales;
     }
 
+    /**
+     * builds StoreNameSetMessagePayload with checking for non-null required values
+     * @return StoreNameSetMessagePayload
+     */
     public StoreNameSetMessagePayload build() {
         return new StoreNameSetMessagePayloadImpl(name, nameAllLocales);
     }
 
     /**
-     * builds StoreNameSetMessagePayload without checking for non null required values
+     * builds StoreNameSetMessagePayload without checking for non-null required values
+     * @return StoreNameSetMessagePayload
      */
     public StoreNameSetMessagePayload buildUnchecked() {
         return new StoreNameSetMessagePayloadImpl(name, nameAllLocales);

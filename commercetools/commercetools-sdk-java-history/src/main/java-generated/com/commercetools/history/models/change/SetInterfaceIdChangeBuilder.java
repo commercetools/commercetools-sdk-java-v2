@@ -31,7 +31,7 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
 
     /**
      *  <p>Shape of the action for <code>setInterfaceId</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
         return this.nextValue;
     }
 
+    /**
+     * builds SetInterfaceIdChange with checking for non-null required values
+     * @return SetInterfaceIdChange
+     */
     public SetInterfaceIdChange build() {
         Objects.requireNonNull(change, SetInterfaceIdChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetInterfaceIdChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
     }
 
     /**
-     * builds SetInterfaceIdChange without checking for non null required values
+     * builds SetInterfaceIdChange without checking for non-null required values
+     * @return SetInterfaceIdChange
      */
     public SetInterfaceIdChange buildUnchecked() {
         return new SetInterfaceIdChangeImpl(change, previousValue, nextValue);

@@ -37,7 +37,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -87,6 +87,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -101,6 +102,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -113,7 +115,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
-     * @param oldItems
+     * @param oldItems value to be set
      * @return Builder
      */
 
@@ -125,7 +127,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
-     * @param oldItems
+     * @param oldItems value to be set
      * @return Builder
      */
 
@@ -137,7 +139,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
-     * @param oldItems
+     * @param oldItems value to be set
      * @return Builder
      */
 
@@ -152,6 +154,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     * @param builder function to build the oldItems value
      * @return Builder
      */
 
@@ -166,6 +169,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     * @param builder function to build the oldItems value
      * @return Builder
      */
 
@@ -178,7 +182,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -204,6 +208,10 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this.shippingKey;
     }
 
+    /**
+     * builds DeliveryItemsUpdatedMessagePayload with checking for non-null required values
+     * @return DeliveryItemsUpdatedMessagePayload
+     */
     public DeliveryItemsUpdatedMessagePayload build() {
         Objects.requireNonNull(deliveryId, DeliveryItemsUpdatedMessagePayload.class + ": deliveryId is missing");
         Objects.requireNonNull(items, DeliveryItemsUpdatedMessagePayload.class + ": items is missing");
@@ -212,7 +220,8 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     * builds DeliveryItemsUpdatedMessagePayload without checking for non null required values
+     * builds DeliveryItemsUpdatedMessagePayload without checking for non-null required values
+     * @return DeliveryItemsUpdatedMessagePayload
      */
     public DeliveryItemsUpdatedMessagePayload buildUnchecked() {
         return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, items, oldItems, shippingKey);

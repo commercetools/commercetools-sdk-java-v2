@@ -25,7 +25,7 @@ public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldRefer
 
     /**
      *  <p>Resource type the Custom Field can reference.</p>
-     * @param referenceTypeId
+     * @param referenceTypeId value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldRefer
         return this.referenceTypeId;
     }
 
+    /**
+     * builds CustomFieldReferenceType with checking for non-null required values
+     * @return CustomFieldReferenceType
+     */
     public CustomFieldReferenceType build() {
         Objects.requireNonNull(referenceTypeId, CustomFieldReferenceType.class + ": referenceTypeId is missing");
         return new CustomFieldReferenceTypeImpl(referenceTypeId);
     }
 
     /**
-     * builds CustomFieldReferenceType without checking for non null required values
+     * builds CustomFieldReferenceType without checking for non-null required values
+     * @return CustomFieldReferenceType
      */
     public CustomFieldReferenceType buildUnchecked() {
         return new CustomFieldReferenceTypeImpl(referenceTypeId);

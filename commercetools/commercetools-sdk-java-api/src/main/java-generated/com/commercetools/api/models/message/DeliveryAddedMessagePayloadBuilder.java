@@ -31,6 +31,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
 
     /**
      *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     * @param builder function to build the delivery value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
 
     /**
      *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
-     * @param delivery
+     * @param delivery value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
         return this.shippingKey;
     }
 
+    /**
+     * builds DeliveryAddedMessagePayload with checking for non-null required values
+     * @return DeliveryAddedMessagePayload
+     */
     public DeliveryAddedMessagePayload build() {
         Objects.requireNonNull(delivery, DeliveryAddedMessagePayload.class + ": delivery is missing");
         return new DeliveryAddedMessagePayloadImpl(delivery, shippingKey);
     }
 
     /**
-     * builds DeliveryAddedMessagePayload without checking for non null required values
+     * builds DeliveryAddedMessagePayload without checking for non-null required values
+     * @return DeliveryAddedMessagePayload
      */
     public DeliveryAddedMessagePayload buildUnchecked() {
         return new DeliveryAddedMessagePayloadImpl(delivery, shippingKey);

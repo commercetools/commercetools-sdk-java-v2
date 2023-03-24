@@ -35,7 +35,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *  <p>Update action for <code>changeTextLineItemName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
+     * @param builder function to build the textLineItem value
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
-     * @param textLineItem
+     * @param textLineItem value to be set
      * @return Builder
      */
 
@@ -70,6 +71,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -93,6 +95,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -104,7 +107,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -130,6 +133,10 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeTextLineItemNameChange with checking for non-null required values
+     * @return ChangeTextLineItemNameChange
+     */
     public ChangeTextLineItemNameChange build() {
         Objects.requireNonNull(change, ChangeTextLineItemNameChange.class + ": change is missing");
         Objects.requireNonNull(textLineItem, ChangeTextLineItemNameChange.class + ": textLineItem is missing");
@@ -139,7 +146,8 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     * builds ChangeTextLineItemNameChange without checking for non null required values
+     * builds ChangeTextLineItemNameChange without checking for non-null required values
+     * @return ChangeTextLineItemNameChange
      */
     public ChangeTextLineItemNameChange buildUnchecked() {
         return new ChangeTextLineItemNameChangeImpl(change, textLineItem, nextValue, previousValue);

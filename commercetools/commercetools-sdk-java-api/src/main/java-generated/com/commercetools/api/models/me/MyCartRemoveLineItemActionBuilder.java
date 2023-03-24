@@ -40,7 +40,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p><code>id</code> of the Line Item to remove.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @param builder function to build the externalPrice value
      * @return Builder
      */
 
@@ -74,7 +75,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
-     * @param externalPrice
+     * @param externalPrice value to be set
      * @return Builder
      */
 
@@ -86,6 +87,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
 
@@ -99,7 +101,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
-     * @param externalTotalPrice
+     * @param externalTotalPrice value to be set
      * @return Builder
      */
 
@@ -111,6 +113,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Container for Line Item-specific addresses to remove.</p>
+     * @param builder function to build the shippingDetailsToRemove value
      * @return Builder
      */
 
@@ -124,7 +127,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Container for Line Item-specific addresses to remove.</p>
-     * @param shippingDetailsToRemove
+     * @param shippingDetailsToRemove value to be set
      * @return Builder
      */
 
@@ -158,6 +161,10 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
         return this.shippingDetailsToRemove;
     }
 
+    /**
+     * builds MyCartRemoveLineItemAction with checking for non-null required values
+     * @return MyCartRemoveLineItemAction
+     */
     public MyCartRemoveLineItemAction build() {
         Objects.requireNonNull(lineItemId, MyCartRemoveLineItemAction.class + ": lineItemId is missing");
         return new MyCartRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
@@ -165,7 +172,8 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
     }
 
     /**
-     * builds MyCartRemoveLineItemAction without checking for non null required values
+     * builds MyCartRemoveLineItemAction without checking for non-null required values
+     * @return MyCartRemoveLineItemAction
      */
     public MyCartRemoveLineItemAction buildUnchecked() {
         return new MyCartRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,

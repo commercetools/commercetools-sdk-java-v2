@@ -27,7 +27,7 @@ public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
-     * @param companyName
+     * @param companyName value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<Cust
         return this.companyName;
     }
 
+    /**
+     * builds CustomerCompanyNameSetMessagePayload with checking for non-null required values
+     * @return CustomerCompanyNameSetMessagePayload
+     */
     public CustomerCompanyNameSetMessagePayload build() {
         return new CustomerCompanyNameSetMessagePayloadImpl(companyName);
     }
 
     /**
-     * builds CustomerCompanyNameSetMessagePayload without checking for non null required values
+     * builds CustomerCompanyNameSetMessagePayload without checking for non-null required values
+     * @return CustomerCompanyNameSetMessagePayload
      */
     public CustomerCompanyNameSetMessagePayload buildUnchecked() {
         return new CustomerCompanyNameSetMessagePayloadImpl(companyName);

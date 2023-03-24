@@ -46,7 +46,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -79,7 +79,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
-     * @param includedInPrice
+     * @param includedInPrice value to be set
      * @return Builder
      */
 
@@ -90,7 +90,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -101,7 +101,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -112,7 +112,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
-     * @param subRates
+     * @param subRates value to be set
      * @return Builder
      */
 
@@ -123,7 +123,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
-     * @param subRates
+     * @param subRates value to be set
      * @return Builder
      */
 
@@ -135,7 +135,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
-     * @param subRates
+     * @param subRates value to be set
      * @return Builder
      */
 
@@ -149,6 +149,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param builder function to build the subRates value
      * @return Builder
      */
 
@@ -163,6 +164,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *
+     * @param builder function to build the subRates value
      * @return Builder
      */
 
@@ -204,6 +206,10 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         return this.subRates;
     }
 
+    /**
+     * builds TaxRate with checking for non-null required values
+     * @return TaxRate
+     */
     public TaxRate build() {
         Objects.requireNonNull(name, TaxRate.class + ": name is missing");
         Objects.requireNonNull(amount, TaxRate.class + ": amount is missing");
@@ -213,7 +219,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     * builds TaxRate without checking for non null required values
+     * builds TaxRate without checking for non-null required values
+     * @return TaxRate
      */
     public TaxRate buildUnchecked() {
         return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);

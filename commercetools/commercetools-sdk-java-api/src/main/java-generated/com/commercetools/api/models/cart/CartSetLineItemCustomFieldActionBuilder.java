@@ -33,7 +33,7 @@ public class CartSetLineItemCustomFieldActionBuilder implements Builder<CartSetL
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class CartSetLineItemCustomFieldActionBuilder implements Builder<CartSetL
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class CartSetLineItemCustomFieldActionBuilder implements Builder<CartSetL
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class CartSetLineItemCustomFieldActionBuilder implements Builder<CartSetL
         return this.value;
     }
 
+    /**
+     * builds CartSetLineItemCustomFieldAction with checking for non-null required values
+     * @return CartSetLineItemCustomFieldAction
+     */
     public CartSetLineItemCustomFieldAction build() {
         Objects.requireNonNull(lineItemId, CartSetLineItemCustomFieldAction.class + ": lineItemId is missing");
         Objects.requireNonNull(name, CartSetLineItemCustomFieldAction.class + ": name is missing");
@@ -84,7 +88,8 @@ public class CartSetLineItemCustomFieldActionBuilder implements Builder<CartSetL
     }
 
     /**
-     * builds CartSetLineItemCustomFieldAction without checking for non null required values
+     * builds CartSetLineItemCustomFieldAction without checking for non-null required values
+     * @return CartSetLineItemCustomFieldAction
      */
     public CartSetLineItemCustomFieldAction buildUnchecked() {
         return new CartSetLineItemCustomFieldActionImpl(lineItemId, name, value);

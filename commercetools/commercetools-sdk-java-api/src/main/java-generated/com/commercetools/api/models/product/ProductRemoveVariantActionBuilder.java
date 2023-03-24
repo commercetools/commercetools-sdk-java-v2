@@ -33,7 +33,7 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to remove.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to remove.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
 
     /**
      *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -79,12 +79,17 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
         return this.staged;
     }
 
+    /**
+     * builds ProductRemoveVariantAction with checking for non-null required values
+     * @return ProductRemoveVariantAction
+     */
     public ProductRemoveVariantAction build() {
         return new ProductRemoveVariantActionImpl(id, sku, staged);
     }
 
     /**
-     * builds ProductRemoveVariantAction without checking for non null required values
+     * builds ProductRemoveVariantAction without checking for non-null required values
+     * @return ProductRemoveVariantAction
      */
     public ProductRemoveVariantAction buildUnchecked() {
         return new ProductRemoveVariantActionImpl(id, sku, staged);

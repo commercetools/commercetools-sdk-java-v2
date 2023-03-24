@@ -25,7 +25,7 @@ public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction
 
     /**
      *  <p>New name of the Zone.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction
         return this.name;
     }
 
+    /**
+     * builds ZoneChangeNameAction with checking for non-null required values
+     * @return ZoneChangeNameAction
+     */
     public ZoneChangeNameAction build() {
         Objects.requireNonNull(name, ZoneChangeNameAction.class + ": name is missing");
         return new ZoneChangeNameActionImpl(name);
     }
 
     /**
-     * builds ZoneChangeNameAction without checking for non null required values
+     * builds ZoneChangeNameAction without checking for non-null required values
+     * @return ZoneChangeNameAction
      */
     public ZoneChangeNameAction buildUnchecked() {
         return new ZoneChangeNameActionImpl(name);

@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditNotProcessedBuilder implements Builder<OrderEditNotProcessed> {
 
+    /**
+     * builds OrderEditNotProcessed with checking for non-null required values
+     * @return OrderEditNotProcessed
+     */
     public OrderEditNotProcessed build() {
         return new OrderEditNotProcessedImpl();
     }
 
     /**
-     * builds OrderEditNotProcessed without checking for non null required values
+     * builds OrderEditNotProcessed without checking for non-null required values
+     * @return OrderEditNotProcessed
      */
     public OrderEditNotProcessed buildUnchecked() {
         return new OrderEditNotProcessedImpl();

@@ -29,7 +29,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds StagedQuoteUpdate with checking for non-null required values
+     * @return StagedQuoteUpdate
+     */
     public StagedQuoteUpdate build() {
         Objects.requireNonNull(version, StagedQuoteUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, StagedQuoteUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
     }
 
     /**
-     * builds StagedQuoteUpdate without checking for non null required values
+     * builds StagedQuoteUpdate without checking for non-null required values
+     * @return StagedQuoteUpdate
      */
     public StagedQuoteUpdate buildUnchecked() {
         return new StagedQuoteUpdateImpl(version, actions);

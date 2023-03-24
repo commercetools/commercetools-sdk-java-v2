@@ -29,7 +29,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
-     * @param transactionId
+     * @param transactionId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
 
     /**
      *  <p>New value to set.</p>
-     * @param interactionId
+     * @param interactionId value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
         return this.interactionId;
     }
 
+    /**
+     * builds PaymentChangeTransactionInteractionIdAction with checking for non-null required values
+     * @return PaymentChangeTransactionInteractionIdAction
+     */
     public PaymentChangeTransactionInteractionIdAction build() {
         Objects.requireNonNull(transactionId,
             PaymentChangeTransactionInteractionIdAction.class + ": transactionId is missing");
@@ -66,7 +70,8 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
     }
 
     /**
-     * builds PaymentChangeTransactionInteractionIdAction without checking for non null required values
+     * builds PaymentChangeTransactionInteractionIdAction without checking for non-null required values
+     * @return PaymentChangeTransactionInteractionIdAction
      */
     public PaymentChangeTransactionInteractionIdAction buildUnchecked() {
         return new PaymentChangeTransactionInteractionIdActionImpl(transactionId, interactionId);

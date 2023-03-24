@@ -28,6 +28,7 @@ public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSet
         return this.name;
     }
 
+    /**
+     * builds DiscountCodeSetNameAction with checking for non-null required values
+     * @return DiscountCodeSetNameAction
+     */
     public DiscountCodeSetNameAction build() {
         return new DiscountCodeSetNameActionImpl(name);
     }
 
     /**
-     * builds DiscountCodeSetNameAction without checking for non null required values
+     * builds DiscountCodeSetNameAction without checking for non-null required values
+     * @return DiscountCodeSetNameAction
      */
     public DiscountCodeSetNameAction buildUnchecked() {
         return new DiscountCodeSetNameActionImpl(name);

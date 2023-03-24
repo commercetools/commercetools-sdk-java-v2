@@ -46,7 +46,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -68,6 +68,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -80,7 +81,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -92,7 +93,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Overall amount of stock.</p>
-     * @param quantityOnStock
+     * @param quantityOnStock value to be set
      * @return Builder
      */
 
@@ -103,7 +104,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
-     * @param restockableInDays
+     * @param restockableInDays value to be set
      * @return Builder
      */
 
@@ -114,7 +115,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Date and time of the next restock.</p>
-     * @param expectedDelivery
+     * @param expectedDelivery value to be set
      * @return Builder
      */
 
@@ -125,6 +126,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -136,7 +138,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -179,6 +181,10 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
         return this.custom;
     }
 
+    /**
+     * builds InventoryEntryDraft with checking for non-null required values
+     * @return InventoryEntryDraft
+     */
     public InventoryEntryDraft build() {
         Objects.requireNonNull(sku, InventoryEntryDraft.class + ": sku is missing");
         Objects.requireNonNull(quantityOnStock, InventoryEntryDraft.class + ": quantityOnStock is missing");
@@ -187,7 +193,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     * builds InventoryEntryDraft without checking for non null required values
+     * builds InventoryEntryDraft without checking for non-null required values
+     * @return InventoryEntryDraft
      */
     public InventoryEntryDraft buildUnchecked() {
         return new InventoryEntryDraftImpl(sku, key, supplyChannel, quantityOnStock, restockableInDays,

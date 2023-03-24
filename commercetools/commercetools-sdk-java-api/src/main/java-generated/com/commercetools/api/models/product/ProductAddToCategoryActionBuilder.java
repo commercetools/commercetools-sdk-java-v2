@@ -34,6 +34,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
 
     /**
      *  <p>The Category to add.</p>
+     * @param builder function to build the category value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
 
     /**
      *  <p>The Category to add.</p>
-     * @param category
+     * @param category value to be set
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
 
     /**
      *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
-     * @param orderHint
+     * @param orderHint value to be set
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
 
     /**
      *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -92,13 +93,18 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
         return this.staged;
     }
 
+    /**
+     * builds ProductAddToCategoryAction with checking for non-null required values
+     * @return ProductAddToCategoryAction
+     */
     public ProductAddToCategoryAction build() {
         Objects.requireNonNull(category, ProductAddToCategoryAction.class + ": category is missing");
         return new ProductAddToCategoryActionImpl(category, orderHint, staged);
     }
 
     /**
-     * builds ProductAddToCategoryAction without checking for non null required values
+     * builds ProductAddToCategoryAction without checking for non-null required values
+     * @return ProductAddToCategoryAction
      */
     public ProductAddToCategoryAction buildUnchecked() {
         return new ProductAddToCategoryActionImpl(category, orderHint, staged);

@@ -27,7 +27,7 @@ public class ReviewSetRatingActionBuilder implements Builder<ReviewSetRatingActi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param rating
+     * @param rating value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ReviewSetRatingActionBuilder implements Builder<ReviewSetRatingActi
         return this.rating;
     }
 
+    /**
+     * builds ReviewSetRatingAction with checking for non-null required values
+     * @return ReviewSetRatingAction
+     */
     public ReviewSetRatingAction build() {
         return new ReviewSetRatingActionImpl(rating);
     }
 
     /**
-     * builds ReviewSetRatingAction without checking for non null required values
+     * builds ReviewSetRatingAction without checking for non-null required values
+     * @return ReviewSetRatingAction
      */
     public ReviewSetRatingAction buildUnchecked() {
         return new ReviewSetRatingActionImpl(rating);

@@ -35,7 +35,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *  <p>Update action for <code>addToCategory</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
+     * @param builder function to build the category value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
-     * @param category
+     * @param category value to be set
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -80,7 +81,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -92,7 +93,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -107,6 +108,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -121,6 +123,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -133,7 +136,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -144,7 +147,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -156,7 +159,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -171,6 +174,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -185,6 +189,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -211,6 +216,10 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds AddToCategoryChange with checking for non-null required values
+     * @return AddToCategoryChange
+     */
     public AddToCategoryChange build() {
         Objects.requireNonNull(change, AddToCategoryChange.class + ": change is missing");
         Objects.requireNonNull(category, AddToCategoryChange.class + ": category is missing");
@@ -220,7 +229,8 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     * builds AddToCategoryChange without checking for non null required values
+     * builds AddToCategoryChange without checking for non-null required values
+     * @return AddToCategoryChange
      */
     public AddToCategoryChange buildUnchecked() {
         return new AddToCategoryChangeImpl(change, category, previousValue, nextValue);

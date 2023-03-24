@@ -35,7 +35,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *
-     * @param taxMode
+     * @param taxMode value to be set
      * @return Builder
      */
 
@@ -58,6 +58,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -92,7 +94,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -118,6 +120,10 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
         return this.previousValue;
     }
 
+    /**
+     * builds SetShippingMethodTaxRateChange with checking for non-null required values
+     * @return SetShippingMethodTaxRateChange
+     */
     public SetShippingMethodTaxRateChange build() {
         Objects.requireNonNull(change, SetShippingMethodTaxRateChange.class + ": change is missing");
         Objects.requireNonNull(taxMode, SetShippingMethodTaxRateChange.class + ": taxMode is missing");
@@ -127,7 +133,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     * builds SetShippingMethodTaxRateChange without checking for non null required values
+     * builds SetShippingMethodTaxRateChange without checking for non-null required values
+     * @return SetShippingMethodTaxRateChange
      */
     public SetShippingMethodTaxRateChange buildUnchecked() {
         return new SetShippingMethodTaxRateChangeImpl(change, taxMode, nextValue, previousValue);

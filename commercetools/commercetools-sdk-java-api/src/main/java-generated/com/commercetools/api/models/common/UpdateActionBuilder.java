@@ -25,7 +25,7 @@ public class UpdateActionBuilder implements Builder<UpdateAction> {
 
     /**
      *
-     * @param action
+     * @param action value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class UpdateActionBuilder implements Builder<UpdateAction> {
         return this.action;
     }
 
+    /**
+     * builds UpdateAction with checking for non-null required values
+     * @return UpdateAction
+     */
     public UpdateAction build() {
         Objects.requireNonNull(action, UpdateAction.class + ": action is missing");
         return new UpdateActionImpl(action);
     }
 
     /**
-     * builds UpdateAction without checking for non null required values
+     * builds UpdateAction without checking for non-null required values
+     * @return UpdateAction
      */
     public UpdateAction buildUnchecked() {
         return new UpdateActionImpl(action);

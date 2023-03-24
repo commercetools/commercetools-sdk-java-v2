@@ -32,7 +32,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
 
     /**
      *  <p><code>"Can not delete a $resource while it is referenced by at least one $referencedBy."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -43,6 +43,8 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ReferenceExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -52,6 +54,9 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ReferenceExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -64,7 +69,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
 
     /**
      *  <p>Type of referenced resource.</p>
-     * @param referencedBy
+     * @param referencedBy value to be set
      * @return Builder
      */
 
@@ -87,13 +92,18 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
         return this.referencedBy;
     }
 
+    /**
+     * builds ReferenceExistsError with checking for non-null required values
+     * @return ReferenceExistsError
+     */
     public ReferenceExistsError build() {
         Objects.requireNonNull(message, ReferenceExistsError.class + ": message is missing");
         return new ReferenceExistsErrorImpl(message, values, referencedBy);
     }
 
     /**
-     * builds ReferenceExistsError without checking for non null required values
+     * builds ReferenceExistsError without checking for non-null required values
+     * @return ReferenceExistsError
      */
     public ReferenceExistsError buildUnchecked() {
         return new ReferenceExistsErrorImpl(message, values, referencedBy);

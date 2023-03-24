@@ -55,7 +55,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Platform-generated unique identifier of the AttributeGroup.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Current version of the AttributeGroup.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Date and time (UTC) the AttributeGroup was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -88,7 +88,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Date and time (UTC) the AttributeGroup was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -99,6 +99,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -110,7 +111,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -122,6 +123,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -133,7 +135,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -144,6 +146,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -155,7 +158,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Name of the AttributeGroup.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -166,6 +169,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Description of the AttributeGroup.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -177,7 +181,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Description of the AttributeGroup.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -189,7 +193,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -201,7 +205,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -213,7 +217,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -228,6 +232,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -243,6 +248,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -256,7 +262,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>User-defined unique identifier of the AttributeGroup.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -309,6 +315,10 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
         return this.key;
     }
 
+    /**
+     * builds AttributeGroup with checking for non-null required values
+     * @return AttributeGroup
+     */
     public AttributeGroup build() {
         Objects.requireNonNull(id, AttributeGroup.class + ": id is missing");
         Objects.requireNonNull(version, AttributeGroup.class + ": version is missing");
@@ -321,7 +331,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
     }
 
     /**
-     * builds AttributeGroup without checking for non null required values
+     * builds AttributeGroup without checking for non-null required values
+     * @return AttributeGroup
      */
     public AttributeGroup buildUnchecked() {
         return new AttributeGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,

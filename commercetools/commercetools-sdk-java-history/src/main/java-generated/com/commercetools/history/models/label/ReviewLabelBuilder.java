@@ -28,7 +28,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
 
     /**
      *
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
         return this.title;
     }
 
+    /**
+     * builds ReviewLabel with checking for non-null required values
+     * @return ReviewLabel
+     */
     public ReviewLabel build() {
         Objects.requireNonNull(key, ReviewLabel.class + ": key is missing");
         Objects.requireNonNull(title, ReviewLabel.class + ": title is missing");
@@ -63,7 +67,8 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
     }
 
     /**
-     * builds ReviewLabel without checking for non null required values
+     * builds ReviewLabel without checking for non-null required values
+     * @return ReviewLabel
      */
     public ReviewLabel buildUnchecked() {
         return new ReviewLabelImpl(key, title);

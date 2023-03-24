@@ -35,6 +35,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
 
     /**
      *  <p>DiscountCode that changed due to the recalculation.</p>
+     * @param builder function to build the discountCode value
      * @return Builder
      */
 
@@ -47,7 +48,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
 
     /**
      *  <p>DiscountCode that changed due to the recalculation.</p>
-     * @param discountCode
+     * @param discountCode value to be set
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
 
     /**
      *  <p>DiscountCodeState after the recalculation.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
 
     /**
      *  <p>DiscountCodeState before the recalculation.</p>
-     * @param oldState
+     * @param oldState value to be set
      * @return Builder
      */
 
@@ -94,6 +95,10 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
         return this.oldState;
     }
 
+    /**
+     * builds OrderDiscountCodeStateSetMessagePayload with checking for non-null required values
+     * @return OrderDiscountCodeStateSetMessagePayload
+     */
     public OrderDiscountCodeStateSetMessagePayload build() {
         Objects.requireNonNull(discountCode,
             OrderDiscountCodeStateSetMessagePayload.class + ": discountCode is missing");
@@ -102,7 +107,8 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     * builds OrderDiscountCodeStateSetMessagePayload without checking for non null required values
+     * builds OrderDiscountCodeStateSetMessagePayload without checking for non-null required values
+     * @return OrderDiscountCodeStateSetMessagePayload
      */
     public OrderDiscountCodeStateSetMessagePayload buildUnchecked() {
         return new OrderDiscountCodeStateSetMessagePayloadImpl(discountCode, state, oldState);

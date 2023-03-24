@@ -32,7 +32,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
 
     /**
      *  <p>List of image URLs which were removed during the Publish update action.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
 
     /**
      *  <p>List of image URLs which were removed during the Publish update action.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
 
     /**
      *  <p>List of image URLs which were removed during the Publish update action.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -68,6 +68,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
 
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
+     * @param builder function to build the productProjection value
      * @return Builder
      */
 
@@ -80,7 +81,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
 
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
-     * @param productProjection
+     * @param productProjection value to be set
      * @return Builder
      */
 
@@ -92,7 +93,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
 
     /**
      *  <p>Publishing Scope that was used during the Publish update action.</p>
-     * @param scope
+     * @param scope value to be set
      * @return Builder
      */
 
@@ -114,6 +115,10 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
         return this.scope;
     }
 
+    /**
+     * builds ProductPublishedMessagePayload with checking for non-null required values
+     * @return ProductPublishedMessagePayload
+     */
     public ProductPublishedMessagePayload build() {
         Objects.requireNonNull(removedImageUrls,
             ProductPublishedMessagePayload.class + ": removedImageUrls is missing");
@@ -124,7 +129,8 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     * builds ProductPublishedMessagePayload without checking for non null required values
+     * builds ProductPublishedMessagePayload without checking for non-null required values
+     * @return ProductPublishedMessagePayload
      */
     public ProductPublishedMessagePayload buildUnchecked() {
         return new ProductPublishedMessagePayloadImpl(removedImageUrls, productProjection, scope);

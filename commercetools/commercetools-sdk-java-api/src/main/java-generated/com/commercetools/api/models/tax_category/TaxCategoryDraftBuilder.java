@@ -37,7 +37,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Name of the TaxCategory.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Description of the TaxCategory.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
-     * @param rates
+     * @param rates value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
-     * @param rates
+     * @param rates value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
-     * @param rates
+     * @param rates value to be set
      * @return Builder
      */
 
@@ -98,6 +98,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
+     * @param builder function to build the rates value
      * @return Builder
      */
 
@@ -112,6 +113,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
+     * @param builder function to build the rates value
      * @return Builder
      */
 
@@ -124,7 +126,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>User-defined unique identifier for the TaxCategory.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -152,13 +154,18 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
         return this.key;
     }
 
+    /**
+     * builds TaxCategoryDraft with checking for non-null required values
+     * @return TaxCategoryDraft
+     */
     public TaxCategoryDraft build() {
         Objects.requireNonNull(name, TaxCategoryDraft.class + ": name is missing");
         return new TaxCategoryDraftImpl(name, description, rates, key);
     }
 
     /**
-     * builds TaxCategoryDraft without checking for non null required values
+     * builds TaxCategoryDraft without checking for non-null required values
+     * @return TaxCategoryDraft
      */
     public TaxCategoryDraft buildUnchecked() {
         return new TaxCategoryDraftImpl(name, description, rates, key);

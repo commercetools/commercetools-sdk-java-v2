@@ -31,6 +31,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
 
     /**
      *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
 
     /**
      *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
         return this.fields;
     }
 
+    /**
+     * builds CustomerGroupSetCustomTypeAction with checking for non-null required values
+     * @return CustomerGroupSetCustomTypeAction
+     */
     public CustomerGroupSetCustomTypeAction build() {
         return new CustomerGroupSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds CustomerGroupSetCustomTypeAction without checking for non null required values
+     * builds CustomerGroupSetCustomTypeAction without checking for non-null required values
+     * @return CustomerGroupSetCustomTypeAction
      */
     public CustomerGroupSetCustomTypeAction buildUnchecked() {
         return new CustomerGroupSetCustomTypeActionImpl(type, fields);

@@ -38,7 +38,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -60,6 +60,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
 
     /**
      *  <p>The Tracking Data that was added to the Parcel.</p>
+     * @param builder function to build the trackingData value
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
 
     /**
      *  <p>The Tracking Data that was added to the Parcel.</p>
-     * @param trackingData
+     * @param trackingData value to be set
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -110,6 +111,10 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
         return this.shippingKey;
     }
 
+    /**
+     * builds ParcelTrackingDataUpdatedMessagePayload with checking for non-null required values
+     * @return ParcelTrackingDataUpdatedMessagePayload
+     */
     public ParcelTrackingDataUpdatedMessagePayload build() {
         Objects.requireNonNull(deliveryId, ParcelTrackingDataUpdatedMessagePayload.class + ": deliveryId is missing");
         Objects.requireNonNull(parcelId, ParcelTrackingDataUpdatedMessagePayload.class + ": parcelId is missing");
@@ -117,7 +122,8 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     * builds ParcelTrackingDataUpdatedMessagePayload without checking for non null required values
+     * builds ParcelTrackingDataUpdatedMessagePayload without checking for non-null required values
+     * @return ParcelTrackingDataUpdatedMessagePayload
      */
     public ParcelTrackingDataUpdatedMessagePayload buildUnchecked() {
         return new ParcelTrackingDataUpdatedMessagePayloadImpl(deliveryId, parcelId, trackingData, shippingKey);

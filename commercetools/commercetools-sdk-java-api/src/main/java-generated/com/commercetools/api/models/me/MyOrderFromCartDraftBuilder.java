@@ -28,7 +28,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
 
     /**
      *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
 
     /**
      *
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
         return this.version;
     }
 
+    /**
+     * builds MyOrderFromCartDraft with checking for non-null required values
+     * @return MyOrderFromCartDraft
+     */
     public MyOrderFromCartDraft build() {
         Objects.requireNonNull(id, MyOrderFromCartDraft.class + ": id is missing");
         Objects.requireNonNull(version, MyOrderFromCartDraft.class + ": version is missing");
@@ -63,7 +67,8 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     }
 
     /**
-     * builds MyOrderFromCartDraft without checking for non null required values
+     * builds MyOrderFromCartDraft without checking for non-null required values
+     * @return MyOrderFromCartDraft
      */
     public MyOrderFromCartDraft buildUnchecked() {
         return new MyOrderFromCartDraftImpl(id, version);

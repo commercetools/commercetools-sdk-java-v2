@@ -64,7 +64,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Unique identifier of the Product.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -75,7 +75,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Current version of the Product.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -86,7 +86,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Date and time (UTC) the Product was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -97,7 +97,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Date and time (UTC) the Product was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -108,6 +108,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -119,7 +120,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -131,6 +132,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -142,7 +144,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -154,7 +156,7 @@ public class ProductBuilder implements Builder<Product> {
     /**
      *  <p>User-defined unique identifier of the Product.</p>
      *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -165,6 +167,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
+     * @param builder function to build the productType value
      * @return Builder
      */
 
@@ -177,7 +180,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
-     * @param productType
+     * @param productType value to be set
      * @return Builder
      */
 
@@ -189,6 +192,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Contains the current and the staged representation of the product information.</p>
+     * @param builder function to build the masterData value
      * @return Builder
      */
 
@@ -200,7 +204,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Contains the current and the staged representation of the product information.</p>
-     * @param masterData
+     * @param masterData value to be set
      * @return Builder
      */
 
@@ -211,6 +215,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>The TaxCategory of the Product.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -223,7 +228,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>The TaxCategory of the Product.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -235,6 +240,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>State of the Product.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -246,7 +252,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>State of the Product.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -257,6 +263,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Review statistics of the Product.</p>
+     * @param builder function to build the reviewRatingStatistics value
      * @return Builder
      */
 
@@ -270,7 +277,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Review statistics of the Product.</p>
-     * @param reviewRatingStatistics
+     * @param reviewRatingStatistics value to be set
      * @return Builder
      */
 
@@ -282,7 +289,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Type of Price to be used when looking up a price for the Product.</p>
-     * @param priceMode
+     * @param priceMode value to be set
      * @return Builder
      */
 
@@ -351,6 +358,10 @@ public class ProductBuilder implements Builder<Product> {
         return this.priceMode;
     }
 
+    /**
+     * builds Product with checking for non-null required values
+     * @return Product
+     */
     public Product build() {
         Objects.requireNonNull(id, Product.class + ": id is missing");
         Objects.requireNonNull(version, Product.class + ": version is missing");
@@ -363,7 +374,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     * builds Product without checking for non null required values
+     * builds Product without checking for non-null required values
+     * @return Product
      */
     public Product buildUnchecked() {
         return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,

@@ -26,7 +26,7 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
 
     /**
      *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
-     * @param status
+     * @param status value to be set
      * @return Builder
      */
 
@@ -40,13 +40,18 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
         return this.status;
     }
 
+    /**
+     * builds ProjectChangeBusinessUnitStatusOnCreationAction with checking for non-null required values
+     * @return ProjectChangeBusinessUnitStatusOnCreationAction
+     */
     public ProjectChangeBusinessUnitStatusOnCreationAction build() {
         Objects.requireNonNull(status, ProjectChangeBusinessUnitStatusOnCreationAction.class + ": status is missing");
         return new ProjectChangeBusinessUnitStatusOnCreationActionImpl(status);
     }
 
     /**
-     * builds ProjectChangeBusinessUnitStatusOnCreationAction without checking for non null required values
+     * builds ProjectChangeBusinessUnitStatusOnCreationAction without checking for non-null required values
+     * @return ProjectChangeBusinessUnitStatusOnCreationAction
      */
     public ProjectChangeBusinessUnitStatusOnCreationAction buildUnchecked() {
         return new ProjectChangeBusinessUnitStatusOnCreationActionImpl(status);

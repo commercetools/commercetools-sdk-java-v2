@@ -40,7 +40,7 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
-     * @param projectKey
+     * @param projectKey value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -74,6 +75,7 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
 
@@ -87,7 +89,7 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
-     * @param resourceUserProvidedIdentifiers
+     * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
 
@@ -99,7 +101,7 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>Last seen version of the resource.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -110,7 +112,7 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>Date and time (UTC) the resource was last modified.</p>
-     * @param modifiedAt
+     * @param modifiedAt value to be set
      * @return Builder
      */
 
@@ -140,6 +142,10 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
         return this.modifiedAt;
     }
 
+    /**
+     * builds ResourceCreatedDeliveryPayload with checking for non-null required values
+     * @return ResourceCreatedDeliveryPayload
+     */
     public ResourceCreatedDeliveryPayload build() {
         Objects.requireNonNull(projectKey, ResourceCreatedDeliveryPayload.class + ": projectKey is missing");
         Objects.requireNonNull(resource, ResourceCreatedDeliveryPayload.class + ": resource is missing");
@@ -150,7 +156,8 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
     }
 
     /**
-     * builds ResourceCreatedDeliveryPayload without checking for non null required values
+     * builds ResourceCreatedDeliveryPayload without checking for non-null required values
+     * @return ResourceCreatedDeliveryPayload
      */
     public ResourceCreatedDeliveryPayload buildUnchecked() {
         return new ResourceCreatedDeliveryPayloadImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,

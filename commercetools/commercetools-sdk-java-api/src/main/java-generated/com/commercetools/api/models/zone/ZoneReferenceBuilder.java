@@ -31,7 +31,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
 
     /**
      *  <p>Unique identifier of the referenced Zone.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
 
     /**
      *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
 
     /**
      *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
         return this.obj;
     }
 
+    /**
+     * builds ZoneReference with checking for non-null required values
+     * @return ZoneReference
+     */
     public ZoneReference build() {
         Objects.requireNonNull(id, ZoneReference.class + ": id is missing");
         return new ZoneReferenceImpl(id, obj);
     }
 
     /**
-     * builds ZoneReference without checking for non null required values
+     * builds ZoneReference without checking for non-null required values
+     * @return ZoneReference
      */
     public ZoneReference buildUnchecked() {
         return new ZoneReferenceImpl(id, obj);

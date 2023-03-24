@@ -25,7 +25,7 @@ public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
         return this.type;
     }
 
+    /**
+     * builds SuggestTokenizer with checking for non-null required values
+     * @return SuggestTokenizer
+     */
     public SuggestTokenizer build() {
         Objects.requireNonNull(type, SuggestTokenizer.class + ": type is missing");
         return new SuggestTokenizerImpl(type);
     }
 
     /**
-     * builds SuggestTokenizer without checking for non null required values
+     * builds SuggestTokenizer without checking for non-null required values
+     * @return SuggestTokenizer
      */
     public SuggestTokenizer buildUnchecked() {
         return new SuggestTokenizerImpl(type);

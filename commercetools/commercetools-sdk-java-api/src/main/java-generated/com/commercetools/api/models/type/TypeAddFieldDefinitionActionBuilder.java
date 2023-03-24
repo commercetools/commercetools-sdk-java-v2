@@ -26,6 +26,7 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the fieldDefinition value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param fieldDefinition
+     * @param fieldDefinition value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
         return this.fieldDefinition;
     }
 
+    /**
+     * builds TypeAddFieldDefinitionAction with checking for non-null required values
+     * @return TypeAddFieldDefinitionAction
+     */
     public TypeAddFieldDefinitionAction build() {
         Objects.requireNonNull(fieldDefinition, TypeAddFieldDefinitionAction.class + ": fieldDefinition is missing");
         return new TypeAddFieldDefinitionActionImpl(fieldDefinition);
     }
 
     /**
-     * builds TypeAddFieldDefinitionAction without checking for non null required values
+     * builds TypeAddFieldDefinitionAction without checking for non-null required values
+     * @return TypeAddFieldDefinitionAction
      */
     public TypeAddFieldDefinitionAction buildUnchecked() {
         return new TypeAddFieldDefinitionActionImpl(fieldDefinition);

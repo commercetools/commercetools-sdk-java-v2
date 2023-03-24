@@ -32,7 +32,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *  <p>Shape of the action for <code>setMetaDescription</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
         return this.nextValue;
     }
 
+    /**
+     * builds SetMetaDescriptionChange with checking for non-null required values
+     * @return SetMetaDescriptionChange
+     */
     public SetMetaDescriptionChange build() {
         Objects.requireNonNull(change, SetMetaDescriptionChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetMetaDescriptionChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
     }
 
     /**
-     * builds SetMetaDescriptionChange without checking for non null required values
+     * builds SetMetaDescriptionChange without checking for non-null required values
+     * @return SetMetaDescriptionChange
      */
     public SetMetaDescriptionChange buildUnchecked() {
         return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);

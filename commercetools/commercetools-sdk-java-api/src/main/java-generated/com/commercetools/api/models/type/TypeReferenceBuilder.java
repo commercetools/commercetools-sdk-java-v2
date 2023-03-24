@@ -31,7 +31,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
 
     /**
      *  <p>Unique identifier of the referenced Type.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
 
     /**
      *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
 
     /**
      *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
         return this.obj;
     }
 
+    /**
+     * builds TypeReference with checking for non-null required values
+     * @return TypeReference
+     */
     public TypeReference build() {
         Objects.requireNonNull(id, TypeReference.class + ": id is missing");
         return new TypeReferenceImpl(id, obj);
     }
 
     /**
-     * builds TypeReference without checking for non null required values
+     * builds TypeReference without checking for non-null required values
+     * @return TypeReference
      */
     public TypeReference buildUnchecked() {
         return new TypeReferenceImpl(id, obj);

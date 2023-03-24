@@ -29,7 +29,7 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds TaxCategoryUpdate with checking for non-null required values
+     * @return TaxCategoryUpdate
+     */
     public TaxCategoryUpdate build() {
         Objects.requireNonNull(version, TaxCategoryUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, TaxCategoryUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
     }
 
     /**
-     * builds TaxCategoryUpdate without checking for non null required values
+     * builds TaxCategoryUpdate without checking for non-null required values
+     * @return TaxCategoryUpdate
      */
     public TaxCategoryUpdate buildUnchecked() {
         return new TaxCategoryUpdateImpl(version, actions);

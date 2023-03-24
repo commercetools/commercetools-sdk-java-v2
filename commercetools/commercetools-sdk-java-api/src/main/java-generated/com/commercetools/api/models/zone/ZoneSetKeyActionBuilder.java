@@ -27,7 +27,7 @@ public class ZoneSetKeyActionBuilder implements Builder<ZoneSetKeyAction> {
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ZoneSetKeyActionBuilder implements Builder<ZoneSetKeyAction> {
         return this.key;
     }
 
+    /**
+     * builds ZoneSetKeyAction with checking for non-null required values
+     * @return ZoneSetKeyAction
+     */
     public ZoneSetKeyAction build() {
         return new ZoneSetKeyActionImpl(key);
     }
 
     /**
-     * builds ZoneSetKeyAction without checking for non null required values
+     * builds ZoneSetKeyAction without checking for non-null required values
+     * @return ZoneSetKeyAction
      */
     public ZoneSetKeyAction buildUnchecked() {
         return new ZoneSetKeyActionImpl(key);

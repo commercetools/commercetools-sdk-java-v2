@@ -28,7 +28,7 @@ public class ProjectSetShippingRateInputTypeActionBuilder implements Builder<Pro
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param shippingRateInputType
+     * @param shippingRateInputType value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class ProjectSetShippingRateInputTypeActionBuilder implements Builder<Pro
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the shippingRateInputType value
      * @return Builder
      */
 
@@ -56,12 +57,17 @@ public class ProjectSetShippingRateInputTypeActionBuilder implements Builder<Pro
         return this.shippingRateInputType;
     }
 
+    /**
+     * builds ProjectSetShippingRateInputTypeAction with checking for non-null required values
+     * @return ProjectSetShippingRateInputTypeAction
+     */
     public ProjectSetShippingRateInputTypeAction build() {
         return new ProjectSetShippingRateInputTypeActionImpl(shippingRateInputType);
     }
 
     /**
-     * builds ProjectSetShippingRateInputTypeAction without checking for non null required values
+     * builds ProjectSetShippingRateInputTypeAction without checking for non-null required values
+     * @return ProjectSetShippingRateInputTypeAction
      */
     public ProjectSetShippingRateInputTypeAction buildUnchecked() {
         return new ProjectSetShippingRateInputTypeActionImpl(shippingRateInputType);

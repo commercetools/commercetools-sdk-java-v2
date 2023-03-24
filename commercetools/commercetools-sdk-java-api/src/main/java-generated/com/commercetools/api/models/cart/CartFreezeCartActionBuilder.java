@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartFreezeCartActionBuilder implements Builder<CartFreezeCartAction> {
 
+    /**
+     * builds CartFreezeCartAction with checking for non-null required values
+     * @return CartFreezeCartAction
+     */
     public CartFreezeCartAction build() {
         return new CartFreezeCartActionImpl();
     }
 
     /**
-     * builds CartFreezeCartAction without checking for non null required values
+     * builds CartFreezeCartAction without checking for non-null required values
+     * @return CartFreezeCartAction
      */
     public CartFreezeCartAction buildUnchecked() {
         return new CartFreezeCartActionImpl();

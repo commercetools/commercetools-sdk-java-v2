@@ -31,6 +31,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
 
     /**
      *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
 
     /**
      *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
 
     /**
      *  <p>Sets the Custom Fields fields for the Payment.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
 
     /**
      *  <p>Sets the Custom Fields fields for the Payment.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
         return this.fields;
     }
 
+    /**
+     * builds PaymentSetCustomTypeAction with checking for non-null required values
+     * @return PaymentSetCustomTypeAction
+     */
     public PaymentSetCustomTypeAction build() {
         return new PaymentSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds PaymentSetCustomTypeAction without checking for non null required values
+     * builds PaymentSetCustomTypeAction without checking for non-null required values
+     * @return PaymentSetCustomTypeAction
      */
     public PaymentSetCustomTypeAction buildUnchecked() {
         return new PaymentSetCustomTypeActionImpl(type, fields);

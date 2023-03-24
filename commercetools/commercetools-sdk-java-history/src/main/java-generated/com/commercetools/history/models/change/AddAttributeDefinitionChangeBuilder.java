@@ -29,7 +29,7 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
 
     /**
      *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
         return this.nextValue;
     }
 
+    /**
+     * builds AddAttributeDefinitionChange with checking for non-null required values
+     * @return AddAttributeDefinitionChange
+     */
     public AddAttributeDefinitionChange build() {
         Objects.requireNonNull(change, AddAttributeDefinitionChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddAttributeDefinitionChange.class + ": nextValue is missing");
@@ -76,7 +81,8 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
     }
 
     /**
-     * builds AddAttributeDefinitionChange without checking for non null required values
+     * builds AddAttributeDefinitionChange without checking for non-null required values
+     * @return AddAttributeDefinitionChange
      */
     public AddAttributeDefinitionChange buildUnchecked() {
         return new AddAttributeDefinitionChangeImpl(change, nextValue);

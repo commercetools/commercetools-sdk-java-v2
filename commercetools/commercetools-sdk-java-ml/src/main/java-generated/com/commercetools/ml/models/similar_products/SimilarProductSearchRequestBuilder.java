@@ -49,7 +49,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>language tag used to prioritize language for text comparisons.</p>
-     * @param language
+     * @param language value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
-     * @param currencyCode
+     * @param currencyCode value to be set
      * @return Builder
      */
 
@@ -93,6 +93,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
+     * @param builder function to build the similarityMeasures value
      * @return Builder
      */
 
@@ -106,7 +107,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
-     * @param similarityMeasures
+     * @param similarityMeasures value to be set
      * @return Builder
      */
 
@@ -118,7 +119,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
-     * @param productSetSelectors
+     * @param productSetSelectors value to be set
      * @return Builder
      */
 
@@ -130,7 +131,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
-     * @param productSetSelectors
+     * @param productSetSelectors value to be set
      * @return Builder
      */
 
@@ -142,7 +143,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
-     * @param productSetSelectors
+     * @param productSetSelectors value to be set
      * @return Builder
      */
 
@@ -157,6 +158,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
+     * @param builder function to build the productSetSelectors value
      * @return Builder
      */
 
@@ -172,6 +174,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
+     * @param builder function to build the productSetSelectors value
      * @return Builder
      */
 
@@ -185,7 +188,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *
-     * @param confidenceMin
+     * @param confidenceMin value to be set
      * @return Builder
      */
 
@@ -196,7 +199,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *
-     * @param confidenceMax
+     * @param confidenceMax value to be set
      * @return Builder
      */
 
@@ -245,13 +248,18 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
         return this.confidenceMax;
     }
 
+    /**
+     * builds SimilarProductSearchRequest with checking for non-null required values
+     * @return SimilarProductSearchRequest
+     */
     public SimilarProductSearchRequest build() {
         return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures,
             productSetSelectors, confidenceMin, confidenceMax);
     }
 
     /**
-     * builds SimilarProductSearchRequest without checking for non null required values
+     * builds SimilarProductSearchRequest without checking for non-null required values
+     * @return SimilarProductSearchRequest
      */
     public SimilarProductSearchRequest buildUnchecked() {
         return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures,

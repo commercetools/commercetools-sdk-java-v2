@@ -27,7 +27,7 @@ public class ZoneSetDescriptionActionBuilder implements Builder<ZoneSetDescripti
 
     /**
      *  <p>Description of the Zone.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ZoneSetDescriptionActionBuilder implements Builder<ZoneSetDescripti
         return this.description;
     }
 
+    /**
+     * builds ZoneSetDescriptionAction with checking for non-null required values
+     * @return ZoneSetDescriptionAction
+     */
     public ZoneSetDescriptionAction build() {
         return new ZoneSetDescriptionActionImpl(description);
     }
 
     /**
-     * builds ZoneSetDescriptionAction without checking for non null required values
+     * builds ZoneSetDescriptionAction without checking for non-null required values
+     * @return ZoneSetDescriptionAction
      */
     public ZoneSetDescriptionAction buildUnchecked() {
         return new ZoneSetDescriptionActionImpl(description);

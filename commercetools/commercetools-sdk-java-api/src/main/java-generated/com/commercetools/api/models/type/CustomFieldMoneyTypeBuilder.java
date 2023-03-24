@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldMoneyTypeBuilder implements Builder<CustomFieldMoneyType> {
 
+    /**
+     * builds CustomFieldMoneyType with checking for non-null required values
+     * @return CustomFieldMoneyType
+     */
     public CustomFieldMoneyType build() {
         return new CustomFieldMoneyTypeImpl();
     }
 
     /**
-     * builds CustomFieldMoneyType without checking for non null required values
+     * builds CustomFieldMoneyType without checking for non-null required values
+     * @return CustomFieldMoneyType
      */
     public CustomFieldMoneyType buildUnchecked() {
         return new CustomFieldMoneyTypeImpl();

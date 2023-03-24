@@ -35,7 +35,7 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *
+     * @param builder function to build the transaction value
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *
-     * @param transaction
+     * @param transaction value to be set
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -107,6 +108,10 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeTransactionInteractionIdChange with checking for non-null required values
+     * @return ChangeTransactionInteractionIdChange
+     */
     public ChangeTransactionInteractionIdChange build() {
         Objects.requireNonNull(change, ChangeTransactionInteractionIdChange.class + ": change is missing");
         Objects.requireNonNull(transaction, ChangeTransactionInteractionIdChange.class + ": transaction is missing");
@@ -117,7 +122,8 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
     }
 
     /**
-     * builds ChangeTransactionInteractionIdChange without checking for non null required values
+     * builds ChangeTransactionInteractionIdChange without checking for non-null required values
+     * @return ChangeTransactionInteractionIdChange
      */
     public ChangeTransactionInteractionIdChange buildUnchecked() {
         return new ChangeTransactionInteractionIdChangeImpl(change, transaction, nextValue, previousValue);

@@ -28,7 +28,7 @@ public class InventoryEntrySetRestockableInDaysActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param restockableInDays
+     * @param restockableInDays value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class InventoryEntrySetRestockableInDaysActionBuilder
         return this.restockableInDays;
     }
 
+    /**
+     * builds InventoryEntrySetRestockableInDaysAction with checking for non-null required values
+     * @return InventoryEntrySetRestockableInDaysAction
+     */
     public InventoryEntrySetRestockableInDaysAction build() {
         return new InventoryEntrySetRestockableInDaysActionImpl(restockableInDays);
     }
 
     /**
-     * builds InventoryEntrySetRestockableInDaysAction without checking for non null required values
+     * builds InventoryEntrySetRestockableInDaysAction without checking for non-null required values
+     * @return InventoryEntrySetRestockableInDaysAction
      */
     public InventoryEntrySetRestockableInDaysAction buildUnchecked() {
         return new InventoryEntrySetRestockableInDaysActionImpl(restockableInDays);

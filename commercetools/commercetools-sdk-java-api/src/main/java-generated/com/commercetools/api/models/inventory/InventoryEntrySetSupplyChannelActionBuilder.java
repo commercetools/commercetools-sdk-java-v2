@@ -28,6 +28,7 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
         return this.supplyChannel;
     }
 
+    /**
+     * builds InventoryEntrySetSupplyChannelAction with checking for non-null required values
+     * @return InventoryEntrySetSupplyChannelAction
+     */
     public InventoryEntrySetSupplyChannelAction build() {
         return new InventoryEntrySetSupplyChannelActionImpl(supplyChannel);
     }
 
     /**
-     * builds InventoryEntrySetSupplyChannelAction without checking for non null required values
+     * builds InventoryEntrySetSupplyChannelAction without checking for non-null required values
+     * @return InventoryEntrySetSupplyChannelAction
      */
     public InventoryEntrySetSupplyChannelAction buildUnchecked() {
         return new InventoryEntrySetSupplyChannelActionImpl(supplyChannel);

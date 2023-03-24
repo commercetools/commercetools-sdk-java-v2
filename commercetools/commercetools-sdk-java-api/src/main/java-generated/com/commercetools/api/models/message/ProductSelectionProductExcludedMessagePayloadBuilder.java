@@ -30,6 +30,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -53,6 +54,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     * @param builder function to build the variantExclusion value
      * @return Builder
      */
 
@@ -66,7 +68,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
-     * @param variantExclusion
+     * @param variantExclusion value to be set
      * @return Builder
      */
 
@@ -84,6 +86,10 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
         return this.variantExclusion;
     }
 
+    /**
+     * builds ProductSelectionProductExcludedMessagePayload with checking for non-null required values
+     * @return ProductSelectionProductExcludedMessagePayload
+     */
     public ProductSelectionProductExcludedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductExcludedMessagePayload.class + ": product is missing");
         Objects.requireNonNull(variantExclusion,
@@ -92,7 +98,8 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
     }
 
     /**
-     * builds ProductSelectionProductExcludedMessagePayload without checking for non null required values
+     * builds ProductSelectionProductExcludedMessagePayload without checking for non-null required values
+     * @return ProductSelectionProductExcludedMessagePayload
      */
     public ProductSelectionProductExcludedMessagePayload buildUnchecked() {
         return new ProductSelectionProductExcludedMessagePayloadImpl(product, variantExclusion);

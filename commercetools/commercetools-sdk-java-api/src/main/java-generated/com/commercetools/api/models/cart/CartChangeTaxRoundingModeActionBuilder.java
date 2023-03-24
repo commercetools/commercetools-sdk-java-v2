@@ -25,7 +25,7 @@ public class CartChangeTaxRoundingModeActionBuilder implements Builder<CartChang
 
     /**
      *  <p>New value to set.</p>
-     * @param taxRoundingMode
+     * @param taxRoundingMode value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class CartChangeTaxRoundingModeActionBuilder implements Builder<CartChang
         return this.taxRoundingMode;
     }
 
+    /**
+     * builds CartChangeTaxRoundingModeAction with checking for non-null required values
+     * @return CartChangeTaxRoundingModeAction
+     */
     public CartChangeTaxRoundingModeAction build() {
         Objects.requireNonNull(taxRoundingMode, CartChangeTaxRoundingModeAction.class + ": taxRoundingMode is missing");
         return new CartChangeTaxRoundingModeActionImpl(taxRoundingMode);
     }
 
     /**
-     * builds CartChangeTaxRoundingModeAction without checking for non null required values
+     * builds CartChangeTaxRoundingModeAction without checking for non-null required values
+     * @return CartChangeTaxRoundingModeAction
      */
     public CartChangeTaxRoundingModeAction buildUnchecked() {
         return new CartChangeTaxRoundingModeActionImpl(taxRoundingMode);

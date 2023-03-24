@@ -25,7 +25,7 @@ public class ChannelChangeKeyActionBuilder implements Builder<ChannelChangeKeyAc
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ChannelChangeKeyActionBuilder implements Builder<ChannelChangeKeyAc
         return this.key;
     }
 
+    /**
+     * builds ChannelChangeKeyAction with checking for non-null required values
+     * @return ChannelChangeKeyAction
+     */
     public ChannelChangeKeyAction build() {
         Objects.requireNonNull(key, ChannelChangeKeyAction.class + ": key is missing");
         return new ChannelChangeKeyActionImpl(key);
     }
 
     /**
-     * builds ChannelChangeKeyAction without checking for non null required values
+     * builds ChannelChangeKeyAction without checking for non-null required values
+     * @return ChannelChangeKeyAction
      */
     public ChannelChangeKeyAction buildUnchecked() {
         return new ChannelChangeKeyActionImpl(key);

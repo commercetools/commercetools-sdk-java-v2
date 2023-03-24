@@ -27,6 +27,7 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was updated.</p>
+     * @param builder function to build the associate value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was updated.</p>
-     * @param associate
+     * @param associate value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
         return this.associate;
     }
 
+    /**
+     * builds BusinessUnitAssociateChangedMessagePayload with checking for non-null required values
+     * @return BusinessUnitAssociateChangedMessagePayload
+     */
     public BusinessUnitAssociateChangedMessagePayload build() {
         Objects.requireNonNull(associate, BusinessUnitAssociateChangedMessagePayload.class + ": associate is missing");
         return new BusinessUnitAssociateChangedMessagePayloadImpl(associate);
     }
 
     /**
-     * builds BusinessUnitAssociateChangedMessagePayload without checking for non null required values
+     * builds BusinessUnitAssociateChangedMessagePayload without checking for non-null required values
+     * @return BusinessUnitAssociateChangedMessagePayload
      */
     public BusinessUnitAssociateChangedMessagePayload buildUnchecked() {
         return new BusinessUnitAssociateChangedMessagePayloadImpl(associate);

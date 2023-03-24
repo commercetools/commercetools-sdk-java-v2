@@ -28,7 +28,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
 
     /**
      *
-     * @param customerEmail
+     * @param customerEmail value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
 
     /**
      *
-     * @param orderNumber
+     * @param orderNumber value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
         return this.orderNumber;
     }
 
+    /**
+     * builds OrderLabel with checking for non-null required values
+     * @return OrderLabel
+     */
     public OrderLabel build() {
         Objects.requireNonNull(customerEmail, OrderLabel.class + ": customerEmail is missing");
         Objects.requireNonNull(orderNumber, OrderLabel.class + ": orderNumber is missing");
@@ -63,7 +67,8 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
     }
 
     /**
-     * builds OrderLabel without checking for non null required values
+     * builds OrderLabel without checking for non-null required values
+     * @return OrderLabel
      */
     public OrderLabel buildUnchecked() {
         return new OrderLabelImpl(customerEmail, orderNumber);

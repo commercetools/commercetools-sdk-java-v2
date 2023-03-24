@@ -39,7 +39,7 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
-     * @param attribute
+     * @param attribute value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the number of product variants in overall similarity.</p>
-     * @param variantCount
+     * @param variantCount value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -117,12 +117,17 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
         return this.price;
     }
 
+    /**
+     * builds SimilarityMeasures with checking for non-null required values
+     * @return SimilarityMeasures
+     */
     public SimilarityMeasures build() {
         return new SimilarityMeasuresImpl(name, description, attribute, variantCount, price);
     }
 
     /**
-     * builds SimilarityMeasures without checking for non null required values
+     * builds SimilarityMeasures without checking for non-null required values
+     * @return SimilarityMeasures
      */
     public SimilarityMeasures buildUnchecked() {
         return new SimilarityMeasuresImpl(name, description, attribute, variantCount, price);

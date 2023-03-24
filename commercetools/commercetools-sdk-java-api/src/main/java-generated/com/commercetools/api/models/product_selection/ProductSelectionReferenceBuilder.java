@@ -31,7 +31,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
 
     /**
      *  <p>Unique identifier of the referenced ProductSelection.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
 
     /**
      *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
 
     /**
      *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
         return this.obj;
     }
 
+    /**
+     * builds ProductSelectionReference with checking for non-null required values
+     * @return ProductSelectionReference
+     */
     public ProductSelectionReference build() {
         Objects.requireNonNull(id, ProductSelectionReference.class + ": id is missing");
         return new ProductSelectionReferenceImpl(id, obj);
     }
 
     /**
-     * builds ProductSelectionReference without checking for non null required values
+     * builds ProductSelectionReference without checking for non-null required values
+     * @return ProductSelectionReference
      */
     public ProductSelectionReference buildUnchecked() {
         return new ProductSelectionReferenceImpl(id, obj);

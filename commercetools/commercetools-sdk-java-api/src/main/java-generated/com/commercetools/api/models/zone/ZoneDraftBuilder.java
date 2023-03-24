@@ -37,7 +37,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Zone.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>Name of the Zone.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>Description of the Zone.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
-     * @param locations
+     * @param locations value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
-     * @param locations
+     * @param locations value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
-     * @param locations
+     * @param locations value to be set
      * @return Builder
      */
 
@@ -107,6 +107,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param builder function to build the locations value
      * @return Builder
      */
 
@@ -121,6 +122,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param builder function to build the locations value
      * @return Builder
      */
 
@@ -150,13 +152,18 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
         return this.locations;
     }
 
+    /**
+     * builds ZoneDraft with checking for non-null required values
+     * @return ZoneDraft
+     */
     public ZoneDraft build() {
         Objects.requireNonNull(name, ZoneDraft.class + ": name is missing");
         return new ZoneDraftImpl(key, name, description, locations);
     }
 
     /**
-     * builds ZoneDraft without checking for non null required values
+     * builds ZoneDraft without checking for non-null required values
+     * @return ZoneDraft
      */
     public ZoneDraft buildUnchecked() {
         return new ZoneDraftImpl(key, name, description, locations);

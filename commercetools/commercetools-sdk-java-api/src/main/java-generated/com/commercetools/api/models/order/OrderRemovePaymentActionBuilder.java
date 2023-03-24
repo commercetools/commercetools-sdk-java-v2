@@ -26,6 +26,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @param builder function to build the payment value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
-     * @param payment
+     * @param payment value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
         return this.payment;
     }
 
+    /**
+     * builds OrderRemovePaymentAction with checking for non-null required values
+     * @return OrderRemovePaymentAction
+     */
     public OrderRemovePaymentAction build() {
         Objects.requireNonNull(payment, OrderRemovePaymentAction.class + ": payment is missing");
         return new OrderRemovePaymentActionImpl(payment);
     }
 
     /**
-     * builds OrderRemovePaymentAction without checking for non null required values
+     * builds OrderRemovePaymentAction without checking for non-null required values
+     * @return OrderRemovePaymentAction
      */
     public OrderRemovePaymentAction buildUnchecked() {
         return new OrderRemovePaymentActionImpl(payment);

@@ -32,7 +32,7 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *  <p>Update action for <code>setOrderTotalPrice</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
         return this.previousValue;
     }
 
+    /**
+     * builds SetOrderTotalPriceChange with checking for non-null required values
+     * @return SetOrderTotalPriceChange
+     */
     public SetOrderTotalPriceChange build() {
         Objects.requireNonNull(change, SetOrderTotalPriceChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetOrderTotalPriceChange.class + ": nextValue is missing");
@@ -106,7 +112,8 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
     }
 
     /**
-     * builds SetOrderTotalPriceChange without checking for non null required values
+     * builds SetOrderTotalPriceChange without checking for non-null required values
+     * @return SetOrderTotalPriceChange
      */
     public SetOrderTotalPriceChange buildUnchecked() {
         return new SetOrderTotalPriceChangeImpl(change, nextValue, previousValue);

@@ -31,7 +31,7 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
 
     /**
      *  <p>Update action for <code>changePaymentState</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
         return this.previousValue;
     }
 
+    /**
+     * builds ChangePaymentStateChange with checking for non-null required values
+     * @return ChangePaymentStateChange
+     */
     public ChangePaymentStateChange build() {
         Objects.requireNonNull(change, ChangePaymentStateChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangePaymentStateChange.class + ": nextValue is missing");
@@ -84,7 +88,8 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
     }
 
     /**
-     * builds ChangePaymentStateChange without checking for non null required values
+     * builds ChangePaymentStateChange without checking for non-null required values
+     * @return ChangePaymentStateChange
      */
     public ChangePaymentStateChange buildUnchecked() {
         return new ChangePaymentStateChangeImpl(change, nextValue, previousValue);

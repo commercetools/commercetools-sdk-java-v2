@@ -34,7 +34,7 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -90,13 +91,18 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
         return this.name;
     }
 
+    /**
+     * builds CategoryChangeAssetNameAction with checking for non-null required values
+     * @return CategoryChangeAssetNameAction
+     */
     public CategoryChangeAssetNameAction build() {
         Objects.requireNonNull(name, CategoryChangeAssetNameAction.class + ": name is missing");
         return new CategoryChangeAssetNameActionImpl(assetId, assetKey, name);
     }
 
     /**
-     * builds CategoryChangeAssetNameAction without checking for non null required values
+     * builds CategoryChangeAssetNameAction without checking for non-null required values
+     * @return CategoryChangeAssetNameAction
      */
     public CategoryChangeAssetNameAction buildUnchecked() {
         return new CategoryChangeAssetNameActionImpl(assetId, assetKey, name);

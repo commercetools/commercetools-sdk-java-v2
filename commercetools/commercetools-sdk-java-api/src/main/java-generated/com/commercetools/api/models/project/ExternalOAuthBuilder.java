@@ -28,7 +28,7 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
 
     /**
      *  <p>URL with authorization header.</p>
-     * @param url
+     * @param url value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
 
     /**
      *  <p>Must not contain any leading or trailing whitespaces. Partially hidden on retrieval.</p>
-     * @param authorizationHeader
+     * @param authorizationHeader value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
         return this.authorizationHeader;
     }
 
+    /**
+     * builds ExternalOAuth with checking for non-null required values
+     * @return ExternalOAuth
+     */
     public ExternalOAuth build() {
         Objects.requireNonNull(url, ExternalOAuth.class + ": url is missing");
         Objects.requireNonNull(authorizationHeader, ExternalOAuth.class + ": authorizationHeader is missing");
@@ -63,7 +67,8 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
     }
 
     /**
-     * builds ExternalOAuth without checking for non null required values
+     * builds ExternalOAuth without checking for non-null required values
+     * @return ExternalOAuth
      */
     public ExternalOAuth buildUnchecked() {
         return new ExternalOAuthImpl(url, authorizationHeader);

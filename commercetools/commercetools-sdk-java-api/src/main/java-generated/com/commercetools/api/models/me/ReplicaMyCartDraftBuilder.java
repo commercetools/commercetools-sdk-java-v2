@@ -24,7 +24,7 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
 
     /**
      *  <p>Reference to a Cart or Order that is replicated.</p>
-     * @param reference
+     * @param reference value to be set
      * @return Builder
      */
 
@@ -37,13 +37,18 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
         return this.reference;
     }
 
+    /**
+     * builds ReplicaMyCartDraft with checking for non-null required values
+     * @return ReplicaMyCartDraft
+     */
     public ReplicaMyCartDraft build() {
         Objects.requireNonNull(reference, ReplicaMyCartDraft.class + ": reference is missing");
         return new ReplicaMyCartDraftImpl(reference);
     }
 
     /**
-     * builds ReplicaMyCartDraft without checking for non null required values
+     * builds ReplicaMyCartDraft without checking for non-null required values
+     * @return ReplicaMyCartDraft
      */
     public ReplicaMyCartDraft buildUnchecked() {
         return new ReplicaMyCartDraftImpl(reference);

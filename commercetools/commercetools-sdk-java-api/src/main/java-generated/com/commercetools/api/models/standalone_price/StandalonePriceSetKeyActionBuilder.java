@@ -27,7 +27,7 @@ public class StandalonePriceSetKeyActionBuilder implements Builder<StandalonePri
 
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class StandalonePriceSetKeyActionBuilder implements Builder<StandalonePri
         return this.key;
     }
 
+    /**
+     * builds StandalonePriceSetKeyAction with checking for non-null required values
+     * @return StandalonePriceSetKeyAction
+     */
     public StandalonePriceSetKeyAction build() {
         return new StandalonePriceSetKeyActionImpl(key);
     }
 
     /**
-     * builds StandalonePriceSetKeyAction without checking for non null required values
+     * builds StandalonePriceSetKeyAction without checking for non-null required values
+     * @return StandalonePriceSetKeyAction
      */
     public StandalonePriceSetKeyAction buildUnchecked() {
         return new StandalonePriceSetKeyActionImpl(key);

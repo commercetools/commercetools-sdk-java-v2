@@ -26,6 +26,7 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>Transaction that was added to the Payment.</p>
+     * @param builder function to build the transaction value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>Transaction that was added to the Payment.</p>
-     * @param transaction
+     * @param transaction value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
         return this.transaction;
     }
 
+    /**
+     * builds PaymentTransactionAddedMessagePayload with checking for non-null required values
+     * @return PaymentTransactionAddedMessagePayload
+     */
     public PaymentTransactionAddedMessagePayload build() {
         Objects.requireNonNull(transaction, PaymentTransactionAddedMessagePayload.class + ": transaction is missing");
         return new PaymentTransactionAddedMessagePayloadImpl(transaction);
     }
 
     /**
-     * builds PaymentTransactionAddedMessagePayload without checking for non null required values
+     * builds PaymentTransactionAddedMessagePayload without checking for non-null required values
+     * @return PaymentTransactionAddedMessagePayload
      */
     public PaymentTransactionAddedMessagePayload buildUnchecked() {
         return new PaymentTransactionAddedMessagePayloadImpl(transaction);

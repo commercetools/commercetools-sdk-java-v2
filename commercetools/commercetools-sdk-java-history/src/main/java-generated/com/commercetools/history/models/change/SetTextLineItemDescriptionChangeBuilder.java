@@ -35,7 +35,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param builder function to build the textLineItem value
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
-     * @param textLineItem
+     * @param textLineItem value to be set
      * @return Builder
      */
 
@@ -70,6 +71,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -93,6 +95,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -104,7 +107,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -130,6 +133,10 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
         return this.nextValue;
     }
 
+    /**
+     * builds SetTextLineItemDescriptionChange with checking for non-null required values
+     * @return SetTextLineItemDescriptionChange
+     */
     public SetTextLineItemDescriptionChange build() {
         Objects.requireNonNull(change, SetTextLineItemDescriptionChange.class + ": change is missing");
         Objects.requireNonNull(textLineItem, SetTextLineItemDescriptionChange.class + ": textLineItem is missing");
@@ -139,7 +146,8 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     * builds SetTextLineItemDescriptionChange without checking for non null required values
+     * builds SetTextLineItemDescriptionChange without checking for non-null required values
+     * @return SetTextLineItemDescriptionChange
      */
     public SetTextLineItemDescriptionChange buildUnchecked() {
         return new SetTextLineItemDescriptionChangeImpl(change, textLineItem, previousValue, nextValue);

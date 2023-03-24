@@ -27,7 +27,7 @@ public class ProductDiscountSetKeyActionBuilder implements Builder<ProductDiscou
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ProductDiscountSetKeyActionBuilder implements Builder<ProductDiscou
         return this.key;
     }
 
+    /**
+     * builds ProductDiscountSetKeyAction with checking for non-null required values
+     * @return ProductDiscountSetKeyAction
+     */
     public ProductDiscountSetKeyAction build() {
         return new ProductDiscountSetKeyActionImpl(key);
     }
 
     /**
-     * builds ProductDiscountSetKeyAction without checking for non null required values
+     * builds ProductDiscountSetKeyAction without checking for non-null required values
+     * @return ProductDiscountSetKeyAction
      */
     public ProductDiscountSetKeyAction buildUnchecked() {
         return new ProductDiscountSetKeyActionImpl(key);

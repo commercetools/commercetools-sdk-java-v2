@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetShippingChangeValueBuilder implements Builder<ChangeTargetShippingChangeValue> {
 
+    /**
+     * builds ChangeTargetShippingChangeValue with checking for non-null required values
+     * @return ChangeTargetShippingChangeValue
+     */
     public ChangeTargetShippingChangeValue build() {
         return new ChangeTargetShippingChangeValueImpl();
     }
 
     /**
-     * builds ChangeTargetShippingChangeValue without checking for non null required values
+     * builds ChangeTargetShippingChangeValue without checking for non-null required values
+     * @return ChangeTargetShippingChangeValue
      */
     public ChangeTargetShippingChangeValue buildUnchecked() {
         return new ChangeTargetShippingChangeValueImpl();

@@ -25,7 +25,7 @@ public class NumberFieldBuilder implements Builder<NumberField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class NumberFieldBuilder implements Builder<NumberField> {
         return this.value;
     }
 
+    /**
+     * builds NumberField with checking for non-null required values
+     * @return NumberField
+     */
     public NumberField build() {
         Objects.requireNonNull(value, NumberField.class + ": value is missing");
         return new NumberFieldImpl(value);
     }
 
     /**
-     * builds NumberField without checking for non null required values
+     * builds NumberField without checking for non-null required values
+     * @return NumberField
      */
     public NumberField buildUnchecked() {
         return new NumberFieldImpl(value);

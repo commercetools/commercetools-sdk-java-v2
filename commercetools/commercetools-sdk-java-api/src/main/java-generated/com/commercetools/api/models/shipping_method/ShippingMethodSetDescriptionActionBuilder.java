@@ -28,7 +28,7 @@ public class ShippingMethodSetDescriptionActionBuilder implements Builder<Shippi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class ShippingMethodSetDescriptionActionBuilder implements Builder<Shippi
         return this.description;
     }
 
+    /**
+     * builds ShippingMethodSetDescriptionAction with checking for non-null required values
+     * @return ShippingMethodSetDescriptionAction
+     */
     public ShippingMethodSetDescriptionAction build() {
         return new ShippingMethodSetDescriptionActionImpl(description);
     }
 
     /**
-     * builds ShippingMethodSetDescriptionAction without checking for non null required values
+     * builds ShippingMethodSetDescriptionAction without checking for non-null required values
+     * @return ShippingMethodSetDescriptionAction
      */
     public ShippingMethodSetDescriptionAction buildUnchecked() {
         return new ShippingMethodSetDescriptionActionImpl(description);

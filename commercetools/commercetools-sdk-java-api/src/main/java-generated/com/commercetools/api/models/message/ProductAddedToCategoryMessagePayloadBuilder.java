@@ -29,6 +29,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Category the Product was added to.</p>
+     * @param builder function to build the category value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Category the Product was added to.</p>
-     * @param category
+     * @param category value to be set
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
         return this.staged;
     }
 
+    /**
+     * builds ProductAddedToCategoryMessagePayload with checking for non-null required values
+     * @return ProductAddedToCategoryMessagePayload
+     */
     public ProductAddedToCategoryMessagePayload build() {
         Objects.requireNonNull(category, ProductAddedToCategoryMessagePayload.class + ": category is missing");
         Objects.requireNonNull(staged, ProductAddedToCategoryMessagePayload.class + ": staged is missing");
@@ -76,7 +81,8 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     * builds ProductAddedToCategoryMessagePayload without checking for non null required values
+     * builds ProductAddedToCategoryMessagePayload without checking for non-null required values
+     * @return ProductAddedToCategoryMessagePayload
      */
     public ProductAddedToCategoryMessagePayload buildUnchecked() {
         return new ProductAddedToCategoryMessagePayloadImpl(category, staged);

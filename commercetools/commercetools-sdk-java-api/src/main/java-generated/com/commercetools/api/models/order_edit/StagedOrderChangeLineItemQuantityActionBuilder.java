@@ -38,7 +38,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -61,6 +61,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the externalPrice value
      * @return Builder
      */
 
@@ -73,7 +74,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     * @param externalPrice
+     * @param externalPrice value to be set
      * @return Builder
      */
 
@@ -85,6 +86,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     /**
      *
+     * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
 
@@ -98,7 +100,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     /**
      *
-     * @param externalTotalPrice
+     * @param externalTotalPrice value to be set
      * @return Builder
      */
 
@@ -126,6 +128,10 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
         return this.externalTotalPrice;
     }
 
+    /**
+     * builds StagedOrderChangeLineItemQuantityAction with checking for non-null required values
+     * @return StagedOrderChangeLineItemQuantityAction
+     */
     public StagedOrderChangeLineItemQuantityAction build() {
         Objects.requireNonNull(lineItemId, StagedOrderChangeLineItemQuantityAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, StagedOrderChangeLineItemQuantityAction.class + ": quantity is missing");
@@ -133,7 +139,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * builds StagedOrderChangeLineItemQuantityAction without checking for non null required values
+     * builds StagedOrderChangeLineItemQuantityAction without checking for non-null required values
+     * @return StagedOrderChangeLineItemQuantityAction
      */
     public StagedOrderChangeLineItemQuantityAction buildUnchecked() {
         return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);

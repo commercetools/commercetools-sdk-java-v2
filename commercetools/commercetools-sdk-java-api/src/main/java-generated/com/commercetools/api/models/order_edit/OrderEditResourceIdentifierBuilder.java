@@ -30,7 +30,7 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
 
     /**
      *  <p>Unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
 
     /**
      *  <p>User-defined unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
         return this.key;
     }
 
+    /**
+     * builds OrderEditResourceIdentifier with checking for non-null required values
+     * @return OrderEditResourceIdentifier
+     */
     public OrderEditResourceIdentifier build() {
         return new OrderEditResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds OrderEditResourceIdentifier without checking for non null required values
+     * builds OrderEditResourceIdentifier without checking for non-null required values
+     * @return OrderEditResourceIdentifier
      */
     public OrderEditResourceIdentifier buildUnchecked() {
         return new OrderEditResourceIdentifierImpl(id, key);

@@ -26,6 +26,7 @@ public class MyCartRemoveDiscountCodeActionBuilder implements Builder<MyCartRemo
 
     /**
      *  <p>Discount Code to remove from the Cart.</p>
+     * @param builder function to build the discountCode value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class MyCartRemoveDiscountCodeActionBuilder implements Builder<MyCartRemo
 
     /**
      *  <p>Discount Code to remove from the Cart.</p>
-     * @param discountCode
+     * @param discountCode value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class MyCartRemoveDiscountCodeActionBuilder implements Builder<MyCartRemo
         return this.discountCode;
     }
 
+    /**
+     * builds MyCartRemoveDiscountCodeAction with checking for non-null required values
+     * @return MyCartRemoveDiscountCodeAction
+     */
     public MyCartRemoveDiscountCodeAction build() {
         Objects.requireNonNull(discountCode, MyCartRemoveDiscountCodeAction.class + ": discountCode is missing");
         return new MyCartRemoveDiscountCodeActionImpl(discountCode);
     }
 
     /**
-     * builds MyCartRemoveDiscountCodeAction without checking for non null required values
+     * builds MyCartRemoveDiscountCodeAction without checking for non-null required values
+     * @return MyCartRemoveDiscountCodeAction
      */
     public MyCartRemoveDiscountCodeAction buildUnchecked() {
         return new MyCartRemoveDiscountCodeActionImpl(discountCode);

@@ -31,7 +31,7 @@ public class BusinessUnitSetDefaultBillingAddressActionBuilder
 
     /**
      *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class BusinessUnitSetDefaultBillingAddressActionBuilder
 
     /**
      *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -61,12 +61,17 @@ public class BusinessUnitSetDefaultBillingAddressActionBuilder
         return this.addressKey;
     }
 
+    /**
+     * builds BusinessUnitSetDefaultBillingAddressAction with checking for non-null required values
+     * @return BusinessUnitSetDefaultBillingAddressAction
+     */
     public BusinessUnitSetDefaultBillingAddressAction build() {
         return new BusinessUnitSetDefaultBillingAddressActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds BusinessUnitSetDefaultBillingAddressAction without checking for non null required values
+     * builds BusinessUnitSetDefaultBillingAddressAction without checking for non-null required values
+     * @return BusinessUnitSetDefaultBillingAddressAction
      */
     public BusinessUnitSetDefaultBillingAddressAction buildUnchecked() {
         return new BusinessUnitSetDefaultBillingAddressActionImpl(addressId, addressKey);

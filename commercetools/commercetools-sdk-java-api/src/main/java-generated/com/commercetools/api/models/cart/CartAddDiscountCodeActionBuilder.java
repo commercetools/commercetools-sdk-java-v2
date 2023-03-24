@@ -25,7 +25,7 @@ public class CartAddDiscountCodeActionBuilder implements Builder<CartAddDiscount
 
     /**
      *  <p><code>code</code> of a DiscountCode.</p>
-     * @param code
+     * @param code value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CartAddDiscountCodeActionBuilder implements Builder<CartAddDiscount
         return this.code;
     }
 
+    /**
+     * builds CartAddDiscountCodeAction with checking for non-null required values
+     * @return CartAddDiscountCodeAction
+     */
     public CartAddDiscountCodeAction build() {
         Objects.requireNonNull(code, CartAddDiscountCodeAction.class + ": code is missing");
         return new CartAddDiscountCodeActionImpl(code);
     }
 
     /**
-     * builds CartAddDiscountCodeAction without checking for non null required values
+     * builds CartAddDiscountCodeAction without checking for non-null required values
+     * @return CartAddDiscountCodeAction
      */
     public CartAddDiscountCodeAction buildUnchecked() {
         return new CartAddDiscountCodeActionImpl(code);

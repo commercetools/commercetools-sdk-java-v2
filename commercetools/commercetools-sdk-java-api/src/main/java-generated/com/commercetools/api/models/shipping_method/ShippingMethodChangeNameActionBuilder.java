@@ -25,7 +25,7 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
 
     /**
      *  <p>Value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
         return this.name;
     }
 
+    /**
+     * builds ShippingMethodChangeNameAction with checking for non-null required values
+     * @return ShippingMethodChangeNameAction
+     */
     public ShippingMethodChangeNameAction build() {
         Objects.requireNonNull(name, ShippingMethodChangeNameAction.class + ": name is missing");
         return new ShippingMethodChangeNameActionImpl(name);
     }
 
     /**
-     * builds ShippingMethodChangeNameAction without checking for non null required values
+     * builds ShippingMethodChangeNameAction without checking for non-null required values
+     * @return ShippingMethodChangeNameAction
      */
     public ShippingMethodChangeNameAction buildUnchecked() {
         return new ShippingMethodChangeNameActionImpl(name);

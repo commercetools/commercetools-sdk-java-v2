@@ -37,7 +37,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -48,6 +48,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param builder function to build the measurements value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
-     * @param measurements
+     * @param measurements value to be set
      * @return Builder
      */
 
@@ -72,6 +73,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param builder function to build the trackingData value
      * @return Builder
      */
 
@@ -83,7 +85,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
-     * @param trackingData
+     * @param trackingData value to be set
      * @return Builder
      */
 
@@ -95,7 +97,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -107,7 +109,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -119,7 +121,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -134,6 +136,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -148,6 +151,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -177,13 +181,18 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
         return this.items;
     }
 
+    /**
+     * builds DeliveryParcel with checking for non-null required values
+     * @return DeliveryParcel
+     */
     public DeliveryParcel build() {
         Objects.requireNonNull(deliveryId, DeliveryParcel.class + ": deliveryId is missing");
         return new DeliveryParcelImpl(deliveryId, measurements, trackingData, items);
     }
 
     /**
-     * builds DeliveryParcel without checking for non null required values
+     * builds DeliveryParcel without checking for non-null required values
+     * @return DeliveryParcel
      */
     public DeliveryParcel buildUnchecked() {
         return new DeliveryParcelImpl(deliveryId, measurements, trackingData, items);

@@ -27,7 +27,7 @@ public class ShippingMethodSetKeyActionBuilder implements Builder<ShippingMethod
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ShippingMethodSetKeyActionBuilder implements Builder<ShippingMethod
         return this.key;
     }
 
+    /**
+     * builds ShippingMethodSetKeyAction with checking for non-null required values
+     * @return ShippingMethodSetKeyAction
+     */
     public ShippingMethodSetKeyAction build() {
         return new ShippingMethodSetKeyActionImpl(key);
     }
 
     /**
-     * builds ShippingMethodSetKeyAction without checking for non null required values
+     * builds ShippingMethodSetKeyAction without checking for non-null required values
+     * @return ShippingMethodSetKeyAction
      */
     public ShippingMethodSetKeyAction buildUnchecked() {
         return new ShippingMethodSetKeyActionImpl(key);

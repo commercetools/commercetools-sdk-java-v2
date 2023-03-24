@@ -35,7 +35,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *  <p>Update action for <code>setAssetCustomType</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
+     * @param builder function to build the asset value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
-     * @param asset
+     * @param asset value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -92,6 +94,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -103,7 +106,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -129,6 +132,10 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
         return this.previousValue;
     }
 
+    /**
+     * builds SetAssetCustomTypeChange with checking for non-null required values
+     * @return SetAssetCustomTypeChange
+     */
     public SetAssetCustomTypeChange build() {
         Objects.requireNonNull(change, SetAssetCustomTypeChange.class + ": change is missing");
         Objects.requireNonNull(asset, SetAssetCustomTypeChange.class + ": asset is missing");
@@ -138,7 +145,8 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     * builds SetAssetCustomTypeChange without checking for non null required values
+     * builds SetAssetCustomTypeChange without checking for non-null required values
+     * @return SetAssetCustomTypeChange
      */
     public SetAssetCustomTypeChange buildUnchecked() {
         return new SetAssetCustomTypeChangeImpl(change, asset, nextValue, previousValue);

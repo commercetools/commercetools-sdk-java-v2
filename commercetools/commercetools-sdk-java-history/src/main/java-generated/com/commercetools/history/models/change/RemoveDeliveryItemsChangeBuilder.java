@@ -29,7 +29,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
 
     /**
      *  <p>Update action for <code>removeDelivery</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveDeliveryItemsChange with checking for non-null required values
+     * @return RemoveDeliveryItemsChange
+     */
     public RemoveDeliveryItemsChange build() {
         Objects.requireNonNull(change, RemoveDeliveryItemsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveDeliveryItemsChange.class + ": previousValue is missing");
@@ -76,7 +81,8 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     }
 
     /**
-     * builds RemoveDeliveryItemsChange without checking for non null required values
+     * builds RemoveDeliveryItemsChange without checking for non-null required values
+     * @return RemoveDeliveryItemsChange
      */
     public RemoveDeliveryItemsChange buildUnchecked() {
         return new RemoveDeliveryItemsChangeImpl(change, previousValue);

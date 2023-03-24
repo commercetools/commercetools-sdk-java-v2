@@ -25,7 +25,7 @@ public class CustomerPasswordUpdatedMessagePayloadBuilder implements Builder<Cus
 
     /**
      *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
-     * @param reset
+     * @param reset value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CustomerPasswordUpdatedMessagePayloadBuilder implements Builder<Cus
         return this.reset;
     }
 
+    /**
+     * builds CustomerPasswordUpdatedMessagePayload with checking for non-null required values
+     * @return CustomerPasswordUpdatedMessagePayload
+     */
     public CustomerPasswordUpdatedMessagePayload build() {
         Objects.requireNonNull(reset, CustomerPasswordUpdatedMessagePayload.class + ": reset is missing");
         return new CustomerPasswordUpdatedMessagePayloadImpl(reset);
     }
 
     /**
-     * builds CustomerPasswordUpdatedMessagePayload without checking for non null required values
+     * builds CustomerPasswordUpdatedMessagePayload without checking for non-null required values
+     * @return CustomerPasswordUpdatedMessagePayload
      */
     public CustomerPasswordUpdatedMessagePayload buildUnchecked() {
         return new CustomerPasswordUpdatedMessagePayloadImpl(reset);

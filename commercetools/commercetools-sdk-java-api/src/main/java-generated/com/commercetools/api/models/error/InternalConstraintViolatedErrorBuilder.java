@@ -27,7 +27,7 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
 
     /**
      *  <p>Plain text description of the constraints that were violated.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InternalConstraintViolatedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InternalConstraintViolatedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
         return this.values;
     }
 
+    /**
+     * builds InternalConstraintViolatedError with checking for non-null required values
+     * @return InternalConstraintViolatedError
+     */
     public InternalConstraintViolatedError build() {
         Objects.requireNonNull(message, InternalConstraintViolatedError.class + ": message is missing");
         return new InternalConstraintViolatedErrorImpl(message, values);
     }
 
     /**
-     * builds InternalConstraintViolatedError without checking for non null required values
+     * builds InternalConstraintViolatedError without checking for non-null required values
+     * @return InternalConstraintViolatedError
      */
     public InternalConstraintViolatedError buildUnchecked() {
         return new InternalConstraintViolatedErrorImpl(message, values);

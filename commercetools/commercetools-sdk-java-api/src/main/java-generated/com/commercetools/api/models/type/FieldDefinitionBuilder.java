@@ -40,7 +40,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Data type of the Custom Field to define.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -51,6 +51,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Data type of the Custom Field to define.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -62,7 +63,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -73,6 +74,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>A human-readable label for the field.</p>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -84,7 +86,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>A human-readable label for the field.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -95,7 +97,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Defines whether the field is required to have a value.</p>
-     * @param required
+     * @param required value to be set
      * @return Builder
      */
 
@@ -106,7 +108,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
-     * @param inputHint
+     * @param inputHint value to be set
      * @return Builder
      */
 
@@ -137,6 +139,10 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         return this.inputHint;
     }
 
+    /**
+     * builds FieldDefinition with checking for non-null required values
+     * @return FieldDefinition
+     */
     public FieldDefinition build() {
         Objects.requireNonNull(type, FieldDefinition.class + ": type is missing");
         Objects.requireNonNull(name, FieldDefinition.class + ": name is missing");
@@ -146,7 +152,8 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * builds FieldDefinition without checking for non null required values
+     * builds FieldDefinition without checking for non-null required values
+     * @return FieldDefinition
      */
     public FieldDefinition buildUnchecked() {
         return new FieldDefinitionImpl(type, name, label, required, inputHint);

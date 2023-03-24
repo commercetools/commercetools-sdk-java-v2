@@ -46,7 +46,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>User-provided unique identifier of the resource.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>User-provided unique identifier of the resource.</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>User-provided unique identifier of an Order.</p>
-     * @param orderNumber
+     * @param orderNumber value to be set
      * @return Builder
      */
 
@@ -79,7 +79,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>User-provided unique identifier of a Customer.</p>
-     * @param customerNumber
+     * @param customerNumber value to be set
      * @return Builder
      */
 
@@ -90,7 +90,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique SKU of a Product Variant.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -101,6 +101,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -112,7 +113,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -124,6 +125,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique identifier of a Custom Object.</p>
+     * @param builder function to build the containerAndKey value
      * @return Builder
      */
 
@@ -135,7 +137,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique identifier of a Custom Object.</p>
-     * @param containerAndKey
+     * @param containerAndKey value to be set
      * @return Builder
      */
 
@@ -180,13 +182,18 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
         return this.containerAndKey;
     }
 
+    /**
+     * builds UserProvidedIdentifiers with checking for non-null required values
+     * @return UserProvidedIdentifiers
+     */
     public UserProvidedIdentifiers build() {
         return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug,
             containerAndKey);
     }
 
     /**
-     * builds UserProvidedIdentifiers without checking for non null required values
+     * builds UserProvidedIdentifiers without checking for non-null required values
+     * @return UserProvidedIdentifiers
      */
     public UserProvidedIdentifiers buildUnchecked() {
         return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug,

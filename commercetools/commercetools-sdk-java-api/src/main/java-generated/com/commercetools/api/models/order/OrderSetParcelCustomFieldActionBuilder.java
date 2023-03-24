@@ -33,7 +33,7 @@ public class OrderSetParcelCustomFieldActionBuilder implements Builder<OrderSetP
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class OrderSetParcelCustomFieldActionBuilder implements Builder<OrderSetP
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class OrderSetParcelCustomFieldActionBuilder implements Builder<OrderSetP
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class OrderSetParcelCustomFieldActionBuilder implements Builder<OrderSetP
         return this.value;
     }
 
+    /**
+     * builds OrderSetParcelCustomFieldAction with checking for non-null required values
+     * @return OrderSetParcelCustomFieldAction
+     */
     public OrderSetParcelCustomFieldAction build() {
         Objects.requireNonNull(parcelId, OrderSetParcelCustomFieldAction.class + ": parcelId is missing");
         Objects.requireNonNull(name, OrderSetParcelCustomFieldAction.class + ": name is missing");
@@ -84,7 +88,8 @@ public class OrderSetParcelCustomFieldActionBuilder implements Builder<OrderSetP
     }
 
     /**
-     * builds OrderSetParcelCustomFieldAction without checking for non null required values
+     * builds OrderSetParcelCustomFieldAction without checking for non-null required values
+     * @return OrderSetParcelCustomFieldAction
      */
     public OrderSetParcelCustomFieldAction buildUnchecked() {
         return new OrderSetParcelCustomFieldActionImpl(parcelId, name, value);

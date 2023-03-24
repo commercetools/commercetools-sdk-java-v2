@@ -29,7 +29,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
 
     /**
      *
+     * @param builder function to build the amountPlanned value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
 
     /**
      *
-     * @param amountPlanned
+     * @param amountPlanned value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
         return this.amountPlanned;
     }
 
+    /**
+     * builds PaymentLabel with checking for non-null required values
+     * @return PaymentLabel
+     */
     public PaymentLabel build() {
         Objects.requireNonNull(key, PaymentLabel.class + ": key is missing");
         Objects.requireNonNull(amountPlanned, PaymentLabel.class + ": amountPlanned is missing");
@@ -75,7 +80,8 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     /**
-     * builds PaymentLabel without checking for non null required values
+     * builds PaymentLabel without checking for non-null required values
+     * @return PaymentLabel
      */
     public PaymentLabel buildUnchecked() {
         return new PaymentLabelImpl(key, amountPlanned);

@@ -35,7 +35,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
-     * @param isOnStock
+     * @param isOnStock value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
-     * @param restockableInDays
+     * @param restockableInDays value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
-     * @param availableQuantity
+     * @param availableQuantity value to be set
      * @return Builder
      */
 
@@ -68,6 +68,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
+     * @param builder function to build the channels value
      * @return Builder
      */
 
@@ -81,7 +82,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
-     * @param channels
+     * @param channels value to be set
      * @return Builder
      */
 
@@ -107,6 +108,10 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
         return this.channels;
     }
 
+    /**
+     * builds ProductVariantAvailability with checking for non-null required values
+     * @return ProductVariantAvailability
+     */
     public ProductVariantAvailability build() {
         Objects.requireNonNull(isOnStock, ProductVariantAvailability.class + ": isOnStock is missing");
         Objects.requireNonNull(restockableInDays, ProductVariantAvailability.class + ": restockableInDays is missing");
@@ -116,7 +121,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     * builds ProductVariantAvailability without checking for non null required values
+     * builds ProductVariantAvailability without checking for non-null required values
+     * @return ProductVariantAvailability
      */
     public ProductVariantAvailability buildUnchecked() {
         return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);

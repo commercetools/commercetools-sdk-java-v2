@@ -58,7 +58,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Date and time (UTC) the ShoppingListLineItem was added to the ShoppingList.</p>
-     * @param addedAt
+     * @param addedAt value to be set
      * @return Builder
      */
 
@@ -69,6 +69,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -80,7 +81,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -92,7 +93,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
-     * @param deactivatedAt
+     * @param deactivatedAt value to be set
      * @return Builder
      */
 
@@ -103,7 +104,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Unique identifier of the ShoppingListLineItem.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -115,6 +116,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -127,7 +129,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -138,7 +140,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Unique identifier of a Product.</p>
-     * @param productId
+     * @param productId value to be set
      * @return Builder
      */
 
@@ -149,6 +151,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>The Product Type defining the Attributes of the Product.</p>
+     * @param builder function to build the productType value
      * @return Builder
      */
 
@@ -161,7 +164,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>The Product Type defining the Attributes of the Product.</p>
-     * @param productType
+     * @param productType value to be set
      * @return Builder
      */
 
@@ -173,7 +176,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -184,7 +187,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -196,6 +199,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Data of the ProductVariant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
+     * @param builder function to build the variant value
      * @return Builder
      */
 
@@ -208,7 +212,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Data of the ProductVariant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -221,6 +225,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Slug of the current ProductData.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
+     * @param builder function to build the productSlug value
      * @return Builder
      */
 
@@ -233,7 +238,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Slug of the current ProductData.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
-     * @param productSlug
+     * @param productSlug value to be set
      * @return Builder
      */
 
@@ -292,6 +297,10 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this.productSlug;
     }
 
+    /**
+     * builds ShoppingListLineItem with checking for non-null required values
+     * @return ShoppingListLineItem
+     */
     public ShoppingListLineItem build() {
         Objects.requireNonNull(addedAt, ShoppingListLineItem.class + ": addedAt is missing");
         Objects.requireNonNull(id, ShoppingListLineItem.class + ": id is missing");
@@ -304,7 +313,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     * builds ShoppingListLineItem without checking for non null required values
+     * builds ShoppingListLineItem without checking for non-null required values
+     * @return ShoppingListLineItem
      */
     public ShoppingListLineItem buildUnchecked() {
         return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, name, productId, productType, quantity,

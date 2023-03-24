@@ -30,7 +30,7 @@ public class ShoppingListRemoveLineItemActionBuilder implements Builder<Shopping
 
     /**
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ShoppingListRemoveLineItemActionBuilder implements Builder<Shopping
 
     /**
      *  <p>Amount to remove from the <code>quantity</code> of the ShoppingListLineItem. If not set, the ShoppingListLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the ShoppingListLineItem, the ShoppingListLineItem is removed from the ShoppingList.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ShoppingListRemoveLineItemActionBuilder implements Builder<Shopping
         return this.quantity;
     }
 
+    /**
+     * builds ShoppingListRemoveLineItemAction with checking for non-null required values
+     * @return ShoppingListRemoveLineItemAction
+     */
     public ShoppingListRemoveLineItemAction build() {
         Objects.requireNonNull(lineItemId, ShoppingListRemoveLineItemAction.class + ": lineItemId is missing");
         return new ShoppingListRemoveLineItemActionImpl(lineItemId, quantity);
     }
 
     /**
-     * builds ShoppingListRemoveLineItemAction without checking for non null required values
+     * builds ShoppingListRemoveLineItemAction without checking for non-null required values
+     * @return ShoppingListRemoveLineItemAction
      */
     public ShoppingListRemoveLineItemAction buildUnchecked() {
         return new ShoppingListRemoveLineItemActionImpl(lineItemId, quantity);

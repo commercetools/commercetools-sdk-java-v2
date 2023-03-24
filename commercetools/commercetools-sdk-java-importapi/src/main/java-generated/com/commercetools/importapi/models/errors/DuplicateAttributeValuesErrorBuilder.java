@@ -29,7 +29,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this.attributes;
     }
 
+    /**
+     * builds DuplicateAttributeValuesError with checking for non-null required values
+     * @return DuplicateAttributeValuesError
+     */
     public DuplicateAttributeValuesError build() {
         Objects.requireNonNull(message, DuplicateAttributeValuesError.class + ": message is missing");
         Objects.requireNonNull(attributes, DuplicateAttributeValuesError.class + ": attributes is missing");
@@ -120,7 +126,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     * builds DuplicateAttributeValuesError without checking for non null required values
+     * builds DuplicateAttributeValuesError without checking for non-null required values
+     * @return DuplicateAttributeValuesError
      */
     public DuplicateAttributeValuesError buildUnchecked() {
         return new DuplicateAttributeValuesErrorImpl(message, attributes);

@@ -28,7 +28,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
-     * @param returnInfo
+     * @param returnInfo value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
-     * @param returnInfo
+     * @param returnInfo value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
-     * @param returnInfo
+     * @param returnInfo value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @param builder function to build the returnInfo value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @param builder function to build the returnInfo value
      * @return Builder
      */
 
@@ -96,12 +98,17 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
         return this.returnInfo;
     }
 
+    /**
+     * builds ReturnInfoSetMessagePayload with checking for non-null required values
+     * @return ReturnInfoSetMessagePayload
+     */
     public ReturnInfoSetMessagePayload build() {
         return new ReturnInfoSetMessagePayloadImpl(returnInfo);
     }
 
     /**
-     * builds ReturnInfoSetMessagePayload without checking for non null required values
+     * builds ReturnInfoSetMessagePayload without checking for non-null required values
+     * @return ReturnInfoSetMessagePayload
      */
     public ReturnInfoSetMessagePayload buildUnchecked() {
         return new ReturnInfoSetMessagePayloadImpl(returnInfo);

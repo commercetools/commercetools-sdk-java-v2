@@ -34,7 +34,7 @@ public class ShoppingListSetTextLineItemCustomFieldActionBuilder
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
-     * @param textLineItemId
+     * @param textLineItemId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ShoppingListSetTextLineItemCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class ShoppingListSetTextLineItemCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -78,6 +78,10 @@ public class ShoppingListSetTextLineItemCustomFieldActionBuilder
         return this.value;
     }
 
+    /**
+     * builds ShoppingListSetTextLineItemCustomFieldAction with checking for non-null required values
+     * @return ShoppingListSetTextLineItemCustomFieldAction
+     */
     public ShoppingListSetTextLineItemCustomFieldAction build() {
         Objects.requireNonNull(textLineItemId,
             ShoppingListSetTextLineItemCustomFieldAction.class + ": textLineItemId is missing");
@@ -86,7 +90,8 @@ public class ShoppingListSetTextLineItemCustomFieldActionBuilder
     }
 
     /**
-     * builds ShoppingListSetTextLineItemCustomFieldAction without checking for non null required values
+     * builds ShoppingListSetTextLineItemCustomFieldAction without checking for non-null required values
+     * @return ShoppingListSetTextLineItemCustomFieldAction
      */
     public ShoppingListSetTextLineItemCustomFieldAction buildUnchecked() {
         return new ShoppingListSetTextLineItemCustomFieldActionImpl(textLineItemId, name, value);

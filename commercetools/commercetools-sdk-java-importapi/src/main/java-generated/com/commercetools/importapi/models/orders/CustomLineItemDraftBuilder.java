@@ -66,6 +66,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -93,7 +94,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -104,6 +105,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -115,6 +117,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -127,7 +130,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -139,7 +142,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -151,6 +154,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -162,7 +166,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -173,7 +177,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -184,7 +188,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -196,7 +200,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -208,7 +212,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -223,6 +227,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -237,6 +242,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -249,6 +255,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>References a tax category by key.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -261,7 +268,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>References a tax category by key.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -273,6 +280,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -284,7 +292,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -296,6 +304,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -308,7 +317,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -320,7 +329,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -332,7 +341,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -344,7 +353,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -359,6 +368,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
 
@@ -374,6 +384,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
 
@@ -387,6 +398,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -400,7 +412,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -465,6 +477,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this.shippingDetails;
     }
 
+    /**
+     * builds CustomLineItemDraft with checking for non-null required values
+     * @return CustomLineItemDraft
+     */
     public CustomLineItemDraft build() {
         Objects.requireNonNull(name, CustomLineItemDraft.class + ": name is missing");
         Objects.requireNonNull(money, CustomLineItemDraft.class + ": money is missing");
@@ -476,7 +492,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * builds CustomLineItemDraft without checking for non null required values
+     * builds CustomLineItemDraft without checking for non-null required values
+     * @return CustomLineItemDraft
      */
     public CustomLineItemDraft buildUnchecked() {
         return new CustomLineItemDraftImpl(name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,

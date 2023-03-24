@@ -29,7 +29,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
 
     /**
      *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -76,6 +76,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -108,6 +110,10 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds CartUpdate with checking for non-null required values
+     * @return CartUpdate
+     */
     public CartUpdate build() {
         Objects.requireNonNull(version, CartUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, CartUpdate.class + ": actions is missing");
@@ -115,7 +121,8 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
     }
 
     /**
-     * builds CartUpdate without checking for non null required values
+     * builds CartUpdate without checking for non-null required values
+     * @return CartUpdate
      */
     public CartUpdate buildUnchecked() {
         return new CartUpdateImpl(version, actions);

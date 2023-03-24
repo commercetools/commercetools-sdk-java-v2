@@ -34,6 +34,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Maps to <code>SyncInfo.channel</code></p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Maps to <code>SyncInfo.channel</code></p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Maps to <code>SyncInfo.externalId</code></p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
-     * @param syncedAt
+     * @param syncedAt value to be set
      * @return Builder
      */
 
@@ -89,6 +90,10 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
         return this.syncedAt;
     }
 
+    /**
+     * builds SyncInfo with checking for non-null required values
+     * @return SyncInfo
+     */
     public SyncInfo build() {
         Objects.requireNonNull(channel, SyncInfo.class + ": channel is missing");
         Objects.requireNonNull(syncedAt, SyncInfo.class + ": syncedAt is missing");
@@ -96,7 +101,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     * builds SyncInfo without checking for non null required values
+     * builds SyncInfo without checking for non-null required values
+     * @return SyncInfo
      */
     public SyncInfo buildUnchecked() {
         return new SyncInfoImpl(channel, externalId, syncedAt);

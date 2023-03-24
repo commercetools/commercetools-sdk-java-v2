@@ -43,7 +43,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
-     * @param projectKey
+     * @param projectKey value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -66,6 +66,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -77,6 +78,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
-     * @param resourceUserProvidedIdentifiers
+     * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
 
@@ -102,7 +104,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>Last seen version of the resource.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -113,7 +115,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p>Date and time (UTC) the resource was last deleted.</p>
-     * @param modifiedAt
+     * @param modifiedAt value to be set
      * @return Builder
      */
 
@@ -124,7 +126,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
 
     /**
      *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
-     * @param dataErasure
+     * @param dataErasure value to be set
      * @return Builder
      */
 
@@ -159,6 +161,10 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
         return this.dataErasure;
     }
 
+    /**
+     * builds ResourceDeletedDeliveryPayload with checking for non-null required values
+     * @return ResourceDeletedDeliveryPayload
+     */
     public ResourceDeletedDeliveryPayload build() {
         Objects.requireNonNull(projectKey, ResourceDeletedDeliveryPayload.class + ": projectKey is missing");
         Objects.requireNonNull(resource, ResourceDeletedDeliveryPayload.class + ": resource is missing");
@@ -169,7 +175,8 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     * builds ResourceDeletedDeliveryPayload without checking for non null required values
+     * builds ResourceDeletedDeliveryPayload without checking for non-null required values
+     * @return ResourceDeletedDeliveryPayload
      */
     public ResourceDeletedDeliveryPayload buildUnchecked() {
         return new ResourceDeletedDeliveryPayloadImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,

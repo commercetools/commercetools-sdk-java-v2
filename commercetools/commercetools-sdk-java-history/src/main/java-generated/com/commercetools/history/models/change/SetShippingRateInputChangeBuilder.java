@@ -29,7 +29,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
 
     /**
      *  <p>Update action for <code>setShippingRateInput</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -72,6 +72,10 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
         return this.previousValue;
     }
 
+    /**
+     * builds SetShippingRateInputChange with checking for non-null required values
+     * @return SetShippingRateInputChange
+     */
     public SetShippingRateInputChange build() {
         Objects.requireNonNull(change, SetShippingRateInputChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetShippingRateInputChange.class + ": nextValue is missing");
@@ -80,7 +84,8 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     }
 
     /**
-     * builds SetShippingRateInputChange without checking for non null required values
+     * builds SetShippingRateInputChange without checking for non-null required values
+     * @return SetShippingRateInputChange
      */
     public SetShippingRateInputChange buildUnchecked() {
         return new SetShippingRateInputChangeImpl(change, nextValue, previousValue);

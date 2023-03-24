@@ -35,7 +35,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
 
     /**
      *  <p>Namespace to group CustomObjects.</p>
-     * @param container
+     * @param container value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
 
     /**
      *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
 
     /**
      *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
 
     /**
      *  <p>Current version of the CustomObject.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -94,6 +94,10 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
         return this.version;
     }
 
+    /**
+     * builds CustomObjectDraft with checking for non-null required values
+     * @return CustomObjectDraft
+     */
     public CustomObjectDraft build() {
         Objects.requireNonNull(container, CustomObjectDraft.class + ": container is missing");
         Objects.requireNonNull(key, CustomObjectDraft.class + ": key is missing");
@@ -102,7 +106,8 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
     }
 
     /**
-     * builds CustomObjectDraft without checking for non null required values
+     * builds CustomObjectDraft without checking for non-null required values
+     * @return CustomObjectDraft
      */
     public CustomObjectDraft buildUnchecked() {
         return new CustomObjectDraftImpl(container, key, value, version);

@@ -67,7 +67,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Unique identifier of the InventoryEntry.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Current version of the InventoryEntry.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Date and time (UTC) the InventoryEntry was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -100,7 +100,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Date and time (UTC) the InventoryEntry was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -111,6 +111,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -122,7 +123,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -134,6 +135,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -145,7 +147,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -156,7 +158,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>User-defined unique identifier of the InventoryEntry.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -167,7 +169,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -178,6 +180,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -189,7 +192,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -201,7 +204,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
-     * @param quantityOnStock
+     * @param quantityOnStock value to be set
      * @return Builder
      */
 
@@ -212,7 +215,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
-     * @param availableQuantity
+     * @param availableQuantity value to be set
      * @return Builder
      */
 
@@ -223,7 +226,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
-     * @param restockableInDays
+     * @param restockableInDays value to be set
      * @return Builder
      */
 
@@ -234,7 +237,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Date and time of the next restock.</p>
-     * @param expectedDelivery
+     * @param expectedDelivery value to be set
      * @return Builder
      */
 
@@ -245,6 +248,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -256,7 +260,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -328,6 +332,10 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         return this.custom;
     }
 
+    /**
+     * builds InventoryEntry with checking for non-null required values
+     * @return InventoryEntry
+     */
     public InventoryEntry build() {
         Objects.requireNonNull(id, InventoryEntry.class + ": id is missing");
         Objects.requireNonNull(version, InventoryEntry.class + ": version is missing");
@@ -341,7 +349,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     * builds InventoryEntry without checking for non null required values
+     * builds InventoryEntry without checking for non-null required values
+     * @return InventoryEntry
      */
     public InventoryEntry buildUnchecked() {
         return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,

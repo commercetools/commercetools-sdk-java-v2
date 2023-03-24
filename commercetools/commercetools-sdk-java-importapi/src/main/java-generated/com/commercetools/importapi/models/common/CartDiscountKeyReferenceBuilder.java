@@ -25,7 +25,7 @@ public class CartDiscountKeyReferenceBuilder implements Builder<CartDiscountKeyR
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CartDiscountKeyReferenceBuilder implements Builder<CartDiscountKeyR
         return this.key;
     }
 
+    /**
+     * builds CartDiscountKeyReference with checking for non-null required values
+     * @return CartDiscountKeyReference
+     */
     public CartDiscountKeyReference build() {
         Objects.requireNonNull(key, CartDiscountKeyReference.class + ": key is missing");
         return new CartDiscountKeyReferenceImpl(key);
     }
 
     /**
-     * builds CartDiscountKeyReference without checking for non null required values
+     * builds CartDiscountKeyReference without checking for non-null required values
+     * @return CartDiscountKeyReference
      */
     public CartDiscountKeyReference buildUnchecked() {
         return new CartDiscountKeyReferenceImpl(key);

@@ -49,6 +49,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     * @param builder function to build the quote value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
-     * @param quote
+     * @param quote value to be set
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p><code>version</code> of the Quote from which an Order is created.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
-     * @param quoteStateToAccepted
+     * @param quoteStateToAccepted value to be set
      * @return Builder
      */
 
@@ -93,7 +94,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
-     * @param orderNumber
+     * @param orderNumber value to be set
      * @return Builder
      */
 
@@ -104,7 +105,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -116,7 +117,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -128,7 +129,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>Order will be created with <code>Open</code> status by default.</p>
-     * @param orderState
+     * @param orderState value to be set
      * @return Builder
      */
 
@@ -140,6 +141,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -151,7 +153,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -199,6 +201,10 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
         return this.state;
     }
 
+    /**
+     * builds OrderFromQuoteDraft with checking for non-null required values
+     * @return OrderFromQuoteDraft
+     */
     public OrderFromQuoteDraft build() {
         Objects.requireNonNull(quote, OrderFromQuoteDraft.class + ": quote is missing");
         Objects.requireNonNull(version, OrderFromQuoteDraft.class + ": version is missing");
@@ -207,7 +213,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     * builds OrderFromQuoteDraft without checking for non null required values
+     * builds OrderFromQuoteDraft without checking for non-null required values
+     * @return OrderFromQuoteDraft
      */
     public OrderFromQuoteDraft buildUnchecked() {
         return new OrderFromQuoteDraftImpl(quote, version, quoteStateToAccepted, orderNumber, paymentState,

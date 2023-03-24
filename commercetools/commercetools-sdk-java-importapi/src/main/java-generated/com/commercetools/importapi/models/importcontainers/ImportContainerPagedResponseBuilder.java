@@ -38,7 +38,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The actual number of results returned.</p>
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The total number of results matching the query.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -106,7 +106,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -121,6 +121,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -136,6 +137,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -167,6 +169,10 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
         return this.results;
     }
 
+    /**
+     * builds ImportContainerPagedResponse with checking for non-null required values
+     * @return ImportContainerPagedResponse
+     */
     public ImportContainerPagedResponse build() {
         Objects.requireNonNull(limit, ImportContainerPagedResponse.class + ": limit is missing");
         Objects.requireNonNull(offset, ImportContainerPagedResponse.class + ": offset is missing");
@@ -177,7 +183,8 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     * builds ImportContainerPagedResponse without checking for non null required values
+     * builds ImportContainerPagedResponse without checking for non-null required values
+     * @return ImportContainerPagedResponse
      */
     public ImportContainerPagedResponse buildUnchecked() {
         return new ImportContainerPagedResponseImpl(limit, offset, count, total, results);

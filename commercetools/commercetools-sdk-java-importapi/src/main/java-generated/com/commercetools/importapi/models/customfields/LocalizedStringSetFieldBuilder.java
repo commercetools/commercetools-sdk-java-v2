@@ -26,7 +26,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -93,13 +95,18 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
         return this.value;
     }
 
+    /**
+     * builds LocalizedStringSetField with checking for non-null required values
+     * @return LocalizedStringSetField
+     */
     public LocalizedStringSetField build() {
         Objects.requireNonNull(value, LocalizedStringSetField.class + ": value is missing");
         return new LocalizedStringSetFieldImpl(value);
     }
 
     /**
-     * builds LocalizedStringSetField without checking for non null required values
+     * builds LocalizedStringSetField without checking for non-null required values
+     * @return LocalizedStringSetField
      */
     public LocalizedStringSetField buildUnchecked() {
         return new LocalizedStringSetFieldImpl(value);

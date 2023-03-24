@@ -28,7 +28,7 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
 
     /**
      *  <p>URI of the topic.</p>
-     * @param uri
+     * @param uri value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
-     * @param accessKey
+     * @param accessKey value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
         return this.accessKey;
     }
 
+    /**
+     * builds AzureEventGridDestination with checking for non-null required values
+     * @return AzureEventGridDestination
+     */
     public AzureEventGridDestination build() {
         Objects.requireNonNull(uri, AzureEventGridDestination.class + ": uri is missing");
         Objects.requireNonNull(accessKey, AzureEventGridDestination.class + ": accessKey is missing");
@@ -63,7 +67,8 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
     }
 
     /**
-     * builds AzureEventGridDestination without checking for non null required values
+     * builds AzureEventGridDestination without checking for non-null required values
+     * @return AzureEventGridDestination
      */
     public AzureEventGridDestination buildUnchecked() {
         return new AzureEventGridDestinationImpl(uri, accessKey);

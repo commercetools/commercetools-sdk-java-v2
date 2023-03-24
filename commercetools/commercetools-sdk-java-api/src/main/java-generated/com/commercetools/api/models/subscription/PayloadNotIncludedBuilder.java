@@ -28,7 +28,7 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
 
     /**
      *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
-     * @param reason
+     * @param reason value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
 
     /**
      *  <p>Value of the <code>type</code> field in the original payload.</p>
-     * @param payloadType
+     * @param payloadType value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
         return this.payloadType;
     }
 
+    /**
+     * builds PayloadNotIncluded with checking for non-null required values
+     * @return PayloadNotIncluded
+     */
     public PayloadNotIncluded build() {
         Objects.requireNonNull(reason, PayloadNotIncluded.class + ": reason is missing");
         Objects.requireNonNull(payloadType, PayloadNotIncluded.class + ": payloadType is missing");
@@ -63,7 +67,8 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
     }
 
     /**
-     * builds PayloadNotIncluded without checking for non null required values
+     * builds PayloadNotIncluded without checking for non-null required values
+     * @return PayloadNotIncluded
      */
     public PayloadNotIncluded buildUnchecked() {
         return new PayloadNotIncludedImpl(reason, payloadType);

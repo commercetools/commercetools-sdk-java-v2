@@ -50,7 +50,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     /**
      *  <p>Describes the Type of the Attribute.</p>
      *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -62,6 +62,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     /**
      *  <p>Describes the Type of the Attribute.</p>
      *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -74,7 +75,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     /**
      *  <p>User-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -85,6 +86,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -96,7 +98,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -107,7 +109,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Set to <code>true</code> if the Attribute is required to have a value on a ProductVariant.</p>
-     * @param isRequired
+     * @param isRequired value to be set
      * @return Builder
      */
 
@@ -118,7 +120,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
-     * @param attributeConstraint
+     * @param attributeConstraint value to be set
      * @return Builder
      */
 
@@ -130,6 +132,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Provides additional information about the Attribute that aids content managers when setting Product details.</p>
+     * @param builder function to build the inputTip value
      * @return Builder
      */
 
@@ -141,7 +144,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Provides additional information about the Attribute that aids content managers when setting Product details.</p>
-     * @param inputTip
+     * @param inputTip value to be set
      * @return Builder
      */
 
@@ -153,7 +156,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
-     * @param inputHint
+     * @param inputHint value to be set
      * @return Builder
      */
 
@@ -165,7 +168,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
-     * @param isSearchable
+     * @param isSearchable value to be set
      * @return Builder
      */
 
@@ -210,6 +213,10 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
         return this.isSearchable;
     }
 
+    /**
+     * builds AttributeDefinitionDraft with checking for non-null required values
+     * @return AttributeDefinitionDraft
+     */
     public AttributeDefinitionDraft build() {
         Objects.requireNonNull(type, AttributeDefinitionDraft.class + ": type is missing");
         Objects.requireNonNull(name, AttributeDefinitionDraft.class + ": name is missing");
@@ -220,7 +227,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     * builds AttributeDefinitionDraft without checking for non null required values
+     * builds AttributeDefinitionDraft without checking for non-null required values
+     * @return AttributeDefinitionDraft
      */
     public AttributeDefinitionDraft buildUnchecked() {
         return new AttributeDefinitionDraftImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,

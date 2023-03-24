@@ -43,7 +43,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Key of the ProductVariant for which Discount was set.</p>
-     * @param variantKey
+     * @param variantKey value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>SKU of the ProductVariant for which Discount was set.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Unique identifier of the Price.</p>
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -87,6 +87,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -98,7 +99,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -110,7 +111,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Whether the update was only applied to the staged ProductProjection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -146,6 +147,10 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
         return this.staged;
     }
 
+    /**
+     * builds ProductPriceDiscountsSetUpdatedPrice with checking for non-null required values
+     * @return ProductPriceDiscountsSetUpdatedPrice
+     */
     public ProductPriceDiscountsSetUpdatedPrice build() {
         Objects.requireNonNull(variantId, ProductPriceDiscountsSetUpdatedPrice.class + ": variantId is missing");
         Objects.requireNonNull(priceId, ProductPriceDiscountsSetUpdatedPrice.class + ": priceId is missing");
@@ -154,7 +159,8 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     * builds ProductPriceDiscountsSetUpdatedPrice without checking for non null required values
+     * builds ProductPriceDiscountsSetUpdatedPrice without checking for non-null required values
+     * @return ProductPriceDiscountsSetUpdatedPrice
      */
     public ProductPriceDiscountsSetUpdatedPrice buildUnchecked() {
         return new ProductPriceDiscountsSetUpdatedPriceImpl(variantId, variantKey, sku, priceId, discounted, staged);

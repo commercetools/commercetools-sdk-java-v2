@@ -32,7 +32,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *  <p>Update action for <code>setGeoLocation</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
         return this.previousValue;
     }
 
+    /**
+     * builds SetGeoLocationChange with checking for non-null required values
+     * @return SetGeoLocationChange
+     */
     public SetGeoLocationChange build() {
         Objects.requireNonNull(change, SetGeoLocationChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetGeoLocationChange.class + ": nextValue is missing");
@@ -106,7 +112,8 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     * builds SetGeoLocationChange without checking for non null required values
+     * builds SetGeoLocationChange without checking for non-null required values
+     * @return SetGeoLocationChange
      */
     public SetGeoLocationChange buildUnchecked() {
         return new SetGeoLocationChangeImpl(change, nextValue, previousValue);

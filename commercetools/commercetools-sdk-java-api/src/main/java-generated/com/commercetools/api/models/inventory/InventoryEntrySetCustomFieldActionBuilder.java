@@ -30,7 +30,7 @@ public class InventoryEntrySetCustomFieldActionBuilder implements Builder<Invent
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class InventoryEntrySetCustomFieldActionBuilder implements Builder<Invent
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class InventoryEntrySetCustomFieldActionBuilder implements Builder<Invent
         return this.value;
     }
 
+    /**
+     * builds InventoryEntrySetCustomFieldAction with checking for non-null required values
+     * @return InventoryEntrySetCustomFieldAction
+     */
     public InventoryEntrySetCustomFieldAction build() {
         Objects.requireNonNull(name, InventoryEntrySetCustomFieldAction.class + ": name is missing");
         return new InventoryEntrySetCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds InventoryEntrySetCustomFieldAction without checking for non null required values
+     * builds InventoryEntrySetCustomFieldAction without checking for non-null required values
+     * @return InventoryEntrySetCustomFieldAction
      */
     public InventoryEntrySetCustomFieldAction buildUnchecked() {
         return new InventoryEntrySetCustomFieldActionImpl(name, value);

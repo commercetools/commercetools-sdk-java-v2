@@ -29,6 +29,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
 
     /**
      *  <p>Line Item that was added to the Order.</p>
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
 
     /**
      *  <p>Line Item that was added to the Order.</p>
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
 
     /**
      *  <p>Quantity of Line Items that were added to the Order.</p>
-     * @param addedQuantity
+     * @param addedQuantity value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
         return this.addedQuantity;
     }
 
+    /**
+     * builds OrderLineItemAddedMessagePayload with checking for non-null required values
+     * @return OrderLineItemAddedMessagePayload
+     */
     public OrderLineItemAddedMessagePayload build() {
         Objects.requireNonNull(lineItem, OrderLineItemAddedMessagePayload.class + ": lineItem is missing");
         Objects.requireNonNull(addedQuantity, OrderLineItemAddedMessagePayload.class + ": addedQuantity is missing");
@@ -75,7 +80,8 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     }
 
     /**
-     * builds OrderLineItemAddedMessagePayload without checking for non null required values
+     * builds OrderLineItemAddedMessagePayload without checking for non-null required values
+     * @return OrderLineItemAddedMessagePayload
      */
     public OrderLineItemAddedMessagePayload buildUnchecked() {
         return new OrderLineItemAddedMessagePayloadImpl(lineItem, addedQuantity);

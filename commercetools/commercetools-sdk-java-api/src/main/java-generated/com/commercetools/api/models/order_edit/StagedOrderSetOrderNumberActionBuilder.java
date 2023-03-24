@@ -27,7 +27,7 @@ public class StagedOrderSetOrderNumberActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param orderNumber
+     * @param orderNumber value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class StagedOrderSetOrderNumberActionBuilder implements Builder<StagedOrd
         return this.orderNumber;
     }
 
+    /**
+     * builds StagedOrderSetOrderNumberAction with checking for non-null required values
+     * @return StagedOrderSetOrderNumberAction
+     */
     public StagedOrderSetOrderNumberAction build() {
         return new StagedOrderSetOrderNumberActionImpl(orderNumber);
     }
 
     /**
-     * builds StagedOrderSetOrderNumberAction without checking for non null required values
+     * builds StagedOrderSetOrderNumberAction without checking for non-null required values
+     * @return StagedOrderSetOrderNumberAction
      */
     public StagedOrderSetOrderNumberAction buildUnchecked() {
         return new StagedOrderSetOrderNumberActionImpl(orderNumber);

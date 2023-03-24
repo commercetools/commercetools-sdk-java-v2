@@ -26,6 +26,7 @@ public class ShoppingListChangeNameActionBuilder implements Builder<ShoppingList
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ShoppingListChangeNameActionBuilder implements Builder<ShoppingList
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class ShoppingListChangeNameActionBuilder implements Builder<ShoppingList
         return this.name;
     }
 
+    /**
+     * builds ShoppingListChangeNameAction with checking for non-null required values
+     * @return ShoppingListChangeNameAction
+     */
     public ShoppingListChangeNameAction build() {
         Objects.requireNonNull(name, ShoppingListChangeNameAction.class + ": name is missing");
         return new ShoppingListChangeNameActionImpl(name);
     }
 
     /**
-     * builds ShoppingListChangeNameAction without checking for non null required values
+     * builds ShoppingListChangeNameAction without checking for non-null required values
+     * @return ShoppingListChangeNameAction
      */
     public ShoppingListChangeNameAction buildUnchecked() {
         return new ShoppingListChangeNameActionImpl(name);

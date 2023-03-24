@@ -58,7 +58,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>User-defined unique identifier for the Standalone Price.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -80,7 +80,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the money value of this Price.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -91,6 +91,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -102,7 +103,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the country for which this Price is valid.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -113,6 +114,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -126,7 +128,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -138,6 +140,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -149,7 +152,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -161,7 +164,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the date from which the Price is valid.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -172,7 +175,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the date until the Price is valid.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -183,7 +186,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -195,7 +198,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -207,7 +210,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -222,6 +225,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -236,6 +240,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets price tiers.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -248,6 +253,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -259,7 +265,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -271,6 +277,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -282,7 +289,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -344,6 +351,10 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
         return this.custom;
     }
 
+    /**
+     * builds StandalonePriceImport with checking for non-null required values
+     * @return StandalonePriceImport
+     */
     public StandalonePriceImport build() {
         Objects.requireNonNull(key, StandalonePriceImport.class + ": key is missing");
         Objects.requireNonNull(sku, StandalonePriceImport.class + ": sku is missing");
@@ -353,7 +364,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     * builds StandalonePriceImport without checking for non null required values
+     * builds StandalonePriceImport without checking for non-null required values
+     * @return StandalonePriceImport
      */
     public StandalonePriceImport buildUnchecked() {
         return new StandalonePriceImportImpl(key, sku, value, country, customerGroup, channel, validFrom, validUntil,

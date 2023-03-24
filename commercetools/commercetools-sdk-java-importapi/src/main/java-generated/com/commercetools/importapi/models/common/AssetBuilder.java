@@ -43,7 +43,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -90,6 +90,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param builder function to build the sources value
      * @return Builder
      */
 
@@ -104,6 +105,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param builder function to build the sources value
      * @return Builder
      */
 
@@ -121,6 +123,7 @@ public class AssetBuilder implements Builder<Asset> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -137,7 +140,7 @@ public class AssetBuilder implements Builder<Asset> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -153,6 +156,7 @@ public class AssetBuilder implements Builder<Asset> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -169,7 +173,7 @@ public class AssetBuilder implements Builder<Asset> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -181,7 +185,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -192,7 +196,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -203,7 +207,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -217,6 +221,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -228,7 +233,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -264,6 +269,10 @@ public class AssetBuilder implements Builder<Asset> {
         return this.custom;
     }
 
+    /**
+     * builds Asset with checking for non-null required values
+     * @return Asset
+     */
     public Asset build() {
         Objects.requireNonNull(key, Asset.class + ": key is missing");
         Objects.requireNonNull(sources, Asset.class + ": sources is missing");
@@ -272,7 +281,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * builds Asset without checking for non null required values
+     * builds Asset without checking for non-null required values
+     * @return Asset
      */
     public Asset buildUnchecked() {
         return new AssetImpl(key, sources, name, description, tags, custom);

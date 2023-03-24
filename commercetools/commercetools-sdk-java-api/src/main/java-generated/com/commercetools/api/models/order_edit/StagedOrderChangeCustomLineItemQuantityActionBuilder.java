@@ -29,7 +29,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
         return this.quantity;
     }
 
+    /**
+     * builds StagedOrderChangeCustomLineItemQuantityAction with checking for non-null required values
+     * @return StagedOrderChangeCustomLineItemQuantityAction
+     */
     public StagedOrderChangeCustomLineItemQuantityAction build() {
         Objects.requireNonNull(customLineItemId,
             StagedOrderChangeCustomLineItemQuantityAction.class + ": customLineItemId is missing");
@@ -65,7 +69,8 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
     }
 
     /**
-     * builds StagedOrderChangeCustomLineItemQuantityAction without checking for non null required values
+     * builds StagedOrderChangeCustomLineItemQuantityAction without checking for non-null required values
+     * @return StagedOrderChangeCustomLineItemQuantityAction
      */
     public StagedOrderChangeCustomLineItemQuantityAction buildUnchecked() {
         return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);

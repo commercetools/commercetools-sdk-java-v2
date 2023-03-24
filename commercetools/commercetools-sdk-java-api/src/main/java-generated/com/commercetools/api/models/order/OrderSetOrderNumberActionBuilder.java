@@ -27,7 +27,7 @@ public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNu
 
     /**
      *
-     * @param orderNumber
+     * @param orderNumber value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNu
         return this.orderNumber;
     }
 
+    /**
+     * builds OrderSetOrderNumberAction with checking for non-null required values
+     * @return OrderSetOrderNumberAction
+     */
     public OrderSetOrderNumberAction build() {
         return new OrderSetOrderNumberActionImpl(orderNumber);
     }
 
     /**
-     * builds OrderSetOrderNumberAction without checking for non null required values
+     * builds OrderSetOrderNumberAction without checking for non-null required values
+     * @return OrderSetOrderNumberAction
      */
     public OrderSetOrderNumberAction buildUnchecked() {
         return new OrderSetOrderNumberActionImpl(orderNumber);

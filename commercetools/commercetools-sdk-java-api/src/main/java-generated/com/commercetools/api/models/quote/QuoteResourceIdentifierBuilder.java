@@ -30,7 +30,7 @@ public class QuoteResourceIdentifierBuilder implements Builder<QuoteResourceIden
 
     /**
      *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class QuoteResourceIdentifierBuilder implements Builder<QuoteResourceIden
 
     /**
      *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class QuoteResourceIdentifierBuilder implements Builder<QuoteResourceIden
         return this.key;
     }
 
+    /**
+     * builds QuoteResourceIdentifier with checking for non-null required values
+     * @return QuoteResourceIdentifier
+     */
     public QuoteResourceIdentifier build() {
         return new QuoteResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds QuoteResourceIdentifier without checking for non null required values
+     * builds QuoteResourceIdentifier without checking for non-null required values
+     * @return QuoteResourceIdentifier
      */
     public QuoteResourceIdentifier buildUnchecked() {
         return new QuoteResourceIdentifierImpl(id, key);

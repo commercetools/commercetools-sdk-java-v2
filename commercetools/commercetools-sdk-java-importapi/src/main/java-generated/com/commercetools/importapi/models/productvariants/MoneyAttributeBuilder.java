@@ -31,7 +31,7 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -53,6 +53,7 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
         return this.value;
     }
 
+    /**
+     * builds MoneyAttribute with checking for non-null required values
+     * @return MoneyAttribute
+     */
     public MoneyAttribute build() {
         Objects.requireNonNull(value, MoneyAttribute.class + ": value is missing");
         return new MoneyAttributeImpl(name, value);
     }
 
     /**
-     * builds MoneyAttribute without checking for non null required values
+     * builds MoneyAttribute without checking for non-null required values
+     * @return MoneyAttribute
      */
     public MoneyAttribute buildUnchecked() {
         return new MoneyAttributeImpl(name, value);

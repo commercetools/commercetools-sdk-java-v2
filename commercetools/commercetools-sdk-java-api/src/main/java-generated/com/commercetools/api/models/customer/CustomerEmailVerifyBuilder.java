@@ -30,7 +30,7 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
 
     /**
      *  <p>Expected version of the Customer.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
 
     /**
      *  <p>Value of the token to verify Customer email.</p>
-     * @param tokenValue
+     * @param tokenValue value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
         return this.tokenValue;
     }
 
+    /**
+     * builds CustomerEmailVerify with checking for non-null required values
+     * @return CustomerEmailVerify
+     */
     public CustomerEmailVerify build() {
         Objects.requireNonNull(tokenValue, CustomerEmailVerify.class + ": tokenValue is missing");
         return new CustomerEmailVerifyImpl(version, tokenValue);
     }
 
     /**
-     * builds CustomerEmailVerify without checking for non null required values
+     * builds CustomerEmailVerify without checking for non-null required values
+     * @return CustomerEmailVerify
      */
     public CustomerEmailVerify buildUnchecked() {
         return new CustomerEmailVerifyImpl(version, tokenValue);

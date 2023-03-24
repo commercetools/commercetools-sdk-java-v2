@@ -34,7 +34,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      *  <p>External reference that identifies the current status of the Payment.</p>
-     * @param interfaceCode
+     * @param interfaceCode value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      *  <p>Text describing the current status of the Payment.</p>
-     * @param interfaceText
+     * @param interfaceText value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -92,12 +93,17 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
         return this.state;
     }
 
+    /**
+     * builds PaymentStatusDraft with checking for non-null required values
+     * @return PaymentStatusDraft
+     */
     public PaymentStatusDraft build() {
         return new PaymentStatusDraftImpl(interfaceCode, interfaceText, state);
     }
 
     /**
-     * builds PaymentStatusDraft without checking for non null required values
+     * builds PaymentStatusDraft without checking for non-null required values
+     * @return PaymentStatusDraft
      */
     public PaymentStatusDraft buildUnchecked() {
         return new PaymentStatusDraftImpl(interfaceCode, interfaceText, state);

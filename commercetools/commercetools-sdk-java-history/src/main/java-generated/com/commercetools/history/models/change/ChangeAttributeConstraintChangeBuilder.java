@@ -34,7 +34,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
 
     /**
      *  <p>name of the updated attribute</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -94,6 +94,10 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeAttributeConstraintChange with checking for non-null required values
+     * @return ChangeAttributeConstraintChange
+     */
     public ChangeAttributeConstraintChange build() {
         Objects.requireNonNull(change, ChangeAttributeConstraintChange.class + ": change is missing");
         Objects.requireNonNull(attributeName, ChangeAttributeConstraintChange.class + ": attributeName is missing");
@@ -103,7 +107,8 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
     }
 
     /**
-     * builds ChangeAttributeConstraintChange without checking for non null required values
+     * builds ChangeAttributeConstraintChange without checking for non-null required values
+     * @return ChangeAttributeConstraintChange
      */
     public ChangeAttributeConstraintChange buildUnchecked() {
         return new ChangeAttributeConstraintChangeImpl(change, attributeName, previousValue, nextValue);

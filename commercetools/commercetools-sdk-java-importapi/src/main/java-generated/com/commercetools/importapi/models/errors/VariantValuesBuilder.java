@@ -34,7 +34,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -96,6 +97,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -120,7 +122,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -132,7 +134,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -147,6 +149,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -162,6 +165,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      *
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -186,6 +190,10 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this.attributes;
     }
 
+    /**
+     * builds VariantValues with checking for non-null required values
+     * @return VariantValues
+     */
     public VariantValues build() {
         Objects.requireNonNull(prices, VariantValues.class + ": prices is missing");
         Objects.requireNonNull(attributes, VariantValues.class + ": attributes is missing");
@@ -193,7 +201,8 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     * builds VariantValues without checking for non null required values
+     * builds VariantValues without checking for non-null required values
+     * @return VariantValues
      */
     public VariantValues buildUnchecked() {
         return new VariantValuesImpl(sku, prices, attributes);

@@ -29,7 +29,7 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
 
     /**
      *  <p>Descriptive localized label of the value.</p>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
 
     /**
      *  <p>Descriptive localized label of the value.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
         return this.label;
     }
 
+    /**
+     * builds CustomFieldLocalizedEnumValue with checking for non-null required values
+     * @return CustomFieldLocalizedEnumValue
+     */
     public CustomFieldLocalizedEnumValue build() {
         Objects.requireNonNull(key, CustomFieldLocalizedEnumValue.class + ": key is missing");
         Objects.requireNonNull(label, CustomFieldLocalizedEnumValue.class + ": label is missing");
@@ -75,7 +80,8 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
     }
 
     /**
-     * builds CustomFieldLocalizedEnumValue without checking for non null required values
+     * builds CustomFieldLocalizedEnumValue without checking for non-null required values
+     * @return CustomFieldLocalizedEnumValue
      */
     public CustomFieldLocalizedEnumValue buildUnchecked() {
         return new CustomFieldLocalizedEnumValueImpl(key, label);

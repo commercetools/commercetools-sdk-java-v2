@@ -34,7 +34,7 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
 
     /**
      *  <p><code>id</code> of the Address to change.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
 
     /**
      *  <p><code>key</code> of the Address to change.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
 
     /**
      *  <p>Value to set.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -90,13 +91,18 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
         return this.address;
     }
 
+    /**
+     * builds MyCustomerChangeAddressAction with checking for non-null required values
+     * @return MyCustomerChangeAddressAction
+     */
     public MyCustomerChangeAddressAction build() {
         Objects.requireNonNull(address, MyCustomerChangeAddressAction.class + ": address is missing");
         return new MyCustomerChangeAddressActionImpl(addressId, addressKey, address);
     }
 
     /**
-     * builds MyCustomerChangeAddressAction without checking for non null required values
+     * builds MyCustomerChangeAddressAction without checking for non-null required values
+     * @return MyCustomerChangeAddressAction
      */
     public MyCustomerChangeAddressAction buildUnchecked() {
         return new MyCustomerChangeAddressActionImpl(addressId, addressKey, address);

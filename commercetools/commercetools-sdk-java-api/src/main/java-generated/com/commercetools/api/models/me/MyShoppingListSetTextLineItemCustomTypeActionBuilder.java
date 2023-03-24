@@ -35,7 +35,7 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
-     * @param textLineItemId
+     * @param textLineItemId value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -104,6 +106,10 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
         return this.fields;
     }
 
+    /**
+     * builds MyShoppingListSetTextLineItemCustomTypeAction with checking for non-null required values
+     * @return MyShoppingListSetTextLineItemCustomTypeAction
+     */
     public MyShoppingListSetTextLineItemCustomTypeAction build() {
         Objects.requireNonNull(textLineItemId,
             MyShoppingListSetTextLineItemCustomTypeAction.class + ": textLineItemId is missing");
@@ -111,7 +117,8 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
     }
 
     /**
-     * builds MyShoppingListSetTextLineItemCustomTypeAction without checking for non null required values
+     * builds MyShoppingListSetTextLineItemCustomTypeAction without checking for non-null required values
+     * @return MyShoppingListSetTextLineItemCustomTypeAction
      */
     public MyShoppingListSetTextLineItemCustomTypeAction buildUnchecked() {
         return new MyShoppingListSetTextLineItemCustomTypeActionImpl(textLineItemId, type, fields);

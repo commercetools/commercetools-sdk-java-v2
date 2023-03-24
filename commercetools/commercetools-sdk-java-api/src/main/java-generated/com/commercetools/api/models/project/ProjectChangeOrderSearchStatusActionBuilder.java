@@ -25,7 +25,7 @@ public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<Proj
 
     /**
      *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
-     * @param status
+     * @param status value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<Proj
         return this.status;
     }
 
+    /**
+     * builds ProjectChangeOrderSearchStatusAction with checking for non-null required values
+     * @return ProjectChangeOrderSearchStatusAction
+     */
     public ProjectChangeOrderSearchStatusAction build() {
         Objects.requireNonNull(status, ProjectChangeOrderSearchStatusAction.class + ": status is missing");
         return new ProjectChangeOrderSearchStatusActionImpl(status);
     }
 
     /**
-     * builds ProjectChangeOrderSearchStatusAction without checking for non null required values
+     * builds ProjectChangeOrderSearchStatusAction without checking for non-null required values
+     * @return ProjectChangeOrderSearchStatusAction
      */
     public ProjectChangeOrderSearchStatusAction buildUnchecked() {
         return new ProjectChangeOrderSearchStatusActionImpl(status);

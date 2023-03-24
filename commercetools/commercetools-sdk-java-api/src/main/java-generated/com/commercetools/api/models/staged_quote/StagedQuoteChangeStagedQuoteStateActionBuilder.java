@@ -26,7 +26,7 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
 
     /**
      *  <p>New state to be set for the Staged Quote.</p>
-     * @param stagedQuoteState
+     * @param stagedQuoteState value to be set
      * @return Builder
      */
 
@@ -40,6 +40,10 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
         return this.stagedQuoteState;
     }
 
+    /**
+     * builds StagedQuoteChangeStagedQuoteStateAction with checking for non-null required values
+     * @return StagedQuoteChangeStagedQuoteStateAction
+     */
     public StagedQuoteChangeStagedQuoteStateAction build() {
         Objects.requireNonNull(stagedQuoteState,
             StagedQuoteChangeStagedQuoteStateAction.class + ": stagedQuoteState is missing");
@@ -47,7 +51,8 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
     }
 
     /**
-     * builds StagedQuoteChangeStagedQuoteStateAction without checking for non null required values
+     * builds StagedQuoteChangeStagedQuoteStateAction without checking for non-null required values
+     * @return StagedQuoteChangeStagedQuoteStateAction
      */
     public StagedQuoteChangeStagedQuoteStateAction buildUnchecked() {
         return new StagedQuoteChangeStagedQuoteStateActionImpl(stagedQuoteState);

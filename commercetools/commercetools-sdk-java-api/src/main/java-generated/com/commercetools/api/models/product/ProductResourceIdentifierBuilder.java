@@ -30,7 +30,7 @@ public class ProductResourceIdentifierBuilder implements Builder<ProductResource
 
     /**
      *  <p>Unique identifier of the referenced Product.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ProductResourceIdentifierBuilder implements Builder<ProductResource
 
     /**
      *  <p>User-defined unique identifier of the referenced Product.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class ProductResourceIdentifierBuilder implements Builder<ProductResource
         return this.key;
     }
 
+    /**
+     * builds ProductResourceIdentifier with checking for non-null required values
+     * @return ProductResourceIdentifier
+     */
     public ProductResourceIdentifier build() {
         return new ProductResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds ProductResourceIdentifier without checking for non null required values
+     * builds ProductResourceIdentifier without checking for non-null required values
+     * @return ProductResourceIdentifier
      */
     public ProductResourceIdentifier buildUnchecked() {
         return new ProductResourceIdentifierImpl(id, key);

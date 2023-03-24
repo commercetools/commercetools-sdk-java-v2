@@ -24,7 +24,7 @@ public class ReviewSetTargetActionBuilder implements Builder<ReviewSetTargetActi
 
     /**
      *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -37,13 +37,18 @@ public class ReviewSetTargetActionBuilder implements Builder<ReviewSetTargetActi
         return this.target;
     }
 
+    /**
+     * builds ReviewSetTargetAction with checking for non-null required values
+     * @return ReviewSetTargetAction
+     */
     public ReviewSetTargetAction build() {
         Objects.requireNonNull(target, ReviewSetTargetAction.class + ": target is missing");
         return new ReviewSetTargetActionImpl(target);
     }
 
     /**
-     * builds ReviewSetTargetAction without checking for non null required values
+     * builds ReviewSetTargetAction without checking for non-null required values
+     * @return ReviewSetTargetAction
      */
     public ReviewSetTargetAction buildUnchecked() {
         return new ReviewSetTargetActionImpl(target);

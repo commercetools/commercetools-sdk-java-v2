@@ -31,6 +31,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -53,6 +54,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -64,7 +66,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -82,13 +84,18 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
         return this.fields;
     }
 
+    /**
+     * builds CustomFieldsDraft with checking for non-null required values
+     * @return CustomFieldsDraft
+     */
     public CustomFieldsDraft build() {
         Objects.requireNonNull(type, CustomFieldsDraft.class + ": type is missing");
         return new CustomFieldsDraftImpl(type, fields);
     }
 
     /**
-     * builds CustomFieldsDraft without checking for non null required values
+     * builds CustomFieldsDraft without checking for non-null required values
+     * @return CustomFieldsDraft
      */
     public CustomFieldsDraft buildUnchecked() {
         return new CustomFieldsDraftImpl(type, fields);

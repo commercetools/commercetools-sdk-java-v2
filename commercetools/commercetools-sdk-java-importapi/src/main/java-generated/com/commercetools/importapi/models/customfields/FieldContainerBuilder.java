@@ -25,6 +25,8 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
 
     /**
      *  <p>Mapping from the custom field name to the actual value.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public FieldContainerBuilder values(
@@ -35,6 +37,9 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
 
     /**
      *  <p>Mapping from the custom field name to the actual value.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public FieldContainerBuilder addValue(final String key,
@@ -50,12 +55,17 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
         return this.values;
     }
 
+    /**
+     * builds FieldContainer with checking for non-null required values
+     * @return FieldContainer
+     */
     public FieldContainer build() {
         return new FieldContainerImpl(values);
     }
 
     /**
-     * builds FieldContainer without checking for non null required values
+     * builds FieldContainer without checking for non-null required values
+     * @return FieldContainer
      */
     public FieldContainer buildUnchecked() {
         return new FieldContainerImpl(values);

@@ -26,6 +26,7 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
 
     /**
      *  <p>References a product type by key.</p>
+     * @param builder function to build the typeReference value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
 
     /**
      *  <p>References a product type by key.</p>
-     * @param typeReference
+     * @param typeReference value to be set
      * @return Builder
      */
 
@@ -53,13 +54,18 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
         return this.typeReference;
     }
 
+    /**
+     * builds AttributeNestedType with checking for non-null required values
+     * @return AttributeNestedType
+     */
     public AttributeNestedType build() {
         Objects.requireNonNull(typeReference, AttributeNestedType.class + ": typeReference is missing");
         return new AttributeNestedTypeImpl(typeReference);
     }
 
     /**
-     * builds AttributeNestedType without checking for non null required values
+     * builds AttributeNestedType without checking for non-null required values
+     * @return AttributeNestedType
      */
     public AttributeNestedType buildUnchecked() {
         return new AttributeNestedTypeImpl(typeReference);

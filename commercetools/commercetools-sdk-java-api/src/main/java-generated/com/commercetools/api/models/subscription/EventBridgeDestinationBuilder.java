@@ -28,7 +28,7 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
 
     /**
      *  <p>AWS region that receives the events.</p>
-     * @param region
+     * @param region value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
 
     /**
      *  <p>ID of the AWS account that receives the events.</p>
-     * @param accountId
+     * @param accountId value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
         return this.accountId;
     }
 
+    /**
+     * builds EventBridgeDestination with checking for non-null required values
+     * @return EventBridgeDestination
+     */
     public EventBridgeDestination build() {
         Objects.requireNonNull(region, EventBridgeDestination.class + ": region is missing");
         Objects.requireNonNull(accountId, EventBridgeDestination.class + ": accountId is missing");
@@ -63,7 +67,8 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
     }
 
     /**
-     * builds EventBridgeDestination without checking for non null required values
+     * builds EventBridgeDestination without checking for non-null required values
+     * @return EventBridgeDestination
      */
     public EventBridgeDestination buildUnchecked() {
         return new EventBridgeDestinationImpl(region, accountId);

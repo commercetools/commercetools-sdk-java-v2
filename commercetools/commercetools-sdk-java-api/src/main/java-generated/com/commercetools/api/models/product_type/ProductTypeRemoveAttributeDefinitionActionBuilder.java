@@ -26,7 +26,7 @@ public class ProductTypeRemoveAttributeDefinitionActionBuilder
 
     /**
      *  <p>Name of the Attribute to remove.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class ProductTypeRemoveAttributeDefinitionActionBuilder
         return this.name;
     }
 
+    /**
+     * builds ProductTypeRemoveAttributeDefinitionAction with checking for non-null required values
+     * @return ProductTypeRemoveAttributeDefinitionAction
+     */
     public ProductTypeRemoveAttributeDefinitionAction build() {
         Objects.requireNonNull(name, ProductTypeRemoveAttributeDefinitionAction.class + ": name is missing");
         return new ProductTypeRemoveAttributeDefinitionActionImpl(name);
     }
 
     /**
-     * builds ProductTypeRemoveAttributeDefinitionAction without checking for non null required values
+     * builds ProductTypeRemoveAttributeDefinitionAction without checking for non-null required values
+     * @return ProductTypeRemoveAttributeDefinitionAction
      */
     public ProductTypeRemoveAttributeDefinitionAction buildUnchecked() {
         return new ProductTypeRemoveAttributeDefinitionActionImpl(name);

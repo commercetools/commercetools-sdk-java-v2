@@ -31,7 +31,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
 
     /**
      *  <p>Every Import Operation is assigned with one of the following states.</p>
-     * @param currentState
+     * @param currentState value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
 
     /**
      *  <p>Every Import Operation is assigned with one of the following states.</p>
-     * @param newState
+     * @param newState value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
         return this.newState;
     }
 
+    /**
+     * builds InvalidStateTransitionError with checking for non-null required values
+     * @return InvalidStateTransitionError
+     */
     public InvalidStateTransitionError build() {
         Objects.requireNonNull(message, InvalidStateTransitionError.class + ": message is missing");
         Objects.requireNonNull(currentState, InvalidStateTransitionError.class + ": currentState is missing");
@@ -84,7 +88,8 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-     * builds InvalidStateTransitionError without checking for non null required values
+     * builds InvalidStateTransitionError without checking for non-null required values
+     * @return InvalidStateTransitionError
      */
     public InvalidStateTransitionError buildUnchecked() {
         return new InvalidStateTransitionErrorImpl(message, currentState, newState);

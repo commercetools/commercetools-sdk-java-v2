@@ -35,6 +35,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
 
     /**
      *  <p>The new value of the updated StandalonePrice.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
 
     /**
      *  <p>The new value of the updated StandalonePrice.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
 
     /**
      *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
 
     /**
      *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     * @param builder function to build the oldValue value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
 
     /**
      *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
-     * @param oldValue
+     * @param oldValue value to be set
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
         return this.oldValue;
     }
 
+    /**
+     * builds StandalonePriceValueChangedMessagePayload with checking for non-null required values
+     * @return StandalonePriceValueChangedMessagePayload
+     */
     public StandalonePriceValueChangedMessagePayload build() {
         Objects.requireNonNull(value, StandalonePriceValueChangedMessagePayload.class + ": value is missing");
         Objects.requireNonNull(staged, StandalonePriceValueChangedMessagePayload.class + ": staged is missing");
@@ -110,7 +116,8 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     }
 
     /**
-     * builds StandalonePriceValueChangedMessagePayload without checking for non null required values
+     * builds StandalonePriceValueChangedMessagePayload without checking for non-null required values
+     * @return StandalonePriceValueChangedMessagePayload
      */
     public StandalonePriceValueChangedMessagePayload buildUnchecked() {
         return new StandalonePriceValueChangedMessagePayloadImpl(value, staged, oldValue);

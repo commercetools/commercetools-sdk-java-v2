@@ -61,7 +61,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Unique identifier of the OrderEdit.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The current version of the OrderEdit.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -105,6 +105,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -116,7 +117,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -128,6 +129,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -139,7 +141,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -150,7 +152,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>User-defined unique identifier of the OrderEdit.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -161,6 +163,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The order to be updated with this edit.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -172,7 +175,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The order to be updated with this edit.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -183,7 +186,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
-     * @param stagedActions
+     * @param stagedActions value to be set
      * @return Builder
      */
 
@@ -195,7 +198,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
-     * @param stagedActions
+     * @param stagedActions value to be set
      * @return Builder
      */
 
@@ -207,7 +210,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
-     * @param stagedActions
+     * @param stagedActions value to be set
      * @return Builder
      */
 
@@ -222,6 +225,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @param builder function to build the stagedActions value
      * @return Builder
      */
 
@@ -237,6 +241,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @param builder function to build the stagedActions value
      * @return Builder
      */
 
@@ -250,6 +255,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -261,7 +267,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -272,7 +278,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
-     * @param result
+     * @param result value to be set
      * @return Builder
      */
 
@@ -283,6 +289,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+     * @param builder function to build the result value
      * @return Builder
      */
 
@@ -294,7 +301,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>This field can be used to add textual information regarding the edit.</p>
-     * @param comment
+     * @param comment value to be set
      * @return Builder
      */
 
@@ -356,6 +363,10 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this.comment;
     }
 
+    /**
+     * builds OrderEdit with checking for non-null required values
+     * @return OrderEdit
+     */
     public OrderEdit build() {
         Objects.requireNonNull(id, OrderEdit.class + ": id is missing");
         Objects.requireNonNull(version, OrderEdit.class + ": version is missing");
@@ -369,7 +380,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     /**
-     * builds OrderEdit without checking for non null required values
+     * builds OrderEdit without checking for non-null required values
+     * @return OrderEdit
      */
     public OrderEdit buildUnchecked() {
         return new OrderEditImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, resource,

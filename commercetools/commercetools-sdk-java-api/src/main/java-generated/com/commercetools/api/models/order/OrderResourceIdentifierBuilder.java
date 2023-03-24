@@ -30,7 +30,7 @@ public class OrderResourceIdentifierBuilder implements Builder<OrderResourceIden
 
     /**
      *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class OrderResourceIdentifierBuilder implements Builder<OrderResourceIden
 
     /**
      *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class OrderResourceIdentifierBuilder implements Builder<OrderResourceIden
         return this.key;
     }
 
+    /**
+     * builds OrderResourceIdentifier with checking for non-null required values
+     * @return OrderResourceIdentifier
+     */
     public OrderResourceIdentifier build() {
         return new OrderResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds OrderResourceIdentifier without checking for non null required values
+     * builds OrderResourceIdentifier without checking for non-null required values
+     * @return OrderResourceIdentifier
      */
     public OrderResourceIdentifier buildUnchecked() {
         return new OrderResourceIdentifierImpl(id, key);

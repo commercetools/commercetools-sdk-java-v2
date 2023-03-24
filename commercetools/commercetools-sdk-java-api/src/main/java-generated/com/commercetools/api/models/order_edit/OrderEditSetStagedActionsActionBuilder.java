@@ -26,7 +26,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
-     * @param stagedActions
+     * @param stagedActions value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
-     * @param stagedActions
+     * @param stagedActions value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
-     * @param stagedActions
+     * @param stagedActions value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
+     * @param builder function to build the stagedActions value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
+     * @param builder function to build the stagedActions value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
         return this.stagedActions;
     }
 
+    /**
+     * builds OrderEditSetStagedActionsAction with checking for non-null required values
+     * @return OrderEditSetStagedActionsAction
+     */
     public OrderEditSetStagedActionsAction build() {
         Objects.requireNonNull(stagedActions, OrderEditSetStagedActionsAction.class + ": stagedActions is missing");
         return new OrderEditSetStagedActionsActionImpl(stagedActions);
     }
 
     /**
-     * builds OrderEditSetStagedActionsAction without checking for non null required values
+     * builds OrderEditSetStagedActionsAction without checking for non-null required values
+     * @return OrderEditSetStagedActionsAction
      */
     public OrderEditSetStagedActionsAction buildUnchecked() {
         return new OrderEditSetStagedActionsActionImpl(stagedActions);

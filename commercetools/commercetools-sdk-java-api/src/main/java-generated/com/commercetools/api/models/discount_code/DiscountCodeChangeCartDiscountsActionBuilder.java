@@ -26,7 +26,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
-     * @param cartDiscounts
+     * @param cartDiscounts value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
-     * @param cartDiscounts
+     * @param cartDiscounts value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
-     * @param cartDiscounts
+     * @param cartDiscounts value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the cartDiscounts value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the cartDiscounts value
      * @return Builder
      */
 
@@ -97,6 +99,10 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
         return this.cartDiscounts;
     }
 
+    /**
+     * builds DiscountCodeChangeCartDiscountsAction with checking for non-null required values
+     * @return DiscountCodeChangeCartDiscountsAction
+     */
     public DiscountCodeChangeCartDiscountsAction build() {
         Objects.requireNonNull(cartDiscounts,
             DiscountCodeChangeCartDiscountsAction.class + ": cartDiscounts is missing");
@@ -104,7 +110,8 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     }
 
     /**
-     * builds DiscountCodeChangeCartDiscountsAction without checking for non null required values
+     * builds DiscountCodeChangeCartDiscountsAction without checking for non-null required values
+     * @return DiscountCodeChangeCartDiscountsAction
      */
     public DiscountCodeChangeCartDiscountsAction buildUnchecked() {
         return new DiscountCodeChangeCartDiscountsActionImpl(cartDiscounts);

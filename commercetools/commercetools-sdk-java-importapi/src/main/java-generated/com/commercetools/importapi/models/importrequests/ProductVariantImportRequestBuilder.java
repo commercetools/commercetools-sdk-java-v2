@@ -26,7 +26,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
         return this.resources;
     }
 
+    /**
+     * builds ProductVariantImportRequest with checking for non-null required values
+     * @return ProductVariantImportRequest
+     */
     public ProductVariantImportRequest build() {
         Objects.requireNonNull(resources, ProductVariantImportRequest.class + ": resources is missing");
         return new ProductVariantImportRequestImpl(resources);
     }
 
     /**
-     * builds ProductVariantImportRequest without checking for non null required values
+     * builds ProductVariantImportRequest without checking for non-null required values
+     * @return ProductVariantImportRequest
      */
     public ProductVariantImportRequest buildUnchecked() {
         return new ProductVariantImportRequestImpl(resources);

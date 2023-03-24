@@ -103,7 +103,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -114,7 +114,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -125,7 +125,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -136,7 +136,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param salutation
+     * @param salutation value to be set
      * @return Builder
      */
 
@@ -147,7 +147,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param firstName
+     * @param firstName value to be set
      * @return Builder
      */
 
@@ -158,7 +158,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param lastName
+     * @param lastName value to be set
      * @return Builder
      */
 
@@ -169,7 +169,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param streetName
+     * @param streetName value to be set
      * @return Builder
      */
 
@@ -180,7 +180,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param streetNumber
+     * @param streetNumber value to be set
      * @return Builder
      */
 
@@ -191,7 +191,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param additionalStreetInfo
+     * @param additionalStreetInfo value to be set
      * @return Builder
      */
 
@@ -202,7 +202,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param postalCode
+     * @param postalCode value to be set
      * @return Builder
      */
 
@@ -213,7 +213,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param city
+     * @param city value to be set
      * @return Builder
      */
 
@@ -224,7 +224,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param region
+     * @param region value to be set
      * @return Builder
      */
 
@@ -235,7 +235,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -246,7 +246,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -257,7 +257,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param company
+     * @param company value to be set
      * @return Builder
      */
 
@@ -268,7 +268,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param department
+     * @param department value to be set
      * @return Builder
      */
 
@@ -279,7 +279,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param building
+     * @param building value to be set
      * @return Builder
      */
 
@@ -290,7 +290,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param apartment
+     * @param apartment value to be set
      * @return Builder
      */
 
@@ -301,7 +301,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param pOBox
+     * @param pOBox value to be set
      * @return Builder
      */
 
@@ -312,7 +312,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param phone
+     * @param phone value to be set
      * @return Builder
      */
 
@@ -323,7 +323,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param mobile
+     * @param mobile value to be set
      * @return Builder
      */
 
@@ -334,7 +334,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -345,7 +345,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param fax
+     * @param fax value to be set
      * @return Builder
      */
 
@@ -356,7 +356,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param additionalAddressInfo
+     * @param additionalAddressInfo value to be set
      * @return Builder
      */
 
@@ -367,7 +367,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -378,6 +378,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Custom Fields for the address.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -389,7 +390,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Custom Fields for the address.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -527,6 +528,10 @@ public class AddressBuilder implements Builder<Address> {
         return this.custom;
     }
 
+    /**
+     * builds Address with checking for non-null required values
+     * @return Address
+     */
     public Address build() {
         Objects.requireNonNull(country, Address.class + ": country is missing");
         return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
@@ -535,7 +540,8 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * builds Address without checking for non null required values
+     * builds Address without checking for non-null required values
+     * @return Address
      */
     public Address buildUnchecked() {
         return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,

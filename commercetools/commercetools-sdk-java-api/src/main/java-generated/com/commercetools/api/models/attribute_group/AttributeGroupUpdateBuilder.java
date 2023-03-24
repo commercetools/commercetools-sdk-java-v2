@@ -29,7 +29,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Expected version of the AttributeGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
         return this.actions;
     }
 
+    /**
+     * builds AttributeGroupUpdate with checking for non-null required values
+     * @return AttributeGroupUpdate
+     */
     public AttributeGroupUpdate build() {
         Objects.requireNonNull(version, AttributeGroupUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, AttributeGroupUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
     }
 
     /**
-     * builds AttributeGroupUpdate without checking for non null required values
+     * builds AttributeGroupUpdate without checking for non-null required values
+     * @return AttributeGroupUpdate
      */
     public AttributeGroupUpdate buildUnchecked() {
         return new AttributeGroupUpdateImpl(version, actions);

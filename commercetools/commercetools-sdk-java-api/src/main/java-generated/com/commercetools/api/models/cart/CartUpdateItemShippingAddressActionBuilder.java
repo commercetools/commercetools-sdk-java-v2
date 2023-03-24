@@ -26,6 +26,7 @@ public class CartUpdateItemShippingAddressActionBuilder implements Builder<CartU
 
     /**
      *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CartUpdateItemShippingAddressActionBuilder implements Builder<CartU
 
     /**
      *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class CartUpdateItemShippingAddressActionBuilder implements Builder<CartU
         return this.address;
     }
 
+    /**
+     * builds CartUpdateItemShippingAddressAction with checking for non-null required values
+     * @return CartUpdateItemShippingAddressAction
+     */
     public CartUpdateItemShippingAddressAction build() {
         Objects.requireNonNull(address, CartUpdateItemShippingAddressAction.class + ": address is missing");
         return new CartUpdateItemShippingAddressActionImpl(address);
     }
 
     /**
-     * builds CartUpdateItemShippingAddressAction without checking for non null required values
+     * builds CartUpdateItemShippingAddressAction without checking for non-null required values
+     * @return CartUpdateItemShippingAddressAction
      */
     public CartUpdateItemShippingAddressAction buildUnchecked() {
         return new CartUpdateItemShippingAddressActionImpl(address);

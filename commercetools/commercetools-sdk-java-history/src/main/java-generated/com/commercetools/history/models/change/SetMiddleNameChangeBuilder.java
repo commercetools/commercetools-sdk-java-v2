@@ -31,7 +31,7 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
 
     /**
      *  <p>Shape of the action for <code>setMiddleName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds SetMiddleNameChange with checking for non-null required values
+     * @return SetMiddleNameChange
+     */
     public SetMiddleNameChange build() {
         Objects.requireNonNull(change, SetMiddleNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetMiddleNameChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
     }
 
     /**
-     * builds SetMiddleNameChange without checking for non null required values
+     * builds SetMiddleNameChange without checking for non-null required values
+     * @return SetMiddleNameChange
      */
     public SetMiddleNameChange buildUnchecked() {
         return new SetMiddleNameChangeImpl(change, previousValue, nextValue);

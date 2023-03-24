@@ -67,7 +67,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -78,6 +78,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Name of the Custom Line Item.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -89,7 +90,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Name of the Custom Line Item.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -100,7 +101,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Money value of the Custom Line Item.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -111,6 +112,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Money value of the Custom Line Item.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -122,6 +124,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -133,7 +136,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Automatically set after the <code>taxRate</code> is set.</p>
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -146,6 +149,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -158,7 +162,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -169,7 +173,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It matches the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -180,7 +184,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Number of Custom Line Items in the Cart.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -191,7 +195,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>State of the Custom Line Item in the Cart.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -202,7 +206,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>State of the Custom Line Item in the Cart.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -213,7 +217,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>State of the Custom Line Item in the Cart.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -227,6 +231,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>State of the Custom Line Item in the Cart.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -241,6 +246,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>State of the Custom Line Item in the Cart.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -253,6 +259,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -265,7 +272,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -280,6 +287,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
      *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using ExternalTaxRateDraft.</li>
      *  </ul>
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -294,7 +302,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
      *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using ExternalTaxRateDraft.</li>
      *  </ul>
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -305,7 +313,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -317,7 +325,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -329,7 +337,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -344,6 +352,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
+     * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
 
@@ -359,6 +368,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
+     * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
 
@@ -372,6 +382,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Custom Fields of the Custom Line Item.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -383,7 +394,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Custom Fields of the Custom Line Item.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -394,6 +405,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -405,7 +417,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -417,7 +429,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     /**
      *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
-     * @param priceMode
+     * @param priceMode value to be set
      * @return Builder
      */
 
@@ -487,6 +499,10 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this.priceMode;
     }
 
+    /**
+     * builds CustomLineItem with checking for non-null required values
+     * @return CustomLineItem
+     */
     public CustomLineItem build() {
         Objects.requireNonNull(id, CustomLineItem.class + ": id is missing");
         Objects.requireNonNull(name, CustomLineItem.class + ": name is missing");
@@ -503,7 +519,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     * builds CustomLineItem without checking for non null required values
+     * builds CustomLineItem without checking for non-null required values
+     * @return CustomLineItem
      */
     public CustomLineItem buildUnchecked() {
         return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,

@@ -28,7 +28,7 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
-     * @param transactionId
+     * @param transactionId value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
 
     /**
      *  <p>New TransactionState.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
         return this.state;
     }
 
+    /**
+     * builds PaymentChangeTransactionStateAction with checking for non-null required values
+     * @return PaymentChangeTransactionStateAction
+     */
     public PaymentChangeTransactionStateAction build() {
         Objects.requireNonNull(transactionId, PaymentChangeTransactionStateAction.class + ": transactionId is missing");
         Objects.requireNonNull(state, PaymentChangeTransactionStateAction.class + ": state is missing");
@@ -64,7 +68,8 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
     }
 
     /**
-     * builds PaymentChangeTransactionStateAction without checking for non null required values
+     * builds PaymentChangeTransactionStateAction without checking for non-null required values
+     * @return PaymentChangeTransactionStateAction
      */
     public PaymentChangeTransactionStateAction buildUnchecked() {
         return new PaymentChangeTransactionStateActionImpl(transactionId, state);

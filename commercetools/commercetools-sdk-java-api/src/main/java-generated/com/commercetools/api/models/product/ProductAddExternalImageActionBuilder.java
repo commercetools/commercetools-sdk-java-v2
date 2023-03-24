@@ -37,7 +37,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -59,6 +59,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
 
     /**
      *  <p>Value to add to <code>images</code>.</p>
+     * @param builder function to build the image value
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
 
     /**
      *  <p>Value to add to <code>images</code>.</p>
-     * @param image
+     * @param image value to be set
      * @return Builder
      */
 
@@ -81,7 +82,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
 
     /**
      *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -109,13 +110,18 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
         return this.staged;
     }
 
+    /**
+     * builds ProductAddExternalImageAction with checking for non-null required values
+     * @return ProductAddExternalImageAction
+     */
     public ProductAddExternalImageAction build() {
         Objects.requireNonNull(image, ProductAddExternalImageAction.class + ": image is missing");
         return new ProductAddExternalImageActionImpl(variantId, sku, image, staged);
     }
 
     /**
-     * builds ProductAddExternalImageAction without checking for non null required values
+     * builds ProductAddExternalImageAction without checking for non-null required values
+     * @return ProductAddExternalImageAction
      */
     public ProductAddExternalImageAction buildUnchecked() {
         return new ProductAddExternalImageActionImpl(variantId, sku, image, staged);

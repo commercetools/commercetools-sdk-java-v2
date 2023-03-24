@@ -32,7 +32,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *  <p>Shape of the action for <code>changeCartDiscounts</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -96,6 +97,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -120,7 +122,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -132,7 +134,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -147,6 +149,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -161,6 +164,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -183,6 +187,10 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeCartDiscountsChange with checking for non-null required values
+     * @return ChangeCartDiscountsChange
+     */
     public ChangeCartDiscountsChange build() {
         Objects.requireNonNull(change, ChangeCartDiscountsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeCartDiscountsChange.class + ": previousValue is missing");
@@ -191,7 +199,8 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     * builds ChangeCartDiscountsChange without checking for non null required values
+     * builds ChangeCartDiscountsChange without checking for non-null required values
+     * @return ChangeCartDiscountsChange
      */
     public ChangeCartDiscountsChange buildUnchecked() {
         return new ChangeCartDiscountsChangeImpl(change, previousValue, nextValue);

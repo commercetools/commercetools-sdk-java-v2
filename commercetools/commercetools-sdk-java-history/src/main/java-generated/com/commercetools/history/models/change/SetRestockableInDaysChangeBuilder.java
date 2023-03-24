@@ -31,7 +31,7 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
 
     /**
      *  <p>Shape of the action for <code>setRestockableInDays</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
         return this.nextValue;
     }
 
+    /**
+     * builds SetRestockableInDaysChange with checking for non-null required values
+     * @return SetRestockableInDaysChange
+     */
     public SetRestockableInDaysChange build() {
         Objects.requireNonNull(change, SetRestockableInDaysChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetRestockableInDaysChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
     }
 
     /**
-     * builds SetRestockableInDaysChange without checking for non null required values
+     * builds SetRestockableInDaysChange without checking for non-null required values
+     * @return SetRestockableInDaysChange
      */
     public SetRestockableInDaysChange buildUnchecked() {
         return new SetRestockableInDaysChangeImpl(change, previousValue, nextValue);

@@ -43,6 +43,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>State of the Review before the Transition State update action.</p>
+     * @param builder function to build the oldState value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>State of the Review before the Transition State update action.</p>
-     * @param oldState
+     * @param oldState value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>State of the Review after the Transition State update action.</p>
+     * @param builder function to build the newState value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>State of the Review after the Transition State update action.</p>
-     * @param newState
+     * @param newState value to be set
      * @return Builder
      */
 
@@ -89,7 +91,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
-     * @param oldIncludedInStatistics
+     * @param oldIncludedInStatistics value to be set
      * @return Builder
      */
 
@@ -100,7 +102,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
-     * @param newIncludedInStatistics
+     * @param newIncludedInStatistics value to be set
      * @return Builder
      */
 
@@ -111,7 +113,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -123,6 +125,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -134,7 +137,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -169,6 +172,10 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
         return this.force;
     }
 
+    /**
+     * builds ReviewStateTransitionMessagePayload with checking for non-null required values
+     * @return ReviewStateTransitionMessagePayload
+     */
     public ReviewStateTransitionMessagePayload build() {
         Objects.requireNonNull(newState, ReviewStateTransitionMessagePayload.class + ": newState is missing");
         Objects.requireNonNull(oldIncludedInStatistics,
@@ -181,7 +188,8 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     * builds ReviewStateTransitionMessagePayload without checking for non null required values
+     * builds ReviewStateTransitionMessagePayload without checking for non-null required values
+     * @return ReviewStateTransitionMessagePayload
      */
     public ReviewStateTransitionMessagePayload buildUnchecked() {
         return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,

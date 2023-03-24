@@ -26,7 +26,7 @@ public class StagedOrderRemoveItemShippingAddressActionBuilder
 
     /**
      *
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -39,6 +39,10 @@ public class StagedOrderRemoveItemShippingAddressActionBuilder
         return this.addressKey;
     }
 
+    /**
+     * builds StagedOrderRemoveItemShippingAddressAction with checking for non-null required values
+     * @return StagedOrderRemoveItemShippingAddressAction
+     */
     public StagedOrderRemoveItemShippingAddressAction build() {
         Objects.requireNonNull(addressKey,
             StagedOrderRemoveItemShippingAddressAction.class + ": addressKey is missing");
@@ -46,7 +50,8 @@ public class StagedOrderRemoveItemShippingAddressActionBuilder
     }
 
     /**
-     * builds StagedOrderRemoveItemShippingAddressAction without checking for non null required values
+     * builds StagedOrderRemoveItemShippingAddressAction without checking for non-null required values
+     * @return StagedOrderRemoveItemShippingAddressAction
      */
     public StagedOrderRemoveItemShippingAddressAction buildUnchecked() {
         return new StagedOrderRemoveItemShippingAddressActionImpl(addressKey);

@@ -30,7 +30,7 @@ public class CategorySetCustomFieldActionBuilder implements Builder<CategorySetC
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CategorySetCustomFieldActionBuilder implements Builder<CategorySetC
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class CategorySetCustomFieldActionBuilder implements Builder<CategorySetC
         return this.value;
     }
 
+    /**
+     * builds CategorySetCustomFieldAction with checking for non-null required values
+     * @return CategorySetCustomFieldAction
+     */
     public CategorySetCustomFieldAction build() {
         Objects.requireNonNull(name, CategorySetCustomFieldAction.class + ": name is missing");
         return new CategorySetCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds CategorySetCustomFieldAction without checking for non null required values
+     * builds CategorySetCustomFieldAction without checking for non-null required values
+     * @return CategorySetCustomFieldAction
      */
     public CategorySetCustomFieldAction buildUnchecked() {
         return new CategorySetCustomFieldActionImpl(name, value);

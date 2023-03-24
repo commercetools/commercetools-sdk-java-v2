@@ -25,7 +25,7 @@ public class TypeChangeKeyActionBuilder implements Builder<TypeChangeKeyAction> 
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class TypeChangeKeyActionBuilder implements Builder<TypeChangeKeyAction> 
         return this.key;
     }
 
+    /**
+     * builds TypeChangeKeyAction with checking for non-null required values
+     * @return TypeChangeKeyAction
+     */
     public TypeChangeKeyAction build() {
         Objects.requireNonNull(key, TypeChangeKeyAction.class + ": key is missing");
         return new TypeChangeKeyActionImpl(key);
     }
 
     /**
-     * builds TypeChangeKeyAction without checking for non null required values
+     * builds TypeChangeKeyAction without checking for non-null required values
+     * @return TypeChangeKeyAction
      */
     public TypeChangeKeyAction buildUnchecked() {
         return new TypeChangeKeyActionImpl(key);

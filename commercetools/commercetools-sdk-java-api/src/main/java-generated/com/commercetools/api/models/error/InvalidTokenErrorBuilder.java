@@ -27,7 +27,7 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
 
     /**
      *  <p>Plain text description of the cause of the error.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InvalidTokenErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InvalidTokenErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
         return this.values;
     }
 
+    /**
+     * builds InvalidTokenError with checking for non-null required values
+     * @return InvalidTokenError
+     */
     public InvalidTokenError build() {
         Objects.requireNonNull(message, InvalidTokenError.class + ": message is missing");
         return new InvalidTokenErrorImpl(message, values);
     }
 
     /**
-     * builds InvalidTokenError without checking for non null required values
+     * builds InvalidTokenError without checking for non-null required values
+     * @return InvalidTokenError
      */
     public InvalidTokenError buildUnchecked() {
         return new InvalidTokenErrorImpl(message, values);

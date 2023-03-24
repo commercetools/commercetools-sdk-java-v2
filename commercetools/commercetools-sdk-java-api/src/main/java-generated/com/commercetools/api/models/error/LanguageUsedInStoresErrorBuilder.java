@@ -27,7 +27,7 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
 
     /**
      *  <p><code>"Language(s) in use by a store cannot be deleted. Remove them in all the stores of this project first."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public LanguageUsedInStoresErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public LanguageUsedInStoresErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
         return this.values;
     }
 
+    /**
+     * builds LanguageUsedInStoresError with checking for non-null required values
+     * @return LanguageUsedInStoresError
+     */
     public LanguageUsedInStoresError build() {
         Objects.requireNonNull(message, LanguageUsedInStoresError.class + ": message is missing");
         return new LanguageUsedInStoresErrorImpl(message, values);
     }
 
     /**
-     * builds LanguageUsedInStoresError without checking for non null required values
+     * builds LanguageUsedInStoresError without checking for non-null required values
+     * @return LanguageUsedInStoresError
      */
     public LanguageUsedInStoresError buildUnchecked() {
         return new LanguageUsedInStoresErrorImpl(message, values);

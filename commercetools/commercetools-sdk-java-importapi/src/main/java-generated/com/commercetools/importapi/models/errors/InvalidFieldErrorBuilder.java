@@ -38,7 +38,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>The name of the field.</p>
-     * @param field
+     * @param field value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>The invalid value.</p>
-     * @param invalidValue
+     * @param invalidValue value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>The set of allowed values for the field, if any.</p>
-     * @param allowedValues
+     * @param allowedValues value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>The set of allowed values for the field, if any.</p>
-     * @param allowedValues
+     * @param allowedValues value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>The set of allowed values for the field, if any.</p>
-     * @param allowedValues
+     * @param allowedValues value to be set
      * @return Builder
      */
 
@@ -107,7 +107,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *
-     * @param resourceIndex
+     * @param resourceIndex value to be set
      * @return Builder
      */
 
@@ -138,6 +138,10 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this.resourceIndex;
     }
 
+    /**
+     * builds InvalidFieldError with checking for non-null required values
+     * @return InvalidFieldError
+     */
     public InvalidFieldError build() {
         Objects.requireNonNull(message, InvalidFieldError.class + ": message is missing");
         Objects.requireNonNull(field, InvalidFieldError.class + ": field is missing");
@@ -146,7 +150,8 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     * builds InvalidFieldError without checking for non null required values
+     * builds InvalidFieldError without checking for non-null required values
+     * @return InvalidFieldError
      */
     public InvalidFieldError buildUnchecked() {
         return new InvalidFieldErrorImpl(message, field, invalidValue, allowedValues, resourceIndex);

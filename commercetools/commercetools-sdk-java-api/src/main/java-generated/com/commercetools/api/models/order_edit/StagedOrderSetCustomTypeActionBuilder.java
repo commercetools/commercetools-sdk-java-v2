@@ -31,6 +31,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
         return this.fields;
     }
 
+    /**
+     * builds StagedOrderSetCustomTypeAction with checking for non-null required values
+     * @return StagedOrderSetCustomTypeAction
+     */
     public StagedOrderSetCustomTypeAction build() {
         return new StagedOrderSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds StagedOrderSetCustomTypeAction without checking for non null required values
+     * builds StagedOrderSetCustomTypeAction without checking for non-null required values
+     * @return StagedOrderSetCustomTypeAction
      */
     public StagedOrderSetCustomTypeAction buildUnchecked() {
         return new StagedOrderSetCustomTypeActionImpl(type, fields);

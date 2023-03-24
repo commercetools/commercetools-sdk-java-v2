@@ -29,7 +29,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Expected version of the InventoryEntry on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
         return this.actions;
     }
 
+    /**
+     * builds InventoryEntryUpdate with checking for non-null required values
+     * @return InventoryEntryUpdate
+     */
     public InventoryEntryUpdate build() {
         Objects.requireNonNull(version, InventoryEntryUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, InventoryEntryUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     * builds InventoryEntryUpdate without checking for non null required values
+     * builds InventoryEntryUpdate without checking for non-null required values
+     * @return InventoryEntryUpdate
      */
     public InventoryEntryUpdate buildUnchecked() {
         return new InventoryEntryUpdateImpl(version, actions);

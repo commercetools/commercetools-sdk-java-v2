@@ -30,7 +30,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -80,6 +80,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -95,6 +96,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -114,6 +116,10 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
         return this.values;
     }
 
+    /**
+     * builds ProductTypeChangeLocalizedEnumValueOrderAction with checking for non-null required values
+     * @return ProductTypeChangeLocalizedEnumValueOrderAction
+     */
     public ProductTypeChangeLocalizedEnumValueOrderAction build() {
         Objects.requireNonNull(attributeName,
             ProductTypeChangeLocalizedEnumValueOrderAction.class + ": attributeName is missing");
@@ -122,7 +128,8 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     * builds ProductTypeChangeLocalizedEnumValueOrderAction without checking for non null required values
+     * builds ProductTypeChangeLocalizedEnumValueOrderAction without checking for non-null required values
+     * @return ProductTypeChangeLocalizedEnumValueOrderAction
      */
     public ProductTypeChangeLocalizedEnumValueOrderAction buildUnchecked() {
         return new ProductTypeChangeLocalizedEnumValueOrderActionImpl(attributeName, values);

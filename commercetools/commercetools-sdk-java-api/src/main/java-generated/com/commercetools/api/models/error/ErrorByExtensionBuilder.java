@@ -30,7 +30,7 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
 
     /**
      *  <p>Unique identifier of the Extension.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
         return this.key;
     }
 
+    /**
+     * builds ErrorByExtension with checking for non-null required values
+     * @return ErrorByExtension
+     */
     public ErrorByExtension build() {
         Objects.requireNonNull(id, ErrorByExtension.class + ": id is missing");
         return new ErrorByExtensionImpl(id, key);
     }
 
     /**
-     * builds ErrorByExtension without checking for non null required values
+     * builds ErrorByExtension without checking for non-null required values
+     * @return ErrorByExtension
      */
     public ErrorByExtension buildUnchecked() {
         return new ErrorByExtensionImpl(id, key);

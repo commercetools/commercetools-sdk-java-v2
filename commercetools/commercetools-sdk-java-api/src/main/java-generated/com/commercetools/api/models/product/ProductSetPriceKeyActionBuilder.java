@@ -33,7 +33,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
 
     /**
      *  <p>The <code>id</code> of the Price to set the key.</p>
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -78,13 +78,18 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
         return this.key;
     }
 
+    /**
+     * builds ProductSetPriceKeyAction with checking for non-null required values
+     * @return ProductSetPriceKeyAction
+     */
     public ProductSetPriceKeyAction build() {
         Objects.requireNonNull(priceId, ProductSetPriceKeyAction.class + ": priceId is missing");
         return new ProductSetPriceKeyActionImpl(priceId, staged, key);
     }
 
     /**
-     * builds ProductSetPriceKeyAction without checking for non null required values
+     * builds ProductSetPriceKeyAction without checking for non-null required values
+     * @return ProductSetPriceKeyAction
      */
     public ProductSetPriceKeyAction buildUnchecked() {
         return new ProductSetPriceKeyActionImpl(priceId, staged, key);

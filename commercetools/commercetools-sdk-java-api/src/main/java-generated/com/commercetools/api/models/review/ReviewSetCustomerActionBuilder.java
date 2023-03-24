@@ -28,6 +28,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
         return this.customer;
     }
 
+    /**
+     * builds ReviewSetCustomerAction with checking for non-null required values
+     * @return ReviewSetCustomerAction
+     */
     public ReviewSetCustomerAction build() {
         return new ReviewSetCustomerActionImpl(customer);
     }
 
     /**
-     * builds ReviewSetCustomerAction without checking for non null required values
+     * builds ReviewSetCustomerAction without checking for non-null required values
+     * @return ReviewSetCustomerAction
      */
     public ReviewSetCustomerAction buildUnchecked() {
         return new ReviewSetCustomerActionImpl(customer);

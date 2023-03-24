@@ -31,7 +31,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
 
     /**
      *  <p>Shape of the action for <code>setCustomerNumber</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
         return this.nextValue;
     }
 
+    /**
+     * builds SetCustomerNumberChange with checking for non-null required values
+     * @return SetCustomerNumberChange
+     */
     public SetCustomerNumberChange build() {
         Objects.requireNonNull(change, SetCustomerNumberChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetCustomerNumberChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
     }
 
     /**
-     * builds SetCustomerNumberChange without checking for non null required values
+     * builds SetCustomerNumberChange without checking for non-null required values
+     * @return SetCustomerNumberChange
      */
     public SetCustomerNumberChange buildUnchecked() {
         return new SetCustomerNumberChangeImpl(change, previousValue, nextValue);

@@ -30,7 +30,7 @@ public class ChannelResourceIdentifierBuilder implements Builder<ChannelResource
 
     /**
      *  <p>Unique identifier of the referenced Channel. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ChannelResourceIdentifierBuilder implements Builder<ChannelResource
 
     /**
      *  <p>User-defined unique identifier of the referenced Channel. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class ChannelResourceIdentifierBuilder implements Builder<ChannelResource
         return this.key;
     }
 
+    /**
+     * builds ChannelResourceIdentifier with checking for non-null required values
+     * @return ChannelResourceIdentifier
+     */
     public ChannelResourceIdentifier build() {
         return new ChannelResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds ChannelResourceIdentifier without checking for non null required values
+     * builds ChannelResourceIdentifier without checking for non-null required values
+     * @return ChannelResourceIdentifier
      */
     public ChannelResourceIdentifier buildUnchecked() {
         return new ChannelResourceIdentifierImpl(id, key);

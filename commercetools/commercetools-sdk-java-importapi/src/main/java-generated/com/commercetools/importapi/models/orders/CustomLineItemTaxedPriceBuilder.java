@@ -29,7 +29,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
 
     /**
      *
-     * @param totalNet
+     * @param totalNet value to be set
      * @return Builder
      */
 
@@ -41,6 +41,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
 
     /**
      *
+     * @param builder function to build the totalNet value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
 
     /**
      *
-     * @param totalGross
+     * @param totalGross value to be set
      * @return Builder
      */
 
@@ -64,6 +65,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
 
     /**
      *
+     * @param builder function to build the totalGross value
      * @return Builder
      */
 
@@ -81,6 +83,10 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
         return this.totalGross;
     }
 
+    /**
+     * builds CustomLineItemTaxedPrice with checking for non-null required values
+     * @return CustomLineItemTaxedPrice
+     */
     public CustomLineItemTaxedPrice build() {
         Objects.requireNonNull(totalNet, CustomLineItemTaxedPrice.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, CustomLineItemTaxedPrice.class + ": totalGross is missing");
@@ -88,7 +94,8 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
     }
 
     /**
-     * builds CustomLineItemTaxedPrice without checking for non null required values
+     * builds CustomLineItemTaxedPrice without checking for non-null required values
+     * @return CustomLineItemTaxedPrice
      */
     public CustomLineItemTaxedPrice buildUnchecked() {
         return new CustomLineItemTaxedPriceImpl(totalNet, totalGross);

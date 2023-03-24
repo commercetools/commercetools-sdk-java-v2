@@ -25,7 +25,7 @@ public class PriceKeyReferenceBuilder implements Builder<PriceKeyReference> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class PriceKeyReferenceBuilder implements Builder<PriceKeyReference> {
         return this.key;
     }
 
+    /**
+     * builds PriceKeyReference with checking for non-null required values
+     * @return PriceKeyReference
+     */
     public PriceKeyReference build() {
         Objects.requireNonNull(key, PriceKeyReference.class + ": key is missing");
         return new PriceKeyReferenceImpl(key);
     }
 
     /**
-     * builds PriceKeyReference without checking for non null required values
+     * builds PriceKeyReference without checking for non-null required values
+     * @return PriceKeyReference
      */
     public PriceKeyReference buildUnchecked() {
         return new PriceKeyReferenceImpl(key);

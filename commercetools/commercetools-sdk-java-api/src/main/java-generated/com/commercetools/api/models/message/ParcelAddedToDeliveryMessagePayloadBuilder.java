@@ -34,6 +34,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @param builder function to build the delivery value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
-     * @param delivery
+     * @param delivery value to be set
      * @return Builder
      */
 
@@ -57,6 +58,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>Parcel that was added to the Delivery.</p>
+     * @param builder function to build the parcel value
      * @return Builder
      */
 
@@ -68,7 +70,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>Parcel that was added to the Delivery.</p>
-     * @param parcel
+     * @param parcel value to be set
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -101,6 +103,10 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
         return this.shippingKey;
     }
 
+    /**
+     * builds ParcelAddedToDeliveryMessagePayload with checking for non-null required values
+     * @return ParcelAddedToDeliveryMessagePayload
+     */
     public ParcelAddedToDeliveryMessagePayload build() {
         Objects.requireNonNull(delivery, ParcelAddedToDeliveryMessagePayload.class + ": delivery is missing");
         Objects.requireNonNull(parcel, ParcelAddedToDeliveryMessagePayload.class + ": parcel is missing");
@@ -108,7 +114,8 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
     }
 
     /**
-     * builds ParcelAddedToDeliveryMessagePayload without checking for non null required values
+     * builds ParcelAddedToDeliveryMessagePayload without checking for non-null required values
+     * @return ParcelAddedToDeliveryMessagePayload
      */
     public ParcelAddedToDeliveryMessagePayload buildUnchecked() {
         return new ParcelAddedToDeliveryMessagePayloadImpl(delivery, parcel, shippingKey);

@@ -27,7 +27,7 @@ public class ShoppingListSetAnonymousIdActionBuilder implements Builder<Shopping
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ShoppingListSetAnonymousIdActionBuilder implements Builder<Shopping
         return this.anonymousId;
     }
 
+    /**
+     * builds ShoppingListSetAnonymousIdAction with checking for non-null required values
+     * @return ShoppingListSetAnonymousIdAction
+     */
     public ShoppingListSetAnonymousIdAction build() {
         return new ShoppingListSetAnonymousIdActionImpl(anonymousId);
     }
 
     /**
-     * builds ShoppingListSetAnonymousIdAction without checking for non null required values
+     * builds ShoppingListSetAnonymousIdAction without checking for non-null required values
+     * @return ShoppingListSetAnonymousIdAction
      */
     public ShoppingListSetAnonymousIdAction buildUnchecked() {
         return new ShoppingListSetAnonymousIdActionImpl(anonymousId);

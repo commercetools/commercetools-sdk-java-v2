@@ -31,7 +31,7 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
 
     /**
      *  <p>Shape of the action for <code>changePredicate</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
         return this.nextValue;
     }
 
+    /**
+     * builds ChangePredicateChange with checking for non-null required values
+     * @return ChangePredicateChange
+     */
     public ChangePredicateChange build() {
         Objects.requireNonNull(change, ChangePredicateChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangePredicateChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
     }
 
     /**
-     * builds ChangePredicateChange without checking for non null required values
+     * builds ChangePredicateChange without checking for non-null required values
+     * @return ChangePredicateChange
      */
     public ChangePredicateChange buildUnchecked() {
         return new ChangePredicateChangeImpl(change, previousValue, nextValue);

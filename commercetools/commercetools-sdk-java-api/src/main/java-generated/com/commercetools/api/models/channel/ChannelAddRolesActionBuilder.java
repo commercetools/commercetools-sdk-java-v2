@@ -25,7 +25,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -64,13 +64,18 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
         return this.roles;
     }
 
+    /**
+     * builds ChannelAddRolesAction with checking for non-null required values
+     * @return ChannelAddRolesAction
+     */
     public ChannelAddRolesAction build() {
         Objects.requireNonNull(roles, ChannelAddRolesAction.class + ": roles is missing");
         return new ChannelAddRolesActionImpl(roles);
     }
 
     /**
-     * builds ChannelAddRolesAction without checking for non null required values
+     * builds ChannelAddRolesAction without checking for non-null required values
+     * @return ChannelAddRolesAction
      */
     public ChannelAddRolesAction buildUnchecked() {
         return new ChannelAddRolesActionImpl(roles);

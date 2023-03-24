@@ -31,7 +31,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
 
     /**
      *  <p>Shape of the action for <code>changeInitial</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeInitialChange with checking for non-null required values
+     * @return ChangeInitialChange
+     */
     public ChangeInitialChange build() {
         Objects.requireNonNull(change, ChangeInitialChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeInitialChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
     }
 
     /**
-     * builds ChangeInitialChange without checking for non null required values
+     * builds ChangeInitialChange without checking for non-null required values
+     * @return ChangeInitialChange
      */
     public ChangeInitialChange buildUnchecked() {
         return new ChangeInitialChangeImpl(change, previousValue, nextValue);

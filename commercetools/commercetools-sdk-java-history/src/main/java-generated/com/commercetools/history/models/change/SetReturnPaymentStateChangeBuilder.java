@@ -31,7 +31,7 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
 
     /**
      *  <p>Update action for <code>setReturnPaymentState</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
         return this.previousValue;
     }
 
+    /**
+     * builds SetReturnPaymentStateChange with checking for non-null required values
+     * @return SetReturnPaymentStateChange
+     */
     public SetReturnPaymentStateChange build() {
         Objects.requireNonNull(change, SetReturnPaymentStateChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetReturnPaymentStateChange.class + ": nextValue is missing");
@@ -84,7 +88,8 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
     }
 
     /**
-     * builds SetReturnPaymentStateChange without checking for non null required values
+     * builds SetReturnPaymentStateChange without checking for non-null required values
+     * @return SetReturnPaymentStateChange
      */
     public SetReturnPaymentStateChange buildUnchecked() {
         return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);

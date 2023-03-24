@@ -31,6 +31,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
         return this.staged;
     }
 
+    /**
+     * builds StandalonePriceChangeValueAction with checking for non-null required values
+     * @return StandalonePriceChangeValueAction
+     */
     public StandalonePriceChangeValueAction build() {
         Objects.requireNonNull(value, StandalonePriceChangeValueAction.class + ": value is missing");
         return new StandalonePriceChangeValueActionImpl(value, staged);
     }
 
     /**
-     * builds StandalonePriceChangeValueAction without checking for non null required values
+     * builds StandalonePriceChangeValueAction without checking for non-null required values
+     * @return StandalonePriceChangeValueAction
      */
     public StandalonePriceChangeValueAction buildUnchecked() {
         return new StandalonePriceChangeValueActionImpl(value, staged);

@@ -31,7 +31,7 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
 
     /**
      *  <p>Expected version of the Customer on which the changes should be applied.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
     /**
      *  <p>Current password of the Customer.</p>
      *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
-     * @param currentPassword
+     * @param currentPassword value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
 
     /**
      *  <p>New password to be set.</p>
-     * @param newPassword
+     * @param newPassword value to be set
      * @return Builder
      */
 
@@ -75,6 +75,10 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
         return this.newPassword;
     }
 
+    /**
+     * builds MyCustomerChangePassword with checking for non-null required values
+     * @return MyCustomerChangePassword
+     */
     public MyCustomerChangePassword build() {
         Objects.requireNonNull(version, MyCustomerChangePassword.class + ": version is missing");
         Objects.requireNonNull(currentPassword, MyCustomerChangePassword.class + ": currentPassword is missing");
@@ -83,7 +87,8 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
     }
 
     /**
-     * builds MyCustomerChangePassword without checking for non null required values
+     * builds MyCustomerChangePassword without checking for non-null required values
+     * @return MyCustomerChangePassword
      */
     public MyCustomerChangePassword buildUnchecked() {
         return new MyCustomerChangePasswordImpl(version, currentPassword, newPassword);

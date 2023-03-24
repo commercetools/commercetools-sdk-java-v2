@@ -26,7 +26,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -93,13 +95,18 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
         return this.resources;
     }
 
+    /**
+     * builds PriceImportRequest with checking for non-null required values
+     * @return PriceImportRequest
+     */
     public PriceImportRequest build() {
         Objects.requireNonNull(resources, PriceImportRequest.class + ": resources is missing");
         return new PriceImportRequestImpl(resources);
     }
 
     /**
-     * builds PriceImportRequest without checking for non null required values
+     * builds PriceImportRequest without checking for non-null required values
+     * @return PriceImportRequest
      */
     public PriceImportRequest buildUnchecked() {
         return new PriceImportRequestImpl(resources);

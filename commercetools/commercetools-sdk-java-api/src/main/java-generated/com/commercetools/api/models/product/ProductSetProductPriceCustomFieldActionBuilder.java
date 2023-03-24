@@ -37,7 +37,7 @@ public class ProductSetProductPriceCustomFieldActionBuilder
 
     /**
      *  <p>The <code>id</code> of the Embedded Price to update.</p>
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ProductSetProductPriceCustomFieldActionBuilder
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ProductSetProductPriceCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ProductSetProductPriceCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -97,6 +97,10 @@ public class ProductSetProductPriceCustomFieldActionBuilder
         return this.value;
     }
 
+    /**
+     * builds ProductSetProductPriceCustomFieldAction with checking for non-null required values
+     * @return ProductSetProductPriceCustomFieldAction
+     */
     public ProductSetProductPriceCustomFieldAction build() {
         Objects.requireNonNull(priceId, ProductSetProductPriceCustomFieldAction.class + ": priceId is missing");
         Objects.requireNonNull(name, ProductSetProductPriceCustomFieldAction.class + ": name is missing");
@@ -104,7 +108,8 @@ public class ProductSetProductPriceCustomFieldActionBuilder
     }
 
     /**
-     * builds ProductSetProductPriceCustomFieldAction without checking for non null required values
+     * builds ProductSetProductPriceCustomFieldAction without checking for non-null required values
+     * @return ProductSetProductPriceCustomFieldAction
      */
     public ProductSetProductPriceCustomFieldAction buildUnchecked() {
         return new ProductSetProductPriceCustomFieldActionImpl(priceId, staged, name, value);

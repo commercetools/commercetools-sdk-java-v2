@@ -33,7 +33,7 @@ public class HitBuilder implements Builder<Hit> {
 
     /**
      *  <p>Unique identifier of the Order.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class HitBuilder implements Builder<Hit> {
 
     /**
      *  <p>Current version of the Order.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class HitBuilder implements Builder<Hit> {
 
     /**
      *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
-     * @param relevance
+     * @param relevance value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class HitBuilder implements Builder<Hit> {
         return this.relevance;
     }
 
+    /**
+     * builds Hit with checking for non-null required values
+     * @return Hit
+     */
     public Hit build() {
         Objects.requireNonNull(id, Hit.class + ": id is missing");
         Objects.requireNonNull(version, Hit.class + ": version is missing");
@@ -84,7 +88,8 @@ public class HitBuilder implements Builder<Hit> {
     }
 
     /**
-     * builds Hit without checking for non null required values
+     * builds Hit without checking for non-null required values
+     * @return Hit
      */
     public Hit buildUnchecked() {
         return new HitImpl(id, version, relevance);

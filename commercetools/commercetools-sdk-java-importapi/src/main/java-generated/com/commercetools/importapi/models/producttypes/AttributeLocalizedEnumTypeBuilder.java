@@ -26,7 +26,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -97,13 +99,18 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
         return this.values;
     }
 
+    /**
+     * builds AttributeLocalizedEnumType with checking for non-null required values
+     * @return AttributeLocalizedEnumType
+     */
     public AttributeLocalizedEnumType build() {
         Objects.requireNonNull(values, AttributeLocalizedEnumType.class + ": values is missing");
         return new AttributeLocalizedEnumTypeImpl(values);
     }
 
     /**
-     * builds AttributeLocalizedEnumType without checking for non null required values
+     * builds AttributeLocalizedEnumType without checking for non-null required values
+     * @return AttributeLocalizedEnumType
      */
     public AttributeLocalizedEnumType buildUnchecked() {
         return new AttributeLocalizedEnumTypeImpl(values);

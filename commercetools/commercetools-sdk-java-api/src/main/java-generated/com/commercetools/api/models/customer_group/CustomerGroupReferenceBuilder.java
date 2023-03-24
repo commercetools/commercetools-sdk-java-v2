@@ -31,7 +31,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
 
     /**
      *  <p>Unique identifier of the referenced CustomerGroup.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
 
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
 
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
         return this.obj;
     }
 
+    /**
+     * builds CustomerGroupReference with checking for non-null required values
+     * @return CustomerGroupReference
+     */
     public CustomerGroupReference build() {
         Objects.requireNonNull(id, CustomerGroupReference.class + ": id is missing");
         return new CustomerGroupReferenceImpl(id, obj);
     }
 
     /**
-     * builds CustomerGroupReference without checking for non null required values
+     * builds CustomerGroupReference without checking for non-null required values
+     * @return CustomerGroupReference
      */
     public CustomerGroupReference buildUnchecked() {
         return new CustomerGroupReferenceImpl(id, obj);

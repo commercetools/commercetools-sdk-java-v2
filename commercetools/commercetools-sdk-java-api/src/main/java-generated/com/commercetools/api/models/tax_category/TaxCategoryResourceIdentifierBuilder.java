@@ -30,7 +30,7 @@ public class TaxCategoryResourceIdentifierBuilder implements Builder<TaxCategory
 
     /**
      *  <p>Unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class TaxCategoryResourceIdentifierBuilder implements Builder<TaxCategory
 
     /**
      *  <p>User-defined unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class TaxCategoryResourceIdentifierBuilder implements Builder<TaxCategory
         return this.key;
     }
 
+    /**
+     * builds TaxCategoryResourceIdentifier with checking for non-null required values
+     * @return TaxCategoryResourceIdentifier
+     */
     public TaxCategoryResourceIdentifier build() {
         return new TaxCategoryResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds TaxCategoryResourceIdentifier without checking for non null required values
+     * builds TaxCategoryResourceIdentifier without checking for non-null required values
+     * @return TaxCategoryResourceIdentifier
      */
     public TaxCategoryResourceIdentifier buildUnchecked() {
         return new TaxCategoryResourceIdentifierImpl(id, key);

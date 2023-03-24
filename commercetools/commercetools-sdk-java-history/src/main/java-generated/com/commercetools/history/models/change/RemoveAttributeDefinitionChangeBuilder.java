@@ -29,7 +29,7 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
 
     /**
      *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveAttributeDefinitionChange with checking for non-null required values
+     * @return RemoveAttributeDefinitionChange
+     */
     public RemoveAttributeDefinitionChange build() {
         Objects.requireNonNull(change, RemoveAttributeDefinitionChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveAttributeDefinitionChange.class + ": previousValue is missing");
@@ -77,7 +82,8 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
     }
 
     /**
-     * builds RemoveAttributeDefinitionChange without checking for non null required values
+     * builds RemoveAttributeDefinitionChange without checking for non-null required values
+     * @return RemoveAttributeDefinitionChange
      */
     public RemoveAttributeDefinitionChange buildUnchecked() {
         return new RemoveAttributeDefinitionChangeImpl(change, previousValue);

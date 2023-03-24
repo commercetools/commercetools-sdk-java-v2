@@ -31,7 +31,7 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
 
     /**
      *  <p>Existing key to be changed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
 
     /**
      *  <p>New key to be set.</p>
-     * @param newKey
+     * @param newKey value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
         return this.newKey;
     }
 
+    /**
+     * builds ProductTypeChangeEnumKeyAction with checking for non-null required values
+     * @return ProductTypeChangeEnumKeyAction
+     */
     public ProductTypeChangeEnumKeyAction build() {
         Objects.requireNonNull(attributeName, ProductTypeChangeEnumKeyAction.class + ": attributeName is missing");
         Objects.requireNonNull(key, ProductTypeChangeEnumKeyAction.class + ": key is missing");
@@ -82,7 +86,8 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
     }
 
     /**
-     * builds ProductTypeChangeEnumKeyAction without checking for non null required values
+     * builds ProductTypeChangeEnumKeyAction without checking for non-null required values
+     * @return ProductTypeChangeEnumKeyAction
      */
     public ProductTypeChangeEnumKeyAction buildUnchecked() {
         return new ProductTypeChangeEnumKeyActionImpl(attributeName, key, newKey);

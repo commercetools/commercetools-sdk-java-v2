@@ -33,7 +33,7 @@ public class MyCartSetLineItemCustomFieldActionBuilder implements Builder<MyCart
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class MyCartSetLineItemCustomFieldActionBuilder implements Builder<MyCart
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class MyCartSetLineItemCustomFieldActionBuilder implements Builder<MyCart
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class MyCartSetLineItemCustomFieldActionBuilder implements Builder<MyCart
         return this.value;
     }
 
+    /**
+     * builds MyCartSetLineItemCustomFieldAction with checking for non-null required values
+     * @return MyCartSetLineItemCustomFieldAction
+     */
     public MyCartSetLineItemCustomFieldAction build() {
         Objects.requireNonNull(lineItemId, MyCartSetLineItemCustomFieldAction.class + ": lineItemId is missing");
         Objects.requireNonNull(name, MyCartSetLineItemCustomFieldAction.class + ": name is missing");
@@ -84,7 +88,8 @@ public class MyCartSetLineItemCustomFieldActionBuilder implements Builder<MyCart
     }
 
     /**
-     * builds MyCartSetLineItemCustomFieldAction without checking for non null required values
+     * builds MyCartSetLineItemCustomFieldAction without checking for non-null required values
+     * @return MyCartSetLineItemCustomFieldAction
      */
     public MyCartSetLineItemCustomFieldAction buildUnchecked() {
         return new MyCartSetLineItemCustomFieldActionImpl(lineItemId, name, value);

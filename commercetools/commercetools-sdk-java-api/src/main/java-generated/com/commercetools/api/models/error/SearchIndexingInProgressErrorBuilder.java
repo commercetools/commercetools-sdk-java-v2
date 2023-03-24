@@ -27,7 +27,7 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
 
     /**
      *  <p><code>"The indexing is currently in progress. Please wait until the status is "Activated" to execute search requests."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public SearchIndexingInProgressErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public SearchIndexingInProgressErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
         return this.values;
     }
 
+    /**
+     * builds SearchIndexingInProgressError with checking for non-null required values
+     * @return SearchIndexingInProgressError
+     */
     public SearchIndexingInProgressError build() {
         Objects.requireNonNull(message, SearchIndexingInProgressError.class + ": message is missing");
         return new SearchIndexingInProgressErrorImpl(message, values);
     }
 
     /**
-     * builds SearchIndexingInProgressError without checking for non null required values
+     * builds SearchIndexingInProgressError without checking for non-null required values
+     * @return SearchIndexingInProgressError
      */
     public SearchIndexingInProgressError buildUnchecked() {
         return new SearchIndexingInProgressErrorImpl(message, values);

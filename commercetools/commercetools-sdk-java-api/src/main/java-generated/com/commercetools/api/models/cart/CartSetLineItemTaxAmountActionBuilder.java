@@ -34,7 +34,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param externalTaxAmount
+     * @param externalTaxAmount value to be set
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
 
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -92,13 +93,18 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
         return this.shippingKey;
     }
 
+    /**
+     * builds CartSetLineItemTaxAmountAction with checking for non-null required values
+     * @return CartSetLineItemTaxAmountAction
+     */
     public CartSetLineItemTaxAmountAction build() {
         Objects.requireNonNull(lineItemId, CartSetLineItemTaxAmountAction.class + ": lineItemId is missing");
         return new CartSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount, shippingKey);
     }
 
     /**
-     * builds CartSetLineItemTaxAmountAction without checking for non null required values
+     * builds CartSetLineItemTaxAmountAction without checking for non-null required values
+     * @return CartSetLineItemTaxAmountAction
      */
     public CartSetLineItemTaxAmountAction buildUnchecked() {
         return new CartSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount, shippingKey);

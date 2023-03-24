@@ -43,7 +43,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
-     * @param projectKey
+     * @param projectKey value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -66,6 +66,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -77,6 +78,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
-     * @param resourceUserProvidedIdentifiers
+     * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
 
@@ -102,7 +104,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Last seen version of the resource.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -113,7 +115,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Version of the resource before the update.</p>
-     * @param oldVersion
+     * @param oldVersion value to be set
      * @return Builder
      */
 
@@ -124,7 +126,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Date and time (UTC) the resource was last updated.</p>
-     * @param modifiedAt
+     * @param modifiedAt value to be set
      * @return Builder
      */
 
@@ -158,6 +160,10 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
         return this.modifiedAt;
     }
 
+    /**
+     * builds ResourceUpdatedDeliveryPayload with checking for non-null required values
+     * @return ResourceUpdatedDeliveryPayload
+     */
     public ResourceUpdatedDeliveryPayload build() {
         Objects.requireNonNull(projectKey, ResourceUpdatedDeliveryPayload.class + ": projectKey is missing");
         Objects.requireNonNull(resource, ResourceUpdatedDeliveryPayload.class + ": resource is missing");
@@ -169,7 +175,8 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
     }
 
     /**
-     * builds ResourceUpdatedDeliveryPayload without checking for non null required values
+     * builds ResourceUpdatedDeliveryPayload without checking for non-null required values
+     * @return ResourceUpdatedDeliveryPayload
      */
     public ResourceUpdatedDeliveryPayload buildUnchecked() {
         return new ResourceUpdatedDeliveryPayloadImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,

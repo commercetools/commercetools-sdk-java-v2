@@ -43,7 +43,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -87,7 +87,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -101,6 +101,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -115,6 +116,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -127,7 +129,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -138,7 +140,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -149,7 +151,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -163,6 +165,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -177,6 +180,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -189,6 +193,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -200,7 +205,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -211,6 +216,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -222,7 +228,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -257,6 +263,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this.custom;
     }
 
+    /**
+     * builds Delivery with checking for non-null required values
+     * @return Delivery
+     */
     public Delivery build() {
         Objects.requireNonNull(id, Delivery.class + ": id is missing");
         Objects.requireNonNull(createdAt, Delivery.class + ": createdAt is missing");
@@ -266,7 +276,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     * builds Delivery without checking for non null required values
+     * builds Delivery without checking for non-null required values
+     * @return Delivery
      */
     public Delivery buildUnchecked() {
         return new DeliveryImpl(id, createdAt, items, parcels, address, custom);

@@ -34,7 +34,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -92,12 +93,17 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
         return this.description;
     }
 
+    /**
+     * builds CategorySetAssetDescriptionAction with checking for non-null required values
+     * @return CategorySetAssetDescriptionAction
+     */
     public CategorySetAssetDescriptionAction build() {
         return new CategorySetAssetDescriptionActionImpl(assetId, assetKey, description);
     }
 
     /**
-     * builds CategorySetAssetDescriptionAction without checking for non null required values
+     * builds CategorySetAssetDescriptionAction without checking for non-null required values
+     * @return CategorySetAssetDescriptionAction
      */
     public CategorySetAssetDescriptionAction buildUnchecked() {
         return new CategorySetAssetDescriptionActionImpl(assetId, assetKey, description);

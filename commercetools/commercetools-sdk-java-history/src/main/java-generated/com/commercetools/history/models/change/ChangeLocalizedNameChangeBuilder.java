@@ -32,7 +32,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *  <p>Shape of the action for <code>changeName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeLocalizedNameChange with checking for non-null required values
+     * @return ChangeLocalizedNameChange
+     */
     public ChangeLocalizedNameChange build() {
         Objects.requireNonNull(change, ChangeLocalizedNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeLocalizedNameChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
     }
 
     /**
-     * builds ChangeLocalizedNameChange without checking for non null required values
+     * builds ChangeLocalizedNameChange without checking for non-null required values
+     * @return ChangeLocalizedNameChange
      */
     public ChangeLocalizedNameChange buildUnchecked() {
         return new ChangeLocalizedNameChangeImpl(change, previousValue, nextValue);

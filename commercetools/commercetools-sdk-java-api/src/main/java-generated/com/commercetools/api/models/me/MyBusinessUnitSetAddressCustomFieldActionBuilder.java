@@ -34,7 +34,7 @@ public class MyBusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      *  <p>ID of the <code>address</code> to be extended.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class MyBusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class MyBusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -78,6 +78,10 @@ public class MyBusinessUnitSetAddressCustomFieldActionBuilder
         return this.value;
     }
 
+    /**
+     * builds MyBusinessUnitSetAddressCustomFieldAction with checking for non-null required values
+     * @return MyBusinessUnitSetAddressCustomFieldAction
+     */
     public MyBusinessUnitSetAddressCustomFieldAction build() {
         Objects.requireNonNull(addressId, MyBusinessUnitSetAddressCustomFieldAction.class + ": addressId is missing");
         Objects.requireNonNull(name, MyBusinessUnitSetAddressCustomFieldAction.class + ": name is missing");
@@ -85,7 +89,8 @@ public class MyBusinessUnitSetAddressCustomFieldActionBuilder
     }
 
     /**
-     * builds MyBusinessUnitSetAddressCustomFieldAction without checking for non null required values
+     * builds MyBusinessUnitSetAddressCustomFieldAction without checking for non-null required values
+     * @return MyBusinessUnitSetAddressCustomFieldAction
      */
     public MyBusinessUnitSetAddressCustomFieldAction buildUnchecked() {
         return new MyBusinessUnitSetAddressCustomFieldActionImpl(addressId, name, value);

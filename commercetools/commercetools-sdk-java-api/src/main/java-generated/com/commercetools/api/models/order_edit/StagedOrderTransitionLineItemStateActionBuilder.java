@@ -41,7 +41,7 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the fromState value
      * @return Builder
      */
 
@@ -74,7 +75,7 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param fromState
+     * @param fromState value to be set
      * @return Builder
      */
 
@@ -86,6 +87,7 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the toState value
      * @return Builder
      */
 
@@ -97,7 +99,7 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param toState
+     * @param toState value to be set
      * @return Builder
      */
 
@@ -109,7 +111,7 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *
-     * @param actualTransitionDate
+     * @param actualTransitionDate value to be set
      * @return Builder
      */
 
@@ -140,6 +142,10 @@ public class StagedOrderTransitionLineItemStateActionBuilder
         return this.actualTransitionDate;
     }
 
+    /**
+     * builds StagedOrderTransitionLineItemStateAction with checking for non-null required values
+     * @return StagedOrderTransitionLineItemStateAction
+     */
     public StagedOrderTransitionLineItemStateAction build() {
         Objects.requireNonNull(lineItemId, StagedOrderTransitionLineItemStateAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, StagedOrderTransitionLineItemStateAction.class + ": quantity is missing");
@@ -150,7 +156,8 @@ public class StagedOrderTransitionLineItemStateActionBuilder
     }
 
     /**
-     * builds StagedOrderTransitionLineItemStateAction without checking for non null required values
+     * builds StagedOrderTransitionLineItemStateAction without checking for non-null required values
+     * @return StagedOrderTransitionLineItemStateAction
      */
     public StagedOrderTransitionLineItemStateAction buildUnchecked() {
         return new StagedOrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,

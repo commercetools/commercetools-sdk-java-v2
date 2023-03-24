@@ -28,7 +28,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return this.quantity;
     }
 
+    /**
+     * builds ItemShippingTarget with checking for non-null required values
+     * @return ItemShippingTarget
+     */
     public ItemShippingTarget build() {
         Objects.requireNonNull(addressKey, ItemShippingTarget.class + ": addressKey is missing");
         Objects.requireNonNull(quantity, ItemShippingTarget.class + ": quantity is missing");
@@ -63,7 +67,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     * builds ItemShippingTarget without checking for non null required values
+     * builds ItemShippingTarget without checking for non-null required values
+     * @return ItemShippingTarget
      */
     public ItemShippingTarget buildUnchecked() {
         return new ItemShippingTargetImpl(addressKey, quantity);

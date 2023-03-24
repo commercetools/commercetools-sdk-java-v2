@@ -32,7 +32,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *  <p>Shape of the action for <code>setTransitions</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -96,6 +97,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -119,7 +121,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -131,7 +133,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -146,6 +148,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -160,6 +163,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -182,6 +186,10 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
         return this.nextValue;
     }
 
+    /**
+     * builds SetTransitionsChange with checking for non-null required values
+     * @return SetTransitionsChange
+     */
     public SetTransitionsChange build() {
         Objects.requireNonNull(change, SetTransitionsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetTransitionsChange.class + ": previousValue is missing");
@@ -190,7 +198,8 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     * builds SetTransitionsChange without checking for non null required values
+     * builds SetTransitionsChange without checking for non-null required values
+     * @return SetTransitionsChange
      */
     public SetTransitionsChange buildUnchecked() {
         return new SetTransitionsChangeImpl(change, previousValue, nextValue);

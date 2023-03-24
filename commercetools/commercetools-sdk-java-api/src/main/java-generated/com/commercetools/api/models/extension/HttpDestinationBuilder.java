@@ -31,7 +31,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
 
     /**
      *  <p>URL to the target destination.</p>
-     * @param url
+     * @param url value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
 
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
-     * @param authentication
+     * @param authentication value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
 
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     * @param builder function to build the authentication value
      * @return Builder
      */
 
@@ -74,13 +75,18 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
         return this.authentication;
     }
 
+    /**
+     * builds HttpDestination with checking for non-null required values
+     * @return HttpDestination
+     */
     public HttpDestination build() {
         Objects.requireNonNull(url, HttpDestination.class + ": url is missing");
         return new HttpDestinationImpl(url, authentication);
     }
 
     /**
-     * builds HttpDestination without checking for non null required values
+     * builds HttpDestination without checking for non-null required values
+     * @return HttpDestination
      */
     public HttpDestination buildUnchecked() {
         return new HttpDestinationImpl(url, authentication);

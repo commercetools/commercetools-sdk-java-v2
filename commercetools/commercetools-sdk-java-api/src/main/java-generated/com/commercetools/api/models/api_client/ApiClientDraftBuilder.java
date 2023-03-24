@@ -39,7 +39,7 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>Name of the APIClient.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
-     * @param scope
+     * @param scope value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>If set, the Client will be deleted after the specified amount of days.</p>
-     * @param deleteDaysAfterCreation
+     * @param deleteDaysAfterCreation value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
-     * @param accessTokenValiditySeconds
+     * @param accessTokenValiditySeconds value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     /**
      *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
-     * @param refreshTokenValiditySeconds
+     * @param refreshTokenValiditySeconds value to be set
      * @return Builder
      */
 
@@ -115,6 +115,10 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
         return this.refreshTokenValiditySeconds;
     }
 
+    /**
+     * builds ApiClientDraft with checking for non-null required values
+     * @return ApiClientDraft
+     */
     public ApiClientDraft build() {
         Objects.requireNonNull(name, ApiClientDraft.class + ": name is missing");
         Objects.requireNonNull(scope, ApiClientDraft.class + ": scope is missing");
@@ -123,7 +127,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-     * builds ApiClientDraft without checking for non null required values
+     * builds ApiClientDraft without checking for non-null required values
+     * @return ApiClientDraft
      */
     public ApiClientDraft buildUnchecked() {
         return new ApiClientDraftImpl(name, scope, deleteDaysAfterCreation, accessTokenValiditySeconds,

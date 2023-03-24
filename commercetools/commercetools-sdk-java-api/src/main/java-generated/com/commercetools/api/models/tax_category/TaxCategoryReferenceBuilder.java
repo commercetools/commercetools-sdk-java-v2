@@ -31,7 +31,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
 
     /**
      *  <p>Unique identifier of the referenced TaxCategory.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
 
     /**
      *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
 
     /**
      *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
         return this.obj;
     }
 
+    /**
+     * builds TaxCategoryReference with checking for non-null required values
+     * @return TaxCategoryReference
+     */
     public TaxCategoryReference build() {
         Objects.requireNonNull(id, TaxCategoryReference.class + ": id is missing");
         return new TaxCategoryReferenceImpl(id, obj);
     }
 
     /**
-     * builds TaxCategoryReference without checking for non null required values
+     * builds TaxCategoryReference without checking for non-null required values
+     * @return TaxCategoryReference
      */
     public TaxCategoryReference buildUnchecked() {
         return new TaxCategoryReferenceImpl(id, obj);

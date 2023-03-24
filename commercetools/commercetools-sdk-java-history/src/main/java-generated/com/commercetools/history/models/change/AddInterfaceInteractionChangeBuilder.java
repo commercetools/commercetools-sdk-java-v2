@@ -29,7 +29,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     /**
      *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -71,6 +72,10 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
         return this.nextValue;
     }
 
+    /**
+     * builds AddInterfaceInteractionChange with checking for non-null required values
+     * @return AddInterfaceInteractionChange
+     */
     public AddInterfaceInteractionChange build() {
         Objects.requireNonNull(change, AddInterfaceInteractionChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddInterfaceInteractionChange.class + ": nextValue is missing");
@@ -78,7 +83,8 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     }
 
     /**
-     * builds AddInterfaceInteractionChange without checking for non null required values
+     * builds AddInterfaceInteractionChange without checking for non-null required values
+     * @return AddInterfaceInteractionChange
      */
     public AddInterfaceInteractionChange buildUnchecked() {
         return new AddInterfaceInteractionChangeImpl(change, nextValue);

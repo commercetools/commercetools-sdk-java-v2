@@ -29,7 +29,7 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
 
     /**
      *  <p>ID of the TaxRate to replace.</p>
-     * @param taxRateId
+     * @param taxRateId value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
 
     /**
      *  <p>New TaxRate to replace with.</p>
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
 
     /**
      *  <p>New TaxRate to replace with.</p>
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
         return this.taxRate;
     }
 
+    /**
+     * builds TaxCategoryReplaceTaxRateAction with checking for non-null required values
+     * @return TaxCategoryReplaceTaxRateAction
+     */
     public TaxCategoryReplaceTaxRateAction build() {
         Objects.requireNonNull(taxRateId, TaxCategoryReplaceTaxRateAction.class + ": taxRateId is missing");
         Objects.requireNonNull(taxRate, TaxCategoryReplaceTaxRateAction.class + ": taxRate is missing");
@@ -76,7 +81,8 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     }
 
     /**
-     * builds TaxCategoryReplaceTaxRateAction without checking for non null required values
+     * builds TaxCategoryReplaceTaxRateAction without checking for non-null required values
+     * @return TaxCategoryReplaceTaxRateAction
      */
     public TaxCategoryReplaceTaxRateAction buildUnchecked() {
         return new TaxCategoryReplaceTaxRateActionImpl(taxRateId, taxRate);

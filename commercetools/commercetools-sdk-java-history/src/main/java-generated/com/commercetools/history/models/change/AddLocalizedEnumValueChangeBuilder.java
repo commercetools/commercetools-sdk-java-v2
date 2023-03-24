@@ -35,7 +35,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *  <p>The name of the field definition updated.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *  <p>The name of the attribute updated.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -68,6 +68,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -80,7 +81,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -106,6 +107,10 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
         return this.nextValue;
     }
 
+    /**
+     * builds AddLocalizedEnumValueChange with checking for non-null required values
+     * @return AddLocalizedEnumValueChange
+     */
     public AddLocalizedEnumValueChange build() {
         Objects.requireNonNull(change, AddLocalizedEnumValueChange.class + ": change is missing");
         Objects.requireNonNull(fieldName, AddLocalizedEnumValueChange.class + ": fieldName is missing");
@@ -115,7 +120,8 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
     }
 
     /**
-     * builds AddLocalizedEnumValueChange without checking for non null required values
+     * builds AddLocalizedEnumValueChange without checking for non-null required values
+     * @return AddLocalizedEnumValueChange
      */
     public AddLocalizedEnumValueChange buildUnchecked() {
         return new AddLocalizedEnumValueChangeImpl(change, fieldName, attributeName, nextValue);

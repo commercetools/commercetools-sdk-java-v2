@@ -25,7 +25,7 @@ public class PaymentSetStatusInterfaceTextActionBuilder implements Builder<Payme
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param interfaceText
+     * @param interfaceText value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class PaymentSetStatusInterfaceTextActionBuilder implements Builder<Payme
         return this.interfaceText;
     }
 
+    /**
+     * builds PaymentSetStatusInterfaceTextAction with checking for non-null required values
+     * @return PaymentSetStatusInterfaceTextAction
+     */
     public PaymentSetStatusInterfaceTextAction build() {
         Objects.requireNonNull(interfaceText, PaymentSetStatusInterfaceTextAction.class + ": interfaceText is missing");
         return new PaymentSetStatusInterfaceTextActionImpl(interfaceText);
     }
 
     /**
-     * builds PaymentSetStatusInterfaceTextAction without checking for non null required values
+     * builds PaymentSetStatusInterfaceTextAction without checking for non-null required values
+     * @return PaymentSetStatusInterfaceTextAction
      */
     public PaymentSetStatusInterfaceTextAction buildUnchecked() {
         return new PaymentSetStatusInterfaceTextActionImpl(interfaceText);

@@ -27,7 +27,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
 
     /**
      *  <p><code>"Account with the given credentials not found."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InvalidCredentialsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InvalidCredentialsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
         return this.values;
     }
 
+    /**
+     * builds InvalidCredentialsError with checking for non-null required values
+     * @return InvalidCredentialsError
+     */
     public InvalidCredentialsError build() {
         Objects.requireNonNull(message, InvalidCredentialsError.class + ": message is missing");
         return new InvalidCredentialsErrorImpl(message, values);
     }
 
     /**
-     * builds InvalidCredentialsError without checking for non null required values
+     * builds InvalidCredentialsError without checking for non-null required values
+     * @return InvalidCredentialsError
      */
     public InvalidCredentialsError buildUnchecked() {
         return new InvalidCredentialsErrorImpl(message, values);

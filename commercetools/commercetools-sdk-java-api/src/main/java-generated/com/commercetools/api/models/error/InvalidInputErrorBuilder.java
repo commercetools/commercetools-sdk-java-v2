@@ -27,7 +27,7 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
 
     /**
      *  <p>Description of the constraints that are not met by the request. For example, <code>"Invalid $propertyName. It may be a non-empty string up to $maxLength"</code>.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InvalidInputErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InvalidInputErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
         return this.values;
     }
 
+    /**
+     * builds InvalidInputError with checking for non-null required values
+     * @return InvalidInputError
+     */
     public InvalidInputError build() {
         Objects.requireNonNull(message, InvalidInputError.class + ": message is missing");
         return new InvalidInputErrorImpl(message, values);
     }
 
     /**
-     * builds InvalidInputError without checking for non null required values
+     * builds InvalidInputError without checking for non-null required values
+     * @return InvalidInputError
      */
     public InvalidInputError buildUnchecked() {
         return new InvalidInputErrorImpl(message, values);

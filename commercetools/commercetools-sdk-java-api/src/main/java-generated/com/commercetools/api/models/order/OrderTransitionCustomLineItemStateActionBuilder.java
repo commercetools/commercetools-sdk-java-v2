@@ -41,7 +41,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the fromState value
      * @return Builder
      */
 
@@ -74,7 +75,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param fromState
+     * @param fromState value to be set
      * @return Builder
      */
 
@@ -86,6 +87,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the toState value
      * @return Builder
      */
 
@@ -97,7 +99,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param toState
+     * @param toState value to be set
      * @return Builder
      */
 
@@ -109,7 +111,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param actualTransitionDate
+     * @param actualTransitionDate value to be set
      * @return Builder
      */
 
@@ -140,6 +142,10 @@ public class OrderTransitionCustomLineItemStateActionBuilder
         return this.actualTransitionDate;
     }
 
+    /**
+     * builds OrderTransitionCustomLineItemStateAction with checking for non-null required values
+     * @return OrderTransitionCustomLineItemStateAction
+     */
     public OrderTransitionCustomLineItemStateAction build() {
         Objects.requireNonNull(customLineItemId,
             OrderTransitionCustomLineItemStateAction.class + ": customLineItemId is missing");
@@ -151,7 +157,8 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     * builds OrderTransitionCustomLineItemStateAction without checking for non null required values
+     * builds OrderTransitionCustomLineItemStateAction without checking for non-null required values
+     * @return OrderTransitionCustomLineItemStateAction
      */
     public OrderTransitionCustomLineItemStateAction buildUnchecked() {
         return new OrderTransitionCustomLineItemStateActionImpl(customLineItemId, quantity, fromState, toState,

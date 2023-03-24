@@ -41,7 +41,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Time at which the transaction took place.</p>
-     * @param timestamp
+     * @param timestamp value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -74,6 +74,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *
+     * @param builder function to build the amount value
      * @return Builder
      */
 
@@ -85,7 +86,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -96,7 +97,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
-     * @param interactionId
+     * @param interactionId value to be set
      * @return Builder
      */
 
@@ -107,7 +108,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -140,6 +141,10 @@ public class TransactionBuilder implements Builder<Transaction> {
         return this.state;
     }
 
+    /**
+     * builds Transaction with checking for non-null required values
+     * @return Transaction
+     */
     public Transaction build() {
         Objects.requireNonNull(id, Transaction.class + ": id is missing");
         Objects.requireNonNull(timestamp, Transaction.class + ": timestamp is missing");
@@ -151,7 +156,8 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     * builds Transaction without checking for non null required values
+     * builds Transaction without checking for non-null required values
+     * @return Transaction
      */
     public Transaction buildUnchecked() {
         return new TransactionImpl(id, timestamp, type, amount, interactionId, state);

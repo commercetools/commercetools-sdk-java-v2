@@ -27,7 +27,7 @@ public class TaxCategorySetDescriptionActionBuilder implements Builder<TaxCatego
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class TaxCategorySetDescriptionActionBuilder implements Builder<TaxCatego
         return this.description;
     }
 
+    /**
+     * builds TaxCategorySetDescriptionAction with checking for non-null required values
+     * @return TaxCategorySetDescriptionAction
+     */
     public TaxCategorySetDescriptionAction build() {
         return new TaxCategorySetDescriptionActionImpl(description);
     }
 
     /**
-     * builds TaxCategorySetDescriptionAction without checking for non null required values
+     * builds TaxCategorySetDescriptionAction without checking for non-null required values
+     * @return TaxCategorySetDescriptionAction
      */
     public TaxCategorySetDescriptionAction buildUnchecked() {
         return new TaxCategorySetDescriptionActionImpl(description);

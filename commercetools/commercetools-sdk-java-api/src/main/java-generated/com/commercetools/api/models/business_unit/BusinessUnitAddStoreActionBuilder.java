@@ -26,6 +26,7 @@ public class BusinessUnitAddStoreActionBuilder implements Builder<BusinessUnitAd
 
     /**
      *  <p>Store to add.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class BusinessUnitAddStoreActionBuilder implements Builder<BusinessUnitAd
 
     /**
      *  <p>Store to add.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class BusinessUnitAddStoreActionBuilder implements Builder<BusinessUnitAd
         return this.store;
     }
 
+    /**
+     * builds BusinessUnitAddStoreAction with checking for non-null required values
+     * @return BusinessUnitAddStoreAction
+     */
     public BusinessUnitAddStoreAction build() {
         Objects.requireNonNull(store, BusinessUnitAddStoreAction.class + ": store is missing");
         return new BusinessUnitAddStoreActionImpl(store);
     }
 
     /**
-     * builds BusinessUnitAddStoreAction without checking for non null required values
+     * builds BusinessUnitAddStoreAction without checking for non-null required values
+     * @return BusinessUnitAddStoreAction
      */
     public BusinessUnitAddStoreAction buildUnchecked() {
         return new BusinessUnitAddStoreActionImpl(store);

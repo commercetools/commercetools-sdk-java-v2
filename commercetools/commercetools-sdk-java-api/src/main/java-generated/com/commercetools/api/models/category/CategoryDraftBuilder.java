@@ -61,6 +61,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -83,6 +84,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -105,6 +107,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Description of the Category.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -116,7 +119,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Description of the Category.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -128,6 +131,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Parent Category of the Category. The parent can be set by its <code>id</code> or <code>key</code>.</p>
+     * @param builder function to build the parent value
      * @return Builder
      */
 
@@ -140,7 +144,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Parent Category of the Category. The parent can be set by its <code>id</code> or <code>key</code>.</p>
-     * @param parent
+     * @param parent value to be set
      * @return Builder
      */
 
@@ -152,7 +156,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree. If not set, a random value will be assigned.</p>
-     * @param orderHint
+     * @param orderHint value to be set
      * @return Builder
      */
 
@@ -163,7 +167,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -174,6 +178,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @param builder function to build the metaTitle value
      * @return Builder
      */
 
@@ -185,7 +190,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
-     * @param metaTitle
+     * @param metaTitle value to be set
      * @return Builder
      */
 
@@ -197,6 +202,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @param builder function to build the metaDescription value
      * @return Builder
      */
 
@@ -208,7 +214,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
-     * @param metaDescription
+     * @param metaDescription value to be set
      * @return Builder
      */
 
@@ -220,6 +226,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @param builder function to build the metaKeywords value
      * @return Builder
      */
 
@@ -231,7 +238,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
-     * @param metaKeywords
+     * @param metaKeywords value to be set
      * @return Builder
      */
 
@@ -243,6 +250,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Custom Fields for the Category.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -254,7 +262,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Custom Fields for the Category.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -265,7 +273,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -276,7 +284,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -288,7 +296,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -302,6 +310,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -316,6 +325,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -328,7 +338,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -395,6 +405,10 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this.key;
     }
 
+    /**
+     * builds CategoryDraft with checking for non-null required values
+     * @return CategoryDraft
+     */
     public CategoryDraft build() {
         Objects.requireNonNull(name, CategoryDraft.class + ": name is missing");
         Objects.requireNonNull(slug, CategoryDraft.class + ": slug is missing");
@@ -403,7 +417,8 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     * builds CategoryDraft without checking for non null required values
+     * builds CategoryDraft without checking for non-null required values
+     * @return CategoryDraft
      */
     public CategoryDraft buildUnchecked() {
         return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,

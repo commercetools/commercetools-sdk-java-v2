@@ -40,7 +40,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
-     * @param timestamp
+     * @param timestamp value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Type of the Transaction. Only <code>Authorization</code> or <code>Charge</code> is allowed.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -62,6 +62,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Money value for the Transaction.</p>
+     * @param builder function to build the amount value
      * @return Builder
      */
 
@@ -73,7 +74,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Money value for the Transaction.</p>
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -84,7 +85,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
-     * @param interactionId
+     * @param interactionId value to be set
      * @return Builder
      */
 
@@ -95,6 +96,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Custom Fields of the Transaction.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -106,7 +108,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Custom Fields of the Transaction.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -139,6 +141,10 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
         return this.custom;
     }
 
+    /**
+     * builds MyTransactionDraft with checking for non-null required values
+     * @return MyTransactionDraft
+     */
     public MyTransactionDraft build() {
         Objects.requireNonNull(type, MyTransactionDraft.class + ": type is missing");
         Objects.requireNonNull(amount, MyTransactionDraft.class + ": amount is missing");
@@ -146,7 +152,8 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     * builds MyTransactionDraft without checking for non null required values
+     * builds MyTransactionDraft without checking for non-null required values
+     * @return MyTransactionDraft
      */
     public MyTransactionDraft buildUnchecked() {
         return new MyTransactionDraftImpl(timestamp, type, amount, interactionId, custom);

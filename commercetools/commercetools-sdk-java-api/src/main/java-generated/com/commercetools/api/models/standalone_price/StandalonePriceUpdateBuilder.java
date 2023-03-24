@@ -29,7 +29,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -95,6 +96,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -115,6 +117,10 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
         return this.actions;
     }
 
+    /**
+     * builds StandalonePriceUpdate with checking for non-null required values
+     * @return StandalonePriceUpdate
+     */
     public StandalonePriceUpdate build() {
         Objects.requireNonNull(version, StandalonePriceUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, StandalonePriceUpdate.class + ": actions is missing");
@@ -122,7 +128,8 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
     }
 
     /**
-     * builds StandalonePriceUpdate without checking for non null required values
+     * builds StandalonePriceUpdate without checking for non-null required values
+     * @return StandalonePriceUpdate
      */
     public StandalonePriceUpdate buildUnchecked() {
         return new StandalonePriceUpdateImpl(version, actions);

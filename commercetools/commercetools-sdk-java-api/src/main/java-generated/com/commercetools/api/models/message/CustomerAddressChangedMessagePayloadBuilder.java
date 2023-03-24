@@ -26,6 +26,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>Address that was set during the Change Address update action.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>Address that was set during the Change Address update action.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
         return this.address;
     }
 
+    /**
+     * builds CustomerAddressChangedMessagePayload with checking for non-null required values
+     * @return CustomerAddressChangedMessagePayload
+     */
     public CustomerAddressChangedMessagePayload build() {
         Objects.requireNonNull(address, CustomerAddressChangedMessagePayload.class + ": address is missing");
         return new CustomerAddressChangedMessagePayloadImpl(address);
     }
 
     /**
-     * builds CustomerAddressChangedMessagePayload without checking for non null required values
+     * builds CustomerAddressChangedMessagePayload without checking for non-null required values
+     * @return CustomerAddressChangedMessagePayload
      */
     public CustomerAddressChangedMessagePayload buildUnchecked() {
         return new CustomerAddressChangedMessagePayloadImpl(address);

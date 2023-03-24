@@ -31,6 +31,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the metaKeywords value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param metaKeywords
+     * @param metaKeywords value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
 
     /**
      *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -73,12 +74,17 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
         return this.staged;
     }
 
+    /**
+     * builds ProductSetMetaKeywordsAction with checking for non-null required values
+     * @return ProductSetMetaKeywordsAction
+     */
     public ProductSetMetaKeywordsAction build() {
         return new ProductSetMetaKeywordsActionImpl(metaKeywords, staged);
     }
 
     /**
-     * builds ProductSetMetaKeywordsAction without checking for non null required values
+     * builds ProductSetMetaKeywordsAction without checking for non-null required values
+     * @return ProductSetMetaKeywordsAction
      */
     public ProductSetMetaKeywordsAction buildUnchecked() {
         return new ProductSetMetaKeywordsActionImpl(metaKeywords, staged);

@@ -51,7 +51,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Description of the invalid Extension response. For example, <code>"The extension did not return the expected JSON."</code>.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -62,6 +62,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -71,6 +73,9 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -83,6 +88,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>User-defined localized description of the error.</p>
+     * @param builder function to build the localizedMessage value
      * @return Builder
      */
 
@@ -94,7 +100,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>User-defined localized description of the error.</p>
-     * @param localizedMessage
+     * @param localizedMessage value to be set
      * @return Builder
      */
 
@@ -106,7 +112,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Any information that should be returned to the API caller.</p>
-     * @param extensionExtraInfo
+     * @param extensionExtraInfo value to be set
      * @return Builder
      */
 
@@ -117,7 +123,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
-     * @param extensionErrors
+     * @param extensionErrors value to be set
      * @return Builder
      */
 
@@ -129,7 +135,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
-     * @param extensionErrors
+     * @param extensionErrors value to be set
      * @return Builder
      */
 
@@ -141,7 +147,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
-     * @param extensionErrors
+     * @param extensionErrors value to be set
      * @return Builder
      */
 
@@ -156,6 +162,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param builder function to build the extensionErrors value
      * @return Builder
      */
 
@@ -170,6 +177,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param builder function to build the extensionErrors value
      * @return Builder
      */
 
@@ -182,7 +190,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>The response body returned by the Extension.</p>
-     * @param extensionBody
+     * @param extensionBody value to be set
      * @return Builder
      */
 
@@ -193,7 +201,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Http status code returned by the Extension.</p>
-     * @param extensionStatusCode
+     * @param extensionStatusCode value to be set
      * @return Builder
      */
 
@@ -204,7 +212,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Unique identifier of the Extension.</p>
-     * @param extensionId
+     * @param extensionId value to be set
      * @return Builder
      */
 
@@ -215,7 +223,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
-     * @param extensionKey
+     * @param extensionKey value to be set
      * @return Builder
      */
 
@@ -265,6 +273,10 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
         return this.extensionKey;
     }
 
+    /**
+     * builds ExtensionBadResponseError with checking for non-null required values
+     * @return ExtensionBadResponseError
+     */
     public ExtensionBadResponseError build() {
         Objects.requireNonNull(message, ExtensionBadResponseError.class + ": message is missing");
         Objects.requireNonNull(extensionErrors, ExtensionBadResponseError.class + ": extensionErrors is missing");
@@ -274,7 +286,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     * builds ExtensionBadResponseError without checking for non null required values
+     * builds ExtensionBadResponseError without checking for non-null required values
+     * @return ExtensionBadResponseError
      */
     public ExtensionBadResponseError buildUnchecked() {
         return new ExtensionBadResponseErrorImpl(message, values, localizedMessage, extensionExtraInfo, extensionErrors,

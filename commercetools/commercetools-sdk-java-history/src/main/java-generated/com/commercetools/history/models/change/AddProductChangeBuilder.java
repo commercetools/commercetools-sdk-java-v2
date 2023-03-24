@@ -29,7 +29,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
 
     /**
      *  <p>Update action for when a product is assigned to a product selection</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds AddProductChange with checking for non-null required values
+     * @return AddProductChange
+     */
     public AddProductChange build() {
         Objects.requireNonNull(change, AddProductChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddProductChange.class + ": nextValue is missing");
@@ -75,7 +80,8 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     * builds AddProductChange without checking for non null required values
+     * builds AddProductChange without checking for non-null required values
+     * @return AddProductChange
      */
     public AddProductChange buildUnchecked() {
         return new AddProductChangeImpl(change, nextValue);

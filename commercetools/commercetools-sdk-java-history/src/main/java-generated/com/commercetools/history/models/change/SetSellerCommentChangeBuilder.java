@@ -31,7 +31,7 @@ public class SetSellerCommentChangeBuilder implements Builder<SetSellerCommentCh
 
     /**
      *  <p>Shape of the action for <code>setSellerComment</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetSellerCommentChangeBuilder implements Builder<SetSellerCommentCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetSellerCommentChangeBuilder implements Builder<SetSellerCommentCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetSellerCommentChangeBuilder implements Builder<SetSellerCommentCh
         return this.nextValue;
     }
 
+    /**
+     * builds SetSellerCommentChange with checking for non-null required values
+     * @return SetSellerCommentChange
+     */
     public SetSellerCommentChange build() {
         Objects.requireNonNull(change, SetSellerCommentChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetSellerCommentChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetSellerCommentChangeBuilder implements Builder<SetSellerCommentCh
     }
 
     /**
-     * builds SetSellerCommentChange without checking for non null required values
+     * builds SetSellerCommentChange without checking for non-null required values
+     * @return SetSellerCommentChange
      */
     public SetSellerCommentChange buildUnchecked() {
         return new SetSellerCommentChangeImpl(change, previousValue, nextValue);

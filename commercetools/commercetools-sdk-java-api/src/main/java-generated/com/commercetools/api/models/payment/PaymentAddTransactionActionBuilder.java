@@ -26,6 +26,7 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
 
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
+     * @param builder function to build the transaction value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
 
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
-     * @param transaction
+     * @param transaction value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
         return this.transaction;
     }
 
+    /**
+     * builds PaymentAddTransactionAction with checking for non-null required values
+     * @return PaymentAddTransactionAction
+     */
     public PaymentAddTransactionAction build() {
         Objects.requireNonNull(transaction, PaymentAddTransactionAction.class + ": transaction is missing");
         return new PaymentAddTransactionActionImpl(transaction);
     }
 
     /**
-     * builds PaymentAddTransactionAction without checking for non null required values
+     * builds PaymentAddTransactionAction without checking for non-null required values
+     * @return PaymentAddTransactionAction
      */
     public PaymentAddTransactionAction buildUnchecked() {
         return new PaymentAddTransactionActionImpl(transaction);

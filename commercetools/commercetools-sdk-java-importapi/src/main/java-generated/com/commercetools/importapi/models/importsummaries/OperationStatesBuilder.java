@@ -40,7 +40,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
-     * @param processing
+     * @param processing value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>validationFailed</code> state.</p>
-     * @param validationFailed
+     * @param validationFailed value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>unresolved</code> state.</p>
-     * @param unresolved
+     * @param unresolved value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
-     * @param waitForMasterVariant
+     * @param waitForMasterVariant value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>imported</code> state.</p>
-     * @param imported
+     * @param imported value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>rejected</code> state.</p>
-     * @param rejected
+     * @param rejected value to be set
      * @return Builder
      */
 
@@ -128,6 +128,10 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
         return this.rejected;
     }
 
+    /**
+     * builds OperationStates with checking for non-null required values
+     * @return OperationStates
+     */
     public OperationStates build() {
         Objects.requireNonNull(processing, OperationStates.class + ": processing is missing");
         Objects.requireNonNull(validationFailed, OperationStates.class + ": validationFailed is missing");
@@ -140,7 +144,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     * builds OperationStates without checking for non null required values
+     * builds OperationStates without checking for non-null required values
+     * @return OperationStates
      */
     public OperationStates buildUnchecked() {
         return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported,

@@ -38,7 +38,7 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
 
     /**
      *
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
 
     /**
      *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
-     * @param triggerQuantity
+     * @param triggerQuantity value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
 
     /**
      *  <p>Quantity of line items that are discounted per application of this discount.</p>
-     * @param discountedQuantity
+     * @param discountedQuantity value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
 
     /**
      *  <p>Maximum number of applications of this discount.</p>
-     * @param maxOccurrence
+     * @param maxOccurrence value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
 
     /**
      *
-     * @param selectionMode
+     * @param selectionMode value to be set
      * @return Builder
      */
 
@@ -112,6 +112,10 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
         return this.selectionMode;
     }
 
+    /**
+     * builds ChangeTargetMultiBuyLineItemsChangeValue with checking for non-null required values
+     * @return ChangeTargetMultiBuyLineItemsChangeValue
+     */
     public ChangeTargetMultiBuyLineItemsChangeValue build() {
         Objects.requireNonNull(predicate, ChangeTargetMultiBuyLineItemsChangeValue.class + ": predicate is missing");
         Objects.requireNonNull(triggerQuantity,
@@ -127,7 +131,8 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
     }
 
     /**
-     * builds ChangeTargetMultiBuyLineItemsChangeValue without checking for non null required values
+     * builds ChangeTargetMultiBuyLineItemsChangeValue without checking for non-null required values
+     * @return ChangeTargetMultiBuyLineItemsChangeValue
      */
     public ChangeTargetMultiBuyLineItemsChangeValue buildUnchecked() {
         return new ChangeTargetMultiBuyLineItemsChangeValueImpl(predicate, triggerQuantity, discountedQuantity,

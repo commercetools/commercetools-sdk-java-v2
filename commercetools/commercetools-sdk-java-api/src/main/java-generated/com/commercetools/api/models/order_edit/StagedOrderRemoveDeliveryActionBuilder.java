@@ -25,7 +25,7 @@ public class StagedOrderRemoveDeliveryActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StagedOrderRemoveDeliveryActionBuilder implements Builder<StagedOrd
         return this.deliveryId;
     }
 
+    /**
+     * builds StagedOrderRemoveDeliveryAction with checking for non-null required values
+     * @return StagedOrderRemoveDeliveryAction
+     */
     public StagedOrderRemoveDeliveryAction build() {
         Objects.requireNonNull(deliveryId, StagedOrderRemoveDeliveryAction.class + ": deliveryId is missing");
         return new StagedOrderRemoveDeliveryActionImpl(deliveryId);
     }
 
     /**
-     * builds StagedOrderRemoveDeliveryAction without checking for non null required values
+     * builds StagedOrderRemoveDeliveryAction without checking for non-null required values
+     * @return StagedOrderRemoveDeliveryAction
      */
     public StagedOrderRemoveDeliveryAction buildUnchecked() {
         return new StagedOrderRemoveDeliveryActionImpl(deliveryId);

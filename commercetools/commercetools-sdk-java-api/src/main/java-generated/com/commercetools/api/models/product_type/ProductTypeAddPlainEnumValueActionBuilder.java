@@ -29,7 +29,7 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
         return this.value;
     }
 
+    /**
+     * builds ProductTypeAddPlainEnumValueAction with checking for non-null required values
+     * @return ProductTypeAddPlainEnumValueAction
+     */
     public ProductTypeAddPlainEnumValueAction build() {
         Objects.requireNonNull(attributeName, ProductTypeAddPlainEnumValueAction.class + ": attributeName is missing");
         Objects.requireNonNull(value, ProductTypeAddPlainEnumValueAction.class + ": value is missing");
@@ -77,7 +82,8 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
     }
 
     /**
-     * builds ProductTypeAddPlainEnumValueAction without checking for non null required values
+     * builds ProductTypeAddPlainEnumValueAction without checking for non-null required values
+     * @return ProductTypeAddPlainEnumValueAction
      */
     public ProductTypeAddPlainEnumValueAction buildUnchecked() {
         return new ProductTypeAddPlainEnumValueActionImpl(attributeName, value);

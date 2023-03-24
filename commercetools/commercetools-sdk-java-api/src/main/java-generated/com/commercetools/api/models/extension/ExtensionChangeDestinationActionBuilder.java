@@ -26,7 +26,7 @@ public class ExtensionChangeDestinationActionBuilder implements Builder<Extensio
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param destination
+     * @param destination value to be set
      * @return Builder
      */
 
@@ -38,6 +38,7 @@ public class ExtensionChangeDestinationActionBuilder implements Builder<Extensio
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the destination value
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class ExtensionChangeDestinationActionBuilder implements Builder<Extensio
         return this.destination;
     }
 
+    /**
+     * builds ExtensionChangeDestinationAction with checking for non-null required values
+     * @return ExtensionChangeDestinationAction
+     */
     public ExtensionChangeDestinationAction build() {
         Objects.requireNonNull(destination, ExtensionChangeDestinationAction.class + ": destination is missing");
         return new ExtensionChangeDestinationActionImpl(destination);
     }
 
     /**
-     * builds ExtensionChangeDestinationAction without checking for non null required values
+     * builds ExtensionChangeDestinationAction without checking for non-null required values
+     * @return ExtensionChangeDestinationAction
      */
     public ExtensionChangeDestinationAction buildUnchecked() {
         return new ExtensionChangeDestinationActionImpl(destination);

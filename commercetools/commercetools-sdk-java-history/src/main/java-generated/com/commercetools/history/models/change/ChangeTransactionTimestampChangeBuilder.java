@@ -35,7 +35,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *
+     * @param builder function to build the transaction value
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *
-     * @param transaction
+     * @param transaction value to be set
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -107,6 +108,10 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeTransactionTimestampChange with checking for non-null required values
+     * @return ChangeTransactionTimestampChange
+     */
     public ChangeTransactionTimestampChange build() {
         Objects.requireNonNull(change, ChangeTransactionTimestampChange.class + ": change is missing");
         Objects.requireNonNull(transaction, ChangeTransactionTimestampChange.class + ": transaction is missing");
@@ -116,7 +121,8 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     }
 
     /**
-     * builds ChangeTransactionTimestampChange without checking for non null required values
+     * builds ChangeTransactionTimestampChange without checking for non-null required values
+     * @return ChangeTransactionTimestampChange
      */
     public ChangeTransactionTimestampChange buildUnchecked() {
         return new ChangeTransactionTimestampChangeImpl(change, transaction, nextValue, previousValue);

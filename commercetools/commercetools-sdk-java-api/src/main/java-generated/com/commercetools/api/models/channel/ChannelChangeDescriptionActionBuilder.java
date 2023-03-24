@@ -26,6 +26,7 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
         return this.description;
     }
 
+    /**
+     * builds ChannelChangeDescriptionAction with checking for non-null required values
+     * @return ChannelChangeDescriptionAction
+     */
     public ChannelChangeDescriptionAction build() {
         Objects.requireNonNull(description, ChannelChangeDescriptionAction.class + ": description is missing");
         return new ChannelChangeDescriptionActionImpl(description);
     }
 
     /**
-     * builds ChannelChangeDescriptionAction without checking for non null required values
+     * builds ChannelChangeDescriptionAction without checking for non-null required values
+     * @return ChannelChangeDescriptionAction
      */
     public ChannelChangeDescriptionAction buildUnchecked() {
         return new ChannelChangeDescriptionActionImpl(description);

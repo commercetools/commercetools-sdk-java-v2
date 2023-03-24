@@ -33,7 +33,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
 
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
 
     /**
      *  <p>If <code>true</code>, only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -78,13 +78,18 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
         return this.staged;
     }
 
+    /**
+     * builds ProductSetSkuAction with checking for non-null required values
+     * @return ProductSetSkuAction
+     */
     public ProductSetSkuAction build() {
         Objects.requireNonNull(variantId, ProductSetSkuAction.class + ": variantId is missing");
         return new ProductSetSkuActionImpl(variantId, sku, staged);
     }
 
     /**
-     * builds ProductSetSkuAction without checking for non null required values
+     * builds ProductSetSkuAction without checking for non-null required values
+     * @return ProductSetSkuAction
      */
     public ProductSetSkuAction buildUnchecked() {
         return new ProductSetSkuActionImpl(variantId, sku, staged);

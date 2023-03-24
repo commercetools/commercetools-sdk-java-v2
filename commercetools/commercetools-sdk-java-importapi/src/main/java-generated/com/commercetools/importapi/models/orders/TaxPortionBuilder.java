@@ -34,7 +34,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     /**
      *
-     * @param rate
+     * @param rate value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     /**
      *
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     /**
      *
+     * @param builder function to build the amount value
      * @return Builder
      */
 
@@ -89,6 +90,10 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
         return this.amount;
     }
 
+    /**
+     * builds TaxPortion with checking for non-null required values
+     * @return TaxPortion
+     */
     public TaxPortion build() {
         Objects.requireNonNull(rate, TaxPortion.class + ": rate is missing");
         Objects.requireNonNull(amount, TaxPortion.class + ": amount is missing");
@@ -96,7 +101,8 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     * builds TaxPortion without checking for non null required values
+     * builds TaxPortion without checking for non-null required values
+     * @return TaxPortion
      */
     public TaxPortion buildUnchecked() {
         return new TaxPortionImpl(name, rate, amount);

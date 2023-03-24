@@ -26,7 +26,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -77,6 +78,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -91,13 +93,18 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
         return this.value;
     }
 
+    /**
+     * builds ReferenceSetField with checking for non-null required values
+     * @return ReferenceSetField
+     */
     public ReferenceSetField build() {
         Objects.requireNonNull(value, ReferenceSetField.class + ": value is missing");
         return new ReferenceSetFieldImpl(value);
     }
 
     /**
-     * builds ReferenceSetField without checking for non null required values
+     * builds ReferenceSetField without checking for non-null required values
+     * @return ReferenceSetField
      */
     public ReferenceSetField buildUnchecked() {
         return new ReferenceSetFieldImpl(value);

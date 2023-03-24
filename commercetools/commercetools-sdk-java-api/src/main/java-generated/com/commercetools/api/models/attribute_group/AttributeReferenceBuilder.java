@@ -25,7 +25,7 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
 
     /**
      *  <p>Key of the attribute.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
         return this.key;
     }
 
+    /**
+     * builds AttributeReference with checking for non-null required values
+     * @return AttributeReference
+     */
     public AttributeReference build() {
         Objects.requireNonNull(key, AttributeReference.class + ": key is missing");
         return new AttributeReferenceImpl(key);
     }
 
     /**
-     * builds AttributeReference without checking for non null required values
+     * builds AttributeReference without checking for non-null required values
+     * @return AttributeReference
      */
     public AttributeReference buildUnchecked() {
         return new AttributeReferenceImpl(key);

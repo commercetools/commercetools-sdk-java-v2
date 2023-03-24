@@ -28,7 +28,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @param builder function to build the distributionChannels value
      * @return Builder
      */
 
@@ -82,6 +83,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @param builder function to build the distributionChannels value
      * @return Builder
      */
 
@@ -98,12 +100,17 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
         return this.distributionChannels;
     }
 
+    /**
+     * builds StoreSetDistributionChannelsAction with checking for non-null required values
+     * @return StoreSetDistributionChannelsAction
+     */
     public StoreSetDistributionChannelsAction build() {
         return new StoreSetDistributionChannelsActionImpl(distributionChannels);
     }
 
     /**
-     * builds StoreSetDistributionChannelsAction without checking for non null required values
+     * builds StoreSetDistributionChannelsAction without checking for non-null required values
+     * @return StoreSetDistributionChannelsAction
      */
     public StoreSetDistributionChannelsAction buildUnchecked() {
         return new StoreSetDistributionChannelsActionImpl(distributionChannels);

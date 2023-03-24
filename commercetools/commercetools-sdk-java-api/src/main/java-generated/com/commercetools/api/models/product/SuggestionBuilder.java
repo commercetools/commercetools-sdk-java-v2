@@ -25,7 +25,7 @@ public class SuggestionBuilder implements Builder<Suggestion> {
 
     /**
      *  <p>The suggested text.</p>
-     * @param text
+     * @param text value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class SuggestionBuilder implements Builder<Suggestion> {
         return this.text;
     }
 
+    /**
+     * builds Suggestion with checking for non-null required values
+     * @return Suggestion
+     */
     public Suggestion build() {
         Objects.requireNonNull(text, Suggestion.class + ": text is missing");
         return new SuggestionImpl(text);
     }
 
     /**
-     * builds Suggestion without checking for non null required values
+     * builds Suggestion without checking for non-null required values
+     * @return Suggestion
      */
     public Suggestion buildUnchecked() {
         return new SuggestionImpl(text);

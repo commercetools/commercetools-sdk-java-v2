@@ -33,7 +33,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     /**
      *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -44,6 +44,8 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public EnumKeyAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,6 +55,9 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public EnumKeyAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +70,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     /**
      *  <p>Conflicting enum key.</p>
-     * @param conflictingEnumKey
+     * @param conflictingEnumKey value to be set
      * @return Builder
      */
 
@@ -76,7 +81,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
-     * @param conflictingAttributeName
+     * @param conflictingAttributeName value to be set
      * @return Builder
      */
 
@@ -101,6 +106,10 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
         return this.conflictingAttributeName;
     }
 
+    /**
+     * builds EnumKeyAlreadyExistsError with checking for non-null required values
+     * @return EnumKeyAlreadyExistsError
+     */
     public EnumKeyAlreadyExistsError build() {
         Objects.requireNonNull(message, EnumKeyAlreadyExistsError.class + ": message is missing");
         Objects.requireNonNull(conflictingEnumKey, EnumKeyAlreadyExistsError.class + ": conflictingEnumKey is missing");
@@ -110,7 +119,8 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     }
 
     /**
-     * builds EnumKeyAlreadyExistsError without checking for non null required values
+     * builds EnumKeyAlreadyExistsError without checking for non-null required values
+     * @return EnumKeyAlreadyExistsError
      */
     public EnumKeyAlreadyExistsError buildUnchecked() {
         return new EnumKeyAlreadyExistsErrorImpl(message, values, conflictingEnumKey, conflictingAttributeName);

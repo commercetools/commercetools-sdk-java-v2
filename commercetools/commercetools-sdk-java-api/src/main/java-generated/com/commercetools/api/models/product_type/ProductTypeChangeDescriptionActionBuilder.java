@@ -25,7 +25,7 @@ public class ProductTypeChangeDescriptionActionBuilder implements Builder<Produc
 
     /**
      *  <p>New value to set.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductTypeChangeDescriptionActionBuilder implements Builder<Produc
         return this.description;
     }
 
+    /**
+     * builds ProductTypeChangeDescriptionAction with checking for non-null required values
+     * @return ProductTypeChangeDescriptionAction
+     */
     public ProductTypeChangeDescriptionAction build() {
         Objects.requireNonNull(description, ProductTypeChangeDescriptionAction.class + ": description is missing");
         return new ProductTypeChangeDescriptionActionImpl(description);
     }
 
     /**
-     * builds ProductTypeChangeDescriptionAction without checking for non null required values
+     * builds ProductTypeChangeDescriptionAction without checking for non-null required values
+     * @return ProductTypeChangeDescriptionAction
      */
     public ProductTypeChangeDescriptionAction buildUnchecked() {
         return new ProductTypeChangeDescriptionActionImpl(description);

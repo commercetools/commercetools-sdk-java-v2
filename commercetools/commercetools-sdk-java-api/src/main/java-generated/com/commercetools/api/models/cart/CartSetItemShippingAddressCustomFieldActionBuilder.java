@@ -34,7 +34,7 @@ public class CartSetItemShippingAddressCustomFieldActionBuilder
 
     /**
      *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class CartSetItemShippingAddressCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class CartSetItemShippingAddressCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -78,6 +78,10 @@ public class CartSetItemShippingAddressCustomFieldActionBuilder
         return this.value;
     }
 
+    /**
+     * builds CartSetItemShippingAddressCustomFieldAction with checking for non-null required values
+     * @return CartSetItemShippingAddressCustomFieldAction
+     */
     public CartSetItemShippingAddressCustomFieldAction build() {
         Objects.requireNonNull(addressKey,
             CartSetItemShippingAddressCustomFieldAction.class + ": addressKey is missing");
@@ -86,7 +90,8 @@ public class CartSetItemShippingAddressCustomFieldActionBuilder
     }
 
     /**
-     * builds CartSetItemShippingAddressCustomFieldAction without checking for non null required values
+     * builds CartSetItemShippingAddressCustomFieldAction without checking for non-null required values
+     * @return CartSetItemShippingAddressCustomFieldAction
      */
     public CartSetItemShippingAddressCustomFieldAction buildUnchecked() {
         return new CartSetItemShippingAddressCustomFieldActionImpl(addressKey, name, value);

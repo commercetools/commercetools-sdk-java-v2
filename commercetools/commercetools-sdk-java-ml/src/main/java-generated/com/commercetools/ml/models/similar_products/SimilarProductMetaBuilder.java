@@ -37,6 +37,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Localized product name used for similarity estimation.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -48,7 +49,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Localized product name used for similarity estimation.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -59,6 +60,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Localized product description used for similarity estimation.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -70,7 +72,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Localized product description used for similarity estimation.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -82,6 +84,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -93,7 +96,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -104,7 +107,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Total number of variants associated with the product.</p>
-     * @param variantCount
+     * @param variantCount value to be set
      * @return Builder
      */
 
@@ -133,12 +136,17 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
         return this.variantCount;
     }
 
+    /**
+     * builds SimilarProductMeta with checking for non-null required values
+     * @return SimilarProductMeta
+     */
     public SimilarProductMeta build() {
         return new SimilarProductMetaImpl(name, description, price, variantCount);
     }
 
     /**
-     * builds SimilarProductMeta without checking for non null required values
+     * builds SimilarProductMeta without checking for non-null required values
+     * @return SimilarProductMeta
      */
     public SimilarProductMeta buildUnchecked() {
         return new SimilarProductMetaImpl(name, description, price, variantCount);

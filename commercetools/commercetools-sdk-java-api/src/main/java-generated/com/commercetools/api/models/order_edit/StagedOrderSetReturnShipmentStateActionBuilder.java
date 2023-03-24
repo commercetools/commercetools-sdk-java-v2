@@ -29,7 +29,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
 
     /**
      *
-     * @param returnItemId
+     * @param returnItemId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
 
     /**
      *
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -58,6 +58,10 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
         return this.shipmentState;
     }
 
+    /**
+     * builds StagedOrderSetReturnShipmentStateAction with checking for non-null required values
+     * @return StagedOrderSetReturnShipmentStateAction
+     */
     public StagedOrderSetReturnShipmentStateAction build() {
         Objects.requireNonNull(returnItemId,
             StagedOrderSetReturnShipmentStateAction.class + ": returnItemId is missing");
@@ -67,7 +71,8 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     /**
-     * builds StagedOrderSetReturnShipmentStateAction without checking for non null required values
+     * builds StagedOrderSetReturnShipmentStateAction without checking for non-null required values
+     * @return StagedOrderSetReturnShipmentStateAction
      */
     public StagedOrderSetReturnShipmentStateAction buildUnchecked() {
         return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);

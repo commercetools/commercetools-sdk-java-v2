@@ -79,7 +79,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Unique identifier of the Review.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -90,7 +90,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Current version of the Review.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -101,7 +101,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Date and time (UTC) the Review was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -112,7 +112,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Date and time (UTC) the Review was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -123,6 +123,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -134,7 +135,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -146,6 +147,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -157,7 +159,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -168,7 +170,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>User-defined unique identifier of the Review.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -179,7 +181,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>&nbsp;+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
-     * @param uniquenessValue
+     * @param uniquenessValue value to be set
      * @return Builder
      */
 
@@ -190,7 +192,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Language in which the content of the Review is written.</p>
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -201,7 +203,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Name of the author.</p>
-     * @param authorName
+     * @param authorName value to be set
      * @return Builder
      */
 
@@ -212,7 +214,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Title of the Review.</p>
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -223,7 +225,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Content of the Review.</p>
-     * @param text
+     * @param text value to be set
      * @return Builder
      */
 
@@ -234,7 +236,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -245,6 +247,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -256,7 +259,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
-     * @param includedInStatistics
+     * @param includedInStatistics value to be set
      * @return Builder
      */
 
@@ -267,7 +270,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Rating of the Product or Channel.</p>
-     * @param rating
+     * @param rating value to be set
      * @return Builder
      */
 
@@ -278,6 +281,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -289,7 +293,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -300,6 +304,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Customer who created the Review.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -311,7 +316,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Customer who created the Review.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -322,6 +327,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Custom Fields of the Review.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -333,7 +339,7 @@ public class ReviewBuilder implements Builder<Review> {
 
     /**
      *  <p>Custom Fields of the Review.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -427,6 +433,10 @@ public class ReviewBuilder implements Builder<Review> {
         return this.custom;
     }
 
+    /**
+     * builds Review with checking for non-null required values
+     * @return Review
+     */
     public Review build() {
         Objects.requireNonNull(id, Review.class + ": id is missing");
         Objects.requireNonNull(version, Review.class + ": version is missing");
@@ -438,7 +448,8 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     * builds Review without checking for non null required values
+     * builds Review without checking for non-null required values
+     * @return Review
      */
     public Review buildUnchecked() {
         return new ReviewImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, uniquenessValue,

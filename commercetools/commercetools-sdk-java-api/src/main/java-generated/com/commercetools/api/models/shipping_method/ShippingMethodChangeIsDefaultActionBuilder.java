@@ -25,7 +25,7 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
-     * @param isDefault
+     * @param isDefault value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
         return this.isDefault;
     }
 
+    /**
+     * builds ShippingMethodChangeIsDefaultAction with checking for non-null required values
+     * @return ShippingMethodChangeIsDefaultAction
+     */
     public ShippingMethodChangeIsDefaultAction build() {
         Objects.requireNonNull(isDefault, ShippingMethodChangeIsDefaultAction.class + ": isDefault is missing");
         return new ShippingMethodChangeIsDefaultActionImpl(isDefault);
     }
 
     /**
-     * builds ShippingMethodChangeIsDefaultAction without checking for non null required values
+     * builds ShippingMethodChangeIsDefaultAction without checking for non-null required values
+     * @return ShippingMethodChangeIsDefaultAction
      */
     public ShippingMethodChangeIsDefaultAction buildUnchecked() {
         return new ShippingMethodChangeIsDefaultActionImpl(isDefault);

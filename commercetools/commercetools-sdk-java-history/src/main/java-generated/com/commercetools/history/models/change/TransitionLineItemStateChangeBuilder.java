@@ -38,7 +38,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *  <p>Update action for <code>transitionLineItemState</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
-     * @param stateId
+     * @param stateId value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -110,6 +110,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -124,6 +125,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -136,7 +138,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -148,7 +150,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -160,7 +162,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -175,6 +177,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -189,6 +192,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -219,6 +223,10 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
         return this.previousValue;
     }
 
+    /**
+     * builds TransitionLineItemStateChange with checking for non-null required values
+     * @return TransitionLineItemStateChange
+     */
     public TransitionLineItemStateChange build() {
         Objects.requireNonNull(change, TransitionLineItemStateChange.class + ": change is missing");
         Objects.requireNonNull(lineItemId, TransitionLineItemStateChange.class + ": lineItemId is missing");
@@ -229,7 +237,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     * builds TransitionLineItemStateChange without checking for non null required values
+     * builds TransitionLineItemStateChange without checking for non-null required values
+     * @return TransitionLineItemStateChange
      */
     public TransitionLineItemStateChange buildUnchecked() {
         return new TransitionLineItemStateChangeImpl(change, lineItemId, stateId, nextValue, previousValue);

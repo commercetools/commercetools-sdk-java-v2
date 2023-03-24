@@ -38,7 +38,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -83,6 +84,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -106,6 +108,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -117,7 +120,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -147,6 +150,10 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
         return this.previousValue;
     }
 
+    /**
+     * builds SetLineItemDistributionChannelChange with checking for non-null required values
+     * @return SetLineItemDistributionChannelChange
+     */
     public SetLineItemDistributionChannelChange build() {
         Objects.requireNonNull(change, SetLineItemDistributionChannelChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, SetLineItemDistributionChannelChange.class + ": lineItem is missing");
@@ -158,7 +165,8 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
     }
 
     /**
-     * builds SetLineItemDistributionChannelChange without checking for non null required values
+     * builds SetLineItemDistributionChannelChange without checking for non-null required values
+     * @return SetLineItemDistributionChannelChange
      */
     public SetLineItemDistributionChannelChange buildUnchecked() {
         return new SetLineItemDistributionChannelChangeImpl(change, lineItem, variant, nextValue, previousValue);

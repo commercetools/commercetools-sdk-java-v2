@@ -24,6 +24,8 @@ public class AttributesBuilder implements Builder<Attributes> {
 
     /**
      *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public AttributesBuilder values(
@@ -34,6 +36,9 @@ public class AttributesBuilder implements Builder<Attributes> {
 
     /**
      *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public AttributesBuilder addValue(final String key,
@@ -49,12 +54,17 @@ public class AttributesBuilder implements Builder<Attributes> {
         return this.values;
     }
 
+    /**
+     * builds Attributes with checking for non-null required values
+     * @return Attributes
+     */
     public Attributes build() {
         return new AttributesImpl(values);
     }
 
     /**
-     * builds Attributes without checking for non null required values
+     * builds Attributes without checking for non-null required values
+     * @return Attributes
      */
     public Attributes buildUnchecked() {
         return new AttributesImpl(values);

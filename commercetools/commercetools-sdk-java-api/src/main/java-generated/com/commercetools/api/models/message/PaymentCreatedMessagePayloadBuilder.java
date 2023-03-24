@@ -26,6 +26,7 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
 
     /**
      *  <p>Payment that was created.</p>
+     * @param builder function to build the payment value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
 
     /**
      *  <p>Payment that was created.</p>
-     * @param payment
+     * @param payment value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
         return this.payment;
     }
 
+    /**
+     * builds PaymentCreatedMessagePayload with checking for non-null required values
+     * @return PaymentCreatedMessagePayload
+     */
     public PaymentCreatedMessagePayload build() {
         Objects.requireNonNull(payment, PaymentCreatedMessagePayload.class + ": payment is missing");
         return new PaymentCreatedMessagePayloadImpl(payment);
     }
 
     /**
-     * builds PaymentCreatedMessagePayload without checking for non null required values
+     * builds PaymentCreatedMessagePayload without checking for non-null required values
+     * @return PaymentCreatedMessagePayload
      */
     public PaymentCreatedMessagePayload buildUnchecked() {
         return new PaymentCreatedMessagePayloadImpl(payment);

@@ -34,7 +34,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Sets the Custom Fields fields for the Line Item.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Sets the Custom Fields fields for the Line Item.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -103,13 +105,18 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
         return this.fields;
     }
 
+    /**
+     * builds CartSetLineItemCustomTypeAction with checking for non-null required values
+     * @return CartSetLineItemCustomTypeAction
+     */
     public CartSetLineItemCustomTypeAction build() {
         Objects.requireNonNull(lineItemId, CartSetLineItemCustomTypeAction.class + ": lineItemId is missing");
         return new CartSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
     }
 
     /**
-     * builds CartSetLineItemCustomTypeAction without checking for non null required values
+     * builds CartSetLineItemCustomTypeAction without checking for non-null required values
+     * @return CartSetLineItemCustomTypeAction
      */
     public CartSetLineItemCustomTypeAction buildUnchecked() {
         return new CartSetLineItemCustomTypeActionImpl(lineItemId, type, fields);

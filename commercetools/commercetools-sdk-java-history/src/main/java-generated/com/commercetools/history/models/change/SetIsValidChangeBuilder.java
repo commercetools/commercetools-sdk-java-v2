@@ -31,7 +31,7 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
 
     /**
      *  <p>Shape of the action for <code>setIsValid</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetIsValidChange with checking for non-null required values
+     * @return SetIsValidChange
+     */
     public SetIsValidChange build() {
         Objects.requireNonNull(change, SetIsValidChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetIsValidChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
     }
 
     /**
-     * builds SetIsValidChange without checking for non null required values
+     * builds SetIsValidChange without checking for non-null required values
+     * @return SetIsValidChange
      */
     public SetIsValidChange buildUnchecked() {
         return new SetIsValidChangeImpl(change, previousValue, nextValue);

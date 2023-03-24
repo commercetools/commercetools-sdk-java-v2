@@ -28,6 +28,7 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
         return this.slug;
     }
 
+    /**
+     * builds ShoppingListSetSlugAction with checking for non-null required values
+     * @return ShoppingListSetSlugAction
+     */
     public ShoppingListSetSlugAction build() {
         return new ShoppingListSetSlugActionImpl(slug);
     }
 
     /**
-     * builds ShoppingListSetSlugAction without checking for non null required values
+     * builds ShoppingListSetSlugAction without checking for non-null required values
+     * @return ShoppingListSetSlugAction
      */
     public ShoppingListSetSlugAction buildUnchecked() {
         return new ShoppingListSetSlugActionImpl(slug);

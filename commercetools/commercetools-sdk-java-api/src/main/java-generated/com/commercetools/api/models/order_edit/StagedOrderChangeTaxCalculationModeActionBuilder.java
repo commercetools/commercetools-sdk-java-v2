@@ -26,7 +26,7 @@ public class StagedOrderChangeTaxCalculationModeActionBuilder
 
     /**
      *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
-     * @param taxCalculationMode
+     * @param taxCalculationMode value to be set
      * @return Builder
      */
 
@@ -40,6 +40,10 @@ public class StagedOrderChangeTaxCalculationModeActionBuilder
         return this.taxCalculationMode;
     }
 
+    /**
+     * builds StagedOrderChangeTaxCalculationModeAction with checking for non-null required values
+     * @return StagedOrderChangeTaxCalculationModeAction
+     */
     public StagedOrderChangeTaxCalculationModeAction build() {
         Objects.requireNonNull(taxCalculationMode,
             StagedOrderChangeTaxCalculationModeAction.class + ": taxCalculationMode is missing");
@@ -47,7 +51,8 @@ public class StagedOrderChangeTaxCalculationModeActionBuilder
     }
 
     /**
-     * builds StagedOrderChangeTaxCalculationModeAction without checking for non null required values
+     * builds StagedOrderChangeTaxCalculationModeAction without checking for non-null required values
+     * @return StagedOrderChangeTaxCalculationModeAction
      */
     public StagedOrderChangeTaxCalculationModeAction buildUnchecked() {
         return new StagedOrderChangeTaxCalculationModeActionImpl(taxCalculationMode);

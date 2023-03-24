@@ -30,7 +30,7 @@ public class StateResourceIdentifierBuilder implements Builder<StateResourceIden
 
     /**
      *  <p>Unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class StateResourceIdentifierBuilder implements Builder<StateResourceIden
 
     /**
      *  <p>User-defined unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class StateResourceIdentifierBuilder implements Builder<StateResourceIden
         return this.key;
     }
 
+    /**
+     * builds StateResourceIdentifier with checking for non-null required values
+     * @return StateResourceIdentifier
+     */
     public StateResourceIdentifier build() {
         return new StateResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds StateResourceIdentifier without checking for non null required values
+     * builds StateResourceIdentifier without checking for non-null required values
+     * @return StateResourceIdentifier
      */
     public StateResourceIdentifier buildUnchecked() {
         return new StateResourceIdentifierImpl(id, key);

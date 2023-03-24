@@ -26,6 +26,7 @@ public class CategoryChangeNameActionBuilder implements Builder<CategoryChangeNa
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CategoryChangeNameActionBuilder implements Builder<CategoryChangeNa
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class CategoryChangeNameActionBuilder implements Builder<CategoryChangeNa
         return this.name;
     }
 
+    /**
+     * builds CategoryChangeNameAction with checking for non-null required values
+     * @return CategoryChangeNameAction
+     */
     public CategoryChangeNameAction build() {
         Objects.requireNonNull(name, CategoryChangeNameAction.class + ": name is missing");
         return new CategoryChangeNameActionImpl(name);
     }
 
     /**
-     * builds CategoryChangeNameAction without checking for non null required values
+     * builds CategoryChangeNameAction without checking for non-null required values
+     * @return CategoryChangeNameAction
      */
     public CategoryChangeNameAction buildUnchecked() {
         return new CategoryChangeNameActionImpl(name);

@@ -33,7 +33,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to become the Master Variant.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to become the Master Variant.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
 
     /**
      *  <p>If <code>true</code>, only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -79,12 +79,17 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
         return this.staged;
     }
 
+    /**
+     * builds ProductChangeMasterVariantAction with checking for non-null required values
+     * @return ProductChangeMasterVariantAction
+     */
     public ProductChangeMasterVariantAction build() {
         return new ProductChangeMasterVariantActionImpl(variantId, sku, staged);
     }
 
     /**
-     * builds ProductChangeMasterVariantAction without checking for non null required values
+     * builds ProductChangeMasterVariantAction without checking for non-null required values
+     * @return ProductChangeMasterVariantAction
      */
     public ProductChangeMasterVariantAction buildUnchecked() {
         return new ProductChangeMasterVariantActionImpl(variantId, sku, staged);

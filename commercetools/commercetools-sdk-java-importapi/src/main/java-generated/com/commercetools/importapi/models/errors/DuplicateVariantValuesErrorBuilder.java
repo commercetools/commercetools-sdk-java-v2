@@ -29,7 +29,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>The offending variant values.</p>
+     * @param builder function to build the variantValues value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>The offending variant values.</p>
-     * @param variantValues
+     * @param variantValues value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
         return this.variantValues;
     }
 
+    /**
+     * builds DuplicateVariantValuesError with checking for non-null required values
+     * @return DuplicateVariantValuesError
+     */
     public DuplicateVariantValuesError build() {
         Objects.requireNonNull(message, DuplicateVariantValuesError.class + ": message is missing");
         Objects.requireNonNull(variantValues, DuplicateVariantValuesError.class + ": variantValues is missing");
@@ -76,7 +81,8 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     * builds DuplicateVariantValuesError without checking for non null required values
+     * builds DuplicateVariantValuesError without checking for non-null required values
+     * @return DuplicateVariantValuesError
      */
     public DuplicateVariantValuesError buildUnchecked() {
         return new DuplicateVariantValuesErrorImpl(message, variantValues);

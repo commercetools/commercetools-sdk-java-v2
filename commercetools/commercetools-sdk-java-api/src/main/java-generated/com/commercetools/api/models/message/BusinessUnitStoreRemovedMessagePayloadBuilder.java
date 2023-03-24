@@ -26,6 +26,7 @@ public class BusinessUnitStoreRemovedMessagePayloadBuilder implements Builder<Bu
 
     /**
      *  <p>The Store that was removed from the Business Unit.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class BusinessUnitStoreRemovedMessagePayloadBuilder implements Builder<Bu
 
     /**
      *  <p>The Store that was removed from the Business Unit.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class BusinessUnitStoreRemovedMessagePayloadBuilder implements Builder<Bu
         return this.store;
     }
 
+    /**
+     * builds BusinessUnitStoreRemovedMessagePayload with checking for non-null required values
+     * @return BusinessUnitStoreRemovedMessagePayload
+     */
     public BusinessUnitStoreRemovedMessagePayload build() {
         Objects.requireNonNull(store, BusinessUnitStoreRemovedMessagePayload.class + ": store is missing");
         return new BusinessUnitStoreRemovedMessagePayloadImpl(store);
     }
 
     /**
-     * builds BusinessUnitStoreRemovedMessagePayload without checking for non null required values
+     * builds BusinessUnitStoreRemovedMessagePayload without checking for non-null required values
+     * @return BusinessUnitStoreRemovedMessagePayload
      */
     public BusinessUnitStoreRemovedMessagePayload buildUnchecked() {
         return new BusinessUnitStoreRemovedMessagePayloadImpl(store);

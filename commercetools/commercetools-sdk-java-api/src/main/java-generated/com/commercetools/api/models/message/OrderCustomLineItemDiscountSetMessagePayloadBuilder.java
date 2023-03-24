@@ -35,7 +35,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier for the Custom Line Item.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -85,6 +85,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
 
@@ -100,6 +101,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
 
@@ -113,6 +115,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -124,7 +127,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -147,6 +150,10 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
         return this.taxedPrice;
     }
 
+    /**
+     * builds OrderCustomLineItemDiscountSetMessagePayload with checking for non-null required values
+     * @return OrderCustomLineItemDiscountSetMessagePayload
+     */
     public OrderCustomLineItemDiscountSetMessagePayload build() {
         Objects.requireNonNull(customLineItemId,
             OrderCustomLineItemDiscountSetMessagePayload.class + ": customLineItemId is missing");
@@ -157,7 +164,8 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     * builds OrderCustomLineItemDiscountSetMessagePayload without checking for non null required values
+     * builds OrderCustomLineItemDiscountSetMessagePayload without checking for non-null required values
+     * @return OrderCustomLineItemDiscountSetMessagePayload
      */
     public OrderCustomLineItemDiscountSetMessagePayload buildUnchecked() {
         return new OrderCustomLineItemDiscountSetMessagePayloadImpl(customLineItemId, discountedPricePerQuantity,

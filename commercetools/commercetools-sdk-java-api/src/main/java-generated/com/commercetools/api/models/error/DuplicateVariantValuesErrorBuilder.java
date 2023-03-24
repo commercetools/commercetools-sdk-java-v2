@@ -31,7 +31,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p><code>"A duplicate combination of the variant values (sku, key, images, prices, attributes) exists."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -42,6 +42,8 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public DuplicateVariantValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -51,6 +53,9 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public DuplicateVariantValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -63,6 +68,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
+     * @param builder function to build the variantValues value
      * @return Builder
      */
 
@@ -74,7 +80,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
-     * @param variantValues
+     * @param variantValues value to be set
      * @return Builder
      */
 
@@ -96,6 +102,10 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
         return this.variantValues;
     }
 
+    /**
+     * builds DuplicateVariantValuesError with checking for non-null required values
+     * @return DuplicateVariantValuesError
+     */
     public DuplicateVariantValuesError build() {
         Objects.requireNonNull(message, DuplicateVariantValuesError.class + ": message is missing");
         Objects.requireNonNull(variantValues, DuplicateVariantValuesError.class + ": variantValues is missing");
@@ -103,7 +113,8 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     * builds DuplicateVariantValuesError without checking for non null required values
+     * builds DuplicateVariantValuesError without checking for non-null required values
+     * @return DuplicateVariantValuesError
      */
     public DuplicateVariantValuesError buildUnchecked() {
         return new DuplicateVariantValuesErrorImpl(message, values, variantValues);

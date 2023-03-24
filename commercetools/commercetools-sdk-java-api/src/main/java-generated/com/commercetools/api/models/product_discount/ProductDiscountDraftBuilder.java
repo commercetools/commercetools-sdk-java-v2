@@ -52,6 +52,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Name of the ProductDiscount.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -63,7 +64,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Name of the ProductDiscount.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -74,7 +75,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>User-defined unique identifier for the ProductDiscount.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -85,6 +86,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Description of the ProductDiscount.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -96,7 +98,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Description of the ProductDiscount.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Type of Discount and its corresponding value.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -120,6 +122,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Type of Discount and its corresponding value.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -132,7 +135,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Valid ProductDiscount predicate.</p>
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -143,7 +146,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
-     * @param sortOrder
+     * @param sortOrder value to be set
      * @return Builder
      */
 
@@ -154,7 +157,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
-     * @param isActive
+     * @param isActive value to be set
      * @return Builder
      */
 
@@ -165,7 +168,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -176,7 +179,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -225,6 +228,10 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
         return this.validUntil;
     }
 
+    /**
+     * builds ProductDiscountDraft with checking for non-null required values
+     * @return ProductDiscountDraft
+     */
     public ProductDiscountDraft build() {
         Objects.requireNonNull(name, ProductDiscountDraft.class + ": name is missing");
         Objects.requireNonNull(value, ProductDiscountDraft.class + ": value is missing");
@@ -236,7 +243,8 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     * builds ProductDiscountDraft without checking for non null required values
+     * builds ProductDiscountDraft without checking for non-null required values
+     * @return ProductDiscountDraft
      */
     public ProductDiscountDraft buildUnchecked() {
         return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom,

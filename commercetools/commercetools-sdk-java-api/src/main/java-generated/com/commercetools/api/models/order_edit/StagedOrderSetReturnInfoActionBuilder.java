@@ -28,7 +28,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -96,12 +98,17 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
         return this.items;
     }
 
+    /**
+     * builds StagedOrderSetReturnInfoAction with checking for non-null required values
+     * @return StagedOrderSetReturnInfoAction
+     */
     public StagedOrderSetReturnInfoAction build() {
         return new StagedOrderSetReturnInfoActionImpl(items);
     }
 
     /**
-     * builds StagedOrderSetReturnInfoAction without checking for non null required values
+     * builds StagedOrderSetReturnInfoAction without checking for non-null required values
+     * @return StagedOrderSetReturnInfoAction
      */
     public StagedOrderSetReturnInfoAction buildUnchecked() {
         return new StagedOrderSetReturnInfoActionImpl(items);

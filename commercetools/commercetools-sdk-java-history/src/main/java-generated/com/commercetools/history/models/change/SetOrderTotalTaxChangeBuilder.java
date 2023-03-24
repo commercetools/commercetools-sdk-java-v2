@@ -35,7 +35,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
 
     /**
      *  <p>Update action for <code>setOrderTotalTax</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
 
     /**
      *
-     * @param taxMode
+     * @param taxMode value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -116,6 +118,10 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
         return this.previousValue;
     }
 
+    /**
+     * builds SetOrderTotalTaxChange with checking for non-null required values
+     * @return SetOrderTotalTaxChange
+     */
     public SetOrderTotalTaxChange build() {
         Objects.requireNonNull(change, SetOrderTotalTaxChange.class + ": change is missing");
         Objects.requireNonNull(taxMode, SetOrderTotalTaxChange.class + ": taxMode is missing");
@@ -125,7 +131,8 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     * builds SetOrderTotalTaxChange without checking for non null required values
+     * builds SetOrderTotalTaxChange without checking for non-null required values
+     * @return SetOrderTotalTaxChange
      */
     public SetOrderTotalTaxChange buildUnchecked() {
         return new SetOrderTotalTaxChangeImpl(change, taxMode, nextValue, previousValue);

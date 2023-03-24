@@ -32,7 +32,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was added.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -86,6 +87,10 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
         return this.staged;
     }
 
+    /**
+     * builds ProductPriceAddedMessagePayload with checking for non-null required values
+     * @return ProductPriceAddedMessagePayload
+     */
     public ProductPriceAddedMessagePayload build() {
         Objects.requireNonNull(variantId, ProductPriceAddedMessagePayload.class + ": variantId is missing");
         Objects.requireNonNull(price, ProductPriceAddedMessagePayload.class + ": price is missing");
@@ -94,7 +99,8 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
     }
 
     /**
-     * builds ProductPriceAddedMessagePayload without checking for non null required values
+     * builds ProductPriceAddedMessagePayload without checking for non-null required values
+     * @return ProductPriceAddedMessagePayload
      */
     public ProductPriceAddedMessagePayload buildUnchecked() {
         return new ProductPriceAddedMessagePayloadImpl(variantId, price, staged);

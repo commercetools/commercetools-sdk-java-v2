@@ -74,7 +74,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Unique identifier of the ShippingMethod.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -85,7 +85,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Current version of the ShippingMethod.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -96,7 +96,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Date and time (UTC) the ShippingMethod was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -107,7 +107,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Date and time (UTC) the ShippingMethod was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -118,6 +118,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -129,7 +130,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -141,6 +142,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -152,7 +154,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -163,7 +165,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>User-defined unique identifier of the ShippingMethod.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -174,7 +176,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Name of the ShippingMethod.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -185,6 +187,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @param builder function to build the localizedName value
      * @return Builder
      */
 
@@ -196,7 +199,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
-     * @param localizedName
+     * @param localizedName value to be set
      * @return Builder
      */
 
@@ -208,7 +211,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Description of the ShippingMethod.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
     @Deprecated
@@ -219,6 +222,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @param builder function to build the localizedDescription value
      * @return Builder
      */
 
@@ -231,7 +235,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
-     * @param localizedDescription
+     * @param localizedDescription value to be set
      * @return Builder
      */
 
@@ -243,6 +247,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -255,7 +260,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -267,7 +272,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
-     * @param zoneRates
+     * @param zoneRates value to be set
      * @return Builder
      */
 
@@ -278,7 +283,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
-     * @param zoneRates
+     * @param zoneRates value to be set
      * @return Builder
      */
 
@@ -290,7 +295,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
-     * @param zoneRates
+     * @param zoneRates value to be set
      * @return Builder
      */
 
@@ -305,6 +310,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @param builder function to build the zoneRates value
      * @return Builder
      */
 
@@ -319,6 +325,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @param builder function to build the zoneRates value
      * @return Builder
      */
 
@@ -331,7 +338,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
-     * @param isDefault
+     * @param isDefault value to be set
      * @return Builder
      */
 
@@ -342,7 +349,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -353,6 +360,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Custom Fields of the ShippingMethod.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -364,7 +372,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Custom Fields of the ShippingMethod.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -446,6 +454,10 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this.custom;
     }
 
+    /**
+     * builds ShippingMethod with checking for non-null required values
+     * @return ShippingMethod
+     */
     public ShippingMethod build() {
         Objects.requireNonNull(id, ShippingMethod.class + ": id is missing");
         Objects.requireNonNull(version, ShippingMethod.class + ": version is missing");
@@ -460,7 +472,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     * builds ShippingMethod without checking for non null required values
+     * builds ShippingMethod without checking for non-null required values
+     * @return ShippingMethod
      */
     public ShippingMethod buildUnchecked() {
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,

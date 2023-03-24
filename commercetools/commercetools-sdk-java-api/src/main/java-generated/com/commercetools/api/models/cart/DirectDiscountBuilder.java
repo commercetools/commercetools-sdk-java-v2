@@ -34,7 +34,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
 
     /**
      *  <p>Unique identifier of the Direct Discount.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
 
     /**
      *  <p>Effect of the Discount on the Cart.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
 
     /**
      *  <p>Effect of the Discount on the Cart.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     /**
      *  <p>Part of the Cart that is discounted.</p>
      *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     /**
      *  <p>Part of the Cart that is discounted.</p>
      *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
         return this.target;
     }
 
+    /**
+     * builds DirectDiscount with checking for non-null required values
+     * @return DirectDiscount
+     */
     public DirectDiscount build() {
         Objects.requireNonNull(id, DirectDiscount.class + ": id is missing");
         Objects.requireNonNull(value, DirectDiscount.class + ": value is missing");
@@ -110,7 +116,8 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     }
 
     /**
-     * builds DirectDiscount without checking for non null required values
+     * builds DirectDiscount without checking for non-null required values
+     * @return DirectDiscount
      */
     public DirectDiscount buildUnchecked() {
         return new DirectDiscountImpl(id, value, target);

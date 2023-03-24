@@ -35,6 +35,7 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -58,6 +59,7 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @param builder function to build the oldState value
      * @return Builder
      */
 
@@ -69,7 +71,7 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
-     * @param oldState
+     * @param oldState value to be set
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
         return this.force;
     }
 
+    /**
+     * builds StagedQuoteStateTransitionMessagePayload with checking for non-null required values
+     * @return StagedQuoteStateTransitionMessagePayload
+     */
     public StagedQuoteStateTransitionMessagePayload build() {
         Objects.requireNonNull(state, StagedQuoteStateTransitionMessagePayload.class + ": state is missing");
         Objects.requireNonNull(force, StagedQuoteStateTransitionMessagePayload.class + ": force is missing");
@@ -110,7 +116,8 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
     }
 
     /**
-     * builds StagedQuoteStateTransitionMessagePayload without checking for non null required values
+     * builds StagedQuoteStateTransitionMessagePayload without checking for non-null required values
+     * @return StagedQuoteStateTransitionMessagePayload
      */
     public StagedQuoteStateTransitionMessagePayload buildUnchecked() {
         return new StagedQuoteStateTransitionMessagePayloadImpl(state, oldState, force);

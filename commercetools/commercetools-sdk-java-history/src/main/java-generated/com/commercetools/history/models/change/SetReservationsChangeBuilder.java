@@ -32,7 +32,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *  <p>Update action for <code>setReservations</code> on inventories</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -96,6 +97,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -120,7 +122,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -132,7 +134,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -147,6 +149,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -161,6 +164,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -183,6 +187,10 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this.previousValue;
     }
 
+    /**
+     * builds SetReservationsChange with checking for non-null required values
+     * @return SetReservationsChange
+     */
     public SetReservationsChange build() {
         Objects.requireNonNull(change, SetReservationsChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetReservationsChange.class + ": nextValue is missing");
@@ -191,7 +199,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     * builds SetReservationsChange without checking for non null required values
+     * builds SetReservationsChange without checking for non-null required values
+     * @return SetReservationsChange
      */
     public SetReservationsChange buildUnchecked() {
         return new SetReservationsChangeImpl(change, nextValue, previousValue);

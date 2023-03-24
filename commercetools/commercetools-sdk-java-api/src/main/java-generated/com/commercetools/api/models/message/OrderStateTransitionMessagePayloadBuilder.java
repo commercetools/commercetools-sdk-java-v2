@@ -34,6 +34,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>OrderState after the Transition State update action.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>OrderState after the Transition State update action.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -57,6 +58,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>OrderState before the Transition State update action.</p>
+     * @param builder function to build the oldState value
      * @return Builder
      */
 
@@ -68,7 +70,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>OrderState before the Transition State update action.</p>
-     * @param oldState
+     * @param oldState value to be set
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -102,6 +104,10 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
         return this.force;
     }
 
+    /**
+     * builds OrderStateTransitionMessagePayload with checking for non-null required values
+     * @return OrderStateTransitionMessagePayload
+     */
     public OrderStateTransitionMessagePayload build() {
         Objects.requireNonNull(state, OrderStateTransitionMessagePayload.class + ": state is missing");
         Objects.requireNonNull(force, OrderStateTransitionMessagePayload.class + ": force is missing");
@@ -109,7 +115,8 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     * builds OrderStateTransitionMessagePayload without checking for non null required values
+     * builds OrderStateTransitionMessagePayload without checking for non-null required values
+     * @return OrderStateTransitionMessagePayload
      */
     public OrderStateTransitionMessagePayload buildUnchecked() {
         return new OrderStateTransitionMessagePayloadImpl(state, oldState, force);

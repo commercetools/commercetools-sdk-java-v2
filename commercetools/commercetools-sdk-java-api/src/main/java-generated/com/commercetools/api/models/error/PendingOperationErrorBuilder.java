@@ -27,7 +27,7 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
 
     /**
      *  <p>Plain text description of the error.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public PendingOperationErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public PendingOperationErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
         return this.values;
     }
 
+    /**
+     * builds PendingOperationError with checking for non-null required values
+     * @return PendingOperationError
+     */
     public PendingOperationError build() {
         Objects.requireNonNull(message, PendingOperationError.class + ": message is missing");
         return new PendingOperationErrorImpl(message, values);
     }
 
     /**
-     * builds PendingOperationError without checking for non null required values
+     * builds PendingOperationError without checking for non-null required values
+     * @return PendingOperationError
      */
     public PendingOperationError buildUnchecked() {
         return new PendingOperationErrorImpl(message, values);

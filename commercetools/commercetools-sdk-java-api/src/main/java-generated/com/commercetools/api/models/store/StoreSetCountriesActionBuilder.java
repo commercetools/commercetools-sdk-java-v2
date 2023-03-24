@@ -28,7 +28,7 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the countries value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the countries value
      * @return Builder
      */
 
@@ -96,12 +98,17 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
         return this.countries;
     }
 
+    /**
+     * builds StoreSetCountriesAction with checking for non-null required values
+     * @return StoreSetCountriesAction
+     */
     public StoreSetCountriesAction build() {
         return new StoreSetCountriesActionImpl(countries);
     }
 
     /**
-     * builds StoreSetCountriesAction without checking for non null required values
+     * builds StoreSetCountriesAction without checking for non-null required values
+     * @return StoreSetCountriesAction
      */
     public StoreSetCountriesAction buildUnchecked() {
         return new StoreSetCountriesActionImpl(countries);

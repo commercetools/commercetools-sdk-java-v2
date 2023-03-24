@@ -28,6 +28,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
         return this.customer;
     }
 
+    /**
+     * builds ShoppingListSetCustomerAction with checking for non-null required values
+     * @return ShoppingListSetCustomerAction
+     */
     public ShoppingListSetCustomerAction build() {
         return new ShoppingListSetCustomerActionImpl(customer);
     }
 
     /**
-     * builds ShoppingListSetCustomerAction without checking for non null required values
+     * builds ShoppingListSetCustomerAction without checking for non-null required values
+     * @return ShoppingListSetCustomerAction
      */
     public ShoppingListSetCustomerAction buildUnchecked() {
         return new ShoppingListSetCustomerActionImpl(customer);

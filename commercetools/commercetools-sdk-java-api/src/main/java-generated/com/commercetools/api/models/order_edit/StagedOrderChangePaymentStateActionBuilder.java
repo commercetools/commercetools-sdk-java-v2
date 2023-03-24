@@ -27,7 +27,7 @@ public class StagedOrderChangePaymentStateActionBuilder implements Builder<Stage
 
     /**
      *
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class StagedOrderChangePaymentStateActionBuilder implements Builder<Stage
         return this.paymentState;
     }
 
+    /**
+     * builds StagedOrderChangePaymentStateAction with checking for non-null required values
+     * @return StagedOrderChangePaymentStateAction
+     */
     public StagedOrderChangePaymentStateAction build() {
         return new StagedOrderChangePaymentStateActionImpl(paymentState);
     }
 
     /**
-     * builds StagedOrderChangePaymentStateAction without checking for non null required values
+     * builds StagedOrderChangePaymentStateAction without checking for non-null required values
+     * @return StagedOrderChangePaymentStateAction
      */
     public StagedOrderChangePaymentStateAction buildUnchecked() {
         return new StagedOrderChangePaymentStateActionImpl(paymentState);

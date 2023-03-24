@@ -26,7 +26,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
 
     /**
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
-     * @param productSelection
+     * @param productSelection value to be set
      * @return Builder
      */
 
@@ -38,6 +38,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
 
     /**
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     * @param builder function to build the productSelection value
      * @return Builder
      */
 
@@ -53,6 +54,10 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
         return this.productSelection;
     }
 
+    /**
+     * builds ProductSelectionCreatedMessagePayload with checking for non-null required values
+     * @return ProductSelectionCreatedMessagePayload
+     */
     public ProductSelectionCreatedMessagePayload build() {
         Objects.requireNonNull(productSelection,
             ProductSelectionCreatedMessagePayload.class + ": productSelection is missing");
@@ -60,7 +65,8 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     * builds ProductSelectionCreatedMessagePayload without checking for non null required values
+     * builds ProductSelectionCreatedMessagePayload without checking for non-null required values
+     * @return ProductSelectionCreatedMessagePayload
      */
     public ProductSelectionCreatedMessagePayload buildUnchecked() {
         return new ProductSelectionCreatedMessagePayloadImpl(productSelection);

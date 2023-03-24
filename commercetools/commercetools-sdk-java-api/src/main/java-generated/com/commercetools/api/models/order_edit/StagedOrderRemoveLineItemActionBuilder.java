@@ -40,7 +40,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the externalPrice value
      * @return Builder
      */
 
@@ -75,7 +76,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     * @param externalPrice
+     * @param externalPrice value to be set
      * @return Builder
      */
 
@@ -87,6 +88,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
 
@@ -100,7 +102,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param externalTotalPrice
+     * @param externalTotalPrice value to be set
      * @return Builder
      */
 
@@ -112,6 +114,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param builder function to build the shippingDetailsToRemove value
      * @return Builder
      */
 
@@ -125,7 +128,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
-     * @param shippingDetailsToRemove
+     * @param shippingDetailsToRemove value to be set
      * @return Builder
      */
 
@@ -159,6 +162,10 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
         return this.shippingDetailsToRemove;
     }
 
+    /**
+     * builds StagedOrderRemoveLineItemAction with checking for non-null required values
+     * @return StagedOrderRemoveLineItemAction
+     */
     public StagedOrderRemoveLineItemAction build() {
         Objects.requireNonNull(lineItemId, StagedOrderRemoveLineItemAction.class + ": lineItemId is missing");
         return new StagedOrderRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
@@ -166,7 +173,8 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * builds StagedOrderRemoveLineItemAction without checking for non null required values
+     * builds StagedOrderRemoveLineItemAction without checking for non-null required values
+     * @return StagedOrderRemoveLineItemAction
      */
     public StagedOrderRemoveLineItemAction buildUnchecked() {
         return new StagedOrderRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,

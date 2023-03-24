@@ -31,7 +31,7 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
 
     /**
      *  <p>Shape of the action for <code>setAuthorName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds SetAuthorNameChange with checking for non-null required values
+     * @return SetAuthorNameChange
+     */
     public SetAuthorNameChange build() {
         Objects.requireNonNull(change, SetAuthorNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetAuthorNameChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
     }
 
     /**
-     * builds SetAuthorNameChange without checking for non null required values
+     * builds SetAuthorNameChange without checking for non-null required values
+     * @return SetAuthorNameChange
      */
     public SetAuthorNameChange buildUnchecked() {
         return new SetAuthorNameChangeImpl(change, previousValue, nextValue);

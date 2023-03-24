@@ -47,6 +47,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -91,7 +93,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -102,7 +104,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Whether the attribute is required to have a value.</p>
-     * @param isRequired
+     * @param isRequired value to be set
      * @return Builder
      */
 
@@ -113,7 +115,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param attributeConstraint
+     * @param attributeConstraint value to be set
      * @return Builder
      */
 
@@ -125,6 +127,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param builder function to build the inputTip value
      * @return Builder
      */
 
@@ -136,7 +139,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param inputTip
+     * @param inputTip value to be set
      * @return Builder
      */
 
@@ -147,7 +150,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param inputHint
+     * @param inputHint value to be set
      * @return Builder
      */
 
@@ -158,7 +161,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
-     * @param isSearchable
+     * @param isSearchable value to be set
      * @return Builder
      */
 
@@ -199,6 +202,10 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this.isSearchable;
     }
 
+    /**
+     * builds AttributeDefinition with checking for non-null required values
+     * @return AttributeDefinition
+     */
     public AttributeDefinition build() {
         Objects.requireNonNull(type, AttributeDefinition.class + ": type is missing");
         Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");
@@ -213,7 +220,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * builds AttributeDefinition without checking for non null required values
+     * builds AttributeDefinition without checking for non-null required values
+     * @return AttributeDefinition
      */
     public AttributeDefinition buildUnchecked() {
         return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,

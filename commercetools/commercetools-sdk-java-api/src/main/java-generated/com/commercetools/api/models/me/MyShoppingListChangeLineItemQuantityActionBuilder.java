@@ -29,7 +29,7 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
 
     /**
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
 
     /**
      *  <p>New value to set. If <code>0</code>, the ShoppingListLineItem is removed from the ShoppingList.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
         return this.quantity;
     }
 
+    /**
+     * builds MyShoppingListChangeLineItemQuantityAction with checking for non-null required values
+     * @return MyShoppingListChangeLineItemQuantityAction
+     */
     public MyShoppingListChangeLineItemQuantityAction build() {
         Objects.requireNonNull(lineItemId,
             MyShoppingListChangeLineItemQuantityAction.class + ": lineItemId is missing");
@@ -65,7 +69,8 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * builds MyShoppingListChangeLineItemQuantityAction without checking for non null required values
+     * builds MyShoppingListChangeLineItemQuantityAction without checking for non-null required values
+     * @return MyShoppingListChangeLineItemQuantityAction
      */
     public MyShoppingListChangeLineItemQuantityAction buildUnchecked() {
         return new MyShoppingListChangeLineItemQuantityActionImpl(lineItemId, quantity);

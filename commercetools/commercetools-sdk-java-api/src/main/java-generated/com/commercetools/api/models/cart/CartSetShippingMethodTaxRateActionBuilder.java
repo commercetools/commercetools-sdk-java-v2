@@ -28,6 +28,7 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
         return this.externalTaxRate;
     }
 
+    /**
+     * builds CartSetShippingMethodTaxRateAction with checking for non-null required values
+     * @return CartSetShippingMethodTaxRateAction
+     */
     public CartSetShippingMethodTaxRateAction build() {
         return new CartSetShippingMethodTaxRateActionImpl(externalTaxRate);
     }
 
     /**
-     * builds CartSetShippingMethodTaxRateAction without checking for non null required values
+     * builds CartSetShippingMethodTaxRateAction without checking for non-null required values
+     * @return CartSetShippingMethodTaxRateAction
      */
     public CartSetShippingMethodTaxRateAction buildUnchecked() {
         return new CartSetShippingMethodTaxRateActionImpl(externalTaxRate);

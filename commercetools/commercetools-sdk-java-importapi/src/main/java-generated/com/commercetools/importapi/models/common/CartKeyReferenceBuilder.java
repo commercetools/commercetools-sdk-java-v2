@@ -25,7 +25,7 @@ public class CartKeyReferenceBuilder implements Builder<CartKeyReference> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CartKeyReferenceBuilder implements Builder<CartKeyReference> {
         return this.key;
     }
 
+    /**
+     * builds CartKeyReference with checking for non-null required values
+     * @return CartKeyReference
+     */
     public CartKeyReference build() {
         Objects.requireNonNull(key, CartKeyReference.class + ": key is missing");
         return new CartKeyReferenceImpl(key);
     }
 
     /**
-     * builds CartKeyReference without checking for non null required values
+     * builds CartKeyReference without checking for non-null required values
+     * @return CartKeyReference
      */
     public CartKeyReference buildUnchecked() {
         return new CartKeyReferenceImpl(key);

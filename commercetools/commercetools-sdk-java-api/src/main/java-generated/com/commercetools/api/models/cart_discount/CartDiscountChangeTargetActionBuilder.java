@@ -26,7 +26,7 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
 
     /**
      *  <p>New value to set.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -38,6 +38,7 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
         return this.target;
     }
 
+    /**
+     * builds CartDiscountChangeTargetAction with checking for non-null required values
+     * @return CartDiscountChangeTargetAction
+     */
     public CartDiscountChangeTargetAction build() {
         Objects.requireNonNull(target, CartDiscountChangeTargetAction.class + ": target is missing");
         return new CartDiscountChangeTargetActionImpl(target);
     }
 
     /**
-     * builds CartDiscountChangeTargetAction without checking for non null required values
+     * builds CartDiscountChangeTargetAction without checking for non-null required values
+     * @return CartDiscountChangeTargetAction
      */
     public CartDiscountChangeTargetAction buildUnchecked() {
         return new CartDiscountChangeTargetActionImpl(target);

@@ -37,7 +37,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
-     * @param oldRating
+     * @param oldRating value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
-     * @param newRating
+     * @param newRating value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
-     * @param includedInStatistics
+     * @param includedInStatistics value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -110,6 +111,10 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
         return this.target;
     }
 
+    /**
+     * builds ReviewRatingSetMessagePayload with checking for non-null required values
+     * @return ReviewRatingSetMessagePayload
+     */
     public ReviewRatingSetMessagePayload build() {
         Objects.requireNonNull(includedInStatistics,
             ReviewRatingSetMessagePayload.class + ": includedInStatistics is missing");
@@ -117,7 +122,8 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     * builds ReviewRatingSetMessagePayload without checking for non null required values
+     * builds ReviewRatingSetMessagePayload without checking for non-null required values
+     * @return ReviewRatingSetMessagePayload
      */
     public ReviewRatingSetMessagePayload buildUnchecked() {
         return new ReviewRatingSetMessagePayloadImpl(oldRating, newRating, includedInStatistics, target);

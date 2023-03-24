@@ -31,7 +31,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
 
     /**
      *
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
 
     /**
      *
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
         return this.obj;
     }
 
+    /**
+     * builds OrderReference with checking for non-null required values
+     * @return OrderReference
+     */
     public OrderReference build() {
         Objects.requireNonNull(id, OrderReference.class + ": id is missing");
         return new OrderReferenceImpl(id, obj);
     }
 
     /**
-     * builds OrderReference without checking for non null required values
+     * builds OrderReference without checking for non-null required values
+     * @return OrderReference
      */
     public OrderReference buildUnchecked() {
         return new OrderReferenceImpl(id, obj);

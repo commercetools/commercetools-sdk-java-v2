@@ -46,7 +46,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -80,7 +80,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -95,6 +95,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Name of the Channel.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -106,7 +107,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Name of the Channel.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -117,6 +118,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Description of the Channel.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -128,7 +130,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Description of the Channel.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -140,6 +142,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Address where the Channel is located.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -151,7 +154,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Address where the Channel is located.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -162,6 +165,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Custom fields defined for the Channel.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -173,7 +177,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>Custom fields defined for the Channel.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -184,7 +188,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
-     * @param geoLocation
+     * @param geoLocation value to be set
      * @return Builder
      */
 
@@ -195,6 +199,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     * @param builder function to build the geoLocation value
      * @return Builder
      */
 
@@ -238,13 +243,18 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
         return this.geoLocation;
     }
 
+    /**
+     * builds ChannelDraft with checking for non-null required values
+     * @return ChannelDraft
+     */
     public ChannelDraft build() {
         Objects.requireNonNull(key, ChannelDraft.class + ": key is missing");
         return new ChannelDraftImpl(key, roles, name, description, address, custom, geoLocation);
     }
 
     /**
-     * builds ChannelDraft without checking for non null required values
+     * builds ChannelDraft without checking for non-null required values
+     * @return ChannelDraft
      */
     public ChannelDraft buildUnchecked() {
         return new ChannelDraftImpl(key, roles, name, description, address, custom, geoLocation);

@@ -32,7 +32,7 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was removed.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The Embedded Price that was removed from the ProductVariant.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The Embedded Price that was removed from the ProductVariant.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -86,6 +87,10 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
         return this.staged;
     }
 
+    /**
+     * builds ProductPriceRemovedMessagePayload with checking for non-null required values
+     * @return ProductPriceRemovedMessagePayload
+     */
     public ProductPriceRemovedMessagePayload build() {
         Objects.requireNonNull(variantId, ProductPriceRemovedMessagePayload.class + ": variantId is missing");
         Objects.requireNonNull(price, ProductPriceRemovedMessagePayload.class + ": price is missing");
@@ -94,7 +99,8 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     * builds ProductPriceRemovedMessagePayload without checking for non null required values
+     * builds ProductPriceRemovedMessagePayload without checking for non-null required values
+     * @return ProductPriceRemovedMessagePayload
      */
     public ProductPriceRemovedMessagePayload buildUnchecked() {
         return new ProductPriceRemovedMessagePayloadImpl(variantId, price, staged);

@@ -28,7 +28,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
 
     /**
      *
-     * @param coordinates
+     * @param coordinates value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
 
     /**
      *
-     * @param coordinates
+     * @param coordinates value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
 
     /**
      *
-     * @param coordinates
+     * @param coordinates value to be set
      * @return Builder
      */
 
@@ -81,6 +81,10 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
         return this.coordinates;
     }
 
+    /**
+     * builds GeoLocation with checking for non-null required values
+     * @return GeoLocation
+     */
     public GeoLocation build() {
         Objects.requireNonNull(type, GeoLocation.class + ": type is missing");
         Objects.requireNonNull(coordinates, GeoLocation.class + ": coordinates is missing");
@@ -88,7 +92,8 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     }
 
     /**
-     * builds GeoLocation without checking for non null required values
+     * builds GeoLocation without checking for non-null required values
+     * @return GeoLocation
      */
     public GeoLocation buildUnchecked() {
         return new GeoLocationImpl(type, coordinates);

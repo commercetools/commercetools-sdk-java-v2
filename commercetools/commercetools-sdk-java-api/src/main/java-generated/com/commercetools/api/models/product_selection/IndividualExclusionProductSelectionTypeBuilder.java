@@ -27,6 +27,7 @@ public class IndividualExclusionProductSelectionTypeBuilder
 
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class IndividualExclusionProductSelectionTypeBuilder
 
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class IndividualExclusionProductSelectionTypeBuilder
         return this.name;
     }
 
+    /**
+     * builds IndividualExclusionProductSelectionType with checking for non-null required values
+     * @return IndividualExclusionProductSelectionType
+     */
     public IndividualExclusionProductSelectionType build() {
         Objects.requireNonNull(name, IndividualExclusionProductSelectionType.class + ": name is missing");
         return new IndividualExclusionProductSelectionTypeImpl(name);
     }
 
     /**
-     * builds IndividualExclusionProductSelectionType without checking for non null required values
+     * builds IndividualExclusionProductSelectionType without checking for non-null required values
+     * @return IndividualExclusionProductSelectionType
      */
     public IndividualExclusionProductSelectionType buildUnchecked() {
         return new IndividualExclusionProductSelectionTypeImpl(name);

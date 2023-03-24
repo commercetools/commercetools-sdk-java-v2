@@ -49,7 +49,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -60,6 +60,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -87,6 +88,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -103,7 +105,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -114,7 +116,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param isRequired
+     * @param isRequired value to be set
      * @return Builder
      */
 
@@ -125,7 +127,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param attributeConstraint
+     * @param attributeConstraint value to be set
      * @return Builder
      */
 
@@ -142,6 +144,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the inputTip value
      * @return Builder
      */
 
@@ -158,7 +161,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param inputTip
+     * @param inputTip value to be set
      * @return Builder
      */
 
@@ -170,7 +173,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param inputHint
+     * @param inputHint value to be set
      * @return Builder
      */
 
@@ -182,7 +185,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
-     * @param isSearchable
+     * @param isSearchable value to be set
      * @return Builder
      */
 
@@ -227,6 +230,10 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this.isSearchable;
     }
 
+    /**
+     * builds AttributeDefinition with checking for non-null required values
+     * @return AttributeDefinition
+     */
     public AttributeDefinition build() {
         Objects.requireNonNull(type, AttributeDefinition.class + ": type is missing");
         Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");
@@ -237,7 +244,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * builds AttributeDefinition without checking for non null required values
+     * builds AttributeDefinition without checking for non-null required values
+     * @return AttributeDefinition
      */
     public AttributeDefinition buildUnchecked() {
         return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,

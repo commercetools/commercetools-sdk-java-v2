@@ -31,7 +31,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
 
     /**
      *  <p>Unique identifier of the referenced ProductType.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
 
     /**
      *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
 
     /**
      *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
         return this.obj;
     }
 
+    /**
+     * builds ProductTypeReference with checking for non-null required values
+     * @return ProductTypeReference
+     */
     public ProductTypeReference build() {
         Objects.requireNonNull(id, ProductTypeReference.class + ": id is missing");
         return new ProductTypeReferenceImpl(id, obj);
     }
 
     /**
-     * builds ProductTypeReference without checking for non null required values
+     * builds ProductTypeReference without checking for non-null required values
+     * @return ProductTypeReference
      */
     public ProductTypeReference buildUnchecked() {
         return new ProductTypeReferenceImpl(id, obj);

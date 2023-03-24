@@ -26,7 +26,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
-     * @param patches
+     * @param patches value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
-     * @param patches
+     * @param patches value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
-     * @param patches
+     * @param patches value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
+     * @param builder function to build the patches value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
+     * @param builder function to build the patches value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
         return this.patches;
     }
 
+    /**
+     * builds ProductVariantPatchRequest with checking for non-null required values
+     * @return ProductVariantPatchRequest
+     */
     public ProductVariantPatchRequest build() {
         Objects.requireNonNull(patches, ProductVariantPatchRequest.class + ": patches is missing");
         return new ProductVariantPatchRequestImpl(patches);
     }
 
     /**
-     * builds ProductVariantPatchRequest without checking for non null required values
+     * builds ProductVariantPatchRequest without checking for non-null required values
+     * @return ProductVariantPatchRequest
      */
     public ProductVariantPatchRequest buildUnchecked() {
         return new ProductVariantPatchRequestImpl(patches);

@@ -31,7 +31,7 @@ public class SetCompanyNameChangeBuilder implements Builder<SetCompanyNameChange
 
     /**
      *  <p>Shape of the action for <code>setCompanyName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetCompanyNameChangeBuilder implements Builder<SetCompanyNameChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetCompanyNameChangeBuilder implements Builder<SetCompanyNameChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetCompanyNameChangeBuilder implements Builder<SetCompanyNameChange
         return this.nextValue;
     }
 
+    /**
+     * builds SetCompanyNameChange with checking for non-null required values
+     * @return SetCompanyNameChange
+     */
     public SetCompanyNameChange build() {
         Objects.requireNonNull(change, SetCompanyNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetCompanyNameChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetCompanyNameChangeBuilder implements Builder<SetCompanyNameChange
     }
 
     /**
-     * builds SetCompanyNameChange without checking for non null required values
+     * builds SetCompanyNameChange without checking for non-null required values
+     * @return SetCompanyNameChange
      */
     public SetCompanyNameChange buildUnchecked() {
         return new SetCompanyNameChangeImpl(change, previousValue, nextValue);

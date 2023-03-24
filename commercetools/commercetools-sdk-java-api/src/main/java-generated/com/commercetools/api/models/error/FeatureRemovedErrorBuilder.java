@@ -27,7 +27,7 @@ public class FeatureRemovedErrorBuilder implements Builder<FeatureRemovedError> 
 
     /**
      *  <p>Description of the feature that is removed.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class FeatureRemovedErrorBuilder implements Builder<FeatureRemovedError> 
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public FeatureRemovedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class FeatureRemovedErrorBuilder implements Builder<FeatureRemovedError> 
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public FeatureRemovedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class FeatureRemovedErrorBuilder implements Builder<FeatureRemovedError> 
         return this.values;
     }
 
+    /**
+     * builds FeatureRemovedError with checking for non-null required values
+     * @return FeatureRemovedError
+     */
     public FeatureRemovedError build() {
         Objects.requireNonNull(message, FeatureRemovedError.class + ": message is missing");
         return new FeatureRemovedErrorImpl(message, values);
     }
 
     /**
-     * builds FeatureRemovedError without checking for non null required values
+     * builds FeatureRemovedError without checking for non-null required values
+     * @return FeatureRemovedError
      */
     public FeatureRemovedError buildUnchecked() {
         return new FeatureRemovedErrorImpl(message, values);

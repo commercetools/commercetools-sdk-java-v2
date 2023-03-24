@@ -39,7 +39,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     /**
      *  <p>Update action for <code>setAssetCustomField</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     /**
      *
-     * @param customTypeId
+     * @param customTypeId value to be set
      * @return Builder
      */
 
@@ -72,6 +72,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     /**
      *
+     * @param builder function to build the asset value
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     /**
      *
-     * @param asset
+     * @param asset value to be set
      * @return Builder
      */
 
@@ -95,7 +96,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -106,7 +107,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -139,6 +140,10 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
         return this.previousValue;
     }
 
+    /**
+     * builds SetAssetCustomFieldChange with checking for non-null required values
+     * @return SetAssetCustomFieldChange
+     */
     public SetAssetCustomFieldChange build() {
         Objects.requireNonNull(change, SetAssetCustomFieldChange.class + ": change is missing");
         Objects.requireNonNull(name, SetAssetCustomFieldChange.class + ": name is missing");
@@ -150,7 +155,8 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     * builds SetAssetCustomFieldChange without checking for non null required values
+     * builds SetAssetCustomFieldChange without checking for non-null required values
+     * @return SetAssetCustomFieldChange
      */
     public SetAssetCustomFieldChange buildUnchecked() {
         return new SetAssetCustomFieldChangeImpl(change, name, customTypeId, asset, nextValue, previousValue);

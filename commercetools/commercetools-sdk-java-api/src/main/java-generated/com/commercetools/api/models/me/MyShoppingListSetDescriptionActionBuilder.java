@@ -28,6 +28,7 @@ public class MyShoppingListSetDescriptionActionBuilder implements Builder<MyShop
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class MyShoppingListSetDescriptionActionBuilder implements Builder<MyShop
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class MyShoppingListSetDescriptionActionBuilder implements Builder<MyShop
         return this.description;
     }
 
+    /**
+     * builds MyShoppingListSetDescriptionAction with checking for non-null required values
+     * @return MyShoppingListSetDescriptionAction
+     */
     public MyShoppingListSetDescriptionAction build() {
         return new MyShoppingListSetDescriptionActionImpl(description);
     }
 
     /**
-     * builds MyShoppingListSetDescriptionAction without checking for non null required values
+     * builds MyShoppingListSetDescriptionAction without checking for non-null required values
+     * @return MyShoppingListSetDescriptionAction
      */
     public MyShoppingListSetDescriptionAction buildUnchecked() {
         return new MyShoppingListSetDescriptionActionImpl(description);

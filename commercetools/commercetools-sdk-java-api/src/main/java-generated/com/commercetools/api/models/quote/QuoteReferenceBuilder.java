@@ -31,7 +31,7 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
 
     /**
      *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
 
     /**
      *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
         return this.obj;
     }
 
+    /**
+     * builds QuoteReference with checking for non-null required values
+     * @return QuoteReference
+     */
     public QuoteReference build() {
         Objects.requireNonNull(id, QuoteReference.class + ": id is missing");
         return new QuoteReferenceImpl(id, obj);
     }
 
     /**
-     * builds QuoteReference without checking for non null required values
+     * builds QuoteReference without checking for non-null required values
+     * @return QuoteReference
      */
     public QuoteReference buildUnchecked() {
         return new QuoteReferenceImpl(id, obj);

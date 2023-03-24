@@ -32,7 +32,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -110,7 +112,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -134,7 +136,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -149,6 +151,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -163,6 +166,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -185,6 +189,10 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeAssetOrderChange with checking for non-null required values
+     * @return ChangeAssetOrderChange
+     */
     public ChangeAssetOrderChange build() {
         Objects.requireNonNull(change, ChangeAssetOrderChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeAssetOrderChange.class + ": previousValue is missing");
@@ -193,7 +201,8 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     * builds ChangeAssetOrderChange without checking for non null required values
+     * builds ChangeAssetOrderChange without checking for non-null required values
+     * @return ChangeAssetOrderChange
      */
     public ChangeAssetOrderChange buildUnchecked() {
         return new ChangeAssetOrderChangeImpl(change, previousValue, nextValue);

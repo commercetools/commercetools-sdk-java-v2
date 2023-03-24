@@ -26,7 +26,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
 
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
-     * @param attributeNames
+     * @param attributeNames value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
 
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
-     * @param attributeNames
+     * @param attributeNames value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
 
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
-     * @param attributeNames
+     * @param attributeNames value to be set
      * @return Builder
      */
 
@@ -65,6 +65,10 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
         return this.attributeNames;
     }
 
+    /**
+     * builds ProductTypeChangeAttributeOrderByNameAction with checking for non-null required values
+     * @return ProductTypeChangeAttributeOrderByNameAction
+     */
     public ProductTypeChangeAttributeOrderByNameAction build() {
         Objects.requireNonNull(attributeNames,
             ProductTypeChangeAttributeOrderByNameAction.class + ": attributeNames is missing");
@@ -72,7 +76,8 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
     }
 
     /**
-     * builds ProductTypeChangeAttributeOrderByNameAction without checking for non null required values
+     * builds ProductTypeChangeAttributeOrderByNameAction without checking for non-null required values
+     * @return ProductTypeChangeAttributeOrderByNameAction
      */
     public ProductTypeChangeAttributeOrderByNameAction buildUnchecked() {
         return new ProductTypeChangeAttributeOrderByNameActionImpl(attributeNames);

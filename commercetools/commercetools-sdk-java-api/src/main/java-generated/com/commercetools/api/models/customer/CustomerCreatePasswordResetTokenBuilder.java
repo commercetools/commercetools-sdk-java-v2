@@ -30,7 +30,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
 
     /**
      *  <p>Validity period of the generated token in minutes.</p>
-     * @param ttlMinutes
+     * @param ttlMinutes value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
         return this.ttlMinutes;
     }
 
+    /**
+     * builds CustomerCreatePasswordResetToken with checking for non-null required values
+     * @return CustomerCreatePasswordResetToken
+     */
     public CustomerCreatePasswordResetToken build() {
         Objects.requireNonNull(email, CustomerCreatePasswordResetToken.class + ": email is missing");
         return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes);
     }
 
     /**
-     * builds CustomerCreatePasswordResetToken without checking for non null required values
+     * builds CustomerCreatePasswordResetToken without checking for non-null required values
+     * @return CustomerCreatePasswordResetToken
      */
     public CustomerCreatePasswordResetToken buildUnchecked() {
         return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes);

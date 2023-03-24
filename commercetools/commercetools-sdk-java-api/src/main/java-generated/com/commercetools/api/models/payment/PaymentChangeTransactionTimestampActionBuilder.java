@@ -29,7 +29,7 @@ public class PaymentChangeTransactionTimestampActionBuilder
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
-     * @param transactionId
+     * @param transactionId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class PaymentChangeTransactionTimestampActionBuilder
 
     /**
      *  <p>Timestamp of the Transaction as reported by the payment service.</p>
-     * @param timestamp
+     * @param timestamp value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class PaymentChangeTransactionTimestampActionBuilder
         return this.timestamp;
     }
 
+    /**
+     * builds PaymentChangeTransactionTimestampAction with checking for non-null required values
+     * @return PaymentChangeTransactionTimestampAction
+     */
     public PaymentChangeTransactionTimestampAction build() {
         Objects.requireNonNull(transactionId,
             PaymentChangeTransactionTimestampAction.class + ": transactionId is missing");
@@ -65,7 +69,8 @@ public class PaymentChangeTransactionTimestampActionBuilder
     }
 
     /**
-     * builds PaymentChangeTransactionTimestampAction without checking for non null required values
+     * builds PaymentChangeTransactionTimestampAction without checking for non-null required values
+     * @return PaymentChangeTransactionTimestampAction
      */
     public PaymentChangeTransactionTimestampAction buildUnchecked() {
         return new PaymentChangeTransactionTimestampActionImpl(transactionId, timestamp);

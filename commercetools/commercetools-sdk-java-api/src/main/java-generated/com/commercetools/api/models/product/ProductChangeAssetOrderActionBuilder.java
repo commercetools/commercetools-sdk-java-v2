@@ -36,7 +36,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
 
     /**
      *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
 
     /**
      *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
-     * @param assetOrder
+     * @param assetOrder value to be set
      * @return Builder
      */
 
@@ -80,7 +80,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
 
     /**
      *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
-     * @param assetOrder
+     * @param assetOrder value to be set
      * @return Builder
      */
 
@@ -91,7 +91,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
 
     /**
      *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
-     * @param assetOrder
+     * @param assetOrder value to be set
      * @return Builder
      */
 
@@ -122,13 +122,18 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
         return this.assetOrder;
     }
 
+    /**
+     * builds ProductChangeAssetOrderAction with checking for non-null required values
+     * @return ProductChangeAssetOrderAction
+     */
     public ProductChangeAssetOrderAction build() {
         Objects.requireNonNull(assetOrder, ProductChangeAssetOrderAction.class + ": assetOrder is missing");
         return new ProductChangeAssetOrderActionImpl(variantId, sku, staged, assetOrder);
     }
 
     /**
-     * builds ProductChangeAssetOrderAction without checking for non null required values
+     * builds ProductChangeAssetOrderAction without checking for non-null required values
+     * @return ProductChangeAssetOrderAction
      */
     public ProductChangeAssetOrderAction buildUnchecked() {
         return new ProductChangeAssetOrderActionImpl(variantId, sku, staged, assetOrder);

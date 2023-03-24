@@ -25,7 +25,7 @@ public class BusinessUnitChangeStatusActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>New status to set.</p>
-     * @param status
+     * @param status value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class BusinessUnitChangeStatusActionBuilder implements Builder<BusinessUn
         return this.status;
     }
 
+    /**
+     * builds BusinessUnitChangeStatusAction with checking for non-null required values
+     * @return BusinessUnitChangeStatusAction
+     */
     public BusinessUnitChangeStatusAction build() {
         Objects.requireNonNull(status, BusinessUnitChangeStatusAction.class + ": status is missing");
         return new BusinessUnitChangeStatusActionImpl(status);
     }
 
     /**
-     * builds BusinessUnitChangeStatusAction without checking for non null required values
+     * builds BusinessUnitChangeStatusAction without checking for non-null required values
+     * @return BusinessUnitChangeStatusAction
      */
     public BusinessUnitChangeStatusAction buildUnchecked() {
         return new BusinessUnitChangeStatusActionImpl(status);

@@ -30,7 +30,7 @@ public class TypeResourceIdentifierBuilder implements Builder<TypeResourceIdenti
 
     /**
      *  <p>Unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class TypeResourceIdentifierBuilder implements Builder<TypeResourceIdenti
 
     /**
      *  <p>User-defined unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class TypeResourceIdentifierBuilder implements Builder<TypeResourceIdenti
         return this.key;
     }
 
+    /**
+     * builds TypeResourceIdentifier with checking for non-null required values
+     * @return TypeResourceIdentifier
+     */
     public TypeResourceIdentifier build() {
         return new TypeResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds TypeResourceIdentifier without checking for non null required values
+     * builds TypeResourceIdentifier without checking for non-null required values
+     * @return TypeResourceIdentifier
      */
     public TypeResourceIdentifier buildUnchecked() {
         return new TypeResourceIdentifierImpl(id, key);

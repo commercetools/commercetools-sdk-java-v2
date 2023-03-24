@@ -25,7 +25,7 @@ public class ChangeTargetCustomLineItemsChangeValueBuilder implements Builder<Ch
 
     /**
      *
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ChangeTargetCustomLineItemsChangeValueBuilder implements Builder<Ch
         return this.predicate;
     }
 
+    /**
+     * builds ChangeTargetCustomLineItemsChangeValue with checking for non-null required values
+     * @return ChangeTargetCustomLineItemsChangeValue
+     */
     public ChangeTargetCustomLineItemsChangeValue build() {
         Objects.requireNonNull(predicate, ChangeTargetCustomLineItemsChangeValue.class + ": predicate is missing");
         return new ChangeTargetCustomLineItemsChangeValueImpl(predicate);
     }
 
     /**
-     * builds ChangeTargetCustomLineItemsChangeValue without checking for non null required values
+     * builds ChangeTargetCustomLineItemsChangeValue without checking for non-null required values
+     * @return ChangeTargetCustomLineItemsChangeValue
      */
     public ChangeTargetCustomLineItemsChangeValue buildUnchecked() {
         return new ChangeTargetCustomLineItemsChangeValueImpl(predicate);

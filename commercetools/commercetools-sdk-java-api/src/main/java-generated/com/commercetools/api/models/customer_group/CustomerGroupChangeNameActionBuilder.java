@@ -25,7 +25,7 @@ public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGro
 
     /**
      *  <p>New name of the CustomerGroup.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGro
         return this.name;
     }
 
+    /**
+     * builds CustomerGroupChangeNameAction with checking for non-null required values
+     * @return CustomerGroupChangeNameAction
+     */
     public CustomerGroupChangeNameAction build() {
         Objects.requireNonNull(name, CustomerGroupChangeNameAction.class + ": name is missing");
         return new CustomerGroupChangeNameActionImpl(name);
     }
 
     /**
-     * builds CustomerGroupChangeNameAction without checking for non null required values
+     * builds CustomerGroupChangeNameAction without checking for non-null required values
+     * @return CustomerGroupChangeNameAction
      */
     public CustomerGroupChangeNameAction buildUnchecked() {
         return new CustomerGroupChangeNameActionImpl(name);

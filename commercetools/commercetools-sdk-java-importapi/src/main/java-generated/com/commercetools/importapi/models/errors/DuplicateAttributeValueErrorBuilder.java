@@ -29,7 +29,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>The attribute in conflict.</p>
-     * @param attribute
+     * @param attribute value to be set
      * @return Builder
      */
 
@@ -52,6 +52,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>The attribute in conflict.</p>
+     * @param builder function to build the attribute value
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
         return this.attribute;
     }
 
+    /**
+     * builds DuplicateAttributeValueError with checking for non-null required values
+     * @return DuplicateAttributeValueError
+     */
     public DuplicateAttributeValueError build() {
         Objects.requireNonNull(message, DuplicateAttributeValueError.class + ": message is missing");
         Objects.requireNonNull(attribute, DuplicateAttributeValueError.class + ": attribute is missing");
@@ -77,7 +82,8 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     * builds DuplicateAttributeValueError without checking for non null required values
+     * builds DuplicateAttributeValueError without checking for non-null required values
+     * @return DuplicateAttributeValueError
      */
     public DuplicateAttributeValueError buildUnchecked() {
         return new DuplicateAttributeValueErrorImpl(message, attribute);

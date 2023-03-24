@@ -25,7 +25,7 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
         return this.message;
     }
 
+    /**
+     * builds InsufficientScopeError with checking for non-null required values
+     * @return InsufficientScopeError
+     */
     public InsufficientScopeError build() {
         Objects.requireNonNull(message, InsufficientScopeError.class + ": message is missing");
         return new InsufficientScopeErrorImpl(message);
     }
 
     /**
-     * builds InsufficientScopeError without checking for non null required values
+     * builds InsufficientScopeError without checking for non-null required values
+     * @return InsufficientScopeError
      */
     public InsufficientScopeError buildUnchecked() {
         return new InsufficientScopeErrorImpl(message);

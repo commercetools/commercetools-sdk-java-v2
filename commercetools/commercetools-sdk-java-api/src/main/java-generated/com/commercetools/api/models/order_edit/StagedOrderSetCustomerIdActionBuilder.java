@@ -27,7 +27,7 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
 
     /**
      *
-     * @param customerId
+     * @param customerId value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
         return this.customerId;
     }
 
+    /**
+     * builds StagedOrderSetCustomerIdAction with checking for non-null required values
+     * @return StagedOrderSetCustomerIdAction
+     */
     public StagedOrderSetCustomerIdAction build() {
         return new StagedOrderSetCustomerIdActionImpl(customerId);
     }
 
     /**
-     * builds StagedOrderSetCustomerIdAction without checking for non null required values
+     * builds StagedOrderSetCustomerIdAction without checking for non-null required values
+     * @return StagedOrderSetCustomerIdAction
      */
     public StagedOrderSetCustomerIdAction buildUnchecked() {
         return new StagedOrderSetCustomerIdActionImpl(customerId);

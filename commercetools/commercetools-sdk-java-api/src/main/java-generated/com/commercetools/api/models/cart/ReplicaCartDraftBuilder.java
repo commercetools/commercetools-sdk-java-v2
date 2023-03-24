@@ -31,7 +31,7 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
-     * @param reference
+     * @param reference value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     * @param builder function to build the reference value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Cart.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
         return this.key;
     }
 
+    /**
+     * builds ReplicaCartDraft with checking for non-null required values
+     * @return ReplicaCartDraft
+     */
     public ReplicaCartDraft build() {
         Objects.requireNonNull(reference, ReplicaCartDraft.class + ": reference is missing");
         return new ReplicaCartDraftImpl(reference, key);
     }
 
     /**
-     * builds ReplicaCartDraft without checking for non null required values
+     * builds ReplicaCartDraft without checking for non-null required values
+     * @return ReplicaCartDraft
      */
     public ReplicaCartDraft buildUnchecked() {
         return new ReplicaCartDraftImpl(reference, key);

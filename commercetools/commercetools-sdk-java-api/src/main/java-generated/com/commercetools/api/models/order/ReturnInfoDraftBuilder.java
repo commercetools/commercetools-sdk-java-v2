@@ -34,7 +34,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -85,6 +86,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -97,7 +99,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
 
     /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
-     * @param returnTrackingId
+     * @param returnTrackingId value to be set
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
 
     /**
      *
-     * @param returnDate
+     * @param returnDate value to be set
      * @return Builder
      */
 
@@ -131,13 +133,18 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
         return this.returnDate;
     }
 
+    /**
+     * builds ReturnInfoDraft with checking for non-null required values
+     * @return ReturnInfoDraft
+     */
     public ReturnInfoDraft build() {
         Objects.requireNonNull(items, ReturnInfoDraft.class + ": items is missing");
         return new ReturnInfoDraftImpl(items, returnTrackingId, returnDate);
     }
 
     /**
-     * builds ReturnInfoDraft without checking for non null required values
+     * builds ReturnInfoDraft without checking for non-null required values
+     * @return ReturnInfoDraft
      */
     public ReturnInfoDraft buildUnchecked() {
         return new ReturnInfoDraftImpl(items, returnTrackingId, returnDate);

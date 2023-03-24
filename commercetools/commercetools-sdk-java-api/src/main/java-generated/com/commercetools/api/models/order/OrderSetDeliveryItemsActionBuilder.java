@@ -29,7 +29,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -78,6 +78,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -92,6 +93,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -110,6 +112,10 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
         return this.items;
     }
 
+    /**
+     * builds OrderSetDeliveryItemsAction with checking for non-null required values
+     * @return OrderSetDeliveryItemsAction
+     */
     public OrderSetDeliveryItemsAction build() {
         Objects.requireNonNull(deliveryId, OrderSetDeliveryItemsAction.class + ": deliveryId is missing");
         Objects.requireNonNull(items, OrderSetDeliveryItemsAction.class + ": items is missing");
@@ -117,7 +123,8 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * builds OrderSetDeliveryItemsAction without checking for non null required values
+     * builds OrderSetDeliveryItemsAction without checking for non-null required values
+     * @return OrderSetDeliveryItemsAction
      */
     public OrderSetDeliveryItemsAction buildUnchecked() {
         return new OrderSetDeliveryItemsActionImpl(deliveryId, items);

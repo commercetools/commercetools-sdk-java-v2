@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeMoneyTypeBuilder implements Builder<AttributeMoneyType> {
 
+    /**
+     * builds AttributeMoneyType with checking for non-null required values
+     * @return AttributeMoneyType
+     */
     public AttributeMoneyType build() {
         return new AttributeMoneyTypeImpl();
     }
 
     /**
-     * builds AttributeMoneyType without checking for non null required values
+     * builds AttributeMoneyType without checking for non-null required values
+     * @return AttributeMoneyType
      */
     public AttributeMoneyType buildUnchecked() {
         return new AttributeMoneyTypeImpl();

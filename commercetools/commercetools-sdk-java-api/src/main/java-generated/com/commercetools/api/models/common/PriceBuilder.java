@@ -58,7 +58,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Unique identifier of this Price.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -80,7 +80,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Money value of this Price.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -91,6 +91,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Money value of this Price.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -102,7 +103,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Country for which this Price is valid.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -113,6 +114,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -126,7 +128,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -138,6 +140,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -149,7 +152,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -160,7 +163,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Date and time from which this Price is valid.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -171,7 +174,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -182,6 +185,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -193,7 +197,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -204,7 +208,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -215,7 +219,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -226,7 +230,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -240,6 +244,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -254,6 +259,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -266,6 +272,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Custom Fields defined for the Price.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -277,7 +284,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Custom Fields defined for the Price.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -339,6 +346,10 @@ public class PriceBuilder implements Builder<Price> {
         return this.custom;
     }
 
+    /**
+     * builds Price with checking for non-null required values
+     * @return Price
+     */
     public Price build() {
         Objects.requireNonNull(id, Price.class + ": id is missing");
         Objects.requireNonNull(value, Price.class + ": value is missing");
@@ -347,7 +358,8 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     * builds Price without checking for non null required values
+     * builds Price without checking for non-null required values
+     * @return Price
      */
     public Price buildUnchecked() {
         return new PriceImpl(id, key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,

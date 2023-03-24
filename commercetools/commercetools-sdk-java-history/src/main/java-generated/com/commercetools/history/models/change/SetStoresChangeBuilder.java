@@ -32,7 +32,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *  <p>Shape of the action for <code>setStores</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -96,6 +97,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -119,7 +121,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -131,7 +133,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -145,6 +147,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -159,6 +162,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -181,6 +185,10 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetStoresChange with checking for non-null required values
+     * @return SetStoresChange
+     */
     public SetStoresChange build() {
         Objects.requireNonNull(change, SetStoresChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetStoresChange.class + ": previousValue is missing");
@@ -189,7 +197,8 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * builds SetStoresChange without checking for non null required values
+     * builds SetStoresChange without checking for non-null required values
+     * @return SetStoresChange
      */
     public SetStoresChange buildUnchecked() {
         return new SetStoresChangeImpl(change, previousValue, nextValue);

@@ -29,7 +29,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     /**
      *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
-     * @param orderNumber
+     * @param orderNumber value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     /**
      *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     /**
      *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
         return this.fields;
     }
 
+    /**
+     * builds OrderPatchImport with checking for non-null required values
+     * @return OrderPatchImport
+     */
     public OrderPatchImport build() {
         Objects.requireNonNull(orderNumber, OrderPatchImport.class + ": orderNumber is missing");
         Objects.requireNonNull(fields, OrderPatchImport.class + ": fields is missing");
@@ -75,7 +80,8 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     * builds OrderPatchImport without checking for non null required values
+     * builds OrderPatchImport without checking for non-null required values
+     * @return OrderPatchImport
      */
     public OrderPatchImport buildUnchecked() {
         return new OrderPatchImportImpl(orderNumber, fields);

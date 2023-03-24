@@ -30,7 +30,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
 
     /**
      *
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
         return this.resource;
     }
 
+    /**
+     * builds ResourceNotFoundError with checking for non-null required values
+     * @return ResourceNotFoundError
+     */
     public ResourceNotFoundError build() {
         Objects.requireNonNull(message, ResourceNotFoundError.class + ": message is missing");
         return new ResourceNotFoundErrorImpl(message, resource);
     }
 
     /**
-     * builds ResourceNotFoundError without checking for non null required values
+     * builds ResourceNotFoundError without checking for non-null required values
+     * @return ResourceNotFoundError
      */
     public ResourceNotFoundError buildUnchecked() {
         return new ResourceNotFoundErrorImpl(message, resource);

@@ -34,6 +34,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param syncedAt
+     * @param syncedAt value to be set
      * @return Builder
      */
 
@@ -92,13 +93,18 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
         return this.syncedAt;
     }
 
+    /**
+     * builds StagedOrderUpdateSyncInfoAction with checking for non-null required values
+     * @return StagedOrderUpdateSyncInfoAction
+     */
     public StagedOrderUpdateSyncInfoAction build() {
         Objects.requireNonNull(channel, StagedOrderUpdateSyncInfoAction.class + ": channel is missing");
         return new StagedOrderUpdateSyncInfoActionImpl(channel, externalId, syncedAt);
     }
 
     /**
-     * builds StagedOrderUpdateSyncInfoAction without checking for non null required values
+     * builds StagedOrderUpdateSyncInfoAction without checking for non-null required values
+     * @return StagedOrderUpdateSyncInfoAction
      */
     public StagedOrderUpdateSyncInfoAction buildUnchecked() {
         return new StagedOrderUpdateSyncInfoActionImpl(channel, externalId, syncedAt);

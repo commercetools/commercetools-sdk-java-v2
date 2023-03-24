@@ -31,7 +31,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
 
     /**
      *
+     * @param builder function to build the trackingData value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
 
     /**
      *
-     * @param trackingData
+     * @param trackingData value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
         return this.trackingData;
     }
 
+    /**
+     * builds OrderSetParcelTrackingDataAction with checking for non-null required values
+     * @return OrderSetParcelTrackingDataAction
+     */
     public OrderSetParcelTrackingDataAction build() {
         Objects.requireNonNull(parcelId, OrderSetParcelTrackingDataAction.class + ": parcelId is missing");
         return new OrderSetParcelTrackingDataActionImpl(parcelId, trackingData);
     }
 
     /**
-     * builds OrderSetParcelTrackingDataAction without checking for non null required values
+     * builds OrderSetParcelTrackingDataAction without checking for non-null required values
+     * @return OrderSetParcelTrackingDataAction
      */
     public OrderSetParcelTrackingDataAction buildUnchecked() {
         return new OrderSetParcelTrackingDataActionImpl(parcelId, trackingData);

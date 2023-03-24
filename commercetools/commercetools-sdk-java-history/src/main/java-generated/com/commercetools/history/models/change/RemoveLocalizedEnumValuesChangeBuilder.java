@@ -32,7 +32,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     /**
      *  <p>Update action for <code>removeEnumValues</code> on product types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     /**
      *  <p>The name of the attribute updated.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -66,7 +67,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -88,6 +89,10 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveLocalizedEnumValuesChange with checking for non-null required values
+     * @return RemoveLocalizedEnumValuesChange
+     */
     public RemoveLocalizedEnumValuesChange build() {
         Objects.requireNonNull(change, RemoveLocalizedEnumValuesChange.class + ": change is missing");
         Objects.requireNonNull(attributeName, RemoveLocalizedEnumValuesChange.class + ": attributeName is missing");
@@ -96,7 +101,8 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     * builds RemoveLocalizedEnumValuesChange without checking for non null required values
+     * builds RemoveLocalizedEnumValuesChange without checking for non-null required values
+     * @return RemoveLocalizedEnumValuesChange
      */
     public RemoveLocalizedEnumValuesChange buildUnchecked() {
         return new RemoveLocalizedEnumValuesChangeImpl(change, attributeName, previousValue);

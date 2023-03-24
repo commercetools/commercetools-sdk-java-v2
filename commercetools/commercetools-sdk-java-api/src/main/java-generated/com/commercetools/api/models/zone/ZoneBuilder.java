@@ -55,7 +55,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Unique identifier of the Zone.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Current version of the Zone.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Date and time (UTC) the Zone was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -88,7 +88,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Date and time (UTC) the Zone was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -99,6 +99,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -110,7 +111,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -122,6 +123,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -133,7 +135,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -144,7 +146,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>User-defined unique identifier of the Zone.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -155,7 +157,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Name of the Zone.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -166,7 +168,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Description of the Zone.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -177,7 +179,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
-     * @param locations
+     * @param locations value to be set
      * @return Builder
      */
 
@@ -188,7 +190,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
-     * @param locations
+     * @param locations value to be set
      * @return Builder
      */
 
@@ -199,7 +201,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
-     * @param locations
+     * @param locations value to be set
      * @return Builder
      */
 
@@ -213,6 +215,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param builder function to build the locations value
      * @return Builder
      */
 
@@ -227,6 +230,7 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @param builder function to build the locations value
      * @return Builder
      */
 
@@ -281,6 +285,10 @@ public class ZoneBuilder implements Builder<Zone> {
         return this.locations;
     }
 
+    /**
+     * builds Zone with checking for non-null required values
+     * @return Zone
+     */
     public Zone build() {
         Objects.requireNonNull(id, Zone.class + ": id is missing");
         Objects.requireNonNull(version, Zone.class + ": version is missing");
@@ -293,7 +301,8 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     * builds Zone without checking for non null required values
+     * builds Zone without checking for non-null required values
+     * @return Zone
      */
     public Zone buildUnchecked() {
         return new ZoneImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description,

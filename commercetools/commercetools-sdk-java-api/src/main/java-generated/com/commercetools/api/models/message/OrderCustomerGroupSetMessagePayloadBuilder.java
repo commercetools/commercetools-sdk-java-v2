@@ -31,6 +31,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
 
     /**
      *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
 
     /**
      *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -56,6 +57,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
 
     /**
      *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     * @param builder function to build the oldCustomerGroup value
      * @return Builder
      */
 
@@ -69,7 +71,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
 
     /**
      *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
-     * @param oldCustomerGroup
+     * @param oldCustomerGroup value to be set
      * @return Builder
      */
 
@@ -89,12 +91,17 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
         return this.oldCustomerGroup;
     }
 
+    /**
+     * builds OrderCustomerGroupSetMessagePayload with checking for non-null required values
+     * @return OrderCustomerGroupSetMessagePayload
+     */
     public OrderCustomerGroupSetMessagePayload build() {
         return new OrderCustomerGroupSetMessagePayloadImpl(customerGroup, oldCustomerGroup);
     }
 
     /**
-     * builds OrderCustomerGroupSetMessagePayload without checking for non null required values
+     * builds OrderCustomerGroupSetMessagePayload without checking for non-null required values
+     * @return OrderCustomerGroupSetMessagePayload
      */
     public OrderCustomerGroupSetMessagePayload buildUnchecked() {
         return new OrderCustomerGroupSetMessagePayloadImpl(customerGroup, oldCustomerGroup);

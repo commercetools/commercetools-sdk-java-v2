@@ -36,7 +36,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -47,6 +47,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -108,6 +109,10 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeShoppingListLineItemQuantityChange with checking for non-null required values
+     * @return ChangeShoppingListLineItemQuantityChange
+     */
     public ChangeShoppingListLineItemQuantityChange build() {
         Objects.requireNonNull(change, ChangeShoppingListLineItemQuantityChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, ChangeShoppingListLineItemQuantityChange.class + ": lineItem is missing");
@@ -118,7 +123,8 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     * builds ChangeShoppingListLineItemQuantityChange without checking for non null required values
+     * builds ChangeShoppingListLineItemQuantityChange without checking for non-null required values
+     * @return ChangeShoppingListLineItemQuantityChange
      */
     public ChangeShoppingListLineItemQuantityChange buildUnchecked() {
         return new ChangeShoppingListLineItemQuantityChangeImpl(change, lineItem, previousValue, nextValue);

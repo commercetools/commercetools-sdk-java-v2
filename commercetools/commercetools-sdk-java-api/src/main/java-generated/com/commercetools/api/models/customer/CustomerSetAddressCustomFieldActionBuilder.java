@@ -33,7 +33,7 @@ public class CustomerSetAddressCustomFieldActionBuilder implements Builder<Custo
 
     /**
      *  <p>User-defined unique identifier of the Address to be updated.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class CustomerSetAddressCustomFieldActionBuilder implements Builder<Custo
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class CustomerSetAddressCustomFieldActionBuilder implements Builder<Custo
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class CustomerSetAddressCustomFieldActionBuilder implements Builder<Custo
         return this.value;
     }
 
+    /**
+     * builds CustomerSetAddressCustomFieldAction with checking for non-null required values
+     * @return CustomerSetAddressCustomFieldAction
+     */
     public CustomerSetAddressCustomFieldAction build() {
         Objects.requireNonNull(addressId, CustomerSetAddressCustomFieldAction.class + ": addressId is missing");
         Objects.requireNonNull(name, CustomerSetAddressCustomFieldAction.class + ": name is missing");
@@ -84,7 +88,8 @@ public class CustomerSetAddressCustomFieldActionBuilder implements Builder<Custo
     }
 
     /**
-     * builds CustomerSetAddressCustomFieldAction without checking for non null required values
+     * builds CustomerSetAddressCustomFieldAction without checking for non-null required values
+     * @return CustomerSetAddressCustomFieldAction
      */
     public CustomerSetAddressCustomFieldAction buildUnchecked() {
         return new CustomerSetAddressCustomFieldActionImpl(addressId, name, value);

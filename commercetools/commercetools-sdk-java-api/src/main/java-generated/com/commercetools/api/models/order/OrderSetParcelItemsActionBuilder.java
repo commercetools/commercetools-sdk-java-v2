@@ -29,7 +29,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
         return this.items;
     }
 
+    /**
+     * builds OrderSetParcelItemsAction with checking for non-null required values
+     * @return OrderSetParcelItemsAction
+     */
     public OrderSetParcelItemsAction build() {
         Objects.requireNonNull(parcelId, OrderSetParcelItemsAction.class + ": parcelId is missing");
         Objects.requireNonNull(items, OrderSetParcelItemsAction.class + ": items is missing");
@@ -116,7 +122,8 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
     }
 
     /**
-     * builds OrderSetParcelItemsAction without checking for non null required values
+     * builds OrderSetParcelItemsAction without checking for non-null required values
+     * @return OrderSetParcelItemsAction
      */
     public OrderSetParcelItemsAction buildUnchecked() {
         return new OrderSetParcelItemsActionImpl(parcelId, items);

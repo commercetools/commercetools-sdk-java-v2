@@ -43,7 +43,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Unique identifier of a Product.</p>
-     * @param productId
+     * @param productId value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -87,7 +87,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
-     * @param addedAt
+     * @param addedAt value to be set
      * @return Builder
      */
 
@@ -98,6 +98,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -109,7 +110,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -149,12 +150,17 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
         return this.custom;
     }
 
+    /**
+     * builds MyShoppingListAddLineItemAction with checking for non-null required values
+     * @return MyShoppingListAddLineItemAction
+     */
     public MyShoppingListAddLineItemAction build() {
         return new MyShoppingListAddLineItemActionImpl(sku, productId, variantId, quantity, addedAt, custom);
     }
 
     /**
-     * builds MyShoppingListAddLineItemAction without checking for non null required values
+     * builds MyShoppingListAddLineItemAction without checking for non-null required values
+     * @return MyShoppingListAddLineItemAction
      */
     public MyShoppingListAddLineItemAction buildUnchecked() {
         return new MyShoppingListAddLineItemActionImpl(sku, productId, variantId, quantity, addedAt, custom);

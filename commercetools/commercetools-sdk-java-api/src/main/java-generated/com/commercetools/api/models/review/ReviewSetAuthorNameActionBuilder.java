@@ -27,7 +27,7 @@ public class ReviewSetAuthorNameActionBuilder implements Builder<ReviewSetAuthor
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param authorName
+     * @param authorName value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ReviewSetAuthorNameActionBuilder implements Builder<ReviewSetAuthor
         return this.authorName;
     }
 
+    /**
+     * builds ReviewSetAuthorNameAction with checking for non-null required values
+     * @return ReviewSetAuthorNameAction
+     */
     public ReviewSetAuthorNameAction build() {
         return new ReviewSetAuthorNameActionImpl(authorName);
     }
 
     /**
-     * builds ReviewSetAuthorNameAction without checking for non null required values
+     * builds ReviewSetAuthorNameAction without checking for non-null required values
+     * @return ReviewSetAuthorNameAction
      */
     public ReviewSetAuthorNameAction buildUnchecked() {
         return new ReviewSetAuthorNameActionImpl(authorName);

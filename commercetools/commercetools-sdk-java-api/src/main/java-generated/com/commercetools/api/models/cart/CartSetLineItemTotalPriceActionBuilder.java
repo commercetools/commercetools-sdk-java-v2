@@ -31,7 +31,7 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
-     * @param externalTotalPrice
+     * @param externalTotalPrice value to be set
      * @return Builder
      */
 
@@ -74,13 +75,18 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
         return this.externalTotalPrice;
     }
 
+    /**
+     * builds CartSetLineItemTotalPriceAction with checking for non-null required values
+     * @return CartSetLineItemTotalPriceAction
+     */
     public CartSetLineItemTotalPriceAction build() {
         Objects.requireNonNull(lineItemId, CartSetLineItemTotalPriceAction.class + ": lineItemId is missing");
         return new CartSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
     }
 
     /**
-     * builds CartSetLineItemTotalPriceAction without checking for non null required values
+     * builds CartSetLineItemTotalPriceAction without checking for non-null required values
+     * @return CartSetLineItemTotalPriceAction
      */
     public CartSetLineItemTotalPriceAction buildUnchecked() {
         return new CartSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);

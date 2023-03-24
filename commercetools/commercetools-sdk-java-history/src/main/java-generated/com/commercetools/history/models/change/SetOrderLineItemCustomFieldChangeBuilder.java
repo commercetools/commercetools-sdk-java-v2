@@ -42,7 +42,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *  <p>Update action for <code>setLineItemCustomField</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
-     * @param customTypeId
+     * @param customTypeId value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -75,7 +75,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -86,6 +86,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -97,7 +98,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -109,7 +110,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -120,7 +121,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -157,6 +158,10 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
         return this.previousValue;
     }
 
+    /**
+     * builds SetOrderLineItemCustomFieldChange with checking for non-null required values
+     * @return SetOrderLineItemCustomFieldChange
+     */
     public SetOrderLineItemCustomFieldChange build() {
         Objects.requireNonNull(change, SetOrderLineItemCustomFieldChange.class + ": change is missing");
         Objects.requireNonNull(customTypeId, SetOrderLineItemCustomFieldChange.class + ": customTypeId is missing");
@@ -170,7 +175,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     * builds SetOrderLineItemCustomFieldChange without checking for non null required values
+     * builds SetOrderLineItemCustomFieldChange without checking for non-null required values
+     * @return SetOrderLineItemCustomFieldChange
      */
     public SetOrderLineItemCustomFieldChange buildUnchecked() {
         return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,

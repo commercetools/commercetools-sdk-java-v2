@@ -61,7 +61,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -83,6 +83,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -94,7 +95,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -105,7 +106,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the country for which this Price is valid.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -116,6 +117,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -129,7 +131,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -141,6 +143,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -153,7 +156,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -165,7 +168,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the date from which the Price is valid. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -176,7 +179,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -187,7 +190,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -199,7 +202,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -211,7 +214,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -226,6 +229,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -240,6 +244,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -252,6 +257,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -263,7 +269,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -275,6 +281,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -286,7 +293,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -298,7 +305,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
-     * @param active
+     * @param active value to be set
      * @return Builder
      */
 
@@ -365,6 +372,10 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this.active;
     }
 
+    /**
+     * builds StandalonePriceDraft with checking for non-null required values
+     * @return StandalonePriceDraft
+     */
     public StandalonePriceDraft build() {
         Objects.requireNonNull(sku, StandalonePriceDraft.class + ": sku is missing");
         Objects.requireNonNull(value, StandalonePriceDraft.class + ": value is missing");
@@ -373,7 +384,8 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     * builds StandalonePriceDraft without checking for non null required values
+     * builds StandalonePriceDraft without checking for non-null required values
+     * @return StandalonePriceDraft
      */
     public StandalonePriceDraft buildUnchecked() {
         return new StandalonePriceDraftImpl(key, sku, value, country, customerGroup, channel, validFrom, validUntil,

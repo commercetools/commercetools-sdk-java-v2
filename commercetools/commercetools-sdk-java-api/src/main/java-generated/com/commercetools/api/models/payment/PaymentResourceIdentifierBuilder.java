@@ -30,7 +30,7 @@ public class PaymentResourceIdentifierBuilder implements Builder<PaymentResource
 
     /**
      *  <p>Unique identifier of the referenced Payment. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class PaymentResourceIdentifierBuilder implements Builder<PaymentResource
 
     /**
      *  <p>User-defined unique identifier of the referenced Payment. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class PaymentResourceIdentifierBuilder implements Builder<PaymentResource
         return this.key;
     }
 
+    /**
+     * builds PaymentResourceIdentifier with checking for non-null required values
+     * @return PaymentResourceIdentifier
+     */
     public PaymentResourceIdentifier build() {
         return new PaymentResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds PaymentResourceIdentifier without checking for non null required values
+     * builds PaymentResourceIdentifier without checking for non-null required values
+     * @return PaymentResourceIdentifier
      */
     public PaymentResourceIdentifier buildUnchecked() {
         return new PaymentResourceIdentifierImpl(id, key);

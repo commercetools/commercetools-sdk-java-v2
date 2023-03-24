@@ -36,7 +36,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *
-     * @param fractionDigits
+     * @param fractionDigits value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *
-     * @param centAmount
+     * @param centAmount value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *  <p>The currency code compliant to ISO 4217.</p>
-     * @param currencyCode
+     * @param currencyCode value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     /**
      *
-     * @param preciseAmount
+     * @param preciseAmount value to be set
      * @return Builder
      */
 
@@ -95,6 +95,10 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
         return this.preciseAmount;
     }
 
+    /**
+     * builds HighPrecisionMoney with checking for non-null required values
+     * @return HighPrecisionMoney
+     */
     public HighPrecisionMoney build() {
         Objects.requireNonNull(centAmount, HighPrecisionMoney.class + ": centAmount is missing");
         Objects.requireNonNull(currencyCode, HighPrecisionMoney.class + ": currencyCode is missing");
@@ -103,7 +107,8 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     }
 
     /**
-     * builds HighPrecisionMoney without checking for non null required values
+     * builds HighPrecisionMoney without checking for non-null required values
+     * @return HighPrecisionMoney
      */
     public HighPrecisionMoney buildUnchecked() {
         return new HighPrecisionMoneyImpl(fractionDigits, centAmount, currencyCode, preciseAmount);

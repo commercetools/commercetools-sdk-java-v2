@@ -40,7 +40,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -51,6 +51,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
+     * @param builder function to build the shippingInfo value
      * @return Builder
      */
 
@@ -62,7 +63,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
-     * @param shippingInfo
+     * @param shippingInfo value to be set
      * @return Builder
      */
 
@@ -73,6 +74,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @param builder function to build the shippingAddress value
      * @return Builder
      */
 
@@ -84,7 +86,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
-     * @param shippingAddress
+     * @param shippingAddress value to be set
      * @return Builder
      */
 
@@ -100,7 +102,7 @@ public class ShippingBuilder implements Builder<Shipping> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -117,6 +119,7 @@ public class ShippingBuilder implements Builder<Shipping> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -128,6 +131,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Custom Fields of Shipping.</p>
+     * @param builder function to build the shippingCustomFields value
      * @return Builder
      */
 
@@ -139,7 +143,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Custom Fields of Shipping.</p>
-     * @param shippingCustomFields
+     * @param shippingCustomFields value to be set
      * @return Builder
      */
 
@@ -171,6 +175,10 @@ public class ShippingBuilder implements Builder<Shipping> {
         return this.shippingCustomFields;
     }
 
+    /**
+     * builds Shipping with checking for non-null required values
+     * @return Shipping
+     */
     public Shipping build() {
         Objects.requireNonNull(shippingKey, Shipping.class + ": shippingKey is missing");
         Objects.requireNonNull(shippingInfo, Shipping.class + ": shippingInfo is missing");
@@ -179,7 +187,8 @@ public class ShippingBuilder implements Builder<Shipping> {
     }
 
     /**
-     * builds Shipping without checking for non null required values
+     * builds Shipping without checking for non-null required values
+     * @return Shipping
      */
     public Shipping buildUnchecked() {
         return new ShippingImpl(shippingKey, shippingInfo, shippingAddress, shippingRateInput, shippingCustomFields);

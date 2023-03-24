@@ -27,7 +27,7 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public QueryComplexityLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public QueryComplexityLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
         return this.values;
     }
 
+    /**
+     * builds QueryComplexityLimitExceededError with checking for non-null required values
+     * @return QueryComplexityLimitExceededError
+     */
     public QueryComplexityLimitExceededError build() {
         Objects.requireNonNull(message, QueryComplexityLimitExceededError.class + ": message is missing");
         return new QueryComplexityLimitExceededErrorImpl(message, values);
     }
 
     /**
-     * builds QueryComplexityLimitExceededError without checking for non null required values
+     * builds QueryComplexityLimitExceededError without checking for non-null required values
+     * @return QueryComplexityLimitExceededError
      */
     public QueryComplexityLimitExceededError buildUnchecked() {
         return new QueryComplexityLimitExceededErrorImpl(message, values);

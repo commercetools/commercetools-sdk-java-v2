@@ -37,7 +37,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p><code>"The value $invalidValue is not valid for field $field."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -48,6 +48,8 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InvalidFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -57,6 +59,9 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InvalidFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -69,7 +74,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>Name of the field with the invalid value.</p>
-     * @param field
+     * @param field value to be set
      * @return Builder
      */
 
@@ -80,7 +85,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>Value invalid for the field.</p>
-     * @param invalidValue
+     * @param invalidValue value to be set
      * @return Builder
      */
 
@@ -91,7 +96,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
-     * @param allowedValues
+     * @param allowedValues value to be set
      * @return Builder
      */
 
@@ -102,7 +107,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
-     * @param allowedValues
+     * @param allowedValues value to be set
      * @return Builder
      */
 
@@ -113,7 +118,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
-     * @param allowedValues
+     * @param allowedValues value to be set
      * @return Builder
      */
 
@@ -146,6 +151,10 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this.allowedValues;
     }
 
+    /**
+     * builds InvalidFieldError with checking for non-null required values
+     * @return InvalidFieldError
+     */
     public InvalidFieldError build() {
         Objects.requireNonNull(message, InvalidFieldError.class + ": message is missing");
         Objects.requireNonNull(field, InvalidFieldError.class + ": field is missing");
@@ -154,7 +163,8 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     * builds InvalidFieldError without checking for non null required values
+     * builds InvalidFieldError without checking for non-null required values
+     * @return InvalidFieldError
      */
     public InvalidFieldError buildUnchecked() {
         return new InvalidFieldErrorImpl(message, values, field, invalidValue, allowedValues);

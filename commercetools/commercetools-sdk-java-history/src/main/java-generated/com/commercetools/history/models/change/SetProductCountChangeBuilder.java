@@ -31,7 +31,7 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
 
     /**
      *  <p>Update action for <code>setProductCount</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
         return this.nextValue;
     }
 
+    /**
+     * builds SetProductCountChange with checking for non-null required values
+     * @return SetProductCountChange
+     */
     public SetProductCountChange build() {
         Objects.requireNonNull(change, SetProductCountChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetProductCountChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
     }
 
     /**
-     * builds SetProductCountChange without checking for non null required values
+     * builds SetProductCountChange without checking for non-null required values
+     * @return SetProductCountChange
      */
     public SetProductCountChange buildUnchecked() {
         return new SetProductCountChangeImpl(change, previousValue, nextValue);

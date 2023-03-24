@@ -29,6 +29,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     /**
      *
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     /**
      *  <p>A valid JSON object, based on FieldDefinition.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
         return this.fields;
     }
 
+    /**
+     * builds CustomFields with checking for non-null required values
+     * @return CustomFields
+     */
     public CustomFields build() {
         Objects.requireNonNull(type, CustomFields.class + ": type is missing");
         Objects.requireNonNull(fields, CustomFields.class + ": fields is missing");
@@ -75,7 +80,8 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     * builds CustomFields without checking for non null required values
+     * builds CustomFields without checking for non-null required values
+     * @return CustomFields
      */
     public CustomFields buildUnchecked() {
         return new CustomFieldsImpl(type, fields);

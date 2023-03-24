@@ -29,6 +29,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @param builder function to build the preview value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
-     * @param preview
+     * @param preview value to be set
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
-     * @param messagePayloads
+     * @param messagePayloads value to be set
      * @return Builder
      */
 
@@ -63,7 +64,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
-     * @param messagePayloads
+     * @param messagePayloads value to be set
      * @return Builder
      */
 
@@ -75,7 +76,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
-     * @param messagePayloads
+     * @param messagePayloads value to be set
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @param builder function to build the messagePayloads value
      * @return Builder
      */
 
@@ -105,6 +107,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     /**
      *
+     * @param builder function to build the messagePayloads value
      * @return Builder
      */
 
@@ -124,6 +127,10 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
         return this.messagePayloads;
     }
 
+    /**
+     * builds OrderEditPreviewSuccess with checking for non-null required values
+     * @return OrderEditPreviewSuccess
+     */
     public OrderEditPreviewSuccess build() {
         Objects.requireNonNull(preview, OrderEditPreviewSuccess.class + ": preview is missing");
         Objects.requireNonNull(messagePayloads, OrderEditPreviewSuccess.class + ": messagePayloads is missing");
@@ -131,7 +138,8 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * builds OrderEditPreviewSuccess without checking for non null required values
+     * builds OrderEditPreviewSuccess without checking for non-null required values
+     * @return OrderEditPreviewSuccess
      */
     public OrderEditPreviewSuccess buildUnchecked() {
         return new OrderEditPreviewSuccessImpl(preview, messagePayloads);

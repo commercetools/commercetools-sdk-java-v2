@@ -26,6 +26,7 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
 
     /**
      *  <p>Associate to remove.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
 
     /**
      *  <p>Associate to remove.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
         return this.customer;
     }
 
+    /**
+     * builds BusinessUnitRemoveAssociateAction with checking for non-null required values
+     * @return BusinessUnitRemoveAssociateAction
+     */
     public BusinessUnitRemoveAssociateAction build() {
         Objects.requireNonNull(customer, BusinessUnitRemoveAssociateAction.class + ": customer is missing");
         return new BusinessUnitRemoveAssociateActionImpl(customer);
     }
 
     /**
-     * builds BusinessUnitRemoveAssociateAction without checking for non null required values
+     * builds BusinessUnitRemoveAssociateAction without checking for non-null required values
+     * @return BusinessUnitRemoveAssociateAction
      */
     public BusinessUnitRemoveAssociateAction buildUnchecked() {
         return new BusinessUnitRemoveAssociateActionImpl(customer);

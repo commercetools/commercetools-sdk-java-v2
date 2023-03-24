@@ -29,7 +29,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Expected version of the ShippingMethod on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
         return this.actions;
     }
 
+    /**
+     * builds ShippingMethodUpdate with checking for non-null required values
+     * @return ShippingMethodUpdate
+     */
     public ShippingMethodUpdate build() {
         Objects.requireNonNull(version, ShippingMethodUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ShippingMethodUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     * builds ShippingMethodUpdate without checking for non null required values
+     * builds ShippingMethodUpdate without checking for non-null required values
+     * @return ShippingMethodUpdate
      */
     public ShippingMethodUpdate buildUnchecked() {
         return new ShippingMethodUpdateImpl(version, actions);

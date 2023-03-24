@@ -26,6 +26,7 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
 
     /**
      *  <p>Location to be removed from the Zone.</p>
+     * @param builder function to build the location value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
 
     /**
      *  <p>Location to be removed from the Zone.</p>
-     * @param location
+     * @param location value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
         return this.location;
     }
 
+    /**
+     * builds ZoneRemoveLocationAction with checking for non-null required values
+     * @return ZoneRemoveLocationAction
+     */
     public ZoneRemoveLocationAction build() {
         Objects.requireNonNull(location, ZoneRemoveLocationAction.class + ": location is missing");
         return new ZoneRemoveLocationActionImpl(location);
     }
 
     /**
-     * builds ZoneRemoveLocationAction without checking for non null required values
+     * builds ZoneRemoveLocationAction without checking for non-null required values
+     * @return ZoneRemoveLocationAction
      */
     public ZoneRemoveLocationAction buildUnchecked() {
         return new ZoneRemoveLocationActionImpl(location);

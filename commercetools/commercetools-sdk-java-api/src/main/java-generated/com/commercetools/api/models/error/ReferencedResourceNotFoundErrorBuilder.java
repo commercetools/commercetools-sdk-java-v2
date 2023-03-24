@@ -38,7 +38,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -49,6 +49,8 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ReferencedResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -58,6 +60,9 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ReferencedResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -70,7 +75,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p>Type of referenced resource.</p>
-     * @param typeId
+     * @param typeId value to be set
      * @return Builder
      */
 
@@ -82,7 +87,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p>Unique identifier of the referenced resource, if known.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -93,7 +98,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      *  <p>User-defined unique identifier of the referenced resource, if known.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -124,6 +129,10 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
         return this.key;
     }
 
+    /**
+     * builds ReferencedResourceNotFoundError with checking for non-null required values
+     * @return ReferencedResourceNotFoundError
+     */
     public ReferencedResourceNotFoundError build() {
         Objects.requireNonNull(message, ReferencedResourceNotFoundError.class + ": message is missing");
         Objects.requireNonNull(typeId, ReferencedResourceNotFoundError.class + ": typeId is missing");
@@ -131,7 +140,8 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     * builds ReferencedResourceNotFoundError without checking for non null required values
+     * builds ReferencedResourceNotFoundError without checking for non-null required values
+     * @return ReferencedResourceNotFoundError
      */
     public ReferencedResourceNotFoundError buildUnchecked() {
         return new ReferencedResourceNotFoundErrorImpl(message, values, typeId, id, key);

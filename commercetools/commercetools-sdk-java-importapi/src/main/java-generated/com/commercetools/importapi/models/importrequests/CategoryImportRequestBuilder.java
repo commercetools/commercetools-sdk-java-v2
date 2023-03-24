@@ -26,7 +26,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
         return this.resources;
     }
 
+    /**
+     * builds CategoryImportRequest with checking for non-null required values
+     * @return CategoryImportRequest
+     */
     public CategoryImportRequest build() {
         Objects.requireNonNull(resources, CategoryImportRequest.class + ": resources is missing");
         return new CategoryImportRequestImpl(resources);
     }
 
     /**
-     * builds CategoryImportRequest without checking for non null required values
+     * builds CategoryImportRequest without checking for non-null required values
+     * @return CategoryImportRequest
      */
     public CategoryImportRequest buildUnchecked() {
         return new CategoryImportRequestImpl(resources);

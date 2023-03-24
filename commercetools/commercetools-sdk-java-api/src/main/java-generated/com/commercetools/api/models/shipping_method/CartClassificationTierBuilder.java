@@ -34,7 +34,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *  <p><code>key</code> selected from the <code>values</code> of the CartClassificationType configured in the Project.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *  <p>Fixed shipping rate for the selected classification.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *  <p>Fixed shipping rate for the selected classification.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
-     * @param isMatching
+     * @param isMatching value to be set
      * @return Builder
      */
 
@@ -89,6 +90,10 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
         return this.isMatching;
     }
 
+    /**
+     * builds CartClassificationTier with checking for non-null required values
+     * @return CartClassificationTier
+     */
     public CartClassificationTier build() {
         Objects.requireNonNull(value, CartClassificationTier.class + ": value is missing");
         Objects.requireNonNull(price, CartClassificationTier.class + ": price is missing");
@@ -96,7 +101,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     * builds CartClassificationTier without checking for non null required values
+     * builds CartClassificationTier without checking for non-null required values
+     * @return CartClassificationTier
      */
     public CartClassificationTier buildUnchecked() {
         return new CartClassificationTierImpl(value, price, isMatching);

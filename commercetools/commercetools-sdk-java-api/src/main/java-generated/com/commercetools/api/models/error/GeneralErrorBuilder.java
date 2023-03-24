@@ -27,7 +27,7 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
 
     /**
      *  <p>Description about any known details of the problem, for example, <code>"Write operations are temporarily unavailable"</code>.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public GeneralErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public GeneralErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
         return this.values;
     }
 
+    /**
+     * builds GeneralError with checking for non-null required values
+     * @return GeneralError
+     */
     public GeneralError build() {
         Objects.requireNonNull(message, GeneralError.class + ": message is missing");
         return new GeneralErrorImpl(message, values);
     }
 
     /**
-     * builds GeneralError without checking for non null required values
+     * builds GeneralError without checking for non-null required values
+     * @return GeneralError
      */
     public GeneralError buildUnchecked() {
         return new GeneralErrorImpl(message, values);

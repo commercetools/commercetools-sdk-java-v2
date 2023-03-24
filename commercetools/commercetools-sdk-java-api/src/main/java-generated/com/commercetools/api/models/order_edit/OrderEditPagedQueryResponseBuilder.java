@@ -40,7 +40,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -96,7 +96,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -108,7 +108,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -123,6 +123,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -137,6 +138,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -168,6 +170,10 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
         return this.results;
     }
 
+    /**
+     * builds OrderEditPagedQueryResponse with checking for non-null required values
+     * @return OrderEditPagedQueryResponse
+     */
     public OrderEditPagedQueryResponse build() {
         Objects.requireNonNull(limit, OrderEditPagedQueryResponse.class + ": limit is missing");
         Objects.requireNonNull(count, OrderEditPagedQueryResponse.class + ": count is missing");
@@ -177,7 +183,8 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * builds OrderEditPagedQueryResponse without checking for non null required values
+     * builds OrderEditPagedQueryResponse without checking for non-null required values
+     * @return OrderEditPagedQueryResponse
      */
     public OrderEditPagedQueryResponse buildUnchecked() {
         return new OrderEditPagedQueryResponseImpl(limit, count, total, offset, results);

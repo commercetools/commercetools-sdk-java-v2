@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRevertStagedChangesActionBuilder implements Builder<ProductRevertStagedChangesAction> {
 
+    /**
+     * builds ProductRevertStagedChangesAction with checking for non-null required values
+     * @return ProductRevertStagedChangesAction
+     */
     public ProductRevertStagedChangesAction build() {
         return new ProductRevertStagedChangesActionImpl();
     }
 
     /**
-     * builds ProductRevertStagedChangesAction without checking for non null required values
+     * builds ProductRevertStagedChangesAction without checking for non-null required values
+     * @return ProductRevertStagedChangesAction
      */
     public ProductRevertStagedChangesAction buildUnchecked() {
         return new ProductRevertStagedChangesActionImpl();

@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceDeletedMessagePayloadBuilder implements Builder<StandalonePriceDeletedMessagePayload> {
 
+    /**
+     * builds StandalonePriceDeletedMessagePayload with checking for non-null required values
+     * @return StandalonePriceDeletedMessagePayload
+     */
     public StandalonePriceDeletedMessagePayload build() {
         return new StandalonePriceDeletedMessagePayloadImpl();
     }
 
     /**
-     * builds StandalonePriceDeletedMessagePayload without checking for non null required values
+     * builds StandalonePriceDeletedMessagePayload without checking for non-null required values
+     * @return StandalonePriceDeletedMessagePayload
      */
     public StandalonePriceDeletedMessagePayload buildUnchecked() {
         return new StandalonePriceDeletedMessagePayloadImpl();

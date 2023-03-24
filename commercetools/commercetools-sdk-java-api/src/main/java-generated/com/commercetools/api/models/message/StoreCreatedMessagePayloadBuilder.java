@@ -46,6 +46,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>The <code>name</code> of the Store that was created.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>The <code>name</code> of the Store that was created.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -80,7 +81,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -91,7 +92,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -105,7 +106,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Countries of the Store that was created.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -117,7 +118,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Countries of the Store that was created.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -129,7 +130,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Countries of the Store that was created.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -144,6 +145,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Countries of the Store that was created.</p>
+     * @param builder function to build the countries value
      * @return Builder
      */
 
@@ -158,6 +160,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Countries of the Store that was created.</p>
+     * @param builder function to build the countries value
      * @return Builder
      */
 
@@ -170,7 +173,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -182,7 +185,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -194,7 +197,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -209,6 +212,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
+     * @param builder function to build the distributionChannels value
      * @return Builder
      */
 
@@ -224,6 +228,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
+     * @param builder function to build the distributionChannels value
      * @return Builder
      */
 
@@ -237,7 +242,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -249,7 +254,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -261,7 +266,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -276,6 +281,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
+     * @param builder function to build the supplyChannels value
      * @return Builder
      */
 
@@ -291,6 +297,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
+     * @param builder function to build the supplyChannels value
      * @return Builder
      */
 
@@ -304,7 +311,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
-     * @param productSelections
+     * @param productSelections value to be set
      * @return Builder
      */
 
@@ -316,7 +323,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
-     * @param productSelections
+     * @param productSelections value to be set
      * @return Builder
      */
 
@@ -328,7 +335,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
-     * @param productSelections
+     * @param productSelections value to be set
      * @return Builder
      */
 
@@ -343,6 +350,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param builder function to build the productSelections value
      * @return Builder
      */
 
@@ -358,6 +366,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param builder function to build the productSelections value
      * @return Builder
      */
 
@@ -371,6 +380,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Custom Fields on the Store that was created.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -382,7 +392,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>Custom Fields on the Store that was created.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -424,6 +434,10 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this.custom;
     }
 
+    /**
+     * builds StoreCreatedMessagePayload with checking for non-null required values
+     * @return StoreCreatedMessagePayload
+     */
     public StoreCreatedMessagePayload build() {
         Objects.requireNonNull(distributionChannels,
             StoreCreatedMessagePayload.class + ": distributionChannels is missing");
@@ -434,7 +448,8 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     * builds StoreCreatedMessagePayload without checking for non null required values
+     * builds StoreCreatedMessagePayload without checking for non-null required values
+     * @return StoreCreatedMessagePayload
      */
     public StoreCreatedMessagePayload buildUnchecked() {
         return new StoreCreatedMessagePayloadImpl(name, languages, countries, distributionChannels, supplyChannels,

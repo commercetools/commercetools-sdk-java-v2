@@ -31,6 +31,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
 
     /**
      *  <p>Customer signed up or signed in after authentication.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
 
     /**
      *  <p>Customer signed up or signed in after authentication.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -53,6 +54,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
 
     /**
      *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     * @param builder function to build the cart value
      * @return Builder
      */
 
@@ -64,7 +66,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
 
     /**
      *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
-     * @param cart
+     * @param cart value to be set
      * @return Builder
      */
 
@@ -82,13 +84,18 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
         return this.cart;
     }
 
+    /**
+     * builds CustomerSignInResult with checking for non-null required values
+     * @return CustomerSignInResult
+     */
     public CustomerSignInResult build() {
         Objects.requireNonNull(customer, CustomerSignInResult.class + ": customer is missing");
         return new CustomerSignInResultImpl(customer, cart);
     }
 
     /**
-     * builds CustomerSignInResult without checking for non null required values
+     * builds CustomerSignInResult without checking for non-null required values
+     * @return CustomerSignInResult
      */
     public CustomerSignInResult buildUnchecked() {
         return new CustomerSignInResultImpl(customer, cart);

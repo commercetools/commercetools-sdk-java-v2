@@ -26,6 +26,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>InventoryEntry that was created.</p>
+     * @param builder function to build the inventoryEntry value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>InventoryEntry that was created.</p>
-     * @param inventoryEntry
+     * @param inventoryEntry value to be set
      * @return Builder
      */
 
@@ -51,6 +52,10 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
         return this.inventoryEntry;
     }
 
+    /**
+     * builds InventoryEntryCreatedMessagePayload with checking for non-null required values
+     * @return InventoryEntryCreatedMessagePayload
+     */
     public InventoryEntryCreatedMessagePayload build() {
         Objects.requireNonNull(inventoryEntry,
             InventoryEntryCreatedMessagePayload.class + ": inventoryEntry is missing");
@@ -58,7 +63,8 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     * builds InventoryEntryCreatedMessagePayload without checking for non null required values
+     * builds InventoryEntryCreatedMessagePayload without checking for non-null required values
+     * @return InventoryEntryCreatedMessagePayload
      */
     public InventoryEntryCreatedMessagePayload buildUnchecked() {
         return new InventoryEntryCreatedMessagePayloadImpl(inventoryEntry);

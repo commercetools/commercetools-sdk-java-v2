@@ -25,7 +25,7 @@ public class MyCustomerChangeEmailActionBuilder implements Builder<MyCustomerCha
 
     /**
      *  <p>New value to set.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class MyCustomerChangeEmailActionBuilder implements Builder<MyCustomerCha
         return this.email;
     }
 
+    /**
+     * builds MyCustomerChangeEmailAction with checking for non-null required values
+     * @return MyCustomerChangeEmailAction
+     */
     public MyCustomerChangeEmailAction build() {
         Objects.requireNonNull(email, MyCustomerChangeEmailAction.class + ": email is missing");
         return new MyCustomerChangeEmailActionImpl(email);
     }
 
     /**
-     * builds MyCustomerChangeEmailAction without checking for non null required values
+     * builds MyCustomerChangeEmailAction without checking for non-null required values
+     * @return MyCustomerChangeEmailAction
      */
     public MyCustomerChangeEmailAction buildUnchecked() {
         return new MyCustomerChangeEmailActionImpl(email);

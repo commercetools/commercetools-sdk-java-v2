@@ -25,7 +25,7 @@ public class ProductPriceModeSetMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The PriceMode that was set.</p>
-     * @param to
+     * @param to value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class ProductPriceModeSetMessagePayloadBuilder implements Builder<Product
         return this.to;
     }
 
+    /**
+     * builds ProductPriceModeSetMessagePayload with checking for non-null required values
+     * @return ProductPriceModeSetMessagePayload
+     */
     public ProductPriceModeSetMessagePayload build() {
         Objects.requireNonNull(to, ProductPriceModeSetMessagePayload.class + ": to is missing");
         return new ProductPriceModeSetMessagePayloadImpl(to);
     }
 
     /**
-     * builds ProductPriceModeSetMessagePayload without checking for non null required values
+     * builds ProductPriceModeSetMessagePayload without checking for non-null required values
+     * @return ProductPriceModeSetMessagePayload
      */
     public ProductPriceModeSetMessagePayload buildUnchecked() {
         return new ProductPriceModeSetMessagePayloadImpl(to);

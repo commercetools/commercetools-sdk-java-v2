@@ -26,6 +26,7 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
 
     /**
      *  <p>Order that has been deleted.</p>
+     * @param builder function to build the order value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
 
     /**
      *  <p>Order that has been deleted.</p>
-     * @param order
+     * @param order value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
         return this.order;
     }
 
+    /**
+     * builds OrderDeletedMessagePayload with checking for non-null required values
+     * @return OrderDeletedMessagePayload
+     */
     public OrderDeletedMessagePayload build() {
         Objects.requireNonNull(order, OrderDeletedMessagePayload.class + ": order is missing");
         return new OrderDeletedMessagePayloadImpl(order);
     }
 
     /**
-     * builds OrderDeletedMessagePayload without checking for non null required values
+     * builds OrderDeletedMessagePayload without checking for non-null required values
+     * @return OrderDeletedMessagePayload
      */
     public OrderDeletedMessagePayload buildUnchecked() {
         return new OrderDeletedMessagePayloadImpl(order);

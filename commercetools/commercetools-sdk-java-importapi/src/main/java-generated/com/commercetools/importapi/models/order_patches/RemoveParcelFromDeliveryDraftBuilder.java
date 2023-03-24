@@ -25,7 +25,7 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
         return this.parcelId;
     }
 
+    /**
+     * builds RemoveParcelFromDeliveryDraft with checking for non-null required values
+     * @return RemoveParcelFromDeliveryDraft
+     */
     public RemoveParcelFromDeliveryDraft build() {
         Objects.requireNonNull(parcelId, RemoveParcelFromDeliveryDraft.class + ": parcelId is missing");
         return new RemoveParcelFromDeliveryDraftImpl(parcelId);
     }
 
     /**
-     * builds RemoveParcelFromDeliveryDraft without checking for non null required values
+     * builds RemoveParcelFromDeliveryDraft without checking for non-null required values
+     * @return RemoveParcelFromDeliveryDraft
      */
     public RemoveParcelFromDeliveryDraft buildUnchecked() {
         return new RemoveParcelFromDeliveryDraftImpl(parcelId);

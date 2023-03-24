@@ -29,7 +29,7 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
 
     /**
      *  <p>Update action for <code>removeAsset</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveAssetChange with checking for non-null required values
+     * @return RemoveAssetChange
+     */
     public RemoveAssetChange build() {
         Objects.requireNonNull(change, RemoveAssetChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveAssetChange.class + ": previousValue is missing");
@@ -75,7 +80,8 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
     }
 
     /**
-     * builds RemoveAssetChange without checking for non null required values
+     * builds RemoveAssetChange without checking for non-null required values
+     * @return RemoveAssetChange
      */
     public RemoveAssetChange buildUnchecked() {
         return new RemoveAssetChangeImpl(change, previousValue);

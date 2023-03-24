@@ -25,7 +25,7 @@ public class DiscountCodeChangeIsActiveActionBuilder implements Builder<Discount
 
     /**
      *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
-     * @param isActive
+     * @param isActive value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class DiscountCodeChangeIsActiveActionBuilder implements Builder<Discount
         return this.isActive;
     }
 
+    /**
+     * builds DiscountCodeChangeIsActiveAction with checking for non-null required values
+     * @return DiscountCodeChangeIsActiveAction
+     */
     public DiscountCodeChangeIsActiveAction build() {
         Objects.requireNonNull(isActive, DiscountCodeChangeIsActiveAction.class + ": isActive is missing");
         return new DiscountCodeChangeIsActiveActionImpl(isActive);
     }
 
     /**
-     * builds DiscountCodeChangeIsActiveAction without checking for non null required values
+     * builds DiscountCodeChangeIsActiveAction without checking for non-null required values
+     * @return DiscountCodeChangeIsActiveAction
      */
     public DiscountCodeChangeIsActiveAction buildUnchecked() {
         return new DiscountCodeChangeIsActiveActionImpl(isActive);

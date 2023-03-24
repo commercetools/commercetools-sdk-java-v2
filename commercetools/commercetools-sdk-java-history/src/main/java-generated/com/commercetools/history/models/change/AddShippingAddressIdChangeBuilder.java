@@ -35,7 +35,7 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     /**
      *  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -104,7 +104,7 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -118,6 +118,7 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     /**
      *
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -129,7 +130,7 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     /**
      *
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -154,6 +155,10 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
         return this.address;
     }
 
+    /**
+     * builds AddShippingAddressIdChange with checking for non-null required values
+     * @return AddShippingAddressIdChange
+     */
     public AddShippingAddressIdChange build() {
         Objects.requireNonNull(change, AddShippingAddressIdChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddShippingAddressIdChange.class + ": nextValue is missing");
@@ -163,7 +168,8 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
     }
 
     /**
-     * builds AddShippingAddressIdChange without checking for non null required values
+     * builds AddShippingAddressIdChange without checking for non-null required values
+     * @return AddShippingAddressIdChange
      */
     public AddShippingAddressIdChange buildUnchecked() {
         return new AddShippingAddressIdChangeImpl(change, nextValue, previousValue, address);

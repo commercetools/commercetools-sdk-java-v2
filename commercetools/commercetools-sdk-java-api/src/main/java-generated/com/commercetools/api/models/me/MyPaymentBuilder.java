@@ -49,7 +49,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Unique identifier of the Payment.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Current version of the Payment.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -93,7 +94,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -104,6 +105,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param builder function to build the amountPlanned value
      * @return Builder
      */
 
@@ -115,7 +117,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
-     * @param amountPlanned
+     * @param amountPlanned value to be set
      * @return Builder
      */
 
@@ -126,6 +128,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param builder function to build the paymentMethodInfo value
      * @return Builder
      */
 
@@ -138,7 +141,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
-     * @param paymentMethodInfo
+     * @param paymentMethodInfo value to be set
      * @return Builder
      */
 
@@ -150,7 +153,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
-     * @param transactions
+     * @param transactions value to be set
      * @return Builder
      */
 
@@ -161,7 +164,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
-     * @param transactions
+     * @param transactions value to be set
      * @return Builder
      */
 
@@ -173,7 +176,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
-     * @param transactions
+     * @param transactions value to be set
      * @return Builder
      */
 
@@ -187,6 +190,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
      * @return Builder
      */
 
@@ -201,6 +205,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
      * @return Builder
      */
 
@@ -213,6 +218,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Custom Fields defined for the Payment.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -224,7 +230,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Custom Fields defined for the Payment.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -268,6 +274,10 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
         return this.custom;
     }
 
+    /**
+     * builds MyPayment with checking for non-null required values
+     * @return MyPayment
+     */
     public MyPayment build() {
         Objects.requireNonNull(id, MyPayment.class + ": id is missing");
         Objects.requireNonNull(version, MyPayment.class + ": version is missing");
@@ -279,7 +289,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     * builds MyPayment without checking for non null required values
+     * builds MyPayment without checking for non-null required values
+     * @return MyPayment
      */
     public MyPayment buildUnchecked() {
         return new MyPaymentImpl(id, version, customer, anonymousId, amountPlanned, paymentMethodInfo, transactions,

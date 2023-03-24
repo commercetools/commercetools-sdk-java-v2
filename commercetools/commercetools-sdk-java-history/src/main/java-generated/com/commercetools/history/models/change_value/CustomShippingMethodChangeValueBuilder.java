@@ -25,7 +25,7 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
         return this.name;
     }
 
+    /**
+     * builds CustomShippingMethodChangeValue with checking for non-null required values
+     * @return CustomShippingMethodChangeValue
+     */
     public CustomShippingMethodChangeValue build() {
         Objects.requireNonNull(name, CustomShippingMethodChangeValue.class + ": name is missing");
         return new CustomShippingMethodChangeValueImpl(name);
     }
 
     /**
-     * builds CustomShippingMethodChangeValue without checking for non null required values
+     * builds CustomShippingMethodChangeValue without checking for non-null required values
+     * @return CustomShippingMethodChangeValue
      */
     public CustomShippingMethodChangeValue buildUnchecked() {
         return new CustomShippingMethodChangeValueImpl(name);

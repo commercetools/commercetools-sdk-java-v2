@@ -37,7 +37,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p><code>id</code> of the APIClient which created the resource.</p>
-     * @param clientId
+     * @param clientId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
-     * @param externalUserId
+     * @param externalUserId value to be set
      * @return Builder
      */
 
@@ -59,6 +59,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -111,12 +112,17 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
         return this.anonymousId;
     }
 
+    /**
+     * builds ClientLogging with checking for non-null required values
+     * @return ClientLogging
+     */
     public ClientLogging build() {
         return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);
     }
 
     /**
-     * builds ClientLogging without checking for non null required values
+     * builds ClientLogging without checking for non-null required values
+     * @return ClientLogging
      */
     public ClientLogging buildUnchecked() {
         return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);

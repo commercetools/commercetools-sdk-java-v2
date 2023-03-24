@@ -67,7 +67,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Unique identifier of the State.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Current version of the State.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Date and time (UTC) the State was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -100,7 +100,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Date and time (UTC) the State was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -111,6 +111,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -122,7 +123,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -134,6 +135,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -145,7 +147,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -156,7 +158,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>User-defined unique identifier of the State.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -167,7 +169,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Indicates to which resource or object types the State is assigned to.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -178,6 +180,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Name of the State.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -189,7 +192,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Name of the State.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -200,6 +203,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Description of the State.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -211,7 +215,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Description of the State.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -222,7 +226,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
-     * @param initial
+     * @param initial value to be set
      * @return Builder
      */
 
@@ -233,7 +237,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
-     * @param builtIn
+     * @param builtIn value to be set
      * @return Builder
      */
 
@@ -244,7 +248,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -255,7 +259,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -266,7 +270,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -284,7 +288,7 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
-     * @param transitions
+     * @param transitions value to be set
      * @return Builder
      */
 
@@ -299,7 +303,7 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
-     * @param transitions
+     * @param transitions value to be set
      * @return Builder
      */
 
@@ -315,7 +319,7 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
-     * @param transitions
+     * @param transitions value to be set
      * @return Builder
      */
 
@@ -334,6 +338,7 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param builder function to build the transitions value
      * @return Builder
      */
 
@@ -352,6 +357,7 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param builder function to build the transitions value
      * @return Builder
      */
 
@@ -424,6 +430,10 @@ public class StateBuilder implements Builder<State> {
         return this.transitions;
     }
 
+    /**
+     * builds State with checking for non-null required values
+     * @return State
+     */
     public State build() {
         Objects.requireNonNull(id, State.class + ": id is missing");
         Objects.requireNonNull(version, State.class + ": version is missing");
@@ -438,7 +448,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-     * builds State without checking for non null required values
+     * builds State without checking for non-null required values
+     * @return State
      */
     public State buildUnchecked() {
         return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,

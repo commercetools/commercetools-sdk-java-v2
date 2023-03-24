@@ -38,7 +38,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -110,6 +110,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -125,6 +126,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -138,6 +140,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *
+     * @param builder function to build the meta value
      * @return Builder
      */
 
@@ -151,7 +154,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     /**
      *
-     * @param meta
+     * @param meta value to be set
      * @return Builder
      */
 
@@ -181,6 +184,10 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
         return this.meta;
     }
 
+    /**
+     * builds SimilarProductsPagedQueryResult with checking for non-null required values
+     * @return SimilarProductsPagedQueryResult
+     */
     public SimilarProductsPagedQueryResult build() {
         Objects.requireNonNull(count, SimilarProductsPagedQueryResult.class + ": count is missing");
         Objects.requireNonNull(total, SimilarProductsPagedQueryResult.class + ": total is missing");
@@ -191,7 +198,8 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     * builds SimilarProductsPagedQueryResult without checking for non null required values
+     * builds SimilarProductsPagedQueryResult without checking for non-null required values
+     * @return SimilarProductsPagedQueryResult
      */
     public SimilarProductsPagedQueryResult buildUnchecked() {
         return new SimilarProductsPagedQueryResultImpl(count, total, offset, results, meta);

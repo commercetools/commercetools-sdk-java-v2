@@ -27,7 +27,7 @@ public class CustomerSetLastNameActionBuilder implements Builder<CustomerSetLast
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param lastName
+     * @param lastName value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerSetLastNameActionBuilder implements Builder<CustomerSetLast
         return this.lastName;
     }
 
+    /**
+     * builds CustomerSetLastNameAction with checking for non-null required values
+     * @return CustomerSetLastNameAction
+     */
     public CustomerSetLastNameAction build() {
         return new CustomerSetLastNameActionImpl(lastName);
     }
 
     /**
-     * builds CustomerSetLastNameAction without checking for non null required values
+     * builds CustomerSetLastNameAction without checking for non-null required values
+     * @return CustomerSetLastNameAction
      */
     public CustomerSetLastNameAction buildUnchecked() {
         return new CustomerSetLastNameActionImpl(lastName);

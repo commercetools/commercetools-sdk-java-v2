@@ -30,7 +30,7 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -84,13 +84,18 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
         return this.value;
     }
 
+    /**
+     * builds DateTimeSetAttribute with checking for non-null required values
+     * @return DateTimeSetAttribute
+     */
     public DateTimeSetAttribute build() {
         Objects.requireNonNull(value, DateTimeSetAttribute.class + ": value is missing");
         return new DateTimeSetAttributeImpl(name, value);
     }
 
     /**
-     * builds DateTimeSetAttribute without checking for non null required values
+     * builds DateTimeSetAttribute without checking for non-null required values
+     * @return DateTimeSetAttribute
      */
     public DateTimeSetAttribute buildUnchecked() {
         return new DateTimeSetAttributeImpl(name, value);

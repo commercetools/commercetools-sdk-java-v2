@@ -40,7 +40,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -62,6 +62,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the fromState value
      * @return Builder
      */
 
@@ -73,7 +74,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param fromState
+     * @param fromState value to be set
      * @return Builder
      */
 
@@ -85,6 +86,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the toState value
      * @return Builder
      */
 
@@ -96,7 +98,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param toState
+     * @param toState value to be set
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *
-     * @param actualTransitionDate
+     * @param actualTransitionDate value to be set
      * @return Builder
      */
 
@@ -139,6 +141,10 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
         return this.actualTransitionDate;
     }
 
+    /**
+     * builds OrderTransitionLineItemStateAction with checking for non-null required values
+     * @return OrderTransitionLineItemStateAction
+     */
     public OrderTransitionLineItemStateAction build() {
         Objects.requireNonNull(lineItemId, OrderTransitionLineItemStateAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, OrderTransitionLineItemStateAction.class + ": quantity is missing");
@@ -149,7 +155,8 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     * builds OrderTransitionLineItemStateAction without checking for non null required values
+     * builds OrderTransitionLineItemStateAction without checking for non-null required values
+     * @return OrderTransitionLineItemStateAction
      */
     public OrderTransitionLineItemStateAction buildUnchecked() {
         return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,

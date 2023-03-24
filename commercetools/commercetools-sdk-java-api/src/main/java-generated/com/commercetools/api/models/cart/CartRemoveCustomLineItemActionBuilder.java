@@ -25,7 +25,7 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
 
     /**
      *  <p><code>id</code> of the Custom Line Item to remove.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -38,6 +38,10 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
         return this.customLineItemId;
     }
 
+    /**
+     * builds CartRemoveCustomLineItemAction with checking for non-null required values
+     * @return CartRemoveCustomLineItemAction
+     */
     public CartRemoveCustomLineItemAction build() {
         Objects.requireNonNull(customLineItemId,
             CartRemoveCustomLineItemAction.class + ": customLineItemId is missing");
@@ -45,7 +49,8 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
     }
 
     /**
-     * builds CartRemoveCustomLineItemAction without checking for non null required values
+     * builds CartRemoveCustomLineItemAction without checking for non-null required values
+     * @return CartRemoveCustomLineItemAction
      */
     public CartRemoveCustomLineItemAction buildUnchecked() {
         return new CartRemoveCustomLineItemActionImpl(customLineItemId);

@@ -29,7 +29,7 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
 
     /**
      *  <p>Update action for <code>addDiscountCode</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
         return this.nextValue;
     }
 
+    /**
+     * builds AddDiscountCodeChange with checking for non-null required values
+     * @return AddDiscountCodeChange
+     */
     public AddDiscountCodeChange build() {
         Objects.requireNonNull(change, AddDiscountCodeChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddDiscountCodeChange.class + ": nextValue is missing");
@@ -76,7 +81,8 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
     }
 
     /**
-     * builds AddDiscountCodeChange without checking for non null required values
+     * builds AddDiscountCodeChange without checking for non-null required values
+     * @return AddDiscountCodeChange
      */
     public AddDiscountCodeChange buildUnchecked() {
         return new AddDiscountCodeChangeImpl(change, nextValue);

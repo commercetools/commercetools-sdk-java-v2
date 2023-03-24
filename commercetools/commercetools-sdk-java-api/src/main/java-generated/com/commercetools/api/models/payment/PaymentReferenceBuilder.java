@@ -31,7 +31,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
 
     /**
      *  <p>Unique identifier of the referenced Payment.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
 
     /**
      *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
 
     /**
      *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
         return this.obj;
     }
 
+    /**
+     * builds PaymentReference with checking for non-null required values
+     * @return PaymentReference
+     */
     public PaymentReference build() {
         Objects.requireNonNull(id, PaymentReference.class + ": id is missing");
         return new PaymentReferenceImpl(id, obj);
     }
 
     /**
-     * builds PaymentReference without checking for non null required values
+     * builds PaymentReference without checking for non-null required values
+     * @return PaymentReference
      */
     public PaymentReference buildUnchecked() {
         return new PaymentReferenceImpl(id, obj);

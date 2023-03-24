@@ -31,6 +31,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
 
     /**
      *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
 
     /**
      *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
 
     /**
      *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
 
     /**
      *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
         return this.fields;
     }
 
+    /**
+     * builds MyShoppingListSetCustomTypeAction with checking for non-null required values
+     * @return MyShoppingListSetCustomTypeAction
+     */
     public MyShoppingListSetCustomTypeAction build() {
         return new MyShoppingListSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds MyShoppingListSetCustomTypeAction without checking for non null required values
+     * builds MyShoppingListSetCustomTypeAction without checking for non-null required values
+     * @return MyShoppingListSetCustomTypeAction
      */
     public MyShoppingListSetCustomTypeAction buildUnchecked() {
         return new MyShoppingListSetCustomTypeActionImpl(type, fields);

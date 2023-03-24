@@ -26,7 +26,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
         return this.values;
     }
 
+    /**
+     * builds CustomFieldLocalizedEnumType with checking for non-null required values
+     * @return CustomFieldLocalizedEnumType
+     */
     public CustomFieldLocalizedEnumType build() {
         Objects.requireNonNull(values, CustomFieldLocalizedEnumType.class + ": values is missing");
         return new CustomFieldLocalizedEnumTypeImpl(values);
     }
 
     /**
-     * builds CustomFieldLocalizedEnumType without checking for non null required values
+     * builds CustomFieldLocalizedEnumType without checking for non-null required values
+     * @return CustomFieldLocalizedEnumType
      */
     public CustomFieldLocalizedEnumType buildUnchecked() {
         return new CustomFieldLocalizedEnumTypeImpl(values);

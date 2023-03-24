@@ -38,7 +38,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     /**
      *  <p>Update action for <code>setLineItemTaxedPrice</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -83,6 +84,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -106,6 +108,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -117,7 +120,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -147,6 +150,10 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
         return this.previousValue;
     }
 
+    /**
+     * builds SetLineItemTaxedPriceChange with checking for non-null required values
+     * @return SetLineItemTaxedPriceChange
+     */
     public SetLineItemTaxedPriceChange build() {
         Objects.requireNonNull(change, SetLineItemTaxedPriceChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, SetLineItemTaxedPriceChange.class + ": lineItem is missing");
@@ -157,7 +164,8 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     }
 
     /**
-     * builds SetLineItemTaxedPriceChange without checking for non null required values
+     * builds SetLineItemTaxedPriceChange without checking for non-null required values
+     * @return SetLineItemTaxedPriceChange
      */
     public SetLineItemTaxedPriceChange buildUnchecked() {
         return new SetLineItemTaxedPriceChangeImpl(change, lineItem, lineItemId, nextValue, previousValue);

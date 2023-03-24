@@ -34,7 +34,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
 
     /**
      *  <p>The <code>id</code> of the Embedded Price to update.</p>
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
 
     /**
      *  <p>Value to set.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -89,6 +90,10 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
         return this.staged;
     }
 
+    /**
+     * builds ProductChangePriceAction with checking for non-null required values
+     * @return ProductChangePriceAction
+     */
     public ProductChangePriceAction build() {
         Objects.requireNonNull(priceId, ProductChangePriceAction.class + ": priceId is missing");
         Objects.requireNonNull(price, ProductChangePriceAction.class + ": price is missing");
@@ -96,7 +101,8 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
     }
 
     /**
-     * builds ProductChangePriceAction without checking for non null required values
+     * builds ProductChangePriceAction without checking for non-null required values
+     * @return ProductChangePriceAction
      */
     public ProductChangePriceAction buildUnchecked() {
         return new ProductChangePriceActionImpl(priceId, price, staged);

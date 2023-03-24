@@ -34,7 +34,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>id</code> of the Price to set the Discount.</p>
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -91,13 +92,18 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
         return this.discounted;
     }
 
+    /**
+     * builds ProductSetDiscountedPriceAction with checking for non-null required values
+     * @return ProductSetDiscountedPriceAction
+     */
     public ProductSetDiscountedPriceAction build() {
         Objects.requireNonNull(priceId, ProductSetDiscountedPriceAction.class + ": priceId is missing");
         return new ProductSetDiscountedPriceActionImpl(priceId, staged, discounted);
     }
 
     /**
-     * builds ProductSetDiscountedPriceAction without checking for non null required values
+     * builds ProductSetDiscountedPriceAction without checking for non-null required values
+     * @return ProductSetDiscountedPriceAction
      */
     public ProductSetDiscountedPriceAction buildUnchecked() {
         return new ProductSetDiscountedPriceActionImpl(priceId, staged, discounted);

@@ -31,7 +31,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -105,7 +105,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -130,6 +130,10 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
         return this.nextValue;
     }
 
+    /**
+     * builds AddChannelRolesChange with checking for non-null required values
+     * @return AddChannelRolesChange
+     */
     public AddChannelRolesChange build() {
         Objects.requireNonNull(change, AddChannelRolesChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, AddChannelRolesChange.class + ": previousValue is missing");
@@ -138,7 +142,8 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
     }
 
     /**
-     * builds AddChannelRolesChange without checking for non null required values
+     * builds AddChannelRolesChange without checking for non-null required values
+     * @return AddChannelRolesChange
      */
     public AddChannelRolesChange buildUnchecked() {
         return new AddChannelRolesChangeImpl(change, previousValue, nextValue);

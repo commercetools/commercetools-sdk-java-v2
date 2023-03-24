@@ -28,7 +28,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
 
     /**
      *  <p>State of the Quote after the Change Quote State update action.</p>
-     * @param quoteState
+     * @param quoteState value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
 
     /**
      *  <p>State of the Quote before the Change Quote State update action.</p>
-     * @param oldQuoteState
+     * @param oldQuoteState value to be set
      * @return Builder
      */
 
@@ -58,6 +58,10 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
         return this.oldQuoteState;
     }
 
+    /**
+     * builds QuoteStateChangedMessagePayload with checking for non-null required values
+     * @return QuoteStateChangedMessagePayload
+     */
     public QuoteStateChangedMessagePayload build() {
         Objects.requireNonNull(quoteState, QuoteStateChangedMessagePayload.class + ": quoteState is missing");
         Objects.requireNonNull(oldQuoteState, QuoteStateChangedMessagePayload.class + ": oldQuoteState is missing");
@@ -65,7 +69,8 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
     }
 
     /**
-     * builds QuoteStateChangedMessagePayload without checking for non null required values
+     * builds QuoteStateChangedMessagePayload without checking for non-null required values
+     * @return QuoteStateChangedMessagePayload
      */
     public QuoteStateChangedMessagePayload buildUnchecked() {
         return new QuoteStateChangedMessagePayloadImpl(quoteState, oldQuoteState);

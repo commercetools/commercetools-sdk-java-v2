@@ -25,6 +25,8 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
 
     /**
      *
+     * @param values properties to be set
+     * @return Builder
      */
 
     public CategoryOrderHintsBuilder values(final Map<String, String> values) {
@@ -34,6 +36,9 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
 
     /**
      *
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public CategoryOrderHintsBuilder addValue(final String key, final String value) {
@@ -48,12 +53,17 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
         return this.values;
     }
 
+    /**
+     * builds CategoryOrderHints with checking for non-null required values
+     * @return CategoryOrderHints
+     */
     public CategoryOrderHints build() {
         return new CategoryOrderHintsImpl(values);
     }
 
     /**
-     * builds CategoryOrderHints without checking for non null required values
+     * builds CategoryOrderHints without checking for non-null required values
+     * @return CategoryOrderHints
      */
     public CategoryOrderHints buildUnchecked() {
         return new CategoryOrderHintsImpl(values);

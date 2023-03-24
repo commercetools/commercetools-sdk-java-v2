@@ -32,7 +32,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *  <p>Update action for <code>setCustomShippingMethod</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
         return this.previousValue;
     }
 
+    /**
+     * builds SetCustomShippingMethodChange with checking for non-null required values
+     * @return SetCustomShippingMethodChange
+     */
     public SetCustomShippingMethodChange build() {
         Objects.requireNonNull(change, SetCustomShippingMethodChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetCustomShippingMethodChange.class + ": nextValue is missing");
@@ -111,7 +117,8 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
     }
 
     /**
-     * builds SetCustomShippingMethodChange without checking for non null required values
+     * builds SetCustomShippingMethodChange without checking for non-null required values
+     * @return SetCustomShippingMethodChange
      */
     public SetCustomShippingMethodChange buildUnchecked() {
         return new SetCustomShippingMethodChangeImpl(change, nextValue, previousValue);

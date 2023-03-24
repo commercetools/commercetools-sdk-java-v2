@@ -41,7 +41,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
-     * @param oldQuantityOnStock
+     * @param oldQuantityOnStock value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
-     * @param newQuantityOnStock
+     * @param newQuantityOnStock value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
-     * @param oldAvailableQuantity
+     * @param oldAvailableQuantity value to be set
      * @return Builder
      */
 
@@ -74,7 +74,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
-     * @param newAvailableQuantity
+     * @param newAvailableQuantity value to be set
      * @return Builder
      */
 
@@ -85,6 +85,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -96,7 +97,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -127,6 +128,10 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
         return this.supplyChannel;
     }
 
+    /**
+     * builds InventoryEntryQuantitySetMessagePayload with checking for non-null required values
+     * @return InventoryEntryQuantitySetMessagePayload
+     */
     public InventoryEntryQuantitySetMessagePayload build() {
         Objects.requireNonNull(oldQuantityOnStock,
             InventoryEntryQuantitySetMessagePayload.class + ": oldQuantityOnStock is missing");
@@ -141,7 +146,8 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-     * builds InventoryEntryQuantitySetMessagePayload without checking for non null required values
+     * builds InventoryEntryQuantitySetMessagePayload without checking for non-null required values
+     * @return InventoryEntryQuantitySetMessagePayload
      */
     public InventoryEntryQuantitySetMessagePayload buildUnchecked() {
         return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock,

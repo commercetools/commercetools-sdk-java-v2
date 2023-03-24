@@ -34,7 +34,7 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
 
     /**
      *  <p>External reference that identifies the current status of the Payment.</p>
-     * @param interfaceCode
+     * @param interfaceCode value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
 
     /**
      *  <p>Text describing the current status of the Payment.</p>
-     * @param interfaceText
+     * @param interfaceText value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
 
     /**
      *  <p>Reference to a State.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
 
     /**
      *  <p>Reference to a State.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -91,12 +92,17 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
         return this.state;
     }
 
+    /**
+     * builds PaymentStatus with checking for non-null required values
+     * @return PaymentStatus
+     */
     public PaymentStatus build() {
         return new PaymentStatusImpl(interfaceCode, interfaceText, state);
     }
 
     /**
-     * builds PaymentStatus without checking for non null required values
+     * builds PaymentStatus without checking for non-null required values
+     * @return PaymentStatus
      */
     public PaymentStatus buildUnchecked() {
         return new PaymentStatusImpl(interfaceCode, interfaceText, state);

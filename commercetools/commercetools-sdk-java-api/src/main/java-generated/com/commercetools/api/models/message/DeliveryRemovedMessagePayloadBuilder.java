@@ -31,6 +31,7 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
 
     /**
      *  <p>The Delivery that was removed from the Order.</p>
+     * @param builder function to build the delivery value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
 
     /**
      *  <p>The Delivery that was removed from the Order.</p>
-     * @param delivery
+     * @param delivery value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
         return this.shippingKey;
     }
 
+    /**
+     * builds DeliveryRemovedMessagePayload with checking for non-null required values
+     * @return DeliveryRemovedMessagePayload
+     */
     public DeliveryRemovedMessagePayload build() {
         Objects.requireNonNull(delivery, DeliveryRemovedMessagePayload.class + ": delivery is missing");
         return new DeliveryRemovedMessagePayloadImpl(delivery, shippingKey);
     }
 
     /**
-     * builds DeliveryRemovedMessagePayload without checking for non null required values
+     * builds DeliveryRemovedMessagePayload without checking for non-null required values
+     * @return DeliveryRemovedMessagePayload
      */
     public DeliveryRemovedMessagePayload buildUnchecked() {
         return new DeliveryRemovedMessagePayloadImpl(delivery, shippingKey);

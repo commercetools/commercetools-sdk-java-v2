@@ -28,7 +28,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @param builder function to build the changes value
      * @return Builder
      */
 
@@ -82,6 +83,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @param builder function to build the changes value
      * @return Builder
      */
 
@@ -98,12 +100,17 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
         return this.changes;
     }
 
+    /**
+     * builds SubscriptionSetChangesAction with checking for non-null required values
+     * @return SubscriptionSetChangesAction
+     */
     public SubscriptionSetChangesAction build() {
         return new SubscriptionSetChangesActionImpl(changes);
     }
 
     /**
-     * builds SubscriptionSetChangesAction without checking for non null required values
+     * builds SubscriptionSetChangesAction without checking for non-null required values
+     * @return SubscriptionSetChangesAction
      */
     public SubscriptionSetChangesAction buildUnchecked() {
         return new SubscriptionSetChangesActionImpl(changes);

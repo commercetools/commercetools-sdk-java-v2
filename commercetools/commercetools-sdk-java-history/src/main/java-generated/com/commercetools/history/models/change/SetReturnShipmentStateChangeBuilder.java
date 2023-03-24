@@ -31,7 +31,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
 
     /**
      *  <p>Update action for <code>setReturnShipmentState</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
         return this.previousValue;
     }
 
+    /**
+     * builds SetReturnShipmentStateChange with checking for non-null required values
+     * @return SetReturnShipmentStateChange
+     */
     public SetReturnShipmentStateChange build() {
         Objects.requireNonNull(change, SetReturnShipmentStateChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetReturnShipmentStateChange.class + ": nextValue is missing");
@@ -84,7 +88,8 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
     }
 
     /**
-     * builds SetReturnShipmentStateChange without checking for non null required values
+     * builds SetReturnShipmentStateChange without checking for non-null required values
+     * @return SetReturnShipmentStateChange
      */
     public SetReturnShipmentStateChange buildUnchecked() {
         return new SetReturnShipmentStateChangeImpl(change, nextValue, previousValue);

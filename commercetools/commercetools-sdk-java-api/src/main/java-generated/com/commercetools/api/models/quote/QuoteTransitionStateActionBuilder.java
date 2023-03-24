@@ -31,6 +31,7 @@ public class QuoteTransitionStateActionBuilder implements Builder<QuoteTransitio
 
     /**
      *  <p>Value to set. If there is no State yet, this must be an initial State.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class QuoteTransitionStateActionBuilder implements Builder<QuoteTransitio
 
     /**
      *  <p>Value to set. If there is no State yet, this must be an initial State.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class QuoteTransitionStateActionBuilder implements Builder<QuoteTransitio
 
     /**
      *  <p>Switch validations on or off.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class QuoteTransitionStateActionBuilder implements Builder<QuoteTransitio
         return this.force;
     }
 
+    /**
+     * builds QuoteTransitionStateAction with checking for non-null required values
+     * @return QuoteTransitionStateAction
+     */
     public QuoteTransitionStateAction build() {
         Objects.requireNonNull(state, QuoteTransitionStateAction.class + ": state is missing");
         return new QuoteTransitionStateActionImpl(state, force);
     }
 
     /**
-     * builds QuoteTransitionStateAction without checking for non null required values
+     * builds QuoteTransitionStateAction without checking for non-null required values
+     * @return QuoteTransitionStateAction
      */
     public QuoteTransitionStateAction buildUnchecked() {
         return new QuoteTransitionStateActionImpl(state, force);

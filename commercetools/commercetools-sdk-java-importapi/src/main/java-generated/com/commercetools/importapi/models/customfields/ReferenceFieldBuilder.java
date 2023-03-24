@@ -26,7 +26,7 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
 
     /**
      *  <p>References a resource by key</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -37,6 +37,7 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
 
     /**
      *  <p>References a resource by key</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
         return this.value;
     }
 
+    /**
+     * builds ReferenceField with checking for non-null required values
+     * @return ReferenceField
+     */
     public ReferenceField build() {
         Objects.requireNonNull(value, ReferenceField.class + ": value is missing");
         return new ReferenceFieldImpl(value);
     }
 
     /**
-     * builds ReferenceField without checking for non null required values
+     * builds ReferenceField without checking for non-null required values
+     * @return ReferenceField
      */
     public ReferenceField buildUnchecked() {
         return new ReferenceFieldImpl(value);

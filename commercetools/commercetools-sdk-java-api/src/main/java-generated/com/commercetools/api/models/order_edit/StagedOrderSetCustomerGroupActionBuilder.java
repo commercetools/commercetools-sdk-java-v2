@@ -28,6 +28,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
 
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
 
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -56,12 +57,17 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
         return this.customerGroup;
     }
 
+    /**
+     * builds StagedOrderSetCustomerGroupAction with checking for non-null required values
+     * @return StagedOrderSetCustomerGroupAction
+     */
     public StagedOrderSetCustomerGroupAction build() {
         return new StagedOrderSetCustomerGroupActionImpl(customerGroup);
     }
 
     /**
-     * builds StagedOrderSetCustomerGroupAction without checking for non null required values
+     * builds StagedOrderSetCustomerGroupAction without checking for non-null required values
+     * @return StagedOrderSetCustomerGroupAction
      */
     public StagedOrderSetCustomerGroupAction buildUnchecked() {
         return new StagedOrderSetCustomerGroupActionImpl(customerGroup);

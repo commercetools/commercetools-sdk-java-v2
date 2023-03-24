@@ -25,6 +25,8 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
 
     /**
      *
+     * @param values properties to be set
+     * @return Builder
      */
 
     public FacetResultsBuilder values(final Map<String, com.commercetools.api.models.product.FacetResult> values) {
@@ -34,6 +36,9 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
 
     /**
      *
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public FacetResultsBuilder addValue(final String key,
@@ -49,12 +54,17 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
         return this.values;
     }
 
+    /**
+     * builds FacetResults with checking for non-null required values
+     * @return FacetResults
+     */
     public FacetResults build() {
         return new FacetResultsImpl(values);
     }
 
     /**
-     * builds FacetResults without checking for non null required values
+     * builds FacetResults without checking for non-null required values
+     * @return FacetResults
      */
     public FacetResults buildUnchecked() {
         return new FacetResultsImpl(values);

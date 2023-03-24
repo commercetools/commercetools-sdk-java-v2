@@ -28,6 +28,7 @@ public class CategorySetDescriptionActionBuilder implements Builder<CategorySetD
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class CategorySetDescriptionActionBuilder implements Builder<CategorySetD
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class CategorySetDescriptionActionBuilder implements Builder<CategorySetD
         return this.description;
     }
 
+    /**
+     * builds CategorySetDescriptionAction with checking for non-null required values
+     * @return CategorySetDescriptionAction
+     */
     public CategorySetDescriptionAction build() {
         return new CategorySetDescriptionActionImpl(description);
     }
 
     /**
-     * builds CategorySetDescriptionAction without checking for non null required values
+     * builds CategorySetDescriptionAction without checking for non-null required values
+     * @return CategorySetDescriptionAction
      */
     public CategorySetDescriptionAction buildUnchecked() {
         return new CategorySetDescriptionActionImpl(description);

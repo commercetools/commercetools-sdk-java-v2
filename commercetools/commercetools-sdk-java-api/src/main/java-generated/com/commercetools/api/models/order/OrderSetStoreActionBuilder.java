@@ -28,6 +28,7 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
 
     /**
      *  <p>ResourceIdentifier to a Store.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
 
     /**
      *  <p>ResourceIdentifier to a Store.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
         return this.store;
     }
 
+    /**
+     * builds OrderSetStoreAction with checking for non-null required values
+     * @return OrderSetStoreAction
+     */
     public OrderSetStoreAction build() {
         return new OrderSetStoreActionImpl(store);
     }
 
     /**
-     * builds OrderSetStoreAction without checking for non null required values
+     * builds OrderSetStoreAction without checking for non-null required values
+     * @return OrderSetStoreAction
      */
     public OrderSetStoreAction buildUnchecked() {
         return new OrderSetStoreActionImpl(store);

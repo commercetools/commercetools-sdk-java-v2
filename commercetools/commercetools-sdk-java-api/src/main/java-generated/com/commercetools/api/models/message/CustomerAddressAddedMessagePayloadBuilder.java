@@ -26,6 +26,7 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
 
     /**
      *  <p>Address that was added during the Add Address update action.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
 
     /**
      *  <p>Address that was added during the Add Address update action.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
         return this.address;
     }
 
+    /**
+     * builds CustomerAddressAddedMessagePayload with checking for non-null required values
+     * @return CustomerAddressAddedMessagePayload
+     */
     public CustomerAddressAddedMessagePayload build() {
         Objects.requireNonNull(address, CustomerAddressAddedMessagePayload.class + ": address is missing");
         return new CustomerAddressAddedMessagePayloadImpl(address);
     }
 
     /**
-     * builds CustomerAddressAddedMessagePayload without checking for non null required values
+     * builds CustomerAddressAddedMessagePayload without checking for non-null required values
+     * @return CustomerAddressAddedMessagePayload
      */
     public CustomerAddressAddedMessagePayload buildUnchecked() {
         return new CustomerAddressAddedMessagePayloadImpl(address);

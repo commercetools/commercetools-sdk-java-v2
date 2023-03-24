@@ -145,7 +145,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Unique identifier of the Cart.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -156,7 +156,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Current version of the Cart.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -167,7 +167,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -178,7 +178,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Date and time (UTC) the Cart was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -189,7 +189,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>User-defined unique identifier of the Cart.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -200,7 +200,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
-     * @param customerId
+     * @param customerId value to be set
      * @return Builder
      */
 
@@ -211,7 +211,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Email address of the Customer that the Cart belongs to.</p>
-     * @param customerEmail
+     * @param customerEmail value to be set
      * @return Builder
      */
 
@@ -222,6 +222,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -235,7 +236,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -247,7 +248,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Anonymous session associated with the Cart.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -258,6 +259,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     * @param builder function to build the businessUnit value
      * @return Builder
      */
 
@@ -271,7 +273,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to a Business Unit the Cart belongs to.</p>
-     * @param businessUnit
+     * @param businessUnit value to be set
      * @return Builder
      */
 
@@ -283,6 +285,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to a Store the Cart belongs to.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -294,7 +297,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to a Store the Cart belongs to.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -305,7 +308,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -316,7 +319,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -327,7 +330,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -341,6 +344,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -355,6 +359,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Line Items added to the Cart.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -367,7 +372,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -378,7 +383,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -390,7 +395,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -404,6 +409,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -418,6 +424,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -430,7 +437,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
-     * @param totalLineItemQuantity
+     * @param totalLineItemQuantity value to be set
      * @return Builder
      */
 
@@ -442,6 +449,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -454,7 +462,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -468,6 +476,7 @@ public class CartBuilder implements Builder<Cart> {
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -482,7 +491,7 @@ public class CartBuilder implements Builder<Cart> {
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -493,6 +502,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @param builder function to build the taxedShippingPrice value
      * @return Builder
      */
 
@@ -504,7 +514,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
-     * @param taxedShippingPrice
+     * @param taxedShippingPrice value to be set
      * @return Builder
      */
 
@@ -516,7 +526,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how Tax Rates are set.</p>
-     * @param taxMode
+     * @param taxMode value to be set
      * @return Builder
      */
 
@@ -527,7 +537,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
-     * @param taxRoundingMode
+     * @param taxRoundingMode value to be set
      * @return Builder
      */
 
@@ -538,7 +548,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
-     * @param taxCalculationMode
+     * @param taxCalculationMode value to be set
      * @return Builder
      */
 
@@ -550,7 +560,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how stock quantities are tracked for Line Items in the Cart.</p>
-     * @param inventoryMode
+     * @param inventoryMode value to be set
      * @return Builder
      */
 
@@ -561,7 +571,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Current status of the Cart.</p>
-     * @param cartState
+     * @param cartState value to be set
      * @return Builder
      */
 
@@ -572,6 +582,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @param builder function to build the billingAddress value
      * @return Builder
      */
 
@@ -583,7 +594,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
-     * @param billingAddress
+     * @param billingAddress value to be set
      * @return Builder
      */
 
@@ -594,6 +605,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @param builder function to build the shippingAddress value
      * @return Builder
      */
 
@@ -605,7 +617,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
-     * @param shippingAddress
+     * @param shippingAddress value to be set
      * @return Builder
      */
 
@@ -616,7 +628,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates whether the Cart has one or multiple Shipping Methods.</p>
-     * @param shippingMode
+     * @param shippingMode value to be set
      * @return Builder
      */
 
@@ -627,6 +639,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @param builder function to build the shippingInfo value
      * @return Builder
      */
 
@@ -638,7 +651,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
-     * @param shippingInfo
+     * @param shippingInfo value to be set
      * @return Builder
      */
 
@@ -649,7 +662,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -660,7 +673,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -671,7 +684,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -685,6 +698,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param builder function to build the shipping value
      * @return Builder
      */
 
@@ -699,6 +713,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param builder function to build the shipping value
      * @return Builder
      */
 
@@ -716,7 +731,7 @@ public class CartBuilder implements Builder<Cart> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -733,6 +748,7 @@ public class CartBuilder implements Builder<Cart> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -745,7 +761,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -758,7 +774,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -771,7 +787,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -787,6 +803,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -802,6 +819,7 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -814,7 +832,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
-     * @param discountCodes
+     * @param discountCodes value to be set
      * @return Builder
      */
 
@@ -825,7 +843,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
-     * @param discountCodes
+     * @param discountCodes value to be set
      * @return Builder
      */
 
@@ -837,7 +855,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
-     * @param discountCodes
+     * @param discountCodes value to be set
      * @return Builder
      */
 
@@ -851,6 +869,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param builder function to build the discountCodes value
      * @return Builder
      */
 
@@ -865,6 +884,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param builder function to build the discountCodes value
      * @return Builder
      */
 
@@ -877,7 +897,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
-     * @param directDiscounts
+     * @param directDiscounts value to be set
      * @return Builder
      */
 
@@ -888,7 +908,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
-     * @param directDiscounts
+     * @param directDiscounts value to be set
      * @return Builder
      */
 
@@ -900,7 +920,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
-     * @param directDiscounts
+     * @param directDiscounts value to be set
      * @return Builder
      */
 
@@ -914,6 +934,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param builder function to build the directDiscounts value
      * @return Builder
      */
 
@@ -928,6 +949,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param builder function to build the directDiscounts value
      * @return Builder
      */
 
@@ -940,7 +962,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
-     * @param refusedGifts
+     * @param refusedGifts value to be set
      * @return Builder
      */
 
@@ -952,7 +974,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
-     * @param refusedGifts
+     * @param refusedGifts value to be set
      * @return Builder
      */
 
@@ -964,7 +986,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
-     * @param refusedGifts
+     * @param refusedGifts value to be set
      * @return Builder
      */
 
@@ -979,6 +1001,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param builder function to build the refusedGifts value
      * @return Builder
      */
 
@@ -994,6 +1017,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param builder function to build the refusedGifts value
      * @return Builder
      */
 
@@ -1007,6 +1031,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Payment information related to the Cart.</p>
+     * @param builder function to build the paymentInfo value
      * @return Builder
      */
 
@@ -1018,7 +1043,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Payment information related to the Cart.</p>
-     * @param paymentInfo
+     * @param paymentInfo value to be set
      * @return Builder
      */
 
@@ -1029,7 +1054,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Used for LineItem Price selection.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -1040,7 +1065,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -1051,7 +1076,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Indicates how the Cart was created.</p>
-     * @param origin
+     * @param origin value to be set
      * @return Builder
      */
 
@@ -1062,6 +1087,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Fields of the Cart.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -1073,7 +1099,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Fields of the Cart.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -1084,7 +1110,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
-     * @param deleteDaysAfterLastModification
+     * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
@@ -1095,6 +1121,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -1106,7 +1133,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -1118,6 +1145,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -1129,7 +1157,7 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -1319,6 +1347,10 @@ public class CartBuilder implements Builder<Cart> {
         return this.createdBy;
     }
 
+    /**
+     * builds Cart with checking for non-null required values
+     * @return Cart
+     */
     public Cart build() {
         Objects.requireNonNull(id, Cart.class + ": id is missing");
         Objects.requireNonNull(version, Cart.class + ": version is missing");
@@ -1348,7 +1380,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     * builds Cart without checking for non null required values
+     * builds Cart without checking for non-null required values
+     * @return Cart
      */
     public Cart buildUnchecked() {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,

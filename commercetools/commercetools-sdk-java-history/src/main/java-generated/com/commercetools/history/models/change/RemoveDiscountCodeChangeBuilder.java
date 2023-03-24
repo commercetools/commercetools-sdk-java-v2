@@ -29,7 +29,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
 
     /**
      *  <p>Update action for <code>removeDiscountCode</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveDiscountCodeChange with checking for non-null required values
+     * @return RemoveDiscountCodeChange
+     */
     public RemoveDiscountCodeChange build() {
         Objects.requireNonNull(change, RemoveDiscountCodeChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveDiscountCodeChange.class + ": previousValue is missing");
@@ -77,7 +82,8 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     * builds RemoveDiscountCodeChange without checking for non null required values
+     * builds RemoveDiscountCodeChange without checking for non-null required values
+     * @return RemoveDiscountCodeChange
      */
     public RemoveDiscountCodeChange buildUnchecked() {
         return new RemoveDiscountCodeChangeImpl(change, previousValue);

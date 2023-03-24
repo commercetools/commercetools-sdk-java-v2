@@ -28,7 +28,7 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
 
     /**
      *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
 
     /**
      *  <p>Descriptive label of the value.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
         return this.label;
     }
 
+    /**
+     * builds AttributePlainEnumValue with checking for non-null required values
+     * @return AttributePlainEnumValue
+     */
     public AttributePlainEnumValue build() {
         Objects.requireNonNull(key, AttributePlainEnumValue.class + ": key is missing");
         Objects.requireNonNull(label, AttributePlainEnumValue.class + ": label is missing");
@@ -63,7 +67,8 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
     }
 
     /**
-     * builds AttributePlainEnumValue without checking for non null required values
+     * builds AttributePlainEnumValue without checking for non-null required values
+     * @return AttributePlainEnumValue
      */
     public AttributePlainEnumValue buildUnchecked() {
         return new AttributePlainEnumValueImpl(key, label);

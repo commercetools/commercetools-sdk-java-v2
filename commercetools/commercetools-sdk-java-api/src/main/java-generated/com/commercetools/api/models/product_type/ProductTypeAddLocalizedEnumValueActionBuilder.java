@@ -29,7 +29,7 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
         return this.value;
     }
 
+    /**
+     * builds ProductTypeAddLocalizedEnumValueAction with checking for non-null required values
+     * @return ProductTypeAddLocalizedEnumValueAction
+     */
     public ProductTypeAddLocalizedEnumValueAction build() {
         Objects.requireNonNull(attributeName,
             ProductTypeAddLocalizedEnumValueAction.class + ": attributeName is missing");
@@ -78,7 +83,8 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
     }
 
     /**
-     * builds ProductTypeAddLocalizedEnumValueAction without checking for non null required values
+     * builds ProductTypeAddLocalizedEnumValueAction without checking for non-null required values
+     * @return ProductTypeAddLocalizedEnumValueAction
      */
     public ProductTypeAddLocalizedEnumValueAction buildUnchecked() {
         return new ProductTypeAddLocalizedEnumValueActionImpl(attributeName, value);

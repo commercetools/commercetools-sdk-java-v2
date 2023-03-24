@@ -28,7 +28,7 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
 
     /**
      *  <p>The type of the referenced resource.</p>
-     * @param typeId
+     * @param typeId value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
         return this.typeId;
     }
 
+    /**
+     * builds UnresolvedReferences with checking for non-null required values
+     * @return UnresolvedReferences
+     */
     public UnresolvedReferences build() {
         Objects.requireNonNull(key, UnresolvedReferences.class + ": key is missing");
         Objects.requireNonNull(typeId, UnresolvedReferences.class + ": typeId is missing");
@@ -63,7 +67,8 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
     }
 
     /**
-     * builds UnresolvedReferences without checking for non null required values
+     * builds UnresolvedReferences without checking for non-null required values
+     * @return UnresolvedReferences
      */
     public UnresolvedReferences buildUnchecked() {
         return new UnresolvedReferencesImpl(key, typeId);

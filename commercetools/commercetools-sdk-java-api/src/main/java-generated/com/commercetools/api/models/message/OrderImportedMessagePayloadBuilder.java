@@ -26,6 +26,7 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
 
     /**
      *  <p>Order that was imported.</p>
+     * @param builder function to build the order value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
 
     /**
      *  <p>Order that was imported.</p>
-     * @param order
+     * @param order value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
         return this.order;
     }
 
+    /**
+     * builds OrderImportedMessagePayload with checking for non-null required values
+     * @return OrderImportedMessagePayload
+     */
     public OrderImportedMessagePayload build() {
         Objects.requireNonNull(order, OrderImportedMessagePayload.class + ": order is missing");
         return new OrderImportedMessagePayloadImpl(order);
     }
 
     /**
-     * builds OrderImportedMessagePayload without checking for non null required values
+     * builds OrderImportedMessagePayload without checking for non-null required values
+     * @return OrderImportedMessagePayload
      */
     public OrderImportedMessagePayload buildUnchecked() {
         return new OrderImportedMessagePayloadImpl(order);

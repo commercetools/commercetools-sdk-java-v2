@@ -31,7 +31,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
 
     /**
      *
+     * @param builder function to build the measurements value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
 
     /**
      *
-     * @param measurements
+     * @param measurements value to be set
      * @return Builder
      */
 
@@ -73,13 +74,18 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
         return this.measurements;
     }
 
+    /**
+     * builds ParcelMeasurementDraft with checking for non-null required values
+     * @return ParcelMeasurementDraft
+     */
     public ParcelMeasurementDraft build() {
         Objects.requireNonNull(parcelId, ParcelMeasurementDraft.class + ": parcelId is missing");
         return new ParcelMeasurementDraftImpl(parcelId, measurements);
     }
 
     /**
-     * builds ParcelMeasurementDraft without checking for non null required values
+     * builds ParcelMeasurementDraft without checking for non-null required values
+     * @return ParcelMeasurementDraft
      */
     public ParcelMeasurementDraft buildUnchecked() {
         return new ParcelMeasurementDraftImpl(parcelId, measurements);

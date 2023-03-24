@@ -30,7 +30,7 @@ public class NumberAttributeBuilder implements Builder<NumberAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class NumberAttributeBuilder implements Builder<NumberAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class NumberAttributeBuilder implements Builder<NumberAttribute> {
         return this.value;
     }
 
+    /**
+     * builds NumberAttribute with checking for non-null required values
+     * @return NumberAttribute
+     */
     public NumberAttribute build() {
         Objects.requireNonNull(value, NumberAttribute.class + ": value is missing");
         return new NumberAttributeImpl(name, value);
     }
 
     /**
-     * builds NumberAttribute without checking for non null required values
+     * builds NumberAttribute without checking for non-null required values
+     * @return NumberAttribute
      */
     public NumberAttribute buildUnchecked() {
         return new NumberAttributeImpl(name, value);

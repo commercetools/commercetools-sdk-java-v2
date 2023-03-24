@@ -25,7 +25,7 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
         return this.parcelId;
     }
 
+    /**
+     * builds OrderRemoveParcelFromDeliveryAction with checking for non-null required values
+     * @return OrderRemoveParcelFromDeliveryAction
+     */
     public OrderRemoveParcelFromDeliveryAction build() {
         Objects.requireNonNull(parcelId, OrderRemoveParcelFromDeliveryAction.class + ": parcelId is missing");
         return new OrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
 
     /**
-     * builds OrderRemoveParcelFromDeliveryAction without checking for non null required values
+     * builds OrderRemoveParcelFromDeliveryAction without checking for non-null required values
+     * @return OrderRemoveParcelFromDeliveryAction
      */
     public OrderRemoveParcelFromDeliveryAction buildUnchecked() {
         return new OrderRemoveParcelFromDeliveryActionImpl(parcelId);

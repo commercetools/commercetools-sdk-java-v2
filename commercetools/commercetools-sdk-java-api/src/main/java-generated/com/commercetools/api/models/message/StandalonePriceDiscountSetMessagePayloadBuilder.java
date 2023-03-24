@@ -29,6 +29,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
         return this.discounted;
     }
 
+    /**
+     * builds StandalonePriceDiscountSetMessagePayload with checking for non-null required values
+     * @return StandalonePriceDiscountSetMessagePayload
+     */
     public StandalonePriceDiscountSetMessagePayload build() {
         return new StandalonePriceDiscountSetMessagePayloadImpl(discounted);
     }
 
     /**
-     * builds StandalonePriceDiscountSetMessagePayload without checking for non null required values
+     * builds StandalonePriceDiscountSetMessagePayload without checking for non-null required values
+     * @return StandalonePriceDiscountSetMessagePayload
      */
     public StandalonePriceDiscountSetMessagePayload buildUnchecked() {
         return new StandalonePriceDiscountSetMessagePayloadImpl(discounted);

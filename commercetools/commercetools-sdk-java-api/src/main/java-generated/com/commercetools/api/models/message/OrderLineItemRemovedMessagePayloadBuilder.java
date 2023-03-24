@@ -49,7 +49,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
-     * @param removedQuantity
+     * @param removedQuantity value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Line Item quantity after the Remove Line Item update action.</p>
-     * @param newQuantity
+     * @param newQuantity value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
-     * @param newState
+     * @param newState value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
-     * @param newState
+     * @param newState value to be set
      * @return Builder
      */
 
@@ -106,7 +106,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
-     * @param newState
+     * @param newState value to be set
      * @return Builder
      */
 
@@ -121,6 +121,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @param builder function to build the newState value
      * @return Builder
      */
 
@@ -135,6 +136,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @param builder function to build the newState value
      * @return Builder
      */
 
@@ -147,6 +149,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newTotalPrice value
      * @return Builder
      */
 
@@ -158,7 +161,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
-     * @param newTotalPrice
+     * @param newTotalPrice value to be set
      * @return Builder
      */
 
@@ -170,6 +173,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newTaxedPrice value
      * @return Builder
      */
 
@@ -181,7 +185,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
-     * @param newTaxedPrice
+     * @param newTaxedPrice value to be set
      * @return Builder
      */
 
@@ -193,6 +197,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Price of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newPrice value
      * @return Builder
      */
 
@@ -204,7 +209,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Price of the Order after the Remove Line Item update action.</p>
-     * @param newPrice
+     * @param newPrice value to be set
      * @return Builder
      */
 
@@ -216,6 +221,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newShippingDetail value
      * @return Builder
      */
 
@@ -228,7 +234,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
-     * @param newShippingDetail
+     * @param newShippingDetail value to be set
      * @return Builder
      */
 
@@ -273,6 +279,10 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this.newShippingDetail;
     }
 
+    /**
+     * builds OrderLineItemRemovedMessagePayload with checking for non-null required values
+     * @return OrderLineItemRemovedMessagePayload
+     */
     public OrderLineItemRemovedMessagePayload build() {
         Objects.requireNonNull(lineItemId, OrderLineItemRemovedMessagePayload.class + ": lineItemId is missing");
         Objects.requireNonNull(removedQuantity,
@@ -285,7 +295,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     * builds OrderLineItemRemovedMessagePayload without checking for non null required values
+     * builds OrderLineItemRemovedMessagePayload without checking for non-null required values
+     * @return OrderLineItemRemovedMessagePayload
      */
     public OrderLineItemRemovedMessagePayload buildUnchecked() {
         return new OrderLineItemRemovedMessagePayloadImpl(lineItemId, removedQuantity, newQuantity, newState,

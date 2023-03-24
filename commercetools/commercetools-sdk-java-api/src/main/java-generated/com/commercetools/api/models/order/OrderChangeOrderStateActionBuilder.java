@@ -25,7 +25,7 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
 
     /**
      *
-     * @param orderState
+     * @param orderState value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
         return this.orderState;
     }
 
+    /**
+     * builds OrderChangeOrderStateAction with checking for non-null required values
+     * @return OrderChangeOrderStateAction
+     */
     public OrderChangeOrderStateAction build() {
         Objects.requireNonNull(orderState, OrderChangeOrderStateAction.class + ": orderState is missing");
         return new OrderChangeOrderStateActionImpl(orderState);
     }
 
     /**
-     * builds OrderChangeOrderStateAction without checking for non null required values
+     * builds OrderChangeOrderStateAction without checking for non-null required values
+     * @return OrderChangeOrderStateAction
      */
     public OrderChangeOrderStateAction buildUnchecked() {
         return new OrderChangeOrderStateActionImpl(orderState);

@@ -38,7 +38,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *  <p>The name of the field definition updated.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *  <p>The name of the attribute updated.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -110,6 +110,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -125,6 +126,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -138,7 +140,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -150,7 +152,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -162,7 +164,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -177,6 +179,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -192,6 +195,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -223,6 +227,10 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeLocalizedEnumValueOrderChange with checking for non-null required values
+     * @return ChangeLocalizedEnumValueOrderChange
+     */
     public ChangeLocalizedEnumValueOrderChange build() {
         Objects.requireNonNull(change, ChangeLocalizedEnumValueOrderChange.class + ": change is missing");
         Objects.requireNonNull(fieldName, ChangeLocalizedEnumValueOrderChange.class + ": fieldName is missing");
@@ -233,7 +241,8 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     * builds ChangeLocalizedEnumValueOrderChange without checking for non null required values
+     * builds ChangeLocalizedEnumValueOrderChange without checking for non-null required values
+     * @return ChangeLocalizedEnumValueOrderChange
      */
     public ChangeLocalizedEnumValueOrderChange buildUnchecked() {
         return new ChangeLocalizedEnumValueOrderChangeImpl(change, fieldName, attributeName, nextValue, previousValue);

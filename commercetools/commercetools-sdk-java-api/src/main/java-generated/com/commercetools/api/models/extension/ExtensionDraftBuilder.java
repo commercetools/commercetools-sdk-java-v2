@@ -37,7 +37,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Extension.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Defines where the Extension can be reached.</p>
-     * @param destination
+     * @param destination value to be set
      * @return Builder
      */
 
@@ -60,6 +60,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Defines where the Extension can be reached.</p>
+     * @param builder function to build the destination value
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
-     * @param triggers
+     * @param triggers value to be set
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
-     * @param triggers
+     * @param triggers value to be set
      * @return Builder
      */
 
@@ -95,7 +96,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
-     * @param triggers
+     * @param triggers value to be set
      * @return Builder
      */
 
@@ -110,6 +111,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @param builder function to build the triggers value
      * @return Builder
      */
 
@@ -124,6 +126,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @param builder function to build the triggers value
      * @return Builder
      */
 
@@ -137,7 +140,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     /**
      *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
-     * @param timeoutInMs
+     * @param timeoutInMs value to be set
      * @return Builder
      */
 
@@ -164,6 +167,10 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
         return this.timeoutInMs;
     }
 
+    /**
+     * builds ExtensionDraft with checking for non-null required values
+     * @return ExtensionDraft
+     */
     public ExtensionDraft build() {
         Objects.requireNonNull(destination, ExtensionDraft.class + ": destination is missing");
         Objects.requireNonNull(triggers, ExtensionDraft.class + ": triggers is missing");
@@ -171,7 +178,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
-     * builds ExtensionDraft without checking for non null required values
+     * builds ExtensionDraft without checking for non-null required values
+     * @return ExtensionDraft
      */
     public ExtensionDraft buildUnchecked() {
         return new ExtensionDraftImpl(key, destination, triggers, timeoutInMs);

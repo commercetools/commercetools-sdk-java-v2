@@ -31,6 +31,7 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
 
     /**
      *  <p>Resource Identifier of a ProductSelection.</p>
+     * @param builder function to build the productSelection value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
 
     /**
      *  <p>Resource Identifier of a ProductSelection.</p>
-     * @param productSelection
+     * @param productSelection value to be set
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
 
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
-     * @param active
+     * @param active value to be set
      * @return Builder
      */
 
@@ -74,13 +75,18 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
         return this.active;
     }
 
+    /**
+     * builds ProductSelectionSettingDraft with checking for non-null required values
+     * @return ProductSelectionSettingDraft
+     */
     public ProductSelectionSettingDraft build() {
         Objects.requireNonNull(productSelection, ProductSelectionSettingDraft.class + ": productSelection is missing");
         return new ProductSelectionSettingDraftImpl(productSelection, active);
     }
 
     /**
-     * builds ProductSelectionSettingDraft without checking for non null required values
+     * builds ProductSelectionSettingDraft without checking for non-null required values
+     * @return ProductSelectionSettingDraft
      */
     public ProductSelectionSettingDraft buildUnchecked() {
         return new ProductSelectionSettingDraftImpl(productSelection, active);

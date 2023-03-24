@@ -26,6 +26,7 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
 
     /**
      *  <p>New parent unit of the Business Unit.</p>
+     * @param builder function to build the parentUnit value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
 
     /**
      *  <p>New parent unit of the Business Unit.</p>
-     * @param parentUnit
+     * @param parentUnit value to be set
      * @return Builder
      */
 
@@ -53,13 +54,18 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
         return this.parentUnit;
     }
 
+    /**
+     * builds BusinessUnitChangeParentUnitAction with checking for non-null required values
+     * @return BusinessUnitChangeParentUnitAction
+     */
     public BusinessUnitChangeParentUnitAction build() {
         Objects.requireNonNull(parentUnit, BusinessUnitChangeParentUnitAction.class + ": parentUnit is missing");
         return new BusinessUnitChangeParentUnitActionImpl(parentUnit);
     }
 
     /**
-     * builds BusinessUnitChangeParentUnitAction without checking for non null required values
+     * builds BusinessUnitChangeParentUnitAction without checking for non-null required values
+     * @return BusinessUnitChangeParentUnitAction
      */
     public BusinessUnitChangeParentUnitAction buildUnchecked() {
         return new BusinessUnitChangeParentUnitActionImpl(parentUnit);

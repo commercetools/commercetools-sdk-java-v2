@@ -26,6 +26,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
 
     /**
      *  <p>Standalone Price that was created.</p>
+     * @param builder function to build the standalonePrice value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
 
     /**
      *  <p>Standalone Price that was created.</p>
-     * @param standalonePrice
+     * @param standalonePrice value to be set
      * @return Builder
      */
 
@@ -52,6 +53,10 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
         return this.standalonePrice;
     }
 
+    /**
+     * builds StandalonePriceCreatedMessagePayload with checking for non-null required values
+     * @return StandalonePriceCreatedMessagePayload
+     */
     public StandalonePriceCreatedMessagePayload build() {
         Objects.requireNonNull(standalonePrice,
             StandalonePriceCreatedMessagePayload.class + ": standalonePrice is missing");
@@ -59,7 +64,8 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
     }
 
     /**
-     * builds StandalonePriceCreatedMessagePayload without checking for non null required values
+     * builds StandalonePriceCreatedMessagePayload without checking for non-null required values
+     * @return StandalonePriceCreatedMessagePayload
      */
     public StandalonePriceCreatedMessagePayload buildUnchecked() {
         return new StandalonePriceCreatedMessagePayloadImpl(standalonePrice);

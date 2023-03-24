@@ -29,7 +29,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Payment.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds MyPaymentUpdate with checking for non-null required values
+     * @return MyPaymentUpdate
+     */
     public MyPaymentUpdate build() {
         Objects.requireNonNull(version, MyPaymentUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, MyPaymentUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
     }
 
     /**
-     * builds MyPaymentUpdate without checking for non null required values
+     * builds MyPaymentUpdate without checking for non-null required values
+     * @return MyPaymentUpdate
      */
     public MyPaymentUpdate buildUnchecked() {
         return new MyPaymentUpdateImpl(version, actions);

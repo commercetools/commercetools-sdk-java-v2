@@ -43,7 +43,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>Name of the TaxRate.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
-     * @param includedInPrice
+     * @param includedInPrice value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -87,7 +87,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -98,7 +98,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
-     * @param subRates
+     * @param subRates value to be set
      * @return Builder
      */
 
@@ -109,7 +109,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
-     * @param subRates
+     * @param subRates value to be set
      * @return Builder
      */
 
@@ -121,7 +121,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
-     * @param subRates
+     * @param subRates value to be set
      * @return Builder
      */
 
@@ -136,6 +136,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param builder function to build the subRates value
      * @return Builder
      */
 
@@ -150,6 +151,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param builder function to build the subRates value
      * @return Builder
      */
 
@@ -187,6 +189,10 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
         return this.subRates;
     }
 
+    /**
+     * builds TaxRateDraft with checking for non-null required values
+     * @return TaxRateDraft
+     */
     public TaxRateDraft build() {
         Objects.requireNonNull(name, TaxRateDraft.class + ": name is missing");
         Objects.requireNonNull(includedInPrice, TaxRateDraft.class + ": includedInPrice is missing");
@@ -195,7 +201,8 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     * builds TaxRateDraft without checking for non null required values
+     * builds TaxRateDraft without checking for non-null required values
+     * @return TaxRateDraft
      */
     public TaxRateDraft buildUnchecked() {
         return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);

@@ -26,7 +26,7 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
         return this.resources;
     }
 
+    /**
+     * builds InventoryImportRequest with checking for non-null required values
+     * @return InventoryImportRequest
+     */
     public InventoryImportRequest build() {
         Objects.requireNonNull(resources, InventoryImportRequest.class + ": resources is missing");
         return new InventoryImportRequestImpl(resources);
     }
 
     /**
-     * builds InventoryImportRequest without checking for non null required values
+     * builds InventoryImportRequest without checking for non-null required values
+     * @return InventoryImportRequest
      */
     public InventoryImportRequest buildUnchecked() {
         return new InventoryImportRequestImpl(resources);

@@ -31,6 +31,7 @@ public class ProductSelectionExcludeProductActionBuilder implements Builder<Prod
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -43,7 +44,7 @@ public class ProductSelectionExcludeProductActionBuilder implements Builder<Prod
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -55,6 +56,7 @@ public class ProductSelectionExcludeProductActionBuilder implements Builder<Prod
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection. If not supplied all Variants are deemed to be excluded.</p>
+     * @param builder function to build the variantExclusion value
      * @return Builder
      */
 
@@ -68,7 +70,7 @@ public class ProductSelectionExcludeProductActionBuilder implements Builder<Prod
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection. If not supplied all Variants are deemed to be excluded.</p>
-     * @param variantExclusion
+     * @param variantExclusion value to be set
      * @return Builder
      */
 
@@ -87,13 +89,18 @@ public class ProductSelectionExcludeProductActionBuilder implements Builder<Prod
         return this.variantExclusion;
     }
 
+    /**
+     * builds ProductSelectionExcludeProductAction with checking for non-null required values
+     * @return ProductSelectionExcludeProductAction
+     */
     public ProductSelectionExcludeProductAction build() {
         Objects.requireNonNull(product, ProductSelectionExcludeProductAction.class + ": product is missing");
         return new ProductSelectionExcludeProductActionImpl(product, variantExclusion);
     }
 
     /**
-     * builds ProductSelectionExcludeProductAction without checking for non null required values
+     * builds ProductSelectionExcludeProductAction without checking for non-null required values
+     * @return ProductSelectionExcludeProductAction
      */
     public ProductSelectionExcludeProductAction buildUnchecked() {
         return new ProductSelectionExcludeProductActionImpl(product, variantExclusion);

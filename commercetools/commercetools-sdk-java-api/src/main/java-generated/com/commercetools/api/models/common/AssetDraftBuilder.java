@@ -43,7 +43,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *
+     * @param builder function to build the sources value
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *
+     * @param builder function to build the sources value
      * @return Builder
      */
 
@@ -105,6 +107,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>Name of the Asset.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -116,7 +119,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>Name of the Asset.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -127,6 +130,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>Description of the Asset.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -138,7 +142,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>Description of the Asset.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -150,7 +154,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -161,7 +165,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -172,7 +176,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -186,6 +190,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>Custom Fields defined for the Asset.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -197,7 +202,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>Custom Fields defined for the Asset.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -208,7 +213,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Asset.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -245,6 +250,10 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
         return this.key;
     }
 
+    /**
+     * builds AssetDraft with checking for non-null required values
+     * @return AssetDraft
+     */
     public AssetDraft build() {
         Objects.requireNonNull(sources, AssetDraft.class + ": sources is missing");
         Objects.requireNonNull(name, AssetDraft.class + ": name is missing");
@@ -252,7 +261,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     * builds AssetDraft without checking for non null required values
+     * builds AssetDraft without checking for non-null required values
+     * @return AssetDraft
      */
     public AssetDraft buildUnchecked() {
         return new AssetDraftImpl(sources, name, description, tags, custom, key);

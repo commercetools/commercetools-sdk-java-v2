@@ -56,7 +56,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Name of the ShippingMethod.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -78,6 +78,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @param builder function to build the localizedName value
      * @return Builder
      */
 
@@ -89,7 +90,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
-     * @param localizedName
+     * @param localizedName value to be set
      * @return Builder
      */
 
@@ -101,7 +102,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Description of the ShippingMethod.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
     @Deprecated
@@ -112,6 +113,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @param builder function to build the localizedDescription value
      * @return Builder
      */
 
@@ -124,7 +126,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
-     * @param localizedDescription
+     * @param localizedDescription value to be set
      * @return Builder
      */
 
@@ -136,6 +138,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -149,7 +152,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -161,7 +164,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
-     * @param zoneRates
+     * @param zoneRates value to be set
      * @return Builder
      */
 
@@ -173,7 +176,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
-     * @param zoneRates
+     * @param zoneRates value to be set
      * @return Builder
      */
 
@@ -185,7 +188,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
-     * @param zoneRates
+     * @param zoneRates value to be set
      * @return Builder
      */
 
@@ -200,6 +203,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @param builder function to build the zoneRates value
      * @return Builder
      */
 
@@ -215,6 +219,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @param builder function to build the zoneRates value
      * @return Builder
      */
 
@@ -228,7 +233,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
-     * @param isDefault
+     * @param isDefault value to be set
      * @return Builder
      */
 
@@ -239,7 +244,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -250,6 +255,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Custom Fields for the ShippingMethod.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -261,7 +267,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Custom Fields for the ShippingMethod.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -318,6 +324,10 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this.custom;
     }
 
+    /**
+     * builds ShippingMethodDraft with checking for non-null required values
+     * @return ShippingMethodDraft
+     */
     public ShippingMethodDraft build() {
         Objects.requireNonNull(name, ShippingMethodDraft.class + ": name is missing");
         Objects.requireNonNull(taxCategory, ShippingMethodDraft.class + ": taxCategory is missing");
@@ -328,7 +338,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     * builds ShippingMethodDraft without checking for non null required values
+     * builds ShippingMethodDraft without checking for non-null required values
+     * @return ShippingMethodDraft
      */
     public ShippingMethodDraft buildUnchecked() {
         return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,

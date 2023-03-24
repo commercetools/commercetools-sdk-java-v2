@@ -29,7 +29,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class ItemStateBuilder implements Builder<ItemState> {
         return this.state;
     }
 
+    /**
+     * builds ItemState with checking for non-null required values
+     * @return ItemState
+     */
     public ItemState build() {
         Objects.requireNonNull(quantity, ItemState.class + ": quantity is missing");
         Objects.requireNonNull(state, ItemState.class + ": state is missing");
@@ -75,7 +80,8 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     * builds ItemState without checking for non null required values
+     * builds ItemState without checking for non-null required values
+     * @return ItemState
      */
     public ItemState buildUnchecked() {
         return new ItemStateImpl(quantity, state);

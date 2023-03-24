@@ -32,6 +32,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @param builder function to build the shippingMethod value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
-     * @param shippingMethod
+     * @param shippingMethod value to be set
      * @return Builder
      */
 
@@ -58,6 +59,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
 
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -70,7 +72,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
 
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -90,12 +92,17 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
         return this.externalTaxRate;
     }
 
+    /**
+     * builds MyCartSetShippingMethodAction with checking for non-null required values
+     * @return MyCartSetShippingMethodAction
+     */
     public MyCartSetShippingMethodAction build() {
         return new MyCartSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
     }
 
     /**
-     * builds MyCartSetShippingMethodAction without checking for non null required values
+     * builds MyCartSetShippingMethodAction without checking for non-null required values
+     * @return MyCartSetShippingMethodAction
      */
     public MyCartSetShippingMethodAction buildUnchecked() {
         return new MyCartSetShippingMethodActionImpl(shippingMethod, externalTaxRate);

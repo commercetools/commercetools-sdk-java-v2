@@ -27,7 +27,7 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
 
     /**
      *  <p><code>"Syntax error while parsing $fieldDefinition."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public SyntaxErrorErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public SyntaxErrorErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
         return this.values;
     }
 
+    /**
+     * builds SyntaxErrorError with checking for non-null required values
+     * @return SyntaxErrorError
+     */
     public SyntaxErrorError build() {
         Objects.requireNonNull(message, SyntaxErrorError.class + ": message is missing");
         return new SyntaxErrorErrorImpl(message, values);
     }
 
     /**
-     * builds SyntaxErrorError without checking for non null required values
+     * builds SyntaxErrorError without checking for non-null required values
+     * @return SyntaxErrorError
      */
     public SyntaxErrorError buildUnchecked() {
         return new SyntaxErrorErrorImpl(message, values);

@@ -28,6 +28,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
 
     /**
      *  <p>Store that was set.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
 
     /**
      *  <p>Store that was set.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
         return this.store;
     }
 
+    /**
+     * builds OrderStoreSetMessagePayload with checking for non-null required values
+     * @return OrderStoreSetMessagePayload
+     */
     public OrderStoreSetMessagePayload build() {
         return new OrderStoreSetMessagePayloadImpl(store);
     }
 
     /**
-     * builds OrderStoreSetMessagePayload without checking for non null required values
+     * builds OrderStoreSetMessagePayload without checking for non-null required values
+     * @return OrderStoreSetMessagePayload
      */
     public OrderStoreSetMessagePayload buildUnchecked() {
         return new OrderStoreSetMessagePayloadImpl(store);

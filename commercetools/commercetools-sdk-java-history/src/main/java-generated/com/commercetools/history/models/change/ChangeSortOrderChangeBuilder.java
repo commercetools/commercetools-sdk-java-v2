@@ -31,7 +31,7 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
 
     /**
      *  <p>Shape of the action for <code>changeSortOrder</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeSortOrderChange with checking for non-null required values
+     * @return ChangeSortOrderChange
+     */
     public ChangeSortOrderChange build() {
         Objects.requireNonNull(change, ChangeSortOrderChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeSortOrderChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
     }
 
     /**
-     * builds ChangeSortOrderChange without checking for non null required values
+     * builds ChangeSortOrderChange without checking for non-null required values
+     * @return ChangeSortOrderChange
      */
     public ChangeSortOrderChange buildUnchecked() {
         return new ChangeSortOrderChangeImpl(change, previousValue, nextValue);

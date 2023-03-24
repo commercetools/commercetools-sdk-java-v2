@@ -25,7 +25,7 @@ public class InvalidOperationBuilder implements Builder<InvalidOperation> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class InvalidOperationBuilder implements Builder<InvalidOperation> {
         return this.message;
     }
 
+    /**
+     * builds InvalidOperation with checking for non-null required values
+     * @return InvalidOperation
+     */
     public InvalidOperation build() {
         Objects.requireNonNull(message, InvalidOperation.class + ": message is missing");
         return new InvalidOperationImpl(message);
     }
 
     /**
-     * builds InvalidOperation without checking for non null required values
+     * builds InvalidOperation without checking for non-null required values
+     * @return InvalidOperation
      */
     public InvalidOperation buildUnchecked() {
         return new InvalidOperationImpl(message);

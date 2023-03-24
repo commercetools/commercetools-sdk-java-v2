@@ -55,7 +55,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Platform-generated unique identifier of the Price.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Original value of the Price.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Original value of the Price.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -88,7 +89,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
-     * @param currentValue
+     * @param currentValue value to be set
      * @return Builder
      */
 
@@ -99,6 +100,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
+     * @param builder function to build the currentValue value
      * @return Builder
      */
 
@@ -110,7 +112,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Country code of the geographic location.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -121,6 +123,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Reference to a CustomerGroup.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -134,7 +137,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Reference to a CustomerGroup.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -146,6 +149,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Reference to a Channel.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -157,7 +161,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Reference to a Channel.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -168,7 +172,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Date and time from which the Price is valid.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -179,7 +183,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Date and time until which the Price is valid.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -191,6 +195,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     /**
      *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -203,7 +208,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     /**
      *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -215,6 +220,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Custom Fields for the Price.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -226,7 +232,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Custom Fields for the Price.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -282,6 +288,10 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
         return this.custom;
     }
 
+    /**
+     * builds ScopedPrice with checking for non-null required values
+     * @return ScopedPrice
+     */
     public ScopedPrice build() {
         Objects.requireNonNull(id, ScopedPrice.class + ": id is missing");
         Objects.requireNonNull(value, ScopedPrice.class + ": value is missing");
@@ -291,7 +301,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     * builds ScopedPrice without checking for non null required values
+     * builds ScopedPrice without checking for non-null required values
+     * @return ScopedPrice
      */
     public ScopedPrice buildUnchecked() {
         return new ScopedPriceImpl(id, value, currentValue, country, customerGroup, channel, validFrom, validUntil,

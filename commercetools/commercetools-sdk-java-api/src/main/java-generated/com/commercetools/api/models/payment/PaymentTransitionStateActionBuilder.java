@@ -31,6 +31,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
 
     /**
      *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
         return this.force;
     }
 
+    /**
+     * builds PaymentTransitionStateAction with checking for non-null required values
+     * @return PaymentTransitionStateAction
+     */
     public PaymentTransitionStateAction build() {
         Objects.requireNonNull(state, PaymentTransitionStateAction.class + ": state is missing");
         return new PaymentTransitionStateActionImpl(state, force);
     }
 
     /**
-     * builds PaymentTransitionStateAction without checking for non null required values
+     * builds PaymentTransitionStateAction without checking for non-null required values
+     * @return PaymentTransitionStateAction
      */
     public PaymentTransitionStateAction buildUnchecked() {
         return new PaymentTransitionStateActionImpl(state, force);

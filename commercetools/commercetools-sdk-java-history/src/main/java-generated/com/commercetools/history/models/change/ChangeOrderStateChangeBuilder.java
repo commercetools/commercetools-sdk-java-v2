@@ -31,7 +31,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
 
     /**
      *  <p>Update action for <code>changeOrderState</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -75,6 +75,10 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeOrderStateChange with checking for non-null required values
+     * @return ChangeOrderStateChange
+     */
     public ChangeOrderStateChange build() {
         Objects.requireNonNull(change, ChangeOrderStateChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangeOrderStateChange.class + ": nextValue is missing");
@@ -83,7 +87,8 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     }
 
     /**
-     * builds ChangeOrderStateChange without checking for non null required values
+     * builds ChangeOrderStateChange without checking for non-null required values
+     * @return ChangeOrderStateChange
      */
     public ChangeOrderStateChange buildUnchecked() {
         return new ChangeOrderStateChangeImpl(change, nextValue, previousValue);

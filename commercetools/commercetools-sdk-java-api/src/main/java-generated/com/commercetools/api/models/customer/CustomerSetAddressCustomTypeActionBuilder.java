@@ -34,7 +34,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>User-defined unique identifier of the Address to be updated.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -103,13 +105,18 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
         return this.fields;
     }
 
+    /**
+     * builds CustomerSetAddressCustomTypeAction with checking for non-null required values
+     * @return CustomerSetAddressCustomTypeAction
+     */
     public CustomerSetAddressCustomTypeAction build() {
         Objects.requireNonNull(addressId, CustomerSetAddressCustomTypeAction.class + ": addressId is missing");
         return new CustomerSetAddressCustomTypeActionImpl(addressId, type, fields);
     }
 
     /**
-     * builds CustomerSetAddressCustomTypeAction without checking for non null required values
+     * builds CustomerSetAddressCustomTypeAction without checking for non-null required values
+     * @return CustomerSetAddressCustomTypeAction
      */
     public CustomerSetAddressCustomTypeAction buildUnchecked() {
         return new CustomerSetAddressCustomTypeActionImpl(addressId, type, fields);

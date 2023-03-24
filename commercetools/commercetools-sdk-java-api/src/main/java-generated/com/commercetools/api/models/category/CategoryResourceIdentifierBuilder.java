@@ -30,7 +30,7 @@ public class CategoryResourceIdentifierBuilder implements Builder<CategoryResour
 
     /**
      *  <p>Unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CategoryResourceIdentifierBuilder implements Builder<CategoryResour
 
     /**
      *  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class CategoryResourceIdentifierBuilder implements Builder<CategoryResour
         return this.key;
     }
 
+    /**
+     * builds CategoryResourceIdentifier with checking for non-null required values
+     * @return CategoryResourceIdentifier
+     */
     public CategoryResourceIdentifier build() {
         return new CategoryResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds CategoryResourceIdentifier without checking for non null required values
+     * builds CategoryResourceIdentifier without checking for non-null required values
+     * @return CategoryResourceIdentifier
      */
     public CategoryResourceIdentifier buildUnchecked() {
         return new CategoryResourceIdentifierImpl(id, key);

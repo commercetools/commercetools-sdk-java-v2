@@ -25,7 +25,7 @@ public class StringFieldBuilder implements Builder<StringField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StringFieldBuilder implements Builder<StringField> {
         return this.value;
     }
 
+    /**
+     * builds StringField with checking for non-null required values
+     * @return StringField
+     */
     public StringField build() {
         Objects.requireNonNull(value, StringField.class + ": value is missing");
         return new StringFieldImpl(value);
     }
 
     /**
-     * builds StringField without checking for non null required values
+     * builds StringField without checking for non-null required values
+     * @return StringField
      */
     public StringField buildUnchecked() {
         return new StringFieldImpl(value);

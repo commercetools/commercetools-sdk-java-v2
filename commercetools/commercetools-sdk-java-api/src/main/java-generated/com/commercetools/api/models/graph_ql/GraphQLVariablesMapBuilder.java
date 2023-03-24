@@ -24,6 +24,8 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
 
     /**
      *
+     * @param values properties to be set
+     * @return Builder
      */
 
     public GraphQLVariablesMapBuilder values(final Map<String, java.lang.Object> values) {
@@ -33,6 +35,9 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
 
     /**
      *
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public GraphQLVariablesMapBuilder addValue(final String key, final java.lang.Object value) {
@@ -47,12 +52,17 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
         return this.values;
     }
 
+    /**
+     * builds GraphQLVariablesMap with checking for non-null required values
+     * @return GraphQLVariablesMap
+     */
     public GraphQLVariablesMap build() {
         return new GraphQLVariablesMapImpl(values);
     }
 
     /**
-     * builds GraphQLVariablesMap without checking for non null required values
+     * builds GraphQLVariablesMap without checking for non-null required values
+     * @return GraphQLVariablesMap
      */
     public GraphQLVariablesMap buildUnchecked() {
         return new GraphQLVariablesMapImpl(values);

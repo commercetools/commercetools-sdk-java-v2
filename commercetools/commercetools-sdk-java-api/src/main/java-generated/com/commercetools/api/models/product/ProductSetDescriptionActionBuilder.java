@@ -31,6 +31,7 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
 
     /**
      *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -73,12 +74,17 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
         return this.staged;
     }
 
+    /**
+     * builds ProductSetDescriptionAction with checking for non-null required values
+     * @return ProductSetDescriptionAction
+     */
     public ProductSetDescriptionAction build() {
         return new ProductSetDescriptionActionImpl(description, staged);
     }
 
     /**
-     * builds ProductSetDescriptionAction without checking for non null required values
+     * builds ProductSetDescriptionAction without checking for non-null required values
+     * @return ProductSetDescriptionAction
      */
     public ProductSetDescriptionAction buildUnchecked() {
         return new ProductSetDescriptionActionImpl(description, staged);

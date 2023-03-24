@@ -29,7 +29,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     /**
      *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds AddTaxRateChange with checking for non-null required values
+     * @return AddTaxRateChange
+     */
     public AddTaxRateChange build() {
         Objects.requireNonNull(change, AddTaxRateChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddTaxRateChange.class + ": nextValue is missing");
@@ -75,7 +80,8 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     }
 
     /**
-     * builds AddTaxRateChange without checking for non null required values
+     * builds AddTaxRateChange without checking for non-null required values
+     * @return AddTaxRateChange
      */
     public AddTaxRateChange buildUnchecked() {
         return new AddTaxRateChangeImpl(change, nextValue);

@@ -28,7 +28,7 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
 
     /**
      *
-     * @param w
+     * @param w value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
 
     /**
      *
-     * @param h
+     * @param h value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
         return this.h;
     }
 
+    /**
+     * builds ImageDimensions with checking for non-null required values
+     * @return ImageDimensions
+     */
     public ImageDimensions build() {
         Objects.requireNonNull(w, ImageDimensions.class + ": w is missing");
         Objects.requireNonNull(h, ImageDimensions.class + ": h is missing");
@@ -63,7 +67,8 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
     }
 
     /**
-     * builds ImageDimensions without checking for non null required values
+     * builds ImageDimensions without checking for non-null required values
+     * @return ImageDimensions
      */
     public ImageDimensions buildUnchecked() {
         return new ImageDimensionsImpl(w, h);

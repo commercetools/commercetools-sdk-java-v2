@@ -25,7 +25,7 @@ public class StandalonePriceChangeActiveActionBuilder implements Builder<Standal
 
     /**
      *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
-     * @param active
+     * @param active value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StandalonePriceChangeActiveActionBuilder implements Builder<Standal
         return this.active;
     }
 
+    /**
+     * builds StandalonePriceChangeActiveAction with checking for non-null required values
+     * @return StandalonePriceChangeActiveAction
+     */
     public StandalonePriceChangeActiveAction build() {
         Objects.requireNonNull(active, StandalonePriceChangeActiveAction.class + ": active is missing");
         return new StandalonePriceChangeActiveActionImpl(active);
     }
 
     /**
-     * builds StandalonePriceChangeActiveAction without checking for non null required values
+     * builds StandalonePriceChangeActiveAction without checking for non-null required values
+     * @return StandalonePriceChangeActiveAction
      */
     public StandalonePriceChangeActiveAction buildUnchecked() {
         return new StandalonePriceChangeActiveActionImpl(active);

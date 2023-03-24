@@ -30,7 +30,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     /**
      *  <p><code>"Request body does not contain valid JSON."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -41,6 +41,8 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InvalidJsonInputErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,6 +52,9 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InvalidJsonInputErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +67,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     /**
      *  <p>Further explanation about why the JSON is invalid.</p>
-     * @param detailedErrorMessage
+     * @param detailedErrorMessage value to be set
      * @return Builder
      */
 
@@ -83,6 +88,10 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
         return this.detailedErrorMessage;
     }
 
+    /**
+     * builds InvalidJsonInputError with checking for non-null required values
+     * @return InvalidJsonInputError
+     */
     public InvalidJsonInputError build() {
         Objects.requireNonNull(message, InvalidJsonInputError.class + ": message is missing");
         Objects.requireNonNull(detailedErrorMessage, InvalidJsonInputError.class + ": detailedErrorMessage is missing");
@@ -90,7 +99,8 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
     }
 
     /**
-     * builds InvalidJsonInputError without checking for non null required values
+     * builds InvalidJsonInputError without checking for non-null required values
+     * @return InvalidJsonInputError
      */
     public InvalidJsonInputError buildUnchecked() {
         return new InvalidJsonInputErrorImpl(message, values, detailedErrorMessage);

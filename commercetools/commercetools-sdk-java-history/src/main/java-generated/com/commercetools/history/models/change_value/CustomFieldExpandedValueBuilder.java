@@ -31,7 +31,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
 
     /**
      *  <p>Name of a custom field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -53,6 +53,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
 
     /**
      *
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -64,7 +65,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
 
     /**
      *
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -85,6 +86,10 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
         return this.label;
     }
 
+    /**
+     * builds CustomFieldExpandedValue with checking for non-null required values
+     * @return CustomFieldExpandedValue
+     */
     public CustomFieldExpandedValue build() {
         Objects.requireNonNull(name, CustomFieldExpandedValue.class + ": name is missing");
         Objects.requireNonNull(value, CustomFieldExpandedValue.class + ": value is missing");
@@ -93,7 +98,8 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     * builds CustomFieldExpandedValue without checking for non null required values
+     * builds CustomFieldExpandedValue without checking for non-null required values
+     * @return CustomFieldExpandedValue
      */
     public CustomFieldExpandedValue buildUnchecked() {
         return new CustomFieldExpandedValueImpl(name, value, label);

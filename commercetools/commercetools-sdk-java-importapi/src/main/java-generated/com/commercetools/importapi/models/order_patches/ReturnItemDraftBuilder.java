@@ -39,7 +39,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *
-     * @param comment
+     * @param comment value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -116,6 +116,10 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
         return this.shipmentState;
     }
 
+    /**
+     * builds ReturnItemDraft with checking for non-null required values
+     * @return ReturnItemDraft
+     */
     public ReturnItemDraft build() {
         Objects.requireNonNull(quantity, ReturnItemDraft.class + ": quantity is missing");
         Objects.requireNonNull(shipmentState, ReturnItemDraft.class + ": shipmentState is missing");
@@ -123,7 +127,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * builds ReturnItemDraft without checking for non null required values
+     * builds ReturnItemDraft without checking for non-null required values
+     * @return ReturnItemDraft
      */
     public ReturnItemDraft buildUnchecked() {
         return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState);

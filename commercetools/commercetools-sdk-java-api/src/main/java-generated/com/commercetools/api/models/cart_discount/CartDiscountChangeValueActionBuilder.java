@@ -26,7 +26,7 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>New value to set.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -38,6 +38,7 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
         return this.value;
     }
 
+    /**
+     * builds CartDiscountChangeValueAction with checking for non-null required values
+     * @return CartDiscountChangeValueAction
+     */
     public CartDiscountChangeValueAction build() {
         Objects.requireNonNull(value, CartDiscountChangeValueAction.class + ": value is missing");
         return new CartDiscountChangeValueActionImpl(value);
     }
 
     /**
-     * builds CartDiscountChangeValueAction without checking for non null required values
+     * builds CartDiscountChangeValueAction without checking for non-null required values
+     * @return CartDiscountChangeValueAction
      */
     public CartDiscountChangeValueAction buildUnchecked() {
         return new CartDiscountChangeValueActionImpl(value);

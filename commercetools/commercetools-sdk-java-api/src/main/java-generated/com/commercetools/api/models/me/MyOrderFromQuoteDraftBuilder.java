@@ -33,7 +33,7 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
 
     /**
      *  <p>Unique identifier of the Quote from which the Order is created.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
 
     /**
      *  <p><code>version</code> of the Quote from which the Order is created.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
 
     /**
      *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
-     * @param quoteStateToAccepted
+     * @param quoteStateToAccepted value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
         return this.quoteStateToAccepted;
     }
 
+    /**
+     * builds MyOrderFromQuoteDraft with checking for non-null required values
+     * @return MyOrderFromQuoteDraft
+     */
     public MyOrderFromQuoteDraft build() {
         Objects.requireNonNull(id, MyOrderFromQuoteDraft.class + ": id is missing");
         Objects.requireNonNull(version, MyOrderFromQuoteDraft.class + ": version is missing");
@@ -84,7 +88,8 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
     }
 
     /**
-     * builds MyOrderFromQuoteDraft without checking for non null required values
+     * builds MyOrderFromQuoteDraft without checking for non-null required values
+     * @return MyOrderFromQuoteDraft
      */
     public MyOrderFromQuoteDraft buildUnchecked() {
         return new MyOrderFromQuoteDraftImpl(id, version, quoteStateToAccepted);

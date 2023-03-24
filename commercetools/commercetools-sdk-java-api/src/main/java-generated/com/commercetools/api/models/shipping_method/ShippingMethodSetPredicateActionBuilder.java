@@ -27,7 +27,7 @@ public class ShippingMethodSetPredicateActionBuilder implements Builder<Shipping
 
     /**
      *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ShippingMethodSetPredicateActionBuilder implements Builder<Shipping
         return this.predicate;
     }
 
+    /**
+     * builds ShippingMethodSetPredicateAction with checking for non-null required values
+     * @return ShippingMethodSetPredicateAction
+     */
     public ShippingMethodSetPredicateAction build() {
         return new ShippingMethodSetPredicateActionImpl(predicate);
     }
 
     /**
-     * builds ShippingMethodSetPredicateAction without checking for non null required values
+     * builds ShippingMethodSetPredicateAction without checking for non-null required values
+     * @return ShippingMethodSetPredicateAction
      */
     public ShippingMethodSetPredicateAction buildUnchecked() {
         return new ShippingMethodSetPredicateActionImpl(predicate);

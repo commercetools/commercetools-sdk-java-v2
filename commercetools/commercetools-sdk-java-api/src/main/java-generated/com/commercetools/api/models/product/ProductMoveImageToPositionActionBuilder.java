@@ -39,7 +39,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>The URL of the image to update.</p>
-     * @param imageUrl
+     * @param imageUrl value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>Position in <code>images</code> where the image should be moved. Must be between <code>0</code> and the total number of images minus <code>1</code>.</p>
-     * @param position
+     * @param position value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -115,6 +115,10 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
         return this.staged;
     }
 
+    /**
+     * builds ProductMoveImageToPositionAction with checking for non-null required values
+     * @return ProductMoveImageToPositionAction
+     */
     public ProductMoveImageToPositionAction build() {
         Objects.requireNonNull(imageUrl, ProductMoveImageToPositionAction.class + ": imageUrl is missing");
         Objects.requireNonNull(position, ProductMoveImageToPositionAction.class + ": position is missing");
@@ -122,7 +126,8 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
     }
 
     /**
-     * builds ProductMoveImageToPositionAction without checking for non null required values
+     * builds ProductMoveImageToPositionAction without checking for non-null required values
+     * @return ProductMoveImageToPositionAction
      */
     public ProductMoveImageToPositionAction buildUnchecked() {
         return new ProductMoveImageToPositionActionImpl(variantId, sku, imageUrl, position, staged);

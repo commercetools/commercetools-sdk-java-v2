@@ -31,6 +31,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
 
     /**
      *  <p>The State to transition to. If there is no existing State, this must be an initial State.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
 
     /**
      *  <p>The State to transition to. If there is no existing State, this must be an initial State.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
 
     /**
      *  <p>If <code>true</code>, validations are disabled.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -73,12 +74,17 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
         return this.force;
     }
 
+    /**
+     * builds ProductTransitionStateAction with checking for non-null required values
+     * @return ProductTransitionStateAction
+     */
     public ProductTransitionStateAction build() {
         return new ProductTransitionStateActionImpl(state, force);
     }
 
     /**
-     * builds ProductTransitionStateAction without checking for non null required values
+     * builds ProductTransitionStateAction without checking for non-null required values
+     * @return ProductTransitionStateAction
      */
     public ProductTransitionStateAction buildUnchecked() {
         return new ProductTransitionStateActionImpl(state, force);

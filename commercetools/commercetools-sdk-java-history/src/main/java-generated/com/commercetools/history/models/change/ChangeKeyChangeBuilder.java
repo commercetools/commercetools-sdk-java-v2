@@ -31,7 +31,7 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
 
     /**
      *  <p>Shape of the action for <code>changeKey</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeKeyChange with checking for non-null required values
+     * @return ChangeKeyChange
+     */
     public ChangeKeyChange build() {
         Objects.requireNonNull(change, ChangeKeyChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeKeyChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
     }
 
     /**
-     * builds ChangeKeyChange without checking for non null required values
+     * builds ChangeKeyChange without checking for non-null required values
+     * @return ChangeKeyChange
      */
     public ChangeKeyChange buildUnchecked() {
         return new ChangeKeyChangeImpl(change, previousValue, nextValue);

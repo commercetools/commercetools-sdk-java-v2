@@ -27,7 +27,7 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
 
     /**
      *  <p><code>"$enumKeysTranscript is used by some products and cannot be deleted because the $attributeName attribute is required."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public EnumValueIsUsedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public EnumValueIsUsedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
         return this.values;
     }
 
+    /**
+     * builds EnumValueIsUsedError with checking for non-null required values
+     * @return EnumValueIsUsedError
+     */
     public EnumValueIsUsedError build() {
         Objects.requireNonNull(message, EnumValueIsUsedError.class + ": message is missing");
         return new EnumValueIsUsedErrorImpl(message, values);
     }
 
     /**
-     * builds EnumValueIsUsedError without checking for non null required values
+     * builds EnumValueIsUsedError without checking for non-null required values
+     * @return EnumValueIsUsedError
      */
     public EnumValueIsUsedError buildUnchecked() {
         return new EnumValueIsUsedErrorImpl(message, values);

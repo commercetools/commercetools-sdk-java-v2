@@ -25,7 +25,7 @@ public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
-     * @param permyriad
+     * @param permyriad value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValu
         return this.permyriad;
     }
 
+    /**
+     * builds ChangeValueRelativeChangeValue with checking for non-null required values
+     * @return ChangeValueRelativeChangeValue
+     */
     public ChangeValueRelativeChangeValue build() {
         Objects.requireNonNull(permyriad, ChangeValueRelativeChangeValue.class + ": permyriad is missing");
         return new ChangeValueRelativeChangeValueImpl(permyriad);
     }
 
     /**
-     * builds ChangeValueRelativeChangeValue without checking for non null required values
+     * builds ChangeValueRelativeChangeValue without checking for non-null required values
+     * @return ChangeValueRelativeChangeValue
      */
     public ChangeValueRelativeChangeValue buildUnchecked() {
         return new ChangeValueRelativeChangeValueImpl(permyriad);

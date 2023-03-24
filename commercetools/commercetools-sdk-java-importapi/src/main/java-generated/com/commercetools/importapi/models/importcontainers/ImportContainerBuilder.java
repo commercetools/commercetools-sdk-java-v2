@@ -39,7 +39,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
-     * @param resourceType
+     * @param resourceType value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>The version of the ImportContainer.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>The time when the ImportContainer was created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>The last time when the ImportContainer was modified.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -114,6 +114,10 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
         return this.lastModifiedAt;
     }
 
+    /**
+     * builds ImportContainer with checking for non-null required values
+     * @return ImportContainer
+     */
     public ImportContainer build() {
         Objects.requireNonNull(key, ImportContainer.class + ": key is missing");
         Objects.requireNonNull(version, ImportContainer.class + ": version is missing");
@@ -123,7 +127,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     * builds ImportContainer without checking for non null required values
+     * builds ImportContainer without checking for non-null required values
+     * @return ImportContainer
      */
     public ImportContainer buildUnchecked() {
         return new ImportContainerImpl(key, resourceType, version, createdAt, lastModifiedAt);

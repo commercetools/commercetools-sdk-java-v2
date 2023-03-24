@@ -35,7 +35,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *  <p>Update action for <code>setDeliveryItems</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -96,6 +96,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -110,6 +111,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -134,7 +136,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -146,7 +148,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -161,6 +163,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -175,6 +178,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -201,6 +205,10 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this.previousValue;
     }
 
+    /**
+     * builds SetDeliveryItemsChange with checking for non-null required values
+     * @return SetDeliveryItemsChange
+     */
     public SetDeliveryItemsChange build() {
         Objects.requireNonNull(change, SetDeliveryItemsChange.class + ": change is missing");
         Objects.requireNonNull(deliveryId, SetDeliveryItemsChange.class + ": deliveryId is missing");
@@ -210,7 +218,8 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     * builds SetDeliveryItemsChange without checking for non null required values
+     * builds SetDeliveryItemsChange without checking for non-null required values
+     * @return SetDeliveryItemsChange
      */
     public SetDeliveryItemsChange buildUnchecked() {
         return new SetDeliveryItemsChangeImpl(change, deliveryId, nextValue, previousValue);

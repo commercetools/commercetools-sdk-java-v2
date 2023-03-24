@@ -25,7 +25,7 @@ public class ProductDiscountKeyReferenceBuilder implements Builder<ProductDiscou
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductDiscountKeyReferenceBuilder implements Builder<ProductDiscou
         return this.key;
     }
 
+    /**
+     * builds ProductDiscountKeyReference with checking for non-null required values
+     * @return ProductDiscountKeyReference
+     */
     public ProductDiscountKeyReference build() {
         Objects.requireNonNull(key, ProductDiscountKeyReference.class + ": key is missing");
         return new ProductDiscountKeyReferenceImpl(key);
     }
 
     /**
-     * builds ProductDiscountKeyReference without checking for non null required values
+     * builds ProductDiscountKeyReference without checking for non-null required values
+     * @return ProductDiscountKeyReference
      */
     public ProductDiscountKeyReference buildUnchecked() {
         return new ProductDiscountKeyReferenceImpl(key);

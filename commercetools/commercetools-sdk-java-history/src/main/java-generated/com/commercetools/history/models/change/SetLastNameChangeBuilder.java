@@ -31,7 +31,7 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
 
     /**
      *  <p>Shape of the action for <code>setLastName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetLastNameChange with checking for non-null required values
+     * @return SetLastNameChange
+     */
     public SetLastNameChange build() {
         Objects.requireNonNull(change, SetLastNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetLastNameChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
     }
 
     /**
-     * builds SetLastNameChange without checking for non null required values
+     * builds SetLastNameChange without checking for non-null required values
+     * @return SetLastNameChange
      */
     public SetLastNameChange buildUnchecked() {
         return new SetLastNameChangeImpl(change, previousValue, nextValue);

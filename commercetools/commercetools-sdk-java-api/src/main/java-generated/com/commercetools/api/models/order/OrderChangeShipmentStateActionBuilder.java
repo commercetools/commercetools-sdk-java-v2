@@ -27,7 +27,7 @@ public class OrderChangeShipmentStateActionBuilder implements Builder<OrderChang
 
     /**
      *
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class OrderChangeShipmentStateActionBuilder implements Builder<OrderChang
         return this.shipmentState;
     }
 
+    /**
+     * builds OrderChangeShipmentStateAction with checking for non-null required values
+     * @return OrderChangeShipmentStateAction
+     */
     public OrderChangeShipmentStateAction build() {
         return new OrderChangeShipmentStateActionImpl(shipmentState);
     }
 
     /**
-     * builds OrderChangeShipmentStateAction without checking for non null required values
+     * builds OrderChangeShipmentStateAction without checking for non-null required values
+     * @return OrderChangeShipmentStateAction
      */
     public OrderChangeShipmentStateAction buildUnchecked() {
         return new OrderChangeShipmentStateActionImpl(shipmentState);

@@ -35,7 +35,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -104,6 +106,10 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
         return this.fields;
     }
 
+    /**
+     * builds CartSetItemShippingAddressCustomTypeAction with checking for non-null required values
+     * @return CartSetItemShippingAddressCustomTypeAction
+     */
     public CartSetItemShippingAddressCustomTypeAction build() {
         Objects.requireNonNull(addressKey,
             CartSetItemShippingAddressCustomTypeAction.class + ": addressKey is missing");
@@ -111,7 +117,8 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     * builds CartSetItemShippingAddressCustomTypeAction without checking for non null required values
+     * builds CartSetItemShippingAddressCustomTypeAction without checking for non-null required values
+     * @return CartSetItemShippingAddressCustomTypeAction
      */
     public CartSetItemShippingAddressCustomTypeAction buildUnchecked() {
         return new CartSetItemShippingAddressCustomTypeActionImpl(addressKey, type, fields);

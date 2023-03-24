@@ -25,7 +25,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
         return this.value;
     }
 
+    /**
+     * builds StringSetField with checking for non-null required values
+     * @return StringSetField
+     */
     public StringSetField build() {
         Objects.requireNonNull(value, StringSetField.class + ": value is missing");
         return new StringSetFieldImpl(value);
     }
 
     /**
-     * builds StringSetField without checking for non null required values
+     * builds StringSetField without checking for non-null required values
+     * @return StringSetField
      */
     public StringSetField buildUnchecked() {
         return new StringSetFieldImpl(value);

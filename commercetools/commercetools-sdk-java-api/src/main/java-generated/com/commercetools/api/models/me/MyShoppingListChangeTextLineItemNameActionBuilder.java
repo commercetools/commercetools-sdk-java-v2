@@ -30,7 +30,7 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
-     * @param textLineItemId
+     * @param textLineItemId value to be set
      * @return Builder
      */
 
@@ -41,6 +41,7 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
         return this.name;
     }
 
+    /**
+     * builds MyShoppingListChangeTextLineItemNameAction with checking for non-null required values
+     * @return MyShoppingListChangeTextLineItemNameAction
+     */
     public MyShoppingListChangeTextLineItemNameAction build() {
         Objects.requireNonNull(textLineItemId,
             MyShoppingListChangeTextLineItemNameAction.class + ": textLineItemId is missing");
@@ -78,7 +83,8 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
     }
 
     /**
-     * builds MyShoppingListChangeTextLineItemNameAction without checking for non null required values
+     * builds MyShoppingListChangeTextLineItemNameAction without checking for non-null required values
+     * @return MyShoppingListChangeTextLineItemNameAction
      */
     public MyShoppingListChangeTextLineItemNameAction buildUnchecked() {
         return new MyShoppingListChangeTextLineItemNameActionImpl(textLineItemId, name);

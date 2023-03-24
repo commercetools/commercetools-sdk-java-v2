@@ -33,7 +33,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
 
     /**
      *
-     * @param returnItemId
+     * @param returnItemId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
         return this.value;
     }
 
+    /**
+     * builds OrderSetReturnItemCustomFieldAction with checking for non-null required values
+     * @return OrderSetReturnItemCustomFieldAction
+     */
     public OrderSetReturnItemCustomFieldAction build() {
         Objects.requireNonNull(returnItemId, OrderSetReturnItemCustomFieldAction.class + ": returnItemId is missing");
         Objects.requireNonNull(name, OrderSetReturnItemCustomFieldAction.class + ": name is missing");
@@ -84,7 +88,8 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     }
 
     /**
-     * builds OrderSetReturnItemCustomFieldAction without checking for non null required values
+     * builds OrderSetReturnItemCustomFieldAction without checking for non-null required values
+     * @return OrderSetReturnItemCustomFieldAction
      */
     public OrderSetReturnItemCustomFieldAction buildUnchecked() {
         return new OrderSetReturnItemCustomFieldActionImpl(returnItemId, name, value);

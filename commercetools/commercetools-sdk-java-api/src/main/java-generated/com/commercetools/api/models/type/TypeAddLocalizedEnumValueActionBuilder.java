@@ -29,7 +29,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
         return this.value;
     }
 
+    /**
+     * builds TypeAddLocalizedEnumValueAction with checking for non-null required values
+     * @return TypeAddLocalizedEnumValueAction
+     */
     public TypeAddLocalizedEnumValueAction build() {
         Objects.requireNonNull(fieldName, TypeAddLocalizedEnumValueAction.class + ": fieldName is missing");
         Objects.requireNonNull(value, TypeAddLocalizedEnumValueAction.class + ": value is missing");
@@ -76,7 +81,8 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
     }
 
     /**
-     * builds TypeAddLocalizedEnumValueAction without checking for non null required values
+     * builds TypeAddLocalizedEnumValueAction without checking for non-null required values
+     * @return TypeAddLocalizedEnumValueAction
      */
     public TypeAddLocalizedEnumValueAction buildUnchecked() {
         return new TypeAddLocalizedEnumValueActionImpl(fieldName, value);

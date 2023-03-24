@@ -34,7 +34,7 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>ID of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>Key of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>New address to set.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>New address to set.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -91,13 +92,18 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
         return this.address;
     }
 
+    /**
+     * builds BusinessUnitChangeAddressAction with checking for non-null required values
+     * @return BusinessUnitChangeAddressAction
+     */
     public BusinessUnitChangeAddressAction build() {
         Objects.requireNonNull(address, BusinessUnitChangeAddressAction.class + ": address is missing");
         return new BusinessUnitChangeAddressActionImpl(addressId, addressKey, address);
     }
 
     /**
-     * builds BusinessUnitChangeAddressAction without checking for non null required values
+     * builds BusinessUnitChangeAddressAction without checking for non-null required values
+     * @return BusinessUnitChangeAddressAction
      */
     public BusinessUnitChangeAddressAction buildUnchecked() {
         return new BusinessUnitChangeAddressActionImpl(addressId, addressKey, address);

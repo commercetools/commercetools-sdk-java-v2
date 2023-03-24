@@ -29,6 +29,7 @@ public class BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder
 
     /**
      *  <p>The address that was set as the default shipping address.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder
 
     /**
      *  <p>The address that was set as the default shipping address.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder
         return this.address;
     }
 
+    /**
+     * builds BusinessUnitDefaultShippingAddressSetMessagePayload with checking for non-null required values
+     * @return BusinessUnitDefaultShippingAddressSetMessagePayload
+     */
     public BusinessUnitDefaultShippingAddressSetMessagePayload build() {
         return new BusinessUnitDefaultShippingAddressSetMessagePayloadImpl(address);
     }
 
     /**
-     * builds BusinessUnitDefaultShippingAddressSetMessagePayload without checking for non null required values
+     * builds BusinessUnitDefaultShippingAddressSetMessagePayload without checking for non-null required values
+     * @return BusinessUnitDefaultShippingAddressSetMessagePayload
      */
     public BusinessUnitDefaultShippingAddressSetMessagePayload buildUnchecked() {
         return new BusinessUnitDefaultShippingAddressSetMessagePayloadImpl(address);

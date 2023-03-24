@@ -35,7 +35,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *  <p>Update action for <code>changeTransactionState</code> on payments</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *
+     * @param builder function to build the transaction value
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *
-     * @param transaction
+     * @param transaction value to be set
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -109,6 +110,10 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeTransactionStateChange with checking for non-null required values
+     * @return ChangeTransactionStateChange
+     */
     public ChangeTransactionStateChange build() {
         Objects.requireNonNull(change, ChangeTransactionStateChange.class + ": change is missing");
         Objects.requireNonNull(transaction, ChangeTransactionStateChange.class + ": transaction is missing");
@@ -118,7 +123,8 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
     }
 
     /**
-     * builds ChangeTransactionStateChange without checking for non null required values
+     * builds ChangeTransactionStateChange without checking for non-null required values
+     * @return ChangeTransactionStateChange
      */
     public ChangeTransactionStateChange buildUnchecked() {
         return new ChangeTransactionStateChangeImpl(change, transaction, nextValue, previousValue);

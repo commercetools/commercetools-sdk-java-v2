@@ -26,6 +26,7 @@ public class CartRemovePaymentActionBuilder implements Builder<CartRemovePayment
 
     /**
      *  <p>Payment to remove from the Cart.</p>
+     * @param builder function to build the payment value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class CartRemovePaymentActionBuilder implements Builder<CartRemovePayment
 
     /**
      *  <p>Payment to remove from the Cart.</p>
-     * @param payment
+     * @param payment value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class CartRemovePaymentActionBuilder implements Builder<CartRemovePayment
         return this.payment;
     }
 
+    /**
+     * builds CartRemovePaymentAction with checking for non-null required values
+     * @return CartRemovePaymentAction
+     */
     public CartRemovePaymentAction build() {
         Objects.requireNonNull(payment, CartRemovePaymentAction.class + ": payment is missing");
         return new CartRemovePaymentActionImpl(payment);
     }
 
     /**
-     * builds CartRemovePaymentAction without checking for non null required values
+     * builds CartRemovePaymentAction without checking for non-null required values
+     * @return CartRemovePaymentAction
      */
     public CartRemovePaymentAction buildUnchecked() {
         return new CartRemovePaymentActionImpl(payment);

@@ -32,7 +32,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     /**
      *  <p>Update action for <code>updateSyncInfo</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     /**
      *
-     * @param channelId
+     * @param channelId value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -86,6 +87,10 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
         return this.nextValue;
     }
 
+    /**
+     * builds UpdateSyncInfoChange with checking for non-null required values
+     * @return UpdateSyncInfoChange
+     */
     public UpdateSyncInfoChange build() {
         Objects.requireNonNull(change, UpdateSyncInfoChange.class + ": change is missing");
         Objects.requireNonNull(channelId, UpdateSyncInfoChange.class + ": channelId is missing");
@@ -94,7 +99,8 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     * builds UpdateSyncInfoChange without checking for non null required values
+     * builds UpdateSyncInfoChange without checking for non-null required values
+     * @return UpdateSyncInfoChange
      */
     public UpdateSyncInfoChange buildUnchecked() {
         return new UpdateSyncInfoChangeImpl(change, channelId, nextValue);

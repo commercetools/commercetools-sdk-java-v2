@@ -43,6 +43,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>QuoteRequest from which the StagedQuote is created.</p>
+     * @param builder function to build the quoteRequest value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>QuoteRequest from which the StagedQuote is created.</p>
-     * @param quoteRequest
+     * @param quoteRequest value to be set
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>Current version of the QuoteRequest.</p>
-     * @param quoteRequestVersion
+     * @param quoteRequestVersion value to be set
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
-     * @param quoteRequestStateToAccepted
+     * @param quoteRequestStateToAccepted value to be set
      * @return Builder
      */
 
@@ -90,7 +91,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>User-defined unique identifier for the StagedQuote.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -105,6 +106,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
      *  </ul>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -120,7 +122,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
      *  </ul>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -131,6 +133,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -142,7 +145,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -179,6 +182,10 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
         return this.state;
     }
 
+    /**
+     * builds StagedQuoteDraft with checking for non-null required values
+     * @return StagedQuoteDraft
+     */
     public StagedQuoteDraft build() {
         Objects.requireNonNull(quoteRequest, StagedQuoteDraft.class + ": quoteRequest is missing");
         Objects.requireNonNull(quoteRequestVersion, StagedQuoteDraft.class + ": quoteRequestVersion is missing");
@@ -187,7 +194,8 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     * builds StagedQuoteDraft without checking for non null required values
+     * builds StagedQuoteDraft without checking for non-null required values
+     * @return StagedQuoteDraft
      */
     public StagedQuoteDraft buildUnchecked() {
         return new StagedQuoteDraftImpl(quoteRequest, quoteRequestVersion, quoteRequestStateToAccepted, key, custom,

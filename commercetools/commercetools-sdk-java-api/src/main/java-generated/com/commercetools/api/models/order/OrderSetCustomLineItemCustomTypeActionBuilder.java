@@ -34,7 +34,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
         return this.fields;
     }
 
+    /**
+     * builds OrderSetCustomLineItemCustomTypeAction with checking for non-null required values
+     * @return OrderSetCustomLineItemCustomTypeAction
+     */
     public OrderSetCustomLineItemCustomTypeAction build() {
         Objects.requireNonNull(customLineItemId,
             OrderSetCustomLineItemCustomTypeAction.class + ": customLineItemId is missing");
@@ -110,7 +116,8 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     * builds OrderSetCustomLineItemCustomTypeAction without checking for non null required values
+     * builds OrderSetCustomLineItemCustomTypeAction without checking for non-null required values
+     * @return OrderSetCustomLineItemCustomTypeAction
      */
     public OrderSetCustomLineItemCustomTypeAction buildUnchecked() {
         return new OrderSetCustomLineItemCustomTypeActionImpl(customLineItemId, type, fields);

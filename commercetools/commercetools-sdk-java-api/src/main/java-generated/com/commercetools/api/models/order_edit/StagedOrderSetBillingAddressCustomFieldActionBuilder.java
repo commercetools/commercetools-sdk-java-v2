@@ -31,7 +31,7 @@ public class StagedOrderSetBillingAddressCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class StagedOrderSetBillingAddressCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -60,13 +60,18 @@ public class StagedOrderSetBillingAddressCustomFieldActionBuilder
         return this.value;
     }
 
+    /**
+     * builds StagedOrderSetBillingAddressCustomFieldAction with checking for non-null required values
+     * @return StagedOrderSetBillingAddressCustomFieldAction
+     */
     public StagedOrderSetBillingAddressCustomFieldAction build() {
         Objects.requireNonNull(name, StagedOrderSetBillingAddressCustomFieldAction.class + ": name is missing");
         return new StagedOrderSetBillingAddressCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds StagedOrderSetBillingAddressCustomFieldAction without checking for non null required values
+     * builds StagedOrderSetBillingAddressCustomFieldAction without checking for non-null required values
+     * @return StagedOrderSetBillingAddressCustomFieldAction
      */
     public StagedOrderSetBillingAddressCustomFieldAction buildUnchecked() {
         return new StagedOrderSetBillingAddressCustomFieldActionImpl(name, value);

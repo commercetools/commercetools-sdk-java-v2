@@ -30,7 +30,7 @@ public class StandalonePriceResourceIdentifierBuilder implements Builder<Standal
 
     /**
      *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class StandalonePriceResourceIdentifierBuilder implements Builder<Standal
 
     /**
      *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class StandalonePriceResourceIdentifierBuilder implements Builder<Standal
         return this.key;
     }
 
+    /**
+     * builds StandalonePriceResourceIdentifier with checking for non-null required values
+     * @return StandalonePriceResourceIdentifier
+     */
     public StandalonePriceResourceIdentifier build() {
         return new StandalonePriceResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds StandalonePriceResourceIdentifier without checking for non null required values
+     * builds StandalonePriceResourceIdentifier without checking for non-null required values
+     * @return StandalonePriceResourceIdentifier
      */
     public StandalonePriceResourceIdentifier buildUnchecked() {
         return new StandalonePriceResourceIdentifierImpl(id, key);

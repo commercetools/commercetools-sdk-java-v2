@@ -33,7 +33,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
-     * @param transactionId
+     * @param transactionId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
         return this.value;
     }
 
+    /**
+     * builds PaymentSetTransactionCustomFieldAction with checking for non-null required values
+     * @return PaymentSetTransactionCustomFieldAction
+     */
     public PaymentSetTransactionCustomFieldAction build() {
         Objects.requireNonNull(transactionId,
             PaymentSetTransactionCustomFieldAction.class + ": transactionId is missing");
@@ -85,7 +89,8 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
     }
 
     /**
-     * builds PaymentSetTransactionCustomFieldAction without checking for non null required values
+     * builds PaymentSetTransactionCustomFieldAction without checking for non-null required values
+     * @return PaymentSetTransactionCustomFieldAction
      */
     public PaymentSetTransactionCustomFieldAction buildUnchecked() {
         return new PaymentSetTransactionCustomFieldActionImpl(transactionId, name, value);

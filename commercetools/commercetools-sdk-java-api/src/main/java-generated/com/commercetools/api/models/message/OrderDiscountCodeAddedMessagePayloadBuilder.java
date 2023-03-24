@@ -26,6 +26,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>DiscountCode that was added.</p>
+     * @param builder function to build the discountCode value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>DiscountCode that was added.</p>
-     * @param discountCode
+     * @param discountCode value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
         return this.discountCode;
     }
 
+    /**
+     * builds OrderDiscountCodeAddedMessagePayload with checking for non-null required values
+     * @return OrderDiscountCodeAddedMessagePayload
+     */
     public OrderDiscountCodeAddedMessagePayload build() {
         Objects.requireNonNull(discountCode, OrderDiscountCodeAddedMessagePayload.class + ": discountCode is missing");
         return new OrderDiscountCodeAddedMessagePayloadImpl(discountCode);
     }
 
     /**
-     * builds OrderDiscountCodeAddedMessagePayload without checking for non null required values
+     * builds OrderDiscountCodeAddedMessagePayload without checking for non-null required values
+     * @return OrderDiscountCodeAddedMessagePayload
      */
     public OrderDiscountCodeAddedMessagePayload buildUnchecked() {
         return new OrderDiscountCodeAddedMessagePayloadImpl(discountCode);

@@ -29,7 +29,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
 
     /**
      *  <p>ShipmentState after the Change Shipment State update action.</p>
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
 
     /**
      *  <p>ShipmentState before the Change Shipment State update action.</p>
-     * @param oldShipmentState
+     * @param oldShipmentState value to be set
      * @return Builder
      */
 
@@ -59,6 +59,10 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
         return this.oldShipmentState;
     }
 
+    /**
+     * builds OrderShipmentStateChangedMessagePayload with checking for non-null required values
+     * @return OrderShipmentStateChangedMessagePayload
+     */
     public OrderShipmentStateChangedMessagePayload build() {
         Objects.requireNonNull(shipmentState,
             OrderShipmentStateChangedMessagePayload.class + ": shipmentState is missing");
@@ -68,7 +72,8 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     * builds OrderShipmentStateChangedMessagePayload without checking for non null required values
+     * builds OrderShipmentStateChangedMessagePayload without checking for non-null required values
+     * @return OrderShipmentStateChangedMessagePayload
      */
     public OrderShipmentStateChangedMessagePayload buildUnchecked() {
         return new OrderShipmentStateChangedMessagePayloadImpl(shipmentState, oldShipmentState);

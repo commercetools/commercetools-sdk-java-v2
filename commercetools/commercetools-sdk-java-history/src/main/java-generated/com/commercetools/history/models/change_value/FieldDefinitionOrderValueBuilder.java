@@ -29,7 +29,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
 
     /**
      *
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
 
     /**
      *
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
         return this.label;
     }
 
+    /**
+     * builds FieldDefinitionOrderValue with checking for non-null required values
+     * @return FieldDefinitionOrderValue
+     */
     public FieldDefinitionOrderValue build() {
         Objects.requireNonNull(name, FieldDefinitionOrderValue.class + ": name is missing");
         Objects.requireNonNull(label, FieldDefinitionOrderValue.class + ": label is missing");
@@ -75,7 +80,8 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     * builds FieldDefinitionOrderValue without checking for non null required values
+     * builds FieldDefinitionOrderValue without checking for non-null required values
+     * @return FieldDefinitionOrderValue
      */
     public FieldDefinitionOrderValue buildUnchecked() {
         return new FieldDefinitionOrderValueImpl(name, label);

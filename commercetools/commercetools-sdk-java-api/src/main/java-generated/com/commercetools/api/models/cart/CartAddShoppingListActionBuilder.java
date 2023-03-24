@@ -34,6 +34,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p>Shopping List that contains the Line Items to be added.</p>
+     * @param builder function to build the shoppingList value
      * @return Builder
      */
 
@@ -47,7 +48,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p>Shopping List that contains the Line Items to be added.</p>
-     * @param shoppingList
+     * @param shoppingList value to be set
      * @return Builder
      */
 
@@ -59,6 +60,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -72,7 +74,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -84,6 +86,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -96,7 +99,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -120,13 +123,18 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
         return this.supplyChannel;
     }
 
+    /**
+     * builds CartAddShoppingListAction with checking for non-null required values
+     * @return CartAddShoppingListAction
+     */
     public CartAddShoppingListAction build() {
         Objects.requireNonNull(shoppingList, CartAddShoppingListAction.class + ": shoppingList is missing");
         return new CartAddShoppingListActionImpl(shoppingList, distributionChannel, supplyChannel);
     }
 
     /**
-     * builds CartAddShoppingListAction without checking for non null required values
+     * builds CartAddShoppingListAction without checking for non-null required values
+     * @return CartAddShoppingListAction
      */
     public CartAddShoppingListAction buildUnchecked() {
         return new CartAddShoppingListActionImpl(shoppingList, distributionChannel, supplyChannel);

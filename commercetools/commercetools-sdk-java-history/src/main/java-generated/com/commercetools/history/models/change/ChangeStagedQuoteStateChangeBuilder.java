@@ -31,7 +31,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeStagedQuoteStateChange with checking for non-null required values
+     * @return ChangeStagedQuoteStateChange
+     */
     public ChangeStagedQuoteStateChange build() {
         Objects.requireNonNull(change, ChangeStagedQuoteStateChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangeStagedQuoteStateChange.class + ": nextValue is missing");
@@ -84,7 +88,8 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
     }
 
     /**
-     * builds ChangeStagedQuoteStateChange without checking for non null required values
+     * builds ChangeStagedQuoteStateChange without checking for non-null required values
+     * @return ChangeStagedQuoteStateChange
      */
     public ChangeStagedQuoteStateChange buildUnchecked() {
         return new ChangeStagedQuoteStateChangeImpl(change, nextValue, previousValue);

@@ -26,7 +26,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
-     * @param updatedPrices
+     * @param updatedPrices value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
-     * @param updatedPrices
+     * @param updatedPrices value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
-     * @param updatedPrices
+     * @param updatedPrices value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @param builder function to build the updatedPrices value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @param builder function to build the updatedPrices value
      * @return Builder
      */
 
@@ -97,6 +99,10 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
         return this.updatedPrices;
     }
 
+    /**
+     * builds ProductPriceDiscountsSetMessagePayload with checking for non-null required values
+     * @return ProductPriceDiscountsSetMessagePayload
+     */
     public ProductPriceDiscountsSetMessagePayload build() {
         Objects.requireNonNull(updatedPrices,
             ProductPriceDiscountsSetMessagePayload.class + ": updatedPrices is missing");
@@ -104,7 +110,8 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     * builds ProductPriceDiscountsSetMessagePayload without checking for non null required values
+     * builds ProductPriceDiscountsSetMessagePayload without checking for non-null required values
+     * @return ProductPriceDiscountsSetMessagePayload
      */
     public ProductPriceDiscountsSetMessagePayload buildUnchecked() {
         return new ProductPriceDiscountsSetMessagePayloadImpl(updatedPrices);

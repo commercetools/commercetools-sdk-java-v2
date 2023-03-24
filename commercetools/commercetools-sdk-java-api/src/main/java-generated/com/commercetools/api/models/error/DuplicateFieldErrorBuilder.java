@@ -32,7 +32,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p><code>"A duplicate value $duplicateValue exists for field $field."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -43,6 +43,8 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public DuplicateFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -52,6 +54,9 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public DuplicateFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -64,7 +69,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p>Name of the conflicting field.</p>
-     * @param field
+     * @param field value to be set
      * @return Builder
      */
 
@@ -75,7 +80,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p>Conflicting duplicate value.</p>
-     * @param duplicateValue
+     * @param duplicateValue value to be set
      * @return Builder
      */
 
@@ -100,6 +105,10 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         return this.duplicateValue;
     }
 
+    /**
+     * builds DuplicateFieldError with checking for non-null required values
+     * @return DuplicateFieldError
+     */
     public DuplicateFieldError build() {
         Objects.requireNonNull(message, DuplicateFieldError.class + ": message is missing");
         Objects.requireNonNull(field, DuplicateFieldError.class + ": field is missing");
@@ -108,7 +117,8 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     * builds DuplicateFieldError without checking for non null required values
+     * builds DuplicateFieldError without checking for non-null required values
+     * @return DuplicateFieldError
      */
     public DuplicateFieldError buildUnchecked() {
         return new DuplicateFieldErrorImpl(message, values, field, duplicateValue);

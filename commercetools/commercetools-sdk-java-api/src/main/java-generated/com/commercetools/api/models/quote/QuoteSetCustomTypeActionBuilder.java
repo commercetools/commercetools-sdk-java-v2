@@ -31,6 +31,7 @@ public class QuoteSetCustomTypeActionBuilder implements Builder<QuoteSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Quote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Quote.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class QuoteSetCustomTypeActionBuilder implements Builder<QuoteSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Quote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Quote.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class QuoteSetCustomTypeActionBuilder implements Builder<QuoteSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Quote.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class QuoteSetCustomTypeActionBuilder implements Builder<QuoteSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Quote.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class QuoteSetCustomTypeActionBuilder implements Builder<QuoteSetCustomTy
         return this.fields;
     }
 
+    /**
+     * builds QuoteSetCustomTypeAction with checking for non-null required values
+     * @return QuoteSetCustomTypeAction
+     */
     public QuoteSetCustomTypeAction build() {
         return new QuoteSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds QuoteSetCustomTypeAction without checking for non null required values
+     * builds QuoteSetCustomTypeAction without checking for non-null required values
+     * @return QuoteSetCustomTypeAction
      */
     public QuoteSetCustomTypeAction buildUnchecked() {
         return new QuoteSetCustomTypeActionImpl(type, fields);

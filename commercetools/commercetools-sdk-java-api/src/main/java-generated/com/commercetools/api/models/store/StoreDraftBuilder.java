@@ -49,7 +49,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,6 +60,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Name of the Store.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Name of the Store.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -93,7 +94,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -104,7 +105,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -118,7 +119,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -130,7 +131,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -142,7 +143,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -157,6 +158,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param builder function to build the countries value
      * @return Builder
      */
 
@@ -171,6 +173,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param builder function to build the countries value
      * @return Builder
      */
 
@@ -183,7 +186,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -195,7 +198,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -207,7 +210,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -222,6 +225,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param builder function to build the distributionChannels value
      * @return Builder
      */
 
@@ -237,6 +241,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param builder function to build the distributionChannels value
      * @return Builder
      */
 
@@ -250,7 +255,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -262,7 +267,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -274,7 +279,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -289,6 +294,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannels value
      * @return Builder
      */
 
@@ -304,6 +310,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannels value
      * @return Builder
      */
 
@@ -323,7 +330,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
-     * @param productSelections
+     * @param productSelections value to be set
      * @return Builder
      */
 
@@ -341,7 +348,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
-     * @param productSelections
+     * @param productSelections value to be set
      * @return Builder
      */
 
@@ -359,7 +366,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
-     * @param productSelections
+     * @param productSelections value to be set
      * @return Builder
      */
 
@@ -380,6 +387,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param builder function to build the productSelections value
      * @return Builder
      */
 
@@ -401,6 +409,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param builder function to build the productSelections value
      * @return Builder
      */
 
@@ -414,6 +423,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Custom fields for the Store.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -425,7 +435,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Custom fields for the Store.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -473,6 +483,10 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
         return this.custom;
     }
 
+    /**
+     * builds StoreDraft with checking for non-null required values
+     * @return StoreDraft
+     */
     public StoreDraft build() {
         Objects.requireNonNull(key, StoreDraft.class + ": key is missing");
         return new StoreDraftImpl(key, name, languages, countries, distributionChannels, supplyChannels,
@@ -480,7 +494,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     * builds StoreDraft without checking for non null required values
+     * builds StoreDraft without checking for non-null required values
+     * @return StoreDraft
      */
     public StoreDraft buildUnchecked() {
         return new StoreDraftImpl(key, name, languages, countries, distributionChannels, supplyChannels,

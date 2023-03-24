@@ -31,7 +31,7 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
         return this.address;
     }
 
+    /**
+     * builds OrderSetDeliveryAddressAction with checking for non-null required values
+     * @return OrderSetDeliveryAddressAction
+     */
     public OrderSetDeliveryAddressAction build() {
         Objects.requireNonNull(deliveryId, OrderSetDeliveryAddressAction.class + ": deliveryId is missing");
         return new OrderSetDeliveryAddressActionImpl(deliveryId, address);
     }
 
     /**
-     * builds OrderSetDeliveryAddressAction without checking for non null required values
+     * builds OrderSetDeliveryAddressAction without checking for non-null required values
+     * @return OrderSetDeliveryAddressAction
      */
     public OrderSetDeliveryAddressAction buildUnchecked() {
         return new OrderSetDeliveryAddressActionImpl(deliveryId, address);

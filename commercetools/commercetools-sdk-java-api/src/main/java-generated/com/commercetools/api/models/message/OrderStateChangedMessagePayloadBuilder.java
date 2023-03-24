@@ -28,7 +28,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
 
     /**
      *  <p>OrderState after the Change Order State update action.</p>
-     * @param orderState
+     * @param orderState value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
 
     /**
      *  <p>OrderState before the Change Order State update action.</p>
-     * @param oldOrderState
+     * @param oldOrderState value to be set
      * @return Builder
      */
 
@@ -58,6 +58,10 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
         return this.oldOrderState;
     }
 
+    /**
+     * builds OrderStateChangedMessagePayload with checking for non-null required values
+     * @return OrderStateChangedMessagePayload
+     */
     public OrderStateChangedMessagePayload build() {
         Objects.requireNonNull(orderState, OrderStateChangedMessagePayload.class + ": orderState is missing");
         Objects.requireNonNull(oldOrderState, OrderStateChangedMessagePayload.class + ": oldOrderState is missing");
@@ -65,7 +69,8 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
     }
 
     /**
-     * builds OrderStateChangedMessagePayload without checking for non null required values
+     * builds OrderStateChangedMessagePayload without checking for non-null required values
+     * @return OrderStateChangedMessagePayload
      */
     public OrderStateChangedMessagePayload buildUnchecked() {
         return new OrderStateChangedMessagePayloadImpl(orderState, oldOrderState);

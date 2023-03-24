@@ -40,7 +40,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -107,7 +107,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -121,6 +121,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -135,6 +136,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -166,6 +168,10 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
         return this.results;
     }
 
+    /**
+     * builds OrderPagedQueryResponse with checking for non-null required values
+     * @return OrderPagedQueryResponse
+     */
     public OrderPagedQueryResponse build() {
         Objects.requireNonNull(limit, OrderPagedQueryResponse.class + ": limit is missing");
         Objects.requireNonNull(count, OrderPagedQueryResponse.class + ": count is missing");
@@ -175,7 +181,8 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * builds OrderPagedQueryResponse without checking for non null required values
+     * builds OrderPagedQueryResponse without checking for non-null required values
+     * @return OrderPagedQueryResponse
      */
     public OrderPagedQueryResponse buildUnchecked() {
         return new OrderPagedQueryResponseImpl(limit, count, total, offset, results);

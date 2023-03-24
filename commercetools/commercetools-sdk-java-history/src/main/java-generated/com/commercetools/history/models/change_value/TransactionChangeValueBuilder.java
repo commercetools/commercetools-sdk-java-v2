@@ -31,7 +31,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
 
     /**
      *
-     * @param interactionId
+     * @param interactionId value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
 
     /**
      *
-     * @param timestamp
+     * @param timestamp value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
         return this.timestamp;
     }
 
+    /**
+     * builds TransactionChangeValue with checking for non-null required values
+     * @return TransactionChangeValue
+     */
     public TransactionChangeValue build() {
         Objects.requireNonNull(id, TransactionChangeValue.class + ": id is missing");
         Objects.requireNonNull(interactionId, TransactionChangeValue.class + ": interactionId is missing");
@@ -82,7 +86,8 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     * builds TransactionChangeValue without checking for non null required values
+     * builds TransactionChangeValue without checking for non-null required values
+     * @return TransactionChangeValue
      */
     public TransactionChangeValue buildUnchecked() {
         return new TransactionChangeValueImpl(id, interactionId, timestamp);

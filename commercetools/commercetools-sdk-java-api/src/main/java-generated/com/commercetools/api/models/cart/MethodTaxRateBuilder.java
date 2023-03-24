@@ -31,7 +31,7 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param shippingMethodKey
+     * @param shippingMethodKey value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
 
     /**
      *  <p>Tax Rate for the Shipping Method.</p>
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
 
     /**
      *  <p>Tax Rate for the Shipping Method.</p>
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
         return this.taxRate;
     }
 
+    /**
+     * builds MethodTaxRate with checking for non-null required values
+     * @return MethodTaxRate
+     */
     public MethodTaxRate build() {
         Objects.requireNonNull(shippingMethodKey, MethodTaxRate.class + ": shippingMethodKey is missing");
         return new MethodTaxRateImpl(shippingMethodKey, taxRate);
     }
 
     /**
-     * builds MethodTaxRate without checking for non null required values
+     * builds MethodTaxRate without checking for non-null required values
+     * @return MethodTaxRate
      */
     public MethodTaxRate buildUnchecked() {
         return new MethodTaxRateImpl(shippingMethodKey, taxRate);

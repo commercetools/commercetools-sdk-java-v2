@@ -29,7 +29,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds ChannelUpdate with checking for non-null required values
+     * @return ChannelUpdate
+     */
     public ChannelUpdate build() {
         Objects.requireNonNull(version, ChannelUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ChannelUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     }
 
     /**
-     * builds ChannelUpdate without checking for non null required values
+     * builds ChannelUpdate without checking for non-null required values
+     * @return ChannelUpdate
      */
     public ChannelUpdate buildUnchecked() {
         return new ChannelUpdateImpl(version, actions);

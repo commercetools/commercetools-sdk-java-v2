@@ -31,6 +31,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
         return this.fields;
     }
 
+    /**
+     * builds ChannelSetAddressCustomTypeAction with checking for non-null required values
+     * @return ChannelSetAddressCustomTypeAction
+     */
     public ChannelSetAddressCustomTypeAction build() {
         return new ChannelSetAddressCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds ChannelSetAddressCustomTypeAction without checking for non null required values
+     * builds ChannelSetAddressCustomTypeAction without checking for non-null required values
+     * @return ChannelSetAddressCustomTypeAction
      */
     public ChannelSetAddressCustomTypeAction buildUnchecked() {
         return new ChannelSetAddressCustomTypeActionImpl(type, fields);

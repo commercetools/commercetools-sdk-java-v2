@@ -28,7 +28,7 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
 
     /**
      *  <p>User-defined identifier that is unique within the given container.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
 
     /**
      *  <p>Namespace to group Custom Objects.</p>
-     * @param container
+     * @param container value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
         return this.container;
     }
 
+    /**
+     * builds ContainerAndKey with checking for non-null required values
+     * @return ContainerAndKey
+     */
     public ContainerAndKey build() {
         Objects.requireNonNull(key, ContainerAndKey.class + ": key is missing");
         Objects.requireNonNull(container, ContainerAndKey.class + ": container is missing");
@@ -63,7 +67,8 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
     }
 
     /**
-     * builds ContainerAndKey without checking for non null required values
+     * builds ContainerAndKey without checking for non-null required values
+     * @return ContainerAndKey
      */
     public ContainerAndKey buildUnchecked() {
         return new ContainerAndKeyImpl(key, container);

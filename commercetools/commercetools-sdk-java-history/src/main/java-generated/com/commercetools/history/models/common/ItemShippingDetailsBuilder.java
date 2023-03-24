@@ -29,7 +29,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *
-     * @param targets
+     * @param targets value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *
-     * @param targets
+     * @param targets value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *
-     * @param targets
+     * @param targets value to be set
      * @return Builder
      */
 
@@ -68,6 +68,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *
+     * @param builder function to build the targets value
      * @return Builder
      */
 
@@ -82,6 +83,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *
+     * @param builder function to build the targets value
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
-     * @param valid
+     * @param valid value to be set
      * @return Builder
      */
 
@@ -111,6 +113,10 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
         return this.valid;
     }
 
+    /**
+     * builds ItemShippingDetails with checking for non-null required values
+     * @return ItemShippingDetails
+     */
     public ItemShippingDetails build() {
         Objects.requireNonNull(targets, ItemShippingDetails.class + ": targets is missing");
         Objects.requireNonNull(valid, ItemShippingDetails.class + ": valid is missing");
@@ -118,7 +124,8 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     * builds ItemShippingDetails without checking for non null required values
+     * builds ItemShippingDetails without checking for non-null required values
+     * @return ItemShippingDetails
      */
     public ItemShippingDetails buildUnchecked() {
         return new ItemShippingDetailsImpl(targets, valid);

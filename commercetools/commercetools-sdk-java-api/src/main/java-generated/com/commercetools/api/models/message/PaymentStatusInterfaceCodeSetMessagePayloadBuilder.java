@@ -31,7 +31,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
-     * @param paymentId
+     * @param paymentId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
 
     /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
-     * @param interfaceCode
+     * @param interfaceCode value to be set
      * @return Builder
      */
 
@@ -60,13 +60,18 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
         return this.interfaceCode;
     }
 
+    /**
+     * builds PaymentStatusInterfaceCodeSetMessagePayload with checking for non-null required values
+     * @return PaymentStatusInterfaceCodeSetMessagePayload
+     */
     public PaymentStatusInterfaceCodeSetMessagePayload build() {
         Objects.requireNonNull(paymentId, PaymentStatusInterfaceCodeSetMessagePayload.class + ": paymentId is missing");
         return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(paymentId, interfaceCode);
     }
 
     /**
-     * builds PaymentStatusInterfaceCodeSetMessagePayload without checking for non null required values
+     * builds PaymentStatusInterfaceCodeSetMessagePayload without checking for non-null required values
+     * @return PaymentStatusInterfaceCodeSetMessagePayload
      */
     public PaymentStatusInterfaceCodeSetMessagePayload buildUnchecked() {
         return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(paymentId, interfaceCode);

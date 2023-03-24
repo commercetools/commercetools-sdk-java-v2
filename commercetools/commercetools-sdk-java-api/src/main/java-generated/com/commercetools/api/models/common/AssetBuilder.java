@@ -46,7 +46,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Unique identifier of the Asset.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -79,7 +79,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param sources
+     * @param sources value to be set
      * @return Builder
      */
 
@@ -93,6 +93,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param builder function to build the sources value
      * @return Builder
      */
 
@@ -107,6 +108,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param builder function to build the sources value
      * @return Builder
      */
 
@@ -119,6 +121,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Name of the Asset.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -130,7 +133,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Name of the Asset.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -141,6 +144,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Description of the Asset.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -152,7 +156,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Description of the Asset.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -163,7 +167,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -174,7 +178,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -185,7 +189,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -199,6 +203,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Custom Fields defined for the Asset.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -210,7 +215,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Custom Fields defined for the Asset.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -221,7 +226,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>User-defined unique identifier of the Asset.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -262,6 +267,10 @@ public class AssetBuilder implements Builder<Asset> {
         return this.key;
     }
 
+    /**
+     * builds Asset with checking for non-null required values
+     * @return Asset
+     */
     public Asset build() {
         Objects.requireNonNull(id, Asset.class + ": id is missing");
         Objects.requireNonNull(sources, Asset.class + ": sources is missing");
@@ -270,7 +279,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * builds Asset without checking for non null required values
+     * builds Asset without checking for non-null required values
+     * @return Asset
      */
     public Asset buildUnchecked() {
         return new AssetImpl(id, sources, name, description, tags, custom, key);

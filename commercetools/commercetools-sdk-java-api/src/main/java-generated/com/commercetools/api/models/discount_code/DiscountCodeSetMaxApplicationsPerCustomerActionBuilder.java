@@ -28,7 +28,7 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param maxApplicationsPerCustomer
+     * @param maxApplicationsPerCustomer value to be set
      * @return Builder
      */
 
@@ -43,12 +43,17 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder
         return this.maxApplicationsPerCustomer;
     }
 
+    /**
+     * builds DiscountCodeSetMaxApplicationsPerCustomerAction with checking for non-null required values
+     * @return DiscountCodeSetMaxApplicationsPerCustomerAction
+     */
     public DiscountCodeSetMaxApplicationsPerCustomerAction build() {
         return new DiscountCodeSetMaxApplicationsPerCustomerActionImpl(maxApplicationsPerCustomer);
     }
 
     /**
-     * builds DiscountCodeSetMaxApplicationsPerCustomerAction without checking for non null required values
+     * builds DiscountCodeSetMaxApplicationsPerCustomerAction without checking for non-null required values
+     * @return DiscountCodeSetMaxApplicationsPerCustomerAction
      */
     public DiscountCodeSetMaxApplicationsPerCustomerAction buildUnchecked() {
         return new DiscountCodeSetMaxApplicationsPerCustomerActionImpl(maxApplicationsPerCustomer);

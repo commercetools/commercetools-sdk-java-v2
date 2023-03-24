@@ -32,7 +32,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
         return this.previousValue;
     }
 
+    /**
+     * builds SetShippingInfoTaxedPriceChange with checking for non-null required values
+     * @return SetShippingInfoTaxedPriceChange
+     */
     public SetShippingInfoTaxedPriceChange build() {
         Objects.requireNonNull(change, SetShippingInfoTaxedPriceChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetShippingInfoTaxedPriceChange.class + ": nextValue is missing");
@@ -107,7 +113,8 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
     }
 
     /**
-     * builds SetShippingInfoTaxedPriceChange without checking for non null required values
+     * builds SetShippingInfoTaxedPriceChange without checking for non-null required values
+     * @return SetShippingInfoTaxedPriceChange
      */
     public SetShippingInfoTaxedPriceChange buildUnchecked() {
         return new SetShippingInfoTaxedPriceChangeImpl(change, nextValue, previousValue);

@@ -26,7 +26,7 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
 
     /**
      *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
-     * @param countryTaxRateFallbackEnabled
+     * @param countryTaxRateFallbackEnabled value to be set
      * @return Builder
      */
 
@@ -40,6 +40,10 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
         return this.countryTaxRateFallbackEnabled;
     }
 
+    /**
+     * builds ProjectChangeCountryTaxRateFallbackEnabledAction with checking for non-null required values
+     * @return ProjectChangeCountryTaxRateFallbackEnabledAction
+     */
     public ProjectChangeCountryTaxRateFallbackEnabledAction build() {
         Objects.requireNonNull(countryTaxRateFallbackEnabled,
             ProjectChangeCountryTaxRateFallbackEnabledAction.class + ": countryTaxRateFallbackEnabled is missing");
@@ -47,7 +51,8 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
     }
 
     /**
-     * builds ProjectChangeCountryTaxRateFallbackEnabledAction without checking for non null required values
+     * builds ProjectChangeCountryTaxRateFallbackEnabledAction without checking for non-null required values
+     * @return ProjectChangeCountryTaxRateFallbackEnabledAction
      */
     public ProjectChangeCountryTaxRateFallbackEnabledAction buildUnchecked() {
         return new ProjectChangeCountryTaxRateFallbackEnabledActionImpl(countryTaxRateFallbackEnabled);

@@ -31,7 +31,7 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
 
     /**
      *  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeRequiresDiscountCodeChange with checking for non-null required values
+     * @return ChangeRequiresDiscountCodeChange
+     */
     public ChangeRequiresDiscountCodeChange build() {
         Objects.requireNonNull(change, ChangeRequiresDiscountCodeChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeRequiresDiscountCodeChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
     }
 
     /**
-     * builds ChangeRequiresDiscountCodeChange without checking for non null required values
+     * builds ChangeRequiresDiscountCodeChange without checking for non-null required values
+     * @return ChangeRequiresDiscountCodeChange
      */
     public ChangeRequiresDiscountCodeChange buildUnchecked() {
         return new ChangeRequiresDiscountCodeChangeImpl(change, previousValue, nextValue);

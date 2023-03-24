@@ -25,7 +25,7 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -38,6 +38,10 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
         return this.customLineItemId;
     }
 
+    /**
+     * builds StagedOrderRemoveCustomLineItemAction with checking for non-null required values
+     * @return StagedOrderRemoveCustomLineItemAction
+     */
     public StagedOrderRemoveCustomLineItemAction build() {
         Objects.requireNonNull(customLineItemId,
             StagedOrderRemoveCustomLineItemAction.class + ": customLineItemId is missing");
@@ -45,7 +49,8 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
     }
 
     /**
-     * builds StagedOrderRemoveCustomLineItemAction without checking for non null required values
+     * builds StagedOrderRemoveCustomLineItemAction without checking for non-null required values
+     * @return StagedOrderRemoveCustomLineItemAction
      */
     public StagedOrderRemoveCustomLineItemAction buildUnchecked() {
         return new StagedOrderRemoveCustomLineItemActionImpl(customLineItemId);

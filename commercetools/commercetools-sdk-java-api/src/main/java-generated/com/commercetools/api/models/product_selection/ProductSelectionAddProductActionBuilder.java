@@ -31,6 +31,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -43,7 +44,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
 
     /**
      *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
-     * @param variantSelection
+     * @param variantSelection value to be set
      * @return Builder
      */
 
@@ -67,6 +68,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
 
     /**
      *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     * @param builder function to build the variantSelection value
      * @return Builder
      */
 
@@ -87,13 +89,18 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
         return this.variantSelection;
     }
 
+    /**
+     * builds ProductSelectionAddProductAction with checking for non-null required values
+     * @return ProductSelectionAddProductAction
+     */
     public ProductSelectionAddProductAction build() {
         Objects.requireNonNull(product, ProductSelectionAddProductAction.class + ": product is missing");
         return new ProductSelectionAddProductActionImpl(product, variantSelection);
     }
 
     /**
-     * builds ProductSelectionAddProductAction without checking for non null required values
+     * builds ProductSelectionAddProductAction without checking for non-null required values
+     * @return ProductSelectionAddProductAction
      */
     public ProductSelectionAddProductAction buildUnchecked() {
         return new ProductSelectionAddProductActionImpl(product, variantSelection);

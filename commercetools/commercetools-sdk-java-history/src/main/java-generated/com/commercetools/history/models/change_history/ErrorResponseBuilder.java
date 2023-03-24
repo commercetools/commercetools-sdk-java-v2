@@ -40,7 +40,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
-     * @param statusCode
+     * @param statusCode value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
-     * @param error
+     * @param error value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
-     * @param error_description
+     * @param error_description value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -96,7 +96,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -108,7 +108,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -123,6 +123,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -137,6 +138,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -170,6 +172,10 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this.errors;
     }
 
+    /**
+     * builds ErrorResponse with checking for non-null required values
+     * @return ErrorResponse
+     */
     public ErrorResponse build() {
         Objects.requireNonNull(statusCode, ErrorResponse.class + ": statusCode is missing");
         Objects.requireNonNull(message, ErrorResponse.class + ": message is missing");
@@ -177,7 +183,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     * builds ErrorResponse without checking for non null required values
+     * builds ErrorResponse without checking for non-null required values
+     * @return ErrorResponse
      */
     public ErrorResponse buildUnchecked() {
         return new ErrorResponseImpl(statusCode, message, error, error_description, errors);

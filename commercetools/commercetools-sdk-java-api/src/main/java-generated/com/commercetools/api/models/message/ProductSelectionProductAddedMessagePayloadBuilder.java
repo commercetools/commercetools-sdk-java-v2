@@ -30,6 +30,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      *  <p>Product that was added to the Product Selection.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      *  <p>Product that was added to the Product Selection.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
-     * @param variantSelection
+     * @param variantSelection value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
+     * @param builder function to build the variantSelection value
      * @return Builder
      */
 
@@ -84,6 +86,10 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
         return this.variantSelection;
     }
 
+    /**
+     * builds ProductSelectionProductAddedMessagePayload with checking for non-null required values
+     * @return ProductSelectionProductAddedMessagePayload
+     */
     public ProductSelectionProductAddedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductAddedMessagePayload.class + ": product is missing");
         Objects.requireNonNull(variantSelection,
@@ -92,7 +98,8 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     }
 
     /**
-     * builds ProductSelectionProductAddedMessagePayload without checking for non null required values
+     * builds ProductSelectionProductAddedMessagePayload without checking for non-null required values
+     * @return ProductSelectionProductAddedMessagePayload
      */
     public ProductSelectionProductAddedMessagePayload buildUnchecked() {
         return new ProductSelectionProductAddedMessagePayloadImpl(product, variantSelection);

@@ -25,7 +25,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
 
     /**
      *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
-     * @param fieldNames
+     * @param fieldNames value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
 
     /**
      *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
-     * @param fieldNames
+     * @param fieldNames value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
 
     /**
      *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
-     * @param fieldNames
+     * @param fieldNames value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
         return this.fieldNames;
     }
 
+    /**
+     * builds TypeChangeFieldDefinitionOrderAction with checking for non-null required values
+     * @return TypeChangeFieldDefinitionOrderAction
+     */
     public TypeChangeFieldDefinitionOrderAction build() {
         Objects.requireNonNull(fieldNames, TypeChangeFieldDefinitionOrderAction.class + ": fieldNames is missing");
         return new TypeChangeFieldDefinitionOrderActionImpl(fieldNames);
     }
 
     /**
-     * builds TypeChangeFieldDefinitionOrderAction without checking for non null required values
+     * builds TypeChangeFieldDefinitionOrderAction without checking for non-null required values
+     * @return TypeChangeFieldDefinitionOrderAction
      */
     public TypeChangeFieldDefinitionOrderAction buildUnchecked() {
         return new TypeChangeFieldDefinitionOrderActionImpl(fieldNames);

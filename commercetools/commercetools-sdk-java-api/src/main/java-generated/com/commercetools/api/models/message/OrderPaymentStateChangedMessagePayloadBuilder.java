@@ -30,7 +30,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>PaymentState after the Change Payment State update action.</p>
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>PaymentState before the Change Payment State update action.</p>
-     * @param oldPaymentState
+     * @param oldPaymentState value to be set
      * @return Builder
      */
 
@@ -61,6 +61,10 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
         return this.oldPaymentState;
     }
 
+    /**
+     * builds OrderPaymentStateChangedMessagePayload with checking for non-null required values
+     * @return OrderPaymentStateChangedMessagePayload
+     */
     public OrderPaymentStateChangedMessagePayload build() {
         Objects.requireNonNull(paymentState,
             OrderPaymentStateChangedMessagePayload.class + ": paymentState is missing");
@@ -68,7 +72,8 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     * builds OrderPaymentStateChangedMessagePayload without checking for non null required values
+     * builds OrderPaymentStateChangedMessagePayload without checking for non-null required values
+     * @return OrderPaymentStateChangedMessagePayload
      */
     public OrderPaymentStateChangedMessagePayload buildUnchecked() {
         return new OrderPaymentStateChangedMessagePayloadImpl(paymentState, oldPaymentState);

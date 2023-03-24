@@ -27,7 +27,7 @@ public class PaymentSetAnonymousIdActionBuilder implements Builder<PaymentSetAno
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class PaymentSetAnonymousIdActionBuilder implements Builder<PaymentSetAno
         return this.anonymousId;
     }
 
+    /**
+     * builds PaymentSetAnonymousIdAction with checking for non-null required values
+     * @return PaymentSetAnonymousIdAction
+     */
     public PaymentSetAnonymousIdAction build() {
         return new PaymentSetAnonymousIdActionImpl(anonymousId);
     }
 
     /**
-     * builds PaymentSetAnonymousIdAction without checking for non null required values
+     * builds PaymentSetAnonymousIdAction without checking for non-null required values
+     * @return PaymentSetAnonymousIdAction
      */
     public PaymentSetAnonymousIdAction buildUnchecked() {
         return new PaymentSetAnonymousIdActionImpl(anonymousId);

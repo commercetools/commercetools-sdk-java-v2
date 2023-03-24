@@ -25,7 +25,7 @@ public class ProductTypeKeyReferenceBuilder implements Builder<ProductTypeKeyRef
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductTypeKeyReferenceBuilder implements Builder<ProductTypeKeyRef
         return this.key;
     }
 
+    /**
+     * builds ProductTypeKeyReference with checking for non-null required values
+     * @return ProductTypeKeyReference
+     */
     public ProductTypeKeyReference build() {
         Objects.requireNonNull(key, ProductTypeKeyReference.class + ": key is missing");
         return new ProductTypeKeyReferenceImpl(key);
     }
 
     /**
-     * builds ProductTypeKeyReference without checking for non null required values
+     * builds ProductTypeKeyReference without checking for non-null required values
+     * @return ProductTypeKeyReference
      */
     public ProductTypeKeyReference buildUnchecked() {
         return new ProductTypeKeyReferenceImpl(key);

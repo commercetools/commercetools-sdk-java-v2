@@ -30,7 +30,7 @@ public class QuoteRequestSetCustomFieldActionBuilder implements Builder<QuoteReq
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class QuoteRequestSetCustomFieldActionBuilder implements Builder<QuoteReq
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class QuoteRequestSetCustomFieldActionBuilder implements Builder<QuoteReq
         return this.value;
     }
 
+    /**
+     * builds QuoteRequestSetCustomFieldAction with checking for non-null required values
+     * @return QuoteRequestSetCustomFieldAction
+     */
     public QuoteRequestSetCustomFieldAction build() {
         Objects.requireNonNull(name, QuoteRequestSetCustomFieldAction.class + ": name is missing");
         return new QuoteRequestSetCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds QuoteRequestSetCustomFieldAction without checking for non null required values
+     * builds QuoteRequestSetCustomFieldAction without checking for non-null required values
+     * @return QuoteRequestSetCustomFieldAction
      */
     public QuoteRequestSetCustomFieldAction buildUnchecked() {
         return new QuoteRequestSetCustomFieldActionImpl(name, value);

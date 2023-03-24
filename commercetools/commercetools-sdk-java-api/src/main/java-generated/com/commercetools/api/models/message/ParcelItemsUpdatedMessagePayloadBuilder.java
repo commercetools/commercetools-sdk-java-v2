@@ -40,7 +40,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -74,7 +74,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -86,7 +86,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -101,6 +101,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -115,6 +116,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -127,7 +129,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
-     * @param oldItems
+     * @param oldItems value to be set
      * @return Builder
      */
 
@@ -139,7 +141,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
-     * @param oldItems
+     * @param oldItems value to be set
      * @return Builder
      */
 
@@ -151,7 +153,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
-     * @param oldItems
+     * @param oldItems value to be set
      * @return Builder
      */
 
@@ -166,6 +168,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param builder function to build the oldItems value
      * @return Builder
      */
 
@@ -180,6 +183,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param builder function to build the oldItems value
      * @return Builder
      */
 
@@ -192,7 +196,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -222,6 +226,10 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return this.shippingKey;
     }
 
+    /**
+     * builds ParcelItemsUpdatedMessagePayload with checking for non-null required values
+     * @return ParcelItemsUpdatedMessagePayload
+     */
     public ParcelItemsUpdatedMessagePayload build() {
         Objects.requireNonNull(parcelId, ParcelItemsUpdatedMessagePayload.class + ": parcelId is missing");
         Objects.requireNonNull(deliveryId, ParcelItemsUpdatedMessagePayload.class + ": deliveryId is missing");
@@ -231,7 +239,8 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     * builds ParcelItemsUpdatedMessagePayload without checking for non null required values
+     * builds ParcelItemsUpdatedMessagePayload without checking for non-null required values
+     * @return ParcelItemsUpdatedMessagePayload
      */
     public ParcelItemsUpdatedMessagePayload buildUnchecked() {
         return new ParcelItemsUpdatedMessagePayloadImpl(parcelId, deliveryId, items, oldItems, shippingKey);

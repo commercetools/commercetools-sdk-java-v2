@@ -26,6 +26,7 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
 
     /**
      *  <p>Value to append to <code>countries</code>.</p>
+     * @param builder function to build the country value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
 
     /**
      *  <p>Value to append to <code>countries</code>.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
         return this.country;
     }
 
+    /**
+     * builds StoreAddCountryAction with checking for non-null required values
+     * @return StoreAddCountryAction
+     */
     public StoreAddCountryAction build() {
         Objects.requireNonNull(country, StoreAddCountryAction.class + ": country is missing");
         return new StoreAddCountryActionImpl(country);
     }
 
     /**
-     * builds StoreAddCountryAction without checking for non null required values
+     * builds StoreAddCountryAction without checking for non-null required values
+     * @return StoreAddCountryAction
      */
     public StoreAddCountryAction buildUnchecked() {
         return new StoreAddCountryActionImpl(country);

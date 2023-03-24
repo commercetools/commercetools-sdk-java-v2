@@ -26,6 +26,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
         return this.value;
     }
 
+    /**
+     * builds LocalizedLabel with checking for non-null required values
+     * @return LocalizedLabel
+     */
     public LocalizedLabel build() {
         Objects.requireNonNull(value, LocalizedLabel.class + ": value is missing");
         return new LocalizedLabelImpl(value);
     }
 
     /**
-     * builds LocalizedLabel without checking for non null required values
+     * builds LocalizedLabel without checking for non-null required values
+     * @return LocalizedLabel
      */
     public LocalizedLabel buildUnchecked() {
         return new LocalizedLabelImpl(value);

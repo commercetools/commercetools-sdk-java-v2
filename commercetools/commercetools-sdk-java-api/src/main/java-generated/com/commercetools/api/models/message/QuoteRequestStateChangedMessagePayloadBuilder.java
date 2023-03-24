@@ -28,7 +28,7 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
 
     /**
      *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
-     * @param quoteRequestState
+     * @param quoteRequestState value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
 
     /**
      *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
-     * @param oldQuoteRequestState
+     * @param oldQuoteRequestState value to be set
      * @return Builder
      */
 
@@ -58,6 +58,10 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
         return this.oldQuoteRequestState;
     }
 
+    /**
+     * builds QuoteRequestStateChangedMessagePayload with checking for non-null required values
+     * @return QuoteRequestStateChangedMessagePayload
+     */
     public QuoteRequestStateChangedMessagePayload build() {
         Objects.requireNonNull(quoteRequestState,
             QuoteRequestStateChangedMessagePayload.class + ": quoteRequestState is missing");
@@ -67,7 +71,8 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
     }
 
     /**
-     * builds QuoteRequestStateChangedMessagePayload without checking for non null required values
+     * builds QuoteRequestStateChangedMessagePayload without checking for non-null required values
+     * @return QuoteRequestStateChangedMessagePayload
      */
     public QuoteRequestStateChangedMessagePayload buildUnchecked() {
         return new QuoteRequestStateChangedMessagePayloadImpl(quoteRequestState, oldQuoteRequestState);

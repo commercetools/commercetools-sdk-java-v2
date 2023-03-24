@@ -32,7 +32,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -74,6 +75,10 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
         return this.externalTaxRate;
     }
 
+    /**
+     * builds StagedOrderSetCustomLineItemTaxRateAction with checking for non-null required values
+     * @return StagedOrderSetCustomLineItemTaxRateAction
+     */
     public StagedOrderSetCustomLineItemTaxRateAction build() {
         Objects.requireNonNull(customLineItemId,
             StagedOrderSetCustomLineItemTaxRateAction.class + ": customLineItemId is missing");
@@ -81,7 +86,8 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     * builds StagedOrderSetCustomLineItemTaxRateAction without checking for non null required values
+     * builds StagedOrderSetCustomLineItemTaxRateAction without checking for non-null required values
+     * @return StagedOrderSetCustomLineItemTaxRateAction
      */
     public StagedOrderSetCustomLineItemTaxRateAction buildUnchecked() {
         return new StagedOrderSetCustomLineItemTaxRateActionImpl(customLineItemId, externalTaxRate);

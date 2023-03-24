@@ -26,6 +26,7 @@ public class MyBusinessUnitRemoveAssociateActionBuilder implements Builder<MyBus
 
     /**
      *  <p>Associate to remove.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class MyBusinessUnitRemoveAssociateActionBuilder implements Builder<MyBus
 
     /**
      *  <p>Associate to remove.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class MyBusinessUnitRemoveAssociateActionBuilder implements Builder<MyBus
         return this.customer;
     }
 
+    /**
+     * builds MyBusinessUnitRemoveAssociateAction with checking for non-null required values
+     * @return MyBusinessUnitRemoveAssociateAction
+     */
     public MyBusinessUnitRemoveAssociateAction build() {
         Objects.requireNonNull(customer, MyBusinessUnitRemoveAssociateAction.class + ": customer is missing");
         return new MyBusinessUnitRemoveAssociateActionImpl(customer);
     }
 
     /**
-     * builds MyBusinessUnitRemoveAssociateAction without checking for non null required values
+     * builds MyBusinessUnitRemoveAssociateAction without checking for non-null required values
+     * @return MyBusinessUnitRemoveAssociateAction
      */
     public MyBusinessUnitRemoveAssociateAction buildUnchecked() {
         return new MyBusinessUnitRemoveAssociateActionImpl(customer);

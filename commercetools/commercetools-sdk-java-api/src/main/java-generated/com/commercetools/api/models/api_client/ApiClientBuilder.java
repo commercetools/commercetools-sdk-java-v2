@@ -51,7 +51,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Name of the APIClient.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
-     * @param scope
+     * @param scope value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
-     * @param secret
+     * @param secret value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
-     * @param lastUsedAt
+     * @param lastUsedAt value to be set
      * @return Builder
      */
 
@@ -106,7 +106,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
-     * @param deleteAt
+     * @param deleteAt value to be set
      * @return Builder
      */
 
@@ -117,7 +117,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Date and time (UTC) the APIClient was initially created at.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -128,7 +128,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
-     * @param accessTokenValiditySeconds
+     * @param accessTokenValiditySeconds value to be set
      * @return Builder
      */
 
@@ -139,7 +139,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
-     * @param refreshTokenValiditySeconds
+     * @param refreshTokenValiditySeconds value to be set
      * @return Builder
      */
 
@@ -190,6 +190,10 @@ public class ApiClientBuilder implements Builder<ApiClient> {
         return this.refreshTokenValiditySeconds;
     }
 
+    /**
+     * builds ApiClient with checking for non-null required values
+     * @return ApiClient
+     */
     public ApiClient build() {
         Objects.requireNonNull(id, ApiClient.class + ": id is missing");
         Objects.requireNonNull(name, ApiClient.class + ": name is missing");
@@ -199,7 +203,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     * builds ApiClient without checking for non null required values
+     * builds ApiClient without checking for non-null required values
+     * @return ApiClient
      */
     public ApiClient buildUnchecked() {
         return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt, accessTokenValiditySeconds,

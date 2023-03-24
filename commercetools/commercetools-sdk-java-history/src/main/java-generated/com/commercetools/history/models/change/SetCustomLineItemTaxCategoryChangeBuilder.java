@@ -38,7 +38,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @param builder function to build the customLineItem value
      * @return Builder
      */
 
@@ -61,7 +62,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
-     * @param customLineItem
+     * @param customLineItem value to be set
      * @return Builder
      */
 
@@ -73,7 +74,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -84,6 +85,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -95,7 +97,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -107,6 +109,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -118,7 +121,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -148,6 +151,10 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
         return this.previousValue;
     }
 
+    /**
+     * builds SetCustomLineItemTaxCategoryChange with checking for non-null required values
+     * @return SetCustomLineItemTaxCategoryChange
+     */
     public SetCustomLineItemTaxCategoryChange build() {
         Objects.requireNonNull(change, SetCustomLineItemTaxCategoryChange.class + ": change is missing");
         Objects.requireNonNull(customLineItem,
@@ -161,7 +168,8 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     * builds SetCustomLineItemTaxCategoryChange without checking for non null required values
+     * builds SetCustomLineItemTaxCategoryChange without checking for non-null required values
+     * @return SetCustomLineItemTaxCategoryChange
      */
     public SetCustomLineItemTaxCategoryChange buildUnchecked() {
         return new SetCustomLineItemTaxCategoryChangeImpl(change, customLineItem, customLineItemId, nextValue,

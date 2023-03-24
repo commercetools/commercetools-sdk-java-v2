@@ -34,7 +34,7 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
-     * @param url
+     * @param url value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
+     * @param builder function to build the dimensions value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
-     * @param dimensions
+     * @param dimensions value to be set
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Custom label that can be used, for example, as an image description.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -89,6 +90,10 @@ public class ImageBuilder implements Builder<Image> {
         return this.label;
     }
 
+    /**
+     * builds Image with checking for non-null required values
+     * @return Image
+     */
     public Image build() {
         Objects.requireNonNull(url, Image.class + ": url is missing");
         Objects.requireNonNull(dimensions, Image.class + ": dimensions is missing");
@@ -96,7 +101,8 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     * builds Image without checking for non null required values
+     * builds Image without checking for non-null required values
+     * @return Image
      */
     public Image buildUnchecked() {
         return new ImageImpl(url, dimensions, label);

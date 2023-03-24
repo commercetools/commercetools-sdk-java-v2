@@ -27,7 +27,7 @@ public class CartDiscountSetValidUntilActionBuilder implements Builder<CartDisco
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CartDiscountSetValidUntilActionBuilder implements Builder<CartDisco
         return this.validUntil;
     }
 
+    /**
+     * builds CartDiscountSetValidUntilAction with checking for non-null required values
+     * @return CartDiscountSetValidUntilAction
+     */
     public CartDiscountSetValidUntilAction build() {
         return new CartDiscountSetValidUntilActionImpl(validUntil);
     }
 
     /**
-     * builds CartDiscountSetValidUntilAction without checking for non null required values
+     * builds CartDiscountSetValidUntilAction without checking for non-null required values
+     * @return CartDiscountSetValidUntilAction
      */
     public CartDiscountSetValidUntilAction buildUnchecked() {
         return new CartDiscountSetValidUntilActionImpl(validUntil);

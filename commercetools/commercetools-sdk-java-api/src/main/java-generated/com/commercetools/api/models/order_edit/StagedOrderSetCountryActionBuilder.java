@@ -27,7 +27,7 @@ public class StagedOrderSetCountryActionBuilder implements Builder<StagedOrderSe
 
     /**
      *
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class StagedOrderSetCountryActionBuilder implements Builder<StagedOrderSe
         return this.country;
     }
 
+    /**
+     * builds StagedOrderSetCountryAction with checking for non-null required values
+     * @return StagedOrderSetCountryAction
+     */
     public StagedOrderSetCountryAction build() {
         return new StagedOrderSetCountryActionImpl(country);
     }
 
     /**
-     * builds StagedOrderSetCountryAction without checking for non null required values
+     * builds StagedOrderSetCountryAction without checking for non-null required values
+     * @return StagedOrderSetCountryAction
      */
     public StagedOrderSetCountryAction buildUnchecked() {
         return new StagedOrderSetCountryActionImpl(country);

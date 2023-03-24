@@ -28,7 +28,7 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
 
     /**
      *
-     * @param line
+     * @param line value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
 
     /**
      *
-     * @param column
+     * @param column value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
         return this.column;
     }
 
+    /**
+     * builds GraphQLErrorLocation with checking for non-null required values
+     * @return GraphQLErrorLocation
+     */
     public GraphQLErrorLocation build() {
         Objects.requireNonNull(line, GraphQLErrorLocation.class + ": line is missing");
         Objects.requireNonNull(column, GraphQLErrorLocation.class + ": column is missing");
@@ -63,7 +67,8 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
     }
 
     /**
-     * builds GraphQLErrorLocation without checking for non null required values
+     * builds GraphQLErrorLocation without checking for non-null required values
+     * @return GraphQLErrorLocation
      */
     public GraphQLErrorLocation buildUnchecked() {
         return new GraphQLErrorLocationImpl(line, column);

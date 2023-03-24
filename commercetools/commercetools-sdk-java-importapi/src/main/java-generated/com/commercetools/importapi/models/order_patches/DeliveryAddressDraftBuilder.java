@@ -31,7 +31,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
 
     /**
      *
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
 
     /**
      *
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
         return this.address;
     }
 
+    /**
+     * builds DeliveryAddressDraft with checking for non-null required values
+     * @return DeliveryAddressDraft
+     */
     public DeliveryAddressDraft build() {
         Objects.requireNonNull(deliveryId, DeliveryAddressDraft.class + ": deliveryId is missing");
         return new DeliveryAddressDraftImpl(deliveryId, address);
     }
 
     /**
-     * builds DeliveryAddressDraft without checking for non null required values
+     * builds DeliveryAddressDraft without checking for non-null required values
+     * @return DeliveryAddressDraft
      */
     public DeliveryAddressDraft buildUnchecked() {
         return new DeliveryAddressDraftImpl(deliveryId, address);

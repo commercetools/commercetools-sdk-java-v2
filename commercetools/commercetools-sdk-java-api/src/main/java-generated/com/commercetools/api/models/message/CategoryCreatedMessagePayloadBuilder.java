@@ -26,6 +26,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
 
     /**
      *  <p>Category that was created.</p>
+     * @param builder function to build the category value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
 
     /**
      *  <p>Category that was created.</p>
-     * @param category
+     * @param category value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
         return this.category;
     }
 
+    /**
+     * builds CategoryCreatedMessagePayload with checking for non-null required values
+     * @return CategoryCreatedMessagePayload
+     */
     public CategoryCreatedMessagePayload build() {
         Objects.requireNonNull(category, CategoryCreatedMessagePayload.class + ": category is missing");
         return new CategoryCreatedMessagePayloadImpl(category);
     }
 
     /**
-     * builds CategoryCreatedMessagePayload without checking for non null required values
+     * builds CategoryCreatedMessagePayload without checking for non-null required values
+     * @return CategoryCreatedMessagePayload
      */
     public CategoryCreatedMessagePayload buildUnchecked() {
         return new CategoryCreatedMessagePayloadImpl(category);

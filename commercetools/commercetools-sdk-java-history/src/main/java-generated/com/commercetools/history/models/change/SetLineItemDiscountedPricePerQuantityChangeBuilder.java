@@ -39,7 +39,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
 
     /**
      *  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -50,6 +50,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -61,7 +62,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -73,7 +74,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -84,6 +85,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -97,7 +99,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -109,6 +111,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -122,7 +125,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -152,6 +155,10 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
         return this.previousValue;
     }
 
+    /**
+     * builds SetLineItemDiscountedPricePerQuantityChange with checking for non-null required values
+     * @return SetLineItemDiscountedPricePerQuantityChange
+     */
     public SetLineItemDiscountedPricePerQuantityChange build() {
         Objects.requireNonNull(change, SetLineItemDiscountedPricePerQuantityChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, SetLineItemDiscountedPricePerQuantityChange.class + ": lineItem is missing");
@@ -163,7 +170,8 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     /**
-     * builds SetLineItemDiscountedPricePerQuantityChange without checking for non null required values
+     * builds SetLineItemDiscountedPricePerQuantityChange without checking for non-null required values
+     * @return SetLineItemDiscountedPricePerQuantityChange
      */
     public SetLineItemDiscountedPricePerQuantityChange buildUnchecked() {
         return new SetLineItemDiscountedPricePerQuantityChangeImpl(change, lineItem, variant, nextValue, previousValue);

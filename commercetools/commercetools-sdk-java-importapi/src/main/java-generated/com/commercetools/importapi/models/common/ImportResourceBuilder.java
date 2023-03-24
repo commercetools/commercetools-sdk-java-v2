@@ -25,7 +25,7 @@ public class ImportResourceBuilder implements Builder<ImportResource> {
 
     /**
      *  <p>User-defined unique identifier.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ImportResourceBuilder implements Builder<ImportResource> {
         return this.key;
     }
 
+    /**
+     * builds ImportResource with checking for non-null required values
+     * @return ImportResource
+     */
     public ImportResource build() {
         Objects.requireNonNull(key, ImportResource.class + ": key is missing");
         return new ImportResourceImpl(key);
     }
 
     /**
-     * builds ImportResource without checking for non null required values
+     * builds ImportResource without checking for non-null required values
+     * @return ImportResource
      */
     public ImportResource buildUnchecked() {
         return new ImportResourceImpl(key);

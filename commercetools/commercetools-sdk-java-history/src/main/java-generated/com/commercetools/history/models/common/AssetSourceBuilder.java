@@ -35,7 +35,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
-     * @param uri
+     * @param uri value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
+     * @param builder function to build the dimensions value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
-     * @param dimensions
+     * @param dimensions value to be set
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
-     * @param contentType
+     * @param contentType value to be set
      * @return Builder
      */
 
@@ -104,6 +105,10 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         return this.contentType;
     }
 
+    /**
+     * builds AssetSource with checking for non-null required values
+     * @return AssetSource
+     */
     public AssetSource build() {
         Objects.requireNonNull(uri, AssetSource.class + ": uri is missing");
         Objects.requireNonNull(key, AssetSource.class + ": key is missing");
@@ -113,7 +118,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     * builds AssetSource without checking for non null required values
+     * builds AssetSource without checking for non-null required values
+     * @return AssetSource
      */
     public AssetSource buildUnchecked() {
         return new AssetSourceImpl(uri, key, dimensions, contentType);

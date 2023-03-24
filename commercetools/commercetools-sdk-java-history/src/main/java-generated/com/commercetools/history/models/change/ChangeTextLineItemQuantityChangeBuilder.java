@@ -35,7 +35,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
 
     /**
      *
+     * @param builder function to build the textLineItem value
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
 
     /**
      *
-     * @param textLineItem
+     * @param textLineItem value to be set
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +82,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -106,6 +107,10 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeTextLineItemQuantityChange with checking for non-null required values
+     * @return ChangeTextLineItemQuantityChange
+     */
     public ChangeTextLineItemQuantityChange build() {
         Objects.requireNonNull(change, ChangeTextLineItemQuantityChange.class + ": change is missing");
         Objects.requireNonNull(textLineItem, ChangeTextLineItemQuantityChange.class + ": textLineItem is missing");
@@ -115,7 +120,8 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     * builds ChangeTextLineItemQuantityChange without checking for non null required values
+     * builds ChangeTextLineItemQuantityChange without checking for non-null required values
+     * @return ChangeTextLineItemQuantityChange
      */
     public ChangeTextLineItemQuantityChange buildUnchecked() {
         return new ChangeTextLineItemQuantityChangeImpl(change, textLineItem, previousValue, nextValue);

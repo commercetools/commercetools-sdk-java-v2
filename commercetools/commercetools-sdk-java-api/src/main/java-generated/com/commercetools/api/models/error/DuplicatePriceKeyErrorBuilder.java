@@ -31,7 +31,7 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
 
     /**
      *  <p><code>"Duplicate price key: $priceKey. The price key must be unique per variant."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -42,6 +42,8 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public DuplicatePriceKeyErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -51,6 +53,9 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public DuplicatePriceKeyErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -63,6 +68,7 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
 
     /**
      *  <p>Conflicting Embedded Price.</p>
+     * @param builder function to build the conflictingPrice value
      * @return Builder
      */
 
@@ -74,7 +80,7 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
 
     /**
      *  <p>Conflicting Embedded Price.</p>
-     * @param conflictingPrice
+     * @param conflictingPrice value to be set
      * @return Builder
      */
 
@@ -96,6 +102,10 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
         return this.conflictingPrice;
     }
 
+    /**
+     * builds DuplicatePriceKeyError with checking for non-null required values
+     * @return DuplicatePriceKeyError
+     */
     public DuplicatePriceKeyError build() {
         Objects.requireNonNull(message, DuplicatePriceKeyError.class + ": message is missing");
         Objects.requireNonNull(conflictingPrice, DuplicatePriceKeyError.class + ": conflictingPrice is missing");
@@ -103,7 +113,8 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
     }
 
     /**
-     * builds DuplicatePriceKeyError without checking for non null required values
+     * builds DuplicatePriceKeyError without checking for non-null required values
+     * @return DuplicatePriceKeyError
      */
     public DuplicatePriceKeyError buildUnchecked() {
         return new DuplicatePriceKeyErrorImpl(message, values, conflictingPrice);

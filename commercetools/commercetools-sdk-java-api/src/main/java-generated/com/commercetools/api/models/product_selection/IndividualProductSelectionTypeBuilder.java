@@ -26,6 +26,7 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
 
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
 
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
         return this.name;
     }
 
+    /**
+     * builds IndividualProductSelectionType with checking for non-null required values
+     * @return IndividualProductSelectionType
+     */
     public IndividualProductSelectionType build() {
         Objects.requireNonNull(name, IndividualProductSelectionType.class + ": name is missing");
         return new IndividualProductSelectionTypeImpl(name);
     }
 
     /**
-     * builds IndividualProductSelectionType without checking for non null required values
+     * builds IndividualProductSelectionType without checking for non-null required values
+     * @return IndividualProductSelectionType
      */
     public IndividualProductSelectionType buildUnchecked() {
         return new IndividualProductSelectionTypeImpl(name);

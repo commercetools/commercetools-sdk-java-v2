@@ -32,7 +32,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -68,6 +68,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -82,6 +83,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
-     * @param returnTrackingId
+     * @param returnTrackingId value to be set
      * @return Builder
      */
 
@@ -105,7 +107,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     /**
      *
-     * @param returnDate
+     * @param returnDate value to be set
      * @return Builder
      */
 
@@ -126,6 +128,10 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this.returnDate;
     }
 
+    /**
+     * builds ReturnInfo with checking for non-null required values
+     * @return ReturnInfo
+     */
     public ReturnInfo build() {
         Objects.requireNonNull(items, ReturnInfo.class + ": items is missing");
         Objects.requireNonNull(returnTrackingId, ReturnInfo.class + ": returnTrackingId is missing");
@@ -134,7 +140,8 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * builds ReturnInfo without checking for non null required values
+     * builds ReturnInfo without checking for non-null required values
+     * @return ReturnInfo
      */
     public ReturnInfo buildUnchecked() {
         return new ReturnInfoImpl(items, returnTrackingId, returnDate);

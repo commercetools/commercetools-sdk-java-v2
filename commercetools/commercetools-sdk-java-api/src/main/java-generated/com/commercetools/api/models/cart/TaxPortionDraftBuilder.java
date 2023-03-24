@@ -34,7 +34,7 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
 
     /**
      *  <p>Name of the tax portion.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
 
     /**
      *  <p>A number in the range 0-1.</p>
-     * @param rate
+     * @param rate value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
 
     /**
      *  <p>Money value for the tax portion.</p>
+     * @param builder function to build the amount value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
 
     /**
      *  <p>Money value for the tax portion.</p>
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -89,6 +90,10 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
         return this.amount;
     }
 
+    /**
+     * builds TaxPortionDraft with checking for non-null required values
+     * @return TaxPortionDraft
+     */
     public TaxPortionDraft build() {
         Objects.requireNonNull(rate, TaxPortionDraft.class + ": rate is missing");
         Objects.requireNonNull(amount, TaxPortionDraft.class + ": amount is missing");
@@ -96,7 +101,8 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
     }
 
     /**
-     * builds TaxPortionDraft without checking for non null required values
+     * builds TaxPortionDraft without checking for non-null required values
+     * @return TaxPortionDraft
      */
     public TaxPortionDraft buildUnchecked() {
         return new TaxPortionDraftImpl(name, rate, amount);

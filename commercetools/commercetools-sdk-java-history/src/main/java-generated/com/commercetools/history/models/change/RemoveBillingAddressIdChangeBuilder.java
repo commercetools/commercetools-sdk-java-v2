@@ -35,7 +35,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -104,7 +104,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -118,6 +118,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -129,7 +130,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -154,6 +155,10 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
         return this.address;
     }
 
+    /**
+     * builds RemoveBillingAddressIdChange with checking for non-null required values
+     * @return RemoveBillingAddressIdChange
+     */
     public RemoveBillingAddressIdChange build() {
         Objects.requireNonNull(change, RemoveBillingAddressIdChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, RemoveBillingAddressIdChange.class + ": nextValue is missing");
@@ -163,7 +168,8 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     * builds RemoveBillingAddressIdChange without checking for non null required values
+     * builds RemoveBillingAddressIdChange without checking for non-null required values
+     * @return RemoveBillingAddressIdChange
      */
     public RemoveBillingAddressIdChange buildUnchecked() {
         return new RemoveBillingAddressIdChangeImpl(change, nextValue, previousValue, address);

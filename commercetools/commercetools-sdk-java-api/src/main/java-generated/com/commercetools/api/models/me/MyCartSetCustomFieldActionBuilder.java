@@ -30,7 +30,7 @@ public class MyCartSetCustomFieldActionBuilder implements Builder<MyCartSetCusto
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class MyCartSetCustomFieldActionBuilder implements Builder<MyCartSetCusto
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class MyCartSetCustomFieldActionBuilder implements Builder<MyCartSetCusto
         return this.value;
     }
 
+    /**
+     * builds MyCartSetCustomFieldAction with checking for non-null required values
+     * @return MyCartSetCustomFieldAction
+     */
     public MyCartSetCustomFieldAction build() {
         Objects.requireNonNull(name, MyCartSetCustomFieldAction.class + ": name is missing");
         return new MyCartSetCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds MyCartSetCustomFieldAction without checking for non null required values
+     * builds MyCartSetCustomFieldAction without checking for non-null required values
+     * @return MyCartSetCustomFieldAction
      */
     public MyCartSetCustomFieldAction buildUnchecked() {
         return new MyCartSetCustomFieldActionImpl(name, value);

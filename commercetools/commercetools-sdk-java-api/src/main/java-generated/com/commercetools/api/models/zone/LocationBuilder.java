@@ -30,7 +30,7 @@ public class LocationBuilder implements Builder<Location> {
 
     /**
      *  <p>Country code of the geographic location.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class LocationBuilder implements Builder<Location> {
 
     /**
      *  <p>State within the country.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class LocationBuilder implements Builder<Location> {
         return this.state;
     }
 
+    /**
+     * builds Location with checking for non-null required values
+     * @return Location
+     */
     public Location build() {
         Objects.requireNonNull(country, Location.class + ": country is missing");
         return new LocationImpl(country, state);
     }
 
     /**
-     * builds Location without checking for non null required values
+     * builds Location without checking for non-null required values
+     * @return Location
      */
     public Location buildUnchecked() {
         return new LocationImpl(country, state);

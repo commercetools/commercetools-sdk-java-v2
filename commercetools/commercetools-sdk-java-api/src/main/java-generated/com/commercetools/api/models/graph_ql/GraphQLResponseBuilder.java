@@ -31,7 +31,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
 
     /**
      *
-     * @param data
+     * @param data value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
 
     /**
      *
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
 
     /**
      *
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
 
     /**
      *
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -80,6 +80,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
 
     /**
      *
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
 
     /**
      *
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -114,12 +116,17 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
         return this.errors;
     }
 
+    /**
+     * builds GraphQLResponse with checking for non-null required values
+     * @return GraphQLResponse
+     */
     public GraphQLResponse build() {
         return new GraphQLResponseImpl(data, errors);
     }
 
     /**
-     * builds GraphQLResponse without checking for non null required values
+     * builds GraphQLResponse without checking for non-null required values
+     * @return GraphQLResponse
      */
     public GraphQLResponse buildUnchecked() {
         return new GraphQLResponseImpl(data, errors);

@@ -27,7 +27,7 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
 
     /**
      *  <p><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public NoMatchingProductDiscountFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public NoMatchingProductDiscountFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
         return this.values;
     }
 
+    /**
+     * builds NoMatchingProductDiscountFoundError with checking for non-null required values
+     * @return NoMatchingProductDiscountFoundError
+     */
     public NoMatchingProductDiscountFoundError build() {
         Objects.requireNonNull(message, NoMatchingProductDiscountFoundError.class + ": message is missing");
         return new NoMatchingProductDiscountFoundErrorImpl(message, values);
     }
 
     /**
-     * builds NoMatchingProductDiscountFoundError without checking for non null required values
+     * builds NoMatchingProductDiscountFoundError without checking for non-null required values
+     * @return NoMatchingProductDiscountFoundError
      */
     public NoMatchingProductDiscountFoundError buildUnchecked() {
         return new NoMatchingProductDiscountFoundErrorImpl(message, values);

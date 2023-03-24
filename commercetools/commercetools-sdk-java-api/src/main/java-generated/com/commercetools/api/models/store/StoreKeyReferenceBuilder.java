@@ -25,7 +25,7 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
 
     /**
      *  <p>Unique and immutable key of the referenced Store.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
         return this.key;
     }
 
+    /**
+     * builds StoreKeyReference with checking for non-null required values
+     * @return StoreKeyReference
+     */
     public StoreKeyReference build() {
         Objects.requireNonNull(key, StoreKeyReference.class + ": key is missing");
         return new StoreKeyReferenceImpl(key);
     }
 
     /**
-     * builds StoreKeyReference without checking for non null required values
+     * builds StoreKeyReference without checking for non-null required values
+     * @return StoreKeyReference
      */
     public StoreKeyReference buildUnchecked() {
         return new StoreKeyReferenceImpl(key);

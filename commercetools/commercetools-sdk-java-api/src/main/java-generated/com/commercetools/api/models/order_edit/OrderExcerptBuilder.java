@@ -34,7 +34,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -56,6 +57,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -67,7 +69,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -78,7 +80,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     /**
      *
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -100,6 +102,10 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
         return this.version;
     }
 
+    /**
+     * builds OrderExcerpt with checking for non-null required values
+     * @return OrderExcerpt
+     */
     public OrderExcerpt build() {
         Objects.requireNonNull(totalPrice, OrderExcerpt.class + ": totalPrice is missing");
         Objects.requireNonNull(version, OrderExcerpt.class + ": version is missing");
@@ -107,7 +113,8 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     * builds OrderExcerpt without checking for non null required values
+     * builds OrderExcerpt without checking for non-null required values
+     * @return OrderExcerpt
      */
     public OrderExcerpt buildUnchecked() {
         return new OrderExcerptImpl(totalPrice, taxedPrice, version);

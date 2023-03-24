@@ -70,6 +70,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -94,7 +95,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Anonymous session associated with the Payment.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -105,7 +106,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -116,7 +117,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
-     * @param interfaceId
+     * @param interfaceId value to be set
      * @return Builder
      */
 
@@ -127,6 +128,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param builder function to build the amountPlanned value
      * @return Builder
      */
 
@@ -138,7 +140,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
-     * @param amountPlanned
+     * @param amountPlanned value to be set
      * @return Builder
      */
 
@@ -149,6 +151,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param builder function to build the amountAuthorized value
      * @return Builder
      */
 
@@ -160,7 +163,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountAuthorized
+     * @param amountAuthorized value to be set
      * @return Builder
      */
 
@@ -172,7 +175,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
-     * @param authorizedUntil
+     * @param authorizedUntil value to be set
      * @return Builder
      */
 
@@ -183,6 +186,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param builder function to build the amountPaid value
      * @return Builder
      */
 
@@ -194,7 +198,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountPaid
+     * @param amountPaid value to be set
      * @return Builder
      */
 
@@ -205,6 +209,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param builder function to build the amountRefunded value
      * @return Builder
      */
 
@@ -216,7 +221,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountRefunded
+     * @param amountRefunded value to be set
      * @return Builder
      */
 
@@ -228,6 +233,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param builder function to build the paymentMethodInfo value
      * @return Builder
      */
 
@@ -240,7 +246,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
-     * @param paymentMethodInfo
+     * @param paymentMethodInfo value to be set
      * @return Builder
      */
 
@@ -252,6 +258,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Current status of the Payment.</p>
+     * @param builder function to build the paymentStatus value
      * @return Builder
      */
 
@@ -263,7 +270,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Current status of the Payment.</p>
-     * @param paymentStatus
+     * @param paymentStatus value to be set
      * @return Builder
      */
 
@@ -275,7 +282,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
-     * @param transactions
+     * @param transactions value to be set
      * @return Builder
      */
 
@@ -287,7 +294,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
-     * @param transactions
+     * @param transactions value to be set
      * @return Builder
      */
 
@@ -299,7 +306,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
-     * @param transactions
+     * @param transactions value to be set
      * @return Builder
      */
 
@@ -314,6 +321,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
      * @return Builder
      */
 
@@ -328,6 +336,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
      * @return Builder
      */
 
@@ -340,7 +349,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
-     * @param interfaceInteractions
+     * @param interfaceInteractions value to be set
      * @return Builder
      */
 
@@ -352,7 +361,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
-     * @param interfaceInteractions
+     * @param interfaceInteractions value to be set
      * @return Builder
      */
 
@@ -364,7 +373,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
-     * @param interfaceInteractions
+     * @param interfaceInteractions value to be set
      * @return Builder
      */
 
@@ -379,6 +388,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param builder function to build the interfaceInteractions value
      * @return Builder
      */
 
@@ -394,6 +404,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param builder function to build the interfaceInteractions value
      * @return Builder
      */
 
@@ -407,6 +418,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -418,7 +430,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -429,7 +441,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Payment.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -512,6 +524,10 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this.key;
     }
 
+    /**
+     * builds PaymentDraft with checking for non-null required values
+     * @return PaymentDraft
+     */
     public PaymentDraft build() {
         Objects.requireNonNull(amountPlanned, PaymentDraft.class + ": amountPlanned is missing");
         return new PaymentDraftImpl(customer, anonymousId, externalId, interfaceId, amountPlanned, amountAuthorized,
@@ -520,7 +536,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     * builds PaymentDraft without checking for non null required values
+     * builds PaymentDraft without checking for non-null required values
+     * @return PaymentDraft
      */
     public PaymentDraft buildUnchecked() {
         return new PaymentDraftImpl(customer, anonymousId, externalId, interfaceId, amountPlanned, amountAuthorized,

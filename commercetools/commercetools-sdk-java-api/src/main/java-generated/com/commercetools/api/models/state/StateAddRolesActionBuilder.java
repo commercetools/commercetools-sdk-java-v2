@@ -25,7 +25,7 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -64,13 +64,18 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
         return this.roles;
     }
 
+    /**
+     * builds StateAddRolesAction with checking for non-null required values
+     * @return StateAddRolesAction
+     */
     public StateAddRolesAction build() {
         Objects.requireNonNull(roles, StateAddRolesAction.class + ": roles is missing");
         return new StateAddRolesActionImpl(roles);
     }
 
     /**
-     * builds StateAddRolesAction without checking for non null required values
+     * builds StateAddRolesAction without checking for non-null required values
+     * @return StateAddRolesAction
      */
     public StateAddRolesAction buildUnchecked() {
         return new StateAddRolesActionImpl(roles);

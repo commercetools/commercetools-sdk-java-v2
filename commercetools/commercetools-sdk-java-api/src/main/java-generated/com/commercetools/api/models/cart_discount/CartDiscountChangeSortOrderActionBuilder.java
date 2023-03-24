@@ -25,7 +25,7 @@ public class CartDiscountChangeSortOrderActionBuilder implements Builder<CartDis
 
     /**
      *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
-     * @param sortOrder
+     * @param sortOrder value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CartDiscountChangeSortOrderActionBuilder implements Builder<CartDis
         return this.sortOrder;
     }
 
+    /**
+     * builds CartDiscountChangeSortOrderAction with checking for non-null required values
+     * @return CartDiscountChangeSortOrderAction
+     */
     public CartDiscountChangeSortOrderAction build() {
         Objects.requireNonNull(sortOrder, CartDiscountChangeSortOrderAction.class + ": sortOrder is missing");
         return new CartDiscountChangeSortOrderActionImpl(sortOrder);
     }
 
     /**
-     * builds CartDiscountChangeSortOrderAction without checking for non null required values
+     * builds CartDiscountChangeSortOrderAction without checking for non-null required values
+     * @return CartDiscountChangeSortOrderAction
      */
     public CartDiscountChangeSortOrderAction buildUnchecked() {
         return new CartDiscountChangeSortOrderActionImpl(sortOrder);

@@ -28,7 +28,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
 
     /**
      *
-     * @param w
+     * @param w value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
 
     /**
      *
-     * @param h
+     * @param h value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
         return this.h;
     }
 
+    /**
+     * builds AssetDimensions with checking for non-null required values
+     * @return AssetDimensions
+     */
     public AssetDimensions build() {
         Objects.requireNonNull(w, AssetDimensions.class + ": w is missing");
         Objects.requireNonNull(h, AssetDimensions.class + ": h is missing");
@@ -63,7 +67,8 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     }
 
     /**
-     * builds AssetDimensions without checking for non null required values
+     * builds AssetDimensions without checking for non-null required values
+     * @return AssetDimensions
      */
     public AssetDimensions buildUnchecked() {
         return new AssetDimensionsImpl(w, h);

@@ -28,6 +28,7 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
 
     /**
      *  <p>Value to set.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -53,12 +54,17 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
         return this.name;
     }
 
+    /**
+     * builds StoreSetNameAction with checking for non-null required values
+     * @return StoreSetNameAction
+     */
     public StoreSetNameAction build() {
         return new StoreSetNameActionImpl(name);
     }
 
     /**
-     * builds StoreSetNameAction without checking for non null required values
+     * builds StoreSetNameAction without checking for non-null required values
+     * @return StoreSetNameAction
      */
     public StoreSetNameAction buildUnchecked() {
         return new StoreSetNameActionImpl(name);

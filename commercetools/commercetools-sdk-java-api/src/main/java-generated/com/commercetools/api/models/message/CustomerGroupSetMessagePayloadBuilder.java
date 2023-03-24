@@ -28,6 +28,7 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
 
     /**
      *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
 
     /**
      *  <p>Customer Group that was set during the Set Customer Group update action.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -56,12 +57,17 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
         return this.customerGroup;
     }
 
+    /**
+     * builds CustomerGroupSetMessagePayload with checking for non-null required values
+     * @return CustomerGroupSetMessagePayload
+     */
     public CustomerGroupSetMessagePayload build() {
         return new CustomerGroupSetMessagePayloadImpl(customerGroup);
     }
 
     /**
-     * builds CustomerGroupSetMessagePayload without checking for non null required values
+     * builds CustomerGroupSetMessagePayload without checking for non-null required values
+     * @return CustomerGroupSetMessagePayload
      */
     public CustomerGroupSetMessagePayload buildUnchecked() {
         return new CustomerGroupSetMessagePayloadImpl(customerGroup);

@@ -28,7 +28,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
         return this.name;
     }
 
+    /**
+     * builds ShippingMethodChangeValue with checking for non-null required values
+     * @return ShippingMethodChangeValue
+     */
     public ShippingMethodChangeValue build() {
         Objects.requireNonNull(id, ShippingMethodChangeValue.class + ": id is missing");
         Objects.requireNonNull(name, ShippingMethodChangeValue.class + ": name is missing");
@@ -63,7 +67,8 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     }
 
     /**
-     * builds ShippingMethodChangeValue without checking for non null required values
+     * builds ShippingMethodChangeValue without checking for non-null required values
+     * @return ShippingMethodChangeValue
      */
     public ShippingMethodChangeValue buildUnchecked() {
         return new ShippingMethodChangeValueImpl(id, name);

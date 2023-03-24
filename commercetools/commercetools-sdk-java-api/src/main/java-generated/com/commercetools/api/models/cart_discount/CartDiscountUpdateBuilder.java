@@ -29,7 +29,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Expected version of the CartDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     /**
      *  <p>Update actions to be performed on the CartDiscount.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds CartDiscountUpdate with checking for non-null required values
+     * @return CartDiscountUpdate
+     */
     public CartDiscountUpdate build() {
         Objects.requireNonNull(version, CartDiscountUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, CartDiscountUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
     }
 
     /**
-     * builds CartDiscountUpdate without checking for non null required values
+     * builds CartDiscountUpdate without checking for non-null required values
+     * @return CartDiscountUpdate
      */
     public CartDiscountUpdate buildUnchecked() {
         return new CartDiscountUpdateImpl(version, actions);

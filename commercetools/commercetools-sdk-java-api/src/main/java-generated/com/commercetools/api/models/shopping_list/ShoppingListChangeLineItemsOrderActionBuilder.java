@@ -25,7 +25,7 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
 
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s in the desired new order.</p>
-     * @param lineItemOrder
+     * @param lineItemOrder value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
 
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s in the desired new order.</p>
-     * @param lineItemOrder
+     * @param lineItemOrder value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
 
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s in the desired new order.</p>
-     * @param lineItemOrder
+     * @param lineItemOrder value to be set
      * @return Builder
      */
 
@@ -63,6 +63,10 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
         return this.lineItemOrder;
     }
 
+    /**
+     * builds ShoppingListChangeLineItemsOrderAction with checking for non-null required values
+     * @return ShoppingListChangeLineItemsOrderAction
+     */
     public ShoppingListChangeLineItemsOrderAction build() {
         Objects.requireNonNull(lineItemOrder,
             ShoppingListChangeLineItemsOrderAction.class + ": lineItemOrder is missing");
@@ -70,7 +74,8 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
     }
 
     /**
-     * builds ShoppingListChangeLineItemsOrderAction without checking for non null required values
+     * builds ShoppingListChangeLineItemsOrderAction without checking for non-null required values
+     * @return ShoppingListChangeLineItemsOrderAction
      */
     public ShoppingListChangeLineItemsOrderAction buildUnchecked() {
         return new ShoppingListChangeLineItemsOrderActionImpl(lineItemOrder);

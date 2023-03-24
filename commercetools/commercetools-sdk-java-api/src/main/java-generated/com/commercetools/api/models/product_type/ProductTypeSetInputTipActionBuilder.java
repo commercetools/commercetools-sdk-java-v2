@@ -31,7 +31,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the inputTip value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param inputTip
+     * @param inputTip value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
         return this.inputTip;
     }
 
+    /**
+     * builds ProductTypeSetInputTipAction with checking for non-null required values
+     * @return ProductTypeSetInputTipAction
+     */
     public ProductTypeSetInputTipAction build() {
         Objects.requireNonNull(attributeName, ProductTypeSetInputTipAction.class + ": attributeName is missing");
         return new ProductTypeSetInputTipActionImpl(attributeName, inputTip);
     }
 
     /**
-     * builds ProductTypeSetInputTipAction without checking for non null required values
+     * builds ProductTypeSetInputTipAction without checking for non-null required values
+     * @return ProductTypeSetInputTipAction
      */
     public ProductTypeSetInputTipAction buildUnchecked() {
         return new ProductTypeSetInputTipActionImpl(attributeName, inputTip);

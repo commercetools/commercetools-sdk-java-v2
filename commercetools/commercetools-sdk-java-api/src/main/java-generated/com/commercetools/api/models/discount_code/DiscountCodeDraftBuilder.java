@@ -61,6 +61,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Name of the DiscountCode.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Name of the DiscountCode.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -83,6 +84,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Description of the DiscountCode.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Description of the DiscountCode.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -106,7 +108,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
-     * @param code
+     * @param code value to be set
      * @return Builder
      */
 
@@ -117,7 +119,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
-     * @param cartDiscounts
+     * @param cartDiscounts value to be set
      * @return Builder
      */
 
@@ -129,7 +131,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
-     * @param cartDiscounts
+     * @param cartDiscounts value to be set
      * @return Builder
      */
 
@@ -141,7 +143,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
-     * @param cartDiscounts
+     * @param cartDiscounts value to be set
      * @return Builder
      */
 
@@ -156,6 +158,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
+     * @param builder function to build the cartDiscounts value
      * @return Builder
      */
 
@@ -172,6 +175,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
+     * @param builder function to build the cartDiscounts value
      * @return Builder
      */
 
@@ -186,7 +190,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
-     * @param cartPredicate
+     * @param cartPredicate value to be set
      * @return Builder
      */
 
@@ -197,7 +201,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Only active DiscountCodes can be applied to the Cart.</p>
-     * @param isActive
+     * @param isActive value to be set
      * @return Builder
      */
 
@@ -208,7 +212,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
-     * @param maxApplications
+     * @param maxApplications value to be set
      * @return Builder
      */
 
@@ -219,7 +223,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
-     * @param maxApplicationsPerCustomer
+     * @param maxApplicationsPerCustomer value to be set
      * @return Builder
      */
 
@@ -230,6 +234,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Custom Fields for the DiscountCode.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -241,7 +246,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Custom Fields for the DiscountCode.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -252,7 +257,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Groups to which the DiscountCode will belong to.</p>
-     * @param groups
+     * @param groups value to be set
      * @return Builder
      */
 
@@ -263,7 +268,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Groups to which the DiscountCode will belong to.</p>
-     * @param groups
+     * @param groups value to be set
      * @return Builder
      */
 
@@ -274,7 +279,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Groups to which the DiscountCode will belong to.</p>
-     * @param groups
+     * @param groups value to be set
      * @return Builder
      */
 
@@ -288,7 +293,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -299,7 +304,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -366,6 +371,10 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this.validUntil;
     }
 
+    /**
+     * builds DiscountCodeDraft with checking for non-null required values
+     * @return DiscountCodeDraft
+     */
     public DiscountCodeDraft build() {
         Objects.requireNonNull(code, DiscountCodeDraft.class + ": code is missing");
         Objects.requireNonNull(cartDiscounts, DiscountCodeDraft.class + ": cartDiscounts is missing");
@@ -374,7 +383,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-     * builds DiscountCodeDraft without checking for non null required values
+     * builds DiscountCodeDraft without checking for non-null required values
+     * @return DiscountCodeDraft
      */
     public DiscountCodeDraft buildUnchecked() {
         return new DiscountCodeDraftImpl(name, description, code, cartDiscounts, cartPredicate, isActive,

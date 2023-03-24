@@ -46,6 +46,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     * @param builder function to build the cart value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
-     * @param cart
+     * @param cart value to be set
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Current version of the referenced Cart.</p>
-     * @param cartVersion
+     * @param cartVersion value to be set
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>User-defined unique identifier for the QuoteRequest.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -90,7 +91,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
-     * @param comment
+     * @param comment value to be set
      * @return Builder
      */
 
@@ -101,6 +102,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Custom Fields to be added to the Quote Request.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -112,7 +114,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Custom Fields to be added to the Quote Request.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -123,6 +125,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -134,7 +137,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -145,7 +148,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
-     * @param purchaseOrderNumber
+     * @param purchaseOrderNumber value to be set
      * @return Builder
      */
 
@@ -186,6 +189,10 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
         return this.purchaseOrderNumber;
     }
 
+    /**
+     * builds QuoteRequestDraft with checking for non-null required values
+     * @return QuoteRequestDraft
+     */
     public QuoteRequestDraft build() {
         Objects.requireNonNull(cart, QuoteRequestDraft.class + ": cart is missing");
         Objects.requireNonNull(cartVersion, QuoteRequestDraft.class + ": cartVersion is missing");
@@ -194,7 +201,8 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     * builds QuoteRequestDraft without checking for non null required values
+     * builds QuoteRequestDraft without checking for non-null required values
+     * @return QuoteRequestDraft
      */
     public QuoteRequestDraft buildUnchecked() {
         return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom, state, purchaseOrderNumber);

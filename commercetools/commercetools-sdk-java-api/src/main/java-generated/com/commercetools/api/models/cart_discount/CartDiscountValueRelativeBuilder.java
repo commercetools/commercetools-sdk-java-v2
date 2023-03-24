@@ -25,7 +25,7 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
-     * @param permyriad
+     * @param permyriad value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
         return this.permyriad;
     }
 
+    /**
+     * builds CartDiscountValueRelative with checking for non-null required values
+     * @return CartDiscountValueRelative
+     */
     public CartDiscountValueRelative build() {
         Objects.requireNonNull(permyriad, CartDiscountValueRelative.class + ": permyriad is missing");
         return new CartDiscountValueRelativeImpl(permyriad);
     }
 
     /**
-     * builds CartDiscountValueRelative without checking for non null required values
+     * builds CartDiscountValueRelative without checking for non-null required values
+     * @return CartDiscountValueRelative
      */
     public CartDiscountValueRelative buildUnchecked() {
         return new CartDiscountValueRelativeImpl(permyriad);

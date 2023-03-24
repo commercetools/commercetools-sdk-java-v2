@@ -10,11 +10,15 @@ public interface ApiDeleteMethod<T extends ApiDeleteMethod<T, TResult>, TResult>
 
     /**
      * set version with the specificied value
+     * @param version resource version
+     * @return method
      */
     <TValue> ApiDeleteMethod<T, TResult> withVersion(final TValue version);
 
     /**
      * add additional version query parameter
+     * @param version resource version
+     * @return method
      */
     <TValue> ApiDeleteMethod<T, TResult> addVersion(final TValue version);
 

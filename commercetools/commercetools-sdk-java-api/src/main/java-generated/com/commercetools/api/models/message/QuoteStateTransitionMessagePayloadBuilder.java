@@ -34,6 +34,7 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -57,6 +58,7 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @param builder function to build the oldState value
      * @return Builder
      */
 
@@ -68,7 +70,7 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
-     * @param oldState
+     * @param oldState value to be set
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -102,6 +104,10 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
         return this.force;
     }
 
+    /**
+     * builds QuoteStateTransitionMessagePayload with checking for non-null required values
+     * @return QuoteStateTransitionMessagePayload
+     */
     public QuoteStateTransitionMessagePayload build() {
         Objects.requireNonNull(state, QuoteStateTransitionMessagePayload.class + ": state is missing");
         Objects.requireNonNull(force, QuoteStateTransitionMessagePayload.class + ": force is missing");
@@ -109,7 +115,8 @@ public class QuoteStateTransitionMessagePayloadBuilder implements Builder<QuoteS
     }
 
     /**
-     * builds QuoteStateTransitionMessagePayload without checking for non null required values
+     * builds QuoteStateTransitionMessagePayload without checking for non-null required values
+     * @return QuoteStateTransitionMessagePayload
      */
     public QuoteStateTransitionMessagePayload buildUnchecked() {
         return new QuoteStateTransitionMessagePayloadImpl(state, oldState, force);

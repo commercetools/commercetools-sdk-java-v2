@@ -28,7 +28,7 @@ public class CartSetDeleteDaysAfterLastModificationActionBuilder
 
     /**
      *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
-     * @param deleteDaysAfterLastModification
+     * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
@@ -43,12 +43,17 @@ public class CartSetDeleteDaysAfterLastModificationActionBuilder
         return this.deleteDaysAfterLastModification;
     }
 
+    /**
+     * builds CartSetDeleteDaysAfterLastModificationAction with checking for non-null required values
+     * @return CartSetDeleteDaysAfterLastModificationAction
+     */
     public CartSetDeleteDaysAfterLastModificationAction build() {
         return new CartSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
     }
 
     /**
-     * builds CartSetDeleteDaysAfterLastModificationAction without checking for non null required values
+     * builds CartSetDeleteDaysAfterLastModificationAction without checking for non-null required values
+     * @return CartSetDeleteDaysAfterLastModificationAction
      */
     public CartSetDeleteDaysAfterLastModificationAction buildUnchecked() {
         return new CartSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);

@@ -26,6 +26,7 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
 
     /**
      *  <p>New value to set as parent.</p>
+     * @param builder function to build the parent value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
 
     /**
      *  <p>New value to set as parent.</p>
-     * @param parent
+     * @param parent value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
         return this.parent;
     }
 
+    /**
+     * builds CategoryChangeParentAction with checking for non-null required values
+     * @return CategoryChangeParentAction
+     */
     public CategoryChangeParentAction build() {
         Objects.requireNonNull(parent, CategoryChangeParentAction.class + ": parent is missing");
         return new CategoryChangeParentActionImpl(parent);
     }
 
     /**
-     * builds CategoryChangeParentAction without checking for non null required values
+     * builds CategoryChangeParentAction without checking for non-null required values
+     * @return CategoryChangeParentAction
      */
     public CategoryChangeParentAction buildUnchecked() {
         return new CategoryChangeParentActionImpl(parent);

@@ -35,7 +35,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *  <p>Update action for <code>addToCategory</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param builder function to build the category value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
-     * @param category
+     * @param category value to be set
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -80,7 +81,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -92,7 +93,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -107,6 +108,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -121,6 +123,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -133,7 +136,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -145,7 +148,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -157,7 +160,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -172,6 +175,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -186,6 +190,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -212,6 +217,10 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveFromCategoryChange with checking for non-null required values
+     * @return RemoveFromCategoryChange
+     */
     public RemoveFromCategoryChange build() {
         Objects.requireNonNull(change, RemoveFromCategoryChange.class + ": change is missing");
         Objects.requireNonNull(category, RemoveFromCategoryChange.class + ": category is missing");
@@ -221,7 +230,8 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * builds RemoveFromCategoryChange without checking for non null required values
+     * builds RemoveFromCategoryChange without checking for non-null required values
+     * @return RemoveFromCategoryChange
      */
     public RemoveFromCategoryChange buildUnchecked() {
         return new RemoveFromCategoryChangeImpl(change, category, previousValue, nextValue);

@@ -25,7 +25,7 @@ public class StoreCountryBuilder implements Builder<StoreCountry> {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-     * @param code
+     * @param code value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StoreCountryBuilder implements Builder<StoreCountry> {
         return this.code;
     }
 
+    /**
+     * builds StoreCountry with checking for non-null required values
+     * @return StoreCountry
+     */
     public StoreCountry build() {
         Objects.requireNonNull(code, StoreCountry.class + ": code is missing");
         return new StoreCountryImpl(code);
     }
 
     /**
-     * builds StoreCountry without checking for non null required values
+     * builds StoreCountry without checking for non-null required values
+     * @return StoreCountry
      */
     public StoreCountry buildUnchecked() {
         return new StoreCountryImpl(code);

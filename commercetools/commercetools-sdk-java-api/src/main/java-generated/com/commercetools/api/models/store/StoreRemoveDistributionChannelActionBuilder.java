@@ -26,6 +26,7 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -53,6 +54,10 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
         return this.distributionChannel;
     }
 
+    /**
+     * builds StoreRemoveDistributionChannelAction with checking for non-null required values
+     * @return StoreRemoveDistributionChannelAction
+     */
     public StoreRemoveDistributionChannelAction build() {
         Objects.requireNonNull(distributionChannel,
             StoreRemoveDistributionChannelAction.class + ": distributionChannel is missing");
@@ -60,7 +65,8 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
     }
 
     /**
-     * builds StoreRemoveDistributionChannelAction without checking for non null required values
+     * builds StoreRemoveDistributionChannelAction without checking for non-null required values
+     * @return StoreRemoveDistributionChannelAction
      */
     public StoreRemoveDistributionChannelAction buildUnchecked() {
         return new StoreRemoveDistributionChannelActionImpl(distributionChannel);

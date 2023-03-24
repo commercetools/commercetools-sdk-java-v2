@@ -34,7 +34,7 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
-     * @param expires
+     * @param expires value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+     * @param builder function to build the result value
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
-     * @param result
+     * @param result value to be set
      * @return Builder
      */
 
@@ -92,6 +93,10 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
         return this.result;
     }
 
+    /**
+     * builds SimilarProductsTaskStatus with checking for non-null required values
+     * @return SimilarProductsTaskStatus
+     */
     public SimilarProductsTaskStatus build() {
         Objects.requireNonNull(state, SimilarProductsTaskStatus.class + ": state is missing");
         Objects.requireNonNull(result, SimilarProductsTaskStatus.class + ": result is missing");
@@ -99,7 +104,8 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
     }
 
     /**
-     * builds SimilarProductsTaskStatus without checking for non null required values
+     * builds SimilarProductsTaskStatus without checking for non-null required values
+     * @return SimilarProductsTaskStatus
      */
     public SimilarProductsTaskStatus buildUnchecked() {
         return new SimilarProductsTaskStatusImpl(state, expires, result);

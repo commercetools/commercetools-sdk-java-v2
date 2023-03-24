@@ -25,7 +25,7 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -64,13 +64,18 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
         return this.roles;
     }
 
+    /**
+     * builds StateSetRolesAction with checking for non-null required values
+     * @return StateSetRolesAction
+     */
     public StateSetRolesAction build() {
         Objects.requireNonNull(roles, StateSetRolesAction.class + ": roles is missing");
         return new StateSetRolesActionImpl(roles);
     }
 
     /**
-     * builds StateSetRolesAction without checking for non null required values
+     * builds StateSetRolesAction without checking for non-null required values
+     * @return StateSetRolesAction
      */
     public StateSetRolesAction buildUnchecked() {
         return new StateSetRolesActionImpl(roles);

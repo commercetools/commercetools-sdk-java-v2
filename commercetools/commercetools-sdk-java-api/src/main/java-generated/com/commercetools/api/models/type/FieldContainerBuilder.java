@@ -24,6 +24,8 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
 
     /**
      *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public FieldContainerBuilder values(final Map<String, java.lang.Object> values) {
@@ -33,6 +35,9 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
 
     /**
      *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public FieldContainerBuilder addValue(final String key, final java.lang.Object value) {
@@ -47,12 +52,17 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
         return this.values;
     }
 
+    /**
+     * builds FieldContainer with checking for non-null required values
+     * @return FieldContainer
+     */
     public FieldContainer build() {
         return new FieldContainerImpl(values);
     }
 
     /**
-     * builds FieldContainer without checking for non null required values
+     * builds FieldContainer without checking for non-null required values
+     * @return FieldContainer
      */
     public FieldContainer buildUnchecked() {
         return new FieldContainerImpl(values);

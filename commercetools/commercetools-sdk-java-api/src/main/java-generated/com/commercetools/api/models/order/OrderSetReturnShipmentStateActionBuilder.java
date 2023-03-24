@@ -28,7 +28,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
 
     /**
      *
-     * @param returnItemId
+     * @param returnItemId value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
 
     /**
      *
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
         return this.shipmentState;
     }
 
+    /**
+     * builds OrderSetReturnShipmentStateAction with checking for non-null required values
+     * @return OrderSetReturnShipmentStateAction
+     */
     public OrderSetReturnShipmentStateAction build() {
         Objects.requireNonNull(returnItemId, OrderSetReturnShipmentStateAction.class + ": returnItemId is missing");
         Objects.requireNonNull(shipmentState, OrderSetReturnShipmentStateAction.class + ": shipmentState is missing");
@@ -64,7 +68,8 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     }
 
     /**
-     * builds OrderSetReturnShipmentStateAction without checking for non null required values
+     * builds OrderSetReturnShipmentStateAction without checking for non-null required values
+     * @return OrderSetReturnShipmentStateAction
      */
     public OrderSetReturnShipmentStateAction buildUnchecked() {
         return new OrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);

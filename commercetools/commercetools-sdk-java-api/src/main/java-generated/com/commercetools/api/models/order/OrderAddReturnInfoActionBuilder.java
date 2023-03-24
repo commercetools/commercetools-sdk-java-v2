@@ -34,7 +34,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
 
     /**
      *
-     * @param returnTrackingId
+     * @param returnTrackingId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -83,6 +83,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -109,7 +111,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
 
     /**
      *
-     * @param returnDate
+     * @param returnDate value to be set
      * @return Builder
      */
 
@@ -132,13 +134,18 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
         return this.returnDate;
     }
 
+    /**
+     * builds OrderAddReturnInfoAction with checking for non-null required values
+     * @return OrderAddReturnInfoAction
+     */
     public OrderAddReturnInfoAction build() {
         Objects.requireNonNull(items, OrderAddReturnInfoAction.class + ": items is missing");
         return new OrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
     }
 
     /**
-     * builds OrderAddReturnInfoAction without checking for non null required values
+     * builds OrderAddReturnInfoAction without checking for non-null required values
+     * @return OrderAddReturnInfoAction
      */
     public OrderAddReturnInfoAction buildUnchecked() {
         return new OrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);

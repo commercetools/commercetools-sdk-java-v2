@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PlatformFormatBuilder implements Builder<PlatformFormat> {
 
+    /**
+     * builds PlatformFormat with checking for non-null required values
+     * @return PlatformFormat
+     */
     public PlatformFormat build() {
         return new PlatformFormatImpl();
     }
 
     /**
-     * builds PlatformFormat without checking for non null required values
+     * builds PlatformFormat without checking for non-null required values
+     * @return PlatformFormat
      */
     public PlatformFormat buildUnchecked() {
         return new PlatformFormatImpl();

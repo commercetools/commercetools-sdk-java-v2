@@ -31,7 +31,7 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
 
     /**
      *  <p>Shape of the action for <code>setTitle</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetTitleChange with checking for non-null required values
+     * @return SetTitleChange
+     */
     public SetTitleChange build() {
         Objects.requireNonNull(change, SetTitleChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetTitleChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
     }
 
     /**
-     * builds SetTitleChange without checking for non null required values
+     * builds SetTitleChange without checking for non-null required values
+     * @return SetTitleChange
      */
     public SetTitleChange buildUnchecked() {
         return new SetTitleChangeImpl(change, previousValue, nextValue);

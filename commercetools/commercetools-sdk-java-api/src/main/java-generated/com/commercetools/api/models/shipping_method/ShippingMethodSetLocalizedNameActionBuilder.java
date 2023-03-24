@@ -28,6 +28,7 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the localizedName value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param localizedName
+     * @param localizedName value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
         return this.localizedName;
     }
 
+    /**
+     * builds ShippingMethodSetLocalizedNameAction with checking for non-null required values
+     * @return ShippingMethodSetLocalizedNameAction
+     */
     public ShippingMethodSetLocalizedNameAction build() {
         return new ShippingMethodSetLocalizedNameActionImpl(localizedName);
     }
 
     /**
-     * builds ShippingMethodSetLocalizedNameAction without checking for non null required values
+     * builds ShippingMethodSetLocalizedNameAction without checking for non-null required values
+     * @return ShippingMethodSetLocalizedNameAction
      */
     public ShippingMethodSetLocalizedNameAction buildUnchecked() {
         return new ShippingMethodSetLocalizedNameActionImpl(localizedName);

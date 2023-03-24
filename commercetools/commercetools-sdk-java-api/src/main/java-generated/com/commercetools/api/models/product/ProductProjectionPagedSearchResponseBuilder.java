@@ -43,7 +43,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -87,7 +87,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -99,7 +99,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -111,7 +111,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -126,6 +126,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -140,6 +141,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -152,6 +154,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
+     * @param builder function to build the facets value
      * @return Builder
      */
 
@@ -163,7 +166,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     /**
      *
-     * @param facets
+     * @param facets value to be set
      * @return Builder
      */
 
@@ -198,6 +201,10 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return this.facets;
     }
 
+    /**
+     * builds ProductProjectionPagedSearchResponse with checking for non-null required values
+     * @return ProductProjectionPagedSearchResponse
+     */
     public ProductProjectionPagedSearchResponse build() {
         Objects.requireNonNull(limit, ProductProjectionPagedSearchResponse.class + ": limit is missing");
         Objects.requireNonNull(count, ProductProjectionPagedSearchResponse.class + ": count is missing");
@@ -208,7 +215,8 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * builds ProductProjectionPagedSearchResponse without checking for non null required values
+     * builds ProductProjectionPagedSearchResponse without checking for non-null required values
+     * @return ProductProjectionPagedSearchResponse
      */
     public ProductProjectionPagedSearchResponse buildUnchecked() {
         return new ProductProjectionPagedSearchResponseImpl(limit, count, total, offset, results, facets);

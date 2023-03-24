@@ -26,6 +26,7 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
 
     /**
      *  <p>Value to append.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
 
     /**
      *  <p>Value to append.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
         return this.supplyChannel;
     }
 
+    /**
+     * builds StoreAddSupplyChannelAction with checking for non-null required values
+     * @return StoreAddSupplyChannelAction
+     */
     public StoreAddSupplyChannelAction build() {
         Objects.requireNonNull(supplyChannel, StoreAddSupplyChannelAction.class + ": supplyChannel is missing");
         return new StoreAddSupplyChannelActionImpl(supplyChannel);
     }
 
     /**
-     * builds StoreAddSupplyChannelAction without checking for non null required values
+     * builds StoreAddSupplyChannelAction without checking for non-null required values
+     * @return StoreAddSupplyChannelAction
      */
     public StoreAddSupplyChannelAction buildUnchecked() {
         return new StoreAddSupplyChannelActionImpl(supplyChannel);

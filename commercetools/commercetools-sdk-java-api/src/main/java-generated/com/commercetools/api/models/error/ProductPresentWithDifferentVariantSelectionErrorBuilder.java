@@ -35,7 +35,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p><code>"Product is already present with the following different $variantSelections."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -46,6 +46,8 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ProductPresentWithDifferentVariantSelectionErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -55,6 +57,9 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ProductPresentWithDifferentVariantSelectionErrorBuilder addValue(final String key,
@@ -68,6 +73,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -79,7 +85,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -91,7 +97,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
-     * @param existingVariantSelection
+     * @param existingVariantSelection value to be set
      * @return Builder
      */
 
@@ -103,6 +109,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     * @param builder function to build the existingVariantSelection value
      * @return Builder
      */
 
@@ -130,6 +137,10 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
         return this.existingVariantSelection;
     }
 
+    /**
+     * builds ProductPresentWithDifferentVariantSelectionError with checking for non-null required values
+     * @return ProductPresentWithDifferentVariantSelectionError
+     */
     public ProductPresentWithDifferentVariantSelectionError build() {
         Objects.requireNonNull(message,
             ProductPresentWithDifferentVariantSelectionError.class + ": message is missing");
@@ -142,7 +153,8 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     * builds ProductPresentWithDifferentVariantSelectionError without checking for non null required values
+     * builds ProductPresentWithDifferentVariantSelectionError without checking for non-null required values
+     * @return ProductPresentWithDifferentVariantSelectionError
      */
     public ProductPresentWithDifferentVariantSelectionError buildUnchecked() {
         return new ProductPresentWithDifferentVariantSelectionErrorImpl(message, values, product,

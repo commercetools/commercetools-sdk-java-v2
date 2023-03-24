@@ -30,7 +30,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p><code>"The enum values contain duplicate keys: $listOfDuplicateKeys."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -41,6 +41,8 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public DuplicateEnumValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,6 +52,9 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public DuplicateEnumValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +67,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p>Duplicate keys.</p>
-     * @param duplicates
+     * @param duplicates value to be set
      * @return Builder
      */
 
@@ -73,7 +78,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p>Duplicate keys.</p>
-     * @param duplicates
+     * @param duplicates value to be set
      * @return Builder
      */
 
@@ -84,7 +89,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p>Duplicate keys.</p>
-     * @param duplicates
+     * @param duplicates value to be set
      * @return Builder
      */
 
@@ -108,6 +113,10 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
         return this.duplicates;
     }
 
+    /**
+     * builds DuplicateEnumValuesError with checking for non-null required values
+     * @return DuplicateEnumValuesError
+     */
     public DuplicateEnumValuesError build() {
         Objects.requireNonNull(message, DuplicateEnumValuesError.class + ": message is missing");
         Objects.requireNonNull(duplicates, DuplicateEnumValuesError.class + ": duplicates is missing");
@@ -115,7 +124,8 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
     }
 
     /**
-     * builds DuplicateEnumValuesError without checking for non null required values
+     * builds DuplicateEnumValuesError without checking for non-null required values
+     * @return DuplicateEnumValuesError
      */
     public DuplicateEnumValuesError buildUnchecked() {
         return new DuplicateEnumValuesErrorImpl(message, values, duplicates);

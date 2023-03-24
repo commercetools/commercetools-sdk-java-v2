@@ -29,7 +29,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
 
     /**
      *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveFieldDefinitionChange with checking for non-null required values
+     * @return RemoveFieldDefinitionChange
+     */
     public RemoveFieldDefinitionChange build() {
         Objects.requireNonNull(change, RemoveFieldDefinitionChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveFieldDefinitionChange.class + ": previousValue is missing");
@@ -76,7 +81,8 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
     }
 
     /**
-     * builds RemoveFieldDefinitionChange without checking for non null required values
+     * builds RemoveFieldDefinitionChange without checking for non-null required values
+     * @return RemoveFieldDefinitionChange
      */
     public RemoveFieldDefinitionChange buildUnchecked() {
         return new RemoveFieldDefinitionChangeImpl(change, previousValue);

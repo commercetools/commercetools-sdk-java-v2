@@ -31,7 +31,7 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
 
     /**
      *  <p>Shape of the action for <code>changeIsActive</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeIsActiveChange with checking for non-null required values
+     * @return ChangeIsActiveChange
+     */
     public ChangeIsActiveChange build() {
         Objects.requireNonNull(change, ChangeIsActiveChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeIsActiveChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
     }
 
     /**
-     * builds ChangeIsActiveChange without checking for non null required values
+     * builds ChangeIsActiveChange without checking for non-null required values
+     * @return ChangeIsActiveChange
      */
     public ChangeIsActiveChange buildUnchecked() {
         return new ChangeIsActiveChangeImpl(change, previousValue, nextValue);

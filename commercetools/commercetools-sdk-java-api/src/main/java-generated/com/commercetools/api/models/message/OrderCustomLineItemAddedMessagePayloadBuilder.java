@@ -26,6 +26,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Custom Line Item that was added to the Order.</p>
+     * @param builder function to build the customLineItem value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Custom Line Item that was added to the Order.</p>
-     * @param customLineItem
+     * @param customLineItem value to be set
      * @return Builder
      */
 
@@ -51,6 +52,10 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
         return this.customLineItem;
     }
 
+    /**
+     * builds OrderCustomLineItemAddedMessagePayload with checking for non-null required values
+     * @return OrderCustomLineItemAddedMessagePayload
+     */
     public OrderCustomLineItemAddedMessagePayload build() {
         Objects.requireNonNull(customLineItem,
             OrderCustomLineItemAddedMessagePayload.class + ": customLineItem is missing");
@@ -58,7 +63,8 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     * builds OrderCustomLineItemAddedMessagePayload without checking for non null required values
+     * builds OrderCustomLineItemAddedMessagePayload without checking for non-null required values
+     * @return OrderCustomLineItemAddedMessagePayload
      */
     public OrderCustomLineItemAddedMessagePayload buildUnchecked() {
         return new OrderCustomLineItemAddedMessagePayloadImpl(customLineItem);

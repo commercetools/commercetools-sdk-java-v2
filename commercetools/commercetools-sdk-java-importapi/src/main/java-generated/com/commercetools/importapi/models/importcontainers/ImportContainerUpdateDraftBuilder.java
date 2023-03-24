@@ -30,7 +30,7 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
 
     /**
      *  <p>Current version of the ImportContainer.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
 
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
-     * @param resourceType
+     * @param resourceType value to be set
      * @return Builder
      */
 
@@ -60,13 +60,18 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
         return this.resourceType;
     }
 
+    /**
+     * builds ImportContainerUpdateDraft with checking for non-null required values
+     * @return ImportContainerUpdateDraft
+     */
     public ImportContainerUpdateDraft build() {
         Objects.requireNonNull(version, ImportContainerUpdateDraft.class + ": version is missing");
         return new ImportContainerUpdateDraftImpl(version, resourceType);
     }
 
     /**
-     * builds ImportContainerUpdateDraft without checking for non null required values
+     * builds ImportContainerUpdateDraft without checking for non-null required values
+     * @return ImportContainerUpdateDraft
      */
     public ImportContainerUpdateDraft buildUnchecked() {
         return new ImportContainerUpdateDraftImpl(version, resourceType);

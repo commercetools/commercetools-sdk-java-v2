@@ -28,6 +28,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
 
     /**
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
 
     /**
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
         return this.store;
     }
 
+    /**
+     * builds ShoppingListSetStoreAction with checking for non-null required values
+     * @return ShoppingListSetStoreAction
+     */
     public ShoppingListSetStoreAction build() {
         return new ShoppingListSetStoreActionImpl(store);
     }
 
     /**
-     * builds ShoppingListSetStoreAction without checking for non null required values
+     * builds ShoppingListSetStoreAction without checking for non-null required values
+     * @return ShoppingListSetStoreAction
      */
     public ShoppingListSetStoreAction buildUnchecked() {
         return new ShoppingListSetStoreActionImpl(store);

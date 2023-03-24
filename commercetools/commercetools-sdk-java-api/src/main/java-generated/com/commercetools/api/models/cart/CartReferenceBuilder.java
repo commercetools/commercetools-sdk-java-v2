@@ -31,7 +31,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
 
     /**
      *  <p>Unique identifier of the referenced Cart.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
 
     /**
      *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
 
     /**
      *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class CartReferenceBuilder implements Builder<CartReference> {
         return this.obj;
     }
 
+    /**
+     * builds CartReference with checking for non-null required values
+     * @return CartReference
+     */
     public CartReference build() {
         Objects.requireNonNull(id, CartReference.class + ": id is missing");
         return new CartReferenceImpl(id, obj);
     }
 
     /**
-     * builds CartReference without checking for non null required values
+     * builds CartReference without checking for non-null required values
+     * @return CartReference
      */
     public CartReference buildUnchecked() {
         return new CartReferenceImpl(id, obj);

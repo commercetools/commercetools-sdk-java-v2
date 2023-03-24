@@ -30,7 +30,7 @@ public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePri
 
     /**
      *  <p>The <code>id</code> of the Embedded Price to remove.</p>
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePri
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePri
         return this.staged;
     }
 
+    /**
+     * builds ProductRemovePriceAction with checking for non-null required values
+     * @return ProductRemovePriceAction
+     */
     public ProductRemovePriceAction build() {
         Objects.requireNonNull(priceId, ProductRemovePriceAction.class + ": priceId is missing");
         return new ProductRemovePriceActionImpl(priceId, staged);
     }
 
     /**
-     * builds ProductRemovePriceAction without checking for non null required values
+     * builds ProductRemovePriceAction without checking for non-null required values
+     * @return ProductRemovePriceAction
      */
     public ProductRemovePriceAction buildUnchecked() {
         return new ProductRemovePriceActionImpl(priceId, staged);

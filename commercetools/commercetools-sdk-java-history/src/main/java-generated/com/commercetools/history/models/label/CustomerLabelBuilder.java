@@ -31,7 +31,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
 
     /**
      *
-     * @param firstName
+     * @param firstName value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
 
     /**
      *
-     * @param lastName
+     * @param lastName value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
 
     /**
      *
-     * @param customerNumber
+     * @param customerNumber value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
         return this.customerNumber;
     }
 
+    /**
+     * builds CustomerLabel with checking for non-null required values
+     * @return CustomerLabel
+     */
     public CustomerLabel build() {
         Objects.requireNonNull(firstName, CustomerLabel.class + ": firstName is missing");
         Objects.requireNonNull(lastName, CustomerLabel.class + ": lastName is missing");
@@ -82,7 +86,8 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     * builds CustomerLabel without checking for non null required values
+     * builds CustomerLabel without checking for non-null required values
+     * @return CustomerLabel
      */
     public CustomerLabel buildUnchecked() {
         return new CustomerLabelImpl(firstName, lastName, customerNumber);

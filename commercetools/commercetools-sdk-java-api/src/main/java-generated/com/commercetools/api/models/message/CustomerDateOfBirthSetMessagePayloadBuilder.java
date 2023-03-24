@@ -27,7 +27,7 @@ public class CustomerDateOfBirthSetMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
-     * @param dateOfBirth
+     * @param dateOfBirth value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerDateOfBirthSetMessagePayloadBuilder implements Builder<Cust
         return this.dateOfBirth;
     }
 
+    /**
+     * builds CustomerDateOfBirthSetMessagePayload with checking for non-null required values
+     * @return CustomerDateOfBirthSetMessagePayload
+     */
     public CustomerDateOfBirthSetMessagePayload build() {
         return new CustomerDateOfBirthSetMessagePayloadImpl(dateOfBirth);
     }
 
     /**
-     * builds CustomerDateOfBirthSetMessagePayload without checking for non null required values
+     * builds CustomerDateOfBirthSetMessagePayload without checking for non-null required values
+     * @return CustomerDateOfBirthSetMessagePayload
      */
     public CustomerDateOfBirthSetMessagePayload buildUnchecked() {
         return new CustomerDateOfBirthSetMessagePayloadImpl(dateOfBirth);

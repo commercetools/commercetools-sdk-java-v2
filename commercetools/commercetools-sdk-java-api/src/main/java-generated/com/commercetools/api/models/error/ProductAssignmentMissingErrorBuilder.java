@@ -34,7 +34,7 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
      *  <p><code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code></p>
      *  <p>For Product Selection of type Individual Exclusion, the message is:</p>
      *  <p><code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -45,6 +45,8 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ProductAssignmentMissingErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -54,6 +56,9 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ProductAssignmentMissingErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -66,6 +71,7 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -77,7 +83,7 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -99,6 +105,10 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
         return this.product;
     }
 
+    /**
+     * builds ProductAssignmentMissingError with checking for non-null required values
+     * @return ProductAssignmentMissingError
+     */
     public ProductAssignmentMissingError build() {
         Objects.requireNonNull(message, ProductAssignmentMissingError.class + ": message is missing");
         Objects.requireNonNull(product, ProductAssignmentMissingError.class + ": product is missing");
@@ -106,7 +116,8 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
     }
 
     /**
-     * builds ProductAssignmentMissingError without checking for non null required values
+     * builds ProductAssignmentMissingError without checking for non-null required values
+     * @return ProductAssignmentMissingError
      */
     public ProductAssignmentMissingError buildUnchecked() {
         return new ProductAssignmentMissingErrorImpl(message, values, product);

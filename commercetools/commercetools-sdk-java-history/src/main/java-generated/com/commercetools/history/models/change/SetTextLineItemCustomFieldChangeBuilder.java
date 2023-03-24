@@ -39,7 +39,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *  <p>Update action for <code>setTextLineItemCustomField</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
-     * @param customTypeId
+     * @param customTypeId value to be set
      * @return Builder
      */
 
@@ -72,6 +72,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param builder function to build the textLineItem value
      * @return Builder
      */
 
@@ -84,7 +85,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
-     * @param textLineItem
+     * @param textLineItem value to be set
      * @return Builder
      */
 
@@ -96,7 +97,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -107,7 +108,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -140,6 +141,10 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
         return this.previousValue;
     }
 
+    /**
+     * builds SetTextLineItemCustomFieldChange with checking for non-null required values
+     * @return SetTextLineItemCustomFieldChange
+     */
     public SetTextLineItemCustomFieldChange build() {
         Objects.requireNonNull(change, SetTextLineItemCustomFieldChange.class + ": change is missing");
         Objects.requireNonNull(name, SetTextLineItemCustomFieldChange.class + ": name is missing");
@@ -152,7 +157,8 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     * builds SetTextLineItemCustomFieldChange without checking for non null required values
+     * builds SetTextLineItemCustomFieldChange without checking for non-null required values
+     * @return SetTextLineItemCustomFieldChange
      */
     public SetTextLineItemCustomFieldChange buildUnchecked() {
         return new SetTextLineItemCustomFieldChangeImpl(change, name, customTypeId, textLineItem, nextValue,

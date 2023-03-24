@@ -31,7 +31,7 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
      *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
-     * @param transitions
+     * @param transitions value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
      *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
-     * @param transitions
+     * @param transitions value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
      *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
-     * @param transitions
+     * @param transitions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
      *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
+     * @param builder function to build the transitions value
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
      *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
+     * @param builder function to build the transitions value
      * @return Builder
      */
 
@@ -113,12 +115,17 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
         return this.transitions;
     }
 
+    /**
+     * builds StateSetTransitionsAction with checking for non-null required values
+     * @return StateSetTransitionsAction
+     */
     public StateSetTransitionsAction build() {
         return new StateSetTransitionsActionImpl(transitions);
     }
 
     /**
-     * builds StateSetTransitionsAction without checking for non null required values
+     * builds StateSetTransitionsAction without checking for non-null required values
+     * @return StateSetTransitionsAction
      */
     public StateSetTransitionsAction buildUnchecked() {
         return new StateSetTransitionsActionImpl(transitions);

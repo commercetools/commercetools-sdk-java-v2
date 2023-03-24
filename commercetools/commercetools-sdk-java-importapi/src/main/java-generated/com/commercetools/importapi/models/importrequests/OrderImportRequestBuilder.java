@@ -26,7 +26,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -93,13 +95,18 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
         return this.resources;
     }
 
+    /**
+     * builds OrderImportRequest with checking for non-null required values
+     * @return OrderImportRequest
+     */
     public OrderImportRequest build() {
         Objects.requireNonNull(resources, OrderImportRequest.class + ": resources is missing");
         return new OrderImportRequestImpl(resources);
     }
 
     /**
-     * builds OrderImportRequest without checking for non null required values
+     * builds OrderImportRequest without checking for non-null required values
+     * @return OrderImportRequest
      */
     public OrderImportRequest buildUnchecked() {
         return new OrderImportRequestImpl(resources);

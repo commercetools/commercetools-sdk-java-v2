@@ -167,7 +167,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Unique identifier of the Order.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -178,7 +178,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>The current version of the order.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -189,7 +189,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -200,7 +200,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -211,6 +211,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -222,7 +223,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -234,6 +235,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -245,7 +247,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -256,7 +258,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>This field will only be present if it was set for Order Import</p>
-     * @param completedAt
+     * @param completedAt value to be set
      * @return Builder
      */
 
@@ -267,7 +269,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
-     * @param orderNumber
+     * @param orderNumber value to be set
      * @return Builder
      */
 
@@ -278,7 +280,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param customerId
+     * @param customerId value to be set
      * @return Builder
      */
 
@@ -289,7 +291,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param customerEmail
+     * @param customerEmail value to be set
      * @return Builder
      */
 
@@ -300,7 +302,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -311,6 +313,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>The Business Unit the Order belongs to.</p>
+     * @param builder function to build the businessUnit value
      * @return Builder
      */
 
@@ -324,7 +327,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>The Business Unit the Order belongs to.</p>
-     * @param businessUnit
+     * @param businessUnit value to be set
      * @return Builder
      */
 
@@ -336,6 +339,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -347,7 +351,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -358,7 +362,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -369,7 +373,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -380,7 +384,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -394,6 +398,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -408,6 +413,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -420,7 +426,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -432,7 +438,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -444,7 +450,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -459,6 +465,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -473,6 +480,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -485,7 +493,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -496,6 +504,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -507,6 +516,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>The taxes are calculated based on the shipping address.</p>
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -518,7 +528,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>The taxes are calculated based on the shipping address.</p>
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -529,6 +539,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     * @param builder function to build the taxedShippingPrice value
      * @return Builder
      */
 
@@ -540,7 +551,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
-     * @param taxedShippingPrice
+     * @param taxedShippingPrice value to be set
      * @return Builder
      */
 
@@ -553,6 +564,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <p>Holds all shipping-related information per Shipping Method.</p>
      *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
+     * @param builder function to build the shippingAddress value
      * @return Builder
      */
 
@@ -565,7 +577,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <p>Holds all shipping-related information per Shipping Method.</p>
      *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
-     * @param shippingAddress
+     * @param shippingAddress value to be set
      * @return Builder
      */
 
@@ -577,6 +589,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the billingAddress value
      * @return Builder
      */
 
@@ -588,7 +601,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param billingAddress
+     * @param billingAddress value to be set
      * @return Builder
      */
 
@@ -600,7 +613,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
-     * @param shippingMode
+     * @param shippingMode value to be set
      * @return Builder
      */
 
@@ -612,7 +625,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
      *  <p>It is updated automatically after the Shipping Method is added.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -624,7 +637,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
      *  <p>It is updated automatically after the Shipping Method is added.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -636,7 +649,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
      *  <p>It is updated automatically after the Shipping Method is added.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -651,6 +664,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
      *  <p>It is updated automatically after the Shipping Method is added.</p>
+     * @param builder function to build the shipping value
      * @return Builder
      */
 
@@ -666,6 +680,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
      *  <p>It is updated automatically after the Shipping Method is added.</p>
+     * @param builder function to build the shipping value
      * @return Builder
      */
 
@@ -678,7 +693,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param taxMode
+     * @param taxMode value to be set
      * @return Builder
      */
 
@@ -689,7 +704,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
-     * @param taxRoundingMode
+     * @param taxRoundingMode value to be set
      * @return Builder
      */
 
@@ -701,6 +716,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -714,7 +730,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -726,7 +742,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -737,7 +753,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>One of the four predefined OrderStates.</p>
-     * @param orderState
+     * @param orderState value to be set
      * @return Builder
      */
 
@@ -748,6 +764,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>This reference can point to a state in a custom workflow.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -759,7 +776,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>This reference can point to a state in a custom workflow.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -770,7 +787,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -782,7 +799,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -794,6 +811,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Set if the ShippingMethod is set.</p>
+     * @param builder function to build the shippingInfo value
      * @return Builder
      */
 
@@ -805,7 +823,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Set if the ShippingMethod is set.</p>
-     * @param shippingInfo
+     * @param shippingInfo value to be set
      * @return Builder
      */
 
@@ -817,7 +835,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param syncInfo
+     * @param syncInfo value to be set
      * @return Builder
      */
 
@@ -828,7 +846,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param syncInfo
+     * @param syncInfo value to be set
      * @return Builder
      */
 
@@ -839,7 +857,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param syncInfo
+     * @param syncInfo value to be set
      * @return Builder
      */
 
@@ -853,6 +871,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the syncInfo value
      * @return Builder
      */
 
@@ -867,6 +886,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the syncInfo value
      * @return Builder
      */
 
@@ -879,7 +899,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param returnInfo
+     * @param returnInfo value to be set
      * @return Builder
      */
 
@@ -890,7 +910,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param returnInfo
+     * @param returnInfo value to be set
      * @return Builder
      */
 
@@ -902,7 +922,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param returnInfo
+     * @param returnInfo value to be set
      * @return Builder
      */
 
@@ -917,6 +937,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the returnInfo value
      * @return Builder
      */
 
@@ -931,6 +952,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the returnInfo value
      * @return Builder
      */
 
@@ -943,7 +965,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
-     * @param purchaseOrderNumber
+     * @param purchaseOrderNumber value to be set
      * @return Builder
      */
 
@@ -954,7 +976,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param discountCodes
+     * @param discountCodes value to be set
      * @return Builder
      */
 
@@ -966,7 +988,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param discountCodes
+     * @param discountCodes value to be set
      * @return Builder
      */
 
@@ -978,7 +1000,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param discountCodes
+     * @param discountCodes value to be set
      * @return Builder
      */
 
@@ -993,6 +1015,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the discountCodes value
      * @return Builder
      */
 
@@ -1007,6 +1030,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the discountCodes value
      * @return Builder
      */
 
@@ -1019,7 +1043,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Internal-only field.</p>
-     * @param lastMessageSequenceNumber
+     * @param lastMessageSequenceNumber value to be set
      * @return Builder
      */
     @Deprecated
@@ -1030,6 +1054,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+     * @param builder function to build the cart value
      * @return Builder
      */
 
@@ -1041,7 +1066,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
-     * @param cart
+     * @param cart value to be set
      * @return Builder
      */
 
@@ -1052,6 +1077,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Set when this order was created from a quote.</p>
+     * @param builder function to build the quote value
      * @return Builder
      */
 
@@ -1063,7 +1089,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Set when this order was created from a quote.</p>
-     * @param quote
+     * @param quote value to be set
      * @return Builder
      */
 
@@ -1074,6 +1100,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -1085,7 +1112,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -1096,6 +1123,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
+     * @param builder function to build the paymentInfo value
      * @return Builder
      */
 
@@ -1107,7 +1135,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param paymentInfo
+     * @param paymentInfo value to be set
      * @return Builder
      */
 
@@ -1118,7 +1146,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -1129,7 +1157,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param inventoryMode
+     * @param inventoryMode value to be set
      * @return Builder
      */
 
@@ -1141,7 +1169,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *
-     * @param origin
+     * @param origin value to be set
      * @return Builder
      */
 
@@ -1152,7 +1180,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
-     * @param taxCalculationMode
+     * @param taxCalculationMode value to be set
      * @return Builder
      */
 
@@ -1169,7 +1197,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -1186,6 +1214,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -1197,7 +1226,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -1209,7 +1238,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -1221,7 +1250,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -1236,6 +1265,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -1250,6 +1280,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -1262,7 +1293,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
-     * @param refusedGifts
+     * @param refusedGifts value to be set
      * @return Builder
      */
 
@@ -1274,7 +1305,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
-     * @param refusedGifts
+     * @param refusedGifts value to be set
      * @return Builder
      */
 
@@ -1286,7 +1317,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
-     * @param refusedGifts
+     * @param refusedGifts value to be set
      * @return Builder
      */
 
@@ -1301,6 +1332,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     * @param builder function to build the refusedGifts value
      * @return Builder
      */
 
@@ -1316,6 +1348,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     * @param builder function to build the refusedGifts value
      * @return Builder
      */
 
@@ -1550,6 +1583,10 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this.refusedGifts;
     }
 
+    /**
+     * builds StagedOrder with checking for non-null required values
+     * @return StagedOrder
+     */
     public StagedOrder build() {
         Objects.requireNonNull(id, StagedOrder.class + ": id is missing");
         Objects.requireNonNull(version, StagedOrder.class + ": version is missing");
@@ -1574,7 +1611,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     * builds StagedOrder without checking for non null required values
+     * builds StagedOrder without checking for non-null required values
+     * @return StagedOrder
      */
     public StagedOrder buildUnchecked() {
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,

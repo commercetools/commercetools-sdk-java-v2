@@ -21,12 +21,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StandalonePriceApplyStagedChangesActionBuilder
         implements Builder<StandalonePriceApplyStagedChangesAction> {
 
+    /**
+     * builds StandalonePriceApplyStagedChangesAction with checking for non-null required values
+     * @return StandalonePriceApplyStagedChangesAction
+     */
     public StandalonePriceApplyStagedChangesAction build() {
         return new StandalonePriceApplyStagedChangesActionImpl();
     }
 
     /**
-     * builds StandalonePriceApplyStagedChangesAction without checking for non null required values
+     * builds StandalonePriceApplyStagedChangesAction without checking for non-null required values
+     * @return StandalonePriceApplyStagedChangesAction
      */
     public StandalonePriceApplyStagedChangesAction buildUnchecked() {
         return new StandalonePriceApplyStagedChangesActionImpl();

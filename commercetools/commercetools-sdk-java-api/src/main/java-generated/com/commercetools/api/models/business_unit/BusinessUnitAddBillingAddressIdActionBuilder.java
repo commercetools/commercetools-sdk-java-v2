@@ -30,7 +30,7 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
 
     /**
      *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
 
     /**
      *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
         return this.addressKey;
     }
 
+    /**
+     * builds BusinessUnitAddBillingAddressIdAction with checking for non-null required values
+     * @return BusinessUnitAddBillingAddressIdAction
+     */
     public BusinessUnitAddBillingAddressIdAction build() {
         return new BusinessUnitAddBillingAddressIdActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds BusinessUnitAddBillingAddressIdAction without checking for non null required values
+     * builds BusinessUnitAddBillingAddressIdAction without checking for non-null required values
+     * @return BusinessUnitAddBillingAddressIdAction
      */
     public BusinessUnitAddBillingAddressIdAction buildUnchecked() {
         return new BusinessUnitAddBillingAddressIdActionImpl(addressId, addressKey);

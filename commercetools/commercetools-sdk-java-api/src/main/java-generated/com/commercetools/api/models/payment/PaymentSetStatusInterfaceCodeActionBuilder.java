@@ -27,7 +27,7 @@ public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<Payme
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param interfaceCode
+     * @param interfaceCode value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<Payme
         return this.interfaceCode;
     }
 
+    /**
+     * builds PaymentSetStatusInterfaceCodeAction with checking for non-null required values
+     * @return PaymentSetStatusInterfaceCodeAction
+     */
     public PaymentSetStatusInterfaceCodeAction build() {
         return new PaymentSetStatusInterfaceCodeActionImpl(interfaceCode);
     }
 
     /**
-     * builds PaymentSetStatusInterfaceCodeAction without checking for non null required values
+     * builds PaymentSetStatusInterfaceCodeAction without checking for non-null required values
+     * @return PaymentSetStatusInterfaceCodeAction
      */
     public PaymentSetStatusInterfaceCodeAction buildUnchecked() {
         return new PaymentSetStatusInterfaceCodeActionImpl(interfaceCode);

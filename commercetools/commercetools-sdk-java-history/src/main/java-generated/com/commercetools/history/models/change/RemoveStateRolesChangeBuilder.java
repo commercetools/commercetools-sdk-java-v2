@@ -31,7 +31,7 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -105,7 +105,7 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -130,6 +130,10 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveStateRolesChange with checking for non-null required values
+     * @return RemoveStateRolesChange
+     */
     public RemoveStateRolesChange build() {
         Objects.requireNonNull(change, RemoveStateRolesChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveStateRolesChange.class + ": previousValue is missing");
@@ -138,7 +142,8 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
     }
 
     /**
-     * builds RemoveStateRolesChange without checking for non null required values
+     * builds RemoveStateRolesChange without checking for non-null required values
+     * @return RemoveStateRolesChange
      */
     public RemoveStateRolesChange buildUnchecked() {
         return new RemoveStateRolesChangeImpl(change, previousValue, nextValue);

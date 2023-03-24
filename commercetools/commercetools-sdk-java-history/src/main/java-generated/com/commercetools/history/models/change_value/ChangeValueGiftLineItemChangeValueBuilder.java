@@ -37,6 +37,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -48,7 +49,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -71,6 +72,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -82,7 +84,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -94,6 +96,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -105,7 +108,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -132,6 +135,10 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
         return this.distributionChannel;
     }
 
+    /**
+     * builds ChangeValueGiftLineItemChangeValue with checking for non-null required values
+     * @return ChangeValueGiftLineItemChangeValue
+     */
     public ChangeValueGiftLineItemChangeValue build() {
         Objects.requireNonNull(product, ChangeValueGiftLineItemChangeValue.class + ": product is missing");
         Objects.requireNonNull(variantId, ChangeValueGiftLineItemChangeValue.class + ": variantId is missing");
@@ -141,7 +148,8 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * builds ChangeValueGiftLineItemChangeValue without checking for non null required values
+     * builds ChangeValueGiftLineItemChangeValue without checking for non-null required values
+     * @return ChangeValueGiftLineItemChangeValue
      */
     public ChangeValueGiftLineItemChangeValue buildUnchecked() {
         return new ChangeValueGiftLineItemChangeValueImpl(product, variantId, supplyChannel, distributionChannel);

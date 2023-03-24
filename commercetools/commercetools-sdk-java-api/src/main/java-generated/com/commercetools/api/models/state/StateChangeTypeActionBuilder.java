@@ -25,7 +25,7 @@ public class StateChangeTypeActionBuilder implements Builder<StateChangeTypeActi
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StateChangeTypeActionBuilder implements Builder<StateChangeTypeActi
         return this.type;
     }
 
+    /**
+     * builds StateChangeTypeAction with checking for non-null required values
+     * @return StateChangeTypeAction
+     */
     public StateChangeTypeAction build() {
         Objects.requireNonNull(type, StateChangeTypeAction.class + ": type is missing");
         return new StateChangeTypeActionImpl(type);
     }
 
     /**
-     * builds StateChangeTypeAction without checking for non null required values
+     * builds StateChangeTypeAction without checking for non-null required values
+     * @return StateChangeTypeAction
      */
     public StateChangeTypeAction buildUnchecked() {
         return new StateChangeTypeActionImpl(type);

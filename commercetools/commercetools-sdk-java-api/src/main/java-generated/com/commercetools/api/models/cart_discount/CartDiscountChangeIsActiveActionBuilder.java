@@ -25,7 +25,7 @@ public class CartDiscountChangeIsActiveActionBuilder implements Builder<CartDisc
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
-     * @param isActive
+     * @param isActive value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CartDiscountChangeIsActiveActionBuilder implements Builder<CartDisc
         return this.isActive;
     }
 
+    /**
+     * builds CartDiscountChangeIsActiveAction with checking for non-null required values
+     * @return CartDiscountChangeIsActiveAction
+     */
     public CartDiscountChangeIsActiveAction build() {
         Objects.requireNonNull(isActive, CartDiscountChangeIsActiveAction.class + ": isActive is missing");
         return new CartDiscountChangeIsActiveActionImpl(isActive);
     }
 
     /**
-     * builds CartDiscountChangeIsActiveAction without checking for non null required values
+     * builds CartDiscountChangeIsActiveAction without checking for non-null required values
+     * @return CartDiscountChangeIsActiveAction
      */
     public CartDiscountChangeIsActiveAction buildUnchecked() {
         return new CartDiscountChangeIsActiveActionImpl(isActive);

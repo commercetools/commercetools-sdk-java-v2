@@ -31,7 +31,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p><code>"Attribute can't have the same value in a different variant."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -42,6 +42,8 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public DuplicateAttributeValueErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -51,6 +53,9 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public DuplicateAttributeValueErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -63,6 +68,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @param builder function to build the attribute value
      * @return Builder
      */
 
@@ -74,7 +80,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>Conflicting Attributes.</p>
-     * @param attribute
+     * @param attribute value to be set
      * @return Builder
      */
 
@@ -96,6 +102,10 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
         return this.attribute;
     }
 
+    /**
+     * builds DuplicateAttributeValueError with checking for non-null required values
+     * @return DuplicateAttributeValueError
+     */
     public DuplicateAttributeValueError build() {
         Objects.requireNonNull(message, DuplicateAttributeValueError.class + ": message is missing");
         Objects.requireNonNull(attribute, DuplicateAttributeValueError.class + ": attribute is missing");
@@ -103,7 +113,8 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     * builds DuplicateAttributeValueError without checking for non null required values
+     * builds DuplicateAttributeValueError without checking for non-null required values
+     * @return DuplicateAttributeValueError
      */
     public DuplicateAttributeValueError buildUnchecked() {
         return new DuplicateAttributeValueErrorImpl(message, values, attribute);

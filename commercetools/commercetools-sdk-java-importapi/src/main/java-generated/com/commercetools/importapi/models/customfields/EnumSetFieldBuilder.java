@@ -25,7 +25,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
         return this.value;
     }
 
+    /**
+     * builds EnumSetField with checking for non-null required values
+     * @return EnumSetField
+     */
     public EnumSetField build() {
         Objects.requireNonNull(value, EnumSetField.class + ": value is missing");
         return new EnumSetFieldImpl(value);
     }
 
     /**
-     * builds EnumSetField without checking for non null required values
+     * builds EnumSetField without checking for non-null required values
+     * @return EnumSetField
      */
     public EnumSetField buildUnchecked() {
         return new EnumSetFieldImpl(value);

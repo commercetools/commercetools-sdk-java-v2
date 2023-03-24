@@ -29,7 +29,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
         return this.nextValue;
     }
 
+    /**
+     * builds AddTextLineItemChange with checking for non-null required values
+     * @return AddTextLineItemChange
+     */
     public AddTextLineItemChange build() {
         Objects.requireNonNull(change, AddTextLineItemChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddTextLineItemChange.class + ": nextValue is missing");
@@ -76,7 +81,8 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
     }
 
     /**
-     * builds AddTextLineItemChange without checking for non null required values
+     * builds AddTextLineItemChange without checking for non-null required values
+     * @return AddTextLineItemChange
      */
     public AddTextLineItemChange buildUnchecked() {
         return new AddTextLineItemChangeImpl(change, nextValue);

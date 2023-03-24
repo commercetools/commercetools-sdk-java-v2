@@ -48,7 +48,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -59,6 +59,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -68,6 +70,9 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -80,7 +85,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Unique identifier of a Product.</p>
-     * @param productId
+     * @param productId value to be set
      * @return Builder
      */
 
@@ -91,7 +96,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Unique identifier of a ProductVariant in the Product.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -102,7 +107,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Currency code of the country.</p>
-     * @param currency
+     * @param currency value to be set
      * @return Builder
      */
 
@@ -113,7 +118,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Country code of the geographic location.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -124,6 +129,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Customer Group associated with the Price.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -137,7 +143,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Customer Group associated with the Price.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -149,6 +155,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Channel associated with the Price.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -160,7 +167,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Channel associated with the Price.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -206,6 +213,10 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
         return this.channel;
     }
 
+    /**
+     * builds MatchingPriceNotFoundError with checking for non-null required values
+     * @return MatchingPriceNotFoundError
+     */
     public MatchingPriceNotFoundError build() {
         Objects.requireNonNull(message, MatchingPriceNotFoundError.class + ": message is missing");
         Objects.requireNonNull(productId, MatchingPriceNotFoundError.class + ": productId is missing");
@@ -215,7 +226,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     * builds MatchingPriceNotFoundError without checking for non null required values
+     * builds MatchingPriceNotFoundError without checking for non-null required values
+     * @return MatchingPriceNotFoundError
      */
     public MatchingPriceNotFoundError buildUnchecked() {
         return new MatchingPriceNotFoundErrorImpl(message, values, productId, variantId, currency, country,

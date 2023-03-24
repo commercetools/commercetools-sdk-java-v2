@@ -32,6 +32,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -56,6 +57,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
+     * @param builder function to build the variantExclusion value
      * @return Builder
      */
 
@@ -69,7 +71,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
-     * @param variantExclusion
+     * @param variantExclusion value to be set
      * @return Builder
      */
 
@@ -88,13 +90,18 @@ public class ProductSelectionSetVariantExclusionActionBuilder
         return this.variantExclusion;
     }
 
+    /**
+     * builds ProductSelectionSetVariantExclusionAction with checking for non-null required values
+     * @return ProductSelectionSetVariantExclusionAction
+     */
     public ProductSelectionSetVariantExclusionAction build() {
         Objects.requireNonNull(product, ProductSelectionSetVariantExclusionAction.class + ": product is missing");
         return new ProductSelectionSetVariantExclusionActionImpl(product, variantExclusion);
     }
 
     /**
-     * builds ProductSelectionSetVariantExclusionAction without checking for non null required values
+     * builds ProductSelectionSetVariantExclusionAction without checking for non-null required values
+     * @return ProductSelectionSetVariantExclusionAction
      */
     public ProductSelectionSetVariantExclusionAction buildUnchecked() {
         return new ProductSelectionSetVariantExclusionActionImpl(product, variantExclusion);

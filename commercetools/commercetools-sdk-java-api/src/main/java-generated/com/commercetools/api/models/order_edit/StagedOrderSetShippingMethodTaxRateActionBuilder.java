@@ -29,6 +29,7 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -56,12 +57,17 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
         return this.externalTaxRate;
     }
 
+    /**
+     * builds StagedOrderSetShippingMethodTaxRateAction with checking for non-null required values
+     * @return StagedOrderSetShippingMethodTaxRateAction
+     */
     public StagedOrderSetShippingMethodTaxRateAction build() {
         return new StagedOrderSetShippingMethodTaxRateActionImpl(externalTaxRate);
     }
 
     /**
-     * builds StagedOrderSetShippingMethodTaxRateAction without checking for non null required values
+     * builds StagedOrderSetShippingMethodTaxRateAction without checking for non-null required values
+     * @return StagedOrderSetShippingMethodTaxRateAction
      */
     public StagedOrderSetShippingMethodTaxRateAction buildUnchecked() {
         return new StagedOrderSetShippingMethodTaxRateActionImpl(externalTaxRate);

@@ -31,7 +31,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
 
     /**
      *  <p>Unique identifier of the referenced ShippingMethod.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
 
     /**
      *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
 
     /**
      *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
         return this.obj;
     }
 
+    /**
+     * builds ShippingMethodReference with checking for non-null required values
+     * @return ShippingMethodReference
+     */
     public ShippingMethodReference build() {
         Objects.requireNonNull(id, ShippingMethodReference.class + ": id is missing");
         return new ShippingMethodReferenceImpl(id, obj);
     }
 
     /**
-     * builds ShippingMethodReference without checking for non null required values
+     * builds ShippingMethodReference without checking for non-null required values
+     * @return ShippingMethodReference
      */
     public ShippingMethodReference buildUnchecked() {
         return new ShippingMethodReferenceImpl(id, obj);

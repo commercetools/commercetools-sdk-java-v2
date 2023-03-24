@@ -33,7 +33,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p>The name of the field.</p>
-     * @param field
+     * @param field value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p>The offending duplicate value.</p>
-     * @param duplicateValue
+     * @param duplicateValue value to be set
      * @return Builder
      */
 
@@ -78,13 +78,18 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         return this.duplicateValue;
     }
 
+    /**
+     * builds DuplicateFieldError with checking for non-null required values
+     * @return DuplicateFieldError
+     */
     public DuplicateFieldError build() {
         Objects.requireNonNull(message, DuplicateFieldError.class + ": message is missing");
         return new DuplicateFieldErrorImpl(message, field, duplicateValue);
     }
 
     /**
-     * builds DuplicateFieldError without checking for non null required values
+     * builds DuplicateFieldError without checking for non-null required values
+     * @return DuplicateFieldError
      */
     public DuplicateFieldError buildUnchecked() {
         return new DuplicateFieldErrorImpl(message, field, duplicateValue);

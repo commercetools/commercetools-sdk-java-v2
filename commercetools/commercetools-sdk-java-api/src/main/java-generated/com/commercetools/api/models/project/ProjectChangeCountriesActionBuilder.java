@@ -25,7 +25,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
         return this.countries;
     }
 
+    /**
+     * builds ProjectChangeCountriesAction with checking for non-null required values
+     * @return ProjectChangeCountriesAction
+     */
     public ProjectChangeCountriesAction build() {
         Objects.requireNonNull(countries, ProjectChangeCountriesAction.class + ": countries is missing");
         return new ProjectChangeCountriesActionImpl(countries);
     }
 
     /**
-     * builds ProjectChangeCountriesAction without checking for non null required values
+     * builds ProjectChangeCountriesAction without checking for non-null required values
+     * @return ProjectChangeCountriesAction
      */
     public ProjectChangeCountriesAction buildUnchecked() {
         return new ProjectChangeCountriesActionImpl(countries);

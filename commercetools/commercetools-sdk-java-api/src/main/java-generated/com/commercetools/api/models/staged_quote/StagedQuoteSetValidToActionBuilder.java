@@ -27,7 +27,7 @@ public class StagedQuoteSetValidToActionBuilder implements Builder<StagedQuoteSe
 
     /**
      *  <p>If <code>validTo</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-     * @param validTo
+     * @param validTo value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class StagedQuoteSetValidToActionBuilder implements Builder<StagedQuoteSe
         return this.validTo;
     }
 
+    /**
+     * builds StagedQuoteSetValidToAction with checking for non-null required values
+     * @return StagedQuoteSetValidToAction
+     */
     public StagedQuoteSetValidToAction build() {
         return new StagedQuoteSetValidToActionImpl(validTo);
     }
 
     /**
-     * builds StagedQuoteSetValidToAction without checking for non null required values
+     * builds StagedQuoteSetValidToAction without checking for non-null required values
+     * @return StagedQuoteSetValidToAction
      */
     public StagedQuoteSetValidToAction buildUnchecked() {
         return new StagedQuoteSetValidToActionImpl(validTo);

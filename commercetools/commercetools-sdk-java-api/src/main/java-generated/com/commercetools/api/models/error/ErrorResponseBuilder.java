@@ -34,7 +34,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *  <p>HTTP status code corresponding to the error.</p>
-     * @param statusCode
+     * @param statusCode value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *  <p>First error message in the <code>errors</code> array.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -97,6 +97,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -112,6 +113,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -135,6 +137,10 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this.errors;
     }
 
+    /**
+     * builds ErrorResponse with checking for non-null required values
+     * @return ErrorResponse
+     */
     public ErrorResponse build() {
         Objects.requireNonNull(statusCode, ErrorResponse.class + ": statusCode is missing");
         Objects.requireNonNull(message, ErrorResponse.class + ": message is missing");
@@ -142,7 +148,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     * builds ErrorResponse without checking for non null required values
+     * builds ErrorResponse without checking for non-null required values
+     * @return ErrorResponse
      */
     public ErrorResponse buildUnchecked() {
         return new ErrorResponseImpl(statusCode, message, errors);

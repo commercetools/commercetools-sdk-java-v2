@@ -55,7 +55,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>User-defined unique identifier for the BusinessUnit.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Name of the Business Unit.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Email address of the Business Unit.</p>
-     * @param contactEmail
+     * @param contactEmail value to be set
      * @return Builder
      */
 
@@ -88,6 +88,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -99,7 +100,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -110,7 +111,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -122,7 +123,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -134,7 +135,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -149,6 +150,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -163,6 +165,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -175,7 +178,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param shippingAddresses
+     * @param shippingAddresses value to be set
      * @return Builder
      */
 
@@ -186,7 +189,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param shippingAddresses
+     * @param shippingAddresses value to be set
      * @return Builder
      */
 
@@ -197,7 +200,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param shippingAddresses
+     * @param shippingAddresses value to be set
      * @return Builder
      */
 
@@ -211,7 +214,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
-     * @param defaultShippingAddress
+     * @param defaultShippingAddress value to be set
      * @return Builder
      */
 
@@ -222,7 +225,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param billingAddresses
+     * @param billingAddresses value to be set
      * @return Builder
      */
 
@@ -233,7 +236,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param billingAddresses
+     * @param billingAddresses value to be set
      * @return Builder
      */
 
@@ -244,7 +247,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param billingAddresses
+     * @param billingAddresses value to be set
      * @return Builder
      */
 
@@ -258,7 +261,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
-     * @param defaultBillingAddress
+     * @param defaultBillingAddress value to be set
      * @return Builder
      */
 
@@ -269,6 +272,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @param builder function to build the parentUnit value
      * @return Builder
      */
 
@@ -282,7 +286,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
-     * @param parentUnit
+     * @param parentUnit value to be set
      * @return Builder
      */
 
@@ -339,6 +343,10 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
         return this.parentUnit;
     }
 
+    /**
+     * builds MyDivisionDraft with checking for non-null required values
+     * @return MyDivisionDraft
+     */
     public MyDivisionDraft build() {
         Objects.requireNonNull(key, MyDivisionDraft.class + ": key is missing");
         Objects.requireNonNull(name, MyDivisionDraft.class + ": name is missing");
@@ -348,7 +356,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     /**
-     * builds MyDivisionDraft without checking for non null required values
+     * builds MyDivisionDraft without checking for non-null required values
+     * @return MyDivisionDraft
      */
     public MyDivisionDraft buildUnchecked() {
         return new MyDivisionDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses,

@@ -27,7 +27,7 @@ public class ReviewSetLocaleActionBuilder implements Builder<ReviewSetLocaleActi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ReviewSetLocaleActionBuilder implements Builder<ReviewSetLocaleActi
         return this.locale;
     }
 
+    /**
+     * builds ReviewSetLocaleAction with checking for non-null required values
+     * @return ReviewSetLocaleAction
+     */
     public ReviewSetLocaleAction build() {
         return new ReviewSetLocaleActionImpl(locale);
     }
 
     /**
-     * builds ReviewSetLocaleAction without checking for non null required values
+     * builds ReviewSetLocaleAction without checking for non-null required values
+     * @return ReviewSetLocaleAction
      */
     public ReviewSetLocaleAction buildUnchecked() {
         return new ReviewSetLocaleActionImpl(locale);

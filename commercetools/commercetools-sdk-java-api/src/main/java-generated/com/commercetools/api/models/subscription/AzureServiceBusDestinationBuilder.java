@@ -25,7 +25,7 @@ public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBu
 
     /**
      *  <p>SharedAccessKey is partially hidden on retrieval for security reasons.</p>
-     * @param connectionString
+     * @param connectionString value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBu
         return this.connectionString;
     }
 
+    /**
+     * builds AzureServiceBusDestination with checking for non-null required values
+     * @return AzureServiceBusDestination
+     */
     public AzureServiceBusDestination build() {
         Objects.requireNonNull(connectionString, AzureServiceBusDestination.class + ": connectionString is missing");
         return new AzureServiceBusDestinationImpl(connectionString);
     }
 
     /**
-     * builds AzureServiceBusDestination without checking for non null required values
+     * builds AzureServiceBusDestination without checking for non-null required values
+     * @return AzureServiceBusDestination
      */
     public AzureServiceBusDestination buildUnchecked() {
         return new AzureServiceBusDestinationImpl(connectionString);

@@ -29,7 +29,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Expected version of the Store on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds StoreUpdate with checking for non-null required values
+     * @return StoreUpdate
+     */
     public StoreUpdate build() {
         Objects.requireNonNull(version, StoreUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, StoreUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     * builds StoreUpdate without checking for non null required values
+     * builds StoreUpdate without checking for non-null required values
+     * @return StoreUpdate
      */
     public StoreUpdate buildUnchecked() {
         return new StoreUpdateImpl(version, actions);

@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeBooleanTypeBuilder implements Builder<AttributeBooleanType> {
 
+    /**
+     * builds AttributeBooleanType with checking for non-null required values
+     * @return AttributeBooleanType
+     */
     public AttributeBooleanType build() {
         return new AttributeBooleanTypeImpl();
     }
 
     /**
-     * builds AttributeBooleanType without checking for non null required values
+     * builds AttributeBooleanType without checking for non-null required values
+     * @return AttributeBooleanType
      */
     public AttributeBooleanType buildUnchecked() {
         return new AttributeBooleanTypeImpl();

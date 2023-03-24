@@ -26,7 +26,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -93,13 +95,18 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
         return this.stores;
     }
 
+    /**
+     * builds BusinessUnitStoresSetMessagePayload with checking for non-null required values
+     * @return BusinessUnitStoresSetMessagePayload
+     */
     public BusinessUnitStoresSetMessagePayload build() {
         Objects.requireNonNull(stores, BusinessUnitStoresSetMessagePayload.class + ": stores is missing");
         return new BusinessUnitStoresSetMessagePayloadImpl(stores);
     }
 
     /**
-     * builds BusinessUnitStoresSetMessagePayload without checking for non null required values
+     * builds BusinessUnitStoresSetMessagePayload without checking for non-null required values
+     * @return BusinessUnitStoresSetMessagePayload
      */
     public BusinessUnitStoresSetMessagePayload buildUnchecked() {
         return new BusinessUnitStoresSetMessagePayloadImpl(stores);

@@ -35,6 +35,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -57,6 +58,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @param builder function to build the freeAbove value
      * @return Builder
      */
 
@@ -68,7 +70,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
-     * @param freeAbove
+     * @param freeAbove value to be set
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p>
-     * @param isMatching
+     * @param isMatching value to be set
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -101,7 +103,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -113,7 +115,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -127,6 +129,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -142,6 +145,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -169,6 +173,10 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return this.tiers;
     }
 
+    /**
+     * builds ShippingRate with checking for non-null required values
+     * @return ShippingRate
+     */
     public ShippingRate build() {
         Objects.requireNonNull(price, ShippingRate.class + ": price is missing");
         Objects.requireNonNull(freeAbove, ShippingRate.class + ": freeAbove is missing");
@@ -178,7 +186,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     * builds ShippingRate without checking for non null required values
+     * builds ShippingRate without checking for non-null required values
+     * @return ShippingRate
      */
     public ShippingRate buildUnchecked() {
         return new ShippingRateImpl(price, freeAbove, isMatching, tiers);

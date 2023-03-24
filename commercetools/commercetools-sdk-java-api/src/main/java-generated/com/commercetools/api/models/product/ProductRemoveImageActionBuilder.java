@@ -36,7 +36,7 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
 
     /**
      *  <p>The URL of the image to remove.</p>
-     * @param imageUrl
+     * @param imageUrl value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
 
     /**
      *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -97,13 +97,18 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
         return this.staged;
     }
 
+    /**
+     * builds ProductRemoveImageAction with checking for non-null required values
+     * @return ProductRemoveImageAction
+     */
     public ProductRemoveImageAction build() {
         Objects.requireNonNull(imageUrl, ProductRemoveImageAction.class + ": imageUrl is missing");
         return new ProductRemoveImageActionImpl(variantId, sku, imageUrl, staged);
     }
 
     /**
-     * builds ProductRemoveImageAction without checking for non null required values
+     * builds ProductRemoveImageAction without checking for non-null required values
+     * @return ProductRemoveImageAction
      */
     public ProductRemoveImageAction buildUnchecked() {
         return new ProductRemoveImageActionImpl(variantId, sku, imageUrl, staged);

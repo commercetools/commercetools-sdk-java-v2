@@ -67,7 +67,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Unique ID of the Store.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Current version of the Store.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Date and time (UTC) the Store was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -100,7 +100,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Date and time (UTC) the Store was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -111,6 +111,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -122,7 +123,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -134,6 +135,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -145,7 +147,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -156,7 +158,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>User-defined unique and immutable identifier for the Store.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -167,6 +169,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Name of the Store.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -178,7 +181,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Name of the Store.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -189,7 +192,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Languages configured for the Store.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -200,7 +203,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Languages configured for the Store.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -211,7 +214,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Languages configured for the Store.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -225,7 +228,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -236,7 +239,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -248,7 +251,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
-     * @param countries
+     * @param countries value to be set
      * @return Builder
      */
 
@@ -262,6 +265,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param builder function to build the countries value
      * @return Builder
      */
 
@@ -276,6 +280,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param builder function to build the countries value
      * @return Builder
      */
 
@@ -288,7 +293,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -300,7 +305,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -312,7 +317,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
-     * @param distributionChannels
+     * @param distributionChannels value to be set
      * @return Builder
      */
 
@@ -327,6 +332,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
+     * @param builder function to build the distributionChannels value
      * @return Builder
      */
 
@@ -342,6 +348,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
+     * @param builder function to build the distributionChannels value
      * @return Builder
      */
 
@@ -355,7 +362,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -366,7 +373,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -378,7 +385,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -393,6 +400,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
+     * @param builder function to build the supplyChannels value
      * @return Builder
      */
 
@@ -408,6 +416,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
+     * @param builder function to build the supplyChannels value
      * @return Builder
      */
 
@@ -427,7 +436,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
-     * @param productSelections
+     * @param productSelections value to be set
      * @return Builder
      */
 
@@ -445,7 +454,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
-     * @param productSelections
+     * @param productSelections value to be set
      * @return Builder
      */
 
@@ -463,7 +472,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
-     * @param productSelections
+     * @param productSelections value to be set
      * @return Builder
      */
 
@@ -484,6 +493,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param builder function to build the productSelections value
      * @return Builder
      */
 
@@ -505,6 +515,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param builder function to build the productSelections value
      * @return Builder
      */
 
@@ -518,6 +529,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Custom fields for the Store.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -529,7 +541,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Custom fields for the Store.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -598,6 +610,10 @@ public class StoreBuilder implements Builder<Store> {
         return this.custom;
     }
 
+    /**
+     * builds Store with checking for non-null required values
+     * @return Store
+     */
     public Store build() {
         Objects.requireNonNull(id, Store.class + ": id is missing");
         Objects.requireNonNull(version, Store.class + ": version is missing");
@@ -614,7 +630,8 @@ public class StoreBuilder implements Builder<Store> {
     }
 
     /**
-     * builds Store without checking for non null required values
+     * builds Store without checking for non-null required values
+     * @return Store
      */
     public Store buildUnchecked() {
         return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,

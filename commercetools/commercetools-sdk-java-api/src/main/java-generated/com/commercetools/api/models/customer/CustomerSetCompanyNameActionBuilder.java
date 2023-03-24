@@ -27,7 +27,7 @@ public class CustomerSetCompanyNameActionBuilder implements Builder<CustomerSetC
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param companyName
+     * @param companyName value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerSetCompanyNameActionBuilder implements Builder<CustomerSetC
         return this.companyName;
     }
 
+    /**
+     * builds CustomerSetCompanyNameAction with checking for non-null required values
+     * @return CustomerSetCompanyNameAction
+     */
     public CustomerSetCompanyNameAction build() {
         return new CustomerSetCompanyNameActionImpl(companyName);
     }
 
     /**
-     * builds CustomerSetCompanyNameAction without checking for non null required values
+     * builds CustomerSetCompanyNameAction without checking for non-null required values
+     * @return CustomerSetCompanyNameAction
      */
     public CustomerSetCompanyNameAction buildUnchecked() {
         return new CustomerSetCompanyNameActionImpl(companyName);

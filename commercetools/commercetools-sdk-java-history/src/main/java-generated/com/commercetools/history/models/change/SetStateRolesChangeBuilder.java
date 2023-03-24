@@ -31,7 +31,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -92,7 +92,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -104,7 +104,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -129,6 +129,10 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds SetStateRolesChange with checking for non-null required values
+     * @return SetStateRolesChange
+     */
     public SetStateRolesChange build() {
         Objects.requireNonNull(change, SetStateRolesChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetStateRolesChange.class + ": previousValue is missing");
@@ -137,7 +141,8 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
     }
 
     /**
-     * builds SetStateRolesChange without checking for non null required values
+     * builds SetStateRolesChange without checking for non-null required values
+     * @return SetStateRolesChange
      */
     public SetStateRolesChange buildUnchecked() {
         return new SetStateRolesChangeImpl(change, previousValue, nextValue);

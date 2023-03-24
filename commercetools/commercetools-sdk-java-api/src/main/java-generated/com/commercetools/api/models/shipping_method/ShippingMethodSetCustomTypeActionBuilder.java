@@ -31,6 +31,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
 
     /**
      *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
 
     /**
      *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
 
     /**
      *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
 
     /**
      *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
         return this.fields;
     }
 
+    /**
+     * builds ShippingMethodSetCustomTypeAction with checking for non-null required values
+     * @return ShippingMethodSetCustomTypeAction
+     */
     public ShippingMethodSetCustomTypeAction build() {
         return new ShippingMethodSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds ShippingMethodSetCustomTypeAction without checking for non null required values
+     * builds ShippingMethodSetCustomTypeAction without checking for non-null required values
+     * @return ShippingMethodSetCustomTypeAction
      */
     public ShippingMethodSetCustomTypeAction buildUnchecked() {
         return new ShippingMethodSetCustomTypeActionImpl(type, fields);

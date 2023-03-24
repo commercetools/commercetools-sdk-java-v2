@@ -27,7 +27,7 @@ public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyActi
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyActi
         return this.key;
     }
 
+    /**
+     * builds OrderEditSetKeyAction with checking for non-null required values
+     * @return OrderEditSetKeyAction
+     */
     public OrderEditSetKeyAction build() {
         return new OrderEditSetKeyActionImpl(key);
     }
 
     /**
-     * builds OrderEditSetKeyAction without checking for non null required values
+     * builds OrderEditSetKeyAction without checking for non-null required values
+     * @return OrderEditSetKeyAction
      */
     public OrderEditSetKeyAction buildUnchecked() {
         return new OrderEditSetKeyActionImpl(key);

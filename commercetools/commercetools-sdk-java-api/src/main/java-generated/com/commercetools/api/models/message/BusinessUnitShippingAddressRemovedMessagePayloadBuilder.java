@@ -27,6 +27,7 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
 
     /**
      *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
 
     /**
      *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -52,6 +53,10 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
         return this.address;
     }
 
+    /**
+     * builds BusinessUnitShippingAddressRemovedMessagePayload with checking for non-null required values
+     * @return BusinessUnitShippingAddressRemovedMessagePayload
+     */
     public BusinessUnitShippingAddressRemovedMessagePayload build() {
         Objects.requireNonNull(address,
             BusinessUnitShippingAddressRemovedMessagePayload.class + ": address is missing");
@@ -59,7 +64,8 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
     }
 
     /**
-     * builds BusinessUnitShippingAddressRemovedMessagePayload without checking for non null required values
+     * builds BusinessUnitShippingAddressRemovedMessagePayload without checking for non-null required values
+     * @return BusinessUnitShippingAddressRemovedMessagePayload
      */
     public BusinessUnitShippingAddressRemovedMessagePayload buildUnchecked() {
         return new BusinessUnitShippingAddressRemovedMessagePayloadImpl(address);

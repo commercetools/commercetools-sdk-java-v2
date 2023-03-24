@@ -27,6 +27,7 @@ public class MyCartAddItemShippingAddressActionBuilder implements Builder<MyCart
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
      *  <p>The new address must have a key that is unique accross this Cart.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class MyCartAddItemShippingAddressActionBuilder implements Builder<MyCart
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
      *  <p>The new address must have a key that is unique accross this Cart.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -53,13 +54,18 @@ public class MyCartAddItemShippingAddressActionBuilder implements Builder<MyCart
         return this.address;
     }
 
+    /**
+     * builds MyCartAddItemShippingAddressAction with checking for non-null required values
+     * @return MyCartAddItemShippingAddressAction
+     */
     public MyCartAddItemShippingAddressAction build() {
         Objects.requireNonNull(address, MyCartAddItemShippingAddressAction.class + ": address is missing");
         return new MyCartAddItemShippingAddressActionImpl(address);
     }
 
     /**
-     * builds MyCartAddItemShippingAddressAction without checking for non null required values
+     * builds MyCartAddItemShippingAddressAction without checking for non-null required values
+     * @return MyCartAddItemShippingAddressAction
      */
     public MyCartAddItemShippingAddressAction buildUnchecked() {
         return new MyCartAddItemShippingAddressActionImpl(address);

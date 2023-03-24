@@ -31,7 +31,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
 
     /**
      *  <p>Unique identifier of the referenced CustomObject.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
 
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
 
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
         return this.obj;
     }
 
+    /**
+     * builds CustomObjectReference with checking for non-null required values
+     * @return CustomObjectReference
+     */
     public CustomObjectReference build() {
         Objects.requireNonNull(id, CustomObjectReference.class + ": id is missing");
         return new CustomObjectReferenceImpl(id, obj);
     }
 
     /**
-     * builds CustomObjectReference without checking for non null required values
+     * builds CustomObjectReference without checking for non-null required values
+     * @return CustomObjectReference
      */
     public CustomObjectReference buildUnchecked() {
         return new CustomObjectReferenceImpl(id, obj);

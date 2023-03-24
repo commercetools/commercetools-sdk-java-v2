@@ -25,7 +25,7 @@ public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpda
 
     /**
      *
-     * @param status
+     * @param status value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpda
         return this.status;
     }
 
+    /**
+     * builds ChangeStatusUpdateAction with checking for non-null required values
+     * @return ChangeStatusUpdateAction
+     */
     public ChangeStatusUpdateAction build() {
         Objects.requireNonNull(status, ChangeStatusUpdateAction.class + ": status is missing");
         return new ChangeStatusUpdateActionImpl(status);
     }
 
     /**
-     * builds ChangeStatusUpdateAction without checking for non null required values
+     * builds ChangeStatusUpdateAction without checking for non-null required values
+     * @return ChangeStatusUpdateAction
      */
     public ChangeStatusUpdateAction buildUnchecked() {
         return new ChangeStatusUpdateActionImpl(status);

@@ -25,7 +25,7 @@ public class ChannelKeyReferenceBuilder implements Builder<ChannelKeyReference> 
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ChannelKeyReferenceBuilder implements Builder<ChannelKeyReference> 
         return this.key;
     }
 
+    /**
+     * builds ChannelKeyReference with checking for non-null required values
+     * @return ChannelKeyReference
+     */
     public ChannelKeyReference build() {
         Objects.requireNonNull(key, ChannelKeyReference.class + ": key is missing");
         return new ChannelKeyReferenceImpl(key);
     }
 
     /**
-     * builds ChannelKeyReference without checking for non null required values
+     * builds ChannelKeyReference without checking for non-null required values
+     * @return ChannelKeyReference
      */
     public ChannelKeyReference buildUnchecked() {
         return new ChannelKeyReferenceImpl(key);

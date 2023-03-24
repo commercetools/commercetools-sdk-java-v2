@@ -31,7 +31,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
 
     /**
      *  <p>Unique identifier of the referenced Customer.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
 
     /**
      *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
 
     /**
      *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
         return this.obj;
     }
 
+    /**
+     * builds CustomerReference with checking for non-null required values
+     * @return CustomerReference
+     */
     public CustomerReference build() {
         Objects.requireNonNull(id, CustomerReference.class + ": id is missing");
         return new CustomerReferenceImpl(id, obj);
     }
 
     /**
-     * builds CustomerReference without checking for non null required values
+     * builds CustomerReference without checking for non-null required values
+     * @return CustomerReference
      */
     public CustomerReference buildUnchecked() {
         return new CustomerReferenceImpl(id, obj);

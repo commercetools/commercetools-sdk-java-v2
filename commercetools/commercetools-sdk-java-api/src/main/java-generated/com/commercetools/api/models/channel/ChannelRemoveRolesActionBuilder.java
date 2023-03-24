@@ -25,7 +25,7 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -65,13 +65,18 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
         return this.roles;
     }
 
+    /**
+     * builds ChannelRemoveRolesAction with checking for non-null required values
+     * @return ChannelRemoveRolesAction
+     */
     public ChannelRemoveRolesAction build() {
         Objects.requireNonNull(roles, ChannelRemoveRolesAction.class + ": roles is missing");
         return new ChannelRemoveRolesActionImpl(roles);
     }
 
     /**
-     * builds ChannelRemoveRolesAction without checking for non null required values
+     * builds ChannelRemoveRolesAction without checking for non-null required values
+     * @return ChannelRemoveRolesAction
      */
     public ChannelRemoveRolesAction buildUnchecked() {
         return new ChannelRemoveRolesActionImpl(roles);

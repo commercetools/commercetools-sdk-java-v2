@@ -28,7 +28,7 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param deleteDaysAfterLastModification
+     * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
@@ -43,12 +43,17 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
         return this.deleteDaysAfterLastModification;
     }
 
+    /**
+     * builds MyShoppingListSetDeleteDaysAfterLastModificationAction with checking for non-null required values
+     * @return MyShoppingListSetDeleteDaysAfterLastModificationAction
+     */
     public MyShoppingListSetDeleteDaysAfterLastModificationAction build() {
         return new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
     }
 
     /**
-     * builds MyShoppingListSetDeleteDaysAfterLastModificationAction without checking for non null required values
+     * builds MyShoppingListSetDeleteDaysAfterLastModificationAction without checking for non-null required values
+     * @return MyShoppingListSetDeleteDaysAfterLastModificationAction
      */
     public MyShoppingListSetDeleteDaysAfterLastModificationAction buildUnchecked() {
         return new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);

@@ -27,7 +27,7 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
 
     /**
      *  <p>Plain text description detailing the external OAuth error. For example, <code>"External OAuth did not respond in time."</code>.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ExternalOAuthFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ExternalOAuthFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
         return this.values;
     }
 
+    /**
+     * builds ExternalOAuthFailedError with checking for non-null required values
+     * @return ExternalOAuthFailedError
+     */
     public ExternalOAuthFailedError build() {
         Objects.requireNonNull(message, ExternalOAuthFailedError.class + ": message is missing");
         return new ExternalOAuthFailedErrorImpl(message, values);
     }
 
     /**
-     * builds ExternalOAuthFailedError without checking for non null required values
+     * builds ExternalOAuthFailedError without checking for non-null required values
+     * @return ExternalOAuthFailedError
      */
     public ExternalOAuthFailedError buildUnchecked() {
         return new ExternalOAuthFailedErrorImpl(message, values);

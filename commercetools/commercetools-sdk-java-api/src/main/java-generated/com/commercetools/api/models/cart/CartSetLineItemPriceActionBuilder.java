@@ -31,7 +31,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
 
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     * @param builder function to build the externalPrice value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
 
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
-     * @param externalPrice
+     * @param externalPrice value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
         return this.externalPrice;
     }
 
+    /**
+     * builds CartSetLineItemPriceAction with checking for non-null required values
+     * @return CartSetLineItemPriceAction
+     */
     public CartSetLineItemPriceAction build() {
         Objects.requireNonNull(lineItemId, CartSetLineItemPriceAction.class + ": lineItemId is missing");
         return new CartSetLineItemPriceActionImpl(lineItemId, externalPrice);
     }
 
     /**
-     * builds CartSetLineItemPriceAction without checking for non null required values
+     * builds CartSetLineItemPriceAction without checking for non-null required values
+     * @return CartSetLineItemPriceAction
      */
     public CartSetLineItemPriceAction buildUnchecked() {
         return new CartSetLineItemPriceActionImpl(lineItemId, externalPrice);

@@ -26,7 +26,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
-     * @param payments
+     * @param payments value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
-     * @param payments
+     * @param payments value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
-     * @param payments
+     * @param payments value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
+     * @param builder function to build the payments value
      * @return Builder
      */
 
@@ -77,6 +78,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
+     * @param builder function to build the payments value
      * @return Builder
      */
 
@@ -91,13 +93,18 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
         return this.payments;
     }
 
+    /**
+     * builds PaymentInfo with checking for non-null required values
+     * @return PaymentInfo
+     */
     public PaymentInfo build() {
         Objects.requireNonNull(payments, PaymentInfo.class + ": payments is missing");
         return new PaymentInfoImpl(payments);
     }
 
     /**
-     * builds PaymentInfo without checking for non null required values
+     * builds PaymentInfo without checking for non-null required values
+     * @return PaymentInfo
      */
     public PaymentInfo buildUnchecked() {
         return new PaymentInfoImpl(payments);

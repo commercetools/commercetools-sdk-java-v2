@@ -52,7 +52,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>User-defined unique identifier for the BusinessUnit.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Name of the Business Unit.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -74,7 +74,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Email address of the Business Unit.</p>
-     * @param contactEmail
+     * @param contactEmail value to be set
      * @return Builder
      */
 
@@ -85,6 +85,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -96,7 +97,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -107,7 +108,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -119,7 +120,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -131,7 +132,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -146,6 +147,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -160,6 +162,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -172,7 +175,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param shippingAddresses
+     * @param shippingAddresses value to be set
      * @return Builder
      */
 
@@ -183,7 +186,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param shippingAddresses
+     * @param shippingAddresses value to be set
      * @return Builder
      */
 
@@ -194,7 +197,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param shippingAddresses
+     * @param shippingAddresses value to be set
      * @return Builder
      */
 
@@ -208,7 +211,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
-     * @param defaultShippingAddress
+     * @param defaultShippingAddress value to be set
      * @return Builder
      */
 
@@ -219,7 +222,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param billingAddresses
+     * @param billingAddresses value to be set
      * @return Builder
      */
 
@@ -230,7 +233,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param billingAddresses
+     * @param billingAddresses value to be set
      * @return Builder
      */
 
@@ -241,7 +244,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
-     * @param billingAddresses
+     * @param billingAddresses value to be set
      * @return Builder
      */
 
@@ -255,7 +258,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
-     * @param defaultBillingAddress
+     * @param defaultBillingAddress value to be set
      * @return Builder
      */
 
@@ -307,6 +310,10 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
         return this.defaultBillingAddress;
     }
 
+    /**
+     * builds MyCompanyDraft with checking for non-null required values
+     * @return MyCompanyDraft
+     */
     public MyCompanyDraft build() {
         Objects.requireNonNull(key, MyCompanyDraft.class + ": key is missing");
         Objects.requireNonNull(name, MyCompanyDraft.class + ": name is missing");
@@ -315,7 +322,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
     }
 
     /**
-     * builds MyCompanyDraft without checking for non null required values
+     * builds MyCompanyDraft without checking for non-null required values
+     * @return MyCompanyDraft
      */
     public MyCompanyDraft buildUnchecked() {
         return new MyCompanyDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses,

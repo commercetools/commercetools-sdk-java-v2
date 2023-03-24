@@ -31,7 +31,7 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
 
     /**
      *  <p>Shape of the action for <code>changeName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeNameChange with checking for non-null required values
+     * @return ChangeNameChange
+     */
     public ChangeNameChange build() {
         Objects.requireNonNull(change, ChangeNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeNameChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
     }
 
     /**
-     * builds ChangeNameChange without checking for non null required values
+     * builds ChangeNameChange without checking for non-null required values
+     * @return ChangeNameChange
      */
     public ChangeNameChange buildUnchecked() {
         return new ChangeNameChangeImpl(change, previousValue, nextValue);

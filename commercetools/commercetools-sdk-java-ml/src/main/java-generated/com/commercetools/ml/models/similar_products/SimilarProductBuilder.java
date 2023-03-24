@@ -34,6 +34,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>Reference to Product</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>Reference to Product</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>ID of the ProductVariant that was compared.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -67,6 +68,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     * @param builder function to build the meta value
      * @return Builder
      */
 
@@ -78,7 +80,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
-     * @param meta
+     * @param meta value to be set
      * @return Builder
      */
 
@@ -103,12 +105,17 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
         return this.meta;
     }
 
+    /**
+     * builds SimilarProduct with checking for non-null required values
+     * @return SimilarProduct
+     */
     public SimilarProduct build() {
         return new SimilarProductImpl(product, variantId, meta);
     }
 
     /**
-     * builds SimilarProduct without checking for non null required values
+     * builds SimilarProduct without checking for non-null required values
+     * @return SimilarProduct
      */
     public SimilarProduct buildUnchecked() {
         return new SimilarProductImpl(product, variantId, meta);

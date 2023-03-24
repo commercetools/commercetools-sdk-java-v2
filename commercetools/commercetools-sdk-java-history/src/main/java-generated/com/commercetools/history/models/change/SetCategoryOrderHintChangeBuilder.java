@@ -38,7 +38,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *  <p>Update action for <code>setCategoryOrderHint</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
-     * @param categoryId
+     * @param categoryId value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -95,6 +96,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -106,7 +108,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -136,6 +138,10 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
         return this.nextValue;
     }
 
+    /**
+     * builds SetCategoryOrderHintChange with checking for non-null required values
+     * @return SetCategoryOrderHintChange
+     */
     public SetCategoryOrderHintChange build() {
         Objects.requireNonNull(change, SetCategoryOrderHintChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetCategoryOrderHintChange.class + ": catalogData is missing");
@@ -146,7 +152,8 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     * builds SetCategoryOrderHintChange without checking for non null required values
+     * builds SetCategoryOrderHintChange without checking for non-null required values
+     * @return SetCategoryOrderHintChange
      */
     public SetCategoryOrderHintChange buildUnchecked() {
         return new SetCategoryOrderHintChangeImpl(change, catalogData, categoryId, previousValue, nextValue);

@@ -28,7 +28,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
 
     /**
      *
-     * @param editVersion
+     * @param editVersion value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
 
     /**
      *
-     * @param resourceVersion
+     * @param resourceVersion value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
         return this.resourceVersion;
     }
 
+    /**
+     * builds OrderEditApply with checking for non-null required values
+     * @return OrderEditApply
+     */
     public OrderEditApply build() {
         Objects.requireNonNull(editVersion, OrderEditApply.class + ": editVersion is missing");
         Objects.requireNonNull(resourceVersion, OrderEditApply.class + ": resourceVersion is missing");
@@ -63,7 +67,8 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     }
 
     /**
-     * builds OrderEditApply without checking for non null required values
+     * builds OrderEditApply without checking for non-null required values
+     * @return OrderEditApply
      */
     public OrderEditApply buildUnchecked() {
         return new OrderEditApplyImpl(editVersion, resourceVersion);

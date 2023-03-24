@@ -26,6 +26,7 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
         return this.product;
     }
 
+    /**
+     * builds ProductSelectionRemoveProductAction with checking for non-null required values
+     * @return ProductSelectionRemoveProductAction
+     */
     public ProductSelectionRemoveProductAction build() {
         Objects.requireNonNull(product, ProductSelectionRemoveProductAction.class + ": product is missing");
         return new ProductSelectionRemoveProductActionImpl(product);
     }
 
     /**
-     * builds ProductSelectionRemoveProductAction without checking for non null required values
+     * builds ProductSelectionRemoveProductAction without checking for non-null required values
+     * @return ProductSelectionRemoveProductAction
      */
     public ProductSelectionRemoveProductAction buildUnchecked() {
         return new ProductSelectionRemoveProductActionImpl(product);

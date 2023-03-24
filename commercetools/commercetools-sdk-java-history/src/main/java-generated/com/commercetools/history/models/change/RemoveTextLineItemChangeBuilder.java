@@ -32,7 +32,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveTextLineItemChange with checking for non-null required values
+     * @return RemoveTextLineItemChange
+     */
     public RemoveTextLineItemChange build() {
         Objects.requireNonNull(change, RemoveTextLineItemChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveTextLineItemChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     }
 
     /**
-     * builds RemoveTextLineItemChange without checking for non null required values
+     * builds RemoveTextLineItemChange without checking for non-null required values
+     * @return RemoveTextLineItemChange
      */
     public RemoveTextLineItemChange buildUnchecked() {
         return new RemoveTextLineItemChangeImpl(change, previousValue, nextValue);

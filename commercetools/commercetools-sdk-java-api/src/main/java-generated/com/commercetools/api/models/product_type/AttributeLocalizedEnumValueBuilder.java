@@ -29,7 +29,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
 
     /**
      *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
 
     /**
      *  <p>Descriptive, localized label of the value.</p>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
 
     /**
      *  <p>Descriptive, localized label of the value.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
         return this.label;
     }
 
+    /**
+     * builds AttributeLocalizedEnumValue with checking for non-null required values
+     * @return AttributeLocalizedEnumValue
+     */
     public AttributeLocalizedEnumValue build() {
         Objects.requireNonNull(key, AttributeLocalizedEnumValue.class + ": key is missing");
         Objects.requireNonNull(label, AttributeLocalizedEnumValue.class + ": label is missing");
@@ -75,7 +80,8 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
     }
 
     /**
-     * builds AttributeLocalizedEnumValue without checking for non null required values
+     * builds AttributeLocalizedEnumValue without checking for non-null required values
+     * @return AttributeLocalizedEnumValue
      */
     public AttributeLocalizedEnumValue buildUnchecked() {
         return new AttributeLocalizedEnumValueImpl(key, label);

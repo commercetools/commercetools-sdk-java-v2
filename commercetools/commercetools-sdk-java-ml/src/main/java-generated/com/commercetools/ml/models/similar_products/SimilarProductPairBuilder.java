@@ -29,7 +29,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *  <p>The probability of product similarity.</p>
-     * @param confidence
+     * @param confidence value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
-     * @param products
+     * @param products value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
-     * @param products
+     * @param products value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
-     * @param products
+     * @param products value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
+     * @param builder function to build the products value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     /**
      *
+     * @param builder function to build the products value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
         return this.products;
     }
 
+    /**
+     * builds SimilarProductPair with checking for non-null required values
+     * @return SimilarProductPair
+     */
     public SimilarProductPair build() {
         Objects.requireNonNull(confidence, SimilarProductPair.class + ": confidence is missing");
         Objects.requireNonNull(products, SimilarProductPair.class + ": products is missing");
@@ -120,7 +126,8 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     * builds SimilarProductPair without checking for non null required values
+     * builds SimilarProductPair without checking for non-null required values
+     * @return SimilarProductPair
      */
     public SimilarProductPair buildUnchecked() {
         return new SimilarProductPairImpl(confidence, products);

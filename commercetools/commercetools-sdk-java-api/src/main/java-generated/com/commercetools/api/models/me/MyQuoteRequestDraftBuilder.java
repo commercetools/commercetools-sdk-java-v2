@@ -31,7 +31,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
 
     /**
      *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
-     * @param cartId
+     * @param cartId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
 
     /**
      *  <p>Current version of the Cart.</p>
-     * @param cartVersion
+     * @param cartVersion value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
 
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
-     * @param comment
+     * @param comment value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
         return this.comment;
     }
 
+    /**
+     * builds MyQuoteRequestDraft with checking for non-null required values
+     * @return MyQuoteRequestDraft
+     */
     public MyQuoteRequestDraft build() {
         Objects.requireNonNull(cartId, MyQuoteRequestDraft.class + ": cartId is missing");
         Objects.requireNonNull(cartVersion, MyQuoteRequestDraft.class + ": cartVersion is missing");
@@ -82,7 +86,8 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
     }
 
     /**
-     * builds MyQuoteRequestDraft without checking for non null required values
+     * builds MyQuoteRequestDraft without checking for non-null required values
+     * @return MyQuoteRequestDraft
      */
     public MyQuoteRequestDraft buildUnchecked() {
         return new MyQuoteRequestDraftImpl(cartId, cartVersion, comment);

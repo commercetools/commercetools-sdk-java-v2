@@ -32,7 +32,7 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *  <p>Update action for setting a custom type</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
         return this.previousValue;
     }
 
+    /**
+     * builds SetCustomTypeChange with checking for non-null required values
+     * @return SetCustomTypeChange
+     */
     public SetCustomTypeChange build() {
         Objects.requireNonNull(change, SetCustomTypeChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetCustomTypeChange.class + ": nextValue is missing");
@@ -106,7 +112,8 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
     }
 
     /**
-     * builds SetCustomTypeChange without checking for non null required values
+     * builds SetCustomTypeChange without checking for non-null required values
+     * @return SetCustomTypeChange
      */
     public SetCustomTypeChange buildUnchecked() {
         return new SetCustomTypeChangeImpl(change, nextValue, previousValue);

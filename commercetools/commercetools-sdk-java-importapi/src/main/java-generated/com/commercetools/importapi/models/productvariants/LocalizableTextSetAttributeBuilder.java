@@ -31,7 +31,7 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -81,6 +81,7 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -95,6 +96,7 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -114,13 +116,18 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
         return this.value;
     }
 
+    /**
+     * builds LocalizableTextSetAttribute with checking for non-null required values
+     * @return LocalizableTextSetAttribute
+     */
     public LocalizableTextSetAttribute build() {
         Objects.requireNonNull(value, LocalizableTextSetAttribute.class + ": value is missing");
         return new LocalizableTextSetAttributeImpl(name, value);
     }
 
     /**
-     * builds LocalizableTextSetAttribute without checking for non null required values
+     * builds LocalizableTextSetAttribute without checking for non-null required values
+     * @return LocalizableTextSetAttribute
      */
     public LocalizableTextSetAttribute buildUnchecked() {
         return new LocalizableTextSetAttributeImpl(name, value);

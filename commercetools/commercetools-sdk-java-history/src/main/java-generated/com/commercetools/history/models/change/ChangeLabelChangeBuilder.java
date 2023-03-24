@@ -38,7 +38,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *  <p>Update action for <code>changeLabel</code> on product types and types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *  <p>The name of the field definition to update (types).</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *  <p>The name of the attribute definition to update (product-type).</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -104,7 +106,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -134,6 +136,10 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeLabelChange with checking for non-null required values
+     * @return ChangeLabelChange
+     */
     public ChangeLabelChange build() {
         Objects.requireNonNull(change, ChangeLabelChange.class + ": change is missing");
         Objects.requireNonNull(fieldName, ChangeLabelChange.class + ": fieldName is missing");
@@ -144,7 +150,8 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-     * builds ChangeLabelChange without checking for non null required values
+     * builds ChangeLabelChange without checking for non-null required values
+     * @return ChangeLabelChange
      */
     public ChangeLabelChange buildUnchecked() {
         return new ChangeLabelChangeImpl(change, fieldName, attributeName, nextValue, previousValue);

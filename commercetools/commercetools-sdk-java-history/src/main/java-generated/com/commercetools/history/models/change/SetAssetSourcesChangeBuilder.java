@@ -35,7 +35,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *  <p>Update action for <code>setAssetSources</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param builder function to build the asset value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
-     * @param asset
+     * @param asset value to be set
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -81,7 +82,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -93,7 +94,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -108,6 +109,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -122,6 +124,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -134,7 +137,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -146,7 +149,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -158,7 +161,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -173,6 +176,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -187,6 +191,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -213,6 +218,10 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         return this.previousValue;
     }
 
+    /**
+     * builds SetAssetSourcesChange with checking for non-null required values
+     * @return SetAssetSourcesChange
+     */
     public SetAssetSourcesChange build() {
         Objects.requireNonNull(change, SetAssetSourcesChange.class + ": change is missing");
         Objects.requireNonNull(asset, SetAssetSourcesChange.class + ": asset is missing");
@@ -222,7 +231,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     * builds SetAssetSourcesChange without checking for non null required values
+     * builds SetAssetSourcesChange without checking for non-null required values
+     * @return SetAssetSourcesChange
      */
     public SetAssetSourcesChange buildUnchecked() {
         return new SetAssetSourcesChangeImpl(change, asset, nextValue, previousValue);

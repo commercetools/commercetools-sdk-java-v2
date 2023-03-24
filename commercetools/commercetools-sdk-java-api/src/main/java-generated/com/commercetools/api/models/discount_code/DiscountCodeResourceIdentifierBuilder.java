@@ -30,7 +30,7 @@ public class DiscountCodeResourceIdentifierBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Unique identifier of the referenced DiscountCode. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class DiscountCodeResourceIdentifierBuilder implements Builder<DiscountCo
 
     /**
      *  <p>User-defined unique identifier of the referenced DiscountCode. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class DiscountCodeResourceIdentifierBuilder implements Builder<DiscountCo
         return this.key;
     }
 
+    /**
+     * builds DiscountCodeResourceIdentifier with checking for non-null required values
+     * @return DiscountCodeResourceIdentifier
+     */
     public DiscountCodeResourceIdentifier build() {
         return new DiscountCodeResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds DiscountCodeResourceIdentifier without checking for non null required values
+     * builds DiscountCodeResourceIdentifier without checking for non-null required values
+     * @return DiscountCodeResourceIdentifier
      */
     public DiscountCodeResourceIdentifier buildUnchecked() {
         return new DiscountCodeResourceIdentifierImpl(id, key);

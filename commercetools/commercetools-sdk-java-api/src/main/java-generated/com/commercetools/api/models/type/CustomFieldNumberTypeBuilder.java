@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldNumberTypeBuilder implements Builder<CustomFieldNumberType> {
 
+    /**
+     * builds CustomFieldNumberType with checking for non-null required values
+     * @return CustomFieldNumberType
+     */
     public CustomFieldNumberType build() {
         return new CustomFieldNumberTypeImpl();
     }
 
     /**
-     * builds CustomFieldNumberType without checking for non null required values
+     * builds CustomFieldNumberType without checking for non-null required values
+     * @return CustomFieldNumberType
      */
     public CustomFieldNumberType buildUnchecked() {
         return new CustomFieldNumberTypeImpl();

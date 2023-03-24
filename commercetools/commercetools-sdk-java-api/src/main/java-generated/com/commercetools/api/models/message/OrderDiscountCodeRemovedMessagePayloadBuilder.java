@@ -26,6 +26,7 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>DiscountCode that was removed.</p>
+     * @param builder function to build the discountCode value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>DiscountCode that was removed.</p>
-     * @param discountCode
+     * @param discountCode value to be set
      * @return Builder
      */
 
@@ -52,6 +53,10 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
         return this.discountCode;
     }
 
+    /**
+     * builds OrderDiscountCodeRemovedMessagePayload with checking for non-null required values
+     * @return OrderDiscountCodeRemovedMessagePayload
+     */
     public OrderDiscountCodeRemovedMessagePayload build() {
         Objects.requireNonNull(discountCode,
             OrderDiscountCodeRemovedMessagePayload.class + ": discountCode is missing");
@@ -59,7 +64,8 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     * builds OrderDiscountCodeRemovedMessagePayload without checking for non null required values
+     * builds OrderDiscountCodeRemovedMessagePayload without checking for non-null required values
+     * @return OrderDiscountCodeRemovedMessagePayload
      */
     public OrderDiscountCodeRemovedMessagePayload buildUnchecked() {
         return new OrderDiscountCodeRemovedMessagePayloadImpl(discountCode);

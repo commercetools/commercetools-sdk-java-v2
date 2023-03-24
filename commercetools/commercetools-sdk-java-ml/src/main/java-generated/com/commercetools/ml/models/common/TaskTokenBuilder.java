@@ -28,7 +28,7 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
 
     /**
      *  <p>The ID for the task. Used to find the status of the task.</p>
-     * @param taskId
+     * @param taskId value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
 
     /**
      *  <p>The URI path to poll for the status of the task.</p>
-     * @param uriPath
+     * @param uriPath value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
         return this.uriPath;
     }
 
+    /**
+     * builds TaskToken with checking for non-null required values
+     * @return TaskToken
+     */
     public TaskToken build() {
         Objects.requireNonNull(taskId, TaskToken.class + ": taskId is missing");
         Objects.requireNonNull(uriPath, TaskToken.class + ": uriPath is missing");
@@ -63,7 +67,8 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
     }
 
     /**
-     * builds TaskToken without checking for non null required values
+     * builds TaskToken without checking for non-null required values
+     * @return TaskToken
      */
     public TaskToken buildUnchecked() {
         return new TaskTokenImpl(taskId, uriPath);

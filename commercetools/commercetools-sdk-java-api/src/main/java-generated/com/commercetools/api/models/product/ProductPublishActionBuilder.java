@@ -27,7 +27,7 @@ public class ProductPublishActionBuilder implements Builder<ProductPublishAction
 
     /**
      *  <p><code>All</code> or <code>Prices</code></p>
-     * @param scope
+     * @param scope value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class ProductPublishActionBuilder implements Builder<ProductPublishAction
         return this.scope;
     }
 
+    /**
+     * builds ProductPublishAction with checking for non-null required values
+     * @return ProductPublishAction
+     */
     public ProductPublishAction build() {
         return new ProductPublishActionImpl(scope);
     }
 
     /**
-     * builds ProductPublishAction without checking for non null required values
+     * builds ProductPublishAction without checking for non-null required values
+     * @return ProductPublishAction
      */
     public ProductPublishAction buildUnchecked() {
         return new ProductPublishActionImpl(scope);

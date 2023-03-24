@@ -28,6 +28,7 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
         return this.address;
     }
 
+    /**
+     * builds OrderSetBillingAddressAction with checking for non-null required values
+     * @return OrderSetBillingAddressAction
+     */
     public OrderSetBillingAddressAction build() {
         return new OrderSetBillingAddressActionImpl(address);
     }
 
     /**
-     * builds OrderSetBillingAddressAction without checking for non null required values
+     * builds OrderSetBillingAddressAction without checking for non-null required values
+     * @return OrderSetBillingAddressAction
      */
     public OrderSetBillingAddressAction buildUnchecked() {
         return new OrderSetBillingAddressActionImpl(address);

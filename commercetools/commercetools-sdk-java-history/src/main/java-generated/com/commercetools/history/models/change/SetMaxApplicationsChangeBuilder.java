@@ -31,7 +31,7 @@ public class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicatio
 
     /**
      *  <p>Shape of the action for <code>setMaxApplications</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicatio
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicatio
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicatio
         return this.nextValue;
     }
 
+    /**
+     * builds SetMaxApplicationsChange with checking for non-null required values
+     * @return SetMaxApplicationsChange
+     */
     public SetMaxApplicationsChange build() {
         Objects.requireNonNull(change, SetMaxApplicationsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetMaxApplicationsChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicatio
     }
 
     /**
-     * builds SetMaxApplicationsChange without checking for non null required values
+     * builds SetMaxApplicationsChange without checking for non-null required values
+     * @return SetMaxApplicationsChange
      */
     public SetMaxApplicationsChange buildUnchecked() {
         return new SetMaxApplicationsChangeImpl(change, previousValue, nextValue);

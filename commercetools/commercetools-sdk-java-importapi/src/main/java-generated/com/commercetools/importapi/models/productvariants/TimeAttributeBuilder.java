@@ -30,7 +30,7 @@ public class TimeAttributeBuilder implements Builder<TimeAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class TimeAttributeBuilder implements Builder<TimeAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class TimeAttributeBuilder implements Builder<TimeAttribute> {
         return this.value;
     }
 
+    /**
+     * builds TimeAttribute with checking for non-null required values
+     * @return TimeAttribute
+     */
     public TimeAttribute build() {
         Objects.requireNonNull(value, TimeAttribute.class + ": value is missing");
         return new TimeAttributeImpl(name, value);
     }
 
     /**
-     * builds TimeAttribute without checking for non null required values
+     * builds TimeAttribute without checking for non-null required values
+     * @return TimeAttribute
      */
     public TimeAttribute buildUnchecked() {
         return new TimeAttributeImpl(name, value);

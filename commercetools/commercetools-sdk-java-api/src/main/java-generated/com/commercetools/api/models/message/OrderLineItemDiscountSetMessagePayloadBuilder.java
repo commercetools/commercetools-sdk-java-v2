@@ -40,7 +40,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Unique identifier for the Line Item.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -75,7 +75,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
-     * @param discountedPricePerQuantity
+     * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
 
@@ -90,6 +90,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
 
@@ -105,6 +106,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
 
@@ -118,6 +120,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -129,7 +132,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -141,6 +144,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -152,7 +156,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -164,7 +168,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
-     * @param taxedPricePortions
+     * @param taxedPricePortions value to be set
      * @return Builder
      */
 
@@ -176,7 +180,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
-     * @param taxedPricePortions
+     * @param taxedPricePortions value to be set
      * @return Builder
      */
 
@@ -188,7 +192,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
-     * @param taxedPricePortions
+     * @param taxedPricePortions value to be set
      * @return Builder
      */
 
@@ -203,6 +207,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
 
@@ -218,6 +223,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
 
@@ -250,6 +256,10 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         return this.taxedPricePortions;
     }
 
+    /**
+     * builds OrderLineItemDiscountSetMessagePayload with checking for non-null required values
+     * @return OrderLineItemDiscountSetMessagePayload
+     */
     public OrderLineItemDiscountSetMessagePayload build() {
         Objects.requireNonNull(lineItemId, OrderLineItemDiscountSetMessagePayload.class + ": lineItemId is missing");
         Objects.requireNonNull(discountedPricePerQuantity,
@@ -262,7 +272,8 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     * builds OrderLineItemDiscountSetMessagePayload without checking for non null required values
+     * builds OrderLineItemDiscountSetMessagePayload without checking for non-null required values
+     * @return OrderLineItemDiscountSetMessagePayload
      */
     public OrderLineItemDiscountSetMessagePayload buildUnchecked() {
         return new OrderLineItemDiscountSetMessagePayloadImpl(lineItemId, discountedPricePerQuantity, totalPrice,

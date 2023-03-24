@@ -34,7 +34,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -84,6 +84,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -99,6 +100,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -112,7 +114,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     /**
      *
-     * @param dryRun
+     * @param dryRun value to be set
      * @return Builder
      */
 
@@ -134,6 +136,10 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
         return this.dryRun;
     }
 
+    /**
+     * builds OrderEditUpdate with checking for non-null required values
+     * @return OrderEditUpdate
+     */
     public OrderEditUpdate build() {
         Objects.requireNonNull(version, OrderEditUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, OrderEditUpdate.class + ": actions is missing");
@@ -141,7 +147,8 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * builds OrderEditUpdate without checking for non null required values
+     * builds OrderEditUpdate without checking for non-null required values
+     * @return OrderEditUpdate
      */
     public OrderEditUpdate buildUnchecked() {
         return new OrderEditUpdateImpl(version, actions, dryRun);

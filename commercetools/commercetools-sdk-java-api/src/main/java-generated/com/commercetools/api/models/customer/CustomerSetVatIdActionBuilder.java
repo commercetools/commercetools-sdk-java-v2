@@ -27,7 +27,7 @@ public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAc
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param vatId
+     * @param vatId value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAc
         return this.vatId;
     }
 
+    /**
+     * builds CustomerSetVatIdAction with checking for non-null required values
+     * @return CustomerSetVatIdAction
+     */
     public CustomerSetVatIdAction build() {
         return new CustomerSetVatIdActionImpl(vatId);
     }
 
     /**
-     * builds CustomerSetVatIdAction without checking for non null required values
+     * builds CustomerSetVatIdAction without checking for non-null required values
+     * @return CustomerSetVatIdAction
      */
     public CustomerSetVatIdAction buildUnchecked() {
         return new CustomerSetVatIdActionImpl(vatId);

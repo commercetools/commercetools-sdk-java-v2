@@ -29,7 +29,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
         return this.value;
     }
 
+    /**
+     * builds TypeChangeEnumValueLabelAction with checking for non-null required values
+     * @return TypeChangeEnumValueLabelAction
+     */
     public TypeChangeEnumValueLabelAction build() {
         Objects.requireNonNull(fieldName, TypeChangeEnumValueLabelAction.class + ": fieldName is missing");
         Objects.requireNonNull(value, TypeChangeEnumValueLabelAction.class + ": value is missing");
@@ -76,7 +81,8 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
     }
 
     /**
-     * builds TypeChangeEnumValueLabelAction without checking for non null required values
+     * builds TypeChangeEnumValueLabelAction without checking for non-null required values
+     * @return TypeChangeEnumValueLabelAction
      */
     public TypeChangeEnumValueLabelAction buildUnchecked() {
         return new TypeChangeEnumValueLabelActionImpl(fieldName, value);

@@ -26,6 +26,7 @@ public class CustomerAddAddressActionBuilder implements Builder<CustomerAddAddre
 
     /**
      *  <p>Value to append to the <code>addresses</code> array.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CustomerAddAddressActionBuilder implements Builder<CustomerAddAddre
 
     /**
      *  <p>Value to append to the <code>addresses</code> array.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class CustomerAddAddressActionBuilder implements Builder<CustomerAddAddre
         return this.address;
     }
 
+    /**
+     * builds CustomerAddAddressAction with checking for non-null required values
+     * @return CustomerAddAddressAction
+     */
     public CustomerAddAddressAction build() {
         Objects.requireNonNull(address, CustomerAddAddressAction.class + ": address is missing");
         return new CustomerAddAddressActionImpl(address);
     }
 
     /**
-     * builds CustomerAddAddressAction without checking for non null required values
+     * builds CustomerAddAddressAction without checking for non-null required values
+     * @return CustomerAddAddressAction
      */
     public CustomerAddAddressAction buildUnchecked() {
         return new CustomerAddAddressActionImpl(address);

@@ -34,7 +34,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The ID of the ImportOperation.</p>
-     * @param operationId
+     * @param operationId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation state of the ImportOperation.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -96,6 +96,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -110,6 +111,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -134,13 +136,18 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
         return this.errors;
     }
 
+    /**
+     * builds ImportOperationStatus with checking for non-null required values
+     * @return ImportOperationStatus
+     */
     public ImportOperationStatus build() {
         Objects.requireNonNull(state, ImportOperationStatus.class + ": state is missing");
         return new ImportOperationStatusImpl(operationId, state, errors);
     }
 
     /**
-     * builds ImportOperationStatus without checking for non null required values
+     * builds ImportOperationStatus without checking for non-null required values
+     * @return ImportOperationStatus
      */
     public ImportOperationStatus buildUnchecked() {
         return new ImportOperationStatusImpl(operationId, state, errors);

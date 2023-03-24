@@ -25,7 +25,7 @@ public class StateChangeInitialActionBuilder implements Builder<StateChangeIniti
 
     /**
      *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
-     * @param initial
+     * @param initial value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StateChangeInitialActionBuilder implements Builder<StateChangeIniti
         return this.initial;
     }
 
+    /**
+     * builds StateChangeInitialAction with checking for non-null required values
+     * @return StateChangeInitialAction
+     */
     public StateChangeInitialAction build() {
         Objects.requireNonNull(initial, StateChangeInitialAction.class + ": initial is missing");
         return new StateChangeInitialActionImpl(initial);
     }
 
     /**
-     * builds StateChangeInitialAction without checking for non null required values
+     * builds StateChangeInitialAction without checking for non-null required values
+     * @return StateChangeInitialAction
      */
     public StateChangeInitialAction buildUnchecked() {
         return new StateChangeInitialActionImpl(initial);

@@ -35,7 +35,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
 
     /**
      *  <p>Update action for <code>changeMasterVariant</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -91,7 +93,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -116,6 +118,10 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeMasterVariantChange with checking for non-null required values
+     * @return ChangeMasterVariantChange
+     */
     public ChangeMasterVariantChange build() {
         Objects.requireNonNull(change, ChangeMasterVariantChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, ChangeMasterVariantChange.class + ": catalogData is missing");
@@ -125,7 +131,8 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     * builds ChangeMasterVariantChange without checking for non null required values
+     * builds ChangeMasterVariantChange without checking for non-null required values
+     * @return ChangeMasterVariantChange
      */
     public ChangeMasterVariantChange buildUnchecked() {
         return new ChangeMasterVariantChangeImpl(change, catalogData, previousValue, nextValue);

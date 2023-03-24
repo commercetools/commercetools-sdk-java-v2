@@ -31,7 +31,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -80,6 +80,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -113,13 +115,18 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
         return this.items;
     }
 
+    /**
+     * builds ParcelItems with checking for non-null required values
+     * @return ParcelItems
+     */
     public ParcelItems build() {
         Objects.requireNonNull(parcelId, ParcelItems.class + ": parcelId is missing");
         return new ParcelItemsImpl(parcelId, items);
     }
 
     /**
-     * builds ParcelItems without checking for non null required values
+     * builds ParcelItems without checking for non-null required values
+     * @return ParcelItems
      */
     public ParcelItems buildUnchecked() {
         return new ParcelItemsImpl(parcelId, items);

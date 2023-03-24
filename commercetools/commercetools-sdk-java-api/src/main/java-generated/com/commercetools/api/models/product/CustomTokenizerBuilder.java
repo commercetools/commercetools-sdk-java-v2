@@ -25,7 +25,7 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
     /**
      *  <p>Contains custom tokens.</p>
-     * @param inputs
+     * @param inputs value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
     /**
      *  <p>Contains custom tokens.</p>
-     * @param inputs
+     * @param inputs value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
     /**
      *  <p>Contains custom tokens.</p>
-     * @param inputs
+     * @param inputs value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
         return this.inputs;
     }
 
+    /**
+     * builds CustomTokenizer with checking for non-null required values
+     * @return CustomTokenizer
+     */
     public CustomTokenizer build() {
         Objects.requireNonNull(inputs, CustomTokenizer.class + ": inputs is missing");
         return new CustomTokenizerImpl(inputs);
     }
 
     /**
-     * builds CustomTokenizer without checking for non null required values
+     * builds CustomTokenizer without checking for non-null required values
+     * @return CustomTokenizer
      */
     public CustomTokenizer buildUnchecked() {
         return new CustomTokenizerImpl(inputs);

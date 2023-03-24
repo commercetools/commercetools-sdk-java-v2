@@ -39,7 +39,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
 
     /**
      *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
 
     /**
      *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
-     * @param triggerQuantity
+     * @param triggerQuantity value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
 
     /**
      *  <p>Number of Line Items that are discounted per application of this Discount.</p>
-     * @param discountedQuantity
+     * @param discountedQuantity value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
 
     /**
      *  <p>Maximum number of times this Discount can be applied.</p>
-     * @param maxOccurrence
+     * @param maxOccurrence value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
 
     /**
      *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
-     * @param selectionMode
+     * @param selectionMode value to be set
      * @return Builder
      */
 
@@ -114,6 +114,10 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
         return this.selectionMode;
     }
 
+    /**
+     * builds MultiBuyLineItemsTarget with checking for non-null required values
+     * @return MultiBuyLineItemsTarget
+     */
     public MultiBuyLineItemsTarget build() {
         Objects.requireNonNull(predicate, MultiBuyLineItemsTarget.class + ": predicate is missing");
         Objects.requireNonNull(triggerQuantity, MultiBuyLineItemsTarget.class + ": triggerQuantity is missing");
@@ -124,7 +128,8 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     * builds MultiBuyLineItemsTarget without checking for non null required values
+     * builds MultiBuyLineItemsTarget without checking for non-null required values
+     * @return MultiBuyLineItemsTarget
      */
     public MultiBuyLineItemsTarget buildUnchecked() {
         return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,

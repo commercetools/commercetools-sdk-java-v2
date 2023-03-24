@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDateTypeBuilder implements Builder<AttributeDateType> {
 
+    /**
+     * builds AttributeDateType with checking for non-null required values
+     * @return AttributeDateType
+     */
     public AttributeDateType build() {
         return new AttributeDateTypeImpl();
     }
 
     /**
-     * builds AttributeDateType without checking for non null required values
+     * builds AttributeDateType without checking for non-null required values
+     * @return AttributeDateType
      */
     public AttributeDateType buildUnchecked() {
         return new AttributeDateTypeImpl();

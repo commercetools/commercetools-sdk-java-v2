@@ -37,7 +37,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>User-defined unique identifier for the ProductSelection.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -48,6 +48,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -70,6 +71,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -93,7 +95,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Type of the Product Selection.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -122,13 +124,18 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         return this.type;
     }
 
+    /**
+     * builds ProductSelectionDraft with checking for non-null required values
+     * @return ProductSelectionDraft
+     */
     public ProductSelectionDraft build() {
         Objects.requireNonNull(name, ProductSelectionDraft.class + ": name is missing");
         return new ProductSelectionDraftImpl(key, name, custom, type);
     }
 
     /**
-     * builds ProductSelectionDraft without checking for non null required values
+     * builds ProductSelectionDraft without checking for non-null required values
+     * @return ProductSelectionDraft
      */
     public ProductSelectionDraft buildUnchecked() {
         return new ProductSelectionDraftImpl(key, name, custom, type);

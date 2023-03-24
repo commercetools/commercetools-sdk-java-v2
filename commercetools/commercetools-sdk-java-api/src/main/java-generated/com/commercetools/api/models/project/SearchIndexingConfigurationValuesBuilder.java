@@ -34,7 +34,7 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
 
     /**
      *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
-     * @param status
+     * @param status value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
 
     /**
      *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -58,6 +58,7 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -94,12 +95,17 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
         return this.lastModifiedBy;
     }
 
+    /**
+     * builds SearchIndexingConfigurationValues with checking for non-null required values
+     * @return SearchIndexingConfigurationValues
+     */
     public SearchIndexingConfigurationValues build() {
         return new SearchIndexingConfigurationValuesImpl(status, lastModifiedAt, lastModifiedBy);
     }
 
     /**
-     * builds SearchIndexingConfigurationValues without checking for non null required values
+     * builds SearchIndexingConfigurationValues without checking for non-null required values
+     * @return SearchIndexingConfigurationValues
      */
     public SearchIndexingConfigurationValues buildUnchecked() {
         return new SearchIndexingConfigurationValuesImpl(status, lastModifiedAt, lastModifiedBy);

@@ -37,7 +37,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *  <p>The name of the field definition updated.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *  <p>The name of the attribute updated.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -112,6 +112,10 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeInputHintChange with checking for non-null required values
+     * @return ChangeInputHintChange
+     */
     public ChangeInputHintChange build() {
         Objects.requireNonNull(change, ChangeInputHintChange.class + ": change is missing");
         Objects.requireNonNull(fieldName, ChangeInputHintChange.class + ": fieldName is missing");
@@ -122,7 +126,8 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     }
 
     /**
-     * builds ChangeInputHintChange without checking for non null required values
+     * builds ChangeInputHintChange without checking for non-null required values
+     * @return ChangeInputHintChange
      */
     public ChangeInputHintChange buildUnchecked() {
         return new ChangeInputHintChangeImpl(change, fieldName, attributeName, nextValue, previousValue);

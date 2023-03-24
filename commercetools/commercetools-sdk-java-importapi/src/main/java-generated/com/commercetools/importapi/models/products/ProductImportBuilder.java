@@ -67,7 +67,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>User-defined unique identifier.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -78,6 +78,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.name</code>.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -89,7 +90,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.name</code>.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -100,6 +101,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     * @param builder function to build the productType value
      * @return Builder
      */
 
@@ -112,7 +114,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
-     * @param productType
+     * @param productType value to be set
      * @return Builder
      */
 
@@ -124,6 +126,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -135,7 +138,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -146,6 +149,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.description</code>.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -157,7 +161,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.description</code>.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -169,7 +173,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
-     * @param categories
+     * @param categories value to be set
      * @return Builder
      */
 
@@ -181,7 +185,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
-     * @param categories
+     * @param categories value to be set
      * @return Builder
      */
 
@@ -193,7 +197,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
-     * @param categories
+     * @param categories value to be set
      * @return Builder
      */
 
@@ -208,6 +212,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @param builder function to build the categories value
      * @return Builder
      */
 
@@ -223,6 +228,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @param builder function to build the categories value
      * @return Builder
      */
 
@@ -241,6 +247,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the metaTitle value
      * @return Builder
      */
 
@@ -257,7 +264,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param metaTitle
+     * @param metaTitle value to be set
      * @return Builder
      */
 
@@ -274,6 +281,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the metaDescription value
      * @return Builder
      */
 
@@ -291,7 +299,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param metaDescription
+     * @param metaDescription value to be set
      * @return Builder
      */
 
@@ -308,6 +316,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the metaKeywords value
      * @return Builder
      */
 
@@ -325,7 +334,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param metaKeywords
+     * @param metaKeywords value to be set
      * @return Builder
      */
 
@@ -337,6 +346,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -349,7 +359,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -377,6 +387,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      *    ]
      *  }
      *  </code></pre>
+     * @param builder function to build the searchKeywords value
      * @return Builder
      */
 
@@ -405,7 +416,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      *    ]
      *  }
      *  </code></pre>
-     * @param searchKeywords
+     * @param searchKeywords value to be set
      * @return Builder
      */
 
@@ -417,6 +428,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -428,7 +440,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -440,7 +452,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
-     * @param publish
+     * @param publish value to be set
      * @return Builder
      */
 
@@ -451,7 +463,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
-     * @param priceMode
+     * @param priceMode value to be set
      * @return Builder
      */
 
@@ -527,6 +539,10 @@ public class ProductImportBuilder implements Builder<ProductImport> {
         return this.priceMode;
     }
 
+    /**
+     * builds ProductImport with checking for non-null required values
+     * @return ProductImport
+     */
     public ProductImport build() {
         Objects.requireNonNull(key, ProductImport.class + ": key is missing");
         Objects.requireNonNull(name, ProductImport.class + ": name is missing");
@@ -537,7 +553,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     * builds ProductImport without checking for non null required values
+     * builds ProductImport without checking for non-null required values
+     * @return ProductImport
      */
     public ProductImport buildUnchecked() {
         return new ProductImportImpl(key, name, productType, slug, description, categories, metaTitle, metaDescription,

@@ -30,7 +30,7 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     /**
      *  <p>Update action for <code>addProperty</code> on custom objects</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     /**
      *  <p>Value path to the property that was added</p>
-     * @param path
+     * @param path value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -73,6 +73,10 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds AddPropertyChange with checking for non-null required values
+     * @return AddPropertyChange
+     */
     public AddPropertyChange build() {
         Objects.requireNonNull(change, AddPropertyChange.class + ": change is missing");
         Objects.requireNonNull(path, AddPropertyChange.class + ": path is missing");
@@ -81,7 +85,8 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
     }
 
     /**
-     * builds AddPropertyChange without checking for non null required values
+     * builds AddPropertyChange without checking for non-null required values
+     * @return AddPropertyChange
      */
     public AddPropertyChange buildUnchecked() {
         return new AddPropertyChangeImpl(change, path, nextValue);

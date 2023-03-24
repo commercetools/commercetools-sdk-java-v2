@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class WhitespaceTokenizerBuilder implements Builder<WhitespaceTokenizer> {
 
+    /**
+     * builds WhitespaceTokenizer with checking for non-null required values
+     * @return WhitespaceTokenizer
+     */
     public WhitespaceTokenizer build() {
         return new WhitespaceTokenizerImpl();
     }
 
     /**
-     * builds WhitespaceTokenizer without checking for non null required values
+     * builds WhitespaceTokenizer without checking for non-null required values
+     * @return WhitespaceTokenizer
      */
     public WhitespaceTokenizer buildUnchecked() {
         return new WhitespaceTokenizerImpl();

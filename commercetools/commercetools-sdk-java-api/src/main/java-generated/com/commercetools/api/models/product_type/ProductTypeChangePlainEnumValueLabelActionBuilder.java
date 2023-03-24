@@ -30,7 +30,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -41,6 +41,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
+     * @param builder function to build the newValue value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
-     * @param newValue
+     * @param newValue value to be set
      * @return Builder
      */
 
@@ -71,6 +72,10 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
         return this.newValue;
     }
 
+    /**
+     * builds ProductTypeChangePlainEnumValueLabelAction with checking for non-null required values
+     * @return ProductTypeChangePlainEnumValueLabelAction
+     */
     public ProductTypeChangePlainEnumValueLabelAction build() {
         Objects.requireNonNull(attributeName,
             ProductTypeChangePlainEnumValueLabelAction.class + ": attributeName is missing");
@@ -79,7 +84,8 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
     }
 
     /**
-     * builds ProductTypeChangePlainEnumValueLabelAction without checking for non null required values
+     * builds ProductTypeChangePlainEnumValueLabelAction without checking for non-null required values
+     * @return ProductTypeChangePlainEnumValueLabelAction
      */
     public ProductTypeChangePlainEnumValueLabelAction buildUnchecked() {
         return new ProductTypeChangePlainEnumValueLabelActionImpl(attributeName, newValue);

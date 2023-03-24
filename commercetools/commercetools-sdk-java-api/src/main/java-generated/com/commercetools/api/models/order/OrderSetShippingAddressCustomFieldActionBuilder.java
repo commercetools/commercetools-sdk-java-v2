@@ -31,7 +31,7 @@ public class OrderSetShippingAddressCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class OrderSetShippingAddressCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -60,13 +60,18 @@ public class OrderSetShippingAddressCustomFieldActionBuilder
         return this.value;
     }
 
+    /**
+     * builds OrderSetShippingAddressCustomFieldAction with checking for non-null required values
+     * @return OrderSetShippingAddressCustomFieldAction
+     */
     public OrderSetShippingAddressCustomFieldAction build() {
         Objects.requireNonNull(name, OrderSetShippingAddressCustomFieldAction.class + ": name is missing");
         return new OrderSetShippingAddressCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds OrderSetShippingAddressCustomFieldAction without checking for non null required values
+     * builds OrderSetShippingAddressCustomFieldAction without checking for non-null required values
+     * @return OrderSetShippingAddressCustomFieldAction
      */
     public OrderSetShippingAddressCustomFieldAction buildUnchecked() {
         return new OrderSetShippingAddressCustomFieldActionImpl(name, value);

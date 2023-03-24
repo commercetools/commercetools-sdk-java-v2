@@ -31,7 +31,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     /**
      *  <p>Update action for <code>setLanguages</code> on stores</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -100,7 +100,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -124,6 +124,10 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetLanguagesChange with checking for non-null required values
+     * @return SetLanguagesChange
+     */
     public SetLanguagesChange build() {
         Objects.requireNonNull(change, SetLanguagesChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetLanguagesChange.class + ": previousValue is missing");
@@ -132,7 +136,8 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     * builds SetLanguagesChange without checking for non null required values
+     * builds SetLanguagesChange without checking for non-null required values
+     * @return SetLanguagesChange
      */
     public SetLanguagesChange buildUnchecked() {
         return new SetLanguagesChangeImpl(change, previousValue, nextValue);

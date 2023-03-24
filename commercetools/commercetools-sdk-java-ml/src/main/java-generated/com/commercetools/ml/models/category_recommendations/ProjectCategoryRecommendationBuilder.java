@@ -32,6 +32,7 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
 
     /**
      *  <p>A category that is recommended for a product.</p>
+     * @param builder function to build the category value
      * @return Builder
      */
 
@@ -43,7 +44,7 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
 
     /**
      *  <p>A category that is recommended for a product.</p>
-     * @param category
+     * @param category value to be set
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
 
     /**
      *  <p>Probability score for the category recommendation.</p>
-     * @param confidence
+     * @param confidence value to be set
      * @return Builder
      */
 
@@ -66,7 +67,7 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
 
     /**
      *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
-     * @param path
+     * @param path value to be set
      * @return Builder
      */
 
@@ -87,6 +88,10 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
         return this.path;
     }
 
+    /**
+     * builds ProjectCategoryRecommendation with checking for non-null required values
+     * @return ProjectCategoryRecommendation
+     */
     public ProjectCategoryRecommendation build() {
         Objects.requireNonNull(category, ProjectCategoryRecommendation.class + ": category is missing");
         Objects.requireNonNull(confidence, ProjectCategoryRecommendation.class + ": confidence is missing");
@@ -95,7 +100,8 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
     }
 
     /**
-     * builds ProjectCategoryRecommendation without checking for non null required values
+     * builds ProjectCategoryRecommendation without checking for non-null required values
+     * @return ProjectCategoryRecommendation
      */
     public ProjectCategoryRecommendation buildUnchecked() {
         return new ProjectCategoryRecommendationImpl(category, confidence, path);

@@ -40,7 +40,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>Number of results requested in the query request.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>Offset supplied by the client or the server default. It is the number of elements skipped, not a page number.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>Actual number of results returned.</p>
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -96,7 +96,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -108,7 +108,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -123,6 +123,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -138,6 +139,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -170,6 +172,10 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
         return this.results;
     }
 
+    /**
+     * builds AttributeGroupPagedQueryResponse with checking for non-null required values
+     * @return AttributeGroupPagedQueryResponse
+     */
     public AttributeGroupPagedQueryResponse build() {
         Objects.requireNonNull(limit, AttributeGroupPagedQueryResponse.class + ": limit is missing");
         Objects.requireNonNull(offset, AttributeGroupPagedQueryResponse.class + ": offset is missing");
@@ -179,7 +185,8 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
     }
 
     /**
-     * builds AttributeGroupPagedQueryResponse without checking for non null required values
+     * builds AttributeGroupPagedQueryResponse without checking for non-null required values
+     * @return AttributeGroupPagedQueryResponse
      */
     public AttributeGroupPagedQueryResponse buildUnchecked() {
         return new AttributeGroupPagedQueryResponseImpl(limit, offset, count, total, results);

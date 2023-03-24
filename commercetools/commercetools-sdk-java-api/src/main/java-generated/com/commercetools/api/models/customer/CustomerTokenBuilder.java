@@ -42,7 +42,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     /**
      *  <p>Unique identifier of the token.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     /**
      *  <p>When the token is created, <code>lastModifiedAt</code> is set to <code>createdAt</code>.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -75,7 +75,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     /**
      *  <p>The <code>id</code> of the Customer.</p>
-     * @param customerId
+     * @param customerId value to be set
      * @return Builder
      */
 
@@ -86,7 +86,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     /**
      *  <p>Date and time (UTC) the token expires.</p>
-     * @param expiresAt
+     * @param expiresAt value to be set
      * @return Builder
      */
 
@@ -97,7 +97,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     /**
      *  <p>Value of the token.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -131,6 +131,10 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
         return this.value;
     }
 
+    /**
+     * builds CustomerToken with checking for non-null required values
+     * @return CustomerToken
+     */
     public CustomerToken build() {
         Objects.requireNonNull(id, CustomerToken.class + ": id is missing");
         Objects.requireNonNull(createdAt, CustomerToken.class + ": createdAt is missing");
@@ -141,7 +145,8 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     * builds CustomerToken without checking for non null required values
+     * builds CustomerToken without checking for non-null required values
+     * @return CustomerToken
      */
     public CustomerToken buildUnchecked() {
         return new CustomerTokenImpl(id, createdAt, lastModifiedAt, customerId, expiresAt, value);

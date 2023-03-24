@@ -32,6 +32,7 @@ public class OrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -43,7 +44,7 @@ public class OrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -55,6 +56,7 @@ public class OrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -66,7 +68,7 @@ public class OrderSetShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -86,12 +88,17 @@ public class OrderSetShippingAddressCustomTypeActionBuilder
         return this.fields;
     }
 
+    /**
+     * builds OrderSetShippingAddressCustomTypeAction with checking for non-null required values
+     * @return OrderSetShippingAddressCustomTypeAction
+     */
     public OrderSetShippingAddressCustomTypeAction build() {
         return new OrderSetShippingAddressCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds OrderSetShippingAddressCustomTypeAction without checking for non null required values
+     * builds OrderSetShippingAddressCustomTypeAction without checking for non-null required values
+     * @return OrderSetShippingAddressCustomTypeAction
      */
     public OrderSetShippingAddressCustomTypeAction buildUnchecked() {
         return new OrderSetShippingAddressCustomTypeActionImpl(type, fields);

@@ -33,7 +33,7 @@ public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSe
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSe
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSe
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSe
         return this.value;
     }
 
+    /**
+     * builds OrderSetDeliveryCustomFieldAction with checking for non-null required values
+     * @return OrderSetDeliveryCustomFieldAction
+     */
     public OrderSetDeliveryCustomFieldAction build() {
         Objects.requireNonNull(deliveryId, OrderSetDeliveryCustomFieldAction.class + ": deliveryId is missing");
         Objects.requireNonNull(name, OrderSetDeliveryCustomFieldAction.class + ": name is missing");
@@ -84,7 +88,8 @@ public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSe
     }
 
     /**
-     * builds OrderSetDeliveryCustomFieldAction without checking for non null required values
+     * builds OrderSetDeliveryCustomFieldAction without checking for non-null required values
+     * @return OrderSetDeliveryCustomFieldAction
      */
     public OrderSetDeliveryCustomFieldAction buildUnchecked() {
         return new OrderSetDeliveryCustomFieldActionImpl(deliveryId, name, value);

@@ -31,7 +31,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set to <code>Explicit</code> to specify Stores for the Business Unit. Set to <code>FromParent</code> to inherit Stores from a parent.</p>
-     * @param storeMode
+     * @param storeMode value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -96,6 +97,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -115,13 +117,18 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
         return this.stores;
     }
 
+    /**
+     * builds BusinessUnitSetStoreModeAction with checking for non-null required values
+     * @return BusinessUnitSetStoreModeAction
+     */
     public BusinessUnitSetStoreModeAction build() {
         Objects.requireNonNull(storeMode, BusinessUnitSetStoreModeAction.class + ": storeMode is missing");
         return new BusinessUnitSetStoreModeActionImpl(storeMode, stores);
     }
 
     /**
-     * builds BusinessUnitSetStoreModeAction without checking for non null required values
+     * builds BusinessUnitSetStoreModeAction without checking for non-null required values
+     * @return BusinessUnitSetStoreModeAction
      */
     public BusinessUnitSetStoreModeAction buildUnchecked() {
         return new BusinessUnitSetStoreModeActionImpl(storeMode, stores);

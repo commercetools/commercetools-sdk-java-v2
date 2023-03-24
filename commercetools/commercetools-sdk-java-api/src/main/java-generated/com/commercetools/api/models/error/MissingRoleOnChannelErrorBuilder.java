@@ -36,7 +36,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -47,6 +47,8 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public MissingRoleOnChannelErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -56,6 +58,9 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public MissingRoleOnChannelErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -68,6 +73,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -80,7 +86,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -95,7 +101,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
      *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
      *  </ul>
-     * @param missingRole
+     * @param missingRole value to be set
      * @return Builder
      */
 
@@ -122,6 +128,10 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
         return this.missingRole;
     }
 
+    /**
+     * builds MissingRoleOnChannelError with checking for non-null required values
+     * @return MissingRoleOnChannelError
+     */
     public MissingRoleOnChannelError build() {
         Objects.requireNonNull(message, MissingRoleOnChannelError.class + ": message is missing");
         Objects.requireNonNull(missingRole, MissingRoleOnChannelError.class + ": missingRole is missing");
@@ -129,7 +139,8 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     * builds MissingRoleOnChannelError without checking for non null required values
+     * builds MissingRoleOnChannelError without checking for non-null required values
+     * @return MissingRoleOnChannelError
      */
     public MissingRoleOnChannelError buildUnchecked() {
         return new MissingRoleOnChannelErrorImpl(message, values, channel, missingRole);

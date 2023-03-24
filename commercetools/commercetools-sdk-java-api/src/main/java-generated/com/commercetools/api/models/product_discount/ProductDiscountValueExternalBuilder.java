@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountValueExternalBuilder implements Builder<ProductDiscountValueExternal> {
 
+    /**
+     * builds ProductDiscountValueExternal with checking for non-null required values
+     * @return ProductDiscountValueExternal
+     */
     public ProductDiscountValueExternal build() {
         return new ProductDiscountValueExternalImpl();
     }
 
     /**
-     * builds ProductDiscountValueExternal without checking for non null required values
+     * builds ProductDiscountValueExternal without checking for non-null required values
+     * @return ProductDiscountValueExternal
      */
     public ProductDiscountValueExternal buildUnchecked() {
         return new ProductDiscountValueExternalImpl();

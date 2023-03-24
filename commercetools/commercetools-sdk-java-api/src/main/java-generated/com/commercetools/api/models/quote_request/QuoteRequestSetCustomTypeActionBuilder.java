@@ -31,6 +31,7 @@ public class QuoteRequestSetCustomTypeActionBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Defines the Type that extends the QuoteRequest with Custom Fields. If absent, any existing Type and Custom Fields are removed from the QuoteRequest.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class QuoteRequestSetCustomTypeActionBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Defines the Type that extends the QuoteRequest with Custom Fields. If absent, any existing Type and Custom Fields are removed from the QuoteRequest.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class QuoteRequestSetCustomTypeActionBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Sets the Custom Fields fields for the QuoteRequest.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class QuoteRequestSetCustomTypeActionBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Sets the Custom Fields fields for the QuoteRequest.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class QuoteRequestSetCustomTypeActionBuilder implements Builder<QuoteRequ
         return this.fields;
     }
 
+    /**
+     * builds QuoteRequestSetCustomTypeAction with checking for non-null required values
+     * @return QuoteRequestSetCustomTypeAction
+     */
     public QuoteRequestSetCustomTypeAction build() {
         return new QuoteRequestSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds QuoteRequestSetCustomTypeAction without checking for non null required values
+     * builds QuoteRequestSetCustomTypeAction without checking for non-null required values
+     * @return QuoteRequestSetCustomTypeAction
      */
     public QuoteRequestSetCustomTypeAction buildUnchecked() {
         return new QuoteRequestSetCustomTypeActionImpl(type, fields);

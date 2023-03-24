@@ -27,7 +27,7 @@ public class DiscountCodeSetValidFromActionBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class DiscountCodeSetValidFromActionBuilder implements Builder<DiscountCo
         return this.validFrom;
     }
 
+    /**
+     * builds DiscountCodeSetValidFromAction with checking for non-null required values
+     * @return DiscountCodeSetValidFromAction
+     */
     public DiscountCodeSetValidFromAction build() {
         return new DiscountCodeSetValidFromActionImpl(validFrom);
     }
 
     /**
-     * builds DiscountCodeSetValidFromAction without checking for non null required values
+     * builds DiscountCodeSetValidFromAction without checking for non-null required values
+     * @return DiscountCodeSetValidFromAction
      */
     public DiscountCodeSetValidFromAction buildUnchecked() {
         return new DiscountCodeSetValidFromActionImpl(validFrom);

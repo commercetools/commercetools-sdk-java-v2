@@ -30,7 +30,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
-     * @param targetsDelta
+     * @param targetsDelta value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
-     * @param targetsDelta
+     * @param targetsDelta value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
-     * @param targetsDelta
+     * @param targetsDelta value to be set
      * @return Builder
      */
 
@@ -80,6 +80,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param builder function to build the targetsDelta value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param builder function to build the targetsDelta value
      * @return Builder
      */
 
@@ -112,6 +114,10 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
         return this.targetsDelta;
     }
 
+    /**
+     * builds MyCartApplyDeltaToLineItemShippingDetailsTargetsAction with checking for non-null required values
+     * @return MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
+     */
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsAction build() {
         Objects.requireNonNull(lineItemId,
             MyCartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": lineItemId is missing");
@@ -121,7 +127,8 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     * builds MyCartApplyDeltaToLineItemShippingDetailsTargetsAction without checking for non null required values
+     * builds MyCartApplyDeltaToLineItemShippingDetailsTargetsAction without checking for non-null required values
+     * @return MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
      */
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsAction buildUnchecked() {
         return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);

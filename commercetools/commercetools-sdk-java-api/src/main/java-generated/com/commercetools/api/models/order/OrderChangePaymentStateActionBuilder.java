@@ -27,7 +27,7 @@ public class OrderChangePaymentStateActionBuilder implements Builder<OrderChange
 
     /**
      *
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class OrderChangePaymentStateActionBuilder implements Builder<OrderChange
         return this.paymentState;
     }
 
+    /**
+     * builds OrderChangePaymentStateAction with checking for non-null required values
+     * @return OrderChangePaymentStateAction
+     */
     public OrderChangePaymentStateAction build() {
         return new OrderChangePaymentStateActionImpl(paymentState);
     }
 
     /**
-     * builds OrderChangePaymentStateAction without checking for non null required values
+     * builds OrderChangePaymentStateAction without checking for non-null required values
+     * @return OrderChangePaymentStateAction
      */
     public OrderChangePaymentStateAction buildUnchecked() {
         return new OrderChangePaymentStateActionImpl(paymentState);

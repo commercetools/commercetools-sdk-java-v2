@@ -32,7 +32,7 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
 
     /**
      *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -75,6 +75,10 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
         return this.nextValue;
     }
 
+    /**
+     * builds SetDeleteDaysAfterLastModificationChange with checking for non-null required values
+     * @return SetDeleteDaysAfterLastModificationChange
+     */
     public SetDeleteDaysAfterLastModificationChange build() {
         Objects.requireNonNull(change, SetDeleteDaysAfterLastModificationChange.class + ": change is missing");
         Objects.requireNonNull(previousValue,
@@ -84,7 +88,8 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
     }
 
     /**
-     * builds SetDeleteDaysAfterLastModificationChange without checking for non null required values
+     * builds SetDeleteDaysAfterLastModificationChange without checking for non-null required values
+     * @return SetDeleteDaysAfterLastModificationChange
      */
     public SetDeleteDaysAfterLastModificationChange buildUnchecked() {
         return new SetDeleteDaysAfterLastModificationChangeImpl(change, previousValue, nextValue);

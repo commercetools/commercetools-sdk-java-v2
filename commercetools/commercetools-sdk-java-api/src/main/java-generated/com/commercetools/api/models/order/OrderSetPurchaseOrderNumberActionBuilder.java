@@ -27,7 +27,7 @@ public class OrderSetPurchaseOrderNumberActionBuilder implements Builder<OrderSe
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
-     * @param purchaseOrderNumber
+     * @param purchaseOrderNumber value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class OrderSetPurchaseOrderNumberActionBuilder implements Builder<OrderSe
         return this.purchaseOrderNumber;
     }
 
+    /**
+     * builds OrderSetPurchaseOrderNumberAction with checking for non-null required values
+     * @return OrderSetPurchaseOrderNumberAction
+     */
     public OrderSetPurchaseOrderNumberAction build() {
         return new OrderSetPurchaseOrderNumberActionImpl(purchaseOrderNumber);
     }
 
     /**
-     * builds OrderSetPurchaseOrderNumberAction without checking for non null required values
+     * builds OrderSetPurchaseOrderNumberAction without checking for non-null required values
+     * @return OrderSetPurchaseOrderNumberAction
      */
     public OrderSetPurchaseOrderNumberAction buildUnchecked() {
         return new OrderSetPurchaseOrderNumberActionImpl(purchaseOrderNumber);

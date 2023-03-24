@@ -39,7 +39,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
-     * @param transitionDate
+     * @param transitionDate value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Number of Custom Line Items for which the State was transitioned.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -73,6 +73,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State the Custom Line Item was transitioned from.</p>
+     * @param builder function to build the fromState value
      * @return Builder
      */
 
@@ -84,7 +85,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State the Custom Line Item was transitioned from.</p>
-     * @param fromState
+     * @param fromState value to be set
      * @return Builder
      */
 
@@ -96,6 +97,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State the Custom Line Item was transitioned to.</p>
+     * @param builder function to build the toState value
      * @return Builder
      */
 
@@ -107,7 +109,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State the Custom Line Item was transitioned to.</p>
-     * @param toState
+     * @param toState value to be set
      * @return Builder
      */
 
@@ -137,6 +139,10 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
         return this.toState;
     }
 
+    /**
+     * builds CustomLineItemStateTransitionMessagePayload with checking for non-null required values
+     * @return CustomLineItemStateTransitionMessagePayload
+     */
     public CustomLineItemStateTransitionMessagePayload build() {
         Objects.requireNonNull(customLineItemId,
             CustomLineItemStateTransitionMessagePayload.class + ": customLineItemId is missing");
@@ -150,7 +156,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     * builds CustomLineItemStateTransitionMessagePayload without checking for non null required values
+     * builds CustomLineItemStateTransitionMessagePayload without checking for non-null required values
+     * @return CustomLineItemStateTransitionMessagePayload
      */
     public CustomLineItemStateTransitionMessagePayload buildUnchecked() {
         return new CustomLineItemStateTransitionMessagePayloadImpl(customLineItemId, transitionDate, quantity,

@@ -32,6 +32,7 @@ public class ProductSelectionSetVariantSelectionActionBuilder
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class ProductSelectionSetVariantSelectionActionBuilder
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class ProductSelectionSetVariantSelectionActionBuilder
 
     /**
      *  <p>Determines which Variants of the previously added Product are to be included in, or excluded from, the Product Selection. Leave it empty to unset an existing Variant Selection.</p>
-     * @param variantSelection
+     * @param variantSelection value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class ProductSelectionSetVariantSelectionActionBuilder
 
     /**
      *  <p>Determines which Variants of the previously added Product are to be included in, or excluded from, the Product Selection. Leave it empty to unset an existing Variant Selection.</p>
+     * @param builder function to build the variantSelection value
      * @return Builder
      */
 
@@ -88,13 +90,18 @@ public class ProductSelectionSetVariantSelectionActionBuilder
         return this.variantSelection;
     }
 
+    /**
+     * builds ProductSelectionSetVariantSelectionAction with checking for non-null required values
+     * @return ProductSelectionSetVariantSelectionAction
+     */
     public ProductSelectionSetVariantSelectionAction build() {
         Objects.requireNonNull(product, ProductSelectionSetVariantSelectionAction.class + ": product is missing");
         return new ProductSelectionSetVariantSelectionActionImpl(product, variantSelection);
     }
 
     /**
-     * builds ProductSelectionSetVariantSelectionAction without checking for non null required values
+     * builds ProductSelectionSetVariantSelectionAction without checking for non-null required values
+     * @return ProductSelectionSetVariantSelectionAction
      */
     public ProductSelectionSetVariantSelectionAction buildUnchecked() {
         return new ProductSelectionSetVariantSelectionActionImpl(product, variantSelection);

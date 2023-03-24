@@ -26,7 +26,7 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
         return this.attributes;
     }
 
+    /**
+     * builds AttributeGroupSetAttributesAction with checking for non-null required values
+     * @return AttributeGroupSetAttributesAction
+     */
     public AttributeGroupSetAttributesAction build() {
         Objects.requireNonNull(attributes, AttributeGroupSetAttributesAction.class + ": attributes is missing");
         return new AttributeGroupSetAttributesActionImpl(attributes);
     }
 
     /**
-     * builds AttributeGroupSetAttributesAction without checking for non null required values
+     * builds AttributeGroupSetAttributesAction without checking for non-null required values
+     * @return AttributeGroupSetAttributesAction
      */
     public AttributeGroupSetAttributesAction buildUnchecked() {
         return new AttributeGroupSetAttributesActionImpl(attributes);

@@ -32,6 +32,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The product that contains this variant.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -43,7 +44,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The product that contains this variant.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The state of the product variant.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The id of the product variant.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -86,6 +87,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this.variantId;
     }
 
+    /**
+     * builds ProductVariant with checking for non-null required values
+     * @return ProductVariant
+     */
     public ProductVariant build() {
         Objects.requireNonNull(product, ProductVariant.class + ": product is missing");
         Objects.requireNonNull(staged, ProductVariant.class + ": staged is missing");
@@ -94,7 +99,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     * builds ProductVariant without checking for non null required values
+     * builds ProductVariant without checking for non-null required values
+     * @return ProductVariant
      */
     public ProductVariant buildUnchecked() {
         return new ProductVariantImpl(product, staged, variantId);

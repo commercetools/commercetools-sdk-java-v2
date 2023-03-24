@@ -31,7 +31,7 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
 
     /**
      *  <p>Update action for <code>setLocale</code> on reviews</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
 
     /**
      *  <p>A locale of IETF language tag.</p>
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
 
     /**
      *  <p>A locale of IETF language tag.</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetLocaleChange with checking for non-null required values
+     * @return SetLocaleChange
+     */
     public SetLocaleChange build() {
         Objects.requireNonNull(change, SetLocaleChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetLocaleChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
     }
 
     /**
-     * builds SetLocaleChange without checking for non null required values
+     * builds SetLocaleChange without checking for non-null required values
+     * @return SetLocaleChange
      */
     public SetLocaleChange buildUnchecked() {
         return new SetLocaleChangeImpl(change, previousValue, nextValue);

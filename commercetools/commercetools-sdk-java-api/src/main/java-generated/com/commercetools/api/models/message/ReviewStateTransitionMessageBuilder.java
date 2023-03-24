@@ -73,7 +73,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -106,7 +106,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -117,6 +117,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -128,7 +129,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -140,6 +141,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -151,7 +153,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -163,7 +165,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
-     * @param sequenceNumber
+     * @param sequenceNumber value to be set
      * @return Builder
      */
 
@@ -174,7 +176,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -185,6 +187,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -196,7 +199,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
-     * @param resourceVersion
+     * @param resourceVersion value to be set
      * @return Builder
      */
 
@@ -207,6 +210,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
 
@@ -220,7 +224,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
-     * @param resourceUserProvidedIdentifiers
+     * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
 
@@ -232,6 +236,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>State of the Review before the Transition State update action.</p>
+     * @param builder function to build the oldState value
      * @return Builder
      */
 
@@ -243,7 +248,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>State of the Review before the Transition State update action.</p>
-     * @param oldState
+     * @param oldState value to be set
      * @return Builder
      */
 
@@ -255,6 +260,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>State of the Review after the Transition State update action.</p>
+     * @param builder function to build the newState value
      * @return Builder
      */
 
@@ -266,7 +272,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>State of the Review after the Transition State update action.</p>
-     * @param newState
+     * @param newState value to be set
      * @return Builder
      */
 
@@ -278,7 +284,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
-     * @param oldIncludedInStatistics
+     * @param oldIncludedInStatistics value to be set
      * @return Builder
      */
 
@@ -289,7 +295,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
-     * @param newIncludedInStatistics
+     * @param newIncludedInStatistics value to be set
      * @return Builder
      */
 
@@ -300,7 +306,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -312,6 +318,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -323,7 +330,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -401,6 +408,10 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this.force;
     }
 
+    /**
+     * builds ReviewStateTransitionMessage with checking for non-null required values
+     * @return ReviewStateTransitionMessage
+     */
     public ReviewStateTransitionMessage build() {
         Objects.requireNonNull(id, ReviewStateTransitionMessage.class + ": id is missing");
         Objects.requireNonNull(version, ReviewStateTransitionMessage.class + ": version is missing");
@@ -421,7 +432,8 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     * builds ReviewStateTransitionMessage without checking for non null required values
+     * builds ReviewStateTransitionMessage without checking for non-null required values
+     * @return ReviewStateTransitionMessage
      */
     public ReviewStateTransitionMessage buildUnchecked() {
         return new ReviewStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,

@@ -28,6 +28,7 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the metaDescription value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
 
     /**
      *  <p>Value to set.</p>
-     * @param metaDescription
+     * @param metaDescription value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
         return this.metaDescription;
     }
 
+    /**
+     * builds CategorySetMetaDescriptionAction with checking for non-null required values
+     * @return CategorySetMetaDescriptionAction
+     */
     public CategorySetMetaDescriptionAction build() {
         return new CategorySetMetaDescriptionActionImpl(metaDescription);
     }
 
     /**
-     * builds CategorySetMetaDescriptionAction without checking for non null required values
+     * builds CategorySetMetaDescriptionAction without checking for non-null required values
+     * @return CategorySetMetaDescriptionAction
      */
     public CategorySetMetaDescriptionAction buildUnchecked() {
         return new CategorySetMetaDescriptionActionImpl(metaDescription);

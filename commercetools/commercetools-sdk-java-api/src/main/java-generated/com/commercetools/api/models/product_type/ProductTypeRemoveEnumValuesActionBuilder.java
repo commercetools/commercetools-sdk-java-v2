@@ -28,7 +28,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
-     * @param keys
+     * @param keys value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
-     * @param keys
+     * @param keys value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
-     * @param keys
+     * @param keys value to be set
      * @return Builder
      */
 
@@ -81,6 +81,10 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
         return this.keys;
     }
 
+    /**
+     * builds ProductTypeRemoveEnumValuesAction with checking for non-null required values
+     * @return ProductTypeRemoveEnumValuesAction
+     */
     public ProductTypeRemoveEnumValuesAction build() {
         Objects.requireNonNull(attributeName, ProductTypeRemoveEnumValuesAction.class + ": attributeName is missing");
         Objects.requireNonNull(keys, ProductTypeRemoveEnumValuesAction.class + ": keys is missing");
@@ -88,7 +92,8 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
     }
 
     /**
-     * builds ProductTypeRemoveEnumValuesAction without checking for non null required values
+     * builds ProductTypeRemoveEnumValuesAction without checking for non-null required values
+     * @return ProductTypeRemoveEnumValuesAction
      */
     public ProductTypeRemoveEnumValuesAction buildUnchecked() {
         return new ProductTypeRemoveEnumValuesActionImpl(attributeName, keys);

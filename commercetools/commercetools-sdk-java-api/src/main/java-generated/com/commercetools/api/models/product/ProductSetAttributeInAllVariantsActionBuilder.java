@@ -33,7 +33,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
 
     /**
      *  <p>The name of the Attribute to set.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
      *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
      *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
      *  </ul>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
 
     /**
      *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -87,13 +87,18 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
         return this.staged;
     }
 
+    /**
+     * builds ProductSetAttributeInAllVariantsAction with checking for non-null required values
+     * @return ProductSetAttributeInAllVariantsAction
+     */
     public ProductSetAttributeInAllVariantsAction build() {
         Objects.requireNonNull(name, ProductSetAttributeInAllVariantsAction.class + ": name is missing");
         return new ProductSetAttributeInAllVariantsActionImpl(name, value, staged);
     }
 
     /**
-     * builds ProductSetAttributeInAllVariantsAction without checking for non null required values
+     * builds ProductSetAttributeInAllVariantsAction without checking for non-null required values
+     * @return ProductSetAttributeInAllVariantsAction
      */
     public ProductSetAttributeInAllVariantsAction buildUnchecked() {
         return new ProductSetAttributeInAllVariantsActionImpl(name, value, staged);

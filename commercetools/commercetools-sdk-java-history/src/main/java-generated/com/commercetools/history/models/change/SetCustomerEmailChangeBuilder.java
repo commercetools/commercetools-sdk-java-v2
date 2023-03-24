@@ -31,7 +31,7 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
 
     /**
      *  <p>Shape of the action for <code>setCustomerEmail</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
         return this.nextValue;
     }
 
+    /**
+     * builds SetCustomerEmailChange with checking for non-null required values
+     * @return SetCustomerEmailChange
+     */
     public SetCustomerEmailChange build() {
         Objects.requireNonNull(change, SetCustomerEmailChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetCustomerEmailChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
     }
 
     /**
-     * builds SetCustomerEmailChange without checking for non null required values
+     * builds SetCustomerEmailChange without checking for non-null required values
+     * @return SetCustomerEmailChange
      */
     public SetCustomerEmailChange buildUnchecked() {
         return new SetCustomerEmailChangeImpl(change, previousValue, nextValue);

@@ -35,7 +35,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *  <p>Update action for <code>changeAssetName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
+     * @param builder function to build the asset value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
-     * @param asset
+     * @param asset value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -92,6 +94,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -103,7 +106,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -129,6 +132,10 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeAssetNameChange with checking for non-null required values
+     * @return ChangeAssetNameChange
+     */
     public ChangeAssetNameChange build() {
         Objects.requireNonNull(change, ChangeAssetNameChange.class + ": change is missing");
         Objects.requireNonNull(asset, ChangeAssetNameChange.class + ": asset is missing");
@@ -138,7 +145,8 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
     }
 
     /**
-     * builds ChangeAssetNameChange without checking for non null required values
+     * builds ChangeAssetNameChange without checking for non-null required values
+     * @return ChangeAssetNameChange
      */
     public ChangeAssetNameChange buildUnchecked() {
         return new ChangeAssetNameChangeImpl(change, asset, nextValue, previousValue);

@@ -35,7 +35,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *  <p>Update action for <code>setAssetKey</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *
+     * @param builder function to build the asset value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *
-     * @param asset
+     * @param asset value to be set
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -104,6 +105,10 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds SetAssetKeyChange with checking for non-null required values
+     * @return SetAssetKeyChange
+     */
     public SetAssetKeyChange build() {
         Objects.requireNonNull(change, SetAssetKeyChange.class + ": change is missing");
         Objects.requireNonNull(asset, SetAssetKeyChange.class + ": asset is missing");
@@ -113,7 +118,8 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     * builds SetAssetKeyChange without checking for non null required values
+     * builds SetAssetKeyChange without checking for non-null required values
+     * @return SetAssetKeyChange
      */
     public SetAssetKeyChange buildUnchecked() {
         return new SetAssetKeyChangeImpl(change, asset, nextValue, previousValue);

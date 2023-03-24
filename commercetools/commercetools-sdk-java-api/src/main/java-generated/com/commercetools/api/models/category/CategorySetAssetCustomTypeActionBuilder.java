@@ -37,7 +37,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -59,6 +59,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -82,6 +83,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -93,7 +95,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -123,12 +125,17 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
         return this.fields;
     }
 
+    /**
+     * builds CategorySetAssetCustomTypeAction with checking for non-null required values
+     * @return CategorySetAssetCustomTypeAction
+     */
     public CategorySetAssetCustomTypeAction build() {
         return new CategorySetAssetCustomTypeActionImpl(assetId, assetKey, type, fields);
     }
 
     /**
-     * builds CategorySetAssetCustomTypeAction without checking for non null required values
+     * builds CategorySetAssetCustomTypeAction without checking for non-null required values
+     * @return CategorySetAssetCustomTypeAction
      */
     public CategorySetAssetCustomTypeAction buildUnchecked() {
         return new CategorySetAssetCustomTypeActionImpl(assetId, assetKey, type, fields);

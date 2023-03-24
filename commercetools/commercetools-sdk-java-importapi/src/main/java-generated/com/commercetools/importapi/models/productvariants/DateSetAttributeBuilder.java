@@ -30,7 +30,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -84,13 +84,18 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
         return this.value;
     }
 
+    /**
+     * builds DateSetAttribute with checking for non-null required values
+     * @return DateSetAttribute
+     */
     public DateSetAttribute build() {
         Objects.requireNonNull(value, DateSetAttribute.class + ": value is missing");
         return new DateSetAttributeImpl(name, value);
     }
 
     /**
-     * builds DateSetAttribute without checking for non null required values
+     * builds DateSetAttribute without checking for non-null required values
+     * @return DateSetAttribute
      */
     public DateSetAttribute buildUnchecked() {
         return new DateSetAttributeImpl(name, value);

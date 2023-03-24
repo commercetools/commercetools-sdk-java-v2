@@ -31,7 +31,7 @@ public class SetKeyChangeBuilder implements Builder<SetKeyChange> {
 
     /**
      *  <p>Shape of the action for <code>setKey</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetKeyChangeBuilder implements Builder<SetKeyChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetKeyChangeBuilder implements Builder<SetKeyChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetKeyChangeBuilder implements Builder<SetKeyChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetKeyChange with checking for non-null required values
+     * @return SetKeyChange
+     */
     public SetKeyChange build() {
         Objects.requireNonNull(change, SetKeyChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetKeyChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetKeyChangeBuilder implements Builder<SetKeyChange> {
     }
 
     /**
-     * builds SetKeyChange without checking for non null required values
+     * builds SetKeyChange without checking for non-null required values
+     * @return SetKeyChange
      */
     public SetKeyChange buildUnchecked() {
         return new SetKeyChangeImpl(change, previousValue, nextValue);

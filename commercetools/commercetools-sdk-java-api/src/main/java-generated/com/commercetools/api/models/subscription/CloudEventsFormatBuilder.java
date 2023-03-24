@@ -25,7 +25,7 @@ public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
 
     /**
      *
-     * @param cloudEventsVersion
+     * @param cloudEventsVersion value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
         return this.cloudEventsVersion;
     }
 
+    /**
+     * builds CloudEventsFormat with checking for non-null required values
+     * @return CloudEventsFormat
+     */
     public CloudEventsFormat build() {
         Objects.requireNonNull(cloudEventsVersion, CloudEventsFormat.class + ": cloudEventsVersion is missing");
         return new CloudEventsFormatImpl(cloudEventsVersion);
     }
 
     /**
-     * builds CloudEventsFormat without checking for non null required values
+     * builds CloudEventsFormat without checking for non-null required values
+     * @return CloudEventsFormat
      */
     public CloudEventsFormat buildUnchecked() {
         return new CloudEventsFormatImpl(cloudEventsVersion);

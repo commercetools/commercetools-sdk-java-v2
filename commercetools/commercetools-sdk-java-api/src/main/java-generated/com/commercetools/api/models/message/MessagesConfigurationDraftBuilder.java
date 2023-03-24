@@ -28,7 +28,7 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
 
     /**
      *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
-     * @param enabled
+     * @param enabled value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
 
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
-     * @param deleteDaysAfterCreation
+     * @param deleteDaysAfterCreation value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
         return this.deleteDaysAfterCreation;
     }
 
+    /**
+     * builds MessagesConfigurationDraft with checking for non-null required values
+     * @return MessagesConfigurationDraft
+     */
     public MessagesConfigurationDraft build() {
         Objects.requireNonNull(enabled, MessagesConfigurationDraft.class + ": enabled is missing");
         Objects.requireNonNull(deleteDaysAfterCreation,
@@ -64,7 +68,8 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
     }
 
     /**
-     * builds MessagesConfigurationDraft without checking for non null required values
+     * builds MessagesConfigurationDraft without checking for non-null required values
+     * @return MessagesConfigurationDraft
      */
     public MessagesConfigurationDraft buildUnchecked() {
         return new MessagesConfigurationDraftImpl(enabled, deleteDaysAfterCreation);

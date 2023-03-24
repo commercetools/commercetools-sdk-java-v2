@@ -32,7 +32,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
 
     /**
      *  <p>Shape of the action for <code>setMethodInfoName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
         return this.nextValue;
     }
 
+    /**
+     * builds SetMethodInfoNameChange with checking for non-null required values
+     * @return SetMethodInfoNameChange
+     */
     public SetMethodInfoNameChange build() {
         Objects.requireNonNull(change, SetMethodInfoNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetMethodInfoNameChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     * builds SetMethodInfoNameChange without checking for non null required values
+     * builds SetMethodInfoNameChange without checking for non-null required values
+     * @return SetMethodInfoNameChange
      */
     public SetMethodInfoNameChange buildUnchecked() {
         return new SetMethodInfoNameChangeImpl(change, previousValue, nextValue);

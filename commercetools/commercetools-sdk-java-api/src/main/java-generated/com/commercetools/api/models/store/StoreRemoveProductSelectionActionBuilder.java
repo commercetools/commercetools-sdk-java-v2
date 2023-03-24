@@ -26,6 +26,7 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
 
     /**
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
+     * @param builder function to build the productSelection value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
 
     /**
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
-     * @param productSelection
+     * @param productSelection value to be set
      * @return Builder
      */
 
@@ -53,6 +54,10 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
         return this.productSelection;
     }
 
+    /**
+     * builds StoreRemoveProductSelectionAction with checking for non-null required values
+     * @return StoreRemoveProductSelectionAction
+     */
     public StoreRemoveProductSelectionAction build() {
         Objects.requireNonNull(productSelection,
             StoreRemoveProductSelectionAction.class + ": productSelection is missing");
@@ -60,7 +65,8 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
     }
 
     /**
-     * builds StoreRemoveProductSelectionAction without checking for non null required values
+     * builds StoreRemoveProductSelectionAction without checking for non-null required values
+     * @return StoreRemoveProductSelectionAction
      */
     public StoreRemoveProductSelectionAction buildUnchecked() {
         return new StoreRemoveProductSelectionActionImpl(productSelection);

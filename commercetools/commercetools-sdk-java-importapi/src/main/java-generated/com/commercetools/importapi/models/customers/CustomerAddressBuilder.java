@@ -100,7 +100,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -111,7 +111,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -122,7 +122,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param salutation
+     * @param salutation value to be set
      * @return Builder
      */
 
@@ -133,7 +133,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param firstName
+     * @param firstName value to be set
      * @return Builder
      */
 
@@ -144,7 +144,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param lastName
+     * @param lastName value to be set
      * @return Builder
      */
 
@@ -155,7 +155,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param streetName
+     * @param streetName value to be set
      * @return Builder
      */
 
@@ -166,7 +166,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param streetNumber
+     * @param streetNumber value to be set
      * @return Builder
      */
 
@@ -177,7 +177,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param additionalStreetInfo
+     * @param additionalStreetInfo value to be set
      * @return Builder
      */
 
@@ -188,7 +188,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param postalCode
+     * @param postalCode value to be set
      * @return Builder
      */
 
@@ -199,7 +199,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param city
+     * @param city value to be set
      * @return Builder
      */
 
@@ -210,7 +210,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param region
+     * @param region value to be set
      * @return Builder
      */
 
@@ -221,7 +221,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -232,7 +232,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -243,7 +243,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param company
+     * @param company value to be set
      * @return Builder
      */
 
@@ -254,7 +254,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param department
+     * @param department value to be set
      * @return Builder
      */
 
@@ -265,7 +265,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param building
+     * @param building value to be set
      * @return Builder
      */
 
@@ -276,7 +276,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param apartment
+     * @param apartment value to be set
      * @return Builder
      */
 
@@ -287,7 +287,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param pOBox
+     * @param pOBox value to be set
      * @return Builder
      */
 
@@ -298,7 +298,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param phone
+     * @param phone value to be set
      * @return Builder
      */
 
@@ -309,7 +309,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param mobile
+     * @param mobile value to be set
      * @return Builder
      */
 
@@ -320,7 +320,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -331,7 +331,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param fax
+     * @param fax value to be set
      * @return Builder
      */
 
@@ -342,7 +342,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param additionalAddressInfo
+     * @param additionalAddressInfo value to be set
      * @return Builder
      */
 
@@ -353,7 +353,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -364,6 +364,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *  <p>Custom Fields for the address.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -375,7 +376,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *  <p>Custom Fields for the address.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -508,6 +509,10 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
         return this.custom;
     }
 
+    /**
+     * builds CustomerAddress with checking for non-null required values
+     * @return CustomerAddress
+     */
     public CustomerAddress build() {
         Objects.requireNonNull(key, CustomerAddress.class + ": key is missing");
         Objects.requireNonNull(country, CustomerAddress.class + ": country is missing");
@@ -517,7 +522,8 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * builds CustomerAddress without checking for non null required values
+     * builds CustomerAddress without checking for non-null required values
+     * @return CustomerAddress
      */
     public CustomerAddress buildUnchecked() {
         return new CustomerAddressImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,

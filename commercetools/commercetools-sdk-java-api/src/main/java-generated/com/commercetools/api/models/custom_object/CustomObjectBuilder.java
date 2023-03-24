@@ -51,7 +51,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Unique identifier of the CustomObject.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Current version of the CustomObject.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Date and time (UTC) the CustomObject was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Date and time (UTC) the CustomObject was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -95,6 +95,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -106,7 +107,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -118,6 +119,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -129,7 +131,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -140,7 +142,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Namespace to group CustomObjects.</p>
-     * @param container
+     * @param container value to be set
      * @return Builder
      */
 
@@ -151,7 +153,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -162,7 +164,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -209,6 +211,10 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
         return this.value;
     }
 
+    /**
+     * builds CustomObject with checking for non-null required values
+     * @return CustomObject
+     */
     public CustomObject build() {
         Objects.requireNonNull(id, CustomObject.class + ": id is missing");
         Objects.requireNonNull(version, CustomObject.class + ": version is missing");
@@ -222,7 +228,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-     * builds CustomObject without checking for non null required values
+     * builds CustomObject without checking for non-null required values
+     * @return CustomObject
      */
     public CustomObject buildUnchecked() {
         return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key,

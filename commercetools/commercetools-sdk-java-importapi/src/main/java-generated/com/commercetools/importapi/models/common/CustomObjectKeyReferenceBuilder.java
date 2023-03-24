@@ -28,7 +28,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
 
     /**
      *
-     * @param container
+     * @param container value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
         return this.container;
     }
 
+    /**
+     * builds CustomObjectKeyReference with checking for non-null required values
+     * @return CustomObjectKeyReference
+     */
     public CustomObjectKeyReference build() {
         Objects.requireNonNull(key, CustomObjectKeyReference.class + ": key is missing");
         Objects.requireNonNull(container, CustomObjectKeyReference.class + ": container is missing");
@@ -63,7 +67,8 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
     }
 
     /**
-     * builds CustomObjectKeyReference without checking for non null required values
+     * builds CustomObjectKeyReference without checking for non-null required values
+     * @return CustomObjectKeyReference
      */
     public CustomObjectKeyReference buildUnchecked() {
         return new CustomObjectKeyReferenceImpl(key, container);

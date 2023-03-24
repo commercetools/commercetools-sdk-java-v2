@@ -30,7 +30,7 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
 
     /**
      *  <p>Value to set.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
         return this.assetKey;
     }
 
+    /**
+     * builds CategorySetAssetKeyAction with checking for non-null required values
+     * @return CategorySetAssetKeyAction
+     */
     public CategorySetAssetKeyAction build() {
         Objects.requireNonNull(assetId, CategorySetAssetKeyAction.class + ": assetId is missing");
         return new CategorySetAssetKeyActionImpl(assetId, assetKey);
     }
 
     /**
-     * builds CategorySetAssetKeyAction without checking for non null required values
+     * builds CategorySetAssetKeyAction without checking for non-null required values
+     * @return CategorySetAssetKeyAction
      */
     public CategorySetAssetKeyAction buildUnchecked() {
         return new CategorySetAssetKeyActionImpl(assetId, assetKey);

@@ -32,7 +32,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *  <p>Update action for adding and removing custom line items</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveCustomLineItemChange with checking for non-null required values
+     * @return RemoveCustomLineItemChange
+     */
     public RemoveCustomLineItemChange build() {
         Objects.requireNonNull(change, RemoveCustomLineItemChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, RemoveCustomLineItemChange.class + ": nextValue is missing");
@@ -107,7 +113,8 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
     }
 
     /**
-     * builds RemoveCustomLineItemChange without checking for non null required values
+     * builds RemoveCustomLineItemChange without checking for non-null required values
+     * @return RemoveCustomLineItemChange
      */
     public RemoveCustomLineItemChange buildUnchecked() {
         return new RemoveCustomLineItemChangeImpl(change, nextValue, previousValue);

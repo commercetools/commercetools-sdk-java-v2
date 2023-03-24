@@ -25,7 +25,7 @@ public class ShippingMethodKeyReferenceBuilder implements Builder<ShippingMethod
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ShippingMethodKeyReferenceBuilder implements Builder<ShippingMethod
         return this.key;
     }
 
+    /**
+     * builds ShippingMethodKeyReference with checking for non-null required values
+     * @return ShippingMethodKeyReference
+     */
     public ShippingMethodKeyReference build() {
         Objects.requireNonNull(key, ShippingMethodKeyReference.class + ": key is missing");
         return new ShippingMethodKeyReferenceImpl(key);
     }
 
     /**
-     * builds ShippingMethodKeyReference without checking for non null required values
+     * builds ShippingMethodKeyReference without checking for non-null required values
+     * @return ShippingMethodKeyReference
      */
     public ShippingMethodKeyReference buildUnchecked() {
         return new ShippingMethodKeyReferenceImpl(key);

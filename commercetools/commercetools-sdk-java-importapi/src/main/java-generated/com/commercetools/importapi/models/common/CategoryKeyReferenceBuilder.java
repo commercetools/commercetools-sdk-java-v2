@@ -25,7 +25,7 @@ public class CategoryKeyReferenceBuilder implements Builder<CategoryKeyReference
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CategoryKeyReferenceBuilder implements Builder<CategoryKeyReference
         return this.key;
     }
 
+    /**
+     * builds CategoryKeyReference with checking for non-null required values
+     * @return CategoryKeyReference
+     */
     public CategoryKeyReference build() {
         Objects.requireNonNull(key, CategoryKeyReference.class + ": key is missing");
         return new CategoryKeyReferenceImpl(key);
     }
 
     /**
-     * builds CategoryKeyReference without checking for non null required values
+     * builds CategoryKeyReference without checking for non-null required values
+     * @return CategoryKeyReference
      */
     public CategoryKeyReference buildUnchecked() {
         return new CategoryKeyReferenceImpl(key);

@@ -29,7 +29,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -111,6 +113,10 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
         return this.items;
     }
 
+    /**
+     * builds StagedOrderSetParcelItemsAction with checking for non-null required values
+     * @return StagedOrderSetParcelItemsAction
+     */
     public StagedOrderSetParcelItemsAction build() {
         Objects.requireNonNull(parcelId, StagedOrderSetParcelItemsAction.class + ": parcelId is missing");
         Objects.requireNonNull(items, StagedOrderSetParcelItemsAction.class + ": items is missing");
@@ -118,7 +124,8 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * builds StagedOrderSetParcelItemsAction without checking for non null required values
+     * builds StagedOrderSetParcelItemsAction without checking for non-null required values
+     * @return StagedOrderSetParcelItemsAction
      */
     public StagedOrderSetParcelItemsAction buildUnchecked() {
         return new StagedOrderSetParcelItemsActionImpl(parcelId, items);

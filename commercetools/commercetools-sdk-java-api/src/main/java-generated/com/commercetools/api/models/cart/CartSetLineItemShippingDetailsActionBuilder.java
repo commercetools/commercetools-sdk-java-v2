@@ -31,7 +31,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, the existing value is removed.</p>
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, the existing value is removed.</p>
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -73,13 +74,18 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
         return this.shippingDetails;
     }
 
+    /**
+     * builds CartSetLineItemShippingDetailsAction with checking for non-null required values
+     * @return CartSetLineItemShippingDetailsAction
+     */
     public CartSetLineItemShippingDetailsAction build() {
         Objects.requireNonNull(lineItemId, CartSetLineItemShippingDetailsAction.class + ": lineItemId is missing");
         return new CartSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
     }
 
     /**
-     * builds CartSetLineItemShippingDetailsAction without checking for non null required values
+     * builds CartSetLineItemShippingDetailsAction without checking for non-null required values
+     * @return CartSetLineItemShippingDetailsAction
      */
     public CartSetLineItemShippingDetailsAction buildUnchecked() {
         return new CartSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);

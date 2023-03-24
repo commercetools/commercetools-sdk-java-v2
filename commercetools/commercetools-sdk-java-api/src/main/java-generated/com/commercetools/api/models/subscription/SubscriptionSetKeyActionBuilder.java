@@ -27,7 +27,7 @@ public class SubscriptionSetKeyActionBuilder implements Builder<SubscriptionSetK
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class SubscriptionSetKeyActionBuilder implements Builder<SubscriptionSetK
         return this.key;
     }
 
+    /**
+     * builds SubscriptionSetKeyAction with checking for non-null required values
+     * @return SubscriptionSetKeyAction
+     */
     public SubscriptionSetKeyAction build() {
         return new SubscriptionSetKeyActionImpl(key);
     }
 
     /**
-     * builds SubscriptionSetKeyAction without checking for non null required values
+     * builds SubscriptionSetKeyAction without checking for non-null required values
+     * @return SubscriptionSetKeyAction
      */
     public SubscriptionSetKeyAction buildUnchecked() {
         return new SubscriptionSetKeyActionImpl(key);

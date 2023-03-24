@@ -26,7 +26,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
-     * @param associates
+     * @param associates value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
-     * @param associates
+     * @param associates value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
-     * @param associates
+     * @param associates value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @param builder function to build the associates value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @param builder function to build the associates value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
         return this.associates;
     }
 
+    /**
+     * builds BusinessUnitSetAssociatesAction with checking for non-null required values
+     * @return BusinessUnitSetAssociatesAction
+     */
     public BusinessUnitSetAssociatesAction build() {
         Objects.requireNonNull(associates, BusinessUnitSetAssociatesAction.class + ": associates is missing");
         return new BusinessUnitSetAssociatesActionImpl(associates);
     }
 
     /**
-     * builds BusinessUnitSetAssociatesAction without checking for non null required values
+     * builds BusinessUnitSetAssociatesAction without checking for non-null required values
+     * @return BusinessUnitSetAssociatesAction
      */
     public BusinessUnitSetAssociatesAction buildUnchecked() {
         return new BusinessUnitSetAssociatesActionImpl(associates);

@@ -27,7 +27,7 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param maxApplications
+     * @param maxApplications value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
         return this.maxApplications;
     }
 
+    /**
+     * builds DiscountCodeSetMaxApplicationsAction with checking for non-null required values
+     * @return DiscountCodeSetMaxApplicationsAction
+     */
     public DiscountCodeSetMaxApplicationsAction build() {
         return new DiscountCodeSetMaxApplicationsActionImpl(maxApplications);
     }
 
     /**
-     * builds DiscountCodeSetMaxApplicationsAction without checking for non null required values
+     * builds DiscountCodeSetMaxApplicationsAction without checking for non-null required values
+     * @return DiscountCodeSetMaxApplicationsAction
      */
     public DiscountCodeSetMaxApplicationsAction buildUnchecked() {
         return new DiscountCodeSetMaxApplicationsActionImpl(maxApplications);

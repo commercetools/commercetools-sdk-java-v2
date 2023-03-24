@@ -34,7 +34,7 @@ public class MyBusinessUnitChangeAddressActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>ID of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class MyBusinessUnitChangeAddressActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>Key of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class MyBusinessUnitChangeAddressActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>New address to set.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class MyBusinessUnitChangeAddressActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>New address to set.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -91,13 +92,18 @@ public class MyBusinessUnitChangeAddressActionBuilder implements Builder<MyBusin
         return this.address;
     }
 
+    /**
+     * builds MyBusinessUnitChangeAddressAction with checking for non-null required values
+     * @return MyBusinessUnitChangeAddressAction
+     */
     public MyBusinessUnitChangeAddressAction build() {
         Objects.requireNonNull(address, MyBusinessUnitChangeAddressAction.class + ": address is missing");
         return new MyBusinessUnitChangeAddressActionImpl(addressId, addressKey, address);
     }
 
     /**
-     * builds MyBusinessUnitChangeAddressAction without checking for non null required values
+     * builds MyBusinessUnitChangeAddressAction without checking for non-null required values
+     * @return MyBusinessUnitChangeAddressAction
      */
     public MyBusinessUnitChangeAddressAction buildUnchecked() {
         return new MyBusinessUnitChangeAddressActionImpl(addressId, addressKey, address);

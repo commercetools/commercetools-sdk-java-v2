@@ -37,7 +37,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
 
     /**
      *  <p>Total number of results matching the query.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
 
     /**
      *  <p>Number of results requested.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
 
     /**
      *  <p>Actual results.</p>
-     * @param hits
+     * @param hits value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
 
     /**
      *  <p>Actual results.</p>
-     * @param hits
+     * @param hits value to be set
      * @return Builder
      */
 
@@ -92,7 +92,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
 
     /**
      *  <p>Actual results.</p>
-     * @param hits
+     * @param hits value to be set
      * @return Builder
      */
 
@@ -106,6 +106,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
 
     /**
      *  <p>Actual results.</p>
+     * @param builder function to build the hits value
      * @return Builder
      */
 
@@ -120,6 +121,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
 
     /**
      *  <p>Actual results.</p>
+     * @param builder function to build the hits value
      * @return Builder
      */
 
@@ -148,6 +150,10 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
         return this.hits;
     }
 
+    /**
+     * builds OrderPagedSearchResponse with checking for non-null required values
+     * @return OrderPagedSearchResponse
+     */
     public OrderPagedSearchResponse build() {
         Objects.requireNonNull(total, OrderPagedSearchResponse.class + ": total is missing");
         Objects.requireNonNull(hits, OrderPagedSearchResponse.class + ": hits is missing");
@@ -155,7 +161,8 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-     * builds OrderPagedSearchResponse without checking for non null required values
+     * builds OrderPagedSearchResponse without checking for non-null required values
+     * @return OrderPagedSearchResponse
      */
     public OrderPagedSearchResponse buildUnchecked() {
         return new OrderPagedSearchResponseImpl(total, offset, limit, hits);

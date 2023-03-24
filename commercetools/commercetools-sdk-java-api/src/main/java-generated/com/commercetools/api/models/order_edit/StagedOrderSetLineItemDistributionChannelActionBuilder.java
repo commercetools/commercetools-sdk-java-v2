@@ -32,7 +32,7 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -75,6 +76,10 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
         return this.distributionChannel;
     }
 
+    /**
+     * builds StagedOrderSetLineItemDistributionChannelAction with checking for non-null required values
+     * @return StagedOrderSetLineItemDistributionChannelAction
+     */
     public StagedOrderSetLineItemDistributionChannelAction build() {
         Objects.requireNonNull(lineItemId,
             StagedOrderSetLineItemDistributionChannelAction.class + ": lineItemId is missing");
@@ -82,7 +87,8 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     * builds StagedOrderSetLineItemDistributionChannelAction without checking for non null required values
+     * builds StagedOrderSetLineItemDistributionChannelAction without checking for non-null required values
+     * @return StagedOrderSetLineItemDistributionChannelAction
      */
     public StagedOrderSetLineItemDistributionChannelAction buildUnchecked() {
         return new StagedOrderSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);

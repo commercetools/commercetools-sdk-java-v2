@@ -25,7 +25,7 @@ public class CartRemoveShippingMethodActionBuilder implements Builder<CartRemove
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method to remove from the Cart.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CartRemoveShippingMethodActionBuilder implements Builder<CartRemove
         return this.shippingKey;
     }
 
+    /**
+     * builds CartRemoveShippingMethodAction with checking for non-null required values
+     * @return CartRemoveShippingMethodAction
+     */
     public CartRemoveShippingMethodAction build() {
         Objects.requireNonNull(shippingKey, CartRemoveShippingMethodAction.class + ": shippingKey is missing");
         return new CartRemoveShippingMethodActionImpl(shippingKey);
     }
 
     /**
-     * builds CartRemoveShippingMethodAction without checking for non null required values
+     * builds CartRemoveShippingMethodAction without checking for non-null required values
+     * @return CartRemoveShippingMethodAction
      */
     public CartRemoveShippingMethodAction buildUnchecked() {
         return new CartRemoveShippingMethodActionImpl(shippingKey);

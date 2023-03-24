@@ -26,7 +26,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
-     * @param targets
+     * @param targets value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
-     * @param targets
+     * @param targets value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
-     * @param targets
+     * @param targets value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @param builder function to build the targets value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @param builder function to build the targets value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return this.targets;
     }
 
+    /**
+     * builds ItemShippingDetailsDraft with checking for non-null required values
+     * @return ItemShippingDetailsDraft
+     */
     public ItemShippingDetailsDraft build() {
         Objects.requireNonNull(targets, ItemShippingDetailsDraft.class + ": targets is missing");
         return new ItemShippingDetailsDraftImpl(targets);
     }
 
     /**
-     * builds ItemShippingDetailsDraft without checking for non null required values
+     * builds ItemShippingDetailsDraft without checking for non-null required values
+     * @return ItemShippingDetailsDraft
      */
     public ItemShippingDetailsDraft buildUnchecked() {
         return new ItemShippingDetailsDraftImpl(targets);

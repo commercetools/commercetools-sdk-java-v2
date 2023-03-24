@@ -25,7 +25,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
         return this.value;
     }
 
+    /**
+     * builds BooleanSetField with checking for non-null required values
+     * @return BooleanSetField
+     */
     public BooleanSetField build() {
         Objects.requireNonNull(value, BooleanSetField.class + ": value is missing");
         return new BooleanSetFieldImpl(value);
     }
 
     /**
-     * builds BooleanSetField without checking for non null required values
+     * builds BooleanSetField without checking for non-null required values
+     * @return BooleanSetField
      */
     public BooleanSetField buildUnchecked() {
         return new BooleanSetFieldImpl(value);

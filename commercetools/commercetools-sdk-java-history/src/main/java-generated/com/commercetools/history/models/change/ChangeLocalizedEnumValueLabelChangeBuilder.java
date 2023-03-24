@@ -41,7 +41,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *  <p>The name of the field definition updated.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *  <p>The name of the attribute updated.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -74,7 +74,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *  <p>Key of the values that was updated</p>
-     * @param valueKey
+     * @param valueKey value to be set
      * @return Builder
      */
 
@@ -85,6 +85,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -96,7 +97,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -108,6 +109,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -119,7 +121,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -153,6 +155,10 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeLocalizedEnumValueLabelChange with checking for non-null required values
+     * @return ChangeLocalizedEnumValueLabelChange
+     */
     public ChangeLocalizedEnumValueLabelChange build() {
         Objects.requireNonNull(change, ChangeLocalizedEnumValueLabelChange.class + ": change is missing");
         Objects.requireNonNull(fieldName, ChangeLocalizedEnumValueLabelChange.class + ": fieldName is missing");
@@ -165,7 +171,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     * builds ChangeLocalizedEnumValueLabelChange without checking for non null required values
+     * builds ChangeLocalizedEnumValueLabelChange without checking for non-null required values
+     * @return ChangeLocalizedEnumValueLabelChange
      */
     public ChangeLocalizedEnumValueLabelChange buildUnchecked() {
         return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,

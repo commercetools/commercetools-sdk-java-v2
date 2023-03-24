@@ -35,7 +35,7 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
 
     /**
      *  <p><code>"Extension did not respond in time."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -46,6 +46,8 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ExtensionNoResponseErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -55,6 +57,9 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ExtensionNoResponseErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -67,7 +72,7 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
 
     /**
      *  <p>Unique identifier of the API Extension.</p>
-     * @param extensionId
+     * @param extensionId value to be set
      * @return Builder
      */
 
@@ -78,7 +83,7 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
 
     /**
      *  <p>User-defined unique identifier of the API Extension, if available.</p>
-     * @param extensionKey
+     * @param extensionKey value to be set
      * @return Builder
      */
 
@@ -104,6 +109,10 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
         return this.extensionKey;
     }
 
+    /**
+     * builds ExtensionNoResponseError with checking for non-null required values
+     * @return ExtensionNoResponseError
+     */
     public ExtensionNoResponseError build() {
         Objects.requireNonNull(message, ExtensionNoResponseError.class + ": message is missing");
         Objects.requireNonNull(extensionId, ExtensionNoResponseError.class + ": extensionId is missing");
@@ -111,7 +120,8 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
     }
 
     /**
-     * builds ExtensionNoResponseError without checking for non null required values
+     * builds ExtensionNoResponseError without checking for non-null required values
+     * @return ExtensionNoResponseError
      */
     public ExtensionNoResponseError buildUnchecked() {
         return new ExtensionNoResponseErrorImpl(message, values, extensionId, extensionKey);

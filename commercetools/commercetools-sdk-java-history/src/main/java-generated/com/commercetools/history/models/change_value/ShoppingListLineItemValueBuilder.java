@@ -32,7 +32,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
 
     /**
      *
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
 
     /**
      *
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -86,6 +87,10 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
         return this.variantId;
     }
 
+    /**
+     * builds ShoppingListLineItemValue with checking for non-null required values
+     * @return ShoppingListLineItemValue
+     */
     public ShoppingListLineItemValue build() {
         Objects.requireNonNull(id, ShoppingListLineItemValue.class + ": id is missing");
         Objects.requireNonNull(name, ShoppingListLineItemValue.class + ": name is missing");
@@ -94,7 +99,8 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     * builds ShoppingListLineItemValue without checking for non null required values
+     * builds ShoppingListLineItemValue without checking for non-null required values
+     * @return ShoppingListLineItemValue
      */
     public ShoppingListLineItemValue buildUnchecked() {
         return new ShoppingListLineItemValueImpl(id, name, variantId);

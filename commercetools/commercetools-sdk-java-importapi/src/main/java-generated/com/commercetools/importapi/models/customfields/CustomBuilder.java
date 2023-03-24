@@ -31,6 +31,7 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      *  <p>The type that provides the field definitions for this object.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      *  <p>The type that provides the field definitions for this object.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -53,6 +54,7 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      *  <p>The custom fields of this object.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -64,7 +66,7 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      *  <p>The custom fields of this object.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -82,13 +84,18 @@ public class CustomBuilder implements Builder<Custom> {
         return this.fields;
     }
 
+    /**
+     * builds Custom with checking for non-null required values
+     * @return Custom
+     */
     public Custom build() {
         Objects.requireNonNull(type, Custom.class + ": type is missing");
         return new CustomImpl(type, fields);
     }
 
     /**
-     * builds Custom without checking for non null required values
+     * builds Custom without checking for non-null required values
+     * @return Custom
      */
     public Custom buildUnchecked() {
         return new CustomImpl(type, fields);

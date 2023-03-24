@@ -29,7 +29,7 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
         return this.money;
     }
 
+    /**
+     * builds CartChangeCustomLineItemMoneyAction with checking for non-null required values
+     * @return CartChangeCustomLineItemMoneyAction
+     */
     public CartChangeCustomLineItemMoneyAction build() {
         Objects.requireNonNull(customLineItemId,
             CartChangeCustomLineItemMoneyAction.class + ": customLineItemId is missing");
@@ -76,7 +81,8 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
     }
 
     /**
-     * builds CartChangeCustomLineItemMoneyAction without checking for non null required values
+     * builds CartChangeCustomLineItemMoneyAction without checking for non-null required values
+     * @return CartChangeCustomLineItemMoneyAction
      */
     public CartChangeCustomLineItemMoneyAction buildUnchecked() {
         return new CartChangeCustomLineItemMoneyActionImpl(customLineItemId, money);

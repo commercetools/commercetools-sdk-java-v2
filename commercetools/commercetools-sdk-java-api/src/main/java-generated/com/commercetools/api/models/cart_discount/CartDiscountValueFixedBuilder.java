@@ -26,7 +26,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -64,6 +64,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -78,6 +79,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -92,13 +94,18 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
         return this.money;
     }
 
+    /**
+     * builds CartDiscountValueFixed with checking for non-null required values
+     * @return CartDiscountValueFixed
+     */
     public CartDiscountValueFixed build() {
         Objects.requireNonNull(money, CartDiscountValueFixed.class + ": money is missing");
         return new CartDiscountValueFixedImpl(money);
     }
 
     /**
-     * builds CartDiscountValueFixed without checking for non null required values
+     * builds CartDiscountValueFixed without checking for non-null required values
+     * @return CartDiscountValueFixed
      */
     public CartDiscountValueFixed buildUnchecked() {
         return new CartDiscountValueFixedImpl(money);

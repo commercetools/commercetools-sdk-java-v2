@@ -38,7 +38,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *
-     * @param shippingMethodName
+     * @param shippingMethodName value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *
+     * @param builder function to build the shippingRate value
      * @return Builder
      */
 
@@ -61,7 +62,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *
-     * @param shippingRate
+     * @param shippingRate value to be set
      * @return Builder
      */
 
@@ -73,6 +74,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -86,7 +88,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -98,6 +100,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -110,7 +113,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -138,6 +141,10 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
         return this.externalTaxRate;
     }
 
+    /**
+     * builds StagedOrderSetCustomShippingMethodAction with checking for non-null required values
+     * @return StagedOrderSetCustomShippingMethodAction
+     */
     public StagedOrderSetCustomShippingMethodAction build() {
         Objects.requireNonNull(shippingMethodName,
             StagedOrderSetCustomShippingMethodAction.class + ": shippingMethodName is missing");
@@ -148,7 +155,8 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     * builds StagedOrderSetCustomShippingMethodAction without checking for non null required values
+     * builds StagedOrderSetCustomShippingMethodAction without checking for non-null required values
+     * @return StagedOrderSetCustomShippingMethodAction
      */
     public StagedOrderSetCustomShippingMethodAction buildUnchecked() {
         return new StagedOrderSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory,

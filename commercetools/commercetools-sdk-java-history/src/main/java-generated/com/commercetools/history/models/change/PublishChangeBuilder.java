@@ -25,7 +25,7 @@ public class PublishChangeBuilder implements Builder<PublishChange> {
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class PublishChangeBuilder implements Builder<PublishChange> {
         return this.change;
     }
 
+    /**
+     * builds PublishChange with checking for non-null required values
+     * @return PublishChange
+     */
     public PublishChange build() {
         Objects.requireNonNull(change, PublishChange.class + ": change is missing");
         return new PublishChangeImpl(change);
     }
 
     /**
-     * builds PublishChange without checking for non null required values
+     * builds PublishChange without checking for non-null required values
+     * @return PublishChange
      */
     public PublishChange buildUnchecked() {
         return new PublishChangeImpl(change);

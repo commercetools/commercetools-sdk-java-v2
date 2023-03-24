@@ -26,6 +26,7 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
         return this.description;
     }
 
+    /**
+     * builds StateSetDescriptionAction with checking for non-null required values
+     * @return StateSetDescriptionAction
+     */
     public StateSetDescriptionAction build() {
         Objects.requireNonNull(description, StateSetDescriptionAction.class + ": description is missing");
         return new StateSetDescriptionActionImpl(description);
     }
 
     /**
-     * builds StateSetDescriptionAction without checking for non null required values
+     * builds StateSetDescriptionAction without checking for non-null required values
+     * @return StateSetDescriptionAction
      */
     public StateSetDescriptionAction buildUnchecked() {
         return new StateSetDescriptionActionImpl(description);

@@ -28,7 +28,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
         return this.quantity;
     }
 
+    /**
+     * builds DeliveryItem with checking for non-null required values
+     * @return DeliveryItem
+     */
     public DeliveryItem build() {
         Objects.requireNonNull(id, DeliveryItem.class + ": id is missing");
         Objects.requireNonNull(quantity, DeliveryItem.class + ": quantity is missing");
@@ -63,7 +67,8 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     * builds DeliveryItem without checking for non null required values
+     * builds DeliveryItem without checking for non-null required values
+     * @return DeliveryItem
      */
     public DeliveryItem buildUnchecked() {
         return new DeliveryItemImpl(id, quantity);

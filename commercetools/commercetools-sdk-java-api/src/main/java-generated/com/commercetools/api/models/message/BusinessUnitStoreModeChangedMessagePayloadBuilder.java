@@ -36,7 +36,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -75,6 +75,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -89,6 +90,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -101,7 +103,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
-     * @param storeMode
+     * @param storeMode value to be set
      * @return Builder
      */
 
@@ -113,7 +115,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
-     * @param oldStores
+     * @param oldStores value to be set
      * @return Builder
      */
 
@@ -125,7 +127,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
-     * @param oldStores
+     * @param oldStores value to be set
      * @return Builder
      */
 
@@ -137,7 +139,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
-     * @param oldStores
+     * @param oldStores value to be set
      * @return Builder
      */
 
@@ -152,6 +154,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param builder function to build the oldStores value
      * @return Builder
      */
 
@@ -166,6 +169,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param builder function to build the oldStores value
      * @return Builder
      */
 
@@ -178,7 +182,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
-     * @param oldStoreMode
+     * @param oldStoreMode value to be set
      * @return Builder
      */
 
@@ -204,6 +208,10 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
         return this.oldStoreMode;
     }
 
+    /**
+     * builds BusinessUnitStoreModeChangedMessagePayload with checking for non-null required values
+     * @return BusinessUnitStoreModeChangedMessagePayload
+     */
     public BusinessUnitStoreModeChangedMessagePayload build() {
         Objects.requireNonNull(stores, BusinessUnitStoreModeChangedMessagePayload.class + ": stores is missing");
         Objects.requireNonNull(storeMode, BusinessUnitStoreModeChangedMessagePayload.class + ": storeMode is missing");
@@ -214,7 +222,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     * builds BusinessUnitStoreModeChangedMessagePayload without checking for non null required values
+     * builds BusinessUnitStoreModeChangedMessagePayload without checking for non-null required values
+     * @return BusinessUnitStoreModeChangedMessagePayload
      */
     public BusinessUnitStoreModeChangedMessagePayload buildUnchecked() {
         return new BusinessUnitStoreModeChangedMessagePayloadImpl(stores, storeMode, oldStores, oldStoreMode);

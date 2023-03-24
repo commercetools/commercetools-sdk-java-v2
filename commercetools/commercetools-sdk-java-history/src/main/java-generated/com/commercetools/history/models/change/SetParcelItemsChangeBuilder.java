@@ -35,7 +35,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *  <p>Update action for <code>setParcelItems</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param builder function to build the parcel value
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
-     * @param parcel
+     * @param parcel value to be set
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -94,7 +95,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -109,6 +110,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -123,6 +125,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -135,7 +138,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -147,7 +150,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -159,7 +162,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -174,6 +177,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -188,6 +192,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -214,6 +219,10 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this.previousValue;
     }
 
+    /**
+     * builds SetParcelItemsChange with checking for non-null required values
+     * @return SetParcelItemsChange
+     */
     public SetParcelItemsChange build() {
         Objects.requireNonNull(change, SetParcelItemsChange.class + ": change is missing");
         Objects.requireNonNull(parcel, SetParcelItemsChange.class + ": parcel is missing");
@@ -223,7 +232,8 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     * builds SetParcelItemsChange without checking for non null required values
+     * builds SetParcelItemsChange without checking for non-null required values
+     * @return SetParcelItemsChange
      */
     public SetParcelItemsChange buildUnchecked() {
         return new SetParcelItemsChangeImpl(change, parcel, nextValue, previousValue);

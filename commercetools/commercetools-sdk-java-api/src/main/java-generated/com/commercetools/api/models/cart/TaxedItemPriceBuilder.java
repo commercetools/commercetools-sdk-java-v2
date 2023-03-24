@@ -34,6 +34,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total net amount of the Line Item or Custom Line Item.</p>
+     * @param builder function to build the totalNet value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total net amount of the Line Item or Custom Line Item.</p>
-     * @param totalNet
+     * @param totalNet value to be set
      * @return Builder
      */
 
@@ -56,6 +57,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
+     * @param builder function to build the totalGross value
      * @return Builder
      */
 
@@ -67,7 +69,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
-     * @param totalGross
+     * @param totalGross value to be set
      * @return Builder
      */
 
@@ -78,6 +80,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param builder function to build the totalTax value
      * @return Builder
      */
 
@@ -89,7 +92,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
-     * @param totalTax
+     * @param totalTax value to be set
      * @return Builder
      */
 
@@ -112,6 +115,10 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
         return this.totalTax;
     }
 
+    /**
+     * builds TaxedItemPrice with checking for non-null required values
+     * @return TaxedItemPrice
+     */
     public TaxedItemPrice build() {
         Objects.requireNonNull(totalNet, TaxedItemPrice.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedItemPrice.class + ": totalGross is missing");
@@ -119,7 +126,8 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     }
 
     /**
-     * builds TaxedItemPrice without checking for non null required values
+     * builds TaxedItemPrice without checking for non-null required values
+     * @return TaxedItemPrice
      */
     public TaxedItemPrice buildUnchecked() {
         return new TaxedItemPriceImpl(totalNet, totalGross, totalTax);

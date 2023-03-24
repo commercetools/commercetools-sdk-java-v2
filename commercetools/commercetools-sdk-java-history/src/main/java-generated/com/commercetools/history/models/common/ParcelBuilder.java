@@ -38,7 +38,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -60,6 +60,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param builder function to build the measurements value
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
-     * @param measurements
+     * @param measurements value to be set
      * @return Builder
      */
 
@@ -83,6 +84,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param builder function to build the trackingData value
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
-     * @param trackingData
+     * @param trackingData value to be set
      * @return Builder
      */
 
@@ -105,7 +107,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -116,7 +118,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -127,7 +129,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -141,6 +143,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -155,6 +158,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -185,6 +189,10 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this.items;
     }
 
+    /**
+     * builds Parcel with checking for non-null required values
+     * @return Parcel
+     */
     public Parcel build() {
         Objects.requireNonNull(id, Parcel.class + ": id is missing");
         Objects.requireNonNull(createdAt, Parcel.class + ": createdAt is missing");
@@ -195,7 +203,8 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * builds Parcel without checking for non null required values
+     * builds Parcel without checking for non-null required values
+     * @return Parcel
      */
     public Parcel buildUnchecked() {
         return new ParcelImpl(id, createdAt, measurements, trackingData, items);

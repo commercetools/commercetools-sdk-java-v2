@@ -37,6 +37,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     * @param builder function to build the channels value
      * @return Builder
      */
 
@@ -50,7 +51,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
-     * @param channels
+     * @param channels value to be set
      * @return Builder
      */
 
@@ -62,7 +63,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>Indicates whether a Product Variant is in stock.</p>
-     * @param isOnStock
+     * @param isOnStock value to be set
      * @return Builder
      */
 
@@ -73,7 +74,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
-     * @param restockableInDays
+     * @param restockableInDays value to be set
      * @return Builder
      */
 
@@ -84,7 +85,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>Number of items of the Product Variant that are in stock.</p>
-     * @param availableQuantity
+     * @param availableQuantity value to be set
      * @return Builder
      */
 
@@ -113,12 +114,17 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
         return this.availableQuantity;
     }
 
+    /**
+     * builds ProductVariantAvailability with checking for non-null required values
+     * @return ProductVariantAvailability
+     */
     public ProductVariantAvailability build() {
         return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity);
     }
 
     /**
-     * builds ProductVariantAvailability without checking for non null required values
+     * builds ProductVariantAvailability without checking for non-null required values
+     * @return ProductVariantAvailability
      */
     public ProductVariantAvailability buildUnchecked() {
         return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity);

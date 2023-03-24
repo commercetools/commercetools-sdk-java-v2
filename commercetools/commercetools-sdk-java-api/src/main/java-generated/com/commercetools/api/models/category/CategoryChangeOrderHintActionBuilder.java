@@ -25,7 +25,7 @@ public class CategoryChangeOrderHintActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
-     * @param orderHint
+     * @param orderHint value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CategoryChangeOrderHintActionBuilder implements Builder<CategoryCha
         return this.orderHint;
     }
 
+    /**
+     * builds CategoryChangeOrderHintAction with checking for non-null required values
+     * @return CategoryChangeOrderHintAction
+     */
     public CategoryChangeOrderHintAction build() {
         Objects.requireNonNull(orderHint, CategoryChangeOrderHintAction.class + ": orderHint is missing");
         return new CategoryChangeOrderHintActionImpl(orderHint);
     }
 
     /**
-     * builds CategoryChangeOrderHintAction without checking for non null required values
+     * builds CategoryChangeOrderHintAction without checking for non-null required values
+     * @return CategoryChangeOrderHintAction
      */
     public CategoryChangeOrderHintAction buildUnchecked() {
         return new CategoryChangeOrderHintActionImpl(orderHint);

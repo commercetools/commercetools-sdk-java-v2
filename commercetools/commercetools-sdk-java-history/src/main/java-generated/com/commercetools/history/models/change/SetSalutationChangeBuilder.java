@@ -31,7 +31,7 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
 
     /**
      *  <p>Shape of the action for <code>setSalutation</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds SetSalutationChange with checking for non-null required values
+     * @return SetSalutationChange
+     */
     public SetSalutationChange build() {
         Objects.requireNonNull(change, SetSalutationChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetSalutationChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
     }
 
     /**
-     * builds SetSalutationChange without checking for non null required values
+     * builds SetSalutationChange without checking for non-null required values
+     * @return SetSalutationChange
      */
     public SetSalutationChange buildUnchecked() {
         return new SetSalutationChangeImpl(change, previousValue, nextValue);

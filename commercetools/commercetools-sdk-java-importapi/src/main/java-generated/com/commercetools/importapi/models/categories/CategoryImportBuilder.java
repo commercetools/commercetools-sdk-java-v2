@@ -61,7 +61,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>User-defined unique identifier.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -72,6 +72,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.name</code>.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.name</code>.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -105,7 +107,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -116,6 +118,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.description</code>.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -127,7 +130,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.description</code>.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -139,6 +142,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     * @param builder function to build the parent value
      * @return Builder
      */
 
@@ -150,7 +154,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
-     * @param parent
+     * @param parent value to be set
      * @return Builder
      */
 
@@ -162,7 +166,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.orderHint</code>.</p>
-     * @param orderHint
+     * @param orderHint value to be set
      * @return Builder
      */
 
@@ -173,7 +177,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.externalId</code>.</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -184,6 +188,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     * @param builder function to build the metaTitle value
      * @return Builder
      */
 
@@ -195,7 +200,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaTitle</code>.</p>
-     * @param metaTitle
+     * @param metaTitle value to be set
      * @return Builder
      */
 
@@ -207,6 +212,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     * @param builder function to build the metaDescription value
      * @return Builder
      */
 
@@ -219,7 +225,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaDescription</code>.</p>
-     * @param metaDescription
+     * @param metaDescription value to be set
      * @return Builder
      */
 
@@ -231,6 +237,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     * @param builder function to build the metaKeywords value
      * @return Builder
      */
 
@@ -243,7 +250,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaKeywords</code>.</p>
-     * @param metaKeywords
+     * @param metaKeywords value to be set
      * @return Builder
      */
 
@@ -255,7 +262,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -266,7 +273,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -278,7 +285,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -292,6 +299,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -306,6 +314,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -318,6 +327,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>The custom fields for this Category.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -329,7 +339,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>The custom fields for this Category.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -395,6 +405,10 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this.custom;
     }
 
+    /**
+     * builds CategoryImport with checking for non-null required values
+     * @return CategoryImport
+     */
     public CategoryImport build() {
         Objects.requireNonNull(key, CategoryImport.class + ": key is missing");
         Objects.requireNonNull(name, CategoryImport.class + ": name is missing");
@@ -404,7 +418,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     * builds CategoryImport without checking for non null required values
+     * builds CategoryImport without checking for non-null required values
+     * @return CategoryImport
      */
     public CategoryImport buildUnchecked() {
         return new CategoryImportImpl(key, name, slug, description, parent, orderHint, externalId, metaTitle,

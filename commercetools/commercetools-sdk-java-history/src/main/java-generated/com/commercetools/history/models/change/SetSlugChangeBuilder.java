@@ -32,7 +32,7 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *  <p>Shape of the action for <code>setSlug</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetSlugChange with checking for non-null required values
+     * @return SetSlugChange
+     */
     public SetSlugChange build() {
         Objects.requireNonNull(change, SetSlugChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetSlugChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class SetSlugChangeBuilder implements Builder<SetSlugChange> {
     }
 
     /**
-     * builds SetSlugChange without checking for non null required values
+     * builds SetSlugChange without checking for non-null required values
+     * @return SetSlugChange
      */
     public SetSlugChange buildUnchecked() {
         return new SetSlugChangeImpl(change, previousValue, nextValue);

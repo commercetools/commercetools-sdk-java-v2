@@ -34,7 +34,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
-     * @param returnTrackingId
+     * @param returnTrackingId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -84,6 +84,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -98,6 +99,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -110,7 +112,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
-     * @param returnDate
+     * @param returnDate value to be set
      * @return Builder
      */
 
@@ -133,13 +135,18 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
         return this.returnDate;
     }
 
+    /**
+     * builds StagedOrderAddReturnInfoAction with checking for non-null required values
+     * @return StagedOrderAddReturnInfoAction
+     */
     public StagedOrderAddReturnInfoAction build() {
         Objects.requireNonNull(items, StagedOrderAddReturnInfoAction.class + ": items is missing");
         return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
     }
 
     /**
-     * builds StagedOrderAddReturnInfoAction without checking for non null required values
+     * builds StagedOrderAddReturnInfoAction without checking for non-null required values
+     * @return StagedOrderAddReturnInfoAction
      */
     public StagedOrderAddReturnInfoAction buildUnchecked() {
         return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);

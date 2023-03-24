@@ -31,6 +31,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>Billing address on the Order after the Set Billing Address update action.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>Billing address on the Order after the Set Billing Address update action.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>Billing address on the Order before the Set Billing Address update action.</p>
+     * @param builder function to build the oldAddress value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>Billing address on the Order before the Set Billing Address update action.</p>
-     * @param oldAddress
+     * @param oldAddress value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
         return this.oldAddress;
     }
 
+    /**
+     * builds OrderBillingAddressSetMessagePayload with checking for non-null required values
+     * @return OrderBillingAddressSetMessagePayload
+     */
     public OrderBillingAddressSetMessagePayload build() {
         return new OrderBillingAddressSetMessagePayloadImpl(address, oldAddress);
     }
 
     /**
-     * builds OrderBillingAddressSetMessagePayload without checking for non null required values
+     * builds OrderBillingAddressSetMessagePayload without checking for non-null required values
+     * @return OrderBillingAddressSetMessagePayload
      */
     public OrderBillingAddressSetMessagePayload buildUnchecked() {
         return new OrderBillingAddressSetMessagePayloadImpl(address, oldAddress);

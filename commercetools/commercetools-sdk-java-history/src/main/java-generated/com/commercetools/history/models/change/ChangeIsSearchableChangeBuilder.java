@@ -34,7 +34,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     /**
      *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     /**
      *  <p>The name of the updated attribute.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -92,6 +92,10 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeIsSearchableChange with checking for non-null required values
+     * @return ChangeIsSearchableChange
+     */
     public ChangeIsSearchableChange build() {
         Objects.requireNonNull(change, ChangeIsSearchableChange.class + ": change is missing");
         Objects.requireNonNull(attributeName, ChangeIsSearchableChange.class + ": attributeName is missing");
@@ -101,7 +105,8 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     }
 
     /**
-     * builds ChangeIsSearchableChange without checking for non null required values
+     * builds ChangeIsSearchableChange without checking for non-null required values
+     * @return ChangeIsSearchableChange
      */
     public ChangeIsSearchableChange buildUnchecked() {
         return new ChangeIsSearchableChangeImpl(change, attributeName, nextValue, previousValue);

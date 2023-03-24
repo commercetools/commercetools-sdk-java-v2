@@ -26,7 +26,7 @@ public class ProductVariantSelectionIncludeAllExceptBuilder
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
-     * @param skus
+     * @param skus value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class ProductVariantSelectionIncludeAllExceptBuilder
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
-     * @param skus
+     * @param skus value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ProductVariantSelectionIncludeAllExceptBuilder
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
-     * @param skus
+     * @param skus value to be set
      * @return Builder
      */
 
@@ -64,13 +64,18 @@ public class ProductVariantSelectionIncludeAllExceptBuilder
         return this.skus;
     }
 
+    /**
+     * builds ProductVariantSelectionIncludeAllExcept with checking for non-null required values
+     * @return ProductVariantSelectionIncludeAllExcept
+     */
     public ProductVariantSelectionIncludeAllExcept build() {
         Objects.requireNonNull(skus, ProductVariantSelectionIncludeAllExcept.class + ": skus is missing");
         return new ProductVariantSelectionIncludeAllExceptImpl(skus);
     }
 
     /**
-     * builds ProductVariantSelectionIncludeAllExcept without checking for non null required values
+     * builds ProductVariantSelectionIncludeAllExcept without checking for non-null required values
+     * @return ProductVariantSelectionIncludeAllExcept
      */
     public ProductVariantSelectionIncludeAllExcept buildUnchecked() {
         return new ProductVariantSelectionIncludeAllExceptImpl(skus);

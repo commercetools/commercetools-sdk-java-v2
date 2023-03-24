@@ -35,7 +35,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>The maximum number of results to return from a query.</p>
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>The total number of product images that were have been analyzed.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -79,7 +79,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -91,7 +91,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -106,6 +106,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -120,6 +121,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -146,6 +148,10 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
         return this.results;
     }
 
+    /**
+     * builds ImageSearchResponse with checking for non-null required values
+     * @return ImageSearchResponse
+     */
     public ImageSearchResponse build() {
         Objects.requireNonNull(count, ImageSearchResponse.class + ": count is missing");
         Objects.requireNonNull(offset, ImageSearchResponse.class + ": offset is missing");
@@ -155,7 +161,8 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
     }
 
     /**
-     * builds ImageSearchResponse without checking for non null required values
+     * builds ImageSearchResponse without checking for non-null required values
+     * @return ImageSearchResponse
      */
     public ImageSearchResponse buildUnchecked() {
         return new ImageSearchResponseImpl(count, offset, total, results);

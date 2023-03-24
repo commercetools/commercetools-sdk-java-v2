@@ -32,7 +32,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
         return this.nextValue;
     }
 
+    /**
+     * builds AddShoppingListLineItemChange with checking for non-null required values
+     * @return AddShoppingListLineItemChange
+     */
     public AddShoppingListLineItemChange build() {
         Objects.requireNonNull(change, AddShoppingListLineItemChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, AddShoppingListLineItemChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
     }
 
     /**
-     * builds AddShoppingListLineItemChange without checking for non null required values
+     * builds AddShoppingListLineItemChange without checking for non-null required values
+     * @return AddShoppingListLineItemChange
      */
     public AddShoppingListLineItemChange buildUnchecked() {
         return new AddShoppingListLineItemChangeImpl(change, previousValue, nextValue);

@@ -31,7 +31,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -112,13 +114,18 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
         return this.value;
     }
 
+    /**
+     * builds MoneySetAttribute with checking for non-null required values
+     * @return MoneySetAttribute
+     */
     public MoneySetAttribute build() {
         Objects.requireNonNull(value, MoneySetAttribute.class + ": value is missing");
         return new MoneySetAttributeImpl(name, value);
     }
 
     /**
-     * builds MoneySetAttribute without checking for non null required values
+     * builds MoneySetAttribute without checking for non-null required values
+     * @return MoneySetAttribute
      */
     public MoneySetAttribute buildUnchecked() {
         return new MoneySetAttributeImpl(name, value);

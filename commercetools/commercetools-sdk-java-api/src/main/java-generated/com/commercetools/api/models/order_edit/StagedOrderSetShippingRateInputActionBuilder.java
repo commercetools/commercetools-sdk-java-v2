@@ -28,7 +28,7 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
 
     /**
      *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
 
     /**
      *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
         return this.shippingRateInput;
     }
 
+    /**
+     * builds StagedOrderSetShippingRateInputAction with checking for non-null required values
+     * @return StagedOrderSetShippingRateInputAction
+     */
     public StagedOrderSetShippingRateInputAction build() {
         return new StagedOrderSetShippingRateInputActionImpl(shippingRateInput);
     }
 
     /**
-     * builds StagedOrderSetShippingRateInputAction without checking for non null required values
+     * builds StagedOrderSetShippingRateInputAction without checking for non-null required values
+     * @return StagedOrderSetShippingRateInputAction
      */
     public StagedOrderSetShippingRateInputAction buildUnchecked() {
         return new StagedOrderSetShippingRateInputActionImpl(shippingRateInput);

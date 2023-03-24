@@ -28,7 +28,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -96,12 +98,17 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
         return this.stores;
     }
 
+    /**
+     * builds BusinessUnitSetStoresAction with checking for non-null required values
+     * @return BusinessUnitSetStoresAction
+     */
     public BusinessUnitSetStoresAction build() {
         return new BusinessUnitSetStoresActionImpl(stores);
     }
 
     /**
-     * builds BusinessUnitSetStoresAction without checking for non null required values
+     * builds BusinessUnitSetStoresAction without checking for non-null required values
+     * @return BusinessUnitSetStoresAction
      */
     public BusinessUnitSetStoresAction buildUnchecked() {
         return new BusinessUnitSetStoresActionImpl(stores);

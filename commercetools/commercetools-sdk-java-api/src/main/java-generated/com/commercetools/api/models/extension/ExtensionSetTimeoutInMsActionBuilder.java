@@ -28,7 +28,7 @@ public class ExtensionSetTimeoutInMsActionBuilder implements Builder<ExtensionSe
     /**
      *  <p>Value to set. If not defined, the maximum value is used. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
-     * @param timeoutInMs
+     * @param timeoutInMs value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class ExtensionSetTimeoutInMsActionBuilder implements Builder<ExtensionSe
         return this.timeoutInMs;
     }
 
+    /**
+     * builds ExtensionSetTimeoutInMsAction with checking for non-null required values
+     * @return ExtensionSetTimeoutInMsAction
+     */
     public ExtensionSetTimeoutInMsAction build() {
         return new ExtensionSetTimeoutInMsActionImpl(timeoutInMs);
     }
 
     /**
-     * builds ExtensionSetTimeoutInMsAction without checking for non null required values
+     * builds ExtensionSetTimeoutInMsAction without checking for non-null required values
+     * @return ExtensionSetTimeoutInMsAction
      */
     public ExtensionSetTimeoutInMsAction buildUnchecked() {
         return new ExtensionSetTimeoutInMsActionImpl(timeoutInMs);

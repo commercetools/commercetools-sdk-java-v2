@@ -41,7 +41,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *  <p>Update action for <code>setDiscountedPrice</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -74,7 +74,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -85,6 +85,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -96,7 +97,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -108,6 +109,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -119,7 +121,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -152,6 +154,10 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
         return this.nextValue;
     }
 
+    /**
+     * builds SetDiscountedPriceChange with checking for non-null required values
+     * @return SetDiscountedPriceChange
+     */
     public SetDiscountedPriceChange build() {
         Objects.requireNonNull(change, SetDiscountedPriceChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetDiscountedPriceChange.class + ": catalogData is missing");
@@ -163,7 +169,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     * builds SetDiscountedPriceChange without checking for non null required values
+     * builds SetDiscountedPriceChange without checking for non-null required values
+     * @return SetDiscountedPriceChange
      */
     public SetDiscountedPriceChange buildUnchecked() {
         return new SetDiscountedPriceChangeImpl(change, catalogData, variant, priceId, previousValue, nextValue);

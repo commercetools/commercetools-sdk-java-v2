@@ -25,7 +25,7 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
 
     /**
      *  <p>Abstract value for categorizing a Cart.</p>
-     * @param score
+     * @param score value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
         return this.score;
     }
 
+    /**
+     * builds ScoreShippingRateInput with checking for non-null required values
+     * @return ScoreShippingRateInput
+     */
     public ScoreShippingRateInput build() {
         Objects.requireNonNull(score, ScoreShippingRateInput.class + ": score is missing");
         return new ScoreShippingRateInputImpl(score);
     }
 
     /**
-     * builds ScoreShippingRateInput without checking for non null required values
+     * builds ScoreShippingRateInput without checking for non-null required values
+     * @return ScoreShippingRateInput
      */
     public ScoreShippingRateInput buildUnchecked() {
         return new ScoreShippingRateInputImpl(score);

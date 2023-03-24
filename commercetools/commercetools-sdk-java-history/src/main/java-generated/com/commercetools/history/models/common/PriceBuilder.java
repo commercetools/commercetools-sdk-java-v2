@@ -29,7 +29,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class PriceBuilder implements Builder<Price> {
         return this.value;
     }
 
+    /**
+     * builds Price with checking for non-null required values
+     * @return Price
+     */
     public Price build() {
         Objects.requireNonNull(id, Price.class + ": id is missing");
         Objects.requireNonNull(value, Price.class + ": value is missing");
@@ -75,7 +80,8 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     * builds Price without checking for non null required values
+     * builds Price without checking for non-null required values
+     * @return Price
      */
     public Price buildUnchecked() {
         return new PriceImpl(id, value);

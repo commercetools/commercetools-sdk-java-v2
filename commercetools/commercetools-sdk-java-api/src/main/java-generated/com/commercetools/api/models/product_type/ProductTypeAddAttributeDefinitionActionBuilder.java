@@ -27,6 +27,7 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
 
     /**
      *  <p>Value to append to <code>attributes</code>.</p>
+     * @param builder function to build the attribute value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
 
     /**
      *  <p>Value to append to <code>attributes</code>.</p>
-     * @param attribute
+     * @param attribute value to be set
      * @return Builder
      */
 
@@ -53,13 +54,18 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
         return this.attribute;
     }
 
+    /**
+     * builds ProductTypeAddAttributeDefinitionAction with checking for non-null required values
+     * @return ProductTypeAddAttributeDefinitionAction
+     */
     public ProductTypeAddAttributeDefinitionAction build() {
         Objects.requireNonNull(attribute, ProductTypeAddAttributeDefinitionAction.class + ": attribute is missing");
         return new ProductTypeAddAttributeDefinitionActionImpl(attribute);
     }
 
     /**
-     * builds ProductTypeAddAttributeDefinitionAction without checking for non null required values
+     * builds ProductTypeAddAttributeDefinitionAction without checking for non-null required values
+     * @return ProductTypeAddAttributeDefinitionAction
      */
     public ProductTypeAddAttributeDefinitionAction buildUnchecked() {
         return new ProductTypeAddAttributeDefinitionActionImpl(attribute);

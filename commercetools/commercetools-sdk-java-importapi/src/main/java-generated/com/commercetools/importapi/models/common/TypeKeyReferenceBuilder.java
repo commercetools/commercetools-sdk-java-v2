@@ -25,7 +25,7 @@ public class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> {
         return this.key;
     }
 
+    /**
+     * builds TypeKeyReference with checking for non-null required values
+     * @return TypeKeyReference
+     */
     public TypeKeyReference build() {
         Objects.requireNonNull(key, TypeKeyReference.class + ": key is missing");
         return new TypeKeyReferenceImpl(key);
     }
 
     /**
-     * builds TypeKeyReference without checking for non null required values
+     * builds TypeKeyReference without checking for non-null required values
+     * @return TypeKeyReference
      */
     public TypeKeyReference buildUnchecked() {
         return new TypeKeyReferenceImpl(key);

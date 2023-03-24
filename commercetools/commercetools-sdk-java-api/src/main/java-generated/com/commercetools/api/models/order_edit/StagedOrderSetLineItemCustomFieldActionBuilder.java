@@ -34,7 +34,7 @@ public class StagedOrderSetLineItemCustomFieldActionBuilder
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class StagedOrderSetLineItemCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class StagedOrderSetLineItemCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -78,6 +78,10 @@ public class StagedOrderSetLineItemCustomFieldActionBuilder
         return this.value;
     }
 
+    /**
+     * builds StagedOrderSetLineItemCustomFieldAction with checking for non-null required values
+     * @return StagedOrderSetLineItemCustomFieldAction
+     */
     public StagedOrderSetLineItemCustomFieldAction build() {
         Objects.requireNonNull(lineItemId, StagedOrderSetLineItemCustomFieldAction.class + ": lineItemId is missing");
         Objects.requireNonNull(name, StagedOrderSetLineItemCustomFieldAction.class + ": name is missing");
@@ -85,7 +89,8 @@ public class StagedOrderSetLineItemCustomFieldActionBuilder
     }
 
     /**
-     * builds StagedOrderSetLineItemCustomFieldAction without checking for non null required values
+     * builds StagedOrderSetLineItemCustomFieldAction without checking for non-null required values
+     * @return StagedOrderSetLineItemCustomFieldAction
      */
     public StagedOrderSetLineItemCustomFieldAction buildUnchecked() {
         return new StagedOrderSetLineItemCustomFieldActionImpl(lineItemId, name, value);

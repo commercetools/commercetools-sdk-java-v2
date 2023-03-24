@@ -26,7 +26,7 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -97,13 +99,18 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
         return this.resources;
     }
 
+    /**
+     * builds StandalonePriceImportRequest with checking for non-null required values
+     * @return StandalonePriceImportRequest
+     */
     public StandalonePriceImportRequest build() {
         Objects.requireNonNull(resources, StandalonePriceImportRequest.class + ": resources is missing");
         return new StandalonePriceImportRequestImpl(resources);
     }
 
     /**
-     * builds StandalonePriceImportRequest without checking for non null required values
+     * builds StandalonePriceImportRequest without checking for non-null required values
+     * @return StandalonePriceImportRequest
      */
     public StandalonePriceImportRequest buildUnchecked() {
         return new StandalonePriceImportRequestImpl(resources);

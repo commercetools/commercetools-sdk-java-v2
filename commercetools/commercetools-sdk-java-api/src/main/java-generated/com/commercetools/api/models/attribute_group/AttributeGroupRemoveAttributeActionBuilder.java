@@ -26,6 +26,7 @@ public class AttributeGroupRemoveAttributeActionBuilder implements Builder<Attri
 
     /**
      *  <p>Value to remove.</p>
+     * @param builder function to build the attribute value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class AttributeGroupRemoveAttributeActionBuilder implements Builder<Attri
 
     /**
      *  <p>Value to remove.</p>
-     * @param attribute
+     * @param attribute value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class AttributeGroupRemoveAttributeActionBuilder implements Builder<Attri
         return this.attribute;
     }
 
+    /**
+     * builds AttributeGroupRemoveAttributeAction with checking for non-null required values
+     * @return AttributeGroupRemoveAttributeAction
+     */
     public AttributeGroupRemoveAttributeAction build() {
         Objects.requireNonNull(attribute, AttributeGroupRemoveAttributeAction.class + ": attribute is missing");
         return new AttributeGroupRemoveAttributeActionImpl(attribute);
     }
 
     /**
-     * builds AttributeGroupRemoveAttributeAction without checking for non null required values
+     * builds AttributeGroupRemoveAttributeAction without checking for non-null required values
+     * @return AttributeGroupRemoveAttributeAction
      */
     public AttributeGroupRemoveAttributeAction buildUnchecked() {
         return new AttributeGroupRemoveAttributeActionImpl(attribute);

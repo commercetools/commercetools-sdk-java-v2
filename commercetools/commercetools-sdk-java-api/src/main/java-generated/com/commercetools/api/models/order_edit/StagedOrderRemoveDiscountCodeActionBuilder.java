@@ -26,6 +26,7 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
 
     /**
      *  <p>Reference to a DiscountCode.</p>
+     * @param builder function to build the discountCode value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
 
     /**
      *  <p>Reference to a DiscountCode.</p>
-     * @param discountCode
+     * @param discountCode value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
         return this.discountCode;
     }
 
+    /**
+     * builds StagedOrderRemoveDiscountCodeAction with checking for non-null required values
+     * @return StagedOrderRemoveDiscountCodeAction
+     */
     public StagedOrderRemoveDiscountCodeAction build() {
         Objects.requireNonNull(discountCode, StagedOrderRemoveDiscountCodeAction.class + ": discountCode is missing");
         return new StagedOrderRemoveDiscountCodeActionImpl(discountCode);
     }
 
     /**
-     * builds StagedOrderRemoveDiscountCodeAction without checking for non null required values
+     * builds StagedOrderRemoveDiscountCodeAction without checking for non-null required values
+     * @return StagedOrderRemoveDiscountCodeAction
      */
     public StagedOrderRemoveDiscountCodeAction buildUnchecked() {
         return new StagedOrderRemoveDiscountCodeActionImpl(discountCode);

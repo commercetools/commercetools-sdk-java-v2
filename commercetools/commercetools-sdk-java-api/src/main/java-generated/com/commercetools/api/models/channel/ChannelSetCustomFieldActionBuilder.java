@@ -30,7 +30,7 @@ public class ChannelSetCustomFieldActionBuilder implements Builder<ChannelSetCus
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ChannelSetCustomFieldActionBuilder implements Builder<ChannelSetCus
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ChannelSetCustomFieldActionBuilder implements Builder<ChannelSetCus
         return this.value;
     }
 
+    /**
+     * builds ChannelSetCustomFieldAction with checking for non-null required values
+     * @return ChannelSetCustomFieldAction
+     */
     public ChannelSetCustomFieldAction build() {
         Objects.requireNonNull(name, ChannelSetCustomFieldAction.class + ": name is missing");
         return new ChannelSetCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds ChannelSetCustomFieldAction without checking for non null required values
+     * builds ChannelSetCustomFieldAction without checking for non-null required values
+     * @return ChannelSetCustomFieldAction
      */
     public ChannelSetCustomFieldAction buildUnchecked() {
         return new ChannelSetCustomFieldActionImpl(name, value);

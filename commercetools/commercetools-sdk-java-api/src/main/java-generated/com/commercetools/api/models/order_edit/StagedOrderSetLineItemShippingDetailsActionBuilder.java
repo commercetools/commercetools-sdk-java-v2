@@ -32,7 +32,7 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -74,6 +75,10 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
         return this.shippingDetails;
     }
 
+    /**
+     * builds StagedOrderSetLineItemShippingDetailsAction with checking for non-null required values
+     * @return StagedOrderSetLineItemShippingDetailsAction
+     */
     public StagedOrderSetLineItemShippingDetailsAction build() {
         Objects.requireNonNull(lineItemId,
             StagedOrderSetLineItemShippingDetailsAction.class + ": lineItemId is missing");
@@ -81,7 +86,8 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
     }
 
     /**
-     * builds StagedOrderSetLineItemShippingDetailsAction without checking for non null required values
+     * builds StagedOrderSetLineItemShippingDetailsAction without checking for non-null required values
+     * @return StagedOrderSetLineItemShippingDetailsAction
      */
     public StagedOrderSetLineItemShippingDetailsAction buildUnchecked() {
         return new StagedOrderSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);

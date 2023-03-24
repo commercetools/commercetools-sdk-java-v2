@@ -32,7 +32,7 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
+     * @param builder function to build the quoteRequest value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
 
     /**
      *
-     * @param quoteRequest
+     * @param quoteRequest value to be set
      * @return Builder
      */
 
@@ -97,6 +99,10 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
         return this.quoteRequest;
     }
 
+    /**
+     * builds StagedQuoteLabel with checking for non-null required values
+     * @return StagedQuoteLabel
+     */
     public StagedQuoteLabel build() {
         Objects.requireNonNull(key, StagedQuoteLabel.class + ": key is missing");
         Objects.requireNonNull(customer, StagedQuoteLabel.class + ": customer is missing");
@@ -105,7 +111,8 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
     }
 
     /**
-     * builds StagedQuoteLabel without checking for non null required values
+     * builds StagedQuoteLabel without checking for non-null required values
+     * @return StagedQuoteLabel
      */
     public StagedQuoteLabel buildUnchecked() {
         return new StagedQuoteLabelImpl(key, customer, quoteRequest);

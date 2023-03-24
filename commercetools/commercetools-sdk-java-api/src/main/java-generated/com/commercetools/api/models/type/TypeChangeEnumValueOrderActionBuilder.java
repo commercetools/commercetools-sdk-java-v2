@@ -28,7 +28,7 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
 
     /**
      *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
-     * @param keys
+     * @param keys value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
 
     /**
      *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
-     * @param keys
+     * @param keys value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
 
     /**
      *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
-     * @param keys
+     * @param keys value to be set
      * @return Builder
      */
 
@@ -81,6 +81,10 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
         return this.keys;
     }
 
+    /**
+     * builds TypeChangeEnumValueOrderAction with checking for non-null required values
+     * @return TypeChangeEnumValueOrderAction
+     */
     public TypeChangeEnumValueOrderAction build() {
         Objects.requireNonNull(fieldName, TypeChangeEnumValueOrderAction.class + ": fieldName is missing");
         Objects.requireNonNull(keys, TypeChangeEnumValueOrderAction.class + ": keys is missing");
@@ -88,7 +92,8 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
     }
 
     /**
-     * builds TypeChangeEnumValueOrderAction without checking for non null required values
+     * builds TypeChangeEnumValueOrderAction without checking for non-null required values
+     * @return TypeChangeEnumValueOrderAction
      */
     public TypeChangeEnumValueOrderAction buildUnchecked() {
         return new TypeChangeEnumValueOrderActionImpl(fieldName, keys);

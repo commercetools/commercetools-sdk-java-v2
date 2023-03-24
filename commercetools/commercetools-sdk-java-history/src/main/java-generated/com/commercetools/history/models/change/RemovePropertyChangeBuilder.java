@@ -30,7 +30,7 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
 
     /**
      *  <p>Update action for <code>removeProperty</code> on custom objects</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
 
     /**
      *  <p>Value path to the property that was removed</p>
-     * @param path
+     * @param path value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -73,6 +73,10 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
         return this.previousValue;
     }
 
+    /**
+     * builds RemovePropertyChange with checking for non-null required values
+     * @return RemovePropertyChange
+     */
     public RemovePropertyChange build() {
         Objects.requireNonNull(change, RemovePropertyChange.class + ": change is missing");
         Objects.requireNonNull(path, RemovePropertyChange.class + ": path is missing");
@@ -81,7 +85,8 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
     }
 
     /**
-     * builds RemovePropertyChange without checking for non null required values
+     * builds RemovePropertyChange without checking for non-null required values
+     * @return RemovePropertyChange
      */
     public RemovePropertyChange buildUnchecked() {
         return new RemovePropertyChangeImpl(change, path, previousValue);

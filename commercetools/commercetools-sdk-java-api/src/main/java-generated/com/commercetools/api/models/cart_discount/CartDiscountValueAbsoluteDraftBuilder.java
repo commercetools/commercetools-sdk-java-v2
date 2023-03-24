@@ -26,7 +26,7 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
 
     /**
      *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
 
     /**
      *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
 
     /**
      *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
 
     /**
      *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -77,6 +78,7 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
 
     /**
      *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -91,13 +93,18 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
         return this.money;
     }
 
+    /**
+     * builds CartDiscountValueAbsoluteDraft with checking for non-null required values
+     * @return CartDiscountValueAbsoluteDraft
+     */
     public CartDiscountValueAbsoluteDraft build() {
         Objects.requireNonNull(money, CartDiscountValueAbsoluteDraft.class + ": money is missing");
         return new CartDiscountValueAbsoluteDraftImpl(money);
     }
 
     /**
-     * builds CartDiscountValueAbsoluteDraft without checking for non null required values
+     * builds CartDiscountValueAbsoluteDraft without checking for non-null required values
+     * @return CartDiscountValueAbsoluteDraft
      */
     public CartDiscountValueAbsoluteDraft buildUnchecked() {
         return new CartDiscountValueAbsoluteDraftImpl(money);

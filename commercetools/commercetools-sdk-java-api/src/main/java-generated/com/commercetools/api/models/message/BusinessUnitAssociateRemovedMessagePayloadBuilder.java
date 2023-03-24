@@ -27,6 +27,7 @@ public class BusinessUnitAssociateRemovedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was removed from the Business Unit.</p>
+     * @param builder function to build the associate value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class BusinessUnitAssociateRemovedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was removed from the Business Unit.</p>
-     * @param associate
+     * @param associate value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class BusinessUnitAssociateRemovedMessagePayloadBuilder
         return this.associate;
     }
 
+    /**
+     * builds BusinessUnitAssociateRemovedMessagePayload with checking for non-null required values
+     * @return BusinessUnitAssociateRemovedMessagePayload
+     */
     public BusinessUnitAssociateRemovedMessagePayload build() {
         Objects.requireNonNull(associate, BusinessUnitAssociateRemovedMessagePayload.class + ": associate is missing");
         return new BusinessUnitAssociateRemovedMessagePayloadImpl(associate);
     }
 
     /**
-     * builds BusinessUnitAssociateRemovedMessagePayload without checking for non null required values
+     * builds BusinessUnitAssociateRemovedMessagePayload without checking for non-null required values
+     * @return BusinessUnitAssociateRemovedMessagePayload
      */
     public BusinessUnitAssociateRemovedMessagePayload buildUnchecked() {
         return new BusinessUnitAssociateRemovedMessagePayloadImpl(associate);

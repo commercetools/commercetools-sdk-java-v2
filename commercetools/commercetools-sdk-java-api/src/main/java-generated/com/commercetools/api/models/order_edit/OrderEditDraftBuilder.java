@@ -43,7 +43,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>User-defined unique identifier for the OrderEdit.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The order to be updated with this edit.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The order to be updated with this edit.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -76,7 +77,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
-     * @param stagedActions
+     * @param stagedActions value to be set
      * @return Builder
      */
 
@@ -88,7 +89,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
-     * @param stagedActions
+     * @param stagedActions value to be set
      * @return Builder
      */
 
@@ -100,7 +101,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
-     * @param stagedActions
+     * @param stagedActions value to be set
      * @return Builder
      */
 
@@ -115,6 +116,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
+     * @param builder function to build the stagedActions value
      * @return Builder
      */
 
@@ -130,6 +132,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
+     * @param builder function to build the stagedActions value
      * @return Builder
      */
 
@@ -143,6 +146,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The custom fields.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -154,7 +158,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The custom fields.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -165,7 +169,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>This field can be used to add additional textual information regarding the edit.</p>
-     * @param comment
+     * @param comment value to be set
      * @return Builder
      */
 
@@ -176,7 +180,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
-     * @param dryRun
+     * @param dryRun value to be set
      * @return Builder
      */
 
@@ -214,13 +218,18 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
         return this.dryRun;
     }
 
+    /**
+     * builds OrderEditDraft with checking for non-null required values
+     * @return OrderEditDraft
+     */
     public OrderEditDraft build() {
         Objects.requireNonNull(resource, OrderEditDraft.class + ": resource is missing");
         return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);
     }
 
     /**
-     * builds OrderEditDraft without checking for non null required values
+     * builds OrderEditDraft without checking for non-null required values
+     * @return OrderEditDraft
      */
     public OrderEditDraft buildUnchecked() {
         return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);

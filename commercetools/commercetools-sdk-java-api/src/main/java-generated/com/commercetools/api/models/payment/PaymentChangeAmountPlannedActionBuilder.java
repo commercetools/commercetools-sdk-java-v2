@@ -26,6 +26,7 @@ public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentC
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the amount value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentC
 
     /**
      *  <p>New value to set.</p>
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentC
         return this.amount;
     }
 
+    /**
+     * builds PaymentChangeAmountPlannedAction with checking for non-null required values
+     * @return PaymentChangeAmountPlannedAction
+     */
     public PaymentChangeAmountPlannedAction build() {
         Objects.requireNonNull(amount, PaymentChangeAmountPlannedAction.class + ": amount is missing");
         return new PaymentChangeAmountPlannedActionImpl(amount);
     }
 
     /**
-     * builds PaymentChangeAmountPlannedAction without checking for non null required values
+     * builds PaymentChangeAmountPlannedAction without checking for non-null required values
+     * @return PaymentChangeAmountPlannedAction
      */
     public PaymentChangeAmountPlannedAction buildUnchecked() {
         return new PaymentChangeAmountPlannedActionImpl(amount);

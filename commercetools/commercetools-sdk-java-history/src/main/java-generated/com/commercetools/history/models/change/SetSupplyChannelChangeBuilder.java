@@ -32,7 +32,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *  <p>Shape of the action for <code>setSupplyChannel</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
         return this.nextValue;
     }
 
+    /**
+     * builds SetSupplyChannelChange with checking for non-null required values
+     * @return SetSupplyChannelChange
+     */
     public SetSupplyChannelChange build() {
         Objects.requireNonNull(change, SetSupplyChannelChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetSupplyChannelChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
     }
 
     /**
-     * builds SetSupplyChannelChange without checking for non null required values
+     * builds SetSupplyChannelChange without checking for non-null required values
+     * @return SetSupplyChannelChange
      */
     public SetSupplyChannelChange buildUnchecked() {
         return new SetSupplyChannelChangeImpl(change, previousValue, nextValue);

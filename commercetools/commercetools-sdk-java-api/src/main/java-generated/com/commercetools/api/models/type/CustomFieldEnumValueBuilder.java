@@ -28,7 +28,7 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
 
     /**
      *  <p>Descriptive label of the value.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
         return this.label;
     }
 
+    /**
+     * builds CustomFieldEnumValue with checking for non-null required values
+     * @return CustomFieldEnumValue
+     */
     public CustomFieldEnumValue build() {
         Objects.requireNonNull(key, CustomFieldEnumValue.class + ": key is missing");
         Objects.requireNonNull(label, CustomFieldEnumValue.class + ": label is missing");
@@ -63,7 +67,8 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
     }
 
     /**
-     * builds CustomFieldEnumValue without checking for non null required values
+     * builds CustomFieldEnumValue without checking for non-null required values
+     * @return CustomFieldEnumValue
      */
     public CustomFieldEnumValue buildUnchecked() {
         return new CustomFieldEnumValueImpl(key, label);

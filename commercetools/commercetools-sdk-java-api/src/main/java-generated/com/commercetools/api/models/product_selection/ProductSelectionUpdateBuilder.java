@@ -29,7 +29,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -95,6 +96,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -115,6 +117,10 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
         return this.actions;
     }
 
+    /**
+     * builds ProductSelectionUpdate with checking for non-null required values
+     * @return ProductSelectionUpdate
+     */
     public ProductSelectionUpdate build() {
         Objects.requireNonNull(version, ProductSelectionUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ProductSelectionUpdate.class + ": actions is missing");
@@ -122,7 +128,8 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
     }
 
     /**
-     * builds ProductSelectionUpdate without checking for non null required values
+     * builds ProductSelectionUpdate without checking for non-null required values
+     * @return ProductSelectionUpdate
      */
     public ProductSelectionUpdate buildUnchecked() {
         return new ProductSelectionUpdateImpl(version, actions);

@@ -104,7 +104,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     /**
      *  <p>Unique identifier of the Address.</p>
      *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -115,7 +115,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -126,7 +126,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Name of the country.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -137,7 +137,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Title of the contact, for example 'Dr.'</p>
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -148,7 +148,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
-     * @param salutation
+     * @param salutation value to be set
      * @return Builder
      */
 
@@ -159,7 +159,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Given name (first name) of the contact.</p>
-     * @param firstName
+     * @param firstName value to be set
      * @return Builder
      */
 
@@ -170,7 +170,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Family name (last name) of the contact.</p>
-     * @param lastName
+     * @param lastName value to be set
      * @return Builder
      */
 
@@ -181,7 +181,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Name of the street.</p>
-     * @param streetName
+     * @param streetName value to be set
      * @return Builder
      */
 
@@ -192,7 +192,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Street number.</p>
-     * @param streetNumber
+     * @param streetNumber value to be set
      * @return Builder
      */
 
@@ -203,7 +203,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Further information on the street address.</p>
-     * @param additionalStreetInfo
+     * @param additionalStreetInfo value to be set
      * @return Builder
      */
 
@@ -214,7 +214,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Postal code.</p>
-     * @param postalCode
+     * @param postalCode value to be set
      * @return Builder
      */
 
@@ -225,7 +225,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Name of the city.</p>
-     * @param city
+     * @param city value to be set
      * @return Builder
      */
 
@@ -236,7 +236,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Name of the region.</p>
-     * @param region
+     * @param region value to be set
      * @return Builder
      */
 
@@ -247,7 +247,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Name of the state, for example, Colorado.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -258,7 +258,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Name of the company.</p>
-     * @param company
+     * @param company value to be set
      * @return Builder
      */
 
@@ -269,7 +269,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Name of the department.</p>
-     * @param department
+     * @param department value to be set
      * @return Builder
      */
 
@@ -280,7 +280,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Number or name of the building.</p>
-     * @param building
+     * @param building value to be set
      * @return Builder
      */
 
@@ -291,7 +291,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Number or name of the apartment.</p>
-     * @param apartment
+     * @param apartment value to be set
      * @return Builder
      */
 
@@ -302,7 +302,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Post office box number.</p>
-     * @param pOBox
+     * @param pOBox value to be set
      * @return Builder
      */
 
@@ -313,7 +313,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Phone number of the contact.</p>
-     * @param phone
+     * @param phone value to be set
      * @return Builder
      */
 
@@ -324,7 +324,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Mobile phone number of the contact.</p>
-     * @param mobile
+     * @param mobile value to be set
      * @return Builder
      */
 
@@ -335,7 +335,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Email address of the contact.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -346,7 +346,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Fax number of the contact.</p>
-     * @param fax
+     * @param fax value to be set
      * @return Builder
      */
 
@@ -357,7 +357,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Further information on the Address.</p>
-     * @param additionalAddressInfo
+     * @param additionalAddressInfo value to be set
      * @return Builder
      */
 
@@ -368,7 +368,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>ID for the contact used in an external system.</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -379,6 +379,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Custom Fields defined for the Address.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -390,7 +391,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     /**
      *  <p>Custom Fields defined for the Address.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -528,6 +529,10 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
         return this.custom;
     }
 
+    /**
+     * builds AddressDraft with checking for non-null required values
+     * @return AddressDraft
+     */
     public AddressDraft build() {
         Objects.requireNonNull(country, AddressDraft.class + ": country is missing");
         return new AddressDraftImpl(id, key, country, title, salutation, firstName, lastName, streetName, streetNumber,
@@ -536,7 +541,8 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     * builds AddressDraft without checking for non null required values
+     * builds AddressDraft without checking for non-null required values
+     * @return AddressDraft
      */
     public AddressDraft buildUnchecked() {
         return new AddressDraftImpl(id, key, country, title, salutation, firstName, lastName, streetName, streetNumber,

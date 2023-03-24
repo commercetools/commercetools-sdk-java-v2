@@ -26,6 +26,7 @@ public class ShippingMethodRemoveZoneActionBuilder implements Builder<ShippingMe
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
+     * @param builder function to build the zone value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ShippingMethodRemoveZoneActionBuilder implements Builder<ShippingMe
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
-     * @param zone
+     * @param zone value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class ShippingMethodRemoveZoneActionBuilder implements Builder<ShippingMe
         return this.zone;
     }
 
+    /**
+     * builds ShippingMethodRemoveZoneAction with checking for non-null required values
+     * @return ShippingMethodRemoveZoneAction
+     */
     public ShippingMethodRemoveZoneAction build() {
         Objects.requireNonNull(zone, ShippingMethodRemoveZoneAction.class + ": zone is missing");
         return new ShippingMethodRemoveZoneActionImpl(zone);
     }
 
     /**
-     * builds ShippingMethodRemoveZoneAction without checking for non null required values
+     * builds ShippingMethodRemoveZoneAction without checking for non-null required values
+     * @return ShippingMethodRemoveZoneAction
      */
     public ShippingMethodRemoveZoneAction buildUnchecked() {
         return new ShippingMethodRemoveZoneActionImpl(zone);

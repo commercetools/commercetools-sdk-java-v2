@@ -32,7 +32,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     /**
      *  <p>Update action for <code>addParcelToDelivery</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -86,6 +87,10 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
         return this.nextValue;
     }
 
+    /**
+     * builds AddParcelToDeliveryChange with checking for non-null required values
+     * @return AddParcelToDeliveryChange
+     */
     public AddParcelToDeliveryChange build() {
         Objects.requireNonNull(change, AddParcelToDeliveryChange.class + ": change is missing");
         Objects.requireNonNull(deliveryId, AddParcelToDeliveryChange.class + ": deliveryId is missing");
@@ -94,7 +99,8 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     * builds AddParcelToDeliveryChange without checking for non null required values
+     * builds AddParcelToDeliveryChange without checking for non-null required values
+     * @return AddParcelToDeliveryChange
      */
     public AddParcelToDeliveryChange buildUnchecked() {
         return new AddParcelToDeliveryChangeImpl(change, deliveryId, nextValue);

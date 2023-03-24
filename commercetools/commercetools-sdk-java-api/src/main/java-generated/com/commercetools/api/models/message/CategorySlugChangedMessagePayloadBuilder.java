@@ -31,6 +31,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
 
     /**
      *  <p>The slug of the Category after the Change Slug update action.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
 
     /**
      *  <p>The slug of the Category after the Change Slug update action.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
 
     /**
      *  <p>The slug of the Category before the Change Slug update action.</p>
+     * @param builder function to build the oldSlug value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
 
     /**
      *  <p>The slug of the Category before the Change Slug update action.</p>
-     * @param oldSlug
+     * @param oldSlug value to be set
      * @return Builder
      */
 
@@ -84,13 +86,18 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
         return this.oldSlug;
     }
 
+    /**
+     * builds CategorySlugChangedMessagePayload with checking for non-null required values
+     * @return CategorySlugChangedMessagePayload
+     */
     public CategorySlugChangedMessagePayload build() {
         Objects.requireNonNull(slug, CategorySlugChangedMessagePayload.class + ": slug is missing");
         return new CategorySlugChangedMessagePayloadImpl(slug, oldSlug);
     }
 
     /**
-     * builds CategorySlugChangedMessagePayload without checking for non null required values
+     * builds CategorySlugChangedMessagePayload without checking for non-null required values
+     * @return CategorySlugChangedMessagePayload
      */
     public CategorySlugChangedMessagePayload buildUnchecked() {
         return new CategorySlugChangedMessagePayloadImpl(slug, oldSlug);

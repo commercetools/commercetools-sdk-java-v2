@@ -35,7 +35,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
 
     /**
      *  <p>Update action for <code>setDeliveryAddress</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -116,6 +118,10 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
         return this.previousValue;
     }
 
+    /**
+     * builds SetDeliveryAddressChange with checking for non-null required values
+     * @return SetDeliveryAddressChange
+     */
     public SetDeliveryAddressChange build() {
         Objects.requireNonNull(change, SetDeliveryAddressChange.class + ": change is missing");
         Objects.requireNonNull(deliveryId, SetDeliveryAddressChange.class + ": deliveryId is missing");
@@ -125,7 +131,8 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     }
 
     /**
-     * builds SetDeliveryAddressChange without checking for non null required values
+     * builds SetDeliveryAddressChange without checking for non-null required values
+     * @return SetDeliveryAddressChange
      */
     public SetDeliveryAddressChange buildUnchecked() {
         return new SetDeliveryAddressChangeImpl(change, deliveryId, nextValue, previousValue);

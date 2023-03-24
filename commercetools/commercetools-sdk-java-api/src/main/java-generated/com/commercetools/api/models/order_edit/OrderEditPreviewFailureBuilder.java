@@ -26,7 +26,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -77,6 +78,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      *
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -91,13 +93,18 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
         return this.errors;
     }
 
+    /**
+     * builds OrderEditPreviewFailure with checking for non-null required values
+     * @return OrderEditPreviewFailure
+     */
     public OrderEditPreviewFailure build() {
         Objects.requireNonNull(errors, OrderEditPreviewFailure.class + ": errors is missing");
         return new OrderEditPreviewFailureImpl(errors);
     }
 
     /**
-     * builds OrderEditPreviewFailure without checking for non null required values
+     * builds OrderEditPreviewFailure without checking for non-null required values
+     * @return OrderEditPreviewFailure
      */
     public OrderEditPreviewFailure buildUnchecked() {
         return new OrderEditPreviewFailureImpl(errors);

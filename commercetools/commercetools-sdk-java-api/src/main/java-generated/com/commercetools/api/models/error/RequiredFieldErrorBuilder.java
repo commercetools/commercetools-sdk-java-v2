@@ -30,7 +30,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *  <p><code>"A value is required for field $field."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -41,6 +41,8 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public RequiredFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,6 +52,9 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public RequiredFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +67,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *  <p>Name of the field missing the value.</p>
-     * @param field
+     * @param field value to be set
      * @return Builder
      */
 
@@ -83,6 +88,10 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
         return this.field;
     }
 
+    /**
+     * builds RequiredFieldError with checking for non-null required values
+     * @return RequiredFieldError
+     */
     public RequiredFieldError build() {
         Objects.requireNonNull(message, RequiredFieldError.class + ": message is missing");
         Objects.requireNonNull(field, RequiredFieldError.class + ": field is missing");
@@ -90,7 +99,8 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     }
 
     /**
-     * builds RequiredFieldError without checking for non null required values
+     * builds RequiredFieldError without checking for non-null required values
+     * @return RequiredFieldError
      */
     public RequiredFieldError buildUnchecked() {
         return new RequiredFieldErrorImpl(message, values, field);

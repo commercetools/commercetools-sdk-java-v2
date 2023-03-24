@@ -28,7 +28,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
 
     /**
      *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
 
     /**
      *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
 
     /**
      *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
 
     /**
      *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     * @param builder function to build the messages value
      * @return Builder
      */
 
@@ -82,6 +83,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
 
     /**
      *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     * @param builder function to build the messages value
      * @return Builder
      */
 
@@ -98,12 +100,17 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
         return this.messages;
     }
 
+    /**
+     * builds SubscriptionSetMessagesAction with checking for non-null required values
+     * @return SubscriptionSetMessagesAction
+     */
     public SubscriptionSetMessagesAction build() {
         return new SubscriptionSetMessagesActionImpl(messages);
     }
 
     /**
-     * builds SubscriptionSetMessagesAction without checking for non null required values
+     * builds SubscriptionSetMessagesAction without checking for non-null required values
+     * @return SubscriptionSetMessagesAction
      */
     public SubscriptionSetMessagesAction buildUnchecked() {
         return new SubscriptionSetMessagesActionImpl(messages);

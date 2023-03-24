@@ -27,7 +27,7 @@ public class CustomerSetKeyActionBuilder implements Builder<CustomerSetKeyAction
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerSetKeyActionBuilder implements Builder<CustomerSetKeyAction
         return this.key;
     }
 
+    /**
+     * builds CustomerSetKeyAction with checking for non-null required values
+     * @return CustomerSetKeyAction
+     */
     public CustomerSetKeyAction build() {
         return new CustomerSetKeyActionImpl(key);
     }
 
     /**
-     * builds CustomerSetKeyAction without checking for non null required values
+     * builds CustomerSetKeyAction without checking for non-null required values
+     * @return CustomerSetKeyAction
      */
     public CustomerSetKeyAction buildUnchecked() {
         return new CustomerSetKeyActionImpl(key);

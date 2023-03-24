@@ -40,7 +40,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>HTTP status code corresponding to the error.</p>
-     * @param statusCode
+     * @param statusCode value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>First error message in the <code>errors</code> array.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -73,7 +73,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -85,7 +85,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
-     * @param errors
+     * @param errors value to be set
      * @return Builder
      */
 
@@ -99,6 +99,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -113,6 +114,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @param builder function to build the errors value
      * @return Builder
      */
 
@@ -125,7 +127,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
-     * @param error
+     * @param error value to be set
      * @return Builder
      */
 
@@ -136,7 +138,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
 
     /**
      *  <p>Plain text description of the first error.</p>
-     * @param error_description
+     * @param error_description value to be set
      * @return Builder
      */
 
@@ -166,6 +168,10 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
         return this.error_description;
     }
 
+    /**
+     * builds AuthErrorResponse with checking for non-null required values
+     * @return AuthErrorResponse
+     */
     public AuthErrorResponse build() {
         Objects.requireNonNull(statusCode, AuthErrorResponse.class + ": statusCode is missing");
         Objects.requireNonNull(message, AuthErrorResponse.class + ": message is missing");
@@ -175,7 +181,8 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
     }
 
     /**
-     * builds AuthErrorResponse without checking for non null required values
+     * builds AuthErrorResponse without checking for non-null required values
+     * @return AuthErrorResponse
      */
     public AuthErrorResponse buildUnchecked() {
         return new AuthErrorResponseImpl(statusCode, message, errors, error, error_description);

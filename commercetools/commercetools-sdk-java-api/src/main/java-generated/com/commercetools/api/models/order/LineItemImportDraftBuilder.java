@@ -61,7 +61,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
-     * @param productId
+     * @param productId value to be set
      * @return Builder
      */
 
@@ -72,6 +72,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>The product name.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>The product name.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
+     * @param builder function to build the variant value
      * @return Builder
      */
 
@@ -105,7 +107,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -117,6 +119,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -128,7 +131,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -139,7 +142,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -150,7 +153,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -161,7 +164,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -173,7 +176,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -187,6 +190,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -201,6 +205,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -213,6 +218,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -225,7 +231,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -237,6 +243,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -250,7 +257,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -262,6 +269,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -273,7 +281,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -285,6 +293,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>The custom fields.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -296,7 +305,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>The custom fields.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -308,7 +317,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
-     * @param inventoryMode
+     * @param inventoryMode value to be set
      * @return Builder
      */
 
@@ -320,6 +329,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -332,7 +342,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -398,6 +408,10 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this.shippingDetails;
     }
 
+    /**
+     * builds LineItemImportDraft with checking for non-null required values
+     * @return LineItemImportDraft
+     */
     public LineItemImportDraft build() {
         Objects.requireNonNull(name, LineItemImportDraft.class + ": name is missing");
         Objects.requireNonNull(variant, LineItemImportDraft.class + ": variant is missing");
@@ -408,7 +422,8 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     * builds LineItemImportDraft without checking for non null required values
+     * builds LineItemImportDraft without checking for non-null required values
+     * @return LineItemImportDraft
      */
     public LineItemImportDraft buildUnchecked() {
         return new LineItemImportDraftImpl(productId, name, variant, price, quantity, state, supplyChannel,

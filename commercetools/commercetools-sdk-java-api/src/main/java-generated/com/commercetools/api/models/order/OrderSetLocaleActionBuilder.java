@@ -27,7 +27,7 @@ public class OrderSetLocaleActionBuilder implements Builder<OrderSetLocaleAction
 
     /**
      *
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class OrderSetLocaleActionBuilder implements Builder<OrderSetLocaleAction
         return this.locale;
     }
 
+    /**
+     * builds OrderSetLocaleAction with checking for non-null required values
+     * @return OrderSetLocaleAction
+     */
     public OrderSetLocaleAction build() {
         return new OrderSetLocaleActionImpl(locale);
     }
 
     /**
-     * builds OrderSetLocaleAction without checking for non null required values
+     * builds OrderSetLocaleAction without checking for non-null required values
+     * @return OrderSetLocaleAction
      */
     public OrderSetLocaleAction buildUnchecked() {
         return new OrderSetLocaleActionImpl(locale);

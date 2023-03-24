@@ -41,6 +41,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -64,7 +65,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *
-     * @param shippingMethodName
+     * @param shippingMethodName value to be set
      * @return Builder
      */
 
@@ -76,6 +77,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *
+     * @param builder function to build the shippingRate value
      * @return Builder
      */
 
@@ -88,7 +90,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *
-     * @param shippingRate
+     * @param shippingRate value to be set
      * @return Builder
      */
 
@@ -100,6 +102,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -113,7 +116,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -125,6 +128,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -137,7 +141,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -169,6 +173,10 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
         return this.externalTaxRate;
     }
 
+    /**
+     * builds StagedOrderSetShippingAddressAndCustomShippingMethodAction with checking for non-null required values
+     * @return StagedOrderSetShippingAddressAndCustomShippingMethodAction
+     */
     public StagedOrderSetShippingAddressAndCustomShippingMethodAction build() {
         Objects.requireNonNull(address,
             StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": address is missing");
@@ -181,7 +189,8 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     * builds StagedOrderSetShippingAddressAndCustomShippingMethodAction without checking for non null required values
+     * builds StagedOrderSetShippingAddressAndCustomShippingMethodAction without checking for non-null required values
+     * @return StagedOrderSetShippingAddressAndCustomShippingMethodAction
      */
     public StagedOrderSetShippingAddressAndCustomShippingMethodAction buildUnchecked() {
         return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,

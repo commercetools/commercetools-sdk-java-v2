@@ -29,6 +29,7 @@ public class BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder
 
     /**
      *  <p>The address that was set as the default billing address.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder
 
     /**
      *  <p>The address that was set as the default billing address.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder
         return this.address;
     }
 
+    /**
+     * builds BusinessUnitDefaultBillingAddressSetMessagePayload with checking for non-null required values
+     * @return BusinessUnitDefaultBillingAddressSetMessagePayload
+     */
     public BusinessUnitDefaultBillingAddressSetMessagePayload build() {
         return new BusinessUnitDefaultBillingAddressSetMessagePayloadImpl(address);
     }
 
     /**
-     * builds BusinessUnitDefaultBillingAddressSetMessagePayload without checking for non null required values
+     * builds BusinessUnitDefaultBillingAddressSetMessagePayload without checking for non-null required values
+     * @return BusinessUnitDefaultBillingAddressSetMessagePayload
      */
     public BusinessUnitDefaultBillingAddressSetMessagePayload buildUnchecked() {
         return new BusinessUnitDefaultBillingAddressSetMessagePayloadImpl(address);

@@ -25,7 +25,7 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
 
     /**
      *
-     * @param code
+     * @param code value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
         return this.code;
     }
 
+    /**
+     * builds StagedOrderAddDiscountCodeAction with checking for non-null required values
+     * @return StagedOrderAddDiscountCodeAction
+     */
     public StagedOrderAddDiscountCodeAction build() {
         Objects.requireNonNull(code, StagedOrderAddDiscountCodeAction.class + ": code is missing");
         return new StagedOrderAddDiscountCodeActionImpl(code);
     }
 
     /**
-     * builds StagedOrderAddDiscountCodeAction without checking for non null required values
+     * builds StagedOrderAddDiscountCodeAction without checking for non-null required values
+     * @return StagedOrderAddDiscountCodeAction
      */
     public StagedOrderAddDiscountCodeAction buildUnchecked() {
         return new StagedOrderAddDiscountCodeActionImpl(code);

@@ -32,6 +32,7 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
 
     /**
      *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     * @param builder function to build the oldParentUnit value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
 
     /**
      *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
-     * @param oldParentUnit
+     * @param oldParentUnit value to be set
      * @return Builder
      */
 
@@ -57,6 +58,7 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
 
     /**
      *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     * @param builder function to build the newParentUnit value
      * @return Builder
      */
 
@@ -70,7 +72,7 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
 
     /**
      *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
-     * @param newParentUnit
+     * @param newParentUnit value to be set
      * @return Builder
      */
 
@@ -90,12 +92,17 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
         return this.newParentUnit;
     }
 
+    /**
+     * builds BusinessUnitParentUnitChangedMessagePayload with checking for non-null required values
+     * @return BusinessUnitParentUnitChangedMessagePayload
+     */
     public BusinessUnitParentUnitChangedMessagePayload build() {
         return new BusinessUnitParentUnitChangedMessagePayloadImpl(oldParentUnit, newParentUnit);
     }
 
     /**
-     * builds BusinessUnitParentUnitChangedMessagePayload without checking for non null required values
+     * builds BusinessUnitParentUnitChangedMessagePayload without checking for non-null required values
+     * @return BusinessUnitParentUnitChangedMessagePayload
      */
     public BusinessUnitParentUnitChangedMessagePayload buildUnchecked() {
         return new BusinessUnitParentUnitChangedMessagePayloadImpl(oldParentUnit, newParentUnit);

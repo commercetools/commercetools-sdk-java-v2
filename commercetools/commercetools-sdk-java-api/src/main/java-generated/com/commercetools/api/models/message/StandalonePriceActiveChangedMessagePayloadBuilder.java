@@ -29,7 +29,7 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
 
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
-     * @param active
+     * @param active value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
 
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
-     * @param oldActive
+     * @param oldActive value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
         return this.oldActive;
     }
 
+    /**
+     * builds StandalonePriceActiveChangedMessagePayload with checking for non-null required values
+     * @return StandalonePriceActiveChangedMessagePayload
+     */
     public StandalonePriceActiveChangedMessagePayload build() {
         Objects.requireNonNull(active, StandalonePriceActiveChangedMessagePayload.class + ": active is missing");
         Objects.requireNonNull(oldActive, StandalonePriceActiveChangedMessagePayload.class + ": oldActive is missing");
@@ -64,7 +68,8 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
     }
 
     /**
-     * builds StandalonePriceActiveChangedMessagePayload without checking for non null required values
+     * builds StandalonePriceActiveChangedMessagePayload without checking for non-null required values
+     * @return StandalonePriceActiveChangedMessagePayload
      */
     public StandalonePriceActiveChangedMessagePayload buildUnchecked() {
         return new StandalonePriceActiveChangedMessagePayloadImpl(active, oldActive);

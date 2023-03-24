@@ -26,7 +26,7 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -77,6 +78,7 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -91,13 +93,18 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
         return this.money;
     }
 
+    /**
+     * builds CartDiscountValueFixedDraft with checking for non-null required values
+     * @return CartDiscountValueFixedDraft
+     */
     public CartDiscountValueFixedDraft build() {
         Objects.requireNonNull(money, CartDiscountValueFixedDraft.class + ": money is missing");
         return new CartDiscountValueFixedDraftImpl(money);
     }
 
     /**
-     * builds CartDiscountValueFixedDraft without checking for non null required values
+     * builds CartDiscountValueFixedDraft without checking for non-null required values
+     * @return CartDiscountValueFixedDraft
      */
     public CartDiscountValueFixedDraft buildUnchecked() {
         return new CartDiscountValueFixedDraftImpl(money);

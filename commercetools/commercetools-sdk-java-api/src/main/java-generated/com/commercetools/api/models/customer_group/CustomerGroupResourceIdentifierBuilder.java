@@ -30,7 +30,7 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
 
     /**
      *  <p>Unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
 
     /**
      *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
         return this.key;
     }
 
+    /**
+     * builds CustomerGroupResourceIdentifier with checking for non-null required values
+     * @return CustomerGroupResourceIdentifier
+     */
     public CustomerGroupResourceIdentifier build() {
         return new CustomerGroupResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds CustomerGroupResourceIdentifier without checking for non null required values
+     * builds CustomerGroupResourceIdentifier without checking for non-null required values
+     * @return CustomerGroupResourceIdentifier
      */
     public CustomerGroupResourceIdentifier buildUnchecked() {
         return new CustomerGroupResourceIdentifierImpl(id, key);

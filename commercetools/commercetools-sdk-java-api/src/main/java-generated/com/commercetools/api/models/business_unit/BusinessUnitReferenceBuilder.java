@@ -31,7 +31,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
 
     /**
      *  <p>Unique identifier of the referenced BusinessUnit.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
 
     /**
      *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
 
     /**
      *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
         return this.obj;
     }
 
+    /**
+     * builds BusinessUnitReference with checking for non-null required values
+     * @return BusinessUnitReference
+     */
     public BusinessUnitReference build() {
         Objects.requireNonNull(id, BusinessUnitReference.class + ": id is missing");
         return new BusinessUnitReferenceImpl(id, obj);
     }
 
     /**
-     * builds BusinessUnitReference without checking for non null required values
+     * builds BusinessUnitReference without checking for non-null required values
+     * @return BusinessUnitReference
      */
     public BusinessUnitReference buildUnchecked() {
         return new BusinessUnitReferenceImpl(id, obj);

@@ -29,7 +29,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
 
     /**
      *  <p>The expected version of the review on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
 
     /**
      *  <p>The list of update actions to be performed on the review.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
 
     /**
      *  <p>The list of update actions to be performed on the review.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
 
     /**
      *  <p>The list of update actions to be performed on the review.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
 
     /**
      *  <p>The list of update actions to be performed on the review.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
 
     /**
      *  <p>The list of update actions to be performed on the review.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds ReviewUpdate with checking for non-null required values
+     * @return ReviewUpdate
+     */
     public ReviewUpdate build() {
         Objects.requireNonNull(version, ReviewUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ReviewUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     * builds ReviewUpdate without checking for non null required values
+     * builds ReviewUpdate without checking for non-null required values
+     * @return ReviewUpdate
      */
     public ReviewUpdate buildUnchecked() {
         return new ReviewUpdateImpl(version, actions);

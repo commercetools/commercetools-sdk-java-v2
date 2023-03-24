@@ -25,7 +25,7 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
         return this.name;
     }
 
+    /**
+     * builds TaxCategoryChangeNameAction with checking for non-null required values
+     * @return TaxCategoryChangeNameAction
+     */
     public TaxCategoryChangeNameAction build() {
         Objects.requireNonNull(name, TaxCategoryChangeNameAction.class + ": name is missing");
         return new TaxCategoryChangeNameActionImpl(name);
     }
 
     /**
-     * builds TaxCategoryChangeNameAction without checking for non null required values
+     * builds TaxCategoryChangeNameAction without checking for non-null required values
+     * @return TaxCategoryChangeNameAction
      */
     public TaxCategoryChangeNameAction buildUnchecked() {
         return new TaxCategoryChangeNameActionImpl(name);

@@ -25,7 +25,7 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
 
     /**
      *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
-     * @param resourceTypeId
+     * @param resourceTypeId value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
         return this.resourceTypeId;
     }
 
+    /**
+     * builds ChangeSubscription with checking for non-null required values
+     * @return ChangeSubscription
+     */
     public ChangeSubscription build() {
         Objects.requireNonNull(resourceTypeId, ChangeSubscription.class + ": resourceTypeId is missing");
         return new ChangeSubscriptionImpl(resourceTypeId);
     }
 
     /**
-     * builds ChangeSubscription without checking for non null required values
+     * builds ChangeSubscription without checking for non-null required values
+     * @return ChangeSubscription
      */
     public ChangeSubscription buildUnchecked() {
         return new ChangeSubscriptionImpl(resourceTypeId);

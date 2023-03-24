@@ -27,7 +27,7 @@ public class MyCustomerSetLocaleActionBuilder implements Builder<MyCustomerSetLo
 
     /**
      *  <p>Value to set. Must be one of the languages supported by the Project.</p>
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class MyCustomerSetLocaleActionBuilder implements Builder<MyCustomerSetLo
         return this.locale;
     }
 
+    /**
+     * builds MyCustomerSetLocaleAction with checking for non-null required values
+     * @return MyCustomerSetLocaleAction
+     */
     public MyCustomerSetLocaleAction build() {
         return new MyCustomerSetLocaleActionImpl(locale);
     }
 
     /**
-     * builds MyCustomerSetLocaleAction without checking for non null required values
+     * builds MyCustomerSetLocaleAction without checking for non-null required values
+     * @return MyCustomerSetLocaleAction
      */
     public MyCustomerSetLocaleAction buildUnchecked() {
         return new MyCustomerSetLocaleActionImpl(locale);

@@ -25,7 +25,7 @@ public class InvalidInputBuilder implements Builder<InvalidInput> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class InvalidInputBuilder implements Builder<InvalidInput> {
         return this.message;
     }
 
+    /**
+     * builds InvalidInput with checking for non-null required values
+     * @return InvalidInput
+     */
     public InvalidInput build() {
         Objects.requireNonNull(message, InvalidInput.class + ": message is missing");
         return new InvalidInputImpl(message);
     }
 
     /**
-     * builds InvalidInput without checking for non null required values
+     * builds InvalidInput without checking for non-null required values
+     * @return InvalidInput
      */
     public InvalidInput buildUnchecked() {
         return new InvalidInputImpl(message);

@@ -33,7 +33,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
 
     /**
      *  <p>The product name that was used to generate recommendations.</p>
-     * @param productName
+     * @param productName value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
 
     /**
      *  <p>The product image that was used to generate recommendations.</p>
-     * @param productImageUrl
+     * @param productImageUrl value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
 
     /**
      *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
-     * @param generalCategoryNames
+     * @param generalCategoryNames value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
 
     /**
      *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
-     * @param generalCategoryNames
+     * @param generalCategoryNames value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
 
     /**
      *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
-     * @param generalCategoryNames
+     * @param generalCategoryNames value to be set
      * @return Builder
      */
 
@@ -104,6 +104,10 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
         return this.generalCategoryNames;
     }
 
+    /**
+     * builds ProjectCategoryRecommendationMeta with checking for non-null required values
+     * @return ProjectCategoryRecommendationMeta
+     */
     public ProjectCategoryRecommendationMeta build() {
         Objects.requireNonNull(generalCategoryNames,
             ProjectCategoryRecommendationMeta.class + ": generalCategoryNames is missing");
@@ -111,7 +115,8 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
     }
 
     /**
-     * builds ProjectCategoryRecommendationMeta without checking for non null required values
+     * builds ProjectCategoryRecommendationMeta without checking for non-null required values
+     * @return ProjectCategoryRecommendationMeta
      */
     public ProjectCategoryRecommendationMeta buildUnchecked() {
         return new ProjectCategoryRecommendationMetaImpl(productName, productImageUrl, generalCategoryNames);

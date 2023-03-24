@@ -28,6 +28,7 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -56,12 +57,17 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
         return this.customerGroup;
     }
 
+    /**
+     * builds CustomerSetCustomerGroupAction with checking for non-null required values
+     * @return CustomerSetCustomerGroupAction
+     */
     public CustomerSetCustomerGroupAction build() {
         return new CustomerSetCustomerGroupActionImpl(customerGroup);
     }
 
     /**
-     * builds CustomerSetCustomerGroupAction without checking for non null required values
+     * builds CustomerSetCustomerGroupAction without checking for non-null required values
+     * @return CustomerSetCustomerGroupAction
      */
     public CustomerSetCustomerGroupAction buildUnchecked() {
         return new CustomerSetCustomerGroupActionImpl(customerGroup);

@@ -25,7 +25,7 @@ public class ProductVariantKeyReferenceBuilder implements Builder<ProductVariant
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductVariantKeyReferenceBuilder implements Builder<ProductVariant
         return this.key;
     }
 
+    /**
+     * builds ProductVariantKeyReference with checking for non-null required values
+     * @return ProductVariantKeyReference
+     */
     public ProductVariantKeyReference build() {
         Objects.requireNonNull(key, ProductVariantKeyReference.class + ": key is missing");
         return new ProductVariantKeyReferenceImpl(key);
     }
 
     /**
-     * builds ProductVariantKeyReference without checking for non null required values
+     * builds ProductVariantKeyReference without checking for non-null required values
+     * @return ProductVariantKeyReference
      */
     public ProductVariantKeyReference buildUnchecked() {
         return new ProductVariantKeyReferenceImpl(key);

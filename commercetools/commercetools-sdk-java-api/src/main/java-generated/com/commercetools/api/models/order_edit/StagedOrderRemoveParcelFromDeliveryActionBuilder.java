@@ -26,7 +26,7 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
         return this.parcelId;
     }
 
+    /**
+     * builds StagedOrderRemoveParcelFromDeliveryAction with checking for non-null required values
+     * @return StagedOrderRemoveParcelFromDeliveryAction
+     */
     public StagedOrderRemoveParcelFromDeliveryAction build() {
         Objects.requireNonNull(parcelId, StagedOrderRemoveParcelFromDeliveryAction.class + ": parcelId is missing");
         return new StagedOrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
 
     /**
-     * builds StagedOrderRemoveParcelFromDeliveryAction without checking for non null required values
+     * builds StagedOrderRemoveParcelFromDeliveryAction without checking for non-null required values
+     * @return StagedOrderRemoveParcelFromDeliveryAction
      */
     public StagedOrderRemoveParcelFromDeliveryAction buildUnchecked() {
         return new StagedOrderRemoveParcelFromDeliveryActionImpl(parcelId);

@@ -32,7 +32,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
-     * @param appliedAt
+     * @param appliedAt value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
+     * @param builder function to build the excerptBeforeEdit value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
-     * @param excerptBeforeEdit
+     * @param excerptBeforeEdit value to be set
      * @return Builder
      */
 
@@ -67,6 +68,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
+     * @param builder function to build the excerptAfterEdit value
      * @return Builder
      */
 
@@ -78,7 +80,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
-     * @param excerptAfterEdit
+     * @param excerptAfterEdit value to be set
      * @return Builder
      */
 
@@ -100,6 +102,10 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
         return this.excerptAfterEdit;
     }
 
+    /**
+     * builds OrderEditApplied with checking for non-null required values
+     * @return OrderEditApplied
+     */
     public OrderEditApplied build() {
         Objects.requireNonNull(appliedAt, OrderEditApplied.class + ": appliedAt is missing");
         Objects.requireNonNull(excerptBeforeEdit, OrderEditApplied.class + ": excerptBeforeEdit is missing");
@@ -108,7 +114,8 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * builds OrderEditApplied without checking for non null required values
+     * builds OrderEditApplied without checking for non-null required values
+     * @return OrderEditApplied
      */
     public OrderEditApplied buildUnchecked() {
         return new OrderEditAppliedImpl(appliedAt, excerptBeforeEdit, excerptAfterEdit);

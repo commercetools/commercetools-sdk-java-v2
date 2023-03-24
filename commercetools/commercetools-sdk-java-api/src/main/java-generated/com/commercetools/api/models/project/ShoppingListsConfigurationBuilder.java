@@ -27,7 +27,7 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
 
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
-     * @param deleteDaysAfterLastModification
+     * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
         return this.deleteDaysAfterLastModification;
     }
 
+    /**
+     * builds ShoppingListsConfiguration with checking for non-null required values
+     * @return ShoppingListsConfiguration
+     */
     public ShoppingListsConfiguration build() {
         return new ShoppingListsConfigurationImpl(deleteDaysAfterLastModification);
     }
 
     /**
-     * builds ShoppingListsConfiguration without checking for non null required values
+     * builds ShoppingListsConfiguration without checking for non-null required values
+     * @return ShoppingListsConfiguration
      */
     public ShoppingListsConfiguration buildUnchecked() {
         return new ShoppingListsConfigurationImpl(deleteDaysAfterLastModification);

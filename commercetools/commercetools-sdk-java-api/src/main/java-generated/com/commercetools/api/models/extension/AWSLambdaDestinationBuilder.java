@@ -31,7 +31,7 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
 
     /**
      *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>. Use the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;:&lt;functionAlias/version&gt;</code> to point to a specific version of the function.</p>
-     * @param arn
+     * @param arn value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
-     * @param accessKey
+     * @param accessKey value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
-     * @param accessSecret
+     * @param accessSecret value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
         return this.accessSecret;
     }
 
+    /**
+     * builds AWSLambdaDestination with checking for non-null required values
+     * @return AWSLambdaDestination
+     */
     public AWSLambdaDestination build() {
         Objects.requireNonNull(arn, AWSLambdaDestination.class + ": arn is missing");
         Objects.requireNonNull(accessKey, AWSLambdaDestination.class + ": accessKey is missing");
@@ -82,7 +86,8 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
     }
 
     /**
-     * builds AWSLambdaDestination without checking for non null required values
+     * builds AWSLambdaDestination without checking for non-null required values
+     * @return AWSLambdaDestination
      */
     public AWSLambdaDestination buildUnchecked() {
         return new AWSLambdaDestinationImpl(arn, accessKey, accessSecret);

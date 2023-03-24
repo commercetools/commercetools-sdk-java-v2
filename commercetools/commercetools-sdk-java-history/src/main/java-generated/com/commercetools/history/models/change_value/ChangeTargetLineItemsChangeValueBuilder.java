@@ -25,7 +25,7 @@ public class ChangeTargetLineItemsChangeValueBuilder implements Builder<ChangeTa
 
     /**
      *
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ChangeTargetLineItemsChangeValueBuilder implements Builder<ChangeTa
         return this.predicate;
     }
 
+    /**
+     * builds ChangeTargetLineItemsChangeValue with checking for non-null required values
+     * @return ChangeTargetLineItemsChangeValue
+     */
     public ChangeTargetLineItemsChangeValue build() {
         Objects.requireNonNull(predicate, ChangeTargetLineItemsChangeValue.class + ": predicate is missing");
         return new ChangeTargetLineItemsChangeValueImpl(predicate);
     }
 
     /**
-     * builds ChangeTargetLineItemsChangeValue without checking for non null required values
+     * builds ChangeTargetLineItemsChangeValue without checking for non-null required values
+     * @return ChangeTargetLineItemsChangeValue
      */
     public ChangeTargetLineItemsChangeValue buildUnchecked() {
         return new ChangeTargetLineItemsChangeValueImpl(predicate);

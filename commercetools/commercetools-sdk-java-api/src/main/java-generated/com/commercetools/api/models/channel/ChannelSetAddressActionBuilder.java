@@ -28,6 +28,7 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
         return this.address;
     }
 
+    /**
+     * builds ChannelSetAddressAction with checking for non-null required values
+     * @return ChannelSetAddressAction
+     */
     public ChannelSetAddressAction build() {
         return new ChannelSetAddressActionImpl(address);
     }
 
     /**
-     * builds ChannelSetAddressAction without checking for non null required values
+     * builds ChannelSetAddressAction without checking for non-null required values
+     * @return ChannelSetAddressAction
      */
     public ChannelSetAddressAction buildUnchecked() {
         return new ChannelSetAddressActionImpl(address);

@@ -36,7 +36,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -108,6 +108,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -125,6 +126,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -154,6 +156,10 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         return this.results;
     }
 
+    /**
+     * builds GeneralCategoryRecommendationPagedQueryResponse with checking for non-null required values
+     * @return GeneralCategoryRecommendationPagedQueryResponse
+     */
     public GeneralCategoryRecommendationPagedQueryResponse build() {
         Objects.requireNonNull(count, GeneralCategoryRecommendationPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(total, GeneralCategoryRecommendationPagedQueryResponse.class + ": total is missing");
@@ -163,7 +169,8 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     * builds GeneralCategoryRecommendationPagedQueryResponse without checking for non null required values
+     * builds GeneralCategoryRecommendationPagedQueryResponse without checking for non-null required values
+     * @return GeneralCategoryRecommendationPagedQueryResponse
      */
     public GeneralCategoryRecommendationPagedQueryResponse buildUnchecked() {
         return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);

@@ -28,7 +28,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
 
     /**
      *
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
         return this.createdAt;
     }
 
+    /**
+     * builds ParcelChangeValue with checking for non-null required values
+     * @return ParcelChangeValue
+     */
     public ParcelChangeValue build() {
         Objects.requireNonNull(id, ParcelChangeValue.class + ": id is missing");
         Objects.requireNonNull(createdAt, ParcelChangeValue.class + ": createdAt is missing");
@@ -63,7 +67,8 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     }
 
     /**
-     * builds ParcelChangeValue without checking for non null required values
+     * builds ParcelChangeValue without checking for non-null required values
+     * @return ParcelChangeValue
      */
     public ParcelChangeValue buildUnchecked() {
         return new ParcelChangeValueImpl(id, createdAt);

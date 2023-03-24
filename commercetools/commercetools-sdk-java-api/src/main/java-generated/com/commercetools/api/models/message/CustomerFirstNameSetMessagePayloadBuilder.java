@@ -27,7 +27,7 @@ public class CustomerFirstNameSetMessagePayloadBuilder implements Builder<Custom
 
     /**
      *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
-     * @param firstName
+     * @param firstName value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerFirstNameSetMessagePayloadBuilder implements Builder<Custom
         return this.firstName;
     }
 
+    /**
+     * builds CustomerFirstNameSetMessagePayload with checking for non-null required values
+     * @return CustomerFirstNameSetMessagePayload
+     */
     public CustomerFirstNameSetMessagePayload build() {
         return new CustomerFirstNameSetMessagePayloadImpl(firstName);
     }
 
     /**
-     * builds CustomerFirstNameSetMessagePayload without checking for non null required values
+     * builds CustomerFirstNameSetMessagePayload without checking for non-null required values
+     * @return CustomerFirstNameSetMessagePayload
      */
     public CustomerFirstNameSetMessagePayload buildUnchecked() {
         return new CustomerFirstNameSetMessagePayloadImpl(firstName);

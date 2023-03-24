@@ -27,6 +27,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
 
     /**
      *  <p>Product that was removed from the Product Selection.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
 
     /**
      *  <p>Product that was removed from the Product Selection.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
         return this.product;
     }
 
+    /**
+     * builds ProductSelectionProductRemovedMessagePayload with checking for non-null required values
+     * @return ProductSelectionProductRemovedMessagePayload
+     */
     public ProductSelectionProductRemovedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductRemovedMessagePayload.class + ": product is missing");
         return new ProductSelectionProductRemovedMessagePayloadImpl(product);
     }
 
     /**
-     * builds ProductSelectionProductRemovedMessagePayload without checking for non null required values
+     * builds ProductSelectionProductRemovedMessagePayload without checking for non-null required values
+     * @return ProductSelectionProductRemovedMessagePayload
      */
     public ProductSelectionProductRemovedMessagePayload buildUnchecked() {
         return new ProductSelectionProductRemovedMessagePayloadImpl(product);

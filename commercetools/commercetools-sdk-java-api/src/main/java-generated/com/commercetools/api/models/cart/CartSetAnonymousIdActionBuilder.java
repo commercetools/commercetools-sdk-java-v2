@@ -27,7 +27,7 @@ public class CartSetAnonymousIdActionBuilder implements Builder<CartSetAnonymous
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CartSetAnonymousIdActionBuilder implements Builder<CartSetAnonymous
         return this.anonymousId;
     }
 
+    /**
+     * builds CartSetAnonymousIdAction with checking for non-null required values
+     * @return CartSetAnonymousIdAction
+     */
     public CartSetAnonymousIdAction build() {
         return new CartSetAnonymousIdActionImpl(anonymousId);
     }
 
     /**
-     * builds CartSetAnonymousIdAction without checking for non null required values
+     * builds CartSetAnonymousIdAction without checking for non-null required values
+     * @return CartSetAnonymousIdAction
      */
     public CartSetAnonymousIdAction buildUnchecked() {
         return new CartSetAnonymousIdActionImpl(anonymousId);

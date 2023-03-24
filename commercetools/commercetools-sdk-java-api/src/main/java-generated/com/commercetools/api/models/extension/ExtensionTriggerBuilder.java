@@ -33,7 +33,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
-     * @param resourceTypeId
+     * @param resourceTypeId value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
-     * @param condition
+     * @param condition value to be set
      * @return Builder
      */
 
@@ -105,6 +105,10 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
         return this.condition;
     }
 
+    /**
+     * builds ExtensionTrigger with checking for non-null required values
+     * @return ExtensionTrigger
+     */
     public ExtensionTrigger build() {
         Objects.requireNonNull(resourceTypeId, ExtensionTrigger.class + ": resourceTypeId is missing");
         Objects.requireNonNull(actions, ExtensionTrigger.class + ": actions is missing");
@@ -112,7 +116,8 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     }
 
     /**
-     * builds ExtensionTrigger without checking for non null required values
+     * builds ExtensionTrigger without checking for non-null required values
+     * @return ExtensionTrigger
      */
     public ExtensionTrigger buildUnchecked() {
         return new ExtensionTriggerImpl(resourceTypeId, actions, condition);

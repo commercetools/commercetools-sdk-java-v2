@@ -36,7 +36,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p><code>"An attribute definition with name $attributeName already exists on product type $productTypeName."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -47,6 +47,8 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -56,6 +58,9 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -68,7 +73,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
-     * @param conflictingProductTypeId
+     * @param conflictingProductTypeId value to be set
      * @return Builder
      */
 
@@ -80,7 +85,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p>Name of the Product Type containing the conflicting name.</p>
-     * @param conflictingProductTypeName
+     * @param conflictingProductTypeName value to be set
      * @return Builder
      */
 
@@ -92,7 +97,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
-     * @param conflictingAttributeName
+     * @param conflictingAttributeName value to be set
      * @return Builder
      */
 
@@ -122,6 +127,10 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
         return this.conflictingAttributeName;
     }
 
+    /**
+     * builds AttributeDefinitionAlreadyExistsError with checking for non-null required values
+     * @return AttributeDefinitionAlreadyExistsError
+     */
     public AttributeDefinitionAlreadyExistsError build() {
         Objects.requireNonNull(message, AttributeDefinitionAlreadyExistsError.class + ": message is missing");
         Objects.requireNonNull(conflictingProductTypeId,
@@ -135,7 +144,8 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     * builds AttributeDefinitionAlreadyExistsError without checking for non null required values
+     * builds AttributeDefinitionAlreadyExistsError without checking for non-null required values
+     * @return AttributeDefinitionAlreadyExistsError
      */
     public AttributeDefinitionAlreadyExistsError buildUnchecked() {
         return new AttributeDefinitionAlreadyExistsErrorImpl(message, values, conflictingProductTypeId,

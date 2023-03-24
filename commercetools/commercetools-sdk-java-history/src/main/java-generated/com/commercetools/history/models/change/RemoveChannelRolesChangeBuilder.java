@@ -31,7 +31,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -105,7 +105,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -130,6 +130,10 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveChannelRolesChange with checking for non-null required values
+     * @return RemoveChannelRolesChange
+     */
     public RemoveChannelRolesChange build() {
         Objects.requireNonNull(change, RemoveChannelRolesChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveChannelRolesChange.class + ": previousValue is missing");
@@ -138,7 +142,8 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
     }
 
     /**
-     * builds RemoveChannelRolesChange without checking for non null required values
+     * builds RemoveChannelRolesChange without checking for non-null required values
+     * @return RemoveChannelRolesChange
      */
     public RemoveChannelRolesChange buildUnchecked() {
         return new RemoveChannelRolesChangeImpl(change, previousValue, nextValue);

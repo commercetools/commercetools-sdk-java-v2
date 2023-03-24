@@ -27,7 +27,7 @@ public class QuoteRequestQuoteRenegotiationActionBuilder implements Builder<Quot
 
     /**
      *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
-     * @param buyerComment
+     * @param buyerComment value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class QuoteRequestQuoteRenegotiationActionBuilder implements Builder<Quot
         return this.buyerComment;
     }
 
+    /**
+     * builds QuoteRequestQuoteRenegotiationAction with checking for non-null required values
+     * @return QuoteRequestQuoteRenegotiationAction
+     */
     public QuoteRequestQuoteRenegotiationAction build() {
         return new QuoteRequestQuoteRenegotiationActionImpl(buyerComment);
     }
 
     /**
-     * builds QuoteRequestQuoteRenegotiationAction without checking for non null required values
+     * builds QuoteRequestQuoteRenegotiationAction without checking for non-null required values
+     * @return QuoteRequestQuoteRenegotiationAction
      */
     public QuoteRequestQuoteRenegotiationAction buildUnchecked() {
         return new QuoteRequestQuoteRenegotiationActionImpl(buyerComment);

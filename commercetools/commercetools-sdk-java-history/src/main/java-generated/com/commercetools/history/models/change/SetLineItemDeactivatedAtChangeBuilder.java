@@ -35,7 +35,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *  <p>Update action for <code>setLineItemDeactivatedAt</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -107,6 +108,10 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
         return this.nextValue;
     }
 
+    /**
+     * builds SetLineItemDeactivatedAtChange with checking for non-null required values
+     * @return SetLineItemDeactivatedAtChange
+     */
     public SetLineItemDeactivatedAtChange build() {
         Objects.requireNonNull(change, SetLineItemDeactivatedAtChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, SetLineItemDeactivatedAtChange.class + ": lineItem is missing");
@@ -116,7 +121,8 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
     }
 
     /**
-     * builds SetLineItemDeactivatedAtChange without checking for non null required values
+     * builds SetLineItemDeactivatedAtChange without checking for non-null required values
+     * @return SetLineItemDeactivatedAtChange
      */
     public SetLineItemDeactivatedAtChange buildUnchecked() {
         return new SetLineItemDeactivatedAtChangeImpl(change, lineItem, previousValue, nextValue);

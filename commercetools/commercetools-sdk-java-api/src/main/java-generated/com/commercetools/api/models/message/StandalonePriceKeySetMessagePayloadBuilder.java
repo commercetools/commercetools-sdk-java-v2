@@ -30,7 +30,7 @@ public class StandalonePriceKeySetMessagePayloadBuilder implements Builder<Stand
 
     /**
      *  <p><code>key</code> value of the StandalonePrice after the Set Key update action.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class StandalonePriceKeySetMessagePayloadBuilder implements Builder<Stand
 
     /**
      *  <p><code>key</code> value of the StandalonePrice before the Set Key update action.</p>
-     * @param oldKey
+     * @param oldKey value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class StandalonePriceKeySetMessagePayloadBuilder implements Builder<Stand
         return this.oldKey;
     }
 
+    /**
+     * builds StandalonePriceKeySetMessagePayload with checking for non-null required values
+     * @return StandalonePriceKeySetMessagePayload
+     */
     public StandalonePriceKeySetMessagePayload build() {
         return new StandalonePriceKeySetMessagePayloadImpl(key, oldKey);
     }
 
     /**
-     * builds StandalonePriceKeySetMessagePayload without checking for non null required values
+     * builds StandalonePriceKeySetMessagePayload without checking for non-null required values
+     * @return StandalonePriceKeySetMessagePayload
      */
     public StandalonePriceKeySetMessagePayload buildUnchecked() {
         return new StandalonePriceKeySetMessagePayloadImpl(key, oldKey);

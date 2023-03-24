@@ -26,6 +26,7 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
         return this.address;
     }
 
+    /**
+     * builds CustomerAddressRemovedMessagePayload with checking for non-null required values
+     * @return CustomerAddressRemovedMessagePayload
+     */
     public CustomerAddressRemovedMessagePayload build() {
         Objects.requireNonNull(address, CustomerAddressRemovedMessagePayload.class + ": address is missing");
         return new CustomerAddressRemovedMessagePayloadImpl(address);
     }
 
     /**
-     * builds CustomerAddressRemovedMessagePayload without checking for non null required values
+     * builds CustomerAddressRemovedMessagePayload without checking for non-null required values
+     * @return CustomerAddressRemovedMessagePayload
      */
     public CustomerAddressRemovedMessagePayload buildUnchecked() {
         return new CustomerAddressRemovedMessagePayloadImpl(address);

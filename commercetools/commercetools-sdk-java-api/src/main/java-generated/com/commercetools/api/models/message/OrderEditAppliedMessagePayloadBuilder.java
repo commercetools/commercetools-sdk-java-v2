@@ -29,6 +29,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      *  <p>OrderEdit that was applied.</p>
+     * @param builder function to build the edit value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      *  <p>OrderEdit that was applied.</p>
-     * @param edit
+     * @param edit value to be set
      * @return Builder
      */
 
@@ -51,6 +52,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
+     * @param builder function to build the result value
      * @return Builder
      */
 
@@ -62,7 +64,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
-     * @param result
+     * @param result value to be set
      * @return Builder
      */
 
@@ -80,6 +82,10 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
         return this.result;
     }
 
+    /**
+     * builds OrderEditAppliedMessagePayload with checking for non-null required values
+     * @return OrderEditAppliedMessagePayload
+     */
     public OrderEditAppliedMessagePayload build() {
         Objects.requireNonNull(edit, OrderEditAppliedMessagePayload.class + ": edit is missing");
         Objects.requireNonNull(result, OrderEditAppliedMessagePayload.class + ": result is missing");
@@ -87,7 +93,8 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     * builds OrderEditAppliedMessagePayload without checking for non null required values
+     * builds OrderEditAppliedMessagePayload without checking for non-null required values
+     * @return OrderEditAppliedMessagePayload
      */
     public OrderEditAppliedMessagePayload buildUnchecked() {
         return new OrderEditAppliedMessagePayloadImpl(edit, result);

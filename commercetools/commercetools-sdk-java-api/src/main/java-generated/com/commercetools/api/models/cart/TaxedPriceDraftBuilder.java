@@ -32,6 +32,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     /**
      *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     * @param builder function to build the totalNet value
      * @return Builder
      */
 
@@ -43,7 +44,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     /**
      *  <p>Total net price of the Line Item or Custom Line Item.</p>
-     * @param totalNet
+     * @param totalNet value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     /**
      *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     * @param builder function to build the totalGross value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     /**
      *  <p>Total gross price of the Line Item or Custom Line Item.</p>
-     * @param totalGross
+     * @param totalGross value to be set
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
-     * @param taxPortions
+     * @param taxPortions value to be set
      * @return Builder
      */
 
@@ -89,7 +91,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
-     * @param taxPortions
+     * @param taxPortions value to be set
      * @return Builder
      */
 
@@ -102,7 +104,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
-     * @param taxPortions
+     * @param taxPortions value to be set
      * @return Builder
      */
 
@@ -118,6 +120,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
      * @return Builder
      */
 
@@ -133,6 +136,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
      * @return Builder
      */
 
@@ -155,6 +159,10 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         return this.taxPortions;
     }
 
+    /**
+     * builds TaxedPriceDraft with checking for non-null required values
+     * @return TaxedPriceDraft
+     */
     public TaxedPriceDraft build() {
         Objects.requireNonNull(totalNet, TaxedPriceDraft.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedPriceDraft.class + ": totalGross is missing");
@@ -163,7 +171,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     * builds TaxedPriceDraft without checking for non null required values
+     * builds TaxedPriceDraft without checking for non-null required values
+     * @return TaxedPriceDraft
      */
     public TaxedPriceDraft buildUnchecked() {
         return new TaxedPriceDraftImpl(totalNet, totalGross, taxPortions);

@@ -31,6 +31,7 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
 
     /**
      *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
 
     /**
      *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
 
     /**
      *  <p>Sets the Custom Fields fields for the Cart.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
 
     /**
      *  <p>Sets the Custom Fields fields for the Cart.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
         return this.fields;
     }
 
+    /**
+     * builds CartSetCustomTypeAction with checking for non-null required values
+     * @return CartSetCustomTypeAction
+     */
     public CartSetCustomTypeAction build() {
         return new CartSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds CartSetCustomTypeAction without checking for non null required values
+     * builds CartSetCustomTypeAction without checking for non-null required values
+     * @return CartSetCustomTypeAction
      */
     public CartSetCustomTypeAction buildUnchecked() {
         return new CartSetCustomTypeActionImpl(type, fields);

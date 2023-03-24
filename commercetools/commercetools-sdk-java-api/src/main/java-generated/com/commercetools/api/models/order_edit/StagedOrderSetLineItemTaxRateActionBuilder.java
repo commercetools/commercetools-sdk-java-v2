@@ -34,7 +34,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
 
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -92,13 +93,18 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
         return this.shippingKey;
     }
 
+    /**
+     * builds StagedOrderSetLineItemTaxRateAction with checking for non-null required values
+     * @return StagedOrderSetLineItemTaxRateAction
+     */
     public StagedOrderSetLineItemTaxRateAction build() {
         Objects.requireNonNull(lineItemId, StagedOrderSetLineItemTaxRateAction.class + ": lineItemId is missing");
         return new StagedOrderSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);
     }
 
     /**
-     * builds StagedOrderSetLineItemTaxRateAction without checking for non null required values
+     * builds StagedOrderSetLineItemTaxRateAction without checking for non-null required values
+     * @return StagedOrderSetLineItemTaxRateAction
      */
     public StagedOrderSetLineItemTaxRateAction buildUnchecked() {
         return new StagedOrderSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);

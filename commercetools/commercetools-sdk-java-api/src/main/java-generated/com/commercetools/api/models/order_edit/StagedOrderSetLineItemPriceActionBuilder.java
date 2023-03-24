@@ -31,7 +31,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the externalPrice value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     * @param externalPrice
+     * @param externalPrice value to be set
      * @return Builder
      */
 
@@ -74,13 +75,18 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
         return this.externalPrice;
     }
 
+    /**
+     * builds StagedOrderSetLineItemPriceAction with checking for non-null required values
+     * @return StagedOrderSetLineItemPriceAction
+     */
     public StagedOrderSetLineItemPriceAction build() {
         Objects.requireNonNull(lineItemId, StagedOrderSetLineItemPriceAction.class + ": lineItemId is missing");
         return new StagedOrderSetLineItemPriceActionImpl(lineItemId, externalPrice);
     }
 
     /**
-     * builds StagedOrderSetLineItemPriceAction without checking for non null required values
+     * builds StagedOrderSetLineItemPriceAction without checking for non-null required values
+     * @return StagedOrderSetLineItemPriceAction
      */
     public StagedOrderSetLineItemPriceAction buildUnchecked() {
         return new StagedOrderSetLineItemPriceActionImpl(lineItemId, externalPrice);

@@ -26,7 +26,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
 
     /**
      *
-     * @param stagedAction
+     * @param stagedAction value to be set
      * @return Builder
      */
 
@@ -38,6 +38,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
 
     /**
      *
+     * @param builder function to build the stagedAction value
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
         return this.stagedAction;
     }
 
+    /**
+     * builds OrderEditAddStagedActionAction with checking for non-null required values
+     * @return OrderEditAddStagedActionAction
+     */
     public OrderEditAddStagedActionAction build() {
         Objects.requireNonNull(stagedAction, OrderEditAddStagedActionAction.class + ": stagedAction is missing");
         return new OrderEditAddStagedActionActionImpl(stagedAction);
     }
 
     /**
-     * builds OrderEditAddStagedActionAction without checking for non null required values
+     * builds OrderEditAddStagedActionAction without checking for non-null required values
+     * @return OrderEditAddStagedActionAction
      */
     public OrderEditAddStagedActionAction buildUnchecked() {
         return new OrderEditAddStagedActionActionImpl(stagedAction);

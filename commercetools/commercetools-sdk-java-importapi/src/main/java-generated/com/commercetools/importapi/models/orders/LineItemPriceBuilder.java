@@ -52,7 +52,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.value</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.value</code>.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -74,7 +75,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.county</code>.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -85,7 +86,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.validFrom</code>.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -96,7 +97,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.validUntil</code>.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -107,6 +108,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a customer group by key.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -120,7 +122,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a customer group by key.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -132,6 +134,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a channel by key.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -143,7 +146,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a channel by key.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -155,6 +158,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -166,7 +170,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -178,7 +182,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -189,7 +193,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -201,7 +205,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -216,6 +220,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -230,6 +235,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -242,6 +248,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.custom</code>.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -253,7 +260,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>Maps to <code>Price.custom</code>.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -306,6 +313,10 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this.custom;
     }
 
+    /**
+     * builds LineItemPrice with checking for non-null required values
+     * @return LineItemPrice
+     */
     public LineItemPrice build() {
         Objects.requireNonNull(value, LineItemPrice.class + ": value is missing");
         return new LineItemPriceImpl(value, country, validFrom, validUntil, customerGroup, channel, discounted, tiers,
@@ -313,7 +324,8 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     * builds LineItemPrice without checking for non null required values
+     * builds LineItemPrice without checking for non-null required values
+     * @return LineItemPrice
      */
     public LineItemPrice buildUnchecked() {
         return new LineItemPriceImpl(value, country, validFrom, validUntil, customerGroup, channel, discounted, tiers,

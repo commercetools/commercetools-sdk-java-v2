@@ -25,7 +25,7 @@ public class CartDiscountValueRelativeDraftBuilder implements Builder<CartDiscou
 
     /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
-     * @param permyriad
+     * @param permyriad value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CartDiscountValueRelativeDraftBuilder implements Builder<CartDiscou
         return this.permyriad;
     }
 
+    /**
+     * builds CartDiscountValueRelativeDraft with checking for non-null required values
+     * @return CartDiscountValueRelativeDraft
+     */
     public CartDiscountValueRelativeDraft build() {
         Objects.requireNonNull(permyriad, CartDiscountValueRelativeDraft.class + ": permyriad is missing");
         return new CartDiscountValueRelativeDraftImpl(permyriad);
     }
 
     /**
-     * builds CartDiscountValueRelativeDraft without checking for non null required values
+     * builds CartDiscountValueRelativeDraft without checking for non-null required values
+     * @return CartDiscountValueRelativeDraft
      */
     public CartDiscountValueRelativeDraft buildUnchecked() {
         return new CartDiscountValueRelativeDraftImpl(permyriad);

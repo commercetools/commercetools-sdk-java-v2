@@ -28,7 +28,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -96,12 +98,17 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
         return this.stores;
     }
 
+    /**
+     * builds CustomerSetStoresAction with checking for non-null required values
+     * @return CustomerSetStoresAction
+     */
     public CustomerSetStoresAction build() {
         return new CustomerSetStoresActionImpl(stores);
     }
 
     /**
-     * builds CustomerSetStoresAction without checking for non null required values
+     * builds CustomerSetStoresAction without checking for non-null required values
+     * @return CustomerSetStoresAction
      */
     public CustomerSetStoresAction buildUnchecked() {
         return new CustomerSetStoresActionImpl(stores);

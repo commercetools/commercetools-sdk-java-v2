@@ -33,7 +33,7 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
 
     /**
      *  <p>Value of the token to reset the Customer password.</p>
-     * @param tokenValue
+     * @param tokenValue value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
 
     /**
      *  <p>New password to be set.</p>
-     * @param newPassword
+     * @param newPassword value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
 
     /**
      *  <p>Expected version of the Customer.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
         return this.version;
     }
 
+    /**
+     * builds CustomerResetPassword with checking for non-null required values
+     * @return CustomerResetPassword
+     */
     public CustomerResetPassword build() {
         Objects.requireNonNull(tokenValue, CustomerResetPassword.class + ": tokenValue is missing");
         Objects.requireNonNull(newPassword, CustomerResetPassword.class + ": newPassword is missing");
@@ -84,7 +88,8 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
     }
 
     /**
-     * builds CustomerResetPassword without checking for non null required values
+     * builds CustomerResetPassword without checking for non-null required values
+     * @return CustomerResetPassword
      */
     public CustomerResetPassword buildUnchecked() {
         return new CustomerResetPasswordImpl(tokenValue, newPassword, version);

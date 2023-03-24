@@ -28,6 +28,7 @@ public class CartDiscountSetDescriptionActionBuilder implements Builder<CartDisc
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class CartDiscountSetDescriptionActionBuilder implements Builder<CartDisc
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class CartDiscountSetDescriptionActionBuilder implements Builder<CartDisc
         return this.description;
     }
 
+    /**
+     * builds CartDiscountSetDescriptionAction with checking for non-null required values
+     * @return CartDiscountSetDescriptionAction
+     */
     public CartDiscountSetDescriptionAction build() {
         return new CartDiscountSetDescriptionActionImpl(description);
     }
 
     /**
-     * builds CartDiscountSetDescriptionAction without checking for non null required values
+     * builds CartDiscountSetDescriptionAction without checking for non-null required values
+     * @return CartDiscountSetDescriptionAction
      */
     public CartDiscountSetDescriptionAction buildUnchecked() {
         return new CartDiscountSetDescriptionActionImpl(description);

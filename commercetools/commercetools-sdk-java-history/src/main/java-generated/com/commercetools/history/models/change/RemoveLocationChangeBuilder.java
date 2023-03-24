@@ -32,7 +32,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
 
     /**
      *  <p>Update action for <code>removeLocation</code> on zones</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveLocationChange with checking for non-null required values
+     * @return RemoveLocationChange
+     */
     public RemoveLocationChange build() {
         Objects.requireNonNull(change, RemoveLocationChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveLocationChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
     }
 
     /**
-     * builds RemoveLocationChange without checking for non null required values
+     * builds RemoveLocationChange without checking for non-null required values
+     * @return RemoveLocationChange
      */
     public RemoveLocationChange buildUnchecked() {
         return new RemoveLocationChangeImpl(change, previousValue, nextValue);

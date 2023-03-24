@@ -28,7 +28,7 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
 
     /**
      *
-     * @param returnItemId
+     * @param returnItemId value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
 
     /**
      *
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
         return this.paymentState;
     }
 
+    /**
+     * builds OrderSetReturnPaymentStateAction with checking for non-null required values
+     * @return OrderSetReturnPaymentStateAction
+     */
     public OrderSetReturnPaymentStateAction build() {
         Objects.requireNonNull(returnItemId, OrderSetReturnPaymentStateAction.class + ": returnItemId is missing");
         Objects.requireNonNull(paymentState, OrderSetReturnPaymentStateAction.class + ": paymentState is missing");
@@ -64,7 +68,8 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
     }
 
     /**
-     * builds OrderSetReturnPaymentStateAction without checking for non null required values
+     * builds OrderSetReturnPaymentStateAction without checking for non-null required values
+     * @return OrderSetReturnPaymentStateAction
      */
     public OrderSetReturnPaymentStateAction buildUnchecked() {
         return new OrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);

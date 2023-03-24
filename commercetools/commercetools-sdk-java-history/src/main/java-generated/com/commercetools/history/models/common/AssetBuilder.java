@@ -38,7 +38,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -71,6 +72,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -82,7 +84,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -93,6 +95,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -104,7 +107,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -115,7 +118,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -144,6 +147,10 @@ public class AssetBuilder implements Builder<Asset> {
         return this.key;
     }
 
+    /**
+     * builds Asset with checking for non-null required values
+     * @return Asset
+     */
     public Asset build() {
         Objects.requireNonNull(id, Asset.class + ": id is missing");
         Objects.requireNonNull(name, Asset.class + ": name is missing");
@@ -154,7 +161,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * builds Asset without checking for non null required values
+     * builds Asset without checking for non-null required values
+     * @return Asset
      */
     public Asset buildUnchecked() {
         return new AssetImpl(id, name, description, custom, key);

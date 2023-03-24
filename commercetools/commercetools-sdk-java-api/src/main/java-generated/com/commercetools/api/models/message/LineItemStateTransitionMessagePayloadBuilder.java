@@ -38,7 +38,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
-     * @param transitionDate
+     * @param transitionDate value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>Number of Line Items for which the State was transitioned.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>State the Line Item was transitioned from.</p>
+     * @param builder function to build the fromState value
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>State the Line Item was transitioned from.</p>
-     * @param fromState
+     * @param fromState value to be set
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>State the Line Item was transitioned to.</p>
+     * @param builder function to build the toState value
      * @return Builder
      */
 
@@ -105,7 +107,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>State the Line Item was transitioned to.</p>
-     * @param toState
+     * @param toState value to be set
      * @return Builder
      */
 
@@ -135,6 +137,10 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
         return this.toState;
     }
 
+    /**
+     * builds LineItemStateTransitionMessagePayload with checking for non-null required values
+     * @return LineItemStateTransitionMessagePayload
+     */
     public LineItemStateTransitionMessagePayload build() {
         Objects.requireNonNull(lineItemId, LineItemStateTransitionMessagePayload.class + ": lineItemId is missing");
         Objects.requireNonNull(transitionDate,
@@ -146,7 +152,8 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     * builds LineItemStateTransitionMessagePayload without checking for non null required values
+     * builds LineItemStateTransitionMessagePayload without checking for non-null required values
+     * @return LineItemStateTransitionMessagePayload
      */
     public LineItemStateTransitionMessagePayload buildUnchecked() {
         return new LineItemStateTransitionMessagePayloadImpl(lineItemId, transitionDate, quantity, fromState, toState);

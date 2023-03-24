@@ -28,7 +28,7 @@ public class BusinessUnitContactEmailSetMessagePayloadBuilder
 
     /**
      *  <p>The contact email that was updated on the Business Unit.</p>
-     * @param contactEmail
+     * @param contactEmail value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class BusinessUnitContactEmailSetMessagePayloadBuilder
         return this.contactEmail;
     }
 
+    /**
+     * builds BusinessUnitContactEmailSetMessagePayload with checking for non-null required values
+     * @return BusinessUnitContactEmailSetMessagePayload
+     */
     public BusinessUnitContactEmailSetMessagePayload build() {
         return new BusinessUnitContactEmailSetMessagePayloadImpl(contactEmail);
     }
 
     /**
-     * builds BusinessUnitContactEmailSetMessagePayload without checking for non null required values
+     * builds BusinessUnitContactEmailSetMessagePayload without checking for non-null required values
+     * @return BusinessUnitContactEmailSetMessagePayload
      */
     public BusinessUnitContactEmailSetMessagePayload buildUnchecked() {
         return new BusinessUnitContactEmailSetMessagePayloadImpl(contactEmail);

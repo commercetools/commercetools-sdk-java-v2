@@ -26,6 +26,7 @@ public class StagedQuoteCreatedMessagePayloadBuilder implements Builder<StagedQu
 
     /**
      *  <p>Staged Quote that was created.</p>
+     * @param builder function to build the stagedQuote value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class StagedQuoteCreatedMessagePayloadBuilder implements Builder<StagedQu
 
     /**
      *  <p>Staged Quote that was created.</p>
-     * @param stagedQuote
+     * @param stagedQuote value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class StagedQuoteCreatedMessagePayloadBuilder implements Builder<StagedQu
         return this.stagedQuote;
     }
 
+    /**
+     * builds StagedQuoteCreatedMessagePayload with checking for non-null required values
+     * @return StagedQuoteCreatedMessagePayload
+     */
     public StagedQuoteCreatedMessagePayload build() {
         Objects.requireNonNull(stagedQuote, StagedQuoteCreatedMessagePayload.class + ": stagedQuote is missing");
         return new StagedQuoteCreatedMessagePayloadImpl(stagedQuote);
     }
 
     /**
-     * builds StagedQuoteCreatedMessagePayload without checking for non null required values
+     * builds StagedQuoteCreatedMessagePayload without checking for non-null required values
+     * @return StagedQuoteCreatedMessagePayload
      */
     public StagedQuoteCreatedMessagePayload buildUnchecked() {
         return new StagedQuoteCreatedMessagePayloadImpl(stagedQuote);

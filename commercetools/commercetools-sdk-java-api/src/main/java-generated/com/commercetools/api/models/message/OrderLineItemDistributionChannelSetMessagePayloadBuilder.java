@@ -32,7 +32,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
 
     /**
      *  <p>Distribution Channel that was set.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
 
     /**
      *  <p>Distribution Channel that was set.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -74,6 +75,10 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
         return this.distributionChannel;
     }
 
+    /**
+     * builds OrderLineItemDistributionChannelSetMessagePayload with checking for non-null required values
+     * @return OrderLineItemDistributionChannelSetMessagePayload
+     */
     public OrderLineItemDistributionChannelSetMessagePayload build() {
         Objects.requireNonNull(lineItemId,
             OrderLineItemDistributionChannelSetMessagePayload.class + ": lineItemId is missing");
@@ -81,7 +86,8 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     }
 
     /**
-     * builds OrderLineItemDistributionChannelSetMessagePayload without checking for non null required values
+     * builds OrderLineItemDistributionChannelSetMessagePayload without checking for non-null required values
+     * @return OrderLineItemDistributionChannelSetMessagePayload
      */
     public OrderLineItemDistributionChannelSetMessagePayload buildUnchecked() {
         return new OrderLineItemDistributionChannelSetMessagePayloadImpl(lineItemId, distributionChannel);

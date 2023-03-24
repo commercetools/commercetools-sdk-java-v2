@@ -38,7 +38,7 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
      *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
      *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
      *  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p>
-     * @param centAmount
+     * @param centAmount value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
-     * @param currencyCode
+     * @param currencyCode value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
 
     /**
      *  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>
-     * @param fractionDigits
+     * @param fractionDigits value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
 
     /**
      *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
-     * @param preciseAmount
+     * @param preciseAmount value to be set
      * @return Builder
      */
 
@@ -97,6 +97,10 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
         return this.preciseAmount;
     }
 
+    /**
+     * builds HighPrecisionMoneyDraft with checking for non-null required values
+     * @return HighPrecisionMoneyDraft
+     */
     public HighPrecisionMoneyDraft build() {
         Objects.requireNonNull(currencyCode, HighPrecisionMoneyDraft.class + ": currencyCode is missing");
         Objects.requireNonNull(fractionDigits, HighPrecisionMoneyDraft.class + ": fractionDigits is missing");
@@ -105,7 +109,8 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
     }
 
     /**
-     * builds HighPrecisionMoneyDraft without checking for non null required values
+     * builds HighPrecisionMoneyDraft without checking for non-null required values
+     * @return HighPrecisionMoneyDraft
      */
     public HighPrecisionMoneyDraft buildUnchecked() {
         return new HighPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits, preciseAmount);

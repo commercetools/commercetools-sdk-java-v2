@@ -41,7 +41,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the fromState value
      * @return Builder
      */
 
@@ -74,7 +75,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param fromState
+     * @param fromState value to be set
      * @return Builder
      */
 
@@ -86,6 +87,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the toState value
      * @return Builder
      */
 
@@ -97,7 +99,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param toState
+     * @param toState value to be set
      * @return Builder
      */
 
@@ -109,7 +111,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param actualTransitionDate
+     * @param actualTransitionDate value to be set
      * @return Builder
      */
 
@@ -140,6 +142,10 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
         return this.actualTransitionDate;
     }
 
+    /**
+     * builds StagedOrderTransitionCustomLineItemStateAction with checking for non-null required values
+     * @return StagedOrderTransitionCustomLineItemStateAction
+     */
     public StagedOrderTransitionCustomLineItemStateAction build() {
         Objects.requireNonNull(customLineItemId,
             StagedOrderTransitionCustomLineItemStateAction.class + ": customLineItemId is missing");
@@ -153,7 +159,8 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     * builds StagedOrderTransitionCustomLineItemStateAction without checking for non null required values
+     * builds StagedOrderTransitionCustomLineItemStateAction without checking for non-null required values
+     * @return StagedOrderTransitionCustomLineItemStateAction
      */
     public StagedOrderTransitionCustomLineItemStateAction buildUnchecked() {
         return new StagedOrderTransitionCustomLineItemStateActionImpl(customLineItemId, quantity, fromState, toState,

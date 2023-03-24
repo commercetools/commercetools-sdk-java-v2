@@ -34,6 +34,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
 
     /**
      *
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
 
     /**
      *
-     * @param syncedAt
+     * @param syncedAt value to be set
      * @return Builder
      */
 
@@ -92,13 +93,18 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
         return this.syncedAt;
     }
 
+    /**
+     * builds OrderUpdateSyncInfoAction with checking for non-null required values
+     * @return OrderUpdateSyncInfoAction
+     */
     public OrderUpdateSyncInfoAction build() {
         Objects.requireNonNull(channel, OrderUpdateSyncInfoAction.class + ": channel is missing");
         return new OrderUpdateSyncInfoActionImpl(channel, externalId, syncedAt);
     }
 
     /**
-     * builds OrderUpdateSyncInfoAction without checking for non null required values
+     * builds OrderUpdateSyncInfoAction without checking for non-null required values
+     * @return OrderUpdateSyncInfoAction
      */
     public OrderUpdateSyncInfoAction buildUnchecked() {
         return new OrderUpdateSyncInfoActionImpl(channel, externalId, syncedAt);

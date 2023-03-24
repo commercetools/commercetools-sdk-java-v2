@@ -26,6 +26,7 @@ public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAd
 
     /**
      *  <p>Value to append to the <code>rates</code> array.</p>
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAd
 
     /**
      *  <p>Value to append to the <code>rates</code> array.</p>
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAd
         return this.taxRate;
     }
 
+    /**
+     * builds TaxCategoryAddTaxRateAction with checking for non-null required values
+     * @return TaxCategoryAddTaxRateAction
+     */
     public TaxCategoryAddTaxRateAction build() {
         Objects.requireNonNull(taxRate, TaxCategoryAddTaxRateAction.class + ": taxRate is missing");
         return new TaxCategoryAddTaxRateActionImpl(taxRate);
     }
 
     /**
-     * builds TaxCategoryAddTaxRateAction without checking for non null required values
+     * builds TaxCategoryAddTaxRateAction without checking for non-null required values
+     * @return TaxCategoryAddTaxRateAction
      */
     public TaxCategoryAddTaxRateAction buildUnchecked() {
         return new TaxCategoryAddTaxRateActionImpl(taxRate);

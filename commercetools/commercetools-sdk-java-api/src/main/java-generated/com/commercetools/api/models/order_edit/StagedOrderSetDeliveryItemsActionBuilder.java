@@ -29,7 +29,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -111,6 +113,10 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
         return this.items;
     }
 
+    /**
+     * builds StagedOrderSetDeliveryItemsAction with checking for non-null required values
+     * @return StagedOrderSetDeliveryItemsAction
+     */
     public StagedOrderSetDeliveryItemsAction build() {
         Objects.requireNonNull(deliveryId, StagedOrderSetDeliveryItemsAction.class + ": deliveryId is missing");
         Objects.requireNonNull(items, StagedOrderSetDeliveryItemsAction.class + ": items is missing");
@@ -118,7 +124,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * builds StagedOrderSetDeliveryItemsAction without checking for non null required values
+     * builds StagedOrderSetDeliveryItemsAction without checking for non-null required values
+     * @return StagedOrderSetDeliveryItemsAction
      */
     public StagedOrderSetDeliveryItemsAction buildUnchecked() {
         return new StagedOrderSetDeliveryItemsActionImpl(deliveryId, items);

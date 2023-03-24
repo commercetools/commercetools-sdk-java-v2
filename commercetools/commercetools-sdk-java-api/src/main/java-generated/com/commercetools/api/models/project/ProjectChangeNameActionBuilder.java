@@ -25,7 +25,7 @@ public class ProjectChangeNameActionBuilder implements Builder<ProjectChangeName
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProjectChangeNameActionBuilder implements Builder<ProjectChangeName
         return this.name;
     }
 
+    /**
+     * builds ProjectChangeNameAction with checking for non-null required values
+     * @return ProjectChangeNameAction
+     */
     public ProjectChangeNameAction build() {
         Objects.requireNonNull(name, ProjectChangeNameAction.class + ": name is missing");
         return new ProjectChangeNameActionImpl(name);
     }
 
     /**
-     * builds ProjectChangeNameAction without checking for non null required values
+     * builds ProjectChangeNameAction without checking for non-null required values
+     * @return ProjectChangeNameAction
      */
     public ProjectChangeNameAction buildUnchecked() {
         return new ProjectChangeNameActionImpl(name);

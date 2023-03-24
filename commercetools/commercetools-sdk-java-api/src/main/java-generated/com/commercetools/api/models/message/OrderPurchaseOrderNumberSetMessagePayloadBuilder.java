@@ -31,7 +31,7 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
 
     /**
      *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
-     * @param purchaseOrderNumber
+     * @param purchaseOrderNumber value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
 
     /**
      *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
-     * @param oldPurchaseOrderNumber
+     * @param oldPurchaseOrderNumber value to be set
      * @return Builder
      */
 
@@ -63,12 +63,17 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
         return this.oldPurchaseOrderNumber;
     }
 
+    /**
+     * builds OrderPurchaseOrderNumberSetMessagePayload with checking for non-null required values
+     * @return OrderPurchaseOrderNumberSetMessagePayload
+     */
     public OrderPurchaseOrderNumberSetMessagePayload build() {
         return new OrderPurchaseOrderNumberSetMessagePayloadImpl(purchaseOrderNumber, oldPurchaseOrderNumber);
     }
 
     /**
-     * builds OrderPurchaseOrderNumberSetMessagePayload without checking for non null required values
+     * builds OrderPurchaseOrderNumberSetMessagePayload without checking for non-null required values
+     * @return OrderPurchaseOrderNumberSetMessagePayload
      */
     public OrderPurchaseOrderNumberSetMessagePayload buildUnchecked() {
         return new OrderPurchaseOrderNumberSetMessagePayloadImpl(purchaseOrderNumber, oldPurchaseOrderNumber);

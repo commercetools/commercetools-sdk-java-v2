@@ -29,6 +29,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *  <p>Reference to a ProductSelection.</p>
+     * @param builder function to build the productSelection value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *  <p>Reference to a ProductSelection.</p>
-     * @param productSelection
+     * @param productSelection value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
-     * @param active
+     * @param active value to be set
      * @return Builder
      */
 
@@ -71,6 +72,10 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
         return this.active;
     }
 
+    /**
+     * builds ProductSelectionSetting with checking for non-null required values
+     * @return ProductSelectionSetting
+     */
     public ProductSelectionSetting build() {
         Objects.requireNonNull(productSelection, ProductSelectionSetting.class + ": productSelection is missing");
         Objects.requireNonNull(active, ProductSelectionSetting.class + ": active is missing");
@@ -78,7 +83,8 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-     * builds ProductSelectionSetting without checking for non null required values
+     * builds ProductSelectionSetting without checking for non-null required values
+     * @return ProductSelectionSetting
      */
     public ProductSelectionSetting buildUnchecked() {
         return new ProductSelectionSettingImpl(productSelection, active);

@@ -34,7 +34,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -103,13 +105,18 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
         return this.fields;
     }
 
+    /**
+     * builds OrderSetDeliveryCustomTypeAction with checking for non-null required values
+     * @return OrderSetDeliveryCustomTypeAction
+     */
     public OrderSetDeliveryCustomTypeAction build() {
         Objects.requireNonNull(deliveryId, OrderSetDeliveryCustomTypeAction.class + ": deliveryId is missing");
         return new OrderSetDeliveryCustomTypeActionImpl(deliveryId, type, fields);
     }
 
     /**
-     * builds OrderSetDeliveryCustomTypeAction without checking for non null required values
+     * builds OrderSetDeliveryCustomTypeAction without checking for non-null required values
+     * @return OrderSetDeliveryCustomTypeAction
      */
     public OrderSetDeliveryCustomTypeAction buildUnchecked() {
         return new OrderSetDeliveryCustomTypeActionImpl(deliveryId, type, fields);

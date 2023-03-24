@@ -39,7 +39,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
-     * @param accessKey
+     * @param accessKey value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
-     * @param accessSecret
+     * @param accessSecret value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>URL of the Amazon SQS queue.</p>
-     * @param queueUrl
+     * @param queueUrl value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>AWS Region the message queue is located in.</p>
-     * @param region
+     * @param region value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>Defines the method of authentication for the SQS queue.</p>
-     * @param authenticationMode
+     * @param authenticationMode value to be set
      * @return Builder
      */
 
@@ -116,6 +116,10 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
         return this.authenticationMode;
     }
 
+    /**
+     * builds SqsDestination with checking for non-null required values
+     * @return SqsDestination
+     */
     public SqsDestination build() {
         Objects.requireNonNull(queueUrl, SqsDestination.class + ": queueUrl is missing");
         Objects.requireNonNull(region, SqsDestination.class + ": region is missing");
@@ -123,7 +127,8 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
     }
 
     /**
-     * builds SqsDestination without checking for non null required values
+     * builds SqsDestination without checking for non-null required values
+     * @return SqsDestination
      */
     public SqsDestination buildUnchecked() {
         return new SqsDestinationImpl(accessKey, accessSecret, queueUrl, region, authenticationMode);

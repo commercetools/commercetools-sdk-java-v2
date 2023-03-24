@@ -30,7 +30,7 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
 
     /**
      *  <p>Unique ID of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
 
     /**
      *  <p>Unique key of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
         return this.key;
     }
 
+    /**
+     * builds StoreResourceIdentifier with checking for non-null required values
+     * @return StoreResourceIdentifier
+     */
     public StoreResourceIdentifier build() {
         return new StoreResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds StoreResourceIdentifier without checking for non null required values
+     * builds StoreResourceIdentifier without checking for non-null required values
+     * @return StoreResourceIdentifier
      */
     public StoreResourceIdentifier buildUnchecked() {
         return new StoreResourceIdentifierImpl(id, key);

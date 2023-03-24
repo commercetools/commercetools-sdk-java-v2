@@ -25,7 +25,7 @@ public class TaxCategoryKeyReferenceBuilder implements Builder<TaxCategoryKeyRef
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class TaxCategoryKeyReferenceBuilder implements Builder<TaxCategoryKeyRef
         return this.key;
     }
 
+    /**
+     * builds TaxCategoryKeyReference with checking for non-null required values
+     * @return TaxCategoryKeyReference
+     */
     public TaxCategoryKeyReference build() {
         Objects.requireNonNull(key, TaxCategoryKeyReference.class + ": key is missing");
         return new TaxCategoryKeyReferenceImpl(key);
     }
 
     /**
-     * builds TaxCategoryKeyReference without checking for non null required values
+     * builds TaxCategoryKeyReference without checking for non-null required values
+     * @return TaxCategoryKeyReference
      */
     public TaxCategoryKeyReference buildUnchecked() {
         return new TaxCategoryKeyReferenceImpl(key);

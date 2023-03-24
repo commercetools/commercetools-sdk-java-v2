@@ -25,7 +25,7 @@ public class InventoryEntryChangeQuantityActionBuilder implements Builder<Invent
 
     /**
      *  <p>Value to set for <code>quantityOnStock</code>.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class InventoryEntryChangeQuantityActionBuilder implements Builder<Invent
         return this.quantity;
     }
 
+    /**
+     * builds InventoryEntryChangeQuantityAction with checking for non-null required values
+     * @return InventoryEntryChangeQuantityAction
+     */
     public InventoryEntryChangeQuantityAction build() {
         Objects.requireNonNull(quantity, InventoryEntryChangeQuantityAction.class + ": quantity is missing");
         return new InventoryEntryChangeQuantityActionImpl(quantity);
     }
 
     /**
-     * builds InventoryEntryChangeQuantityAction without checking for non null required values
+     * builds InventoryEntryChangeQuantityAction without checking for non-null required values
+     * @return InventoryEntryChangeQuantityAction
      */
     public InventoryEntryChangeQuantityAction buildUnchecked() {
         return new InventoryEntryChangeQuantityActionImpl(quantity);

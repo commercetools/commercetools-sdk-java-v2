@@ -32,7 +32,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *  <p>Shape of the action for <code>setTaxCategory</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
         return this.nextValue;
     }
 
+    /**
+     * builds SetTaxCategoryChange with checking for non-null required values
+     * @return SetTaxCategoryChange
+     */
     public SetTaxCategoryChange build() {
         Objects.requireNonNull(change, SetTaxCategoryChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetTaxCategoryChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
     }
 
     /**
-     * builds SetTaxCategoryChange without checking for non null required values
+     * builds SetTaxCategoryChange without checking for non-null required values
+     * @return SetTaxCategoryChange
      */
     public SetTaxCategoryChange buildUnchecked() {
         return new SetTaxCategoryChangeImpl(change, previousValue, nextValue);

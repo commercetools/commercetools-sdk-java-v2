@@ -35,7 +35,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *  <p>Update action for <code>setProductPriceCustomType</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -91,7 +93,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -117,6 +119,10 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
         return this.nextValue;
     }
 
+    /**
+     * builds SetProductPriceCustomTypeChange with checking for non-null required values
+     * @return SetProductPriceCustomTypeChange
+     */
     public SetProductPriceCustomTypeChange build() {
         Objects.requireNonNull(change, SetProductPriceCustomTypeChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetProductPriceCustomTypeChange.class + ": catalogData is missing");
@@ -126,7 +132,8 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     * builds SetProductPriceCustomTypeChange without checking for non null required values
+     * builds SetProductPriceCustomTypeChange without checking for non-null required values
+     * @return SetProductPriceCustomTypeChange
      */
     public SetProductPriceCustomTypeChange buildUnchecked() {
         return new SetProductPriceCustomTypeChangeImpl(change, catalogData, previousValue, nextValue);

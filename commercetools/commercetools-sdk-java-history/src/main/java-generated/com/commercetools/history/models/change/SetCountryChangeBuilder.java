@@ -31,7 +31,7 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
     /**
      *  <p>Update action for <code>setCountry</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetCountryChange with checking for non-null required values
+     * @return SetCountryChange
+     */
     public SetCountryChange build() {
         Objects.requireNonNull(change, SetCountryChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetCountryChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
     }
 
     /**
-     * builds SetCountryChange without checking for non null required values
+     * builds SetCountryChange without checking for non-null required values
+     * @return SetCountryChange
      */
     public SetCountryChange buildUnchecked() {
         return new SetCountryChangeImpl(change, previousValue, nextValue);

@@ -31,6 +31,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
 
     /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     * @param builder function to build the products value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
 
     /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
-     * @param products
+     * @param products value to be set
      * @return Builder
      */
 
@@ -56,6 +57,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
 
     /**
      *  <p>Configuration for the Order Search feature.</p>
+     * @param builder function to build the orders value
      * @return Builder
      */
 
@@ -68,7 +70,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
 
     /**
      *  <p>Configuration for the Order Search feature.</p>
-     * @param orders
+     * @param orders value to be set
      * @return Builder
      */
 
@@ -88,12 +90,17 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
         return this.orders;
     }
 
+    /**
+     * builds SearchIndexingConfiguration with checking for non-null required values
+     * @return SearchIndexingConfiguration
+     */
     public SearchIndexingConfiguration build() {
         return new SearchIndexingConfigurationImpl(products, orders);
     }
 
     /**
-     * builds SearchIndexingConfiguration without checking for non null required values
+     * builds SearchIndexingConfiguration without checking for non-null required values
+     * @return SearchIndexingConfiguration
      */
     public SearchIndexingConfiguration buildUnchecked() {
         return new SearchIndexingConfigurationImpl(products, orders);

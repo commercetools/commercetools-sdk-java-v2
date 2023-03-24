@@ -27,6 +27,7 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
 
     /**
      *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     * @param builder function to build the stagedChanges value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
 
     /**
      *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
-     * @param stagedChanges
+     * @param stagedChanges value to be set
      * @return Builder
      */
 
@@ -54,6 +55,10 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
         return this.stagedChanges;
     }
 
+    /**
+     * builds StandalonePriceStagedChangesAppliedMessagePayload with checking for non-null required values
+     * @return StandalonePriceStagedChangesAppliedMessagePayload
+     */
     public StandalonePriceStagedChangesAppliedMessagePayload build() {
         Objects.requireNonNull(stagedChanges,
             StandalonePriceStagedChangesAppliedMessagePayload.class + ": stagedChanges is missing");
@@ -61,7 +66,8 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
     }
 
     /**
-     * builds StandalonePriceStagedChangesAppliedMessagePayload without checking for non null required values
+     * builds StandalonePriceStagedChangesAppliedMessagePayload without checking for non-null required values
+     * @return StandalonePriceStagedChangesAppliedMessagePayload
      */
     public StandalonePriceStagedChangesAppliedMessagePayload buildUnchecked() {
         return new StandalonePriceStagedChangesAppliedMessagePayloadImpl(stagedChanges);

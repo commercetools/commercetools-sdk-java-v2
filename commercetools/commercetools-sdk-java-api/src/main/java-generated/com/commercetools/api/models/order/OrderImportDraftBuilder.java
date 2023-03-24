@@ -100,7 +100,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
-     * @param orderNumber
+     * @param orderNumber value to be set
      * @return Builder
      */
 
@@ -111,7 +111,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If given the customer with that ID must exist in the project.</p>
-     * @param customerId
+     * @param customerId value to be set
      * @return Builder
      */
 
@@ -122,7 +122,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
-     * @param customerEmail
+     * @param customerEmail value to be set
      * @return Builder
      */
 
@@ -133,7 +133,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -145,7 +145,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -157,7 +157,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -172,6 +172,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -186,6 +187,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -198,7 +200,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -210,7 +212,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -222,7 +224,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -237,6 +239,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -252,6 +255,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -265,6 +269,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -276,7 +281,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -287,6 +292,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -298,7 +304,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -310,6 +316,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param builder function to build the shippingAddress value
      * @return Builder
      */
 
@@ -321,7 +328,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
-     * @param shippingAddress
+     * @param shippingAddress value to be set
      * @return Builder
      */
 
@@ -333,6 +340,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param builder function to build the billingAddress value
      * @return Builder
      */
 
@@ -344,7 +352,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
-     * @param billingAddress
+     * @param billingAddress value to be set
      * @return Builder
      */
 
@@ -356,6 +364,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -369,7 +378,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -381,7 +390,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -392,7 +401,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
-     * @param orderState
+     * @param orderState value to be set
      * @return Builder
      */
 
@@ -404,6 +413,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>This reference can point to a state in a custom workflow.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -415,7 +425,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>This reference can point to a state in a custom workflow.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -426,7 +436,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -438,7 +448,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -450,6 +460,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Set if the ShippingMethod is set.</p>
+     * @param builder function to build the shippingInfo value
      * @return Builder
      */
 
@@ -462,7 +473,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Set if the ShippingMethod is set.</p>
-     * @param shippingInfo
+     * @param shippingInfo value to be set
      * @return Builder
      */
 
@@ -474,6 +485,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param builder function to build the paymentInfo value
      * @return Builder
      */
 
@@ -485,7 +497,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
-     * @param paymentInfo
+     * @param paymentInfo value to be set
      * @return Builder
      */
 
@@ -497,7 +509,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
-     * @param completedAt
+     * @param completedAt value to be set
      * @return Builder
      */
 
@@ -508,6 +520,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The custom fields.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -519,7 +532,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The custom fields.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -530,7 +543,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
-     * @param inventoryMode
+     * @param inventoryMode value to be set
      * @return Builder
      */
 
@@ -542,7 +555,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
-     * @param taxRoundingMode
+     * @param taxRoundingMode value to be set
      * @return Builder
      */
 
@@ -554,7 +567,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -566,7 +579,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -578,7 +591,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -593,6 +606,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -608,6 +622,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -621,6 +636,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The Business Unit the Cart belongs to.</p>
+     * @param builder function to build the businessUnit value
      * @return Builder
      */
 
@@ -634,7 +650,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The Business Unit the Cart belongs to.</p>
-     * @param businessUnit
+     * @param businessUnit value to be set
      * @return Builder
      */
 
@@ -646,6 +662,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -657,7 +674,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -669,7 +686,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The default origin is <code>Customer</code>.</p>
-     * @param origin
+     * @param origin value to be set
      * @return Builder
      */
 
@@ -802,6 +819,10 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return this.origin;
     }
 
+    /**
+     * builds OrderImportDraft with checking for non-null required values
+     * @return OrderImportDraft
+     */
     public OrderImportDraft build() {
         Objects.requireNonNull(totalPrice, OrderImportDraft.class + ": totalPrice is missing");
         return new OrderImportDraftImpl(orderNumber, customerId, customerEmail, lineItems, customLineItems, totalPrice,
@@ -811,7 +832,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     * builds OrderImportDraft without checking for non null required values
+     * builds OrderImportDraft without checking for non-null required values
+     * @return OrderImportDraft
      */
     public OrderImportDraft buildUnchecked() {
         return new OrderImportDraftImpl(orderNumber, customerId, customerEmail, lineItems, customLineItems, totalPrice,

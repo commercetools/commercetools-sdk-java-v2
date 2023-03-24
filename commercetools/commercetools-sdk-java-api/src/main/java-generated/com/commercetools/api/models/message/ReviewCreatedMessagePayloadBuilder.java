@@ -26,6 +26,7 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
 
     /**
      *  <p>Review that was created.</p>
+     * @param builder function to build the review value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
 
     /**
      *  <p>Review that was created.</p>
-     * @param review
+     * @param review value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
         return this.review;
     }
 
+    /**
+     * builds ReviewCreatedMessagePayload with checking for non-null required values
+     * @return ReviewCreatedMessagePayload
+     */
     public ReviewCreatedMessagePayload build() {
         Objects.requireNonNull(review, ReviewCreatedMessagePayload.class + ": review is missing");
         return new ReviewCreatedMessagePayloadImpl(review);
     }
 
     /**
-     * builds ReviewCreatedMessagePayload without checking for non null required values
+     * builds ReviewCreatedMessagePayload without checking for non-null required values
+     * @return ReviewCreatedMessagePayload
      */
     public ReviewCreatedMessagePayload buildUnchecked() {
         return new ReviewCreatedMessagePayloadImpl(review);

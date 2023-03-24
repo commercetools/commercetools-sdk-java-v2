@@ -27,7 +27,7 @@ public class AttributeGroupSetKeyActionBuilder implements Builder<AttributeGroup
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class AttributeGroupSetKeyActionBuilder implements Builder<AttributeGroup
         return this.key;
     }
 
+    /**
+     * builds AttributeGroupSetKeyAction with checking for non-null required values
+     * @return AttributeGroupSetKeyAction
+     */
     public AttributeGroupSetKeyAction build() {
         return new AttributeGroupSetKeyActionImpl(key);
     }
 
     /**
-     * builds AttributeGroupSetKeyAction without checking for non null required values
+     * builds AttributeGroupSetKeyAction without checking for non-null required values
+     * @return AttributeGroupSetKeyAction
      */
     public AttributeGroupSetKeyAction buildUnchecked() {
         return new AttributeGroupSetKeyActionImpl(key);

@@ -29,7 +29,7 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>Roles the Associate holds within the Business Unit.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>Roles the Associate holds within the Business Unit.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>Roles the Associate holds within the Business Unit.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -66,6 +66,7 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>The Customer that is part of the Business Unit.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -77,7 +78,7 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>The Customer that is part of the Business Unit.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -94,6 +95,10 @@ public class AssociateBuilder implements Builder<Associate> {
         return this.customer;
     }
 
+    /**
+     * builds Associate with checking for non-null required values
+     * @return Associate
+     */
     public Associate build() {
         Objects.requireNonNull(roles, Associate.class + ": roles is missing");
         Objects.requireNonNull(customer, Associate.class + ": customer is missing");
@@ -101,7 +106,8 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     * builds Associate without checking for non null required values
+     * builds Associate without checking for non-null required values
+     * @return Associate
      */
     public Associate buildUnchecked() {
         return new AssociateImpl(roles, customer);

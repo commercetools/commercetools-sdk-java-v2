@@ -25,7 +25,7 @@ public class StateKeyReferenceBuilder implements Builder<StateKeyReference> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StateKeyReferenceBuilder implements Builder<StateKeyReference> {
         return this.key;
     }
 
+    /**
+     * builds StateKeyReference with checking for non-null required values
+     * @return StateKeyReference
+     */
     public StateKeyReference build() {
         Objects.requireNonNull(key, StateKeyReference.class + ": key is missing");
         return new StateKeyReferenceImpl(key);
     }
 
     /**
-     * builds StateKeyReference without checking for non null required values
+     * builds StateKeyReference without checking for non-null required values
+     * @return StateKeyReference
      */
     public StateKeyReference buildUnchecked() {
         return new StateKeyReferenceImpl(key);

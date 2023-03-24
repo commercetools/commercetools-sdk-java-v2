@@ -33,7 +33,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -55,6 +55,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
 
     /**
      *
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -66,7 +67,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
 
     /**
      *
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -88,6 +89,10 @@ public class SetCartClassificationShippingRateInputValueBuilder
         return this.label;
     }
 
+    /**
+     * builds SetCartClassificationShippingRateInputValue with checking for non-null required values
+     * @return SetCartClassificationShippingRateInputValue
+     */
     public SetCartClassificationShippingRateInputValue build() {
         Objects.requireNonNull(type, SetCartClassificationShippingRateInputValue.class + ": type is missing");
         Objects.requireNonNull(key, SetCartClassificationShippingRateInputValue.class + ": key is missing");
@@ -96,7 +101,8 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     * builds SetCartClassificationShippingRateInputValue without checking for non null required values
+     * builds SetCartClassificationShippingRateInputValue without checking for non-null required values
+     * @return SetCartClassificationShippingRateInputValue
      */
     public SetCartClassificationShippingRateInputValue buildUnchecked() {
         return new SetCartClassificationShippingRateInputValueImpl(type, key, label);

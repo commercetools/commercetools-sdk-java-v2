@@ -28,6 +28,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
 
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
 
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -56,12 +57,17 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
         return this.taxCategory;
     }
 
+    /**
+     * builds ProductSetTaxCategoryAction with checking for non-null required values
+     * @return ProductSetTaxCategoryAction
+     */
     public ProductSetTaxCategoryAction build() {
         return new ProductSetTaxCategoryActionImpl(taxCategory);
     }
 
     /**
-     * builds ProductSetTaxCategoryAction without checking for non null required values
+     * builds ProductSetTaxCategoryAction without checking for non-null required values
+     * @return ProductSetTaxCategoryAction
      */
     public ProductSetTaxCategoryAction buildUnchecked() {
         return new ProductSetTaxCategoryActionImpl(taxCategory);

@@ -31,7 +31,7 @@ public class MyBusinessUnitRemoveShippingAddressIdActionBuilder
 
     /**
      *  <p>ID of the shipping address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class MyBusinessUnitRemoveShippingAddressIdActionBuilder
 
     /**
      *  <p>Key of the shipping address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -61,12 +61,17 @@ public class MyBusinessUnitRemoveShippingAddressIdActionBuilder
         return this.addressKey;
     }
 
+    /**
+     * builds MyBusinessUnitRemoveShippingAddressIdAction with checking for non-null required values
+     * @return MyBusinessUnitRemoveShippingAddressIdAction
+     */
     public MyBusinessUnitRemoveShippingAddressIdAction build() {
         return new MyBusinessUnitRemoveShippingAddressIdActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds MyBusinessUnitRemoveShippingAddressIdAction without checking for non null required values
+     * builds MyBusinessUnitRemoveShippingAddressIdAction without checking for non-null required values
+     * @return MyBusinessUnitRemoveShippingAddressIdAction
      */
     public MyBusinessUnitRemoveShippingAddressIdAction buildUnchecked() {
         return new MyBusinessUnitRemoveShippingAddressIdActionImpl(addressId, addressKey);

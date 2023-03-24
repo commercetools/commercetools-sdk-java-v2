@@ -28,6 +28,7 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the metaKeywords value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Value to set.</p>
-     * @param metaKeywords
+     * @param metaKeywords value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
         return this.metaKeywords;
     }
 
+    /**
+     * builds CategorySetMetaKeywordsAction with checking for non-null required values
+     * @return CategorySetMetaKeywordsAction
+     */
     public CategorySetMetaKeywordsAction build() {
         return new CategorySetMetaKeywordsActionImpl(metaKeywords);
     }
 
     /**
-     * builds CategorySetMetaKeywordsAction without checking for non null required values
+     * builds CategorySetMetaKeywordsAction without checking for non-null required values
+     * @return CategorySetMetaKeywordsAction
      */
     public CategorySetMetaKeywordsAction buildUnchecked() {
         return new CategorySetMetaKeywordsActionImpl(metaKeywords);

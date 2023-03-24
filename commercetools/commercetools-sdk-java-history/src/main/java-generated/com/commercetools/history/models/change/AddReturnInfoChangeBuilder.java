@@ -29,7 +29,7 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
 
     /**
      *  <p>Update action for <code>addReturnInfo</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds AddReturnInfoChange with checking for non-null required values
+     * @return AddReturnInfoChange
+     */
     public AddReturnInfoChange build() {
         Objects.requireNonNull(change, AddReturnInfoChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddReturnInfoChange.class + ": nextValue is missing");
@@ -75,7 +80,8 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
     }
 
     /**
-     * builds AddReturnInfoChange without checking for non null required values
+     * builds AddReturnInfoChange without checking for non-null required values
+     * @return AddReturnInfoChange
      */
     public AddReturnInfoChange buildUnchecked() {
         return new AddReturnInfoChangeImpl(change, nextValue);

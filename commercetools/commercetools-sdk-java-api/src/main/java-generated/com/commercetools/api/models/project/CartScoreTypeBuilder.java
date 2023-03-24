@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartScoreTypeBuilder implements Builder<CartScoreType> {
 
+    /**
+     * builds CartScoreType with checking for non-null required values
+     * @return CartScoreType
+     */
     public CartScoreType build() {
         return new CartScoreTypeImpl();
     }
 
     /**
-     * builds CartScoreType without checking for non null required values
+     * builds CartScoreType without checking for non-null required values
+     * @return CartScoreType
      */
     public CartScoreType buildUnchecked() {
         return new CartScoreTypeImpl();

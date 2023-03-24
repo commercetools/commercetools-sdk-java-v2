@@ -26,7 +26,7 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
 
     /**
      *  <p>The Business Unit that was created.</p>
-     * @param businessUnit
+     * @param businessUnit value to be set
      * @return Builder
      */
 
@@ -38,6 +38,7 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
 
     /**
      *  <p>The Business Unit that was created.</p>
+     * @param builder function to build the businessUnit value
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
         return this.businessUnit;
     }
 
+    /**
+     * builds BusinessUnitCreatedMessagePayload with checking for non-null required values
+     * @return BusinessUnitCreatedMessagePayload
+     */
     public BusinessUnitCreatedMessagePayload build() {
         Objects.requireNonNull(businessUnit, BusinessUnitCreatedMessagePayload.class + ": businessUnit is missing");
         return new BusinessUnitCreatedMessagePayloadImpl(businessUnit);
     }
 
     /**
-     * builds BusinessUnitCreatedMessagePayload without checking for non null required values
+     * builds BusinessUnitCreatedMessagePayload without checking for non-null required values
+     * @return BusinessUnitCreatedMessagePayload
      */
     public BusinessUnitCreatedMessagePayload buildUnchecked() {
         return new BusinessUnitCreatedMessagePayloadImpl(businessUnit);

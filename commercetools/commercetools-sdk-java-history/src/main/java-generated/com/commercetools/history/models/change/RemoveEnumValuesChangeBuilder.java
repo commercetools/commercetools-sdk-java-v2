@@ -32,7 +32,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
 
     /**
      *  <p>Update action for <code>removeEnumValues</code> on product types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
 
     /**
      *  <p>The name of the attribute updated.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -87,6 +88,10 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveEnumValuesChange with checking for non-null required values
+     * @return RemoveEnumValuesChange
+     */
     public RemoveEnumValuesChange build() {
         Objects.requireNonNull(change, RemoveEnumValuesChange.class + ": change is missing");
         Objects.requireNonNull(attributeName, RemoveEnumValuesChange.class + ": attributeName is missing");
@@ -95,7 +100,8 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
     }
 
     /**
-     * builds RemoveEnumValuesChange without checking for non null required values
+     * builds RemoveEnumValuesChange without checking for non-null required values
+     * @return RemoveEnumValuesChange
      */
     public RemoveEnumValuesChange buildUnchecked() {
         return new RemoveEnumValuesChangeImpl(change, attributeName, previousValue);

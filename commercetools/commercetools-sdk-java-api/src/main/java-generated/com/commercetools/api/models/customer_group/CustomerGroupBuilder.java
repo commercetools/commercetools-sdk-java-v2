@@ -52,7 +52,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Unique identifier of the CustomerGroup.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Current version of the CustomerGroup.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -74,7 +74,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -85,7 +85,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -96,6 +96,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -107,7 +108,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -119,6 +120,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -130,7 +132,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -141,7 +143,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -152,7 +154,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Unique name of the CustomerGroup.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -163,6 +165,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -174,7 +177,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -223,6 +226,10 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
         return this.custom;
     }
 
+    /**
+     * builds CustomerGroup with checking for non-null required values
+     * @return CustomerGroup
+     */
     public CustomerGroup build() {
         Objects.requireNonNull(id, CustomerGroup.class + ": id is missing");
         Objects.requireNonNull(version, CustomerGroup.class + ": version is missing");
@@ -234,7 +241,8 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     * builds CustomerGroup without checking for non null required values
+     * builds CustomerGroup without checking for non-null required values
+     * @return CustomerGroup
      */
     public CustomerGroup buildUnchecked() {
         return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,

@@ -31,7 +31,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
 
     /**
      *  <p>Unique identifier of the referenced DiscountCode.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
 
     /**
      *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
 
     /**
      *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
         return this.obj;
     }
 
+    /**
+     * builds DiscountCodeReference with checking for non-null required values
+     * @return DiscountCodeReference
+     */
     public DiscountCodeReference build() {
         Objects.requireNonNull(id, DiscountCodeReference.class + ": id is missing");
         return new DiscountCodeReferenceImpl(id, obj);
     }
 
     /**
-     * builds DiscountCodeReference without checking for non null required values
+     * builds DiscountCodeReference without checking for non-null required values
+     * @return DiscountCodeReference
      */
     public DiscountCodeReference buildUnchecked() {
         return new DiscountCodeReferenceImpl(id, obj);

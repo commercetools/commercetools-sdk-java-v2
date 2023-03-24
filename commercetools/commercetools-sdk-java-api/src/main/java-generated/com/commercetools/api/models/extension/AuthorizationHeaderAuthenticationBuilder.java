@@ -25,7 +25,7 @@ public class AuthorizationHeaderAuthenticationBuilder implements Builder<Authori
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
-     * @param headerValue
+     * @param headerValue value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class AuthorizationHeaderAuthenticationBuilder implements Builder<Authori
         return this.headerValue;
     }
 
+    /**
+     * builds AuthorizationHeaderAuthentication with checking for non-null required values
+     * @return AuthorizationHeaderAuthentication
+     */
     public AuthorizationHeaderAuthentication build() {
         Objects.requireNonNull(headerValue, AuthorizationHeaderAuthentication.class + ": headerValue is missing");
         return new AuthorizationHeaderAuthenticationImpl(headerValue);
     }
 
     /**
-     * builds AuthorizationHeaderAuthentication without checking for non null required values
+     * builds AuthorizationHeaderAuthentication without checking for non-null required values
+     * @return AuthorizationHeaderAuthentication
      */
     public AuthorizationHeaderAuthentication buildUnchecked() {
         return new AuthorizationHeaderAuthenticationImpl(headerValue);

@@ -29,7 +29,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -78,6 +78,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -92,6 +93,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -110,6 +112,10 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
         return this.state;
     }
 
+    /**
+     * builds OrderImportLineItemStateAction with checking for non-null required values
+     * @return OrderImportLineItemStateAction
+     */
     public OrderImportLineItemStateAction build() {
         Objects.requireNonNull(lineItemId, OrderImportLineItemStateAction.class + ": lineItemId is missing");
         Objects.requireNonNull(state, OrderImportLineItemStateAction.class + ": state is missing");
@@ -117,7 +123,8 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     * builds OrderImportLineItemStateAction without checking for non null required values
+     * builds OrderImportLineItemStateAction without checking for non-null required values
+     * @return OrderImportLineItemStateAction
      */
     public OrderImportLineItemStateAction buildUnchecked() {
         return new OrderImportLineItemStateActionImpl(lineItemId, state);

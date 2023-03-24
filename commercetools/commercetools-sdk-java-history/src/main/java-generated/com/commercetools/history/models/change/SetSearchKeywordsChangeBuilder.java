@@ -35,7 +35,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *  <p>Update action for <code>setSearchKeywords</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -91,7 +93,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -117,6 +119,10 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
         return this.nextValue;
     }
 
+    /**
+     * builds SetSearchKeywordsChange with checking for non-null required values
+     * @return SetSearchKeywordsChange
+     */
     public SetSearchKeywordsChange build() {
         Objects.requireNonNull(change, SetSearchKeywordsChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetSearchKeywordsChange.class + ": catalogData is missing");
@@ -126,7 +132,8 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     * builds SetSearchKeywordsChange without checking for non null required values
+     * builds SetSearchKeywordsChange without checking for non-null required values
+     * @return SetSearchKeywordsChange
      */
     public SetSearchKeywordsChange buildUnchecked() {
         return new SetSearchKeywordsChangeImpl(change, catalogData, previousValue, nextValue);

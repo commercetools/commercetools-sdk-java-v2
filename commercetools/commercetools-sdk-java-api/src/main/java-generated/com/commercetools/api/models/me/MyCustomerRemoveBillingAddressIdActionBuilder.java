@@ -30,7 +30,7 @@ public class MyCustomerRemoveBillingAddressIdActionBuilder implements Builder<My
 
     /**
      *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class MyCustomerRemoveBillingAddressIdActionBuilder implements Builder<My
 
     /**
      *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class MyCustomerRemoveBillingAddressIdActionBuilder implements Builder<My
         return this.addressKey;
     }
 
+    /**
+     * builds MyCustomerRemoveBillingAddressIdAction with checking for non-null required values
+     * @return MyCustomerRemoveBillingAddressIdAction
+     */
     public MyCustomerRemoveBillingAddressIdAction build() {
         return new MyCustomerRemoveBillingAddressIdActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds MyCustomerRemoveBillingAddressIdAction without checking for non null required values
+     * builds MyCustomerRemoveBillingAddressIdAction without checking for non-null required values
+     * @return MyCustomerRemoveBillingAddressIdAction
      */
     public MyCustomerRemoveBillingAddressIdAction buildUnchecked() {
         return new MyCustomerRemoveBillingAddressIdActionImpl(addressId, addressKey);

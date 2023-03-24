@@ -33,7 +33,7 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -50,6 +50,7 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -65,12 +66,17 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
         return this.shippingRateInput;
     }
 
+    /**
+     * builds CartSetShippingRateInputAction with checking for non-null required values
+     * @return CartSetShippingRateInputAction
+     */
     public CartSetShippingRateInputAction build() {
         return new CartSetShippingRateInputActionImpl(shippingRateInput);
     }
 
     /**
-     * builds CartSetShippingRateInputAction without checking for non null required values
+     * builds CartSetShippingRateInputAction without checking for non-null required values
+     * @return CartSetShippingRateInputAction
      */
     public CartSetShippingRateInputAction buildUnchecked() {
         return new CartSetShippingRateInputActionImpl(shippingRateInput);

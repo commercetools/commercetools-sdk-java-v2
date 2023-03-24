@@ -31,7 +31,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
 
     /**
      *
+     * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
 
     /**
      *
-     * @param externalTotalPrice
+     * @param externalTotalPrice value to be set
      * @return Builder
      */
 
@@ -74,13 +75,18 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
         return this.externalTotalPrice;
     }
 
+    /**
+     * builds StagedOrderSetLineItemTotalPriceAction with checking for non-null required values
+     * @return StagedOrderSetLineItemTotalPriceAction
+     */
     public StagedOrderSetLineItemTotalPriceAction build() {
         Objects.requireNonNull(lineItemId, StagedOrderSetLineItemTotalPriceAction.class + ": lineItemId is missing");
         return new StagedOrderSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
     }
 
     /**
-     * builds StagedOrderSetLineItemTotalPriceAction without checking for non null required values
+     * builds StagedOrderSetLineItemTotalPriceAction without checking for non-null required values
+     * @return StagedOrderSetLineItemTotalPriceAction
      */
     public StagedOrderSetLineItemTotalPriceAction buildUnchecked() {
         return new StagedOrderSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);

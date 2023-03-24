@@ -27,7 +27,7 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
 
     /**
      *  <p><code>"The query timed out. If your query constantly times out, please check that it follows the performance best practices (see https://docs.commercetools.com/api/predicates/query#performance-considerations)."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public QueryTimedOutErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public QueryTimedOutErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
         return this.values;
     }
 
+    /**
+     * builds QueryTimedOutError with checking for non-null required values
+     * @return QueryTimedOutError
+     */
     public QueryTimedOutError build() {
         Objects.requireNonNull(message, QueryTimedOutError.class + ": message is missing");
         return new QueryTimedOutErrorImpl(message, values);
     }
 
     /**
-     * builds QueryTimedOutError without checking for non null required values
+     * builds QueryTimedOutError without checking for non-null required values
+     * @return QueryTimedOutError
      */
     public QueryTimedOutError buildUnchecked() {
         return new QueryTimedOutErrorImpl(message, values);

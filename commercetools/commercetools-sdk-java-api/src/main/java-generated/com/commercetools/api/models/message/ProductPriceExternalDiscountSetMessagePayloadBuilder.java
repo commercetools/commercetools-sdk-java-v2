@@ -44,7 +44,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Product Variant for which the Discount was set.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Key of the Product Variant for which the Discount was set.</p>
-     * @param variantKey
+     * @param variantKey value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>SKU of the Product Variant for which Discount was set.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Price.</p>
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -88,6 +88,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -99,7 +100,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -111,7 +112,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -147,6 +148,10 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
         return this.staged;
     }
 
+    /**
+     * builds ProductPriceExternalDiscountSetMessagePayload with checking for non-null required values
+     * @return ProductPriceExternalDiscountSetMessagePayload
+     */
     public ProductPriceExternalDiscountSetMessagePayload build() {
         Objects.requireNonNull(variantId,
             ProductPriceExternalDiscountSetMessagePayload.class + ": variantId is missing");
@@ -157,7 +162,8 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     * builds ProductPriceExternalDiscountSetMessagePayload without checking for non null required values
+     * builds ProductPriceExternalDiscountSetMessagePayload without checking for non-null required values
+     * @return ProductPriceExternalDiscountSetMessagePayload
      */
     public ProductPriceExternalDiscountSetMessagePayload buildUnchecked() {
         return new ProductPriceExternalDiscountSetMessagePayloadImpl(variantId, variantKey, sku, priceId, discounted,

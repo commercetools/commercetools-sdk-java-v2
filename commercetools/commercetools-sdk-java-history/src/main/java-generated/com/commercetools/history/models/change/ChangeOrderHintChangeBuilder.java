@@ -31,7 +31,7 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
 
     /**
      *  <p>Shape of the action for <code>changeOrderHint</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeOrderHintChange with checking for non-null required values
+     * @return ChangeOrderHintChange
+     */
     public ChangeOrderHintChange build() {
         Objects.requireNonNull(change, ChangeOrderHintChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeOrderHintChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
     }
 
     /**
-     * builds ChangeOrderHintChange without checking for non null required values
+     * builds ChangeOrderHintChange without checking for non-null required values
+     * @return ChangeOrderHintChange
      */
     public ChangeOrderHintChange buildUnchecked() {
         return new ChangeOrderHintChangeImpl(change, previousValue, nextValue);

@@ -34,7 +34,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
 
     /**
      *  <p>Unique identifier of the Customer.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
 
     /**
      *  <p>Expected version of the Customer on which the changes should be applied.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     /**
      *  <p>Current password of the Customer.</p>
      *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
-     * @param currentPassword
+     * @param currentPassword value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
 
     /**
      *  <p>New password to be set.</p>
-     * @param newPassword
+     * @param newPassword value to be set
      * @return Builder
      */
 
@@ -93,6 +93,10 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
         return this.newPassword;
     }
 
+    /**
+     * builds CustomerChangePassword with checking for non-null required values
+     * @return CustomerChangePassword
+     */
     public CustomerChangePassword build() {
         Objects.requireNonNull(id, CustomerChangePassword.class + ": id is missing");
         Objects.requireNonNull(version, CustomerChangePassword.class + ": version is missing");
@@ -102,7 +106,8 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     }
 
     /**
-     * builds CustomerChangePassword without checking for non null required values
+     * builds CustomerChangePassword without checking for non-null required values
+     * @return CustomerChangePassword
      */
     public CustomerChangePassword buildUnchecked() {
         return new CustomerChangePasswordImpl(id, version, currentPassword, newPassword);

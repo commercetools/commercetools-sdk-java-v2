@@ -35,7 +35,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -104,13 +106,18 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
         return this.fields;
     }
 
+    /**
+     * builds OrderSetDeliveryAddressCustomTypeAction with checking for non-null required values
+     * @return OrderSetDeliveryAddressCustomTypeAction
+     */
     public OrderSetDeliveryAddressCustomTypeAction build() {
         Objects.requireNonNull(deliveryId, OrderSetDeliveryAddressCustomTypeAction.class + ": deliveryId is missing");
         return new OrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);
     }
 
     /**
-     * builds OrderSetDeliveryAddressCustomTypeAction without checking for non null required values
+     * builds OrderSetDeliveryAddressCustomTypeAction without checking for non-null required values
+     * @return OrderSetDeliveryAddressCustomTypeAction
      */
     public OrderSetDeliveryAddressCustomTypeAction buildUnchecked() {
         return new OrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);

@@ -25,7 +25,7 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
 
     /**
      *  <p>Determines how monetary values are rounded.</p>
-     * @param taxRoundingMode
+     * @param taxRoundingMode value to be set
      * @return Builder
      */
 
@@ -39,6 +39,10 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
         return this.taxRoundingMode;
     }
 
+    /**
+     * builds StagedOrderChangeTaxRoundingModeAction with checking for non-null required values
+     * @return StagedOrderChangeTaxRoundingModeAction
+     */
     public StagedOrderChangeTaxRoundingModeAction build() {
         Objects.requireNonNull(taxRoundingMode,
             StagedOrderChangeTaxRoundingModeAction.class + ": taxRoundingMode is missing");
@@ -46,7 +50,8 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
     }
 
     /**
-     * builds StagedOrderChangeTaxRoundingModeAction without checking for non null required values
+     * builds StagedOrderChangeTaxRoundingModeAction without checking for non-null required values
+     * @return StagedOrderChangeTaxRoundingModeAction
      */
     public StagedOrderChangeTaxRoundingModeAction buildUnchecked() {
         return new StagedOrderChangeTaxRoundingModeActionImpl(taxRoundingMode);

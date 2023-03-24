@@ -34,6 +34,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a ShoppingList.</p>
+     * @param builder function to build the shoppingList value
      * @return Builder
      */
 
@@ -47,7 +48,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a ShoppingList.</p>
-     * @param shoppingList
+     * @param shoppingList value to be set
      * @return Builder
      */
 
@@ -59,6 +60,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -71,7 +73,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -83,6 +85,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -96,7 +99,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -120,13 +123,18 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
         return this.distributionChannel;
     }
 
+    /**
+     * builds StagedOrderAddShoppingListAction with checking for non-null required values
+     * @return StagedOrderAddShoppingListAction
+     */
     public StagedOrderAddShoppingListAction build() {
         Objects.requireNonNull(shoppingList, StagedOrderAddShoppingListAction.class + ": shoppingList is missing");
         return new StagedOrderAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
     }
 
     /**
-     * builds StagedOrderAddShoppingListAction without checking for non null required values
+     * builds StagedOrderAddShoppingListAction without checking for non-null required values
+     * @return StagedOrderAddShoppingListAction
      */
     public StagedOrderAddShoppingListAction buildUnchecked() {
         return new StagedOrderAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);

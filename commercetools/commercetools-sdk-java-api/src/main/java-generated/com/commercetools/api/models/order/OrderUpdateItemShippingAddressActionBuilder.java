@@ -26,6 +26,7 @@ public class OrderUpdateItemShippingAddressActionBuilder implements Builder<Orde
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class OrderUpdateItemShippingAddressActionBuilder implements Builder<Orde
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class OrderUpdateItemShippingAddressActionBuilder implements Builder<Orde
         return this.address;
     }
 
+    /**
+     * builds OrderUpdateItemShippingAddressAction with checking for non-null required values
+     * @return OrderUpdateItemShippingAddressAction
+     */
     public OrderUpdateItemShippingAddressAction build() {
         Objects.requireNonNull(address, OrderUpdateItemShippingAddressAction.class + ": address is missing");
         return new OrderUpdateItemShippingAddressActionImpl(address);
     }
 
     /**
-     * builds OrderUpdateItemShippingAddressAction without checking for non null required values
+     * builds OrderUpdateItemShippingAddressAction without checking for non-null required values
+     * @return OrderUpdateItemShippingAddressAction
      */
     public OrderUpdateItemShippingAddressAction buildUnchecked() {
         return new OrderUpdateItemShippingAddressActionImpl(address);

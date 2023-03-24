@@ -31,7 +31,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     /**
      *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -42,6 +42,8 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public DuplicatePriceScopeErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -51,6 +53,9 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public DuplicatePriceScopeErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -63,6 +68,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     /**
      *  <p>Conflicting Embedded Price.</p>
+     * @param builder function to build the conflictingPrice value
      * @return Builder
      */
 
@@ -74,7 +80,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     /**
      *  <p>Conflicting Embedded Price.</p>
-     * @param conflictingPrice
+     * @param conflictingPrice value to be set
      * @return Builder
      */
 
@@ -96,6 +102,10 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         return this.conflictingPrice;
     }
 
+    /**
+     * builds DuplicatePriceScopeError with checking for non-null required values
+     * @return DuplicatePriceScopeError
+     */
     public DuplicatePriceScopeError build() {
         Objects.requireNonNull(message, DuplicatePriceScopeError.class + ": message is missing");
         Objects.requireNonNull(conflictingPrice, DuplicatePriceScopeError.class + ": conflictingPrice is missing");
@@ -103,7 +113,8 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     * builds DuplicatePriceScopeError without checking for non null required values
+     * builds DuplicatePriceScopeError without checking for non-null required values
+     * @return DuplicatePriceScopeError
      */
     public DuplicatePriceScopeError buildUnchecked() {
         return new DuplicatePriceScopeErrorImpl(message, values, conflictingPrice);

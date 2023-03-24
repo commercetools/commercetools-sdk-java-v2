@@ -37,7 +37,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>User-defined unique identifier.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>Maps to <code>ProductType.name</code>.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>Maps to <code>ProductType.description</code>.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -109,6 +109,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -124,6 +125,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -152,6 +154,10 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
         return this.attributes;
     }
 
+    /**
+     * builds ProductTypeImport with checking for non-null required values
+     * @return ProductTypeImport
+     */
     public ProductTypeImport build() {
         Objects.requireNonNull(key, ProductTypeImport.class + ": key is missing");
         Objects.requireNonNull(name, ProductTypeImport.class + ": name is missing");
@@ -160,7 +166,8 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     * builds ProductTypeImport without checking for non null required values
+     * builds ProductTypeImport without checking for non-null required values
+     * @return ProductTypeImport
      */
     public ProductTypeImport buildUnchecked() {
         return new ProductTypeImportImpl(key, name, description, attributes);

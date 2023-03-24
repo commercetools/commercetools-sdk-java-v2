@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSearchSortingBuilder implements Builder<OrderSearchSorting> {
 
+    /**
+     * builds OrderSearchSorting with checking for non-null required values
+     * @return OrderSearchSorting
+     */
     public OrderSearchSorting build() {
         return new OrderSearchSortingImpl();
     }
 
     /**
-     * builds OrderSearchSorting without checking for non null required values
+     * builds OrderSearchSorting without checking for non-null required values
+     * @return OrderSearchSorting
      */
     public OrderSearchSorting buildUnchecked() {
         return new OrderSearchSortingImpl();

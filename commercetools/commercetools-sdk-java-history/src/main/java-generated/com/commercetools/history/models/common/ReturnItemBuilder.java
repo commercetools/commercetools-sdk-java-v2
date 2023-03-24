@@ -46,7 +46,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -79,7 +79,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
-     * @param comment
+     * @param comment value to be set
      * @return Builder
      */
 
@@ -90,7 +90,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -102,7 +102,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
-     * @param paymentState
+     * @param paymentState value to be set
      * @return Builder
      */
 
@@ -114,7 +114,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -125,7 +125,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -166,6 +166,10 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
         return this.createdAt;
     }
 
+    /**
+     * builds ReturnItem with checking for non-null required values
+     * @return ReturnItem
+     */
     public ReturnItem build() {
         Objects.requireNonNull(id, ReturnItem.class + ": id is missing");
         Objects.requireNonNull(quantity, ReturnItem.class + ": quantity is missing");
@@ -179,7 +183,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     * builds ReturnItem without checking for non null required values
+     * builds ReturnItem without checking for non-null required values
+     * @return ReturnItem
      */
     public ReturnItem buildUnchecked() {
         return new ReturnItemImpl(id, quantity, type, comment, shipmentState, paymentState, lastModifiedAt, createdAt);

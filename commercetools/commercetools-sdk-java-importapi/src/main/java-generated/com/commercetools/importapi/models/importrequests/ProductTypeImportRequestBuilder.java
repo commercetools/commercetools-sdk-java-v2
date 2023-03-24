@@ -26,7 +26,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
         return this.resources;
     }
 
+    /**
+     * builds ProductTypeImportRequest with checking for non-null required values
+     * @return ProductTypeImportRequest
+     */
     public ProductTypeImportRequest build() {
         Objects.requireNonNull(resources, ProductTypeImportRequest.class + ": resources is missing");
         return new ProductTypeImportRequestImpl(resources);
     }
 
     /**
-     * builds ProductTypeImportRequest without checking for non null required values
+     * builds ProductTypeImportRequest without checking for non-null required values
+     * @return ProductTypeImportRequest
      */
     public ProductTypeImportRequest buildUnchecked() {
         return new ProductTypeImportRequestImpl(resources);

@@ -26,6 +26,7 @@ public class AttributeGroupChangeNameActionBuilder implements Builder<AttributeG
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class AttributeGroupChangeNameActionBuilder implements Builder<AttributeG
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class AttributeGroupChangeNameActionBuilder implements Builder<AttributeG
         return this.name;
     }
 
+    /**
+     * builds AttributeGroupChangeNameAction with checking for non-null required values
+     * @return AttributeGroupChangeNameAction
+     */
     public AttributeGroupChangeNameAction build() {
         Objects.requireNonNull(name, AttributeGroupChangeNameAction.class + ": name is missing");
         return new AttributeGroupChangeNameActionImpl(name);
     }
 
     /**
-     * builds AttributeGroupChangeNameAction without checking for non null required values
+     * builds AttributeGroupChangeNameAction without checking for non-null required values
+     * @return AttributeGroupChangeNameAction
      */
     public AttributeGroupChangeNameAction buildUnchecked() {
         return new AttributeGroupChangeNameActionImpl(name);

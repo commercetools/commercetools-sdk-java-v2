@@ -29,6 +29,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @param builder function to build the variant value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
         return this.staged;
     }
 
+    /**
+     * builds ProductVariantAddedMessagePayload with checking for non-null required values
+     * @return ProductVariantAddedMessagePayload
+     */
     public ProductVariantAddedMessagePayload build() {
         Objects.requireNonNull(variant, ProductVariantAddedMessagePayload.class + ": variant is missing");
         Objects.requireNonNull(staged, ProductVariantAddedMessagePayload.class + ": staged is missing");
@@ -76,7 +81,8 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     * builds ProductVariantAddedMessagePayload without checking for non null required values
+     * builds ProductVariantAddedMessagePayload without checking for non-null required values
+     * @return ProductVariantAddedMessagePayload
      */
     public ProductVariantAddedMessagePayload buildUnchecked() {
         return new ProductVariantAddedMessagePayloadImpl(variant, staged);

@@ -31,7 +31,7 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
 
     /**
      *  <p>Shape of the action for <code>setExternalId</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds SetExternalIdChange with checking for non-null required values
+     * @return SetExternalIdChange
+     */
     public SetExternalIdChange build() {
         Objects.requireNonNull(change, SetExternalIdChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetExternalIdChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
     }
 
     /**
-     * builds SetExternalIdChange without checking for non null required values
+     * builds SetExternalIdChange without checking for non-null required values
+     * @return SetExternalIdChange
      */
     public SetExternalIdChange buildUnchecked() {
         return new SetExternalIdChangeImpl(change, previousValue, nextValue);

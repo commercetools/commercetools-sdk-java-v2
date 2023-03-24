@@ -31,6 +31,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
 
     /**
      *  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
 
     /**
      *  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
 
     /**
      *  <p>Sets the Custom Fields fields for the Category.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
 
     /**
      *  <p>Sets the Custom Fields fields for the Category.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
         return this.fields;
     }
 
+    /**
+     * builds CategorySetCustomTypeAction with checking for non-null required values
+     * @return CategorySetCustomTypeAction
+     */
     public CategorySetCustomTypeAction build() {
         return new CategorySetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds CategorySetCustomTypeAction without checking for non null required values
+     * builds CategorySetCustomTypeAction without checking for non-null required values
+     * @return CategorySetCustomTypeAction
      */
     public CategorySetCustomTypeAction buildUnchecked() {
         return new CategorySetCustomTypeActionImpl(type, fields);

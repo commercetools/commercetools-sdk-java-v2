@@ -25,7 +25,7 @@ public class TypeRemoveFieldDefinitionActionBuilder implements Builder<TypeRemov
 
     /**
      *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class TypeRemoveFieldDefinitionActionBuilder implements Builder<TypeRemov
         return this.fieldName;
     }
 
+    /**
+     * builds TypeRemoveFieldDefinitionAction with checking for non-null required values
+     * @return TypeRemoveFieldDefinitionAction
+     */
     public TypeRemoveFieldDefinitionAction build() {
         Objects.requireNonNull(fieldName, TypeRemoveFieldDefinitionAction.class + ": fieldName is missing");
         return new TypeRemoveFieldDefinitionActionImpl(fieldName);
     }
 
     /**
-     * builds TypeRemoveFieldDefinitionAction without checking for non null required values
+     * builds TypeRemoveFieldDefinitionAction without checking for non-null required values
+     * @return TypeRemoveFieldDefinitionAction
      */
     public TypeRemoveFieldDefinitionAction buildUnchecked() {
         return new TypeRemoveFieldDefinitionActionImpl(fieldName);

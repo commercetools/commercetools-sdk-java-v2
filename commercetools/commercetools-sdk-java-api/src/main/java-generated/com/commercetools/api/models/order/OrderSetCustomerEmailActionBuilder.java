@@ -27,7 +27,7 @@ public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCusto
 
     /**
      *
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCusto
         return this.email;
     }
 
+    /**
+     * builds OrderSetCustomerEmailAction with checking for non-null required values
+     * @return OrderSetCustomerEmailAction
+     */
     public OrderSetCustomerEmailAction build() {
         return new OrderSetCustomerEmailActionImpl(email);
     }
 
     /**
-     * builds OrderSetCustomerEmailAction without checking for non null required values
+     * builds OrderSetCustomerEmailAction without checking for non-null required values
+     * @return OrderSetCustomerEmailAction
      */
     public OrderSetCustomerEmailAction buildUnchecked() {
         return new OrderSetCustomerEmailActionImpl(email);

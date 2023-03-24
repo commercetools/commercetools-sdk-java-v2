@@ -31,7 +31,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      *
-     * @param isOnStock
+     * @param isOnStock value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      *
-     * @param restockableInDays
+     * @param restockableInDays value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      *
-     * @param availableQuantity
+     * @param availableQuantity value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         return this.availableQuantity;
     }
 
+    /**
+     * builds ProductVariantChannelAvailability with checking for non-null required values
+     * @return ProductVariantChannelAvailability
+     */
     public ProductVariantChannelAvailability build() {
         Objects.requireNonNull(isOnStock, ProductVariantChannelAvailability.class + ": isOnStock is missing");
         Objects.requireNonNull(restockableInDays,
@@ -84,7 +88,8 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     * builds ProductVariantChannelAvailability without checking for non null required values
+     * builds ProductVariantChannelAvailability without checking for non-null required values
+     * @return ProductVariantChannelAvailability
      */
     public ProductVariantChannelAvailability buildUnchecked() {
         return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);

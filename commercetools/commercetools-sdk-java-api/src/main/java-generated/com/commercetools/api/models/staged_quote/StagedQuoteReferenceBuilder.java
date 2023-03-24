@@ -31,7 +31,7 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
 
     /**
      *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
 
     /**
      *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
         return this.obj;
     }
 
+    /**
+     * builds StagedQuoteReference with checking for non-null required values
+     * @return StagedQuoteReference
+     */
     public StagedQuoteReference build() {
         Objects.requireNonNull(id, StagedQuoteReference.class + ": id is missing");
         return new StagedQuoteReferenceImpl(id, obj);
     }
 
     /**
-     * builds StagedQuoteReference without checking for non null required values
+     * builds StagedQuoteReference without checking for non-null required values
+     * @return StagedQuoteReference
      */
     public StagedQuoteReference buildUnchecked() {
         return new StagedQuoteReferenceImpl(id, obj);

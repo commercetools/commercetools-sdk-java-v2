@@ -46,7 +46,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -79,7 +79,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -90,7 +90,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -101,6 +101,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -112,7 +113,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -124,6 +125,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -135,7 +137,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -180,12 +182,17 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
         return this.fields;
     }
 
+    /**
+     * builds ProductSetAssetCustomTypeAction with checking for non-null required values
+     * @return ProductSetAssetCustomTypeAction
+     */
     public ProductSetAssetCustomTypeAction build() {
         return new ProductSetAssetCustomTypeActionImpl(variantId, sku, staged, assetId, assetKey, type, fields);
     }
 
     /**
-     * builds ProductSetAssetCustomTypeAction without checking for non null required values
+     * builds ProductSetAssetCustomTypeAction without checking for non-null required values
+     * @return ProductSetAssetCustomTypeAction
      */
     public ProductSetAssetCustomTypeAction buildUnchecked() {
         return new ProductSetAssetCustomTypeActionImpl(variantId, sku, staged, assetId, assetKey, type, fields);

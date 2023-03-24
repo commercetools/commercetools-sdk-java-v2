@@ -34,7 +34,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     /**
      *
-     * @param query
+     * @param query value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     /**
      *
-     * @param operationName
+     * @param operationName value to be set
      * @return Builder
      */
 
@@ -56,6 +56,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     /**
      *
+     * @param builder function to build the variables value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     /**
      *
-     * @param variables
+     * @param variables value to be set
      * @return Builder
      */
 
@@ -91,13 +92,18 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
         return this.variables;
     }
 
+    /**
+     * builds GraphQLRequest with checking for non-null required values
+     * @return GraphQLRequest
+     */
     public GraphQLRequest build() {
         Objects.requireNonNull(query, GraphQLRequest.class + ": query is missing");
         return new GraphQLRequestImpl(query, operationName, variables);
     }
 
     /**
-     * builds GraphQLRequest without checking for non null required values
+     * builds GraphQLRequest without checking for non-null required values
+     * @return GraphQLRequest
      */
     public GraphQLRequest buildUnchecked() {
         return new GraphQLRequestImpl(query, operationName, variables);

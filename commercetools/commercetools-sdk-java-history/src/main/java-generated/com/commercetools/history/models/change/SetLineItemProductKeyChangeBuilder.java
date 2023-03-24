@@ -41,7 +41,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *  <p>Update action for <code>setLineItemProductKey</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -52,6 +52,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -63,7 +64,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -75,7 +76,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -86,7 +87,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -97,7 +98,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -108,7 +109,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -141,6 +142,10 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
         return this.nextValue;
     }
 
+    /**
+     * builds SetLineItemProductKeyChange with checking for non-null required values
+     * @return SetLineItemProductKeyChange
+     */
     public SetLineItemProductKeyChange build() {
         Objects.requireNonNull(change, SetLineItemProductKeyChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, SetLineItemProductKeyChange.class + ": lineItem is missing");
@@ -152,7 +157,8 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
-     * builds SetLineItemProductKeyChange without checking for non null required values
+     * builds SetLineItemProductKeyChange without checking for non-null required values
+     * @return SetLineItemProductKeyChange
      */
     public SetLineItemProductKeyChange buildUnchecked() {
         return new SetLineItemProductKeyChangeImpl(change, lineItem, lineItemId, variant, previousValue, nextValue);

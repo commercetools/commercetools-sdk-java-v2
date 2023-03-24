@@ -28,7 +28,7 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
 
     /**
      *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
-     * @param stagedQuoteState
+     * @param stagedQuoteState value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
 
     /**
      *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
-     * @param oldStagedQuoteState
+     * @param oldStagedQuoteState value to be set
      * @return Builder
      */
 
@@ -58,6 +58,10 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
         return this.oldStagedQuoteState;
     }
 
+    /**
+     * builds StagedQuoteStateChangedMessagePayload with checking for non-null required values
+     * @return StagedQuoteStateChangedMessagePayload
+     */
     public StagedQuoteStateChangedMessagePayload build() {
         Objects.requireNonNull(stagedQuoteState,
             StagedQuoteStateChangedMessagePayload.class + ": stagedQuoteState is missing");
@@ -67,7 +71,8 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     * builds StagedQuoteStateChangedMessagePayload without checking for non null required values
+     * builds StagedQuoteStateChangedMessagePayload without checking for non-null required values
+     * @return StagedQuoteStateChangedMessagePayload
      */
     public StagedQuoteStateChangedMessagePayload buildUnchecked() {
         return new StagedQuoteStateChangedMessagePayloadImpl(stagedQuoteState, oldStagedQuoteState);

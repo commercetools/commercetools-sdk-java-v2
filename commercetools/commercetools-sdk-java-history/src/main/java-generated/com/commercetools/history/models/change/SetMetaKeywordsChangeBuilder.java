@@ -32,7 +32,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *  <p>Shape of the action for <code>setMetaKeywords</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
         return this.nextValue;
     }
 
+    /**
+     * builds SetMetaKeywordsChange with checking for non-null required values
+     * @return SetMetaKeywordsChange
+     */
     public SetMetaKeywordsChange build() {
         Objects.requireNonNull(change, SetMetaKeywordsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetMetaKeywordsChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
     }
 
     /**
-     * builds SetMetaKeywordsChange without checking for non null required values
+     * builds SetMetaKeywordsChange without checking for non-null required values
+     * @return SetMetaKeywordsChange
      */
     public SetMetaKeywordsChange buildUnchecked() {
         return new SetMetaKeywordsChangeImpl(change, previousValue, nextValue);

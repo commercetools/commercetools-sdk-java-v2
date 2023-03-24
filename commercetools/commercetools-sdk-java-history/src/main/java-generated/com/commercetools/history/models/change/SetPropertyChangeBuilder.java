@@ -32,7 +32,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     /**
      *  <p>Update action for <code>setProperty</code> on custom objects</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     /**
      *  <p>Value path to the property that was changed</p>
-     * @param path
+     * @param path value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -90,6 +90,10 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds SetPropertyChange with checking for non-null required values
+     * @return SetPropertyChange
+     */
     public SetPropertyChange build() {
         Objects.requireNonNull(change, SetPropertyChange.class + ": change is missing");
         Objects.requireNonNull(path, SetPropertyChange.class + ": path is missing");
@@ -99,7 +103,8 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     }
 
     /**
-     * builds SetPropertyChange without checking for non null required values
+     * builds SetPropertyChange without checking for non-null required values
+     * @return SetPropertyChange
      */
     public SetPropertyChange buildUnchecked() {
         return new SetPropertyChangeImpl(change, path, nextValue, previousValue);

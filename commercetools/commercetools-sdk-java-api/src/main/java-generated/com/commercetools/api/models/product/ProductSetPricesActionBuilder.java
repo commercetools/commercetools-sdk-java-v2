@@ -37,7 +37,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -96,6 +96,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -110,6 +111,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -150,13 +152,18 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
         return this.staged;
     }
 
+    /**
+     * builds ProductSetPricesAction with checking for non-null required values
+     * @return ProductSetPricesAction
+     */
     public ProductSetPricesAction build() {
         Objects.requireNonNull(prices, ProductSetPricesAction.class + ": prices is missing");
         return new ProductSetPricesActionImpl(variantId, sku, prices, staged);
     }
 
     /**
-     * builds ProductSetPricesAction without checking for non null required values
+     * builds ProductSetPricesAction without checking for non-null required values
+     * @return ProductSetPricesAction
      */
     public ProductSetPricesAction buildUnchecked() {
         return new ProductSetPricesActionImpl(variantId, sku, prices, staged);

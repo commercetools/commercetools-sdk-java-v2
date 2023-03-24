@@ -30,7 +30,7 @@ public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCus
 
     /**
      *  <p><code>id</code> of the Address to become a billing address.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCus
 
     /**
      *  <p><code>key</code> of the Address to become a billing address.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCus
         return this.addressKey;
     }
 
+    /**
+     * builds MyCustomerAddBillingAddressIdAction with checking for non-null required values
+     * @return MyCustomerAddBillingAddressIdAction
+     */
     public MyCustomerAddBillingAddressIdAction build() {
         return new MyCustomerAddBillingAddressIdActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds MyCustomerAddBillingAddressIdAction without checking for non null required values
+     * builds MyCustomerAddBillingAddressIdAction without checking for non-null required values
+     * @return MyCustomerAddBillingAddressIdAction
      */
     public MyCustomerAddBillingAddressIdAction buildUnchecked() {
         return new MyCustomerAddBillingAddressIdActionImpl(addressId, addressKey);

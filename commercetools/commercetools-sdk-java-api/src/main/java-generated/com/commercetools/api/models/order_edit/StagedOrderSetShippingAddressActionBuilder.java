@@ -28,6 +28,7 @@ public class StagedOrderSetShippingAddressActionBuilder implements Builder<Stage
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class StagedOrderSetShippingAddressActionBuilder implements Builder<Stage
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class StagedOrderSetShippingAddressActionBuilder implements Builder<Stage
         return this.address;
     }
 
+    /**
+     * builds StagedOrderSetShippingAddressAction with checking for non-null required values
+     * @return StagedOrderSetShippingAddressAction
+     */
     public StagedOrderSetShippingAddressAction build() {
         return new StagedOrderSetShippingAddressActionImpl(address);
     }
 
     /**
-     * builds StagedOrderSetShippingAddressAction without checking for non null required values
+     * builds StagedOrderSetShippingAddressAction without checking for non-null required values
+     * @return StagedOrderSetShippingAddressAction
      */
     public StagedOrderSetShippingAddressAction buildUnchecked() {
         return new StagedOrderSetShippingAddressActionImpl(address);

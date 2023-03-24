@@ -46,7 +46,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>User-defined unique identifier.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.sku</code></p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
-     * @param quantityOnStock
+     * @param quantityOnStock value to be set
      * @return Builder
      */
 
@@ -79,7 +79,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.restockableInDays</code></p>
-     * @param restockableInDays
+     * @param restockableInDays value to be set
      * @return Builder
      */
 
@@ -90,7 +90,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
-     * @param expectedDelivery
+     * @param expectedDelivery value to be set
      * @return Builder
      */
 
@@ -101,6 +101,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -113,7 +114,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -125,6 +126,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -136,7 +138,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -178,6 +180,10 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
         return this.custom;
     }
 
+    /**
+     * builds InventoryImport with checking for non-null required values
+     * @return InventoryImport
+     */
     public InventoryImport build() {
         Objects.requireNonNull(key, InventoryImport.class + ": key is missing");
         Objects.requireNonNull(sku, InventoryImport.class + ": sku is missing");
@@ -187,7 +193,8 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     * builds InventoryImport without checking for non null required values
+     * builds InventoryImport without checking for non-null required values
+     * @return InventoryImport
      */
     public InventoryImport buildUnchecked() {
         return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel,

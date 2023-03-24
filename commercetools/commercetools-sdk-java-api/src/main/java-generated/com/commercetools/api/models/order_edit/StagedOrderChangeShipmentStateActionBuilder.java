@@ -27,7 +27,7 @@ public class StagedOrderChangeShipmentStateActionBuilder implements Builder<Stag
 
     /**
      *
-     * @param shipmentState
+     * @param shipmentState value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class StagedOrderChangeShipmentStateActionBuilder implements Builder<Stag
         return this.shipmentState;
     }
 
+    /**
+     * builds StagedOrderChangeShipmentStateAction with checking for non-null required values
+     * @return StagedOrderChangeShipmentStateAction
+     */
     public StagedOrderChangeShipmentStateAction build() {
         return new StagedOrderChangeShipmentStateActionImpl(shipmentState);
     }
 
     /**
-     * builds StagedOrderChangeShipmentStateAction without checking for non null required values
+     * builds StagedOrderChangeShipmentStateAction without checking for non-null required values
+     * @return StagedOrderChangeShipmentStateAction
      */
     public StagedOrderChangeShipmentStateAction buildUnchecked() {
         return new StagedOrderChangeShipmentStateActionImpl(shipmentState);

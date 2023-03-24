@@ -28,7 +28,7 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Custom Line Item is removed from the Cart.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
         return this.quantity;
     }
 
+    /**
+     * builds CartChangeCustomLineItemQuantityAction with checking for non-null required values
+     * @return CartChangeCustomLineItemQuantityAction
+     */
     public CartChangeCustomLineItemQuantityAction build() {
         Objects.requireNonNull(customLineItemId,
             CartChangeCustomLineItemQuantityAction.class + ": customLineItemId is missing");
@@ -65,7 +69,8 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
     }
 
     /**
-     * builds CartChangeCustomLineItemQuantityAction without checking for non null required values
+     * builds CartChangeCustomLineItemQuantityAction without checking for non-null required values
+     * @return CartChangeCustomLineItemQuantityAction
      */
     public CartChangeCustomLineItemQuantityAction buildUnchecked() {
         return new CartChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);

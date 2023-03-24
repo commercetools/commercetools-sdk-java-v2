@@ -73,7 +73,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Password of the Customer.</p>
-     * @param password
+     * @param password value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Given name (first name) of the Customer.</p>
-     * @param firstName
+     * @param firstName value to be set
      * @return Builder
      */
 
@@ -106,7 +106,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Family name (last name) of the Customer.</p>
-     * @param lastName
+     * @param lastName value to be set
      * @return Builder
      */
 
@@ -117,7 +117,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Middle name of the Customer.</p>
-     * @param middleName
+     * @param middleName value to be set
      * @return Builder
      */
 
@@ -128,7 +128,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Title of the Customer, for example, 'Dr.'.</p>
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -139,7 +139,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
-     * @param salutation
+     * @param salutation value to be set
      * @return Builder
      */
 
@@ -150,7 +150,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Date of birth of the Customer.</p>
-     * @param dateOfBirth
+     * @param dateOfBirth value to be set
      * @return Builder
      */
 
@@ -161,7 +161,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Company name of the Customer.</p>
-     * @param companyName
+     * @param companyName value to be set
      * @return Builder
      */
 
@@ -172,7 +172,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Unique VAT ID of the Customer.</p>
-     * @param vatId
+     * @param vatId value to be set
      * @return Builder
      */
 
@@ -183,7 +183,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -195,7 +195,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -207,7 +207,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -222,6 +222,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -236,6 +237,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -248,7 +250,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
-     * @param defaultShippingAddress
+     * @param defaultShippingAddress value to be set
      * @return Builder
      */
 
@@ -259,7 +261,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
-     * @param defaultBillingAddress
+     * @param defaultBillingAddress value to be set
      * @return Builder
      */
 
@@ -270,6 +272,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Custom Fields for the Customer.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -281,7 +284,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Custom Fields for the Customer.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -292,7 +295,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -303,7 +306,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -315,7 +318,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -327,7 +330,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -342,6 +345,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -356,6 +360,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -444,6 +449,10 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
         return this.stores;
     }
 
+    /**
+     * builds MyCustomerDraft with checking for non-null required values
+     * @return MyCustomerDraft
+     */
     public MyCustomerDraft build() {
         Objects.requireNonNull(email, MyCustomerDraft.class + ": email is missing");
         Objects.requireNonNull(password, MyCustomerDraft.class + ": password is missing");
@@ -452,7 +461,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     * builds MyCustomerDraft without checking for non null required values
+     * builds MyCustomerDraft without checking for non-null required values
+     * @return MyCustomerDraft
      */
     public MyCustomerDraft buildUnchecked() {
         return new MyCustomerDraftImpl(email, password, firstName, lastName, middleName, title, salutation, dateOfBirth,

@@ -28,7 +28,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return this.quantity;
     }
 
+    /**
+     * builds ItemShippingTarget with checking for non-null required values
+     * @return ItemShippingTarget
+     */
     public ItemShippingTarget build() {
         Objects.requireNonNull(addressKey, ItemShippingTarget.class + ": addressKey is missing");
         Objects.requireNonNull(quantity, ItemShippingTarget.class + ": quantity is missing");
@@ -63,7 +67,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     * builds ItemShippingTarget without checking for non null required values
+     * builds ItemShippingTarget without checking for non-null required values
+     * @return ItemShippingTarget
      */
     public ItemShippingTarget buildUnchecked() {
         return new ItemShippingTargetImpl(addressKey, quantity);

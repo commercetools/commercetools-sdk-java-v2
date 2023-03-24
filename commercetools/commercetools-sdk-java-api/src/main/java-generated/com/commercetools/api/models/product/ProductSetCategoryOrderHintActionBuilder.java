@@ -33,7 +33,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
 
     /**
      *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
-     * @param categoryId
+     * @param categoryId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
 
     /**
      *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
-     * @param orderHint
+     * @param orderHint value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
 
     /**
      *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -78,13 +78,18 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
         return this.staged;
     }
 
+    /**
+     * builds ProductSetCategoryOrderHintAction with checking for non-null required values
+     * @return ProductSetCategoryOrderHintAction
+     */
     public ProductSetCategoryOrderHintAction build() {
         Objects.requireNonNull(categoryId, ProductSetCategoryOrderHintAction.class + ": categoryId is missing");
         return new ProductSetCategoryOrderHintActionImpl(categoryId, orderHint, staged);
     }
 
     /**
-     * builds ProductSetCategoryOrderHintAction without checking for non null required values
+     * builds ProductSetCategoryOrderHintAction without checking for non-null required values
+     * @return ProductSetCategoryOrderHintAction
      */
     public ProductSetCategoryOrderHintAction buildUnchecked() {
         return new ProductSetCategoryOrderHintActionImpl(categoryId, orderHint, staged);

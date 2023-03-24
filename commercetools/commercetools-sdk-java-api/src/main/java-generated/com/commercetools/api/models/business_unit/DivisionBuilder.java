@@ -88,7 +88,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -99,7 +99,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Current version of the Business Unit.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -110,7 +110,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Date and time (UTC) the Business Unit was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -121,7 +121,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Date and time (UTC) the Business Unit was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -132,6 +132,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -143,7 +144,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -155,6 +156,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -166,7 +168,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -177,7 +179,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>User-defined unique identifier of the Business Unit.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -188,7 +190,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
-     * @param status
+     * @param status value to be set
      * @return Builder
      */
 
@@ -201,7 +203,7 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -214,7 +216,7 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -228,7 +230,7 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -244,6 +246,7 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -260,6 +263,7 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -272,7 +276,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.</p>
-     * @param storeMode
+     * @param storeMode value to be set
      * @return Builder
      */
 
@@ -283,7 +287,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Name of the Business Unit.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -294,7 +298,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Email address of the Business Unit.</p>
-     * @param contactEmail
+     * @param contactEmail value to be set
      * @return Builder
      */
 
@@ -305,6 +309,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -316,7 +321,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -327,7 +332,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -338,7 +343,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -349,7 +354,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -363,6 +368,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -377,6 +383,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -389,7 +396,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
-     * @param shippingAddressIds
+     * @param shippingAddressIds value to be set
      * @return Builder
      */
 
@@ -400,7 +407,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
-     * @param shippingAddressIds
+     * @param shippingAddressIds value to be set
      * @return Builder
      */
 
@@ -411,7 +418,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
-     * @param shippingAddressIds
+     * @param shippingAddressIds value to be set
      * @return Builder
      */
 
@@ -425,7 +432,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifier of the address used as the default shipping address.</p>
-     * @param defaultShippingAddressId
+     * @param defaultShippingAddressId value to be set
      * @return Builder
      */
 
@@ -436,7 +443,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
-     * @param billingAddressIds
+     * @param billingAddressIds value to be set
      * @return Builder
      */
 
@@ -447,7 +454,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
-     * @param billingAddressIds
+     * @param billingAddressIds value to be set
      * @return Builder
      */
 
@@ -458,7 +465,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
-     * @param billingAddressIds
+     * @param billingAddressIds value to be set
      * @return Builder
      */
 
@@ -472,7 +479,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Unique identifier of the address used as the default billing address.</p>
-     * @param defaultBillingAddressId
+     * @param defaultBillingAddressId value to be set
      * @return Builder
      */
 
@@ -483,7 +490,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
-     * @param associates
+     * @param associates value to be set
      * @return Builder
      */
 
@@ -494,7 +501,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
-     * @param associates
+     * @param associates value to be set
      * @return Builder
      */
 
@@ -506,7 +513,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
-     * @param associates
+     * @param associates value to be set
      * @return Builder
      */
 
@@ -520,6 +527,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param builder function to build the associates value
      * @return Builder
      */
 
@@ -534,6 +542,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param builder function to build the associates value
      * @return Builder
      */
 
@@ -546,6 +555,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Parent unit of the Division.</p>
+     * @param builder function to build the parentUnit value
      * @return Builder
      */
 
@@ -558,7 +568,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Parent unit of the Division.</p>
-     * @param parentUnit
+     * @param parentUnit value to be set
      * @return Builder
      */
 
@@ -570,6 +580,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
+     * @param builder function to build the topLevelUnit value
      * @return Builder
      */
 
@@ -583,7 +594,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
-     * @param topLevelUnit
+     * @param topLevelUnit value to be set
      * @return Builder
      */
 
@@ -686,6 +697,10 @@ public class DivisionBuilder implements Builder<Division> {
         return this.topLevelUnit;
     }
 
+    /**
+     * builds Division with checking for non-null required values
+     * @return Division
+     */
     public Division build() {
         Objects.requireNonNull(id, Division.class + ": id is missing");
         Objects.requireNonNull(version, Division.class + ": version is missing");
@@ -705,7 +720,8 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     * builds Division without checking for non null required values
+     * builds Division without checking for non-null required values
+     * @return Division
      */
     public Division buildUnchecked() {
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,

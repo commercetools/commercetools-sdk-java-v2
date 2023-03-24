@@ -31,7 +31,7 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
 
     /**
      *  <p>Unique ID of the referenced Store.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
 
     /**
      *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
 
     /**
      *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
         return this.obj;
     }
 
+    /**
+     * builds StoreReference with checking for non-null required values
+     * @return StoreReference
+     */
     public StoreReference build() {
         Objects.requireNonNull(id, StoreReference.class + ": id is missing");
         return new StoreReferenceImpl(id, obj);
     }
 
     /**
-     * builds StoreReference without checking for non null required values
+     * builds StoreReference without checking for non-null required values
+     * @return StoreReference
      */
     public StoreReference buildUnchecked() {
         return new StoreReferenceImpl(id, obj);

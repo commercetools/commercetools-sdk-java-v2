@@ -27,7 +27,7 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
 
     /**
      *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ObjectNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ObjectNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
         return this.values;
     }
 
+    /**
+     * builds ObjectNotFoundError with checking for non-null required values
+     * @return ObjectNotFoundError
+     */
     public ObjectNotFoundError build() {
         Objects.requireNonNull(message, ObjectNotFoundError.class + ": message is missing");
         return new ObjectNotFoundErrorImpl(message, values);
     }
 
     /**
-     * builds ObjectNotFoundError without checking for non null required values
+     * builds ObjectNotFoundError without checking for non-null required values
+     * @return ObjectNotFoundError
      */
     public ObjectNotFoundError buildUnchecked() {
         return new ObjectNotFoundErrorImpl(message, values);

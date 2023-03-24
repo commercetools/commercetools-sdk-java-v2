@@ -28,7 +28,7 @@ public class MyCartSetCountryActionBuilder implements Builder<MyCartSetCountryAc
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -42,12 +42,17 @@ public class MyCartSetCountryActionBuilder implements Builder<MyCartSetCountryAc
         return this.country;
     }
 
+    /**
+     * builds MyCartSetCountryAction with checking for non-null required values
+     * @return MyCartSetCountryAction
+     */
     public MyCartSetCountryAction build() {
         return new MyCartSetCountryActionImpl(country);
     }
 
     /**
-     * builds MyCartSetCountryAction without checking for non null required values
+     * builds MyCartSetCountryAction without checking for non-null required values
+     * @return MyCartSetCountryAction
      */
     public MyCartSetCountryAction buildUnchecked() {
         return new MyCartSetCountryActionImpl(country);

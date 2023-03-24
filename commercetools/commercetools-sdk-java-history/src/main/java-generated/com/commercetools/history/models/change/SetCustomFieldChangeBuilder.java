@@ -35,7 +35,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *  <p>Update action for setting a custom field</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *  <p>Custom field name</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *
-     * @param customTypeId
+     * @param customTypeId value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -79,7 +79,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -108,6 +108,10 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
         return this.previousValue;
     }
 
+    /**
+     * builds SetCustomFieldChange with checking for non-null required values
+     * @return SetCustomFieldChange
+     */
     public SetCustomFieldChange build() {
         Objects.requireNonNull(change, SetCustomFieldChange.class + ": change is missing");
         Objects.requireNonNull(name, SetCustomFieldChange.class + ": name is missing");
@@ -118,7 +122,8 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     }
 
     /**
-     * builds SetCustomFieldChange without checking for non null required values
+     * builds SetCustomFieldChange without checking for non-null required values
+     * @return SetCustomFieldChange
      */
     public SetCustomFieldChange buildUnchecked() {
         return new SetCustomFieldChangeImpl(change, name, customTypeId, nextValue, previousValue);

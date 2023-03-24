@@ -40,7 +40,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -105,7 +107,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -116,6 +118,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -127,7 +130,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -139,7 +142,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -151,7 +154,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -163,7 +166,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -178,6 +181,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -192,6 +196,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -204,6 +209,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -215,7 +221,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -250,12 +256,17 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return this.custom;
     }
 
+    /**
+     * builds OrderAddDeliveryAction with checking for non-null required values
+     * @return OrderAddDeliveryAction
+     */
     public OrderAddDeliveryAction build() {
         return new OrderAddDeliveryActionImpl(items, shippingKey, address, parcels, custom);
     }
 
     /**
-     * builds OrderAddDeliveryAction without checking for non null required values
+     * builds OrderAddDeliveryAction without checking for non-null required values
+     * @return OrderAddDeliveryAction
      */
     public OrderAddDeliveryAction buildUnchecked() {
         return new OrderAddDeliveryActionImpl(items, shippingKey, address, parcels, custom);

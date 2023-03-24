@@ -37,7 +37,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p><code>id</code> of the APIClient which created the resource.</p>
-     * @param clientId
+     * @param clientId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
-     * @param externalUserId
+     * @param externalUserId value to be set
      * @return Builder
      */
 
@@ -59,6 +59,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -81,7 +82,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p>Indicates the anonymous session during which the resource was created.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -110,12 +111,17 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
         return this.anonymousId;
     }
 
+    /**
+     * builds CreatedBy with checking for non-null required values
+     * @return CreatedBy
+     */
     public CreatedBy build() {
         return new CreatedByImpl(clientId, externalUserId, customer, anonymousId);
     }
 
     /**
-     * builds CreatedBy without checking for non null required values
+     * builds CreatedBy without checking for non-null required values
+     * @return CreatedBy
      */
     public CreatedBy buildUnchecked() {
         return new CreatedByImpl(clientId, externalUserId, customer, anonymousId);

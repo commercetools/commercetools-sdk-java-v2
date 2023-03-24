@@ -26,6 +26,7 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
 
     /**
      *  <p>Value to append.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
 
     /**
      *  <p>Value to append.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -53,6 +54,10 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
         return this.distributionChannel;
     }
 
+    /**
+     * builds StoreAddDistributionChannelAction with checking for non-null required values
+     * @return StoreAddDistributionChannelAction
+     */
     public StoreAddDistributionChannelAction build() {
         Objects.requireNonNull(distributionChannel,
             StoreAddDistributionChannelAction.class + ": distributionChannel is missing");
@@ -60,7 +65,8 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
     }
 
     /**
-     * builds StoreAddDistributionChannelAction without checking for non null required values
+     * builds StoreAddDistributionChannelAction without checking for non-null required values
+     * @return StoreAddDistributionChannelAction
      */
     public StoreAddDistributionChannelAction buildUnchecked() {
         return new StoreAddDistributionChannelActionImpl(distributionChannel);

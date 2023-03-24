@@ -25,7 +25,7 @@ public class TimeFieldBuilder implements Builder<TimeField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class TimeFieldBuilder implements Builder<TimeField> {
         return this.value;
     }
 
+    /**
+     * builds TimeField with checking for non-null required values
+     * @return TimeField
+     */
     public TimeField build() {
         Objects.requireNonNull(value, TimeField.class + ": value is missing");
         return new TimeFieldImpl(value);
     }
 
     /**
-     * builds TimeField without checking for non null required values
+     * builds TimeField without checking for non-null required values
+     * @return TimeField
      */
     public TimeField buildUnchecked() {
         return new TimeFieldImpl(value);

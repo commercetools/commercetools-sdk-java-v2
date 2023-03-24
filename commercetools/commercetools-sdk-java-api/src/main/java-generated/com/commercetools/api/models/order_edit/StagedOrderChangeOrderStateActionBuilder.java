@@ -25,7 +25,7 @@ public class StagedOrderChangeOrderStateActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param orderState
+     * @param orderState value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class StagedOrderChangeOrderStateActionBuilder implements Builder<StagedO
         return this.orderState;
     }
 
+    /**
+     * builds StagedOrderChangeOrderStateAction with checking for non-null required values
+     * @return StagedOrderChangeOrderStateAction
+     */
     public StagedOrderChangeOrderStateAction build() {
         Objects.requireNonNull(orderState, StagedOrderChangeOrderStateAction.class + ": orderState is missing");
         return new StagedOrderChangeOrderStateActionImpl(orderState);
     }
 
     /**
-     * builds StagedOrderChangeOrderStateAction without checking for non null required values
+     * builds StagedOrderChangeOrderStateAction without checking for non-null required values
+     * @return StagedOrderChangeOrderStateAction
      */
     public StagedOrderChangeOrderStateAction buildUnchecked() {
         return new StagedOrderChangeOrderStateActionImpl(orderState);

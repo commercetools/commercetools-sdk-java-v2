@@ -28,6 +28,7 @@ public class CartSetShippingAddressActionBuilder implements Builder<CartSetShipp
 
     /**
      *  <p>Value to set. If not set, the shipping address is unset, and the <code>taxedPrice</code> and <code>taxRate</code> are unset in all Line Items of the Cart.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class CartSetShippingAddressActionBuilder implements Builder<CartSetShipp
 
     /**
      *  <p>Value to set. If not set, the shipping address is unset, and the <code>taxedPrice</code> and <code>taxRate</code> are unset in all Line Items of the Cart.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class CartSetShippingAddressActionBuilder implements Builder<CartSetShipp
         return this.address;
     }
 
+    /**
+     * builds CartSetShippingAddressAction with checking for non-null required values
+     * @return CartSetShippingAddressAction
+     */
     public CartSetShippingAddressAction build() {
         return new CartSetShippingAddressActionImpl(address);
     }
 
     /**
-     * builds CartSetShippingAddressAction without checking for non null required values
+     * builds CartSetShippingAddressAction without checking for non-null required values
+     * @return CartSetShippingAddressAction
      */
     public CartSetShippingAddressAction buildUnchecked() {
         return new CartSetShippingAddressActionImpl(address);

@@ -35,7 +35,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
-     * @param taxMode
+     * @param taxMode value to be set
      * @return Builder
      */
 
@@ -58,6 +58,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -83,6 +84,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -96,7 +98,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -122,6 +124,10 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
         return this.previousValue;
     }
 
+    /**
+     * builds SetShippingMethodTaxAmountChange with checking for non-null required values
+     * @return SetShippingMethodTaxAmountChange
+     */
     public SetShippingMethodTaxAmountChange build() {
         Objects.requireNonNull(change, SetShippingMethodTaxAmountChange.class + ": change is missing");
         Objects.requireNonNull(taxMode, SetShippingMethodTaxAmountChange.class + ": taxMode is missing");
@@ -131,7 +137,8 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
     }
 
     /**
-     * builds SetShippingMethodTaxAmountChange without checking for non null required values
+     * builds SetShippingMethodTaxAmountChange without checking for non-null required values
+     * @return SetShippingMethodTaxAmountChange
      */
     public SetShippingMethodTaxAmountChange buildUnchecked() {
         return new SetShippingMethodTaxAmountChangeImpl(change, taxMode, nextValue, previousValue);

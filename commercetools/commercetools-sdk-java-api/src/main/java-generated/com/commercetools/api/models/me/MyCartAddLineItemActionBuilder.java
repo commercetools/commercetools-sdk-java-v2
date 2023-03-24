@@ -53,7 +53,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     /**
      *  <p><code>id</code> of the Product.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
-     * @param productId
+     * @param productId value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
      *  <p><code>id</code> of the ProductVariant in the Product.</p>
      *  <p>If not given, the Master Variant is used.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Number of Line Items to add to the Cart.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -101,7 +101,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     /**
      *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
-     * @param addedAt
+     * @param addedAt value to be set
      * @return Builder
      */
 
@@ -112,6 +112,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -125,7 +126,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -137,6 +138,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -149,7 +151,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -161,6 +163,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -173,7 +176,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -185,6 +188,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Custom Fields for the Line Item.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -196,7 +200,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Custom Fields for the Line Item.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -251,13 +255,18 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
         return this.custom;
     }
 
+    /**
+     * builds MyCartAddLineItemAction with checking for non-null required values
+     * @return MyCartAddLineItemAction
+     */
     public MyCartAddLineItemAction build() {
         return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
             supplyChannel, shippingDetails, custom);
     }
 
     /**
-     * builds MyCartAddLineItemAction without checking for non null required values
+     * builds MyCartAddLineItemAction without checking for non-null required values
+     * @return MyCartAddLineItemAction
      */
     public MyCartAddLineItemAction buildUnchecked() {
         return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,

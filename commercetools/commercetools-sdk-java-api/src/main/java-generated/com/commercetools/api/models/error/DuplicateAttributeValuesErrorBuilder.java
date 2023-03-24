@@ -31,7 +31,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p><code>"The set of attributes must be unique across all variants."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -42,6 +42,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -51,6 +53,9 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -63,7 +68,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -75,7 +80,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -87,7 +92,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -102,6 +107,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -116,6 +122,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -138,6 +145,10 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this.attributes;
     }
 
+    /**
+     * builds DuplicateAttributeValuesError with checking for non-null required values
+     * @return DuplicateAttributeValuesError
+     */
     public DuplicateAttributeValuesError build() {
         Objects.requireNonNull(message, DuplicateAttributeValuesError.class + ": message is missing");
         Objects.requireNonNull(attributes, DuplicateAttributeValuesError.class + ": attributes is missing");
@@ -145,7 +156,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     * builds DuplicateAttributeValuesError without checking for non null required values
+     * builds DuplicateAttributeValuesError without checking for non-null required values
+     * @return DuplicateAttributeValuesError
      */
     public DuplicateAttributeValuesError buildUnchecked() {
         return new DuplicateAttributeValuesErrorImpl(message, values, attributes);

@@ -29,7 +29,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -93,6 +94,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -111,6 +113,10 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
         return this.actions;
     }
 
+    /**
+     * builds MyQuoteRequestUpdate with checking for non-null required values
+     * @return MyQuoteRequestUpdate
+     */
     public MyQuoteRequestUpdate build() {
         Objects.requireNonNull(version, MyQuoteRequestUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, MyQuoteRequestUpdate.class + ": actions is missing");
@@ -118,7 +124,8 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
     }
 
     /**
-     * builds MyQuoteRequestUpdate without checking for non null required values
+     * builds MyQuoteRequestUpdate without checking for non-null required values
+     * @return MyQuoteRequestUpdate
      */
     public MyQuoteRequestUpdate buildUnchecked() {
         return new MyQuoteRequestUpdateImpl(version, actions);

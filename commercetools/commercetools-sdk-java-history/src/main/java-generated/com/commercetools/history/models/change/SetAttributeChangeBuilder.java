@@ -35,7 +35,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *  <p>Update action for <code>setAttribute</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -93,7 +95,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -119,6 +121,10 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetAttributeChange with checking for non-null required values
+     * @return SetAttributeChange
+     */
     public SetAttributeChange build() {
         Objects.requireNonNull(change, SetAttributeChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetAttributeChange.class + ": catalogData is missing");
@@ -128,7 +134,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     * builds SetAttributeChange without checking for non null required values
+     * builds SetAttributeChange without checking for non-null required values
+     * @return SetAttributeChange
      */
     public SetAttributeChange buildUnchecked() {
         return new SetAttributeChangeImpl(change, catalogData, previousValue, nextValue);

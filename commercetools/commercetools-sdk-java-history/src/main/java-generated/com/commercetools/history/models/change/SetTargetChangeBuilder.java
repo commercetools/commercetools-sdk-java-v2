@@ -32,7 +32,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *  <p>Shape of the action for <code>setTarget</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -97,6 +99,10 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetTargetChange with checking for non-null required values
+     * @return SetTargetChange
+     */
     public SetTargetChange build() {
         Objects.requireNonNull(change, SetTargetChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetTargetChange.class + ": previousValue is missing");
@@ -105,7 +111,8 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
     }
 
     /**
-     * builds SetTargetChange without checking for non null required values
+     * builds SetTargetChange without checking for non-null required values
+     * @return SetTargetChange
      */
     public SetTargetChange buildUnchecked() {
         return new SetTargetChangeImpl(change, previousValue, nextValue);

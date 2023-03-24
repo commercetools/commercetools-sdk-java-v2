@@ -43,7 +43,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>User-defined unique SKU of the Product Variant.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>User-defined unique identifier for the ProductVariant.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -88,7 +88,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -103,6 +103,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -117,6 +118,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -129,7 +131,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -141,7 +143,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -153,7 +155,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -168,6 +170,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -182,6 +185,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -194,7 +198,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Images for the Product Variant.</p>
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -205,7 +209,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Images for the Product Variant.</p>
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -217,7 +221,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Images for the Product Variant.</p>
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -231,6 +235,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Images for the Product Variant.</p>
+     * @param builder function to build the images value
      * @return Builder
      */
 
@@ -245,6 +250,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Images for the Product Variant.</p>
+     * @param builder function to build the images value
      * @return Builder
      */
 
@@ -257,7 +263,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Media assets for the Product Variant.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -268,7 +274,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Media assets for the Product Variant.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -280,7 +286,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Media assets for the Product Variant.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -295,6 +301,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -309,6 +316,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -349,12 +357,17 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this.assets;
     }
 
+    /**
+     * builds ProductVariantDraft with checking for non-null required values
+     * @return ProductVariantDraft
+     */
     public ProductVariantDraft build() {
         return new ProductVariantDraftImpl(sku, key, prices, attributes, images, assets);
     }
 
     /**
-     * builds ProductVariantDraft without checking for non null required values
+     * builds ProductVariantDraft without checking for non-null required values
+     * @return ProductVariantDraft
      */
     public ProductVariantDraft buildUnchecked() {
         return new ProductVariantDraftImpl(sku, key, prices, attributes, images, assets);

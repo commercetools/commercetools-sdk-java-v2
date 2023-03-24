@@ -29,7 +29,7 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
-     * @param keys
+     * @param keys value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
-     * @param keys
+     * @param keys value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
-     * @param keys
+     * @param keys value to be set
      * @return Builder
      */
 
@@ -82,6 +82,10 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
         return this.keys;
     }
 
+    /**
+     * builds TypeChangeLocalizedEnumValueOrderAction with checking for non-null required values
+     * @return TypeChangeLocalizedEnumValueOrderAction
+     */
     public TypeChangeLocalizedEnumValueOrderAction build() {
         Objects.requireNonNull(fieldName, TypeChangeLocalizedEnumValueOrderAction.class + ": fieldName is missing");
         Objects.requireNonNull(keys, TypeChangeLocalizedEnumValueOrderAction.class + ": keys is missing");
@@ -89,7 +93,8 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     * builds TypeChangeLocalizedEnumValueOrderAction without checking for non null required values
+     * builds TypeChangeLocalizedEnumValueOrderAction without checking for non-null required values
+     * @return TypeChangeLocalizedEnumValueOrderAction
      */
     public TypeChangeLocalizedEnumValueOrderAction buildUnchecked() {
         return new TypeChangeLocalizedEnumValueOrderActionImpl(fieldName, keys);

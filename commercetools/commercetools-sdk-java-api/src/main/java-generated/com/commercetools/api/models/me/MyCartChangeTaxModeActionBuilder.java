@@ -25,7 +25,7 @@ public class MyCartChangeTaxModeActionBuilder implements Builder<MyCartChangeTax
 
     /**
      *  <p>The new TaxMode.</p>
-     * @param taxMode
+     * @param taxMode value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class MyCartChangeTaxModeActionBuilder implements Builder<MyCartChangeTax
         return this.taxMode;
     }
 
+    /**
+     * builds MyCartChangeTaxModeAction with checking for non-null required values
+     * @return MyCartChangeTaxModeAction
+     */
     public MyCartChangeTaxModeAction build() {
         Objects.requireNonNull(taxMode, MyCartChangeTaxModeAction.class + ": taxMode is missing");
         return new MyCartChangeTaxModeActionImpl(taxMode);
     }
 
     /**
-     * builds MyCartChangeTaxModeAction without checking for non null required values
+     * builds MyCartChangeTaxModeAction without checking for non-null required values
+     * @return MyCartChangeTaxModeAction
      */
     public MyCartChangeTaxModeAction buildUnchecked() {
         return new MyCartChangeTaxModeActionImpl(taxMode);

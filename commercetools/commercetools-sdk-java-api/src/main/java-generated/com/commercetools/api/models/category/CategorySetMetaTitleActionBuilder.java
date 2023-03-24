@@ -28,6 +28,7 @@ public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMet
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the metaTitle value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMet
 
     /**
      *  <p>Value to set.</p>
-     * @param metaTitle
+     * @param metaTitle value to be set
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMet
         return this.metaTitle;
     }
 
+    /**
+     * builds CategorySetMetaTitleAction with checking for non-null required values
+     * @return CategorySetMetaTitleAction
+     */
     public CategorySetMetaTitleAction build() {
         return new CategorySetMetaTitleActionImpl(metaTitle);
     }
 
     /**
-     * builds CategorySetMetaTitleAction without checking for non null required values
+     * builds CategorySetMetaTitleAction without checking for non-null required values
+     * @return CategorySetMetaTitleAction
      */
     public CategorySetMetaTitleAction buildUnchecked() {
         return new CategorySetMetaTitleActionImpl(metaTitle);

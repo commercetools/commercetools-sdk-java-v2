@@ -61,7 +61,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Unique identifier of the Subscription.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Current version of the Subscription.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Date and time (UTC) the Subscription was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Date and time (UTC) the Subscription was last modified.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -105,6 +105,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -116,7 +117,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -128,6 +129,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -139,7 +141,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -150,7 +152,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Change notifications subscribed to.</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -161,7 +163,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Change notifications subscribed to.</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -173,7 +175,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Change notifications subscribed to.</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -188,6 +190,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Change notifications subscribed to.</p>
+     * @param builder function to build the changes value
      * @return Builder
      */
 
@@ -203,6 +206,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Change notifications subscribed to.</p>
+     * @param builder function to build the changes value
      * @return Builder
      */
 
@@ -216,7 +220,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Messaging service to which the messages are to be sent.</p>
-     * @param destination
+     * @param destination value to be set
      * @return Builder
      */
 
@@ -227,6 +231,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Messaging service to which the messages are to be sent.</p>
+     * @param builder function to build the destination value
      * @return Builder
      */
 
@@ -238,7 +243,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>User-defined unique identifier of the Subscription.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -249,7 +254,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Messages subscribed to.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -261,7 +266,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Messages subscribed to.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -273,7 +278,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Messages subscribed to.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -288,6 +293,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Messages subscribed to.</p>
+     * @param builder function to build the messages value
      * @return Builder
      */
 
@@ -303,6 +309,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Messages subscribed to.</p>
+     * @param builder function to build the messages value
      * @return Builder
      */
 
@@ -316,7 +323,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Format in which the payload is delivered.</p>
-     * @param format
+     * @param format value to be set
      * @return Builder
      */
 
@@ -327,6 +334,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Format in which the payload is delivered.</p>
+     * @param builder function to build the format value
      * @return Builder
      */
 
@@ -338,7 +346,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Status of the Subscription.</p>
-     * @param status
+     * @param status value to be set
      * @return Builder
      */
 
@@ -398,6 +406,10 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this.status;
     }
 
+    /**
+     * builds Subscription with checking for non-null required values
+     * @return Subscription
+     */
     public Subscription build() {
         Objects.requireNonNull(id, Subscription.class + ": id is missing");
         Objects.requireNonNull(version, Subscription.class + ": version is missing");
@@ -413,7 +425,8 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     * builds Subscription without checking for non null required values
+     * builds Subscription without checking for non-null required values
+     * @return Subscription
      */
     public Subscription buildUnchecked() {
         return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,

@@ -30,7 +30,7 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
 
     /**
      *
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
 
     /**
      *
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
         return this.variantId;
     }
 
+    /**
+     * builds ProductLegacySetSkuAction with checking for non-null required values
+     * @return ProductLegacySetSkuAction
+     */
     public ProductLegacySetSkuAction build() {
         Objects.requireNonNull(variantId, ProductLegacySetSkuAction.class + ": variantId is missing");
         return new ProductLegacySetSkuActionImpl(sku, variantId);
     }
 
     /**
-     * builds ProductLegacySetSkuAction without checking for non null required values
+     * builds ProductLegacySetSkuAction without checking for non-null required values
+     * @return ProductLegacySetSkuAction
      */
     public ProductLegacySetSkuAction buildUnchecked() {
         return new ProductLegacySetSkuActionImpl(sku, variantId);

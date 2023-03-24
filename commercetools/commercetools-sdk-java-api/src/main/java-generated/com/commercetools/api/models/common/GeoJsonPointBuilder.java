@@ -25,7 +25,7 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
 
     /**
      *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
-     * @param coordinates
+     * @param coordinates value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
 
     /**
      *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
-     * @param coordinates
+     * @param coordinates value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
 
     /**
      *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
-     * @param coordinates
+     * @param coordinates value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
         return this.coordinates;
     }
 
+    /**
+     * builds GeoJsonPoint with checking for non-null required values
+     * @return GeoJsonPoint
+     */
     public GeoJsonPoint build() {
         Objects.requireNonNull(coordinates, GeoJsonPoint.class + ": coordinates is missing");
         return new GeoJsonPointImpl(coordinates);
     }
 
     /**
-     * builds GeoJsonPoint without checking for non null required values
+     * builds GeoJsonPoint without checking for non-null required values
+     * @return GeoJsonPoint
      */
     public GeoJsonPoint buildUnchecked() {
         return new GeoJsonPointImpl(coordinates);

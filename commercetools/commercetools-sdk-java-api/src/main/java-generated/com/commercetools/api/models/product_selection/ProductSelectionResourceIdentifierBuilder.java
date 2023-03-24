@@ -30,7 +30,7 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
 
     /**
      *  <p>Unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
 
     /**
      *  <p>User-defined unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
         return this.key;
     }
 
+    /**
+     * builds ProductSelectionResourceIdentifier with checking for non-null required values
+     * @return ProductSelectionResourceIdentifier
+     */
     public ProductSelectionResourceIdentifier build() {
         return new ProductSelectionResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds ProductSelectionResourceIdentifier without checking for non null required values
+     * builds ProductSelectionResourceIdentifier without checking for non-null required values
+     * @return ProductSelectionResourceIdentifier
      */
     public ProductSelectionResourceIdentifier buildUnchecked() {
         return new ProductSelectionResourceIdentifierImpl(id, key);

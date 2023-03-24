@@ -29,7 +29,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -78,6 +78,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -92,6 +93,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -110,6 +112,10 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds CategoryUpdate with checking for non-null required values
+     * @return CategoryUpdate
+     */
     public CategoryUpdate build() {
         Objects.requireNonNull(version, CategoryUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, CategoryUpdate.class + ": actions is missing");
@@ -117,7 +123,8 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     * builds CategoryUpdate without checking for non null required values
+     * builds CategoryUpdate without checking for non-null required values
+     * @return CategoryUpdate
      */
     public CategoryUpdate buildUnchecked() {
         return new CategoryUpdateImpl(version, actions);

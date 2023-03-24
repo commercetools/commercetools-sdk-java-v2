@@ -30,7 +30,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
 
     /**
      *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -41,6 +41,8 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public AttributeNameDoesNotExistErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,6 +52,9 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public AttributeNameDoesNotExistErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +67,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
 
     /**
      *  <p>Non-existent Attribute name.</p>
-     * @param invalidAttributeName
+     * @param invalidAttributeName value to be set
      * @return Builder
      */
 
@@ -83,6 +88,10 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
         return this.invalidAttributeName;
     }
 
+    /**
+     * builds AttributeNameDoesNotExistError with checking for non-null required values
+     * @return AttributeNameDoesNotExistError
+     */
     public AttributeNameDoesNotExistError build() {
         Objects.requireNonNull(message, AttributeNameDoesNotExistError.class + ": message is missing");
         Objects.requireNonNull(invalidAttributeName,
@@ -91,7 +100,8 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     }
 
     /**
-     * builds AttributeNameDoesNotExistError without checking for non null required values
+     * builds AttributeNameDoesNotExistError without checking for non-null required values
+     * @return AttributeNameDoesNotExistError
      */
     public AttributeNameDoesNotExistError buildUnchecked() {
         return new AttributeNameDoesNotExistErrorImpl(message, values, invalidAttributeName);

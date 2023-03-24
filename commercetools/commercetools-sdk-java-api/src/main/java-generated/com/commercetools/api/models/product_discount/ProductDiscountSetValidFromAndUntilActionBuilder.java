@@ -31,7 +31,7 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
 
     /**
      *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
 
     /**
      *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -63,12 +63,17 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
         return this.validUntil;
     }
 
+    /**
+     * builds ProductDiscountSetValidFromAndUntilAction with checking for non-null required values
+     * @return ProductDiscountSetValidFromAndUntilAction
+     */
     public ProductDiscountSetValidFromAndUntilAction build() {
         return new ProductDiscountSetValidFromAndUntilActionImpl(validFrom, validUntil);
     }
 
     /**
-     * builds ProductDiscountSetValidFromAndUntilAction without checking for non null required values
+     * builds ProductDiscountSetValidFromAndUntilAction without checking for non-null required values
+     * @return ProductDiscountSetValidFromAndUntilAction
      */
     public ProductDiscountSetValidFromAndUntilAction buildUnchecked() {
         return new ProductDiscountSetValidFromAndUntilActionImpl(validFrom, validUntil);

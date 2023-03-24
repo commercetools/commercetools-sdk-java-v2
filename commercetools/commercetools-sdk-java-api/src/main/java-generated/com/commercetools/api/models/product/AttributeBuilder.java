@@ -27,7 +27,7 @@ public class AttributeBuilder implements Builder<Attribute> {
 
     /**
      *  <p>Name of the Attribute.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class AttributeBuilder implements Builder<Attribute> {
      *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
      *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
      *  </ul>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,6 +63,10 @@ public class AttributeBuilder implements Builder<Attribute> {
         return this.value;
     }
 
+    /**
+     * builds Attribute with checking for non-null required values
+     * @return Attribute
+     */
     public Attribute build() {
         Objects.requireNonNull(name, Attribute.class + ": name is missing");
         Objects.requireNonNull(value, Attribute.class + ": value is missing");
@@ -70,7 +74,8 @@ public class AttributeBuilder implements Builder<Attribute> {
     }
 
     /**
-     * builds Attribute without checking for non null required values
+     * builds Attribute without checking for non-null required values
+     * @return Attribute
      */
     public Attribute buildUnchecked() {
         return new AttributeImpl(name, value);

@@ -29,7 +29,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds MyCartUpdate with checking for non-null required values
+     * @return MyCartUpdate
+     */
     public MyCartUpdate build() {
         Objects.requireNonNull(version, MyCartUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, MyCartUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
     }
 
     /**
-     * builds MyCartUpdate without checking for non null required values
+     * builds MyCartUpdate without checking for non-null required values
+     * @return MyCartUpdate
      */
     public MyCartUpdate buildUnchecked() {
         return new MyCartUpdateImpl(version, actions);

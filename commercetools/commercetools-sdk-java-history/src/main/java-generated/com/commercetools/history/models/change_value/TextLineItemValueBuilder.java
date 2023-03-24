@@ -29,7 +29,7 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
 
     /**
      *
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
         return this.name;
     }
 
+    /**
+     * builds TextLineItemValue with checking for non-null required values
+     * @return TextLineItemValue
+     */
     public TextLineItemValue build() {
         Objects.requireNonNull(id, TextLineItemValue.class + ": id is missing");
         Objects.requireNonNull(name, TextLineItemValue.class + ": name is missing");
@@ -75,7 +80,8 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
     }
 
     /**
-     * builds TextLineItemValue without checking for non null required values
+     * builds TextLineItemValue without checking for non-null required values
+     * @return TextLineItemValue
      */
     public TextLineItemValue buildUnchecked() {
         return new TextLineItemValueImpl(id, name);

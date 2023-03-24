@@ -31,7 +31,7 @@ public class SetOrderNumberChangeBuilder implements Builder<SetOrderNumberChange
 
     /**
      *  <p>Shape of the action for <code>setOrderNumber</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetOrderNumberChangeBuilder implements Builder<SetOrderNumberChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetOrderNumberChangeBuilder implements Builder<SetOrderNumberChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetOrderNumberChangeBuilder implements Builder<SetOrderNumberChange
         return this.nextValue;
     }
 
+    /**
+     * builds SetOrderNumberChange with checking for non-null required values
+     * @return SetOrderNumberChange
+     */
     public SetOrderNumberChange build() {
         Objects.requireNonNull(change, SetOrderNumberChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetOrderNumberChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetOrderNumberChangeBuilder implements Builder<SetOrderNumberChange
     }
 
     /**
-     * builds SetOrderNumberChange without checking for non null required values
+     * builds SetOrderNumberChange without checking for non-null required values
+     * @return SetOrderNumberChange
      */
     public SetOrderNumberChange buildUnchecked() {
         return new SetOrderNumberChangeImpl(change, previousValue, nextValue);

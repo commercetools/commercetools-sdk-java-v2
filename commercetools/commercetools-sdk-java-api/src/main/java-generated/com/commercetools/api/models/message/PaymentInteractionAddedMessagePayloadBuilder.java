@@ -26,6 +26,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>The interface interaction that was added to the Payment.</p>
+     * @param builder function to build the interaction value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>The interface interaction that was added to the Payment.</p>
-     * @param interaction
+     * @param interaction value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
         return this.interaction;
     }
 
+    /**
+     * builds PaymentInteractionAddedMessagePayload with checking for non-null required values
+     * @return PaymentInteractionAddedMessagePayload
+     */
     public PaymentInteractionAddedMessagePayload build() {
         Objects.requireNonNull(interaction, PaymentInteractionAddedMessagePayload.class + ": interaction is missing");
         return new PaymentInteractionAddedMessagePayloadImpl(interaction);
     }
 
     /**
-     * builds PaymentInteractionAddedMessagePayload without checking for non null required values
+     * builds PaymentInteractionAddedMessagePayload without checking for non-null required values
+     * @return PaymentInteractionAddedMessagePayload
      */
     public PaymentInteractionAddedMessagePayload buildUnchecked() {
         return new PaymentInteractionAddedMessagePayloadImpl(interaction);

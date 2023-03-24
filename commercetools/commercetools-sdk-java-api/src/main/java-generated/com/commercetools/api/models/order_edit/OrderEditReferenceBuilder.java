@@ -31,7 +31,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
 
     /**
      *  <p>Unique identifier of the referenced OrderEdit.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
 
     /**
      *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
 
     /**
      *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
         return this.obj;
     }
 
+    /**
+     * builds OrderEditReference with checking for non-null required values
+     * @return OrderEditReference
+     */
     public OrderEditReference build() {
         Objects.requireNonNull(id, OrderEditReference.class + ": id is missing");
         return new OrderEditReferenceImpl(id, obj);
     }
 
     /**
-     * builds OrderEditReference without checking for non null required values
+     * builds OrderEditReference without checking for non-null required values
+     * @return OrderEditReference
      */
     public OrderEditReference buildUnchecked() {
         return new OrderEditReferenceImpl(id, obj);

@@ -33,7 +33,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -104,12 +104,17 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
         return this.tags;
     }
 
+    /**
+     * builds CategorySetAssetTagsAction with checking for non-null required values
+     * @return CategorySetAssetTagsAction
+     */
     public CategorySetAssetTagsAction build() {
         return new CategorySetAssetTagsActionImpl(assetId, assetKey, tags);
     }
 
     /**
-     * builds CategorySetAssetTagsAction without checking for non null required values
+     * builds CategorySetAssetTagsAction without checking for non-null required values
+     * @return CategorySetAssetTagsAction
      */
     public CategorySetAssetTagsAction buildUnchecked() {
         return new CategorySetAssetTagsActionImpl(assetId, assetKey, tags);

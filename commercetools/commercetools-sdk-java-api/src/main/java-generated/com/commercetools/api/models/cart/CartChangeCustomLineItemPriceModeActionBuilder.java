@@ -29,7 +29,7 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param mode
+     * @param mode value to be set
      * @return Builder
      */
 
@@ -58,6 +58,10 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
         return this.mode;
     }
 
+    /**
+     * builds CartChangeCustomLineItemPriceModeAction with checking for non-null required values
+     * @return CartChangeCustomLineItemPriceModeAction
+     */
     public CartChangeCustomLineItemPriceModeAction build() {
         Objects.requireNonNull(customLineItemId,
             CartChangeCustomLineItemPriceModeAction.class + ": customLineItemId is missing");
@@ -66,7 +70,8 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
     }
 
     /**
-     * builds CartChangeCustomLineItemPriceModeAction without checking for non null required values
+     * builds CartChangeCustomLineItemPriceModeAction without checking for non-null required values
+     * @return CartChangeCustomLineItemPriceModeAction
      */
     public CartChangeCustomLineItemPriceModeAction buildUnchecked() {
         return new CartChangeCustomLineItemPriceModeActionImpl(customLineItemId, mode);

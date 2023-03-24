@@ -35,7 +35,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
+     * @param builder function to build the parcel value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
-     * @param parcel
+     * @param parcel value to be set
      * @return Builder
      */
 
@@ -69,7 +70,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -91,6 +92,10 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
         return this.shippingKey;
     }
 
+    /**
+     * builds ParcelRemovedFromDeliveryMessagePayload with checking for non-null required values
+     * @return ParcelRemovedFromDeliveryMessagePayload
+     */
     public ParcelRemovedFromDeliveryMessagePayload build() {
         Objects.requireNonNull(deliveryId, ParcelRemovedFromDeliveryMessagePayload.class + ": deliveryId is missing");
         Objects.requireNonNull(parcel, ParcelRemovedFromDeliveryMessagePayload.class + ": parcel is missing");
@@ -98,7 +103,8 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     * builds ParcelRemovedFromDeliveryMessagePayload without checking for non null required values
+     * builds ParcelRemovedFromDeliveryMessagePayload without checking for non-null required values
+     * @return ParcelRemovedFromDeliveryMessagePayload
      */
     public ParcelRemovedFromDeliveryMessagePayload buildUnchecked() {
         return new ParcelRemovedFromDeliveryMessagePayloadImpl(deliveryId, parcel, shippingKey);

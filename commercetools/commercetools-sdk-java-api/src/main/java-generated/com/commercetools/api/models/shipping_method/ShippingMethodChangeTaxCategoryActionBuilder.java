@@ -26,6 +26,7 @@ public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<Shi
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<Shi
 
     /**
      *  <p>Value to set.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -53,13 +54,18 @@ public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<Shi
         return this.taxCategory;
     }
 
+    /**
+     * builds ShippingMethodChangeTaxCategoryAction with checking for non-null required values
+     * @return ShippingMethodChangeTaxCategoryAction
+     */
     public ShippingMethodChangeTaxCategoryAction build() {
         Objects.requireNonNull(taxCategory, ShippingMethodChangeTaxCategoryAction.class + ": taxCategory is missing");
         return new ShippingMethodChangeTaxCategoryActionImpl(taxCategory);
     }
 
     /**
-     * builds ShippingMethodChangeTaxCategoryAction without checking for non null required values
+     * builds ShippingMethodChangeTaxCategoryAction without checking for non-null required values
+     * @return ShippingMethodChangeTaxCategoryAction
      */
     public ShippingMethodChangeTaxCategoryAction buildUnchecked() {
         return new ShippingMethodChangeTaxCategoryActionImpl(taxCategory);

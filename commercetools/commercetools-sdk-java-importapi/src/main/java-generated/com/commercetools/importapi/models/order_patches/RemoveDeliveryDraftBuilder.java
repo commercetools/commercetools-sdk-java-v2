@@ -25,7 +25,7 @@ public class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryDraft> 
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryDraft> 
         return this.id;
     }
 
+    /**
+     * builds RemoveDeliveryDraft with checking for non-null required values
+     * @return RemoveDeliveryDraft
+     */
     public RemoveDeliveryDraft build() {
         Objects.requireNonNull(id, RemoveDeliveryDraft.class + ": id is missing");
         return new RemoveDeliveryDraftImpl(id);
     }
 
     /**
-     * builds RemoveDeliveryDraft without checking for non null required values
+     * builds RemoveDeliveryDraft without checking for non-null required values
+     * @return RemoveDeliveryDraft
      */
     public RemoveDeliveryDraft buildUnchecked() {
         return new RemoveDeliveryDraftImpl(id);

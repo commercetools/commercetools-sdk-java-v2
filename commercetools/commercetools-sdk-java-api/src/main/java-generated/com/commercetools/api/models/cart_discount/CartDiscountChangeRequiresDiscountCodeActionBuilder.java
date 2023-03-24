@@ -26,7 +26,7 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
-     * @param requiresDiscountCode
+     * @param requiresDiscountCode value to be set
      * @return Builder
      */
 
@@ -40,6 +40,10 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
         return this.requiresDiscountCode;
     }
 
+    /**
+     * builds CartDiscountChangeRequiresDiscountCodeAction with checking for non-null required values
+     * @return CartDiscountChangeRequiresDiscountCodeAction
+     */
     public CartDiscountChangeRequiresDiscountCodeAction build() {
         Objects.requireNonNull(requiresDiscountCode,
             CartDiscountChangeRequiresDiscountCodeAction.class + ": requiresDiscountCode is missing");
@@ -47,7 +51,8 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
     }
 
     /**
-     * builds CartDiscountChangeRequiresDiscountCodeAction without checking for non null required values
+     * builds CartDiscountChangeRequiresDiscountCodeAction without checking for non-null required values
+     * @return CartDiscountChangeRequiresDiscountCodeAction
      */
     public CartDiscountChangeRequiresDiscountCodeAction buildUnchecked() {
         return new CartDiscountChangeRequiresDiscountCodeActionImpl(requiresDiscountCode);

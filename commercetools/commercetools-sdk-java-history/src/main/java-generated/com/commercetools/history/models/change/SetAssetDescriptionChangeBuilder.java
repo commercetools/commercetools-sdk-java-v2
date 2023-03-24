@@ -35,7 +35,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *  <p>Update action for <code>setAssetDescription</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
+     * @param builder function to build the asset value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
-     * @param asset
+     * @param asset value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -92,6 +94,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -103,7 +106,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -129,6 +132,10 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
         return this.previousValue;
     }
 
+    /**
+     * builds SetAssetDescriptionChange with checking for non-null required values
+     * @return SetAssetDescriptionChange
+     */
     public SetAssetDescriptionChange build() {
         Objects.requireNonNull(change, SetAssetDescriptionChange.class + ": change is missing");
         Objects.requireNonNull(asset, SetAssetDescriptionChange.class + ": asset is missing");
@@ -138,7 +145,8 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     }
 
     /**
-     * builds SetAssetDescriptionChange without checking for non null required values
+     * builds SetAssetDescriptionChange without checking for non-null required values
+     * @return SetAssetDescriptionChange
      */
     public SetAssetDescriptionChange buildUnchecked() {
         return new SetAssetDescriptionChangeImpl(change, asset, nextValue, previousValue);

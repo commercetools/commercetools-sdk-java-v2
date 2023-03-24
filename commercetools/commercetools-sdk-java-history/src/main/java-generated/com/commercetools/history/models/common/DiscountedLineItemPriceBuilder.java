@@ -29,6 +29,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
-     * @param includedDiscounts
+     * @param includedDiscounts value to be set
      * @return Builder
      */
 
@@ -63,7 +64,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
-     * @param includedDiscounts
+     * @param includedDiscounts value to be set
      * @return Builder
      */
 
@@ -75,7 +76,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
-     * @param includedDiscounts
+     * @param includedDiscounts value to be set
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @param builder function to build the includedDiscounts value
      * @return Builder
      */
 
@@ -105,6 +107,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @param builder function to build the includedDiscounts value
      * @return Builder
      */
 
@@ -124,6 +127,10 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
         return this.includedDiscounts;
     }
 
+    /**
+     * builds DiscountedLineItemPrice with checking for non-null required values
+     * @return DiscountedLineItemPrice
+     */
     public DiscountedLineItemPrice build() {
         Objects.requireNonNull(value, DiscountedLineItemPrice.class + ": value is missing");
         Objects.requireNonNull(includedDiscounts, DiscountedLineItemPrice.class + ": includedDiscounts is missing");
@@ -131,7 +138,8 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     * builds DiscountedLineItemPrice without checking for non null required values
+     * builds DiscountedLineItemPrice without checking for non-null required values
+     * @return DiscountedLineItemPrice
      */
     public DiscountedLineItemPrice buildUnchecked() {
         return new DiscountedLineItemPriceImpl(value, includedDiscounts);

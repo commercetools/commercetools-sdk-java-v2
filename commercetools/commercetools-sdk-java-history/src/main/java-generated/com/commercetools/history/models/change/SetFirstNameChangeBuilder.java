@@ -31,7 +31,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
 
     /**
      *  <p>Shape of the action for <code>setFirstName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetFirstNameChange with checking for non-null required values
+     * @return SetFirstNameChange
+     */
     public SetFirstNameChange build() {
         Objects.requireNonNull(change, SetFirstNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetFirstNameChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     }
 
     /**
-     * builds SetFirstNameChange without checking for non null required values
+     * builds SetFirstNameChange without checking for non-null required values
+     * @return SetFirstNameChange
      */
     public SetFirstNameChange buildUnchecked() {
         return new SetFirstNameChangeImpl(change, previousValue, nextValue);

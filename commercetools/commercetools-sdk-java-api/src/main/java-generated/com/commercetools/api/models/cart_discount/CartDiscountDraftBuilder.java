@@ -64,6 +64,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Name of the CartDiscount.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -75,7 +76,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Name of the CartDiscount.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -86,7 +87,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>User-defined unique identifier for the CartDiscount.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Description of the CartDiscount.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Description of the CartDiscount.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -120,7 +122,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -132,6 +134,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -144,7 +147,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Valid Cart Predicate.</p>
-     * @param cartPredicate
+     * @param cartPredicate value to be set
      * @return Builder
      */
 
@@ -155,7 +158,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -167,6 +170,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -178,7 +182,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
-     * @param sortOrder
+     * @param sortOrder value to be set
      * @return Builder
      */
 
@@ -189,7 +193,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Only active Discounts can be applied to the Cart.</p>
-     * @param isActive
+     * @param isActive value to be set
      * @return Builder
      */
 
@@ -200,7 +204,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Date and time (UTC) from which the Discount is effective.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -211,7 +215,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Date and time (UTC) until which the Discount is effective.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -222,7 +226,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
-     * @param requiresDiscountCode
+     * @param requiresDiscountCode value to be set
      * @return Builder
      */
 
@@ -233,7 +237,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.</p>
-     * @param stackingMode
+     * @param stackingMode value to be set
      * @return Builder
      */
 
@@ -245,6 +249,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Custom Fields of the CartDiscount.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -256,7 +261,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Custom Fields of the CartDiscount.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -326,6 +331,10 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         return this.custom;
     }
 
+    /**
+     * builds CartDiscountDraft with checking for non-null required values
+     * @return CartDiscountDraft
+     */
     public CartDiscountDraft build() {
         Objects.requireNonNull(name, CartDiscountDraft.class + ": name is missing");
         Objects.requireNonNull(value, CartDiscountDraft.class + ": value is missing");
@@ -336,7 +345,8 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     * builds CartDiscountDraft without checking for non null required values
+     * builds CartDiscountDraft without checking for non-null required values
+     * @return CartDiscountDraft
      */
     public CartDiscountDraft buildUnchecked() {
         return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, isActive,

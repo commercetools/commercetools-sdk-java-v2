@@ -37,7 +37,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -48,6 +48,8 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -57,6 +59,9 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -69,7 +74,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Name of the conflicting field.</p>
-     * @param field
+     * @param field value to be set
      * @return Builder
      */
 
@@ -80,7 +85,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Conflicting duplicate value.</p>
-     * @param duplicateValue
+     * @param duplicateValue value to be set
      * @return Builder
      */
 
@@ -91,7 +96,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Reference to the resource that has the conflicting value.</p>
-     * @param conflictingResource
+     * @param conflictingResource value to be set
      * @return Builder
      */
 
@@ -103,6 +108,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     /**
      *  <p>Reference to the resource that has the conflicting value.</p>
+     * @param builder function to build the conflictingResource value
      * @return Builder
      */
 
@@ -132,6 +138,10 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
         return this.conflictingResource;
     }
 
+    /**
+     * builds DuplicateFieldWithConflictingResourceError with checking for non-null required values
+     * @return DuplicateFieldWithConflictingResourceError
+     */
     public DuplicateFieldWithConflictingResourceError build() {
         Objects.requireNonNull(message, DuplicateFieldWithConflictingResourceError.class + ": message is missing");
         Objects.requireNonNull(field, DuplicateFieldWithConflictingResourceError.class + ": field is missing");
@@ -144,7 +154,8 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     /**
-     * builds DuplicateFieldWithConflictingResourceError without checking for non null required values
+     * builds DuplicateFieldWithConflictingResourceError without checking for non-null required values
+     * @return DuplicateFieldWithConflictingResourceError
      */
     public DuplicateFieldWithConflictingResourceError buildUnchecked() {
         return new DuplicateFieldWithConflictingResourceErrorImpl(message, values, field, duplicateValue,

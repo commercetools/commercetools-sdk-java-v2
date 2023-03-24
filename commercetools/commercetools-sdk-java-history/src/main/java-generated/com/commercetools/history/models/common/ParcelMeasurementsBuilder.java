@@ -34,7 +34,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
 
     /**
      *
-     * @param heightInMillimeter
+     * @param heightInMillimeter value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
 
     /**
      *
-     * @param lengthInMillimeter
+     * @param lengthInMillimeter value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
 
     /**
      *
-     * @param widthInMillimeter
+     * @param widthInMillimeter value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
 
     /**
      *
-     * @param weightInGram
+     * @param weightInGram value to be set
      * @return Builder
      */
 
@@ -92,6 +92,10 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
         return this.weightInGram;
     }
 
+    /**
+     * builds ParcelMeasurements with checking for non-null required values
+     * @return ParcelMeasurements
+     */
     public ParcelMeasurements build() {
         Objects.requireNonNull(heightInMillimeter, ParcelMeasurements.class + ": heightInMillimeter is missing");
         Objects.requireNonNull(lengthInMillimeter, ParcelMeasurements.class + ": lengthInMillimeter is missing");
@@ -101,7 +105,8 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     * builds ParcelMeasurements without checking for non null required values
+     * builds ParcelMeasurements without checking for non-null required values
+     * @return ParcelMeasurements
      */
     public ParcelMeasurements buildUnchecked() {
         return new ParcelMeasurementsImpl(heightInMillimeter, lengthInMillimeter, widthInMillimeter, weightInGram);

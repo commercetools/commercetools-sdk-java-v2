@@ -31,7 +31,7 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
 
     /**
      *  <p>Update action for <code>setAuthenticationMode</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
         return this.nextValue;
     }
 
+    /**
+     * builds SetAuthenticationModeChange with checking for non-null required values
+     * @return SetAuthenticationModeChange
+     */
     public SetAuthenticationModeChange build() {
         Objects.requireNonNull(change, SetAuthenticationModeChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetAuthenticationModeChange.class + ": previousValue is missing");
@@ -84,7 +88,8 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
     }
 
     /**
-     * builds SetAuthenticationModeChange without checking for non null required values
+     * builds SetAuthenticationModeChange without checking for non-null required values
+     * @return SetAuthenticationModeChange
      */
     public SetAuthenticationModeChange buildUnchecked() {
         return new SetAuthenticationModeChangeImpl(change, previousValue, nextValue);

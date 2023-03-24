@@ -32,7 +32,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -110,7 +112,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -134,7 +136,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -149,6 +151,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -164,6 +167,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -187,6 +191,10 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeFieldDefinitionOrderChange with checking for non-null required values
+     * @return ChangeFieldDefinitionOrderChange
+     */
     public ChangeFieldDefinitionOrderChange build() {
         Objects.requireNonNull(change, ChangeFieldDefinitionOrderChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeFieldDefinitionOrderChange.class + ": previousValue is missing");
@@ -195,7 +203,8 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * builds ChangeFieldDefinitionOrderChange without checking for non null required values
+     * builds ChangeFieldDefinitionOrderChange without checking for non-null required values
+     * @return ChangeFieldDefinitionOrderChange
      */
     public ChangeFieldDefinitionOrderChange buildUnchecked() {
         return new ChangeFieldDefinitionOrderChangeImpl(change, previousValue, nextValue);

@@ -27,7 +27,7 @@ public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> 
 
     /**
      *  <p>Value to set. If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> 
         return this.key;
     }
 
+    /**
+     * builds PaymentSetKeyAction with checking for non-null required values
+     * @return PaymentSetKeyAction
+     */
     public PaymentSetKeyAction build() {
         return new PaymentSetKeyActionImpl(key);
     }
 
     /**
-     * builds PaymentSetKeyAction without checking for non null required values
+     * builds PaymentSetKeyAction without checking for non-null required values
+     * @return PaymentSetKeyAction
      */
     public PaymentSetKeyAction buildUnchecked() {
         return new PaymentSetKeyActionImpl(key);

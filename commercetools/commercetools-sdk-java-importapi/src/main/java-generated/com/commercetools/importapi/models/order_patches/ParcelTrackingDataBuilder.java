@@ -31,7 +31,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
 
     /**
      *
+     * @param builder function to build the trackingData value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
 
     /**
      *
-     * @param trackingData
+     * @param trackingData value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
         return this.trackingData;
     }
 
+    /**
+     * builds ParcelTrackingData with checking for non-null required values
+     * @return ParcelTrackingData
+     */
     public ParcelTrackingData build() {
         Objects.requireNonNull(parcelId, ParcelTrackingData.class + ": parcelId is missing");
         return new ParcelTrackingDataImpl(parcelId, trackingData);
     }
 
     /**
-     * builds ParcelTrackingData without checking for non null required values
+     * builds ParcelTrackingData without checking for non-null required values
+     * @return ParcelTrackingData
      */
     public ParcelTrackingData buildUnchecked() {
         return new ParcelTrackingDataImpl(parcelId, trackingData);

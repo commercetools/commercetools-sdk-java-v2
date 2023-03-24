@@ -94,7 +94,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Unique identifier of the Product.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -105,7 +105,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Current version of the Product.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -116,7 +116,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Date and time (UTC) the ProductProjection was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -127,7 +127,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Date and time (UTC) the ProductProjection was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -138,7 +138,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -149,6 +149,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The ProductType defining the Attributes of the Product.</p>
+     * @param builder function to build the productType value
      * @return Builder
      */
 
@@ -161,7 +162,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The ProductType defining the Attributes of the Product.</p>
-     * @param productType
+     * @param productType value to be set
      * @return Builder
      */
 
@@ -173,6 +174,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -184,7 +186,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Name of the Product.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -195,6 +197,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -206,7 +209,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Description of the Product.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -218,6 +221,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -229,7 +233,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -240,7 +244,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
-     * @param categories
+     * @param categories value to be set
      * @return Builder
      */
 
@@ -252,7 +256,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
-     * @param categories
+     * @param categories value to be set
      * @return Builder
      */
 
@@ -264,7 +268,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
-     * @param categories
+     * @param categories value to be set
      * @return Builder
      */
 
@@ -279,6 +283,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
      * @return Builder
      */
 
@@ -293,6 +298,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
      * @return Builder
      */
 
@@ -305,6 +311,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Order of Product in Categories.</p>
+     * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
 
@@ -317,7 +324,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Order of Product in Categories.</p>
-     * @param categoryOrderHints
+     * @param categoryOrderHints value to be set
      * @return Builder
      */
 
@@ -329,6 +336,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @param builder function to build the metaTitle value
      * @return Builder
      */
 
@@ -340,7 +348,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
-     * @param metaTitle
+     * @param metaTitle value to be set
      * @return Builder
      */
 
@@ -352,6 +360,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @param builder function to build the metaDescription value
      * @return Builder
      */
 
@@ -363,7 +372,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
-     * @param metaDescription
+     * @param metaDescription value to be set
      * @return Builder
      */
 
@@ -375,6 +384,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param builder function to build the metaKeywords value
      * @return Builder
      */
 
@@ -386,7 +396,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
-     * @param metaKeywords
+     * @param metaKeywords value to be set
      * @return Builder
      */
 
@@ -398,6 +408,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param builder function to build the searchKeywords value
      * @return Builder
      */
 
@@ -409,7 +420,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
-     * @param searchKeywords
+     * @param searchKeywords value to be set
      * @return Builder
      */
 
@@ -421,7 +432,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p><code>true</code> if the staged data is different from the current data.</p>
-     * @param hasStagedChanges
+     * @param hasStagedChanges value to be set
      * @return Builder
      */
 
@@ -432,7 +443,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p><code>true</code> if the Product is published.</p>
-     * @param published
+     * @param published value to be set
      * @return Builder
      */
 
@@ -443,6 +454,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     * @param builder function to build the masterVariant value
      * @return Builder
      */
 
@@ -454,7 +466,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
-     * @param masterVariant
+     * @param masterVariant value to be set
      * @return Builder
      */
 
@@ -466,7 +478,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
-     * @param variants
+     * @param variants value to be set
      * @return Builder
      */
 
@@ -477,7 +489,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
-     * @param variants
+     * @param variants value to be set
      * @return Builder
      */
 
@@ -489,7 +501,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
-     * @param variants
+     * @param variants value to be set
      * @return Builder
      */
 
@@ -504,6 +516,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param builder function to build the variants value
      * @return Builder
      */
 
@@ -518,6 +531,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param builder function to build the variants value
      * @return Builder
      */
 
@@ -530,6 +544,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The TaxCategory of the Product.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -542,7 +557,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The TaxCategory of the Product.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -554,6 +569,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>State of the Product.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -565,7 +581,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>State of the Product.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -576,6 +592,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Review statistics of the Product.</p>
+     * @param builder function to build the reviewRatingStatistics value
      * @return Builder
      */
 
@@ -589,7 +606,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Review statistics of the Product.</p>
-     * @param reviewRatingStatistics
+     * @param reviewRatingStatistics value to be set
      * @return Builder
      */
 
@@ -601,7 +618,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
-     * @param priceMode
+     * @param priceMode value to be set
      * @return Builder
      */
 
@@ -716,6 +733,10 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this.priceMode;
     }
 
+    /**
+     * builds ProductProjection with checking for non-null required values
+     * @return ProductProjection
+     */
     public ProductProjection build() {
         Objects.requireNonNull(id, ProductProjection.class + ": id is missing");
         Objects.requireNonNull(version, ProductProjection.class + ": version is missing");
@@ -734,7 +755,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     * builds ProductProjection without checking for non null required values
+     * builds ProductProjection without checking for non-null required values
+     * @return ProductProjection
      */
     public ProductProjection buildUnchecked() {
         return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description,

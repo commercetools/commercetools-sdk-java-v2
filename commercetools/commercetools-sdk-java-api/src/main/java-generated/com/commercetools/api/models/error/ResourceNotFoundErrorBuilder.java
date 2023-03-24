@@ -27,7 +27,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
 
     /**
      *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
         return this.values;
     }
 
+    /**
+     * builds ResourceNotFoundError with checking for non-null required values
+     * @return ResourceNotFoundError
+     */
     public ResourceNotFoundError build() {
         Objects.requireNonNull(message, ResourceNotFoundError.class + ": message is missing");
         return new ResourceNotFoundErrorImpl(message, values);
     }
 
     /**
-     * builds ResourceNotFoundError without checking for non null required values
+     * builds ResourceNotFoundError without checking for non-null required values
+     * @return ResourceNotFoundError
      */
     public ResourceNotFoundError buildUnchecked() {
         return new ResourceNotFoundErrorImpl(message, values);

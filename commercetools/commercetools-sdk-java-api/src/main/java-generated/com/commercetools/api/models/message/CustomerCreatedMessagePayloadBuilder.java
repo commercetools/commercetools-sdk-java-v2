@@ -26,6 +26,7 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
 
     /**
      *  <p>Customer that was created.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
 
     /**
      *  <p>Customer that was created.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
         return this.customer;
     }
 
+    /**
+     * builds CustomerCreatedMessagePayload with checking for non-null required values
+     * @return CustomerCreatedMessagePayload
+     */
     public CustomerCreatedMessagePayload build() {
         Objects.requireNonNull(customer, CustomerCreatedMessagePayload.class + ": customer is missing");
         return new CustomerCreatedMessagePayloadImpl(customer);
     }
 
     /**
-     * builds CustomerCreatedMessagePayload without checking for non null required values
+     * builds CustomerCreatedMessagePayload without checking for non-null required values
+     * @return CustomerCreatedMessagePayload
      */
     public CustomerCreatedMessagePayload buildUnchecked() {
         return new CustomerCreatedMessagePayloadImpl(customer);

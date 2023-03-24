@@ -29,7 +29,7 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
         return this.label;
     }
 
+    /**
+     * builds ProductTypeChangeLabelAction with checking for non-null required values
+     * @return ProductTypeChangeLabelAction
+     */
     public ProductTypeChangeLabelAction build() {
         Objects.requireNonNull(attributeName, ProductTypeChangeLabelAction.class + ": attributeName is missing");
         Objects.requireNonNull(label, ProductTypeChangeLabelAction.class + ": label is missing");
@@ -75,7 +80,8 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
     }
 
     /**
-     * builds ProductTypeChangeLabelAction without checking for non null required values
+     * builds ProductTypeChangeLabelAction without checking for non-null required values
+     * @return ProductTypeChangeLabelAction
      */
     public ProductTypeChangeLabelAction buildUnchecked() {
         return new ProductTypeChangeLabelActionImpl(attributeName, label);

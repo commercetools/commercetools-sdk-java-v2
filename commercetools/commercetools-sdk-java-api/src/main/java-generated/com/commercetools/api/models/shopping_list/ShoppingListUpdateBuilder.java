@@ -29,7 +29,7 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
 
     /**
      *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds ShoppingListUpdate with checking for non-null required values
+     * @return ShoppingListUpdate
+     */
     public ShoppingListUpdate build() {
         Objects.requireNonNull(version, ShoppingListUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ShoppingListUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
     }
 
     /**
-     * builds ShoppingListUpdate without checking for non null required values
+     * builds ShoppingListUpdate without checking for non-null required values
+     * @return ShoppingListUpdate
      */
     public ShoppingListUpdate buildUnchecked() {
         return new ShoppingListUpdateImpl(version, actions);

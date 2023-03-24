@@ -30,7 +30,7 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
-     * @param textLineItemId
+     * @param textLineItemId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
 
     /**
      *  <p>Amount to remove from the <code>quantity</code> of the TextLineItem. If not set, the TextLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the TextLineItem, the TextLineItem is removed from the ShoppingList.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -59,6 +59,10 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
         return this.quantity;
     }
 
+    /**
+     * builds MyShoppingListRemoveTextLineItemAction with checking for non-null required values
+     * @return MyShoppingListRemoveTextLineItemAction
+     */
     public MyShoppingListRemoveTextLineItemAction build() {
         Objects.requireNonNull(textLineItemId,
             MyShoppingListRemoveTextLineItemAction.class + ": textLineItemId is missing");
@@ -66,7 +70,8 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
     }
 
     /**
-     * builds MyShoppingListRemoveTextLineItemAction without checking for non null required values
+     * builds MyShoppingListRemoveTextLineItemAction without checking for non-null required values
+     * @return MyShoppingListRemoveTextLineItemAction
      */
     public MyShoppingListRemoveTextLineItemAction buildUnchecked() {
         return new MyShoppingListRemoveTextLineItemActionImpl(textLineItemId, quantity);

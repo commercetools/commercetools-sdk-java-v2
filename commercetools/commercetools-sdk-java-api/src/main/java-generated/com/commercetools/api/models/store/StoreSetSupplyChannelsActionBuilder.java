@@ -28,7 +28,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
-     * @param supplyChannels
+     * @param supplyChannels value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @param builder function to build the supplyChannels value
      * @return Builder
      */
 
@@ -82,6 +83,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @param builder function to build the supplyChannels value
      * @return Builder
      */
 
@@ -98,12 +100,17 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
         return this.supplyChannels;
     }
 
+    /**
+     * builds StoreSetSupplyChannelsAction with checking for non-null required values
+     * @return StoreSetSupplyChannelsAction
+     */
     public StoreSetSupplyChannelsAction build() {
         return new StoreSetSupplyChannelsActionImpl(supplyChannels);
     }
 
     /**
-     * builds StoreSetSupplyChannelsAction without checking for non null required values
+     * builds StoreSetSupplyChannelsAction without checking for non-null required values
+     * @return StoreSetSupplyChannelsAction
      */
     public StoreSetSupplyChannelsAction buildUnchecked() {
         return new StoreSetSupplyChannelsActionImpl(supplyChannels);

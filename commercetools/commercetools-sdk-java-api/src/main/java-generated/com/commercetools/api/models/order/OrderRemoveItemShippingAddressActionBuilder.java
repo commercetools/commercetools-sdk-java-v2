@@ -25,7 +25,7 @@ public class OrderRemoveItemShippingAddressActionBuilder implements Builder<Orde
 
     /**
      *
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class OrderRemoveItemShippingAddressActionBuilder implements Builder<Orde
         return this.addressKey;
     }
 
+    /**
+     * builds OrderRemoveItemShippingAddressAction with checking for non-null required values
+     * @return OrderRemoveItemShippingAddressAction
+     */
     public OrderRemoveItemShippingAddressAction build() {
         Objects.requireNonNull(addressKey, OrderRemoveItemShippingAddressAction.class + ": addressKey is missing");
         return new OrderRemoveItemShippingAddressActionImpl(addressKey);
     }
 
     /**
-     * builds OrderRemoveItemShippingAddressAction without checking for non null required values
+     * builds OrderRemoveItemShippingAddressAction without checking for non-null required values
+     * @return OrderRemoveItemShippingAddressAction
      */
     public OrderRemoveItemShippingAddressAction buildUnchecked() {
         return new OrderRemoveItemShippingAddressActionImpl(addressKey);

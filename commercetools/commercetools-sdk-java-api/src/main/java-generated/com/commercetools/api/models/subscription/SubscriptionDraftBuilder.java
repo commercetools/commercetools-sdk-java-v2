@@ -40,7 +40,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
+     * @param builder function to build the changes value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
+     * @param builder function to build the changes value
      * @return Builder
      */
 
@@ -107,7 +109,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messaging service to which the messages are sent.</p>
-     * @param destination
+     * @param destination value to be set
      * @return Builder
      */
 
@@ -119,6 +121,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messaging service to which the messages are sent.</p>
+     * @param builder function to build the destination value
      * @return Builder
      */
 
@@ -130,7 +133,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Subscription.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -141,7 +144,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -153,7 +156,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -165,7 +168,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
-     * @param messages
+     * @param messages value to be set
      * @return Builder
      */
 
@@ -180,6 +183,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
+     * @param builder function to build the messages value
      * @return Builder
      */
 
@@ -195,6 +199,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Messages to be subscribed to.</p>
+     * @param builder function to build the messages value
      * @return Builder
      */
 
@@ -208,7 +213,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
-     * @param format
+     * @param format value to be set
      * @return Builder
      */
 
@@ -220,6 +225,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     * @param builder function to build the format value
      * @return Builder
      */
 
@@ -253,13 +259,18 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this.format;
     }
 
+    /**
+     * builds SubscriptionDraft with checking for non-null required values
+     * @return SubscriptionDraft
+     */
     public SubscriptionDraft build() {
         Objects.requireNonNull(destination, SubscriptionDraft.class + ": destination is missing");
         return new SubscriptionDraftImpl(changes, destination, key, messages, format);
     }
 
     /**
-     * builds SubscriptionDraft without checking for non null required values
+     * builds SubscriptionDraft without checking for non-null required values
+     * @return SubscriptionDraft
      */
     public SubscriptionDraft buildUnchecked() {
         return new SubscriptionDraftImpl(changes, destination, key, messages, format);

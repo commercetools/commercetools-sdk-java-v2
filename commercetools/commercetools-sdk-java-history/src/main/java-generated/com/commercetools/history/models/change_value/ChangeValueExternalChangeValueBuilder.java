@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeValueExternalChangeValueBuilder implements Builder<ChangeValueExternalChangeValue> {
 
+    /**
+     * builds ChangeValueExternalChangeValue with checking for non-null required values
+     * @return ChangeValueExternalChangeValue
+     */
     public ChangeValueExternalChangeValue build() {
         return new ChangeValueExternalChangeValueImpl();
     }
 
     /**
-     * builds ChangeValueExternalChangeValue without checking for non null required values
+     * builds ChangeValueExternalChangeValue without checking for non-null required values
+     * @return ChangeValueExternalChangeValue
      */
     public ChangeValueExternalChangeValue buildUnchecked() {
         return new ChangeValueExternalChangeValueImpl();

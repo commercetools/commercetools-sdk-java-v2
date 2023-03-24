@@ -27,7 +27,7 @@ public class InventoryEntrySetKeyActionBuilder implements Builder<InventoryEntry
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class InventoryEntrySetKeyActionBuilder implements Builder<InventoryEntry
         return this.key;
     }
 
+    /**
+     * builds InventoryEntrySetKeyAction with checking for non-null required values
+     * @return InventoryEntrySetKeyAction
+     */
     public InventoryEntrySetKeyAction build() {
         return new InventoryEntrySetKeyActionImpl(key);
     }
 
     /**
-     * builds InventoryEntrySetKeyAction without checking for non null required values
+     * builds InventoryEntrySetKeyAction without checking for non-null required values
+     * @return InventoryEntrySetKeyAction
      */
     public InventoryEntrySetKeyAction buildUnchecked() {
         return new InventoryEntrySetKeyActionImpl(key);

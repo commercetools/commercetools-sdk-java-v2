@@ -55,7 +55,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -66,6 +66,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -77,7 +78,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -88,6 +89,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>References a customer group by key.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -101,7 +103,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>References a customer group by key.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -113,6 +115,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>References a channel by key.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -124,7 +127,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>References a channel by key.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -136,7 +139,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -147,7 +150,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -158,6 +161,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The custom fields for this category.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -169,7 +173,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The custom fields for this category.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -181,6 +185,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -192,7 +197,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -204,7 +209,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -215,7 +220,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -227,7 +232,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -242,6 +247,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -256,6 +262,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -268,7 +275,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     /**
      *  <p>User-defined unique identifier for the Embedded Price.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -326,6 +333,10 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
         return this.key;
     }
 
+    /**
+     * builds PriceDraftImport with checking for non-null required values
+     * @return PriceDraftImport
+     */
     public PriceDraftImport build() {
         Objects.requireNonNull(value, PriceDraftImport.class + ": value is missing");
         return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom,
@@ -333,7 +344,8 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     * builds PriceDraftImport without checking for non null required values
+     * builds PriceDraftImport without checking for non-null required values
+     * @return PriceDraftImport
      */
     public PriceDraftImport buildUnchecked() {
         return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom,

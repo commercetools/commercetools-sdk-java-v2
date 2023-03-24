@@ -34,7 +34,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
-     * @param transactionId
+     * @param transactionId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Sets the Custom Fields fields for the Transaction.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
         return this.fields;
     }
 
+    /**
+     * builds PaymentSetTransactionCustomTypeAction with checking for non-null required values
+     * @return PaymentSetTransactionCustomTypeAction
+     */
     public PaymentSetTransactionCustomTypeAction build() {
         Objects.requireNonNull(transactionId,
             PaymentSetTransactionCustomTypeAction.class + ": transactionId is missing");
@@ -110,7 +116,8 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     }
 
     /**
-     * builds PaymentSetTransactionCustomTypeAction without checking for non null required values
+     * builds PaymentSetTransactionCustomTypeAction without checking for non-null required values
+     * @return PaymentSetTransactionCustomTypeAction
      */
     public PaymentSetTransactionCustomTypeAction buildUnchecked() {
         return new PaymentSetTransactionCustomTypeActionImpl(transactionId, type, fields);

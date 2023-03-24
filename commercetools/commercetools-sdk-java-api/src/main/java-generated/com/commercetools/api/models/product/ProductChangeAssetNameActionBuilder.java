@@ -43,7 +43,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -87,7 +87,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -98,6 +98,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -109,7 +110,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -147,13 +148,18 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
         return this.name;
     }
 
+    /**
+     * builds ProductChangeAssetNameAction with checking for non-null required values
+     * @return ProductChangeAssetNameAction
+     */
     public ProductChangeAssetNameAction build() {
         Objects.requireNonNull(name, ProductChangeAssetNameAction.class + ": name is missing");
         return new ProductChangeAssetNameActionImpl(variantId, sku, staged, assetId, assetKey, name);
     }
 
     /**
-     * builds ProductChangeAssetNameAction without checking for non null required values
+     * builds ProductChangeAssetNameAction without checking for non-null required values
+     * @return ProductChangeAssetNameAction
      */
     public ProductChangeAssetNameAction buildUnchecked() {
         return new ProductChangeAssetNameActionImpl(variantId, sku, staged, assetId, assetKey, name);

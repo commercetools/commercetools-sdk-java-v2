@@ -31,7 +31,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
 
     /**
      *  <p>Shape of the action for <code>setDateOfBirth</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
         return this.nextValue;
     }
 
+    /**
+     * builds SetDateOfBirthChange with checking for non-null required values
+     * @return SetDateOfBirthChange
+     */
     public SetDateOfBirthChange build() {
         Objects.requireNonNull(change, SetDateOfBirthChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetDateOfBirthChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
     }
 
     /**
-     * builds SetDateOfBirthChange without checking for non null required values
+     * builds SetDateOfBirthChange without checking for non-null required values
+     * @return SetDateOfBirthChange
      */
     public SetDateOfBirthChange buildUnchecked() {
         return new SetDateOfBirthChangeImpl(change, previousValue, nextValue);

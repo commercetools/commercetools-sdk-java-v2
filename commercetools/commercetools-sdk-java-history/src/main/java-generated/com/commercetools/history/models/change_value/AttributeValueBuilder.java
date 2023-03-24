@@ -27,7 +27,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -55,6 +55,10 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
         return this.value;
     }
 
+    /**
+     * builds AttributeValue with checking for non-null required values
+     * @return AttributeValue
+     */
     public AttributeValue build() {
         Objects.requireNonNull(name, AttributeValue.class + ": name is missing");
         Objects.requireNonNull(value, AttributeValue.class + ": value is missing");
@@ -62,7 +66,8 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
     }
 
     /**
-     * builds AttributeValue without checking for non null required values
+     * builds AttributeValue without checking for non-null required values
+     * @return AttributeValue
      */
     public AttributeValue buildUnchecked() {
         return new AttributeValueImpl(name, value);

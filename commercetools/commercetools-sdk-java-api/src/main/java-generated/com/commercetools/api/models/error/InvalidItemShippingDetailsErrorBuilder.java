@@ -33,7 +33,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     /**
      *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -44,6 +44,8 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InvalidItemShippingDetailsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,6 +55,9 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InvalidItemShippingDetailsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +70,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
-     * @param subject
+     * @param subject value to be set
      * @return Builder
      */
 
@@ -76,7 +81,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
-     * @param itemId
+     * @param itemId value to be set
      * @return Builder
      */
 
@@ -101,6 +106,10 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
         return this.itemId;
     }
 
+    /**
+     * builds InvalidItemShippingDetailsError with checking for non-null required values
+     * @return InvalidItemShippingDetailsError
+     */
     public InvalidItemShippingDetailsError build() {
         Objects.requireNonNull(message, InvalidItemShippingDetailsError.class + ": message is missing");
         Objects.requireNonNull(subject, InvalidItemShippingDetailsError.class + ": subject is missing");
@@ -109,7 +118,8 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     }
 
     /**
-     * builds InvalidItemShippingDetailsError without checking for non null required values
+     * builds InvalidItemShippingDetailsError without checking for non-null required values
+     * @return InvalidItemShippingDetailsError
      */
     public InvalidItemShippingDetailsError buildUnchecked() {
         return new InvalidItemShippingDetailsErrorImpl(message, values, subject, itemId);

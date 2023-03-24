@@ -25,7 +25,7 @@ public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
         return this.change;
     }
 
+    /**
+     * builds UnpublishChange with checking for non-null required values
+     * @return UnpublishChange
+     */
     public UnpublishChange build() {
         Objects.requireNonNull(change, UnpublishChange.class + ": change is missing");
         return new UnpublishChangeImpl(change);
     }
 
     /**
-     * builds UnpublishChange without checking for non null required values
+     * builds UnpublishChange without checking for non-null required values
+     * @return UnpublishChange
      */
     public UnpublishChange buildUnchecked() {
         return new UnpublishChangeImpl(change);

@@ -32,7 +32,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *  <p>Update action for <code>setProductSelections</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -110,7 +112,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -134,7 +136,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -149,6 +151,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -164,6 +167,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -187,6 +191,10 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
         return this.nextValue;
     }
 
+    /**
+     * builds SetProductSelectionsChange with checking for non-null required values
+     * @return SetProductSelectionsChange
+     */
     public SetProductSelectionsChange build() {
         Objects.requireNonNull(change, SetProductSelectionsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetProductSelectionsChange.class + ": previousValue is missing");
@@ -195,7 +203,8 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
     }
 
     /**
-     * builds SetProductSelectionsChange without checking for non null required values
+     * builds SetProductSelectionsChange without checking for non-null required values
+     * @return SetProductSelectionsChange
      */
     public SetProductSelectionsChange buildUnchecked() {
         return new SetProductSelectionsChangeImpl(change, previousValue, nextValue);

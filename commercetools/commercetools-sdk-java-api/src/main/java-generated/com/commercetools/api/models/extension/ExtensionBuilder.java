@@ -55,7 +55,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Unique identifier of the Extension.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Current version of the Extension.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Date and time (UTC) the Extension was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -88,7 +88,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Date and time (UTC) the Extension was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -99,6 +99,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -110,7 +111,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -122,6 +123,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -133,7 +135,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -144,7 +146,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -155,7 +157,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
-     * @param destination
+     * @param destination value to be set
      * @return Builder
      */
 
@@ -166,6 +168,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
+     * @param builder function to build the destination value
      * @return Builder
      */
 
@@ -178,7 +181,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
-     * @param triggers
+     * @param triggers value to be set
      * @return Builder
      */
 
@@ -189,7 +192,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
-     * @param triggers
+     * @param triggers value to be set
      * @return Builder
      */
 
@@ -201,7 +204,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
-     * @param triggers
+     * @param triggers value to be set
      * @return Builder
      */
 
@@ -215,6 +218,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @param builder function to build the triggers value
      * @return Builder
      */
 
@@ -229,6 +233,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @param builder function to build the triggers value
      * @return Builder
      */
 
@@ -241,7 +246,7 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
-     * @param timeoutInMs
+     * @param timeoutInMs value to be set
      * @return Builder
      */
 
@@ -294,6 +299,10 @@ public class ExtensionBuilder implements Builder<Extension> {
         return this.timeoutInMs;
     }
 
+    /**
+     * builds Extension with checking for non-null required values
+     * @return Extension
+     */
     public Extension build() {
         Objects.requireNonNull(id, Extension.class + ": id is missing");
         Objects.requireNonNull(version, Extension.class + ": version is missing");
@@ -306,7 +315,8 @@ public class ExtensionBuilder implements Builder<Extension> {
     }
 
     /**
-     * builds Extension without checking for non null required values
+     * builds Extension without checking for non-null required values
+     * @return Extension
      */
     public Extension buildUnchecked() {
         return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,

@@ -31,7 +31,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
+     * @param builder function to build the currentProjection value
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
-     * @param currentProjection
+     * @param currentProjection value to be set
      * @return Builder
      */
 
@@ -98,13 +99,18 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
         return this.currentProjection;
     }
 
+    /**
+     * builds ProductDeletedMessagePayload with checking for non-null required values
+     * @return ProductDeletedMessagePayload
+     */
     public ProductDeletedMessagePayload build() {
         Objects.requireNonNull(removedImageUrls, ProductDeletedMessagePayload.class + ": removedImageUrls is missing");
         return new ProductDeletedMessagePayloadImpl(removedImageUrls, currentProjection);
     }
 
     /**
-     * builds ProductDeletedMessagePayload without checking for non null required values
+     * builds ProductDeletedMessagePayload without checking for non-null required values
+     * @return ProductDeletedMessagePayload
      */
     public ProductDeletedMessagePayload buildUnchecked() {
         return new ProductDeletedMessagePayloadImpl(removedImageUrls, currentProjection);

@@ -26,7 +26,7 @@ public class QuoteRequestChangeQuoteRequestStateActionBuilder
 
     /**
      *  <p>New state to be set for the Quote Request.</p>
-     * @param quoteRequestState
+     * @param quoteRequestState value to be set
      * @return Builder
      */
 
@@ -40,6 +40,10 @@ public class QuoteRequestChangeQuoteRequestStateActionBuilder
         return this.quoteRequestState;
     }
 
+    /**
+     * builds QuoteRequestChangeQuoteRequestStateAction with checking for non-null required values
+     * @return QuoteRequestChangeQuoteRequestStateAction
+     */
     public QuoteRequestChangeQuoteRequestStateAction build() {
         Objects.requireNonNull(quoteRequestState,
             QuoteRequestChangeQuoteRequestStateAction.class + ": quoteRequestState is missing");
@@ -47,7 +51,8 @@ public class QuoteRequestChangeQuoteRequestStateActionBuilder
     }
 
     /**
-     * builds QuoteRequestChangeQuoteRequestStateAction without checking for non null required values
+     * builds QuoteRequestChangeQuoteRequestStateAction without checking for non-null required values
+     * @return QuoteRequestChangeQuoteRequestStateAction
      */
     public QuoteRequestChangeQuoteRequestStateAction buildUnchecked() {
         return new QuoteRequestChangeQuoteRequestStateActionImpl(quoteRequestState);

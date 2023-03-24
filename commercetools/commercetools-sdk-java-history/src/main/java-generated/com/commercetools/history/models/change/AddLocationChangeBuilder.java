@@ -32,7 +32,7 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Update action for <code>addLocation</code> on zones</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds AddLocationChange with checking for non-null required values
+     * @return AddLocationChange
+     */
     public AddLocationChange build() {
         Objects.requireNonNull(change, AddLocationChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, AddLocationChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
     }
 
     /**
-     * builds AddLocationChange without checking for non null required values
+     * builds AddLocationChange without checking for non-null required values
+     * @return AddLocationChange
      */
     public AddLocationChange buildUnchecked() {
         return new AddLocationChangeImpl(change, previousValue, nextValue);

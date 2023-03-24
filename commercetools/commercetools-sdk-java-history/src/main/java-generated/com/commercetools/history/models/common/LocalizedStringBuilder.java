@@ -25,6 +25,8 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
 
     /**
      *
+     * @param values properties to be set
+     * @return Builder
      */
 
     public LocalizedStringBuilder values(final Map<String, String> values) {
@@ -34,6 +36,9 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
 
     /**
      *
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public LocalizedStringBuilder addValue(final String key, final String value) {
@@ -48,12 +53,17 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
         return this.values;
     }
 
+    /**
+     * builds LocalizedString with checking for non-null required values
+     * @return LocalizedString
+     */
     public LocalizedString build() {
         return new LocalizedStringImpl(values);
     }
 
     /**
-     * builds LocalizedString without checking for non null required values
+     * builds LocalizedString without checking for non-null required values
+     * @return LocalizedString
      */
     public LocalizedString buildUnchecked() {
         return new LocalizedStringImpl(values);

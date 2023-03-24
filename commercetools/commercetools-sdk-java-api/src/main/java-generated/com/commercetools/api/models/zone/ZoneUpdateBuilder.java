@@ -29,7 +29,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Expected version of the Zone on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -76,6 +76,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Zone.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -108,6 +110,10 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds ZoneUpdate with checking for non-null required values
+     * @return ZoneUpdate
+     */
     public ZoneUpdate build() {
         Objects.requireNonNull(version, ZoneUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ZoneUpdate.class + ": actions is missing");
@@ -115,7 +121,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-     * builds ZoneUpdate without checking for non null required values
+     * builds ZoneUpdate without checking for non-null required values
+     * @return ZoneUpdate
      */
     public ZoneUpdate buildUnchecked() {
         return new ZoneUpdateImpl(version, actions);

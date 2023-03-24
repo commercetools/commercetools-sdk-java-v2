@@ -29,7 +29,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
 
     /**
      *
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
         return this.name;
     }
 
+    /**
+     * builds AssetChangeValue with checking for non-null required values
+     * @return AssetChangeValue
+     */
     public AssetChangeValue build() {
         Objects.requireNonNull(id, AssetChangeValue.class + ": id is missing");
         Objects.requireNonNull(name, AssetChangeValue.class + ": name is missing");
@@ -75,7 +80,8 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     }
 
     /**
-     * builds AssetChangeValue without checking for non null required values
+     * builds AssetChangeValue without checking for non-null required values
+     * @return AssetChangeValue
      */
     public AssetChangeValue buildUnchecked() {
         return new AssetChangeValueImpl(id, name);

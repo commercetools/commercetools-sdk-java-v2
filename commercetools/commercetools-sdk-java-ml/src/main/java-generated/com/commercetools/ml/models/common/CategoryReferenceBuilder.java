@@ -25,7 +25,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
         return this.id;
     }
 
+    /**
+     * builds CategoryReference with checking for non-null required values
+     * @return CategoryReference
+     */
     public CategoryReference build() {
         Objects.requireNonNull(id, CategoryReference.class + ": id is missing");
         return new CategoryReferenceImpl(id);
     }
 
     /**
-     * builds CategoryReference without checking for non null required values
+     * builds CategoryReference without checking for non-null required values
+     * @return CategoryReference
      */
     public CategoryReference buildUnchecked() {
         return new CategoryReferenceImpl(id);

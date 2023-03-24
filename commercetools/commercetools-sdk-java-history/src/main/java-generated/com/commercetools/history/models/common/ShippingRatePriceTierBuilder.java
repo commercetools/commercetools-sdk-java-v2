@@ -25,7 +25,7 @@ public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTi
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTi
         return this.type;
     }
 
+    /**
+     * builds ShippingRatePriceTier with checking for non-null required values
+     * @return ShippingRatePriceTier
+     */
     public ShippingRatePriceTier build() {
         Objects.requireNonNull(type, ShippingRatePriceTier.class + ": type is missing");
         return new ShippingRatePriceTierImpl(type);
     }
 
     /**
-     * builds ShippingRatePriceTier without checking for non null required values
+     * builds ShippingRatePriceTier without checking for non-null required values
+     * @return ShippingRatePriceTier
      */
     public ShippingRatePriceTier buildUnchecked() {
         return new ShippingRatePriceTierImpl(type);

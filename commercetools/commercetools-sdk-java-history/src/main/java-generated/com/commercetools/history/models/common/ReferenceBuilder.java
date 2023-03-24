@@ -28,7 +28,7 @@ public class ReferenceBuilder implements Builder<Reference> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ReferenceBuilder implements Builder<Reference> {
 
     /**
      *
-     * @param typeId
+     * @param typeId value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ReferenceBuilder implements Builder<Reference> {
         return this.typeId;
     }
 
+    /**
+     * builds Reference with checking for non-null required values
+     * @return Reference
+     */
     public Reference build() {
         Objects.requireNonNull(id, Reference.class + ": id is missing");
         Objects.requireNonNull(typeId, Reference.class + ": typeId is missing");
@@ -63,7 +67,8 @@ public class ReferenceBuilder implements Builder<Reference> {
     }
 
     /**
-     * builds Reference without checking for non null required values
+     * builds Reference without checking for non-null required values
+     * @return Reference
      */
     public Reference buildUnchecked() {
         return new ReferenceImpl(id, typeId);

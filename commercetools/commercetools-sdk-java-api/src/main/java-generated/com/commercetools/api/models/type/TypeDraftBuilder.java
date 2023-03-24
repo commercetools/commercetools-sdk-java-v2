@@ -40,7 +40,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Type.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -51,6 +51,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Name of the Type.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -62,7 +63,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Name of the Type.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -73,6 +74,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Description of the Type.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -84,7 +86,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Description of the Type.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -96,7 +98,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
-     * @param resourceTypeIds
+     * @param resourceTypeIds value to be set
      * @return Builder
      */
 
@@ -107,7 +109,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
-     * @param resourceTypeIds
+     * @param resourceTypeIds value to be set
      * @return Builder
      */
 
@@ -119,7 +121,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
-     * @param resourceTypeIds
+     * @param resourceTypeIds value to be set
      * @return Builder
      */
 
@@ -134,7 +136,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
-     * @param fieldDefinitions
+     * @param fieldDefinitions value to be set
      * @return Builder
      */
 
@@ -146,7 +148,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
-     * @param fieldDefinitions
+     * @param fieldDefinitions value to be set
      * @return Builder
      */
 
@@ -158,7 +160,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
-     * @param fieldDefinitions
+     * @param fieldDefinitions value to be set
      * @return Builder
      */
 
@@ -173,6 +175,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param builder function to build the fieldDefinitions value
      * @return Builder
      */
 
@@ -187,6 +190,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @param builder function to build the fieldDefinitions value
      * @return Builder
      */
 
@@ -219,6 +223,10 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         return this.fieldDefinitions;
     }
 
+    /**
+     * builds TypeDraft with checking for non-null required values
+     * @return TypeDraft
+     */
     public TypeDraft build() {
         Objects.requireNonNull(key, TypeDraft.class + ": key is missing");
         Objects.requireNonNull(name, TypeDraft.class + ": name is missing");
@@ -227,7 +235,8 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     * builds TypeDraft without checking for non null required values
+     * builds TypeDraft without checking for non-null required values
+     * @return TypeDraft
      */
     public TypeDraft buildUnchecked() {
         return new TypeDraftImpl(key, name, description, resourceTypeIds, fieldDefinitions);

@@ -37,7 +37,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>User-defined unique identifier for the ProductType.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Name of the ProductType.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Description of the ProductType.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -109,6 +109,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -124,6 +125,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -153,6 +155,10 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
         return this.attributes;
     }
 
+    /**
+     * builds ProductTypeDraft with checking for non-null required values
+     * @return ProductTypeDraft
+     */
     public ProductTypeDraft build() {
         Objects.requireNonNull(name, ProductTypeDraft.class + ": name is missing");
         Objects.requireNonNull(description, ProductTypeDraft.class + ": description is missing");
@@ -160,7 +166,8 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     * builds ProductTypeDraft without checking for non null required values
+     * builds ProductTypeDraft without checking for non-null required values
+     * @return ProductTypeDraft
      */
     public ProductTypeDraft buildUnchecked() {
         return new ProductTypeDraftImpl(key, name, description, attributes);

@@ -34,7 +34,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     /**
      *  <p>Update action for <code>setProductVariantKey</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -92,6 +92,10 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
         return this.nextValue;
     }
 
+    /**
+     * builds SetProductVariantKeyChange with checking for non-null required values
+     * @return SetProductVariantKeyChange
+     */
     public SetProductVariantKeyChange build() {
         Objects.requireNonNull(change, SetProductVariantKeyChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetProductVariantKeyChange.class + ": catalogData is missing");
@@ -101,7 +105,8 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
-     * builds SetProductVariantKeyChange without checking for non null required values
+     * builds SetProductVariantKeyChange without checking for non-null required values
+     * @return SetProductVariantKeyChange
      */
     public SetProductVariantKeyChange buildUnchecked() {
         return new SetProductVariantKeyChangeImpl(change, catalogData, previousValue, nextValue);

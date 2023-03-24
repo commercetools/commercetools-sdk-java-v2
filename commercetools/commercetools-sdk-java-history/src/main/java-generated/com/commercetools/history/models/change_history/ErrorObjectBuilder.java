@@ -28,7 +28,7 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
 
     /**
      *
-     * @param code
+     * @param code value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
         return this.message;
     }
 
+    /**
+     * builds ErrorObject with checking for non-null required values
+     * @return ErrorObject
+     */
     public ErrorObject build() {
         Objects.requireNonNull(code, ErrorObject.class + ": code is missing");
         Objects.requireNonNull(message, ErrorObject.class + ": message is missing");
@@ -63,7 +67,8 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
     }
 
     /**
-     * builds ErrorObject without checking for non null required values
+     * builds ErrorObject without checking for non-null required values
+     * @return ErrorObject
      */
     public ErrorObject buildUnchecked() {
         return new ErrorObjectImpl(code, message);

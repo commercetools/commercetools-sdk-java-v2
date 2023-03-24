@@ -54,7 +54,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param from
+     * @param from value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param fromStr
+     * @param fromStr value to be set
      * @return Builder
      */
 
@@ -76,7 +76,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param to
+     * @param to value to be set
      * @return Builder
      */
 
@@ -87,7 +87,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param toStr
+     * @param toStr value to be set
      * @return Builder
      */
 
@@ -98,7 +98,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -109,7 +109,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param productCount
+     * @param productCount value to be set
      * @return Builder
      */
 
@@ -120,7 +120,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -131,7 +131,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param min
+     * @param min value to be set
      * @return Builder
      */
 
@@ -142,7 +142,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param max
+     * @param max value to be set
      * @return Builder
      */
 
@@ -153,7 +153,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
-     * @param mean
+     * @param mean value to be set
      * @return Builder
      */
 
@@ -203,6 +203,10 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
         return this.mean;
     }
 
+    /**
+     * builds FacetRange with checking for non-null required values
+     * @return FacetRange
+     */
     public FacetRange build() {
         Objects.requireNonNull(from, FacetRange.class + ": from is missing");
         Objects.requireNonNull(fromStr, FacetRange.class + ": fromStr is missing");
@@ -217,7 +221,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * builds FacetRange without checking for non null required values
+     * builds FacetRange without checking for non-null required values
+     * @return FacetRange
      */
     public FacetRange buildUnchecked() {
         return new FacetRangeImpl(from, fromStr, to, toStr, count, productCount, total, min, max, mean);

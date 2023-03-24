@@ -29,7 +29,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
-     * @param targets
+     * @param targets value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
-     * @param targets
+     * @param targets value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
-     * @param targets
+     * @param targets value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @param builder function to build the targets value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @param builder function to build the targets value
      * @return Builder
      */
 
@@ -96,7 +98,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
      *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
      *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an InvalidItemShippingDetails error.</li>
      *  </ul>
-     * @param valid
+     * @param valid value to be set
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
         return this.valid;
     }
 
+    /**
+     * builds ItemShippingDetails with checking for non-null required values
+     * @return ItemShippingDetails
+     */
     public ItemShippingDetails build() {
         Objects.requireNonNull(targets, ItemShippingDetails.class + ": targets is missing");
         Objects.requireNonNull(valid, ItemShippingDetails.class + ": valid is missing");
@@ -120,7 +126,8 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     * builds ItemShippingDetails without checking for non null required values
+     * builds ItemShippingDetails without checking for non-null required values
+     * @return ItemShippingDetails
      */
     public ItemShippingDetails buildUnchecked() {
         return new ItemShippingDetailsImpl(targets, valid);

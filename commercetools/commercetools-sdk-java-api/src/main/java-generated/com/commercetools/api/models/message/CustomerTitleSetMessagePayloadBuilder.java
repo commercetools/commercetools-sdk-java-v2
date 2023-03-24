@@ -27,7 +27,7 @@ public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTi
 
     /**
      *  <p>The <code>title</code> that was set during the Set Title update action.</p>
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTi
         return this.title;
     }
 
+    /**
+     * builds CustomerTitleSetMessagePayload with checking for non-null required values
+     * @return CustomerTitleSetMessagePayload
+     */
     public CustomerTitleSetMessagePayload build() {
         return new CustomerTitleSetMessagePayloadImpl(title);
     }
 
     /**
-     * builds CustomerTitleSetMessagePayload without checking for non null required values
+     * builds CustomerTitleSetMessagePayload without checking for non-null required values
+     * @return CustomerTitleSetMessagePayload
      */
     public CustomerTitleSetMessagePayload buildUnchecked() {
         return new CustomerTitleSetMessagePayloadImpl(title);

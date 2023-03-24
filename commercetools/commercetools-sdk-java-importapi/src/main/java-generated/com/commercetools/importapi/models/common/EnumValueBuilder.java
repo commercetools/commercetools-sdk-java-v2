@@ -28,7 +28,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
 
     /**
      *
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class EnumValueBuilder implements Builder<EnumValue> {
         return this.label;
     }
 
+    /**
+     * builds EnumValue with checking for non-null required values
+     * @return EnumValue
+     */
     public EnumValue build() {
         Objects.requireNonNull(key, EnumValue.class + ": key is missing");
         Objects.requireNonNull(label, EnumValue.class + ": label is missing");
@@ -63,7 +67,8 @@ public class EnumValueBuilder implements Builder<EnumValue> {
     }
 
     /**
-     * builds EnumValue without checking for non null required values
+     * builds EnumValue without checking for non-null required values
+     * @return EnumValue
      */
     public EnumValue buildUnchecked() {
         return new EnumValueImpl(key, label);

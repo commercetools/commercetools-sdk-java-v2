@@ -35,7 +35,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *  <p>Update actions for removing images</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -96,6 +96,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -110,6 +111,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -133,7 +135,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -145,7 +147,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -159,6 +161,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -173,6 +176,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -199,6 +203,10 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveImageChange with checking for non-null required values
+     * @return RemoveImageChange
+     */
     public RemoveImageChange build() {
         Objects.requireNonNull(change, RemoveImageChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, RemoveImageChange.class + ": catalogData is missing");
@@ -208,7 +216,8 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     * builds RemoveImageChange without checking for non null required values
+     * builds RemoveImageChange without checking for non-null required values
+     * @return RemoveImageChange
      */
     public RemoveImageChange buildUnchecked() {
         return new RemoveImageChangeImpl(change, catalogData, previousValue, nextValue);

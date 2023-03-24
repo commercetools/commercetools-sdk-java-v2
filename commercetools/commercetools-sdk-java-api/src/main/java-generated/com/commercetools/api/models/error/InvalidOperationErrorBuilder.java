@@ -27,7 +27,7 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
 
     /**
      *  <p>Plain text description of the error.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InvalidOperationErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InvalidOperationErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
         return this.values;
     }
 
+    /**
+     * builds InvalidOperationError with checking for non-null required values
+     * @return InvalidOperationError
+     */
     public InvalidOperationError build() {
         Objects.requireNonNull(message, InvalidOperationError.class + ": message is missing");
         return new InvalidOperationErrorImpl(message, values);
     }
 
     /**
-     * builds InvalidOperationError without checking for non null required values
+     * builds InvalidOperationError without checking for non-null required values
+     * @return InvalidOperationError
      */
     public InvalidOperationError buildUnchecked() {
         return new InvalidOperationErrorImpl(message, values);

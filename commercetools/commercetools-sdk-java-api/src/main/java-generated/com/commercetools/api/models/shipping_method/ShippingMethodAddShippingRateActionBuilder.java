@@ -29,6 +29,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Zone to which the ShippingRate should be added.</p>
+     * @param builder function to build the zone value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Zone to which the ShippingRate should be added.</p>
-     * @param zone
+     * @param zone value to be set
      * @return Builder
      */
 
@@ -52,6 +53,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Value to add to <code>shippingRates</code>.</p>
+     * @param builder function to build the shippingRate value
      * @return Builder
      */
 
@@ -64,7 +66,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Value to add to <code>shippingRates</code>.</p>
-     * @param shippingRate
+     * @param shippingRate value to be set
      * @return Builder
      */
 
@@ -82,6 +84,10 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
         return this.shippingRate;
     }
 
+    /**
+     * builds ShippingMethodAddShippingRateAction with checking for non-null required values
+     * @return ShippingMethodAddShippingRateAction
+     */
     public ShippingMethodAddShippingRateAction build() {
         Objects.requireNonNull(zone, ShippingMethodAddShippingRateAction.class + ": zone is missing");
         Objects.requireNonNull(shippingRate, ShippingMethodAddShippingRateAction.class + ": shippingRate is missing");
@@ -89,7 +95,8 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     }
 
     /**
-     * builds ShippingMethodAddShippingRateAction without checking for non null required values
+     * builds ShippingMethodAddShippingRateAction without checking for non-null required values
+     * @return ShippingMethodAddShippingRateAction
      */
     public ShippingMethodAddShippingRateAction buildUnchecked() {
         return new ShippingMethodAddShippingRateActionImpl(zone, shippingRate);

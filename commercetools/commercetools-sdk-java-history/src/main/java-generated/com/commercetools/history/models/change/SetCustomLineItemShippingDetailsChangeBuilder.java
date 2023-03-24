@@ -35,7 +35,7 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
 
     /**
      *  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -92,7 +94,7 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -118,6 +120,10 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
         return this.previousValue;
     }
 
+    /**
+     * builds SetCustomLineItemShippingDetailsChange with checking for non-null required values
+     * @return SetCustomLineItemShippingDetailsChange
+     */
     public SetCustomLineItemShippingDetailsChange build() {
         Objects.requireNonNull(change, SetCustomLineItemShippingDetailsChange.class + ": change is missing");
         Objects.requireNonNull(customLineItemId,
@@ -129,7 +135,8 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
     }
 
     /**
-     * builds SetCustomLineItemShippingDetailsChange without checking for non null required values
+     * builds SetCustomLineItemShippingDetailsChange without checking for non-null required values
+     * @return SetCustomLineItemShippingDetailsChange
      */
     public SetCustomLineItemShippingDetailsChange buildUnchecked() {
         return new SetCustomLineItemShippingDetailsChangeImpl(change, customLineItemId, nextValue, previousValue);

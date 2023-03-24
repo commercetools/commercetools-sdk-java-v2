@@ -37,7 +37,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *  <p>URI of the AssetSource.</p>
-     * @param uri
+     * @param uri value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *  <p>User-defined unique identifier of the AssetSource.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -59,6 +59,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *  <p>Width and height of the AssetSource.</p>
+     * @param builder function to build the dimensions value
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *  <p>Width and height of the AssetSource.</p>
-     * @param dimensions
+     * @param dimensions value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
-     * @param contentType
+     * @param contentType value to be set
      * @return Builder
      */
 
@@ -110,13 +111,18 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         return this.contentType;
     }
 
+    /**
+     * builds AssetSource with checking for non-null required values
+     * @return AssetSource
+     */
     public AssetSource build() {
         Objects.requireNonNull(uri, AssetSource.class + ": uri is missing");
         return new AssetSourceImpl(uri, key, dimensions, contentType);
     }
 
     /**
-     * builds AssetSource without checking for non null required values
+     * builds AssetSource without checking for non-null required values
+     * @return AssetSource
      */
     public AssetSource buildUnchecked() {
         return new AssetSourceImpl(uri, key, dimensions, contentType);

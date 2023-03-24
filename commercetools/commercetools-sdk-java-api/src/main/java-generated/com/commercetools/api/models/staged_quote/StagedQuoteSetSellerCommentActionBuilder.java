@@ -27,7 +27,7 @@ public class StagedQuoteSetSellerCommentActionBuilder implements Builder<StagedQ
 
     /**
      *  <p>If <code>sellerComment</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-     * @param sellerComment
+     * @param sellerComment value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class StagedQuoteSetSellerCommentActionBuilder implements Builder<StagedQ
         return this.sellerComment;
     }
 
+    /**
+     * builds StagedQuoteSetSellerCommentAction with checking for non-null required values
+     * @return StagedQuoteSetSellerCommentAction
+     */
     public StagedQuoteSetSellerCommentAction build() {
         return new StagedQuoteSetSellerCommentActionImpl(sellerComment);
     }
 
     /**
-     * builds StagedQuoteSetSellerCommentAction without checking for non null required values
+     * builds StagedQuoteSetSellerCommentAction without checking for non-null required values
+     * @return StagedQuoteSetSellerCommentAction
      */
     public StagedQuoteSetSellerCommentAction buildUnchecked() {
         return new StagedQuoteSetSellerCommentActionImpl(sellerComment);

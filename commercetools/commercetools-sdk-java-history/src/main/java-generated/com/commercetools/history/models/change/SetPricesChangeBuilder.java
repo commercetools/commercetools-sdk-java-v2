@@ -38,7 +38,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *  <p>Update action for <code>setPrices</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -109,6 +109,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -123,6 +124,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -135,7 +137,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -146,7 +148,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -158,7 +160,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -172,6 +174,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -186,6 +189,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -216,6 +220,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetPricesChange with checking for non-null required values
+     * @return SetPricesChange
+     */
     public SetPricesChange build() {
         Objects.requireNonNull(change, SetPricesChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetPricesChange.class + ": catalogData is missing");
@@ -226,7 +234,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * builds SetPricesChange without checking for non null required values
+     * builds SetPricesChange without checking for non-null required values
+     * @return SetPricesChange
      */
     public SetPricesChange buildUnchecked() {
         return new SetPricesChangeImpl(change, catalogData, variant, previousValue, nextValue);

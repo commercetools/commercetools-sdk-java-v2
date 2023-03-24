@@ -32,7 +32,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
 
     /**
      *  <p>Update action for <code>removeItemShippingAddress</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveItemShippingAddressesChange with checking for non-null required values
+     * @return RemoveItemShippingAddressesChange
+     */
     public RemoveItemShippingAddressesChange build() {
         Objects.requireNonNull(change, RemoveItemShippingAddressesChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, RemoveItemShippingAddressesChange.class + ": nextValue is missing");
@@ -107,7 +113,8 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
     }
 
     /**
-     * builds RemoveItemShippingAddressesChange without checking for non null required values
+     * builds RemoveItemShippingAddressesChange without checking for non-null required values
+     * @return RemoveItemShippingAddressesChange
      */
     public RemoveItemShippingAddressesChange buildUnchecked() {
         return new RemoveItemShippingAddressesChangeImpl(change, nextValue, previousValue);

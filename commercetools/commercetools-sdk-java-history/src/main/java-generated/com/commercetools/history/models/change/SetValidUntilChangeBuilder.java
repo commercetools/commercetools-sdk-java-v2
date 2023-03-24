@@ -31,7 +31,7 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
 
     /**
      *  <p>Shape of the action for <code>setValidUntil</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds SetValidUntilChange with checking for non-null required values
+     * @return SetValidUntilChange
+     */
     public SetValidUntilChange build() {
         Objects.requireNonNull(change, SetValidUntilChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetValidUntilChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
     }
 
     /**
-     * builds SetValidUntilChange without checking for non null required values
+     * builds SetValidUntilChange without checking for non-null required values
+     * @return SetValidUntilChange
      */
     public SetValidUntilChange buildUnchecked() {
         return new SetValidUntilChangeImpl(change, previousValue, nextValue);

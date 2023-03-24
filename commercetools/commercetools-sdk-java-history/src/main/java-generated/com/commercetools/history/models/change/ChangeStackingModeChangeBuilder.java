@@ -31,7 +31,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
 
     /**
      *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeStackingModeChange with checking for non-null required values
+     * @return ChangeStackingModeChange
+     */
     public ChangeStackingModeChange build() {
         Objects.requireNonNull(change, ChangeStackingModeChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangeStackingModeChange.class + ": nextValue is missing");
@@ -84,7 +88,8 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     }
 
     /**
-     * builds ChangeStackingModeChange without checking for non null required values
+     * builds ChangeStackingModeChange without checking for non-null required values
+     * @return ChangeStackingModeChange
      */
     public ChangeStackingModeChange buildUnchecked() {
         return new ChangeStackingModeChangeImpl(change, nextValue, previousValue);

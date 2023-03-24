@@ -29,6 +29,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Sets the Zone for which the shippng rates are valid.</p>
+     * @param builder function to build the zone value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Sets the Zone for which the shippng rates are valid.</p>
-     * @param zone
+     * @param zone value to be set
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
-     * @param shippingRates
+     * @param shippingRates value to be set
      * @return Builder
      */
 
@@ -63,7 +64,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
-     * @param shippingRates
+     * @param shippingRates value to be set
      * @return Builder
      */
 
@@ -75,7 +76,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
-     * @param shippingRates
+     * @param shippingRates value to be set
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @param builder function to build the shippingRates value
      * @return Builder
      */
 
@@ -105,6 +107,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @param builder function to build the shippingRates value
      * @return Builder
      */
 
@@ -124,6 +127,10 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
         return this.shippingRates;
     }
 
+    /**
+     * builds ZoneRateDraft with checking for non-null required values
+     * @return ZoneRateDraft
+     */
     public ZoneRateDraft build() {
         Objects.requireNonNull(zone, ZoneRateDraft.class + ": zone is missing");
         Objects.requireNonNull(shippingRates, ZoneRateDraft.class + ": shippingRates is missing");
@@ -131,7 +138,8 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
     }
 
     /**
-     * builds ZoneRateDraft without checking for non null required values
+     * builds ZoneRateDraft without checking for non-null required values
+     * @return ZoneRateDraft
      */
     public ZoneRateDraft buildUnchecked() {
         return new ZoneRateDraftImpl(zone, shippingRates);

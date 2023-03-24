@@ -25,7 +25,7 @@ public class ContentionErrorBuilder implements Builder<ContentionError> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ContentionErrorBuilder implements Builder<ContentionError> {
         return this.message;
     }
 
+    /**
+     * builds ContentionError with checking for non-null required values
+     * @return ContentionError
+     */
     public ContentionError build() {
         Objects.requireNonNull(message, ContentionError.class + ": message is missing");
         return new ContentionErrorImpl(message);
     }
 
     /**
-     * builds ContentionError without checking for non null required values
+     * builds ContentionError without checking for non-null required values
+     * @return ContentionError
      */
     public ContentionError buildUnchecked() {
         return new ContentionErrorImpl(message);

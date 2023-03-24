@@ -35,7 +35,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>ID of the specified Product.</p>
-     * @param productId
+     * @param productId value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>ID of the specified Product Variant.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -68,6 +68,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>Specified Price of the specified Product Variant.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>Specified Price of the specified Product Variant.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -104,6 +105,10 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
         return this.price;
     }
 
+    /**
+     * builds ProductDiscountMatchQuery with checking for non-null required values
+     * @return ProductDiscountMatchQuery
+     */
     public ProductDiscountMatchQuery build() {
         Objects.requireNonNull(productId, ProductDiscountMatchQuery.class + ": productId is missing");
         Objects.requireNonNull(variantId, ProductDiscountMatchQuery.class + ": variantId is missing");
@@ -113,7 +118,8 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
     }
 
     /**
-     * builds ProductDiscountMatchQuery without checking for non null required values
+     * builds ProductDiscountMatchQuery without checking for non-null required values
+     * @return ProductDiscountMatchQuery
      */
     public ProductDiscountMatchQuery buildUnchecked() {
         return new ProductDiscountMatchQueryImpl(productId, variantId, staged, price);

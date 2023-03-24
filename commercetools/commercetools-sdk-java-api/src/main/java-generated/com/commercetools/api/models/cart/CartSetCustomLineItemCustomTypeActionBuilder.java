@@ -34,7 +34,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
         return this.fields;
     }
 
+    /**
+     * builds CartSetCustomLineItemCustomTypeAction with checking for non-null required values
+     * @return CartSetCustomLineItemCustomTypeAction
+     */
     public CartSetCustomLineItemCustomTypeAction build() {
         Objects.requireNonNull(customLineItemId,
             CartSetCustomLineItemCustomTypeAction.class + ": customLineItemId is missing");
@@ -110,7 +116,8 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     }
 
     /**
-     * builds CartSetCustomLineItemCustomTypeAction without checking for non null required values
+     * builds CartSetCustomLineItemCustomTypeAction without checking for non-null required values
+     * @return CartSetCustomLineItemCustomTypeAction
      */
     public CartSetCustomLineItemCustomTypeAction buildUnchecked() {
         return new CartSetCustomLineItemCustomTypeActionImpl(customLineItemId, type, fields);

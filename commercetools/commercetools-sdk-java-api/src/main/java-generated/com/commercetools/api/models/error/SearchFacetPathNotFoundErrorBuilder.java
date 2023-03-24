@@ -27,7 +27,7 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
 
     /**
      *  <p><code>"Facet path $path not found."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public SearchFacetPathNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public SearchFacetPathNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
         return this.values;
     }
 
+    /**
+     * builds SearchFacetPathNotFoundError with checking for non-null required values
+     * @return SearchFacetPathNotFoundError
+     */
     public SearchFacetPathNotFoundError build() {
         Objects.requireNonNull(message, SearchFacetPathNotFoundError.class + ": message is missing");
         return new SearchFacetPathNotFoundErrorImpl(message, values);
     }
 
     /**
-     * builds SearchFacetPathNotFoundError without checking for non null required values
+     * builds SearchFacetPathNotFoundError without checking for non-null required values
+     * @return SearchFacetPathNotFoundError
      */
     public SearchFacetPathNotFoundError buildUnchecked() {
         return new SearchFacetPathNotFoundErrorImpl(message, values);

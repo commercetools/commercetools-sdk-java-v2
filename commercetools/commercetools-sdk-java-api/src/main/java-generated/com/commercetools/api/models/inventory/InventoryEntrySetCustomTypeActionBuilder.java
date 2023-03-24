@@ -31,6 +31,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
 
     /**
      *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
 
     /**
      *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
 
     /**
      *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
 
     /**
      *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
         return this.fields;
     }
 
+    /**
+     * builds InventoryEntrySetCustomTypeAction with checking for non-null required values
+     * @return InventoryEntrySetCustomTypeAction
+     */
     public InventoryEntrySetCustomTypeAction build() {
         return new InventoryEntrySetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds InventoryEntrySetCustomTypeAction without checking for non null required values
+     * builds InventoryEntrySetCustomTypeAction without checking for non-null required values
+     * @return InventoryEntrySetCustomTypeAction
      */
     public InventoryEntrySetCustomTypeAction buildUnchecked() {
         return new InventoryEntrySetCustomTypeActionImpl(type, fields);

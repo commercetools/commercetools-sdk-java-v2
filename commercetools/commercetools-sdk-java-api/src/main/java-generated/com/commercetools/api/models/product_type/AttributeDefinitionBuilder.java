@@ -49,7 +49,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -60,6 +60,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>User-defined name of the Attribute that is unique within the Project.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -82,6 +83,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -93,7 +95,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -104,7 +106,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
-     * @param isRequired
+     * @param isRequired value to be set
      * @return Builder
      */
 
@@ -115,7 +117,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
-     * @param attributeConstraint
+     * @param attributeConstraint value to be set
      * @return Builder
      */
 
@@ -127,6 +129,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
+     * @param builder function to build the inputTip value
      * @return Builder
      */
 
@@ -138,7 +141,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
-     * @param inputTip
+     * @param inputTip value to be set
      * @return Builder
      */
 
@@ -150,7 +153,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
-     * @param inputHint
+     * @param inputHint value to be set
      * @return Builder
      */
 
@@ -163,7 +166,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     /**
      *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
      *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
-     * @param isSearchable
+     * @param isSearchable value to be set
      * @return Builder
      */
 
@@ -205,6 +208,10 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this.isSearchable;
     }
 
+    /**
+     * builds AttributeDefinition with checking for non-null required values
+     * @return AttributeDefinition
+     */
     public AttributeDefinition build() {
         Objects.requireNonNull(type, AttributeDefinition.class + ": type is missing");
         Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");
@@ -218,7 +225,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * builds AttributeDefinition without checking for non null required values
+     * builds AttributeDefinition without checking for non-null required values
+     * @return AttributeDefinition
      */
     public AttributeDefinition buildUnchecked() {
         return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,

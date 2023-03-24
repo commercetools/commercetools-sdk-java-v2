@@ -26,7 +26,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
-     * @param resources
+     * @param resources value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
+     * @param builder function to build the resources value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
         return this.resources;
     }
 
+    /**
+     * builds CustomerImportRequest with checking for non-null required values
+     * @return CustomerImportRequest
+     */
     public CustomerImportRequest build() {
         Objects.requireNonNull(resources, CustomerImportRequest.class + ": resources is missing");
         return new CustomerImportRequestImpl(resources);
     }
 
     /**
-     * builds CustomerImportRequest without checking for non null required values
+     * builds CustomerImportRequest without checking for non-null required values
+     * @return CustomerImportRequest
      */
     public CustomerImportRequest buildUnchecked() {
         return new CustomerImportRequestImpl(resources);

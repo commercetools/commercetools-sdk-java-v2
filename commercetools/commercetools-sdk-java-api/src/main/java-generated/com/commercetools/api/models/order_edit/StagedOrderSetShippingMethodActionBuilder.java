@@ -31,6 +31,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
 
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     * @param builder function to build the shippingMethod value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
 
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
-     * @param shippingMethod
+     * @param shippingMethod value to be set
      * @return Builder
      */
 
@@ -56,6 +57,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -68,7 +70,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -88,12 +90,17 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
         return this.externalTaxRate;
     }
 
+    /**
+     * builds StagedOrderSetShippingMethodAction with checking for non-null required values
+     * @return StagedOrderSetShippingMethodAction
+     */
     public StagedOrderSetShippingMethodAction build() {
         return new StagedOrderSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
     }
 
     /**
-     * builds StagedOrderSetShippingMethodAction without checking for non null required values
+     * builds StagedOrderSetShippingMethodAction without checking for non-null required values
+     * @return StagedOrderSetShippingMethodAction
      */
     public StagedOrderSetShippingMethodAction buildUnchecked() {
         return new StagedOrderSetShippingMethodActionImpl(shippingMethod, externalTaxRate);

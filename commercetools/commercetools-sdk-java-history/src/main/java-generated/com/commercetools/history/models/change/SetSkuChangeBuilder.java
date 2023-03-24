@@ -34,7 +34,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     /**
      *  <p>Update action for <code>setSku</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -92,6 +92,10 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetSkuChange with checking for non-null required values
+     * @return SetSkuChange
+     */
     public SetSkuChange build() {
         Objects.requireNonNull(change, SetSkuChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetSkuChange.class + ": catalogData is missing");
@@ -101,7 +105,8 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
-     * builds SetSkuChange without checking for non null required values
+     * builds SetSkuChange without checking for non-null required values
+     * @return SetSkuChange
      */
     public SetSkuChange buildUnchecked() {
         return new SetSkuChangeImpl(change, catalogData, previousValue, nextValue);

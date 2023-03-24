@@ -29,7 +29,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
 
     /**
      *  <p>Update action for <code>removeAddress</code> action.</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
         return this.previousValue;
     }
 
+    /**
+     * builds RemoveAddressChange with checking for non-null required values
+     * @return RemoveAddressChange
+     */
     public RemoveAddressChange build() {
         Objects.requireNonNull(change, RemoveAddressChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveAddressChange.class + ": previousValue is missing");
@@ -76,7 +81,8 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     }
 
     /**
-     * builds RemoveAddressChange without checking for non null required values
+     * builds RemoveAddressChange without checking for non-null required values
+     * @return RemoveAddressChange
      */
     public RemoveAddressChange buildUnchecked() {
         return new RemoveAddressChangeImpl(change, previousValue);

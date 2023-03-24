@@ -25,7 +25,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
         return this.message;
     }
 
+    /**
+     * builds InvalidCredentialsError with checking for non-null required values
+     * @return InvalidCredentialsError
+     */
     public InvalidCredentialsError build() {
         Objects.requireNonNull(message, InvalidCredentialsError.class + ": message is missing");
         return new InvalidCredentialsErrorImpl(message);
     }
 
     /**
-     * builds InvalidCredentialsError without checking for non null required values
+     * builds InvalidCredentialsError without checking for non-null required values
+     * @return InvalidCredentialsError
      */
     public InvalidCredentialsError buildUnchecked() {
         return new InvalidCredentialsErrorImpl(message);

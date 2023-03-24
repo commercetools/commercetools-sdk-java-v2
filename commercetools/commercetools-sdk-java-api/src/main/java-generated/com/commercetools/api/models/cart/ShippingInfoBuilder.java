@@ -55,7 +55,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Name of the Shipping Method.</p>
-     * @param shippingMethodName
+     * @param shippingMethodName value to be set
      * @return Builder
      */
 
@@ -66,6 +66,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -77,7 +78,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -88,6 +89,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Used to determine the price.</p>
+     * @param builder function to build the shippingRate value
      * @return Builder
      */
 
@@ -100,7 +102,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Used to determine the price.</p>
-     * @param shippingRate
+     * @param shippingRate value to be set
      * @return Builder
      */
 
@@ -112,6 +114,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     * @param builder function to build the taxedPrice value
      * @return Builder
      */
 
@@ -123,7 +126,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Automatically set after the <code>taxRate</code> is set.</p>
-     * @param taxedPrice
+     * @param taxedPrice value to be set
      * @return Builder
      */
 
@@ -135,6 +138,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     /**
      *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
      *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     * @param builder function to build the taxRate value
      * @return Builder
      */
 
@@ -147,7 +151,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     /**
      *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
      *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
-     * @param taxRate
+     * @param taxRate value to be set
      * @return Builder
      */
 
@@ -158,6 +162,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -170,7 +175,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -182,6 +187,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Not set if a custom Shipping Method is used.</p>
+     * @param builder function to build the shippingMethod value
      * @return Builder
      */
 
@@ -195,7 +201,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Not set if a custom Shipping Method is used.</p>
-     * @param shippingMethod
+     * @param shippingMethod value to be set
      * @return Builder
      */
 
@@ -207,7 +213,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Information on how items are delivered to customers.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -218,7 +224,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Information on how items are delivered to customers.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -230,7 +236,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Information on how items are delivered to customers.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -245,6 +251,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Information on how items are delivered to customers.</p>
+     * @param builder function to build the deliveries value
      * @return Builder
      */
 
@@ -259,6 +266,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Information on how items are delivered to customers.</p>
+     * @param builder function to build the deliveries value
      * @return Builder
      */
 
@@ -271,6 +279,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Discounted price of the Shipping Method.</p>
+     * @param builder function to build the discountedPrice value
      * @return Builder
      */
 
@@ -283,7 +292,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Discounted price of the Shipping Method.</p>
-     * @param discountedPrice
+     * @param discountedPrice value to be set
      * @return Builder
      */
 
@@ -295,7 +304,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
-     * @param shippingMethodState
+     * @param shippingMethodState value to be set
      * @return Builder
      */
 
@@ -351,6 +360,10 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         return this.shippingMethodState;
     }
 
+    /**
+     * builds ShippingInfo with checking for non-null required values
+     * @return ShippingInfo
+     */
     public ShippingInfo build() {
         Objects.requireNonNull(shippingMethodName, ShippingInfo.class + ": shippingMethodName is missing");
         Objects.requireNonNull(price, ShippingInfo.class + ": price is missing");
@@ -361,7 +374,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     * builds ShippingInfo without checking for non null required values
+     * builds ShippingInfo without checking for non-null required values
+     * @return ShippingInfo
      */
     public ShippingInfo buildUnchecked() {
         return new ShippingInfoImpl(shippingMethodName, price, shippingRate, taxedPrice, taxRate, taxCategory,

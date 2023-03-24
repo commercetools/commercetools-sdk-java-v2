@@ -32,7 +32,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     /**
      *  <p>Update action for <code>addEnumValue</code> on types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     /**
      *  <p>The name of the field/attribute definition updated.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -87,6 +88,10 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds AddEnumValueChange with checking for non-null required values
+     * @return AddEnumValueChange
+     */
     public AddEnumValueChange build() {
         Objects.requireNonNull(change, AddEnumValueChange.class + ": change is missing");
         Objects.requireNonNull(fieldName, AddEnumValueChange.class + ": fieldName is missing");
@@ -95,7 +100,8 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
-     * builds AddEnumValueChange without checking for non null required values
+     * builds AddEnumValueChange without checking for non-null required values
+     * @return AddEnumValueChange
      */
     public AddEnumValueChange buildUnchecked() {
         return new AddEnumValueChangeImpl(change, fieldName, nextValue);

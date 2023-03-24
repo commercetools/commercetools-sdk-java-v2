@@ -30,7 +30,7 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
 
     /**
      *
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
         return this.resource;
     }
 
+    /**
+     * builds ResourceCreationError with checking for non-null required values
+     * @return ResourceCreationError
+     */
     public ResourceCreationError build() {
         Objects.requireNonNull(message, ResourceCreationError.class + ": message is missing");
         return new ResourceCreationErrorImpl(message, resource);
     }
 
     /**
-     * builds ResourceCreationError without checking for non null required values
+     * builds ResourceCreationError without checking for non-null required values
+     * @return ResourceCreationError
      */
     public ResourceCreationError buildUnchecked() {
         return new ResourceCreationErrorImpl(message, resource);

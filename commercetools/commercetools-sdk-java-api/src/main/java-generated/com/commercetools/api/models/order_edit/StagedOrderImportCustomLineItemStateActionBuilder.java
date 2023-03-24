@@ -30,7 +30,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -65,7 +65,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -80,6 +80,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -112,6 +114,10 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
         return this.state;
     }
 
+    /**
+     * builds StagedOrderImportCustomLineItemStateAction with checking for non-null required values
+     * @return StagedOrderImportCustomLineItemStateAction
+     */
     public StagedOrderImportCustomLineItemStateAction build() {
         Objects.requireNonNull(customLineItemId,
             StagedOrderImportCustomLineItemStateAction.class + ": customLineItemId is missing");
@@ -120,7 +126,8 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     * builds StagedOrderImportCustomLineItemStateAction without checking for non null required values
+     * builds StagedOrderImportCustomLineItemStateAction without checking for non-null required values
+     * @return StagedOrderImportCustomLineItemStateAction
      */
     public StagedOrderImportCustomLineItemStateAction buildUnchecked() {
         return new StagedOrderImportCustomLineItemStateActionImpl(customLineItemId, state);

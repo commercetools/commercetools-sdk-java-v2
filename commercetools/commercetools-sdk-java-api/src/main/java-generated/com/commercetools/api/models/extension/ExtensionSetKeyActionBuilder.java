@@ -27,7 +27,7 @@ public class ExtensionSetKeyActionBuilder implements Builder<ExtensionSetKeyActi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ExtensionSetKeyActionBuilder implements Builder<ExtensionSetKeyActi
         return this.key;
     }
 
+    /**
+     * builds ExtensionSetKeyAction with checking for non-null required values
+     * @return ExtensionSetKeyAction
+     */
     public ExtensionSetKeyAction build() {
         return new ExtensionSetKeyActionImpl(key);
     }
 
     /**
-     * builds ExtensionSetKeyAction without checking for non null required values
+     * builds ExtensionSetKeyAction without checking for non-null required values
+     * @return ExtensionSetKeyAction
      */
     public ExtensionSetKeyAction buildUnchecked() {
         return new ExtensionSetKeyActionImpl(key);

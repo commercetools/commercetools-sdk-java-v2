@@ -26,7 +26,7 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
 
     /**
      *
-     * @param elementType
+     * @param elementType value to be set
      * @return Builder
      */
 
@@ -38,6 +38,7 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
 
     /**
      *
+     * @param builder function to build the elementType value
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
         return this.elementType;
     }
 
+    /**
+     * builds AttributeSetType with checking for non-null required values
+     * @return AttributeSetType
+     */
     public AttributeSetType build() {
         Objects.requireNonNull(elementType, AttributeSetType.class + ": elementType is missing");
         return new AttributeSetTypeImpl(elementType);
     }
 
     /**
-     * builds AttributeSetType without checking for non null required values
+     * builds AttributeSetType without checking for non-null required values
+     * @return AttributeSetType
      */
     public AttributeSetType buildUnchecked() {
         return new AttributeSetTypeImpl(elementType);

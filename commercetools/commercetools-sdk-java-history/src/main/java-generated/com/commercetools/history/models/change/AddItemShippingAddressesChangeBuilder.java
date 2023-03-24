@@ -32,7 +32,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *  <p>Update action for <code>addItemShippingAddress</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
         return this.previousValue;
     }
 
+    /**
+     * builds AddItemShippingAddressesChange with checking for non-null required values
+     * @return AddItemShippingAddressesChange
+     */
     public AddItemShippingAddressesChange build() {
         Objects.requireNonNull(change, AddItemShippingAddressesChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddItemShippingAddressesChange.class + ": nextValue is missing");
@@ -107,7 +113,8 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
     }
 
     /**
-     * builds AddItemShippingAddressesChange without checking for non null required values
+     * builds AddItemShippingAddressesChange without checking for non-null required values
+     * @return AddItemShippingAddressesChange
      */
     public AddItemShippingAddressesChange buildUnchecked() {
         return new AddItemShippingAddressesChangeImpl(change, nextValue, previousValue);

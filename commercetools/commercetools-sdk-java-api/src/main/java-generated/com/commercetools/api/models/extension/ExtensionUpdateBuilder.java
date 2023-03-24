@@ -29,7 +29,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Expected version of the Extension on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds ExtensionUpdate with checking for non-null required values
+     * @return ExtensionUpdate
+     */
     public ExtensionUpdate build() {
         Objects.requireNonNull(version, ExtensionUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ExtensionUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-     * builds ExtensionUpdate without checking for non null required values
+     * builds ExtensionUpdate without checking for non-null required values
+     * @return ExtensionUpdate
      */
     public ExtensionUpdate buildUnchecked() {
         return new ExtensionUpdateImpl(version, actions);

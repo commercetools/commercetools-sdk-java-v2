@@ -37,7 +37,7 @@ public class CentPrecisionMoneyDraftBuilder implements Builder<CentPrecisionMone
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
-     * @param centAmount
+     * @param centAmount value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class CentPrecisionMoneyDraftBuilder implements Builder<CentPrecisionMone
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
-     * @param currencyCode
+     * @param currencyCode value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class CentPrecisionMoneyDraftBuilder implements Builder<CentPrecisionMone
 
     /**
      *  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>
-     * @param fractionDigits
+     * @param fractionDigits value to be set
      * @return Builder
      */
 
@@ -81,6 +81,10 @@ public class CentPrecisionMoneyDraftBuilder implements Builder<CentPrecisionMone
         return this.fractionDigits;
     }
 
+    /**
+     * builds CentPrecisionMoneyDraft with checking for non-null required values
+     * @return CentPrecisionMoneyDraft
+     */
     public CentPrecisionMoneyDraft build() {
         Objects.requireNonNull(centAmount, CentPrecisionMoneyDraft.class + ": centAmount is missing");
         Objects.requireNonNull(currencyCode, CentPrecisionMoneyDraft.class + ": currencyCode is missing");
@@ -88,7 +92,8 @@ public class CentPrecisionMoneyDraftBuilder implements Builder<CentPrecisionMone
     }
 
     /**
-     * builds CentPrecisionMoneyDraft without checking for non null required values
+     * builds CentPrecisionMoneyDraft without checking for non-null required values
+     * @return CentPrecisionMoneyDraft
      */
     public CentPrecisionMoneyDraft buildUnchecked() {
         return new CentPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits);

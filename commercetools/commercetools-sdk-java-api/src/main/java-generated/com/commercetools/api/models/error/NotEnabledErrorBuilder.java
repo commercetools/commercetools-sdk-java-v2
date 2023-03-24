@@ -27,7 +27,7 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
 
     /**
      *  <p><code>"The category recommendations API is not yet enabled for your project."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public NotEnabledErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public NotEnabledErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
         return this.values;
     }
 
+    /**
+     * builds NotEnabledError with checking for non-null required values
+     * @return NotEnabledError
+     */
     public NotEnabledError build() {
         Objects.requireNonNull(message, NotEnabledError.class + ": message is missing");
         return new NotEnabledErrorImpl(message, values);
     }
 
     /**
-     * builds NotEnabledError without checking for non null required values
+     * builds NotEnabledError without checking for non-null required values
+     * @return NotEnabledError
      */
     public NotEnabledError buildUnchecked() {
         return new NotEnabledErrorImpl(message, values);

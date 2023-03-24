@@ -31,6 +31,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
 
     /**
      *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
 
     /**
      *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
 
     /**
      *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
 
     /**
      *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
         return this.fields;
     }
 
+    /**
+     * builds ProductSelectionSetCustomTypeAction with checking for non-null required values
+     * @return ProductSelectionSetCustomTypeAction
+     */
     public ProductSelectionSetCustomTypeAction build() {
         return new ProductSelectionSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds ProductSelectionSetCustomTypeAction without checking for non null required values
+     * builds ProductSelectionSetCustomTypeAction without checking for non-null required values
+     * @return ProductSelectionSetCustomTypeAction
      */
     public ProductSelectionSetCustomTypeAction buildUnchecked() {
         return new ProductSelectionSetCustomTypeActionImpl(type, fields);

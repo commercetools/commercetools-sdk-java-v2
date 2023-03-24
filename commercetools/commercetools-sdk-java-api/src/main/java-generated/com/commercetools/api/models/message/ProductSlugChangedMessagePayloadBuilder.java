@@ -31,6 +31,7 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
 
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
 
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
 
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
+     * @param builder function to build the oldSlug value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
 
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
-     * @param oldSlug
+     * @param oldSlug value to be set
      * @return Builder
      */
 
@@ -84,13 +86,18 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
         return this.oldSlug;
     }
 
+    /**
+     * builds ProductSlugChangedMessagePayload with checking for non-null required values
+     * @return ProductSlugChangedMessagePayload
+     */
     public ProductSlugChangedMessagePayload build() {
         Objects.requireNonNull(slug, ProductSlugChangedMessagePayload.class + ": slug is missing");
         return new ProductSlugChangedMessagePayloadImpl(slug, oldSlug);
     }
 
     /**
-     * builds ProductSlugChangedMessagePayload without checking for non null required values
+     * builds ProductSlugChangedMessagePayload without checking for non-null required values
+     * @return ProductSlugChangedMessagePayload
      */
     public ProductSlugChangedMessagePayload buildUnchecked() {
         return new ProductSlugChangedMessagePayloadImpl(slug, oldSlug);

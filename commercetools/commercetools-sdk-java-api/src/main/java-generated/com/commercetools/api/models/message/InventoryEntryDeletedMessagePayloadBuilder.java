@@ -31,7 +31,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
         return this.supplyChannel;
     }
 
+    /**
+     * builds InventoryEntryDeletedMessagePayload with checking for non-null required values
+     * @return InventoryEntryDeletedMessagePayload
+     */
     public InventoryEntryDeletedMessagePayload build() {
         Objects.requireNonNull(sku, InventoryEntryDeletedMessagePayload.class + ": sku is missing");
         return new InventoryEntryDeletedMessagePayloadImpl(sku, supplyChannel);
     }
 
     /**
-     * builds InventoryEntryDeletedMessagePayload without checking for non null required values
+     * builds InventoryEntryDeletedMessagePayload without checking for non-null required values
+     * @return InventoryEntryDeletedMessagePayload
      */
     public InventoryEntryDeletedMessagePayload buildUnchecked() {
         return new InventoryEntryDeletedMessagePayloadImpl(sku, supplyChannel);

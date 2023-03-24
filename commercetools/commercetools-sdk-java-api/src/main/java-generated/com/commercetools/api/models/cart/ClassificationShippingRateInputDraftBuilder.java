@@ -25,7 +25,7 @@ public class ClassificationShippingRateInputDraftBuilder implements Builder<Clas
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ClassificationShippingRateInputDraftBuilder implements Builder<Clas
         return this.key;
     }
 
+    /**
+     * builds ClassificationShippingRateInputDraft with checking for non-null required values
+     * @return ClassificationShippingRateInputDraft
+     */
     public ClassificationShippingRateInputDraft build() {
         Objects.requireNonNull(key, ClassificationShippingRateInputDraft.class + ": key is missing");
         return new ClassificationShippingRateInputDraftImpl(key);
     }
 
     /**
-     * builds ClassificationShippingRateInputDraft without checking for non null required values
+     * builds ClassificationShippingRateInputDraft without checking for non-null required values
+     * @return ClassificationShippingRateInputDraft
      */
     public ClassificationShippingRateInputDraft buildUnchecked() {
         return new ClassificationShippingRateInputDraftImpl(key);

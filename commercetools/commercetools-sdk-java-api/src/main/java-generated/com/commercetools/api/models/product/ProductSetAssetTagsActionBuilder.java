@@ -42,7 +42,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -75,7 +75,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -86,7 +86,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -97,7 +97,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -108,7 +108,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -119,7 +119,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
-     * @param tags
+     * @param tags value to be set
      * @return Builder
      */
 
@@ -161,12 +161,17 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
         return this.tags;
     }
 
+    /**
+     * builds ProductSetAssetTagsAction with checking for non-null required values
+     * @return ProductSetAssetTagsAction
+     */
     public ProductSetAssetTagsAction build() {
         return new ProductSetAssetTagsActionImpl(variantId, sku, staged, assetId, assetKey, tags);
     }
 
     /**
-     * builds ProductSetAssetTagsAction without checking for non null required values
+     * builds ProductSetAssetTagsAction without checking for non-null required values
+     * @return ProductSetAssetTagsAction
      */
     public ProductSetAssetTagsAction buildUnchecked() {
         return new ProductSetAssetTagsActionImpl(variantId, sku, staged, assetId, assetKey, tags);

@@ -31,6 +31,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      *  <p>ResourceIdentifier of a Type.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      *  <p>ResourceIdentifier of a Type.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -84,13 +86,18 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
         return this.fields;
     }
 
+    /**
+     * builds PaymentAddInterfaceInteractionAction with checking for non-null required values
+     * @return PaymentAddInterfaceInteractionAction
+     */
     public PaymentAddInterfaceInteractionAction build() {
         Objects.requireNonNull(type, PaymentAddInterfaceInteractionAction.class + ": type is missing");
         return new PaymentAddInterfaceInteractionActionImpl(type, fields);
     }
 
     /**
-     * builds PaymentAddInterfaceInteractionAction without checking for non null required values
+     * builds PaymentAddInterfaceInteractionAction without checking for non-null required values
+     * @return PaymentAddInterfaceInteractionAction
      */
     public PaymentAddInterfaceInteractionAction buildUnchecked() {
         return new PaymentAddInterfaceInteractionActionImpl(type, fields);

@@ -36,7 +36,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
-     * @param accessKey
+     * @param accessKey value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
-     * @param accessSecret
+     * @param accessSecret value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     /**
      *  <p>Amazon Resource Name (ARN) of the topic.</p>
-     * @param topicArn
+     * @param topicArn value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     /**
      *  <p>Defines the method of authentication for the SNS topic.</p>
-     * @param authenticationMode
+     * @param authenticationMode value to be set
      * @return Builder
      */
 
@@ -98,13 +98,18 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
         return this.authenticationMode;
     }
 
+    /**
+     * builds SnsDestination with checking for non-null required values
+     * @return SnsDestination
+     */
     public SnsDestination build() {
         Objects.requireNonNull(topicArn, SnsDestination.class + ": topicArn is missing");
         return new SnsDestinationImpl(accessKey, accessSecret, topicArn, authenticationMode);
     }
 
     /**
-     * builds SnsDestination without checking for non null required values
+     * builds SnsDestination without checking for non-null required values
+     * @return SnsDestination
      */
     public SnsDestination buildUnchecked() {
         return new SnsDestinationImpl(accessKey, accessSecret, topicArn, authenticationMode);

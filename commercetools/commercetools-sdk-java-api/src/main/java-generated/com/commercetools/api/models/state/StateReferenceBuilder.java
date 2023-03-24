@@ -31,7 +31,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
 
     /**
      *  <p>Unique identifier of the referenced State.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
 
     /**
      *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
 
     /**
      *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class StateReferenceBuilder implements Builder<StateReference> {
         return this.obj;
     }
 
+    /**
+     * builds StateReference with checking for non-null required values
+     * @return StateReference
+     */
     public StateReference build() {
         Objects.requireNonNull(id, StateReference.class + ": id is missing");
         return new StateReferenceImpl(id, obj);
     }
 
     /**
-     * builds StateReference without checking for non null required values
+     * builds StateReference without checking for non-null required values
+     * @return StateReference
      */
     public StateReference buildUnchecked() {
         return new StateReferenceImpl(id, obj);

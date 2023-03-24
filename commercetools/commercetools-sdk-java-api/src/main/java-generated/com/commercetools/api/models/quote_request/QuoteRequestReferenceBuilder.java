@@ -31,7 +31,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
 
     /**
      *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
 
     /**
      *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
         return this.obj;
     }
 
+    /**
+     * builds QuoteRequestReference with checking for non-null required values
+     * @return QuoteRequestReference
+     */
     public QuoteRequestReference build() {
         Objects.requireNonNull(id, QuoteRequestReference.class + ": id is missing");
         return new QuoteRequestReferenceImpl(id, obj);
     }
 
     /**
-     * builds QuoteRequestReference without checking for non null required values
+     * builds QuoteRequestReference without checking for non-null required values
+     * @return QuoteRequestReference
      */
     public QuoteRequestReference buildUnchecked() {
         return new QuoteRequestReferenceImpl(id, obj);

@@ -30,7 +30,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
 
     /**
      *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -41,6 +41,8 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public MaxResourceLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,6 +52,9 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public MaxResourceLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +67,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
 
     /**
      *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
-     * @param exceededResource
+     * @param exceededResource value to be set
      * @return Builder
      */
 
@@ -84,6 +89,10 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
         return this.exceededResource;
     }
 
+    /**
+     * builds MaxResourceLimitExceededError with checking for non-null required values
+     * @return MaxResourceLimitExceededError
+     */
     public MaxResourceLimitExceededError build() {
         Objects.requireNonNull(message, MaxResourceLimitExceededError.class + ": message is missing");
         Objects.requireNonNull(exceededResource, MaxResourceLimitExceededError.class + ": exceededResource is missing");
@@ -91,7 +100,8 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     }
 
     /**
-     * builds MaxResourceLimitExceededError without checking for non null required values
+     * builds MaxResourceLimitExceededError without checking for non-null required values
+     * @return MaxResourceLimitExceededError
      */
     public MaxResourceLimitExceededError buildUnchecked() {
         return new MaxResourceLimitExceededErrorImpl(message, values, exceededResource);

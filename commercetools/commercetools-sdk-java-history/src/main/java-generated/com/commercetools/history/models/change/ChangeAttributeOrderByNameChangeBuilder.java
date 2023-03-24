@@ -31,7 +31,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     /**
      *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -100,7 +100,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -124,6 +124,10 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeAttributeOrderByNameChange with checking for non-null required values
+     * @return ChangeAttributeOrderByNameChange
+     */
     public ChangeAttributeOrderByNameChange build() {
         Objects.requireNonNull(change, ChangeAttributeOrderByNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeAttributeOrderByNameChange.class + ": previousValue is missing");
@@ -132,7 +136,8 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
     }
 
     /**
-     * builds ChangeAttributeOrderByNameChange without checking for non null required values
+     * builds ChangeAttributeOrderByNameChange without checking for non-null required values
+     * @return ChangeAttributeOrderByNameChange
      */
     public ChangeAttributeOrderByNameChange buildUnchecked() {
         return new ChangeAttributeOrderByNameChangeImpl(change, previousValue, nextValue);

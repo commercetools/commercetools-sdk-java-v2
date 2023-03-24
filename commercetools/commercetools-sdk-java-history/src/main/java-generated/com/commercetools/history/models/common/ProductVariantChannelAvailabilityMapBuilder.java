@@ -25,6 +25,8 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
 
     /**
      *
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ProductVariantChannelAvailabilityMapBuilder values(
@@ -35,6 +37,9 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
 
     /**
      *
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ProductVariantChannelAvailabilityMapBuilder addValue(final String key,
@@ -50,12 +55,17 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
         return this.values;
     }
 
+    /**
+     * builds ProductVariantChannelAvailabilityMap with checking for non-null required values
+     * @return ProductVariantChannelAvailabilityMap
+     */
     public ProductVariantChannelAvailabilityMap build() {
         return new ProductVariantChannelAvailabilityMapImpl(values);
     }
 
     /**
-     * builds ProductVariantChannelAvailabilityMap without checking for non null required values
+     * builds ProductVariantChannelAvailabilityMap without checking for non-null required values
+     * @return ProductVariantChannelAvailabilityMap
      */
     public ProductVariantChannelAvailabilityMap buildUnchecked() {
         return new ProductVariantChannelAvailabilityMapImpl(values);

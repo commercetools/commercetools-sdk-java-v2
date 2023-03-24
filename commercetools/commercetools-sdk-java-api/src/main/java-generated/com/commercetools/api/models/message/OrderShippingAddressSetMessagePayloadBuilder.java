@@ -31,6 +31,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
 
     /**
      *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
 
     /**
      *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
 
     /**
      *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     * @param builder function to build the oldAddress value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
 
     /**
      *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
-     * @param oldAddress
+     * @param oldAddress value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
         return this.oldAddress;
     }
 
+    /**
+     * builds OrderShippingAddressSetMessagePayload with checking for non-null required values
+     * @return OrderShippingAddressSetMessagePayload
+     */
     public OrderShippingAddressSetMessagePayload build() {
         return new OrderShippingAddressSetMessagePayloadImpl(address, oldAddress);
     }
 
     /**
-     * builds OrderShippingAddressSetMessagePayload without checking for non null required values
+     * builds OrderShippingAddressSetMessagePayload without checking for non-null required values
+     * @return OrderShippingAddressSetMessagePayload
      */
     public OrderShippingAddressSetMessagePayload buildUnchecked() {
         return new OrderShippingAddressSetMessagePayloadImpl(address, oldAddress);

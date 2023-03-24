@@ -27,6 +27,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Messages Query feature.</p>
+     * @param builder function to build the messagesConfiguration value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Messages Query feature.</p>
-     * @param messagesConfiguration
+     * @param messagesConfiguration value to be set
      * @return Builder
      */
 
@@ -54,6 +55,10 @@ public class ProjectChangeMessagesConfigurationActionBuilder
         return this.messagesConfiguration;
     }
 
+    /**
+     * builds ProjectChangeMessagesConfigurationAction with checking for non-null required values
+     * @return ProjectChangeMessagesConfigurationAction
+     */
     public ProjectChangeMessagesConfigurationAction build() {
         Objects.requireNonNull(messagesConfiguration,
             ProjectChangeMessagesConfigurationAction.class + ": messagesConfiguration is missing");
@@ -61,7 +66,8 @@ public class ProjectChangeMessagesConfigurationActionBuilder
     }
 
     /**
-     * builds ProjectChangeMessagesConfigurationAction without checking for non null required values
+     * builds ProjectChangeMessagesConfigurationAction without checking for non-null required values
+     * @return ProjectChangeMessagesConfigurationAction
      */
     public ProjectChangeMessagesConfigurationAction buildUnchecked() {
         return new ProjectChangeMessagesConfigurationActionImpl(messagesConfiguration);

@@ -31,7 +31,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
 
     /**
      *  <p><code>"Error while applying staged actions. ShippingMethods could not be determined."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -42,6 +42,8 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public EditPreviewFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -51,6 +53,9 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public EditPreviewFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -63,6 +68,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
 
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
+     * @param builder function to build the result value
      * @return Builder
      */
 
@@ -75,7 +81,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
 
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
-     * @param result
+     * @param result value to be set
      * @return Builder
      */
 
@@ -97,6 +103,10 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
         return this.result;
     }
 
+    /**
+     * builds EditPreviewFailedError with checking for non-null required values
+     * @return EditPreviewFailedError
+     */
     public EditPreviewFailedError build() {
         Objects.requireNonNull(message, EditPreviewFailedError.class + ": message is missing");
         Objects.requireNonNull(result, EditPreviewFailedError.class + ": result is missing");
@@ -104,7 +114,8 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     }
 
     /**
-     * builds EditPreviewFailedError without checking for non null required values
+     * builds EditPreviewFailedError without checking for non-null required values
+     * @return EditPreviewFailedError
      */
     public EditPreviewFailedError buildUnchecked() {
         return new EditPreviewFailedErrorImpl(message, values, result);

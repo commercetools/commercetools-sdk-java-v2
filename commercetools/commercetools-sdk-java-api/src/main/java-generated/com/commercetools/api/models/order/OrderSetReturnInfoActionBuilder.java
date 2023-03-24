@@ -28,7 +28,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -67,6 +67,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -96,12 +98,17 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
         return this.items;
     }
 
+    /**
+     * builds OrderSetReturnInfoAction with checking for non-null required values
+     * @return OrderSetReturnInfoAction
+     */
     public OrderSetReturnInfoAction build() {
         return new OrderSetReturnInfoActionImpl(items);
     }
 
     /**
-     * builds OrderSetReturnInfoAction without checking for non null required values
+     * builds OrderSetReturnInfoAction without checking for non-null required values
+     * @return OrderSetReturnInfoAction
      */
     public OrderSetReturnInfoAction buildUnchecked() {
         return new OrderSetReturnInfoActionImpl(items);

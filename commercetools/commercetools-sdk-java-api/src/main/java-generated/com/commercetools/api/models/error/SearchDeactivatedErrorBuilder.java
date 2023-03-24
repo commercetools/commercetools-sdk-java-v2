@@ -27,7 +27,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
 
     /**
      *  <p><code>"The endpoint is deactivated for this project. Please enable it via the Project endpoint, via the Merchant Center in the Project settings, or reach out to Support to enable it."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public SearchDeactivatedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public SearchDeactivatedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
         return this.values;
     }
 
+    /**
+     * builds SearchDeactivatedError with checking for non-null required values
+     * @return SearchDeactivatedError
+     */
     public SearchDeactivatedError build() {
         Objects.requireNonNull(message, SearchDeactivatedError.class + ": message is missing");
         return new SearchDeactivatedErrorImpl(message, values);
     }
 
     /**
-     * builds SearchDeactivatedError without checking for non null required values
+     * builds SearchDeactivatedError without checking for non-null required values
+     * @return SearchDeactivatedError
      */
     public SearchDeactivatedError buildUnchecked() {
         return new SearchDeactivatedErrorImpl(message, values);

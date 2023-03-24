@@ -35,7 +35,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were added to the Store.</p>
-     * @param addedProductSelections
+     * @param addedProductSelections value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were added to the Store.</p>
-     * @param addedProductSelections
+     * @param addedProductSelections value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were added to the Store.</p>
-     * @param addedProductSelections
+     * @param addedProductSelections value to be set
      * @return Builder
      */
 
@@ -74,6 +74,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @param builder function to build the addedProductSelections value
      * @return Builder
      */
 
@@ -89,6 +90,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @param builder function to build the addedProductSelections value
      * @return Builder
      */
 
@@ -102,7 +104,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were removed from the Store.</p>
-     * @param removedProductSelections
+     * @param removedProductSelections value to be set
      * @return Builder
      */
 
@@ -114,7 +116,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were removed from the Store.</p>
-     * @param removedProductSelections
+     * @param removedProductSelections value to be set
      * @return Builder
      */
 
@@ -126,7 +128,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were removed from the Store.</p>
-     * @param removedProductSelections
+     * @param removedProductSelections value to be set
      * @return Builder
      */
 
@@ -141,6 +143,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @param builder function to build the removedProductSelections value
      * @return Builder
      */
 
@@ -156,6 +159,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @param builder function to build the removedProductSelections value
      * @return Builder
      */
 
@@ -169,7 +173,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were updated in the Store.</p>
-     * @param updatedProductSelections
+     * @param updatedProductSelections value to be set
      * @return Builder
      */
 
@@ -181,7 +185,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were updated in the Store.</p>
-     * @param updatedProductSelections
+     * @param updatedProductSelections value to be set
      * @return Builder
      */
 
@@ -193,7 +197,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were updated in the Store.</p>
-     * @param updatedProductSelections
+     * @param updatedProductSelections value to be set
      * @return Builder
      */
 
@@ -208,6 +212,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @param builder function to build the updatedProductSelections value
      * @return Builder
      */
 
@@ -223,6 +228,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
 
     /**
      *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @param builder function to build the updatedProductSelections value
      * @return Builder
      */
 
@@ -249,13 +255,18 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this.updatedProductSelections;
     }
 
+    /**
+     * builds StoreProductSelectionsChangedMessagePayload with checking for non-null required values
+     * @return StoreProductSelectionsChangedMessagePayload
+     */
     public StoreProductSelectionsChangedMessagePayload build() {
         return new StoreProductSelectionsChangedMessagePayloadImpl(addedProductSelections, removedProductSelections,
             updatedProductSelections);
     }
 
     /**
-     * builds StoreProductSelectionsChangedMessagePayload without checking for non null required values
+     * builds StoreProductSelectionsChangedMessagePayload without checking for non-null required values
+     * @return StoreProductSelectionsChangedMessagePayload
      */
     public StoreProductSelectionsChangedMessagePayload buildUnchecked() {
         return new StoreProductSelectionsChangedMessagePayloadImpl(addedProductSelections, removedProductSelections,

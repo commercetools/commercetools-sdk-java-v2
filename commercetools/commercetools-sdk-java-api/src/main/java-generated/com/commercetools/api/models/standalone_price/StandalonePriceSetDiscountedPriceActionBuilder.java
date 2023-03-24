@@ -29,6 +29,7 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -55,12 +56,17 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
         return this.discounted;
     }
 
+    /**
+     * builds StandalonePriceSetDiscountedPriceAction with checking for non-null required values
+     * @return StandalonePriceSetDiscountedPriceAction
+     */
     public StandalonePriceSetDiscountedPriceAction build() {
         return new StandalonePriceSetDiscountedPriceActionImpl(discounted);
     }
 
     /**
-     * builds StandalonePriceSetDiscountedPriceAction without checking for non null required values
+     * builds StandalonePriceSetDiscountedPriceAction without checking for non-null required values
+     * @return StandalonePriceSetDiscountedPriceAction
      */
     public StandalonePriceSetDiscountedPriceAction buildUnchecked() {
         return new StandalonePriceSetDiscountedPriceActionImpl(discounted);

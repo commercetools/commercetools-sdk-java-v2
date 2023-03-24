@@ -31,7 +31,7 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
 
     /**
      *  <p><code>id</code> of the Address to become the default shipping address.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
 
     /**
      *  <p><code>key</code> of the Address to become the default shipping address.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -61,12 +61,17 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
         return this.addressKey;
     }
 
+    /**
+     * builds MyCustomerSetDefaultShippingAddressAction with checking for non-null required values
+     * @return MyCustomerSetDefaultShippingAddressAction
+     */
     public MyCustomerSetDefaultShippingAddressAction build() {
         return new MyCustomerSetDefaultShippingAddressActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds MyCustomerSetDefaultShippingAddressAction without checking for non null required values
+     * builds MyCustomerSetDefaultShippingAddressAction without checking for non-null required values
+     * @return MyCustomerSetDefaultShippingAddressAction
      */
     public MyCustomerSetDefaultShippingAddressAction buildUnchecked() {
         return new MyCustomerSetDefaultShippingAddressActionImpl(addressId, addressKey);

@@ -25,7 +25,7 @@ public class AzureFunctionsAuthenticationBuilder implements Builder<AzureFunctio
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class AzureFunctionsAuthenticationBuilder implements Builder<AzureFunctio
         return this.key;
     }
 
+    /**
+     * builds AzureFunctionsAuthentication with checking for non-null required values
+     * @return AzureFunctionsAuthentication
+     */
     public AzureFunctionsAuthentication build() {
         Objects.requireNonNull(key, AzureFunctionsAuthentication.class + ": key is missing");
         return new AzureFunctionsAuthenticationImpl(key);
     }
 
     /**
-     * builds AzureFunctionsAuthentication without checking for non null required values
+     * builds AzureFunctionsAuthentication without checking for non-null required values
+     * @return AzureFunctionsAuthentication
      */
     public AzureFunctionsAuthentication buildUnchecked() {
         return new AzureFunctionsAuthenticationImpl(key);

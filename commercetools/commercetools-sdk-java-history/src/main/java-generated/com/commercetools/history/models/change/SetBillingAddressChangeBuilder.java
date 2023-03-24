@@ -32,7 +32,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *  <p>Update action for <code>setBillingAddress</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
         return this.previousValue;
     }
 
+    /**
+     * builds SetBillingAddressChange with checking for non-null required values
+     * @return SetBillingAddressChange
+     */
     public SetBillingAddressChange build() {
         Objects.requireNonNull(change, SetBillingAddressChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetBillingAddressChange.class + ": nextValue is missing");
@@ -106,7 +112,8 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
     }
 
     /**
-     * builds SetBillingAddressChange without checking for non null required values
+     * builds SetBillingAddressChange without checking for non-null required values
+     * @return SetBillingAddressChange
      */
     public SetBillingAddressChange buildUnchecked() {
         return new SetBillingAddressChangeImpl(change, nextValue, previousValue);

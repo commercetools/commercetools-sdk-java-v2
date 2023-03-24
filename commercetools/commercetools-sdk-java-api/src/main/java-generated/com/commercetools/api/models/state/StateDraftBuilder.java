@@ -46,7 +46,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>User-defined unique identifier for the State.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Specify to which resource or object type the State is assigned to.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +68,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Name of the State.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Name of the State.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Description of the State.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -101,7 +103,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Description of the State.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -113,7 +115,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
-     * @param initial
+     * @param initial value to be set
      * @return Builder
      */
 
@@ -124,7 +126,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -135,7 +137,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -147,7 +149,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -166,7 +168,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
-     * @param transitions
+     * @param transitions value to be set
      * @return Builder
      */
 
@@ -183,7 +185,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
-     * @param transitions
+     * @param transitions value to be set
      * @return Builder
      */
 
@@ -200,7 +202,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
-     * @param transitions
+     * @param transitions value to be set
      * @return Builder
      */
 
@@ -220,6 +222,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param builder function to build the transitions value
      * @return Builder
      */
 
@@ -240,6 +243,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param builder function to build the transitions value
      * @return Builder
      */
 
@@ -284,6 +288,10 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         return this.transitions;
     }
 
+    /**
+     * builds StateDraft with checking for non-null required values
+     * @return StateDraft
+     */
     public StateDraft build() {
         Objects.requireNonNull(key, StateDraft.class + ": key is missing");
         Objects.requireNonNull(type, StateDraft.class + ": type is missing");
@@ -291,7 +299,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     * builds StateDraft without checking for non null required values
+     * builds StateDraft without checking for non-null required values
+     * @return StateDraft
      */
     public StateDraft buildUnchecked() {
         return new StateDraftImpl(key, type, name, description, initial, roles, transitions);

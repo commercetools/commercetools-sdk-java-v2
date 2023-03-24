@@ -31,7 +31,7 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
 
     /**
      *  <p>Shape of the action for <code>setRating</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetRatingChange with checking for non-null required values
+     * @return SetRatingChange
+     */
     public SetRatingChange build() {
         Objects.requireNonNull(change, SetRatingChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetRatingChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
     }
 
     /**
-     * builds SetRatingChange without checking for non null required values
+     * builds SetRatingChange without checking for non-null required values
+     * @return SetRatingChange
      */
     public SetRatingChange buildUnchecked() {
         return new SetRatingChangeImpl(change, previousValue, nextValue);

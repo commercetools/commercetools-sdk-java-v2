@@ -30,7 +30,7 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
 
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
 
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
         return this.assetKey;
     }
 
+    /**
+     * builds CategoryRemoveAssetAction with checking for non-null required values
+     * @return CategoryRemoveAssetAction
+     */
     public CategoryRemoveAssetAction build() {
         return new CategoryRemoveAssetActionImpl(assetId, assetKey);
     }
 
     /**
-     * builds CategoryRemoveAssetAction without checking for non null required values
+     * builds CategoryRemoveAssetAction without checking for non-null required values
+     * @return CategoryRemoveAssetAction
      */
     public CategoryRemoveAssetAction buildUnchecked() {
         return new CategoryRemoveAssetActionImpl(assetId, assetKey);

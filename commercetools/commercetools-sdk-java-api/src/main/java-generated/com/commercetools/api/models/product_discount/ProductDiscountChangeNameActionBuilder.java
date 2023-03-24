@@ -26,6 +26,7 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
         return this.name;
     }
 
+    /**
+     * builds ProductDiscountChangeNameAction with checking for non-null required values
+     * @return ProductDiscountChangeNameAction
+     */
     public ProductDiscountChangeNameAction build() {
         Objects.requireNonNull(name, ProductDiscountChangeNameAction.class + ": name is missing");
         return new ProductDiscountChangeNameActionImpl(name);
     }
 
     /**
-     * builds ProductDiscountChangeNameAction without checking for non null required values
+     * builds ProductDiscountChangeNameAction without checking for non-null required values
+     * @return ProductDiscountChangeNameAction
      */
     public ProductDiscountChangeNameAction buildUnchecked() {
         return new ProductDiscountChangeNameActionImpl(name);

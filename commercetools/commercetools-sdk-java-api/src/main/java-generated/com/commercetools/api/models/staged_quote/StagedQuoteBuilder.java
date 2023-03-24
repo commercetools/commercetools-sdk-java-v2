@@ -76,7 +76,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The unique ID of the StagedQuote.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -87,7 +87,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Current version of the StagedQuote.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -98,7 +98,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Date and time (UTC) the StagedQuote was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -109,7 +109,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Date and time (UTC) the StagedQuote was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -120,7 +120,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>User-specific unique identifier of the staged quote.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -131,6 +131,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -142,7 +143,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -154,6 +155,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -165,7 +167,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -176,7 +178,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Predefined states tracking the status of the Staged Quote.</p>
-     * @param stagedQuoteState
+     * @param stagedQuoteState value to be set
      * @return Builder
      */
 
@@ -188,6 +190,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The Buyer who requested the Quote.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -199,7 +202,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The Buyer who requested the Quote.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -211,6 +214,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Quote Request related to the Staged Quote.</p>
+     * @param builder function to build the quoteRequest value
      * @return Builder
      */
 
@@ -223,7 +227,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Quote Request related to the Staged Quote.</p>
-     * @param quoteRequest
+     * @param quoteRequest value to be set
      * @return Builder
      */
 
@@ -235,6 +239,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     * @param builder function to build the quotationCart value
      * @return Builder
      */
 
@@ -246,7 +251,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
-     * @param quotationCart
+     * @param quotationCart value to be set
      * @return Builder
      */
 
@@ -257,7 +262,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Expiration date for the Quote.</p>
-     * @param validTo
+     * @param validTo value to be set
      * @return Builder
      */
 
@@ -268,7 +273,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Message from the Seller included in the offer.</p>
-     * @param sellerComment
+     * @param sellerComment value to be set
      * @return Builder
      */
 
@@ -279,6 +284,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Custom Fields of the Staged Quote.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -290,7 +296,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>Custom Fields of the Staged Quote.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -301,6 +307,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -312,7 +319,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -323,7 +330,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
-     * @param purchaseOrderNumber
+     * @param purchaseOrderNumber value to be set
      * @return Builder
      */
 
@@ -334,6 +341,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
+     * @param builder function to build the businessUnit value
      * @return Builder
      */
 
@@ -347,7 +355,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
     /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
-     * @param businessUnit
+     * @param businessUnit value to be set
      * @return Builder
      */
 
@@ -435,6 +443,10 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         return this.businessUnit;
     }
 
+    /**
+     * builds StagedQuote with checking for non-null required values
+     * @return StagedQuote
+     */
     public StagedQuote build() {
         Objects.requireNonNull(id, StagedQuote.class + ": id is missing");
         Objects.requireNonNull(version, StagedQuote.class + ": version is missing");
@@ -449,7 +461,8 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     * builds StagedQuote without checking for non null required values
+     * builds StagedQuote without checking for non-null required values
+     * @return StagedQuote
      */
     public StagedQuote buildUnchecked() {
         return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,

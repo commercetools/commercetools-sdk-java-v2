@@ -32,7 +32,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *  <p>Update action for <code>setShippingMethod</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
         return this.previousValue;
     }
 
+    /**
+     * builds SetShippingMethodChange with checking for non-null required values
+     * @return SetShippingMethodChange
+     */
     public SetShippingMethodChange build() {
         Objects.requireNonNull(change, SetShippingMethodChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, SetShippingMethodChange.class + ": nextValue is missing");
@@ -111,7 +117,8 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     }
 
     /**
-     * builds SetShippingMethodChange without checking for non null required values
+     * builds SetShippingMethodChange without checking for non-null required values
+     * @return SetShippingMethodChange
      */
     public SetShippingMethodChange buildUnchecked() {
         return new SetShippingMethodChangeImpl(change, nextValue, previousValue);

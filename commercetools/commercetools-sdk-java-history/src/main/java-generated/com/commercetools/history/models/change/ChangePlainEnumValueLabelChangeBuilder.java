@@ -37,7 +37,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *  <p>The name of the attribute updated.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *  <p>Key of the values that was updated</p>
-     * @param valueKey
+     * @param valueKey value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -110,6 +110,10 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
         return this.nextValue;
     }
 
+    /**
+     * builds ChangePlainEnumValueLabelChange with checking for non-null required values
+     * @return ChangePlainEnumValueLabelChange
+     */
     public ChangePlainEnumValueLabelChange build() {
         Objects.requireNonNull(change, ChangePlainEnumValueLabelChange.class + ": change is missing");
         Objects.requireNonNull(attributeName, ChangePlainEnumValueLabelChange.class + ": attributeName is missing");
@@ -120,7 +124,8 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     * builds ChangePlainEnumValueLabelChange without checking for non null required values
+     * builds ChangePlainEnumValueLabelChange without checking for non-null required values
+     * @return ChangePlainEnumValueLabelChange
      */
     public ChangePlainEnumValueLabelChange buildUnchecked() {
         return new ChangePlainEnumValueLabelChangeImpl(change, attributeName, valueKey, previousValue, nextValue);

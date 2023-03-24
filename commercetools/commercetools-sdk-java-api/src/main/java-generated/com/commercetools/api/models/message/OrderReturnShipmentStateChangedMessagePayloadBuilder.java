@@ -29,7 +29,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the ReturnItem.</p>
-     * @param returnItemId
+     * @param returnItemId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
 
     /**
      *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
-     * @param returnShipmentState
+     * @param returnShipmentState value to be set
      * @return Builder
      */
 
@@ -58,6 +58,10 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
         return this.returnShipmentState;
     }
 
+    /**
+     * builds OrderReturnShipmentStateChangedMessagePayload with checking for non-null required values
+     * @return OrderReturnShipmentStateChangedMessagePayload
+     */
     public OrderReturnShipmentStateChangedMessagePayload build() {
         Objects.requireNonNull(returnItemId,
             OrderReturnShipmentStateChangedMessagePayload.class + ": returnItemId is missing");
@@ -67,7 +71,8 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     * builds OrderReturnShipmentStateChangedMessagePayload without checking for non null required values
+     * builds OrderReturnShipmentStateChangedMessagePayload without checking for non-null required values
+     * @return OrderReturnShipmentStateChangedMessagePayload
      */
     public OrderReturnShipmentStateChangedMessagePayload buildUnchecked() {
         return new OrderReturnShipmentStateChangedMessagePayloadImpl(returnItemId, returnShipmentState);

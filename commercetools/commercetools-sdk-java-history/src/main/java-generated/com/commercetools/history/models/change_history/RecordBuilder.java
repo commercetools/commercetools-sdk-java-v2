@@ -56,7 +56,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Version of the resource after the change.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Version of the resource before the change.</p>
-     * @param previousVersion
+     * @param previousVersion value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Type of the change (creation, update or deletion).</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -89,6 +89,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
+     * @param builder function to build the modifiedBy value
      * @return Builder
      */
 
@@ -100,7 +101,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
-     * @param modifiedBy
+     * @param modifiedBy value to be set
      * @return Builder
      */
 
@@ -111,7 +112,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Date and time when the change was made.</p>
-     * @param modifiedAt
+     * @param modifiedAt value to be set
      * @return Builder
      */
 
@@ -122,7 +123,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information that describes the resource after the change.</p>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -133,6 +134,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information that describes the resource after the change.</p>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -144,7 +146,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information that describes the resource before the change.</p>
-     * @param previousLabel
+     * @param previousLabel value to be set
      * @return Builder
      */
 
@@ -155,6 +157,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information that describes the resource before the change.</p>
+     * @param builder function to build the previousLabel value
      * @return Builder
      */
 
@@ -166,7 +169,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -177,7 +180,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -188,7 +191,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
-     * @param changes
+     * @param changes value to be set
      * @return Builder
      */
 
@@ -202,6 +205,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @param builder function to build the changes value
      * @return Builder
      */
 
@@ -216,6 +220,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @param builder function to build the changes value
      * @return Builder
      */
 
@@ -228,6 +233,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Reference to the changed resource.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -239,7 +245,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Reference to the changed resource.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -250,7 +256,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -261,7 +267,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -272,7 +278,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -286,6 +292,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -300,6 +307,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -312,7 +320,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
-     * @param withoutChanges
+     * @param withoutChanges value to be set
      * @return Builder
      */
 
@@ -365,6 +373,10 @@ public class RecordBuilder implements Builder<Record> {
         return this.withoutChanges;
     }
 
+    /**
+     * builds Record with checking for non-null required values
+     * @return Record
+     */
     public Record build() {
         Objects.requireNonNull(version, Record.class + ": version is missing");
         Objects.requireNonNull(previousVersion, Record.class + ": previousVersion is missing");
@@ -382,7 +394,8 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     * builds Record without checking for non null required values
+     * builds Record without checking for non-null required values
+     * @return Record
      */
     public Record buildUnchecked() {
         return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,

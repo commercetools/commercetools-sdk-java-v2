@@ -30,7 +30,7 @@ public class ZoneResourceIdentifierBuilder implements Builder<ZoneResourceIdenti
 
     /**
      *  <p>Unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ZoneResourceIdentifierBuilder implements Builder<ZoneResourceIdenti
 
     /**
      *  <p>User-defined unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class ZoneResourceIdentifierBuilder implements Builder<ZoneResourceIdenti
         return this.key;
     }
 
+    /**
+     * builds ZoneResourceIdentifier with checking for non-null required values
+     * @return ZoneResourceIdentifier
+     */
     public ZoneResourceIdentifier build() {
         return new ZoneResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds ZoneResourceIdentifier without checking for non null required values
+     * builds ZoneResourceIdentifier without checking for non-null required values
+     * @return ZoneResourceIdentifier
      */
     public ZoneResourceIdentifier buildUnchecked() {
         return new ZoneResourceIdentifierImpl(id, key);

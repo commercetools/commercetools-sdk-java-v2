@@ -25,7 +25,7 @@ public class BusinessUnitKeyReferenceBuilder implements Builder<BusinessUnitKeyR
 
     /**
      *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class BusinessUnitKeyReferenceBuilder implements Builder<BusinessUnitKeyR
         return this.key;
     }
 
+    /**
+     * builds BusinessUnitKeyReference with checking for non-null required values
+     * @return BusinessUnitKeyReference
+     */
     public BusinessUnitKeyReference build() {
         Objects.requireNonNull(key, BusinessUnitKeyReference.class + ": key is missing");
         return new BusinessUnitKeyReferenceImpl(key);
     }
 
     /**
-     * builds BusinessUnitKeyReference without checking for non null required values
+     * builds BusinessUnitKeyReference without checking for non-null required values
+     * @return BusinessUnitKeyReference
      */
     public BusinessUnitKeyReference buildUnchecked() {
         return new BusinessUnitKeyReferenceImpl(key);

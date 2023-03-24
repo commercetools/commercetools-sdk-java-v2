@@ -27,7 +27,7 @@ public class ProductSetKeyActionBuilder implements Builder<ProductSetKeyAction> 
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ProductSetKeyActionBuilder implements Builder<ProductSetKeyAction> 
         return this.key;
     }
 
+    /**
+     * builds ProductSetKeyAction with checking for non-null required values
+     * @return ProductSetKeyAction
+     */
     public ProductSetKeyAction build() {
         return new ProductSetKeyActionImpl(key);
     }
 
     /**
-     * builds ProductSetKeyAction without checking for non null required values
+     * builds ProductSetKeyAction without checking for non-null required values
+     * @return ProductSetKeyAction
      */
     public ProductSetKeyAction buildUnchecked() {
         return new ProductSetKeyActionImpl(key);

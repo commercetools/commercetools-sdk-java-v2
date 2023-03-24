@@ -37,7 +37,7 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -61,6 +61,7 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     * @param builder function to build the externalPrice value
      * @return Builder
      */
 
@@ -73,7 +74,7 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
-     * @param externalPrice
+     * @param externalPrice value to be set
      * @return Builder
      */
 
@@ -85,6 +86,7 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
 
@@ -98,7 +100,7 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
-     * @param externalTotalPrice
+     * @param externalTotalPrice value to be set
      * @return Builder
      */
 
@@ -126,6 +128,10 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
         return this.externalTotalPrice;
     }
 
+    /**
+     * builds CartChangeLineItemQuantityAction with checking for non-null required values
+     * @return CartChangeLineItemQuantityAction
+     */
     public CartChangeLineItemQuantityAction build() {
         Objects.requireNonNull(lineItemId, CartChangeLineItemQuantityAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, CartChangeLineItemQuantityAction.class + ": quantity is missing");
@@ -133,7 +139,8 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
     }
 
     /**
-     * builds CartChangeLineItemQuantityAction without checking for non null required values
+     * builds CartChangeLineItemQuantityAction without checking for non-null required values
+     * @return CartChangeLineItemQuantityAction
      */
     public CartChangeLineItemQuantityAction buildUnchecked() {
         return new CartChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);

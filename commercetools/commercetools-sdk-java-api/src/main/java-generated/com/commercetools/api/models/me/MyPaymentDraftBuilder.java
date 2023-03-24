@@ -37,6 +37,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     * @param builder function to build the amountPlanned value
      * @return Builder
      */
 
@@ -48,7 +49,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
-     * @param amountPlanned
+     * @param amountPlanned value to be set
      * @return Builder
      */
 
@@ -59,6 +60,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param builder function to build the paymentMethodInfo value
      * @return Builder
      */
 
@@ -71,7 +73,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
-     * @param paymentMethodInfo
+     * @param paymentMethodInfo value to be set
      * @return Builder
      */
 
@@ -83,6 +85,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -94,7 +97,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -105,6 +108,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     /**
      *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     * @param builder function to build the transaction value
      * @return Builder
      */
 
@@ -116,7 +120,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     /**
      *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
-     * @param transaction
+     * @param transaction value to be set
      * @return Builder
      */
 
@@ -145,13 +149,18 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
         return this.transaction;
     }
 
+    /**
+     * builds MyPaymentDraft with checking for non-null required values
+     * @return MyPaymentDraft
+     */
     public MyPaymentDraft build() {
         Objects.requireNonNull(amountPlanned, MyPaymentDraft.class + ": amountPlanned is missing");
         return new MyPaymentDraftImpl(amountPlanned, paymentMethodInfo, custom, transaction);
     }
 
     /**
-     * builds MyPaymentDraft without checking for non null required values
+     * builds MyPaymentDraft without checking for non-null required values
+     * @return MyPaymentDraft
      */
     public MyPaymentDraft buildUnchecked() {
         return new MyPaymentDraftImpl(amountPlanned, paymentMethodInfo, custom, transaction);

@@ -31,7 +31,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
 
     /**
      *  <p>Update action for <code>changeShipmentState</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeShipmentStateChange with checking for non-null required values
+     * @return ChangeShipmentStateChange
+     */
     public ChangeShipmentStateChange build() {
         Objects.requireNonNull(change, ChangeShipmentStateChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangeShipmentStateChange.class + ": nextValue is missing");
@@ -84,7 +88,8 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     }
 
     /**
-     * builds ChangeShipmentStateChange without checking for non null required values
+     * builds ChangeShipmentStateChange without checking for non-null required values
+     * @return ChangeShipmentStateChange
      */
     public ChangeShipmentStateChange buildUnchecked() {
         return new ChangeShipmentStateChangeImpl(change, nextValue, previousValue);

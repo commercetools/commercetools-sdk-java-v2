@@ -27,7 +27,7 @@ public class StagedOrderSetCustomerEmailActionBuilder implements Builder<StagedO
 
     /**
      *
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class StagedOrderSetCustomerEmailActionBuilder implements Builder<StagedO
         return this.email;
     }
 
+    /**
+     * builds StagedOrderSetCustomerEmailAction with checking for non-null required values
+     * @return StagedOrderSetCustomerEmailAction
+     */
     public StagedOrderSetCustomerEmailAction build() {
         return new StagedOrderSetCustomerEmailActionImpl(email);
     }
 
     /**
-     * builds StagedOrderSetCustomerEmailAction without checking for non null required values
+     * builds StagedOrderSetCustomerEmailAction without checking for non-null required values
+     * @return StagedOrderSetCustomerEmailAction
      */
     public StagedOrderSetCustomerEmailAction buildUnchecked() {
         return new StagedOrderSetCustomerEmailActionImpl(email);

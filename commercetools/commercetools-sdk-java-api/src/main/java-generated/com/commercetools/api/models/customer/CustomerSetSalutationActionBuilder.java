@@ -27,7 +27,7 @@ public class CustomerSetSalutationActionBuilder implements Builder<CustomerSetSa
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param salutation
+     * @param salutation value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerSetSalutationActionBuilder implements Builder<CustomerSetSa
         return this.salutation;
     }
 
+    /**
+     * builds CustomerSetSalutationAction with checking for non-null required values
+     * @return CustomerSetSalutationAction
+     */
     public CustomerSetSalutationAction build() {
         return new CustomerSetSalutationActionImpl(salutation);
     }
 
     /**
-     * builds CustomerSetSalutationAction without checking for non null required values
+     * builds CustomerSetSalutationAction without checking for non-null required values
+     * @return CustomerSetSalutationAction
      */
     public CustomerSetSalutationAction buildUnchecked() {
         return new CustomerSetSalutationActionImpl(salutation);

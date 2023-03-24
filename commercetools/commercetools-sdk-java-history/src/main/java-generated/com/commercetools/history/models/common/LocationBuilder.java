@@ -28,7 +28,7 @@ public class LocationBuilder implements Builder<Location> {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class LocationBuilder implements Builder<Location> {
 
     /**
      *
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class LocationBuilder implements Builder<Location> {
         return this.state;
     }
 
+    /**
+     * builds Location with checking for non-null required values
+     * @return Location
+     */
     public Location build() {
         Objects.requireNonNull(country, Location.class + ": country is missing");
         Objects.requireNonNull(state, Location.class + ": state is missing");
@@ -63,7 +67,8 @@ public class LocationBuilder implements Builder<Location> {
     }
 
     /**
-     * builds Location without checking for non null required values
+     * builds Location without checking for non-null required values
+     * @return Location
      */
     public Location buildUnchecked() {
         return new LocationImpl(country, state);

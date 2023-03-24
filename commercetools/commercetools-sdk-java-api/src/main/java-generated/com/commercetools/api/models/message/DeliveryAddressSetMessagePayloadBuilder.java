@@ -37,7 +37,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -48,6 +48,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -71,6 +72,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
+     * @param builder function to build the oldAddress value
      * @return Builder
      */
 
@@ -82,7 +84,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
-     * @param oldAddress
+     * @param oldAddress value to be set
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -122,13 +124,18 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
         return this.shippingKey;
     }
 
+    /**
+     * builds DeliveryAddressSetMessagePayload with checking for non-null required values
+     * @return DeliveryAddressSetMessagePayload
+     */
     public DeliveryAddressSetMessagePayload build() {
         Objects.requireNonNull(deliveryId, DeliveryAddressSetMessagePayload.class + ": deliveryId is missing");
         return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress, shippingKey);
     }
 
     /**
-     * builds DeliveryAddressSetMessagePayload without checking for non null required values
+     * builds DeliveryAddressSetMessagePayload without checking for non-null required values
+     * @return DeliveryAddressSetMessagePayload
      */
     public DeliveryAddressSetMessagePayload buildUnchecked() {
         return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress, shippingKey);

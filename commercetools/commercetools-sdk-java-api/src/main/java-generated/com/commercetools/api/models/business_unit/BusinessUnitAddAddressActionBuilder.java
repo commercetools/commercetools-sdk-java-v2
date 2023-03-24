@@ -26,6 +26,7 @@ public class BusinessUnitAddAddressActionBuilder implements Builder<BusinessUnit
 
     /**
      *  <p>Address to add to the addresses of the Business Unit.</p>
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class BusinessUnitAddAddressActionBuilder implements Builder<BusinessUnit
 
     /**
      *  <p>Address to add to the addresses of the Business Unit.</p>
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class BusinessUnitAddAddressActionBuilder implements Builder<BusinessUnit
         return this.address;
     }
 
+    /**
+     * builds BusinessUnitAddAddressAction with checking for non-null required values
+     * @return BusinessUnitAddAddressAction
+     */
     public BusinessUnitAddAddressAction build() {
         Objects.requireNonNull(address, BusinessUnitAddAddressAction.class + ": address is missing");
         return new BusinessUnitAddAddressActionImpl(address);
     }
 
     /**
-     * builds BusinessUnitAddAddressAction without checking for non null required values
+     * builds BusinessUnitAddAddressAction without checking for non-null required values
+     * @return BusinessUnitAddAddressAction
      */
     public BusinessUnitAddAddressAction buildUnchecked() {
         return new BusinessUnitAddAddressActionImpl(address);

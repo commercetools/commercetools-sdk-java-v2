@@ -29,7 +29,7 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -78,6 +78,7 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -92,6 +93,7 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Customer.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -110,6 +112,10 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds MyCustomerUpdate with checking for non-null required values
+     * @return MyCustomerUpdate
+     */
     public MyCustomerUpdate build() {
         Objects.requireNonNull(version, MyCustomerUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, MyCustomerUpdate.class + ": actions is missing");
@@ -117,7 +123,8 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
     }
 
     /**
-     * builds MyCustomerUpdate without checking for non null required values
+     * builds MyCustomerUpdate without checking for non-null required values
+     * @return MyCustomerUpdate
      */
     public MyCustomerUpdate buildUnchecked() {
         return new MyCustomerUpdateImpl(version, actions);

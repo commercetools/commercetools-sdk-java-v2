@@ -115,7 +115,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Unique identifier of the Customer.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -126,7 +126,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Current version of the Customer.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -137,7 +137,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Date and time (UTC) the Customer was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -148,7 +148,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Date and time (UTC) the Customer was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -159,7 +159,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>User-defined unique identifier of the Customer.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -171,7 +171,7 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>User-defined unique identifier of the Customer.</p>
      *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
-     * @param customerNumber
+     * @param customerNumber value to be set
      * @return Builder
      */
 
@@ -182,7 +182,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -193,6 +193,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -204,7 +205,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -216,6 +217,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -227,7 +229,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -238,7 +240,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -249,7 +251,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present only when <code>authenticationMode</code> is set to <code>Password</code>.</p>
-     * @param password
+     * @param password value to be set
      * @return Builder
      */
 
@@ -260,7 +262,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Given name (first name) of the Customer.</p>
-     * @param firstName
+     * @param firstName value to be set
      * @return Builder
      */
 
@@ -271,7 +273,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Family name (last name) of the Customer.</p>
-     * @param lastName
+     * @param lastName value to be set
      * @return Builder
      */
 
@@ -282,7 +284,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Middle name of the Customer.</p>
-     * @param middleName
+     * @param middleName value to be set
      * @return Builder
      */
 
@@ -293,7 +295,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Title of the Customer, for example, 'Dr.'.</p>
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -304,7 +306,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Date of birth of the Customer.</p>
-     * @param dateOfBirth
+     * @param dateOfBirth value to be set
      * @return Builder
      */
 
@@ -315,7 +317,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Company name of the Customer.</p>
-     * @param companyName
+     * @param companyName value to be set
      * @return Builder
      */
 
@@ -326,7 +328,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Unique VAT ID of the Customer.</p>
-     * @param vatId
+     * @param vatId value to be set
      * @return Builder
      */
 
@@ -337,7 +339,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -348,7 +350,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -359,7 +361,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
-     * @param addresses
+     * @param addresses value to be set
      * @return Builder
      */
 
@@ -373,6 +375,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -387,6 +390,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
+     * @param builder function to build the addresses value
      * @return Builder
      */
 
@@ -399,7 +403,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>ID of the address in <code>addresses</code> used as the default shipping address.</p>
-     * @param defaultShippingAddressId
+     * @param defaultShippingAddressId value to be set
      * @return Builder
      */
 
@@ -410,7 +414,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
-     * @param shippingAddressIds
+     * @param shippingAddressIds value to be set
      * @return Builder
      */
 
@@ -421,7 +425,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
-     * @param shippingAddressIds
+     * @param shippingAddressIds value to be set
      * @return Builder
      */
 
@@ -432,7 +436,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
-     * @param shippingAddressIds
+     * @param shippingAddressIds value to be set
      * @return Builder
      */
 
@@ -446,7 +450,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>ID of the address in <code>addresses</code> used as the default billing address.</p>
-     * @param defaultBillingAddressId
+     * @param defaultBillingAddressId value to be set
      * @return Builder
      */
 
@@ -457,7 +461,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
-     * @param billingAddressIds
+     * @param billingAddressIds value to be set
      * @return Builder
      */
 
@@ -468,7 +472,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
-     * @param billingAddressIds
+     * @param billingAddressIds value to be set
      * @return Builder
      */
 
@@ -479,7 +483,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
-     * @param billingAddressIds
+     * @param billingAddressIds value to be set
      * @return Builder
      */
 
@@ -493,7 +497,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Indicates whether the email address of the Customer is verified.</p>
-     * @param isEmailVerified
+     * @param isEmailVerified value to be set
      * @return Builder
      */
 
@@ -504,6 +508,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>CustomerGroup to which the Customer belongs.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -517,7 +522,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>CustomerGroup to which the Customer belongs.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -529,6 +534,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Custom Fields for the Customer.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -540,7 +546,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Custom Fields for the Customer.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -551,7 +557,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Preferred language of the Customer.</p>
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -562,7 +568,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
-     * @param salutation
+     * @param salutation value to be set
      * @return Builder
      */
 
@@ -577,7 +583,7 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -592,7 +598,7 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -608,7 +614,7 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
-     * @param stores
+     * @param stores value to be set
      * @return Builder
      */
 
@@ -626,6 +632,7 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -644,6 +651,7 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
+     * @param builder function to build the stores value
      * @return Builder
      */
 
@@ -656,7 +664,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Indicates whether the <code>password</code> is required for the Customer.</p>
-     * @param authenticationMode
+     * @param authenticationMode value to be set
      * @return Builder
      */
 
@@ -808,6 +816,10 @@ public class CustomerBuilder implements Builder<Customer> {
         return this.authenticationMode;
     }
 
+    /**
+     * builds Customer with checking for non-null required values
+     * @return Customer
+     */
     public Customer build() {
         Objects.requireNonNull(id, Customer.class + ": id is missing");
         Objects.requireNonNull(version, Customer.class + ": version is missing");
@@ -824,7 +836,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     * builds Customer without checking for non null required values
+     * builds Customer without checking for non-null required values
+     * @return Customer
      */
     public Customer buildUnchecked() {
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, key, customerNumber, externalId, lastModifiedBy,

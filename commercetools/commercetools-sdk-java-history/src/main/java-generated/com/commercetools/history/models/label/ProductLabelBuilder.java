@@ -29,6 +29,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     /**
      *
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     /**
      *
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -51,6 +52,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     /**
      *
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -62,7 +64,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -79,6 +81,10 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
         return this.name;
     }
 
+    /**
+     * builds ProductLabel with checking for non-null required values
+     * @return ProductLabel
+     */
     public ProductLabel build() {
         Objects.requireNonNull(slug, ProductLabel.class + ": slug is missing");
         Objects.requireNonNull(name, ProductLabel.class + ": name is missing");
@@ -86,7 +92,8 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     * builds ProductLabel without checking for non null required values
+     * builds ProductLabel without checking for non-null required values
+     * @return ProductLabel
      */
     public ProductLabel buildUnchecked() {
         return new ProductLabelImpl(slug, name);

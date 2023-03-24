@@ -26,6 +26,7 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
 
     /**
      *  <p>ResourceIdentifier of the Store to remove.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
 
     /**
      *  <p>ResourceIdentifier of the Store to remove.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
         return this.store;
     }
 
+    /**
+     * builds CustomerRemoveStoreAction with checking for non-null required values
+     * @return CustomerRemoveStoreAction
+     */
     public CustomerRemoveStoreAction build() {
         Objects.requireNonNull(store, CustomerRemoveStoreAction.class + ": store is missing");
         return new CustomerRemoveStoreActionImpl(store);
     }
 
     /**
-     * builds CustomerRemoveStoreAction without checking for non null required values
+     * builds CustomerRemoveStoreAction without checking for non-null required values
+     * @return CustomerRemoveStoreAction
      */
     public CustomerRemoveStoreAction buildUnchecked() {
         return new CustomerRemoveStoreActionImpl(store);

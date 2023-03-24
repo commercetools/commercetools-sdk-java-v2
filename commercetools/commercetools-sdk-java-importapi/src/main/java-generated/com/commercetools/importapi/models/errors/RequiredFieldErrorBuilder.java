@@ -28,7 +28,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *  <p>The name of the field.</p>
-     * @param field
+     * @param field value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
         return this.field;
     }
 
+    /**
+     * builds RequiredFieldError with checking for non-null required values
+     * @return RequiredFieldError
+     */
     public RequiredFieldError build() {
         Objects.requireNonNull(message, RequiredFieldError.class + ": message is missing");
         Objects.requireNonNull(field, RequiredFieldError.class + ": field is missing");
@@ -63,7 +67,8 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     }
 
     /**
-     * builds RequiredFieldError without checking for non null required values
+     * builds RequiredFieldError without checking for non-null required values
+     * @return RequiredFieldError
      */
     public RequiredFieldError buildUnchecked() {
         return new RequiredFieldErrorImpl(message, field);

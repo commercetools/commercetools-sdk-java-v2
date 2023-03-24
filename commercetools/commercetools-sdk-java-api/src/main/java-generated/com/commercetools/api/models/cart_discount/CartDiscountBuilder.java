@@ -85,7 +85,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Unique identifier of the CartDiscount.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -96,7 +96,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Current version of the CartDiscount.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -107,7 +107,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -118,7 +118,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -129,6 +129,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -140,7 +141,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -152,6 +153,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -163,7 +165,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -174,6 +176,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Name of the CartDiscount.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -185,7 +188,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Name of the CartDiscount.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -196,7 +199,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>User-defined unique identifier of the CartDiscount.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -207,6 +210,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Description of the CartDiscount.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -218,7 +222,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Description of the CartDiscount.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -230,7 +234,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Effect of the CartDiscount.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -241,6 +245,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Effect of the CartDiscount.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -252,7 +257,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Valid Cart Predicate.</p>
-     * @param cartPredicate
+     * @param cartPredicate value to be set
      * @return Builder
      */
 
@@ -263,7 +268,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -275,6 +280,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -286,7 +292,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
-     * @param sortOrder
+     * @param sortOrder value to be set
      * @return Builder
      */
 
@@ -297,7 +303,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
-     * @param isActive
+     * @param isActive value to be set
      * @return Builder
      */
 
@@ -308,7 +314,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Date and time (UTC) from which the Discount is effective.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -319,7 +325,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Date and time (UTC) until which the Discount is effective.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -330,7 +336,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
-     * @param requiresDiscountCode
+     * @param requiresDiscountCode value to be set
      * @return Builder
      */
 
@@ -341,7 +347,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
-     * @param references
+     * @param references value to be set
      * @return Builder
      */
 
@@ -352,7 +358,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
-     * @param references
+     * @param references value to be set
      * @return Builder
      */
 
@@ -364,7 +370,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
-     * @param references
+     * @param references value to be set
      * @return Builder
      */
 
@@ -378,6 +384,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     * @param builder function to build the references value
      * @return Builder
      */
 
@@ -392,6 +399,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     * @param builder function to build the references value
      * @return Builder
      */
 
@@ -404,7 +412,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Indicates whether the application of the CartDiscount causes other discounts to be ignored.</p>
-     * @param stackingMode
+     * @param stackingMode value to be set
      * @return Builder
      */
 
@@ -416,6 +424,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Custom Fields of the CartDiscount.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -427,7 +436,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Custom Fields of the CartDiscount.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -524,6 +533,10 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this.custom;
     }
 
+    /**
+     * builds CartDiscount with checking for non-null required values
+     * @return CartDiscount
+     */
     public CartDiscount build() {
         Objects.requireNonNull(id, CartDiscount.class + ": id is missing");
         Objects.requireNonNull(version, CartDiscount.class + ": version is missing");
@@ -543,7 +556,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     * builds CartDiscount without checking for non null required values
+     * builds CartDiscount without checking for non-null required values
+     * @return CartDiscount
      */
     public CartDiscount buildUnchecked() {
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,

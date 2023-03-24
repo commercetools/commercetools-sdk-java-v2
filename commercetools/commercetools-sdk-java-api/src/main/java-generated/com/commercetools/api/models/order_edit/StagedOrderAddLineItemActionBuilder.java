@@ -61,6 +61,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -84,6 +85,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -97,7 +99,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -109,6 +111,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -121,7 +124,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -133,7 +136,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param productId
+     * @param productId value to be set
      * @return Builder
      */
 
@@ -144,7 +147,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -155,7 +158,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -166,7 +169,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -177,7 +180,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param addedAt
+     * @param addedAt value to be set
      * @return Builder
      */
 
@@ -188,6 +191,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -200,7 +204,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -213,6 +217,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the externalPrice value
      * @return Builder
      */
 
@@ -225,7 +230,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     * @param externalPrice
+     * @param externalPrice value to be set
      * @return Builder
      */
 
@@ -237,6 +242,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
 
@@ -250,7 +256,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *
-     * @param externalTotalPrice
+     * @param externalTotalPrice value to be set
      * @return Builder
      */
 
@@ -262,6 +268,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -274,7 +281,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -344,13 +351,18 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
         return this.shippingDetails;
     }
 
+    /**
+     * builds StagedOrderAddLineItemAction with checking for non-null required values
+     * @return StagedOrderAddLineItemAction
+     */
     public StagedOrderAddLineItemAction build() {
         return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,
             sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
     }
 
     /**
-     * builds StagedOrderAddLineItemAction without checking for non null required values
+     * builds StagedOrderAddLineItemAction without checking for non-null required values
+     * @return StagedOrderAddLineItemAction
      */
     public StagedOrderAddLineItemAction buildUnchecked() {
         return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,

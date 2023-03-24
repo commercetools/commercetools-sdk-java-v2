@@ -32,7 +32,7 @@ public class RemovePaymentChangeBuilder implements Builder<RemovePaymentChange> 
 
     /**
      *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class RemovePaymentChangeBuilder implements Builder<RemovePaymentChange> 
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class RemovePaymentChangeBuilder implements Builder<RemovePaymentChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class RemovePaymentChangeBuilder implements Builder<RemovePaymentChange> 
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class RemovePaymentChangeBuilder implements Builder<RemovePaymentChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class RemovePaymentChangeBuilder implements Builder<RemovePaymentChange> 
         return this.previousValue;
     }
 
+    /**
+     * builds RemovePaymentChange with checking for non-null required values
+     * @return RemovePaymentChange
+     */
     public RemovePaymentChange build() {
         Objects.requireNonNull(change, RemovePaymentChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, RemovePaymentChange.class + ": nextValue is missing");
@@ -106,7 +112,8 @@ public class RemovePaymentChangeBuilder implements Builder<RemovePaymentChange> 
     }
 
     /**
-     * builds RemovePaymentChange without checking for non null required values
+     * builds RemovePaymentChange without checking for non-null required values
+     * @return RemovePaymentChange
      */
     public RemovePaymentChange buildUnchecked() {
         return new RemovePaymentChangeImpl(change, nextValue, previousValue);

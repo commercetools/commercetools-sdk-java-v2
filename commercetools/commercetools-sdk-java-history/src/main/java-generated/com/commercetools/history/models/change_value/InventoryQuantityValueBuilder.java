@@ -28,7 +28,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
 
     /**
      *
-     * @param quantityOnStock
+     * @param quantityOnStock value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
 
     /**
      *
-     * @param availableQuantity
+     * @param availableQuantity value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
         return this.availableQuantity;
     }
 
+    /**
+     * builds InventoryQuantityValue with checking for non-null required values
+     * @return InventoryQuantityValue
+     */
     public InventoryQuantityValue build() {
         Objects.requireNonNull(quantityOnStock, InventoryQuantityValue.class + ": quantityOnStock is missing");
         Objects.requireNonNull(availableQuantity, InventoryQuantityValue.class + ": availableQuantity is missing");
@@ -63,7 +67,8 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
     }
 
     /**
-     * builds InventoryQuantityValue without checking for non null required values
+     * builds InventoryQuantityValue without checking for non-null required values
+     * @return InventoryQuantityValue
      */
     public InventoryQuantityValue buildUnchecked() {
         return new InventoryQuantityValueImpl(quantityOnStock, availableQuantity);

@@ -29,7 +29,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
 
     /**
      *  <p>Expected version of the Subscription on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Subscription.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Subscription.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Subscription.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Subscription.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Subscription.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds SubscriptionUpdate with checking for non-null required values
+     * @return SubscriptionUpdate
+     */
     public SubscriptionUpdate build() {
         Objects.requireNonNull(version, SubscriptionUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, SubscriptionUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
     }
 
     /**
-     * builds SubscriptionUpdate without checking for non null required values
+     * builds SubscriptionUpdate without checking for non-null required values
+     * @return SubscriptionUpdate
      */
     public SubscriptionUpdate buildUnchecked() {
         return new SubscriptionUpdateImpl(version, actions);

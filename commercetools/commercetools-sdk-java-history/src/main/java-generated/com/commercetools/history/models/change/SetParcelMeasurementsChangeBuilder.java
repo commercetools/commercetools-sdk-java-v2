@@ -35,7 +35,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *  <p>Update action for <code>setParcelMeasurements</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
+     * @param builder function to build the parcel value
      * @return Builder
      */
 
@@ -58,7 +59,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
-     * @param parcel
+     * @param parcel value to be set
      * @return Builder
      */
 
@@ -70,6 +71,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -93,6 +95,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -105,7 +108,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -131,6 +134,10 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
         return this.previousValue;
     }
 
+    /**
+     * builds SetParcelMeasurementsChange with checking for non-null required values
+     * @return SetParcelMeasurementsChange
+     */
     public SetParcelMeasurementsChange build() {
         Objects.requireNonNull(change, SetParcelMeasurementsChange.class + ": change is missing");
         Objects.requireNonNull(parcel, SetParcelMeasurementsChange.class + ": parcel is missing");
@@ -140,7 +147,8 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     * builds SetParcelMeasurementsChange without checking for non null required values
+     * builds SetParcelMeasurementsChange without checking for non-null required values
+     * @return SetParcelMeasurementsChange
      */
     public SetParcelMeasurementsChange buildUnchecked() {
         return new SetParcelMeasurementsChangeImpl(change, parcel, nextValue, previousValue);

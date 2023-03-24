@@ -32,7 +32,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *  <p>Shape of the action for <code>setMetaTitle</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetMetaTitleChange with checking for non-null required values
+     * @return SetMetaTitleChange
+     */
     public SetMetaTitleChange build() {
         Objects.requireNonNull(change, SetMetaTitleChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetMetaTitleChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
     }
 
     /**
-     * builds SetMetaTitleChange without checking for non null required values
+     * builds SetMetaTitleChange without checking for non-null required values
+     * @return SetMetaTitleChange
      */
     public SetMetaTitleChange buildUnchecked() {
         return new SetMetaTitleChangeImpl(change, previousValue, nextValue);

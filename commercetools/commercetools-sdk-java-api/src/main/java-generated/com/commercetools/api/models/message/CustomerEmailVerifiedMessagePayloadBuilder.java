@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerEmailVerifiedMessagePayloadBuilder implements Builder<CustomerEmailVerifiedMessagePayload> {
 
+    /**
+     * builds CustomerEmailVerifiedMessagePayload with checking for non-null required values
+     * @return CustomerEmailVerifiedMessagePayload
+     */
     public CustomerEmailVerifiedMessagePayload build() {
         return new CustomerEmailVerifiedMessagePayloadImpl();
     }
 
     /**
-     * builds CustomerEmailVerifiedMessagePayload without checking for non null required values
+     * builds CustomerEmailVerifiedMessagePayload without checking for non-null required values
+     * @return CustomerEmailVerifiedMessagePayload
      */
     public CustomerEmailVerifiedMessagePayload buildUnchecked() {
         return new CustomerEmailVerifiedMessagePayloadImpl();

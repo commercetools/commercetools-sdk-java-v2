@@ -25,7 +25,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
 
     /**
      *  <p>Roles to remove from the State.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
 
     /**
      *  <p>Roles to remove from the State.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
 
     /**
      *  <p>Roles to remove from the State.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -64,13 +64,18 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
         return this.roles;
     }
 
+    /**
+     * builds StateRemoveRolesAction with checking for non-null required values
+     * @return StateRemoveRolesAction
+     */
     public StateRemoveRolesAction build() {
         Objects.requireNonNull(roles, StateRemoveRolesAction.class + ": roles is missing");
         return new StateRemoveRolesActionImpl(roles);
     }
 
     /**
-     * builds StateRemoveRolesAction without checking for non null required values
+     * builds StateRemoveRolesAction without checking for non-null required values
+     * @return StateRemoveRolesAction
      */
     public StateRemoveRolesAction buildUnchecked() {
         return new StateRemoveRolesActionImpl(roles);

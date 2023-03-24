@@ -30,6 +30,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Payment after the Transition State update action.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Payment after the Transition State update action.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
         return this.force;
     }
 
+    /**
+     * builds PaymentStatusStateTransitionMessagePayload with checking for non-null required values
+     * @return PaymentStatusStateTransitionMessagePayload
+     */
     public PaymentStatusStateTransitionMessagePayload build() {
         Objects.requireNonNull(state, PaymentStatusStateTransitionMessagePayload.class + ": state is missing");
         Objects.requireNonNull(force, PaymentStatusStateTransitionMessagePayload.class + ": force is missing");
@@ -77,7 +82,8 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
     }
 
     /**
-     * builds PaymentStatusStateTransitionMessagePayload without checking for non null required values
+     * builds PaymentStatusStateTransitionMessagePayload without checking for non-null required values
+     * @return PaymentStatusStateTransitionMessagePayload
      */
     public PaymentStatusStateTransitionMessagePayload buildUnchecked() {
         return new PaymentStatusStateTransitionMessagePayloadImpl(state, force);

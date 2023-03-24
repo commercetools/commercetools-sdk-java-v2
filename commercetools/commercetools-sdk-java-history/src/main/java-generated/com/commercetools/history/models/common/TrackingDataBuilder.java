@@ -37,7 +37,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *  <p>The ID to track one parcel.</p>
-     * @param trackingId
+     * @param trackingId value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *  <p>The carrier that delivers the parcel.</p>
-     * @param carrier
+     * @param carrier value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *
-     * @param provider
+     * @param provider value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *
-     * @param providerTransaction
+     * @param providerTransaction value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
-     * @param isReturn
+     * @param isReturn value to be set
      * @return Builder
      */
 
@@ -110,6 +110,10 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
         return this.isReturn;
     }
 
+    /**
+     * builds TrackingData with checking for non-null required values
+     * @return TrackingData
+     */
     public TrackingData build() {
         Objects.requireNonNull(trackingId, TrackingData.class + ": trackingId is missing");
         Objects.requireNonNull(carrier, TrackingData.class + ": carrier is missing");
@@ -120,7 +124,8 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * builds TrackingData without checking for non null required values
+     * builds TrackingData without checking for non-null required values
+     * @return TrackingData
      */
     public TrackingData buildUnchecked() {
         return new TrackingDataImpl(trackingId, carrier, provider, providerTransaction, isReturn);

@@ -32,7 +32,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *  <p>Shape of the action for <code>setDistributionChannels</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -96,6 +97,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -120,7 +122,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -132,7 +134,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -147,6 +149,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -161,6 +164,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -183,6 +187,10 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         return this.nextValue;
     }
 
+    /**
+     * builds SetDistributionChannelsChange with checking for non-null required values
+     * @return SetDistributionChannelsChange
+     */
     public SetDistributionChannelsChange build() {
         Objects.requireNonNull(change, SetDistributionChannelsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetDistributionChannelsChange.class + ": previousValue is missing");
@@ -191,7 +199,8 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     * builds SetDistributionChannelsChange without checking for non null required values
+     * builds SetDistributionChannelsChange without checking for non-null required values
+     * @return SetDistributionChannelsChange
      */
     public SetDistributionChannelsChange buildUnchecked() {
         return new SetDistributionChannelsChangeImpl(change, previousValue, nextValue);

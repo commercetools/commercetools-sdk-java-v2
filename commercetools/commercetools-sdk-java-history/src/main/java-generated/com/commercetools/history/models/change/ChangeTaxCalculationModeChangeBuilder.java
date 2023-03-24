@@ -31,7 +31,7 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
 
     /**
      *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeTaxCalculationModeChange with checking for non-null required values
+     * @return ChangeTaxCalculationModeChange
+     */
     public ChangeTaxCalculationModeChange build() {
         Objects.requireNonNull(change, ChangeTaxCalculationModeChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeTaxCalculationModeChange.class + ": previousValue is missing");
@@ -84,7 +88,8 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
     }
 
     /**
-     * builds ChangeTaxCalculationModeChange without checking for non null required values
+     * builds ChangeTaxCalculationModeChange without checking for non-null required values
+     * @return ChangeTaxCalculationModeChange
      */
     public ChangeTaxCalculationModeChange buildUnchecked() {
         return new ChangeTaxCalculationModeChangeImpl(change, previousValue, nextValue);

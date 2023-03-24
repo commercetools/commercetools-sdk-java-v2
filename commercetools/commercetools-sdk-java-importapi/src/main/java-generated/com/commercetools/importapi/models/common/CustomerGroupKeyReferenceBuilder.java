@@ -25,7 +25,7 @@ public class CustomerGroupKeyReferenceBuilder implements Builder<CustomerGroupKe
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class CustomerGroupKeyReferenceBuilder implements Builder<CustomerGroupKe
         return this.key;
     }
 
+    /**
+     * builds CustomerGroupKeyReference with checking for non-null required values
+     * @return CustomerGroupKeyReference
+     */
     public CustomerGroupKeyReference build() {
         Objects.requireNonNull(key, CustomerGroupKeyReference.class + ": key is missing");
         return new CustomerGroupKeyReferenceImpl(key);
     }
 
     /**
-     * builds CustomerGroupKeyReference without checking for non null required values
+     * builds CustomerGroupKeyReference without checking for non-null required values
+     * @return CustomerGroupKeyReference
      */
     public CustomerGroupKeyReference buildUnchecked() {
         return new CustomerGroupKeyReferenceImpl(key);

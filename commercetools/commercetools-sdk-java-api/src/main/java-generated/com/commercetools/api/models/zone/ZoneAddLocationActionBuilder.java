@@ -26,6 +26,7 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
 
     /**
      *  <p>Location to be added to the Zone.</p>
+     * @param builder function to build the location value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
 
     /**
      *  <p>Location to be added to the Zone.</p>
-     * @param location
+     * @param location value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
         return this.location;
     }
 
+    /**
+     * builds ZoneAddLocationAction with checking for non-null required values
+     * @return ZoneAddLocationAction
+     */
     public ZoneAddLocationAction build() {
         Objects.requireNonNull(location, ZoneAddLocationAction.class + ": location is missing");
         return new ZoneAddLocationActionImpl(location);
     }
 
     /**
-     * builds ZoneAddLocationAction without checking for non null required values
+     * builds ZoneAddLocationAction without checking for non-null required values
+     * @return ZoneAddLocationAction
      */
     public ZoneAddLocationAction buildUnchecked() {
         return new ZoneAddLocationActionImpl(location);

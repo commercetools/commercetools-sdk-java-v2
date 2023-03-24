@@ -32,7 +32,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -110,7 +112,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -134,7 +136,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -149,6 +151,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -164,6 +167,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -187,6 +191,10 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeTextLineItemsOrderChange with checking for non-null required values
+     * @return ChangeTextLineItemsOrderChange
+     */
     public ChangeTextLineItemsOrderChange build() {
         Objects.requireNonNull(change, ChangeTextLineItemsOrderChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeTextLineItemsOrderChange.class + ": previousValue is missing");
@@ -195,7 +203,8 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     * builds ChangeTextLineItemsOrderChange without checking for non null required values
+     * builds ChangeTextLineItemsOrderChange without checking for non-null required values
+     * @return ChangeTextLineItemsOrderChange
      */
     public ChangeTextLineItemsOrderChange buildUnchecked() {
         return new ChangeTextLineItemsOrderChangeImpl(change, previousValue, nextValue);

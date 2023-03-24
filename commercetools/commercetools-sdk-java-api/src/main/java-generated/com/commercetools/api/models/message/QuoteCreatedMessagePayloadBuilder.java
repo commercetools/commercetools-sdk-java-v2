@@ -26,6 +26,7 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
 
     /**
      *  <p>Quote that was created.</p>
+     * @param builder function to build the quote value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
 
     /**
      *  <p>Quote that was created.</p>
-     * @param quote
+     * @param quote value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
         return this.quote;
     }
 
+    /**
+     * builds QuoteCreatedMessagePayload with checking for non-null required values
+     * @return QuoteCreatedMessagePayload
+     */
     public QuoteCreatedMessagePayload build() {
         Objects.requireNonNull(quote, QuoteCreatedMessagePayload.class + ": quote is missing");
         return new QuoteCreatedMessagePayloadImpl(quote);
     }
 
     /**
-     * builds QuoteCreatedMessagePayload without checking for non null required values
+     * builds QuoteCreatedMessagePayload without checking for non-null required values
+     * @return QuoteCreatedMessagePayload
      */
     public QuoteCreatedMessagePayload buildUnchecked() {
         return new QuoteCreatedMessagePayloadImpl(quote);

@@ -29,6 +29,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Product State after the Transition State update action.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Product State after the Transition State update action.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -69,6 +70,10 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
         return this.force;
     }
 
+    /**
+     * builds ProductStateTransitionMessagePayload with checking for non-null required values
+     * @return ProductStateTransitionMessagePayload
+     */
     public ProductStateTransitionMessagePayload build() {
         Objects.requireNonNull(state, ProductStateTransitionMessagePayload.class + ": state is missing");
         Objects.requireNonNull(force, ProductStateTransitionMessagePayload.class + ": force is missing");
@@ -76,7 +81,8 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     * builds ProductStateTransitionMessagePayload without checking for non null required values
+     * builds ProductStateTransitionMessagePayload without checking for non-null required values
+     * @return ProductStateTransitionMessagePayload
      */
     public ProductStateTransitionMessagePayload buildUnchecked() {
         return new ProductStateTransitionMessagePayloadImpl(state, force);

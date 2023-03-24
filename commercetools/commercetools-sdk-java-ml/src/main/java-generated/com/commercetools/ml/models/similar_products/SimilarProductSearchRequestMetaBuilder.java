@@ -26,6 +26,7 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
 
     /**
      *  <p>The SimilarityMeasures used in this search.</p>
+     * @param builder function to build the similarityMeasures value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
 
     /**
      *  <p>The SimilarityMeasures used in this search.</p>
-     * @param similarityMeasures
+     * @param similarityMeasures value to be set
      * @return Builder
      */
 
@@ -53,6 +54,10 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
         return this.similarityMeasures;
     }
 
+    /**
+     * builds SimilarProductSearchRequestMeta with checking for non-null required values
+     * @return SimilarProductSearchRequestMeta
+     */
     public SimilarProductSearchRequestMeta build() {
         Objects.requireNonNull(similarityMeasures,
             SimilarProductSearchRequestMeta.class + ": similarityMeasures is missing");
@@ -60,7 +65,8 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
     }
 
     /**
-     * builds SimilarProductSearchRequestMeta without checking for non null required values
+     * builds SimilarProductSearchRequestMeta without checking for non-null required values
+     * @return SimilarProductSearchRequestMeta
      */
     public SimilarProductSearchRequestMeta buildUnchecked() {
         return new SimilarProductSearchRequestMetaImpl(similarityMeasures);

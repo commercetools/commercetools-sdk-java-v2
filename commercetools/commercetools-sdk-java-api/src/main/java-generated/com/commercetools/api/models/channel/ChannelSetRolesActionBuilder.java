@@ -25,7 +25,7 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
 
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
 
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
 
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
-     * @param roles
+     * @param roles value to be set
      * @return Builder
      */
 
@@ -64,13 +64,18 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
         return this.roles;
     }
 
+    /**
+     * builds ChannelSetRolesAction with checking for non-null required values
+     * @return ChannelSetRolesAction
+     */
     public ChannelSetRolesAction build() {
         Objects.requireNonNull(roles, ChannelSetRolesAction.class + ": roles is missing");
         return new ChannelSetRolesActionImpl(roles);
     }
 
     /**
-     * builds ChannelSetRolesAction without checking for non null required values
+     * builds ChannelSetRolesAction without checking for non-null required values
+     * @return ChannelSetRolesAction
      */
     public ChannelSetRolesAction buildUnchecked() {
         return new ChannelSetRolesActionImpl(roles);

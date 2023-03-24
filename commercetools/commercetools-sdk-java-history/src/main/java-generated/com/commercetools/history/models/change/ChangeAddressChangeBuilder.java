@@ -32,7 +32,7 @@ public class ChangeAddressChangeBuilder implements Builder<ChangeAddressChange> 
 
     /**
      *  <p>Update action <code>changeAddress</code> action.</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ChangeAddressChangeBuilder implements Builder<ChangeAddressChange> 
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ChangeAddressChangeBuilder implements Builder<ChangeAddressChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class ChangeAddressChangeBuilder implements Builder<ChangeAddressChange> 
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class ChangeAddressChangeBuilder implements Builder<ChangeAddressChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class ChangeAddressChangeBuilder implements Builder<ChangeAddressChange> 
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeAddressChange with checking for non-null required values
+     * @return ChangeAddressChange
+     */
     public ChangeAddressChange build() {
         Objects.requireNonNull(change, ChangeAddressChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangeAddressChange.class + ": nextValue is missing");
@@ -106,7 +112,8 @@ public class ChangeAddressChangeBuilder implements Builder<ChangeAddressChange> 
     }
 
     /**
-     * builds ChangeAddressChange without checking for non null required values
+     * builds ChangeAddressChange without checking for non-null required values
+     * @return ChangeAddressChange
      */
     public ChangeAddressChange buildUnchecked() {
         return new ChangeAddressChangeImpl(change, nextValue, previousValue);

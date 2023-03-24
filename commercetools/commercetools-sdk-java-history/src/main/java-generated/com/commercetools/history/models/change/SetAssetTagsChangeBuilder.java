@@ -35,7 +35,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *  <p>Update action for <code>setAssetTags</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
+     * @param builder function to build the asset value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
-     * @param asset
+     * @param asset value to be set
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -90,7 +91,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -104,7 +105,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -115,7 +116,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -126,7 +127,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -154,6 +155,10 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds SetAssetTagsChange with checking for non-null required values
+     * @return SetAssetTagsChange
+     */
     public SetAssetTagsChange build() {
         Objects.requireNonNull(change, SetAssetTagsChange.class + ": change is missing");
         Objects.requireNonNull(asset, SetAssetTagsChange.class + ": asset is missing");
@@ -163,7 +168,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     * builds SetAssetTagsChange without checking for non null required values
+     * builds SetAssetTagsChange without checking for non-null required values
+     * @return SetAssetTagsChange
      */
     public SetAssetTagsChange buildUnchecked() {
         return new SetAssetTagsChangeImpl(change, asset, nextValue, previousValue);

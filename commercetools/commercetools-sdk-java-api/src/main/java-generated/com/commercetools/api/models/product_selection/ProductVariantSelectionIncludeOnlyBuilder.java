@@ -25,7 +25,7 @@ public class ProductVariantSelectionIncludeOnlyBuilder implements Builder<Produc
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
-     * @param skus
+     * @param skus value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class ProductVariantSelectionIncludeOnlyBuilder implements Builder<Produc
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
-     * @param skus
+     * @param skus value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class ProductVariantSelectionIncludeOnlyBuilder implements Builder<Produc
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
-     * @param skus
+     * @param skus value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class ProductVariantSelectionIncludeOnlyBuilder implements Builder<Produc
         return this.skus;
     }
 
+    /**
+     * builds ProductVariantSelectionIncludeOnly with checking for non-null required values
+     * @return ProductVariantSelectionIncludeOnly
+     */
     public ProductVariantSelectionIncludeOnly build() {
         Objects.requireNonNull(skus, ProductVariantSelectionIncludeOnly.class + ": skus is missing");
         return new ProductVariantSelectionIncludeOnlyImpl(skus);
     }
 
     /**
-     * builds ProductVariantSelectionIncludeOnly without checking for non null required values
+     * builds ProductVariantSelectionIncludeOnly without checking for non-null required values
+     * @return ProductVariantSelectionIncludeOnly
      */
     public ProductVariantSelectionIncludeOnly buildUnchecked() {
         return new ProductVariantSelectionIncludeOnlyImpl(skus);

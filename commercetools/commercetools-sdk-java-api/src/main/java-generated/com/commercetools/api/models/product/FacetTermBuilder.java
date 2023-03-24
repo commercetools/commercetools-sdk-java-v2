@@ -32,7 +32,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
 
     /**
      *
-     * @param term
+     * @param term value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
 
     /**
      *
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
 
     /**
      *
-     * @param productCount
+     * @param productCount value to be set
      * @return Builder
      */
 
@@ -76,6 +76,10 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
         return this.productCount;
     }
 
+    /**
+     * builds FacetTerm with checking for non-null required values
+     * @return FacetTerm
+     */
     public FacetTerm build() {
         Objects.requireNonNull(term, FacetTerm.class + ": term is missing");
         Objects.requireNonNull(count, FacetTerm.class + ": count is missing");
@@ -83,7 +87,8 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * builds FacetTerm without checking for non null required values
+     * builds FacetTerm without checking for non-null required values
+     * @return FacetTerm
      */
     public FacetTerm buildUnchecked() {
         return new FacetTermImpl(term, count, productCount);

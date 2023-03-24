@@ -33,7 +33,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
 
     /**
      *  <p><code>"The $fieldName field definition does not contain an enum value with the key $enumKey."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -44,6 +44,8 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public EnumKeyDoesNotExistErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,6 +55,9 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public EnumKeyDoesNotExistErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +70,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
 
     /**
      *  <p>Conflicting enum key.</p>
-     * @param conflictingEnumKey
+     * @param conflictingEnumKey value to be set
      * @return Builder
      */
 
@@ -76,7 +81,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
-     * @param conflictingAttributeName
+     * @param conflictingAttributeName value to be set
      * @return Builder
      */
 
@@ -101,6 +106,10 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
         return this.conflictingAttributeName;
     }
 
+    /**
+     * builds EnumKeyDoesNotExistError with checking for non-null required values
+     * @return EnumKeyDoesNotExistError
+     */
     public EnumKeyDoesNotExistError build() {
         Objects.requireNonNull(message, EnumKeyDoesNotExistError.class + ": message is missing");
         Objects.requireNonNull(conflictingEnumKey, EnumKeyDoesNotExistError.class + ": conflictingEnumKey is missing");
@@ -110,7 +119,8 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     }
 
     /**
-     * builds EnumKeyDoesNotExistError without checking for non null required values
+     * builds EnumKeyDoesNotExistError without checking for non-null required values
+     * @return EnumKeyDoesNotExistError
      */
     public EnumKeyDoesNotExistError buildUnchecked() {
         return new EnumKeyDoesNotExistErrorImpl(message, values, conflictingEnumKey, conflictingAttributeName);

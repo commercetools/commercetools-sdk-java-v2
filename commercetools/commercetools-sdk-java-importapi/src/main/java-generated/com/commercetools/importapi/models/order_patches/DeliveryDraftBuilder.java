@@ -34,7 +34,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -45,7 +45,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -71,6 +71,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -85,6 +86,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -97,6 +99,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -108,7 +111,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -119,7 +122,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -131,7 +134,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -143,7 +146,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
-     * @param parcels
+     * @param parcels value to be set
      * @return Builder
      */
 
@@ -158,6 +161,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -173,6 +177,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param builder function to build the parcels value
      * @return Builder
      */
 
@@ -197,6 +202,10 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
         return this.parcels;
     }
 
+    /**
+     * builds DeliveryDraft with checking for non-null required values
+     * @return DeliveryDraft
+     */
     public DeliveryDraft build() {
         Objects.requireNonNull(items, DeliveryDraft.class + ": items is missing");
         Objects.requireNonNull(parcels, DeliveryDraft.class + ": parcels is missing");
@@ -204,7 +213,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * builds DeliveryDraft without checking for non null required values
+     * builds DeliveryDraft without checking for non-null required values
+     * @return DeliveryDraft
      */
     public DeliveryDraft buildUnchecked() {
         return new DeliveryDraftImpl(items, address, parcels);

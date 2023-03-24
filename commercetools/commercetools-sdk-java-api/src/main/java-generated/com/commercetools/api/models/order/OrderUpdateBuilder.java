@@ -29,7 +29,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds OrderUpdate with checking for non-null required values
+     * @return OrderUpdate
+     */
     public OrderUpdate build() {
         Objects.requireNonNull(version, OrderUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, OrderUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     * builds OrderUpdate without checking for non null required values
+     * builds OrderUpdate without checking for non-null required values
+     * @return OrderUpdate
      */
     public OrderUpdate buildUnchecked() {
         return new OrderUpdateImpl(version, actions);

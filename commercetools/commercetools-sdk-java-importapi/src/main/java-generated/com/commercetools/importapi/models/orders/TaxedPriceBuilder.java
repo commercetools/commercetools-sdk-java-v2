@@ -32,6 +32,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     * @param builder function to build the totalNet value
      * @return Builder
      */
 
@@ -43,7 +44,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
-     * @param totalNet
+     * @param totalNet value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     * @param builder function to build the totalGross value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
-     * @param totalGross
+     * @param totalGross value to be set
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
-     * @param taxPortions
+     * @param taxPortions value to be set
      * @return Builder
      */
 
@@ -87,7 +89,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
-     * @param taxPortions
+     * @param taxPortions value to be set
      * @return Builder
      */
 
@@ -99,7 +101,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
-     * @param taxPortions
+     * @param taxPortions value to be set
      * @return Builder
      */
 
@@ -114,6 +116,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @param builder function to build the taxPortions value
      * @return Builder
      */
 
@@ -128,6 +131,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @param builder function to build the taxPortions value
      * @return Builder
      */
 
@@ -150,6 +154,10 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this.taxPortions;
     }
 
+    /**
+     * builds TaxedPrice with checking for non-null required values
+     * @return TaxedPrice
+     */
     public TaxedPrice build() {
         Objects.requireNonNull(totalNet, TaxedPrice.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedPrice.class + ": totalGross is missing");
@@ -158,7 +166,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     * builds TaxedPrice without checking for non null required values
+     * builds TaxedPrice without checking for non-null required values
+     * @return TaxedPrice
      */
     public TaxedPrice buildUnchecked() {
         return new TaxedPriceImpl(totalNet, totalGross, taxPortions);

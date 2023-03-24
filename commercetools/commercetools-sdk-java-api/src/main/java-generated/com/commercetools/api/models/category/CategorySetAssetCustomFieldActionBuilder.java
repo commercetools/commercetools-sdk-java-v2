@@ -36,7 +36,7 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -97,13 +97,18 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
         return this.value;
     }
 
+    /**
+     * builds CategorySetAssetCustomFieldAction with checking for non-null required values
+     * @return CategorySetAssetCustomFieldAction
+     */
     public CategorySetAssetCustomFieldAction build() {
         Objects.requireNonNull(name, CategorySetAssetCustomFieldAction.class + ": name is missing");
         return new CategorySetAssetCustomFieldActionImpl(assetId, assetKey, name, value);
     }
 
     /**
-     * builds CategorySetAssetCustomFieldAction without checking for non null required values
+     * builds CategorySetAssetCustomFieldAction without checking for non-null required values
+     * @return CategorySetAssetCustomFieldAction
      */
     public CategorySetAssetCustomFieldAction buildUnchecked() {
         return new CategorySetAssetCustomFieldActionImpl(assetId, assetKey, name, value);

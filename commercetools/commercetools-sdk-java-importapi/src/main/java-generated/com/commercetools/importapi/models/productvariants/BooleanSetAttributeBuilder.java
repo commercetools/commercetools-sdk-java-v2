@@ -30,7 +30,7 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -84,13 +84,18 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
         return this.value;
     }
 
+    /**
+     * builds BooleanSetAttribute with checking for non-null required values
+     * @return BooleanSetAttribute
+     */
     public BooleanSetAttribute build() {
         Objects.requireNonNull(value, BooleanSetAttribute.class + ": value is missing");
         return new BooleanSetAttributeImpl(name, value);
     }
 
     /**
-     * builds BooleanSetAttribute without checking for non null required values
+     * builds BooleanSetAttribute without checking for non-null required values
+     * @return BooleanSetAttribute
      */
     public BooleanSetAttribute buildUnchecked() {
         return new BooleanSetAttributeImpl(name, value);

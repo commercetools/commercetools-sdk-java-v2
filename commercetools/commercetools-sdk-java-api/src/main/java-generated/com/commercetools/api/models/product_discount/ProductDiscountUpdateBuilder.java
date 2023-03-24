@@ -29,7 +29,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -95,6 +96,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -115,6 +117,10 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
         return this.actions;
     }
 
+    /**
+     * builds ProductDiscountUpdate with checking for non-null required values
+     * @return ProductDiscountUpdate
+     */
     public ProductDiscountUpdate build() {
         Objects.requireNonNull(version, ProductDiscountUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ProductDiscountUpdate.class + ": actions is missing");
@@ -122,7 +128,8 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
     }
 
     /**
-     * builds ProductDiscountUpdate without checking for non null required values
+     * builds ProductDiscountUpdate without checking for non-null required values
+     * @return ProductDiscountUpdate
      */
     public ProductDiscountUpdate buildUnchecked() {
         return new ProductDiscountUpdateImpl(version, actions);

@@ -29,7 +29,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     /**
      *  <p>Money value of the discounted price.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     /**
      *  <p>Money value of the discounted price.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -51,6 +52,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     /**
      *  <p>ProductDiscount related to the discounted price.</p>
+     * @param builder function to build the discount value
      * @return Builder
      */
 
@@ -64,7 +66,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     /**
      *  <p>ProductDiscount related to the discounted price.</p>
-     * @param discount
+     * @param discount value to be set
      * @return Builder
      */
 
@@ -82,6 +84,10 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
         return this.discount;
     }
 
+    /**
+     * builds DiscountedPrice with checking for non-null required values
+     * @return DiscountedPrice
+     */
     public DiscountedPrice build() {
         Objects.requireNonNull(value, DiscountedPrice.class + ": value is missing");
         Objects.requireNonNull(discount, DiscountedPrice.class + ": discount is missing");
@@ -89,7 +95,8 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     * builds DiscountedPrice without checking for non null required values
+     * builds DiscountedPrice without checking for non-null required values
+     * @return DiscountedPrice
      */
     public DiscountedPrice buildUnchecked() {
         return new DiscountedPriceImpl(value, discount);

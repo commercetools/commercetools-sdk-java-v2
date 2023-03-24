@@ -38,7 +38,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -60,6 +60,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     * @param builder function to build the measurements value
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
-     * @param measurements
+     * @param measurements value to be set
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -110,6 +111,10 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
         return this.shippingKey;
     }
 
+    /**
+     * builds ParcelMeasurementsUpdatedMessagePayload with checking for non-null required values
+     * @return ParcelMeasurementsUpdatedMessagePayload
+     */
     public ParcelMeasurementsUpdatedMessagePayload build() {
         Objects.requireNonNull(deliveryId, ParcelMeasurementsUpdatedMessagePayload.class + ": deliveryId is missing");
         Objects.requireNonNull(parcelId, ParcelMeasurementsUpdatedMessagePayload.class + ": parcelId is missing");
@@ -117,7 +122,8 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     }
 
     /**
-     * builds ParcelMeasurementsUpdatedMessagePayload without checking for non null required values
+     * builds ParcelMeasurementsUpdatedMessagePayload without checking for non-null required values
+     * @return ParcelMeasurementsUpdatedMessagePayload
      */
     public ParcelMeasurementsUpdatedMessagePayload buildUnchecked() {
         return new ParcelMeasurementsUpdatedMessagePayloadImpl(deliveryId, parcelId, measurements, shippingKey);

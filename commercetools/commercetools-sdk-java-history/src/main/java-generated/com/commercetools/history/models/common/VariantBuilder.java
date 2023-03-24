@@ -31,7 +31,7 @@ public class VariantBuilder implements Builder<Variant> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class VariantBuilder implements Builder<Variant> {
 
     /**
      *
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class VariantBuilder implements Builder<Variant> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class VariantBuilder implements Builder<Variant> {
         return this.key;
     }
 
+    /**
+     * builds Variant with checking for non-null required values
+     * @return Variant
+     */
     public Variant build() {
         Objects.requireNonNull(id, Variant.class + ": id is missing");
         Objects.requireNonNull(sku, Variant.class + ": sku is missing");
@@ -82,7 +86,8 @@ public class VariantBuilder implements Builder<Variant> {
     }
 
     /**
-     * builds Variant without checking for non null required values
+     * builds Variant without checking for non-null required values
+     * @return Variant
      */
     public Variant buildUnchecked() {
         return new VariantImpl(id, sku, key);

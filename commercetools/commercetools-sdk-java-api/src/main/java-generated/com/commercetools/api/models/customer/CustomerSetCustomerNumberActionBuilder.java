@@ -27,7 +27,7 @@ public class CustomerSetCustomerNumberActionBuilder implements Builder<CustomerS
 
     /**
      *  <p>Value to set. Once set, it cannot be changed.</p>
-     * @param customerNumber
+     * @param customerNumber value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CustomerSetCustomerNumberActionBuilder implements Builder<CustomerS
         return this.customerNumber;
     }
 
+    /**
+     * builds CustomerSetCustomerNumberAction with checking for non-null required values
+     * @return CustomerSetCustomerNumberAction
+     */
     public CustomerSetCustomerNumberAction build() {
         return new CustomerSetCustomerNumberActionImpl(customerNumber);
     }
 
     /**
-     * builds CustomerSetCustomerNumberAction without checking for non null required values
+     * builds CustomerSetCustomerNumberAction without checking for non-null required values
+     * @return CustomerSetCustomerNumberAction
      */
     public CustomerSetCustomerNumberAction buildUnchecked() {
         return new CustomerSetCustomerNumberActionImpl(customerNumber);

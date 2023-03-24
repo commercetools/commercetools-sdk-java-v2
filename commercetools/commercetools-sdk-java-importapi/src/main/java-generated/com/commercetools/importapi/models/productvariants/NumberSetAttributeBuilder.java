@@ -30,7 +30,7 @@ public class NumberSetAttributeBuilder implements Builder<NumberSetAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class NumberSetAttributeBuilder implements Builder<NumberSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class NumberSetAttributeBuilder implements Builder<NumberSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class NumberSetAttributeBuilder implements Builder<NumberSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -84,13 +84,18 @@ public class NumberSetAttributeBuilder implements Builder<NumberSetAttribute> {
         return this.value;
     }
 
+    /**
+     * builds NumberSetAttribute with checking for non-null required values
+     * @return NumberSetAttribute
+     */
     public NumberSetAttribute build() {
         Objects.requireNonNull(value, NumberSetAttribute.class + ": value is missing");
         return new NumberSetAttributeImpl(name, value);
     }
 
     /**
-     * builds NumberSetAttribute without checking for non null required values
+     * builds NumberSetAttribute without checking for non-null required values
+     * @return NumberSetAttribute
      */
     public NumberSetAttribute buildUnchecked() {
         return new NumberSetAttributeImpl(name, value);

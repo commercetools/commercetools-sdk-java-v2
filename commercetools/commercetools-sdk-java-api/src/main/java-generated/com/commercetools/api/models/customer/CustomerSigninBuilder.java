@@ -47,7 +47,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
     /**
      *  <p>Password of the Customer.</p>
-     * @param password
+     * @param password value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
     /**
      *  <p>Deprecated since it is now possible to identify an anonymous cart by using its <code>id</code> or external <code>key</code>.</p>
-     * @param anonymousCartId
+     * @param anonymousCartId value to be set
      * @return Builder
      */
     @Deprecated
@@ -80,6 +80,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
     /**
      *  <p>Identifies a Cart that will be assigned to the Customer.</p>
+     * @param builder function to build the anonymousCart value
      * @return Builder
      */
 
@@ -92,7 +93,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
     /**
      *  <p>Identifies a Cart that will be assigned to the Customer.</p>
-     * @param anonymousCart
+     * @param anonymousCart value to be set
      * @return Builder
      */
 
@@ -107,7 +108,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
      *   <li>Set to <code>MergeWithExistingCustomerCart</code> if LineItems of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
      *   <li>Set to <code>UseAsNewActiveCustomerCart</code> if the anonymous Cart should be used as the new active Customer Cart and no LineItems are to be merged.</li>
      *  </ul>
-     * @param anonymousCartSignInMode
+     * @param anonymousCartSignInMode value to be set
      * @return Builder
      */
 
@@ -119,7 +120,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
     /**
      *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous Cart. Otherwise a 400 Bad Request <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -133,7 +134,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
      *   <li>If <code>false</code>, only the prices, discounts, and tax rates will be updated.</li>
      *  </ul>
-     * @param updateProductData
+     * @param updateProductData value to be set
      * @return Builder
      */
 
@@ -176,6 +177,10 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
         return this.updateProductData;
     }
 
+    /**
+     * builds CustomerSignin with checking for non-null required values
+     * @return CustomerSignin
+     */
     public CustomerSignin build() {
         Objects.requireNonNull(email, CustomerSignin.class + ": email is missing");
         Objects.requireNonNull(password, CustomerSignin.class + ": password is missing");
@@ -184,7 +189,8 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     * builds CustomerSignin without checking for non null required values
+     * builds CustomerSignin without checking for non-null required values
+     * @return CustomerSignin
      */
     public CustomerSignin buildUnchecked() {
         return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode,

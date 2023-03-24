@@ -25,7 +25,7 @@ public class StateChangeKeyActionBuilder implements Builder<StateChangeKeyAction
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StateChangeKeyActionBuilder implements Builder<StateChangeKeyAction
         return this.key;
     }
 
+    /**
+     * builds StateChangeKeyAction with checking for non-null required values
+     * @return StateChangeKeyAction
+     */
     public StateChangeKeyAction build() {
         Objects.requireNonNull(key, StateChangeKeyAction.class + ": key is missing");
         return new StateChangeKeyActionImpl(key);
     }
 
     /**
-     * builds StateChangeKeyAction without checking for non null required values
+     * builds StateChangeKeyAction without checking for non-null required values
+     * @return StateChangeKeyAction
      */
     public StateChangeKeyAction buildUnchecked() {
         return new StateChangeKeyActionImpl(key);

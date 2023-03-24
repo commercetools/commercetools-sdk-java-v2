@@ -58,7 +58,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Review.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>&nbsp;+ Product <code>id</code>.</p>
-     * @param uniquenessValue
+     * @param uniquenessValue value to be set
      * @return Builder
      */
 
@@ -80,7 +80,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Language in which the content of the Review is written.</p>
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -91,7 +91,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Name of the author.</p>
-     * @param authorName
+     * @param authorName value to be set
      * @return Builder
      */
 
@@ -102,7 +102,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Title of the Review.</p>
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -113,7 +113,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Content of the Review.</p>
-     * @param text
+     * @param text value to be set
      * @return Builder
      */
 
@@ -125,7 +125,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     /**
      *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
      *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -137,6 +137,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     /**
      *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
      *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -148,6 +149,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -159,7 +161,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -170,7 +172,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Rating of the targeted Product or Channel. This rating can represent the number of stars, a percentage, or a like (+1)/dislike (-1). A rating is used in the ratings statistics of the targeted object, unless the Review is in a State that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
-     * @param rating
+     * @param rating value to be set
      * @return Builder
      */
 
@@ -181,6 +183,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Customer who created the Review.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -193,7 +196,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Customer who created the Review.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -205,6 +208,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Custom Fields for the Review.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -216,7 +220,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Custom Fields for the Review.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -280,13 +284,18 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
         return this.custom;
     }
 
+    /**
+     * builds ReviewDraft with checking for non-null required values
+     * @return ReviewDraft
+     */
     public ReviewDraft build() {
         return new ReviewDraftImpl(key, uniquenessValue, locale, authorName, title, text, target, state, rating,
             customer, custom);
     }
 
     /**
-     * builds ReviewDraft without checking for non null required values
+     * builds ReviewDraft without checking for non-null required values
+     * @return ReviewDraft
      */
     public ReviewDraft buildUnchecked() {
         return new ReviewDraftImpl(key, uniquenessValue, locale, authorName, title, text, target, state, rating,

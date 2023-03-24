@@ -27,7 +27,7 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
 
     /**
      *  <p><code>"The predicate does not match the cart."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ShippingMethodDoesNotMatchCartErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ShippingMethodDoesNotMatchCartErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
         return this.values;
     }
 
+    /**
+     * builds ShippingMethodDoesNotMatchCartError with checking for non-null required values
+     * @return ShippingMethodDoesNotMatchCartError
+     */
     public ShippingMethodDoesNotMatchCartError build() {
         Objects.requireNonNull(message, ShippingMethodDoesNotMatchCartError.class + ": message is missing");
         return new ShippingMethodDoesNotMatchCartErrorImpl(message, values);
     }
 
     /**
-     * builds ShippingMethodDoesNotMatchCartError without checking for non null required values
+     * builds ShippingMethodDoesNotMatchCartError without checking for non-null required values
+     * @return ShippingMethodDoesNotMatchCartError
      */
     public ShippingMethodDoesNotMatchCartError buildUnchecked() {
         return new ShippingMethodDoesNotMatchCartErrorImpl(message, values);

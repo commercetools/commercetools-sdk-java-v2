@@ -53,7 +53,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param addedAt
+     * @param addedAt value to be set
      * @return Builder
      */
 
@@ -64,6 +64,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -75,7 +76,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -86,7 +87,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -108,7 +110,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -119,7 +121,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param productId
+     * @param productId value to be set
      * @return Builder
      */
 
@@ -130,6 +132,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
+     * @param builder function to build the productSlug value
      * @return Builder
      */
 
@@ -141,7 +144,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param productSlug
+     * @param productSlug value to be set
      * @return Builder
      */
 
@@ -152,6 +155,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
+     * @param builder function to build the productType value
      * @return Builder
      */
 
@@ -163,7 +167,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param productType
+     * @param productType value to be set
      * @return Builder
      */
 
@@ -174,7 +178,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -185,6 +189,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
+     * @param builder function to build the variant value
      * @return Builder
      */
 
@@ -196,7 +201,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -207,7 +212,7 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -256,6 +261,10 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this.variantId;
     }
 
+    /**
+     * builds LineItem with checking for non-null required values
+     * @return LineItem
+     */
     public LineItem build() {
         Objects.requireNonNull(addedAt, LineItem.class + ": addedAt is missing");
         Objects.requireNonNull(custom, LineItem.class + ": custom is missing");
@@ -272,7 +281,8 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     * builds LineItem without checking for non null required values
+     * builds LineItem without checking for non-null required values
+     * @return LineItem
      */
     public LineItem buildUnchecked() {
         return new LineItemImpl(addedAt, custom, id, name, productId, productSlug, productType, quantity, variant,

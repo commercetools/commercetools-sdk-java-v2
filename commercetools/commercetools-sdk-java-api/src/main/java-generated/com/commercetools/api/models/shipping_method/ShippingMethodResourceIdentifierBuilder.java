@@ -30,7 +30,7 @@ public class ShippingMethodResourceIdentifierBuilder implements Builder<Shipping
 
     /**
      *  <p>Unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ShippingMethodResourceIdentifierBuilder implements Builder<Shipping
 
     /**
      *  <p>User-defined unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class ShippingMethodResourceIdentifierBuilder implements Builder<Shipping
         return this.key;
     }
 
+    /**
+     * builds ShippingMethodResourceIdentifier with checking for non-null required values
+     * @return ShippingMethodResourceIdentifier
+     */
     public ShippingMethodResourceIdentifier build() {
         return new ShippingMethodResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds ShippingMethodResourceIdentifier without checking for non null required values
+     * builds ShippingMethodResourceIdentifier without checking for non-null required values
+     * @return ShippingMethodResourceIdentifier
      */
     public ShippingMethodResourceIdentifier buildUnchecked() {
         return new ShippingMethodResourceIdentifierImpl(id, key);

@@ -26,6 +26,7 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
 
     /**
      *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     * @param builder function to build the productProjection value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
 
     /**
      *  <p>The staged Product Projection of the Product at the time of creation.</p>
-     * @param productProjection
+     * @param productProjection value to be set
      * @return Builder
      */
 
@@ -52,6 +53,10 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
         return this.productProjection;
     }
 
+    /**
+     * builds ProductCreatedMessagePayload with checking for non-null required values
+     * @return ProductCreatedMessagePayload
+     */
     public ProductCreatedMessagePayload build() {
         Objects.requireNonNull(productProjection,
             ProductCreatedMessagePayload.class + ": productProjection is missing");
@@ -59,7 +64,8 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
     }
 
     /**
-     * builds ProductCreatedMessagePayload without checking for non null required values
+     * builds ProductCreatedMessagePayload without checking for non-null required values
+     * @return ProductCreatedMessagePayload
      */
     public ProductCreatedMessagePayload buildUnchecked() {
         return new ProductCreatedMessagePayloadImpl(productProjection);

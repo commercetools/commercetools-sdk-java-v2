@@ -35,7 +35,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -104,6 +106,10 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
         return this.fields;
     }
 
+    /**
+     * builds StagedOrderSetCustomLineItemCustomTypeAction with checking for non-null required values
+     * @return StagedOrderSetCustomLineItemCustomTypeAction
+     */
     public StagedOrderSetCustomLineItemCustomTypeAction build() {
         Objects.requireNonNull(customLineItemId,
             StagedOrderSetCustomLineItemCustomTypeAction.class + ": customLineItemId is missing");
@@ -111,7 +117,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-     * builds StagedOrderSetCustomLineItemCustomTypeAction without checking for non null required values
+     * builds StagedOrderSetCustomLineItemCustomTypeAction without checking for non-null required values
+     * @return StagedOrderSetCustomLineItemCustomTypeAction
      */
     public StagedOrderSetCustomLineItemCustomTypeAction buildUnchecked() {
         return new StagedOrderSetCustomLineItemCustomTypeActionImpl(customLineItemId, type, fields);

@@ -31,7 +31,7 @@ public class SetMethodInfoInterfaceChangeBuilder implements Builder<SetMethodInf
 
     /**
      *  <p>Shape of the action for <code>setMethodInfoInterface</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetMethodInfoInterfaceChangeBuilder implements Builder<SetMethodInf
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetMethodInfoInterfaceChangeBuilder implements Builder<SetMethodInf
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetMethodInfoInterfaceChangeBuilder implements Builder<SetMethodInf
         return this.nextValue;
     }
 
+    /**
+     * builds SetMethodInfoInterfaceChange with checking for non-null required values
+     * @return SetMethodInfoInterfaceChange
+     */
     public SetMethodInfoInterfaceChange build() {
         Objects.requireNonNull(change, SetMethodInfoInterfaceChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetMethodInfoInterfaceChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetMethodInfoInterfaceChangeBuilder implements Builder<SetMethodInf
     }
 
     /**
-     * builds SetMethodInfoInterfaceChange without checking for non null required values
+     * builds SetMethodInfoInterfaceChange without checking for non-null required values
+     * @return SetMethodInfoInterfaceChange
      */
     public SetMethodInfoInterfaceChange buildUnchecked() {
         return new SetMethodInfoInterfaceChangeImpl(change, previousValue, nextValue);

@@ -34,7 +34,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *
-     * @param parcelId
+     * @param parcelId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -103,13 +105,18 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
         return this.fields;
     }
 
+    /**
+     * builds StagedOrderSetParcelCustomTypeAction with checking for non-null required values
+     * @return StagedOrderSetParcelCustomTypeAction
+     */
     public StagedOrderSetParcelCustomTypeAction build() {
         Objects.requireNonNull(parcelId, StagedOrderSetParcelCustomTypeAction.class + ": parcelId is missing");
         return new StagedOrderSetParcelCustomTypeActionImpl(parcelId, type, fields);
     }
 
     /**
-     * builds StagedOrderSetParcelCustomTypeAction without checking for non null required values
+     * builds StagedOrderSetParcelCustomTypeAction without checking for non-null required values
+     * @return StagedOrderSetParcelCustomTypeAction
      */
     public StagedOrderSetParcelCustomTypeAction buildUnchecked() {
         return new StagedOrderSetParcelCustomTypeActionImpl(parcelId, type, fields);

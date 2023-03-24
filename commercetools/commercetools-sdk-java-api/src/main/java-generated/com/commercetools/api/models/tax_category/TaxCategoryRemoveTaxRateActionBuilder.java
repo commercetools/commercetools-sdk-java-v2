@@ -25,7 +25,7 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
 
     /**
      *  <p>ID of the TaxRate to remove.</p>
-     * @param taxRateId
+     * @param taxRateId value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
         return this.taxRateId;
     }
 
+    /**
+     * builds TaxCategoryRemoveTaxRateAction with checking for non-null required values
+     * @return TaxCategoryRemoveTaxRateAction
+     */
     public TaxCategoryRemoveTaxRateAction build() {
         Objects.requireNonNull(taxRateId, TaxCategoryRemoveTaxRateAction.class + ": taxRateId is missing");
         return new TaxCategoryRemoveTaxRateActionImpl(taxRateId);
     }
 
     /**
-     * builds TaxCategoryRemoveTaxRateAction without checking for non null required values
+     * builds TaxCategoryRemoveTaxRateAction without checking for non-null required values
+     * @return TaxCategoryRemoveTaxRateAction
      */
     public TaxCategoryRemoveTaxRateAction buildUnchecked() {
         return new TaxCategoryRemoveTaxRateActionImpl(taxRateId);

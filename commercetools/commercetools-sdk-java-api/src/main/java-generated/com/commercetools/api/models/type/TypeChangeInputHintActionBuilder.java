@@ -28,7 +28,7 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param inputHint
+     * @param inputHint value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
         return this.inputHint;
     }
 
+    /**
+     * builds TypeChangeInputHintAction with checking for non-null required values
+     * @return TypeChangeInputHintAction
+     */
     public TypeChangeInputHintAction build() {
         Objects.requireNonNull(fieldName, TypeChangeInputHintAction.class + ": fieldName is missing");
         Objects.requireNonNull(inputHint, TypeChangeInputHintAction.class + ": inputHint is missing");
@@ -64,7 +68,8 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
     }
 
     /**
-     * builds TypeChangeInputHintAction without checking for non null required values
+     * builds TypeChangeInputHintAction without checking for non-null required values
+     * @return TypeChangeInputHintAction
      */
     public TypeChangeInputHintAction buildUnchecked() {
         return new TypeChangeInputHintActionImpl(fieldName, inputHint);

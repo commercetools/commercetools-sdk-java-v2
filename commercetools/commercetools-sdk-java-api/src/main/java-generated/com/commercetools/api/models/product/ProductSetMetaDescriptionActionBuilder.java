@@ -31,6 +31,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the metaDescription value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param metaDescription
+     * @param metaDescription value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -73,12 +74,17 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
         return this.staged;
     }
 
+    /**
+     * builds ProductSetMetaDescriptionAction with checking for non-null required values
+     * @return ProductSetMetaDescriptionAction
+     */
     public ProductSetMetaDescriptionAction build() {
         return new ProductSetMetaDescriptionActionImpl(metaDescription, staged);
     }
 
     /**
-     * builds ProductSetMetaDescriptionAction without checking for non null required values
+     * builds ProductSetMetaDescriptionAction without checking for non-null required values
+     * @return ProductSetMetaDescriptionAction
      */
     public ProductSetMetaDescriptionAction buildUnchecked() {
         return new ProductSetMetaDescriptionActionImpl(metaDescription, staged);

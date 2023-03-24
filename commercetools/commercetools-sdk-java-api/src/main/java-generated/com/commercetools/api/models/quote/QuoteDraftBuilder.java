@@ -43,7 +43,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Quote.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -54,6 +54,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>StagedQuote from which the Quote is created.</p>
+     * @param builder function to build the stagedQuote value
      * @return Builder
      */
 
@@ -67,7 +68,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>StagedQuote from which the Quote is created.</p>
-     * @param stagedQuote
+     * @param stagedQuote value to be set
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>Current version of the StagedQuote.</p>
-     * @param stagedQuoteVersion
+     * @param stagedQuoteVersion value to be set
      * @return Builder
      */
 
@@ -90,7 +91,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
-     * @param stagedQuoteStateToSent
+     * @param stagedQuoteStateToSent value to be set
      * @return Builder
      */
 
@@ -101,6 +102,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -112,7 +114,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -127,6 +129,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
      *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
      *  </ul>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -142,7 +145,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
      *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
      *  </ul>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -179,6 +182,10 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
         return this.custom;
     }
 
+    /**
+     * builds QuoteDraft with checking for non-null required values
+     * @return QuoteDraft
+     */
     public QuoteDraft build() {
         Objects.requireNonNull(stagedQuote, QuoteDraft.class + ": stagedQuote is missing");
         Objects.requireNonNull(stagedQuoteVersion, QuoteDraft.class + ": stagedQuoteVersion is missing");
@@ -186,7 +193,8 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
     }
 
     /**
-     * builds QuoteDraft without checking for non null required values
+     * builds QuoteDraft without checking for non-null required values
+     * @return QuoteDraft
      */
     public QuoteDraft buildUnchecked() {
         return new QuoteDraftImpl(key, stagedQuote, stagedQuoteVersion, stagedQuoteStateToSent, state, custom);

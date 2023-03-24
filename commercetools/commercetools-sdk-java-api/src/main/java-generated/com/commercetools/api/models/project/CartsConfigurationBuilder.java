@@ -31,7 +31,7 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft. If a ChangeSubscription for Carts exists, a ResourceDeletedDeliveryPayload is sent upon deletion of a Cart.</p>
      *  <p>This field may not be present on Projects created before January 2020.</p>
-     * @param deleteDaysAfterLastModification
+     * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
 
     /**
      *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
-     * @param countryTaxRateFallbackEnabled
+     * @param countryTaxRateFallbackEnabled value to be set
      * @return Builder
      */
 
@@ -63,12 +63,17 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
         return this.countryTaxRateFallbackEnabled;
     }
 
+    /**
+     * builds CartsConfiguration with checking for non-null required values
+     * @return CartsConfiguration
+     */
     public CartsConfiguration build() {
         return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled);
     }
 
     /**
-     * builds CartsConfiguration without checking for non null required values
+     * builds CartsConfiguration without checking for non-null required values
+     * @return CartsConfiguration
      */
     public CartsConfiguration buildUnchecked() {
         return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled);

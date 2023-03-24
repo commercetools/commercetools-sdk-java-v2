@@ -32,7 +32,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -80,6 +80,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -106,7 +108,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -127,6 +129,10 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
         return this.staged;
     }
 
+    /**
+     * builds ProductPricesSetMessagePayload with checking for non-null required values
+     * @return ProductPricesSetMessagePayload
+     */
     public ProductPricesSetMessagePayload build() {
         Objects.requireNonNull(variantId, ProductPricesSetMessagePayload.class + ": variantId is missing");
         Objects.requireNonNull(prices, ProductPricesSetMessagePayload.class + ": prices is missing");
@@ -135,7 +141,8 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     * builds ProductPricesSetMessagePayload without checking for non null required values
+     * builds ProductPricesSetMessagePayload without checking for non-null required values
+     * @return ProductPricesSetMessagePayload
      */
     public ProductPricesSetMessagePayload buildUnchecked() {
         return new ProductPricesSetMessagePayloadImpl(variantId, prices, staged);

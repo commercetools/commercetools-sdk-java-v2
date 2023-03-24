@@ -27,7 +27,7 @@ public class MyBusinessUnitSetContactEmailActionBuilder implements Builder<MyBus
 
     /**
      *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
-     * @param contactEmail
+     * @param contactEmail value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class MyBusinessUnitSetContactEmailActionBuilder implements Builder<MyBus
         return this.contactEmail;
     }
 
+    /**
+     * builds MyBusinessUnitSetContactEmailAction with checking for non-null required values
+     * @return MyBusinessUnitSetContactEmailAction
+     */
     public MyBusinessUnitSetContactEmailAction build() {
         return new MyBusinessUnitSetContactEmailActionImpl(contactEmail);
     }
 
     /**
-     * builds MyBusinessUnitSetContactEmailAction without checking for non null required values
+     * builds MyBusinessUnitSetContactEmailAction without checking for non-null required values
+     * @return MyBusinessUnitSetContactEmailAction
      */
     public MyBusinessUnitSetContactEmailAction buildUnchecked() {
         return new MyBusinessUnitSetContactEmailActionImpl(contactEmail);

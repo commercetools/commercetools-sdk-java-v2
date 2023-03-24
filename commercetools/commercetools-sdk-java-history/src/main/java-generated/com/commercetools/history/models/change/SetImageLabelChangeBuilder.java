@@ -35,7 +35,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
 
     /**
      *  <p>Update action for <code>setImageLabel</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -115,6 +117,10 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
         return this.nextValue;
     }
 
+    /**
+     * builds SetImageLabelChange with checking for non-null required values
+     * @return SetImageLabelChange
+     */
     public SetImageLabelChange build() {
         Objects.requireNonNull(change, SetImageLabelChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, SetImageLabelChange.class + ": catalogData is missing");
@@ -124,7 +130,8 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     * builds SetImageLabelChange without checking for non null required values
+     * builds SetImageLabelChange without checking for non-null required values
+     * @return SetImageLabelChange
      */
     public SetImageLabelChange buildUnchecked() {
         return new SetImageLabelChangeImpl(change, catalogData, previousValue, nextValue);

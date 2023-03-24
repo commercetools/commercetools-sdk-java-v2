@@ -26,6 +26,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
 
     /**
      *  <p>Reference to a Store by its key.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
 
     /**
      *  <p>Reference to a Store by its key.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
         return this.store;
     }
 
+    /**
+     * builds ShoppingListStoreSetMessagePayload with checking for non-null required values
+     * @return ShoppingListStoreSetMessagePayload
+     */
     public ShoppingListStoreSetMessagePayload build() {
         Objects.requireNonNull(store, ShoppingListStoreSetMessagePayload.class + ": store is missing");
         return new ShoppingListStoreSetMessagePayloadImpl(store);
     }
 
     /**
-     * builds ShoppingListStoreSetMessagePayload without checking for non null required values
+     * builds ShoppingListStoreSetMessagePayload without checking for non-null required values
+     * @return ShoppingListStoreSetMessagePayload
      */
     public ShoppingListStoreSetMessagePayload buildUnchecked() {
         return new ShoppingListStoreSetMessagePayloadImpl(store);

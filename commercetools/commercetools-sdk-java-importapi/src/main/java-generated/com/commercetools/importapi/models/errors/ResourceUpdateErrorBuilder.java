@@ -30,7 +30,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
 
     /**
      *
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
         return this.resource;
     }
 
+    /**
+     * builds ResourceUpdateError with checking for non-null required values
+     * @return ResourceUpdateError
+     */
     public ResourceUpdateError build() {
         Objects.requireNonNull(message, ResourceUpdateError.class + ": message is missing");
         return new ResourceUpdateErrorImpl(message, resource);
     }
 
     /**
-     * builds ResourceUpdateError without checking for non null required values
+     * builds ResourceUpdateError without checking for non-null required values
+     * @return ResourceUpdateError
      */
     public ResourceUpdateError buildUnchecked() {
         return new ResourceUpdateErrorImpl(message, resource);

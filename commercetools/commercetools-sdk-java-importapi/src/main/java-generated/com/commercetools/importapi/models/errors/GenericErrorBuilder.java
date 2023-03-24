@@ -25,7 +25,7 @@ public class GenericErrorBuilder implements Builder<GenericError> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class GenericErrorBuilder implements Builder<GenericError> {
         return this.message;
     }
 
+    /**
+     * builds GenericError with checking for non-null required values
+     * @return GenericError
+     */
     public GenericError build() {
         Objects.requireNonNull(message, GenericError.class + ": message is missing");
         return new GenericErrorImpl(message);
     }
 
     /**
-     * builds GenericError without checking for non null required values
+     * builds GenericError without checking for non-null required values
+     * @return GenericError
      */
     public GenericError buildUnchecked() {
         return new GenericErrorImpl(message);

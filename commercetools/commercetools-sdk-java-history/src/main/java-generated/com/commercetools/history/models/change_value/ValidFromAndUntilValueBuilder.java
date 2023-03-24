@@ -28,7 +28,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
 
     /**
      *
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
 
     /**
      *
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
         return this.validUntil;
     }
 
+    /**
+     * builds ValidFromAndUntilValue with checking for non-null required values
+     * @return ValidFromAndUntilValue
+     */
     public ValidFromAndUntilValue build() {
         Objects.requireNonNull(validFrom, ValidFromAndUntilValue.class + ": validFrom is missing");
         Objects.requireNonNull(validUntil, ValidFromAndUntilValue.class + ": validUntil is missing");
@@ -63,7 +67,8 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
     }
 
     /**
-     * builds ValidFromAndUntilValue without checking for non null required values
+     * builds ValidFromAndUntilValue without checking for non-null required values
+     * @return ValidFromAndUntilValue
      */
     public ValidFromAndUntilValue buildUnchecked() {
         return new ValidFromAndUntilValueImpl(validFrom, validUntil);

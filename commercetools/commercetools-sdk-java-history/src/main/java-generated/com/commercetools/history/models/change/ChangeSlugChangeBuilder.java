@@ -32,7 +32,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
 
     /**
      *  <p>Shape of the action for <code>changeSlug</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeSlugChange with checking for non-null required values
+     * @return ChangeSlugChange
+     */
     public ChangeSlugChange build() {
         Objects.requireNonNull(change, ChangeSlugChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeSlugChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
     }
 
     /**
-     * builds ChangeSlugChange without checking for non null required values
+     * builds ChangeSlugChange without checking for non-null required values
+     * @return ChangeSlugChange
      */
     public ChangeSlugChange buildUnchecked() {
         return new ChangeSlugChangeImpl(change, previousValue, nextValue);

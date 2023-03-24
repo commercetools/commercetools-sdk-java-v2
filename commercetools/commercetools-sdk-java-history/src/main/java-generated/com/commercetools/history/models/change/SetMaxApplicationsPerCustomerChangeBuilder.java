@@ -31,7 +31,7 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
 
     /**
      *  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
         return this.nextValue;
     }
 
+    /**
+     * builds SetMaxApplicationsPerCustomerChange with checking for non-null required values
+     * @return SetMaxApplicationsPerCustomerChange
+     */
     public SetMaxApplicationsPerCustomerChange build() {
         Objects.requireNonNull(change, SetMaxApplicationsPerCustomerChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetMaxApplicationsPerCustomerChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
     }
 
     /**
-     * builds SetMaxApplicationsPerCustomerChange without checking for non null required values
+     * builds SetMaxApplicationsPerCustomerChange without checking for non-null required values
+     * @return SetMaxApplicationsPerCustomerChange
      */
     public SetMaxApplicationsPerCustomerChange buildUnchecked() {
         return new SetMaxApplicationsPerCustomerChangeImpl(change, previousValue, nextValue);

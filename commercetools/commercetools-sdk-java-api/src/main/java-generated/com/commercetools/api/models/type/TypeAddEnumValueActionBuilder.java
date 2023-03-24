@@ -29,7 +29,7 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
 
     /**
      *  <p>Value to append to the array.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
         return this.value;
     }
 
+    /**
+     * builds TypeAddEnumValueAction with checking for non-null required values
+     * @return TypeAddEnumValueAction
+     */
     public TypeAddEnumValueAction build() {
         Objects.requireNonNull(fieldName, TypeAddEnumValueAction.class + ": fieldName is missing");
         Objects.requireNonNull(value, TypeAddEnumValueAction.class + ": value is missing");
@@ -75,7 +80,8 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
     }
 
     /**
-     * builds TypeAddEnumValueAction without checking for non null required values
+     * builds TypeAddEnumValueAction without checking for non-null required values
+     * @return TypeAddEnumValueAction
      */
     public TypeAddEnumValueAction buildUnchecked() {
         return new TypeAddEnumValueActionImpl(fieldName, value);

@@ -30,7 +30,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
-     * @param addedLanguages
+     * @param addedLanguages value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
-     * @param addedLanguages
+     * @param addedLanguages value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
-     * @param addedLanguages
+     * @param addedLanguages value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
-     * @param removedLanguages
+     * @param removedLanguages value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
-     * @param removedLanguages
+     * @param removedLanguages value to be set
      * @return Builder
      */
 
@@ -90,7 +90,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
-     * @param removedLanguages
+     * @param removedLanguages value to be set
      * @return Builder
      */
 
@@ -112,12 +112,17 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
         return this.removedLanguages;
     }
 
+    /**
+     * builds StoreLanguagesChangedMessagePayload with checking for non-null required values
+     * @return StoreLanguagesChangedMessagePayload
+     */
     public StoreLanguagesChangedMessagePayload build() {
         return new StoreLanguagesChangedMessagePayloadImpl(addedLanguages, removedLanguages);
     }
 
     /**
-     * builds StoreLanguagesChangedMessagePayload without checking for non null required values
+     * builds StoreLanguagesChangedMessagePayload without checking for non-null required values
+     * @return StoreLanguagesChangedMessagePayload
      */
     public StoreLanguagesChangedMessagePayload buildUnchecked() {
         return new StoreLanguagesChangedMessagePayloadImpl(addedLanguages, removedLanguages);

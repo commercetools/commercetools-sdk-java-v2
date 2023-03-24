@@ -88,7 +88,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Unique identifier of the Payment.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -99,7 +99,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Current version of the Payment.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -110,7 +110,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Date and time (UTC) the Payment was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -121,7 +121,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Date and time (UTC) the Payment was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -132,6 +132,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -143,7 +144,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -155,6 +156,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -166,7 +168,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -177,6 +179,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -188,7 +191,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -199,7 +202,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Anonymous session associated with the Payment.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -210,7 +213,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @param externalId
+     * @param externalId value to be set
      * @return Builder
      */
 
@@ -221,7 +224,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
-     * @param interfaceId
+     * @param interfaceId value to be set
      * @return Builder
      */
 
@@ -232,6 +235,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param builder function to build the amountPlanned value
      * @return Builder
      */
 
@@ -243,7 +247,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
-     * @param amountPlanned
+     * @param amountPlanned value to be set
      * @return Builder
      */
 
@@ -254,7 +258,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountAuthorized
+     * @param amountAuthorized value to be set
      * @return Builder
      */
 
@@ -266,6 +270,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param builder function to build the amountAuthorized value
      * @return Builder
      */
 
@@ -277,7 +282,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
-     * @param authorizedUntil
+     * @param authorizedUntil value to be set
      * @return Builder
      */
 
@@ -288,7 +293,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountPaid
+     * @param amountPaid value to be set
      * @return Builder
      */
 
@@ -299,6 +304,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param builder function to build the amountPaid value
      * @return Builder
      */
 
@@ -310,7 +316,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountRefunded
+     * @param amountRefunded value to be set
      * @return Builder
      */
 
@@ -322,6 +328,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param builder function to build the amountRefunded value
      * @return Builder
      */
 
@@ -333,6 +340,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param builder function to build the paymentMethodInfo value
      * @return Builder
      */
 
@@ -345,7 +353,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
-     * @param paymentMethodInfo
+     * @param paymentMethodInfo value to be set
      * @return Builder
      */
 
@@ -357,6 +365,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Current status of the Payment.</p>
+     * @param builder function to build the paymentStatus value
      * @return Builder
      */
 
@@ -368,7 +377,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Current status of the Payment.</p>
-     * @param paymentStatus
+     * @param paymentStatus value to be set
      * @return Builder
      */
 
@@ -379,7 +388,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
-     * @param transactions
+     * @param transactions value to be set
      * @return Builder
      */
 
@@ -390,7 +399,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
-     * @param transactions
+     * @param transactions value to be set
      * @return Builder
      */
 
@@ -402,7 +411,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
-     * @param transactions
+     * @param transactions value to be set
      * @return Builder
      */
 
@@ -416,6 +425,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
      * @return Builder
      */
 
@@ -430,6 +440,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
      * @return Builder
      */
 
@@ -442,7 +453,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
-     * @param interfaceInteractions
+     * @param interfaceInteractions value to be set
      * @return Builder
      */
 
@@ -454,7 +465,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
-     * @param interfaceInteractions
+     * @param interfaceInteractions value to be set
      * @return Builder
      */
 
@@ -466,7 +477,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
-     * @param interfaceInteractions
+     * @param interfaceInteractions value to be set
      * @return Builder
      */
 
@@ -481,6 +492,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param builder function to build the interfaceInteractions value
      * @return Builder
      */
 
@@ -496,6 +508,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param builder function to build the interfaceInteractions value
      * @return Builder
      */
 
@@ -509,6 +522,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -520,7 +534,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Custom Fields for the Payment.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -531,7 +545,7 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>User-defined unique identifier of the Payment.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -636,6 +650,10 @@ public class PaymentBuilder implements Builder<Payment> {
         return this.key;
     }
 
+    /**
+     * builds Payment with checking for non-null required values
+     * @return Payment
+     */
     public Payment build() {
         Objects.requireNonNull(id, Payment.class + ": id is missing");
         Objects.requireNonNull(version, Payment.class + ": version is missing");
@@ -652,7 +670,8 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     * builds Payment without checking for non null required values
+     * builds Payment without checking for non-null required values
+     * @return Payment
      */
     public Payment buildUnchecked() {
         return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,

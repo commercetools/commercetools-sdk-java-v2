@@ -29,7 +29,7 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Expected version of the Product on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds ProductUpdate with checking for non-null required values
+     * @return ProductUpdate
+     */
     public ProductUpdate build() {
         Objects.requireNonNull(version, ProductUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ProductUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
     }
 
     /**
-     * builds ProductUpdate without checking for non null required values
+     * builds ProductUpdate without checking for non-null required values
+     * @return ProductUpdate
      */
     public ProductUpdate buildUnchecked() {
         return new ProductUpdateImpl(version, actions);

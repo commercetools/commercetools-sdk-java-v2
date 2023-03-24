@@ -30,7 +30,7 @@ public class CustomerResourceIdentifierBuilder implements Builder<CustomerResour
 
     /**
      *  <p>Unique identifier of the referenced Customer.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CustomerResourceIdentifierBuilder implements Builder<CustomerResour
 
     /**
      *  <p>User-defined unique identifier of the referenced Customer.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class CustomerResourceIdentifierBuilder implements Builder<CustomerResour
         return this.key;
     }
 
+    /**
+     * builds CustomerResourceIdentifier with checking for non-null required values
+     * @return CustomerResourceIdentifier
+     */
     public CustomerResourceIdentifier build() {
         return new CustomerResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds CustomerResourceIdentifier without checking for non null required values
+     * builds CustomerResourceIdentifier without checking for non-null required values
+     * @return CustomerResourceIdentifier
      */
     public CustomerResourceIdentifier buildUnchecked() {
         return new CustomerResourceIdentifierImpl(id, key);

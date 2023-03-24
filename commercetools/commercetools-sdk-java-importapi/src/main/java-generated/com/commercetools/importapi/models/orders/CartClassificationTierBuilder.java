@@ -37,7 +37,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -48,6 +48,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -82,7 +83,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -94,7 +95,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -109,6 +110,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -124,6 +126,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -137,7 +140,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
-     * @param isMatching
+     * @param isMatching value to be set
      * @return Builder
      */
 
@@ -163,6 +166,10 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
         return this.isMatching;
     }
 
+    /**
+     * builds CartClassificationTier with checking for non-null required values
+     * @return CartClassificationTier
+     */
     public CartClassificationTier build() {
         Objects.requireNonNull(value, CartClassificationTier.class + ": value is missing");
         Objects.requireNonNull(price, CartClassificationTier.class + ": price is missing");
@@ -171,7 +178,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     * builds CartClassificationTier without checking for non null required values
+     * builds CartClassificationTier without checking for non-null required values
+     * @return CartClassificationTier
      */
     public CartClassificationTier buildUnchecked() {
         return new CartClassificationTierImpl(value, price, tiers, isMatching);

@@ -39,7 +39,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -116,13 +116,18 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
         return this.assetKey;
     }
 
+    /**
+     * builds ProductSetAssetKeyAction with checking for non-null required values
+     * @return ProductSetAssetKeyAction
+     */
     public ProductSetAssetKeyAction build() {
         Objects.requireNonNull(assetId, ProductSetAssetKeyAction.class + ": assetId is missing");
         return new ProductSetAssetKeyActionImpl(variantId, sku, staged, assetId, assetKey);
     }
 
     /**
-     * builds ProductSetAssetKeyAction without checking for non null required values
+     * builds ProductSetAssetKeyAction without checking for non-null required values
+     * @return ProductSetAssetKeyAction
      */
     public ProductSetAssetKeyAction buildUnchecked() {
         return new ProductSetAssetKeyActionImpl(variantId, sku, staged, assetId, assetKey);

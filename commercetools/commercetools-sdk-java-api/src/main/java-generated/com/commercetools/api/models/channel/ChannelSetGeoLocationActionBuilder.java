@@ -28,7 +28,7 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
 
     /**
      *  <p>Value to set.</p>
-     * @param geoLocation
+     * @param geoLocation value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the geoLocation value
      * @return Builder
      */
 
@@ -54,12 +55,17 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
         return this.geoLocation;
     }
 
+    /**
+     * builds ChannelSetGeoLocationAction with checking for non-null required values
+     * @return ChannelSetGeoLocationAction
+     */
     public ChannelSetGeoLocationAction build() {
         return new ChannelSetGeoLocationActionImpl(geoLocation);
     }
 
     /**
-     * builds ChannelSetGeoLocationAction without checking for non null required values
+     * builds ChannelSetGeoLocationAction without checking for non-null required values
+     * @return ChannelSetGeoLocationAction
      */
     public ChannelSetGeoLocationAction buildUnchecked() {
         return new ChannelSetGeoLocationActionImpl(geoLocation);

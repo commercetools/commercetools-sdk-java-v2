@@ -27,7 +27,7 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
 
     /**
      *  <p><code>"The resource size exceeds the maximal allowed size of 16 MB."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ResourceSizeLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ResourceSizeLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
         return this.values;
     }
 
+    /**
+     * builds ResourceSizeLimitExceededError with checking for non-null required values
+     * @return ResourceSizeLimitExceededError
+     */
     public ResourceSizeLimitExceededError build() {
         Objects.requireNonNull(message, ResourceSizeLimitExceededError.class + ": message is missing");
         return new ResourceSizeLimitExceededErrorImpl(message, values);
     }
 
     /**
-     * builds ResourceSizeLimitExceededError without checking for non null required values
+     * builds ResourceSizeLimitExceededError without checking for non-null required values
+     * @return ResourceSizeLimitExceededError
      */
     public ResourceSizeLimitExceededError buildUnchecked() {
         return new ResourceSizeLimitExceededErrorImpl(message, values);

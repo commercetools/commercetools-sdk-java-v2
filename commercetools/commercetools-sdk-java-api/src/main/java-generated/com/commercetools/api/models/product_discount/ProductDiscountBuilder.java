@@ -73,7 +73,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Unique identifier of the ProductDiscount.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Current version of the ProductDiscount.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -106,7 +106,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -117,6 +117,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -128,7 +129,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -140,6 +141,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -151,7 +153,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -162,6 +164,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Name of the ProductDiscount.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -173,7 +176,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Name of the ProductDiscount.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -184,7 +187,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>User-defined unique identifier of the ProductDiscount.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -195,6 +198,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Description of the ProductDiscount.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -206,7 +210,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Description of the ProductDiscount.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -218,7 +222,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Type of Discount and its corresponding value.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -230,6 +234,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Type of Discount and its corresponding value.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -242,7 +247,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Valid ProductDiscount predicate.</p>
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -253,7 +258,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>
-     * @param sortOrder
+     * @param sortOrder value to be set
      * @return Builder
      */
 
@@ -264,7 +269,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
-     * @param isActive
+     * @param isActive value to be set
      * @return Builder
      */
 
@@ -275,7 +280,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
-     * @param references
+     * @param references value to be set
      * @return Builder
      */
 
@@ -286,7 +291,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
-     * @param references
+     * @param references value to be set
      * @return Builder
      */
 
@@ -298,7 +303,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
-     * @param references
+     * @param references value to be set
      * @return Builder
      */
 
@@ -312,6 +317,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+     * @param builder function to build the references value
      * @return Builder
      */
 
@@ -326,6 +332,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+     * @param builder function to build the references value
      * @return Builder
      */
 
@@ -338,7 +345,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -349,7 +356,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     /**
      *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -428,6 +435,10 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         return this.validUntil;
     }
 
+    /**
+     * builds ProductDiscount with checking for non-null required values
+     * @return ProductDiscount
+     */
     public ProductDiscount build() {
         Objects.requireNonNull(id, ProductDiscount.class + ": id is missing");
         Objects.requireNonNull(version, ProductDiscount.class + ": version is missing");
@@ -444,7 +455,8 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     }
 
     /**
-     * builds ProductDiscount without checking for non null required values
+     * builds ProductDiscount without checking for non-null required values
+     * @return ProductDiscount
      */
     public ProductDiscount buildUnchecked() {
         return new ProductDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,

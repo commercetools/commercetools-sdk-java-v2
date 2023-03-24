@@ -25,7 +25,7 @@ public class StringLabelBuilder implements Builder<StringLabel> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StringLabelBuilder implements Builder<StringLabel> {
         return this.value;
     }
 
+    /**
+     * builds StringLabel with checking for non-null required values
+     * @return StringLabel
+     */
     public StringLabel build() {
         Objects.requireNonNull(value, StringLabel.class + ": value is missing");
         return new StringLabelImpl(value);
     }
 
     /**
-     * builds StringLabel without checking for non null required values
+     * builds StringLabel without checking for non-null required values
+     * @return StringLabel
      */
     public StringLabel buildUnchecked() {
         return new StringLabelImpl(value);

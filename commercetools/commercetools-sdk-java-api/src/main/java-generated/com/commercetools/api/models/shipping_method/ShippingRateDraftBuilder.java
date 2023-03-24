@@ -34,6 +34,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Money value of the ShippingRate.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Money value of the ShippingRate.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -56,6 +57,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @param builder function to build the freeAbove value
      * @return Builder
      */
 
@@ -67,7 +69,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
-     * @param freeAbove
+     * @param freeAbove value to be set
      * @return Builder
      */
 
@@ -78,7 +80,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -102,7 +104,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -117,6 +119,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -132,6 +135,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -157,13 +161,18 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return this.tiers;
     }
 
+    /**
+     * builds ShippingRateDraft with checking for non-null required values
+     * @return ShippingRateDraft
+     */
     public ShippingRateDraft build() {
         Objects.requireNonNull(price, ShippingRateDraft.class + ": price is missing");
         return new ShippingRateDraftImpl(price, freeAbove, tiers);
     }
 
     /**
-     * builds ShippingRateDraft without checking for non null required values
+     * builds ShippingRateDraft without checking for non-null required values
+     * @return ShippingRateDraft
      */
     public ShippingRateDraft buildUnchecked() {
         return new ShippingRateDraftImpl(price, freeAbove, tiers);

@@ -26,7 +26,7 @@ public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDisco
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDisco
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDisco
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDisco
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDisco
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -93,13 +95,18 @@ public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDisco
         return this.money;
     }
 
+    /**
+     * builds ProductDiscountValueAbsolute with checking for non-null required values
+     * @return ProductDiscountValueAbsolute
+     */
     public ProductDiscountValueAbsolute build() {
         Objects.requireNonNull(money, ProductDiscountValueAbsolute.class + ": money is missing");
         return new ProductDiscountValueAbsoluteImpl(money);
     }
 
     /**
-     * builds ProductDiscountValueAbsolute without checking for non null required values
+     * builds ProductDiscountValueAbsolute without checking for non-null required values
+     * @return ProductDiscountValueAbsolute
      */
     public ProductDiscountValueAbsolute buildUnchecked() {
         return new ProductDiscountValueAbsoluteImpl(money);

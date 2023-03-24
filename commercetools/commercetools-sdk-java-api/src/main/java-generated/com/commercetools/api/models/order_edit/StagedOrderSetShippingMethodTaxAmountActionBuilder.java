@@ -34,6 +34,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
      *  </ul>
+     * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
      *  </ul>
-     * @param externalTaxAmount
+     * @param externalTaxAmount value to be set
      * @return Builder
      */
 
@@ -66,12 +67,17 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
         return this.externalTaxAmount;
     }
 
+    /**
+     * builds StagedOrderSetShippingMethodTaxAmountAction with checking for non-null required values
+     * @return StagedOrderSetShippingMethodTaxAmountAction
+     */
     public StagedOrderSetShippingMethodTaxAmountAction build() {
         return new StagedOrderSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
     }
 
     /**
-     * builds StagedOrderSetShippingMethodTaxAmountAction without checking for non null required values
+     * builds StagedOrderSetShippingMethodTaxAmountAction without checking for non-null required values
+     * @return StagedOrderSetShippingMethodTaxAmountAction
      */
     public StagedOrderSetShippingMethodTaxAmountAction buildUnchecked() {
         return new StagedOrderSetShippingMethodTaxAmountActionImpl(externalTaxAmount);

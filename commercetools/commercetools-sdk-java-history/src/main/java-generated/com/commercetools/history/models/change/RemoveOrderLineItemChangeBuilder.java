@@ -32,7 +32,7 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveOrderLineItemChange with checking for non-null required values
+     * @return RemoveOrderLineItemChange
+     */
     public RemoveOrderLineItemChange build() {
         Objects.requireNonNull(change, RemoveOrderLineItemChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveOrderLineItemChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
     }
 
     /**
-     * builds RemoveOrderLineItemChange without checking for non null required values
+     * builds RemoveOrderLineItemChange without checking for non-null required values
+     * @return RemoveOrderLineItemChange
      */
     public RemoveOrderLineItemChange buildUnchecked() {
         return new RemoveOrderLineItemChangeImpl(change, previousValue, nextValue);

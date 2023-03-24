@@ -40,6 +40,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Name of the TextLineItem.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -63,6 +64,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -74,7 +76,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Description of the TextLineItem.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -86,7 +88,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Number of entries in the TextLineItem.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -97,7 +99,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
-     * @param addedAt
+     * @param addedAt value to be set
      * @return Builder
      */
 
@@ -108,6 +110,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Custom Fields defined for the TextLineItem.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -119,7 +122,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Custom Fields defined for the TextLineItem.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -153,13 +156,18 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
         return this.custom;
     }
 
+    /**
+     * builds MyShoppingListAddTextLineItemAction with checking for non-null required values
+     * @return MyShoppingListAddTextLineItemAction
+     */
     public MyShoppingListAddTextLineItemAction build() {
         Objects.requireNonNull(name, MyShoppingListAddTextLineItemAction.class + ": name is missing");
         return new MyShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);
     }
 
     /**
-     * builds MyShoppingListAddTextLineItemAction without checking for non null required values
+     * builds MyShoppingListAddTextLineItemAction without checking for non-null required values
+     * @return MyShoppingListAddTextLineItemAction
      */
     public MyShoppingListAddTextLineItemAction buildUnchecked() {
         return new MyShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);

@@ -45,7 +45,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -56,7 +56,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -78,7 +78,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -100,7 +100,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -111,7 +111,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -154,13 +154,18 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
         return this.value;
     }
 
+    /**
+     * builds ProductSetAssetCustomFieldAction with checking for non-null required values
+     * @return ProductSetAssetCustomFieldAction
+     */
     public ProductSetAssetCustomFieldAction build() {
         Objects.requireNonNull(name, ProductSetAssetCustomFieldAction.class + ": name is missing");
         return new ProductSetAssetCustomFieldActionImpl(variantId, sku, staged, assetId, assetKey, name, value);
     }
 
     /**
-     * builds ProductSetAssetCustomFieldAction without checking for non null required values
+     * builds ProductSetAssetCustomFieldAction without checking for non-null required values
+     * @return ProductSetAssetCustomFieldAction
      */
     public ProductSetAssetCustomFieldAction buildUnchecked() {
         return new ProductSetAssetCustomFieldActionImpl(variantId, sku, staged, assetId, assetKey, name, value);

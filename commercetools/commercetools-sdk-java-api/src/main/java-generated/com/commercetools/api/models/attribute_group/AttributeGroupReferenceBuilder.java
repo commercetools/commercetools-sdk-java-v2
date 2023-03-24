@@ -31,7 +31,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
 
     /**
      *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
 
     /**
      *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
 
     /**
      *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
         return this.obj;
     }
 
+    /**
+     * builds AttributeGroupReference with checking for non-null required values
+     * @return AttributeGroupReference
+     */
     public AttributeGroupReference build() {
         Objects.requireNonNull(id, AttributeGroupReference.class + ": id is missing");
         return new AttributeGroupReferenceImpl(id, obj);
     }
 
     /**
-     * builds AttributeGroupReference without checking for non null required values
+     * builds AttributeGroupReference without checking for non-null required values
+     * @return AttributeGroupReference
      */
     public AttributeGroupReference buildUnchecked() {
         return new AttributeGroupReferenceImpl(id, obj);

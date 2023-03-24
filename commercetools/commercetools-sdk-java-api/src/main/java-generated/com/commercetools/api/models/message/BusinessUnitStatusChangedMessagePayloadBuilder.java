@@ -26,7 +26,7 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
 
     /**
      *  <p>Updated status of the Business Unit.</p>
-     * @param active
+     * @param active value to be set
      * @return Builder
      */
 
@@ -40,13 +40,18 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
         return this.active;
     }
 
+    /**
+     * builds BusinessUnitStatusChangedMessagePayload with checking for non-null required values
+     * @return BusinessUnitStatusChangedMessagePayload
+     */
     public BusinessUnitStatusChangedMessagePayload build() {
         Objects.requireNonNull(active, BusinessUnitStatusChangedMessagePayload.class + ": active is missing");
         return new BusinessUnitStatusChangedMessagePayloadImpl(active);
     }
 
     /**
-     * builds BusinessUnitStatusChangedMessagePayload without checking for non null required values
+     * builds BusinessUnitStatusChangedMessagePayload without checking for non-null required values
+     * @return BusinessUnitStatusChangedMessagePayload
      */
     public BusinessUnitStatusChangedMessagePayload buildUnchecked() {
         return new BusinessUnitStatusChangedMessagePayloadImpl(active);

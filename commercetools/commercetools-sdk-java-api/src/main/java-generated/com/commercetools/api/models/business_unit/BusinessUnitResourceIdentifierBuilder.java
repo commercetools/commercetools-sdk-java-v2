@@ -30,7 +30,7 @@ public class BusinessUnitResourceIdentifierBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Unique identifier of the referenced BusinessUnit. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class BusinessUnitResourceIdentifierBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Unique key of the referenced BusinessUnit. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class BusinessUnitResourceIdentifierBuilder implements Builder<BusinessUn
         return this.key;
     }
 
+    /**
+     * builds BusinessUnitResourceIdentifier with checking for non-null required values
+     * @return BusinessUnitResourceIdentifier
+     */
     public BusinessUnitResourceIdentifier build() {
         return new BusinessUnitResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds BusinessUnitResourceIdentifier without checking for non null required values
+     * builds BusinessUnitResourceIdentifier without checking for non-null required values
+     * @return BusinessUnitResourceIdentifier
      */
     public BusinessUnitResourceIdentifier buildUnchecked() {
         return new BusinessUnitResourceIdentifierImpl(id, key);

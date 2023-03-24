@@ -28,7 +28,7 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
-     * @param attributeName
+     * @param attributeName value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
 
     /**
      *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
-     * @param newValue
+     * @param newValue value to be set
      * @return Builder
      */
 
@@ -57,6 +57,10 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
         return this.newValue;
     }
 
+    /**
+     * builds ProductTypeChangeInputHintAction with checking for non-null required values
+     * @return ProductTypeChangeInputHintAction
+     */
     public ProductTypeChangeInputHintAction build() {
         Objects.requireNonNull(attributeName, ProductTypeChangeInputHintAction.class + ": attributeName is missing");
         Objects.requireNonNull(newValue, ProductTypeChangeInputHintAction.class + ": newValue is missing");
@@ -64,7 +68,8 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
     }
 
     /**
-     * builds ProductTypeChangeInputHintAction without checking for non null required values
+     * builds ProductTypeChangeInputHintAction without checking for non-null required values
+     * @return ProductTypeChangeInputHintAction
      */
     public ProductTypeChangeInputHintAction buildUnchecked() {
         return new ProductTypeChangeInputHintActionImpl(attributeName, newValue);

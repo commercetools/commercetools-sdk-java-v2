@@ -55,7 +55,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Unique identifier of the TaxCategory.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Current version of the TaxCategory.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -77,7 +77,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -88,7 +88,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -99,6 +99,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -110,7 +111,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -122,6 +123,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -133,7 +135,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -144,7 +146,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Name of the TaxCategory.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -155,7 +157,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Description of the TaxCategory.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -166,7 +168,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
-     * @param rates
+     * @param rates value to be set
      * @return Builder
      */
 
@@ -177,7 +179,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
-     * @param rates
+     * @param rates value to be set
      * @return Builder
      */
 
@@ -188,7 +190,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
-     * @param rates
+     * @param rates value to be set
      * @return Builder
      */
 
@@ -202,6 +204,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @param builder function to build the rates value
      * @return Builder
      */
 
@@ -216,6 +219,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @param builder function to build the rates value
      * @return Builder
      */
 
@@ -228,7 +232,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>User-defined unique identifier of the TaxCategory.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -281,6 +285,10 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
         return this.key;
     }
 
+    /**
+     * builds TaxCategory with checking for non-null required values
+     * @return TaxCategory
+     */
     public TaxCategory build() {
         Objects.requireNonNull(id, TaxCategory.class + ": id is missing");
         Objects.requireNonNull(version, TaxCategory.class + ": version is missing");
@@ -293,7 +301,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-     * builds TaxCategory without checking for non null required values
+     * builds TaxCategory without checking for non-null required values
+     * @return TaxCategory
      */
     public TaxCategory buildUnchecked() {
         return new TaxCategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, description,

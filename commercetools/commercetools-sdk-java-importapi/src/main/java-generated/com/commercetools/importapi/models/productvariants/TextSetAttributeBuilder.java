@@ -30,7 +30,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -84,13 +84,18 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
         return this.value;
     }
 
+    /**
+     * builds TextSetAttribute with checking for non-null required values
+     * @return TextSetAttribute
+     */
     public TextSetAttribute build() {
         Objects.requireNonNull(value, TextSetAttribute.class + ": value is missing");
         return new TextSetAttributeImpl(name, value);
     }
 
     /**
-     * builds TextSetAttribute without checking for non null required values
+     * builds TextSetAttribute without checking for non-null required values
+     * @return TextSetAttribute
      */
     public TextSetAttribute buildUnchecked() {
         return new TextSetAttributeImpl(name, value);

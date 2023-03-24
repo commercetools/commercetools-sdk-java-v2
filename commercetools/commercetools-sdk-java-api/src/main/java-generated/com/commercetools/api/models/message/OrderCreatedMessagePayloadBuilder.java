@@ -26,6 +26,7 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
 
     /**
      *  <p>Order that was created.</p>
+     * @param builder function to build the order value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
 
     /**
      *  <p>Order that was created.</p>
-     * @param order
+     * @param order value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
         return this.order;
     }
 
+    /**
+     * builds OrderCreatedMessagePayload with checking for non-null required values
+     * @return OrderCreatedMessagePayload
+     */
     public OrderCreatedMessagePayload build() {
         Objects.requireNonNull(order, OrderCreatedMessagePayload.class + ": order is missing");
         return new OrderCreatedMessagePayloadImpl(order);
     }
 
     /**
-     * builds OrderCreatedMessagePayload without checking for non null required values
+     * builds OrderCreatedMessagePayload without checking for non-null required values
+     * @return OrderCreatedMessagePayload
      */
     public OrderCreatedMessagePayload buildUnchecked() {
         return new OrderCreatedMessagePayloadImpl(order);

@@ -36,7 +36,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
 
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
 
     /**
      *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -98,12 +98,17 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
         return this.staged;
     }
 
+    /**
+     * builds ProductSetProductVariantKeyAction with checking for non-null required values
+     * @return ProductSetProductVariantKeyAction
+     */
     public ProductSetProductVariantKeyAction build() {
         return new ProductSetProductVariantKeyActionImpl(variantId, sku, key, staged);
     }
 
     /**
-     * builds ProductSetProductVariantKeyAction without checking for non null required values
+     * builds ProductSetProductVariantKeyAction without checking for non-null required values
+     * @return ProductSetProductVariantKeyAction
      */
     public ProductSetProductVariantKeyAction buildUnchecked() {
         return new ProductSetProductVariantKeyActionImpl(variantId, sku, key, staged);

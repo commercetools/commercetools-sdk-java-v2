@@ -29,7 +29,7 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds BusinessUnitUpdate with checking for non-null required values
+     * @return BusinessUnitUpdate
+     */
     public BusinessUnitUpdate build() {
         Objects.requireNonNull(version, BusinessUnitUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, BusinessUnitUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
     }
 
     /**
-     * builds BusinessUnitUpdate without checking for non null required values
+     * builds BusinessUnitUpdate without checking for non-null required values
+     * @return BusinessUnitUpdate
      */
     public BusinessUnitUpdate buildUnchecked() {
         return new BusinessUnitUpdateImpl(version, actions);

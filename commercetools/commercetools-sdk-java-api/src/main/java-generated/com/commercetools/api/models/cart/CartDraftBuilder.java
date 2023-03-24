@@ -112,7 +112,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Currency the Cart uses.</p>
-     * @param currency
+     * @param currency value to be set
      * @return Builder
      */
 
@@ -123,7 +123,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Cart.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -134,7 +134,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
-     * @param customerId
+     * @param customerId value to be set
      * @return Builder
      */
 
@@ -145,7 +145,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Email address of the Customer that the Cart belongs to.</p>
-     * @param customerEmail
+     * @param customerEmail value to be set
      * @return Builder
      */
 
@@ -157,6 +157,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
      *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -171,7 +172,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
      *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -183,7 +184,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Anonymous session associated with the Cart.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -194,6 +195,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     * @param builder function to build the businessUnit value
      * @return Builder
      */
 
@@ -207,7 +209,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
-     * @param businessUnit
+     * @param businessUnit value to be set
      * @return Builder
      */
 
@@ -219,6 +221,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -230,7 +233,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -241,7 +244,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -252,7 +255,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -264,7 +267,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -279,6 +282,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -293,6 +297,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -305,7 +310,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Line Items to add to the Cart.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -317,7 +322,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Line Items to add to the Cart.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -329,7 +334,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Line Items to add to the Cart.</p>
-     * @param customLineItems
+     * @param customLineItems value to be set
      * @return Builder
      */
 
@@ -344,6 +349,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Line Items to add to the Cart.</p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -359,6 +365,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Line Items to add to the Cart.</p>
+     * @param builder function to build the customLineItems value
      * @return Builder
      */
 
@@ -372,7 +379,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Determines how Tax Rates are set.</p>
-     * @param taxMode
+     * @param taxMode value to be set
      * @return Builder
      */
 
@@ -383,6 +390,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRateForShippingMethod value
      * @return Builder
      */
 
@@ -396,7 +404,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> TaxMode.</p>
-     * @param externalTaxRateForShippingMethod
+     * @param externalTaxRateForShippingMethod value to be set
      * @return Builder
      */
 
@@ -408,7 +416,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
-     * @param taxRoundingMode
+     * @param taxRoundingMode value to be set
      * @return Builder
      */
 
@@ -420,7 +428,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
-     * @param taxCalculationMode
+     * @param taxCalculationMode value to be set
      * @return Builder
      */
 
@@ -432,7 +440,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
-     * @param inventoryMode
+     * @param inventoryMode value to be set
      * @return Builder
      */
 
@@ -444,6 +452,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @param builder function to build the billingAddress value
      * @return Builder
      */
 
@@ -455,7 +464,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
-     * @param billingAddress
+     * @param billingAddress value to be set
      * @return Builder
      */
 
@@ -467,6 +476,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @param builder function to build the shippingAddress value
      * @return Builder
      */
 
@@ -478,7 +488,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
-     * @param shippingAddress
+     * @param shippingAddress value to be set
      * @return Builder
      */
 
@@ -490,6 +500,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Shipping Method for a Cart with <code>Single</code> ShippingMode. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     * @param builder function to build the shippingMethod value
      * @return Builder
      */
 
@@ -503,7 +514,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Shipping Method for a Cart with <code>Single</code> ShippingMode. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
-     * @param shippingMethod
+     * @param shippingMethod value to be set
      * @return Builder
      */
 
@@ -520,7 +531,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -537,6 +548,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -552,7 +564,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      *   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
      *   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
      *  </ul>
-     * @param shippingMode
+     * @param shippingMode value to be set
      * @return Builder
      */
 
@@ -563,7 +575,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param customShipping
+     * @param customShipping value to be set
      * @return Builder
      */
 
@@ -575,7 +587,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param customShipping
+     * @param customShipping value to be set
      * @return Builder
      */
 
@@ -587,7 +599,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param customShipping
+     * @param customShipping value to be set
      * @return Builder
      */
 
@@ -602,6 +614,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the customShipping value
      * @return Builder
      */
 
@@ -617,6 +630,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the customShipping value
      * @return Builder
      */
 
@@ -630,7 +644,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -641,7 +655,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -653,7 +667,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param shipping
+     * @param shipping value to be set
      * @return Builder
      */
 
@@ -667,6 +681,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the shipping value
      * @return Builder
      */
 
@@ -681,6 +696,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the shipping value
      * @return Builder
      */
 
@@ -694,7 +710,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -707,7 +723,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -720,7 +736,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
-     * @param itemShippingAddresses
+     * @param itemShippingAddresses value to be set
      * @return Builder
      */
 
@@ -736,6 +752,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -752,6 +769,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
 
@@ -765,7 +783,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
-     * @param discountCodes
+     * @param discountCodes value to be set
      * @return Builder
      */
 
@@ -776,7 +794,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
-     * @param discountCodes
+     * @param discountCodes value to be set
      * @return Builder
      */
 
@@ -787,7 +805,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
-     * @param discountCodes
+     * @param discountCodes value to be set
      * @return Builder
      */
 
@@ -801,7 +819,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -812,7 +830,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
-     * @param locale
+     * @param locale value to be set
      * @return Builder
      */
 
@@ -823,7 +841,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Indicates how the Cart was created.</p>
-     * @param origin
+     * @param origin value to be set
      * @return Builder
      */
 
@@ -835,7 +853,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. If not provided, the default value for this field configured in Project settings is assigned.</p>
      *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
-     * @param deleteDaysAfterLastModification
+     * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
@@ -846,6 +864,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Fields for the Cart.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -857,7 +876,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Custom Fields for the Cart.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -1010,6 +1029,10 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         return this.custom;
     }
 
+    /**
+     * builds CartDraft with checking for non-null required values
+     * @return CartDraft
+     */
     public CartDraft build() {
         Objects.requireNonNull(currency, CartDraft.class + ": currency is missing");
         return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, businessUnit,
@@ -1020,7 +1043,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     * builds CartDraft without checking for non null required values
+     * builds CartDraft without checking for non-null required values
+     * @return CartDraft
      */
     public CartDraft buildUnchecked() {
         return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, businessUnit,

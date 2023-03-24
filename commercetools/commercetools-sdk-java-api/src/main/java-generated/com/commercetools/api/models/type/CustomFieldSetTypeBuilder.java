@@ -26,7 +26,7 @@ public class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
 
     /**
      *  <p>Field type of the elements in the set.</p>
-     * @param elementType
+     * @param elementType value to be set
      * @return Builder
      */
 
@@ -37,6 +37,7 @@ public class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
 
     /**
      *  <p>Field type of the elements in the set.</p>
+     * @param builder function to build the elementType value
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
         return this.elementType;
     }
 
+    /**
+     * builds CustomFieldSetType with checking for non-null required values
+     * @return CustomFieldSetType
+     */
     public CustomFieldSetType build() {
         Objects.requireNonNull(elementType, CustomFieldSetType.class + ": elementType is missing");
         return new CustomFieldSetTypeImpl(elementType);
     }
 
     /**
-     * builds CustomFieldSetType without checking for non null required values
+     * builds CustomFieldSetType without checking for non-null required values
+     * @return CustomFieldSetType
      */
     public CustomFieldSetType buildUnchecked() {
         return new CustomFieldSetTypeImpl(elementType);

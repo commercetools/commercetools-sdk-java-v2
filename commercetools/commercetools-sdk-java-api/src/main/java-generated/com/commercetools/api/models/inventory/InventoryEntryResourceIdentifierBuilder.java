@@ -30,7 +30,7 @@ public class InventoryEntryResourceIdentifierBuilder implements Builder<Inventor
 
     /**
      *  <p>Unique identifier of the referenced InventoryEntry. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class InventoryEntryResourceIdentifierBuilder implements Builder<Inventor
 
     /**
      *  <p>User-defined unique identifier of the referenced InventoryEntry. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class InventoryEntryResourceIdentifierBuilder implements Builder<Inventor
         return this.key;
     }
 
+    /**
+     * builds InventoryEntryResourceIdentifier with checking for non-null required values
+     * @return InventoryEntryResourceIdentifier
+     */
     public InventoryEntryResourceIdentifier build() {
         return new InventoryEntryResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds InventoryEntryResourceIdentifier without checking for non null required values
+     * builds InventoryEntryResourceIdentifier without checking for non-null required values
+     * @return InventoryEntryResourceIdentifier
      */
     public InventoryEntryResourceIdentifier buildUnchecked() {
         return new InventoryEntryResourceIdentifierImpl(id, key);

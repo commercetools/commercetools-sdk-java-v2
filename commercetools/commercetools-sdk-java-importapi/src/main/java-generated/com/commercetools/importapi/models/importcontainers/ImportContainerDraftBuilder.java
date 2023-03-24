@@ -30,7 +30,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
 
     /**
      *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
 
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
-     * @param resourceType
+     * @param resourceType value to be set
      * @return Builder
      */
 
@@ -60,13 +60,18 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
         return this.resourceType;
     }
 
+    /**
+     * builds ImportContainerDraft with checking for non-null required values
+     * @return ImportContainerDraft
+     */
     public ImportContainerDraft build() {
         Objects.requireNonNull(key, ImportContainerDraft.class + ": key is missing");
         return new ImportContainerDraftImpl(key, resourceType);
     }
 
     /**
-     * builds ImportContainerDraft without checking for non null required values
+     * builds ImportContainerDraft without checking for non-null required values
+     * @return ImportContainerDraft
      */
     public ImportContainerDraft buildUnchecked() {
         return new ImportContainerDraftImpl(key, resourceType);

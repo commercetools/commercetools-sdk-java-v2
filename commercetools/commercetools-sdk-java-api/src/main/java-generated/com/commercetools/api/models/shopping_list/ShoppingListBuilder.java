@@ -76,7 +76,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Unique identifier of the ShoppingList.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -87,7 +87,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Current version of the ShoppingList.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -98,7 +98,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Date and time (UTC) the ShoppingList was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -109,7 +109,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Date and time (UTC) the ShoppingList was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -120,6 +120,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -131,7 +132,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Name of the ShoppingList.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -142,7 +143,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>User-defined unique identifier of the ShoppingList.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -153,6 +154,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -164,7 +166,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Reference to a Customer associated with the ShoppingList.</p>
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -176,6 +178,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     * @param builder function to build the slug value
      * @return Builder
      */
 
@@ -187,7 +190,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -198,6 +201,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Description of the ShoppingList.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -209,7 +213,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Description of the ShoppingList.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -221,7 +225,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -233,7 +237,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -245,7 +249,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -260,6 +264,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -275,6 +280,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -288,7 +294,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
-     * @param textLineItems
+     * @param textLineItems value to be set
      * @return Builder
      */
 
@@ -300,7 +306,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
-     * @param textLineItems
+     * @param textLineItems value to be set
      * @return Builder
      */
 
@@ -312,7 +318,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
-     * @param textLineItems
+     * @param textLineItems value to be set
      * @return Builder
      */
 
@@ -327,6 +333,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     * @param builder function to build the textLineItems value
      * @return Builder
      */
 
@@ -342,6 +349,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     * @param builder function to build the textLineItems value
      * @return Builder
      */
 
@@ -355,7 +363,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
-     * @param deleteDaysAfterLastModification
+     * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
@@ -366,7 +374,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
-     * @param anonymousId
+     * @param anonymousId value to be set
      * @return Builder
      */
 
@@ -377,6 +385,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Store to which the ShoppingList is assigned.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -388,7 +397,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Store to which the ShoppingList is assigned.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -399,6 +408,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -410,7 +420,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -421,6 +431,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -432,7 +443,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -444,6 +455,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -455,7 +467,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -542,6 +554,10 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         return this.createdBy;
     }
 
+    /**
+     * builds ShoppingList with checking for non-null required values
+     * @return ShoppingList
+     */
     public ShoppingList build() {
         Objects.requireNonNull(id, ShoppingList.class + ": id is missing");
         Objects.requireNonNull(version, ShoppingList.class + ": version is missing");
@@ -556,7 +572,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     * builds ShoppingList without checking for non null required values
+     * builds ShoppingList without checking for non-null required values
+     * @return ShoppingList
      */
     public ShoppingList buildUnchecked() {
         return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, name, key, customer, slug, description,

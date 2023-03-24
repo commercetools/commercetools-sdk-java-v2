@@ -32,7 +32,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
 
     /**
      *  <p>Shape of the action for <code>setName</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetNameChange with checking for non-null required values
+     * @return SetNameChange
+     */
     public SetNameChange build() {
         Objects.requireNonNull(change, SetNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetNameChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
     }
 
     /**
-     * builds SetNameChange without checking for non null required values
+     * builds SetNameChange without checking for non-null required values
+     * @return SetNameChange
      */
     public SetNameChange buildUnchecked() {
         return new SetNameChangeImpl(change, previousValue, nextValue);

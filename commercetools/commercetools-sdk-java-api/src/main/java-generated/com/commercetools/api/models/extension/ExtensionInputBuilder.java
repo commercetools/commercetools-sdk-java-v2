@@ -29,7 +29,7 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
 
     /**
      *  <p><code>Create</code> or <code>Update</code> request.</p>
-     * @param action
+     * @param action value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
 
     /**
      *  <p>Expanded reference to the resource that triggered the Extension.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -51,6 +51,7 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
 
     /**
      *  <p>Expanded reference to the resource that triggered the Extension.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
         return this.resource;
     }
 
+    /**
+     * builds ExtensionInput with checking for non-null required values
+     * @return ExtensionInput
+     */
     public ExtensionInput build() {
         Objects.requireNonNull(action, ExtensionInput.class + ": action is missing");
         Objects.requireNonNull(resource, ExtensionInput.class + ": resource is missing");
@@ -75,7 +80,8 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
     }
 
     /**
-     * builds ExtensionInput without checking for non null required values
+     * builds ExtensionInput without checking for non-null required values
+     * @return ExtensionInput
      */
     public ExtensionInput buildUnchecked() {
         return new ExtensionInputImpl(action, resource);

@@ -31,7 +31,7 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
 
     /**
      *  <p>Shape of the action for <code>setExpectedDelivery</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
         return this.nextValue;
     }
 
+    /**
+     * builds SetExpectedDeliveryChange with checking for non-null required values
+     * @return SetExpectedDeliveryChange
+     */
     public SetExpectedDeliveryChange build() {
         Objects.requireNonNull(change, SetExpectedDeliveryChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetExpectedDeliveryChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
     }
 
     /**
-     * builds SetExpectedDeliveryChange without checking for non null required values
+     * builds SetExpectedDeliveryChange without checking for non-null required values
+     * @return SetExpectedDeliveryChange
      */
     public SetExpectedDeliveryChange buildUnchecked() {
         return new SetExpectedDeliveryChangeImpl(change, previousValue, nextValue);

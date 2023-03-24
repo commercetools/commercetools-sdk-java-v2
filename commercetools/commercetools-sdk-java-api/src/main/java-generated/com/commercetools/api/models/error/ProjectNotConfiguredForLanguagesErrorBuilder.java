@@ -32,7 +32,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
 
     /**
      *  <p><code>"The project is not configured for given languages."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -43,6 +43,8 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -52,6 +54,9 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -64,7 +69,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
 
     /**
      *  <p>Languages configured for the Store.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -75,7 +80,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
 
     /**
      *  <p>Languages configured for the Store.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -86,7 +91,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
 
     /**
      *  <p>Languages configured for the Store.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -111,13 +116,18 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
         return this.languages;
     }
 
+    /**
+     * builds ProjectNotConfiguredForLanguagesError with checking for non-null required values
+     * @return ProjectNotConfiguredForLanguagesError
+     */
     public ProjectNotConfiguredForLanguagesError build() {
         Objects.requireNonNull(message, ProjectNotConfiguredForLanguagesError.class + ": message is missing");
         return new ProjectNotConfiguredForLanguagesErrorImpl(message, values, languages);
     }
 
     /**
-     * builds ProjectNotConfiguredForLanguagesError without checking for non null required values
+     * builds ProjectNotConfiguredForLanguagesError without checking for non-null required values
+     * @return ProjectNotConfiguredForLanguagesError
      */
     public ProjectNotConfiguredForLanguagesError buildUnchecked() {
         return new ProjectNotConfiguredForLanguagesErrorImpl(message, values, languages);

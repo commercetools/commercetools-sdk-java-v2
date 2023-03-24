@@ -31,7 +31,7 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
 
     /**
      *  <p>Shape of the action for <code>setStatusInterfaceText</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
         return this.nextValue;
     }
 
+    /**
+     * builds SetStatusInterfaceTextChange with checking for non-null required values
+     * @return SetStatusInterfaceTextChange
+     */
     public SetStatusInterfaceTextChange build() {
         Objects.requireNonNull(change, SetStatusInterfaceTextChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetStatusInterfaceTextChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
     }
 
     /**
-     * builds SetStatusInterfaceTextChange without checking for non null required values
+     * builds SetStatusInterfaceTextChange without checking for non-null required values
+     * @return SetStatusInterfaceTextChange
      */
     public SetStatusInterfaceTextChange buildUnchecked() {
         return new SetStatusInterfaceTextChangeImpl(change, previousValue, nextValue);

@@ -35,7 +35,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *  <p>Update action for <code>addBillingAddressId</code> action on customers.</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -82,7 +82,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -104,7 +104,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -118,6 +118,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
+     * @param builder function to build the address value
      * @return Builder
      */
 
@@ -129,7 +130,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
-     * @param address
+     * @param address value to be set
      * @return Builder
      */
 
@@ -154,6 +155,10 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
         return this.address;
     }
 
+    /**
+     * builds AddBillingAddressIdChange with checking for non-null required values
+     * @return AddBillingAddressIdChange
+     */
     public AddBillingAddressIdChange build() {
         Objects.requireNonNull(change, AddBillingAddressIdChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddBillingAddressIdChange.class + ": nextValue is missing");
@@ -163,7 +168,8 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
     }
 
     /**
-     * builds AddBillingAddressIdChange without checking for non null required values
+     * builds AddBillingAddressIdChange without checking for non-null required values
+     * @return AddBillingAddressIdChange
      */
     public AddBillingAddressIdChange buildUnchecked() {
         return new AddBillingAddressIdChangeImpl(change, nextValue, previousValue, address);

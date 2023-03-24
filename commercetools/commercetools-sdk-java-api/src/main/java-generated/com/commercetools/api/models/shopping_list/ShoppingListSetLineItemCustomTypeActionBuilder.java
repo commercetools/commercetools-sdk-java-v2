@@ -35,7 +35,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -104,13 +106,18 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
         return this.fields;
     }
 
+    /**
+     * builds ShoppingListSetLineItemCustomTypeAction with checking for non-null required values
+     * @return ShoppingListSetLineItemCustomTypeAction
+     */
     public ShoppingListSetLineItemCustomTypeAction build() {
         Objects.requireNonNull(lineItemId, ShoppingListSetLineItemCustomTypeAction.class + ": lineItemId is missing");
         return new ShoppingListSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
     }
 
     /**
-     * builds ShoppingListSetLineItemCustomTypeAction without checking for non null required values
+     * builds ShoppingListSetLineItemCustomTypeAction without checking for non-null required values
+     * @return ShoppingListSetLineItemCustomTypeAction
      */
     public ShoppingListSetLineItemCustomTypeAction buildUnchecked() {
         return new ShoppingListSetLineItemCustomTypeActionImpl(lineItemId, type, fields);

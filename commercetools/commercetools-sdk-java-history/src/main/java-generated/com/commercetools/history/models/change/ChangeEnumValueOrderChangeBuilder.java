@@ -35,7 +35,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *  <p>The name of the field/attribute definition updated.</p>
-     * @param fieldName
+     * @param fieldName value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -96,6 +96,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -110,6 +111,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -134,7 +136,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -146,7 +148,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -161,6 +163,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -176,6 +179,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -203,6 +207,10 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeEnumValueOrderChange with checking for non-null required values
+     * @return ChangeEnumValueOrderChange
+     */
     public ChangeEnumValueOrderChange build() {
         Objects.requireNonNull(change, ChangeEnumValueOrderChange.class + ": change is missing");
         Objects.requireNonNull(fieldName, ChangeEnumValueOrderChange.class + ": fieldName is missing");
@@ -212,7 +220,8 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * builds ChangeEnumValueOrderChange without checking for non null required values
+     * builds ChangeEnumValueOrderChange without checking for non-null required values
+     * @return ChangeEnumValueOrderChange
      */
     public ChangeEnumValueOrderChange buildUnchecked() {
         return new ChangeEnumValueOrderChangeImpl(change, fieldName, nextValue, previousValue);

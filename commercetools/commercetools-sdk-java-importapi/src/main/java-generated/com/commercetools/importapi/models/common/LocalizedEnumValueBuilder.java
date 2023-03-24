@@ -29,7 +29,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -61,7 +62,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -78,6 +79,10 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
         return this.label;
     }
 
+    /**
+     * builds LocalizedEnumValue with checking for non-null required values
+     * @return LocalizedEnumValue
+     */
     public LocalizedEnumValue build() {
         Objects.requireNonNull(key, LocalizedEnumValue.class + ": key is missing");
         Objects.requireNonNull(label, LocalizedEnumValue.class + ": label is missing");
@@ -85,7 +90,8 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
     }
 
     /**
-     * builds LocalizedEnumValue without checking for non null required values
+     * builds LocalizedEnumValue without checking for non-null required values
+     * @return LocalizedEnumValue
      */
     public LocalizedEnumValue buildUnchecked() {
         return new LocalizedEnumValueImpl(key, label);

@@ -26,6 +26,7 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
 
     /**
      *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
+     * @param builder function to build the payment value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
 
     /**
      *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
-     * @param payment
+     * @param payment value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
         return this.payment;
     }
 
+    /**
+     * builds MyCartAddPaymentAction with checking for non-null required values
+     * @return MyCartAddPaymentAction
+     */
     public MyCartAddPaymentAction build() {
         Objects.requireNonNull(payment, MyCartAddPaymentAction.class + ": payment is missing");
         return new MyCartAddPaymentActionImpl(payment);
     }
 
     /**
-     * builds MyCartAddPaymentAction without checking for non null required values
+     * builds MyCartAddPaymentAction without checking for non-null required values
+     * @return MyCartAddPaymentAction
      */
     public MyCartAddPaymentAction buildUnchecked() {
         return new MyCartAddPaymentActionImpl(payment);

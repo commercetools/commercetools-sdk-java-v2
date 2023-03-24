@@ -31,6 +31,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
 
     /**
      *
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
         return this.force;
     }
 
+    /**
+     * builds OrderTransitionStateAction with checking for non-null required values
+     * @return OrderTransitionStateAction
+     */
     public OrderTransitionStateAction build() {
         Objects.requireNonNull(state, OrderTransitionStateAction.class + ": state is missing");
         return new OrderTransitionStateActionImpl(state, force);
     }
 
     /**
-     * builds OrderTransitionStateAction without checking for non null required values
+     * builds OrderTransitionStateAction without checking for non-null required values
+     * @return OrderTransitionStateAction
      */
     public OrderTransitionStateAction buildUnchecked() {
         return new OrderTransitionStateActionImpl(state, force);

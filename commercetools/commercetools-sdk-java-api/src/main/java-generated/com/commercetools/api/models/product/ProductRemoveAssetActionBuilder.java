@@ -39,7 +39,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>The <code>id</code> of the Asset to remove.</p>
-     * @param assetId
+     * @param assetId value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
 
     /**
      *  <p>The <code>key</code> of the Asset to remove.</p>
-     * @param assetKey
+     * @param assetKey value to be set
      * @return Builder
      */
 
@@ -117,12 +117,17 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
         return this.assetKey;
     }
 
+    /**
+     * builds ProductRemoveAssetAction with checking for non-null required values
+     * @return ProductRemoveAssetAction
+     */
     public ProductRemoveAssetAction build() {
         return new ProductRemoveAssetActionImpl(variantId, sku, staged, assetId, assetKey);
     }
 
     /**
-     * builds ProductRemoveAssetAction without checking for non null required values
+     * builds ProductRemoveAssetAction without checking for non-null required values
+     * @return ProductRemoveAssetAction
      */
     public ProductRemoveAssetAction buildUnchecked() {
         return new ProductRemoveAssetActionImpl(variantId, sku, staged, assetId, assetKey);

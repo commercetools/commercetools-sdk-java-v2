@@ -32,7 +32,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
-     * @param locations
+     * @param locations value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
-     * @param locations
+     * @param locations value to be set
      * @return Builder
      */
 
@@ -67,7 +67,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
-     * @param locations
+     * @param locations value to be set
      * @return Builder
      */
 
@@ -82,6 +82,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @param builder function to build the locations value
      * @return Builder
      */
 
@@ -97,6 +98,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @param builder function to build the locations value
      * @return Builder
      */
 
@@ -110,7 +112,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
-     * @param path
+     * @param path value to be set
      * @return Builder
      */
 
@@ -121,7 +123,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
-     * @param path
+     * @param path value to be set
      * @return Builder
      */
 
@@ -132,7 +134,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
-     * @param path
+     * @param path value to be set
      * @return Builder
      */
 
@@ -156,6 +158,10 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         return this.path;
     }
 
+    /**
+     * builds GraphQLError with checking for non-null required values
+     * @return GraphQLError
+     */
     public GraphQLError build() {
         Objects.requireNonNull(message, GraphQLError.class + ": message is missing");
         Objects.requireNonNull(locations, GraphQLError.class + ": locations is missing");
@@ -164,7 +170,8 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * builds GraphQLError without checking for non null required values
+     * builds GraphQLError without checking for non-null required values
+     * @return GraphQLError
      */
     public GraphQLError buildUnchecked() {
         return new GraphQLErrorImpl(message, locations, path);

@@ -58,7 +58,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Unique identifier of the ProductSelection.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Current version of the ProductSelection.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -80,7 +80,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -91,7 +91,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -102,6 +102,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -113,7 +114,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -125,6 +126,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -136,7 +138,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -147,7 +149,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>User-defined unique identifier of the ProductSelection.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -158,6 +160,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Name of the ProductSelection.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -169,7 +172,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Name of the ProductSelection.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -180,7 +183,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
-     * @param productCount
+     * @param productCount value to be set
      * @return Builder
      */
 
@@ -191,7 +194,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -203,6 +206,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Custom Fields of the ProductSelection.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -214,7 +218,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Custom Fields of the ProductSelection.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -271,6 +275,10 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         return this.custom;
     }
 
+    /**
+     * builds ProductSelection with checking for non-null required values
+     * @return ProductSelection
+     */
     public ProductSelection build() {
         Objects.requireNonNull(id, ProductSelection.class + ": id is missing");
         Objects.requireNonNull(version, ProductSelection.class + ": version is missing");
@@ -284,7 +292,8 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     * builds ProductSelection without checking for non null required values
+     * builds ProductSelection without checking for non-null required values
+     * @return ProductSelection
      */
     public ProductSelection buildUnchecked() {
         return new ProductSelectionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,

@@ -32,7 +32,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
 
     /**
      *  <p>Shape of the action for <code>transitionState</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
         return this.nextValue;
     }
 
+    /**
+     * builds TransitionStateChange with checking for non-null required values
+     * @return TransitionStateChange
+     */
     public TransitionStateChange build() {
         Objects.requireNonNull(change, TransitionStateChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, TransitionStateChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     }
 
     /**
-     * builds TransitionStateChange without checking for non null required values
+     * builds TransitionStateChange without checking for non-null required values
+     * @return TransitionStateChange
      */
     public TransitionStateChange buildUnchecked() {
         return new TransitionStateChangeImpl(change, previousValue, nextValue);

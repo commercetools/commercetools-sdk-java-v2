@@ -30,7 +30,7 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
 
     /**
      *  <p>Value to set. Changing a Customer's <code>authMode</code> from <code>Password</code> to <code>ExternalAuth</code> deletes the Customer's password.</p>
-     * @param authMode
+     * @param authMode value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
 
     /**
      *  <p>Required when <code>authMode</code> is <code>Password</code>.</p>
-     * @param password
+     * @param password value to be set
      * @return Builder
      */
 
@@ -60,13 +60,18 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
         return this.password;
     }
 
+    /**
+     * builds CustomerSetAuthenticationModeAction with checking for non-null required values
+     * @return CustomerSetAuthenticationModeAction
+     */
     public CustomerSetAuthenticationModeAction build() {
         Objects.requireNonNull(authMode, CustomerSetAuthenticationModeAction.class + ": authMode is missing");
         return new CustomerSetAuthenticationModeActionImpl(authMode, password);
     }
 
     /**
-     * builds CustomerSetAuthenticationModeAction without checking for non null required values
+     * builds CustomerSetAuthenticationModeAction without checking for non-null required values
+     * @return CustomerSetAuthenticationModeAction
      */
     public CustomerSetAuthenticationModeAction buildUnchecked() {
         return new CustomerSetAuthenticationModeActionImpl(authMode, password);

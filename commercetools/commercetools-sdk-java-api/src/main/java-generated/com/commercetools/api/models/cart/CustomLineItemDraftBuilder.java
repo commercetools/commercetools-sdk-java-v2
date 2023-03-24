@@ -52,6 +52,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Name of the Custom Line Item.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -63,7 +64,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Name of the Custom Line Item.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -74,7 +75,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -85,6 +86,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -96,7 +98,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -107,7 +109,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
-     * @param slug
+     * @param slug value to be set
      * @return Builder
      */
 
@@ -118,6 +120,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     * @param builder function to build the taxCategory value
      * @return Builder
      */
 
@@ -131,7 +134,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
-     * @param taxCategory
+     * @param taxCategory value to be set
      * @return Builder
      */
 
@@ -143,6 +146,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -155,7 +159,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -167,6 +171,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -178,7 +183,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Custom Fields for the Custom Line Item.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -190,6 +195,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -202,7 +208,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -217,7 +223,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
-     * @param priceMode
+     * @param priceMode value to be set
      * @return Builder
      */
 
@@ -268,6 +274,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this.priceMode;
     }
 
+    /**
+     * builds CustomLineItemDraft with checking for non-null required values
+     * @return CustomLineItemDraft
+     */
     public CustomLineItemDraft build() {
         Objects.requireNonNull(name, CustomLineItemDraft.class + ": name is missing");
         Objects.requireNonNull(money, CustomLineItemDraft.class + ": money is missing");
@@ -278,7 +288,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * builds CustomLineItemDraft without checking for non null required values
+     * builds CustomLineItemDraft without checking for non-null required values
+     * @return CustomLineItemDraft
      */
     public CustomLineItemDraft buildUnchecked() {
         return new CustomLineItemDraftImpl(name, quantity, money, slug, taxCategory, externalTaxRate, custom,

@@ -26,7 +26,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
 
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
 
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
 
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
-     * @param removedImageUrls
+     * @param removedImageUrls value to be set
      * @return Builder
      */
 
@@ -65,6 +65,10 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
         return this.removedImageUrls;
     }
 
+    /**
+     * builds ProductRevertedStagedChangesMessagePayload with checking for non-null required values
+     * @return ProductRevertedStagedChangesMessagePayload
+     */
     public ProductRevertedStagedChangesMessagePayload build() {
         Objects.requireNonNull(removedImageUrls,
             ProductRevertedStagedChangesMessagePayload.class + ": removedImageUrls is missing");
@@ -72,7 +76,8 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     }
 
     /**
-     * builds ProductRevertedStagedChangesMessagePayload without checking for non null required values
+     * builds ProductRevertedStagedChangesMessagePayload without checking for non-null required values
+     * @return ProductRevertedStagedChangesMessagePayload
      */
     public ProductRevertedStagedChangesMessagePayload buildUnchecked() {
         return new ProductRevertedStagedChangesMessagePayloadImpl(removedImageUrls);

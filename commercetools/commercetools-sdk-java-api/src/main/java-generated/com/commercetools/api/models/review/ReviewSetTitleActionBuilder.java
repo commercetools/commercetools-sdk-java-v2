@@ -27,7 +27,7 @@ public class ReviewSetTitleActionBuilder implements Builder<ReviewSetTitleAction
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param title
+     * @param title value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ReviewSetTitleActionBuilder implements Builder<ReviewSetTitleAction
         return this.title;
     }
 
+    /**
+     * builds ReviewSetTitleAction with checking for non-null required values
+     * @return ReviewSetTitleAction
+     */
     public ReviewSetTitleAction build() {
         return new ReviewSetTitleActionImpl(title);
     }
 
     /**
-     * builds ReviewSetTitleAction without checking for non null required values
+     * builds ReviewSetTitleAction without checking for non-null required values
+     * @return ReviewSetTitleAction
      */
     public ReviewSetTitleAction buildUnchecked() {
         return new ReviewSetTitleActionImpl(title);

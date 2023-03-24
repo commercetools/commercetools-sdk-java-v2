@@ -82,7 +82,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Unique identifier of the StandalonePrice.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -93,7 +93,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Current version of the StandalonePrice.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -104,7 +104,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -115,7 +115,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -126,6 +126,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -137,7 +138,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -149,6 +150,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -160,7 +162,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -171,7 +173,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>User-defined unique identifier of the StandalonePrice.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -182,7 +184,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>SKU of the ProductVariant to which this Price is associated.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -193,7 +195,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Money value of this Price.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -204,6 +206,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Money value of this Price.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -215,7 +218,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Country for which this Price is valid.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -226,6 +229,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -239,7 +243,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -251,6 +255,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Product distribution Channel for which this Price is valid.</p>
+     * @param builder function to build the channel value
      * @return Builder
      */
 
@@ -262,7 +267,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Product distribution Channel for which this Price is valid.</p>
-     * @param channel
+     * @param channel value to be set
      * @return Builder
      */
 
@@ -274,7 +279,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Date from which the Price is valid.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -285,7 +290,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -296,7 +301,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -307,7 +312,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -319,7 +324,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -333,6 +338,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -347,6 +353,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -359,6 +366,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -370,7 +378,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -382,6 +390,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -393,7 +402,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -404,6 +413,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     * @param builder function to build the staged value
      * @return Builder
      */
 
@@ -416,7 +426,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -428,7 +438,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
-     * @param active
+     * @param active value to be set
      * @return Builder
      */
 
@@ -525,6 +535,10 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this.active;
     }
 
+    /**
+     * builds StandalonePrice with checking for non-null required values
+     * @return StandalonePrice
+     */
     public StandalonePrice build() {
         Objects.requireNonNull(id, StandalonePrice.class + ": id is missing");
         Objects.requireNonNull(version, StandalonePrice.class + ": version is missing");
@@ -538,7 +552,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     * builds StandalonePrice without checking for non null required values
+     * builds StandalonePrice without checking for non-null required values
+     * @return StandalonePrice
      */
     public StandalonePrice buildUnchecked() {
         return new StandalonePriceImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,

@@ -25,7 +25,7 @@ public class InvalidJsonInputBuilder implements Builder<InvalidJsonInput> {
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class InvalidJsonInputBuilder implements Builder<InvalidJsonInput> {
         return this.message;
     }
 
+    /**
+     * builds InvalidJsonInput with checking for non-null required values
+     * @return InvalidJsonInput
+     */
     public InvalidJsonInput build() {
         Objects.requireNonNull(message, InvalidJsonInput.class + ": message is missing");
         return new InvalidJsonInputImpl(message);
     }
 
     /**
-     * builds InvalidJsonInput without checking for non null required values
+     * builds InvalidJsonInput without checking for non-null required values
+     * @return InvalidJsonInput
      */
     public InvalidJsonInput buildUnchecked() {
         return new InvalidJsonInputImpl(message);

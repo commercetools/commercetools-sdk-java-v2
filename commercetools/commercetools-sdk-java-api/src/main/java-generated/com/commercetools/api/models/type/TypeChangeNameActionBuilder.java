@@ -26,6 +26,7 @@ public class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction
         return this.name;
     }
 
+    /**
+     * builds TypeChangeNameAction with checking for non-null required values
+     * @return TypeChangeNameAction
+     */
     public TypeChangeNameAction build() {
         Objects.requireNonNull(name, TypeChangeNameAction.class + ": name is missing");
         return new TypeChangeNameActionImpl(name);
     }
 
     /**
-     * builds TypeChangeNameAction without checking for non null required values
+     * builds TypeChangeNameAction without checking for non-null required values
+     * @return TypeChangeNameAction
      */
     public TypeChangeNameAction buildUnchecked() {
         return new TypeChangeNameActionImpl(name);

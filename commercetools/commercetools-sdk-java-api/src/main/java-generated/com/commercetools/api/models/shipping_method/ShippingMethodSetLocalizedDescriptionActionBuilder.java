@@ -29,6 +29,7 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the localizedDescription value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param localizedDescription
+     * @param localizedDescription value to be set
      * @return Builder
      */
 
@@ -56,12 +57,17 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
         return this.localizedDescription;
     }
 
+    /**
+     * builds ShippingMethodSetLocalizedDescriptionAction with checking for non-null required values
+     * @return ShippingMethodSetLocalizedDescriptionAction
+     */
     public ShippingMethodSetLocalizedDescriptionAction build() {
         return new ShippingMethodSetLocalizedDescriptionActionImpl(localizedDescription);
     }
 
     /**
-     * builds ShippingMethodSetLocalizedDescriptionAction without checking for non null required values
+     * builds ShippingMethodSetLocalizedDescriptionAction without checking for non-null required values
+     * @return ShippingMethodSetLocalizedDescriptionAction
      */
     public ShippingMethodSetLocalizedDescriptionAction buildUnchecked() {
         return new ShippingMethodSetLocalizedDescriptionActionImpl(localizedDescription);

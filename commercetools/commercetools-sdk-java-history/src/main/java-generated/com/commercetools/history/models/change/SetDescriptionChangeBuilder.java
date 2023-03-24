@@ -31,7 +31,7 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
 
     /**
      *  <p>Shape of the action for <code>setDescription</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
         return this.nextValue;
     }
 
+    /**
+     * builds SetDescriptionChange with checking for non-null required values
+     * @return SetDescriptionChange
+     */
     public SetDescriptionChange build() {
         Objects.requireNonNull(change, SetDescriptionChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetDescriptionChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
     }
 
     /**
-     * builds SetDescriptionChange without checking for non null required values
+     * builds SetDescriptionChange without checking for non-null required values
+     * @return SetDescriptionChange
      */
     public SetDescriptionChange buildUnchecked() {
         return new SetDescriptionChangeImpl(change, previousValue, nextValue);

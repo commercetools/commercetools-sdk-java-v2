@@ -35,7 +35,7 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
-     * @param centAmount
+     * @param centAmount value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
-     * @param currencyCode
+     * @param currencyCode value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
 
     /**
      *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
-     * @param fractionDigits
+     * @param fractionDigits value to be set
      * @return Builder
      */
 
@@ -78,6 +78,10 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
         return this.fractionDigits;
     }
 
+    /**
+     * builds CentPrecisionMoney with checking for non-null required values
+     * @return CentPrecisionMoney
+     */
     public CentPrecisionMoney build() {
         Objects.requireNonNull(centAmount, CentPrecisionMoney.class + ": centAmount is missing");
         Objects.requireNonNull(currencyCode, CentPrecisionMoney.class + ": currencyCode is missing");
@@ -86,7 +90,8 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
     }
 
     /**
-     * builds CentPrecisionMoney without checking for non null required values
+     * builds CentPrecisionMoney without checking for non-null required values
+     * @return CentPrecisionMoney
      */
     public CentPrecisionMoney buildUnchecked() {
         return new CentPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits);

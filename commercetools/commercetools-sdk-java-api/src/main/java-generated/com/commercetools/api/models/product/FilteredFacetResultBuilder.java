@@ -30,7 +30,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
 
     /**
      *
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
 
     /**
      *
-     * @param productCount
+     * @param productCount value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
         return this.productCount;
     }
 
+    /**
+     * builds FilteredFacetResult with checking for non-null required values
+     * @return FilteredFacetResult
+     */
     public FilteredFacetResult build() {
         Objects.requireNonNull(count, FilteredFacetResult.class + ": count is missing");
         return new FilteredFacetResultImpl(count, productCount);
     }
 
     /**
-     * builds FilteredFacetResult without checking for non null required values
+     * builds FilteredFacetResult without checking for non-null required values
+     * @return FilteredFacetResult
      */
     public FilteredFacetResult buildUnchecked() {
         return new FilteredFacetResultImpl(count, productCount);

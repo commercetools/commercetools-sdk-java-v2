@@ -27,7 +27,7 @@ public class ShoppingListSetKeyActionBuilder implements Builder<ShoppingListSetK
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ShoppingListSetKeyActionBuilder implements Builder<ShoppingListSetK
         return this.key;
     }
 
+    /**
+     * builds ShoppingListSetKeyAction with checking for non-null required values
+     * @return ShoppingListSetKeyAction
+     */
     public ShoppingListSetKeyAction build() {
         return new ShoppingListSetKeyActionImpl(key);
     }
 
     /**
-     * builds ShoppingListSetKeyAction without checking for non null required values
+     * builds ShoppingListSetKeyAction without checking for non-null required values
+     * @return ShoppingListSetKeyAction
      */
     public ShoppingListSetKeyAction buildUnchecked() {
         return new ShoppingListSetKeyActionImpl(key);

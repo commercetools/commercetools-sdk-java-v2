@@ -31,6 +31,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param builder function to build the shippingInfo value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
-     * @param shippingInfo
+     * @param shippingInfo value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param builder function to build the oldShippingInfo value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
-     * @param oldShippingInfo
+     * @param oldShippingInfo value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
         return this.oldShippingInfo;
     }
 
+    /**
+     * builds OrderShippingInfoSetMessagePayload with checking for non-null required values
+     * @return OrderShippingInfoSetMessagePayload
+     */
     public OrderShippingInfoSetMessagePayload build() {
         return new OrderShippingInfoSetMessagePayloadImpl(shippingInfo, oldShippingInfo);
     }
 
     /**
-     * builds OrderShippingInfoSetMessagePayload without checking for non null required values
+     * builds OrderShippingInfoSetMessagePayload without checking for non-null required values
+     * @return OrderShippingInfoSetMessagePayload
      */
     public OrderShippingInfoSetMessagePayload buildUnchecked() {
         return new OrderShippingInfoSetMessagePayloadImpl(shippingInfo, oldShippingInfo);

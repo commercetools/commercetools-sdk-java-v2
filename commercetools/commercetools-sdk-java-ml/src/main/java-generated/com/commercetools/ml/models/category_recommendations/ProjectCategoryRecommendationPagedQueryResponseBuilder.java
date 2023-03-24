@@ -39,7 +39,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *  <p>Number of elements skipped.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -96,7 +96,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param results
+     * @param results value to be set
      * @return Builder
      */
 
@@ -111,6 +111,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -127,6 +128,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param builder function to build the results value
      * @return Builder
      */
 
@@ -141,6 +143,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param builder function to build the meta value
      * @return Builder
      */
 
@@ -155,7 +158,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
-     * @param meta
+     * @param meta value to be set
      * @return Builder
      */
 
@@ -185,6 +188,10 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this.meta;
     }
 
+    /**
+     * builds ProjectCategoryRecommendationPagedQueryResponse with checking for non-null required values
+     * @return ProjectCategoryRecommendationPagedQueryResponse
+     */
     public ProjectCategoryRecommendationPagedQueryResponse build() {
         Objects.requireNonNull(count, ProjectCategoryRecommendationPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(total, ProjectCategoryRecommendationPagedQueryResponse.class + ": total is missing");
@@ -195,7 +202,8 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     * builds ProjectCategoryRecommendationPagedQueryResponse without checking for non null required values
+     * builds ProjectCategoryRecommendationPagedQueryResponse without checking for non-null required values
+     * @return ProjectCategoryRecommendationPagedQueryResponse
      */
     public ProjectCategoryRecommendationPagedQueryResponse buildUnchecked() {
         return new ProjectCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results, meta);

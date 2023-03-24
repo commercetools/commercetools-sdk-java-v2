@@ -27,7 +27,7 @@ public class ReviewSetTextActionBuilder implements Builder<ReviewSetTextAction> 
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param text
+     * @param text value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ReviewSetTextActionBuilder implements Builder<ReviewSetTextAction> 
         return this.text;
     }
 
+    /**
+     * builds ReviewSetTextAction with checking for non-null required values
+     * @return ReviewSetTextAction
+     */
     public ReviewSetTextAction build() {
         return new ReviewSetTextActionImpl(text);
     }
 
     /**
-     * builds ReviewSetTextAction without checking for non null required values
+     * builds ReviewSetTextAction without checking for non-null required values
+     * @return ReviewSetTextAction
      */
     public ReviewSetTextAction buildUnchecked() {
         return new ReviewSetTextActionImpl(text);

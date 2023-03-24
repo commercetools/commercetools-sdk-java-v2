@@ -37,6 +37,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -48,7 +49,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Name of the AttributeGroup.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -59,6 +60,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Description of the AttributeGroup.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -70,7 +72,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Description of the AttributeGroup.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -82,7 +84,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -106,7 +108,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -121,6 +123,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -136,6 +139,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -149,7 +153,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>User-defined unique identifier for the AttributeGroup.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -176,6 +180,10 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
         return this.key;
     }
 
+    /**
+     * builds AttributeGroupDraft with checking for non-null required values
+     * @return AttributeGroupDraft
+     */
     public AttributeGroupDraft build() {
         Objects.requireNonNull(name, AttributeGroupDraft.class + ": name is missing");
         Objects.requireNonNull(attributes, AttributeGroupDraft.class + ": attributes is missing");
@@ -183,7 +191,8 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     }
 
     /**
-     * builds AttributeGroupDraft without checking for non null required values
+     * builds AttributeGroupDraft without checking for non-null required values
+     * @return AttributeGroupDraft
      */
     public AttributeGroupDraft buildUnchecked() {
         return new AttributeGroupDraftImpl(name, description, attributes, key);

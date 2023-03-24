@@ -30,6 +30,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
 
     /**
      *  <p>Category the Product was removed from.</p>
+     * @param builder function to build the category value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
 
     /**
      *  <p>Category the Product was removed from.</p>
-     * @param category
+     * @param category value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
         return this.staged;
     }
 
+    /**
+     * builds ProductRemovedFromCategoryMessagePayload with checking for non-null required values
+     * @return ProductRemovedFromCategoryMessagePayload
+     */
     public ProductRemovedFromCategoryMessagePayload build() {
         Objects.requireNonNull(category, ProductRemovedFromCategoryMessagePayload.class + ": category is missing");
         Objects.requireNonNull(staged, ProductRemovedFromCategoryMessagePayload.class + ": staged is missing");
@@ -77,7 +82,8 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     * builds ProductRemovedFromCategoryMessagePayload without checking for non null required values
+     * builds ProductRemovedFromCategoryMessagePayload without checking for non-null required values
+     * @return ProductRemovedFromCategoryMessagePayload
      */
     public ProductRemovedFromCategoryMessagePayload buildUnchecked() {
         return new ProductRemovedFromCategoryMessagePayloadImpl(category, staged);

@@ -30,7 +30,7 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -61,12 +61,17 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
         return this.validUntil;
     }
 
+    /**
+     * builds CartDiscountSetValidFromAndUntilAction with checking for non-null required values
+     * @return CartDiscountSetValidFromAndUntilAction
+     */
     public CartDiscountSetValidFromAndUntilAction build() {
         return new CartDiscountSetValidFromAndUntilActionImpl(validFrom, validUntil);
     }
 
     /**
-     * builds CartDiscountSetValidFromAndUntilAction without checking for non null required values
+     * builds CartDiscountSetValidFromAndUntilAction without checking for non-null required values
+     * @return CartDiscountSetValidFromAndUntilAction
      */
     public CartDiscountSetValidFromAndUntilAction buildUnchecked() {
         return new CartDiscountSetValidFromAndUntilActionImpl(validFrom, validUntil);

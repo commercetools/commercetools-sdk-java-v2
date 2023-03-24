@@ -37,7 +37,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
     /**
      *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p>
-     * @param score
+     * @param score value to be set
      * @return Builder
      */
 
@@ -48,6 +48,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
     /**
      *  <p>Defines a fixed price for the <code>score</code>.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
     /**
      *  <p>Defines a fixed price for the <code>score</code>.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -70,6 +71,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
     /**
      *  <p>Dynamically calculates a Price for a range of scores.</p>
+     * @param builder function to build the priceFunction value
      * @return Builder
      */
 
@@ -82,7 +84,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
     /**
      *  <p>Dynamically calculates a Price for a range of scores.</p>
-     * @param priceFunction
+     * @param priceFunction value to be set
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
     /**
      *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
-     * @param isMatching
+     * @param isMatching value to be set
      * @return Builder
      */
 
@@ -122,13 +124,18 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
         return this.isMatching;
     }
 
+    /**
+     * builds CartScoreTier with checking for non-null required values
+     * @return CartScoreTier
+     */
     public CartScoreTier build() {
         Objects.requireNonNull(score, CartScoreTier.class + ": score is missing");
         return new CartScoreTierImpl(score, price, priceFunction, isMatching);
     }
 
     /**
-     * builds CartScoreTier without checking for non null required values
+     * builds CartScoreTier without checking for non-null required values
+     * @return CartScoreTier
      */
     public CartScoreTier buildUnchecked() {
         return new CartScoreTierImpl(score, price, priceFunction, isMatching);

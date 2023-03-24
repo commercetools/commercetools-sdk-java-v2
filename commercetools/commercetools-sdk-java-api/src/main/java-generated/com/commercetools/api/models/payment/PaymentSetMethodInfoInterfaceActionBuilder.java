@@ -25,7 +25,7 @@ public class PaymentSetMethodInfoInterfaceActionBuilder implements Builder<Payme
 
     /**
      *  <p>Value to set. Once set, the <code>paymentInterface</code> of the <code>paymentMethodInfo</code> cannot be changed.</p>
-     * @param _interface
+     * @param _interface value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class PaymentSetMethodInfoInterfaceActionBuilder implements Builder<Payme
         return this._interface;
     }
 
+    /**
+     * builds PaymentSetMethodInfoInterfaceAction with checking for non-null required values
+     * @return PaymentSetMethodInfoInterfaceAction
+     */
     public PaymentSetMethodInfoInterfaceAction build() {
         Objects.requireNonNull(_interface, PaymentSetMethodInfoInterfaceAction.class + ": interface is missing");
         return new PaymentSetMethodInfoInterfaceActionImpl(_interface);
     }
 
     /**
-     * builds PaymentSetMethodInfoInterfaceAction without checking for non null required values
+     * builds PaymentSetMethodInfoInterfaceAction without checking for non-null required values
+     * @return PaymentSetMethodInfoInterfaceAction
      */
     public PaymentSetMethodInfoInterfaceAction buildUnchecked() {
         return new PaymentSetMethodInfoInterfaceActionImpl(_interface);

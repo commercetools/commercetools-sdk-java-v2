@@ -26,7 +26,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -64,6 +64,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -78,6 +79,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -92,13 +94,18 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
         return this.values;
     }
 
+    /**
+     * builds CustomFieldEnumType with checking for non-null required values
+     * @return CustomFieldEnumType
+     */
     public CustomFieldEnumType build() {
         Objects.requireNonNull(values, CustomFieldEnumType.class + ": values is missing");
         return new CustomFieldEnumTypeImpl(values);
     }
 
     /**
-     * builds CustomFieldEnumType without checking for non null required values
+     * builds CustomFieldEnumType without checking for non-null required values
+     * @return CustomFieldEnumType
      */
     public CustomFieldEnumType buildUnchecked() {
         return new CustomFieldEnumTypeImpl(values);

@@ -27,7 +27,7 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
 
     /**
      *  <p><code>"The given current password does not match."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InvalidCurrentPasswordErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InvalidCurrentPasswordErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
         return this.values;
     }
 
+    /**
+     * builds InvalidCurrentPasswordError with checking for non-null required values
+     * @return InvalidCurrentPasswordError
+     */
     public InvalidCurrentPasswordError build() {
         Objects.requireNonNull(message, InvalidCurrentPasswordError.class + ": message is missing");
         return new InvalidCurrentPasswordErrorImpl(message, values);
     }
 
     /**
-     * builds InvalidCurrentPasswordError without checking for non null required values
+     * builds InvalidCurrentPasswordError without checking for non-null required values
+     * @return InvalidCurrentPasswordError
      */
     public InvalidCurrentPasswordError buildUnchecked() {
         return new InvalidCurrentPasswordErrorImpl(message, values);

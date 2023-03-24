@@ -27,7 +27,7 @@ public class ReviewSetKeyActionBuilder implements Builder<ReviewSetKeyAction> {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ReviewSetKeyActionBuilder implements Builder<ReviewSetKeyAction> {
         return this.key;
     }
 
+    /**
+     * builds ReviewSetKeyAction with checking for non-null required values
+     * @return ReviewSetKeyAction
+     */
     public ReviewSetKeyAction build() {
         return new ReviewSetKeyActionImpl(key);
     }
 
     /**
-     * builds ReviewSetKeyAction without checking for non null required values
+     * builds ReviewSetKeyAction without checking for non-null required values
+     * @return ReviewSetKeyAction
      */
     public ReviewSetKeyAction buildUnchecked() {
         return new ReviewSetKeyActionImpl(key);

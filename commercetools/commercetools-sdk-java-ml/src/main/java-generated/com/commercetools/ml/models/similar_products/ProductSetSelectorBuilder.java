@@ -42,7 +42,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>The project containing the project set.</p>
-     * @param projectKey
+     * @param projectKey value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
-     * @param productIds
+     * @param productIds value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
-     * @param productIds
+     * @param productIds value to be set
      * @return Builder
      */
 
@@ -75,7 +75,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
-     * @param productIds
+     * @param productIds value to be set
      * @return Builder
      */
 
@@ -89,7 +89,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
-     * @param productTypeIds
+     * @param productTypeIds value to be set
      * @return Builder
      */
 
@@ -100,7 +100,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
-     * @param productTypeIds
+     * @param productTypeIds value to be set
      * @return Builder
      */
 
@@ -111,7 +111,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
-     * @param productTypeIds
+     * @param productTypeIds value to be set
      * @return Builder
      */
 
@@ -125,7 +125,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>Specifies use of staged or current product data.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -136,7 +136,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
-     * @param includeVariants
+     * @param includeVariants value to be set
      * @return Builder
      */
 
@@ -147,7 +147,7 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     /**
      *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
-     * @param productSetLimit
+     * @param productSetLimit value to be set
      * @return Builder
      */
 
@@ -185,6 +185,10 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
         return this.productSetLimit;
     }
 
+    /**
+     * builds ProductSetSelector with checking for non-null required values
+     * @return ProductSetSelector
+     */
     public ProductSetSelector build() {
         Objects.requireNonNull(projectKey, ProductSetSelector.class + ": projectKey is missing");
         return new ProductSetSelectorImpl(projectKey, productIds, productTypeIds, staged, includeVariants,
@@ -192,7 +196,8 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
     }
 
     /**
-     * builds ProductSetSelector without checking for non null required values
+     * builds ProductSetSelector without checking for non-null required values
+     * @return ProductSetSelector
      */
     public ProductSetSelector buildUnchecked() {
         return new ProductSetSelectorImpl(projectKey, productIds, productTypeIds, staged, includeVariants,

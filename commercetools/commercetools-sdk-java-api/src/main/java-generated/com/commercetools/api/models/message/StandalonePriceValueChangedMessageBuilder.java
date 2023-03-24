@@ -64,7 +64,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -75,7 +75,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -86,7 +86,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -97,7 +97,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -108,6 +108,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -119,7 +120,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -131,6 +132,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -142,7 +144,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -154,7 +156,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
-     * @param sequenceNumber
+     * @param sequenceNumber value to be set
      * @return Builder
      */
 
@@ -165,7 +167,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -177,6 +179,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -188,7 +191,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
-     * @param resourceVersion
+     * @param resourceVersion value to be set
      * @return Builder
      */
 
@@ -199,6 +202,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
 
@@ -212,7 +216,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
-     * @param resourceUserProvidedIdentifiers
+     * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
 
@@ -224,6 +228,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>The new value of the updated StandalonePrice.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -235,7 +240,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>The new value of the updated StandalonePrice.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -246,7 +251,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -257,6 +262,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     * @param builder function to build the oldValue value
      * @return Builder
      */
 
@@ -268,7 +274,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
-     * @param oldValue
+     * @param oldValue value to be set
      * @return Builder
      */
 
@@ -334,6 +340,10 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
         return this.oldValue;
     }
 
+    /**
+     * builds StandalonePriceValueChangedMessage with checking for non-null required values
+     * @return StandalonePriceValueChangedMessage
+     */
     public StandalonePriceValueChangedMessage build() {
         Objects.requireNonNull(id, StandalonePriceValueChangedMessage.class + ": id is missing");
         Objects.requireNonNull(version, StandalonePriceValueChangedMessage.class + ": version is missing");
@@ -353,7 +363,8 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     * builds StandalonePriceValueChangedMessage without checking for non null required values
+     * builds StandalonePriceValueChangedMessage without checking for non-null required values
+     * @return StandalonePriceValueChangedMessage
      */
     public StandalonePriceValueChangedMessage buildUnchecked() {
         return new StandalonePriceValueChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,

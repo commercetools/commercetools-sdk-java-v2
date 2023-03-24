@@ -29,7 +29,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
-     * @param transactionId
+     * @param transactionId value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
 
     /**
      *  <p>Transaction State after the Change Transaction State update action.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -58,6 +58,10 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
         return this.state;
     }
 
+    /**
+     * builds PaymentTransactionStateChangedMessagePayload with checking for non-null required values
+     * @return PaymentTransactionStateChangedMessagePayload
+     */
     public PaymentTransactionStateChangedMessagePayload build() {
         Objects.requireNonNull(transactionId,
             PaymentTransactionStateChangedMessagePayload.class + ": transactionId is missing");
@@ -66,7 +70,8 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
     }
 
     /**
-     * builds PaymentTransactionStateChangedMessagePayload without checking for non null required values
+     * builds PaymentTransactionStateChangedMessagePayload without checking for non-null required values
+     * @return PaymentTransactionStateChangedMessagePayload
      */
     public PaymentTransactionStateChangedMessagePayload buildUnchecked() {
         return new PaymentTransactionStateChangedMessagePayloadImpl(transactionId, state);

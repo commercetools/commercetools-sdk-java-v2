@@ -32,7 +32,7 @@ public class MyShoppingListSetTextLineItemDescriptionActionBuilder
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
-     * @param textLineItemId
+     * @param textLineItemId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class MyShoppingListSetTextLineItemDescriptionActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class MyShoppingListSetTextLineItemDescriptionActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -73,6 +74,10 @@ public class MyShoppingListSetTextLineItemDescriptionActionBuilder
         return this.description;
     }
 
+    /**
+     * builds MyShoppingListSetTextLineItemDescriptionAction with checking for non-null required values
+     * @return MyShoppingListSetTextLineItemDescriptionAction
+     */
     public MyShoppingListSetTextLineItemDescriptionAction build() {
         Objects.requireNonNull(textLineItemId,
             MyShoppingListSetTextLineItemDescriptionAction.class + ": textLineItemId is missing");
@@ -80,7 +85,8 @@ public class MyShoppingListSetTextLineItemDescriptionActionBuilder
     }
 
     /**
-     * builds MyShoppingListSetTextLineItemDescriptionAction without checking for non null required values
+     * builds MyShoppingListSetTextLineItemDescriptionAction without checking for non-null required values
+     * @return MyShoppingListSetTextLineItemDescriptionAction
      */
     public MyShoppingListSetTextLineItemDescriptionAction buildUnchecked() {
         return new MyShoppingListSetTextLineItemDescriptionActionImpl(textLineItemId, description);

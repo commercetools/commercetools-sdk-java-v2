@@ -32,7 +32,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,7 +43,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -55,6 +55,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -68,7 +69,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeTargetChange with checking for non-null required values
+     * @return ChangeTargetChange
+     */
     public ChangeTargetChange build() {
         Objects.requireNonNull(change, ChangeTargetChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangeTargetChange.class + ": nextValue is missing");
@@ -111,7 +117,8 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
-     * builds ChangeTargetChange without checking for non null required values
+     * builds ChangeTargetChange without checking for non-null required values
+     * @return ChangeTargetChange
      */
     public ChangeTargetChange buildUnchecked() {
         return new ChangeTargetChangeImpl(change, nextValue, previousValue);

@@ -27,7 +27,7 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
 
     /**
      *  <p>Plain text description of the error concerning the predicate. For example, <code>"Invalid country code $countryCode provided for the field $fieldDefinition."</code>.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public SemanticErrorErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public SemanticErrorErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
         return this.values;
     }
 
+    /**
+     * builds SemanticErrorError with checking for non-null required values
+     * @return SemanticErrorError
+     */
     public SemanticErrorError build() {
         Objects.requireNonNull(message, SemanticErrorError.class + ": message is missing");
         return new SemanticErrorErrorImpl(message, values);
     }
 
     /**
-     * builds SemanticErrorError without checking for non null required values
+     * builds SemanticErrorError without checking for non-null required values
+     * @return SemanticErrorError
      */
     public SemanticErrorError buildUnchecked() {
         return new SemanticErrorErrorImpl(message, values);

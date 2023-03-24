@@ -25,7 +25,7 @@ public class GoogleCloudFunctionDestinationBuilder implements Builder<GoogleClou
 
     /**
      *  <p>URL to the target function.</p>
-     * @param url
+     * @param url value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class GoogleCloudFunctionDestinationBuilder implements Builder<GoogleClou
         return this.url;
     }
 
+    /**
+     * builds GoogleCloudFunctionDestination with checking for non-null required values
+     * @return GoogleCloudFunctionDestination
+     */
     public GoogleCloudFunctionDestination build() {
         Objects.requireNonNull(url, GoogleCloudFunctionDestination.class + ": url is missing");
         return new GoogleCloudFunctionDestinationImpl(url);
     }
 
     /**
-     * builds GoogleCloudFunctionDestination without checking for non null required values
+     * builds GoogleCloudFunctionDestination without checking for non-null required values
+     * @return GoogleCloudFunctionDestination
      */
     public GoogleCloudFunctionDestination buildUnchecked() {
         return new GoogleCloudFunctionDestinationImpl(url);

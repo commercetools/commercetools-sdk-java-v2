@@ -29,7 +29,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds StateUpdate with checking for non-null required values
+     * @return StateUpdate
+     */
     public StateUpdate build() {
         Objects.requireNonNull(version, StateUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, StateUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
     }
 
     /**
-     * builds StateUpdate without checking for non null required values
+     * builds StateUpdate without checking for non-null required values
+     * @return StateUpdate
      */
     public StateUpdate buildUnchecked() {
         return new StateUpdateImpl(version, actions);

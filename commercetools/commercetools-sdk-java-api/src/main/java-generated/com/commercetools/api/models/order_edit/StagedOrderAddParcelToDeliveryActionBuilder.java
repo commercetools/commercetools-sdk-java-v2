@@ -37,7 +37,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -48,6 +48,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param builder function to build the measurements value
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
-     * @param measurements
+     * @param measurements value to be set
      * @return Builder
      */
 
@@ -71,6 +72,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param builder function to build the trackingData value
      * @return Builder
      */
 
@@ -82,7 +84,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
-     * @param trackingData
+     * @param trackingData value to be set
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -106,7 +108,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -118,7 +120,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
-     * @param items
+     * @param items value to be set
      * @return Builder
      */
 
@@ -133,6 +135,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -147,6 +150,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param builder function to build the items value
      * @return Builder
      */
 
@@ -176,13 +180,18 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         return this.items;
     }
 
+    /**
+     * builds StagedOrderAddParcelToDeliveryAction with checking for non-null required values
+     * @return StagedOrderAddParcelToDeliveryAction
+     */
     public StagedOrderAddParcelToDeliveryAction build() {
         Objects.requireNonNull(deliveryId, StagedOrderAddParcelToDeliveryAction.class + ": deliveryId is missing");
         return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, measurements, trackingData, items);
     }
 
     /**
-     * builds StagedOrderAddParcelToDeliveryAction without checking for non null required values
+     * builds StagedOrderAddParcelToDeliveryAction without checking for non-null required values
+     * @return StagedOrderAddParcelToDeliveryAction
      */
     public StagedOrderAddParcelToDeliveryAction buildUnchecked() {
         return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, measurements, trackingData, items);

@@ -31,6 +31,7 @@ public class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaT
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the metaTitle value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaT
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param metaTitle
+     * @param metaTitle value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaT
 
     /**
      *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -73,12 +74,17 @@ public class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaT
         return this.staged;
     }
 
+    /**
+     * builds ProductSetMetaTitleAction with checking for non-null required values
+     * @return ProductSetMetaTitleAction
+     */
     public ProductSetMetaTitleAction build() {
         return new ProductSetMetaTitleActionImpl(metaTitle, staged);
     }
 
     /**
-     * builds ProductSetMetaTitleAction without checking for non null required values
+     * builds ProductSetMetaTitleAction without checking for non-null required values
+     * @return ProductSetMetaTitleAction
      */
     public ProductSetMetaTitleAction buildUnchecked() {
         return new ProductSetMetaTitleActionImpl(metaTitle, staged);

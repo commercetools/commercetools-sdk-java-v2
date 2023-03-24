@@ -37,6 +37,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Total net price of the Cart or Order.</p>
+     * @param builder function to build the totalNet value
      * @return Builder
      */
 
@@ -48,7 +49,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Total net price of the Cart or Order.</p>
-     * @param totalNet
+     * @param totalNet value to be set
      * @return Builder
      */
 
@@ -59,6 +60,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Total gross price of the Cart or Order.</p>
+     * @param builder function to build the totalGross value
      * @return Builder
      */
 
@@ -70,7 +72,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Total gross price of the Cart or Order.</p>
-     * @param totalGross
+     * @param totalGross value to be set
      * @return Builder
      */
 
@@ -82,7 +84,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
-     * @param taxPortions
+     * @param taxPortions value to be set
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
-     * @param taxPortions
+     * @param taxPortions value to be set
      * @return Builder
      */
 
@@ -107,7 +109,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
-     * @param taxPortions
+     * @param taxPortions value to be set
      * @return Builder
      */
 
@@ -122,6 +124,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
      * @return Builder
      */
 
@@ -137,6 +140,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
      * @return Builder
      */
 
@@ -150,6 +154,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Total tax applicable for the Cart or Order.</p>
      *  <p>Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param builder function to build the totalTax value
      * @return Builder
      */
 
@@ -162,7 +167,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     /**
      *  <p>Total tax applicable for the Cart or Order.</p>
      *  <p>Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
-     * @param totalTax
+     * @param totalTax value to be set
      * @return Builder
      */
 
@@ -188,6 +193,10 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this.totalTax;
     }
 
+    /**
+     * builds TaxedPrice with checking for non-null required values
+     * @return TaxedPrice
+     */
     public TaxedPrice build() {
         Objects.requireNonNull(totalNet, TaxedPrice.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedPrice.class + ": totalGross is missing");
@@ -196,7 +205,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     * builds TaxedPrice without checking for non null required values
+     * builds TaxedPrice without checking for non-null required values
+     * @return TaxedPrice
      */
     public TaxedPrice buildUnchecked() {
         return new TaxedPriceImpl(totalNet, totalGross, taxPortions, totalTax);

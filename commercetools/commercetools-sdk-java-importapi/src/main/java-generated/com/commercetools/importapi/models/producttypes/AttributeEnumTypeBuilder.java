@@ -26,7 +26,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *
-     * @param values
+     * @param values value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *
+     * @param builder function to build the values value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
         return this.values;
     }
 
+    /**
+     * builds AttributeEnumType with checking for non-null required values
+     * @return AttributeEnumType
+     */
     public AttributeEnumType build() {
         Objects.requireNonNull(values, AttributeEnumType.class + ": values is missing");
         return new AttributeEnumTypeImpl(values);
     }
 
     /**
-     * builds AttributeEnumType without checking for non null required values
+     * builds AttributeEnumType without checking for non-null required values
+     * @return AttributeEnumType
      */
     public AttributeEnumType buildUnchecked() {
         return new AttributeEnumTypeImpl(values);

@@ -31,7 +31,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
 
     /**
      *  <p>Unique identifier of the referenced Review.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
 
     /**
      *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
 
     /**
      *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
         return this.obj;
     }
 
+    /**
+     * builds ReviewReference with checking for non-null required values
+     * @return ReviewReference
+     */
     public ReviewReference build() {
         Objects.requireNonNull(id, ReviewReference.class + ": id is missing");
         return new ReviewReferenceImpl(id, obj);
     }
 
     /**
-     * builds ReviewReference without checking for non null required values
+     * builds ReviewReference without checking for non-null required values
+     * @return ReviewReference
      */
     public ReviewReference buildUnchecked() {
         return new ReviewReferenceImpl(id, obj);

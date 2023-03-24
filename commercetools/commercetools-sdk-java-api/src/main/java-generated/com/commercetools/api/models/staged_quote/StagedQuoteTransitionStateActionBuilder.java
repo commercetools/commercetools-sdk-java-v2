@@ -31,6 +31,7 @@ public class StagedQuoteTransitionStateActionBuilder implements Builder<StagedQu
 
     /**
      *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class StagedQuoteTransitionStateActionBuilder implements Builder<StagedQu
 
     /**
      *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class StagedQuoteTransitionStateActionBuilder implements Builder<StagedQu
 
     /**
      *  <p>Switch validations on or off.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class StagedQuoteTransitionStateActionBuilder implements Builder<StagedQu
         return this.force;
     }
 
+    /**
+     * builds StagedQuoteTransitionStateAction with checking for non-null required values
+     * @return StagedQuoteTransitionStateAction
+     */
     public StagedQuoteTransitionStateAction build() {
         Objects.requireNonNull(state, StagedQuoteTransitionStateAction.class + ": state is missing");
         return new StagedQuoteTransitionStateActionImpl(state, force);
     }
 
     /**
-     * builds StagedQuoteTransitionStateAction without checking for non null required values
+     * builds StagedQuoteTransitionStateAction without checking for non-null required values
+     * @return StagedQuoteTransitionStateAction
      */
     public StagedQuoteTransitionStateAction buildUnchecked() {
         return new StagedQuoteTransitionStateActionImpl(state, force);

@@ -26,6 +26,7 @@ public class StagedOrderRemovePaymentActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @param builder function to build the payment value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class StagedOrderRemovePaymentActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
-     * @param payment
+     * @param payment value to be set
      * @return Builder
      */
 
@@ -52,13 +53,18 @@ public class StagedOrderRemovePaymentActionBuilder implements Builder<StagedOrde
         return this.payment;
     }
 
+    /**
+     * builds StagedOrderRemovePaymentAction with checking for non-null required values
+     * @return StagedOrderRemovePaymentAction
+     */
     public StagedOrderRemovePaymentAction build() {
         Objects.requireNonNull(payment, StagedOrderRemovePaymentAction.class + ": payment is missing");
         return new StagedOrderRemovePaymentActionImpl(payment);
     }
 
     /**
-     * builds StagedOrderRemovePaymentAction without checking for non null required values
+     * builds StagedOrderRemovePaymentAction without checking for non-null required values
+     * @return StagedOrderRemovePaymentAction
      */
     public StagedOrderRemovePaymentAction buildUnchecked() {
         return new StagedOrderRemovePaymentActionImpl(payment);

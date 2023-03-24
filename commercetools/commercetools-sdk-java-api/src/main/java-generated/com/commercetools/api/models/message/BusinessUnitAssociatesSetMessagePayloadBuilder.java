@@ -27,7 +27,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
-     * @param associates
+     * @param associates value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
-     * @param associates
+     * @param associates value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
-     * @param associates
+     * @param associates value to be set
      * @return Builder
      */
 
@@ -66,6 +66,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @param builder function to build the associates value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @param builder function to build the associates value
      * @return Builder
      */
 
@@ -94,13 +96,18 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
         return this.associates;
     }
 
+    /**
+     * builds BusinessUnitAssociatesSetMessagePayload with checking for non-null required values
+     * @return BusinessUnitAssociatesSetMessagePayload
+     */
     public BusinessUnitAssociatesSetMessagePayload build() {
         Objects.requireNonNull(associates, BusinessUnitAssociatesSetMessagePayload.class + ": associates is missing");
         return new BusinessUnitAssociatesSetMessagePayloadImpl(associates);
     }
 
     /**
-     * builds BusinessUnitAssociatesSetMessagePayload without checking for non null required values
+     * builds BusinessUnitAssociatesSetMessagePayload without checking for non-null required values
+     * @return BusinessUnitAssociatesSetMessagePayload
      */
     public BusinessUnitAssociatesSetMessagePayload buildUnchecked() {
         return new BusinessUnitAssociatesSetMessagePayloadImpl(associates);

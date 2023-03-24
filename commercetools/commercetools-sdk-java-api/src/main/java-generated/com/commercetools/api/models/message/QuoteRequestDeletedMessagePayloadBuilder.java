@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteRequestDeletedMessagePayloadBuilder implements Builder<QuoteRequestDeletedMessagePayload> {
 
+    /**
+     * builds QuoteRequestDeletedMessagePayload with checking for non-null required values
+     * @return QuoteRequestDeletedMessagePayload
+     */
     public QuoteRequestDeletedMessagePayload build() {
         return new QuoteRequestDeletedMessagePayloadImpl();
     }
 
     /**
-     * builds QuoteRequestDeletedMessagePayload without checking for non null required values
+     * builds QuoteRequestDeletedMessagePayload without checking for non-null required values
+     * @return QuoteRequestDeletedMessagePayload
      */
     public QuoteRequestDeletedMessagePayload buildUnchecked() {
         return new QuoteRequestDeletedMessagePayloadImpl();

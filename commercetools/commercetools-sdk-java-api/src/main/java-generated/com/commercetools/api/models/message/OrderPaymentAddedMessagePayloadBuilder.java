@@ -26,6 +26,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
 
     /**
      *  <p>Payment that was added to the Order.</p>
+     * @param builder function to build the payment value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
 
     /**
      *  <p>Payment that was added to the Order.</p>
-     * @param payment
+     * @param payment value to be set
      * @return Builder
      */
 
@@ -51,13 +52,18 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
         return this.payment;
     }
 
+    /**
+     * builds OrderPaymentAddedMessagePayload with checking for non-null required values
+     * @return OrderPaymentAddedMessagePayload
+     */
     public OrderPaymentAddedMessagePayload build() {
         Objects.requireNonNull(payment, OrderPaymentAddedMessagePayload.class + ": payment is missing");
         return new OrderPaymentAddedMessagePayloadImpl(payment);
     }
 
     /**
-     * builds OrderPaymentAddedMessagePayload without checking for non null required values
+     * builds OrderPaymentAddedMessagePayload without checking for non-null required values
+     * @return OrderPaymentAddedMessagePayload
      */
     public OrderPaymentAddedMessagePayload buildUnchecked() {
         return new OrderPaymentAddedMessagePayloadImpl(payment);

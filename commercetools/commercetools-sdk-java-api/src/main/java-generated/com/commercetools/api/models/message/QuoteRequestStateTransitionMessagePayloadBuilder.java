@@ -35,6 +35,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -58,6 +59,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @param builder function to build the oldState value
      * @return Builder
      */
 
@@ -69,7 +71,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
-     * @param oldState
+     * @param oldState value to be set
      * @return Builder
      */
 
@@ -81,7 +83,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -103,6 +105,10 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
         return this.force;
     }
 
+    /**
+     * builds QuoteRequestStateTransitionMessagePayload with checking for non-null required values
+     * @return QuoteRequestStateTransitionMessagePayload
+     */
     public QuoteRequestStateTransitionMessagePayload build() {
         Objects.requireNonNull(state, QuoteRequestStateTransitionMessagePayload.class + ": state is missing");
         Objects.requireNonNull(force, QuoteRequestStateTransitionMessagePayload.class + ": force is missing");
@@ -110,7 +116,8 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     * builds QuoteRequestStateTransitionMessagePayload without checking for non null required values
+     * builds QuoteRequestStateTransitionMessagePayload without checking for non-null required values
+     * @return QuoteRequestStateTransitionMessagePayload
      */
     public QuoteRequestStateTransitionMessagePayload buildUnchecked() {
         return new QuoteRequestStateTransitionMessagePayloadImpl(state, oldState, force);

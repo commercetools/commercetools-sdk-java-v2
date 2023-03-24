@@ -27,7 +27,7 @@ public class DiscountCodeSetCartPredicateActionBuilder implements Builder<Discou
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     * @param cartPredicate
+     * @param cartPredicate value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class DiscountCodeSetCartPredicateActionBuilder implements Builder<Discou
         return this.cartPredicate;
     }
 
+    /**
+     * builds DiscountCodeSetCartPredicateAction with checking for non-null required values
+     * @return DiscountCodeSetCartPredicateAction
+     */
     public DiscountCodeSetCartPredicateAction build() {
         return new DiscountCodeSetCartPredicateActionImpl(cartPredicate);
     }
 
     /**
-     * builds DiscountCodeSetCartPredicateAction without checking for non null required values
+     * builds DiscountCodeSetCartPredicateAction without checking for non-null required values
+     * @return DiscountCodeSetCartPredicateAction
      */
     public DiscountCodeSetCartPredicateAction buildUnchecked() {
         return new DiscountCodeSetCartPredicateActionImpl(cartPredicate);

@@ -37,6 +37,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>The Order search query.</p>
+     * @param builder function to build the query value
      * @return Builder
      */
 
@@ -48,7 +49,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>The Order search query.</p>
-     * @param query
+     * @param query value to be set
      * @return Builder
      */
 
@@ -59,7 +60,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
-     * @param sort
+     * @param sort value to be set
      * @return Builder
      */
 
@@ -71,7 +72,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
-     * @param sort
+     * @param sort value to be set
      * @return Builder
      */
 
@@ -83,7 +84,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
-     * @param sort
+     * @param sort value to be set
      * @return Builder
      */
 
@@ -98,6 +99,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @param builder function to build the sort value
      * @return Builder
      */
 
@@ -112,6 +114,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @param builder function to build the sort value
      * @return Builder
      */
 
@@ -124,7 +127,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>The maximum number of search results to be returned.</p>
-     * @param limit
+     * @param limit value to be set
      * @return Builder
      */
 
@@ -135,7 +138,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>The number of search results to be skipped in the response for pagination.</p>
-     * @param offset
+     * @param offset value to be set
      * @return Builder
      */
 
@@ -163,13 +166,18 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
         return this.offset;
     }
 
+    /**
+     * builds OrderSearchRequest with checking for non-null required values
+     * @return OrderSearchRequest
+     */
     public OrderSearchRequest build() {
         Objects.requireNonNull(query, OrderSearchRequest.class + ": query is missing");
         return new OrderSearchRequestImpl(query, sort, limit, offset);
     }
 
     /**
-     * builds OrderSearchRequest without checking for non null required values
+     * builds OrderSearchRequest without checking for non-null required values
+     * @return OrderSearchRequest
      */
     public OrderSearchRequest buildUnchecked() {
         return new OrderSearchRequestImpl(query, sort, limit, offset);

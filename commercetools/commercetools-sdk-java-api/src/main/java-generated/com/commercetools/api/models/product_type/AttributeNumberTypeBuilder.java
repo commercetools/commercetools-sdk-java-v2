@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeNumberTypeBuilder implements Builder<AttributeNumberType> {
 
+    /**
+     * builds AttributeNumberType with checking for non-null required values
+     * @return AttributeNumberType
+     */
     public AttributeNumberType build() {
         return new AttributeNumberTypeImpl();
     }
 
     /**
-     * builds AttributeNumberType without checking for non null required values
+     * builds AttributeNumberType without checking for non-null required values
+     * @return AttributeNumberType
      */
     public AttributeNumberType buildUnchecked() {
         return new AttributeNumberTypeImpl();

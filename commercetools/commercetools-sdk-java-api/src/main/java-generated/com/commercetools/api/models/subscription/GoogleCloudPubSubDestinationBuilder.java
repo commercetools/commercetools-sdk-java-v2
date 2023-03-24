@@ -28,7 +28,7 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
 
     /**
      *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
-     * @param projectId
+     * @param projectId value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
 
     /**
      *  <p>Name of the topic.</p>
-     * @param topic
+     * @param topic value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
         return this.topic;
     }
 
+    /**
+     * builds GoogleCloudPubSubDestination with checking for non-null required values
+     * @return GoogleCloudPubSubDestination
+     */
     public GoogleCloudPubSubDestination build() {
         Objects.requireNonNull(projectId, GoogleCloudPubSubDestination.class + ": projectId is missing");
         Objects.requireNonNull(topic, GoogleCloudPubSubDestination.class + ": topic is missing");
@@ -63,7 +67,8 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
     }
 
     /**
-     * builds GoogleCloudPubSubDestination without checking for non null required values
+     * builds GoogleCloudPubSubDestination without checking for non-null required values
+     * @return GoogleCloudPubSubDestination
      */
     public GoogleCloudPubSubDestination buildUnchecked() {
         return new GoogleCloudPubSubDestinationImpl(projectId, topic);

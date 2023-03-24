@@ -79,7 +79,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -90,7 +90,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -101,7 +101,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -112,7 +112,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -123,6 +123,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -134,7 +135,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -146,6 +147,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -157,7 +159,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -169,7 +171,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
-     * @param sequenceNumber
+     * @param sequenceNumber value to be set
      * @return Builder
      */
 
@@ -180,7 +182,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -191,6 +193,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -202,7 +205,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
-     * @param resourceVersion
+     * @param resourceVersion value to be set
      * @return Builder
      */
 
@@ -213,6 +216,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
 
@@ -226,7 +230,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
-     * @param resourceUserProvidedIdentifiers
+     * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
 
@@ -238,7 +242,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -249,7 +253,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
-     * @param removedQuantity
+     * @param removedQuantity value to be set
      * @return Builder
      */
 
@@ -260,7 +264,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Line Item quantity after the Remove Line Item update action.</p>
-     * @param newQuantity
+     * @param newQuantity value to be set
      * @return Builder
      */
 
@@ -271,7 +275,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
-     * @param newState
+     * @param newState value to be set
      * @return Builder
      */
 
@@ -282,7 +286,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
-     * @param newState
+     * @param newState value to be set
      * @return Builder
      */
 
@@ -294,7 +298,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
-     * @param newState
+     * @param newState value to be set
      * @return Builder
      */
 
@@ -309,6 +313,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @param builder function to build the newState value
      * @return Builder
      */
 
@@ -323,6 +328,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @param builder function to build the newState value
      * @return Builder
      */
 
@@ -335,6 +341,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newTotalPrice value
      * @return Builder
      */
 
@@ -346,7 +353,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
-     * @param newTotalPrice
+     * @param newTotalPrice value to be set
      * @return Builder
      */
 
@@ -358,6 +365,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newTaxedPrice value
      * @return Builder
      */
 
@@ -369,7 +377,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
-     * @param newTaxedPrice
+     * @param newTaxedPrice value to be set
      * @return Builder
      */
 
@@ -381,6 +389,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Price of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newPrice value
      * @return Builder
      */
 
@@ -392,7 +401,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Price of the Order after the Remove Line Item update action.</p>
-     * @param newPrice
+     * @param newPrice value to be set
      * @return Builder
      */
 
@@ -404,6 +413,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newShippingDetail value
      * @return Builder
      */
 
@@ -416,7 +426,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     /**
      *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
-     * @param newShippingDetail
+     * @param newShippingDetail value to be set
      * @return Builder
      */
 
@@ -504,6 +514,10 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this.newShippingDetail;
     }
 
+    /**
+     * builds OrderLineItemRemovedMessage with checking for non-null required values
+     * @return OrderLineItemRemovedMessage
+     */
     public OrderLineItemRemovedMessage build() {
         Objects.requireNonNull(id, OrderLineItemRemovedMessage.class + ": id is missing");
         Objects.requireNonNull(version, OrderLineItemRemovedMessage.class + ": version is missing");
@@ -523,7 +537,8 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     * builds OrderLineItemRemovedMessage without checking for non null required values
+     * builds OrderLineItemRemovedMessage without checking for non-null required values
+     * @return OrderLineItemRemovedMessage
      */
     public OrderLineItemRemovedMessage buildUnchecked() {
         return new OrderLineItemRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,

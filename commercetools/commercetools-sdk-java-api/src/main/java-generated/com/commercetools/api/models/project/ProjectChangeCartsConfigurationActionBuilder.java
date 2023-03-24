@@ -26,6 +26,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
 
     /**
      *  <p>Configuration for the Carts feature.</p>
+     * @param builder function to build the cartsConfiguration value
      * @return Builder
      */
 
@@ -38,7 +39,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
 
     /**
      *  <p>Configuration for the Carts feature.</p>
-     * @param cartsConfiguration
+     * @param cartsConfiguration value to be set
      * @return Builder
      */
 
@@ -52,6 +53,10 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
         return this.cartsConfiguration;
     }
 
+    /**
+     * builds ProjectChangeCartsConfigurationAction with checking for non-null required values
+     * @return ProjectChangeCartsConfigurationAction
+     */
     public ProjectChangeCartsConfigurationAction build() {
         Objects.requireNonNull(cartsConfiguration,
             ProjectChangeCartsConfigurationAction.class + ": cartsConfiguration is missing");
@@ -59,7 +64,8 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     }
 
     /**
-     * builds ProjectChangeCartsConfigurationAction without checking for non null required values
+     * builds ProjectChangeCartsConfigurationAction without checking for non-null required values
+     * @return ProjectChangeCartsConfigurationAction
      */
     public ProjectChangeCartsConfigurationAction buildUnchecked() {
         return new ProjectChangeCartsConfigurationActionImpl(cartsConfiguration);

@@ -27,7 +27,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -66,12 +66,17 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
         return this.languages;
     }
 
+    /**
+     * builds StoreSetLanguagesAction with checking for non-null required values
+     * @return StoreSetLanguagesAction
+     */
     public StoreSetLanguagesAction build() {
         return new StoreSetLanguagesActionImpl(languages);
     }
 
     /**
-     * builds StoreSetLanguagesAction without checking for non null required values
+     * builds StoreSetLanguagesAction without checking for non-null required values
+     * @return StoreSetLanguagesAction
      */
     public StoreSetLanguagesAction buildUnchecked() {
         return new StoreSetLanguagesActionImpl(languages);

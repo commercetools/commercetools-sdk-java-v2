@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductUnpublishActionBuilder implements Builder<ProductUnpublishAction> {
 
+    /**
+     * builds ProductUnpublishAction with checking for non-null required values
+     * @return ProductUnpublishAction
+     */
     public ProductUnpublishAction build() {
         return new ProductUnpublishActionImpl();
     }
 
     /**
-     * builds ProductUnpublishAction without checking for non null required values
+     * builds ProductUnpublishAction without checking for non-null required values
+     * @return ProductUnpublishAction
      */
     public ProductUnpublishAction buildUnchecked() {
         return new ProductUnpublishActionImpl();

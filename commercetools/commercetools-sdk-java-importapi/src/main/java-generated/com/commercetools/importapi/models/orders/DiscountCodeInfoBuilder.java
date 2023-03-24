@@ -31,6 +31,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     /**
      *  <p>References a discount code by key.</p>
+     * @param builder function to build the discountCode value
      * @return Builder
      */
 
@@ -44,7 +45,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     /**
      *  <p>References a discount code by key.</p>
-     * @param discountCode
+     * @param discountCode value to be set
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     /**
      *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -75,13 +76,18 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
         return this.state;
     }
 
+    /**
+     * builds DiscountCodeInfo with checking for non-null required values
+     * @return DiscountCodeInfo
+     */
     public DiscountCodeInfo build() {
         Objects.requireNonNull(discountCode, DiscountCodeInfo.class + ": discountCode is missing");
         return new DiscountCodeInfoImpl(discountCode, state);
     }
 
     /**
-     * builds DiscountCodeInfo without checking for non null required values
+     * builds DiscountCodeInfo without checking for non-null required values
+     * @return DiscountCodeInfo
      */
     public DiscountCodeInfo buildUnchecked() {
         return new DiscountCodeInfoImpl(discountCode, state);

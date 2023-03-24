@@ -31,7 +31,7 @@ public class MyBusinessUnitAddShippingAddressIdActionBuilder
 
     /**
      *  <p>ID of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class MyBusinessUnitAddShippingAddressIdActionBuilder
 
     /**
      *  <p>Key of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -61,12 +61,17 @@ public class MyBusinessUnitAddShippingAddressIdActionBuilder
         return this.addressKey;
     }
 
+    /**
+     * builds MyBusinessUnitAddShippingAddressIdAction with checking for non-null required values
+     * @return MyBusinessUnitAddShippingAddressIdAction
+     */
     public MyBusinessUnitAddShippingAddressIdAction build() {
         return new MyBusinessUnitAddShippingAddressIdActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds MyBusinessUnitAddShippingAddressIdAction without checking for non null required values
+     * builds MyBusinessUnitAddShippingAddressIdAction without checking for non-null required values
+     * @return MyBusinessUnitAddShippingAddressIdAction
      */
     public MyBusinessUnitAddShippingAddressIdAction buildUnchecked() {
         return new MyBusinessUnitAddShippingAddressIdActionImpl(addressId, addressKey);

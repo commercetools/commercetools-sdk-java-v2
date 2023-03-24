@@ -35,7 +35,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *  <p>Update action for adding prices</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *
-     * @param priceId
+     * @param priceId value to be set
      * @return Builder
      */
 
@@ -68,6 +68,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -79,7 +80,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -104,6 +105,10 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds AddPriceChange with checking for non-null required values
+     * @return AddPriceChange
+     */
     public AddPriceChange build() {
         Objects.requireNonNull(change, AddPriceChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, AddPriceChange.class + ": catalogData is missing");
@@ -113,7 +118,8 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
-     * builds AddPriceChange without checking for non null required values
+     * builds AddPriceChange without checking for non-null required values
+     * @return AddPriceChange
      */
     public AddPriceChange buildUnchecked() {
         return new AddPriceChangeImpl(change, catalogData, priceId, nextValue);

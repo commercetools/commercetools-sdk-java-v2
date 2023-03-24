@@ -39,7 +39,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      *  <p>Indicates whether a Product Variant is in stock in a specified Channel.</p>
-     * @param isOnStock
+     * @param isOnStock value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      *  <p>Number of days to restock a Product Variant once it is out of stock in a specified Channel.</p>
-     * @param restockableInDays
+     * @param restockableInDays value to be set
      * @return Builder
      */
 
@@ -61,7 +61,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      *  <p>Number of items of this Product Variant that are in stock in a specified Channel.</p>
-     * @param availableQuantity
+     * @param availableQuantity value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the InventoryEntry.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      *  <p>Current version of the InventoryEntry.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -115,6 +115,10 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         return this.version;
     }
 
+    /**
+     * builds ProductVariantChannelAvailability with checking for non-null required values
+     * @return ProductVariantChannelAvailability
+     */
     public ProductVariantChannelAvailability build() {
         Objects.requireNonNull(id, ProductVariantChannelAvailability.class + ": id is missing");
         Objects.requireNonNull(version, ProductVariantChannelAvailability.class + ": version is missing");
@@ -122,7 +126,8 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     * builds ProductVariantChannelAvailability without checking for non null required values
+     * builds ProductVariantChannelAvailability without checking for non-null required values
+     * @return ProductVariantChannelAvailability
      */
     public ProductVariantChannelAvailability buildUnchecked() {
         return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, id, version);

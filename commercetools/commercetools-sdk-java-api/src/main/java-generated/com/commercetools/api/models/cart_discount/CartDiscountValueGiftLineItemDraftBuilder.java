@@ -37,6 +37,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
@@ -49,7 +50,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
-     * @param product
+     * @param product value to be set
      * @return Builder
      */
 
@@ -61,7 +62,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ProductVariant of the Product.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -72,6 +73,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>Channel must have the role <code>InventorySupply</code>.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -84,7 +86,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>Channel must have the role <code>InventorySupply</code>.</p>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -96,6 +98,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
+     * @param builder function to build the distributionChannel value
      * @return Builder
      */
 
@@ -109,7 +112,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
-     * @param distributionChannel
+     * @param distributionChannel value to be set
      * @return Builder
      */
 
@@ -137,6 +140,10 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
         return this.distributionChannel;
     }
 
+    /**
+     * builds CartDiscountValueGiftLineItemDraft with checking for non-null required values
+     * @return CartDiscountValueGiftLineItemDraft
+     */
     public CartDiscountValueGiftLineItemDraft build() {
         Objects.requireNonNull(product, CartDiscountValueGiftLineItemDraft.class + ": product is missing");
         Objects.requireNonNull(variantId, CartDiscountValueGiftLineItemDraft.class + ": variantId is missing");
@@ -144,7 +151,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-     * builds CartDiscountValueGiftLineItemDraft without checking for non null required values
+     * builds CartDiscountValueGiftLineItemDraft without checking for non-null required values
+     * @return CartDiscountValueGiftLineItemDraft
      */
     public CartDiscountValueGiftLineItemDraft buildUnchecked() {
         return new CartDiscountValueGiftLineItemDraftImpl(product, variantId, supplyChannel, distributionChannel);

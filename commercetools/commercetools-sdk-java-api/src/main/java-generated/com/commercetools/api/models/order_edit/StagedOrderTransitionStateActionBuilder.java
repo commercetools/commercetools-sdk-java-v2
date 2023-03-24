@@ -31,6 +31,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the state value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
 
     /**
      *
-     * @param force
+     * @param force value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
         return this.force;
     }
 
+    /**
+     * builds StagedOrderTransitionStateAction with checking for non-null required values
+     * @return StagedOrderTransitionStateAction
+     */
     public StagedOrderTransitionStateAction build() {
         Objects.requireNonNull(state, StagedOrderTransitionStateAction.class + ": state is missing");
         return new StagedOrderTransitionStateActionImpl(state, force);
     }
 
     /**
-     * builds StagedOrderTransitionStateAction without checking for non null required values
+     * builds StagedOrderTransitionStateAction without checking for non-null required values
+     * @return StagedOrderTransitionStateAction
      */
     public StagedOrderTransitionStateAction buildUnchecked() {
         return new StagedOrderTransitionStateActionImpl(state, force);

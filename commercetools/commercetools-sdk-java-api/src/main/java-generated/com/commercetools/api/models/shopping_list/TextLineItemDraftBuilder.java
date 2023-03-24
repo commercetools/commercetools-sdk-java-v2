@@ -40,7 +40,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
-     * @param addedAt
+     * @param addedAt value to be set
      * @return Builder
      */
 
@@ -51,6 +51,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Custom Fields for the TextLineItem.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -62,7 +63,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Custom Fields for the TextLineItem.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -73,6 +74,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -84,7 +86,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Description of the TextLineItem.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -96,6 +98,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -107,7 +110,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Name of the TextLineItem.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -118,7 +121,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Number of entries in the TextLineItem.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -151,13 +154,18 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
         return this.quantity;
     }
 
+    /**
+     * builds TextLineItemDraft with checking for non-null required values
+     * @return TextLineItemDraft
+     */
     public TextLineItemDraft build() {
         Objects.requireNonNull(name, TextLineItemDraft.class + ": name is missing");
         return new TextLineItemDraftImpl(addedAt, custom, description, name, quantity);
     }
 
     /**
-     * builds TextLineItemDraft without checking for non null required values
+     * builds TextLineItemDraft without checking for non-null required values
+     * @return TextLineItemDraft
      */
     public TextLineItemDraft buildUnchecked() {
         return new TextLineItemDraftImpl(addedAt, custom, description, name, quantity);

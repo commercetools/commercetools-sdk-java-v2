@@ -30,7 +30,7 @@ public class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -84,13 +84,18 @@ public class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> {
         return this.value;
     }
 
+    /**
+     * builds TimeSetAttribute with checking for non-null required values
+     * @return TimeSetAttribute
+     */
     public TimeSetAttribute build() {
         Objects.requireNonNull(value, TimeSetAttribute.class + ": value is missing");
         return new TimeSetAttributeImpl(name, value);
     }
 
     /**
-     * builds TimeSetAttribute without checking for non null required values
+     * builds TimeSetAttribute without checking for non-null required values
+     * @return TimeSetAttribute
      */
     public TimeSetAttribute buildUnchecked() {
         return new TimeSetAttributeImpl(name, value);

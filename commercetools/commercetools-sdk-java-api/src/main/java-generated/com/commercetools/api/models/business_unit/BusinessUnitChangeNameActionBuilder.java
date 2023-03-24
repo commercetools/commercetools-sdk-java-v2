@@ -25,7 +25,7 @@ public class BusinessUnitChangeNameActionBuilder implements Builder<BusinessUnit
 
     /**
      *  <p>New name to set.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class BusinessUnitChangeNameActionBuilder implements Builder<BusinessUnit
         return this.name;
     }
 
+    /**
+     * builds BusinessUnitChangeNameAction with checking for non-null required values
+     * @return BusinessUnitChangeNameAction
+     */
     public BusinessUnitChangeNameAction build() {
         Objects.requireNonNull(name, BusinessUnitChangeNameAction.class + ": name is missing");
         return new BusinessUnitChangeNameActionImpl(name);
     }
 
     /**
-     * builds BusinessUnitChangeNameAction without checking for non null required values
+     * builds BusinessUnitChangeNameAction without checking for non-null required values
+     * @return BusinessUnitChangeNameAction
      */
     public BusinessUnitChangeNameAction buildUnchecked() {
         return new BusinessUnitChangeNameActionImpl(name);

@@ -27,7 +27,7 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
 
     /**
      *  <p>Plain text description of the cause of the error.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public InvalidSubjectErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public InvalidSubjectErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
         return this.values;
     }
 
+    /**
+     * builds InvalidSubjectError with checking for non-null required values
+     * @return InvalidSubjectError
+     */
     public InvalidSubjectError build() {
         Objects.requireNonNull(message, InvalidSubjectError.class + ": message is missing");
         return new InvalidSubjectErrorImpl(message, values);
     }
 
     /**
-     * builds InvalidSubjectError without checking for non null required values
+     * builds InvalidSubjectError without checking for non-null required values
+     * @return InvalidSubjectError
      */
     public InvalidSubjectError buildUnchecked() {
         return new InvalidSubjectErrorImpl(message, values);

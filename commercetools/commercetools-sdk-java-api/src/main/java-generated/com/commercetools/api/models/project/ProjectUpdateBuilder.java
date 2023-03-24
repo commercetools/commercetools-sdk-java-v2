@@ -29,7 +29,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
 
     /**
      *  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Project.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Project.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -63,7 +63,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Project.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -77,6 +77,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Project.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -91,6 +92,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Project.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -109,6 +111,10 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds ProjectUpdate with checking for non-null required values
+     * @return ProjectUpdate
+     */
     public ProjectUpdate build() {
         Objects.requireNonNull(version, ProjectUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, ProjectUpdate.class + ": actions is missing");
@@ -116,7 +122,8 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     * builds ProjectUpdate without checking for non null required values
+     * builds ProjectUpdate without checking for non-null required values
+     * @return ProjectUpdate
      */
     public ProjectUpdate buildUnchecked() {
         return new ProjectUpdateImpl(version, actions);

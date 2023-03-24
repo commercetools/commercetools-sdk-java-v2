@@ -25,7 +25,7 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
 
     /**
      *  <p>New value to set.</p>
-     * @param cartPredicate
+     * @param cartPredicate value to be set
      * @return Builder
      */
 
@@ -38,6 +38,10 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
         return this.cartPredicate;
     }
 
+    /**
+     * builds CartDiscountChangeCartPredicateAction with checking for non-null required values
+     * @return CartDiscountChangeCartPredicateAction
+     */
     public CartDiscountChangeCartPredicateAction build() {
         Objects.requireNonNull(cartPredicate,
             CartDiscountChangeCartPredicateAction.class + ": cartPredicate is missing");
@@ -45,7 +49,8 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
     }
 
     /**
-     * builds CartDiscountChangeCartPredicateAction without checking for non null required values
+     * builds CartDiscountChangeCartPredicateAction without checking for non-null required values
+     * @return CartDiscountChangeCartPredicateAction
      */
     public CartDiscountChangeCartPredicateAction buildUnchecked() {
         return new CartDiscountChangeCartPredicateActionImpl(cartPredicate);

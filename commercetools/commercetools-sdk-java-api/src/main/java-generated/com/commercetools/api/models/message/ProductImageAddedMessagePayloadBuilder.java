@@ -32,7 +32,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
 
     /**
      *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
 
     /**
      *  <p>Image that was added.</p>
+     * @param builder function to build the image value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
 
     /**
      *  <p>Image that was added.</p>
-     * @param image
+     * @param image value to be set
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -86,6 +87,10 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
         return this.staged;
     }
 
+    /**
+     * builds ProductImageAddedMessagePayload with checking for non-null required values
+     * @return ProductImageAddedMessagePayload
+     */
     public ProductImageAddedMessagePayload build() {
         Objects.requireNonNull(variantId, ProductImageAddedMessagePayload.class + ": variantId is missing");
         Objects.requireNonNull(image, ProductImageAddedMessagePayload.class + ": image is missing");
@@ -94,7 +99,8 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     * builds ProductImageAddedMessagePayload without checking for non null required values
+     * builds ProductImageAddedMessagePayload without checking for non-null required values
+     * @return ProductImageAddedMessagePayload
      */
     public ProductImageAddedMessagePayload buildUnchecked() {
         return new ProductImageAddedMessagePayloadImpl(variantId, image, staged);

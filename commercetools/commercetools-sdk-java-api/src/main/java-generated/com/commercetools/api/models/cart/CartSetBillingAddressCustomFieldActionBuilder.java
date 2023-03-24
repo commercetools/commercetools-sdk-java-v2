@@ -30,7 +30,7 @@ public class CartSetBillingAddressCustomFieldActionBuilder implements Builder<Ca
 
     /**
      *  <p>Name of the Custom Field.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CartSetBillingAddressCustomFieldActionBuilder implements Builder<Ca
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -59,13 +59,18 @@ public class CartSetBillingAddressCustomFieldActionBuilder implements Builder<Ca
         return this.value;
     }
 
+    /**
+     * builds CartSetBillingAddressCustomFieldAction with checking for non-null required values
+     * @return CartSetBillingAddressCustomFieldAction
+     */
     public CartSetBillingAddressCustomFieldAction build() {
         Objects.requireNonNull(name, CartSetBillingAddressCustomFieldAction.class + ": name is missing");
         return new CartSetBillingAddressCustomFieldActionImpl(name, value);
     }
 
     /**
-     * builds CartSetBillingAddressCustomFieldAction without checking for non null required values
+     * builds CartSetBillingAddressCustomFieldAction without checking for non-null required values
+     * @return CartSetBillingAddressCustomFieldAction
      */
     public CartSetBillingAddressCustomFieldAction buildUnchecked() {
         return new CartSetBillingAddressCustomFieldActionImpl(name, value);

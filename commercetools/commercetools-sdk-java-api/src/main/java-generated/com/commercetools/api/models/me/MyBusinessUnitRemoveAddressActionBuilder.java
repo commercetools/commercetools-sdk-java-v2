@@ -30,7 +30,7 @@ public class MyBusinessUnitRemoveAddressActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>ID of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressId
+     * @param addressId value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class MyBusinessUnitRemoveAddressActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>Key of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
-     * @param addressKey
+     * @param addressKey value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class MyBusinessUnitRemoveAddressActionBuilder implements Builder<MyBusin
         return this.addressKey;
     }
 
+    /**
+     * builds MyBusinessUnitRemoveAddressAction with checking for non-null required values
+     * @return MyBusinessUnitRemoveAddressAction
+     */
     public MyBusinessUnitRemoveAddressAction build() {
         return new MyBusinessUnitRemoveAddressActionImpl(addressId, addressKey);
     }
 
     /**
-     * builds MyBusinessUnitRemoveAddressAction without checking for non null required values
+     * builds MyBusinessUnitRemoveAddressAction without checking for non-null required values
+     * @return MyBusinessUnitRemoveAddressAction
      */
     public MyBusinessUnitRemoveAddressAction buildUnchecked() {
         return new MyBusinessUnitRemoveAddressActionImpl(addressId, addressKey);

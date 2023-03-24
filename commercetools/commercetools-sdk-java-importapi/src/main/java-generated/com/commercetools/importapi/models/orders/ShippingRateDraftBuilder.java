@@ -34,6 +34,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -45,7 +46,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -56,6 +57,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @param builder function to build the freeAbove value
      * @return Builder
      */
 
@@ -67,7 +69,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
-     * @param freeAbove
+     * @param freeAbove value to be set
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -91,7 +93,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -103,7 +105,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
-     * @param tiers
+     * @param tiers value to be set
      * @return Builder
      */
 
@@ -118,6 +120,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -133,6 +136,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @param builder function to build the tiers value
      * @return Builder
      */
 
@@ -158,13 +162,18 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return this.tiers;
     }
 
+    /**
+     * builds ShippingRateDraft with checking for non-null required values
+     * @return ShippingRateDraft
+     */
     public ShippingRateDraft build() {
         Objects.requireNonNull(price, ShippingRateDraft.class + ": price is missing");
         return new ShippingRateDraftImpl(price, freeAbove, tiers);
     }
 
     /**
-     * builds ShippingRateDraft without checking for non null required values
+     * builds ShippingRateDraft without checking for non-null required values
+     * @return ShippingRateDraft
      */
     public ShippingRateDraft buildUnchecked() {
         return new ShippingRateDraftImpl(price, freeAbove, tiers);

@@ -25,7 +25,7 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
 
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
-     * @param groups
+     * @param groups value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
 
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
-     * @param groups
+     * @param groups value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
 
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
-     * @param groups
+     * @param groups value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
         return this.groups;
     }
 
+    /**
+     * builds DiscountCodeChangeGroupsAction with checking for non-null required values
+     * @return DiscountCodeChangeGroupsAction
+     */
     public DiscountCodeChangeGroupsAction build() {
         Objects.requireNonNull(groups, DiscountCodeChangeGroupsAction.class + ": groups is missing");
         return new DiscountCodeChangeGroupsActionImpl(groups);
     }
 
     /**
-     * builds DiscountCodeChangeGroupsAction without checking for non null required values
+     * builds DiscountCodeChangeGroupsAction without checking for non-null required values
+     * @return DiscountCodeChangeGroupsAction
      */
     public DiscountCodeChangeGroupsAction buildUnchecked() {
         return new DiscountCodeChangeGroupsActionImpl(groups);

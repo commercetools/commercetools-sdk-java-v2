@@ -25,7 +25,7 @@ public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
         return this.change;
     }
 
+    /**
+     * builds VerifyEmailChange with checking for non-null required values
+     * @return VerifyEmailChange
+     */
     public VerifyEmailChange build() {
         Objects.requireNonNull(change, VerifyEmailChange.class + ": change is missing");
         return new VerifyEmailChangeImpl(change);
     }
 
     /**
-     * builds VerifyEmailChange without checking for non null required values
+     * builds VerifyEmailChange without checking for non-null required values
+     * @return VerifyEmailChange
      */
     public VerifyEmailChange buildUnchecked() {
         return new VerifyEmailChangeImpl(change);

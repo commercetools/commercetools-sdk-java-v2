@@ -30,7 +30,7 @@ public class DiscountCodeSetValidFromAndUntilActionBuilder implements Builder<Di
 
     /**
      *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class DiscountCodeSetValidFromAndUntilActionBuilder implements Builder<Di
 
     /**
      *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
-     * @param validUntil
+     * @param validUntil value to be set
      * @return Builder
      */
 
@@ -61,12 +61,17 @@ public class DiscountCodeSetValidFromAndUntilActionBuilder implements Builder<Di
         return this.validUntil;
     }
 
+    /**
+     * builds DiscountCodeSetValidFromAndUntilAction with checking for non-null required values
+     * @return DiscountCodeSetValidFromAndUntilAction
+     */
     public DiscountCodeSetValidFromAndUntilAction build() {
         return new DiscountCodeSetValidFromAndUntilActionImpl(validFrom, validUntil);
     }
 
     /**
-     * builds DiscountCodeSetValidFromAndUntilAction without checking for non null required values
+     * builds DiscountCodeSetValidFromAndUntilAction without checking for non-null required values
+     * @return DiscountCodeSetValidFromAndUntilAction
      */
     public DiscountCodeSetValidFromAndUntilAction buildUnchecked() {
         return new DiscountCodeSetValidFromAndUntilActionImpl(validFrom, validUntil);

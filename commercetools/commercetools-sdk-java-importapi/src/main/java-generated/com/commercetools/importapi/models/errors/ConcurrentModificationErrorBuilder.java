@@ -36,7 +36,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *  <p>The version specified in the failed request.</p>
-     * @param specifiedVersion
+     * @param specifiedVersion value to be set
      * @return Builder
      */
 
@@ -58,7 +58,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *  <p>The current version of the resource.</p>
-     * @param currentVersion
+     * @param currentVersion value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *  <p>The resource in conflict.</p>
-     * @param conflictedResource
+     * @param conflictedResource value to be set
      * @return Builder
      */
 
@@ -96,6 +96,10 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
         return this.conflictedResource;
     }
 
+    /**
+     * builds ConcurrentModificationError with checking for non-null required values
+     * @return ConcurrentModificationError
+     */
     public ConcurrentModificationError build() {
         Objects.requireNonNull(message, ConcurrentModificationError.class + ": message is missing");
         Objects.requireNonNull(currentVersion, ConcurrentModificationError.class + ": currentVersion is missing");
@@ -103,7 +107,8 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     * builds ConcurrentModificationError without checking for non null required values
+     * builds ConcurrentModificationError without checking for non-null required values
+     * @return ConcurrentModificationError
      */
     public ConcurrentModificationError buildUnchecked() {
         return new ConcurrentModificationErrorImpl(message, specifiedVersion, currentVersion, conflictedResource);

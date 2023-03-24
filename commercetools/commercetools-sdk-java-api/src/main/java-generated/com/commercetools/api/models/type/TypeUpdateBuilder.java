@@ -29,7 +29,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -51,7 +51,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -62,7 +62,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -76,6 +76,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -108,6 +110,10 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds TypeUpdate with checking for non-null required values
+     * @return TypeUpdate
+     */
     public TypeUpdate build() {
         Objects.requireNonNull(version, TypeUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, TypeUpdate.class + ": actions is missing");
@@ -115,7 +121,8 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
     }
 
     /**
-     * builds TypeUpdate without checking for non null required values
+     * builds TypeUpdate without checking for non-null required values
+     * @return TypeUpdate
      */
     public TypeUpdate buildUnchecked() {
         return new TypeUpdateImpl(version, actions);

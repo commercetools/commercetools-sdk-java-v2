@@ -30,7 +30,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -41,6 +41,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
 
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
+     * @param builder function to build the customLineItem value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
 
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
-     * @param customLineItem
+     * @param customLineItem value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
         return this.customLineItem;
     }
 
+    /**
+     * builds OrderCustomLineItemRemovedMessagePayload with checking for non-null required values
+     * @return OrderCustomLineItemRemovedMessagePayload
+     */
     public OrderCustomLineItemRemovedMessagePayload build() {
         Objects.requireNonNull(customLineItemId,
             OrderCustomLineItemRemovedMessagePayload.class + ": customLineItemId is missing");
@@ -79,7 +84,8 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     * builds OrderCustomLineItemRemovedMessagePayload without checking for non null required values
+     * builds OrderCustomLineItemRemovedMessagePayload without checking for non-null required values
+     * @return OrderCustomLineItemRemovedMessagePayload
      */
     public OrderCustomLineItemRemovedMessagePayload buildUnchecked() {
         return new OrderCustomLineItemRemovedMessagePayloadImpl(customLineItemId, customLineItem);

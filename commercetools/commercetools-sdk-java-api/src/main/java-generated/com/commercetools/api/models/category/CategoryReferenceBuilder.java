@@ -31,7 +31,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
 
     /**
      *  <p>Unique identifier of the referenced Category.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
 
     /**
      *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
 
     /**
      *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
         return this.obj;
     }
 
+    /**
+     * builds CategoryReference with checking for non-null required values
+     * @return CategoryReference
+     */
     public CategoryReference build() {
         Objects.requireNonNull(id, CategoryReference.class + ": id is missing");
         return new CategoryReferenceImpl(id, obj);
     }
 
     /**
-     * builds CategoryReference without checking for non null required values
+     * builds CategoryReference without checking for non-null required values
+     * @return CategoryReference
      */
     public CategoryReference buildUnchecked() {
         return new CategoryReferenceImpl(id, obj);

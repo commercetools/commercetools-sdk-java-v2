@@ -32,7 +32,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -56,7 +57,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -102,6 +104,10 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
         return this.nextValue;
     }
 
+    /**
+     * builds SetValidFromAndUntilChange with checking for non-null required values
+     * @return SetValidFromAndUntilChange
+     */
     public SetValidFromAndUntilChange build() {
         Objects.requireNonNull(change, SetValidFromAndUntilChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetValidFromAndUntilChange.class + ": previousValue is missing");
@@ -110,7 +116,8 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     * builds SetValidFromAndUntilChange without checking for non null required values
+     * builds SetValidFromAndUntilChange without checking for non-null required values
+     * @return SetValidFromAndUntilChange
      */
     public SetValidFromAndUntilChange buildUnchecked() {
         return new SetValidFromAndUntilChangeImpl(change, previousValue, nextValue);

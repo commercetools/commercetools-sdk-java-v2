@@ -30,6 +30,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the totalNet value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     * @param totalNet
+     * @param totalNet value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the totalGross value
      * @return Builder
      */
 
@@ -66,7 +68,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     * @param totalGross
+     * @param totalGross value to be set
      * @return Builder
      */
 
@@ -83,6 +85,10 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
         return this.totalGross;
     }
 
+    /**
+     * builds TaxedItemPriceDraft with checking for non-null required values
+     * @return TaxedItemPriceDraft
+     */
     public TaxedItemPriceDraft build() {
         Objects.requireNonNull(totalNet, TaxedItemPriceDraft.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedItemPriceDraft.class + ": totalGross is missing");
@@ -90,7 +96,8 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     }
 
     /**
-     * builds TaxedItemPriceDraft without checking for non null required values
+     * builds TaxedItemPriceDraft without checking for non-null required values
+     * @return TaxedItemPriceDraft
      */
     public TaxedItemPriceDraft buildUnchecked() {
         return new TaxedItemPriceDraftImpl(totalNet, totalGross);

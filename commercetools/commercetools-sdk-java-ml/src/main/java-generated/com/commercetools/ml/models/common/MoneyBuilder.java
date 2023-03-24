@@ -28,7 +28,7 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *
-     * @param centAmount
+     * @param centAmount value to be set
      * @return Builder
      */
 
@@ -39,7 +39,7 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *  <p>The currency code compliant to ISO 4217.</p>
-     * @param currencyCode
+     * @param currencyCode value to be set
      * @return Builder
      */
 
@@ -56,6 +56,10 @@ public class MoneyBuilder implements Builder<Money> {
         return this.currencyCode;
     }
 
+    /**
+     * builds Money with checking for non-null required values
+     * @return Money
+     */
     public Money build() {
         Objects.requireNonNull(centAmount, Money.class + ": centAmount is missing");
         Objects.requireNonNull(currencyCode, Money.class + ": currencyCode is missing");
@@ -63,7 +67,8 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     * builds Money without checking for non null required values
+     * builds Money without checking for non-null required values
+     * @return Money
      */
     public Money buildUnchecked() {
         return new MoneyImpl(centAmount, currencyCode);

@@ -29,6 +29,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     * @param builder function to build the states value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
-     * @param states
+     * @param states value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     /**
      *  <p>The total number of ImportOperations received for this Import Summary.</p>
-     * @param total
+     * @param total value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
         return this.total;
     }
 
+    /**
+     * builds ImportSummary with checking for non-null required values
+     * @return ImportSummary
+     */
     public ImportSummary build() {
         Objects.requireNonNull(states, ImportSummary.class + ": states is missing");
         Objects.requireNonNull(total, ImportSummary.class + ": total is missing");
@@ -77,7 +82,8 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     * builds ImportSummary without checking for non null required values
+     * builds ImportSummary without checking for non-null required values
+     * @return ImportSummary
      */
     public ImportSummary buildUnchecked() {
         return new ImportSummaryImpl(states, total);

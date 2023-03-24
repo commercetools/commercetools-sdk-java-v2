@@ -35,6 +35,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -46,7 +47,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -90,7 +92,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *
-     * @param inputHint
+     * @param inputHint value to be set
      * @return Builder
      */
 
@@ -115,6 +117,10 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         return this.inputHint;
     }
 
+    /**
+     * builds FieldDefinition with checking for non-null required values
+     * @return FieldDefinition
+     */
     public FieldDefinition build() {
         Objects.requireNonNull(type, FieldDefinition.class + ": type is missing");
         Objects.requireNonNull(name, FieldDefinition.class + ": name is missing");
@@ -124,7 +130,8 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * builds FieldDefinition without checking for non null required values
+     * builds FieldDefinition without checking for non-null required values
+     * @return FieldDefinition
      */
     public FieldDefinition buildUnchecked() {
         return new FieldDefinitionImpl(type, name, label, inputHint);

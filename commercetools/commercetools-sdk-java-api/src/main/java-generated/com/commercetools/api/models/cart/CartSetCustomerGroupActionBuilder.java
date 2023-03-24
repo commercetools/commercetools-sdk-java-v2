@@ -28,6 +28,7 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the customerGroup value
      * @return Builder
      */
 
@@ -41,7 +42,7 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param customerGroup
+     * @param customerGroup value to be set
      * @return Builder
      */
 
@@ -56,12 +57,17 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
         return this.customerGroup;
     }
 
+    /**
+     * builds CartSetCustomerGroupAction with checking for non-null required values
+     * @return CartSetCustomerGroupAction
+     */
     public CartSetCustomerGroupAction build() {
         return new CartSetCustomerGroupActionImpl(customerGroup);
     }
 
     /**
-     * builds CartSetCustomerGroupAction without checking for non null required values
+     * builds CartSetCustomerGroupAction without checking for non-null required values
+     * @return CartSetCustomerGroupAction
      */
     public CartSetCustomerGroupAction buildUnchecked() {
         return new CartSetCustomerGroupActionImpl(customerGroup);

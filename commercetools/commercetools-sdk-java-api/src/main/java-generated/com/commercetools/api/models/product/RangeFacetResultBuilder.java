@@ -26,7 +26,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
-     * @param ranges
+     * @param ranges value to be set
      * @return Builder
      */
 
@@ -37,7 +37,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
-     * @param ranges
+     * @param ranges value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
-     * @param ranges
+     * @param ranges value to be set
      * @return Builder
      */
 
@@ -63,6 +63,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
+     * @param builder function to build the ranges value
      * @return Builder
      */
 
@@ -77,6 +78,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
+     * @param builder function to build the ranges value
      * @return Builder
      */
 
@@ -91,13 +93,18 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
         return this.ranges;
     }
 
+    /**
+     * builds RangeFacetResult with checking for non-null required values
+     * @return RangeFacetResult
+     */
     public RangeFacetResult build() {
         Objects.requireNonNull(ranges, RangeFacetResult.class + ": ranges is missing");
         return new RangeFacetResultImpl(ranges);
     }
 
     /**
-     * builds RangeFacetResult without checking for non null required values
+     * builds RangeFacetResult without checking for non-null required values
+     * @return RangeFacetResult
      */
     public RangeFacetResult buildUnchecked() {
         return new RangeFacetResultImpl(ranges);

@@ -32,7 +32,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *  <p><code>"Object $resourceId has a different version than expected. Expected: $expectedVersion - Actual: $currentVersion."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -43,6 +43,8 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ConcurrentModificationErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -52,6 +54,9 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ConcurrentModificationErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -64,7 +69,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *  <p>Current version of the resource.</p>
-     * @param currentVersion
+     * @param currentVersion value to be set
      * @return Builder
      */
 
@@ -86,13 +91,18 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
         return this.currentVersion;
     }
 
+    /**
+     * builds ConcurrentModificationError with checking for non-null required values
+     * @return ConcurrentModificationError
+     */
     public ConcurrentModificationError build() {
         Objects.requireNonNull(message, ConcurrentModificationError.class + ": message is missing");
         return new ConcurrentModificationErrorImpl(message, values, currentVersion);
     }
 
     /**
-     * builds ConcurrentModificationError without checking for non null required values
+     * builds ConcurrentModificationError without checking for non-null required values
+     * @return ConcurrentModificationError
      */
     public ConcurrentModificationError buildUnchecked() {
         return new ConcurrentModificationErrorImpl(message, values, currentVersion);

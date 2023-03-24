@@ -25,7 +25,7 @@ public class StagedOrderChangeTaxModeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Indicates how taxes are set on the Cart.</p>
-     * @param taxMode
+     * @param taxMode value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class StagedOrderChangeTaxModeActionBuilder implements Builder<StagedOrde
         return this.taxMode;
     }
 
+    /**
+     * builds StagedOrderChangeTaxModeAction with checking for non-null required values
+     * @return StagedOrderChangeTaxModeAction
+     */
     public StagedOrderChangeTaxModeAction build() {
         Objects.requireNonNull(taxMode, StagedOrderChangeTaxModeAction.class + ": taxMode is missing");
         return new StagedOrderChangeTaxModeActionImpl(taxMode);
     }
 
     /**
-     * builds StagedOrderChangeTaxModeAction without checking for non null required values
+     * builds StagedOrderChangeTaxModeAction without checking for non-null required values
+     * @return StagedOrderChangeTaxModeAction
      */
     public StagedOrderChangeTaxModeAction buildUnchecked() {
         return new StagedOrderChangeTaxModeActionImpl(taxMode);

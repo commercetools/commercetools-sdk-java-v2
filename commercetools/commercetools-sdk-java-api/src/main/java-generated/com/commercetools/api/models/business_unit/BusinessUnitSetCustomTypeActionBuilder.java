@@ -31,6 +31,7 @@ public class BusinessUnitSetCustomTypeActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class BusinessUnitSetCustomTypeActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class BusinessUnitSetCustomTypeActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class BusinessUnitSetCustomTypeActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>Sets the Custom Fields for the BusinessUnit.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class BusinessUnitSetCustomTypeActionBuilder implements Builder<BusinessU
         return this.fields;
     }
 
+    /**
+     * builds BusinessUnitSetCustomTypeAction with checking for non-null required values
+     * @return BusinessUnitSetCustomTypeAction
+     */
     public BusinessUnitSetCustomTypeAction build() {
         return new BusinessUnitSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds BusinessUnitSetCustomTypeAction without checking for non null required values
+     * builds BusinessUnitSetCustomTypeAction without checking for non-null required values
+     * @return BusinessUnitSetCustomTypeAction
      */
     public BusinessUnitSetCustomTypeAction buildUnchecked() {
         return new BusinessUnitSetCustomTypeActionImpl(type, fields);

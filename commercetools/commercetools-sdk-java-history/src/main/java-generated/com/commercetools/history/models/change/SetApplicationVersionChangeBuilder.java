@@ -31,7 +31,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
 
     /**
      *  <p>Internal Update action for <code>setApplicationVersion</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
         return this.nextValue;
     }
 
+    /**
+     * builds SetApplicationVersionChange with checking for non-null required values
+     * @return SetApplicationVersionChange
+     */
     public SetApplicationVersionChange build() {
         Objects.requireNonNull(change, SetApplicationVersionChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetApplicationVersionChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     }
 
     /**
-     * builds SetApplicationVersionChange without checking for non null required values
+     * builds SetApplicationVersionChange without checking for non-null required values
+     * @return SetApplicationVersionChange
      */
     public SetApplicationVersionChange buildUnchecked() {
         return new SetApplicationVersionChangeImpl(change, previousValue, nextValue);

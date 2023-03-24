@@ -31,7 +31,7 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
 
     /**
      *  <p>Defines the effect the Discount will have.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
 
     /**
      *  <p>Defines the effect the Discount will have.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
     /**
      *  <p>Defines what part of the Cart will be discounted.</p>
      *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
-     * @param target
+     * @param target value to be set
      * @return Builder
      */
 
@@ -67,6 +68,7 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
     /**
      *  <p>Defines what part of the Cart will be discounted.</p>
      *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
+     * @param builder function to build the target value
      * @return Builder
      */
 
@@ -85,13 +87,18 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
         return this.target;
     }
 
+    /**
+     * builds DirectDiscountDraft with checking for non-null required values
+     * @return DirectDiscountDraft
+     */
     public DirectDiscountDraft build() {
         Objects.requireNonNull(value, DirectDiscountDraft.class + ": value is missing");
         return new DirectDiscountDraftImpl(value, target);
     }
 
     /**
-     * builds DirectDiscountDraft without checking for non null required values
+     * builds DirectDiscountDraft without checking for non-null required values
+     * @return DirectDiscountDraft
      */
     public DirectDiscountDraft buildUnchecked() {
         return new DirectDiscountDraftImpl(value, target);

@@ -30,7 +30,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
-     * @param targetsDelta
+     * @param targetsDelta value to be set
      * @return Builder
      */
 
@@ -54,7 +54,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
-     * @param targetsDelta
+     * @param targetsDelta value to be set
      * @return Builder
      */
 
@@ -66,7 +66,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
-     * @param targetsDelta
+     * @param targetsDelta value to be set
      * @return Builder
      */
 
@@ -81,6 +81,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param builder function to build the targetsDelta value
      * @return Builder
      */
 
@@ -95,6 +96,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param builder function to build the targetsDelta value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
         return this.targetsDelta;
     }
 
+    /**
+     * builds CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction with checking for non-null required values
+     * @return CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
+     */
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction build() {
         Objects.requireNonNull(customLineItemId,
             CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.class + ": customLineItemId is missing");
@@ -122,7 +128,8 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     * builds CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction without checking for non null required values
+     * builds CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction without checking for non-null required values
+     * @return CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
      */
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction buildUnchecked() {
         return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(customLineItemId, targetsDelta);

@@ -29,7 +29,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -40,7 +40,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -52,7 +52,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -64,7 +64,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
-     * @param actions
+     * @param actions value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -94,6 +95,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
+     * @param builder function to build the actions value
      * @return Builder
      */
 
@@ -113,6 +115,10 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
         return this.actions;
     }
 
+    /**
+     * builds DiscountCodeUpdate with checking for non-null required values
+     * @return DiscountCodeUpdate
+     */
     public DiscountCodeUpdate build() {
         Objects.requireNonNull(version, DiscountCodeUpdate.class + ": version is missing");
         Objects.requireNonNull(actions, DiscountCodeUpdate.class + ": actions is missing");
@@ -120,7 +126,8 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
     }
 
     /**
-     * builds DiscountCodeUpdate without checking for non null required values
+     * builds DiscountCodeUpdate without checking for non-null required values
+     * @return DiscountCodeUpdate
      */
     public DiscountCodeUpdate buildUnchecked() {
         return new DiscountCodeUpdateImpl(version, actions);

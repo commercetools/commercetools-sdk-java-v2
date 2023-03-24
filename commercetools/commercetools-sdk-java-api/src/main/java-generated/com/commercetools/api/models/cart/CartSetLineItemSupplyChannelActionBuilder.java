@@ -31,7 +31,7 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
-     * @param lineItemId
+     * @param lineItemId value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
      *  </ul>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
      *  </ul>
-     * @param supplyChannel
+     * @param supplyChannel value to be set
      * @return Builder
      */
 
@@ -79,13 +80,18 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
         return this.supplyChannel;
     }
 
+    /**
+     * builds CartSetLineItemSupplyChannelAction with checking for non-null required values
+     * @return CartSetLineItemSupplyChannelAction
+     */
     public CartSetLineItemSupplyChannelAction build() {
         Objects.requireNonNull(lineItemId, CartSetLineItemSupplyChannelAction.class + ": lineItemId is missing");
         return new CartSetLineItemSupplyChannelActionImpl(lineItemId, supplyChannel);
     }
 
     /**
-     * builds CartSetLineItemSupplyChannelAction without checking for non null required values
+     * builds CartSetLineItemSupplyChannelAction without checking for non-null required values
+     * @return CartSetLineItemSupplyChannelAction
      */
     public CartSetLineItemSupplyChannelAction buildUnchecked() {
         return new CartSetLineItemSupplyChannelActionImpl(lineItemId, supplyChannel);

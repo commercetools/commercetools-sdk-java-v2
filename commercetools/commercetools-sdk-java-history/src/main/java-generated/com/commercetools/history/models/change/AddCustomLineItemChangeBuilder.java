@@ -32,7 +32,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *  <p>Update action for adding and removing custom line items</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
         return this.previousValue;
     }
 
+    /**
+     * builds AddCustomLineItemChange with checking for non-null required values
+     * @return AddCustomLineItemChange
+     */
     public AddCustomLineItemChange build() {
         Objects.requireNonNull(change, AddCustomLineItemChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddCustomLineItemChange.class + ": nextValue is missing");
@@ -107,7 +113,8 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
     }
 
     /**
-     * builds AddCustomLineItemChange without checking for non null required values
+     * builds AddCustomLineItemChange without checking for non-null required values
+     * @return AddCustomLineItemChange
      */
     public AddCustomLineItemChange buildUnchecked() {
         return new AddCustomLineItemChangeImpl(change, nextValue, previousValue);

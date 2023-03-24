@@ -38,7 +38,7 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>Error code caused by the Extension. For example, <code>InvalidField</code>.</p>
-     * @param code
+     * @param code value to be set
      * @return Builder
      */
 
@@ -49,7 +49,7 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>Plain text description of the error.</p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -60,7 +60,7 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>Unique identifier of the Extension.</p>
-     * @param extensionId
+     * @param extensionId value to be set
      * @return Builder
      */
 
@@ -71,7 +71,7 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
-     * @param extensionKey
+     * @param extensionKey value to be set
      * @return Builder
      */
 
@@ -82,6 +82,8 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public ExtensionErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -91,6 +93,9 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public ExtensionErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -122,6 +127,10 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
         return this.values;
     }
 
+    /**
+     * builds ExtensionError with checking for non-null required values
+     * @return ExtensionError
+     */
     public ExtensionError build() {
         Objects.requireNonNull(code, ExtensionError.class + ": code is missing");
         Objects.requireNonNull(message, ExtensionError.class + ": message is missing");
@@ -130,7 +139,8 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
     }
 
     /**
-     * builds ExtensionError without checking for non null required values
+     * builds ExtensionError without checking for non-null required values
+     * @return ExtensionError
      */
     public ExtensionError buildUnchecked() {
         return new ExtensionErrorImpl(code, message, extensionId, extensionKey, values);

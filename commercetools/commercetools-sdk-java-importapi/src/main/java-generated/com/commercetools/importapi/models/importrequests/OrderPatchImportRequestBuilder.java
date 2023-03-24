@@ -26,7 +26,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
-     * @param patches
+     * @param patches value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
-     * @param patches
+     * @param patches value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
-     * @param patches
+     * @param patches value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
+     * @param builder function to build the patches value
      * @return Builder
      */
 
@@ -80,6 +81,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
+     * @param builder function to build the patches value
      * @return Builder
      */
 
@@ -95,13 +97,18 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
         return this.patches;
     }
 
+    /**
+     * builds OrderPatchImportRequest with checking for non-null required values
+     * @return OrderPatchImportRequest
+     */
     public OrderPatchImportRequest build() {
         Objects.requireNonNull(patches, OrderPatchImportRequest.class + ": patches is missing");
         return new OrderPatchImportRequestImpl(patches);
     }
 
     /**
-     * builds OrderPatchImportRequest without checking for non null required values
+     * builds OrderPatchImportRequest without checking for non-null required values
+     * @return OrderPatchImportRequest
      */
     public OrderPatchImportRequest buildUnchecked() {
         return new OrderPatchImportRequestImpl(patches);

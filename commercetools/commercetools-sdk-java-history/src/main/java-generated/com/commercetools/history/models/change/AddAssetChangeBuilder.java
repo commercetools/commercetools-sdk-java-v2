@@ -32,7 +32,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
 
     /**
      *  <p>Update action for <code>addAsset</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -65,6 +66,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -76,7 +78,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -97,6 +99,10 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
         return this.previousValue;
     }
 
+    /**
+     * builds AddAssetChange with checking for non-null required values
+     * @return AddAssetChange
+     */
     public AddAssetChange build() {
         Objects.requireNonNull(change, AddAssetChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddAssetChange.class + ": nextValue is missing");
@@ -105,7 +111,8 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     }
 
     /**
-     * builds AddAssetChange without checking for non null required values
+     * builds AddAssetChange without checking for non-null required values
+     * @return AddAssetChange
      */
     public AddAssetChange buildUnchecked() {
         return new AddAssetChangeImpl(change, nextValue, previousValue);

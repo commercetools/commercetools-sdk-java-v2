@@ -31,7 +31,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
 
     /**
      *  <p>Unique identifier of the referenced ProductDiscount.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
 
     /**
      *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
 
     /**
      *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
         return this.obj;
     }
 
+    /**
+     * builds ProductDiscountReference with checking for non-null required values
+     * @return ProductDiscountReference
+     */
     public ProductDiscountReference build() {
         Objects.requireNonNull(id, ProductDiscountReference.class + ": id is missing");
         return new ProductDiscountReferenceImpl(id, obj);
     }
 
     /**
-     * builds ProductDiscountReference without checking for non null required values
+     * builds ProductDiscountReference without checking for non-null required values
+     * @return ProductDiscountReference
      */
     public ProductDiscountReference buildUnchecked() {
         return new ProductDiscountReferenceImpl(id, obj);

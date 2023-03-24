@@ -37,7 +37,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
-     * @param averageRating
+     * @param averageRating value to be set
      * @return Builder
      */
 
@@ -48,7 +48,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>Highest rating of one target</p>
-     * @param highestRating
+     * @param highestRating value to be set
      * @return Builder
      */
 
@@ -59,7 +59,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>Lowest rating of one target</p>
-     * @param lowestRating
+     * @param lowestRating value to be set
      * @return Builder
      */
 
@@ -70,7 +70,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>Number of ratings taken into account</p>
-     * @param count
+     * @param count value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
-     * @param ratingsDistribution
+     * @param ratingsDistribution value to be set
      * @return Builder
      */
 
@@ -110,6 +110,10 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
         return this.ratingsDistribution;
     }
 
+    /**
+     * builds ReviewRatingStatistics with checking for non-null required values
+     * @return ReviewRatingStatistics
+     */
     public ReviewRatingStatistics build() {
         Objects.requireNonNull(averageRating, ReviewRatingStatistics.class + ": averageRating is missing");
         Objects.requireNonNull(highestRating, ReviewRatingStatistics.class + ": highestRating is missing");
@@ -120,7 +124,8 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     * builds ReviewRatingStatistics without checking for non null required values
+     * builds ReviewRatingStatistics without checking for non-null required values
+     * @return ReviewRatingStatistics
      */
     public ReviewRatingStatistics buildUnchecked() {
         return new ReviewRatingStatisticsImpl(averageRating, highestRating, lowestRating, count, ratingsDistribution);

@@ -31,6 +31,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the searchKeywords value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
 
     /**
      *  <p>Value to set.</p>
-     * @param searchKeywords
+     * @param searchKeywords value to be set
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
 
     /**
      *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
         return this.staged;
     }
 
+    /**
+     * builds ProductSetSearchKeywordsAction with checking for non-null required values
+     * @return ProductSetSearchKeywordsAction
+     */
     public ProductSetSearchKeywordsAction build() {
         Objects.requireNonNull(searchKeywords, ProductSetSearchKeywordsAction.class + ": searchKeywords is missing");
         return new ProductSetSearchKeywordsActionImpl(searchKeywords, staged);
     }
 
     /**
-     * builds ProductSetSearchKeywordsAction without checking for non null required values
+     * builds ProductSetSearchKeywordsAction without checking for non-null required values
+     * @return ProductSetSearchKeywordsAction
      */
     public ProductSetSearchKeywordsAction buildUnchecked() {
         return new ProductSetSearchKeywordsActionImpl(searchKeywords, staged);

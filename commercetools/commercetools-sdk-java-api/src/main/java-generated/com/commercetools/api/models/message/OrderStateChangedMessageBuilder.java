@@ -61,7 +61,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -83,7 +83,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
-     * @param createdAt
+     * @param createdAt value to be set
      * @return Builder
      */
 
@@ -94,7 +94,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
-     * @param lastModifiedAt
+     * @param lastModifiedAt value to be set
      * @return Builder
      */
 
@@ -105,6 +105,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
 
@@ -116,7 +117,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
-     * @param lastModifiedBy
+     * @param lastModifiedBy value to be set
      * @return Builder
      */
 
@@ -128,6 +129,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
      * @return Builder
      */
 
@@ -139,7 +141,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     * @param createdBy
+     * @param createdBy value to be set
      * @return Builder
      */
 
@@ -151,7 +153,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
-     * @param sequenceNumber
+     * @param sequenceNumber value to be set
      * @return Builder
      */
 
@@ -162,7 +164,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
-     * @param resource
+     * @param resource value to be set
      * @return Builder
      */
 
@@ -173,6 +175,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param builder function to build the resource value
      * @return Builder
      */
 
@@ -184,7 +187,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
-     * @param resourceVersion
+     * @param resourceVersion value to be set
      * @return Builder
      */
 
@@ -195,6 +198,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
 
@@ -208,7 +212,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
-     * @param resourceUserProvidedIdentifiers
+     * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
 
@@ -220,7 +224,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>OrderState after the Change Order State update action.</p>
-     * @param orderState
+     * @param orderState value to be set
      * @return Builder
      */
 
@@ -231,7 +235,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
 
     /**
      *  <p>OrderState before the Change Order State update action.</p>
-     * @param oldOrderState
+     * @param oldOrderState value to be set
      * @return Builder
      */
 
@@ -292,6 +296,10 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
         return this.oldOrderState;
     }
 
+    /**
+     * builds OrderStateChangedMessage with checking for non-null required values
+     * @return OrderStateChangedMessage
+     */
     public OrderStateChangedMessage build() {
         Objects.requireNonNull(id, OrderStateChangedMessage.class + ": id is missing");
         Objects.requireNonNull(version, OrderStateChangedMessage.class + ": version is missing");
@@ -307,7 +315,8 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
     }
 
     /**
-     * builds OrderStateChangedMessage without checking for non null required values
+     * builds OrderStateChangedMessage without checking for non-null required values
+     * @return OrderStateChangedMessage
      */
     public OrderStateChangedMessage buildUnchecked() {
         return new OrderStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,

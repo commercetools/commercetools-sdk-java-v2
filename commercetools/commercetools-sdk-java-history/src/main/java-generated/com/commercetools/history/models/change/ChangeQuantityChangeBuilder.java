@@ -32,7 +32,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -67,6 +68,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -102,6 +104,10 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
         return this.previousValue;
     }
 
+    /**
+     * builds ChangeQuantityChange with checking for non-null required values
+     * @return ChangeQuantityChange
+     */
     public ChangeQuantityChange build() {
         Objects.requireNonNull(change, ChangeQuantityChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, ChangeQuantityChange.class + ": nextValue is missing");
@@ -110,7 +116,8 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
-     * builds ChangeQuantityChange without checking for non null required values
+     * builds ChangeQuantityChange without checking for non-null required values
+     * @return ChangeQuantityChange
      */
     public ChangeQuantityChange buildUnchecked() {
         return new ChangeQuantityChangeImpl(change, nextValue, previousValue);

@@ -31,7 +31,7 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
 
     /**
      *  <p>Shape of the action for <code>setText</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetTextChange with checking for non-null required values
+     * @return SetTextChange
+     */
     public SetTextChange build() {
         Objects.requireNonNull(change, SetTextChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetTextChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
     }
 
     /**
-     * builds SetTextChange without checking for non null required values
+     * builds SetTextChange without checking for non-null required values
+     * @return SetTextChange
      */
     public SetTextChange buildUnchecked() {
         return new SetTextChangeImpl(change, previousValue, nextValue);

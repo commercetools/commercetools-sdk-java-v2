@@ -30,7 +30,7 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
 
     /**
      *  <p>Unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -41,7 +41,7 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
 
     /**
      *  <p>User-defined unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -60,12 +60,17 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
         return this.key;
     }
 
+    /**
+     * builds CartResourceIdentifier with checking for non-null required values
+     * @return CartResourceIdentifier
+     */
     public CartResourceIdentifier build() {
         return new CartResourceIdentifierImpl(id, key);
     }
 
     /**
-     * builds CartResourceIdentifier without checking for non null required values
+     * builds CartResourceIdentifier without checking for non-null required values
+     * @return CartResourceIdentifier
      */
     public CartResourceIdentifier buildUnchecked() {
         return new CartResourceIdentifierImpl(id, key);

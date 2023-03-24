@@ -26,6 +26,7 @@ public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeName
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -37,7 +38,7 @@ public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeName
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeName
         return this.name;
     }
 
+    /**
+     * builds ChannelChangeNameAction with checking for non-null required values
+     * @return ChannelChangeNameAction
+     */
     public ChannelChangeNameAction build() {
         Objects.requireNonNull(name, ChannelChangeNameAction.class + ": name is missing");
         return new ChannelChangeNameActionImpl(name);
     }
 
     /**
-     * builds ChannelChangeNameAction without checking for non null required values
+     * builds ChannelChangeNameAction without checking for non-null required values
+     * @return ChannelChangeNameAction
      */
     public ChannelChangeNameAction buildUnchecked() {
         return new ChannelChangeNameActionImpl(name);

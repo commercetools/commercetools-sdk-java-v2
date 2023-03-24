@@ -46,6 +46,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @param builder function to build the name value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Name of the ShoppingList.</p>
-     * @param name
+     * @param name value to be set
      * @return Builder
      */
 
@@ -68,6 +69,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Description of the ShoppingList.</p>
+     * @param builder function to build the description value
      * @return Builder
      */
 
@@ -79,7 +81,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Description of the ShoppingList.</p>
-     * @param description
+     * @param description value to be set
      * @return Builder
      */
 
@@ -91,7 +93,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -103,7 +105,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -115,7 +117,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -130,6 +132,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -145,6 +148,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param builder function to build the lineItems value
      * @return Builder
      */
 
@@ -158,7 +162,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
-     * @param textLineItems
+     * @param textLineItems value to be set
      * @return Builder
      */
 
@@ -170,7 +174,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
-     * @param textLineItems
+     * @param textLineItems value to be set
      * @return Builder
      */
 
@@ -182,7 +186,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
-     * @param textLineItems
+     * @param textLineItems value to be set
      * @return Builder
      */
 
@@ -197,6 +201,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param builder function to build the textLineItems value
      * @return Builder
      */
 
@@ -212,6 +217,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param builder function to build the textLineItems value
      * @return Builder
      */
 
@@ -225,6 +231,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -236,7 +243,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -248,7 +255,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
-     * @param deleteDaysAfterLastModification
+     * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
@@ -260,6 +267,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     * @param builder function to build the store value
      * @return Builder
      */
 
@@ -271,7 +279,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
-     * @param store
+     * @param store value to be set
      * @return Builder
      */
 
@@ -315,6 +323,10 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this.store;
     }
 
+    /**
+     * builds MyShoppingListDraft with checking for non-null required values
+     * @return MyShoppingListDraft
+     */
     public MyShoppingListDraft build() {
         Objects.requireNonNull(name, MyShoppingListDraft.class + ": name is missing");
         return new MyShoppingListDraftImpl(name, description, lineItems, textLineItems, custom,
@@ -322,7 +334,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     * builds MyShoppingListDraft without checking for non null required values
+     * builds MyShoppingListDraft without checking for non-null required values
+     * @return MyShoppingListDraft
      */
     public MyShoppingListDraft buildUnchecked() {
         return new MyShoppingListDraftImpl(name, description, lineItems, textLineItems, custom,

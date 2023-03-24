@@ -31,7 +31,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
 
     /**
      *  <p>Unique identifier of the referenced InventoryEntry.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
 
     /**
      *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
 
     /**
      *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
         return this.obj;
     }
 
+    /**
+     * builds InventoryEntryReference with checking for non-null required values
+     * @return InventoryEntryReference
+     */
     public InventoryEntryReference build() {
         Objects.requireNonNull(id, InventoryEntryReference.class + ": id is missing");
         return new InventoryEntryReferenceImpl(id, obj);
     }
 
     /**
-     * builds InventoryEntryReference without checking for non null required values
+     * builds InventoryEntryReference without checking for non-null required values
+     * @return InventoryEntryReference
      */
     public InventoryEntryReference buildUnchecked() {
         return new InventoryEntryReferenceImpl(id, obj);

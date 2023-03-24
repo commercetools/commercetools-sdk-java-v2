@@ -32,7 +32,7 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *  <p>Shape of the action for <code>setCustomerGroup</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
         return this.nextValue;
     }
 
+    /**
+     * builds SetCustomerGroupChange with checking for non-null required values
+     * @return SetCustomerGroupChange
+     */
     public SetCustomerGroupChange build() {
         Objects.requireNonNull(change, SetCustomerGroupChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetCustomerGroupChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
     }
 
     /**
-     * builds SetCustomerGroupChange without checking for non null required values
+     * builds SetCustomerGroupChange without checking for non-null required values
+     * @return SetCustomerGroupChange
      */
     public SetCustomerGroupChange buildUnchecked() {
         return new SetCustomerGroupChangeImpl(change, previousValue, nextValue);

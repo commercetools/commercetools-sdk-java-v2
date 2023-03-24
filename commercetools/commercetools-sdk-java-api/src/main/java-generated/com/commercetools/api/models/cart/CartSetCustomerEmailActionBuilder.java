@@ -27,7 +27,7 @@ public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustome
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param email
+     * @param email value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustome
         return this.email;
     }
 
+    /**
+     * builds CartSetCustomerEmailAction with checking for non-null required values
+     * @return CartSetCustomerEmailAction
+     */
     public CartSetCustomerEmailAction build() {
         return new CartSetCustomerEmailActionImpl(email);
     }
 
     /**
-     * builds CartSetCustomerEmailAction without checking for non null required values
+     * builds CartSetCustomerEmailAction without checking for non-null required values
+     * @return CartSetCustomerEmailAction
      */
     public CartSetCustomerEmailAction buildUnchecked() {
         return new CartSetCustomerEmailActionImpl(email);

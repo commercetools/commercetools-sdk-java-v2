@@ -25,7 +25,7 @@ public class DateFieldBuilder implements Builder<DateField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class DateFieldBuilder implements Builder<DateField> {
         return this.value;
     }
 
+    /**
+     * builds DateField with checking for non-null required values
+     * @return DateField
+     */
     public DateField build() {
         Objects.requireNonNull(value, DateField.class + ": value is missing");
         return new DateFieldImpl(value);
     }
 
     /**
-     * builds DateField without checking for non null required values
+     * builds DateField without checking for non-null required values
+     * @return DateField
      */
     public DateField buildUnchecked() {
         return new DateFieldImpl(value);

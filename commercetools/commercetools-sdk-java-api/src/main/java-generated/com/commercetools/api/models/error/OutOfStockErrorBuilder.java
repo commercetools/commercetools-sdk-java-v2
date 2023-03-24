@@ -33,7 +33,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -44,6 +44,8 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public OutOfStockErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,6 +55,9 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public OutOfStockErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +70,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -76,7 +81,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -87,7 +92,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
-     * @param lineItems
+     * @param lineItems value to be set
      * @return Builder
      */
 
@@ -101,7 +106,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
-     * @param skus
+     * @param skus value to be set
      * @return Builder
      */
 
@@ -112,7 +117,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
-     * @param skus
+     * @param skus value to be set
      * @return Builder
      */
 
@@ -123,7 +128,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
-     * @param skus
+     * @param skus value to be set
      * @return Builder
      */
 
@@ -151,6 +156,10 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
         return this.skus;
     }
 
+    /**
+     * builds OutOfStockError with checking for non-null required values
+     * @return OutOfStockError
+     */
     public OutOfStockError build() {
         Objects.requireNonNull(message, OutOfStockError.class + ": message is missing");
         Objects.requireNonNull(lineItems, OutOfStockError.class + ": lineItems is missing");
@@ -159,7 +168,8 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     * builds OutOfStockError without checking for non null required values
+     * builds OutOfStockError without checking for non-null required values
+     * @return OutOfStockError
      */
     public OutOfStockError buildUnchecked() {
         return new OutOfStockErrorImpl(message, values, lineItems, skus);

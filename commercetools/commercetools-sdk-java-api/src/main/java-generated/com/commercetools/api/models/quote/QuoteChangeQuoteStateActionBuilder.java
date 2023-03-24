@@ -25,7 +25,7 @@ public class QuoteChangeQuoteStateActionBuilder implements Builder<QuoteChangeQu
 
     /**
      *  <p>New state to be set for the Quote.</p>
-     * @param quoteState
+     * @param quoteState value to be set
      * @return Builder
      */
 
@@ -39,13 +39,18 @@ public class QuoteChangeQuoteStateActionBuilder implements Builder<QuoteChangeQu
         return this.quoteState;
     }
 
+    /**
+     * builds QuoteChangeQuoteStateAction with checking for non-null required values
+     * @return QuoteChangeQuoteStateAction
+     */
     public QuoteChangeQuoteStateAction build() {
         Objects.requireNonNull(quoteState, QuoteChangeQuoteStateAction.class + ": quoteState is missing");
         return new QuoteChangeQuoteStateActionImpl(quoteState);
     }
 
     /**
-     * builds QuoteChangeQuoteStateAction without checking for non null required values
+     * builds QuoteChangeQuoteStateAction without checking for non-null required values
+     * @return QuoteChangeQuoteStateAction
      */
     public QuoteChangeQuoteStateAction buildUnchecked() {
         return new QuoteChangeQuoteStateActionImpl(quoteState);

@@ -35,7 +35,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *
-     * @param deliveryId
+     * @param deliveryId value to be set
      * @return Builder
      */
 
@@ -46,6 +46,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -57,7 +58,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -69,6 +70,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -80,7 +82,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -104,6 +106,10 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
         return this.fields;
     }
 
+    /**
+     * builds StagedOrderSetDeliveryAddressCustomTypeAction with checking for non-null required values
+     * @return StagedOrderSetDeliveryAddressCustomTypeAction
+     */
     public StagedOrderSetDeliveryAddressCustomTypeAction build() {
         Objects.requireNonNull(deliveryId,
             StagedOrderSetDeliveryAddressCustomTypeAction.class + ": deliveryId is missing");
@@ -111,7 +117,8 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     * builds StagedOrderSetDeliveryAddressCustomTypeAction without checking for non null required values
+     * builds StagedOrderSetDeliveryAddressCustomTypeAction without checking for non-null required values
+     * @return StagedOrderSetDeliveryAddressCustomTypeAction
      */
     public StagedOrderSetDeliveryAddressCustomTypeAction buildUnchecked() {
         return new StagedOrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);

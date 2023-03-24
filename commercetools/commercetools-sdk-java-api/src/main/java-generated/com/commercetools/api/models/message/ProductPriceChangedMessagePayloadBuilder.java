@@ -40,7 +40,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
-     * @param variantId
+     * @param variantId value to be set
      * @return Builder
      */
 
@@ -51,6 +51,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @param builder function to build the oldPrice value
      * @return Builder
      */
 
@@ -62,7 +63,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
-     * @param oldPrice
+     * @param oldPrice value to be set
      * @return Builder
      */
 
@@ -73,6 +74,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @param builder function to build the newPrice value
      * @return Builder
      */
 
@@ -84,7 +86,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The Embedded Price after the Change Embedded Price update action.</p>
-     * @param newPrice
+     * @param newPrice value to be set
      * @return Builder
      */
 
@@ -95,7 +97,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
-     * @param staged
+     * @param staged value to be set
      * @return Builder
      */
 
@@ -106,6 +108,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @param builder function to build the oldStagedPrice value
      * @return Builder
      */
 
@@ -117,7 +120,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
-     * @param oldStagedPrice
+     * @param oldStagedPrice value to be set
      * @return Builder
      */
 
@@ -148,6 +151,10 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
         return this.oldStagedPrice;
     }
 
+    /**
+     * builds ProductPriceChangedMessagePayload with checking for non-null required values
+     * @return ProductPriceChangedMessagePayload
+     */
     public ProductPriceChangedMessagePayload build() {
         Objects.requireNonNull(variantId, ProductPriceChangedMessagePayload.class + ": variantId is missing");
         Objects.requireNonNull(oldPrice, ProductPriceChangedMessagePayload.class + ": oldPrice is missing");
@@ -157,7 +164,8 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     * builds ProductPriceChangedMessagePayload without checking for non null required values
+     * builds ProductPriceChangedMessagePayload without checking for non-null required values
+     * @return ProductPriceChangedMessagePayload
      */
     public ProductPriceChangedMessagePayload buildUnchecked() {
         return new ProductPriceChangedMessagePayloadImpl(variantId, oldPrice, newPrice, staged, oldStagedPrice);

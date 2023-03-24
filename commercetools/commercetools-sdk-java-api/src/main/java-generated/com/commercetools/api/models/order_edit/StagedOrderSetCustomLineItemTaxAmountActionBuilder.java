@@ -32,7 +32,7 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -48,6 +48,7 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
      *  </ul>
+     * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
 
@@ -65,7 +66,7 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
      *  </ul>
-     * @param externalTaxAmount
+     * @param externalTaxAmount value to be set
      * @return Builder
      */
 
@@ -84,6 +85,10 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
         return this.externalTaxAmount;
     }
 
+    /**
+     * builds StagedOrderSetCustomLineItemTaxAmountAction with checking for non-null required values
+     * @return StagedOrderSetCustomLineItemTaxAmountAction
+     */
     public StagedOrderSetCustomLineItemTaxAmountAction build() {
         Objects.requireNonNull(customLineItemId,
             StagedOrderSetCustomLineItemTaxAmountAction.class + ": customLineItemId is missing");
@@ -91,7 +96,8 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
     }
 
     /**
-     * builds StagedOrderSetCustomLineItemTaxAmountAction without checking for non null required values
+     * builds StagedOrderSetCustomLineItemTaxAmountAction without checking for non-null required values
+     * @return StagedOrderSetCustomLineItemTaxAmountAction
      */
     public StagedOrderSetCustomLineItemTaxAmountAction buildUnchecked() {
         return new StagedOrderSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);

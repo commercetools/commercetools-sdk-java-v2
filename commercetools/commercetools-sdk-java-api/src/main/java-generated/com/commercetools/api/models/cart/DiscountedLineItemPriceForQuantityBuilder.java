@@ -29,7 +29,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
 
     /**
      *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
-     * @param quantity
+     * @param quantity value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
 
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
+     * @param builder function to build the discountedPrice value
      * @return Builder
      */
 
@@ -52,7 +53,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
 
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
-     * @param discountedPrice
+     * @param discountedPrice value to be set
      * @return Builder
      */
 
@@ -70,6 +71,10 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
         return this.discountedPrice;
     }
 
+    /**
+     * builds DiscountedLineItemPriceForQuantity with checking for non-null required values
+     * @return DiscountedLineItemPriceForQuantity
+     */
     public DiscountedLineItemPriceForQuantity build() {
         Objects.requireNonNull(quantity, DiscountedLineItemPriceForQuantity.class + ": quantity is missing");
         Objects.requireNonNull(discountedPrice,
@@ -78,7 +83,8 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     * builds DiscountedLineItemPriceForQuantity without checking for non null required values
+     * builds DiscountedLineItemPriceForQuantity without checking for non-null required values
+     * @return DiscountedLineItemPriceForQuantity
      */
     public DiscountedLineItemPriceForQuantity buildUnchecked() {
         return new DiscountedLineItemPriceForQuantityImpl(quantity, discountedPrice);

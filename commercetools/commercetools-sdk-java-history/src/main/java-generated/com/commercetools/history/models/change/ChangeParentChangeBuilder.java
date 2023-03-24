@@ -32,7 +32,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *  <p>Shape of the action for <code>changeParent</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -98,6 +100,10 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds ChangeParentChange with checking for non-null required values
+     * @return ChangeParentChange
+     */
     public ChangeParentChange build() {
         Objects.requireNonNull(change, ChangeParentChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeParentChange.class + ": previousValue is missing");
@@ -106,7 +112,8 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
     }
 
     /**
-     * builds ChangeParentChange without checking for non null required values
+     * builds ChangeParentChange without checking for non-null required values
+     * @return ChangeParentChange
      */
     public ChangeParentChange buildUnchecked() {
         return new ChangeParentChangeImpl(change, previousValue, nextValue);

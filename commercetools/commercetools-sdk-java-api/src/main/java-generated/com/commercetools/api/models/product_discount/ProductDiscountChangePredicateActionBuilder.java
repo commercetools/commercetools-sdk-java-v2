@@ -25,7 +25,7 @@ public class ProductDiscountChangePredicateActionBuilder implements Builder<Prod
 
     /**
      *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
-     * @param predicate
+     * @param predicate value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductDiscountChangePredicateActionBuilder implements Builder<Prod
         return this.predicate;
     }
 
+    /**
+     * builds ProductDiscountChangePredicateAction with checking for non-null required values
+     * @return ProductDiscountChangePredicateAction
+     */
     public ProductDiscountChangePredicateAction build() {
         Objects.requireNonNull(predicate, ProductDiscountChangePredicateAction.class + ": predicate is missing");
         return new ProductDiscountChangePredicateActionImpl(predicate);
     }
 
     /**
-     * builds ProductDiscountChangePredicateAction without checking for non null required values
+     * builds ProductDiscountChangePredicateAction without checking for non-null required values
+     * @return ProductDiscountChangePredicateAction
      */
     public ProductDiscountChangePredicateAction buildUnchecked() {
         return new ProductDiscountChangePredicateActionImpl(predicate);

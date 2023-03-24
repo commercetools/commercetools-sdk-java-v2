@@ -46,7 +46,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>User-defined identifier for the Shipping that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param shippingKey
+     * @param shippingKey value to be set
      * @return Builder
      */
 
@@ -57,6 +57,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @param builder function to build the shippingMethod value
      * @return Builder
      */
 
@@ -70,7 +71,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
-     * @param shippingMethod
+     * @param shippingMethod value to be set
      * @return Builder
      */
 
@@ -82,6 +83,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the Line Items.</p>
+     * @param builder function to build the shippingAddress value
      * @return Builder
      */
 
@@ -93,7 +95,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the Line Items.</p>
-     * @param shippingAddress
+     * @param shippingAddress value to be set
      * @return Builder
      */
 
@@ -110,7 +112,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
-     * @param shippingRateInput
+     * @param shippingRateInput value to be set
      * @return Builder
      */
 
@@ -127,6 +129,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
@@ -139,6 +142,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
      * @return Builder
      */
 
@@ -151,7 +155,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
-     * @param externalTaxRate
+     * @param externalTaxRate value to be set
      * @return Builder
      */
 
@@ -163,7 +167,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -175,7 +179,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -187,7 +191,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
-     * @param deliveries
+     * @param deliveries value to be set
      * @return Builder
      */
 
@@ -202,6 +206,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     * @param builder function to build the deliveries value
      * @return Builder
      */
 
@@ -216,6 +221,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     * @param builder function to build the deliveries value
      * @return Builder
      */
 
@@ -228,6 +234,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Custom Fields for the Shipping Method.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -239,7 +246,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>Custom Fields for the Shipping Method.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -281,6 +288,10 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
         return this.custom;
     }
 
+    /**
+     * builds CartAddShippingMethodAction with checking for non-null required values
+     * @return CartAddShippingMethodAction
+     */
     public CartAddShippingMethodAction build() {
         Objects.requireNonNull(shippingKey, CartAddShippingMethodAction.class + ": shippingKey is missing");
         Objects.requireNonNull(shippingMethod, CartAddShippingMethodAction.class + ": shippingMethod is missing");
@@ -290,7 +301,8 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     * builds CartAddShippingMethodAction without checking for non null required values
+     * builds CartAddShippingMethodAction without checking for non-null required values
+     * @return CartAddShippingMethodAction
      */
     public CartAddShippingMethodAction buildUnchecked() {
         return new CartAddShippingMethodActionImpl(shippingKey, shippingMethod, shippingAddress, shippingRateInput,

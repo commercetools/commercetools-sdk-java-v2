@@ -35,7 +35,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *  <p>Update actions for adding an external image</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -96,6 +96,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -110,6 +111,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -133,7 +135,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -145,7 +147,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -160,6 +162,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -174,6 +177,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -200,6 +204,10 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         return this.nextValue;
     }
 
+    /**
+     * builds AddExternalImageChange with checking for non-null required values
+     * @return AddExternalImageChange
+     */
     public AddExternalImageChange build() {
         Objects.requireNonNull(change, AddExternalImageChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, AddExternalImageChange.class + ": catalogData is missing");
@@ -209,7 +217,8 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * builds AddExternalImageChange without checking for non null required values
+     * builds AddExternalImageChange without checking for non-null required values
+     * @return AddExternalImageChange
      */
     public AddExternalImageChange buildUnchecked() {
         return new AddExternalImageChangeImpl(change, catalogData, previousValue, nextValue);

@@ -29,7 +29,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
 
     /**
      *  <p>Update action for <code>addTransaction</code> on payments</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
         return this.nextValue;
     }
 
+    /**
+     * builds AddTransactionChange with checking for non-null required values
+     * @return AddTransactionChange
+     */
     public AddTransactionChange build() {
         Objects.requireNonNull(change, AddTransactionChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddTransactionChange.class + ": nextValue is missing");
@@ -75,7 +80,8 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
     }
 
     /**
-     * builds AddTransactionChange without checking for non null required values
+     * builds AddTransactionChange without checking for non-null required values
+     * @return AddTransactionChange
      */
     public AddTransactionChange buildUnchecked() {
         return new AddTransactionChangeImpl(change, nextValue);

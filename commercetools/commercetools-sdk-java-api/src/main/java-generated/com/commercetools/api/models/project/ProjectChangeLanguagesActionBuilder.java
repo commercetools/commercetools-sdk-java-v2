@@ -25,7 +25,7 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -36,7 +36,7 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -47,7 +47,7 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param languages
+     * @param languages value to be set
      * @return Builder
      */
 
@@ -63,13 +63,18 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
         return this.languages;
     }
 
+    /**
+     * builds ProjectChangeLanguagesAction with checking for non-null required values
+     * @return ProjectChangeLanguagesAction
+     */
     public ProjectChangeLanguagesAction build() {
         Objects.requireNonNull(languages, ProjectChangeLanguagesAction.class + ": languages is missing");
         return new ProjectChangeLanguagesActionImpl(languages);
     }
 
     /**
-     * builds ProjectChangeLanguagesAction without checking for non null required values
+     * builds ProjectChangeLanguagesAction without checking for non-null required values
+     * @return ProjectChangeLanguagesAction
      */
     public ProjectChangeLanguagesAction buildUnchecked() {
         return new ProjectChangeLanguagesActionImpl(languages);

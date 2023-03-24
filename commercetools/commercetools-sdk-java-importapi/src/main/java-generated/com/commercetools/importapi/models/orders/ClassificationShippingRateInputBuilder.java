@@ -29,7 +29,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -45,6 +45,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the label value
      * @return Builder
      */
 
@@ -61,7 +62,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
      *    "en": "dog food"
      *  }
      *  </code></pre>
-     * @param label
+     * @param label value to be set
      * @return Builder
      */
 
@@ -79,6 +80,10 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
         return this.label;
     }
 
+    /**
+     * builds ClassificationShippingRateInput with checking for non-null required values
+     * @return ClassificationShippingRateInput
+     */
     public ClassificationShippingRateInput build() {
         Objects.requireNonNull(key, ClassificationShippingRateInput.class + ": key is missing");
         Objects.requireNonNull(label, ClassificationShippingRateInput.class + ": label is missing");
@@ -86,7 +91,8 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
     }
 
     /**
-     * builds ClassificationShippingRateInput without checking for non null required values
+     * builds ClassificationShippingRateInput without checking for non-null required values
+     * @return ClassificationShippingRateInput
      */
     public ClassificationShippingRateInput buildUnchecked() {
         return new ClassificationShippingRateInputImpl(key, label);

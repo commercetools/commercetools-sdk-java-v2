@@ -36,7 +36,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *  <p>Update action for <code>setLineItemCustomType</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -47,6 +47,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -72,6 +73,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -83,7 +85,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -95,6 +97,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -106,7 +109,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -132,6 +135,10 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
         return this.previousValue;
     }
 
+    /**
+     * builds SetShoppingListLineItemCustomTypeChange with checking for non-null required values
+     * @return SetShoppingListLineItemCustomTypeChange
+     */
     public SetShoppingListLineItemCustomTypeChange build() {
         Objects.requireNonNull(change, SetShoppingListLineItemCustomTypeChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, SetShoppingListLineItemCustomTypeChange.class + ": lineItem is missing");
@@ -142,7 +149,8 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     /**
-     * builds SetShoppingListLineItemCustomTypeChange without checking for non null required values
+     * builds SetShoppingListLineItemCustomTypeChange without checking for non-null required values
+     * @return SetShoppingListLineItemCustomTypeChange
      */
     public SetShoppingListLineItemCustomTypeChange buildUnchecked() {
         return new SetShoppingListLineItemCustomTypeChangeImpl(change, lineItem, nextValue, previousValue);

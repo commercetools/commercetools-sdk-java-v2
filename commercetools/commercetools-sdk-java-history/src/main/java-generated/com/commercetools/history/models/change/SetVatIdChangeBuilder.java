@@ -31,7 +31,7 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
 
     /**
      *  <p>Shape of the action for <code>setVatId</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
         return this.nextValue;
     }
 
+    /**
+     * builds SetVatIdChange with checking for non-null required values
+     * @return SetVatIdChange
+     */
     public SetVatIdChange build() {
         Objects.requireNonNull(change, SetVatIdChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetVatIdChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
     }
 
     /**
-     * builds SetVatIdChange without checking for non null required values
+     * builds SetVatIdChange without checking for non-null required values
+     * @return SetVatIdChange
      */
     public SetVatIdChange buildUnchecked() {
         return new SetVatIdChangeImpl(change, previousValue, nextValue);

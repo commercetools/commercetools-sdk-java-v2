@@ -26,7 +26,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
-     * @param operationStatus
+     * @param operationStatus value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
-     * @param operationStatus
+     * @param operationStatus value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
-     * @param operationStatus
+     * @param operationStatus value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
+     * @param builder function to build the operationStatus value
      * @return Builder
      */
 
@@ -81,6 +82,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
+     * @param builder function to build the operationStatus value
      * @return Builder
      */
 
@@ -97,13 +99,18 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
         return this.operationStatus;
     }
 
+    /**
+     * builds ImportResponse with checking for non-null required values
+     * @return ImportResponse
+     */
     public ImportResponse build() {
         Objects.requireNonNull(operationStatus, ImportResponse.class + ": operationStatus is missing");
         return new ImportResponseImpl(operationStatus);
     }
 
     /**
-     * builds ImportResponse without checking for non null required values
+     * builds ImportResponse without checking for non-null required values
+     * @return ImportResponse
      */
     public ImportResponse buildUnchecked() {
         return new ImportResponseImpl(operationStatus);

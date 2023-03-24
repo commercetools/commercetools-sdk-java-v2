@@ -25,7 +25,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
 
     /**
      *
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -38,13 +38,18 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
         return this.id;
     }
 
+    /**
+     * builds ProductReference with checking for non-null required values
+     * @return ProductReference
+     */
     public ProductReference build() {
         Objects.requireNonNull(id, ProductReference.class + ": id is missing");
         return new ProductReferenceImpl(id);
     }
 
     /**
-     * builds ProductReference without checking for non null required values
+     * builds ProductReference without checking for non-null required values
+     * @return ProductReference
      */
     public ProductReference buildUnchecked() {
         return new ProductReferenceImpl(id);

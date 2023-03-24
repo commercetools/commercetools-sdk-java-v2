@@ -27,7 +27,7 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
 
     /**
      *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -38,6 +38,8 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public SearchExecutionFailureErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,6 +49,9 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public SearchExecutionFailureErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,13 +70,18 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
         return this.values;
     }
 
+    /**
+     * builds SearchExecutionFailureError with checking for non-null required values
+     * @return SearchExecutionFailureError
+     */
     public SearchExecutionFailureError build() {
         Objects.requireNonNull(message, SearchExecutionFailureError.class + ": message is missing");
         return new SearchExecutionFailureErrorImpl(message, values);
     }
 
     /**
-     * builds SearchExecutionFailureError without checking for non null required values
+     * builds SearchExecutionFailureError without checking for non-null required values
+     * @return SearchExecutionFailureError
      */
     public SearchExecutionFailureError buildUnchecked() {
         return new SearchExecutionFailureErrorImpl(message, values);

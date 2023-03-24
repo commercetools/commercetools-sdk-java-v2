@@ -29,7 +29,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
 
     /**
      *
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -40,6 +40,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
 
     /**
      *
+     * @param builder function to build the customer value
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
 
     /**
      *
-     * @param customer
+     * @param customer value to be set
      * @return Builder
      */
 
@@ -68,6 +69,10 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
         return this.customer;
     }
 
+    /**
+     * builds QuoteRequestLabel with checking for non-null required values
+     * @return QuoteRequestLabel
+     */
     public QuoteRequestLabel build() {
         Objects.requireNonNull(key, QuoteRequestLabel.class + ": key is missing");
         Objects.requireNonNull(customer, QuoteRequestLabel.class + ": customer is missing");
@@ -75,7 +80,8 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     * builds QuoteRequestLabel without checking for non null required values
+     * builds QuoteRequestLabel without checking for non-null required values
+     * @return QuoteRequestLabel
      */
     public QuoteRequestLabel buildUnchecked() {
         return new QuoteRequestLabelImpl(key, customer);

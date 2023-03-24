@@ -38,7 +38,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *  <p>Update action for <code>setLineItemProductSlug</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -49,6 +49,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @param builder function to build the lineItem value
      * @return Builder
      */
 
@@ -60,7 +61,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
-     * @param lineItem
+     * @param lineItem value to be set
      * @return Builder
      */
 
@@ -72,7 +73,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
-     * @param variant
+     * @param variant value to be set
      * @return Builder
      */
 
@@ -83,6 +84,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -94,7 +96,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -106,6 +108,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -117,7 +120,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -147,6 +150,10 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
         return this.previousValue;
     }
 
+    /**
+     * builds SetLineItemProductSlugChange with checking for non-null required values
+     * @return SetLineItemProductSlugChange
+     */
     public SetLineItemProductSlugChange build() {
         Objects.requireNonNull(change, SetLineItemProductSlugChange.class + ": change is missing");
         Objects.requireNonNull(lineItem, SetLineItemProductSlugChange.class + ": lineItem is missing");
@@ -157,7 +164,8 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
     }
 
     /**
-     * builds SetLineItemProductSlugChange without checking for non null required values
+     * builds SetLineItemProductSlugChange without checking for non-null required values
+     * @return SetLineItemProductSlugChange
      */
     public SetLineItemProductSlugChange buildUnchecked() {
         return new SetLineItemProductSlugChangeImpl(change, lineItem, variant, nextValue, previousValue);

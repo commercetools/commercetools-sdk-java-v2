@@ -46,7 +46,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
-     * @param timestamp
+     * @param timestamp value to be set
      * @return Builder
      */
 
@@ -68,7 +68,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -79,6 +79,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Money value of the Transaction.</p>
+     * @param builder function to build the amount value
      * @return Builder
      */
 
@@ -90,7 +91,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Money value of the Transaction.</p>
-     * @param amount
+     * @param amount value to be set
      * @return Builder
      */
 
@@ -101,7 +102,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
-     * @param interactionId
+     * @param interactionId value to be set
      * @return Builder
      */
 
@@ -112,7 +113,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>State of the Transaction.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -123,6 +124,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Custom Fields defined for the Transaction.</p>
+     * @param builder function to build the custom value
      * @return Builder
      */
 
@@ -134,7 +136,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Custom Fields defined for the Transaction.</p>
-     * @param custom
+     * @param custom value to be set
      * @return Builder
      */
 
@@ -174,6 +176,10 @@ public class TransactionBuilder implements Builder<Transaction> {
         return this.custom;
     }
 
+    /**
+     * builds Transaction with checking for non-null required values
+     * @return Transaction
+     */
     public Transaction build() {
         Objects.requireNonNull(id, Transaction.class + ": id is missing");
         Objects.requireNonNull(type, Transaction.class + ": type is missing");
@@ -183,7 +189,8 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     * builds Transaction without checking for non null required values
+     * builds Transaction without checking for non-null required values
+     * @return Transaction
      */
     public Transaction buildUnchecked() {
         return new TransactionImpl(id, timestamp, type, amount, interactionId, state, custom);

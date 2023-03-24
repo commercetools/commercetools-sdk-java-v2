@@ -30,6 +30,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     /**
      *  <p>Price of the Line Item.</p>
      *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     /**
      *  <p>Price of the Line Item.</p>
      *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -53,6 +54,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Total price of the Line Item.</p>
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
@@ -64,7 +66,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Total price of the Line Item.</p>
-     * @param totalPrice
+     * @param totalPrice value to be set
      * @return Builder
      */
 
@@ -81,6 +83,10 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
         return this.totalPrice;
     }
 
+    /**
+     * builds ExternalLineItemTotalPrice with checking for non-null required values
+     * @return ExternalLineItemTotalPrice
+     */
     public ExternalLineItemTotalPrice build() {
         Objects.requireNonNull(price, ExternalLineItemTotalPrice.class + ": price is missing");
         Objects.requireNonNull(totalPrice, ExternalLineItemTotalPrice.class + ": totalPrice is missing");
@@ -88,7 +94,8 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     }
 
     /**
-     * builds ExternalLineItemTotalPrice without checking for non null required values
+     * builds ExternalLineItemTotalPrice without checking for non-null required values
+     * @return ExternalLineItemTotalPrice
      */
     public ExternalLineItemTotalPrice buildUnchecked() {
         return new ExternalLineItemTotalPriceImpl(price, totalPrice);

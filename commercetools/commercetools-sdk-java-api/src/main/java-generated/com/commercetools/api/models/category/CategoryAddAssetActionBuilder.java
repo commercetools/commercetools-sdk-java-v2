@@ -31,6 +31,7 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
 
     /**
      *  <p>Value to append.</p>
+     * @param builder function to build the asset value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
 
     /**
      *  <p>Value to append.</p>
-     * @param asset
+     * @param asset value to be set
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
 
     /**
      *  <p>Position in the array at which the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
-     * @param position
+     * @param position value to be set
      * @return Builder
      */
 
@@ -71,13 +72,18 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
         return this.position;
     }
 
+    /**
+     * builds CategoryAddAssetAction with checking for non-null required values
+     * @return CategoryAddAssetAction
+     */
     public CategoryAddAssetAction build() {
         Objects.requireNonNull(asset, CategoryAddAssetAction.class + ": asset is missing");
         return new CategoryAddAssetActionImpl(asset, position);
     }
 
     /**
-     * builds CategoryAddAssetAction without checking for non null required values
+     * builds CategoryAddAssetAction without checking for non-null required values
+     * @return CategoryAddAssetAction
      */
     public CategoryAddAssetAction buildUnchecked() {
         return new CategoryAddAssetActionImpl(asset, position);

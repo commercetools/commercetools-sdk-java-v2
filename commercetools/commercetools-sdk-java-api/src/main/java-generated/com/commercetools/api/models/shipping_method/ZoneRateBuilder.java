@@ -29,6 +29,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Zone for which the shipping rates are valid.</p>
+     * @param builder function to build the zone value
      * @return Builder
      */
 
@@ -40,7 +41,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Zone for which the shipping rates are valid.</p>
-     * @param zone
+     * @param zone value to be set
      * @return Builder
      */
 
@@ -51,7 +52,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
-     * @param shippingRates
+     * @param shippingRates value to be set
      * @return Builder
      */
 
@@ -63,7 +64,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
-     * @param shippingRates
+     * @param shippingRates value to be set
      * @return Builder
      */
 
@@ -75,7 +76,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
-     * @param shippingRates
+     * @param shippingRates value to be set
      * @return Builder
      */
 
@@ -90,6 +91,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
+     * @param builder function to build the shippingRates value
      * @return Builder
      */
 
@@ -105,6 +107,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
+     * @param builder function to build the shippingRates value
      * @return Builder
      */
 
@@ -124,6 +127,10 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return this.shippingRates;
     }
 
+    /**
+     * builds ZoneRate with checking for non-null required values
+     * @return ZoneRate
+     */
     public ZoneRate build() {
         Objects.requireNonNull(zone, ZoneRate.class + ": zone is missing");
         Objects.requireNonNull(shippingRates, ZoneRate.class + ": shippingRates is missing");
@@ -131,7 +138,8 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     * builds ZoneRate without checking for non null required values
+     * builds ZoneRate without checking for non-null required values
+     * @return ZoneRate
      */
     public ZoneRate buildUnchecked() {
         return new ZoneRateImpl(zone, shippingRates);

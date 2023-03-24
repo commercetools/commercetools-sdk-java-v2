@@ -35,7 +35,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *  <p>Update actions for moving images</p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -46,7 +46,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
-     * @param catalogData
+     * @param catalogData value to be set
      * @return Builder
      */
 
@@ -57,7 +57,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -69,7 +69,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -81,7 +81,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -96,6 +96,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -110,6 +111,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -122,7 +124,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -134,7 +136,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -146,7 +148,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -161,6 +163,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -175,6 +178,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -201,6 +205,10 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         return this.nextValue;
     }
 
+    /**
+     * builds MoveImageToPositionChange with checking for non-null required values
+     * @return MoveImageToPositionChange
+     */
     public MoveImageToPositionChange build() {
         Objects.requireNonNull(change, MoveImageToPositionChange.class + ": change is missing");
         Objects.requireNonNull(catalogData, MoveImageToPositionChange.class + ": catalogData is missing");
@@ -210,7 +218,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     * builds MoveImageToPositionChange without checking for non null required values
+     * builds MoveImageToPositionChange without checking for non-null required values
+     * @return MoveImageToPositionChange
      */
     public MoveImageToPositionChange buildUnchecked() {
         return new MoveImageToPositionChangeImpl(change, catalogData, previousValue, nextValue);

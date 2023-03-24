@@ -26,6 +26,7 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
 
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     * @param builder function to build the businessUnit value
      * @return Builder
      */
 
@@ -39,7 +40,7 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
 
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
-     * @param businessUnit
+     * @param businessUnit value to be set
      * @return Builder
      */
 
@@ -53,13 +54,18 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
         return this.businessUnit;
     }
 
+    /**
+     * builds CartSetBusinessUnitAction with checking for non-null required values
+     * @return CartSetBusinessUnitAction
+     */
     public CartSetBusinessUnitAction build() {
         Objects.requireNonNull(businessUnit, CartSetBusinessUnitAction.class + ": businessUnit is missing");
         return new CartSetBusinessUnitActionImpl(businessUnit);
     }
 
     /**
-     * builds CartSetBusinessUnitAction without checking for non null required values
+     * builds CartSetBusinessUnitAction without checking for non-null required values
+     * @return CartSetBusinessUnitAction
      */
     public CartSetBusinessUnitAction buildUnchecked() {
         return new CartSetBusinessUnitActionImpl(businessUnit);

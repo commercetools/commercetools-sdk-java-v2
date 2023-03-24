@@ -33,7 +33,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
 
     /**
      *  <p>Unique identifier of the Customer.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -44,7 +44,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
 
     /**
      *  <p>Expected version of the Customer.</p>
-     * @param version
+     * @param version value to be set
      * @return Builder
      */
 
@@ -55,7 +55,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
 
     /**
      *  <p>Validity period of the generated token in minutes.</p>
-     * @param ttlMinutes
+     * @param ttlMinutes value to be set
      * @return Builder
      */
 
@@ -77,6 +77,10 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
         return this.ttlMinutes;
     }
 
+    /**
+     * builds CustomerCreateEmailToken with checking for non-null required values
+     * @return CustomerCreateEmailToken
+     */
     public CustomerCreateEmailToken build() {
         Objects.requireNonNull(id, CustomerCreateEmailToken.class + ": id is missing");
         Objects.requireNonNull(ttlMinutes, CustomerCreateEmailToken.class + ": ttlMinutes is missing");
@@ -84,7 +88,8 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
     }
 
     /**
-     * builds CustomerCreateEmailToken without checking for non null required values
+     * builds CustomerCreateEmailToken without checking for non-null required values
+     * @return CustomerCreateEmailToken
      */
     public CustomerCreateEmailToken buildUnchecked() {
         return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes);

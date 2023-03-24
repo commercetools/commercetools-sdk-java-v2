@@ -61,7 +61,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -72,7 +72,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>User-defined unique SKU of the Product Variant.</p>
-     * @param sku
+     * @param sku value to be set
      * @return Builder
      */
 
@@ -84,7 +84,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     /**
      *  <p>User-defined unique identifier of the ProductVariant.</p>
      *  <p>This is different from Product <code>key</code>.</p>
-     * @param key
+     * @param key value to be set
      * @return Builder
      */
 
@@ -95,7 +95,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -106,7 +106,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -118,7 +118,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
-     * @param prices
+     * @param prices value to be set
      * @return Builder
      */
 
@@ -132,6 +132,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -146,6 +147,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
      * @return Builder
      */
 
@@ -158,7 +160,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -170,7 +172,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -182,7 +184,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
-     * @param attributes
+     * @param attributes value to be set
      * @return Builder
      */
 
@@ -197,6 +199,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -211,6 +214,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Attributes of the Product Variant.</p>
+     * @param builder function to build the attributes value
      * @return Builder
      */
 
@@ -223,6 +227,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param builder function to build the price value
      * @return Builder
      */
 
@@ -234,7 +239,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
-     * @param price
+     * @param price value to be set
      * @return Builder
      */
 
@@ -245,7 +250,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -256,7 +261,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -268,7 +273,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
-     * @param images
+     * @param images value to be set
      * @return Builder
      */
 
@@ -282,6 +287,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
+     * @param builder function to build the images value
      * @return Builder
      */
 
@@ -296,6 +302,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Images of the Product Variant.</p>
+     * @param builder function to build the images value
      * @return Builder
      */
 
@@ -308,7 +315,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -319,7 +326,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -331,7 +338,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
-     * @param assets
+     * @param assets value to be set
      * @return Builder
      */
 
@@ -345,6 +352,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -359,6 +367,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Media assets of the Product Variant.</p>
+     * @param builder function to build the assets value
      * @return Builder
      */
 
@@ -371,6 +380,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     * @param builder function to build the availability value
      * @return Builder
      */
 
@@ -383,7 +393,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
-     * @param availability
+     * @param availability value to be set
      * @return Builder
      */
 
@@ -395,7 +405,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
-     * @param isMatchingVariant
+     * @param isMatchingVariant value to be set
      * @return Builder
      */
 
@@ -406,6 +416,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     * @param builder function to build the scopedPrice value
      * @return Builder
      */
 
@@ -417,7 +428,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
-     * @param scopedPrice
+     * @param scopedPrice value to be set
      * @return Builder
      */
 
@@ -429,7 +440,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection.</p>
-     * @param scopedPriceDiscounted
+     * @param scopedPriceDiscounted value to be set
      * @return Builder
      */
 
@@ -497,6 +508,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this.scopedPriceDiscounted;
     }
 
+    /**
+     * builds ProductVariant with checking for non-null required values
+     * @return ProductVariant
+     */
     public ProductVariant build() {
         Objects.requireNonNull(id, ProductVariant.class + ": id is missing");
         return new ProductVariantImpl(id, sku, key, prices, attributes, price, images, assets, availability,
@@ -504,7 +519,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     * builds ProductVariant without checking for non null required values
+     * builds ProductVariant without checking for non-null required values
+     * @return ProductVariant
      */
     public ProductVariant buildUnchecked() {
         return new ProductVariantImpl(id, sku, key, prices, attributes, price, images, assets, availability,

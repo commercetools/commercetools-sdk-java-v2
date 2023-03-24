@@ -31,6 +31,7 @@ public class StandalonePriceSetCustomTypeActionBuilder implements Builder<Standa
 
     /**
      *  <p>Defines the Type that extends the StandalonePrice with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
+     * @param builder function to build the type value
      * @return Builder
      */
 
@@ -42,7 +43,7 @@ public class StandalonePriceSetCustomTypeActionBuilder implements Builder<Standa
 
     /**
      *  <p>Defines the Type that extends the StandalonePrice with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
-     * @param type
+     * @param type value to be set
      * @return Builder
      */
 
@@ -54,6 +55,7 @@ public class StandalonePriceSetCustomTypeActionBuilder implements Builder<Standa
 
     /**
      *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
+     * @param builder function to build the fields value
      * @return Builder
      */
 
@@ -65,7 +67,7 @@ public class StandalonePriceSetCustomTypeActionBuilder implements Builder<Standa
 
     /**
      *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
-     * @param fields
+     * @param fields value to be set
      * @return Builder
      */
 
@@ -85,12 +87,17 @@ public class StandalonePriceSetCustomTypeActionBuilder implements Builder<Standa
         return this.fields;
     }
 
+    /**
+     * builds StandalonePriceSetCustomTypeAction with checking for non-null required values
+     * @return StandalonePriceSetCustomTypeAction
+     */
     public StandalonePriceSetCustomTypeAction build() {
         return new StandalonePriceSetCustomTypeActionImpl(type, fields);
     }
 
     /**
-     * builds StandalonePriceSetCustomTypeAction without checking for non null required values
+     * builds StandalonePriceSetCustomTypeAction without checking for non-null required values
+     * @return StandalonePriceSetCustomTypeAction
      */
     public StandalonePriceSetCustomTypeAction buildUnchecked() {
         return new StandalonePriceSetCustomTypeActionImpl(type, fields);

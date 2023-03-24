@@ -32,7 +32,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
@@ -54,7 +55,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -66,6 +67,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
@@ -77,7 +79,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -99,6 +101,10 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
         return this.nextValue;
     }
 
+    /**
+     * builds RemoveShoppingListLineItemChange with checking for non-null required values
+     * @return RemoveShoppingListLineItemChange
+     */
     public RemoveShoppingListLineItemChange build() {
         Objects.requireNonNull(change, RemoveShoppingListLineItemChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveShoppingListLineItemChange.class + ": previousValue is missing");
@@ -107,7 +113,8 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
     }
 
     /**
-     * builds RemoveShoppingListLineItemChange without checking for non null required values
+     * builds RemoveShoppingListLineItemChange without checking for non-null required values
+     * @return RemoveShoppingListLineItemChange
      */
     public RemoveShoppingListLineItemChange buildUnchecked() {
         return new RemoveShoppingListLineItemChangeImpl(change, previousValue, nextValue);

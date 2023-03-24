@@ -31,7 +31,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
 
     /**
      *  <p>Unique identifier of the referenced CartDiscount.</p>
-     * @param id
+     * @param id value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
 
     /**
      *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     * @param builder function to build the obj value
      * @return Builder
      */
 
@@ -53,7 +54,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
 
     /**
      *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
-     * @param obj
+     * @param obj value to be set
      * @return Builder
      */
 
@@ -72,13 +73,18 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
         return this.obj;
     }
 
+    /**
+     * builds CartDiscountReference with checking for non-null required values
+     * @return CartDiscountReference
+     */
     public CartDiscountReference build() {
         Objects.requireNonNull(id, CartDiscountReference.class + ": id is missing");
         return new CartDiscountReferenceImpl(id, obj);
     }
 
     /**
-     * builds CartDiscountReference without checking for non null required values
+     * builds CartDiscountReference without checking for non-null required values
+     * @return CartDiscountReference
      */
     public CartDiscountReference buildUnchecked() {
         return new CartDiscountReferenceImpl(id, obj);

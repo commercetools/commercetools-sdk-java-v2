@@ -31,7 +31,7 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
 
     /**
      *  <p>Shape of the action for <code>setAnonymousId</code></p>
-     * @param change
+     * @param change value to be set
      * @return Builder
      */
 
@@ -42,7 +42,7 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
 
     /**
      *
-     * @param previousValue
+     * @param previousValue value to be set
      * @return Builder
      */
 
@@ -53,7 +53,7 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
 
     /**
      *
-     * @param nextValue
+     * @param nextValue value to be set
      * @return Builder
      */
 
@@ -74,6 +74,10 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
         return this.nextValue;
     }
 
+    /**
+     * builds SetAnonymousIdChange with checking for non-null required values
+     * @return SetAnonymousIdChange
+     */
     public SetAnonymousIdChange build() {
         Objects.requireNonNull(change, SetAnonymousIdChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetAnonymousIdChange.class + ": previousValue is missing");
@@ -82,7 +86,8 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
     }
 
     /**
-     * builds SetAnonymousIdChange without checking for non null required values
+     * builds SetAnonymousIdChange without checking for non-null required values
+     * @return SetAnonymousIdChange
      */
     public SetAnonymousIdChange buildUnchecked() {
         return new SetAnonymousIdChangeImpl(change, previousValue, nextValue);

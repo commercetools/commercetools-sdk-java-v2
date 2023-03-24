@@ -26,7 +26,7 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
 
     /**
      *
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -37,6 +37,7 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
 
     /**
      *
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -50,13 +51,18 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
         return this.value;
     }
 
+    /**
+     * builds MoneyField with checking for non-null required values
+     * @return MoneyField
+     */
     public MoneyField build() {
         Objects.requireNonNull(value, MoneyField.class + ": value is missing");
         return new MoneyFieldImpl(value);
     }
 
     /**
-     * builds MoneyField without checking for non null required values
+     * builds MoneyField without checking for non-null required values
+     * @return MoneyField
      */
     public MoneyField buildUnchecked() {
         return new MoneyFieldImpl(value);

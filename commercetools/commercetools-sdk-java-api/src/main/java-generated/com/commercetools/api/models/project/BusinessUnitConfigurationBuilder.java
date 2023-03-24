@@ -25,7 +25,7 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
 
     /**
      *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
-     * @param myBusinessUnitStatusOnCreation
+     * @param myBusinessUnitStatusOnCreation value to be set
      * @return Builder
      */
 
@@ -39,6 +39,10 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
         return this.myBusinessUnitStatusOnCreation;
     }
 
+    /**
+     * builds BusinessUnitConfiguration with checking for non-null required values
+     * @return BusinessUnitConfiguration
+     */
     public BusinessUnitConfiguration build() {
         Objects.requireNonNull(myBusinessUnitStatusOnCreation,
             BusinessUnitConfiguration.class + ": myBusinessUnitStatusOnCreation is missing");
@@ -46,7 +50,8 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
     }
 
     /**
-     * builds BusinessUnitConfiguration without checking for non null required values
+     * builds BusinessUnitConfiguration without checking for non-null required values
+     * @return BusinessUnitConfiguration
      */
     public BusinessUnitConfiguration buildUnchecked() {
         return new BusinessUnitConfigurationImpl(myBusinessUnitStatusOnCreation);

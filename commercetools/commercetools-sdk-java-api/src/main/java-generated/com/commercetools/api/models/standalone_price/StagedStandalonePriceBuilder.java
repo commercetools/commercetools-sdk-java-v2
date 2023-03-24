@@ -31,7 +31,7 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
 
     /**
      *  <p>Money value of the StagedStandalonePrice.</p>
-     * @param value
+     * @param value value to be set
      * @return Builder
      */
 
@@ -42,6 +42,7 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
 
     /**
      *  <p>Money value of the StagedStandalonePrice.</p>
+     * @param builder function to build the value value
      * @return Builder
      */
 
@@ -53,6 +54,7 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
 
     /**
      *  <p>Discounted price for the StagedStandalonePrice.</p>
+     * @param builder function to build the discounted value
      * @return Builder
      */
 
@@ -64,7 +66,7 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
 
     /**
      *  <p>Discounted price for the StagedStandalonePrice.</p>
-     * @param discounted
+     * @param discounted value to be set
      * @return Builder
      */
 
@@ -83,13 +85,18 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
         return this.discounted;
     }
 
+    /**
+     * builds StagedStandalonePrice with checking for non-null required values
+     * @return StagedStandalonePrice
+     */
     public StagedStandalonePrice build() {
         Objects.requireNonNull(value, StagedStandalonePrice.class + ": value is missing");
         return new StagedStandalonePriceImpl(value, discounted);
     }
 
     /**
-     * builds StagedStandalonePrice without checking for non null required values
+     * builds StagedStandalonePrice without checking for non-null required values
+     * @return StagedStandalonePrice
      */
     public StagedStandalonePrice buildUnchecked() {
         return new StagedStandalonePriceImpl(value, discounted);

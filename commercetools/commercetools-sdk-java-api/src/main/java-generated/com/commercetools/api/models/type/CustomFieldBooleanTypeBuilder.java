@@ -20,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldBooleanTypeBuilder implements Builder<CustomFieldBooleanType> {
 
+    /**
+     * builds CustomFieldBooleanType with checking for non-null required values
+     * @return CustomFieldBooleanType
+     */
     public CustomFieldBooleanType build() {
         return new CustomFieldBooleanTypeImpl();
     }
 
     /**
-     * builds CustomFieldBooleanType without checking for non null required values
+     * builds CustomFieldBooleanType without checking for non-null required values
+     * @return CustomFieldBooleanType
      */
     public CustomFieldBooleanType buildUnchecked() {
         return new CustomFieldBooleanTypeImpl();

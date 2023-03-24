@@ -38,7 +38,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p><code>"Tax category $taxCategoryId is missing a tax rate for country $countriesAndStates."</code></p>
-     * @param message
+     * @param message value to be set
      * @return Builder
      */
 
@@ -49,6 +49,8 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
      */
 
     public MissingTaxRateForCountryErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -58,6 +60,9 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
      */
 
     public MissingTaxRateForCountryErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -70,7 +75,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p>Unique identifier of the TaxCategory.</p>
-     * @param taxCategoryId
+     * @param taxCategoryId value to be set
      * @return Builder
      */
 
@@ -81,7 +86,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p>Country code of the geographic location.</p>
-     * @param country
+     * @param country value to be set
      * @return Builder
      */
 
@@ -92,7 +97,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
-     * @param state
+     * @param state value to be set
      * @return Builder
      */
 
@@ -123,6 +128,10 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
         return this.state;
     }
 
+    /**
+     * builds MissingTaxRateForCountryError with checking for non-null required values
+     * @return MissingTaxRateForCountryError
+     */
     public MissingTaxRateForCountryError build() {
         Objects.requireNonNull(message, MissingTaxRateForCountryError.class + ": message is missing");
         Objects.requireNonNull(taxCategoryId, MissingTaxRateForCountryError.class + ": taxCategoryId is missing");
@@ -130,7 +139,8 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     * builds MissingTaxRateForCountryError without checking for non null required values
+     * builds MissingTaxRateForCountryError without checking for non-null required values
+     * @return MissingTaxRateForCountryError
      */
     public MissingTaxRateForCountryError buildUnchecked() {
         return new MissingTaxRateForCountryErrorImpl(message, values, taxCategoryId, country, state);

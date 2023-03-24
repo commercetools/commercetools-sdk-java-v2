@@ -26,7 +26,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
-     * @param money
+     * @param money value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param builder function to build the money value
      * @return Builder
      */
 
@@ -93,13 +95,18 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
         return this.money;
     }
 
+    /**
+     * builds CartDiscountValueAbsolute with checking for non-null required values
+     * @return CartDiscountValueAbsolute
+     */
     public CartDiscountValueAbsolute build() {
         Objects.requireNonNull(money, CartDiscountValueAbsolute.class + ": money is missing");
         return new CartDiscountValueAbsoluteImpl(money);
     }
 
     /**
-     * builds CartDiscountValueAbsolute without checking for non null required values
+     * builds CartDiscountValueAbsolute without checking for non-null required values
+     * @return CartDiscountValueAbsolute
      */
     public CartDiscountValueAbsolute buildUnchecked() {
         return new CartDiscountValueAbsoluteImpl(money);

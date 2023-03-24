@@ -32,7 +32,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
 
     /**
      *
-     * @param customLineItemId
+     * @param customLineItemId value to be set
      * @return Builder
      */
 
@@ -43,6 +43,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param builder function to build the shippingDetails value
      * @return Builder
      */
 
@@ -55,7 +56,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
-     * @param shippingDetails
+     * @param shippingDetails value to be set
      * @return Builder
      */
 
@@ -74,6 +75,10 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
         return this.shippingDetails;
     }
 
+    /**
+     * builds StagedOrderSetCustomLineItemShippingDetailsAction with checking for non-null required values
+     * @return StagedOrderSetCustomLineItemShippingDetailsAction
+     */
     public StagedOrderSetCustomLineItemShippingDetailsAction build() {
         Objects.requireNonNull(customLineItemId,
             StagedOrderSetCustomLineItemShippingDetailsAction.class + ": customLineItemId is missing");
@@ -81,7 +86,8 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     * builds StagedOrderSetCustomLineItemShippingDetailsAction without checking for non null required values
+     * builds StagedOrderSetCustomLineItemShippingDetailsAction without checking for non-null required values
+     * @return StagedOrderSetCustomLineItemShippingDetailsAction
      */
     public StagedOrderSetCustomLineItemShippingDetailsAction buildUnchecked() {
         return new StagedOrderSetCustomLineItemShippingDetailsActionImpl(customLineItemId, shippingDetails);

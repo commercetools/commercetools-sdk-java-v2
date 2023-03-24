@@ -27,7 +27,7 @@ public class ProductDiscountSetValidFromActionBuilder implements Builder<Product
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
-     * @param validFrom
+     * @param validFrom value to be set
      * @return Builder
      */
 
@@ -41,12 +41,17 @@ public class ProductDiscountSetValidFromActionBuilder implements Builder<Product
         return this.validFrom;
     }
 
+    /**
+     * builds ProductDiscountSetValidFromAction with checking for non-null required values
+     * @return ProductDiscountSetValidFromAction
+     */
     public ProductDiscountSetValidFromAction build() {
         return new ProductDiscountSetValidFromActionImpl(validFrom);
     }
 
     /**
-     * builds ProductDiscountSetValidFromAction without checking for non null required values
+     * builds ProductDiscountSetValidFromAction without checking for non-null required values
+     * @return ProductDiscountSetValidFromAction
      */
     public ProductDiscountSetValidFromAction buildUnchecked() {
         return new ProductDiscountSetValidFromActionImpl(validFrom);

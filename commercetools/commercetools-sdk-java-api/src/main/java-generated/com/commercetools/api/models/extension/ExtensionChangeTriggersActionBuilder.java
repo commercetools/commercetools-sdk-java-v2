@@ -26,7 +26,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param triggers
+     * @param triggers value to be set
      * @return Builder
      */
 
@@ -38,7 +38,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param triggers
+     * @param triggers value to be set
      * @return Builder
      */
 
@@ -50,7 +50,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     * @param triggers
+     * @param triggers value to be set
      * @return Builder
      */
 
@@ -65,6 +65,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the triggers value
      * @return Builder
      */
 
@@ -79,6 +80,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the triggers value
      * @return Builder
      */
 
@@ -93,13 +95,18 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
         return this.triggers;
     }
 
+    /**
+     * builds ExtensionChangeTriggersAction with checking for non-null required values
+     * @return ExtensionChangeTriggersAction
+     */
     public ExtensionChangeTriggersAction build() {
         Objects.requireNonNull(triggers, ExtensionChangeTriggersAction.class + ": triggers is missing");
         return new ExtensionChangeTriggersActionImpl(triggers);
     }
 
     /**
-     * builds ExtensionChangeTriggersAction without checking for non null required values
+     * builds ExtensionChangeTriggersAction without checking for non-null required values
+     * @return ExtensionChangeTriggersAction
      */
     public ExtensionChangeTriggersAction buildUnchecked() {
         return new ExtensionChangeTriggersActionImpl(triggers);

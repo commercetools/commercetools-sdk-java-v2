@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 /**
- *
+ * entity to implement a type safe generic custom object
  * @param <TValue> The type of the value of this custom object.
  */
 @JsonDeserialize(as = GenericCustomObjectImpl.class)

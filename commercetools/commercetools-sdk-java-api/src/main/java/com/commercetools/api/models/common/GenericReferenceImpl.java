@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- *
+ * generic reference implementation
  * @param <T> the underlying reference type
  */
 public class GenericReferenceImpl<T> implements GenericReference<T> {

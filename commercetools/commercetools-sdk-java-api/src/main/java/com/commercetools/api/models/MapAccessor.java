@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 /**
+ * accessor interface for map objects like attributes or custom fields
  * @param <T> the type of the map value
  */
 public class MapAccessor<T> {

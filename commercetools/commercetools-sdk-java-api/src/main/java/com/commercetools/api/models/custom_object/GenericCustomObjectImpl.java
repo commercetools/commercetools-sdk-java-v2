@@ -10,7 +10,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ * generic custom object implementation
  * @param <TValue> The type of the value of this custom object.
  */
 public class GenericCustomObjectImpl<TValue> implements GenericCustomObject<TValue> {

@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 
 /**
- *
+ * builder for a generic custom object
  * @param <TValue> The type of the value of this custom object.
  */
 public class GenericCustomObjectBuilder<TValue> implements Builder<GenericCustomObject<TValue>> {

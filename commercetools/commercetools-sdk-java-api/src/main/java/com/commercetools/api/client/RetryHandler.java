@@ -11,6 +11,7 @@ import io.vrap.rmf.base.client.*;
 
 /**
  * Handler functions to retry single requests.
+ * @param <TResult> type of the result
  * {@include.example commercetools.ConcurrentModificationTest#concurrentMod()}
  */
 public interface RetryHandler<TResult> {

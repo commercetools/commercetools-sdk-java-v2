@@ -144,7 +144,8 @@ public class GenericCustomObjectBuilder<TValue> implements Builder<GenericCustom
     }
 
     /**
-     * builds CustomObject without checking for non null required values
+     * builds CustomObject without checking for non-null required values
+     * @return Custom object
      */
     public GenericCustomObject<TValue> buildUnchecked() {
         return new GenericCustomObjectImpl<>(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,

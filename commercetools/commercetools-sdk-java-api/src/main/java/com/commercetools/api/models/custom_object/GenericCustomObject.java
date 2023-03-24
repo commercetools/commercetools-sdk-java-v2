@@ -39,6 +39,7 @@ public interface GenericCustomObject<TValue>
 
     /**
     *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    * @return LastModifiedBy
     */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -46,14 +47,16 @@ public interface GenericCustomObject<TValue>
 
     /**
     *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+     * @return CreatedBy
     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>A namespace to group custom objects.</p>
-    */
+     *  <p>A namespace to group custom objects.</p>
+     * @return container name
+     */
     @NotNull
     @JsonProperty("container")
     public String getContainer();

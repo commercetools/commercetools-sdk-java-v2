@@ -32,6 +32,8 @@ public class MoneyBuilder implements Builder<Money> {
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
+     * @param centAmount the value to be set
+     * @return Builder
      */
 
     public MoneyBuilder centAmount(final Long centAmount) {
@@ -41,6 +43,8 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
+     * @param currencyCode the value to be set
+     * @return Builder
      */
 
     public MoneyBuilder currencyCode(final String currencyCode) {
@@ -63,7 +67,8 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     * builds Money without checking for non null required values
+     * builds Money without checking for non-null required values
+     * @return Money
      */
     public Money buildUnchecked() {
         return new MoneyImpl(centAmount, currencyCode);

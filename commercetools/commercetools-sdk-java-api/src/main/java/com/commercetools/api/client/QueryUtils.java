@@ -31,6 +31,7 @@ public class QueryUtils {
      * @param pageMapper callback function that is called on every page queried
      * @param <TElement> type of one query result element
      * @param <TMethod> type of the query
+     * @param <TResult> type of the result
      * @param <S> type of the returned result of the callback function on every page.
      * @return a completion stage containing a list of mapped pages as a result.
      */
@@ -56,6 +57,7 @@ public class QueryUtils {
      * @param pageConsumer consumer applied on every page queried
      * @param <TElement> type of one query result element
      * @param <TMethod> type of the query
+     * @param <TResult> type of the result
      * @return a completion stage containing void as a result after the consumer was applied on all
      *     pages.
      */
@@ -83,6 +85,7 @@ public class QueryUtils {
      * @param pageMapper callback function that is called on every page queried
      * @param <TElement> type of one query result element
      * @param <TMethod> type of the query
+     * @param <TResult> type of the result
      * @param <S> type of the returned result of the callback function on every page.
      * @param pageSize the page size.
      * @return a completion stage containing a list of mapped pages as a result.
@@ -109,6 +112,7 @@ public class QueryUtils {
      * @param pageConsumer consumer applied on every page queried
      * @param <TElement> type of one query result element
      * @param <TMethod> type of the query
+     * @param <TResult> type of the result
      * @param pageSize the page size
      * @return a completion stage containing void as a result after the consumer was applied on all
      *     pages.

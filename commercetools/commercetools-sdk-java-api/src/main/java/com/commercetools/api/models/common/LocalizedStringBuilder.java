@@ -36,6 +36,7 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
 
     /**
      * builds LocalizedString without checking for non null required values
+     * @return LocalizedString
      */
     public LocalizedString buildUnchecked() {
         return new LocalizedStringImpl(values);

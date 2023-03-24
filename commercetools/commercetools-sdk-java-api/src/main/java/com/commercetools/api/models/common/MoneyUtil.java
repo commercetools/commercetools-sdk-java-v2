@@ -147,6 +147,8 @@ public class MoneyUtil {
 
     /**
      * Calculates the taxes applied to the pricing.
+     * @param taxedPrice the items taxed price
+     * @return the monetary amount
      */
     public static MonetaryAmount calculateAppliedTaxes(final TaxedItemPrice taxedPrice) {
         return taxedPrice.getTotalGross().subtract(taxedPrice.getTotalNet());
@@ -155,6 +157,9 @@ public class MoneyUtil {
     /**
      * Calculates the gross price of the given amount according to its tax rate.
      * Whether the provided amount is already gross or net is determined by the tax rate.
+     * @param amount the monetary amount
+     * @param taxRate the tax rate used for calculating the gross price
+     * @return the monetary amount
      */
     public static MonetaryAmount calculateGrossPrice(final MonetaryAmount amount, final TaxRate taxRate) {
         return taxRate.getIncludedInPrice() ? amount : convertNetToGrossPrice(amount, taxRate.getAmount());

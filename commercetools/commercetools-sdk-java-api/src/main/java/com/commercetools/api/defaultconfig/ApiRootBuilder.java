@@ -536,6 +536,8 @@ public class ApiRootBuilder {
 
     /**
      * @deprecated use {@link #build(String)}  instead
+     * @param projectKey the project key to be used
+     * @return Builder
      */
     @Deprecated
     public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {
@@ -551,6 +553,8 @@ public class ApiRootBuilder {
 
     /**
      * @deprecated use {@link #build(String)}  instead
+     * @param projectKey the project key to be used
+     * @return Builder
      */
     @Deprecated
     public ProjectApiRoot buildProjectRoot(final String projectKey) {

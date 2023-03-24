@@ -109,6 +109,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * set cartId with the specified value
+     * @param cartId value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final TValue cartId) {
         return copy().withQueryParam("cartId", cartId);
@@ -116,6 +119,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * add additional cartId query parameter
+     * @param cartId value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(final TValue cartId) {
         return copy().addQueryParam("cartId", cartId);
@@ -123,6 +129,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * set cartId with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final Supplier<String> supplier) {
         return copy().withQueryParam("cartId", supplier.get());
@@ -130,6 +138,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * add additional cartId query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(final Supplier<String> supplier) {
         return copy().addQueryParam("cartId", supplier.get());
@@ -137,6 +147,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * set cartId with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(
             final Function<StringBuilder, StringBuilder> op) {
@@ -145,6 +157,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * add additional cartId query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(
             final Function<StringBuilder, StringBuilder> op) {
@@ -153,6 +167,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * set cartId with the specified values
+     * @param cartId values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(
             final Collection<TValue> cartId) {
@@ -163,6 +180,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * add additional cartId query parameters
+     * @param cartId values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(
             final Collection<TValue> cartId) {
@@ -172,6 +192,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -179,6 +202,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -186,6 +212,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -193,6 +221,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -200,6 +230,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -208,6 +240,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -216,6 +250,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(
             final Collection<TValue> expand) {
@@ -226,6 +263,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(
             final Collection<TValue> expand) {

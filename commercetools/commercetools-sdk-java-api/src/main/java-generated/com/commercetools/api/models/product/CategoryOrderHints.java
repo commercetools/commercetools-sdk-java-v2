@@ -31,6 +31,7 @@ public interface CategoryOrderHints {
 
     /**
      *  <p>A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</p>
+     * @return map of the pattern property values
      */
     @NotNull
     @JsonAnyGetter

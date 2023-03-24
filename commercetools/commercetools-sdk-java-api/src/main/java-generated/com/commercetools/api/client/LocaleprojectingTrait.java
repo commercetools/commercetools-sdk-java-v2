@@ -14,11 +14,17 @@ public interface LocaleprojectingTrait<T extends LocaleprojectingTrait<T>> {
 
     /**
      * set localeProjection with the specificied value
+     * @param localeProjection value to be set
+     * @param <TValue> value type
+     * @return LocaleprojectingTrait
      */
     <TValue> LocaleprojectingTrait<T> withLocaleProjection(final TValue localeProjection);
 
     /**
      * add additional localeProjection query parameter
+     * @param localeProjection value to be added
+     * @param <TValue> value type
+     * @return LocaleprojectingTrait
      */
     <TValue> LocaleprojectingTrait<T> addLocaleProjection(final TValue localeProjection);
 

@@ -30,6 +30,7 @@ public interface GraphQLVariablesMap {
 
     /**
      *
+     * @return map of the pattern property values
      */
     @NotNull
     @JsonAnyGetter

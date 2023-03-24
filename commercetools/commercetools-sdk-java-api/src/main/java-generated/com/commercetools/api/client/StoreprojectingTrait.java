@@ -14,11 +14,17 @@ public interface StoreprojectingTrait<T extends StoreprojectingTrait<T>> {
 
     /**
      * set storeProjection with the specificied value
+     * @param storeProjection value to be set
+     * @param <TValue> value type
+     * @return StoreprojectingTrait
      */
     <TValue> StoreprojectingTrait<T> withStoreProjection(final TValue storeProjection);
 
     /**
      * add additional storeProjection query parameter
+     * @param storeProjection value to be added
+     * @param <TValue> value type
+     * @return StoreprojectingTrait
      */
     <TValue> StoreprojectingTrait<T> addStoreProjection(final TValue storeProjection);
 

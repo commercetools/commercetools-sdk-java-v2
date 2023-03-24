@@ -94,6 +94,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -101,6 +104,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -108,6 +114,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet withLimit(final Supplier<Double> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -115,6 +123,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet addLimit(final Supplier<Double> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -122,6 +132,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet withLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("limit", op.apply(new StringBuilder()));
@@ -129,6 +141,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet addLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("limit", op.apply(new StringBuilder()));
@@ -136,6 +150,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
@@ -145,6 +162,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
@@ -153,6 +173,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -160,6 +183,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -167,6 +193,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet withOffset(final Supplier<Double> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -174,6 +202,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet addOffset(final Supplier<Double> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -181,6 +211,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet withOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("offset", op.apply(new StringBuilder()));
@@ -188,6 +220,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet addOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("offset", op.apply(new StringBuilder()));
@@ -195,6 +229,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
@@ -204,6 +241,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
@@ -212,6 +252,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set sort with the specified value
+     * @param sort value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
@@ -219,6 +262,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional sort query parameter
+     * @param sort value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
@@ -226,6 +272,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set sort with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet withSort(final Supplier<String> supplier) {
         return copy().withQueryParam("sort", supplier.get());
@@ -233,6 +281,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional sort query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet addSort(final Supplier<String> supplier) {
         return copy().addQueryParam("sort", supplier.get());
@@ -240,6 +290,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set sort with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet withSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("sort", op.apply(new StringBuilder()));
@@ -247,6 +299,8 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional sort query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImportContainersGet
      */
     public ByProjectKeyImportContainersGet addSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("sort", op.apply(new StringBuilder()));
@@ -254,6 +308,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * set sort with the specified values
+     * @param sort values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet withSort(final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
@@ -263,6 +320,9 @@ public class ByProjectKeyImportContainersGet extends
 
     /**
      * add additional sort query parameters
+     * @param sort values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersGet
      */
     public <TValue> ByProjectKeyImportContainersGet addSort(final Collection<TValue> sort) {
         return copy().addQueryParams(

@@ -107,6 +107,9 @@ public class ByProjectKeyCategoriesKeyByKeyPost extends
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyCategoriesKeyByKeyPost
      */
     public <TValue> ByProjectKeyCategoriesKeyByKeyPost withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -114,6 +117,9 @@ public class ByProjectKeyCategoriesKeyByKeyPost extends
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyCategoriesKeyByKeyPost
      */
     public <TValue> ByProjectKeyCategoriesKeyByKeyPost addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -121,6 +127,8 @@ public class ByProjectKeyCategoriesKeyByKeyPost extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyCategoriesKeyByKeyPost
      */
     public ByProjectKeyCategoriesKeyByKeyPost withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -128,6 +136,8 @@ public class ByProjectKeyCategoriesKeyByKeyPost extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyCategoriesKeyByKeyPost
      */
     public ByProjectKeyCategoriesKeyByKeyPost addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -135,6 +145,8 @@ public class ByProjectKeyCategoriesKeyByKeyPost extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyCategoriesKeyByKeyPost
      */
     public ByProjectKeyCategoriesKeyByKeyPost withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -142,6 +154,8 @@ public class ByProjectKeyCategoriesKeyByKeyPost extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyCategoriesKeyByKeyPost
      */
     public ByProjectKeyCategoriesKeyByKeyPost addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -149,6 +163,9 @@ public class ByProjectKeyCategoriesKeyByKeyPost extends
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyCategoriesKeyByKeyPost
      */
     public <TValue> ByProjectKeyCategoriesKeyByKeyPost withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -158,6 +175,9 @@ public class ByProjectKeyCategoriesKeyByKeyPost extends
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyCategoriesKeyByKeyPost
      */
     public <TValue> ByProjectKeyCategoriesKeyByKeyPost addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

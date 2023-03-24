@@ -114,6 +114,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet withExpand(
             final TValue expand) {
@@ -122,6 +125,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet addExpand(
             final TValue expand) {
@@ -130,6 +136,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet withExpand(
             final Supplier<String> supplier) {
@@ -138,6 +146,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet addExpand(
             final Supplier<String> supplier) {
@@ -146,6 +156,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet withExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -154,6 +166,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet addExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -162,6 +176,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet withExpand(
             final Collection<TValue> expand) {
@@ -172,6 +189,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet addExpand(
             final Collection<TValue> expand) {

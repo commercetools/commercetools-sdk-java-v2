@@ -106,6 +106,9 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * set version with the specified value
+     * @param version value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesByIDDelete
      */
     public <TValue> ByProjectKeyStatesByIDDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
@@ -113,6 +116,9 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * add additional version query parameter
+     * @param version value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesByIDDelete
      */
     public <TValue> ByProjectKeyStatesByIDDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
@@ -120,6 +126,8 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * set version with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyStatesByIDDelete
      */
     public ByProjectKeyStatesByIDDelete withVersion(final Supplier<Long> supplier) {
         return copy().withQueryParam("version", supplier.get());
@@ -127,6 +135,8 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * add additional version query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyStatesByIDDelete
      */
     public ByProjectKeyStatesByIDDelete addVersion(final Supplier<Long> supplier) {
         return copy().addQueryParam("version", supplier.get());
@@ -134,6 +144,8 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * set version with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyStatesByIDDelete
      */
     public ByProjectKeyStatesByIDDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("version", op.apply(new StringBuilder()));
@@ -141,6 +153,8 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * add additional version query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyStatesByIDDelete
      */
     public ByProjectKeyStatesByIDDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("version", op.apply(new StringBuilder()));
@@ -148,6 +162,9 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * set version with the specified values
+     * @param version values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesByIDDelete
      */
     public <TValue> ByProjectKeyStatesByIDDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
@@ -157,6 +174,9 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * add additional version query parameters
+     * @param version values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesByIDDelete
      */
     public <TValue> ByProjectKeyStatesByIDDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
@@ -165,6 +185,9 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesByIDDelete
      */
     public <TValue> ByProjectKeyStatesByIDDelete withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -172,6 +195,9 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesByIDDelete
      */
     public <TValue> ByProjectKeyStatesByIDDelete addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -179,6 +205,8 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyStatesByIDDelete
      */
     public ByProjectKeyStatesByIDDelete withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -186,6 +214,8 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyStatesByIDDelete
      */
     public ByProjectKeyStatesByIDDelete addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -193,6 +223,8 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyStatesByIDDelete
      */
     public ByProjectKeyStatesByIDDelete withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -200,6 +232,8 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyStatesByIDDelete
      */
     public ByProjectKeyStatesByIDDelete addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -207,6 +241,9 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesByIDDelete
      */
     public <TValue> ByProjectKeyStatesByIDDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -216,6 +253,9 @@ public class ByProjectKeyStatesByIDDelete
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesByIDDelete
      */
     public <TValue> ByProjectKeyStatesByIDDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

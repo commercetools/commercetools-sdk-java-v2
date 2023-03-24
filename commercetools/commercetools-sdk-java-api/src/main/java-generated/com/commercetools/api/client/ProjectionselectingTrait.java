@@ -14,11 +14,17 @@ public interface ProjectionselectingTrait<T extends ProjectionselectingTrait<T>>
 
     /**
      * set staged with the specificied value
+     * @param staged value to be set
+     * @param <TValue> value type
+     * @return ProjectionselectingTrait
      */
     <TValue> ProjectionselectingTrait<T> withStaged(final TValue staged);
 
     /**
      * add additional staged query parameter
+     * @param staged value to be added
+     * @param <TValue> value type
+     * @return ProjectionselectingTrait
      */
     <TValue> ProjectionselectingTrait<T> addStaged(final TValue staged);
 

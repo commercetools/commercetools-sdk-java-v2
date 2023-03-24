@@ -14,11 +14,17 @@ public interface SortableTrait<T extends SortableTrait<T>> {
 
     /**
      * set sort with the specificied value
+     * @param sort value to be set
+     * @param <TValue> value type
+     * @return SortableTrait
      */
     <TValue> SortableTrait<T> withSort(final TValue sort);
 
     /**
      * add additional sort query parameter
+     * @param sort value to be added
+     * @param <TValue> value type
+     * @return SortableTrait
      */
     <TValue> SortableTrait<T> addSort(final TValue sort);
 

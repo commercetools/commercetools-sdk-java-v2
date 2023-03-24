@@ -130,6 +130,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set staged with the specified value
+     * @param staged value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withStaged(final TValue staged) {
         return copy().withQueryParam("staged", staged);
@@ -137,6 +140,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional staged query parameter
+     * @param staged value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addStaged(final TValue staged) {
         return copy().addQueryParam("staged", staged);
@@ -144,6 +150,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set staged with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withStaged(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("staged", supplier.get());
@@ -151,6 +159,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional staged query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addStaged(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("staged", supplier.get());
@@ -158,6 +168,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set staged with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withStaged(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("staged", op.apply(new StringBuilder()));
@@ -165,6 +177,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional staged query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addStaged(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("staged", op.apply(new StringBuilder()));
@@ -172,6 +186,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set staged with the specified values
+     * @param staged values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withStaged(final Collection<TValue> staged) {
         return copy().withoutQueryParam("staged")
@@ -181,6 +198,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional staged query parameters
+     * @param staged values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addStaged(final Collection<TValue> staged) {
         return copy().addQueryParams(
@@ -189,6 +209,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCurrency with the specified value
+     * @param priceCurrency value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withPriceCurrency(final TValue priceCurrency) {
         return copy().withQueryParam("priceCurrency", priceCurrency);
@@ -196,6 +219,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCurrency query parameter
+     * @param priceCurrency value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addPriceCurrency(final TValue priceCurrency) {
         return copy().addQueryParam("priceCurrency", priceCurrency);
@@ -203,6 +229,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCurrency with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withPriceCurrency(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCurrency", supplier.get());
@@ -210,6 +238,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCurrency query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addPriceCurrency(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCurrency", supplier.get());
@@ -217,6 +247,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCurrency with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceCurrency", op.apply(new StringBuilder()));
@@ -224,6 +256,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCurrency query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceCurrency", op.apply(new StringBuilder()));
@@ -231,6 +265,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCurrency with the specified values
+     * @param priceCurrency values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().withoutQueryParam("priceCurrency")
@@ -241,6 +278,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCurrency query parameters
+     * @param priceCurrency values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().addQueryParams(priceCurrency.stream()
@@ -250,6 +290,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCountry with the specified value
+     * @param priceCountry value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withPriceCountry(final TValue priceCountry) {
         return copy().withQueryParam("priceCountry", priceCountry);
@@ -257,6 +300,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCountry query parameter
+     * @param priceCountry value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addPriceCountry(final TValue priceCountry) {
         return copy().addQueryParam("priceCountry", priceCountry);
@@ -264,6 +310,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCountry with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withPriceCountry(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCountry", supplier.get());
@@ -271,6 +319,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCountry query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addPriceCountry(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCountry", supplier.get());
@@ -278,6 +328,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCountry with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withPriceCountry(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceCountry", op.apply(new StringBuilder()));
@@ -285,6 +337,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCountry query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addPriceCountry(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceCountry", op.apply(new StringBuilder()));
@@ -292,6 +346,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCountry with the specified values
+     * @param priceCountry values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withPriceCountry(final Collection<TValue> priceCountry) {
         return copy().withoutQueryParam("priceCountry")
@@ -302,6 +359,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCountry query parameters
+     * @param priceCountry values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addPriceCountry(final Collection<TValue> priceCountry) {
         return copy().addQueryParams(priceCountry.stream()
@@ -311,6 +371,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param priceCustomerGroup value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withPriceCustomerGroup(final TValue priceCustomerGroup) {
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
@@ -318,6 +381,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param priceCustomerGroup value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addPriceCustomerGroup(final TValue priceCustomerGroup) {
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
@@ -325,6 +391,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withPriceCustomerGroup(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCustomerGroup", supplier.get());
@@ -332,6 +400,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addPriceCustomerGroup(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCustomerGroup", supplier.get());
@@ -339,6 +409,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withPriceCustomerGroup(
             final Function<StringBuilder, StringBuilder> op) {
@@ -347,6 +419,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addPriceCustomerGroup(
             final Function<StringBuilder, StringBuilder> op) {
@@ -355,6 +429,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceCustomerGroup with the specified values
+     * @param priceCustomerGroup values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withPriceCustomerGroup(
             final Collection<TValue> priceCustomerGroup) {
@@ -366,6 +443,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceCustomerGroup query parameters
+     * @param priceCustomerGroup values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addPriceCustomerGroup(
             final Collection<TValue> priceCustomerGroup) {
@@ -376,6 +456,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceChannel with the specified value
+     * @param priceChannel value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withPriceChannel(final TValue priceChannel) {
         return copy().withQueryParam("priceChannel", priceChannel);
@@ -383,6 +466,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceChannel query parameter
+     * @param priceChannel value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addPriceChannel(final TValue priceChannel) {
         return copy().addQueryParam("priceChannel", priceChannel);
@@ -390,6 +476,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceChannel with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withPriceChannel(final Supplier<String> supplier) {
         return copy().withQueryParam("priceChannel", supplier.get());
@@ -397,6 +485,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceChannel query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addPriceChannel(final Supplier<String> supplier) {
         return copy().addQueryParam("priceChannel", supplier.get());
@@ -404,6 +494,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceChannel with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withPriceChannel(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceChannel", op.apply(new StringBuilder()));
@@ -411,6 +503,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceChannel query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addPriceChannel(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceChannel", op.apply(new StringBuilder()));
@@ -418,6 +512,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set priceChannel with the specified values
+     * @param priceChannel values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withPriceChannel(final Collection<TValue> priceChannel) {
         return copy().withoutQueryParam("priceChannel")
@@ -428,6 +525,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional priceChannel query parameters
+     * @param priceChannel values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
@@ -437,6 +537,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set localeProjection with the specified value
+     * @param localeProjection value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withLocaleProjection(final TValue localeProjection) {
         return copy().withQueryParam("localeProjection", localeProjection);
@@ -444,6 +547,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional localeProjection query parameter
+     * @param localeProjection value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addLocaleProjection(final TValue localeProjection) {
         return copy().addQueryParam("localeProjection", localeProjection);
@@ -451,6 +557,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set localeProjection with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withLocaleProjection(final Supplier<String> supplier) {
         return copy().withQueryParam("localeProjection", supplier.get());
@@ -458,6 +566,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional localeProjection query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addLocaleProjection(final Supplier<String> supplier) {
         return copy().addQueryParam("localeProjection", supplier.get());
@@ -465,6 +575,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set localeProjection with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
@@ -472,6 +584,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional localeProjection query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
@@ -479,6 +593,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set localeProjection with the specified values
+     * @param localeProjection values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withLocaleProjection(
             final Collection<TValue> localeProjection) {
@@ -490,6 +607,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional localeProjection query parameters
+     * @param localeProjection values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addLocaleProjection(
             final Collection<TValue> localeProjection) {
@@ -500,6 +620,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set storeProjection with the specified value
+     * @param storeProjection value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withStoreProjection(final TValue storeProjection) {
         return copy().withQueryParam("storeProjection", storeProjection);
@@ -507,6 +630,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional storeProjection query parameter
+     * @param storeProjection value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addStoreProjection(final TValue storeProjection) {
         return copy().addQueryParam("storeProjection", storeProjection);
@@ -514,6 +640,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set storeProjection with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withStoreProjection(final Supplier<String> supplier) {
         return copy().withQueryParam("storeProjection", supplier.get());
@@ -521,6 +649,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional storeProjection query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addStoreProjection(final Supplier<String> supplier) {
         return copy().addQueryParam("storeProjection", supplier.get());
@@ -528,6 +658,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set storeProjection with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withStoreProjection(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("storeProjection", op.apply(new StringBuilder()));
@@ -535,6 +667,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional storeProjection query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addStoreProjection(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("storeProjection", op.apply(new StringBuilder()));
@@ -542,6 +676,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set storeProjection with the specified values
+     * @param storeProjection values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withStoreProjection(
             final Collection<TValue> storeProjection) {
@@ -553,6 +690,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional storeProjection query parameters
+     * @param storeProjection values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addStoreProjection(final Collection<TValue> storeProjection) {
         return copy().addQueryParams(storeProjection.stream()
@@ -562,6 +702,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -569,6 +712,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -576,6 +722,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -583,6 +731,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -590,6 +740,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -597,6 +749,8 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public ByProjectKeyProductProjectionsByIDGet addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -604,6 +758,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -613,6 +770,9 @@ public class ByProjectKeyProductProjectionsByIDGet
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyProductProjectionsByIDGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

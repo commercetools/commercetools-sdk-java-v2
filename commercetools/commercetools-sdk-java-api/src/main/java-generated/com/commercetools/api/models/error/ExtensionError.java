@@ -65,6 +65,7 @@ public interface ExtensionError {
 
     /**
      *  <p>Error-specific additional fields.</p>
+     * @return map of the pattern property values
      */
     @NotNull
     @JsonAnyGetter

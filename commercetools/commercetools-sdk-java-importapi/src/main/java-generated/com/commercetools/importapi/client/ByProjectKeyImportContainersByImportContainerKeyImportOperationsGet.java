@@ -124,6 +124,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -131,6 +134,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -138,6 +144,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withLimit(
             final Supplier<Double> supplier) {
@@ -146,6 +154,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addLimit(
             final Supplier<Double> supplier) {
@@ -154,6 +164,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withLimit(
             final Function<StringBuilder, StringBuilder> op) {
@@ -162,6 +174,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addLimit(
             final Function<StringBuilder, StringBuilder> op) {
@@ -170,6 +184,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withLimit(
             final Collection<TValue> limit) {
@@ -180,6 +197,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addLimit(
             final Collection<TValue> limit) {
@@ -189,6 +209,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withOffset(
             final TValue offset) {
@@ -197,6 +220,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -204,6 +230,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withOffset(
             final Supplier<Double> supplier) {
@@ -212,6 +240,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addOffset(
             final Supplier<Double> supplier) {
@@ -220,6 +250,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withOffset(
             final Function<StringBuilder, StringBuilder> op) {
@@ -228,6 +260,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addOffset(
             final Function<StringBuilder, StringBuilder> op) {
@@ -236,6 +270,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withOffset(
             final Collection<TValue> offset) {
@@ -246,6 +283,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addOffset(
             final Collection<TValue> offset) {
@@ -255,6 +295,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set sort with the specified value
+     * @param sort value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
@@ -262,6 +305,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional sort query parameter
+     * @param sort value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
@@ -269,6 +315,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set sort with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withSort(
             final Supplier<String> supplier) {
@@ -277,6 +325,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional sort query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addSort(
             final Supplier<String> supplier) {
@@ -285,6 +335,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set sort with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withSort(
             final Function<StringBuilder, StringBuilder> op) {
@@ -293,6 +345,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional sort query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addSort(
             final Function<StringBuilder, StringBuilder> op) {
@@ -301,6 +355,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set sort with the specified values
+     * @param sort values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withSort(
             final Collection<TValue> sort) {
@@ -311,6 +368,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional sort query parameters
+     * @param sort values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addSort(
             final Collection<TValue> sort) {
@@ -320,6 +380,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set resourceKey with the specified value
+     * @param resourceKey value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withResourceKey(
             final TValue resourceKey) {
@@ -328,6 +391,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional resourceKey query parameter
+     * @param resourceKey value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addResourceKey(
             final TValue resourceKey) {
@@ -336,6 +402,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set resourceKey with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withResourceKey(
             final Supplier<String> supplier) {
@@ -344,6 +412,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional resourceKey query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addResourceKey(
             final Supplier<String> supplier) {
@@ -352,6 +422,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set resourceKey with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withResourceKey(
             final Function<StringBuilder, StringBuilder> op) {
@@ -360,6 +432,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional resourceKey query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addResourceKey(
             final Function<StringBuilder, StringBuilder> op) {
@@ -368,6 +442,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set resourceKey with the specified values
+     * @param resourceKey values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withResourceKey(
             final Collection<TValue> resourceKey) {
@@ -379,6 +456,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional resourceKey query parameters
+     * @param resourceKey values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addResourceKey(
             final Collection<TValue> resourceKey) {
@@ -388,6 +468,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set state with the specified value
+     * @param state value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withState(final TValue state) {
         return copy().withQueryParam("state", state);
@@ -395,6 +478,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional state query parameter
+     * @param state value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addState(final TValue state) {
         return copy().addQueryParam("state", state);
@@ -402,6 +488,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set state with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withState(
             final Supplier<ProcessingState> supplier) {
@@ -410,6 +498,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional state query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addState(
             final Supplier<ProcessingState> supplier) {
@@ -418,6 +508,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set state with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withState(
             final Function<StringBuilder, StringBuilder> op) {
@@ -426,6 +518,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional state query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addState(
             final Function<StringBuilder, StringBuilder> op) {
@@ -434,6 +528,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set state with the specified values
+     * @param state values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withState(
             final Collection<TValue> state) {
@@ -444,6 +541,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional state query parameters
+     * @param state values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addState(
             final Collection<TValue> state) {
@@ -453,6 +553,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set debug with the specified value
+     * @param debug value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withDebug(final TValue debug) {
         return copy().withQueryParam("debug", debug);
@@ -460,6 +563,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional debug query parameter
+     * @param debug value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addDebug(final TValue debug) {
         return copy().addQueryParam("debug", debug);
@@ -467,6 +573,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set debug with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withDebug(
             final Supplier<Boolean> supplier) {
@@ -475,6 +583,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional debug query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addDebug(
             final Supplier<Boolean> supplier) {
@@ -483,6 +593,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set debug with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withDebug(
             final Function<StringBuilder, StringBuilder> op) {
@@ -491,6 +603,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional debug query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addDebug(
             final Function<StringBuilder, StringBuilder> op) {
@@ -499,6 +613,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * set debug with the specified values
+     * @param debug values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withDebug(
             final Collection<TValue> debug) {
@@ -509,6 +626,9 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
 
     /**
      * add additional debug query parameters
+     * @param debug values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addDebug(
             final Collection<TValue> debug) {

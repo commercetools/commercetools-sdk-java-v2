@@ -32,6 +32,7 @@ public interface SuggestionResult {
 
     /**
      *
+     * @return map of the pattern property values
      */
     @NotNull
     @Valid

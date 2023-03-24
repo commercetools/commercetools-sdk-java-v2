@@ -112,6 +112,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -119,6 +122,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -126,6 +132,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -133,6 +141,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -140,6 +150,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -147,6 +159,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -154,6 +168,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -163,6 +180,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
@@ -171,6 +191,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set dataErasure with the specified value
+     * @param dataErasure value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete withDataErasure(final TValue dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
@@ -178,6 +201,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional dataErasure query parameter
+     * @param dataErasure value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete addDataErasure(final TValue dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
@@ -185,6 +211,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set dataErasure with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete withDataErasure(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("dataErasure", supplier.get());
@@ -192,6 +220,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional dataErasure query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete addDataErasure(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("dataErasure", supplier.get());
@@ -199,6 +229,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set dataErasure with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete withDataErasure(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("dataErasure", op.apply(new StringBuilder()));
@@ -206,6 +238,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional dataErasure query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete addDataErasure(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("dataErasure", op.apply(new StringBuilder()));
@@ -213,6 +247,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set dataErasure with the specified values
+     * @param dataErasure values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete withDataErasure(final Collection<TValue> dataErasure) {
         return copy().withoutQueryParam("dataErasure")
@@ -223,6 +260,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional dataErasure query parameters
+     * @param dataErasure values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete addDataErasure(final Collection<TValue> dataErasure) {
         return copy().addQueryParams(
@@ -231,6 +271,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set version with the specified value
+     * @param version value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
@@ -238,6 +281,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional version query parameter
+     * @param version value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
@@ -245,6 +291,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set version with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete withVersion(final Supplier<Long> supplier) {
         return copy().withQueryParam("version", supplier.get());
@@ -252,6 +300,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional version query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete addVersion(final Supplier<Long> supplier) {
         return copy().addQueryParam("version", supplier.get());
@@ -259,6 +309,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set version with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("version", op.apply(new StringBuilder()));
@@ -266,6 +318,8 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional version query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public ByProjectKeyShoppingListsKeyByKeyDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("version", op.apply(new StringBuilder()));
@@ -273,6 +327,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * set version with the specified values
+     * @param version values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
@@ -282,6 +339,9 @@ public class ByProjectKeyShoppingListsKeyByKeyDelete extends
 
     /**
      * add additional version query parameters
+     * @param version values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyShoppingListsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyShoppingListsKeyByKeyDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(

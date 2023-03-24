@@ -99,6 +99,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
 
     /**
      * set version with the specified value
+     * @param version value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeDelete
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
@@ -106,6 +109,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
 
     /**
      * add additional version query parameter
+     * @param version value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeDelete
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
@@ -113,6 +119,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
 
     /**
      * set version with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeDelete
      */
     public ByProjectKeyInStoreKeyByStoreKeyMeDelete withVersion(final Supplier<Long> supplier) {
         return copy().withQueryParam("version", supplier.get());
@@ -120,6 +128,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
 
     /**
      * add additional version query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeDelete
      */
     public ByProjectKeyInStoreKeyByStoreKeyMeDelete addVersion(final Supplier<Long> supplier) {
         return copy().addQueryParam("version", supplier.get());
@@ -127,6 +137,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
 
     /**
      * set version with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeDelete
      */
     public ByProjectKeyInStoreKeyByStoreKeyMeDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("version", op.apply(new StringBuilder()));
@@ -134,6 +146,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
 
     /**
      * add additional version query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeDelete
      */
     public ByProjectKeyInStoreKeyByStoreKeyMeDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("version", op.apply(new StringBuilder()));
@@ -141,6 +155,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
 
     /**
      * set version with the specified values
+     * @param version values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeDelete
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
@@ -150,6 +167,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
 
     /**
      * add additional version query parameters
+     * @param version values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeDelete
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(

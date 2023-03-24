@@ -119,6 +119,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCurrency with the specified value
+     * @param priceCurrency value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withPriceCurrency(final TValue priceCurrency) {
         return copy().withQueryParam("priceCurrency", priceCurrency);
@@ -126,6 +129,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCurrency query parameter
+     * @param priceCurrency value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addPriceCurrency(final TValue priceCurrency) {
         return copy().addQueryParam("priceCurrency", priceCurrency);
@@ -133,6 +139,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCurrency with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withPriceCurrency(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCurrency", supplier.get());
@@ -140,6 +148,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCurrency query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addPriceCurrency(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCurrency", supplier.get());
@@ -147,6 +157,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCurrency with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceCurrency", op.apply(new StringBuilder()));
@@ -154,6 +166,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCurrency query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceCurrency", op.apply(new StringBuilder()));
@@ -161,6 +175,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCurrency with the specified values
+     * @param priceCurrency values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().withoutQueryParam("priceCurrency")
@@ -171,6 +188,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCurrency query parameters
+     * @param priceCurrency values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().addQueryParams(priceCurrency.stream()
@@ -180,6 +200,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCountry with the specified value
+     * @param priceCountry value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withPriceCountry(final TValue priceCountry) {
         return copy().withQueryParam("priceCountry", priceCountry);
@@ -187,6 +210,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCountry query parameter
+     * @param priceCountry value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addPriceCountry(final TValue priceCountry) {
         return copy().addQueryParam("priceCountry", priceCountry);
@@ -194,6 +220,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCountry with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withPriceCountry(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCountry", supplier.get());
@@ -201,6 +229,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCountry query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addPriceCountry(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCountry", supplier.get());
@@ -208,6 +238,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCountry with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withPriceCountry(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceCountry", op.apply(new StringBuilder()));
@@ -215,6 +247,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCountry query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addPriceCountry(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceCountry", op.apply(new StringBuilder()));
@@ -222,6 +256,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCountry with the specified values
+     * @param priceCountry values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withPriceCountry(final Collection<TValue> priceCountry) {
         return copy().withoutQueryParam("priceCountry")
@@ -232,6 +269,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCountry query parameters
+     * @param priceCountry values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addPriceCountry(final Collection<TValue> priceCountry) {
         return copy().addQueryParams(priceCountry.stream()
@@ -241,6 +281,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param priceCustomerGroup value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withPriceCustomerGroup(final TValue priceCustomerGroup) {
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
@@ -248,6 +291,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param priceCustomerGroup value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addPriceCustomerGroup(final TValue priceCustomerGroup) {
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
@@ -255,6 +301,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withPriceCustomerGroup(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCustomerGroup", supplier.get());
@@ -262,6 +310,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addPriceCustomerGroup(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCustomerGroup", supplier.get());
@@ -269,6 +319,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withPriceCustomerGroup(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
@@ -276,6 +328,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addPriceCustomerGroup(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
@@ -283,6 +337,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceCustomerGroup with the specified values
+     * @param priceCustomerGroup values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withPriceCustomerGroup(
             final Collection<TValue> priceCustomerGroup) {
@@ -294,6 +351,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceCustomerGroup query parameters
+     * @param priceCustomerGroup values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addPriceCustomerGroup(final Collection<TValue> priceCustomerGroup) {
         return copy().addQueryParams(priceCustomerGroup.stream()
@@ -303,6 +363,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceChannel with the specified value
+     * @param priceChannel value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withPriceChannel(final TValue priceChannel) {
         return copy().withQueryParam("priceChannel", priceChannel);
@@ -310,6 +373,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceChannel query parameter
+     * @param priceChannel value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addPriceChannel(final TValue priceChannel) {
         return copy().addQueryParam("priceChannel", priceChannel);
@@ -317,6 +383,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceChannel with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withPriceChannel(final Supplier<String> supplier) {
         return copy().withQueryParam("priceChannel", supplier.get());
@@ -324,6 +392,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceChannel query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addPriceChannel(final Supplier<String> supplier) {
         return copy().addQueryParam("priceChannel", supplier.get());
@@ -331,6 +401,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceChannel with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withPriceChannel(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceChannel", op.apply(new StringBuilder()));
@@ -338,6 +410,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceChannel query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addPriceChannel(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceChannel", op.apply(new StringBuilder()));
@@ -345,6 +419,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set priceChannel with the specified values
+     * @param priceChannel values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withPriceChannel(final Collection<TValue> priceChannel) {
         return copy().withoutQueryParam("priceChannel")
@@ -355,6 +432,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional priceChannel query parameters
+     * @param priceChannel values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
@@ -364,6 +444,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set localeProjection with the specified value
+     * @param localeProjection value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withLocaleProjection(final TValue localeProjection) {
         return copy().withQueryParam("localeProjection", localeProjection);
@@ -371,6 +454,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional localeProjection query parameter
+     * @param localeProjection value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addLocaleProjection(final TValue localeProjection) {
         return copy().addQueryParam("localeProjection", localeProjection);
@@ -378,6 +464,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set localeProjection with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withLocaleProjection(final Supplier<String> supplier) {
         return copy().withQueryParam("localeProjection", supplier.get());
@@ -385,6 +473,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional localeProjection query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addLocaleProjection(final Supplier<String> supplier) {
         return copy().addQueryParam("localeProjection", supplier.get());
@@ -392,6 +482,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set localeProjection with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
@@ -399,6 +491,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional localeProjection query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
@@ -406,6 +500,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set localeProjection with the specified values
+     * @param localeProjection values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withLocaleProjection(final Collection<TValue> localeProjection) {
         return copy().withoutQueryParam("localeProjection")
@@ -416,6 +513,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional localeProjection query parameters
+     * @param localeProjection values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addLocaleProjection(final Collection<TValue> localeProjection) {
         return copy().addQueryParams(localeProjection.stream()
@@ -425,6 +525,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -432,6 +535,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -439,6 +545,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -446,6 +554,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -453,6 +563,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -460,6 +572,8 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public ByProjectKeyProductsKeyByKeyGet addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -467,6 +581,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -476,6 +593,9 @@ public class ByProjectKeyProductsKeyByKeyGet
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyGet
      */
     public <TValue> ByProjectKeyProductsKeyByKeyGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

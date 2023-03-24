@@ -36,6 +36,7 @@ public interface LocalizedString {
 
     /**
      *
+     * @return map of the pattern property values
      */
     @NotNull
     @JsonAnyGetter

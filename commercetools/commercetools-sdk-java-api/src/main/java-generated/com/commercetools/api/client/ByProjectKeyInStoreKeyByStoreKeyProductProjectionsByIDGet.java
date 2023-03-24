@@ -142,6 +142,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set staged with the specified value
+     * @param staged value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withStaged(final TValue staged) {
         return copy().withQueryParam("staged", staged);
@@ -149,6 +152,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional staged query parameter
+     * @param staged value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addStaged(final TValue staged) {
         return copy().addQueryParam("staged", staged);
@@ -156,6 +162,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set staged with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withStaged(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("staged", supplier.get());
@@ -163,6 +171,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional staged query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addStaged(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("staged", supplier.get());
@@ -170,6 +180,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set staged with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withStaged(
             final Function<StringBuilder, StringBuilder> op) {
@@ -178,6 +190,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional staged query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addStaged(
             final Function<StringBuilder, StringBuilder> op) {
@@ -186,6 +200,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set staged with the specified values
+     * @param staged values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withStaged(
             final Collection<TValue> staged) {
@@ -196,6 +213,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional staged query parameters
+     * @param staged values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addStaged(
             final Collection<TValue> staged) {
@@ -205,6 +225,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCurrency with the specified value
+     * @param priceCurrency value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCurrency(
             final TValue priceCurrency) {
@@ -213,6 +236,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCurrency query parameter
+     * @param priceCurrency value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCurrency(
             final TValue priceCurrency) {
@@ -221,6 +247,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCurrency with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCurrency(
             final Supplier<String> supplier) {
@@ -229,6 +257,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCurrency query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCurrency(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCurrency", supplier.get());
@@ -236,6 +266,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCurrency with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCurrency(
             final Function<StringBuilder, StringBuilder> op) {
@@ -244,6 +276,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCurrency query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCurrency(
             final Function<StringBuilder, StringBuilder> op) {
@@ -252,6 +286,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCurrency with the specified values
+     * @param priceCurrency values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCurrency(
             final Collection<TValue> priceCurrency) {
@@ -263,6 +300,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCurrency query parameters
+     * @param priceCurrency values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCurrency(
             final Collection<TValue> priceCurrency) {
@@ -273,6 +313,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCountry with the specified value
+     * @param priceCountry value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCountry(
             final TValue priceCountry) {
@@ -281,6 +324,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCountry query parameter
+     * @param priceCountry value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCountry(
             final TValue priceCountry) {
@@ -289,6 +335,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCountry with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCountry(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCountry", supplier.get());
@@ -296,6 +344,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCountry query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCountry(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCountry", supplier.get());
@@ -303,6 +353,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCountry with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCountry(
             final Function<StringBuilder, StringBuilder> op) {
@@ -311,6 +363,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCountry query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCountry(
             final Function<StringBuilder, StringBuilder> op) {
@@ -319,6 +373,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCountry with the specified values
+     * @param priceCountry values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCountry(
             final Collection<TValue> priceCountry) {
@@ -330,6 +387,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCountry query parameters
+     * @param priceCountry values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCountry(
             final Collection<TValue> priceCountry) {
@@ -340,6 +400,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param priceCustomerGroup value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCustomerGroup(
             final TValue priceCustomerGroup) {
@@ -348,6 +411,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param priceCustomerGroup value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCustomerGroup(
             final TValue priceCustomerGroup) {
@@ -356,6 +422,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCustomerGroup(
             final Supplier<String> supplier) {
@@ -364,6 +432,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCustomerGroup(
             final Supplier<String> supplier) {
@@ -372,6 +442,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCustomerGroup(
             final Function<StringBuilder, StringBuilder> op) {
@@ -380,6 +452,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCustomerGroup(
             final Function<StringBuilder, StringBuilder> op) {
@@ -388,6 +462,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceCustomerGroup with the specified values
+     * @param priceCustomerGroup values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceCustomerGroup(
             final Collection<TValue> priceCustomerGroup) {
@@ -399,6 +476,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceCustomerGroup query parameters
+     * @param priceCustomerGroup values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceCustomerGroup(
             final Collection<TValue> priceCustomerGroup) {
@@ -409,6 +489,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceChannel with the specified value
+     * @param priceChannel value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceChannel(
             final TValue priceChannel) {
@@ -417,6 +500,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceChannel query parameter
+     * @param priceChannel value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceChannel(
             final TValue priceChannel) {
@@ -425,6 +511,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceChannel with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceChannel(final Supplier<String> supplier) {
         return copy().withQueryParam("priceChannel", supplier.get());
@@ -432,6 +520,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceChannel query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceChannel(final Supplier<String> supplier) {
         return copy().addQueryParam("priceChannel", supplier.get());
@@ -439,6 +529,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceChannel with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceChannel(
             final Function<StringBuilder, StringBuilder> op) {
@@ -447,6 +539,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceChannel query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceChannel(
             final Function<StringBuilder, StringBuilder> op) {
@@ -455,6 +549,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set priceChannel with the specified values
+     * @param priceChannel values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withPriceChannel(
             final Collection<TValue> priceChannel) {
@@ -466,6 +563,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional priceChannel query parameters
+     * @param priceChannel values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addPriceChannel(
             final Collection<TValue> priceChannel) {
@@ -476,6 +576,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set localeProjection with the specified value
+     * @param localeProjection value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withLocaleProjection(
             final TValue localeProjection) {
@@ -484,6 +587,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional localeProjection query parameter
+     * @param localeProjection value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addLocaleProjection(
             final TValue localeProjection) {
@@ -492,6 +598,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set localeProjection with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withLocaleProjection(
             final Supplier<String> supplier) {
@@ -500,6 +608,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional localeProjection query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addLocaleProjection(
             final Supplier<String> supplier) {
@@ -508,6 +618,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set localeProjection with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withLocaleProjection(
             final Function<StringBuilder, StringBuilder> op) {
@@ -516,6 +628,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional localeProjection query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addLocaleProjection(
             final Function<StringBuilder, StringBuilder> op) {
@@ -524,6 +638,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set localeProjection with the specified values
+     * @param localeProjection values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withLocaleProjection(
             final Collection<TValue> localeProjection) {
@@ -535,6 +652,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional localeProjection query parameters
+     * @param localeProjection values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addLocaleProjection(
             final Collection<TValue> localeProjection) {
@@ -545,6 +665,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -552,6 +675,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -559,6 +685,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -566,6 +694,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -573,6 +703,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -581,6 +713,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -589,6 +723,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withExpand(
             final Collection<TValue> expand) {
@@ -599,6 +736,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addExpand(
             final Collection<TValue> expand) {

@@ -32,6 +32,7 @@ public interface ProductVariantChannelAvailabilityMap {
 
     /**
      *
+     * @return map of the pattern property values
      */
     @NotNull
     @Valid

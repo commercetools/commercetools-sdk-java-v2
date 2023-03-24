@@ -113,6 +113,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -120,6 +123,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -127,6 +133,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -134,6 +142,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -141,6 +151,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -148,6 +160,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -155,6 +169,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -164,6 +181,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

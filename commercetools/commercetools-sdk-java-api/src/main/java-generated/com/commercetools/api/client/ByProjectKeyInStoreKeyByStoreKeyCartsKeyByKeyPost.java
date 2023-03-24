@@ -120,6 +120,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -127,6 +130,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -134,6 +140,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -141,6 +149,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -148,6 +158,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -156,6 +168,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -164,6 +178,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -173,6 +190,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

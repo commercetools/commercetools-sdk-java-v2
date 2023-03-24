@@ -30,6 +30,7 @@ public interface FieldContainer {
 
     /**
      *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     * @return map of the pattern property values
      */
     @NotNull
     @JsonAnyGetter

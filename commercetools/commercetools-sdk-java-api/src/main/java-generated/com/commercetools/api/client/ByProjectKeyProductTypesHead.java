@@ -85,6 +85,9 @@ public class ByProjectKeyProductTypesHead
 
     /**
      * set where with the specified value
+     * @param where value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductTypesHead
      */
     public <TValue> ByProjectKeyProductTypesHead withWhere(final TValue where) {
         return copy().withQueryParam("where", where);
@@ -92,6 +95,9 @@ public class ByProjectKeyProductTypesHead
 
     /**
      * add additional where query parameter
+     * @param where value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductTypesHead
      */
     public <TValue> ByProjectKeyProductTypesHead addWhere(final TValue where) {
         return copy().addQueryParam("where", where);
@@ -99,6 +105,8 @@ public class ByProjectKeyProductTypesHead
 
     /**
      * set where with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductTypesHead
      */
     public ByProjectKeyProductTypesHead withWhere(final Supplier<String> supplier) {
         return copy().withQueryParam("where", supplier.get());
@@ -106,6 +114,8 @@ public class ByProjectKeyProductTypesHead
 
     /**
      * add additional where query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductTypesHead
      */
     public ByProjectKeyProductTypesHead addWhere(final Supplier<String> supplier) {
         return copy().addQueryParam("where", supplier.get());
@@ -113,6 +123,8 @@ public class ByProjectKeyProductTypesHead
 
     /**
      * set where with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductTypesHead
      */
     public ByProjectKeyProductTypesHead withWhere(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("where", op.apply(new StringBuilder()));
@@ -120,6 +132,8 @@ public class ByProjectKeyProductTypesHead
 
     /**
      * add additional where query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductTypesHead
      */
     public ByProjectKeyProductTypesHead addWhere(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("where", op.apply(new StringBuilder()));
@@ -127,6 +141,9 @@ public class ByProjectKeyProductTypesHead
 
     /**
      * set where with the specified values
+     * @param where values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductTypesHead
      */
     public <TValue> ByProjectKeyProductTypesHead withWhere(final Collection<TValue> where) {
         return copy().withoutQueryParam("where")
@@ -136,6 +153,9 @@ public class ByProjectKeyProductTypesHead
 
     /**
      * add additional where query parameters
+     * @param where values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductTypesHead
      */
     public <TValue> ByProjectKeyProductTypesHead addWhere(final Collection<TValue> where) {
         return copy().addQueryParams(

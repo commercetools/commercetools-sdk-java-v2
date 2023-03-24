@@ -94,6 +94,9 @@ public class ByProjectKeySubscriptionsPostString extends
 
     /**
      * set expand with the specified value
+     * @param <TValue> value type
+     * @param expand value to be set
+     * @return ByProjectKeySubscriptionsPostString
      */
     public <TValue> ByProjectKeySubscriptionsPostString withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -101,6 +104,9 @@ public class ByProjectKeySubscriptionsPostString extends
 
     /**
      * add additional expand query parameter
+     * @param <TValue> value type
+     * @param expand value to be added
+     * @return ByProjectKeySubscriptionsPostString
      */
     public <TValue> ByProjectKeySubscriptionsPostString addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -108,6 +114,8 @@ public class ByProjectKeySubscriptionsPostString extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeySubscriptionsPostString
      */
     public ByProjectKeySubscriptionsPostString withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -115,6 +123,8 @@ public class ByProjectKeySubscriptionsPostString extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeySubscriptionsPostString
      */
     public ByProjectKeySubscriptionsPostString addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -122,6 +132,8 @@ public class ByProjectKeySubscriptionsPostString extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeySubscriptionsPostString
      */
     public ByProjectKeySubscriptionsPostString withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -129,6 +141,8 @@ public class ByProjectKeySubscriptionsPostString extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeySubscriptionsPostString
      */
     public ByProjectKeySubscriptionsPostString addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -136,6 +150,9 @@ public class ByProjectKeySubscriptionsPostString extends
 
     /**
      * set expand with the specified values
+     * @param <TValue> value type
+     * @param expand values to be set
+     * @return ByProjectKeySubscriptionsPostString
      */
     public <TValue> ByProjectKeySubscriptionsPostString withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -145,6 +162,9 @@ public class ByProjectKeySubscriptionsPostString extends
 
     /**
      * add additional expand query parameters
+     * @param <TValue> value type
+     * @param expand values to be added
+     * @return ByProjectKeySubscriptionsPostString
      */
     public <TValue> ByProjectKeySubscriptionsPostString addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

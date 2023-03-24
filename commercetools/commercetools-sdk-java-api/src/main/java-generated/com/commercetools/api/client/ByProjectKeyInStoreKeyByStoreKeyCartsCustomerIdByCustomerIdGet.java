@@ -116,6 +116,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -123,6 +126,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -130,6 +136,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -137,6 +145,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -144,6 +154,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet withExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -152,6 +164,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet addExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -160,6 +174,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet withExpand(
             final Collection<TValue> expand) {
@@ -170,6 +187,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet addExpand(
             final Collection<TValue> expand) {

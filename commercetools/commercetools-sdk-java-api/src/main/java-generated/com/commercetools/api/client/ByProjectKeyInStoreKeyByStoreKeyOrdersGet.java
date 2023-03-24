@@ -122,6 +122,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -129,6 +132,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -136,6 +142,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -143,6 +151,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -150,6 +160,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -157,6 +169,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -164,6 +178,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -173,6 +190,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
@@ -181,6 +201,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set sort with the specified value
+     * @param sort value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
@@ -188,6 +211,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional sort query parameter
+     * @param sort value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
@@ -195,6 +221,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set sort with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withSort(final Supplier<String> supplier) {
         return copy().withQueryParam("sort", supplier.get());
@@ -202,6 +230,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional sort query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addSort(final Supplier<String> supplier) {
         return copy().addQueryParam("sort", supplier.get());
@@ -209,6 +239,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set sort with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("sort", op.apply(new StringBuilder()));
@@ -216,6 +248,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional sort query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("sort", op.apply(new StringBuilder()));
@@ -223,6 +257,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set sort with the specified values
+     * @param sort values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withSort(final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
@@ -232,6 +269,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional sort query parameters
+     * @param sort values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addSort(final Collection<TValue> sort) {
         return copy().addQueryParams(
@@ -240,6 +280,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -247,6 +290,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -254,6 +300,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -261,6 +309,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -268,6 +318,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("limit", op.apply(new StringBuilder()));
@@ -275,6 +327,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("limit", op.apply(new StringBuilder()));
@@ -282,6 +336,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
@@ -291,6 +348,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
@@ -299,6 +359,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -306,6 +369,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -313,6 +379,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -320,6 +388,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -327,6 +397,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("offset", op.apply(new StringBuilder()));
@@ -334,6 +406,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("offset", op.apply(new StringBuilder()));
@@ -341,6 +415,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
@@ -350,6 +427,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
@@ -358,6 +438,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set withTotal with the specified value
+     * @param withTotal value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWithTotal(final TValue withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
@@ -365,6 +448,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional withTotal query parameter
+     * @param withTotal value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWithTotal(final TValue withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
@@ -372,6 +458,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set withTotal with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWithTotal(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("withTotal", supplier.get());
@@ -379,6 +467,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional withTotal query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWithTotal(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("withTotal", supplier.get());
@@ -386,6 +476,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set withTotal with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
@@ -393,6 +485,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional withTotal query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
@@ -400,6 +494,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set withTotal with the specified values
+     * @param withTotal values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWithTotal(final Collection<TValue> withTotal) {
         return copy().withoutQueryParam("withTotal")
@@ -410,6 +507,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional withTotal query parameters
+     * @param withTotal values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWithTotal(final Collection<TValue> withTotal) {
         return copy().addQueryParams(
@@ -418,6 +518,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set where with the specified value
+     * @param where value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWhere(final TValue where) {
         return copy().withQueryParam("where", where);
@@ -425,6 +528,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional where query parameter
+     * @param where value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWhere(final TValue where) {
         return copy().addQueryParam("where", where);
@@ -432,6 +538,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set where with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWhere(final Supplier<String> supplier) {
         return copy().withQueryParam("where", supplier.get());
@@ -439,6 +547,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional where query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWhere(final Supplier<String> supplier) {
         return copy().addQueryParam("where", supplier.get());
@@ -446,6 +556,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set where with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWhere(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("where", op.apply(new StringBuilder()));
@@ -453,6 +565,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional where query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWhere(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("where", op.apply(new StringBuilder()));
@@ -460,6 +574,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set where with the specified values
+     * @param where values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWhere(final Collection<TValue> where) {
         return copy().withoutQueryParam("where")
@@ -469,6 +586,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional where query parameters
+     * @param where values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWhere(final Collection<TValue> where) {
         return copy().addQueryParams(
@@ -477,6 +597,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set predicateVar with the specificied value
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter value
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withPredicateVar(final String varName,
             final TValue predicateVar) {
@@ -485,6 +609,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional predicateVar query parameter
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter value
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addPredicateVar(final String varName,
             final TValue predicateVar) {
@@ -493,6 +621,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * set predicateVar with the specificied values
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter values
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet withPredicateVar(final String varName,
             final Collection<TValue> predicateVar) {
@@ -505,6 +637,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
 
     /**
      * add additional predicateVar query parameters
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter values
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersGet addPredicateVar(final String varName,
             final Collection<TValue> predicateVar) {

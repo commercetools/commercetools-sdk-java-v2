@@ -117,6 +117,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -124,6 +127,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -131,6 +137,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -138,6 +146,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -145,6 +155,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(
             final Function<StringBuilder, StringBuilder> op) {
@@ -153,6 +165,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(
             final Function<StringBuilder, StringBuilder> op) {
@@ -161,6 +175,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(
             final Collection<TValue> limit) {
@@ -171,6 +188,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(
             final Collection<TValue> limit) {
@@ -180,6 +200,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -187,6 +210,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -194,6 +220,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -201,6 +229,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -208,6 +238,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(
             final Function<StringBuilder, StringBuilder> op) {
@@ -216,6 +248,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(
             final Function<StringBuilder, StringBuilder> op) {
@@ -224,6 +258,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(
             final Collection<TValue> offset) {
@@ -234,6 +271,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(
             final Collection<TValue> offset) {
@@ -243,6 +283,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set staged with the specified value
+     * @param staged value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final TValue staged) {
         return copy().withQueryParam("staged", staged);
@@ -250,6 +293,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional staged query parameter
+     * @param staged value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(final TValue staged) {
         return copy().addQueryParam("staged", staged);
@@ -257,6 +303,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set staged with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("staged", supplier.get());
@@ -264,6 +312,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional staged query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("staged", supplier.get());
@@ -271,6 +321,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set staged with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(
             final Function<StringBuilder, StringBuilder> op) {
@@ -279,6 +331,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional staged query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(
             final Function<StringBuilder, StringBuilder> op) {
@@ -287,6 +341,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set staged with the specified values
+     * @param staged values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(
             final Collection<TValue> staged) {
@@ -297,6 +354,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional staged query parameters
+     * @param staged values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(
             final Collection<TValue> staged) {
@@ -306,6 +366,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set confidenceMin with the specified value
+     * @param confidenceMin value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(
             final TValue confidenceMin) {
@@ -314,6 +377,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional confidenceMin query parameter
+     * @param confidenceMin value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMin(
             final TValue confidenceMin) {
@@ -322,6 +388,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set confidenceMin with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(
             final Supplier<Double> supplier) {
@@ -330,6 +398,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional confidenceMin query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMin(
             final Supplier<Double> supplier) {
@@ -338,6 +408,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set confidenceMin with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(
             final Function<StringBuilder, StringBuilder> op) {
@@ -346,6 +418,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional confidenceMin query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMin(
             final Function<StringBuilder, StringBuilder> op) {
@@ -354,6 +428,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set confidenceMin with the specified values
+     * @param confidenceMin values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(
             final Collection<TValue> confidenceMin) {
@@ -365,6 +442,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional confidenceMin query parameters
+     * @param confidenceMin values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMin(
             final Collection<TValue> confidenceMin) {
@@ -375,6 +455,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set confidenceMax with the specified value
+     * @param confidenceMax value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(
             final TValue confidenceMax) {
@@ -383,6 +466,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional confidenceMax query parameter
+     * @param confidenceMax value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(
             final TValue confidenceMax) {
@@ -391,6 +477,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set confidenceMax with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(
             final Supplier<Double> supplier) {
@@ -399,6 +487,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional confidenceMax query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(
             final Supplier<Double> supplier) {
@@ -407,6 +497,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set confidenceMax with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(
             final Function<StringBuilder, StringBuilder> op) {
@@ -415,6 +507,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional confidenceMax query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(
             final Function<StringBuilder, StringBuilder> op) {
@@ -423,6 +517,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * set confidenceMax with the specified values
+     * @param confidenceMax values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(
             final Collection<TValue> confidenceMax) {
@@ -434,6 +531,9 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
 
     /**
      * add additional confidenceMax query parameters
+     * @param confidenceMax values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsProjectCategoriesByProductIdGet
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(
             final Collection<TValue> confidenceMax) {

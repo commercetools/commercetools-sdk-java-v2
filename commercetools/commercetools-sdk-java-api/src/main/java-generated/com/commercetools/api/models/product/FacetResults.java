@@ -32,6 +32,7 @@ public interface FacetResults {
 
     /**
      *
+     * @return map of the pattern property values
      */
     @NotNull
     @Valid

@@ -116,6 +116,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -123,6 +126,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -130,6 +136,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -137,6 +145,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -144,6 +154,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(
             final Function<StringBuilder, StringBuilder> op) {
@@ -152,6 +164,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(
             final Function<StringBuilder, StringBuilder> op) {
@@ -160,6 +174,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(
             final Collection<TValue> limit) {
@@ -170,6 +187,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(
             final Collection<TValue> limit) {
@@ -179,6 +199,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -186,6 +209,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -193,6 +219,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -200,6 +228,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -207,6 +237,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(
             final Function<StringBuilder, StringBuilder> op) {
@@ -215,6 +247,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(
             final Function<StringBuilder, StringBuilder> op) {
@@ -223,6 +257,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(
             final Collection<TValue> offset) {
@@ -233,6 +270,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(
             final Collection<TValue> offset) {
@@ -242,6 +282,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set withTotal with the specified value
+     * @param withTotal value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
             final TValue withTotal) {
@@ -250,6 +293,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional withTotal query parameter
+     * @param withTotal value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
             final TValue withTotal) {
@@ -258,6 +304,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set withTotal with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
             final Supplier<Boolean> supplier) {
@@ -266,6 +314,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional withTotal query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
             final Supplier<Boolean> supplier) {
@@ -274,6 +324,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set withTotal with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
             final Function<StringBuilder, StringBuilder> op) {
@@ -282,6 +334,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional withTotal query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
             final Function<StringBuilder, StringBuilder> op) {
@@ -290,6 +344,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set withTotal with the specified values
+     * @param withTotal values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
             final Collection<TValue> withTotal) {
@@ -301,6 +358,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional withTotal query parameters
+     * @param withTotal values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
             final Collection<TValue> withTotal) {
@@ -310,6 +370,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -317,6 +380,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -324,6 +390,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -331,6 +399,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -338,6 +408,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -346,6 +418,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -354,6 +428,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(
             final Collection<TValue> expand) {
@@ -364,6 +441,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(
             final Collection<TValue> expand) {

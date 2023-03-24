@@ -14,11 +14,17 @@ public interface ExpandableTrait<T extends ExpandableTrait<T>> {
 
     /**
      * set expand with the specificied value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ExpandableTrait
      */
     <TValue> ExpandableTrait<T> withExpand(final TValue expand);
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ExpandableTrait
      */
     <TValue> ExpandableTrait<T> addExpand(final TValue expand);
 

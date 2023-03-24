@@ -14,11 +14,17 @@ public interface VersionedTrait<T extends VersionedTrait<T>> {
 
     /**
      * set version with the specificied value
+     * @param version value to be set
+     * @param <TValue> value type
+     * @return VersionedTrait
      */
     <TValue> VersionedTrait<T> withVersion(final TValue version);
 
     /**
      * add additional version query parameter
+     * @param version value to be added
+     * @param <TValue> value type
+     * @return VersionedTrait
      */
     <TValue> VersionedTrait<T> addVersion(final TValue version);
 

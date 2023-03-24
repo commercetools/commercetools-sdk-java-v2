@@ -124,6 +124,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set filename with the specified value
+     * @param filename value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost withFilename(final TValue filename) {
         return copy().withQueryParam("filename", filename);
@@ -131,6 +134,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional filename query parameter
+     * @param filename value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost addFilename(final TValue filename) {
         return copy().addQueryParam("filename", filename);
@@ -138,6 +144,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set filename with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost withFilename(final Supplier<String> supplier) {
         return copy().withQueryParam("filename", supplier.get());
@@ -145,6 +153,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional filename query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost addFilename(final Supplier<String> supplier) {
         return copy().addQueryParam("filename", supplier.get());
@@ -152,6 +162,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set filename with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost withFilename(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("filename", op.apply(new StringBuilder()));
@@ -159,6 +171,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional filename query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost addFilename(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("filename", op.apply(new StringBuilder()));
@@ -166,6 +180,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set filename with the specified values
+     * @param filename values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost withFilename(final Collection<TValue> filename) {
         return copy().withoutQueryParam("filename")
@@ -176,6 +193,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional filename query parameters
+     * @param filename values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost addFilename(final Collection<TValue> filename) {
         return copy().addQueryParams(
@@ -184,6 +204,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set variant with the specified value
+     * @param variant value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost withVariant(final TValue variant) {
         return copy().withQueryParam("variant", variant);
@@ -191,6 +214,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional variant query parameter
+     * @param variant value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost addVariant(final TValue variant) {
         return copy().addQueryParam("variant", variant);
@@ -198,6 +224,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set variant with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost withVariant(final Supplier<Long> supplier) {
         return copy().withQueryParam("variant", supplier.get());
@@ -205,6 +233,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional variant query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost addVariant(final Supplier<Long> supplier) {
         return copy().addQueryParam("variant", supplier.get());
@@ -212,6 +242,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set variant with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost withVariant(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("variant", op.apply(new StringBuilder()));
@@ -219,6 +251,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional variant query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost addVariant(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("variant", op.apply(new StringBuilder()));
@@ -226,6 +260,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set variant with the specified values
+     * @param variant values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost withVariant(final Collection<TValue> variant) {
         return copy().withoutQueryParam("variant")
@@ -235,6 +272,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional variant query parameters
+     * @param variant values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost addVariant(final Collection<TValue> variant) {
         return copy().addQueryParams(
@@ -243,6 +283,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set sku with the specified value
+     * @param sku value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost withSku(final TValue sku) {
         return copy().withQueryParam("sku", sku);
@@ -250,6 +293,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional sku query parameter
+     * @param sku value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost addSku(final TValue sku) {
         return copy().addQueryParam("sku", sku);
@@ -257,6 +303,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set sku with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost withSku(final Supplier<String> supplier) {
         return copy().withQueryParam("sku", supplier.get());
@@ -264,6 +312,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional sku query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost addSku(final Supplier<String> supplier) {
         return copy().addQueryParam("sku", supplier.get());
@@ -271,6 +321,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set sku with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost withSku(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("sku", op.apply(new StringBuilder()));
@@ -278,6 +330,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional sku query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost addSku(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("sku", op.apply(new StringBuilder()));
@@ -285,6 +339,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set sku with the specified values
+     * @param sku values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost withSku(final Collection<TValue> sku) {
         return copy().withoutQueryParam("sku")
@@ -294,6 +351,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional sku query parameters
+     * @param sku values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost addSku(final Collection<TValue> sku) {
         return copy().addQueryParams(
@@ -302,6 +362,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set staged with the specified value
+     * @param staged value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost withStaged(final TValue staged) {
         return copy().withQueryParam("staged", staged);
@@ -309,6 +372,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional staged query parameter
+     * @param staged value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost addStaged(final TValue staged) {
         return copy().addQueryParam("staged", staged);
@@ -316,6 +382,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set staged with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost withStaged(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("staged", supplier.get());
@@ -323,6 +391,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional staged query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost addStaged(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("staged", supplier.get());
@@ -330,6 +400,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set staged with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost withStaged(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("staged", op.apply(new StringBuilder()));
@@ -337,6 +409,8 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional staged query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost addStaged(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("staged", op.apply(new StringBuilder()));
@@ -344,6 +418,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * set staged with the specified values
+     * @param staged values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost withStaged(final Collection<TValue> staged) {
         return copy().withoutQueryParam("staged")
@@ -353,6 +430,9 @@ public class ByProjectKeyProductsByIDImagesPost extends
 
     /**
      * add additional staged query parameters
+     * @param staged values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsByIDImagesPost
      */
     public <TValue> ByProjectKeyProductsByIDImagesPost addStaged(final Collection<TValue> staged) {
         return copy().addQueryParams(

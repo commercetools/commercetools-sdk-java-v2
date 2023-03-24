@@ -14,11 +14,17 @@ public interface DataerasureTrait<T extends DataerasureTrait<T>> {
 
     /**
      * set dataErasure with the specificied value
+     * @param dataErasure value to be set
+     * @param <TValue> value type
+     * @return DataerasureTrait
      */
     <TValue> DataerasureTrait<T> withDataErasure(final TValue dataErasure);
 
     /**
      * add additional dataErasure query parameter
+     * @param dataErasure value to be added
+     * @param <TValue> value type
+     * @return DataerasureTrait
      */
     <TValue> DataerasureTrait<T> addDataErasure(final TValue dataErasure);
 

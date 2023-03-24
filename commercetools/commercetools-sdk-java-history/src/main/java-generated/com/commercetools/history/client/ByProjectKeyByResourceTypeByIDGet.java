@@ -158,6 +158,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set dateFrom with the specified value
+     * @param dateFrom value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withDateFrom(final TValue dateFrom) {
         return copy().withQueryParam("date.from", dateFrom);
@@ -165,6 +168,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional dateFrom query parameter
+     * @param dateFrom value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addDateFrom(final TValue dateFrom) {
         return copy().addQueryParam("date.from", dateFrom);
@@ -172,6 +178,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set dateFrom with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withDateFrom(final Supplier<Object> supplier) {
         return copy().withQueryParam("date.from", supplier.get());
@@ -179,6 +187,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional dateFrom query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addDateFrom(final Supplier<Object> supplier) {
         return copy().addQueryParam("date.from", supplier.get());
@@ -186,6 +196,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set dateFrom with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withDateFrom(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("date.from", op.apply(new StringBuilder()));
@@ -193,6 +205,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional dateFrom query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addDateFrom(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("date.from", op.apply(new StringBuilder()));
@@ -200,6 +214,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set dateFrom with the specified values
+     * @param dateFrom values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withDateFrom(final Collection<TValue> dateFrom) {
         return copy().withoutQueryParam("date.from")
@@ -210,6 +227,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional dateFrom query parameters
+     * @param dateFrom values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addDateFrom(final Collection<TValue> dateFrom) {
         return copy().addQueryParams(
@@ -218,6 +238,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set dateTo with the specified value
+     * @param dateTo value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withDateTo(final TValue dateTo) {
         return copy().withQueryParam("date.to", dateTo);
@@ -225,6 +248,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional dateTo query parameter
+     * @param dateTo value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addDateTo(final TValue dateTo) {
         return copy().addQueryParam("date.to", dateTo);
@@ -232,6 +258,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set dateTo with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withDateTo(final Supplier<Object> supplier) {
         return copy().withQueryParam("date.to", supplier.get());
@@ -239,6 +267,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional dateTo query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addDateTo(final Supplier<Object> supplier) {
         return copy().addQueryParam("date.to", supplier.get());
@@ -246,6 +276,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set dateTo with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withDateTo(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("date.to", op.apply(new StringBuilder()));
@@ -253,6 +285,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional dateTo query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addDateTo(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("date.to", op.apply(new StringBuilder()));
@@ -260,6 +294,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set dateTo with the specified values
+     * @param dateTo values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withDateTo(final Collection<TValue> dateTo) {
         return copy().withoutQueryParam("date.to")
@@ -269,6 +306,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional dateTo query parameters
+     * @param dateTo values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addDateTo(final Collection<TValue> dateTo) {
         return copy().addQueryParams(
@@ -277,6 +317,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -284,6 +327,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -291,6 +337,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -298,6 +346,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -305,6 +355,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("limit", op.apply(new StringBuilder()));
@@ -312,6 +364,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("limit", op.apply(new StringBuilder()));
@@ -319,6 +373,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
@@ -328,6 +385,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
@@ -336,6 +396,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -343,6 +406,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -350,6 +416,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -357,6 +425,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -364,6 +434,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("offset", op.apply(new StringBuilder()));
@@ -371,6 +443,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("offset", op.apply(new StringBuilder()));
@@ -378,6 +452,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
@@ -387,6 +464,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
@@ -395,6 +475,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set userId with the specified value
+     * @param userId value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withUserId(final TValue userId) {
         return copy().withQueryParam("userId", userId);
@@ -402,6 +485,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional userId query parameter
+     * @param userId value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addUserId(final TValue userId) {
         return copy().addQueryParam("userId", userId);
@@ -409,6 +495,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set userId with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withUserId(final Supplier<String> supplier) {
         return copy().withQueryParam("userId", supplier.get());
@@ -416,6 +504,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional userId query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addUserId(final Supplier<String> supplier) {
         return copy().addQueryParam("userId", supplier.get());
@@ -423,6 +513,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set userId with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withUserId(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("userId", op.apply(new StringBuilder()));
@@ -430,6 +522,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional userId query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addUserId(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("userId", op.apply(new StringBuilder()));
@@ -437,6 +531,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set userId with the specified values
+     * @param userId values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withUserId(final Collection<TValue> userId) {
         return copy().withoutQueryParam("userId")
@@ -446,6 +543,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional userId query parameters
+     * @param userId values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addUserId(final Collection<TValue> userId) {
         return copy().addQueryParams(
@@ -454,6 +554,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set type with the specified value
+     * @param type value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withType(final TValue type) {
         return copy().withQueryParam("type", type);
@@ -461,6 +564,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional type query parameter
+     * @param type value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addType(final TValue type) {
         return copy().addQueryParam("type", type);
@@ -468,6 +574,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set type with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withType(final Supplier<String> supplier) {
         return copy().withQueryParam("type", supplier.get());
@@ -475,6 +583,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional type query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addType(final Supplier<String> supplier) {
         return copy().addQueryParam("type", supplier.get());
@@ -482,6 +592,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set type with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withType(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("type", op.apply(new StringBuilder()));
@@ -489,6 +601,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional type query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addType(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("type", op.apply(new StringBuilder()));
@@ -496,6 +610,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set type with the specified values
+     * @param type values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withType(final Collection<TValue> type) {
         return copy().withoutQueryParam("type")
@@ -505,6 +622,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional type query parameters
+     * @param type values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addType(final Collection<TValue> type) {
         return copy().addQueryParams(
@@ -513,6 +633,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set clientId with the specified value
+     * @param clientId value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withClientId(final TValue clientId) {
         return copy().withQueryParam("clientId", clientId);
@@ -520,6 +643,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional clientId query parameter
+     * @param clientId value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addClientId(final TValue clientId) {
         return copy().addQueryParam("clientId", clientId);
@@ -527,6 +653,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set clientId with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withClientId(final Supplier<String> supplier) {
         return copy().withQueryParam("clientId", supplier.get());
@@ -534,6 +662,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional clientId query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addClientId(final Supplier<String> supplier) {
         return copy().addQueryParam("clientId", supplier.get());
@@ -541,6 +671,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set clientId with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withClientId(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("clientId", op.apply(new StringBuilder()));
@@ -548,6 +680,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional clientId query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addClientId(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("clientId", op.apply(new StringBuilder()));
@@ -555,6 +689,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set clientId with the specified values
+     * @param clientId values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withClientId(final Collection<TValue> clientId) {
         return copy().withoutQueryParam("clientId")
@@ -565,6 +702,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional clientId query parameters
+     * @param clientId values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addClientId(final Collection<TValue> clientId) {
         return copy().addQueryParams(
@@ -573,6 +713,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set source with the specified value
+     * @param source value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withSource(final TValue source) {
         return copy().withQueryParam("source", source);
@@ -580,6 +723,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional source query parameter
+     * @param source value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addSource(final TValue source) {
         return copy().addQueryParam("source", source);
@@ -587,6 +733,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set source with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withSource(final Supplier<String> supplier) {
         return copy().withQueryParam("source", supplier.get());
@@ -594,6 +742,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional source query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addSource(final Supplier<String> supplier) {
         return copy().addQueryParam("source", supplier.get());
@@ -601,6 +751,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set source with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withSource(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("source", op.apply(new StringBuilder()));
@@ -608,6 +760,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional source query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addSource(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("source", op.apply(new StringBuilder()));
@@ -615,6 +769,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set source with the specified values
+     * @param source values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withSource(final Collection<TValue> source) {
         return copy().withoutQueryParam("source")
@@ -624,6 +781,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional source query parameters
+     * @param source values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addSource(final Collection<TValue> source) {
         return copy().addQueryParams(
@@ -632,6 +792,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set changes with the specified value
+     * @param changes value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withChanges(final TValue changes) {
         return copy().withQueryParam("changes", changes);
@@ -639,6 +802,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional changes query parameter
+     * @param changes value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addChanges(final TValue changes) {
         return copy().addQueryParam("changes", changes);
@@ -646,6 +812,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set changes with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withChanges(final Supplier<String> supplier) {
         return copy().withQueryParam("changes", supplier.get());
@@ -653,6 +821,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional changes query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addChanges(final Supplier<String> supplier) {
         return copy().addQueryParam("changes", supplier.get());
@@ -660,6 +830,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set changes with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withChanges(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("changes", op.apply(new StringBuilder()));
@@ -667,6 +839,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional changes query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addChanges(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("changes", op.apply(new StringBuilder()));
@@ -674,6 +848,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set changes with the specified values
+     * @param changes values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withChanges(final Collection<TValue> changes) {
         return copy().withoutQueryParam("changes")
@@ -683,6 +860,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional changes query parameters
+     * @param changes values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addChanges(final Collection<TValue> changes) {
         return copy().addQueryParams(
@@ -691,6 +871,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set stores with the specified value
+     * @param stores value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withStores(final TValue stores) {
         return copy().withQueryParam("stores", stores);
@@ -698,6 +881,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional stores query parameter
+     * @param stores value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addStores(final TValue stores) {
         return copy().addQueryParam("stores", stores);
@@ -705,6 +891,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set stores with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withStores(final Supplier<String> supplier) {
         return copy().withQueryParam("stores", supplier.get());
@@ -712,6 +900,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional stores query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addStores(final Supplier<String> supplier) {
         return copy().addQueryParam("stores", supplier.get());
@@ -719,6 +909,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set stores with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withStores(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("stores", op.apply(new StringBuilder()));
@@ -726,6 +918,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional stores query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addStores(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("stores", op.apply(new StringBuilder()));
@@ -733,6 +927,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set stores with the specified values
+     * @param stores values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withStores(final Collection<TValue> stores) {
         return copy().withoutQueryParam("stores")
@@ -742,6 +939,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional stores query parameters
+     * @param stores values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addStores(final Collection<TValue> stores) {
         return copy().addQueryParams(
@@ -750,6 +950,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set customerId with the specified value
+     * @param customerId value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withCustomerId(final TValue customerId) {
         return copy().withQueryParam("customerId", customerId);
@@ -757,6 +960,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional customerId query parameter
+     * @param customerId value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addCustomerId(final TValue customerId) {
         return copy().addQueryParam("customerId", customerId);
@@ -764,6 +970,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set customerId with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withCustomerId(final Supplier<String> supplier) {
         return copy().withQueryParam("customerId", supplier.get());
@@ -771,6 +979,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional customerId query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addCustomerId(final Supplier<String> supplier) {
         return copy().addQueryParam("customerId", supplier.get());
@@ -778,6 +988,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set customerId with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withCustomerId(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("customerId", op.apply(new StringBuilder()));
@@ -785,6 +997,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional customerId query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addCustomerId(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("customerId", op.apply(new StringBuilder()));
@@ -792,6 +1006,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set customerId with the specified values
+     * @param customerId values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withCustomerId(final Collection<TValue> customerId) {
         return copy().withoutQueryParam("customerId")
@@ -802,6 +1019,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional customerId query parameters
+     * @param customerId values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addCustomerId(final Collection<TValue> customerId) {
         return copy().addQueryParams(
@@ -810,6 +1030,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set excludePlatformInitiatedChanges with the specified value
+     * @param excludePlatformInitiatedChanges value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
             final TValue excludePlatformInitiatedChanges) {
@@ -818,6 +1041,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional excludePlatformInitiatedChanges query parameter
+     * @param excludePlatformInitiatedChanges value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
             final TValue excludePlatformInitiatedChanges) {
@@ -826,6 +1052,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set excludePlatformInitiatedChanges with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
             final Supplier<PlatformInitiatedChange> supplier) {
@@ -834,6 +1062,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional excludePlatformInitiatedChanges query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
             final Supplier<PlatformInitiatedChange> supplier) {
@@ -842,6 +1072,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set excludePlatformInitiatedChanges with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
             final Function<StringBuilder, StringBuilder> op) {
@@ -850,6 +1082,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional excludePlatformInitiatedChanges query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
             final Function<StringBuilder, StringBuilder> op) {
@@ -858,6 +1092,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set excludePlatformInitiatedChanges with the specified values
+     * @param excludePlatformInitiatedChanges values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
             final Collection<TValue> excludePlatformInitiatedChanges) {
@@ -869,6 +1106,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional excludePlatformInitiatedChanges query parameters
+     * @param excludePlatformInitiatedChanges values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
             final Collection<TValue> excludePlatformInitiatedChanges) {
@@ -879,6 +1119,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -886,6 +1129,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -893,6 +1139,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withExpand(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -900,6 +1148,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addExpand(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -907,6 +1157,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -914,6 +1166,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public ByProjectKeyByResourceTypeByIDGet addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -921,6 +1175,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -930,6 +1187,9 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
      */
     public <TValue> ByProjectKeyByResourceTypeByIDGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

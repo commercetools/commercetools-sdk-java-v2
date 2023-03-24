@@ -122,6 +122,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostS
 
     /**
      * set expand with the specified value
+     * @param <TValue> value type
+     * @param expand value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString withExpand(
             final TValue expand) {
@@ -130,6 +133,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostS
 
     /**
      * add additional expand query parameter
+     * @param <TValue> value type
+     * @param expand value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString addExpand(
             final TValue expand) {
@@ -138,6 +144,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostS
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString withExpand(
             final Supplier<String> supplier) {
@@ -146,6 +154,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostS
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString addExpand(
             final Supplier<String> supplier) {
@@ -154,6 +164,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostS
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString withExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -162,6 +174,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostS
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString addExpand(
             final Function<StringBuilder, StringBuilder> op) {
@@ -170,6 +184,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostS
 
     /**
      * set expand with the specified values
+     * @param <TValue> value type
+     * @param expand values to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString withExpand(
             final Collection<TValue> expand) {
@@ -180,6 +197,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostS
 
     /**
      * add additional expand query parameters
+     * @param <TValue> value type
+     * @param expand values to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString addExpand(
             final Collection<TValue> expand) {

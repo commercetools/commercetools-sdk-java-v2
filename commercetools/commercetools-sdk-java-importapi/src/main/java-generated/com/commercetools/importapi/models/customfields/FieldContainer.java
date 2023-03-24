@@ -32,6 +32,7 @@ public interface FieldContainer {
 
     /**
      *  <p>Mapping from the custom field name to the actual value.</p>
+     * @return map of the pattern property values
      */
     @NotNull
     @Valid

@@ -107,6 +107,9 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * set version with the specified value
+     * @param version value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public <TValue> ByProjectKeyProductSelectionsByIDDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
@@ -114,6 +117,9 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * add additional version query parameter
+     * @param version value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public <TValue> ByProjectKeyProductSelectionsByIDDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
@@ -121,6 +127,8 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * set version with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public ByProjectKeyProductSelectionsByIDDelete withVersion(final Supplier<Long> supplier) {
         return copy().withQueryParam("version", supplier.get());
@@ -128,6 +136,8 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * add additional version query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public ByProjectKeyProductSelectionsByIDDelete addVersion(final Supplier<Long> supplier) {
         return copy().addQueryParam("version", supplier.get());
@@ -135,6 +145,8 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * set version with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public ByProjectKeyProductSelectionsByIDDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("version", op.apply(new StringBuilder()));
@@ -142,6 +154,8 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * add additional version query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public ByProjectKeyProductSelectionsByIDDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("version", op.apply(new StringBuilder()));
@@ -149,6 +163,9 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * set version with the specified values
+     * @param version values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public <TValue> ByProjectKeyProductSelectionsByIDDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
@@ -158,6 +175,9 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * add additional version query parameters
+     * @param version values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public <TValue> ByProjectKeyProductSelectionsByIDDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
@@ -166,6 +186,9 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public <TValue> ByProjectKeyProductSelectionsByIDDelete withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -173,6 +196,9 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public <TValue> ByProjectKeyProductSelectionsByIDDelete addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -180,6 +206,8 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public ByProjectKeyProductSelectionsByIDDelete withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -187,6 +215,8 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public ByProjectKeyProductSelectionsByIDDelete addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -194,6 +224,8 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public ByProjectKeyProductSelectionsByIDDelete withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -201,6 +233,8 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public ByProjectKeyProductSelectionsByIDDelete addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -208,6 +242,9 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public <TValue> ByProjectKeyProductSelectionsByIDDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -217,6 +254,9 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsByIDDelete
      */
     public <TValue> ByProjectKeyProductSelectionsByIDDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

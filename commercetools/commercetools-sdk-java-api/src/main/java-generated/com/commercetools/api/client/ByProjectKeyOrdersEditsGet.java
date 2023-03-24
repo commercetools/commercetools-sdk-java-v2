@@ -113,6 +113,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -120,6 +123,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -127,6 +133,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -134,6 +142,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -141,6 +151,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -148,6 +160,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -155,6 +169,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -164,6 +181,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
@@ -172,6 +192,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set sort with the specified value
+     * @param sort value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
@@ -179,6 +202,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional sort query parameter
+     * @param sort value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
@@ -186,6 +212,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set sort with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withSort(final Supplier<String> supplier) {
         return copy().withQueryParam("sort", supplier.get());
@@ -193,6 +221,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional sort query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addSort(final Supplier<String> supplier) {
         return copy().addQueryParam("sort", supplier.get());
@@ -200,6 +230,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set sort with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("sort", op.apply(new StringBuilder()));
@@ -207,6 +239,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional sort query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("sort", op.apply(new StringBuilder()));
@@ -214,6 +248,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set sort with the specified values
+     * @param sort values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withSort(final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
@@ -223,6 +260,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional sort query parameters
+     * @param sort values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addSort(final Collection<TValue> sort) {
         return copy().addQueryParams(
@@ -231,6 +271,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -238,6 +281,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -245,6 +291,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -252,6 +300,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -259,6 +309,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("limit", op.apply(new StringBuilder()));
@@ -266,6 +318,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("limit", op.apply(new StringBuilder()));
@@ -273,6 +327,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
@@ -282,6 +339,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
@@ -290,6 +350,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -297,6 +360,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -304,6 +370,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -311,6 +379,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -318,6 +388,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("offset", op.apply(new StringBuilder()));
@@ -325,6 +397,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("offset", op.apply(new StringBuilder()));
@@ -332,6 +406,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
@@ -341,6 +418,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
@@ -349,6 +429,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set withTotal with the specified value
+     * @param withTotal value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withWithTotal(final TValue withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
@@ -356,6 +439,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional withTotal query parameter
+     * @param withTotal value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addWithTotal(final TValue withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
@@ -363,6 +449,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set withTotal with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withWithTotal(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("withTotal", supplier.get());
@@ -370,6 +458,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional withTotal query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addWithTotal(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("withTotal", supplier.get());
@@ -377,6 +467,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set withTotal with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
@@ -384,6 +476,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional withTotal query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
@@ -391,6 +485,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set withTotal with the specified values
+     * @param withTotal values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withWithTotal(final Collection<TValue> withTotal) {
         return copy().withoutQueryParam("withTotal")
@@ -401,6 +498,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional withTotal query parameters
+     * @param withTotal values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addWithTotal(final Collection<TValue> withTotal) {
         return copy().addQueryParams(
@@ -409,6 +509,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set where with the specified value
+     * @param where value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withWhere(final TValue where) {
         return copy().withQueryParam("where", where);
@@ -416,6 +519,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional where query parameter
+     * @param where value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addWhere(final TValue where) {
         return copy().addQueryParam("where", where);
@@ -423,6 +529,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set where with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withWhere(final Supplier<String> supplier) {
         return copy().withQueryParam("where", supplier.get());
@@ -430,6 +538,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional where query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addWhere(final Supplier<String> supplier) {
         return copy().addQueryParam("where", supplier.get());
@@ -437,6 +547,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set where with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet withWhere(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("where", op.apply(new StringBuilder()));
@@ -444,6 +556,8 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional where query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyOrdersEditsGet
      */
     public ByProjectKeyOrdersEditsGet addWhere(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("where", op.apply(new StringBuilder()));
@@ -451,6 +565,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set where with the specified values
+     * @param where values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withWhere(final Collection<TValue> where) {
         return copy().withoutQueryParam("where")
@@ -460,6 +577,9 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional where query parameters
+     * @param where values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addWhere(final Collection<TValue> where) {
         return copy().addQueryParams(
@@ -468,6 +588,10 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set predicateVar with the specificied value
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter value
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withPredicateVar(final String varName, final TValue predicateVar) {
         return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
@@ -475,6 +599,10 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional predicateVar query parameter
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter value
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addPredicateVar(final String varName, final TValue predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
@@ -482,6 +610,10 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * set predicateVar with the specificied values
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter values
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet withPredicateVar(final String varName,
             final Collection<TValue> predicateVar) {
@@ -494,6 +626,10 @@ public class ByProjectKeyOrdersEditsGet extends
 
     /**
      * add additional predicateVar query parameters
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter values
+     * @return ByProjectKeyOrdersEditsGet
      */
     public <TValue> ByProjectKeyOrdersEditsGet addPredicateVar(final String varName,
             final Collection<TValue> predicateVar) {

@@ -166,6 +166,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set fuzzy with the specified value
+     * @param fuzzy value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFuzzy(final TValue fuzzy) {
         return copy().withQueryParam("fuzzy", fuzzy);
@@ -173,6 +176,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional fuzzy query parameter
+     * @param fuzzy value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFuzzy(final TValue fuzzy) {
         return copy().addQueryParam("fuzzy", fuzzy);
@@ -180,6 +186,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set fuzzy with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFuzzy(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("fuzzy", supplier.get());
@@ -187,6 +195,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional fuzzy query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFuzzy(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("fuzzy", supplier.get());
@@ -194,6 +204,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set fuzzy with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFuzzy(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("fuzzy", op.apply(new StringBuilder()));
@@ -201,6 +213,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional fuzzy query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFuzzy(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("fuzzy", op.apply(new StringBuilder()));
@@ -208,6 +222,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set fuzzy with the specified values
+     * @param fuzzy values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFuzzy(final Collection<TValue> fuzzy) {
         return copy().withoutQueryParam("fuzzy")
@@ -217,6 +234,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional fuzzy query parameters
+     * @param fuzzy values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFuzzy(final Collection<TValue> fuzzy) {
         return copy().addQueryParams(
@@ -225,6 +245,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set fuzzyLevel with the specified value
+     * @param fuzzyLevel value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final TValue fuzzyLevel) {
         return copy().withQueryParam("fuzzyLevel", fuzzyLevel);
@@ -232,6 +255,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional fuzzyLevel query parameter
+     * @param fuzzyLevel value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final TValue fuzzyLevel) {
         return copy().addQueryParam("fuzzyLevel", fuzzyLevel);
@@ -239,6 +265,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set fuzzyLevel with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Supplier<Double> supplier) {
         return copy().withQueryParam("fuzzyLevel", supplier.get());
@@ -246,6 +274,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional fuzzyLevel query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Supplier<Double> supplier) {
         return copy().addQueryParam("fuzzyLevel", supplier.get());
@@ -253,6 +283,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set fuzzyLevel with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("fuzzyLevel", op.apply(new StringBuilder()));
@@ -260,6 +292,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional fuzzyLevel query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("fuzzyLevel", op.apply(new StringBuilder()));
@@ -267,6 +301,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set fuzzyLevel with the specified values
+     * @param fuzzyLevel values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Collection<TValue> fuzzyLevel) {
         return copy().withoutQueryParam("fuzzyLevel")
@@ -277,6 +314,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional fuzzyLevel query parameters
+     * @param fuzzyLevel values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Collection<TValue> fuzzyLevel) {
         return copy().addQueryParams(
@@ -285,6 +325,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set markMatchingVariants with the specified value
+     * @param markMatchingVariants value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(
             final TValue markMatchingVariants) {
@@ -293,6 +336,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional markMatchingVariants query parameter
+     * @param markMatchingVariants value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final TValue markMatchingVariants) {
         return copy().addQueryParam("markMatchingVariants", markMatchingVariants);
@@ -300,6 +346,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set markMatchingVariants with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("markMatchingVariants", supplier.get());
@@ -307,6 +355,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional markMatchingVariants query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("markMatchingVariants", supplier.get());
@@ -314,6 +364,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set markMatchingVariants with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(
             final Function<StringBuilder, StringBuilder> op) {
@@ -322,6 +374,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional markMatchingVariants query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(
             final Function<StringBuilder, StringBuilder> op) {
@@ -330,6 +384,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set markMatchingVariants with the specified values
+     * @param markMatchingVariants values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(
             final Collection<TValue> markMatchingVariants) {
@@ -341,6 +398,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional markMatchingVariants query parameters
+     * @param markMatchingVariants values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(
             final Collection<TValue> markMatchingVariants) {
@@ -351,6 +411,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filter with the specified value
+     * @param filter value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFilter(final TValue filter) {
         return copy().withQueryParam("filter", filter);
@@ -358,6 +421,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filter query parameter
+     * @param filter value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFilter(final TValue filter) {
         return copy().addQueryParam("filter", filter);
@@ -365,6 +431,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filter with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFilter(final Supplier<String> supplier) {
         return copy().withQueryParam("filter", supplier.get());
@@ -372,6 +440,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filter query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFilter(final Supplier<String> supplier) {
         return copy().addQueryParam("filter", supplier.get());
@@ -379,6 +449,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filter with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFilter(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("filter", op.apply(new StringBuilder()));
@@ -386,6 +458,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filter query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFilter(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("filter", op.apply(new StringBuilder()));
@@ -393,6 +467,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filter with the specified values
+     * @param filter values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFilter(final Collection<TValue> filter) {
         return copy().withoutQueryParam("filter")
@@ -402,6 +479,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filter query parameters
+     * @param filter values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFilter(final Collection<TValue> filter) {
         return copy().addQueryParams(
@@ -410,6 +490,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filterFacets with the specified value
+     * @param filterFacets value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFilterFacets(final TValue filterFacets) {
         return copy().withQueryParam("filter.facets", filterFacets);
@@ -417,6 +500,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filterFacets query parameter
+     * @param filterFacets value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFilterFacets(final TValue filterFacets) {
         return copy().addQueryParam("filter.facets", filterFacets);
@@ -424,6 +510,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filterFacets with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFilterFacets(final Supplier<String> supplier) {
         return copy().withQueryParam("filter.facets", supplier.get());
@@ -431,6 +519,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filterFacets query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFilterFacets(final Supplier<String> supplier) {
         return copy().addQueryParam("filter.facets", supplier.get());
@@ -438,6 +528,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filterFacets with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFilterFacets(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("filter.facets", op.apply(new StringBuilder()));
@@ -445,6 +537,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filterFacets query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFilterFacets(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("filter.facets", op.apply(new StringBuilder()));
@@ -452,6 +546,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filterFacets with the specified values
+     * @param filterFacets values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFilterFacets(final Collection<TValue> filterFacets) {
         return copy().withoutQueryParam("filter.facets")
@@ -462,6 +559,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filterFacets query parameters
+     * @param filterFacets values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFilterFacets(final Collection<TValue> filterFacets) {
         return copy().addQueryParams(filterFacets.stream()
@@ -471,6 +571,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filterQuery with the specified value
+     * @param filterQuery value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFilterQuery(final TValue filterQuery) {
         return copy().withQueryParam("filter.query", filterQuery);
@@ -478,6 +581,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filterQuery query parameter
+     * @param filterQuery value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFilterQuery(final TValue filterQuery) {
         return copy().addQueryParam("filter.query", filterQuery);
@@ -485,6 +591,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filterQuery with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final Supplier<String> supplier) {
         return copy().withQueryParam("filter.query", supplier.get());
@@ -492,6 +600,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filterQuery query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFilterQuery(final Supplier<String> supplier) {
         return copy().addQueryParam("filter.query", supplier.get());
@@ -499,6 +609,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filterQuery with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("filter.query", op.apply(new StringBuilder()));
@@ -506,6 +618,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filterQuery query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFilterQuery(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("filter.query", op.apply(new StringBuilder()));
@@ -513,6 +627,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set filterQuery with the specified values
+     * @param filterQuery values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFilterQuery(final Collection<TValue> filterQuery) {
         return copy().withoutQueryParam("filter.query")
@@ -523,6 +640,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional filterQuery query parameters
+     * @param filterQuery values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFilterQuery(final Collection<TValue> filterQuery) {
         return copy().addQueryParams(
@@ -531,6 +651,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set facet with the specified value
+     * @param facet value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFacet(final TValue facet) {
         return copy().withQueryParam("facet", facet);
@@ -538,6 +661,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional facet query parameter
+     * @param facet value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFacet(final TValue facet) {
         return copy().addQueryParam("facet", facet);
@@ -545,6 +671,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set facet with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFacet(final Supplier<String> supplier) {
         return copy().withQueryParam("facet", supplier.get());
@@ -552,6 +680,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional facet query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFacet(final Supplier<String> supplier) {
         return copy().addQueryParam("facet", supplier.get());
@@ -559,6 +689,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set facet with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withFacet(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("facet", op.apply(new StringBuilder()));
@@ -566,6 +698,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional facet query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addFacet(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("facet", op.apply(new StringBuilder()));
@@ -573,6 +707,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set facet with the specified values
+     * @param facet values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withFacet(final Collection<TValue> facet) {
         return copy().withoutQueryParam("facet")
@@ -582,6 +719,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional facet query parameters
+     * @param facet values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFacet(final Collection<TValue> facet) {
         return copy().addQueryParams(
@@ -590,6 +730,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set sort with the specified value
+     * @param sort value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
@@ -597,6 +740,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional sort query parameter
+     * @param sort value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
@@ -604,6 +750,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set sort with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withSort(final Supplier<String> supplier) {
         return copy().withQueryParam("sort", supplier.get());
@@ -611,6 +759,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional sort query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addSort(final Supplier<String> supplier) {
         return copy().addQueryParam("sort", supplier.get());
@@ -618,6 +768,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set sort with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("sort", op.apply(new StringBuilder()));
@@ -625,6 +777,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional sort query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("sort", op.apply(new StringBuilder()));
@@ -632,6 +786,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set sort with the specified values
+     * @param sort values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withSort(final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
@@ -641,6 +798,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional sort query parameters
+     * @param sort values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addSort(final Collection<TValue> sort) {
         return copy().addQueryParams(
@@ -649,6 +809,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -656,6 +819,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -663,6 +829,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -670,6 +838,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -677,6 +847,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("limit", op.apply(new StringBuilder()));
@@ -684,6 +856,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("limit", op.apply(new StringBuilder()));
@@ -691,6 +865,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
@@ -700,6 +877,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
@@ -708,6 +888,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -715,6 +898,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -722,6 +908,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -729,6 +917,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -736,6 +926,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("offset", op.apply(new StringBuilder()));
@@ -743,6 +935,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("offset", op.apply(new StringBuilder()));
@@ -750,6 +944,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
@@ -759,6 +956,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
@@ -767,6 +967,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set withTotal with the specified value
+     * @param withTotal value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withWithTotal(final TValue withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
@@ -774,6 +977,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional withTotal query parameter
+     * @param withTotal value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addWithTotal(final TValue withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
@@ -781,6 +987,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set withTotal with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withWithTotal(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("withTotal", supplier.get());
@@ -788,6 +996,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional withTotal query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addWithTotal(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("withTotal", supplier.get());
@@ -795,6 +1005,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set withTotal with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
@@ -802,6 +1014,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional withTotal query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
@@ -809,6 +1023,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set withTotal with the specified values
+     * @param withTotal values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withWithTotal(final Collection<TValue> withTotal) {
         return copy().withoutQueryParam("withTotal")
@@ -819,6 +1036,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional withTotal query parameters
+     * @param withTotal values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addWithTotal(final Collection<TValue> withTotal) {
         return copy().addQueryParams(
@@ -827,6 +1047,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set staged with the specified value
+     * @param staged value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withStaged(final TValue staged) {
         return copy().withQueryParam("staged", staged);
@@ -834,6 +1057,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional staged query parameter
+     * @param staged value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addStaged(final TValue staged) {
         return copy().addQueryParam("staged", staged);
@@ -841,6 +1067,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set staged with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withStaged(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("staged", supplier.get());
@@ -848,6 +1076,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional staged query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addStaged(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("staged", supplier.get());
@@ -855,6 +1085,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set staged with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withStaged(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("staged", op.apply(new StringBuilder()));
@@ -862,6 +1094,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional staged query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addStaged(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("staged", op.apply(new StringBuilder()));
@@ -869,6 +1103,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set staged with the specified values
+     * @param staged values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withStaged(final Collection<TValue> staged) {
         return copy().withoutQueryParam("staged")
@@ -878,6 +1115,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional staged query parameters
+     * @param staged values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addStaged(final Collection<TValue> staged) {
         return copy().addQueryParams(
@@ -886,6 +1126,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCurrency with the specified value
+     * @param priceCurrency value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withPriceCurrency(final TValue priceCurrency) {
         return copy().withQueryParam("priceCurrency", priceCurrency);
@@ -893,6 +1136,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCurrency query parameter
+     * @param priceCurrency value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addPriceCurrency(final TValue priceCurrency) {
         return copy().addQueryParam("priceCurrency", priceCurrency);
@@ -900,6 +1146,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCurrency with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceCurrency(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCurrency", supplier.get());
@@ -907,6 +1155,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCurrency query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceCurrency(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCurrency", supplier.get());
@@ -914,6 +1164,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCurrency with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceCurrency", op.apply(new StringBuilder()));
@@ -921,6 +1173,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCurrency query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceCurrency", op.apply(new StringBuilder()));
@@ -928,6 +1182,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCurrency with the specified values
+     * @param priceCurrency values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().withoutQueryParam("priceCurrency")
@@ -938,6 +1195,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCurrency query parameters
+     * @param priceCurrency values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().addQueryParams(priceCurrency.stream()
@@ -947,6 +1207,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCountry with the specified value
+     * @param priceCountry value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withPriceCountry(final TValue priceCountry) {
         return copy().withQueryParam("priceCountry", priceCountry);
@@ -954,6 +1217,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCountry query parameter
+     * @param priceCountry value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addPriceCountry(final TValue priceCountry) {
         return copy().addQueryParam("priceCountry", priceCountry);
@@ -961,6 +1227,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCountry with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceCountry(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCountry", supplier.get());
@@ -968,6 +1236,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCountry query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceCountry(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCountry", supplier.get());
@@ -975,6 +1245,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCountry with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceCountry(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceCountry", op.apply(new StringBuilder()));
@@ -982,6 +1254,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCountry query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceCountry(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceCountry", op.apply(new StringBuilder()));
@@ -989,6 +1263,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCountry with the specified values
+     * @param priceCountry values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withPriceCountry(final Collection<TValue> priceCountry) {
         return copy().withoutQueryParam("priceCountry")
@@ -999,6 +1276,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCountry query parameters
+     * @param priceCountry values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addPriceCountry(final Collection<TValue> priceCountry) {
         return copy().addQueryParams(priceCountry.stream()
@@ -1008,6 +1288,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param priceCustomerGroup value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withPriceCustomerGroup(final TValue priceCustomerGroup) {
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
@@ -1015,6 +1298,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param priceCustomerGroup value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addPriceCustomerGroup(final TValue priceCustomerGroup) {
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
@@ -1022,6 +1308,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceCustomerGroup(final Supplier<String> supplier) {
         return copy().withQueryParam("priceCustomerGroup", supplier.get());
@@ -1029,6 +1317,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceCustomerGroup(final Supplier<String> supplier) {
         return copy().addQueryParam("priceCustomerGroup", supplier.get());
@@ -1036,6 +1326,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCustomerGroup with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceCustomerGroup(
             final Function<StringBuilder, StringBuilder> op) {
@@ -1044,6 +1336,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCustomerGroup query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceCustomerGroup(
             final Function<StringBuilder, StringBuilder> op) {
@@ -1052,6 +1346,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceCustomerGroup with the specified values
+     * @param priceCustomerGroup values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withPriceCustomerGroup(
             final Collection<TValue> priceCustomerGroup) {
@@ -1063,6 +1360,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceCustomerGroup query parameters
+     * @param priceCustomerGroup values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addPriceCustomerGroup(
             final Collection<TValue> priceCustomerGroup) {
@@ -1073,6 +1373,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceChannel with the specified value
+     * @param priceChannel value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withPriceChannel(final TValue priceChannel) {
         return copy().withQueryParam("priceChannel", priceChannel);
@@ -1080,6 +1383,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceChannel query parameter
+     * @param priceChannel value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addPriceChannel(final TValue priceChannel) {
         return copy().addQueryParam("priceChannel", priceChannel);
@@ -1087,6 +1393,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceChannel with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceChannel(final Supplier<String> supplier) {
         return copy().withQueryParam("priceChannel", supplier.get());
@@ -1094,6 +1402,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceChannel query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceChannel(final Supplier<String> supplier) {
         return copy().addQueryParam("priceChannel", supplier.get());
@@ -1101,6 +1411,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceChannel with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceChannel(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("priceChannel", op.apply(new StringBuilder()));
@@ -1108,6 +1420,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceChannel query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceChannel(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("priceChannel", op.apply(new StringBuilder()));
@@ -1115,6 +1429,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set priceChannel with the specified values
+     * @param priceChannel values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withPriceChannel(final Collection<TValue> priceChannel) {
         return copy().withoutQueryParam("priceChannel")
@@ -1125,6 +1442,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional priceChannel query parameters
+     * @param priceChannel values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
@@ -1134,6 +1454,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set localeProjection with the specified value
+     * @param localeProjection value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withLocaleProjection(final TValue localeProjection) {
         return copy().withQueryParam("localeProjection", localeProjection);
@@ -1141,6 +1464,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional localeProjection query parameter
+     * @param localeProjection value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addLocaleProjection(final TValue localeProjection) {
         return copy().addQueryParam("localeProjection", localeProjection);
@@ -1148,6 +1474,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set localeProjection with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withLocaleProjection(final Supplier<String> supplier) {
         return copy().withQueryParam("localeProjection", supplier.get());
@@ -1155,6 +1483,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional localeProjection query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addLocaleProjection(final Supplier<String> supplier) {
         return copy().addQueryParam("localeProjection", supplier.get());
@@ -1162,6 +1492,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set localeProjection with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withLocaleProjection(
             final Function<StringBuilder, StringBuilder> op) {
@@ -1170,6 +1502,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional localeProjection query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addLocaleProjection(
             final Function<StringBuilder, StringBuilder> op) {
@@ -1178,6 +1512,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set localeProjection with the specified values
+     * @param localeProjection values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withLocaleProjection(
             final Collection<TValue> localeProjection) {
@@ -1189,6 +1526,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional localeProjection query parameters
+     * @param localeProjection values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addLocaleProjection(
             final Collection<TValue> localeProjection) {
@@ -1199,6 +1539,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set storeProjection with the specified value
+     * @param storeProjection value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withStoreProjection(final TValue storeProjection) {
         return copy().withQueryParam("storeProjection", storeProjection);
@@ -1206,6 +1549,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional storeProjection query parameter
+     * @param storeProjection value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addStoreProjection(final TValue storeProjection) {
         return copy().addQueryParam("storeProjection", storeProjection);
@@ -1213,6 +1559,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set storeProjection with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withStoreProjection(final Supplier<String> supplier) {
         return copy().withQueryParam("storeProjection", supplier.get());
@@ -1220,6 +1568,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional storeProjection query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addStoreProjection(final Supplier<String> supplier) {
         return copy().addQueryParam("storeProjection", supplier.get());
@@ -1227,6 +1577,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set storeProjection with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withStoreProjection(
             final Function<StringBuilder, StringBuilder> op) {
@@ -1235,6 +1587,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional storeProjection query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addStoreProjection(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("storeProjection", op.apply(new StringBuilder()));
@@ -1242,6 +1596,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set storeProjection with the specified values
+     * @param storeProjection values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withStoreProjection(
             final Collection<TValue> storeProjection) {
@@ -1253,6 +1610,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional storeProjection query parameters
+     * @param storeProjection values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addStoreProjection(
             final Collection<TValue> storeProjection) {
@@ -1263,6 +1623,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -1270,6 +1633,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -1277,6 +1643,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -1284,6 +1652,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -1291,6 +1661,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -1298,6 +1670,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public ByProjectKeyProductProjectionsSearchGet addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -1305,6 +1679,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -1314,6 +1691,9 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
@@ -1322,6 +1702,10 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set text with the specificied value
+     * @param <TValue> value type
+     * @param locale parameter name
+     * @param text parameter value
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withText(final String locale, final TValue text) {
         return copy().withQueryParam(String.format("text.%s", locale), text);
@@ -1329,6 +1713,10 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional text query parameter
+     * @param <TValue> value type
+     * @param locale parameter name
+     * @param text parameter value
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addText(final String locale, final TValue text) {
         return copy().addQueryParam(String.format("text.%s", locale), text);
@@ -1336,6 +1724,10 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * set text with the specificied values
+     * @param <TValue> value type
+     * @param locale parameter name
+     * @param text parameter values
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet withText(final String locale,
             final Collection<TValue> text) {
@@ -1348,6 +1740,10 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     /**
      * add additional text query parameters
+     * @param <TValue> value type
+     * @param locale parameter name
+     * @param text parameter values
+     * @return ByProjectKeyProductProjectionsSearchGet
      */
     public <TValue> ByProjectKeyProductProjectionsSearchGet addText(final String locale,
             final Collection<TValue> text) {

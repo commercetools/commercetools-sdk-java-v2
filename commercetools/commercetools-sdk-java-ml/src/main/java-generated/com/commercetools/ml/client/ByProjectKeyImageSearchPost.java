@@ -102,6 +102,9 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImageSearchPost
      */
     public <TValue> ByProjectKeyImageSearchPost withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -109,6 +112,9 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImageSearchPost
      */
     public <TValue> ByProjectKeyImageSearchPost addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -116,6 +122,8 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImageSearchPost
      */
     public ByProjectKeyImageSearchPost withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -123,6 +131,8 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImageSearchPost
      */
     public ByProjectKeyImageSearchPost addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -130,6 +140,8 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImageSearchPost
      */
     public ByProjectKeyImageSearchPost withLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("limit", op.apply(new StringBuilder()));
@@ -137,6 +149,8 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImageSearchPost
      */
     public ByProjectKeyImageSearchPost addLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("limit", op.apply(new StringBuilder()));
@@ -144,6 +158,9 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImageSearchPost
      */
     public <TValue> ByProjectKeyImageSearchPost withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
@@ -153,6 +170,9 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImageSearchPost
      */
     public <TValue> ByProjectKeyImageSearchPost addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
@@ -161,6 +181,9 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImageSearchPost
      */
     public <TValue> ByProjectKeyImageSearchPost withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -168,6 +191,9 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImageSearchPost
      */
     public <TValue> ByProjectKeyImageSearchPost addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -175,6 +201,8 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyImageSearchPost
      */
     public ByProjectKeyImageSearchPost withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -182,6 +210,8 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyImageSearchPost
      */
     public ByProjectKeyImageSearchPost addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -189,6 +219,8 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyImageSearchPost
      */
     public ByProjectKeyImageSearchPost withOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("offset", op.apply(new StringBuilder()));
@@ -196,6 +228,8 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyImageSearchPost
      */
     public ByProjectKeyImageSearchPost addOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("offset", op.apply(new StringBuilder()));
@@ -203,6 +237,9 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyImageSearchPost
      */
     public <TValue> ByProjectKeyImageSearchPost withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
@@ -212,6 +249,9 @@ public class ByProjectKeyImageSearchPost extends
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyImageSearchPost
      */
     public <TValue> ByProjectKeyImageSearchPost addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(

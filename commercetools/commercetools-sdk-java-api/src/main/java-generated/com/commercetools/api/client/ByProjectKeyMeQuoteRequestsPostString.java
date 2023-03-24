@@ -95,6 +95,9 @@ public class ByProjectKeyMeQuoteRequestsPostString extends
 
     /**
      * set expand with the specified value
+     * @param <TValue> value type
+     * @param expand value to be set
+     * @return ByProjectKeyMeQuoteRequestsPostString
      */
     public <TValue> ByProjectKeyMeQuoteRequestsPostString withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -102,6 +105,9 @@ public class ByProjectKeyMeQuoteRequestsPostString extends
 
     /**
      * add additional expand query parameter
+     * @param <TValue> value type
+     * @param expand value to be added
+     * @return ByProjectKeyMeQuoteRequestsPostString
      */
     public <TValue> ByProjectKeyMeQuoteRequestsPostString addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -109,6 +115,8 @@ public class ByProjectKeyMeQuoteRequestsPostString extends
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyMeQuoteRequestsPostString
      */
     public ByProjectKeyMeQuoteRequestsPostString withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -116,6 +124,8 @@ public class ByProjectKeyMeQuoteRequestsPostString extends
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyMeQuoteRequestsPostString
      */
     public ByProjectKeyMeQuoteRequestsPostString addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -123,6 +133,8 @@ public class ByProjectKeyMeQuoteRequestsPostString extends
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyMeQuoteRequestsPostString
      */
     public ByProjectKeyMeQuoteRequestsPostString withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -130,6 +142,8 @@ public class ByProjectKeyMeQuoteRequestsPostString extends
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyMeQuoteRequestsPostString
      */
     public ByProjectKeyMeQuoteRequestsPostString addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -137,6 +151,9 @@ public class ByProjectKeyMeQuoteRequestsPostString extends
 
     /**
      * set expand with the specified values
+     * @param <TValue> value type
+     * @param expand values to be set
+     * @return ByProjectKeyMeQuoteRequestsPostString
      */
     public <TValue> ByProjectKeyMeQuoteRequestsPostString withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -146,6 +163,9 @@ public class ByProjectKeyMeQuoteRequestsPostString extends
 
     /**
      * add additional expand query parameters
+     * @param <TValue> value type
+     * @param expand values to be added
+     * @return ByProjectKeyMeQuoteRequestsPostString
      */
     public <TValue> ByProjectKeyMeQuoteRequestsPostString addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

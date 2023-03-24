@@ -110,6 +110,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -117,6 +120,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -124,6 +130,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -131,6 +139,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -138,6 +148,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -145,6 +157,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -152,6 +166,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -161,6 +178,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
@@ -169,6 +189,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set sort with the specified value
+     * @param sort value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
@@ -176,6 +199,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional sort query parameter
+     * @param sort value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
@@ -183,6 +209,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set sort with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withSort(final Supplier<String> supplier) {
         return copy().withQueryParam("sort", supplier.get());
@@ -190,6 +218,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional sort query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addSort(final Supplier<String> supplier) {
         return copy().addQueryParam("sort", supplier.get());
@@ -197,6 +227,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set sort with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("sort", op.apply(new StringBuilder()));
@@ -204,6 +236,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional sort query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addSort(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("sort", op.apply(new StringBuilder()));
@@ -211,6 +245,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set sort with the specified values
+     * @param sort values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withSort(final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
@@ -220,6 +257,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional sort query parameters
+     * @param sort values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addSort(final Collection<TValue> sort) {
         return copy().addQueryParams(
@@ -228,6 +268,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -235,6 +278,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -242,6 +288,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -249,6 +297,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -256,6 +306,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("limit", op.apply(new StringBuilder()));
@@ -263,6 +315,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("limit", op.apply(new StringBuilder()));
@@ -270,6 +324,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
@@ -279,6 +336,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
@@ -287,6 +347,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -294,6 +357,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -301,6 +367,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -308,6 +376,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -315,6 +385,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("offset", op.apply(new StringBuilder()));
@@ -322,6 +394,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("offset", op.apply(new StringBuilder()));
@@ -329,6 +403,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
@@ -338,6 +415,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
@@ -346,6 +426,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set withTotal with the specified value
+     * @param withTotal value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withWithTotal(final TValue withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
@@ -353,6 +436,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional withTotal query parameter
+     * @param withTotal value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addWithTotal(final TValue withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
@@ -360,6 +446,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set withTotal with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withWithTotal(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("withTotal", supplier.get());
@@ -367,6 +455,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional withTotal query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addWithTotal(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("withTotal", supplier.get());
@@ -374,6 +464,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set withTotal with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
@@ -381,6 +473,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional withTotal query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
@@ -388,6 +482,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set withTotal with the specified values
+     * @param withTotal values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withWithTotal(final Collection<TValue> withTotal) {
         return copy().withoutQueryParam("withTotal")
@@ -398,6 +495,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional withTotal query parameters
+     * @param withTotal values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addWithTotal(final Collection<TValue> withTotal) {
         return copy().addQueryParams(
@@ -406,6 +506,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set where with the specified value
+     * @param where value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withWhere(final TValue where) {
         return copy().withQueryParam("where", where);
@@ -413,6 +516,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional where query parameter
+     * @param where value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addWhere(final TValue where) {
         return copy().addQueryParam("where", where);
@@ -420,6 +526,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set where with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withWhere(final Supplier<String> supplier) {
         return copy().withQueryParam("where", supplier.get());
@@ -427,6 +535,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional where query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addWhere(final Supplier<String> supplier) {
         return copy().addQueryParam("where", supplier.get());
@@ -434,6 +544,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * set where with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet withWhere(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("where", op.apply(new StringBuilder()));
@@ -441,6 +553,8 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional where query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyStatesGet
      */
     public ByProjectKeyStatesGet addWhere(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("where", op.apply(new StringBuilder()));
@@ -448,6 +562,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * set where with the specified values
+     * @param where values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withWhere(final Collection<TValue> where) {
         return copy().withoutQueryParam("where")
@@ -457,6 +574,9 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional where query parameters
+     * @param where values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addWhere(final Collection<TValue> where) {
         return copy().addQueryParams(
@@ -465,6 +585,10 @@ public class ByProjectKeyStatesGet
 
     /**
      * set predicateVar with the specificied value
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter value
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withPredicateVar(final String varName, final TValue predicateVar) {
         return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
@@ -472,6 +596,10 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional predicateVar query parameter
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter value
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addPredicateVar(final String varName, final TValue predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
@@ -479,6 +607,10 @@ public class ByProjectKeyStatesGet
 
     /**
      * set predicateVar with the specificied values
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter values
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet withPredicateVar(final String varName,
             final Collection<TValue> predicateVar) {
@@ -491,6 +623,10 @@ public class ByProjectKeyStatesGet
 
     /**
      * add additional predicateVar query parameters
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter values
+     * @return ByProjectKeyStatesGet
      */
     public <TValue> ByProjectKeyStatesGet addPredicateVar(final String varName, final Collection<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);

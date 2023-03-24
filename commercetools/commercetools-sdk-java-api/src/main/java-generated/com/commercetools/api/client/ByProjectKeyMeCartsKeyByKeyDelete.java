@@ -106,6 +106,9 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * set version with the specified value
+     * @param version value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyMeCartsKeyByKeyDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
@@ -113,6 +116,9 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * add additional version query parameter
+     * @param version value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyMeCartsKeyByKeyDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
@@ -120,6 +126,8 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * set version with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public ByProjectKeyMeCartsKeyByKeyDelete withVersion(final Supplier<Long> supplier) {
         return copy().withQueryParam("version", supplier.get());
@@ -127,6 +135,8 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * add additional version query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public ByProjectKeyMeCartsKeyByKeyDelete addVersion(final Supplier<Long> supplier) {
         return copy().addQueryParam("version", supplier.get());
@@ -134,6 +144,8 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * set version with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public ByProjectKeyMeCartsKeyByKeyDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("version", op.apply(new StringBuilder()));
@@ -141,6 +153,8 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * add additional version query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public ByProjectKeyMeCartsKeyByKeyDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("version", op.apply(new StringBuilder()));
@@ -148,6 +162,9 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * set version with the specified values
+     * @param version values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyMeCartsKeyByKeyDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
@@ -157,6 +174,9 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * add additional version query parameters
+     * @param version values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyMeCartsKeyByKeyDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
@@ -165,6 +185,9 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyMeCartsKeyByKeyDelete withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
@@ -172,6 +195,9 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyMeCartsKeyByKeyDelete addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
@@ -179,6 +205,8 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public ByProjectKeyMeCartsKeyByKeyDelete withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
@@ -186,6 +214,8 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public ByProjectKeyMeCartsKeyByKeyDelete addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
@@ -193,6 +223,8 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public ByProjectKeyMeCartsKeyByKeyDelete withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
@@ -200,6 +232,8 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public ByProjectKeyMeCartsKeyByKeyDelete addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
@@ -207,6 +241,9 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyMeCartsKeyByKeyDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
@@ -216,6 +253,9 @@ public class ByProjectKeyMeCartsKeyByKeyDelete
 
     /**
      * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyMeCartsKeyByKeyDelete
      */
     public <TValue> ByProjectKeyMeCartsKeyByKeyDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(

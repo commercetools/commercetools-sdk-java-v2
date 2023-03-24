@@ -107,6 +107,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set productImageUrl with the specified value
+     * @param productImageUrl value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final TValue productImageUrl) {
         return copy().withQueryParam("productImageUrl", productImageUrl);
@@ -114,6 +117,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional productImageUrl query parameter
+     * @param productImageUrl value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(final TValue productImageUrl) {
         return copy().addQueryParam("productImageUrl", productImageUrl);
@@ -121,6 +127,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set productImageUrl with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final Supplier<String> supplier) {
         return copy().withQueryParam("productImageUrl", supplier.get());
@@ -128,6 +136,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional productImageUrl query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(final Supplier<String> supplier) {
         return copy().addQueryParam("productImageUrl", supplier.get());
@@ -135,6 +145,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set productImageUrl with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(
             final Function<StringBuilder, StringBuilder> op) {
@@ -143,6 +155,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional productImageUrl query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(
             final Function<StringBuilder, StringBuilder> op) {
@@ -151,6 +165,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set productImageUrl with the specified values
+     * @param productImageUrl values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(
             final Collection<TValue> productImageUrl) {
@@ -162,6 +179,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional productImageUrl query parameters
+     * @param productImageUrl values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(
             final Collection<TValue> productImageUrl) {
@@ -172,6 +192,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set productName with the specified value
+     * @param productName value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final TValue productName) {
         return copy().withQueryParam("productName", productName);
@@ -179,6 +202,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional productName query parameter
+     * @param productName value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(final TValue productName) {
         return copy().addQueryParam("productName", productName);
@@ -186,6 +212,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set productName with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final Supplier<String> supplier) {
         return copy().withQueryParam("productName", supplier.get());
@@ -193,6 +221,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional productName query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(final Supplier<String> supplier) {
         return copy().addQueryParam("productName", supplier.get());
@@ -200,6 +230,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set productName with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(
             final Function<StringBuilder, StringBuilder> op) {
@@ -208,6 +240,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional productName query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(
             final Function<StringBuilder, StringBuilder> op) {
@@ -216,6 +250,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set productName with the specified values
+     * @param productName values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(
             final Collection<TValue> productName) {
@@ -227,6 +264,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional productName query parameters
+     * @param productName values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(
             final Collection<TValue> productName) {
@@ -236,6 +276,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set limit with the specified value
+     * @param limit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
@@ -243,6 +286,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional limit query parameter
+     * @param limit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
@@ -250,6 +296,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set limit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
@@ -257,6 +305,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional limit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
@@ -264,6 +314,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set limit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("limit", op.apply(new StringBuilder()));
@@ -271,6 +323,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional limit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("limit", op.apply(new StringBuilder()));
@@ -278,6 +332,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set limit with the specified values
+     * @param limit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
@@ -287,6 +344,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional limit query parameters
+     * @param limit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
@@ -295,6 +355,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set offset with the specified value
+     * @param offset value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
@@ -302,6 +365,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional offset query parameter
+     * @param offset value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
@@ -309,6 +375,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set offset with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
@@ -316,6 +384,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional offset query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
@@ -323,6 +393,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set offset with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("offset", op.apply(new StringBuilder()));
@@ -330,6 +402,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional offset query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("offset", op.apply(new StringBuilder()));
@@ -337,6 +411,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set offset with the specified values
+     * @param offset values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
@@ -346,6 +423,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional offset query parameters
+     * @param offset values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
@@ -354,6 +434,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set confidenceMin with the specified value
+     * @param confidenceMin value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final TValue confidenceMin) {
         return copy().withQueryParam("confidenceMin", confidenceMin);
@@ -361,6 +444,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional confidenceMin query parameter
+     * @param confidenceMin value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final TValue confidenceMin) {
         return copy().addQueryParam("confidenceMin", confidenceMin);
@@ -368,6 +454,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set confidenceMin with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final Supplier<Double> supplier) {
         return copy().withQueryParam("confidenceMin", supplier.get());
@@ -375,6 +463,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional confidenceMin query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final Supplier<Double> supplier) {
         return copy().addQueryParam("confidenceMin", supplier.get());
@@ -382,6 +472,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set confidenceMin with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(
             final Function<StringBuilder, StringBuilder> op) {
@@ -390,6 +482,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional confidenceMin query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(
             final Function<StringBuilder, StringBuilder> op) {
@@ -398,6 +492,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set confidenceMin with the specified values
+     * @param confidenceMin values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(
             final Collection<TValue> confidenceMin) {
@@ -409,6 +506,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional confidenceMin query parameters
+     * @param confidenceMin values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(
             final Collection<TValue> confidenceMin) {
@@ -419,6 +519,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set confidenceMax with the specified value
+     * @param confidenceMax value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final TValue confidenceMax) {
         return copy().withQueryParam("confidenceMax", confidenceMax);
@@ -426,6 +529,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional confidenceMax query parameter
+     * @param confidenceMax value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final TValue confidenceMax) {
         return copy().addQueryParam("confidenceMax", confidenceMax);
@@ -433,6 +539,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set confidenceMax with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final Supplier<Double> supplier) {
         return copy().withQueryParam("confidenceMax", supplier.get());
@@ -440,6 +548,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional confidenceMax query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final Supplier<Double> supplier) {
         return copy().addQueryParam("confidenceMax", supplier.get());
@@ -447,6 +557,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set confidenceMax with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(
             final Function<StringBuilder, StringBuilder> op) {
@@ -455,6 +567,8 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional confidenceMax query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(
             final Function<StringBuilder, StringBuilder> op) {
@@ -463,6 +577,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * set confidenceMax with the specified values
+     * @param confidenceMax values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(
             final Collection<TValue> confidenceMax) {
@@ -474,6 +591,9 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
 
     /**
      * add additional confidenceMax query parameters
+     * @param confidenceMax values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecommendationsGeneralCategoriesGet
      */
     public <TValue> ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(
             final Collection<TValue> confidenceMax) {

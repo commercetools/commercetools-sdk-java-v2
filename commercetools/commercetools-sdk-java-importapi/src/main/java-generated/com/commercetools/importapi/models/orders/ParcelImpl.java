@@ -30,6 +30,8 @@ public class ParcelImpl implements Parcel, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
+    private com.commercetools.importapi.models.customfields.Custom custom;
+
     /**
      * create instance with all properties
      */
@@ -37,12 +39,14 @@ public class ParcelImpl implements Parcel, ModelBase {
     ParcelImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("measurements") final com.commercetools.importapi.models.orders.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.importapi.models.orders.TrackingData trackingData,
-            @JsonProperty("items") final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items) {
+            @JsonProperty("items") final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items,
+            @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
         this.id = id;
         this.createdAt = createdAt;
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
+        this.custom = custom;
     }
 
     /**
@@ -91,6 +95,14 @@ public class ParcelImpl implements Parcel, ModelBase {
         return this.items;
     }
 
+    /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     */
+
+    public com.commercetools.importapi.models.customfields.Custom getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -115,6 +127,10 @@ public class ParcelImpl implements Parcel, ModelBase {
         this.items = items;
     }
 
+    public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -130,6 +146,7 @@ public class ParcelImpl implements Parcel, ModelBase {
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -140,6 +157,7 @@ public class ParcelImpl implements Parcel, ModelBase {
                 .append(measurements)
                 .append(trackingData)
                 .append(items)
+                .append(custom)
                 .toHashCode();
     }
 

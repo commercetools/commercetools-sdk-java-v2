@@ -232,7 +232,7 @@ public interface Address {
     public String getExternalId();
 
     /**
-     *  <p>Custom Fields for the address.</p>
+     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
      * @return custom
      */
     @Valid
@@ -415,7 +415,7 @@ public interface Address {
     public void setExternalId(final String externalId);
 
     /**
-     *  <p>Custom Fields for the address.</p>
+     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
      * @param custom value to be set
      */
 

@@ -9,6 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -73,6 +74,14 @@ public interface Parcel {
     public List<DeliveryItem> getItems();
 
     /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public Custom getCustom();
+
+    /**
      * set id
      * @param id value to be set
      */
@@ -116,6 +125,13 @@ public interface Parcel {
     public void setItems(final List<DeliveryItem> items);
 
     /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final Custom custom);
+
+    /**
      * factory method
      * @return instance of Parcel
      */
@@ -135,6 +151,7 @@ public interface Parcel {
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

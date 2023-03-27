@@ -58,16 +58,40 @@ public interface ShoppingListLineItemValue {
     @JsonProperty("variantId")
     public Integer getVariantId();
 
+    /**
+     * set id
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set name
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     * set variantId
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Integer variantId);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListLineItemValue
+     */
     public static ShoppingListLineItemValue of() {
         return new ShoppingListLineItemValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListLineItemValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListLineItemValue of(final ShoppingListLineItemValue template) {
         ShoppingListLineItemValueImpl instance = new ShoppingListLineItemValueImpl();
         instance.setId(template.getId());
@@ -76,18 +100,37 @@ public interface ShoppingListLineItemValue {
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListLineItemValue
+     * @return builder
+     */
     public static ShoppingListLineItemValueBuilder builder() {
         return ShoppingListLineItemValueBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListLineItemValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListLineItemValueBuilder builder(final ShoppingListLineItemValue template) {
         return ShoppingListLineItemValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListLineItemValue(Function<ShoppingListLineItemValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemValue>() {
             @Override

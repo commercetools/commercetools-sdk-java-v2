@@ -628,105 +628,220 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Product.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Product.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ProductProjection was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ProductProjection was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Product.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>The ProductType defining the Attributes of the Product.</p>
+     * @return productType
+     */
+
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
 
+    /**
+     *  <p>Name of the Product.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the Product.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     * @return slug
+     */
+
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
 
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @return categories
+     */
+
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
         return this.categories;
     }
+
+    /**
+     *  <p>Order of Product in Categories.</p>
+     * @return categoryOrderHints
+     */
 
     @Nullable
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
         return this.categoryOrderHints;
     }
 
+    /**
+     *  <p>Title of the Product displayed in search results.</p>
+     * @return metaTitle
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
+
+    /**
+     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @return metaDescription
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
 
+    /**
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @return metaKeywords
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
+
+    /**
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @return searchKeywords
+     */
 
     @Nullable
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
     }
 
+    /**
+     *  <p><code>true</code> if the staged data is different from the current data.</p>
+     * @return hasStagedChanges
+     */
+
     @Nullable
     public Boolean getHasStagedChanges() {
         return this.hasStagedChanges;
     }
+
+    /**
+     *  <p><code>true</code> if the Product is published.</p>
+     * @return published
+     */
 
     @Nullable
     public Boolean getPublished() {
         return this.published;
     }
 
+    /**
+     *  <p>The Master Variant of the Product.</p>
+     * @return masterVariant
+     */
+
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
         return this.masterVariant;
     }
 
+    /**
+     *  <p>Additional Product Variants.</p>
+     * @return variants
+     */
+
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
         return this.variants;
     }
+
+    /**
+     *  <p>The TaxCategory of the Product.</p>
+     * @return taxCategory
+     */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
         return this.taxCategory;
     }
 
+    /**
+     *  <p>State of the Product.</p>
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
+    /**
+     *  <p>Review statistics of the Product.</p>
+     * @return reviewRatingStatistics
+     */
+
     @Nullable
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
         return this.reviewRatingStatistics;
     }
+
+    /**
+     *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     * @return priceMode
+     */
 
     @Nullable
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
@@ -765,10 +880,19 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
             priceMode);
     }
 
+    /**
+     * factory method for an instance of ProductProjectionBuilder
+     * @return builder
+     */
     public static ProductProjectionBuilder of() {
         return new ProductProjectionBuilder();
     }
 
+    /**
+     * create builder for ProductProjection instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductProjectionBuilder of(final ProductProjection template) {
         ProductProjectionBuilder builder = new ProductProjectionBuilder();
         builder.id = template.getId();

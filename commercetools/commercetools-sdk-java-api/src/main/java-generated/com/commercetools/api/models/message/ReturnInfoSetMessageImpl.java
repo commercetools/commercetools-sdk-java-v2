@@ -44,6 +44,9 @@ public class ReturnInfoSetMessageImpl implements ReturnInfoSetMessage, ModelBase
 
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReturnInfoSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class ReturnInfoSetMessageImpl implements ReturnInfoSetMessage, ModelBase
         this.type = RETURN_INFO_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ReturnInfoSetMessageImpl() {
         this.type = RETURN_INFO_SET;
     }

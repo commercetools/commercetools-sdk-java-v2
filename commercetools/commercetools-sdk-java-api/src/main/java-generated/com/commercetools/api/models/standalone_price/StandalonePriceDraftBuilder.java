@@ -314,58 +314,118 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     * @return sku
+     */
+
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Sets the money value of this Price.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Sets the country for which this Price is valid.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Sets the date from which the Price is valid. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>Sets price tiers.</p>
+     * @return tiers
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
         return this.tiers;
     }
+
+    /**
+     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
+     * @return discounted
+     */
 
     @Nullable
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     * @return active
+     */
 
     @Nullable
     public Boolean getActive() {
@@ -392,10 +452,19 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
             tiers, discounted, custom, active);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceDraftBuilder
+     * @return builder
+     */
     public static StandalonePriceDraftBuilder of() {
         return new StandalonePriceDraftBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceDraftBuilder of(final StandalonePriceDraft template) {
         StandalonePriceDraftBuilder builder = new StandalonePriceDraftBuilder();
         builder.key = template.getKey();

@@ -28,6 +28,9 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
 
     private com.commercetools.history.models.common.OrderState previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeOrderStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.OrderState nextValue,
@@ -38,6 +41,9 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
         this.type = CHANGE_ORDER_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeOrderStateChangeImpl() {
         this.type = CHANGE_ORDER_STATE_CHANGE;
     }

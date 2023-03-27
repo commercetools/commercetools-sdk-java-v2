@@ -26,6 +26,9 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
 
     private Boolean quoteStateToAccepted;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyOrderFromQuoteDraftImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("quoteStateToAccepted") final Boolean quoteStateToAccepted) {
@@ -34,6 +37,9 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
         this.quoteStateToAccepted = quoteStateToAccepted;
     }
 
+    /**
+     * create empty instance
+     */
     public MyOrderFromQuoteDraftImpl() {
     }
 

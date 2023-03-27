@@ -24,6 +24,9 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
 
     private Integer availableQuantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryQuantityValueImpl(@JsonProperty("quantityOnStock") final Integer quantityOnStock,
             @JsonProperty("availableQuantity") final Integer availableQuantity) {
@@ -31,6 +34,9 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
         this.availableQuantity = availableQuantity;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryQuantityValueImpl() {
     }
 

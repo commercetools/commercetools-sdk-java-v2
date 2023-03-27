@@ -81,10 +81,20 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
         return this;
     }
 
+    /**
+     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     * @return oldCustomerGroup
+     */
 
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {
@@ -107,10 +117,19 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
         return new OrderCustomerGroupSetMessagePayloadImpl(customerGroup, oldCustomerGroup);
     }
 
+    /**
+     * factory method for an instance of OrderCustomerGroupSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderCustomerGroupSetMessagePayloadBuilder of() {
         return new OrderCustomerGroupSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderCustomerGroupSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomerGroupSetMessagePayloadBuilder of(final OrderCustomerGroupSetMessagePayload template) {
         OrderCustomerGroupSetMessagePayloadBuilder builder = new OrderCustomerGroupSetMessagePayloadBuilder();
         builder.customerGroup = template.getCustomerGroup();

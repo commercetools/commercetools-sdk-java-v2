@@ -53,16 +53,40 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
     @JsonProperty("state")
     public StateResourceIdentifier getState();
 
+    /**
+     *  <p>External reference that identifies the current status of the Payment.</p>
+     * @param interfaceCode value to be set
+     */
+
     public void setInterfaceCode(final String interfaceCode);
+
+    /**
+     *  <p>Text describing the current status of the Payment.</p>
+     * @param interfaceText value to be set
+     */
 
     public void setInterfaceText(final String interfaceText);
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateResourceIdentifier state);
 
+    /**
+     * factory method
+     * @return instance of PaymentStatusDraft
+     */
     public static PaymentStatusDraft of() {
         return new PaymentStatusDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentStatusDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentStatusDraft of(final PaymentStatusDraft template) {
         PaymentStatusDraftImpl instance = new PaymentStatusDraftImpl();
         instance.setInterfaceCode(template.getInterfaceCode());
@@ -71,18 +95,37 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentStatusDraft
+     * @return builder
+     */
     public static PaymentStatusDraftBuilder builder() {
         return PaymentStatusDraftBuilder.of();
     }
 
+    /**
+     * create builder for PaymentStatusDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentStatusDraftBuilder builder(final PaymentStatusDraft template) {
         return PaymentStatusDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentStatusDraft(Function<PaymentStatusDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentStatusDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentStatusDraft>() {
             @Override

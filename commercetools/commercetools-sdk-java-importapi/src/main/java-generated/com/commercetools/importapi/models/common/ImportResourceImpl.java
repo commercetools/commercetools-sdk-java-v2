@@ -22,11 +22,17 @@ public class ImportResourceImpl implements ImportResource, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportResourceImpl(@JsonProperty("key") final String key) {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportResourceImpl() {
     }
 

@@ -53,7 +53,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *
+     * set the value to the createdAt
      * @param createdAt value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *
+     * set the value to the measurements using the builder function
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *
+     * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *
+     * set the value to the trackingData using the builder function
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *
+     * set the value to the trackingData
      * @param trackingData value to be set
      * @return Builder
      */
@@ -197,28 +197,58 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     * value of createdAt}
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     * value of measurements}
+     * @return measurements
+     */
 
     @Nullable
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
 
+    /**
+     * value of trackingData}
+     * @return trackingData
+     */
+
     @Nullable
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;
     }
 
+    /**
+     *  <p>The delivery items contained in this parcel.</p>
+     * @return items
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
+
+    /**
+     *  <p>Custom Fields of this parcel.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -243,10 +273,19 @@ public class ParcelBuilder implements Builder<Parcel> {
         return new ParcelImpl(id, createdAt, measurements, trackingData, items, custom);
     }
 
+    /**
+     * factory method for an instance of ParcelBuilder
+     * @return builder
+     */
     public static ParcelBuilder of() {
         return new ParcelBuilder();
     }
 
+    /**
+     * create builder for Parcel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelBuilder of(final Parcel template) {
         ParcelBuilder builder = new ParcelBuilder();
         builder.id = template.getId();

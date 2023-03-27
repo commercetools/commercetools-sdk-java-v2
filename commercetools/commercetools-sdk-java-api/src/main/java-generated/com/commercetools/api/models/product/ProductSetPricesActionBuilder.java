@@ -133,19 +133,39 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return prices
+     */
+
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -169,10 +189,19 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
         return new ProductSetPricesActionImpl(variantId, sku, prices, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetPricesActionBuilder
+     * @return builder
+     */
     public static ProductSetPricesActionBuilder of() {
         return new ProductSetPricesActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetPricesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetPricesActionBuilder of(final ProductSetPricesAction template) {
         ProductSetPricesActionBuilder builder = new ProductSetPricesActionBuilder();
         builder.variantId = template.getVariantId();

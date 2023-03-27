@@ -24,6 +24,9 @@ public class BusinessUnitStoreRemovedMessagePayloadImpl implements BusinessUnitS
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitStoreRemovedMessagePayloadImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store) {
@@ -31,6 +34,9 @@ public class BusinessUnitStoreRemovedMessagePayloadImpl implements BusinessUnitS
         this.type = BUSINESS_UNIT_STORE_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitStoreRemovedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_STORE_REMOVED;
     }

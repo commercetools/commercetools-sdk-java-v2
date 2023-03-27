@@ -35,6 +35,11 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     * @return sellerComment
+     */
+
     public String getSellerComment() {
         return this.sellerComment;
     }
@@ -57,10 +62,19 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
         return new StagedQuoteSellerCommentSetMessagePayloadImpl(sellerComment);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteSellerCommentSetMessagePayloadBuilder
+     * @return builder
+     */
     public static StagedQuoteSellerCommentSetMessagePayloadBuilder of() {
         return new StagedQuoteSellerCommentSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteSellerCommentSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteSellerCommentSetMessagePayloadBuilder of(
             final StagedQuoteSellerCommentSetMessagePayload template) {
         StagedQuoteSellerCommentSetMessagePayloadBuilder builder = new StagedQuoteSellerCommentSetMessagePayloadBuilder();

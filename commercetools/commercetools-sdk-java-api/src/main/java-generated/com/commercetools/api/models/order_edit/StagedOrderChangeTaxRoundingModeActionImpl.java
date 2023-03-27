@@ -24,6 +24,9 @@ public class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderCh
 
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderChangeTaxRoundingModeActionImpl(
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
@@ -31,6 +34,9 @@ public class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderCh
         this.action = CHANGE_TAX_ROUNDING_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderChangeTaxRoundingModeActionImpl() {
         this.action = CHANGE_TAX_ROUNDING_MODE;
     }

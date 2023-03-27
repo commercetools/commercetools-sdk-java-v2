@@ -24,7 +24,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     private java.util.List<Double> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -58,6 +58,11 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
         this.value.addAll(Arrays.asList(value));
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<Double> getValue() {
         return this.value;
@@ -80,10 +85,19 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
         return new NumberSetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of NumberSetFieldBuilder
+     * @return builder
+     */
     public static NumberSetFieldBuilder of() {
         return new NumberSetFieldBuilder();
     }
 
+    /**
+     * create builder for NumberSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static NumberSetFieldBuilder of(final NumberSetField template) {
         NumberSetFieldBuilder builder = new NumberSetFieldBuilder();
         builder.value = template.getValue();

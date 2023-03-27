@@ -26,6 +26,9 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
 
     private com.commercetools.api.models.product.ProductProjection currentProjection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls,
             @JsonProperty("currentProjection") final com.commercetools.api.models.product.ProductProjection currentProjection) {
@@ -34,6 +37,9 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
         this.type = PRODUCT_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDeletedMessagePayloadImpl() {
         this.type = PRODUCT_DELETED;
     }

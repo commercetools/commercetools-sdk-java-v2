@@ -24,12 +24,18 @@ public class MyCartSetLocaleActionImpl implements MyCartSetLocaleAction, ModelBa
 
     private String locale;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
         this.locale = locale;
         this.action = SET_LOCALE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartSetLocaleActionImpl() {
         this.action = SET_LOCALE;
     }

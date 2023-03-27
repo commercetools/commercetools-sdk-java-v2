@@ -115,28 +115,85 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     @JsonProperty("priceMode")
     public CustomLineItemPriceMode getPriceMode();
 
+    /**
+     *  <p>Name of the Custom Line Item.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Number of Custom Line Items to add to the Cart.</p>
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @param money value to be set
+     */
+
     public void setMoney(final Money money);
+
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final String slug);
 
+    /**
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
+
+    /**
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     * @param externalTaxRate value to be set
+     */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param shippingDetails value to be set
+     */
 
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     * @param priceMode value to be set
+     */
+
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
 
+    /**
+     * factory method
+     * @return instance of CustomLineItemDraft
+     */
     public static CustomLineItemDraft of() {
         return new CustomLineItemDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomLineItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomLineItemDraft of(final CustomLineItemDraft template) {
         CustomLineItemDraftImpl instance = new CustomLineItemDraftImpl();
         instance.setName(template.getName());
@@ -151,18 +208,37 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
         return instance;
     }
 
+    /**
+     * builder factory method for CustomLineItemDraft
+     * @return builder
+     */
     public static CustomLineItemDraftBuilder builder() {
         return CustomLineItemDraftBuilder.of();
     }
 
+    /**
+     * create builder for CustomLineItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemDraftBuilder builder(final CustomLineItemDraft template) {
         return CustomLineItemDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomLineItemDraft(Function<CustomLineItemDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft>() {
             @Override

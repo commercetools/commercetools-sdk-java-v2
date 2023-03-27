@@ -43,6 +43,9 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
 
     private com.commercetools.api.models.common.LocalizedString productSlug;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
@@ -67,6 +70,9 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.productSlug = productSlug;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListLineItemImpl() {
     }
 

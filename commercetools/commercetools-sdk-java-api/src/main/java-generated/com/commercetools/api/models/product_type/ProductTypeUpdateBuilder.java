@@ -107,9 +107,19 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the ProductType on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the ProductType.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
         return new ProductTypeUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of ProductTypeUpdateBuilder
+     * @return builder
+     */
     public static ProductTypeUpdateBuilder of() {
         return new ProductTypeUpdateBuilder();
     }
 
+    /**
+     * create builder for ProductTypeUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeUpdateBuilder of(final ProductTypeUpdate template) {
         ProductTypeUpdateBuilder builder = new ProductTypeUpdateBuilder();
         builder.version = template.getVersion();

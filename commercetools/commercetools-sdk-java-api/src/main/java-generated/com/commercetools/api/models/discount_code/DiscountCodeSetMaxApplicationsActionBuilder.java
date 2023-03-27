@@ -36,6 +36,11 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return maxApplications
+     */
+
     @Nullable
     public Long getMaxApplications() {
         return this.maxApplications;
@@ -57,10 +62,19 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
         return new DiscountCodeSetMaxApplicationsActionImpl(maxApplications);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeSetMaxApplicationsActionBuilder
+     * @return builder
+     */
     public static DiscountCodeSetMaxApplicationsActionBuilder of() {
         return new DiscountCodeSetMaxApplicationsActionBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeSetMaxApplicationsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeSetMaxApplicationsActionBuilder of(final DiscountCodeSetMaxApplicationsAction template) {
         DiscountCodeSetMaxApplicationsActionBuilder builder = new DiscountCodeSetMaxApplicationsActionBuilder();
         builder.maxApplications = template.getMaxApplications();

@@ -28,6 +28,9 @@ public class CartValueTierImpl implements CartValueTier, ModelBase {
 
     private Boolean isMatching;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartValueTierImpl(@JsonProperty("minimumCentAmount") final Long minimumCentAmount,
             @JsonProperty("price") final com.commercetools.api.models.common.Money price,
@@ -38,6 +41,9 @@ public class CartValueTierImpl implements CartValueTier, ModelBase {
         this.type = ShippingRateTierType.findEnum("CartValue");
     }
 
+    /**
+     * create empty instance
+     */
     public CartValueTierImpl() {
         this.type = ShippingRateTierType.findEnum("CartValue");
     }

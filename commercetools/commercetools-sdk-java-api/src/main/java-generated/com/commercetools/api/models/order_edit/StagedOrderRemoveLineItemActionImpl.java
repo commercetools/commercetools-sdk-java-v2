@@ -32,6 +32,9 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("quantity") final Long quantity,
@@ -46,6 +49,9 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
         this.action = REMOVE_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderRemoveLineItemActionImpl() {
         this.action = REMOVE_LINE_ITEM;
     }

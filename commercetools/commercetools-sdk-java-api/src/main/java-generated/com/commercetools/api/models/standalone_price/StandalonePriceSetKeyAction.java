@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceSetKeyActionImpl.class)
 public interface StandalonePriceSetKeyAction extends StandalonePriceUpdateAction {
 
+    /**
+     * discriminator value for StandalonePriceSetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,30 +39,63 @@ public interface StandalonePriceSetKeyAction extends StandalonePriceUpdateAction
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceSetKeyAction
+     */
     public static StandalonePriceSetKeyAction of() {
         return new StandalonePriceSetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceSetKeyAction of(final StandalonePriceSetKeyAction template) {
         StandalonePriceSetKeyActionImpl instance = new StandalonePriceSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceSetKeyAction
+     * @return builder
+     */
     public static StandalonePriceSetKeyActionBuilder builder() {
         return StandalonePriceSetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceSetKeyActionBuilder builder(final StandalonePriceSetKeyAction template) {
         return StandalonePriceSetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceSetKeyAction(Function<StandalonePriceSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetKeyAction>() {
             @Override

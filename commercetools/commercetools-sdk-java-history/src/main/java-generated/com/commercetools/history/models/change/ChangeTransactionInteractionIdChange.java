@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeTransactionInteractionIdChangeImpl.class)
 public interface ChangeTransactionInteractionIdChange extends Change {
 
+    /**
+     * discriminator value for ChangeTransactionInteractionIdChange
+     */
     String CHANGE_TRANSACTION_INTERACTION_ID_CHANGE = "ChangeTransactionInteractionIdChange";
 
     /**
@@ -77,18 +80,47 @@ public interface ChangeTransactionInteractionIdChange extends Change {
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set transaction
+     * @param transaction value to be set
+     */
 
     public void setTransaction(final TransactionChangeValue transaction);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeTransactionInteractionIdChange
+     */
     public static ChangeTransactionInteractionIdChange of() {
         return new ChangeTransactionInteractionIdChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeTransactionInteractionIdChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeTransactionInteractionIdChange of(final ChangeTransactionInteractionIdChange template) {
         ChangeTransactionInteractionIdChangeImpl instance = new ChangeTransactionInteractionIdChangeImpl();
         instance.setChange(template.getChange());
@@ -98,19 +130,38 @@ public interface ChangeTransactionInteractionIdChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeTransactionInteractionIdChange
+     * @return builder
+     */
     public static ChangeTransactionInteractionIdChangeBuilder builder() {
         return ChangeTransactionInteractionIdChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeTransactionInteractionIdChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTransactionInteractionIdChangeBuilder builder(
             final ChangeTransactionInteractionIdChange template) {
         return ChangeTransactionInteractionIdChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeTransactionInteractionIdChange(Function<ChangeTransactionInteractionIdChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeTransactionInteractionIdChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeTransactionInteractionIdChange>() {
             @Override

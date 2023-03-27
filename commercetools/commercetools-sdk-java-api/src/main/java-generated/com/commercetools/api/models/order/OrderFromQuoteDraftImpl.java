@@ -36,6 +36,9 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
 
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderFromQuoteDraftImpl(
             @JsonProperty("quote") final com.commercetools.api.models.quote.QuoteResourceIdentifier quote,
@@ -56,6 +59,9 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
         this.state = state;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderFromQuoteDraftImpl() {
     }
 

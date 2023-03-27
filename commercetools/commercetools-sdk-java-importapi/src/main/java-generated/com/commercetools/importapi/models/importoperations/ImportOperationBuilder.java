@@ -291,48 +291,103 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
         return this;
     }
 
+    /**
+     *  <p>The version of the ImportOperation.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>The key of the importContainer.</p>
+     * @return importContainerKey
+     */
 
     public String getImportContainerKey() {
         return this.importContainerKey;
     }
 
+    /**
+     *  <p>The key of the resource.</p>
+     * @return resourceKey
+     */
+
     public String getResourceKey() {
         return this.resourceKey;
     }
+
+    /**
+     *  <p>The ID of the ImportOperation.</p>
+     * @return id
+     */
 
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
+     * @return state
+     */
+
     public com.commercetools.importapi.models.common.ProcessingState getState() {
         return this.state;
     }
+
+    /**
+     *  <p>The version of the imported resource when the import was successful.</p>
+     * @return resourceVersion
+     */
 
     @Nullable
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
 
+    /**
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     * @return errors
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;
     }
+
+    /**
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     * @return unresolvedReferences
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> getUnresolvedReferences() {
         return this.unresolvedReferences;
     }
 
+    /**
+     *  <p>The time when the ImportOperation was created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>The last time When the ImportOperation was modified.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>The expiration time of the ImportOperation.</p>
+     * @return expiresAt
+     */
 
     public java.time.ZonedDateTime getExpiresAt() {
         return this.expiresAt;
@@ -364,10 +419,19 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
             unresolvedReferences, createdAt, lastModifiedAt, expiresAt);
     }
 
+    /**
+     * factory method for an instance of ImportOperationBuilder
+     * @return builder
+     */
     public static ImportOperationBuilder of() {
         return new ImportOperationBuilder();
     }
 
+    /**
+     * create builder for ImportOperation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportOperationBuilder of(final ImportOperation template) {
         ImportOperationBuilder builder = new ImportOperationBuilder();
         builder.version = template.getVersion();

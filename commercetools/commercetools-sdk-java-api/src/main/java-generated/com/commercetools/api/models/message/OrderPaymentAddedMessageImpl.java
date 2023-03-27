@@ -44,6 +44,9 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
 
     private com.commercetools.api.models.payment.PaymentReference payment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderPaymentAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         this.type = ORDER_PAYMENT_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderPaymentAddedMessageImpl() {
         this.type = ORDER_PAYMENT_ADDED;
     }

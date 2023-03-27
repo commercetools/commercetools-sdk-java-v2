@@ -28,12 +28,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CompanyDraftImpl.class)
 public interface CompanyDraft extends BusinessUnitDraft, io.vrap.rmf.base.client.Draft<CompanyDraft> {
 
+    /**
+     * discriminator value for CompanyDraft
+     */
     String COMPANY = "Company";
 
+    /**
+     * factory method
+     * @return instance of CompanyDraft
+     */
     public static CompanyDraft of() {
         return new CompanyDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CompanyDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CompanyDraft of(final CompanyDraft template) {
         CompanyDraftImpl instance = new CompanyDraftImpl();
         instance.setKey(template.getKey());
@@ -52,18 +64,37 @@ public interface CompanyDraft extends BusinessUnitDraft, io.vrap.rmf.base.client
         return instance;
     }
 
+    /**
+     * builder factory method for CompanyDraft
+     * @return builder
+     */
     public static CompanyDraftBuilder builder() {
         return CompanyDraftBuilder.of();
     }
 
+    /**
+     * create builder for CompanyDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CompanyDraftBuilder builder(final CompanyDraft template) {
         return CompanyDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCompanyDraft(Function<CompanyDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CompanyDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CompanyDraft>() {
             @Override

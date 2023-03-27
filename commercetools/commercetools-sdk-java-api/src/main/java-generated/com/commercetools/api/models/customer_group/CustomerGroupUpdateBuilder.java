@@ -107,9 +107,19 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
         return this;
     }
 
+    /**
+     *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the CustomerGroup.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
         return new CustomerGroupUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of CustomerGroupUpdateBuilder
+     * @return builder
+     */
     public static CustomerGroupUpdateBuilder of() {
         return new CustomerGroupUpdateBuilder();
     }
 
+    /**
+     * create builder for CustomerGroupUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupUpdateBuilder of(final CustomerGroupUpdate template) {
         CustomerGroupUpdateBuilder builder = new CustomerGroupUpdateBuilder();
         builder.version = template.getVersion();

@@ -92,14 +92,29 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>State of the Quote after the Transition State update action.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
+
+    /**
+     *  <p>State of the Quote before the Transition State update action.</p>
+     * @return oldState
+     */
 
     @Nullable
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
+
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @return force
+     */
 
     public Boolean getForce() {
         return this.force;
@@ -123,10 +138,19 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
         return new QuoteRequestStateTransitionMessagePayloadImpl(state, oldState, force);
     }
 
+    /**
+     * factory method for an instance of QuoteRequestStateTransitionMessagePayloadBuilder
+     * @return builder
+     */
     public static QuoteRequestStateTransitionMessagePayloadBuilder of() {
         return new QuoteRequestStateTransitionMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestStateTransitionMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestStateTransitionMessagePayloadBuilder of(
             final QuoteRequestStateTransitionMessagePayload template) {
         QuoteRequestStateTransitionMessagePayloadBuilder builder = new QuoteRequestStateTransitionMessagePayloadBuilder();

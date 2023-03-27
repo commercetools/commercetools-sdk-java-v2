@@ -232,75 +232,227 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     @JsonProperty("topLevelUnit")
     public BusinessUnitKeyReference getTopLevelUnit();
 
+    /**
+     *  <p>Unique identifier of the Business Unit.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Business Unit.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the Business Unit was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the Business Unit was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the Business Unit.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     * @param status value to be set
+     */
+
     public void setStatus(final BusinessUnitStatus status);
+
+    /**
+     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores values to be set
+     */
 
     @JsonIgnore
     public void setStores(final StoreKeyReference... stores);
 
+    /**
+     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores values to be set
+     */
+
     public void setStores(final List<StoreKeyReference> stores);
+
+    /**
+     *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent.</p>
+     * @param storeMode value to be set
+     */
 
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
 
+    /**
+     *  <p>Name of the Business Unit.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     *  <p>Email address of the Business Unit.</p>
+     * @param contactEmail value to be set
+     */
 
     public void setContactEmail(final String contactEmail);
 
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses values to be set
+     */
 
     @JsonIgnore
     public void setAddresses(final Address... addresses);
 
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses values to be set
+     */
+
     public void setAddresses(final List<Address> addresses);
+
+    /**
+     *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @param shippingAddressIds values to be set
+     */
 
     @JsonIgnore
     public void setShippingAddressIds(final String... shippingAddressIds);
 
+    /**
+     *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @param shippingAddressIds values to be set
+     */
+
     public void setShippingAddressIds(final List<String> shippingAddressIds);
 
+    /**
+     *  <p>Unique identifier of the address used as the default shipping address.</p>
+     * @param defaultShippingAddressId value to be set
+     */
+
     public void setDefaultShippingAddressId(final String defaultShippingAddressId);
+
+    /**
+     *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @param billingAddressIds values to be set
+     */
 
     @JsonIgnore
     public void setBillingAddressIds(final String... billingAddressIds);
 
+    /**
+     *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @param billingAddressIds values to be set
+     */
+
     public void setBillingAddressIds(final List<String> billingAddressIds);
 
+    /**
+     *  <p>Unique identifier of the address used as the default billing address.</p>
+     * @param defaultBillingAddressId value to be set
+     */
+
     public void setDefaultBillingAddressId(final String defaultBillingAddressId);
+
+    /**
+     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param associates values to be set
+     */
 
     @JsonIgnore
     public void setAssociates(final Associate... associates);
 
+    /**
+     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param associates values to be set
+     */
+
     public void setAssociates(final List<Associate> associates);
+
+    /**
+     *  <p>Parent unit of the Business Unit. Only present when the <code>unitType</code> is <code>Division</code>.</p>
+     * @param parentUnit value to be set
+     */
 
     public void setParentUnit(final BusinessUnitKeyReference parentUnit);
 
+    /**
+     *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
+     * @param topLevelUnit value to be set
+     */
+
     public void setTopLevelUnit(final BusinessUnitKeyReference topLevelUnit);
 
+    /**
+     * builder for company subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.business_unit.CompanyBuilder companyBuilder() {
         return com.commercetools.api.models.business_unit.CompanyBuilder.of();
     }
 
+    /**
+     * builder for division subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.business_unit.DivisionBuilder divisionBuilder() {
         return com.commercetools.api.models.business_unit.DivisionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnit(Function<BusinessUnit, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnit> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnit>() {
             @Override

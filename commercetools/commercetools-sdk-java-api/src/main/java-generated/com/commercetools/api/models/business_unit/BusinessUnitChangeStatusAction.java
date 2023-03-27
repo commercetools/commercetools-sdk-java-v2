@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitChangeStatusActionImpl.class)
 public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitChangeStatusAction
+     */
     String CHANGE_STATUS = "changeStatus";
 
     /**
@@ -39,30 +42,63 @@ public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction
     @JsonProperty("status")
     public String getStatus();
 
+    /**
+     *  <p>New status to set.</p>
+     * @param status value to be set
+     */
+
     public void setStatus(final String status);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitChangeStatusAction
+     */
     public static BusinessUnitChangeStatusAction of() {
         return new BusinessUnitChangeStatusActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitChangeStatusAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitChangeStatusAction of(final BusinessUnitChangeStatusAction template) {
         BusinessUnitChangeStatusActionImpl instance = new BusinessUnitChangeStatusActionImpl();
         instance.setStatus(template.getStatus());
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitChangeStatusAction
+     * @return builder
+     */
     public static BusinessUnitChangeStatusActionBuilder builder() {
         return BusinessUnitChangeStatusActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitChangeStatusAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitChangeStatusActionBuilder builder(final BusinessUnitChangeStatusAction template) {
         return BusinessUnitChangeStatusActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitChangeStatusAction(Function<BusinessUnitChangeStatusAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeStatusAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeStatusAction>() {
             @Override

@@ -47,14 +47,33 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of CustomFieldsDraft
+     */
     public static CustomFieldsDraft of() {
         return new CustomFieldsDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomFieldsDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomFieldsDraft of(final CustomFieldsDraft template) {
         CustomFieldsDraftImpl instance = new CustomFieldsDraftImpl();
         instance.setType(template.getType());
@@ -62,14 +81,29 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
         return instance;
     }
 
+    /**
+     * builder factory method for CustomFieldsDraft
+     * @return builder
+     */
     public static CustomFieldsDraftBuilder builder() {
         return CustomFieldsDraftBuilder.of();
     }
 
+    /**
+     * create builder for CustomFieldsDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldsDraftBuilder builder(final CustomFieldsDraft template) {
         return CustomFieldsDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomFieldsDraft(Function<CustomFieldsDraft, T> helper) {
         return helper.apply(this);
     }
@@ -82,6 +116,10 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
         return template.toDraftBuilder();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldsDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldsDraft>() {
             @Override

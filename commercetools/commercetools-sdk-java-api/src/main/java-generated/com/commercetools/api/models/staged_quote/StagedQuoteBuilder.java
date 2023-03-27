@@ -365,78 +365,163 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         return this;
     }
 
+    /**
+     *  <p>The unique ID of the StagedQuote.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the StagedQuote.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the StagedQuote was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the StagedQuote was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>User-specific unique identifier of the staged quote.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Predefined states tracking the status of the Staged Quote.</p>
+     * @return stagedQuoteState
+     */
+
     public com.commercetools.api.models.staged_quote.StagedQuoteState getStagedQuoteState() {
         return this.stagedQuoteState;
     }
+
+    /**
+     *  <p>The Buyer who requested the Quote.</p>
+     * @return customer
+     */
 
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
+    /**
+     *  <p>Quote Request related to the Staged Quote.</p>
+     * @return quoteRequest
+     */
+
     public com.commercetools.api.models.quote_request.QuoteRequestReference getQuoteRequest() {
         return this.quoteRequest;
     }
 
+    /**
+     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     * @return quotationCart
+     */
+
     public com.commercetools.api.models.cart.CartReference getQuotationCart() {
         return this.quotationCart;
     }
+
+    /**
+     *  <p>Expiration date for the Quote.</p>
+     * @return validTo
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidTo() {
         return this.validTo;
     }
 
+    /**
+     *  <p>Message from the Seller included in the offer.</p>
+     * @return sellerComment
+     */
+
     @Nullable
     public String getSellerComment() {
         return this.sellerComment;
     }
+
+    /**
+     *  <p>Custom Fields of the Staged Quote.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
+    /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     * @return purchaseOrderNumber
+     */
+
     @Nullable
     public String getPurchaseOrderNumber() {
         return this.purchaseOrderNumber;
     }
+
+    /**
+     *  <p>The BusinessUnit for the Staged Quote.</p>
+     * @return businessUnit
+     */
 
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -470,10 +555,19 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
             purchaseOrderNumber, businessUnit);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteBuilder
+     * @return builder
+     */
     public static StagedQuoteBuilder of() {
         return new StagedQuoteBuilder();
     }
 
+    /**
+     * create builder for StagedQuote instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteBuilder of(final StagedQuote template) {
         StagedQuoteBuilder builder = new StagedQuoteBuilder();
         builder.id = template.getId();

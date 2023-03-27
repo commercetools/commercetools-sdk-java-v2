@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetLineItemPriceActionImpl.class)
 public interface CartSetLineItemPriceAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetLineItemPriceAction
+     */
     String SET_LINE_ITEM_PRICE = "setLineItemPrice";
 
     /**
@@ -49,14 +52,33 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     * @param externalPrice value to be set
+     */
 
     public void setExternalPrice(final Money externalPrice);
 
+    /**
+     * factory method
+     * @return instance of CartSetLineItemPriceAction
+     */
     public static CartSetLineItemPriceAction of() {
         return new CartSetLineItemPriceActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetLineItemPriceAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetLineItemPriceAction of(final CartSetLineItemPriceAction template) {
         CartSetLineItemPriceActionImpl instance = new CartSetLineItemPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
@@ -64,18 +86,37 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetLineItemPriceAction
+     * @return builder
+     */
     public static CartSetLineItemPriceActionBuilder builder() {
         return CartSetLineItemPriceActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetLineItemPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetLineItemPriceActionBuilder builder(final CartSetLineItemPriceAction template) {
         return CartSetLineItemPriceActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetLineItemPriceAction(Function<CartSetLineItemPriceAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemPriceAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemPriceAction>() {
             @Override

@@ -26,6 +26,9 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingRateDraftImpl(@JsonProperty("price") final com.commercetools.importapi.models.common.Money price,
             @JsonProperty("freeAbove") final com.commercetools.importapi.models.common.Money freeAbove,
@@ -35,6 +38,9 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
         this.tiers = tiers;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingRateDraftImpl() {
     }
 

@@ -30,7 +30,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     private com.commercetools.importapi.models.orders.TrackingData trackingData;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
-     *
+     * set the value to the trackingData using the builder function
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
-     *
+     * set the value to the trackingData
      * @param trackingData value to be set
      * @return Builder
      */
@@ -64,9 +64,19 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
         return this;
     }
 
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     * value of trackingData}
+     * @return trackingData
+     */
 
     @Nullable
     public com.commercetools.importapi.models.orders.TrackingData getTrackingData() {
@@ -90,10 +100,19 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
         return new ParcelTrackingDataImpl(parcelId, trackingData);
     }
 
+    /**
+     * factory method for an instance of ParcelTrackingDataBuilder
+     * @return builder
+     */
     public static ParcelTrackingDataBuilder of() {
         return new ParcelTrackingDataBuilder();
     }
 
+    /**
+     * create builder for ParcelTrackingData instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelTrackingDataBuilder of(final ParcelTrackingData template) {
         ParcelTrackingDataBuilder builder = new ParcelTrackingDataBuilder();
         builder.parcelId = template.getParcelId();

@@ -22,12 +22,18 @@ public class ShippingRatePriceTierImpl implements ShippingRatePriceTier, ModelBa
 
     private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingRatePriceTierImpl(
             @JsonProperty("type") final com.commercetools.api.models.shipping_method.ShippingRateTierType type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingRatePriceTierImpl() {
     }
 

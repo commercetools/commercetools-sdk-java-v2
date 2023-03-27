@@ -46,14 +46,33 @@ public interface AttributePlainEnumValue {
     @JsonProperty("label")
     public String getLabel();
 
+    /**
+     *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Descriptive label of the value.</p>
+     * @param label value to be set
+     */
 
     public void setLabel(final String label);
 
+    /**
+     * factory method
+     * @return instance of AttributePlainEnumValue
+     */
     public static AttributePlainEnumValue of() {
         return new AttributePlainEnumValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributePlainEnumValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributePlainEnumValue of(final AttributePlainEnumValue template) {
         AttributePlainEnumValueImpl instance = new AttributePlainEnumValueImpl();
         instance.setKey(template.getKey());
@@ -61,18 +80,37 @@ public interface AttributePlainEnumValue {
         return instance;
     }
 
+    /**
+     * builder factory method for AttributePlainEnumValue
+     * @return builder
+     */
     public static AttributePlainEnumValueBuilder builder() {
         return AttributePlainEnumValueBuilder.of();
     }
 
+    /**
+     * create builder for AttributePlainEnumValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributePlainEnumValueBuilder builder(final AttributePlainEnumValue template) {
         return AttributePlainEnumValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributePlainEnumValue(Function<AttributePlainEnumValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributePlainEnumValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributePlainEnumValue>() {
             @Override

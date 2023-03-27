@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetMethodInfoMethodActionImpl.class)
 public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
 
+    /**
+     * discriminator value for PaymentSetMethodInfoMethodAction
+     */
     String SET_METHOD_INFO_METHOD = "setMethodInfoMethod";
 
     /**
@@ -36,30 +39,63 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
     @JsonProperty("method")
     public String getMethod();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param method value to be set
+     */
+
     public void setMethod(final String method);
 
+    /**
+     * factory method
+     * @return instance of PaymentSetMethodInfoMethodAction
+     */
     public static PaymentSetMethodInfoMethodAction of() {
         return new PaymentSetMethodInfoMethodActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentSetMethodInfoMethodAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentSetMethodInfoMethodAction of(final PaymentSetMethodInfoMethodAction template) {
         PaymentSetMethodInfoMethodActionImpl instance = new PaymentSetMethodInfoMethodActionImpl();
         instance.setMethod(template.getMethod());
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentSetMethodInfoMethodAction
+     * @return builder
+     */
     public static PaymentSetMethodInfoMethodActionBuilder builder() {
         return PaymentSetMethodInfoMethodActionBuilder.of();
     }
 
+    /**
+     * create builder for PaymentSetMethodInfoMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetMethodInfoMethodActionBuilder builder(final PaymentSetMethodInfoMethodAction template) {
         return PaymentSetMethodInfoMethodActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentSetMethodInfoMethodAction(Function<PaymentSetMethodInfoMethodAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoMethodAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoMethodAction>() {
             @Override

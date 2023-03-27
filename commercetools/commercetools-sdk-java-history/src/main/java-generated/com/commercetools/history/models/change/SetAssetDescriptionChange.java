@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetAssetDescriptionChangeImpl.class)
 public interface SetAssetDescriptionChange extends Change {
 
+    /**
+     * discriminator value for SetAssetDescriptionChange
+     */
     String SET_ASSET_DESCRIPTION_CHANGE = "SetAssetDescriptionChange";
 
     /**
@@ -80,18 +83,47 @@ public interface SetAssetDescriptionChange extends Change {
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setAssetDescription</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set asset
+     * @param asset value to be set
+     */
 
     public void setAsset(final AssetChangeValue asset);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final LocalizedString nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final LocalizedString previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetAssetDescriptionChange
+     */
     public static SetAssetDescriptionChange of() {
         return new SetAssetDescriptionChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetAssetDescriptionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetAssetDescriptionChange of(final SetAssetDescriptionChange template) {
         SetAssetDescriptionChangeImpl instance = new SetAssetDescriptionChangeImpl();
         instance.setChange(template.getChange());
@@ -101,18 +133,37 @@ public interface SetAssetDescriptionChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetAssetDescriptionChange
+     * @return builder
+     */
     public static SetAssetDescriptionChangeBuilder builder() {
         return SetAssetDescriptionChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetAssetDescriptionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetAssetDescriptionChangeBuilder builder(final SetAssetDescriptionChange template) {
         return SetAssetDescriptionChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetAssetDescriptionChange(Function<SetAssetDescriptionChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetAssetDescriptionChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetAssetDescriptionChange>() {
             @Override

@@ -24,6 +24,9 @@ public class CartSetShippingRateInputActionImpl implements CartSetShippingRateIn
 
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetShippingRateInputActionImpl(
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
@@ -31,6 +34,9 @@ public class CartSetShippingRateInputActionImpl implements CartSetShippingRateIn
         this.action = SET_SHIPPING_RATE_INPUT;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetShippingRateInputActionImpl() {
         this.action = SET_SHIPPING_RATE_INPUT;
     }

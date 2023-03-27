@@ -28,6 +28,9 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderStateTransitionMessagePayloadImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
@@ -39,6 +42,9 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
         this.type = ORDER_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderStateTransitionMessagePayloadImpl() {
         this.type = ORDER_STATE_TRANSITION;
     }

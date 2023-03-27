@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShoppingListResourceIdentifier
         extends ResourceIdentifier, com.commercetools.api.models.Identifiable<ShoppingList> {
 
+    /**
+     * discriminator value for ShoppingListResourceIdentifier
+     */
     String SHOPPING_LIST = "shopping-list";
 
     /**
@@ -46,14 +49,33 @@ public interface ShoppingListResourceIdentifier
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListResourceIdentifier
+     */
     public static ShoppingListResourceIdentifier of() {
         return new ShoppingListResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListResourceIdentifier of(final ShoppingListResourceIdentifier template) {
         ShoppingListResourceIdentifierImpl instance = new ShoppingListResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -61,18 +83,37 @@ public interface ShoppingListResourceIdentifier
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListResourceIdentifier
+     * @return builder
+     */
     public static ShoppingListResourceIdentifierBuilder builder() {
         return ShoppingListResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListResourceIdentifierBuilder builder(final ShoppingListResourceIdentifier template) {
         return ShoppingListResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListResourceIdentifier(Function<ShoppingListResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListResourceIdentifier>() {
             @Override

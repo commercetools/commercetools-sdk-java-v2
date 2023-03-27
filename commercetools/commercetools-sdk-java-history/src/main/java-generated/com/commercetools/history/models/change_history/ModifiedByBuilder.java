@@ -119,28 +119,58 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
         return this;
     }
 
+    /**
+     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     * @return type
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     * @return customer
+     */
 
     @Nullable
     public com.commercetools.history.models.common.Reference getCustomer() {
         return this.customer;
     }
 
+    /**
+     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     * @return anonymousId
+     */
+
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
+    /**
+     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     * @return clientId
+     */
+
     @Nullable
     public String getClientId() {
         return this.clientId;
     }
+
+    /**
+     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     * @return isPlatformClient
+     */
 
     public Boolean getIsPlatformClient() {
         return this.isPlatformClient;
@@ -165,10 +195,19 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
         return new ModifiedByImpl(id, type, customer, anonymousId, clientId, isPlatformClient);
     }
 
+    /**
+     * factory method for an instance of ModifiedByBuilder
+     * @return builder
+     */
     public static ModifiedByBuilder of() {
         return new ModifiedByBuilder();
     }
 
+    /**
+     * create builder for ModifiedBy instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ModifiedByBuilder of(final ModifiedBy template) {
         ModifiedByBuilder builder = new ModifiedByBuilder();
         builder.id = template.getId();

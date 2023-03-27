@@ -42,6 +42,9 @@ public class StoreDeletedMessageImpl implements StoreDeletedMessage, ModelBase {
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class StoreDeletedMessageImpl implements StoreDeletedMessage, ModelBase {
         this.type = STORE_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreDeletedMessageImpl() {
         this.type = STORE_DELETED;
     }

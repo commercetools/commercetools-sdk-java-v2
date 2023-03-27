@@ -38,6 +38,9 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyLineItemDraftImpl(@JsonProperty("productId") final String productId,
             @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
@@ -58,6 +61,9 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public MyLineItemDraftImpl() {
     }
 

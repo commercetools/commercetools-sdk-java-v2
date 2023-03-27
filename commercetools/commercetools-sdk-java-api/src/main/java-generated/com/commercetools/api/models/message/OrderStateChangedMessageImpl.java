@@ -46,6 +46,9 @@ public class OrderStateChangedMessageImpl implements OrderStateChangedMessage, M
 
     private com.commercetools.api.models.order.OrderState oldOrderState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderStateChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class OrderStateChangedMessageImpl implements OrderStateChangedMessage, M
         this.type = ORDER_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderStateChangedMessageImpl() {
         this.type = ORDER_STATE_CHANGED;
     }

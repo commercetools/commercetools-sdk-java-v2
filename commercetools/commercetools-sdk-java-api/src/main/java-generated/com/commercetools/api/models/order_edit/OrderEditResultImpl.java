@@ -22,11 +22,17 @@ public class OrderEditResultImpl implements OrderEditResult, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditResultImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditResultImpl() {
     }
 

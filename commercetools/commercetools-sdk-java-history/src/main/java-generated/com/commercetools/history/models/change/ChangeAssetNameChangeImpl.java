@@ -30,6 +30,9 @@ public class ChangeAssetNameChangeImpl implements ChangeAssetNameChange, ModelBa
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeAssetNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
@@ -42,6 +45,9 @@ public class ChangeAssetNameChangeImpl implements ChangeAssetNameChange, ModelBa
         this.type = CHANGE_ASSET_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeAssetNameChangeImpl() {
         this.type = CHANGE_ASSET_NAME_CHANGE;
     }

@@ -59,6 +59,11 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
         return this;
     }
 
+    /**
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     * @return coordinates
+     */
+
     public java.util.List<Double> getCoordinates() {
         return this.coordinates;
     }
@@ -80,10 +85,19 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
         return new GeoJsonPointImpl(coordinates);
     }
 
+    /**
+     * factory method for an instance of GeoJsonPointBuilder
+     * @return builder
+     */
     public static GeoJsonPointBuilder of() {
         return new GeoJsonPointBuilder();
     }
 
+    /**
+     * create builder for GeoJsonPoint instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GeoJsonPointBuilder of(final GeoJsonPoint template) {
         GeoJsonPointBuilder builder = new GeoJsonPointBuilder();
         builder.coordinates = template.getCoordinates();

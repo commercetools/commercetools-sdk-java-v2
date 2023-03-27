@@ -28,6 +28,9 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
 
     private Boolean nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetIsValidChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Boolean previousValue,
@@ -38,6 +41,9 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
         this.type = SET_IS_VALID_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetIsValidChangeImpl() {
         this.type = SET_IS_VALID_CHANGE;
     }

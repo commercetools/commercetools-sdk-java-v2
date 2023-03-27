@@ -24,12 +24,18 @@ public class MyPaymentSetMethodInfoInterfaceActionImpl implements MyPaymentSetMe
 
     private String _interface;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyPaymentSetMethodInfoInterfaceActionImpl(@JsonProperty("interface") final String _interface) {
         this._interface = _interface;
         this.action = SET_METHOD_INFO_INTERFACE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyPaymentSetMethodInfoInterfaceActionImpl() {
         this.action = SET_METHOD_INFO_INTERFACE;
     }

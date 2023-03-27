@@ -26,6 +26,9 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
 
     private java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditPreviewSuccessImpl(
             @JsonProperty("preview") final com.commercetools.api.models.order_edit.StagedOrder preview,
@@ -35,6 +38,9 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
         this.type = PREVIEW_SUCCESS;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditPreviewSuccessImpl() {
         this.type = PREVIEW_SUCCESS;
     }

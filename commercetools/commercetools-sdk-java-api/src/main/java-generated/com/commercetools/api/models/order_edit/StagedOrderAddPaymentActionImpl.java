@@ -24,6 +24,9 @@ public class StagedOrderAddPaymentActionImpl implements StagedOrderAddPaymentAct
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderAddPaymentActionImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
@@ -31,6 +34,9 @@ public class StagedOrderAddPaymentActionImpl implements StagedOrderAddPaymentAct
         this.action = ADD_PAYMENT;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderAddPaymentActionImpl() {
         this.action = ADD_PAYMENT;
     }

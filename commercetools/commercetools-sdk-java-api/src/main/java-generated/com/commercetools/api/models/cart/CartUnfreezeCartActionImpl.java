@@ -21,6 +21,9 @@ public class CartUnfreezeCartActionImpl implements CartUnfreezeCartAction, Model
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartUnfreezeCartActionImpl() {
         this.action = UNFREEZE_CART;

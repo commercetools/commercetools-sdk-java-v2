@@ -57,16 +57,40 @@ public interface CustomFieldExpandedValue {
     @JsonProperty("label")
     public LocalizedString getLabel();
 
+    /**
+     *  <p>Name of a custom field.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     * set value
+     * @param value value to be set
+     */
 
     public void setValue(final Object value);
 
+    /**
+     * set label
+     * @param label value to be set
+     */
+
     public void setLabel(final LocalizedString label);
 
+    /**
+     * factory method
+     * @return instance of CustomFieldExpandedValue
+     */
     public static CustomFieldExpandedValue of() {
         return new CustomFieldExpandedValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomFieldExpandedValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomFieldExpandedValue of(final CustomFieldExpandedValue template) {
         CustomFieldExpandedValueImpl instance = new CustomFieldExpandedValueImpl();
         instance.setName(template.getName());
@@ -75,18 +99,37 @@ public interface CustomFieldExpandedValue {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomFieldExpandedValue
+     * @return builder
+     */
     public static CustomFieldExpandedValueBuilder builder() {
         return CustomFieldExpandedValueBuilder.of();
     }
 
+    /**
+     * create builder for CustomFieldExpandedValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldExpandedValueBuilder builder(final CustomFieldExpandedValue template) {
         return CustomFieldExpandedValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomFieldExpandedValue(Function<CustomFieldExpandedValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldExpandedValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldExpandedValue>() {
             @Override

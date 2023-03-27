@@ -30,6 +30,9 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
 
     private Integer refreshTokenValiditySeconds;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ApiClientDraftImpl(@JsonProperty("name") final String name, @JsonProperty("scope") final String scope,
             @JsonProperty("deleteDaysAfterCreation") final Long deleteDaysAfterCreation,
@@ -42,6 +45,9 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
         this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;
     }
 
+    /**
+     * create empty instance
+     */
     public ApiClientDraftImpl() {
     }
 

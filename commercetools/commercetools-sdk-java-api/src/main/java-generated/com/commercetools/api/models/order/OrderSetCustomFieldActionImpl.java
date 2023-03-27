@@ -26,6 +26,9 @@ public class OrderSetCustomFieldActionImpl implements OrderSetCustomFieldAction,
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class OrderSetCustomFieldActionImpl implements OrderSetCustomFieldAction,
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

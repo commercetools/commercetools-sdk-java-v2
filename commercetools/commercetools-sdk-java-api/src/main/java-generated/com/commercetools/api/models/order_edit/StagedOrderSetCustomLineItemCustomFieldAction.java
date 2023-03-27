@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetCustomLineItemCustomFieldActionImpl.class)
 public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetCustomLineItemCustomFieldAction
+     */
     String SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD = "setCustomLineItemCustomField";
 
     /**
@@ -57,16 +60,40 @@ public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrd
     @JsonProperty("value")
     public Object getValue();
 
+    /**
+     * set customLineItemId
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Object value);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetCustomLineItemCustomFieldAction
+     */
     public static StagedOrderSetCustomLineItemCustomFieldAction of() {
         return new StagedOrderSetCustomLineItemCustomFieldActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetCustomLineItemCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetCustomLineItemCustomFieldAction of(
             final StagedOrderSetCustomLineItemCustomFieldAction template) {
         StagedOrderSetCustomLineItemCustomFieldActionImpl instance = new StagedOrderSetCustomLineItemCustomFieldActionImpl();
@@ -76,15 +103,30 @@ public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrd
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetCustomLineItemCustomFieldAction
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemCustomFieldActionBuilder builder() {
         return StagedOrderSetCustomLineItemCustomFieldActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomLineItemCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemCustomFieldActionBuilder builder(
             final StagedOrderSetCustomLineItemCustomFieldAction template) {
         return StagedOrderSetCustomLineItemCustomFieldActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetCustomLineItemCustomFieldAction(
             Function<StagedOrderSetCustomLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
@@ -98,6 +140,10 @@ public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrd
                 .build();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomFieldAction>() {
             @Override

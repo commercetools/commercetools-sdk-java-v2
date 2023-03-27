@@ -40,7 +40,7 @@ public class BooleanAttributeBuilder implements Builder<BooleanAttribute> {
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -50,10 +50,20 @@ public class BooleanAttributeBuilder implements Builder<BooleanAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public Boolean getValue() {
         return this.value;
@@ -76,10 +86,19 @@ public class BooleanAttributeBuilder implements Builder<BooleanAttribute> {
         return new BooleanAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of BooleanAttributeBuilder
+     * @return builder
+     */
     public static BooleanAttributeBuilder of() {
         return new BooleanAttributeBuilder();
     }
 
+    /**
+     * create builder for BooleanAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BooleanAttributeBuilder of(final BooleanAttribute template) {
         BooleanAttributeBuilder builder = new BooleanAttributeBuilder();
         builder.name = template.getName();

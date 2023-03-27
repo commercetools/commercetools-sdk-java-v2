@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerImportRequestImpl.class)
 public interface CustomerImportRequest extends ImportRequest {
 
+    /**
+     * discriminator value for CustomerImportRequest
+     */
     String CUSTOMER = "customer";
 
     /**
@@ -42,33 +45,71 @@ public interface CustomerImportRequest extends ImportRequest {
     @JsonProperty("resources")
     public List<CustomerImport> getResources();
 
+    /**
+     *  <p>The customer import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     @JsonIgnore
     public void setResources(final CustomerImport... resources);
 
+    /**
+     *  <p>The customer import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     public void setResources(final List<CustomerImport> resources);
 
+    /**
+     * factory method
+     * @return instance of CustomerImportRequest
+     */
     public static CustomerImportRequest of() {
         return new CustomerImportRequestImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerImportRequest of(final CustomerImportRequest template) {
         CustomerImportRequestImpl instance = new CustomerImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerImportRequest
+     * @return builder
+     */
     public static CustomerImportRequestBuilder builder() {
         return CustomerImportRequestBuilder.of();
     }
 
+    /**
+     * create builder for CustomerImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerImportRequestBuilder builder(final CustomerImportRequest template) {
         return CustomerImportRequestBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerImportRequest(Function<CustomerImportRequest, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerImportRequest> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerImportRequest>() {
             @Override

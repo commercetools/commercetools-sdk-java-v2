@@ -22,11 +22,17 @@ public class FacetResultImpl implements FacetResult, ModelBase {
 
     private com.commercetools.api.models.product.FacetTypes type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FacetResultImpl(@JsonProperty("type") final com.commercetools.api.models.product.FacetTypes type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public FacetResultImpl() {
     }
 

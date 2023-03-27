@@ -66,9 +66,19 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
         return this;
     }
 
+    /**
+     *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
+     * @return productSelection
+     */
+
     public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
         return this.productSelection;
     }
+
+    /**
+     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     * @return active
+     */
 
     @Nullable
     public Boolean getActive() {
@@ -93,10 +103,19 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
         return new StoreChangeProductSelectionActionImpl(productSelection, active);
     }
 
+    /**
+     * factory method for an instance of StoreChangeProductSelectionActionBuilder
+     * @return builder
+     */
     public static StoreChangeProductSelectionActionBuilder of() {
         return new StoreChangeProductSelectionActionBuilder();
     }
 
+    /**
+     * create builder for StoreChangeProductSelectionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreChangeProductSelectionActionBuilder of(final StoreChangeProductSelectionAction template) {
         StoreChangeProductSelectionActionBuilder builder = new StoreChangeProductSelectionActionBuilder();
         builder.productSelection = template.getProductSelection();

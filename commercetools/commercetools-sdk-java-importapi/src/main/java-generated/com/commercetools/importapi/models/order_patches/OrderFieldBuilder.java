@@ -369,45 +369,90 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>Order.returnInfo</code></p>
+     * @return addReturnInfo
+     */
+
     @Nullable
     public com.commercetools.importapi.models.order_patches.ReturnInfo getAddReturnInfo() {
         return this.addReturnInfo;
     }
+
+    /**
+     *  <p>Maps to <code>Order.delivery</code></p>
+     * @return addParcelToDelivery
+     */
 
     @Nullable
     public com.commercetools.importapi.models.order_patches.DeliveryParcel getAddParcelToDelivery() {
         return this.addParcelToDelivery;
     }
 
+    /**
+     *  <p>Maps to <code>Order.delivery</code></p>
+     * @return addDeliveries
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.order_patches.DeliveryDraft> getAddDeliveries() {
         return this.addDeliveries;
     }
+
+    /**
+     *  <p>Maps to <code>Order.removeDelivery</code></p>
+     * @return removeDelivery
+     */
 
     @Nullable
     public com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft getRemoveDelivery() {
         return this.removeDelivery;
     }
 
+    /**
+     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     * @return removeParcelFromDelivery
+     */
+
     @Nullable
     public com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft getRemoveParcelFromDelivery() {
         return this.removeParcelFromDelivery;
     }
+
+    /**
+     *  <p>Maps to <code>Order.addressDraft</code></p>
+     * @return setDeliveryAddress
+     */
 
     @Nullable
     public com.commercetools.importapi.models.order_patches.DeliveryAddressDraft getSetDeliveryAddress() {
         return this.setDeliveryAddress;
     }
 
+    /**
+     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     * @return setParcelMeasurements
+     */
+
     @Nullable
     public com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft getSetParcelMeasurements() {
         return this.setParcelMeasurements;
     }
 
+    /**
+     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     * @return setParcelTrackingData
+     */
+
     @Nullable
     public com.commercetools.importapi.models.order_patches.ParcelTrackingData getSetParcelTrackingData() {
         return this.setParcelTrackingData;
     }
+
+    /**
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @return setParcelItems
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.order_patches.ParcelItems> getSetParcelItems() {
@@ -432,10 +477,19 @@ public class OrderFieldBuilder implements Builder<OrderField> {
             removeParcelFromDelivery, setDeliveryAddress, setParcelMeasurements, setParcelTrackingData, setParcelItems);
     }
 
+    /**
+     * factory method for an instance of OrderFieldBuilder
+     * @return builder
+     */
     public static OrderFieldBuilder of() {
         return new OrderFieldBuilder();
     }
 
+    /**
+     * create builder for OrderField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderFieldBuilder of(final OrderField template) {
         OrderFieldBuilder builder = new OrderFieldBuilder();
         builder.addReturnInfo = template.getAddReturnInfo();

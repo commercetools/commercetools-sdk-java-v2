@@ -64,9 +64,19 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
         return this;
     }
 
+    /**
+     *  <p>Reference to a ProductSelection.</p>
+     * @return productSelection
+     */
+
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
         return this.productSelection;
     }
+
+    /**
+     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     * @return active
+     */
 
     public Boolean getActive() {
         return this.active;
@@ -90,10 +100,19 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
         return new ProductSelectionSettingImpl(productSelection, active);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionSettingBuilder
+     * @return builder
+     */
     public static ProductSelectionSettingBuilder of() {
         return new ProductSelectionSettingBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionSetting instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionSettingBuilder of(final ProductSelectionSetting template) {
         ProductSelectionSettingBuilder builder = new ProductSelectionSettingBuilder();
         builder.productSelection = template.getProductSelection();

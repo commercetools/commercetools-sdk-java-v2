@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceKeySetMessageImpl.class)
 public interface StandalonePriceKeySetMessage extends Message {
 
+    /**
+     * discriminator value for StandalonePriceKeySetMessage
+     */
     String STANDALONE_PRICE_KEY_SET = "StandalonePriceKeySet";
 
     /**
@@ -51,14 +54,33 @@ public interface StandalonePriceKeySetMessage extends Message {
     @JsonProperty("oldKey")
     public String getOldKey();
 
+    /**
+     *  <p><code>key</code> value of the StandalonePrice after the Set Key update action.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p><code>key</code> value of the StandalonePrice before the Set Key update action.</p>
+     * @param oldKey value to be set
+     */
 
     public void setOldKey(final String oldKey);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceKeySetMessage
+     */
     public static StandalonePriceKeySetMessage of() {
         return new StandalonePriceKeySetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceKeySetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceKeySetMessage of(final StandalonePriceKeySetMessage template) {
         StandalonePriceKeySetMessageImpl instance = new StandalonePriceKeySetMessageImpl();
         instance.setId(template.getId());
@@ -76,18 +98,37 @@ public interface StandalonePriceKeySetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceKeySetMessage
+     * @return builder
+     */
     public static StandalonePriceKeySetMessageBuilder builder() {
         return StandalonePriceKeySetMessageBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceKeySetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceKeySetMessageBuilder builder(final StandalonePriceKeySetMessage template) {
         return StandalonePriceKeySetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceKeySetMessage(Function<StandalonePriceKeySetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceKeySetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceKeySetMessage>() {
             @Override

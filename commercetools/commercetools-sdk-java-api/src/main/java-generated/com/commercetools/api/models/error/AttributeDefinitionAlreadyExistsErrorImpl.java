@@ -33,6 +33,9 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
 
     private String conflictingAttributeName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeDefinitionAlreadyExistsErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -47,6 +50,9 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
         this.code = ATTRIBUTE_DEFINITION_ALREADY_EXISTS;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeDefinitionAlreadyExistsErrorImpl() {
         this.code = ATTRIBUTE_DEFINITION_ALREADY_EXISTS;
     }

@@ -56,6 +56,9 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -93,6 +96,9 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
         this.type = STORE_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreCreatedMessageImpl() {
         this.type = STORE_CREATED;
     }

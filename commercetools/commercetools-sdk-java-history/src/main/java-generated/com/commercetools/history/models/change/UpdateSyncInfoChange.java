@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = UpdateSyncInfoChangeImpl.class)
 public interface UpdateSyncInfoChange extends Change {
 
+    /**
+     * discriminator value for UpdateSyncInfoChange
+     */
     String UPDATE_SYNC_INFO_CHANGE = "UpdateSyncInfoChange";
 
     /**
@@ -68,16 +71,40 @@ public interface UpdateSyncInfoChange extends Change {
     @JsonProperty("nextValue")
     public SyncInfo getNextValue();
 
+    /**
+     *  <p>Update action for <code>updateSyncInfo</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set channelId
+     * @param channelId value to be set
+     */
 
     public void setChannelId(final String channelId);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final SyncInfo nextValue);
 
+    /**
+     * factory method
+     * @return instance of UpdateSyncInfoChange
+     */
     public static UpdateSyncInfoChange of() {
         return new UpdateSyncInfoChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of UpdateSyncInfoChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static UpdateSyncInfoChange of(final UpdateSyncInfoChange template) {
         UpdateSyncInfoChangeImpl instance = new UpdateSyncInfoChangeImpl();
         instance.setChange(template.getChange());
@@ -86,18 +113,37 @@ public interface UpdateSyncInfoChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for UpdateSyncInfoChange
+     * @return builder
+     */
     public static UpdateSyncInfoChangeBuilder builder() {
         return UpdateSyncInfoChangeBuilder.of();
     }
 
+    /**
+     * create builder for UpdateSyncInfoChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UpdateSyncInfoChangeBuilder builder(final UpdateSyncInfoChange template) {
         return UpdateSyncInfoChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withUpdateSyncInfoChange(Function<UpdateSyncInfoChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<UpdateSyncInfoChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<UpdateSyncInfoChange>() {
             @Override

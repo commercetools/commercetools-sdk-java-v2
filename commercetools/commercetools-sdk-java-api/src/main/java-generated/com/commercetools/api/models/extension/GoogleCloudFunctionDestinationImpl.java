@@ -24,12 +24,18 @@ public class GoogleCloudFunctionDestinationImpl implements GoogleCloudFunctionDe
 
     private String url;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GoogleCloudFunctionDestinationImpl(@JsonProperty("url") final String url) {
         this.url = url;
         this.type = GOOGLE_CLOUD_FUNCTION;
     }
 
+    /**
+     * create empty instance
+     */
     public GoogleCloudFunctionDestinationImpl() {
         this.type = GOOGLE_CLOUD_FUNCTION;
     }

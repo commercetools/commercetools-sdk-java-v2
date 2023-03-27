@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreNameSetMessageImpl.class)
 public interface StoreNameSetMessage extends Message {
 
+    /**
+     * discriminator value for StoreNameSetMessage
+     */
     String STORE_NAME_SET = "StoreNameSet";
 
     /**
@@ -54,17 +57,41 @@ public interface StoreNameSetMessage extends Message {
     @JsonProperty("nameAllLocales")
     public List<LocalizedString> getNameAllLocales();
 
+    /**
+     *  <p>Name of the Store set during the Set Name update action.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Names set for the Store in different locales.</p>
+     * @param nameAllLocales values to be set
+     */
 
     @JsonIgnore
     public void setNameAllLocales(final LocalizedString... nameAllLocales);
 
+    /**
+     *  <p>Names set for the Store in different locales.</p>
+     * @param nameAllLocales values to be set
+     */
+
     public void setNameAllLocales(final List<LocalizedString> nameAllLocales);
 
+    /**
+     * factory method
+     * @return instance of StoreNameSetMessage
+     */
     public static StoreNameSetMessage of() {
         return new StoreNameSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreNameSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreNameSetMessage of(final StoreNameSetMessage template) {
         StoreNameSetMessageImpl instance = new StoreNameSetMessageImpl();
         instance.setId(template.getId());
@@ -82,18 +109,37 @@ public interface StoreNameSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreNameSetMessage
+     * @return builder
+     */
     public static StoreNameSetMessageBuilder builder() {
         return StoreNameSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for StoreNameSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreNameSetMessageBuilder builder(final StoreNameSetMessage template) {
         return StoreNameSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreNameSetMessage(Function<StoreNameSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreNameSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreNameSetMessage>() {
             @Override

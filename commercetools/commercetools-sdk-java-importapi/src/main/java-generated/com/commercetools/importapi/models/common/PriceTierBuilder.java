@@ -61,9 +61,19 @@ public class PriceTierBuilder implements Builder<PriceTier> {
         return this;
     }
 
+    /**
+     *  <p>The minimum quantity this price tier is valid for.</p>
+     * @return minimumQuantity
+     */
+
     public Long getMinimumQuantity() {
         return this.minimumQuantity;
     }
+
+    /**
+     *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
+     * @return value
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
@@ -87,10 +97,19 @@ public class PriceTierBuilder implements Builder<PriceTier> {
         return new PriceTierImpl(minimumQuantity, value);
     }
 
+    /**
+     * factory method for an instance of PriceTierBuilder
+     * @return builder
+     */
     public static PriceTierBuilder of() {
         return new PriceTierBuilder();
     }
 
+    /**
+     * create builder for PriceTier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceTierBuilder of(final PriceTier template) {
         PriceTierBuilder builder = new PriceTierBuilder();
         builder.minimumQuantity = template.getMinimumQuantity();

@@ -27,6 +27,9 @@ public class ProductSelectionExcludeProductActionImpl implements ProductSelectio
 
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionExcludeProductActionImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductResourceIdentifier product,
@@ -36,6 +39,9 @@ public class ProductSelectionExcludeProductActionImpl implements ProductSelectio
         this.action = EXCLUDE_PRODUCT;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionExcludeProductActionImpl() {
         this.action = EXCLUDE_PRODUCT;
     }

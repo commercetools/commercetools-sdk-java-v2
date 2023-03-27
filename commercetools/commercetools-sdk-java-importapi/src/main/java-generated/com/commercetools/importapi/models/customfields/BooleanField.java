@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BooleanFieldImpl.class)
 public interface BooleanField extends CustomField {
 
+    /**
+     * discriminator value for BooleanField
+     */
     String BOOLEAN = "Boolean";
 
     /**
@@ -39,30 +42,63 @@ public interface BooleanField extends CustomField {
     @JsonProperty("value")
     public Boolean getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final Boolean value);
 
+    /**
+     * factory method
+     * @return instance of BooleanField
+     */
     public static BooleanField of() {
         return new BooleanFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of BooleanField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BooleanField of(final BooleanField template) {
         BooleanFieldImpl instance = new BooleanFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for BooleanField
+     * @return builder
+     */
     public static BooleanFieldBuilder builder() {
         return BooleanFieldBuilder.of();
     }
 
+    /**
+     * create builder for BooleanField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BooleanFieldBuilder builder(final BooleanField template) {
         return BooleanFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBooleanField(Function<BooleanField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BooleanField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BooleanField>() {
             @Override

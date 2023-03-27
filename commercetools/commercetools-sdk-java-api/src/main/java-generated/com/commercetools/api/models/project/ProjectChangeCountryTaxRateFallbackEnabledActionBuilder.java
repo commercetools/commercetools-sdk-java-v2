@@ -36,6 +36,11 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
         return this;
     }
 
+    /**
+     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     * @return countryTaxRateFallbackEnabled
+     */
+
     public Boolean getCountryTaxRateFallbackEnabled() {
         return this.countryTaxRateFallbackEnabled;
     }
@@ -58,10 +63,19 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
         return new ProjectChangeCountryTaxRateFallbackEnabledActionImpl(countryTaxRateFallbackEnabled);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
+     * @return builder
+     */
     public static ProjectChangeCountryTaxRateFallbackEnabledActionBuilder of() {
         return new ProjectChangeCountryTaxRateFallbackEnabledActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeCountryTaxRateFallbackEnabledAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeCountryTaxRateFallbackEnabledActionBuilder of(
             final ProjectChangeCountryTaxRateFallbackEnabledAction template) {
         ProjectChangeCountryTaxRateFallbackEnabledActionBuilder builder = new ProjectChangeCountryTaxRateFallbackEnabledActionBuilder();

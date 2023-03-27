@@ -36,6 +36,11 @@ public class QuoteRequestQuoteRenegotiationActionBuilder implements Builder<Quot
         return this;
     }
 
+    /**
+     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     * @return buyerComment
+     */
+
     @Nullable
     public String getBuyerComment() {
         return this.buyerComment;
@@ -57,10 +62,19 @@ public class QuoteRequestQuoteRenegotiationActionBuilder implements Builder<Quot
         return new QuoteRequestQuoteRenegotiationActionImpl(buyerComment);
     }
 
+    /**
+     * factory method for an instance of QuoteRequestQuoteRenegotiationActionBuilder
+     * @return builder
+     */
     public static QuoteRequestQuoteRenegotiationActionBuilder of() {
         return new QuoteRequestQuoteRenegotiationActionBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestQuoteRenegotiationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestQuoteRenegotiationActionBuilder of(final QuoteRequestQuoteRenegotiationAction template) {
         QuoteRequestQuoteRenegotiationActionBuilder builder = new QuoteRequestQuoteRenegotiationActionBuilder();
         builder.buyerComment = template.getBuyerComment();

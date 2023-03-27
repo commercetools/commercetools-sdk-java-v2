@@ -26,6 +26,9 @@ public class ReferenceSetAttributeImpl implements ReferenceSetAttribute, ModelBa
 
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReferenceSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.KeyReference> value) {
@@ -34,6 +37,9 @@ public class ReferenceSetAttributeImpl implements ReferenceSetAttribute, ModelBa
         this.type = REFERENCE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ReferenceSetAttributeImpl() {
         this.type = REFERENCE_SET;
     }

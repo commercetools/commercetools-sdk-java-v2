@@ -444,39 +444,85 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Name of the Store.</p>
+     * @return name
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     * @return languages
+     */
+
     @Nullable
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     * @return countries
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
         return this.countries;
     }
 
+    /**
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return distributionChannels
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels() {
         return this.distributionChannels;
     }
+
+    /**
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannels
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {
         return this.supplyChannels;
     }
 
+    /**
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
+     *  <ul>
+     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *  </ul>
+     * @return productSelections
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {
         return this.productSelections;
     }
+
+    /**
+     *  <p>Custom fields for the Store.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -502,10 +548,19 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
             productSelections, custom);
     }
 
+    /**
+     * factory method for an instance of StoreDraftBuilder
+     * @return builder
+     */
     public static StoreDraftBuilder of() {
         return new StoreDraftBuilder();
     }
 
+    /**
+     * create builder for StoreDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreDraftBuilder of(final StoreDraft template) {
         StoreDraftBuilder builder = new StoreDraftBuilder();
         builder.key = template.getKey();

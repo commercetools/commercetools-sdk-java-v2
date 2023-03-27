@@ -27,6 +27,9 @@ public class MyShoppingListSetTextLineItemDescriptionActionImpl
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("textLineItemId") final String textLineItemId,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
@@ -35,6 +38,9 @@ public class MyShoppingListSetTextLineItemDescriptionActionImpl
         this.action = SET_TEXT_LINE_ITEM_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public MyShoppingListSetTextLineItemDescriptionActionImpl() {
         this.action = SET_TEXT_LINE_ITEM_DESCRIPTION;
     }

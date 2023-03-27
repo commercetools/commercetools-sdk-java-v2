@@ -41,7 +41,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setReturnShipmentState</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.ReturnShipmentState getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.ReturnShipmentState getPreviousValue() {
         return this.previousValue;
@@ -95,10 +110,19 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
         return new SetReturnShipmentStateChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetReturnShipmentStateChangeBuilder
+     * @return builder
+     */
     public static SetReturnShipmentStateChangeBuilder of() {
         return new SetReturnShipmentStateChangeBuilder();
     }
 
+    /**
+     * create builder for SetReturnShipmentStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetReturnShipmentStateChangeBuilder of(final SetReturnShipmentStateChange template) {
         SetReturnShipmentStateChangeBuilder builder = new SetReturnShipmentStateChangeBuilder();
         builder.change = template.getChange();

@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderStateTransitionMessageImpl.class)
 public interface OrderStateTransitionMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderStateTransitionMessage
+     */
     String ORDER_STATE_TRANSITION = "OrderStateTransition";
 
     /**
@@ -66,16 +69,40 @@ public interface OrderStateTransitionMessage extends OrderMessage {
     @JsonProperty("force")
     public Boolean getForce();
 
+    /**
+     *  <p>OrderState after the Transition State update action.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     *  <p>OrderState before the Transition State update action.</p>
+     * @param oldState value to be set
+     */
 
     public void setOldState(final StateReference oldState);
 
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force value to be set
+     */
+
     public void setForce(final Boolean force);
 
+    /**
+     * factory method
+     * @return instance of OrderStateTransitionMessage
+     */
     public static OrderStateTransitionMessage of() {
         return new OrderStateTransitionMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderStateTransitionMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderStateTransitionMessage of(final OrderStateTransitionMessage template) {
         OrderStateTransitionMessageImpl instance = new OrderStateTransitionMessageImpl();
         instance.setId(template.getId());
@@ -94,18 +121,37 @@ public interface OrderStateTransitionMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderStateTransitionMessage
+     * @return builder
+     */
     public static OrderStateTransitionMessageBuilder builder() {
         return OrderStateTransitionMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderStateTransitionMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderStateTransitionMessageBuilder builder(final OrderStateTransitionMessage template) {
         return OrderStateTransitionMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderStateTransitionMessage(Function<OrderStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderStateTransitionMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderStateTransitionMessage>() {
             @Override

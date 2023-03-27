@@ -33,12 +33,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreDeletedMessageImpl.class)
 public interface StoreDeletedMessage extends Message {
 
+    /**
+     * discriminator value for StoreDeletedMessage
+     */
     String STORE_DELETED = "StoreDeleted";
 
+    /**
+     * factory method
+     * @return instance of StoreDeletedMessage
+     */
     public static StoreDeletedMessage of() {
         return new StoreDeletedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreDeletedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreDeletedMessage of(final StoreDeletedMessage template) {
         StoreDeletedMessageImpl instance = new StoreDeletedMessageImpl();
         instance.setId(template.getId());
@@ -54,18 +66,37 @@ public interface StoreDeletedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreDeletedMessage
+     * @return builder
+     */
     public static StoreDeletedMessageBuilder builder() {
         return StoreDeletedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StoreDeletedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreDeletedMessageBuilder builder(final StoreDeletedMessage template) {
         return StoreDeletedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreDeletedMessage(Function<StoreDeletedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreDeletedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreDeletedMessage>() {
             @Override

@@ -48,9 +48,19 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
         return this;
     }
 
+    /**
+     *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Descriptive label of the value.</p>
+     * @return label
+     */
 
     public String getLabel() {
         return this.label;
@@ -74,10 +84,19 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
         return new AttributePlainEnumValueImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of AttributePlainEnumValueBuilder
+     * @return builder
+     */
     public static AttributePlainEnumValueBuilder of() {
         return new AttributePlainEnumValueBuilder();
     }
 
+    /**
+     * create builder for AttributePlainEnumValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributePlainEnumValueBuilder of(final AttributePlainEnumValue template) {
         AttributePlainEnumValueBuilder builder = new AttributePlainEnumValueBuilder();
         builder.key = template.getKey();

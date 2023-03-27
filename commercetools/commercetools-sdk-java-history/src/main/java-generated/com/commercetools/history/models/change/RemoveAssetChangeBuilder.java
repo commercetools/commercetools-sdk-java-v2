@@ -39,7 +39,7 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeAsset</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.Asset getPreviousValue() {
         return this.previousValue;
@@ -87,10 +97,19 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
         return new RemoveAssetChangeImpl(change, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemoveAssetChangeBuilder
+     * @return builder
+     */
     public static RemoveAssetChangeBuilder of() {
         return new RemoveAssetChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveAssetChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveAssetChangeBuilder of(final RemoveAssetChange template) {
         RemoveAssetChangeBuilder builder = new RemoveAssetChangeBuilder();
         builder.change = template.getChange();

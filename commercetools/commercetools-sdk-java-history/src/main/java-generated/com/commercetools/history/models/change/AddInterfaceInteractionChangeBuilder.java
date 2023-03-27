@@ -64,9 +64,19 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>Only available if <code>expand</code> is set to true</p>
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.change_value.CustomFieldExpandedValue getNextValue() {
         return this.nextValue;
@@ -90,10 +100,19 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
         return new AddInterfaceInteractionChangeImpl(change, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddInterfaceInteractionChangeBuilder
+     * @return builder
+     */
     public static AddInterfaceInteractionChangeBuilder of() {
         return new AddInterfaceInteractionChangeBuilder();
     }
 
+    /**
+     * create builder for AddInterfaceInteractionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddInterfaceInteractionChangeBuilder of(final AddInterfaceInteractionChange template) {
         AddInterfaceInteractionChangeBuilder builder = new AddInterfaceInteractionChangeBuilder();
         builder.change = template.getChange();

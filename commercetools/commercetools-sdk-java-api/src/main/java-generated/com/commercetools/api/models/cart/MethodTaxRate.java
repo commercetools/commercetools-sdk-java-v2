@@ -47,14 +47,33 @@ public interface MethodTaxRate {
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingMethodKey value to be set
+     */
+
     public void setShippingMethodKey(final String shippingMethodKey);
+
+    /**
+     *  <p>Tax Rate for the Shipping Method.</p>
+     * @param taxRate value to be set
+     */
 
     public void setTaxRate(final TaxRate taxRate);
 
+    /**
+     * factory method
+     * @return instance of MethodTaxRate
+     */
     public static MethodTaxRate of() {
         return new MethodTaxRateImpl();
     }
 
+    /**
+     * factory method to copy an instance of MethodTaxRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MethodTaxRate of(final MethodTaxRate template) {
         MethodTaxRateImpl instance = new MethodTaxRateImpl();
         instance.setShippingMethodKey(template.getShippingMethodKey());
@@ -62,18 +81,37 @@ public interface MethodTaxRate {
         return instance;
     }
 
+    /**
+     * builder factory method for MethodTaxRate
+     * @return builder
+     */
     public static MethodTaxRateBuilder builder() {
         return MethodTaxRateBuilder.of();
     }
 
+    /**
+     * create builder for MethodTaxRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MethodTaxRateBuilder builder(final MethodTaxRate template) {
         return MethodTaxRateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMethodTaxRate(Function<MethodTaxRate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MethodTaxRate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MethodTaxRate>() {
             @Override

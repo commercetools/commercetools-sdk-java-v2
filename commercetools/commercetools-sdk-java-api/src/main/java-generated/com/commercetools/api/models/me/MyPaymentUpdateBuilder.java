@@ -103,9 +103,19 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Payment.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> getActions() {
         return this.actions;
@@ -129,10 +139,19 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
         return new MyPaymentUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of MyPaymentUpdateBuilder
+     * @return builder
+     */
     public static MyPaymentUpdateBuilder of() {
         return new MyPaymentUpdateBuilder();
     }
 
+    /**
+     * create builder for MyPaymentUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyPaymentUpdateBuilder of(final MyPaymentUpdate template) {
         MyPaymentUpdateBuilder builder = new MyPaymentUpdateBuilder();
         builder.version = template.getVersion();

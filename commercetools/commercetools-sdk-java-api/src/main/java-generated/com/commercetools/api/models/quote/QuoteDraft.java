@@ -88,22 +88,65 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>User-defined unique identifier for the Quote.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>StagedQuote from which the Quote is created.</p>
+     * @param stagedQuote value to be set
+     */
 
     public void setStagedQuote(final StagedQuoteResourceIdentifier stagedQuote);
 
+    /**
+     *  <p>Current version of the StagedQuote.</p>
+     * @param stagedQuoteVersion value to be set
+     */
+
     public void setStagedQuoteVersion(final Long stagedQuoteVersion);
+
+    /**
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     * @param stagedQuoteStateToSent value to be set
+     */
 
     public void setStagedQuoteStateToSent(final Boolean stagedQuoteStateToSent);
 
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     *  <p>Custom Fields to be added to the Quote.</p>
+     *  <ul>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
+     *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
+     *  </ul>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of QuoteDraft
+     */
     public static QuoteDraft of() {
         return new QuoteDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteDraft of(final QuoteDraft template) {
         QuoteDraftImpl instance = new QuoteDraftImpl();
         instance.setKey(template.getKey());
@@ -115,18 +158,37 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteDraft
+     * @return builder
+     */
     public static QuoteDraftBuilder builder() {
         return QuoteDraftBuilder.of();
     }
 
+    /**
+     * create builder for QuoteDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteDraftBuilder builder(final QuoteDraft template) {
         return QuoteDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteDraft(Function<QuoteDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteDraft>() {
             @Override

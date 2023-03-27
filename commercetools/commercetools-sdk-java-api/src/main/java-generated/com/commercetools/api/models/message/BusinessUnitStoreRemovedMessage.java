@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitStoreRemovedMessageImpl.class)
 public interface BusinessUnitStoreRemovedMessage extends Message {
 
+    /**
+     * discriminator value for BusinessUnitStoreRemovedMessage
+     */
     String BUSINESS_UNIT_STORE_REMOVED = "BusinessUnitStoreRemoved";
 
     /**
@@ -49,12 +52,26 @@ public interface BusinessUnitStoreRemovedMessage extends Message {
     @JsonProperty("store")
     public StoreKeyReference getStore();
 
+    /**
+     *  <p>The Store that was removed from the Business Unit.</p>
+     * @param store value to be set
+     */
+
     public void setStore(final StoreKeyReference store);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitStoreRemovedMessage
+     */
     public static BusinessUnitStoreRemovedMessage of() {
         return new BusinessUnitStoreRemovedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitStoreRemovedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitStoreRemovedMessage of(final BusinessUnitStoreRemovedMessage template) {
         BusinessUnitStoreRemovedMessageImpl instance = new BusinessUnitStoreRemovedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface BusinessUnitStoreRemovedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitStoreRemovedMessage
+     * @return builder
+     */
     public static BusinessUnitStoreRemovedMessageBuilder builder() {
         return BusinessUnitStoreRemovedMessageBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitStoreRemovedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStoreRemovedMessageBuilder builder(final BusinessUnitStoreRemovedMessage template) {
         return BusinessUnitStoreRemovedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitStoreRemovedMessage(Function<BusinessUnitStoreRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoreRemovedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoreRemovedMessage>() {
             @Override

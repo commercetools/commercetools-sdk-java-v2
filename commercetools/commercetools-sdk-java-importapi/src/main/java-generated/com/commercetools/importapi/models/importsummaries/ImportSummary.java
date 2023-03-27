@@ -48,14 +48,33 @@ public interface ImportSummary {
     @JsonProperty("total")
     public Long getTotal();
 
+    /**
+     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     * @param states value to be set
+     */
+
     public void setStates(final OperationStates states);
+
+    /**
+     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     * @param total value to be set
+     */
 
     public void setTotal(final Long total);
 
+    /**
+     * factory method
+     * @return instance of ImportSummary
+     */
     public static ImportSummary of() {
         return new ImportSummaryImpl();
     }
 
+    /**
+     * factory method to copy an instance of ImportSummary
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ImportSummary of(final ImportSummary template) {
         ImportSummaryImpl instance = new ImportSummaryImpl();
         instance.setStates(template.getStates());
@@ -63,18 +82,37 @@ public interface ImportSummary {
         return instance;
     }
 
+    /**
+     * builder factory method for ImportSummary
+     * @return builder
+     */
     public static ImportSummaryBuilder builder() {
         return ImportSummaryBuilder.of();
     }
 
+    /**
+     * create builder for ImportSummary instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportSummaryBuilder builder(final ImportSummary template) {
         return ImportSummaryBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImportSummary(Function<ImportSummary, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImportSummary> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImportSummary>() {
             @Override

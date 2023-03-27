@@ -77,15 +77,30 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
         return this;
     }
 
+    /**
+     *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
+     * @return paymentInterface
+     */
+
     @Nullable
     public String getPaymentInterface() {
         return this.paymentInterface;
     }
 
+    /**
+     *  <p>Payment method used, for example, credit card, or cash advance.</p>
+     * @return method
+     */
+
     @Nullable
     public String getMethod() {
         return this.method;
     }
+
+    /**
+     *  <p>Localizable name of the payment method.</p>
+     * @return name
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -108,10 +123,19 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
         return new PaymentMethodInfoImpl(paymentInterface, method, name);
     }
 
+    /**
+     * factory method for an instance of PaymentMethodInfoBuilder
+     * @return builder
+     */
     public static PaymentMethodInfoBuilder of() {
         return new PaymentMethodInfoBuilder();
     }
 
+    /**
+     * create builder for PaymentMethodInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentMethodInfoBuilder of(final PaymentMethodInfo template) {
         PaymentMethodInfoBuilder builder = new PaymentMethodInfoBuilder();
         builder.paymentInterface = template.getPaymentInterface();

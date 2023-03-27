@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangePriceChangeImpl.class)
 public interface ChangePriceChange extends Change {
 
+    /**
+     * discriminator value for ChangePriceChange
+     */
     String CHANGE_PRICE_CHANGE = "ChangePriceChange";
 
     /**
@@ -87,20 +90,54 @@ public interface ChangePriceChange extends Change {
     @JsonProperty("nextValue")
     public Price getNextValue();
 
+    /**
+     *  <p>Update action for changing prices</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set priceId
+     * @param priceId value to be set
+     */
+
     public void setPriceId(final String priceId);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Price previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Price nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangePriceChange
+     */
     public static ChangePriceChange of() {
         return new ChangePriceChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangePriceChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangePriceChange of(final ChangePriceChange template) {
         ChangePriceChangeImpl instance = new ChangePriceChangeImpl();
         instance.setChange(template.getChange());
@@ -111,18 +148,37 @@ public interface ChangePriceChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangePriceChange
+     * @return builder
+     */
     public static ChangePriceChangeBuilder builder() {
         return ChangePriceChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangePriceChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangePriceChangeBuilder builder(final ChangePriceChange template) {
         return ChangePriceChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangePriceChange(Function<ChangePriceChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangePriceChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangePriceChange>() {
             @Override

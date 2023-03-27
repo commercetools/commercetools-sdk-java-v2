@@ -95,6 +95,11 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
         return this;
     }
 
+    /**
+     *  <p>The list of update actions to be performed on the project.</p>
+     * @return actions
+     */
+
     public java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> getActions() {
         return this.actions;
     }
@@ -116,10 +121,19 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
         return new ImageSearchConfigRequestImpl(actions);
     }
 
+    /**
+     * factory method for an instance of ImageSearchConfigRequestBuilder
+     * @return builder
+     */
     public static ImageSearchConfigRequestBuilder of() {
         return new ImageSearchConfigRequestBuilder();
     }
 
+    /**
+     * create builder for ImageSearchConfigRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImageSearchConfigRequestBuilder of(final ImageSearchConfigRequest template) {
         ImageSearchConfigRequestBuilder builder = new ImageSearchConfigRequestBuilder();
         builder.actions = template.getActions();

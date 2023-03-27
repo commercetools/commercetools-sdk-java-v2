@@ -24,12 +24,18 @@ public class ChangeTargetCustomLineItemsChangeValueImpl implements ChangeTargetC
 
     private String predicate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTargetCustomLineItemsChangeValueImpl(@JsonProperty("predicate") final String predicate) {
         this.predicate = predicate;
         this.type = CUSTOM_LINE_ITEMS;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTargetCustomLineItemsChangeValueImpl() {
         this.type = CUSTOM_LINE_ITEMS;
     }

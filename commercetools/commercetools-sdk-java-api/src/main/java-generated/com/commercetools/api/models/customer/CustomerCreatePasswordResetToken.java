@@ -45,14 +45,33 @@ public interface CustomerCreatePasswordResetToken {
     @JsonProperty("ttlMinutes")
     public Long getTtlMinutes();
 
+    /**
+     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     * @param email value to be set
+     */
+
     public void setEmail(final String email);
+
+    /**
+     *  <p>Validity period of the generated token in minutes.</p>
+     * @param ttlMinutes value to be set
+     */
 
     public void setTtlMinutes(final Long ttlMinutes);
 
+    /**
+     * factory method
+     * @return instance of CustomerCreatePasswordResetToken
+     */
     public static CustomerCreatePasswordResetToken of() {
         return new CustomerCreatePasswordResetTokenImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerCreatePasswordResetToken
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerCreatePasswordResetToken of(final CustomerCreatePasswordResetToken template) {
         CustomerCreatePasswordResetTokenImpl instance = new CustomerCreatePasswordResetTokenImpl();
         instance.setEmail(template.getEmail());
@@ -60,18 +79,37 @@ public interface CustomerCreatePasswordResetToken {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerCreatePasswordResetToken
+     * @return builder
+     */
     public static CustomerCreatePasswordResetTokenBuilder builder() {
         return CustomerCreatePasswordResetTokenBuilder.of();
     }
 
+    /**
+     * create builder for CustomerCreatePasswordResetToken instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerCreatePasswordResetTokenBuilder builder(final CustomerCreatePasswordResetToken template) {
         return CustomerCreatePasswordResetTokenBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerCreatePasswordResetToken(Function<CustomerCreatePasswordResetToken, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerCreatePasswordResetToken> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerCreatePasswordResetToken>() {
             @Override

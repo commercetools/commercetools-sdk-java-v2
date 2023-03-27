@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryReplaceTaxRateActionImpl.class)
 public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction {
 
+    /**
+     * discriminator value for TaxCategoryReplaceTaxRateAction
+     */
     String REPLACE_TAX_RATE = "replaceTaxRate";
 
     /**
@@ -50,14 +53,33 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     @JsonProperty("taxRate")
     public TaxRateDraft getTaxRate();
 
+    /**
+     *  <p>ID of the TaxRate to replace.</p>
+     * @param taxRateId value to be set
+     */
+
     public void setTaxRateId(final String taxRateId);
+
+    /**
+     *  <p>New TaxRate to replace with.</p>
+     * @param taxRate value to be set
+     */
 
     public void setTaxRate(final TaxRateDraft taxRate);
 
+    /**
+     * factory method
+     * @return instance of TaxCategoryReplaceTaxRateAction
+     */
     public static TaxCategoryReplaceTaxRateAction of() {
         return new TaxCategoryReplaceTaxRateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxCategoryReplaceTaxRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxCategoryReplaceTaxRateAction of(final TaxCategoryReplaceTaxRateAction template) {
         TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
@@ -65,18 +87,37 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
         return instance;
     }
 
+    /**
+     * builder factory method for TaxCategoryReplaceTaxRateAction
+     * @return builder
+     */
     public static TaxCategoryReplaceTaxRateActionBuilder builder() {
         return TaxCategoryReplaceTaxRateActionBuilder.of();
     }
 
+    /**
+     * create builder for TaxCategoryReplaceTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryReplaceTaxRateActionBuilder builder(final TaxCategoryReplaceTaxRateAction template) {
         return TaxCategoryReplaceTaxRateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxCategoryReplaceTaxRateAction(Function<TaxCategoryReplaceTaxRateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReplaceTaxRateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReplaceTaxRateAction>() {
             @Override

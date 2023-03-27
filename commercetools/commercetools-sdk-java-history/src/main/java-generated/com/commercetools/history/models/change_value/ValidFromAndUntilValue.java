@@ -46,14 +46,33 @@ public interface ValidFromAndUntilValue {
     @JsonProperty("validUntil")
     public String getValidUntil();
 
+    /**
+     * set validFrom
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final String validFrom);
+
+    /**
+     * set validUntil
+     * @param validUntil value to be set
+     */
 
     public void setValidUntil(final String validUntil);
 
+    /**
+     * factory method
+     * @return instance of ValidFromAndUntilValue
+     */
     public static ValidFromAndUntilValue of() {
         return new ValidFromAndUntilValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of ValidFromAndUntilValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ValidFromAndUntilValue of(final ValidFromAndUntilValue template) {
         ValidFromAndUntilValueImpl instance = new ValidFromAndUntilValueImpl();
         instance.setValidFrom(template.getValidFrom());
@@ -61,18 +80,37 @@ public interface ValidFromAndUntilValue {
         return instance;
     }
 
+    /**
+     * builder factory method for ValidFromAndUntilValue
+     * @return builder
+     */
     public static ValidFromAndUntilValueBuilder builder() {
         return ValidFromAndUntilValueBuilder.of();
     }
 
+    /**
+     * create builder for ValidFromAndUntilValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ValidFromAndUntilValueBuilder builder(final ValidFromAndUntilValue template) {
         return ValidFromAndUntilValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withValidFromAndUntilValue(Function<ValidFromAndUntilValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ValidFromAndUntilValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ValidFromAndUntilValue>() {
             @Override

@@ -36,7 +36,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set the value to the measurements using the builder function
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set the value to the trackingData using the builder function
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set the value to the trackingData
      * @param trackingData value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -161,19 +161,39 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         return this;
     }
 
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     * value of measurements}
+     * @return measurements
+     */
 
     @Nullable
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
 
+    /**
+     * value of trackingData}
+     * @return trackingData
+     */
+
     @Nullable
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;
     }
+
+    /**
+     * value of items}
+     * @return items
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -197,10 +217,19 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, measurements, trackingData, items);
     }
 
+    /**
+     * factory method for an instance of StagedOrderAddParcelToDeliveryActionBuilder
+     * @return builder
+     */
     public static StagedOrderAddParcelToDeliveryActionBuilder of() {
         return new StagedOrderAddParcelToDeliveryActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderAddParcelToDeliveryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddParcelToDeliveryActionBuilder of(final StagedOrderAddParcelToDeliveryAction template) {
         StagedOrderAddParcelToDeliveryActionBuilder builder = new StagedOrderAddParcelToDeliveryActionBuilder();
         builder.deliveryId = template.getDeliveryId();

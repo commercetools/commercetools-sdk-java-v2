@@ -50,9 +50,19 @@ public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePri
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the Embedded Price to remove.</p>
+     * @return priceId
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -76,10 +86,19 @@ public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePri
         return new ProductRemovePriceActionImpl(priceId, staged);
     }
 
+    /**
+     * factory method for an instance of ProductRemovePriceActionBuilder
+     * @return builder
+     */
     public static ProductRemovePriceActionBuilder of() {
         return new ProductRemovePriceActionBuilder();
     }
 
+    /**
+     * create builder for ProductRemovePriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRemovePriceActionBuilder of(final ProductRemovePriceAction template) {
         ProductRemovePriceActionBuilder builder = new ProductRemovePriceActionBuilder();
         builder.priceId = template.getPriceId();

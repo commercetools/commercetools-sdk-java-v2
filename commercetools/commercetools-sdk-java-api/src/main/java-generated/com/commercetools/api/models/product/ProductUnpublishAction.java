@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductUnpublishActionImpl.class)
 public interface ProductUnpublishAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductUnpublishAction
+     */
     String UNPUBLISH = "unpublish";
 
+    /**
+     * factory method
+     * @return instance of ProductUnpublishAction
+     */
     public static ProductUnpublishAction of() {
         return new ProductUnpublishActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductUnpublishAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductUnpublishAction of(final ProductUnpublishAction template) {
         ProductUnpublishActionImpl instance = new ProductUnpublishActionImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for ProductUnpublishAction
+     * @return builder
+     */
     public static ProductUnpublishActionBuilder builder() {
         return ProductUnpublishActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductUnpublishAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductUnpublishActionBuilder builder(final ProductUnpublishAction template) {
         return ProductUnpublishActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductUnpublishAction(Function<ProductUnpublishAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishAction>() {
             @Override

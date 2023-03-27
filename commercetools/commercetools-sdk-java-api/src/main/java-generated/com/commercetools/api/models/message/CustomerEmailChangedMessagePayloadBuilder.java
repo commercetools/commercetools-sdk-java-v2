@@ -34,6 +34,11 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
         return this;
     }
 
+    /**
+     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     * @return email
+     */
+
     public String getEmail() {
         return this.email;
     }
@@ -55,10 +60,19 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
         return new CustomerEmailChangedMessagePayloadImpl(email);
     }
 
+    /**
+     * factory method for an instance of CustomerEmailChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerEmailChangedMessagePayloadBuilder of() {
         return new CustomerEmailChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerEmailChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerEmailChangedMessagePayloadBuilder of(final CustomerEmailChangedMessagePayload template) {
         CustomerEmailChangedMessagePayloadBuilder builder = new CustomerEmailChangedMessagePayloadBuilder();
         builder.email = template.getEmail();

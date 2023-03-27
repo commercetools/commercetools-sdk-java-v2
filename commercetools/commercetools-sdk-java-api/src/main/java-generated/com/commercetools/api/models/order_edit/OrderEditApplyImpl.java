@@ -24,6 +24,9 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
 
     private Long resourceVersion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditApplyImpl(@JsonProperty("editVersion") final Long editVersion,
             @JsonProperty("resourceVersion") final Long resourceVersion) {
@@ -31,6 +34,9 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
         this.resourceVersion = resourceVersion;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditApplyImpl() {
     }
 

@@ -41,6 +41,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MatchingPriceNotFoundErrorImpl.class)
 public interface MatchingPriceNotFoundError extends ErrorObject {
 
+    /**
+     * discriminator value for MatchingPriceNotFoundError
+     */
     String MATCHING_PRICE_NOT_FOUND = "MatchingPriceNotFound";
 
     /**
@@ -107,24 +110,68 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     @JsonProperty("channel")
     public ChannelReference getChannel();
 
+    /**
+     *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Unique identifier of a Product.</p>
+     * @param productId value to be set
+     */
 
     public void setProductId(final String productId);
 
+    /**
+     *  <p>Unique identifier of a ProductVariant in the Product.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Integer variantId);
+
+    /**
+     *  <p>Currency code of the country.</p>
+     * @param currency value to be set
+     */
 
     public void setCurrency(final String currency);
 
+    /**
+     *  <p>Country code of the geographic location.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
+
+    /**
+     *  <p>Customer Group associated with the Price.</p>
+     * @param customerGroup value to be set
+     */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
+    /**
+     *  <p>Channel associated with the Price.</p>
+     * @param channel value to be set
+     */
+
     public void setChannel(final ChannelReference channel);
 
+    /**
+     * factory method
+     * @return instance of MatchingPriceNotFoundError
+     */
     public static MatchingPriceNotFoundError of() {
         return new MatchingPriceNotFoundErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of MatchingPriceNotFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MatchingPriceNotFoundError of(final MatchingPriceNotFoundError template) {
         MatchingPriceNotFoundErrorImpl instance = new MatchingPriceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
@@ -138,18 +185,37 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for MatchingPriceNotFoundError
+     * @return builder
+     */
     public static MatchingPriceNotFoundErrorBuilder builder() {
         return MatchingPriceNotFoundErrorBuilder.of();
     }
 
+    /**
+     * create builder for MatchingPriceNotFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MatchingPriceNotFoundErrorBuilder builder(final MatchingPriceNotFoundError template) {
         return MatchingPriceNotFoundErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMatchingPriceNotFoundError(Function<MatchingPriceNotFoundError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MatchingPriceNotFoundError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MatchingPriceNotFoundError>() {
             @Override

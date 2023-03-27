@@ -26,6 +26,9 @@ public class RemoveFieldDefinitionChangeImpl implements RemoveFieldDefinitionCha
 
     private com.commercetools.history.models.common.FieldDefinition previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveFieldDefinitionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.FieldDefinition previousValue) {
@@ -34,6 +37,9 @@ public class RemoveFieldDefinitionChangeImpl implements RemoveFieldDefinitionCha
         this.type = REMOVE_FIELD_DEFINITION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveFieldDefinitionChangeImpl() {
         this.type = REMOVE_FIELD_DEFINITION_CHANGE;
     }

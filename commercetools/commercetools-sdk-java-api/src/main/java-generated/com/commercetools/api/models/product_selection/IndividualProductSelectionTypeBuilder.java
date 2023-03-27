@@ -47,6 +47,11 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
         return this;
     }
 
+    /**
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -68,10 +73,19 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
         return new IndividualProductSelectionTypeImpl(name);
     }
 
+    /**
+     * factory method for an instance of IndividualProductSelectionTypeBuilder
+     * @return builder
+     */
     public static IndividualProductSelectionTypeBuilder of() {
         return new IndividualProductSelectionTypeBuilder();
     }
 
+    /**
+     * create builder for IndividualProductSelectionType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static IndividualProductSelectionTypeBuilder of(final IndividualProductSelectionType template) {
         IndividualProductSelectionTypeBuilder builder = new IndividualProductSelectionTypeBuilder();
         builder.name = template.getName();

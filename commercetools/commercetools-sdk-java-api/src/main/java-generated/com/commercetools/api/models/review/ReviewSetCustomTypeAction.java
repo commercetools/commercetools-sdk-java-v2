@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewSetCustomTypeActionImpl.class)
 public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
 
+    /**
+     * discriminator value for ReviewSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Review.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of ReviewSetCustomTypeAction
+     */
     public static ReviewSetCustomTypeAction of() {
         return new ReviewSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReviewSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReviewSetCustomTypeAction of(final ReviewSetCustomTypeAction template) {
         ReviewSetCustomTypeActionImpl instance = new ReviewSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ReviewSetCustomTypeAction
+     * @return builder
+     */
     public static ReviewSetCustomTypeActionBuilder builder() {
         return ReviewSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for ReviewSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetCustomTypeActionBuilder builder(final ReviewSetCustomTypeAction template) {
         return ReviewSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReviewSetCustomTypeAction(Function<ReviewSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetCustomTypeAction>() {
             @Override

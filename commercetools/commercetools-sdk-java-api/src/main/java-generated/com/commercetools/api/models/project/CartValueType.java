@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartValueTypeImpl.class)
 public interface CartValueType extends ShippingRateInputType {
 
+    /**
+     * discriminator value for CartValueType
+     */
     String CART_VALUE = "CartValue";
 
+    /**
+     * factory method
+     * @return instance of CartValueType
+     */
     public static CartValueType of() {
         return new CartValueTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartValueType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartValueType of(final CartValueType template) {
         CartValueTypeImpl instance = new CartValueTypeImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for CartValueType
+     * @return builder
+     */
     public static CartValueTypeBuilder builder() {
         return CartValueTypeBuilder.of();
     }
 
+    /**
+     * create builder for CartValueType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartValueTypeBuilder builder(final CartValueType template) {
         return CartValueTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartValueType(Function<CartValueType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartValueType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartValueType>() {
             @Override

@@ -27,6 +27,9 @@ public class MyPaymentSetTransactionCustomFieldActionImpl
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyPaymentSetTransactionCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -35,6 +38,9 @@ public class MyPaymentSetTransactionCustomFieldActionImpl
         this.action = SET_TRANSACTION_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public MyPaymentSetTransactionCustomFieldActionImpl() {
         this.action = SET_TRANSACTION_CUSTOM_FIELD;
     }

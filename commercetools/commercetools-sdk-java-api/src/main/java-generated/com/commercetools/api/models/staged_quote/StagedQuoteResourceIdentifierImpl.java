@@ -27,6 +27,9 @@ public class StagedQuoteResourceIdentifierImpl implements StagedQuoteResourceIde
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class StagedQuoteResourceIdentifierImpl implements StagedQuoteResourceIde
         this.typeId = ReferenceTypeId.findEnum("staged-quote");
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("staged-quote");
     }

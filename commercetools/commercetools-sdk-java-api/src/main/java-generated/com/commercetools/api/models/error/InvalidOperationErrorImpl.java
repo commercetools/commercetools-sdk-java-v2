@@ -27,6 +27,9 @@ public class InvalidOperationErrorImpl implements InvalidOperationError, ModelBa
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidOperationErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class InvalidOperationErrorImpl implements InvalidOperationError, ModelBa
         this.code = INVALID_OPERATION;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidOperationErrorImpl() {
         this.code = INVALID_OPERATION;
     }

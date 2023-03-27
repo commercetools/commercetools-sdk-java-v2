@@ -28,6 +28,9 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
 
     private com.commercetools.history.models.change_value.InventoryQuantityValue previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeQuantityChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.change_value.InventoryQuantityValue nextValue,
@@ -38,6 +41,9 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
         this.type = CHANGE_QUANTITY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeQuantityChangeImpl() {
         this.type = CHANGE_QUANTITY_CHANGE;
     }

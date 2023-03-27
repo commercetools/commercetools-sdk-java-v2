@@ -47,6 +47,11 @@ public class CustomerAddStoreActionBuilder implements Builder<CustomerAddStoreAc
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of the Store to add.</p>
+     * @return store
+     */
+
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
@@ -68,10 +73,19 @@ public class CustomerAddStoreActionBuilder implements Builder<CustomerAddStoreAc
         return new CustomerAddStoreActionImpl(store);
     }
 
+    /**
+     * factory method for an instance of CustomerAddStoreActionBuilder
+     * @return builder
+     */
     public static CustomerAddStoreActionBuilder of() {
         return new CustomerAddStoreActionBuilder();
     }
 
+    /**
+     * create builder for CustomerAddStoreAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerAddStoreActionBuilder of(final CustomerAddStoreAction template) {
         CustomerAddStoreActionBuilder builder = new CustomerAddStoreActionBuilder();
         builder.store = template.getStore();

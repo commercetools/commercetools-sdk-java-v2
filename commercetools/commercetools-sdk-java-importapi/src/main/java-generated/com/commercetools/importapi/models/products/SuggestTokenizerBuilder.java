@@ -19,6 +19,10 @@ public class SuggestTokenizerBuilder {
         return com.commercetools.importapi.models.products.WhitespaceTokenizerBuilder.of();
     }
 
+    /**
+     * factory method for an instance of SuggestTokenizerBuilder
+     * @return builder
+     */
     public static SuggestTokenizerBuilder of() {
         return new SuggestTokenizerBuilder();
     }

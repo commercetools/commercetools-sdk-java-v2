@@ -34,6 +34,11 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Custom Line Item to remove.</p>
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
@@ -56,10 +61,19 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
         return new CartRemoveCustomLineItemActionImpl(customLineItemId);
     }
 
+    /**
+     * factory method for an instance of CartRemoveCustomLineItemActionBuilder
+     * @return builder
+     */
     public static CartRemoveCustomLineItemActionBuilder of() {
         return new CartRemoveCustomLineItemActionBuilder();
     }
 
+    /**
+     * create builder for CartRemoveCustomLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartRemoveCustomLineItemActionBuilder of(final CartRemoveCustomLineItemAction template) {
         CartRemoveCustomLineItemActionBuilder builder = new CartRemoveCustomLineItemActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();

@@ -29,6 +29,9 @@ public class StandalonePriceValueChangedMessagePayloadImpl
 
     private com.commercetools.api.models.common.Money oldValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceValueChangedMessagePayloadImpl(
             @JsonProperty("value") final com.commercetools.api.models.common.Money value,
@@ -40,6 +43,9 @@ public class StandalonePriceValueChangedMessagePayloadImpl
         this.type = STANDALONE_PRICE_VALUE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceValueChangedMessagePayloadImpl() {
         this.type = STANDALONE_PRICE_VALUE_CHANGED;
     }

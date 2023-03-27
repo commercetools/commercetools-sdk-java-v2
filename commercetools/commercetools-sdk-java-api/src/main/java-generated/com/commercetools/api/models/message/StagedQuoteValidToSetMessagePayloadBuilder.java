@@ -34,6 +34,11 @@ public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<Stage
         return this;
     }
 
+    /**
+     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     * @return validTo
+     */
+
     public java.time.ZonedDateTime getValidTo() {
         return this.validTo;
     }
@@ -55,10 +60,19 @@ public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<Stage
         return new StagedQuoteValidToSetMessagePayloadImpl(validTo);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteValidToSetMessagePayloadBuilder
+     * @return builder
+     */
     public static StagedQuoteValidToSetMessagePayloadBuilder of() {
         return new StagedQuoteValidToSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteValidToSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteValidToSetMessagePayloadBuilder of(final StagedQuoteValidToSetMessagePayload template) {
         StagedQuoteValidToSetMessagePayloadBuilder builder = new StagedQuoteValidToSetMessagePayloadBuilder();
         builder.validTo = template.getValidTo();

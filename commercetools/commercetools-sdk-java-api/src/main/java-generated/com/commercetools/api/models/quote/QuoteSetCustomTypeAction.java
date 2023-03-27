@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteSetCustomTypeActionImpl.class)
 public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
 
+    /**
+     * discriminator value for QuoteSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the Quote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Quote.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Quote.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of QuoteSetCustomTypeAction
+     */
     public static QuoteSetCustomTypeAction of() {
         return new QuoteSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteSetCustomTypeAction of(final QuoteSetCustomTypeAction template) {
         QuoteSetCustomTypeActionImpl instance = new QuoteSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteSetCustomTypeAction
+     * @return builder
+     */
     public static QuoteSetCustomTypeActionBuilder builder() {
         return QuoteSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for QuoteSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteSetCustomTypeActionBuilder builder(final QuoteSetCustomTypeAction template) {
         return QuoteSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteSetCustomTypeAction(Function<QuoteSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteSetCustomTypeAction>() {
             @Override

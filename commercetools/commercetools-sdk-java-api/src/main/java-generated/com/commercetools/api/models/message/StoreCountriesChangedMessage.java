@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreCountriesChangedMessageImpl.class)
 public interface StoreCountriesChangedMessage extends Message {
 
+    /**
+     * discriminator value for StoreCountriesChangedMessage
+     */
     String STORE_COUNTRIES_CHANGED = "StoreCountriesChanged";
 
     /**
@@ -54,20 +57,49 @@ public interface StoreCountriesChangedMessage extends Message {
     @JsonProperty("removedCountries")
     public List<StoreCountry> getRemovedCountries();
 
+    /**
+     *  <p>Countries added to the Store.</p>
+     * @param addedCountries values to be set
+     */
+
     @JsonIgnore
     public void setAddedCountries(final StoreCountry... addedCountries);
 
+    /**
+     *  <p>Countries added to the Store.</p>
+     * @param addedCountries values to be set
+     */
+
     public void setAddedCountries(final List<StoreCountry> addedCountries);
+
+    /**
+     *  <p>Countries removed from the Store.</p>
+     * @param removedCountries values to be set
+     */
 
     @JsonIgnore
     public void setRemovedCountries(final StoreCountry... removedCountries);
 
+    /**
+     *  <p>Countries removed from the Store.</p>
+     * @param removedCountries values to be set
+     */
+
     public void setRemovedCountries(final List<StoreCountry> removedCountries);
 
+    /**
+     * factory method
+     * @return instance of StoreCountriesChangedMessage
+     */
     public static StoreCountriesChangedMessage of() {
         return new StoreCountriesChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreCountriesChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreCountriesChangedMessage of(final StoreCountriesChangedMessage template) {
         StoreCountriesChangedMessageImpl instance = new StoreCountriesChangedMessageImpl();
         instance.setId(template.getId());
@@ -85,18 +117,37 @@ public interface StoreCountriesChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreCountriesChangedMessage
+     * @return builder
+     */
     public static StoreCountriesChangedMessageBuilder builder() {
         return StoreCountriesChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StoreCountriesChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreCountriesChangedMessageBuilder builder(final StoreCountriesChangedMessage template) {
         return StoreCountriesChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreCountriesChangedMessage(Function<StoreCountriesChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreCountriesChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreCountriesChangedMessage>() {
             @Override

@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitStoreModeChangedMessagePayloadImpl.class)
 public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for BusinessUnitStoreModeChangedMessagePayload
+     */
     String BUSINESS_UNIT_STORE_MODE_CHANGED = "BusinessUnitStoreModeChanged";
 
     /**
@@ -71,24 +74,63 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
     @JsonProperty("oldStoreMode")
     public BusinessUnitStoreMode getOldStoreMode();
 
+    /**
+     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores values to be set
+     */
+
     @JsonIgnore
     public void setStores(final StoreKeyReference... stores);
 
+    /**
+     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores values to be set
+     */
+
     public void setStores(final List<StoreKeyReference> stores);
 
+    /**
+     *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     * @param storeMode value to be set
+     */
+
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
+
+    /**
+     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores values to be set
+     */
 
     @JsonIgnore
     public void setOldStores(final StoreKeyReference... oldStores);
 
+    /**
+     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores values to be set
+     */
+
     public void setOldStores(final List<StoreKeyReference> oldStores);
+
+    /**
+     *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStoreMode value to be set
+     */
 
     public void setOldStoreMode(final BusinessUnitStoreMode oldStoreMode);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitStoreModeChangedMessagePayload
+     */
     public static BusinessUnitStoreModeChangedMessagePayload of() {
         return new BusinessUnitStoreModeChangedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitStoreModeChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitStoreModeChangedMessagePayload of(
             final BusinessUnitStoreModeChangedMessagePayload template) {
         BusinessUnitStoreModeChangedMessagePayloadImpl instance = new BusinessUnitStoreModeChangedMessagePayloadImpl();
@@ -99,20 +141,39 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitStoreModeChangedMessagePayload
+     * @return builder
+     */
     public static BusinessUnitStoreModeChangedMessagePayloadBuilder builder() {
         return BusinessUnitStoreModeChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitStoreModeChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStoreModeChangedMessagePayloadBuilder builder(
             final BusinessUnitStoreModeChangedMessagePayload template) {
         return BusinessUnitStoreModeChangedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitStoreModeChangedMessagePayload(
             Function<BusinessUnitStoreModeChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoreModeChangedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoreModeChangedMessagePayload>() {
             @Override

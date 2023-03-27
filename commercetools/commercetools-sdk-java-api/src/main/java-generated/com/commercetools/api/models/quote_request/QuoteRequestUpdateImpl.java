@@ -24,6 +24,9 @@ public class QuoteRequestUpdateImpl implements QuoteRequestUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class QuoteRequestUpdateImpl implements QuoteRequestUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestUpdateImpl() {
     }
 

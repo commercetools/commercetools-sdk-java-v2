@@ -26,6 +26,9 @@ public class StoreCountriesChangedMessagePayloadImpl implements StoreCountriesCh
 
     private java.util.List<com.commercetools.api.models.store_country.StoreCountry> removedCountries;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreCountriesChangedMessagePayloadImpl(
             @JsonProperty("addedCountries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> addedCountries,
@@ -35,6 +38,9 @@ public class StoreCountriesChangedMessagePayloadImpl implements StoreCountriesCh
         this.type = STORE_COUNTRIES_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreCountriesChangedMessagePayloadImpl() {
         this.type = STORE_COUNTRIES_CHANGED;
     }

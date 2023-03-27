@@ -25,12 +25,18 @@ public class BusinessUnitKeyReferenceImpl implements BusinessUnitKeyReference, M
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceTypeId.findEnum("business-unit");
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitKeyReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("business-unit");
     }

@@ -32,6 +32,9 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
 
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExternalTaxRateDraftImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Double amount,
             @JsonProperty("includedInPrice") final Boolean includedInPrice,
@@ -45,6 +48,9 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
         this.subRates = subRates;
     }
 
+    /**
+     * create empty instance
+     */
     public ExternalTaxRateDraftImpl() {
     }
 

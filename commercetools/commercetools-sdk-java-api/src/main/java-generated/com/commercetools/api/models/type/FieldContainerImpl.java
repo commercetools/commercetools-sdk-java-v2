@@ -22,11 +22,17 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FieldContainerImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public FieldContainerImpl() {
     }
 

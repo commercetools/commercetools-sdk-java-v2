@@ -24,12 +24,18 @@ public class ProductTypeChangeDescriptionActionImpl implements ProductTypeChange
 
     private String description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeDescriptionActionImpl(@JsonProperty("description") final String description) {
         this.description = description;
         this.action = CHANGE_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeDescriptionActionImpl() {
         this.action = CHANGE_DESCRIPTION;
     }

@@ -50,9 +50,19 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
         return this;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     * @return assetId
+     */
+
     public String getAssetId() {
         return this.assetId;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return assetKey
+     */
 
     @Nullable
     public String getAssetKey() {
@@ -76,10 +86,19 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
         return new CategorySetAssetKeyActionImpl(assetId, assetKey);
     }
 
+    /**
+     * factory method for an instance of CategorySetAssetKeyActionBuilder
+     * @return builder
+     */
     public static CategorySetAssetKeyActionBuilder of() {
         return new CategorySetAssetKeyActionBuilder();
     }
 
+    /**
+     * create builder for CategorySetAssetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetAssetKeyActionBuilder of(final CategorySetAssetKeyAction template) {
         CategorySetAssetKeyActionBuilder builder = new CategorySetAssetKeyActionBuilder();
         builder.assetId = template.getAssetId();

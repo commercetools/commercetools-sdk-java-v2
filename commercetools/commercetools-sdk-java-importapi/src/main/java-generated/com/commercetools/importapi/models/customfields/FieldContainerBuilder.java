@@ -51,6 +51,11 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
         return this;
     }
 
+    /**
+     *  <p>Mapping from the custom field name to the actual value.</p>
+     * @return pattern properties
+     */
+
     public Map<String, com.commercetools.importapi.models.customfields.CustomField> getValues() {
         return this.values;
     }
@@ -71,10 +76,19 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
         return new FieldContainerImpl(values);
     }
 
+    /**
+     * factory method for an instance of FieldContainerBuilder
+     * @return builder
+     */
     public static FieldContainerBuilder of() {
         return new FieldContainerBuilder();
     }
 
+    /**
+     * create builder for FieldContainer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldContainerBuilder of(final FieldContainer template) {
         FieldContainerBuilder builder = new FieldContainerBuilder();
         builder.values = template.values();

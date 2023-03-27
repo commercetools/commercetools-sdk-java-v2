@@ -30,6 +30,9 @@ public class ZonePagedQueryResponseImpl implements ZonePagedQueryResponse, Model
 
     private java.util.List<com.commercetools.api.models.zone.Zone> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZonePagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -41,6 +44,9 @@ public class ZonePagedQueryResponseImpl implements ZonePagedQueryResponse, Model
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ZonePagedQueryResponseImpl() {
     }
 

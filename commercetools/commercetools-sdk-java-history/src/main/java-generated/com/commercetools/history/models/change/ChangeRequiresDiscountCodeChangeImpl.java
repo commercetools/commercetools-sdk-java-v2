@@ -28,6 +28,9 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
 
     private Boolean nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeRequiresDiscountCodeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Boolean previousValue,
@@ -38,6 +41,9 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
         this.type = CHANGE_REQUIRES_DISCOUNT_CODE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeRequiresDiscountCodeChangeImpl() {
         this.type = CHANGE_REQUIRES_DISCOUNT_CODE_CHANGE;
     }

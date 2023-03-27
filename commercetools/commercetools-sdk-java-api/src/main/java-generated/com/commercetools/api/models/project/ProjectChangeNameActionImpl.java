@@ -24,12 +24,18 @@ public class ProjectChangeNameActionImpl implements ProjectChangeNameAction, Mod
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

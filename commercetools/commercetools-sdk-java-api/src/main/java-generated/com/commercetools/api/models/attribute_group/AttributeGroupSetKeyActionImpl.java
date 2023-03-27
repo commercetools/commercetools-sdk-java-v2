@@ -24,12 +24,18 @@ public class AttributeGroupSetKeyActionImpl implements AttributeGroupSetKeyActio
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupSetKeyActionImpl() {
         this.action = SET_KEY;
     }

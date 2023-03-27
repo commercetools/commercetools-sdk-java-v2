@@ -55,16 +55,39 @@ public interface TypedMoney extends Money {
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
+    /**
+     *  <p>Number of digits after the decimal separator:</p>
+     *  <ul>
+     *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
+     *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
+     *  </ul>
+     * @param fractionDigits value to be set
+     */
+
     public void setFractionDigits(final Integer fractionDigits);
 
+    /**
+     * builder for centPrecision subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.common.CentPrecisionMoneyBuilder centPrecisionBuilder() {
         return com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of();
     }
 
+    /**
+     * builder for highPrecision subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.common.HighPrecisionMoneyBuilder highPrecisionBuilder() {
         return com.commercetools.api.models.common.HighPrecisionMoneyBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
     }
@@ -74,6 +97,10 @@ public interface TypedMoney extends Money {
         return MoneyUtil::of;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypedMoney> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypedMoney>() {
             @Override

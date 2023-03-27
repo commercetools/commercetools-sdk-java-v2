@@ -30,7 +30,7 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
     }
 
     /**
-     *
+     * set the value to the measurements using the builder function
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
     }
 
     /**
-     *
+     * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
      */
@@ -64,9 +64,19 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
         return this;
     }
 
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     * value of measurements}
+     * @return measurements
+     */
 
     @Nullable
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -90,10 +100,19 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
         return new StagedOrderSetParcelMeasurementsActionImpl(parcelId, measurements);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetParcelMeasurementsActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetParcelMeasurementsActionBuilder of() {
         return new StagedOrderSetParcelMeasurementsActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetParcelMeasurementsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetParcelMeasurementsActionBuilder of(
             final StagedOrderSetParcelMeasurementsAction template) {
         StagedOrderSetParcelMeasurementsActionBuilder builder = new StagedOrderSetParcelMeasurementsActionBuilder();

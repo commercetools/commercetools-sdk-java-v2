@@ -24,7 +24,7 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
         return new InsufficientScopeErrorImpl(message);
     }
 
+    /**
+     * factory method for an instance of InsufficientScopeErrorBuilder
+     * @return builder
+     */
     public static InsufficientScopeErrorBuilder of() {
         return new InsufficientScopeErrorBuilder();
     }
 
+    /**
+     * create builder for InsufficientScopeError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InsufficientScopeErrorBuilder of(final InsufficientScopeError template) {
         InsufficientScopeErrorBuilder builder = new InsufficientScopeErrorBuilder();
         builder.message = template.getMessage();

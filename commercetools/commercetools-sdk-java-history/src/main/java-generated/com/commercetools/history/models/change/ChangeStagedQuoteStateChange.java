@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeStagedQuoteStateChangeImpl.class)
 public interface ChangeStagedQuoteStateChange extends Change {
 
+    /**
+     * discriminator value for ChangeStagedQuoteStateChange
+     */
     String CHANGE_STAGED_QUOTE_STATE_CHANGE = "ChangeStagedQuoteStateChange";
 
     /**
@@ -66,16 +69,40 @@ public interface ChangeStagedQuoteStateChange extends Change {
     @JsonProperty("previousValue")
     public StagedQuoteState getPreviousValue();
 
+    /**
+     * set change
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final StagedQuoteState nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final StagedQuoteState previousValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeStagedQuoteStateChange
+     */
     public static ChangeStagedQuoteStateChange of() {
         return new ChangeStagedQuoteStateChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeStagedQuoteStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeStagedQuoteStateChange of(final ChangeStagedQuoteStateChange template) {
         ChangeStagedQuoteStateChangeImpl instance = new ChangeStagedQuoteStateChangeImpl();
         instance.setChange(template.getChange());
@@ -84,18 +111,37 @@ public interface ChangeStagedQuoteStateChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeStagedQuoteStateChange
+     * @return builder
+     */
     public static ChangeStagedQuoteStateChangeBuilder builder() {
         return ChangeStagedQuoteStateChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeStagedQuoteStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeStagedQuoteStateChangeBuilder builder(final ChangeStagedQuoteStateChange template) {
         return ChangeStagedQuoteStateChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeStagedQuoteStateChange(Function<ChangeStagedQuoteStateChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeStagedQuoteStateChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeStagedQuoteStateChange>() {
             @Override

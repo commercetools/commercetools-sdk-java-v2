@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetDefaultBillingAddressChangeImpl.class)
 public interface SetDefaultBillingAddressChange extends Change {
 
+    /**
+     * discriminator value for SetDefaultBillingAddressChange
+     */
     String SET_DEFAULT_BILLING_ADDRESS_CHANGE = "SetDefaultBillingAddressChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetDefaultBillingAddressChange extends Change {
     @JsonProperty("previousValue")
     public Address getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Address nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Address previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetDefaultBillingAddressChange
+     */
     public static SetDefaultBillingAddressChange of() {
         return new SetDefaultBillingAddressChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetDefaultBillingAddressChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetDefaultBillingAddressChange of(final SetDefaultBillingAddressChange template) {
         SetDefaultBillingAddressChangeImpl instance = new SetDefaultBillingAddressChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetDefaultBillingAddressChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetDefaultBillingAddressChange
+     * @return builder
+     */
     public static SetDefaultBillingAddressChangeBuilder builder() {
         return SetDefaultBillingAddressChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetDefaultBillingAddressChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDefaultBillingAddressChangeBuilder builder(final SetDefaultBillingAddressChange template) {
         return SetDefaultBillingAddressChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetDefaultBillingAddressChange(Function<SetDefaultBillingAddressChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetDefaultBillingAddressChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetDefaultBillingAddressChange>() {
             @Override

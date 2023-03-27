@@ -65,9 +65,19 @@ public class CartSetCustomLineItemTaxRateActionBuilder implements Builder<CartSe
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *  <p>Value to set. If empty, an existing value is removed.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -92,10 +102,19 @@ public class CartSetCustomLineItemTaxRateActionBuilder implements Builder<CartSe
         return new CartSetCustomLineItemTaxRateActionImpl(customLineItemId, externalTaxRate);
     }
 
+    /**
+     * factory method for an instance of CartSetCustomLineItemTaxRateActionBuilder
+     * @return builder
+     */
     public static CartSetCustomLineItemTaxRateActionBuilder of() {
         return new CartSetCustomLineItemTaxRateActionBuilder();
     }
 
+    /**
+     * create builder for CartSetCustomLineItemTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomLineItemTaxRateActionBuilder of(final CartSetCustomLineItemTaxRateAction template) {
         CartSetCustomLineItemTaxRateActionBuilder builder = new CartSetCustomLineItemTaxRateActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();

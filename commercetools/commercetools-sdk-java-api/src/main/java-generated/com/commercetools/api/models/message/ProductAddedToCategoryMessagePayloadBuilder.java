@@ -62,9 +62,19 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     *  <p>Category the Product was added to.</p>
+     * @return category
+     */
+
     public com.commercetools.api.models.category.CategoryReference getCategory() {
         return this.category;
     }
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
+     */
 
     public Boolean getStaged() {
         return this.staged;
@@ -88,10 +98,19 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
         return new ProductAddedToCategoryMessagePayloadImpl(category, staged);
     }
 
+    /**
+     * factory method for an instance of ProductAddedToCategoryMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductAddedToCategoryMessagePayloadBuilder of() {
         return new ProductAddedToCategoryMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductAddedToCategoryMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAddedToCategoryMessagePayloadBuilder of(final ProductAddedToCategoryMessagePayload template) {
         ProductAddedToCategoryMessagePayloadBuilder builder = new ProductAddedToCategoryMessagePayloadBuilder();
         builder.category = template.getCategory();

@@ -40,7 +40,7 @@ public class TimeAttributeBuilder implements Builder<TimeAttribute> {
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -50,10 +50,20 @@ public class TimeAttributeBuilder implements Builder<TimeAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.time.LocalTime getValue() {
         return this.value;
@@ -76,10 +86,19 @@ public class TimeAttributeBuilder implements Builder<TimeAttribute> {
         return new TimeAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of TimeAttributeBuilder
+     * @return builder
+     */
     public static TimeAttributeBuilder of() {
         return new TimeAttributeBuilder();
     }
 
+    /**
+     * create builder for TimeAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TimeAttributeBuilder of(final TimeAttribute template) {
         TimeAttributeBuilder builder = new TimeAttributeBuilder();
         builder.name = template.getName();

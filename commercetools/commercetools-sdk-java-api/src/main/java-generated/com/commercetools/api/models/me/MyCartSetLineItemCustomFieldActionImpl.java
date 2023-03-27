@@ -28,6 +28,9 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -37,6 +40,9 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
         this.action = SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartSetLineItemCustomFieldActionImpl() {
         this.action = SET_LINE_ITEM_CUSTOM_FIELD;
     }

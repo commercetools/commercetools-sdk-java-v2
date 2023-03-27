@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DeliveryRemovedMessageImpl.class)
 public interface DeliveryRemovedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for DeliveryRemovedMessage
+     */
     String DELIVERY_REMOVED = "DeliveryRemoved";
 
     /**
@@ -57,14 +60,33 @@ public interface DeliveryRemovedMessage extends OrderMessage {
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>The Delivery that was removed from the Order.</p>
+     * @param delivery value to be set
+     */
+
     public void setDelivery(final Delivery delivery);
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
 
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of DeliveryRemovedMessage
+     */
     public static DeliveryRemovedMessage of() {
         return new DeliveryRemovedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of DeliveryRemovedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DeliveryRemovedMessage of(final DeliveryRemovedMessage template) {
         DeliveryRemovedMessageImpl instance = new DeliveryRemovedMessageImpl();
         instance.setId(template.getId());
@@ -82,18 +104,37 @@ public interface DeliveryRemovedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for DeliveryRemovedMessage
+     * @return builder
+     */
     public static DeliveryRemovedMessageBuilder builder() {
         return DeliveryRemovedMessageBuilder.of();
     }
 
+    /**
+     * create builder for DeliveryRemovedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryRemovedMessageBuilder builder(final DeliveryRemovedMessage template) {
         return DeliveryRemovedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDeliveryRemovedMessage(Function<DeliveryRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DeliveryRemovedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DeliveryRemovedMessage>() {
             @Override

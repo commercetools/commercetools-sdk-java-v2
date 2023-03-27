@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeSetMaxApplicationsActionImpl.class)
 public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdateAction {
 
+    /**
+     * discriminator value for DiscountCodeSetMaxApplicationsAction
+     */
     String SET_MAX_APPLICATIONS = "setMaxApplications";
 
     /**
@@ -36,31 +39,64 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     @JsonProperty("maxApplications")
     public Long getMaxApplications();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param maxApplications value to be set
+     */
+
     public void setMaxApplications(final Long maxApplications);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodeSetMaxApplicationsAction
+     */
     public static DiscountCodeSetMaxApplicationsAction of() {
         return new DiscountCodeSetMaxApplicationsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodeSetMaxApplicationsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodeSetMaxApplicationsAction of(final DiscountCodeSetMaxApplicationsAction template) {
         DiscountCodeSetMaxApplicationsActionImpl instance = new DiscountCodeSetMaxApplicationsActionImpl();
         instance.setMaxApplications(template.getMaxApplications());
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodeSetMaxApplicationsAction
+     * @return builder
+     */
     public static DiscountCodeSetMaxApplicationsActionBuilder builder() {
         return DiscountCodeSetMaxApplicationsActionBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodeSetMaxApplicationsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeSetMaxApplicationsActionBuilder builder(
             final DiscountCodeSetMaxApplicationsAction template) {
         return DiscountCodeSetMaxApplicationsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodeSetMaxApplicationsAction(Function<DiscountCodeSetMaxApplicationsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsAction>() {
             @Override

@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentAddInterfaceInteractionActionImpl.class)
 public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateAction {
 
+    /**
+     * discriminator value for PaymentAddInterfaceInteractionAction
+     */
     String ADD_INTERFACE_INTERACTION = "addInterfaceInteraction";
 
     /**
@@ -51,14 +54,33 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>ResourceIdentifier of a Type.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of PaymentAddInterfaceInteractionAction
+     */
     public static PaymentAddInterfaceInteractionAction of() {
         return new PaymentAddInterfaceInteractionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentAddInterfaceInteractionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentAddInterfaceInteractionAction of(final PaymentAddInterfaceInteractionAction template) {
         PaymentAddInterfaceInteractionActionImpl instance = new PaymentAddInterfaceInteractionActionImpl();
         instance.setType(template.getType());
@@ -66,19 +88,38 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentAddInterfaceInteractionAction
+     * @return builder
+     */
     public static PaymentAddInterfaceInteractionActionBuilder builder() {
         return PaymentAddInterfaceInteractionActionBuilder.of();
     }
 
+    /**
+     * create builder for PaymentAddInterfaceInteractionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentAddInterfaceInteractionActionBuilder builder(
             final PaymentAddInterfaceInteractionAction template) {
         return PaymentAddInterfaceInteractionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentAddInterfaceInteractionAction(Function<PaymentAddInterfaceInteractionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentAddInterfaceInteractionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentAddInterfaceInteractionAction>() {
             @Override

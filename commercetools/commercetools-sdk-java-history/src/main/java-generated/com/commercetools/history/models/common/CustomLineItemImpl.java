@@ -34,6 +34,9 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private Integer quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomLineItemImpl(@JsonProperty("id") final String id,
             @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name,
@@ -50,6 +53,9 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.quantity = quantity;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomLineItemImpl() {
     }
 

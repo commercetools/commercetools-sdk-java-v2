@@ -48,6 +48,9 @@ public class StoreProductSelectionsChangedMessageImpl implements StoreProductSel
 
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreProductSelectionsChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -78,6 +81,9 @@ public class StoreProductSelectionsChangedMessageImpl implements StoreProductSel
         this.type = STORE_PRODUCT_SELECTIONS_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreProductSelectionsChangedMessageImpl() {
         this.type = STORE_PRODUCT_SELECTIONS_CHANGED;
     }

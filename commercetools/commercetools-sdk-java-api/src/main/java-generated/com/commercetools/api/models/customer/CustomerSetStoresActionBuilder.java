@@ -93,6 +93,11 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @return stores
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
         return this.stores;
@@ -114,10 +119,19 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
         return new CustomerSetStoresActionImpl(stores);
     }
 
+    /**
+     * factory method for an instance of CustomerSetStoresActionBuilder
+     * @return builder
+     */
     public static CustomerSetStoresActionBuilder of() {
         return new CustomerSetStoresActionBuilder();
     }
 
+    /**
+     * create builder for CustomerSetStoresAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetStoresActionBuilder of(final CustomerSetStoresAction template) {
         CustomerSetStoresActionBuilder builder = new CustomerSetStoresActionBuilder();
         builder.stores = template.getStores();

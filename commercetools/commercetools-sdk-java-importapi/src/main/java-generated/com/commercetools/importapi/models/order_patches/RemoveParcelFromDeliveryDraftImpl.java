@@ -22,11 +22,17 @@ public class RemoveParcelFromDeliveryDraftImpl implements RemoveParcelFromDelive
 
     private String parcelId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveParcelFromDeliveryDraftImpl(@JsonProperty("parcelId") final String parcelId) {
         this.parcelId = parcelId;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveParcelFromDeliveryDraftImpl() {
     }
 

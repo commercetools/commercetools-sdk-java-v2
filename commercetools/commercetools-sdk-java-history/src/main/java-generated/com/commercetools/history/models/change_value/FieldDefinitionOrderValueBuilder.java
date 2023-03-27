@@ -28,7 +28,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     *
+     * set the value to the label using the builder function
      * @param builder function to build the label value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     *
+     * set the value to the label
      * @param label value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
         return this;
     }
 
+    /**
+     * value of name}
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of label}
+     * @return label
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {
         return this.label;
@@ -87,10 +97,19 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
         return new FieldDefinitionOrderValueImpl(name, label);
     }
 
+    /**
+     * factory method for an instance of FieldDefinitionOrderValueBuilder
+     * @return builder
+     */
     public static FieldDefinitionOrderValueBuilder of() {
         return new FieldDefinitionOrderValueBuilder();
     }
 
+    /**
+     * create builder for FieldDefinitionOrderValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldDefinitionOrderValueBuilder of(final FieldDefinitionOrderValue template) {
         FieldDefinitionOrderValueBuilder builder = new FieldDefinitionOrderValueBuilder();
         builder.name = template.getName();

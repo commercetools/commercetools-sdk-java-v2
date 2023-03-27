@@ -27,7 +27,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
     private String container;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
     }
 
     /**
-     *
+     * set the value to the container
      * @param container value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of container}
+     * @return container
+     */
 
     public String getContainer() {
         return this.container;
@@ -74,10 +84,19 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
         return new CustomObjectKeyReferenceImpl(key, container);
     }
 
+    /**
+     * factory method for an instance of CustomObjectKeyReferenceBuilder
+     * @return builder
+     */
     public static CustomObjectKeyReferenceBuilder of() {
         return new CustomObjectKeyReferenceBuilder();
     }
 
+    /**
+     * create builder for CustomObjectKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomObjectKeyReferenceBuilder of(final CustomObjectKeyReference template) {
         CustomObjectKeyReferenceBuilder builder = new CustomObjectKeyReferenceBuilder();
         builder.key = template.getKey();

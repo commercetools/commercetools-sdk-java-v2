@@ -37,30 +37,63 @@ public interface ImportResource {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>User-defined unique identifier.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ImportResource
+     */
     public static ImportResource of() {
         return new ImportResourceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ImportResource
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ImportResource of(final ImportResource template) {
         ImportResourceImpl instance = new ImportResourceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for ImportResource
+     * @return builder
+     */
     public static ImportResourceBuilder builder() {
         return ImportResourceBuilder.of();
     }
 
+    /**
+     * create builder for ImportResource instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportResourceBuilder builder(final ImportResource template) {
         return ImportResourceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImportResource(Function<ImportResource, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImportResource> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImportResource>() {
             @Override

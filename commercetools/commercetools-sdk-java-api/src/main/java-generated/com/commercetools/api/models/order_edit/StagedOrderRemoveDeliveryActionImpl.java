@@ -24,12 +24,18 @@ public class StagedOrderRemoveDeliveryActionImpl implements StagedOrderRemoveDel
 
     private String deliveryId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderRemoveDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId) {
         this.deliveryId = deliveryId;
         this.action = REMOVE_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderRemoveDeliveryActionImpl() {
         this.action = REMOVE_DELIVERY;
     }

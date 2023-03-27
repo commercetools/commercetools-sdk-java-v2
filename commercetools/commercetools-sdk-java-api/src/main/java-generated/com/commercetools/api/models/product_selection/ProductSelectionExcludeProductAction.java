@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionExcludeProductActionImpl.class)
 public interface ProductSelectionExcludeProductAction extends ProductSelectionUpdateAction {
 
+    /**
+     * discriminator value for ProductSelectionExcludeProductAction
+     */
     String EXCLUDE_PRODUCT = "excludeProduct";
 
     /**
@@ -51,14 +54,33 @@ public interface ProductSelectionExcludeProductAction extends ProductSelectionUp
     @JsonProperty("variantExclusion")
     public ProductVariantExclusion getVariantExclusion();
 
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductResourceIdentifier product);
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection. If not supplied all Variants are deemed to be excluded.</p>
+     * @param variantExclusion value to be set
+     */
 
     public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionExcludeProductAction
+     */
     public static ProductSelectionExcludeProductAction of() {
         return new ProductSelectionExcludeProductActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionExcludeProductAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionExcludeProductAction of(final ProductSelectionExcludeProductAction template) {
         ProductSelectionExcludeProductActionImpl instance = new ProductSelectionExcludeProductActionImpl();
         instance.setProduct(template.getProduct());
@@ -66,19 +88,38 @@ public interface ProductSelectionExcludeProductAction extends ProductSelectionUp
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionExcludeProductAction
+     * @return builder
+     */
     public static ProductSelectionExcludeProductActionBuilder builder() {
         return ProductSelectionExcludeProductActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionExcludeProductAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionExcludeProductActionBuilder builder(
             final ProductSelectionExcludeProductAction template) {
         return ProductSelectionExcludeProductActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionExcludeProductAction(Function<ProductSelectionExcludeProductAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction>() {
             @Override

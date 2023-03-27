@@ -535,82 +535,167 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    /**
+     *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
+     * @return productType
+     */
+
     public com.commercetools.api.models.product_type.ProductTypeResourceIdentifier getProductType() {
         return this.productType;
     }
+
+    /**
+     *  <p>Name of the Product.</p>
+     * @return name
+     */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @return slug
+     */
+
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the Product.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Description of the Product.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @return categories
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> getCategories() {
         return this.categories;
     }
 
+    /**
+     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @return categoryOrderHints
+     */
+
     @Nullable
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
         return this.categoryOrderHints;
     }
+
+    /**
+     *  <p>Title of the Product displayed in search results.</p>
+     * @return metaTitle
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
 
+    /**
+     *  <p>Description of the Product displayed in search results.</p>
+     * @return metaDescription
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
+
+    /**
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @return metaKeywords
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
 
+    /**
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     * @return masterVariant
+     */
+
     @Nullable
     public com.commercetools.api.models.product.ProductVariantDraft getMasterVariant() {
         return this.masterVariant;
     }
+
+    /**
+     *  <p>The additional Product Variants for the Product.</p>
+     * @return variants
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.product.ProductVariantDraft> getVariants() {
         return this.variants;
     }
 
+    /**
+     *  <p>The Tax Category to be assigned to the Product.</p>
+     * @return taxCategory
+     */
+
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @return searchKeywords
+     */
 
     @Nullable
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
     }
 
+    /**
+     *  <p>State to be assigned to the Product.</p>
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
 
+    /**
+     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     * @return publish
+     */
+
     @Nullable
     public Boolean getPublish() {
         return this.publish;
     }
+
+    /**
+     *  <p>Specifies the type of prices used when looking up a price for the Product.</p>
+     * @return priceMode
+     */
 
     @Nullable
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
@@ -640,10 +725,19 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
             publish, priceMode);
     }
 
+    /**
+     * factory method for an instance of ProductDraftBuilder
+     * @return builder
+     */
     public static ProductDraftBuilder of() {
         return new ProductDraftBuilder();
     }
 
+    /**
+     * create builder for ProductDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDraftBuilder of(final ProductDraft template) {
         ProductDraftBuilder builder = new ProductDraftBuilder();
         builder.productType = template.getProductType();

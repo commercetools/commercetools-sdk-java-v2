@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitAssociateAddedMessageImpl.class)
 public interface BusinessUnitAssociateAddedMessage extends Message {
 
+    /**
+     * discriminator value for BusinessUnitAssociateAddedMessage
+     */
     String BUSINESS_UNIT_ASSOCIATE_ADDED = "BusinessUnitAssociateAdded";
 
     /**
@@ -49,12 +52,26 @@ public interface BusinessUnitAssociateAddedMessage extends Message {
     @JsonProperty("associate")
     public Associate getAssociate();
 
+    /**
+     *  <p>The Associate that was added to the Business Unit.</p>
+     * @param associate value to be set
+     */
+
     public void setAssociate(final Associate associate);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitAssociateAddedMessage
+     */
     public static BusinessUnitAssociateAddedMessage of() {
         return new BusinessUnitAssociateAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitAssociateAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitAssociateAddedMessage of(final BusinessUnitAssociateAddedMessage template) {
         BusinessUnitAssociateAddedMessageImpl instance = new BusinessUnitAssociateAddedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface BusinessUnitAssociateAddedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitAssociateAddedMessage
+     * @return builder
+     */
     public static BusinessUnitAssociateAddedMessageBuilder builder() {
         return BusinessUnitAssociateAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitAssociateAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAssociateAddedMessageBuilder builder(final BusinessUnitAssociateAddedMessage template) {
         return BusinessUnitAssociateAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitAssociateAddedMessage(Function<BusinessUnitAssociateAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateAddedMessage>() {
             @Override

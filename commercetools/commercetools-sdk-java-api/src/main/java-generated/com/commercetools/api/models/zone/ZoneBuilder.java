@@ -241,45 +241,95 @@ public class ZoneBuilder implements Builder<Zone> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Zone.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Zone.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Zone was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Zone was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Zone.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the Zone.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the Zone.</p>
+     * @return description
+     */
 
     @Nullable
     public String getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @return locations
+     */
 
     public java.util.List<com.commercetools.api.models.zone.Location> getLocations() {
         return this.locations;
@@ -309,10 +359,19 @@ public class ZoneBuilder implements Builder<Zone> {
             locations);
     }
 
+    /**
+     * factory method for an instance of ZoneBuilder
+     * @return builder
+     */
     public static ZoneBuilder of() {
         return new ZoneBuilder();
     }
 
+    /**
+     * create builder for Zone instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneBuilder of(final Zone template) {
         ZoneBuilder builder = new ZoneBuilder();
         builder.id = template.getId();

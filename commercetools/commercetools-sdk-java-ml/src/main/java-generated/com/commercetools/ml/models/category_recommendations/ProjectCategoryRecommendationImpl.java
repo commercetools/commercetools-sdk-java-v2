@@ -26,6 +26,9 @@ public class ProjectCategoryRecommendationImpl implements ProjectCategoryRecomme
 
     private String path;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectCategoryRecommendationImpl(
             @JsonProperty("category") final com.commercetools.ml.models.common.CategoryReference category,
@@ -35,6 +38,9 @@ public class ProjectCategoryRecommendationImpl implements ProjectCategoryRecomme
         this.path = path;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectCategoryRecommendationImpl() {
     }
 

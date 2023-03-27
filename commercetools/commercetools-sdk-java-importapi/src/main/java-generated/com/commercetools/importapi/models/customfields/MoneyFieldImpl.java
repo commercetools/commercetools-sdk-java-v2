@@ -24,12 +24,18 @@ public class MoneyFieldImpl implements MoneyField, ModelBase {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MoneyFieldImpl(@JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         this.type = MONEY;
     }
 
+    /**
+     * create empty instance
+     */
     public MoneyFieldImpl() {
         this.type = MONEY;
     }

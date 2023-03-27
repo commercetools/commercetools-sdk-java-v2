@@ -30,6 +30,9 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
 
     private com.commercetools.importapi.models.order_patches.ReturnShipmentState shipmentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReturnItemDraftImpl(@JsonProperty("quantity") final Double quantity,
             @JsonProperty("lineItemId") final String lineItemId,
@@ -43,6 +46,9 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
         this.shipmentState = shipmentState;
     }
 
+    /**
+     * create empty instance
+     */
     public ReturnItemDraftImpl() {
     }
 

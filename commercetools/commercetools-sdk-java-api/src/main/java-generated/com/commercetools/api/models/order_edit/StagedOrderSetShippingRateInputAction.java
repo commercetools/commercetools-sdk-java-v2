@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetShippingRateInputActionImpl.class)
 public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetShippingRateInputAction
+     */
     String SET_SHIPPING_RATE_INPUT = "setShippingRateInput";
 
     /**
@@ -40,27 +43,56 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
     @JsonProperty("shippingRateInput")
     public ShippingRateInputDraft getShippingRateInput();
 
+    /**
+     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     * @param shippingRateInput value to be set
+     */
+
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetShippingRateInputAction
+     */
     public static StagedOrderSetShippingRateInputAction of() {
         return new StagedOrderSetShippingRateInputActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetShippingRateInputAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetShippingRateInputAction of(final StagedOrderSetShippingRateInputAction template) {
         StagedOrderSetShippingRateInputActionImpl instance = new StagedOrderSetShippingRateInputActionImpl();
         instance.setShippingRateInput(template.getShippingRateInput());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetShippingRateInputAction
+     * @return builder
+     */
     public static StagedOrderSetShippingRateInputActionBuilder builder() {
         return StagedOrderSetShippingRateInputActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingRateInputAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingRateInputActionBuilder builder(
             final StagedOrderSetShippingRateInputAction template) {
         return StagedOrderSetShippingRateInputActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetShippingRateInputAction(Function<StagedOrderSetShippingRateInputAction, T> helper) {
         return helper.apply(this);
     }
@@ -69,6 +101,10 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
         return StagedOrderSetShippingRateInputAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingRateInputAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingRateInputAction>() {
             @Override

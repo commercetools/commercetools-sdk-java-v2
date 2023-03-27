@@ -105,21 +105,46 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
         return this;
     }
 
+    /**
+     *  <p><code>"The attribute with name $attributeName has a different type on product type $productTypeName."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
+     * @return conflictingProductTypeId
+     */
+
     public String getConflictingProductTypeId() {
         return this.conflictingProductTypeId;
     }
 
+    /**
+     *  <p>Name of the Product Type containing the conflicting name.</p>
+     * @return conflictingProductTypeName
+     */
+
     public String getConflictingProductTypeName() {
         return this.conflictingProductTypeName;
     }
+
+    /**
+     *  <p>Name of the conflicting Attribute.</p>
+     * @return conflictingAttributeName
+     */
 
     public String getConflictingAttributeName() {
         return this.conflictingAttributeName;
@@ -150,10 +175,19 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
             conflictingProductTypeName, conflictingAttributeName);
     }
 
+    /**
+     * factory method for an instance of AttributeDefinitionTypeConflictErrorBuilder
+     * @return builder
+     */
     public static AttributeDefinitionTypeConflictErrorBuilder of() {
         return new AttributeDefinitionTypeConflictErrorBuilder();
     }
 
+    /**
+     * create builder for AttributeDefinitionTypeConflictError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDefinitionTypeConflictErrorBuilder of(final AttributeDefinitionTypeConflictError template) {
         AttributeDefinitionTypeConflictErrorBuilder builder = new AttributeDefinitionTypeConflictErrorBuilder();
         builder.message = template.getMessage();

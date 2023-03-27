@@ -24,12 +24,18 @@ public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase
 
     private Integer column;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GraphQLErrorLocationImpl(@JsonProperty("line") final Integer line, @JsonProperty("column") final Integer column) {
         this.line = line;
         this.column = column;
     }
 
+    /**
+     * create empty instance
+     */
     public GraphQLErrorLocationImpl() {
     }
 

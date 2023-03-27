@@ -36,6 +36,9 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
 
     private String createdAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Integer quantity,
             @JsonProperty("type") final String type, @JsonProperty("comment") final String comment,
@@ -53,6 +56,9 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
         this.createdAt = createdAt;
     }
 
+    /**
+     * create empty instance
+     */
     public ReturnItemImpl() {
     }
 

@@ -24,6 +24,9 @@ public class MyCustomerResetPasswordImpl implements MyCustomerResetPassword, Mod
 
     private String newPassword;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerResetPasswordImpl(@JsonProperty("tokenValue") final String tokenValue,
             @JsonProperty("newPassword") final String newPassword) {
@@ -31,6 +34,9 @@ public class MyCustomerResetPasswordImpl implements MyCustomerResetPassword, Mod
         this.newPassword = newPassword;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerResetPasswordImpl() {
     }
 

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeSetDescriptionActionImpl.class)
 public interface DiscountCodeSetDescriptionAction extends DiscountCodeUpdateAction {
 
+    /**
+     * discriminator value for DiscountCodeSetDescriptionAction
+     */
     String SET_DESCRIPTION = "setDescription";
 
     /**
@@ -39,30 +42,63 @@ public interface DiscountCodeSetDescriptionAction extends DiscountCodeUpdateActi
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodeSetDescriptionAction
+     */
     public static DiscountCodeSetDescriptionAction of() {
         return new DiscountCodeSetDescriptionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodeSetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodeSetDescriptionAction of(final DiscountCodeSetDescriptionAction template) {
         DiscountCodeSetDescriptionActionImpl instance = new DiscountCodeSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodeSetDescriptionAction
+     * @return builder
+     */
     public static DiscountCodeSetDescriptionActionBuilder builder() {
         return DiscountCodeSetDescriptionActionBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodeSetDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeSetDescriptionActionBuilder builder(final DiscountCodeSetDescriptionAction template) {
         return DiscountCodeSetDescriptionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodeSetDescriptionAction(Function<DiscountCodeSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetDescriptionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetDescriptionAction>() {
             @Override

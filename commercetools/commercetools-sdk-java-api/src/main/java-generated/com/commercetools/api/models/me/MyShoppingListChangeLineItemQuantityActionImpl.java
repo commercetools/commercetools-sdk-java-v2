@@ -27,6 +27,9 @@ public class MyShoppingListChangeLineItemQuantityActionImpl
 
     private Long quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyShoppingListChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("quantity") final Long quantity) {
@@ -35,6 +38,9 @@ public class MyShoppingListChangeLineItemQuantityActionImpl
         this.action = CHANGE_LINE_ITEM_QUANTITY;
     }
 
+    /**
+     * create empty instance
+     */
     public MyShoppingListChangeLineItemQuantityActionImpl() {
         this.action = CHANGE_LINE_ITEM_QUANTITY;
     }

@@ -27,7 +27,7 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
     private String message;
 
     /**
-     *
+     * set the value to the code
      * @param code value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
     }
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
         return this;
     }
 
+    /**
+     * value of code}
+     * @return code
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -74,10 +84,19 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
         return new ErrorObjectImpl(code, message);
     }
 
+    /**
+     * factory method for an instance of ErrorObjectBuilder
+     * @return builder
+     */
     public static ErrorObjectBuilder of() {
         return new ErrorObjectBuilder();
     }
 
+    /**
+     * create builder for ErrorObject instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ErrorObjectBuilder of(final ErrorObject template) {
         ErrorObjectBuilder builder = new ErrorObjectBuilder();
         builder.code = template.getCode();

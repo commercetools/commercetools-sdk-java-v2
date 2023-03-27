@@ -55,19 +55,48 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     * set measurements
+     * @param measurements value to be set
+     */
+
     public void setMeasurements(final ParcelMeasurements measurements);
 
+    /**
+     * set trackingData
+     * @param trackingData value to be set
+     */
+
     public void setTrackingData(final TrackingData trackingData);
+
+    /**
+     * set items
+     * @param items values to be set
+     */
 
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
 
+    /**
+     * factory method
+     * @return instance of DeliveryParcelDraft
+     */
     public static DeliveryParcelDraft of() {
         return new DeliveryParcelDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of DeliveryParcelDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DeliveryParcelDraft of(final DeliveryParcelDraft template) {
         DeliveryParcelDraftImpl instance = new DeliveryParcelDraftImpl();
         instance.setMeasurements(template.getMeasurements());
@@ -76,18 +105,37 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
         return instance;
     }
 
+    /**
+     * builder factory method for DeliveryParcelDraft
+     * @return builder
+     */
     public static DeliveryParcelDraftBuilder builder() {
         return DeliveryParcelDraftBuilder.of();
     }
 
+    /**
+     * create builder for DeliveryParcelDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryParcelDraftBuilder builder(final DeliveryParcelDraft template) {
         return DeliveryParcelDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDeliveryParcelDraft(Function<DeliveryParcelDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DeliveryParcelDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DeliveryParcelDraft>() {
             @Override

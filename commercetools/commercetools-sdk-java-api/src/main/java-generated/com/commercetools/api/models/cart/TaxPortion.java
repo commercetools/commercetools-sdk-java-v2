@@ -57,16 +57,40 @@ public interface TaxPortion {
     @JsonProperty("amount")
     public CentPrecisionMoney getAmount();
 
+    /**
+     *  <p>Name of the tax portion.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     *  <p>A number in the range 0-1.</p>
+     * @param rate value to be set
+     */
 
     public void setRate(final Double rate);
 
+    /**
+     *  <p>Money value of the tax portion.</p>
+     * @param amount value to be set
+     */
+
     public void setAmount(final CentPrecisionMoney amount);
 
+    /**
+     * factory method
+     * @return instance of TaxPortion
+     */
     public static TaxPortion of() {
         return new TaxPortionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxPortion
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxPortion of(final TaxPortion template) {
         TaxPortionImpl instance = new TaxPortionImpl();
         instance.setName(template.getName());
@@ -75,18 +99,37 @@ public interface TaxPortion {
         return instance;
     }
 
+    /**
+     * builder factory method for TaxPortion
+     * @return builder
+     */
     public static TaxPortionBuilder builder() {
         return TaxPortionBuilder.of();
     }
 
+    /**
+     * create builder for TaxPortion instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxPortionBuilder builder(final TaxPortion template) {
         return TaxPortionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxPortion(Function<TaxPortion, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxPortion> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxPortion>() {
             @Override

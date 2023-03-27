@@ -121,17 +121,37 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
         return this;
     }
 
+    /**
+     *  <p><code>"Product is already present with the following different $variantSelections."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Reference to the Product for which the error was returned.</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     * @return existingVariantSelection
+     */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getExistingVariantSelection() {
         return this.existingVariantSelection;
@@ -161,10 +181,19 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
             existingVariantSelection);
     }
 
+    /**
+     * factory method for an instance of ProductPresentWithDifferentVariantSelectionErrorBuilder
+     * @return builder
+     */
     public static ProductPresentWithDifferentVariantSelectionErrorBuilder of() {
         return new ProductPresentWithDifferentVariantSelectionErrorBuilder();
     }
 
+    /**
+     * create builder for ProductPresentWithDifferentVariantSelectionError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPresentWithDifferentVariantSelectionErrorBuilder of(
             final ProductPresentWithDifferentVariantSelectionError template) {
         ProductPresentWithDifferentVariantSelectionErrorBuilder builder = new ProductPresentWithDifferentVariantSelectionErrorBuilder();

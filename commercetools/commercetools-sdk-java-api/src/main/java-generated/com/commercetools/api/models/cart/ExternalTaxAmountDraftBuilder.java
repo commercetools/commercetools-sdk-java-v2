@@ -73,9 +73,19 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
         return this;
     }
 
+    /**
+     *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
+     * @return totalGross
+     */
+
     public com.commercetools.api.models.common.Money getTotalGross() {
         return this.totalGross;
     }
+
+    /**
+     *  <p>Tax Rates and subrates of states and countries.</p>
+     * @return taxRate
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getTaxRate() {
         return this.taxRate;
@@ -99,10 +109,19 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
         return new ExternalTaxAmountDraftImpl(totalGross, taxRate);
     }
 
+    /**
+     * factory method for an instance of ExternalTaxAmountDraftBuilder
+     * @return builder
+     */
     public static ExternalTaxAmountDraftBuilder of() {
         return new ExternalTaxAmountDraftBuilder();
     }
 
+    /**
+     * create builder for ExternalTaxAmountDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalTaxAmountDraftBuilder of(final ExternalTaxAmountDraft template) {
         ExternalTaxAmountDraftBuilder builder = new ExternalTaxAmountDraftBuilder();
         builder.totalGross = template.getTotalGross();

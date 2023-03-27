@@ -73,14 +73,38 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     *  <p>The name of the Attribute to set.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Value to set for the Attributes. If empty, any existing value will be removed.</p>
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
+     * @return value
+     */
 
     @Nullable
     public java.lang.Object getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -104,10 +128,19 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
         return new ProductSetAttributeInAllVariantsActionImpl(name, value, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetAttributeInAllVariantsActionBuilder
+     * @return builder
+     */
     public static ProductSetAttributeInAllVariantsActionBuilder of() {
         return new ProductSetAttributeInAllVariantsActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetAttributeInAllVariantsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetAttributeInAllVariantsActionBuilder of(
             final ProductSetAttributeInAllVariantsAction template) {
         ProductSetAttributeInAllVariantsActionBuilder builder = new ProductSetAttributeInAllVariantsActionBuilder();

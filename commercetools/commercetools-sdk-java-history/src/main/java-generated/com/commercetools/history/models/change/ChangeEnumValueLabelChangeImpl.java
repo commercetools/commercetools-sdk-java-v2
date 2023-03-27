@@ -32,6 +32,9 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeEnumValueLabelChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("fieldName") final String fieldName, @JsonProperty("valueKey") final String valueKey,
@@ -45,6 +48,9 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
         this.type = CHANGE_ENUM_VALUE_LABEL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeEnumValueLabelChangeImpl() {
         this.type = CHANGE_ENUM_VALUE_LABEL_CHANGE;
     }

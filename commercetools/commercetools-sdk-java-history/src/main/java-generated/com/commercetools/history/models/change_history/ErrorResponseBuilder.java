@@ -39,7 +39,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     private java.util.List<com.commercetools.history.models.change_history.ErrorObject> errors;
 
     /**
-     *
+     * set the value to the statusCode
      * @param statusCode value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     * set the value to the error
      * @param error value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     * set the value to the error_description
      * @param error_description value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     * set values to the errors
      * @param errors value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     * set value to the errors
      * @param errors value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     * add values to the errors
      * @param errors value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     * add the value to the errors using the builder function
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     * set the value to the errors using the builder function
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -149,23 +149,48 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this;
     }
 
+    /**
+     * value of statusCode}
+     * @return statusCode
+     */
+
     public Integer getStatusCode() {
         return this.statusCode;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     * value of error}
+     * @return error
+     */
 
     @Nullable
     public String getError() {
         return this.error;
     }
 
+    /**
+     * value of error_description}
+     * @return error_description
+     */
+
     @Nullable
     public String getError_description() {
         return this.error_description;
     }
+
+    /**
+     * value of errors}
+     * @return errors
+     */
 
     @Nullable
     public java.util.List<com.commercetools.history.models.change_history.ErrorObject> getErrors() {
@@ -190,10 +215,19 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
     }
 
+    /**
+     * factory method for an instance of ErrorResponseBuilder
+     * @return builder
+     */
     public static ErrorResponseBuilder of() {
         return new ErrorResponseBuilder();
     }
 
+    /**
+     * create builder for ErrorResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ErrorResponseBuilder of(final ErrorResponse template) {
         ErrorResponseBuilder builder = new ErrorResponseBuilder();
         builder.statusCode = template.getStatusCode();

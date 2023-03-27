@@ -41,6 +41,9 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
 
     private Integer defaultBillingAddress;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCompanyDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name,
             @JsonProperty("contactEmail") final String contactEmail,
@@ -62,6 +65,9 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
         this.unitType = BusinessUnitType.findEnum("Company");
     }
 
+    /**
+     * create empty instance
+     */
     public MyCompanyDraftImpl() {
         this.unitType = BusinessUnitType.findEnum("Company");
     }

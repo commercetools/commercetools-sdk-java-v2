@@ -26,6 +26,9 @@ public class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOr
 
     private java.util.List<String> keys;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeChangeEnumValueOrderActionImpl(@JsonProperty("fieldName") final String fieldName,
             @JsonProperty("keys") final java.util.List<String> keys) {
@@ -34,6 +37,9 @@ public class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOr
         this.action = CHANGE_ENUM_VALUE_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeChangeEnumValueOrderActionImpl() {
         this.action = CHANGE_ENUM_VALUE_ORDER;
     }

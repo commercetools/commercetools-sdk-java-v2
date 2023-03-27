@@ -28,6 +28,9 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
@@ -38,6 +41,9 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
         this.type = SET_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCustomTypeChangeImpl() {
         this.type = SET_CUSTOM_TYPE_CHANGE;
     }

@@ -48,6 +48,11 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
         return this;
     }
 
+    /**
+     *  <p>Address that was removed during the Remove Address update action.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
@@ -69,10 +74,19 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
         return new CustomerAddressRemovedMessagePayloadImpl(address);
     }
 
+    /**
+     * factory method for an instance of CustomerAddressRemovedMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerAddressRemovedMessagePayloadBuilder of() {
         return new CustomerAddressRemovedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerAddressRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerAddressRemovedMessagePayloadBuilder of(final CustomerAddressRemovedMessagePayload template) {
         CustomerAddressRemovedMessagePayloadBuilder builder = new CustomerAddressRemovedMessagePayloadBuilder();
         builder.address = template.getAddress();

@@ -28,6 +28,9 @@ public class AddLocationChangeImpl implements AddLocationChange, ModelBase {
 
     private com.commercetools.history.models.common.Location nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddLocationChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Location previousValue,
@@ -38,6 +41,9 @@ public class AddLocationChangeImpl implements AddLocationChange, ModelBase {
         this.type = ADD_LOCATION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddLocationChangeImpl() {
         this.type = ADD_LOCATION_CHANGE;
     }

@@ -24,6 +24,9 @@ public class StateSetDescriptionActionImpl implements StateSetDescriptionAction,
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
@@ -31,6 +34,9 @@ public class StateSetDescriptionActionImpl implements StateSetDescriptionAction,
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public StateSetDescriptionActionImpl() {
         this.action = SET_DESCRIPTION;
     }

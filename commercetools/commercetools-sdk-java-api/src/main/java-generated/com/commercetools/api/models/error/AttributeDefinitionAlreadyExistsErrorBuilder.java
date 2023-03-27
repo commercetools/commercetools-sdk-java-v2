@@ -107,21 +107,46 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
         return this;
     }
 
+    /**
+     *  <p><code>"An attribute definition with name $attributeName already exists on product type $productTypeName."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
+     * @return conflictingProductTypeId
+     */
+
     public String getConflictingProductTypeId() {
         return this.conflictingProductTypeId;
     }
 
+    /**
+     *  <p>Name of the Product Type containing the conflicting name.</p>
+     * @return conflictingProductTypeName
+     */
+
     public String getConflictingProductTypeName() {
         return this.conflictingProductTypeName;
     }
+
+    /**
+     *  <p>Name of the conflicting Attribute.</p>
+     * @return conflictingAttributeName
+     */
 
     public String getConflictingAttributeName() {
         return this.conflictingAttributeName;
@@ -152,10 +177,19 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
             conflictingProductTypeName, conflictingAttributeName);
     }
 
+    /**
+     * factory method for an instance of AttributeDefinitionAlreadyExistsErrorBuilder
+     * @return builder
+     */
     public static AttributeDefinitionAlreadyExistsErrorBuilder of() {
         return new AttributeDefinitionAlreadyExistsErrorBuilder();
     }
 
+    /**
+     * create builder for AttributeDefinitionAlreadyExistsError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDefinitionAlreadyExistsErrorBuilder of(
             final AttributeDefinitionAlreadyExistsError template) {
         AttributeDefinitionAlreadyExistsErrorBuilder builder = new AttributeDefinitionAlreadyExistsErrorBuilder();

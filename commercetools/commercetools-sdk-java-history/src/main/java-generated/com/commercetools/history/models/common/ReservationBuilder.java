@@ -34,7 +34,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     private String checkoutStartedAt;
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     }
 
     /**
-     *
+     * set the value to the owner using the builder function
      * @param builder function to build the owner value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     }
 
     /**
-     *
+     * set the value to the owner
      * @param owner value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     }
 
     /**
-     *
+     * set the value to the createdAt
      * @param createdAt value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     }
 
     /**
-     *
+     * set the value to the checkoutStartedAt
      * @param checkoutStartedAt value to be set
      * @return Builder
      */
@@ -89,17 +89,37 @@ public class ReservationBuilder implements Builder<Reservation> {
         return this;
     }
 
+    /**
+     * value of quantity}
+     * @return quantity
+     */
+
     public Integer getQuantity() {
         return this.quantity;
     }
+
+    /**
+     * value of owner}
+     * @return owner
+     */
 
     public com.commercetools.history.models.common.Reference getOwner() {
         return this.owner;
     }
 
+    /**
+     * value of createdAt}
+     * @return createdAt
+     */
+
     public String getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     * value of checkoutStartedAt}
+     * @return checkoutStartedAt
+     */
 
     public String getCheckoutStartedAt() {
         return this.checkoutStartedAt;
@@ -125,10 +145,19 @@ public class ReservationBuilder implements Builder<Reservation> {
         return new ReservationImpl(quantity, owner, createdAt, checkoutStartedAt);
     }
 
+    /**
+     * factory method for an instance of ReservationBuilder
+     * @return builder
+     */
     public static ReservationBuilder of() {
         return new ReservationBuilder();
     }
 
+    /**
+     * create builder for Reservation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReservationBuilder of(final Reservation template) {
         ReservationBuilder builder = new ReservationBuilder();
         builder.quantity = template.getQuantity();

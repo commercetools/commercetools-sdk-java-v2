@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetAttributeInAllVariantsActionImpl.class)
 public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetAttributeInAllVariantsAction
+     */
     String SET_ATTRIBUTE_IN_ALL_VARIANTS = "setAttributeInAllVariants";
 
     /**
@@ -64,16 +67,49 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The name of the Attribute to set.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     *  <p>Value to set for the Attributes. If empty, any existing value will be removed.</p>
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
+     * @param value value to be set
+     */
 
     public void setValue(final Object value);
 
+    /**
+     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductSetAttributeInAllVariantsAction
+     */
     public static ProductSetAttributeInAllVariantsAction of() {
         return new ProductSetAttributeInAllVariantsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetAttributeInAllVariantsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetAttributeInAllVariantsAction of(final ProductSetAttributeInAllVariantsAction template) {
         ProductSetAttributeInAllVariantsActionImpl instance = new ProductSetAttributeInAllVariantsActionImpl();
         instance.setName(template.getName());
@@ -82,15 +118,30 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetAttributeInAllVariantsAction
+     * @return builder
+     */
     public static ProductSetAttributeInAllVariantsActionBuilder builder() {
         return ProductSetAttributeInAllVariantsActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetAttributeInAllVariantsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetAttributeInAllVariantsActionBuilder builder(
             final ProductSetAttributeInAllVariantsAction template) {
         return ProductSetAttributeInAllVariantsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetAttributeInAllVariantsAction(
             Function<ProductSetAttributeInAllVariantsAction, T> helper) {
         return helper.apply(this);
@@ -104,6 +155,10 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
         return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).staged(staged).build();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction>() {
             @Override

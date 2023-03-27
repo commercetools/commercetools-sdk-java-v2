@@ -21,6 +21,9 @@ public class ChangeTargetShippingChangeValueImpl implements ChangeTargetShipping
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTargetShippingChangeValueImpl() {
         this.type = SHIPPING;

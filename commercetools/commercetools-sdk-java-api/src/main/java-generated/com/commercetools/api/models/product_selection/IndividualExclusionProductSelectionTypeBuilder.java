@@ -49,6 +49,11 @@ public class IndividualExclusionProductSelectionTypeBuilder
         return this;
     }
 
+    /**
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -70,10 +75,19 @@ public class IndividualExclusionProductSelectionTypeBuilder
         return new IndividualExclusionProductSelectionTypeImpl(name);
     }
 
+    /**
+     * factory method for an instance of IndividualExclusionProductSelectionTypeBuilder
+     * @return builder
+     */
     public static IndividualExclusionProductSelectionTypeBuilder of() {
         return new IndividualExclusionProductSelectionTypeBuilder();
     }
 
+    /**
+     * create builder for IndividualExclusionProductSelectionType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static IndividualExclusionProductSelectionTypeBuilder of(
             final IndividualExclusionProductSelectionType template) {
         IndividualExclusionProductSelectionTypeBuilder builder = new IndividualExclusionProductSelectionTypeBuilder();

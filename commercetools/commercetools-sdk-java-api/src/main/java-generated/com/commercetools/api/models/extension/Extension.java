@@ -122,33 +122,97 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     @JsonProperty("timeoutInMs")
     public Integer getTimeoutInMs();
 
+    /**
+     *  <p>Unique identifier of the Extension.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Extension.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the Extension was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the Extension was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the Extension.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
+     * @param destination value to be set
+     */
+
     public void setDestination(final ExtensionDestination destination);
+
+    /**
+     *  <p>Describes what triggers the Extension.</p>
+     * @param triggers values to be set
+     */
 
     @JsonIgnore
     public void setTriggers(final ExtensionTrigger... triggers);
 
+    /**
+     *  <p>Describes what triggers the Extension.</p>
+     * @param triggers values to be set
+     */
+
     public void setTriggers(final List<ExtensionTrigger> triggers);
+
+    /**
+     *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     * @param timeoutInMs value to be set
+     */
 
     public void setTimeoutInMs(final Integer timeoutInMs);
 
+    /**
+     * factory method
+     * @return instance of Extension
+     */
     public static Extension of() {
         return new ExtensionImpl();
     }
 
+    /**
+     * factory method to copy an instance of Extension
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Extension of(final Extension template) {
         ExtensionImpl instance = new ExtensionImpl();
         instance.setId(template.getId());
@@ -164,18 +228,37 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
         return instance;
     }
 
+    /**
+     * builder factory method for Extension
+     * @return builder
+     */
     public static ExtensionBuilder builder() {
         return ExtensionBuilder.of();
     }
 
+    /**
+     * create builder for Extension instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionBuilder builder(final Extension template) {
         return ExtensionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtension(Function<Extension, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Extension> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Extension>() {
             @Override

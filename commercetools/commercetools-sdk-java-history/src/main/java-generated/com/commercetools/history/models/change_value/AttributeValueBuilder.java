@@ -26,7 +26,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
     private java.lang.Object value;
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -47,9 +47,19 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
         return this;
     }
 
+    /**
+     * value of name}
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.lang.Object getValue() {
         return this.value;
@@ -73,10 +83,19 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
         return new AttributeValueImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of AttributeValueBuilder
+     * @return builder
+     */
     public static AttributeValueBuilder of() {
         return new AttributeValueBuilder();
     }
 
+    /**
+     * create builder for AttributeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeValueBuilder of(final AttributeValue template) {
         AttributeValueBuilder builder = new AttributeValueBuilder();
         builder.name = template.getName();

@@ -24,12 +24,18 @@ public class UnpublishChangeImpl implements UnpublishChange, ModelBase {
 
     private String change;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     UnpublishChangeImpl(@JsonProperty("change") final String change) {
         this.change = change;
         this.type = UNPUBLISH_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public UnpublishChangeImpl() {
         this.type = UNPUBLISH_CHANGE;
     }

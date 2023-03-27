@@ -22,11 +22,17 @@ public class SubscriptionUpdateActionImpl implements SubscriptionUpdateAction, M
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubscriptionUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public SubscriptionUpdateActionImpl() {
     }
 

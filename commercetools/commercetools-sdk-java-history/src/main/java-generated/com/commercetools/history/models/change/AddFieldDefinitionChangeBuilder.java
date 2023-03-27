@@ -39,7 +39,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,9 +62,19 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.FieldDefinition getNextValue() {
         return this.nextValue;
@@ -88,10 +98,19 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
         return new AddFieldDefinitionChangeImpl(change, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddFieldDefinitionChangeBuilder
+     * @return builder
+     */
     public static AddFieldDefinitionChangeBuilder of() {
         return new AddFieldDefinitionChangeBuilder();
     }
 
+    /**
+     * create builder for AddFieldDefinitionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddFieldDefinitionChangeBuilder of(final AddFieldDefinitionChange template) {
         AddFieldDefinitionChangeBuilder builder = new AddFieldDefinitionChangeBuilder();
         builder.change = template.getChange();

@@ -39,7 +39,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     *
+     * set values to the products
      * @param products value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     *
+     * set value to the products
      * @param products value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     *
+     * add values to the products
      * @param products value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     *
+     * add the value to the products using the builder function
      * @param builder function to build the products value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     *
+     * set the value to the products using the builder function
      * @param builder function to build the products value
      * @return Builder
      */
@@ -107,9 +107,19 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
         return this;
     }
 
+    /**
+     *  <p>The probability of product similarity.</p>
+     * @return confidence
+     */
+
     public Double getConfidence() {
         return this.confidence;
     }
+
+    /**
+     * value of products}
+     * @return products
+     */
 
     public java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> getProducts() {
         return this.products;
@@ -133,10 +143,19 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
         return new SimilarProductPairImpl(confidence, products);
     }
 
+    /**
+     * factory method for an instance of SimilarProductPairBuilder
+     * @return builder
+     */
     public static SimilarProductPairBuilder of() {
         return new SimilarProductPairBuilder();
     }
 
+    /**
+     * create builder for SimilarProductPair instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SimilarProductPairBuilder of(final SimilarProductPair template) {
         SimilarProductPairBuilder builder = new SimilarProductPairBuilder();
         builder.confidence = template.getConfidence();

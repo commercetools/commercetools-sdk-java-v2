@@ -26,6 +26,9 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetSearchKeywordsActionImpl(
             @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,
@@ -35,6 +38,9 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
         this.action = SET_SEARCH_KEYWORDS;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetSearchKeywordsActionImpl() {
         this.action = SET_SEARCH_KEYWORDS;
     }

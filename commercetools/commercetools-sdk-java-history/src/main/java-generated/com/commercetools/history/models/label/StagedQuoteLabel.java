@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedQuoteLabelImpl.class)
 public interface StagedQuoteLabel extends Label {
 
+    /**
+     * discriminator value for StagedQuoteLabel
+     */
     String STAGED_QUOTE_LABEL = "StagedQuoteLabel";
 
     /**
@@ -69,16 +72,40 @@ public interface StagedQuoteLabel extends Label {
     @JsonProperty("quoteRequest")
     public Reference getQuoteRequest();
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     * set customer
+     * @param customer value to be set
+     */
 
     public void setCustomer(final Reference customer);
 
+    /**
+     * set quoteRequest
+     * @param quoteRequest value to be set
+     */
+
     public void setQuoteRequest(final Reference quoteRequest);
 
+    /**
+     * factory method
+     * @return instance of StagedQuoteLabel
+     */
     public static StagedQuoteLabel of() {
         return new StagedQuoteLabelImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedQuoteLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedQuoteLabel of(final StagedQuoteLabel template) {
         StagedQuoteLabelImpl instance = new StagedQuoteLabelImpl();
         instance.setKey(template.getKey());
@@ -87,18 +114,37 @@ public interface StagedQuoteLabel extends Label {
         return instance;
     }
 
+    /**
+     * builder factory method for StagedQuoteLabel
+     * @return builder
+     */
     public static StagedQuoteLabelBuilder builder() {
         return StagedQuoteLabelBuilder.of();
     }
 
+    /**
+     * create builder for StagedQuoteLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteLabelBuilder builder(final StagedQuoteLabel template) {
         return StagedQuoteLabelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedQuoteLabel(Function<StagedQuoteLabel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteLabel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteLabel>() {
             @Override

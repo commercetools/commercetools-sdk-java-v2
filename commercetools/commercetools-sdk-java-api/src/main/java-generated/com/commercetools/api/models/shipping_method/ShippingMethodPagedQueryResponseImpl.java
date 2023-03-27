@@ -30,6 +30,9 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -42,6 +45,9 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodPagedQueryResponseImpl() {
     }
 

@@ -49,17 +49,41 @@ public interface StandalonePriceUpdate extends
     @JsonProperty("actions")
     public List<StandalonePriceUpdateAction> getActions();
 
+    /**
+     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>Update actions to be performed on the StandalonePrice.</p>
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final StandalonePriceUpdateAction... actions);
 
+    /**
+     *  <p>Update actions to be performed on the StandalonePrice.</p>
+     * @param actions values to be set
+     */
+
     public void setActions(final List<StandalonePriceUpdateAction> actions);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceUpdate
+     */
     public static StandalonePriceUpdate of() {
         return new StandalonePriceUpdateImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceUpdate of(final StandalonePriceUpdate template) {
         StandalonePriceUpdateImpl instance = new StandalonePriceUpdateImpl();
         instance.setVersion(template.getVersion());
@@ -67,18 +91,37 @@ public interface StandalonePriceUpdate extends
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceUpdate
+     * @return builder
+     */
     public static StandalonePriceUpdateBuilder builder() {
         return StandalonePriceUpdateBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceUpdateBuilder builder(final StandalonePriceUpdate template) {
         return StandalonePriceUpdateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceUpdate(Function<StandalonePriceUpdate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceUpdate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceUpdate>() {
             @Override

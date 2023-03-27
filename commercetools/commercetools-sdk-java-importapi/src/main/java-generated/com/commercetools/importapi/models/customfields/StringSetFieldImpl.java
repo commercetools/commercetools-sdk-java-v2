@@ -24,12 +24,18 @@ public class StringSetFieldImpl implements StringSetField, ModelBase {
 
     private java.util.List<String> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StringSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
         this.value = value;
         this.type = STRING_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StringSetFieldImpl() {
         this.type = STRING_SET;
     }

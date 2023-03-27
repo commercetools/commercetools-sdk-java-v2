@@ -51,10 +51,20 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     * @return addressKey
+     */
 
     @Nullable
     public String getAddressKey() {
@@ -77,10 +87,19 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
         return new MyCustomerSetDefaultShippingAddressActionImpl(addressId, addressKey);
     }
 
+    /**
+     * factory method for an instance of MyCustomerSetDefaultShippingAddressActionBuilder
+     * @return builder
+     */
     public static MyCustomerSetDefaultShippingAddressActionBuilder of() {
         return new MyCustomerSetDefaultShippingAddressActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerSetDefaultShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetDefaultShippingAddressActionBuilder of(
             final MyCustomerSetDefaultShippingAddressAction template) {
         MyCustomerSetDefaultShippingAddressActionBuilder builder = new MyCustomerSetDefaultShippingAddressActionBuilder();

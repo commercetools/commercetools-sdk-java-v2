@@ -24,12 +24,18 @@ public class CustomerGroupChangeNameActionImpl implements CustomerGroupChangeNam
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

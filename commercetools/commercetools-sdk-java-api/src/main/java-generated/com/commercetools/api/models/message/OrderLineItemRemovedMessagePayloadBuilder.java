@@ -244,35 +244,75 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Line Item.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
+     * @return removedQuantity
+     */
 
     public Long getRemovedQuantity() {
         return this.removedQuantity;
     }
 
+    /**
+     *  <p>Line Item quantity after the Remove Line Item update action.</p>
+     * @return newQuantity
+     */
+
     public Long getNewQuantity() {
         return this.newQuantity;
     }
+
+    /**
+     *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @return newState
+     */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getNewState() {
         return this.newState;
     }
 
+    /**
+     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     * @return newTotalPrice
+     */
+
     public com.commercetools.api.models.common.CentPrecisionMoney getNewTotalPrice() {
         return this.newTotalPrice;
     }
+
+    /**
+     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     * @return newTaxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedItemPrice getNewTaxedPrice() {
         return this.newTaxedPrice;
     }
 
+    /**
+     *  <p>Price of the Order after the Remove Line Item update action.</p>
+     * @return newPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Price getNewPrice() {
         return this.newPrice;
     }
+
+    /**
+     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     * @return newShippingDetail
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetails getNewShippingDetail() {
@@ -303,10 +343,19 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
             newTotalPrice, newTaxedPrice, newPrice, newShippingDetail);
     }
 
+    /**
+     * factory method for an instance of OrderLineItemRemovedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderLineItemRemovedMessagePayloadBuilder of() {
         return new OrderLineItemRemovedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderLineItemRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLineItemRemovedMessagePayloadBuilder of(final OrderLineItemRemovedMessagePayload template) {
         OrderLineItemRemovedMessagePayloadBuilder builder = new OrderLineItemRemovedMessagePayloadBuilder();
         builder.lineItemId = template.getLineItemId();

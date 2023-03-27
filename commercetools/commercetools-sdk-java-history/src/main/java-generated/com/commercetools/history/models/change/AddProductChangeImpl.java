@@ -26,6 +26,9 @@ public class AddProductChangeImpl implements AddProductChange, ModelBase {
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddProductChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Reference nextValue) {
@@ -34,6 +37,9 @@ public class AddProductChangeImpl implements AddProductChange, ModelBase {
         this.type = ADD_PRODUCT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddProductChangeImpl() {
         this.type = ADD_PRODUCT_CHANGE;
     }

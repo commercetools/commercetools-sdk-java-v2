@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeMasterVariantChangeImpl.class)
 public interface ChangeMasterVariantChange extends Change {
 
+    /**
+     * discriminator value for ChangeMasterVariantChange
+     */
     String CHANGE_MASTER_VARIANT_CHANGE = "ChangeMasterVariantChange";
 
     /**
@@ -78,18 +81,47 @@ public interface ChangeMasterVariantChange extends Change {
     @JsonProperty("nextValue")
     public Variant getNextValue();
 
+    /**
+     *  <p>Update action for <code>changeMasterVariant</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Variant previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Variant nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeMasterVariantChange
+     */
     public static ChangeMasterVariantChange of() {
         return new ChangeMasterVariantChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeMasterVariantChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeMasterVariantChange of(final ChangeMasterVariantChange template) {
         ChangeMasterVariantChangeImpl instance = new ChangeMasterVariantChangeImpl();
         instance.setChange(template.getChange());
@@ -99,18 +131,37 @@ public interface ChangeMasterVariantChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeMasterVariantChange
+     * @return builder
+     */
     public static ChangeMasterVariantChangeBuilder builder() {
         return ChangeMasterVariantChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeMasterVariantChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeMasterVariantChangeBuilder builder(final ChangeMasterVariantChange template) {
         return ChangeMasterVariantChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeMasterVariantChange(Function<ChangeMasterVariantChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeMasterVariantChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeMasterVariantChange>() {
             @Override

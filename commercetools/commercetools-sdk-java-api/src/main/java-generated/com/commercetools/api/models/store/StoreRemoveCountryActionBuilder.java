@@ -48,6 +48,11 @@ public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCount
         return this;
     }
 
+    /**
+     *  <p>Value to remove from <code>countries</code>.</p>
+     * @return country
+     */
+
     public com.commercetools.api.models.store_country.StoreCountry getCountry() {
         return this.country;
     }
@@ -69,10 +74,19 @@ public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCount
         return new StoreRemoveCountryActionImpl(country);
     }
 
+    /**
+     * factory method for an instance of StoreRemoveCountryActionBuilder
+     * @return builder
+     */
     public static StoreRemoveCountryActionBuilder of() {
         return new StoreRemoveCountryActionBuilder();
     }
 
+    /**
+     * create builder for StoreRemoveCountryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreRemoveCountryActionBuilder of(final StoreRemoveCountryAction template) {
         StoreRemoveCountryActionBuilder builder = new StoreRemoveCountryActionBuilder();
         builder.country = template.getCountry();

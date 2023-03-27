@@ -24,6 +24,9 @@ public class MyCartRemoveDiscountCodeActionImpl implements MyCartRemoveDiscountC
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartRemoveDiscountCodeActionImpl(
             @JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
@@ -31,6 +34,9 @@ public class MyCartRemoveDiscountCodeActionImpl implements MyCartRemoveDiscountC
         this.action = REMOVE_DISCOUNT_CODE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartRemoveDiscountCodeActionImpl() {
         this.action = REMOVE_DISCOUNT_CODE;
     }

@@ -24,12 +24,18 @@ public class PaymentKeyReferenceImpl implements PaymentKeyReference, ModelBase {
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("payment");
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("payment");
     }

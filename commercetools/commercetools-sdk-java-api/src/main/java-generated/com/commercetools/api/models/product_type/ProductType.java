@@ -122,33 +122,97 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
     @JsonProperty("attributes")
     public List<AttributeDefinition> getAttributes();
 
+    /**
+     *  <p>Unique identifier of the ProductType.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the ProductType.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the ProductType was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the ProductType was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the ProductType.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Name of the ProductType.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>Description of the ProductType.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final String description);
+
+    /**
+     *  <p>Attributes specified for the ProductType.</p>
+     * @param attributes values to be set
+     */
 
     @JsonIgnore
     public void setAttributes(final AttributeDefinition... attributes);
 
+    /**
+     *  <p>Attributes specified for the ProductType.</p>
+     * @param attributes values to be set
+     */
+
     public void setAttributes(final List<AttributeDefinition> attributes);
 
+    /**
+     * factory method
+     * @return instance of ProductType
+     */
     public static ProductType of() {
         return new ProductTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductType of(final ProductType template) {
         ProductTypeImpl instance = new ProductTypeImpl();
         instance.setId(template.getId());
@@ -164,14 +228,29 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
         return instance;
     }
 
+    /**
+     * builder factory method for ProductType
+     * @return builder
+     */
     public static ProductTypeBuilder builder() {
         return ProductTypeBuilder.of();
     }
 
+    /**
+     * create builder for ProductType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeBuilder builder(final ProductType template) {
         return ProductTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductType(Function<ProductType, T> helper) {
         return helper.apply(this);
     }
@@ -180,6 +259,10 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
         return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductType>() {
             @Override

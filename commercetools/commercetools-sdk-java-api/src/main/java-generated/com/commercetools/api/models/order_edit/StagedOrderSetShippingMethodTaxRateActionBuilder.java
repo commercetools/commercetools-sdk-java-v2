@@ -52,6 +52,11 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
@@ -73,10 +78,19 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
         return new StagedOrderSetShippingMethodTaxRateActionImpl(externalTaxRate);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetShippingMethodTaxRateActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetShippingMethodTaxRateActionBuilder of() {
         return new StagedOrderSetShippingMethodTaxRateActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingMethodTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingMethodTaxRateActionBuilder of(
             final StagedOrderSetShippingMethodTaxRateAction template) {
         StagedOrderSetShippingMethodTaxRateActionBuilder builder = new StagedOrderSetShippingMethodTaxRateActionBuilder();

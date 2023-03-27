@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceExternalDiscountSetMessagePayloadImpl.class)
 public interface StandalonePriceExternalDiscountSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StandalonePriceExternalDiscountSetMessagePayload
+     */
     String STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET = "StandalonePriceExternalDiscountSet";
 
     /**
@@ -39,12 +42,26 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
+    /**
+     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     * @param discounted value to be set
+     */
+
     public void setDiscounted(final DiscountedPrice discounted);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceExternalDiscountSetMessagePayload
+     */
     public static StandalonePriceExternalDiscountSetMessagePayload of() {
         return new StandalonePriceExternalDiscountSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceExternalDiscountSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceExternalDiscountSetMessagePayload of(
             final StandalonePriceExternalDiscountSetMessagePayload template) {
         StandalonePriceExternalDiscountSetMessagePayloadImpl instance = new StandalonePriceExternalDiscountSetMessagePayloadImpl();
@@ -52,20 +69,39 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceExternalDiscountSetMessagePayload
+     * @return builder
+     */
     public static StandalonePriceExternalDiscountSetMessagePayloadBuilder builder() {
         return StandalonePriceExternalDiscountSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceExternalDiscountSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceExternalDiscountSetMessagePayloadBuilder builder(
             final StandalonePriceExternalDiscountSetMessagePayload template) {
         return StandalonePriceExternalDiscountSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceExternalDiscountSetMessagePayload(
             Function<StandalonePriceExternalDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessagePayload>() {
             @Override

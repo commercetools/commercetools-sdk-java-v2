@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartAddItemShippingAddressActionImpl.class)
 public interface MyCartAddItemShippingAddressAction extends MyCartUpdateAction {
 
+    /**
+     * discriminator value for MyCartAddItemShippingAddressAction
+     */
     String ADD_ITEM_SHIPPING_ADDRESS = "addItemShippingAddress";
 
     /**
@@ -43,30 +46,64 @@ public interface MyCartAddItemShippingAddressAction extends MyCartUpdateAction {
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
+     *  <p>The new address must have a key that is unique accross this Cart.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
 
+    /**
+     * factory method
+     * @return instance of MyCartAddItemShippingAddressAction
+     */
     public static MyCartAddItemShippingAddressAction of() {
         return new MyCartAddItemShippingAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCartAddItemShippingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCartAddItemShippingAddressAction of(final MyCartAddItemShippingAddressAction template) {
         MyCartAddItemShippingAddressActionImpl instance = new MyCartAddItemShippingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCartAddItemShippingAddressAction
+     * @return builder
+     */
     public static MyCartAddItemShippingAddressActionBuilder builder() {
         return MyCartAddItemShippingAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCartAddItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartAddItemShippingAddressActionBuilder builder(final MyCartAddItemShippingAddressAction template) {
         return MyCartAddItemShippingAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCartAddItemShippingAddressAction(Function<MyCartAddItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCartAddItemShippingAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCartAddItemShippingAddressAction>() {
             @Override

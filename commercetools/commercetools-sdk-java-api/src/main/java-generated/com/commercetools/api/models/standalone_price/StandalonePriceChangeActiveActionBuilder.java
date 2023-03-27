@@ -34,6 +34,11 @@ public class StandalonePriceChangeActiveActionBuilder implements Builder<Standal
         return this;
     }
 
+    /**
+     *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     * @return active
+     */
+
     public Boolean getActive() {
         return this.active;
     }
@@ -55,10 +60,19 @@ public class StandalonePriceChangeActiveActionBuilder implements Builder<Standal
         return new StandalonePriceChangeActiveActionImpl(active);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceChangeActiveActionBuilder
+     * @return builder
+     */
     public static StandalonePriceChangeActiveActionBuilder of() {
         return new StandalonePriceChangeActiveActionBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceChangeActiveAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceChangeActiveActionBuilder of(final StandalonePriceChangeActiveAction template) {
         StandalonePriceChangeActiveActionBuilder builder = new StandalonePriceChangeActiveActionBuilder();
         builder.active = template.getActive();

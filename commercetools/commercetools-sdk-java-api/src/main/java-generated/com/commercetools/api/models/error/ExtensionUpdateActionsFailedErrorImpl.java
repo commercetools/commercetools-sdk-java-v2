@@ -32,6 +32,9 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
 
     private java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionUpdateActionsFailedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -46,6 +49,9 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
         this.code = EXTENSION_UPDATE_ACTIONS_FAILED;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionUpdateActionsFailedErrorImpl() {
         this.code = EXTENSION_UPDATE_ACTIONS_FAILED;
     }

@@ -25,6 +25,9 @@ public class StoreAddDistributionChannelActionImpl implements StoreAddDistributi
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreAddDistributionChannelActionImpl(
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
@@ -32,6 +35,9 @@ public class StoreAddDistributionChannelActionImpl implements StoreAddDistributi
         this.action = ADD_DISTRIBUTION_CHANNEL;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreAddDistributionChannelActionImpl() {
         this.action = ADD_DISTRIBUTION_CHANNEL;
     }

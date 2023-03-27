@@ -150,39 +150,118 @@ public interface PriceImport extends ImportResource {
     @JsonProperty("product")
     public ProductKeyReference getProduct();
 
+    /**
+     *  <p>User-defined unique identifier for the Embedded Price.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Maps to <code>Price.value</code>.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final TypedMoney value);
 
+    /**
+     *  <p>Maps to <code>Price.county</code>.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
+
+    /**
+     *  <p>Maps to <code>Price.validFrom</code>.</p>
+     * @param validFrom value to be set
+     */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Maps to <code>Price.validUntil</code>.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
+
+    /**
+     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     * @param customerGroup value to be set
+     */
 
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
 
+    /**
+     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     * @param channel value to be set
+     */
+
     public void setChannel(final ChannelKeyReference channel);
+
+    /**
+     *  <p>Sets a discounted price from an external service.</p>
+     * @param discounted value to be set
+     */
 
     public void setDiscounted(final DiscountedPrice discounted);
 
+    /**
+     *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
+     * @param publish value to be set
+     */
+
     public void setPublish(final Boolean publish);
+
+    /**
+     *  <p>The tiered prices for this price.</p>
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final PriceTier... tiers);
 
+    /**
+     *  <p>The tiered prices for this price.</p>
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<PriceTier> tiers);
+
+    /**
+     *  <p>The custom fields for this price.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final Custom custom);
 
+    /**
+     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     * @param productVariant value to be set
+     */
+
     public void setProductVariant(final ProductVariantKeyReference productVariant);
+
+    /**
+     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     * @param product value to be set
+     */
 
     public void setProduct(final ProductKeyReference product);
 
+    /**
+     * factory method
+     * @return instance of PriceImport
+     */
     public static PriceImport of() {
         return new PriceImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of PriceImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PriceImport of(final PriceImport template) {
         PriceImportImpl instance = new PriceImportImpl();
         instance.setKey(template.getKey());
@@ -201,18 +280,37 @@ public interface PriceImport extends ImportResource {
         return instance;
     }
 
+    /**
+     * builder factory method for PriceImport
+     * @return builder
+     */
     public static PriceImportBuilder builder() {
         return PriceImportBuilder.of();
     }
 
+    /**
+     * create builder for PriceImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceImportBuilder builder(final PriceImport template) {
         return PriceImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPriceImport(Function<PriceImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PriceImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PriceImport>() {
             @Override

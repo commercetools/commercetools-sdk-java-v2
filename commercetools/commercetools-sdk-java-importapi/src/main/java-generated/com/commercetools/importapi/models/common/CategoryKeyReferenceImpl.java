@@ -24,12 +24,18 @@ public class CategoryKeyReferenceImpl implements CategoryKeyReference, ModelBase
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("category");
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("category");
     }

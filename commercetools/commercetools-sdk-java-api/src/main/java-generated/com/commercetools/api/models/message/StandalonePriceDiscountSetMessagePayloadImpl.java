@@ -25,6 +25,9 @@ public class StandalonePriceDiscountSetMessagePayloadImpl
 
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceDiscountSetMessagePayloadImpl(
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted) {
@@ -32,6 +35,9 @@ public class StandalonePriceDiscountSetMessagePayloadImpl
         this.type = STANDALONE_PRICE_DISCOUNT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceDiscountSetMessagePayloadImpl() {
         this.type = STANDALONE_PRICE_DISCOUNT_SET;
     }

@@ -24,6 +24,9 @@ public class ReturnInfoAddedMessagePayloadImpl implements ReturnInfoAddedMessage
 
     private com.commercetools.api.models.order.ReturnInfo returnInfo;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReturnInfoAddedMessagePayloadImpl(
             @JsonProperty("returnInfo") final com.commercetools.api.models.order.ReturnInfo returnInfo) {
@@ -31,6 +34,9 @@ public class ReturnInfoAddedMessagePayloadImpl implements ReturnInfoAddedMessage
         this.type = RETURN_INFO_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ReturnInfoAddedMessagePayloadImpl() {
         this.type = RETURN_INFO_ADDED;
     }

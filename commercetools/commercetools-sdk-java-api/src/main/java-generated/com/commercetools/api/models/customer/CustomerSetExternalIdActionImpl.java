@@ -24,12 +24,18 @@ public class CustomerSetExternalIdActionImpl implements CustomerSetExternalIdAct
 
     private String externalId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetExternalIdActionImpl(@JsonProperty("externalId") final String externalId) {
         this.externalId = externalId;
         this.action = SET_EXTERNAL_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetExternalIdActionImpl() {
         this.action = SET_EXTERNAL_ID;
     }

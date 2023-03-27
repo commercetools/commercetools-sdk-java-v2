@@ -22,11 +22,17 @@ public class ShippingRateInputDraftImpl implements ShippingRateInputDraft, Model
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingRateInputDraftImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingRateInputDraftImpl() {
     }
 

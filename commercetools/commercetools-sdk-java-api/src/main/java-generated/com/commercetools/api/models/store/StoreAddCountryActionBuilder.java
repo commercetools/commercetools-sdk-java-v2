@@ -47,6 +47,11 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
         return this;
     }
 
+    /**
+     *  <p>Value to append to <code>countries</code>.</p>
+     * @return country
+     */
+
     public com.commercetools.api.models.store_country.StoreCountry getCountry() {
         return this.country;
     }
@@ -68,10 +73,19 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
         return new StoreAddCountryActionImpl(country);
     }
 
+    /**
+     * factory method for an instance of StoreAddCountryActionBuilder
+     * @return builder
+     */
     public static StoreAddCountryActionBuilder of() {
         return new StoreAddCountryActionBuilder();
     }
 
+    /**
+     * create builder for StoreAddCountryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreAddCountryActionBuilder of(final StoreAddCountryAction template) {
         StoreAddCountryActionBuilder builder = new StoreAddCountryActionBuilder();
         builder.country = template.getCountry();

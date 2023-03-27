@@ -24,6 +24,9 @@ public class StandalonePriceCreatedMessagePayloadImpl implements StandalonePrice
 
     private com.commercetools.api.models.standalone_price.StandalonePrice standalonePrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceCreatedMessagePayloadImpl(
             @JsonProperty("standalonePrice") final com.commercetools.api.models.standalone_price.StandalonePrice standalonePrice) {
@@ -31,6 +34,9 @@ public class StandalonePriceCreatedMessagePayloadImpl implements StandalonePrice
         this.type = STANDALONE_PRICE_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceCreatedMessagePayloadImpl() {
         this.type = STANDALONE_PRICE_CREATED;
     }

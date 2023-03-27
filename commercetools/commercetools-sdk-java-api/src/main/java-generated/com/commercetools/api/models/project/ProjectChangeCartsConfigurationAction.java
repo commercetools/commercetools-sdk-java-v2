@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeCartsConfigurationActionImpl.class)
 public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateAction {
 
+    /**
+     * discriminator value for ProjectChangeCartsConfigurationAction
+     */
     String CHANGE_CARTS_CONFIGURATION = "changeCartsConfiguration";
 
     /**
@@ -41,31 +44,64 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     @JsonProperty("cartsConfiguration")
     public CartsConfiguration getCartsConfiguration();
 
+    /**
+     *  <p>Configuration for the Carts feature.</p>
+     * @param cartsConfiguration value to be set
+     */
+
     public void setCartsConfiguration(final CartsConfiguration cartsConfiguration);
 
+    /**
+     * factory method
+     * @return instance of ProjectChangeCartsConfigurationAction
+     */
     public static ProjectChangeCartsConfigurationAction of() {
         return new ProjectChangeCartsConfigurationActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectChangeCartsConfigurationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectChangeCartsConfigurationAction of(final ProjectChangeCartsConfigurationAction template) {
         ProjectChangeCartsConfigurationActionImpl instance = new ProjectChangeCartsConfigurationActionImpl();
         instance.setCartsConfiguration(template.getCartsConfiguration());
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectChangeCartsConfigurationAction
+     * @return builder
+     */
     public static ProjectChangeCartsConfigurationActionBuilder builder() {
         return ProjectChangeCartsConfigurationActionBuilder.of();
     }
 
+    /**
+     * create builder for ProjectChangeCartsConfigurationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeCartsConfigurationActionBuilder builder(
             final ProjectChangeCartsConfigurationAction template) {
         return ProjectChangeCartsConfigurationActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectChangeCartsConfigurationAction(Function<ProjectChangeCartsConfigurationAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCartsConfigurationAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCartsConfigurationAction>() {
             @Override

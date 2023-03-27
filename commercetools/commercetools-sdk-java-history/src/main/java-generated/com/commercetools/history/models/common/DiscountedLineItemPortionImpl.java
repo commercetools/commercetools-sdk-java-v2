@@ -24,6 +24,9 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
 
     private com.commercetools.history.models.common.Money discountedAmount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountedLineItemPortionImpl(
             @JsonProperty("discount") final com.commercetools.history.models.common.Reference discount,
@@ -32,6 +35,9 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
         this.discountedAmount = discountedAmount;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountedLineItemPortionImpl() {
     }
 

@@ -60,6 +60,9 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -101,6 +104,9 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountImpl() {
     }
 

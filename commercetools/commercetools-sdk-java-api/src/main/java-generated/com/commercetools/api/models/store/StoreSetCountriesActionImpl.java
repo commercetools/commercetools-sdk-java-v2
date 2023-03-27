@@ -24,6 +24,9 @@ public class StoreSetCountriesActionImpl implements StoreSetCountriesAction, Mod
 
     private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreSetCountriesActionImpl(
             @JsonProperty("countries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
@@ -31,6 +34,9 @@ public class StoreSetCountriesActionImpl implements StoreSetCountriesAction, Mod
         this.action = SET_COUNTRIES;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreSetCountriesActionImpl() {
         this.action = SET_COUNTRIES;
     }

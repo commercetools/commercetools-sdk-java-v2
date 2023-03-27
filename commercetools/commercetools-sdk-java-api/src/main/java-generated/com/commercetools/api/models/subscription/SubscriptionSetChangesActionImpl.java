@@ -24,6 +24,9 @@ public class SubscriptionSetChangesActionImpl implements SubscriptionSetChangesA
 
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubscriptionSetChangesActionImpl(
             @JsonProperty("changes") final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
@@ -31,6 +34,9 @@ public class SubscriptionSetChangesActionImpl implements SubscriptionSetChangesA
         this.action = SET_CHANGES;
     }
 
+    /**
+     * create empty instance
+     */
     public SubscriptionSetChangesActionImpl() {
         this.action = SET_CHANGES;
     }

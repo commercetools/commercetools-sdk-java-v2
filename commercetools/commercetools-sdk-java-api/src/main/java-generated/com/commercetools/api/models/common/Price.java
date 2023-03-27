@@ -124,35 +124,104 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Unique identifier of this Price.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>Money value of this Price.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final TypedMoney value);
+
+    /**
+     *  <p>Country for which this Price is valid.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>CustomerGroup for which this Price is valid.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
+
+    /**
+     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     * @param channel value to be set
+     */
 
     public void setChannel(final ChannelReference channel);
 
+    /**
+     *  <p>Date and time from which this Price is valid.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
+
+    /**
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     * @param validUntil value to be set
+     */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     * @param discounted value to be set
+     */
+
     public void setDiscounted(final DiscountedPrice discounted);
+
+    /**
+     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final PriceTier... tiers);
 
+    /**
+     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<PriceTier> tiers);
+
+    /**
+     *  <p>Custom Fields defined for the Price.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of Price
+     */
     public static Price of() {
         return new PriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of Price
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Price of(final Price template) {
         PriceImpl instance = new PriceImpl();
         instance.setId(template.getId());
@@ -169,18 +238,37 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
         return instance;
     }
 
+    /**
+     * builder factory method for Price
+     * @return builder
+     */
     public static PriceBuilder builder() {
         return PriceBuilder.of();
     }
 
+    /**
+     * create builder for Price instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceBuilder builder(final Price template) {
         return PriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPrice(Function<Price, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Price> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Price>() {
             @Override

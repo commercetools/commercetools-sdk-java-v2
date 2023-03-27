@@ -27,6 +27,9 @@ public class ProductResourceIdentifierImpl implements ProductResourceIdentifier,
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class ProductResourceIdentifierImpl implements ProductResourceIdentifier,
         this.typeId = ReferenceTypeId.findEnum("product");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("product");
     }

@@ -28,6 +28,9 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
 
     private Boolean isMatching;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartClassificationTierImpl(@JsonProperty("value") final String value,
             @JsonProperty("price") final com.commercetools.api.models.common.Money price,
@@ -38,6 +41,9 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
         this.type = ShippingRateTierType.findEnum("CartClassification");
     }
 
+    /**
+     * create empty instance
+     */
     public CartClassificationTierImpl() {
         this.type = ShippingRateTierType.findEnum("CartClassification");
     }

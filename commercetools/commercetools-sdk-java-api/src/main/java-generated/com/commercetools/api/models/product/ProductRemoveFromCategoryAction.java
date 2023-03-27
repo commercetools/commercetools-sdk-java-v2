@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRemoveFromCategoryActionImpl.class)
 public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductRemoveFromCategoryAction
+     */
     String REMOVE_FROM_CATEGORY = "removeFromCategory";
 
     /**
@@ -50,14 +53,33 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The Category to remove.</p>
+     * @param category value to be set
+     */
+
     public void setCategory(final CategoryResourceIdentifier category);
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductRemoveFromCategoryAction
+     */
     public static ProductRemoveFromCategoryAction of() {
         return new ProductRemoveFromCategoryActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductRemoveFromCategoryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductRemoveFromCategoryAction of(final ProductRemoveFromCategoryAction template) {
         ProductRemoveFromCategoryActionImpl instance = new ProductRemoveFromCategoryActionImpl();
         instance.setCategory(template.getCategory());
@@ -65,18 +87,37 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductRemoveFromCategoryAction
+     * @return builder
+     */
     public static ProductRemoveFromCategoryActionBuilder builder() {
         return ProductRemoveFromCategoryActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductRemoveFromCategoryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRemoveFromCategoryActionBuilder builder(final ProductRemoveFromCategoryAction template) {
         return ProductRemoveFromCategoryActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductRemoveFromCategoryAction(Function<ProductRemoveFromCategoryAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductRemoveFromCategoryAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductRemoveFromCategoryAction>() {
             @Override

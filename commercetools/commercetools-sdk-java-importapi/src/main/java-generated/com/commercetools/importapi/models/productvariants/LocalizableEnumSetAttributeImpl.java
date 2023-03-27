@@ -26,6 +26,9 @@ public class LocalizableEnumSetAttributeImpl implements LocalizableEnumSetAttrib
 
     private java.util.List<String> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizableEnumSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<String> value) {
@@ -34,6 +37,9 @@ public class LocalizableEnumSetAttributeImpl implements LocalizableEnumSetAttrib
         this.type = LENUM_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizableEnumSetAttributeImpl() {
         this.type = LENUM_SET;
     }

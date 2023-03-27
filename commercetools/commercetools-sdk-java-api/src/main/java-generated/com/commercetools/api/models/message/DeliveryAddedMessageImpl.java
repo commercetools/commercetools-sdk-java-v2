@@ -46,6 +46,9 @@ public class DeliveryAddedMessageImpl implements DeliveryAddedMessage, ModelBase
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class DeliveryAddedMessageImpl implements DeliveryAddedMessage, ModelBase
         this.type = DELIVERY_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryAddedMessageImpl() {
         this.type = DELIVERY_ADDED;
     }

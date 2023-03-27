@@ -25,12 +25,18 @@ public class BusinessUnitContactEmailSetMessagePayloadImpl
 
     private String contactEmail;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitContactEmailSetMessagePayloadImpl(@JsonProperty("contactEmail") final String contactEmail) {
         this.contactEmail = contactEmail;
         this.type = BUSINESS_UNIT_CONTACT_EMAIL_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitContactEmailSetMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_CONTACT_EMAIL_SET;
     }

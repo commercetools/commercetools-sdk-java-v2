@@ -26,6 +26,9 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
 
     private Boolean active;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreChangeProductSelectionActionImpl(
             @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection,
@@ -35,6 +38,9 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
         this.action = CHANGE_PRODUCT_SELECTION_ACTIVE;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreChangeProductSelectionActionImpl() {
         this.action = CHANGE_PRODUCT_SELECTION_ACTIVE;
     }

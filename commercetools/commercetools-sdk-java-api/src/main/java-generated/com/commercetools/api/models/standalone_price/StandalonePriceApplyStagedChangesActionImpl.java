@@ -21,6 +21,9 @@ public class StandalonePriceApplyStagedChangesActionImpl implements StandalonePr
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceApplyStagedChangesActionImpl() {
         this.action = APPLY_STAGED_CHANGES;

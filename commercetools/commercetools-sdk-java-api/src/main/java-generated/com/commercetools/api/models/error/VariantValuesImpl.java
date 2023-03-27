@@ -26,6 +26,9 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
 
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     VariantValuesImpl(@JsonProperty("sku") final String sku,
             @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices,
@@ -35,6 +38,9 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
         this.attributes = attributes;
     }
 
+    /**
+     * create empty instance
+     */
     public VariantValuesImpl() {
     }
 

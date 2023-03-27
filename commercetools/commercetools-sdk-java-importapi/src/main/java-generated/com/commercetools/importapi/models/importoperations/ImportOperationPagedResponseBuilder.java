@@ -149,21 +149,46 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Integer getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
 
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>The actual number of results returned.</p>
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
 
+    /**
+     *  <p>The total number of import operations matching the query.</p>
+     * @return total
+     */
+
     public Long getTotal() {
         return this.total;
     }
+
+    /**
+     *  <p>The array of Import Operations matching the query.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> getResults() {
         return this.results;
@@ -190,10 +215,19 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
         return new ImportOperationPagedResponseImpl(limit, offset, count, total, results);
     }
 
+    /**
+     * factory method for an instance of ImportOperationPagedResponseBuilder
+     * @return builder
+     */
     public static ImportOperationPagedResponseBuilder of() {
         return new ImportOperationPagedResponseBuilder();
     }
 
+    /**
+     * create builder for ImportOperationPagedResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportOperationPagedResponseBuilder of(final ImportOperationPagedResponse template) {
         ImportOperationPagedResponseBuilder builder = new ImportOperationPagedResponseBuilder();
         builder.limit = template.getLimit();

@@ -45,26 +45,52 @@ public interface OrderEditResult {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for applied subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditAppliedBuilder appliedBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of();
     }
 
+    /**
+     * builder for notProcessed subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditNotProcessedBuilder notProcessedBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditNotProcessedBuilder.of();
     }
 
+    /**
+     * builder for previewFailure subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder previewFailureBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder.of();
     }
 
+    /**
+     * builder for previewSuccess subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditPreviewSuccessBuilder previewSuccessBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditPreviewSuccessBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditResult(Function<OrderEditResult, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditResult> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditResult>() {
             @Override

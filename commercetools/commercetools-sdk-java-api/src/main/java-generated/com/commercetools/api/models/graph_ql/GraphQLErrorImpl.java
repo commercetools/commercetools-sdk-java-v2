@@ -26,6 +26,9 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
 
     private java.util.List<java.lang.Object> path;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GraphQLErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("locations") final java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations,
@@ -35,6 +38,9 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
         this.path = path;
     }
 
+    /**
+     * create empty instance
+     */
     public GraphQLErrorImpl() {
     }
 

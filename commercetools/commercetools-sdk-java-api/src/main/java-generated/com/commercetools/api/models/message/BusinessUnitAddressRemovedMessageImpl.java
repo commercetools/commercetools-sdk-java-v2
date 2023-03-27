@@ -44,6 +44,9 @@ public class BusinessUnitAddressRemovedMessageImpl implements BusinessUnitAddres
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitAddressRemovedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class BusinessUnitAddressRemovedMessageImpl implements BusinessUnitAddres
         this.type = BUSINESS_UNIT_ADDRESS_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitAddressRemovedMessageImpl() {
         this.type = BUSINESS_UNIT_ADDRESS_REMOVED;
     }

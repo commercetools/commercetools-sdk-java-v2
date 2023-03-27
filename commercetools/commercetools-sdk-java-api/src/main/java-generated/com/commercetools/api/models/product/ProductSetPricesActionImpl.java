@@ -30,6 +30,9 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetPricesActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices,
@@ -41,6 +44,9 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
         this.action = SET_PRICES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetPricesActionImpl() {
         this.action = SET_PRICES;
     }

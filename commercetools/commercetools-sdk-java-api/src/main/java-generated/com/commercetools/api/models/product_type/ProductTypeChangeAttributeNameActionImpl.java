@@ -27,6 +27,9 @@ public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChan
 
     private String newAttributeName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeAttributeNameActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("newAttributeName") final String newAttributeName) {
@@ -35,6 +38,9 @@ public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChan
         this.action = CHANGE_ATTRIBUTE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeAttributeNameActionImpl() {
         this.action = CHANGE_ATTRIBUTE_NAME;
     }

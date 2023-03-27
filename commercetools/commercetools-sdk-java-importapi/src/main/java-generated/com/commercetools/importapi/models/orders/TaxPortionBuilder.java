@@ -33,7 +33,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     private com.commercetools.importapi.models.common.TypedMoney amount;
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     *
+     * set the value to the rate
      * @param rate value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     *
+     * set the value to the amount
      * @param amount value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     *
+     * set the value to the amount using the builder function
      * @param builder function to build the amount value
      * @return Builder
      */
@@ -77,14 +77,29 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
         return this;
     }
 
+    /**
+     * value of name}
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
 
+    /**
+     * value of rate}
+     * @return rate
+     */
+
     public Double getRate() {
         return this.rate;
     }
+
+    /**
+     * value of amount}
+     * @return amount
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getAmount() {
         return this.amount;
@@ -108,10 +123,19 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
         return new TaxPortionImpl(name, rate, amount);
     }
 
+    /**
+     * factory method for an instance of TaxPortionBuilder
+     * @return builder
+     */
     public static TaxPortionBuilder of() {
         return new TaxPortionBuilder();
     }
 
+    /**
+     * create builder for TaxPortion instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxPortionBuilder of(final TaxPortion template) {
         TaxPortionBuilder builder = new TaxPortionBuilder();
         builder.name = template.getName();

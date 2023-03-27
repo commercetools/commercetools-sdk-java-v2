@@ -80,9 +80,19 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     * @return variantSelection
+     */
 
     @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
@@ -106,10 +116,19 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
         return new ProductSelectionAddProductActionImpl(product, variantSelection);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionAddProductActionBuilder
+     * @return builder
+     */
     public static ProductSelectionAddProductActionBuilder of() {
         return new ProductSelectionAddProductActionBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionAddProductAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionAddProductActionBuilder of(final ProductSelectionAddProductAction template) {
         ProductSelectionAddProductActionBuilder builder = new ProductSelectionAddProductActionBuilder();
         builder.product = template.getProduct();

@@ -63,9 +63,19 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
         return this;
     }
 
+    /**
+     *  <p>The Delivery that was removed from the Order.</p>
+     * @return delivery
+     */
+
     public com.commercetools.api.models.order.Delivery getDelivery() {
         return this.delivery;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -89,10 +99,19 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
         return new DeliveryRemovedMessagePayloadImpl(delivery, shippingKey);
     }
 
+    /**
+     * factory method for an instance of DeliveryRemovedMessagePayloadBuilder
+     * @return builder
+     */
     public static DeliveryRemovedMessagePayloadBuilder of() {
         return new DeliveryRemovedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for DeliveryRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryRemovedMessagePayloadBuilder of(final DeliveryRemovedMessagePayload template) {
         DeliveryRemovedMessagePayloadBuilder builder = new DeliveryRemovedMessagePayloadBuilder();
         builder.delivery = template.getDelivery();

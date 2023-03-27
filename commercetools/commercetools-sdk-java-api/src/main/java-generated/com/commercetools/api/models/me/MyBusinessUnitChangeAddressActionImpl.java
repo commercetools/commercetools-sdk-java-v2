@@ -28,6 +28,9 @@ public class MyBusinessUnitChangeAddressActionImpl implements MyBusinessUnitChan
 
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitChangeAddressActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("addressKey") final String addressKey,
@@ -38,6 +41,9 @@ public class MyBusinessUnitChangeAddressActionImpl implements MyBusinessUnitChan
         this.action = CHANGE_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitChangeAddressActionImpl() {
         this.action = CHANGE_ADDRESS;
     }

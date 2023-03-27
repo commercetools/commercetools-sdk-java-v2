@@ -327,30 +327,60 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *  <p>User-defined unique SKU of the Product Variant.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return prices
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
     }
 
+    /**
+     *  <p>Images for the Product Variant.</p>
+     * @return images
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
         return this.images;
     }
+
+    /**
+     *  <p>Media assets for the Product Variant.</p>
+     * @return assets
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets() {
@@ -373,10 +403,19 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return new ProductVariantDraftImpl(sku, key, prices, attributes, images, assets);
     }
 
+    /**
+     * factory method for an instance of ProductVariantDraftBuilder
+     * @return builder
+     */
     public static ProductVariantDraftBuilder of() {
         return new ProductVariantDraftBuilder();
     }
 
+    /**
+     * create builder for ProductVariantDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantDraftBuilder of(final ProductVariantDraft template) {
         ProductVariantDraftBuilder builder = new ProductVariantDraftBuilder();
         builder.sku = template.getSku();

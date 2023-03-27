@@ -24,12 +24,18 @@ public class CustomerPasswordUpdatedMessagePayloadImpl implements CustomerPasswo
 
     private Boolean reset;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerPasswordUpdatedMessagePayloadImpl(@JsonProperty("reset") final Boolean reset) {
         this.reset = reset;
         this.type = CUSTOMER_PASSWORD_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerPasswordUpdatedMessagePayloadImpl() {
         this.type = CUSTOMER_PASSWORD_UPDATED;
     }

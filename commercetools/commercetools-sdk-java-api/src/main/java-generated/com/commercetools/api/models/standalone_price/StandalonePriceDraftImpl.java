@@ -45,6 +45,9 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     private Boolean active;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceDraftImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("value") final com.commercetools.api.models.common.Money value,
@@ -71,6 +74,9 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.active = active;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceDraftImpl() {
     }
 

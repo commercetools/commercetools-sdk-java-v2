@@ -36,6 +36,11 @@ public class PaymentSetMethodInfoMethodActionBuilder implements Builder<PaymentS
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return method
+     */
+
     @Nullable
     public String getMethod() {
         return this.method;
@@ -57,10 +62,19 @@ public class PaymentSetMethodInfoMethodActionBuilder implements Builder<PaymentS
         return new PaymentSetMethodInfoMethodActionImpl(method);
     }
 
+    /**
+     * factory method for an instance of PaymentSetMethodInfoMethodActionBuilder
+     * @return builder
+     */
     public static PaymentSetMethodInfoMethodActionBuilder of() {
         return new PaymentSetMethodInfoMethodActionBuilder();
     }
 
+    /**
+     * create builder for PaymentSetMethodInfoMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetMethodInfoMethodActionBuilder of(final PaymentSetMethodInfoMethodAction template) {
         PaymentSetMethodInfoMethodActionBuilder builder = new PaymentSetMethodInfoMethodActionBuilder();
         builder.method = template.getMethod();

@@ -25,11 +25,17 @@ public class ReplicaMyCartDraftImpl implements ReplicaMyCartDraft, ModelBase {
 
     private java.lang.Object reference;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReplicaMyCartDraftImpl(@JsonProperty("reference") final java.lang.Object reference) {
         this.reference = reference;
     }
 
+    /**
+     * create empty instance
+     */
     public ReplicaMyCartDraftImpl() {
     }
 

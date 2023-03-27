@@ -24,12 +24,18 @@ public class CustomerSetLastNameActionImpl implements CustomerSetLastNameAction,
 
     private String lastName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetLastNameActionImpl(@JsonProperty("lastName") final String lastName) {
         this.lastName = lastName;
         this.action = SET_LAST_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetLastNameActionImpl() {
         this.action = SET_LAST_NAME;
     }

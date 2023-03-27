@@ -44,6 +44,9 @@ public class StandalonePriceCreatedMessageImpl implements StandalonePriceCreated
 
     private com.commercetools.api.models.standalone_price.StandalonePrice standalonePrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class StandalonePriceCreatedMessageImpl implements StandalonePriceCreated
         this.type = STANDALONE_PRICE_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceCreatedMessageImpl() {
         this.type = STANDALONE_PRICE_CREATED;
     }

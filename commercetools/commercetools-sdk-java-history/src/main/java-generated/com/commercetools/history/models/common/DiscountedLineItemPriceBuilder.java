@@ -28,7 +28,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     private java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts;
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     * set values to the includedDiscounts
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     * set value to the includedDiscounts
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     * add values to the includedDiscounts
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     * add the value to the includedDiscounts using the builder function
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     * set the value to the includedDiscounts using the builder function
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -119,9 +119,19 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
         return this;
     }
 
+    /**
+     * value of value}
+     * @return value
+     */
+
     public com.commercetools.history.models.common.Money getValue() {
         return this.value;
     }
+
+    /**
+     * value of includedDiscounts}
+     * @return includedDiscounts
+     */
 
     public java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> getIncludedDiscounts() {
         return this.includedDiscounts;
@@ -145,10 +155,19 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
         return new DiscountedLineItemPriceImpl(value, includedDiscounts);
     }
 
+    /**
+     * factory method for an instance of DiscountedLineItemPriceBuilder
+     * @return builder
+     */
     public static DiscountedLineItemPriceBuilder of() {
         return new DiscountedLineItemPriceBuilder();
     }
 
+    /**
+     * create builder for DiscountedLineItemPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedLineItemPriceBuilder of(final DiscountedLineItemPrice template) {
         DiscountedLineItemPriceBuilder builder = new DiscountedLineItemPriceBuilder();
         builder.value = template.getValue();

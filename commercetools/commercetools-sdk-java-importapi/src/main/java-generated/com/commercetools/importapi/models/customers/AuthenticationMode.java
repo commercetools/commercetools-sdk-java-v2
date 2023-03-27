@@ -26,9 +26,18 @@ public interface AuthenticationMode {
     */
     AuthenticationMode EXTERNAL_AUTH = AuthenticationModeEnum.EXTERNAL_AUTH;
 
+    /**
+     * possible values of AuthenticationMode
+     */
     enum AuthenticationModeEnum implements AuthenticationMode {
+        /**
+         * Password
+         */
         PASSWORD("Password"),
 
+        /**
+         * ExternalAuth
+         */
         EXTERNAL_AUTH("ExternalAuth");
         private final String jsonName;
 
@@ -45,13 +54,30 @@ public interface AuthenticationMode {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of AuthenticationMode
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static AuthenticationMode findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new AuthenticationMode() {
@@ -71,10 +97,18 @@ public interface AuthenticationMode {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<AuthenticationMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static AuthenticationMode[] values() {
         return AuthenticationModeEnum.values();
     }

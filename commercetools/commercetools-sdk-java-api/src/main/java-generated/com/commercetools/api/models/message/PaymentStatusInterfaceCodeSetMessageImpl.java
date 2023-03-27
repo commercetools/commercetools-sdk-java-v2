@@ -46,6 +46,9 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
 
     private String interfaceCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentStatusInterfaceCodeSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
         this.type = PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentStatusInterfaceCodeSetMessageImpl() {
         this.type = PAYMENT_STATUS_INTERFACE_CODE_SET;
     }

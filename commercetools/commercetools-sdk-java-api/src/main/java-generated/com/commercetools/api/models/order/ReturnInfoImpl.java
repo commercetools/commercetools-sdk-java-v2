@@ -26,6 +26,9 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
 
     private java.time.ZonedDateTime returnDate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReturnInfoImpl(@JsonProperty("items") final java.util.List<com.commercetools.api.models.order.ReturnItem> items,
             @JsonProperty("returnTrackingId") final String returnTrackingId,
@@ -35,6 +38,9 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
         this.returnDate = returnDate;
     }
 
+    /**
+     * create empty instance
+     */
     public ReturnInfoImpl() {
     }
 

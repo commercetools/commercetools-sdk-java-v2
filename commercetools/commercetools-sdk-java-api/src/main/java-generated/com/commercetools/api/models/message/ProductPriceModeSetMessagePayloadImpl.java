@@ -24,6 +24,9 @@ public class ProductPriceModeSetMessagePayloadImpl implements ProductPriceModeSe
 
     private com.commercetools.api.models.product.ProductPriceModeEnum to;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceModeSetMessagePayloadImpl(
             @JsonProperty("to") final com.commercetools.api.models.product.ProductPriceModeEnum to) {
@@ -31,6 +34,9 @@ public class ProductPriceModeSetMessagePayloadImpl implements ProductPriceModeSe
         this.type = PRODUCT_PRICE_MODE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceModeSetMessagePayloadImpl() {
         this.type = PRODUCT_PRICE_MODE_SET;
     }

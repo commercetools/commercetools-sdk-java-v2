@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListSetLineItemCustomTypeActionImpl.class)
 public interface ShoppingListSetLineItemCustomTypeAction extends ShoppingListUpdateAction {
 
+    /**
+     * discriminator value for ShoppingListSetLineItemCustomTypeAction
+     */
     String SET_LINE_ITEM_CUSTOM_TYPE = "setLineItemCustomType";
 
     /**
@@ -58,16 +61,40 @@ public interface ShoppingListSetLineItemCustomTypeAction extends ShoppingListUpd
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
+     * @param type value to be set
+     */
 
     public void setType(final TypeResourceIdentifier type);
 
+    /**
+     *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
+     * @param fields value to be set
+     */
+
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListSetLineItemCustomTypeAction
+     */
     public static ShoppingListSetLineItemCustomTypeAction of() {
         return new ShoppingListSetLineItemCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListSetLineItemCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListSetLineItemCustomTypeAction of(final ShoppingListSetLineItemCustomTypeAction template) {
         ShoppingListSetLineItemCustomTypeActionImpl instance = new ShoppingListSetLineItemCustomTypeActionImpl();
         instance.setLineItemId(template.getLineItemId());
@@ -76,20 +103,39 @@ public interface ShoppingListSetLineItemCustomTypeAction extends ShoppingListUpd
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListSetLineItemCustomTypeAction
+     * @return builder
+     */
     public static ShoppingListSetLineItemCustomTypeActionBuilder builder() {
         return ShoppingListSetLineItemCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListSetLineItemCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListSetLineItemCustomTypeActionBuilder builder(
             final ShoppingListSetLineItemCustomTypeAction template) {
         return ShoppingListSetLineItemCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListSetLineItemCustomTypeAction(
             Function<ShoppingListSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetLineItemCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetLineItemCustomTypeAction>() {
             @Override

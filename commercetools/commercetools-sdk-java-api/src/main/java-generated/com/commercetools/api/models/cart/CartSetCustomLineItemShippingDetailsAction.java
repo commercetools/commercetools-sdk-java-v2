@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomLineItemShippingDetailsActionImpl.class)
 public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetCustomLineItemShippingDetailsAction
+     */
     String SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS = "setCustomLineItemShippingDetails";
 
     /**
@@ -48,14 +51,33 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param shippingDetails value to be set
+     */
 
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
+    /**
+     * factory method
+     * @return instance of CartSetCustomLineItemShippingDetailsAction
+     */
     public static CartSetCustomLineItemShippingDetailsAction of() {
         return new CartSetCustomLineItemShippingDetailsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetCustomLineItemShippingDetailsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetCustomLineItemShippingDetailsAction of(
             final CartSetCustomLineItemShippingDetailsAction template) {
         CartSetCustomLineItemShippingDetailsActionImpl instance = new CartSetCustomLineItemShippingDetailsActionImpl();
@@ -64,20 +86,39 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetCustomLineItemShippingDetailsAction
+     * @return builder
+     */
     public static CartSetCustomLineItemShippingDetailsActionBuilder builder() {
         return CartSetCustomLineItemShippingDetailsActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetCustomLineItemShippingDetailsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomLineItemShippingDetailsActionBuilder builder(
             final CartSetCustomLineItemShippingDetailsAction template) {
         return CartSetCustomLineItemShippingDetailsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetCustomLineItemShippingDetailsAction(
             Function<CartSetCustomLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomLineItemShippingDetailsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomLineItemShippingDetailsAction>() {
             @Override

@@ -56,16 +56,40 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
+     * @param groupName value to be set
+     */
 
     public void setGroupName(final String groupName);
 
+    /**
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of CustomerGroupDraft
+     */
     public static CustomerGroupDraft of() {
         return new CustomerGroupDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerGroupDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerGroupDraft of(final CustomerGroupDraft template) {
         CustomerGroupDraftImpl instance = new CustomerGroupDraftImpl();
         instance.setKey(template.getKey());
@@ -74,18 +98,37 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerGroupDraft
+     * @return builder
+     */
     public static CustomerGroupDraftBuilder builder() {
         return CustomerGroupDraftBuilder.of();
     }
 
+    /**
+     * create builder for CustomerGroupDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupDraftBuilder builder(final CustomerGroupDraft template) {
         return CustomerGroupDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerGroupDraft(Function<CustomerGroupDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupDraft>() {
             @Override

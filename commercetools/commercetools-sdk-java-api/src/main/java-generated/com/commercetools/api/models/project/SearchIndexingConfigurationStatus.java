@@ -31,11 +31,23 @@ public interface SearchIndexingConfigurationStatus {
     */
     SearchIndexingConfigurationStatus INDEXING = SearchIndexingConfigurationStatusEnum.INDEXING;
 
+    /**
+     * possible values of SearchIndexingConfigurationStatus
+     */
     enum SearchIndexingConfigurationStatusEnum implements SearchIndexingConfigurationStatus {
+        /**
+         * Activated
+         */
         ACTIVATED("Activated"),
 
+        /**
+         * Deactivated
+         */
         DEACTIVATED("Deactivated"),
 
+        /**
+         * Indexing
+         */
         INDEXING("Indexing");
         private final String jsonName;
 
@@ -52,13 +64,30 @@ public interface SearchIndexingConfigurationStatus {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of SearchIndexingConfigurationStatus
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static SearchIndexingConfigurationStatus findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new SearchIndexingConfigurationStatus() {
@@ -78,10 +107,18 @@ public interface SearchIndexingConfigurationStatus {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<SearchIndexingConfigurationStatus> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static SearchIndexingConfigurationStatus[] values() {
         return SearchIndexingConfigurationStatusEnum.values();
     }

@@ -46,6 +46,9 @@ public class OrderCustomerEmailSetMessageImpl implements OrderCustomerEmailSetMe
 
     private String oldEmail;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomerEmailSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -72,6 +75,9 @@ public class OrderCustomerEmailSetMessageImpl implements OrderCustomerEmailSetMe
         this.type = ORDER_CUSTOMER_EMAIL_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomerEmailSetMessageImpl() {
         this.type = ORDER_CUSTOMER_EMAIL_SET;
     }

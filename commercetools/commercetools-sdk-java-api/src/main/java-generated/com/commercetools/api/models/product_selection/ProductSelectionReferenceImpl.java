@@ -27,6 +27,9 @@ public class ProductSelectionReferenceImpl implements ProductSelectionReference,
 
     private com.commercetools.api.models.product_selection.ProductSelection obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.product_selection.ProductSelection obj) {
@@ -35,6 +38,9 @@ public class ProductSelectionReferenceImpl implements ProductSelectionReference,
         this.typeId = ReferenceTypeId.findEnum("product-selection");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("product-selection");
     }

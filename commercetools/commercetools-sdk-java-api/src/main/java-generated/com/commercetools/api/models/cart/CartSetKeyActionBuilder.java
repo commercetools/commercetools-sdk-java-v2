@@ -36,6 +36,11 @@ public class CartSetKeyActionBuilder implements Builder<CartSetKeyAction> {
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -57,10 +62,19 @@ public class CartSetKeyActionBuilder implements Builder<CartSetKeyAction> {
         return new CartSetKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of CartSetKeyActionBuilder
+     * @return builder
+     */
     public static CartSetKeyActionBuilder of() {
         return new CartSetKeyActionBuilder();
     }
 
+    /**
+     * create builder for CartSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetKeyActionBuilder of(final CartSetKeyAction template) {
         CartSetKeyActionBuilder builder = new CartSetKeyActionBuilder();
         builder.key = template.getKey();

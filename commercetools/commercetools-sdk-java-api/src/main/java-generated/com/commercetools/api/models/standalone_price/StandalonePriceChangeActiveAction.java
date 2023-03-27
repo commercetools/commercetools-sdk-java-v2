@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceChangeActiveActionImpl.class)
 public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdateAction {
 
+    /**
+     * discriminator value for StandalonePriceChangeActiveAction
+     */
     String CHANGE_ACTIVE = "changeActive";
 
     /**
@@ -39,30 +42,63 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
     @JsonProperty("active")
     public Boolean getActive();
 
+    /**
+     *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     * @param active value to be set
+     */
+
     public void setActive(final Boolean active);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceChangeActiveAction
+     */
     public static StandalonePriceChangeActiveAction of() {
         return new StandalonePriceChangeActiveActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceChangeActiveAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceChangeActiveAction of(final StandalonePriceChangeActiveAction template) {
         StandalonePriceChangeActiveActionImpl instance = new StandalonePriceChangeActiveActionImpl();
         instance.setActive(template.getActive());
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceChangeActiveAction
+     * @return builder
+     */
     public static StandalonePriceChangeActiveActionBuilder builder() {
         return StandalonePriceChangeActiveActionBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceChangeActiveAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceChangeActiveActionBuilder builder(final StandalonePriceChangeActiveAction template) {
         return StandalonePriceChangeActiveActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceChangeActiveAction(Function<StandalonePriceChangeActiveAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceChangeActiveAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceChangeActiveAction>() {
             @Override

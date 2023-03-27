@@ -62,9 +62,19 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
         return this;
     }
 
+    /**
+     *  <p><code>"Syntax error while parsing $fieldDefinition."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
         return new SyntaxErrorErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of SyntaxErrorErrorBuilder
+     * @return builder
+     */
     public static SyntaxErrorErrorBuilder of() {
         return new SyntaxErrorErrorBuilder();
     }
 
+    /**
+     * create builder for SyntaxErrorError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SyntaxErrorErrorBuilder of(final SyntaxErrorError template) {
         SyntaxErrorErrorBuilder builder = new SyntaxErrorErrorBuilder();
         builder.message = template.getMessage();

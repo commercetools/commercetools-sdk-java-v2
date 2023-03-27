@@ -24,6 +24,9 @@ public class ShoppingListStoreSetMessagePayloadImpl implements ShoppingListStore
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListStoreSetMessagePayloadImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store) {
@@ -31,6 +34,9 @@ public class ShoppingListStoreSetMessagePayloadImpl implements ShoppingListStore
         this.type = SHOPPING_LIST_STORE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListStoreSetMessagePayloadImpl() {
         this.type = SHOPPING_LIST_STORE_SET;
     }

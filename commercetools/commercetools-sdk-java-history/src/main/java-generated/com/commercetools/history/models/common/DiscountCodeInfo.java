@@ -48,14 +48,33 @@ public interface DiscountCodeInfo {
     @JsonProperty("state")
     public DiscountCodeState getState();
 
+    /**
+     * set discountCode
+     * @param discountCode value to be set
+     */
+
     public void setDiscountCode(final Reference discountCode);
+
+    /**
+     * set state
+     * @param state value to be set
+     */
 
     public void setState(final DiscountCodeState state);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodeInfo
+     */
     public static DiscountCodeInfo of() {
         return new DiscountCodeInfoImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodeInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodeInfo of(final DiscountCodeInfo template) {
         DiscountCodeInfoImpl instance = new DiscountCodeInfoImpl();
         instance.setDiscountCode(template.getDiscountCode());
@@ -63,18 +82,37 @@ public interface DiscountCodeInfo {
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodeInfo
+     * @return builder
+     */
     public static DiscountCodeInfoBuilder builder() {
         return DiscountCodeInfoBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodeInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeInfoBuilder builder(final DiscountCodeInfo template) {
         return DiscountCodeInfoBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodeInfo(Function<DiscountCodeInfo, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeInfo> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeInfo>() {
             @Override

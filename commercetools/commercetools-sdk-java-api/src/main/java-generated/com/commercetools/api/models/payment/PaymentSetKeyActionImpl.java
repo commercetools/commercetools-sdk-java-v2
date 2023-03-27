@@ -24,12 +24,18 @@ public class PaymentSetKeyActionImpl implements PaymentSetKeyAction, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetKeyActionImpl() {
         this.action = SET_KEY;
     }

@@ -28,6 +28,9 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
 
     private Boolean nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeInitialChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Boolean previousValue,
@@ -38,6 +41,9 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
         this.type = CHANGE_INITIAL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeInitialChangeImpl() {
         this.type = CHANGE_INITIAL_CHANGE;
     }

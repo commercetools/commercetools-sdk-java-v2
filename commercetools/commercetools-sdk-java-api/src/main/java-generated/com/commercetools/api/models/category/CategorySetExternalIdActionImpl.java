@@ -24,12 +24,18 @@ public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAct
 
     private String externalId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetExternalIdActionImpl(@JsonProperty("externalId") final String externalId) {
         this.externalId = externalId;
         this.action = SET_EXTERNAL_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetExternalIdActionImpl() {
         this.action = SET_EXTERNAL_ID;
     }

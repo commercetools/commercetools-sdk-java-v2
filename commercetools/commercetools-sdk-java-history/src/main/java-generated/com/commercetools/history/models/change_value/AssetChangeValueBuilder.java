@@ -28,7 +28,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     private com.commercetools.history.models.common.LocalizedString name;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     }
 
     /**
-     *
+     * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
         return this.name;
@@ -87,10 +97,19 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
         return new AssetChangeValueImpl(id, name);
     }
 
+    /**
+     * factory method for an instance of AssetChangeValueBuilder
+     * @return builder
+     */
     public static AssetChangeValueBuilder of() {
         return new AssetChangeValueBuilder();
     }
 
+    /**
+     * create builder for AssetChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssetChangeValueBuilder of(final AssetChangeValue template) {
         AssetChangeValueBuilder builder = new AssetChangeValueBuilder();
         builder.id = template.getId();

@@ -34,6 +34,11 @@ public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBu
         return this;
     }
 
+    /**
+     *  <p>SharedAccessKey is partially hidden on retrieval for security reasons.</p>
+     * @return connectionString
+     */
+
     public String getConnectionString() {
         return this.connectionString;
     }
@@ -55,10 +60,19 @@ public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBu
         return new AzureServiceBusDestinationImpl(connectionString);
     }
 
+    /**
+     * factory method for an instance of AzureServiceBusDestinationBuilder
+     * @return builder
+     */
     public static AzureServiceBusDestinationBuilder of() {
         return new AzureServiceBusDestinationBuilder();
     }
 
+    /**
+     * create builder for AzureServiceBusDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AzureServiceBusDestinationBuilder of(final AzureServiceBusDestination template) {
         AzureServiceBusDestinationBuilder builder = new AzureServiceBusDestinationBuilder();
         builder.connectionString = template.getConnectionString();

@@ -24,6 +24,9 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
 
     private com.commercetools.api.models.common.Money totalPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExternalLineItemTotalPriceImpl(@JsonProperty("price") final com.commercetools.api.models.common.Money price,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice) {
@@ -31,6 +34,9 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
         this.totalPrice = totalPrice;
     }
 
+    /**
+     * create empty instance
+     */
     public ExternalLineItemTotalPriceImpl() {
     }
 

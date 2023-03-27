@@ -24,6 +24,9 @@ public class MyBusinessUnitChangeAssociateActionImpl implements MyBusinessUnitCh
 
     private com.commercetools.api.models.business_unit.AssociateDraft associate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitChangeAssociateActionImpl(
             @JsonProperty("associate") final com.commercetools.api.models.business_unit.AssociateDraft associate) {
@@ -31,6 +34,9 @@ public class MyBusinessUnitChangeAssociateActionImpl implements MyBusinessUnitCh
         this.action = CHANGE_ASSOCIATE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitChangeAssociateActionImpl() {
         this.action = CHANGE_ASSOCIATE;
     }

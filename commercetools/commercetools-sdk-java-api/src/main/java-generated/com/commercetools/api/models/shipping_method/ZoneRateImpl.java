@@ -24,6 +24,9 @@ public class ZoneRateImpl implements ZoneRate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneRateImpl(@JsonProperty("zone") final com.commercetools.api.models.zone.ZoneReference zone,
             @JsonProperty("shippingRates") final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates) {
@@ -31,6 +34,9 @@ public class ZoneRateImpl implements ZoneRate, ModelBase {
         this.shippingRates = shippingRates;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneRateImpl() {
     }
 

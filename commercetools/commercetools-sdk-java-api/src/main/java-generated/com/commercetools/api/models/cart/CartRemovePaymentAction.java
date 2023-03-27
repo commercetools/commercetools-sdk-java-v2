@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartRemovePaymentActionImpl.class)
 public interface CartRemovePaymentAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartRemovePaymentAction
+     */
     String REMOVE_PAYMENT = "removePayment";
 
     /**
@@ -42,30 +45,63 @@ public interface CartRemovePaymentAction extends CartUpdateAction {
     @JsonProperty("payment")
     public PaymentResourceIdentifier getPayment();
 
+    /**
+     *  <p>Payment to remove from the Cart.</p>
+     * @param payment value to be set
+     */
+
     public void setPayment(final PaymentResourceIdentifier payment);
 
+    /**
+     * factory method
+     * @return instance of CartRemovePaymentAction
+     */
     public static CartRemovePaymentAction of() {
         return new CartRemovePaymentActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartRemovePaymentAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartRemovePaymentAction of(final CartRemovePaymentAction template) {
         CartRemovePaymentActionImpl instance = new CartRemovePaymentActionImpl();
         instance.setPayment(template.getPayment());
         return instance;
     }
 
+    /**
+     * builder factory method for CartRemovePaymentAction
+     * @return builder
+     */
     public static CartRemovePaymentActionBuilder builder() {
         return CartRemovePaymentActionBuilder.of();
     }
 
+    /**
+     * create builder for CartRemovePaymentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartRemovePaymentActionBuilder builder(final CartRemovePaymentAction template) {
         return CartRemovePaymentActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartRemovePaymentAction(Function<CartRemovePaymentAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartRemovePaymentAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartRemovePaymentAction>() {
             @Override

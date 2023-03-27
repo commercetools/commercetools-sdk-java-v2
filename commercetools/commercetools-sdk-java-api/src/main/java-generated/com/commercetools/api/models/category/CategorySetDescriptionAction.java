@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySetDescriptionActionImpl.class)
 public interface CategorySetDescriptionAction extends CategoryUpdateAction {
 
+    /**
+     * discriminator value for CategorySetDescriptionAction
+     */
     String SET_DESCRIPTION = "setDescription";
 
     /**
@@ -39,30 +42,63 @@ public interface CategorySetDescriptionAction extends CategoryUpdateAction {
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
 
+    /**
+     * factory method
+     * @return instance of CategorySetDescriptionAction
+     */
     public static CategorySetDescriptionAction of() {
         return new CategorySetDescriptionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategorySetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategorySetDescriptionAction of(final CategorySetDescriptionAction template) {
         CategorySetDescriptionActionImpl instance = new CategorySetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
 
+    /**
+     * builder factory method for CategorySetDescriptionAction
+     * @return builder
+     */
     public static CategorySetDescriptionActionBuilder builder() {
         return CategorySetDescriptionActionBuilder.of();
     }
 
+    /**
+     * create builder for CategorySetDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetDescriptionActionBuilder builder(final CategorySetDescriptionAction template) {
         return CategorySetDescriptionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategorySetDescriptionAction(Function<CategorySetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategorySetDescriptionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategorySetDescriptionAction>() {
             @Override

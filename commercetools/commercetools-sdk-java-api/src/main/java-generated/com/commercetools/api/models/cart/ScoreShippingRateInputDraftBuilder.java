@@ -34,6 +34,11 @@ public class ScoreShippingRateInputDraftBuilder implements Builder<ScoreShipping
         return this;
     }
 
+    /**
+     *  <p>Abstract value for categorizing a Cart.</p>
+     * @return score
+     */
+
     public Long getScore() {
         return this.score;
     }
@@ -55,10 +60,19 @@ public class ScoreShippingRateInputDraftBuilder implements Builder<ScoreShipping
         return new ScoreShippingRateInputDraftImpl(score);
     }
 
+    /**
+     * factory method for an instance of ScoreShippingRateInputDraftBuilder
+     * @return builder
+     */
     public static ScoreShippingRateInputDraftBuilder of() {
         return new ScoreShippingRateInputDraftBuilder();
     }
 
+    /**
+     * create builder for ScoreShippingRateInputDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ScoreShippingRateInputDraftBuilder of(final ScoreShippingRateInputDraft template) {
         ScoreShippingRateInputDraftBuilder builder = new ScoreShippingRateInputDraftBuilder();
         builder.score = template.getScore();

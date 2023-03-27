@@ -28,7 +28,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     private com.commercetools.history.models.common.Money amountPlanned;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     /**
-     *
+     * set the value to the amountPlanned using the builder function
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     /**
-     *
+     * set the value to the amountPlanned
      * @param amountPlanned value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of amountPlanned}
+     * @return amountPlanned
+     */
 
     public com.commercetools.history.models.common.Money getAmountPlanned() {
         return this.amountPlanned;
@@ -87,10 +97,19 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
         return new PaymentLabelImpl(key, amountPlanned);
     }
 
+    /**
+     * factory method for an instance of PaymentLabelBuilder
+     * @return builder
+     */
     public static PaymentLabelBuilder of() {
         return new PaymentLabelBuilder();
     }
 
+    /**
+     * create builder for PaymentLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentLabelBuilder of(final PaymentLabel template) {
         PaymentLabelBuilder builder = new PaymentLabelBuilder();
         builder.key = template.getKey();

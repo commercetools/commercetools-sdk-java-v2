@@ -44,6 +44,9 @@ public class CustomerPasswordUpdatedMessageImpl implements CustomerPasswordUpdat
 
     private Boolean reset;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerPasswordUpdatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerPasswordUpdatedMessageImpl implements CustomerPasswordUpdat
         this.type = CUSTOMER_PASSWORD_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerPasswordUpdatedMessageImpl() {
         this.type = CUSTOMER_PASSWORD_UPDATED;
     }

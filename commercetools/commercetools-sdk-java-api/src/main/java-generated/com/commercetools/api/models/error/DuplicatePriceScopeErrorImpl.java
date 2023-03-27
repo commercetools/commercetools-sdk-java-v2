@@ -29,6 +29,9 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
 
     private com.commercetools.api.models.common.Price conflictingPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DuplicatePriceScopeErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -39,6 +42,9 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
         this.code = DUPLICATE_PRICE_SCOPE;
     }
 
+    /**
+     * create empty instance
+     */
     public DuplicatePriceScopeErrorImpl() {
         this.code = DUPLICATE_PRICE_SCOPE;
     }

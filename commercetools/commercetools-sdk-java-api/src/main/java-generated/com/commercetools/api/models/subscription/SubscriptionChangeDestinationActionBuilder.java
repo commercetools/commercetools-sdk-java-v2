@@ -48,6 +48,11 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return destination
+     */
+
     public com.commercetools.api.models.subscription.Destination getDestination() {
         return this.destination;
     }
@@ -69,10 +74,19 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
         return new SubscriptionChangeDestinationActionImpl(destination);
     }
 
+    /**
+     * factory method for an instance of SubscriptionChangeDestinationActionBuilder
+     * @return builder
+     */
     public static SubscriptionChangeDestinationActionBuilder of() {
         return new SubscriptionChangeDestinationActionBuilder();
     }
 
+    /**
+     * create builder for SubscriptionChangeDestinationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubscriptionChangeDestinationActionBuilder of(final SubscriptionChangeDestinationAction template) {
         SubscriptionChangeDestinationActionBuilder builder = new SubscriptionChangeDestinationActionBuilder();
         builder.destination = template.getDestination();

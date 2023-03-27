@@ -102,9 +102,19 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Zone on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Zone.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> getActions() {
         return this.actions;
@@ -128,10 +138,19 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
         return new ZoneUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of ZoneUpdateBuilder
+     * @return builder
+     */
     public static ZoneUpdateBuilder of() {
         return new ZoneUpdateBuilder();
     }
 
+    /**
+     * create builder for ZoneUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneUpdateBuilder of(final ZoneUpdate template) {
         ZoneUpdateBuilder builder = new ZoneUpdateBuilder();
         builder.version = template.getVersion();

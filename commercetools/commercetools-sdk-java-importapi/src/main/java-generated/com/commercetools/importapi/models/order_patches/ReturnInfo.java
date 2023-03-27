@@ -56,19 +56,48 @@ public interface ReturnInfo {
     @JsonProperty("returnDate")
     public ZonedDateTime getReturnDate();
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     @JsonIgnore
     public void setItems(final ReturnItemDraft... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<ReturnItemDraft> items);
+
+    /**
+     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     * @param returnTrackingId value to be set
+     */
 
     public void setReturnTrackingId(final String returnTrackingId);
 
+    /**
+     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     * @param returnDate value to be set
+     */
+
     public void setReturnDate(final ZonedDateTime returnDate);
 
+    /**
+     * factory method
+     * @return instance of ReturnInfo
+     */
     public static ReturnInfo of() {
         return new ReturnInfoImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReturnInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReturnInfo of(final ReturnInfo template) {
         ReturnInfoImpl instance = new ReturnInfoImpl();
         instance.setItems(template.getItems());
@@ -77,18 +106,37 @@ public interface ReturnInfo {
         return instance;
     }
 
+    /**
+     * builder factory method for ReturnInfo
+     * @return builder
+     */
     public static ReturnInfoBuilder builder() {
         return ReturnInfoBuilder.of();
     }
 
+    /**
+     * create builder for ReturnInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnInfoBuilder builder(final ReturnInfo template) {
         return ReturnInfoBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReturnInfo(Function<ReturnInfo, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfo> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfo>() {
             @Override

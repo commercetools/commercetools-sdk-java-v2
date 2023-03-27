@@ -22,11 +22,17 @@ public class TaxCategoryUpdateActionImpl implements TaxCategoryUpdateAction, Mod
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryUpdateActionImpl() {
     }
 

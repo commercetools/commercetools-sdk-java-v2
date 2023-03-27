@@ -28,6 +28,9 @@ public class MoneyImpl implements Money, ModelBase {
 
     private String currencyCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits,
             @JsonProperty("centAmount") final Long centAmount,
@@ -38,6 +41,9 @@ public class MoneyImpl implements Money, ModelBase {
         this.type = MoneyType.findEnum("centPrecision");
     }
 
+    /**
+     * create empty instance
+     */
     public MoneyImpl() {
         this.type = MoneyType.findEnum("centPrecision");
     }

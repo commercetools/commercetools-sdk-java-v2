@@ -24,12 +24,18 @@ public class CustomerLastNameSetMessagePayloadImpl implements CustomerLastNameSe
 
     private String lastName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerLastNameSetMessagePayloadImpl(@JsonProperty("lastName") final String lastName) {
         this.lastName = lastName;
         this.type = CUSTOMER_LAST_NAME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerLastNameSetMessagePayloadImpl() {
         this.type = CUSTOMER_LAST_NAME_SET;
     }

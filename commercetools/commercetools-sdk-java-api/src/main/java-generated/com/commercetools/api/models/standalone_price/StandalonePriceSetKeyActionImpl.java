@@ -24,12 +24,18 @@ public class StandalonePriceSetKeyActionImpl implements StandalonePriceSetKeyAct
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceSetKeyActionImpl() {
         this.action = SET_KEY;
     }

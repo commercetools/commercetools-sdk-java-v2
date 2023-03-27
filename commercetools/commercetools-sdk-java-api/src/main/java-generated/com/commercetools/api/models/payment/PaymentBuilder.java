@@ -554,96 +554,201 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Payment.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Payment.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Payment was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Payment was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>Reference to a Customer associated with the Payment.</p>
+     * @return customer
+     */
 
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
+    /**
+     *  <p>Anonymous session associated with the Payment.</p>
+     * @return anonymousId
+     */
+
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
     }
+
+    /**
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
+     */
 
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
 
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
+     * @return interfaceId
+     */
+
     @Nullable
     public String getInterfaceId() {
         return this.interfaceId;
     }
 
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @return amountPlanned
+     */
+
     public com.commercetools.api.models.common.CentPrecisionMoney getAmountPlanned() {
         return this.amountPlanned;
     }
+
+    /**
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return amountAuthorized
+     */
 
     @Nullable
     public com.commercetools.api.models.common.TypedMoney getAmountAuthorized() {
         return this.amountAuthorized;
     }
 
+    /**
+     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
+     * @return authorizedUntil
+     */
+
     @Nullable
     public String getAuthorizedUntil() {
         return this.authorizedUntil;
     }
+
+    /**
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return amountPaid
+     */
 
     @Nullable
     public com.commercetools.api.models.common.TypedMoney getAmountPaid() {
         return this.amountPaid;
     }
 
+    /**
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return amountRefunded
+     */
+
     @Nullable
     public com.commercetools.api.models.common.TypedMoney getAmountRefunded() {
         return this.amountRefunded;
     }
 
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return paymentMethodInfo
+     */
+
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
         return this.paymentMethodInfo;
     }
+
+    /**
+     *  <p>Current status of the Payment.</p>
+     * @return paymentStatus
+     */
 
     public com.commercetools.api.models.payment.PaymentStatus getPaymentStatus() {
         return this.paymentStatus;
     }
 
+    /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return transactions
+     */
+
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
         return this.transactions;
     }
+
+    /**
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @return interfaceInteractions
+     */
 
     public java.util.List<com.commercetools.api.models.type.CustomFields> getInterfaceInteractions() {
         return this.interfaceInteractions;
     }
 
+    /**
+     *  <p>Custom Fields for the Payment.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Payment.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -679,10 +784,19 @@ public class PaymentBuilder implements Builder<Payment> {
             paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom, key);
     }
 
+    /**
+     * factory method for an instance of PaymentBuilder
+     * @return builder
+     */
     public static PaymentBuilder of() {
         return new PaymentBuilder();
     }
 
+    /**
+     * create builder for Payment instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentBuilder of(final Payment template) {
         PaymentBuilder builder = new PaymentBuilder();
         builder.id = template.getId();

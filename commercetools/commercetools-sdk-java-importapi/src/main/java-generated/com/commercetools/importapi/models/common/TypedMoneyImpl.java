@@ -28,6 +28,9 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
 
     private String currencyCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypedMoneyImpl(@JsonProperty("type") final com.commercetools.importapi.models.common.MoneyType type,
             @JsonProperty("fractionDigits") final Integer fractionDigits,
@@ -39,6 +42,9 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
         this.currencyCode = currencyCode;
     }
 
+    /**
+     * create empty instance
+     */
     public TypedMoneyImpl() {
     }
 

@@ -90,21 +90,46 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
         return this;
     }
 
+    /**
+     *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
+     * @return averageRating
+     */
+
     public Double getAverageRating() {
         return this.averageRating;
     }
+
+    /**
+     *  <p>Highest rating of one target</p>
+     * @return highestRating
+     */
 
     public Double getHighestRating() {
         return this.highestRating;
     }
 
+    /**
+     *  <p>Lowest rating of one target</p>
+     * @return lowestRating
+     */
+
     public Double getLowestRating() {
         return this.lowestRating;
     }
 
+    /**
+     *  <p>Number of ratings taken into account</p>
+     * @return count
+     */
+
     public Integer getCount() {
         return this.count;
     }
+
+    /**
+     *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     * @return ratingsDistribution
+     */
 
     public java.lang.Object getRatingsDistribution() {
         return this.ratingsDistribution;
@@ -131,10 +156,19 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
         return new ReviewRatingStatisticsImpl(averageRating, highestRating, lowestRating, count, ratingsDistribution);
     }
 
+    /**
+     * factory method for an instance of ReviewRatingStatisticsBuilder
+     * @return builder
+     */
     public static ReviewRatingStatisticsBuilder of() {
         return new ReviewRatingStatisticsBuilder();
     }
 
+    /**
+     * create builder for ReviewRatingStatistics instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewRatingStatisticsBuilder of(final ReviewRatingStatistics template) {
         ReviewRatingStatisticsBuilder builder = new ReviewRatingStatisticsBuilder();
         builder.averageRating = template.getAverageRating();

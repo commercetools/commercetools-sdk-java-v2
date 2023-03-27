@@ -52,9 +52,19 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     *  <p>PaymentState after the Change Payment State update action.</p>
+     * @return paymentState
+     */
+
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;
     }
+
+    /**
+     *  <p>PaymentState before the Change Payment State update action.</p>
+     * @return oldPaymentState
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentState getOldPaymentState() {
@@ -79,10 +89,19 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
         return new OrderPaymentStateChangedMessagePayloadImpl(paymentState, oldPaymentState);
     }
 
+    /**
+     * factory method for an instance of OrderPaymentStateChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderPaymentStateChangedMessagePayloadBuilder of() {
         return new OrderPaymentStateChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderPaymentStateChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPaymentStateChangedMessagePayloadBuilder of(
             final OrderPaymentStateChangedMessagePayload template) {
         OrderPaymentStateChangedMessagePayloadBuilder builder = new OrderPaymentStateChangedMessagePayloadBuilder();

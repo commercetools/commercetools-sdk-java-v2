@@ -24,7 +24,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
     private java.util.List<String> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -58,6 +58,11 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
         this.value.addAll(Arrays.asList(value));
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<String> getValue() {
         return this.value;
@@ -80,10 +85,19 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
         return new EnumSetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of EnumSetFieldBuilder
+     * @return builder
+     */
     public static EnumSetFieldBuilder of() {
         return new EnumSetFieldBuilder();
     }
 
+    /**
+     * create builder for EnumSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumSetFieldBuilder of(final EnumSetField template) {
         EnumSetFieldBuilder builder = new EnumSetFieldBuilder();
         builder.value = template.getValue();

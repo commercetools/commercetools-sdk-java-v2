@@ -107,13 +107,28 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Product for which the Product Variant Exclusion changed.</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
 
+    /**
+     *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     * @return oldVariantExclusion
+     */
+
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getOldVariantExclusion() {
         return this.oldVariantExclusion;
     }
+
+    /**
+     *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     * @return newVariantExclusion
+     */
 
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getNewVariantExclusion() {
         return this.newVariantExclusion;
@@ -143,10 +158,19 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
             newVariantExclusion);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionVariantExclusionChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductSelectionVariantExclusionChangedMessagePayloadBuilder of() {
         return new ProductSelectionVariantExclusionChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionVariantExclusionChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionVariantExclusionChangedMessagePayloadBuilder of(
             final ProductSelectionVariantExclusionChangedMessagePayload template) {
         ProductSelectionVariantExclusionChangedMessagePayloadBuilder builder = new ProductSelectionVariantExclusionChangedMessagePayloadBuilder();

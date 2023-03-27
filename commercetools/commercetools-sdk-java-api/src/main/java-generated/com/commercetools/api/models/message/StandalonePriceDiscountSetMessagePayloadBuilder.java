@@ -51,6 +51,11 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     * @return discounted
+     */
+
     @Nullable
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
@@ -72,10 +77,19 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
         return new StandalonePriceDiscountSetMessagePayloadImpl(discounted);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceDiscountSetMessagePayloadBuilder
+     * @return builder
+     */
     public static StandalonePriceDiscountSetMessagePayloadBuilder of() {
         return new StandalonePriceDiscountSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceDiscountSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceDiscountSetMessagePayloadBuilder of(
             final StandalonePriceDiscountSetMessagePayload template) {
         StandalonePriceDiscountSetMessagePayloadBuilder builder = new StandalonePriceDiscountSetMessagePayloadBuilder();

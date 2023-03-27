@@ -50,6 +50,11 @@ public class CartSetBillingAddressActionBuilder implements Builder<CartSetBillin
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
@@ -71,10 +76,19 @@ public class CartSetBillingAddressActionBuilder implements Builder<CartSetBillin
         return new CartSetBillingAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of CartSetBillingAddressActionBuilder
+     * @return builder
+     */
     public static CartSetBillingAddressActionBuilder of() {
         return new CartSetBillingAddressActionBuilder();
     }
 
+    /**
+     * create builder for CartSetBillingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetBillingAddressActionBuilder of(final CartSetBillingAddressAction template) {
         CartSetBillingAddressActionBuilder builder = new CartSetBillingAddressActionBuilder();
         builder.address = template.getAddress();

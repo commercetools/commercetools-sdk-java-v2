@@ -26,9 +26,18 @@ public interface BusinessUnitStoreMode {
     */
     BusinessUnitStoreMode FROM_PARENT = BusinessUnitStoreModeEnum.FROM_PARENT;
 
+    /**
+     * possible values of BusinessUnitStoreMode
+     */
     enum BusinessUnitStoreModeEnum implements BusinessUnitStoreMode {
+        /**
+         * Explicit
+         */
         EXPLICIT("Explicit"),
 
+        /**
+         * FromParent
+         */
         FROM_PARENT("FromParent");
         private final String jsonName;
 
@@ -45,13 +54,30 @@ public interface BusinessUnitStoreMode {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of BusinessUnitStoreMode
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static BusinessUnitStoreMode findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new BusinessUnitStoreMode() {
@@ -71,10 +97,18 @@ public interface BusinessUnitStoreMode {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<BusinessUnitStoreMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static BusinessUnitStoreMode[] values() {
         return BusinessUnitStoreModeEnum.values();
     }

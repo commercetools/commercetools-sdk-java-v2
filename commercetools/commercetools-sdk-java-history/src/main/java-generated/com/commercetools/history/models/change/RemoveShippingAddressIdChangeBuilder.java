@@ -45,7 +45,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *
+     * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *
+     * set the value to the address
      * @param address value to be set
      * @return Builder
      */
@@ -139,17 +139,37 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<String> getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of address}
+     * @return address
+     */
 
     public com.commercetools.history.models.common.Address getAddress() {
         return this.address;
@@ -175,10 +195,19 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
         return new RemoveShippingAddressIdChangeImpl(change, nextValue, previousValue, address);
     }
 
+    /**
+     * factory method for an instance of RemoveShippingAddressIdChangeBuilder
+     * @return builder
+     */
     public static RemoveShippingAddressIdChangeBuilder of() {
         return new RemoveShippingAddressIdChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveShippingAddressIdChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveShippingAddressIdChangeBuilder of(final RemoveShippingAddressIdChange template) {
         RemoveShippingAddressIdChangeBuilder builder = new RemoveShippingAddressIdChangeBuilder();
         builder.change = template.getChange();

@@ -27,7 +27,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     /**
-     *
+     * set the value to the returnItemId
      * @param returnItemId value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     }
 
     /**
-     *
+     * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -49,9 +49,19 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
         return this;
     }
 
+    /**
+     * value of returnItemId}
+     * @return returnItemId
+     */
+
     public String getReturnItemId() {
         return this.returnItemId;
     }
+
+    /**
+     * value of shipmentState}
+     * @return shipmentState
+     */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
         return this.shipmentState;
@@ -75,10 +85,19 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
         return new OrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
     }
 
+    /**
+     * factory method for an instance of OrderSetReturnShipmentStateActionBuilder
+     * @return builder
+     */
     public static OrderSetReturnShipmentStateActionBuilder of() {
         return new OrderSetReturnShipmentStateActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetReturnShipmentStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetReturnShipmentStateActionBuilder of(final OrderSetReturnShipmentStateAction template) {
         OrderSetReturnShipmentStateActionBuilder builder = new OrderSetReturnShipmentStateActionBuilder();
         builder.returnItemId = template.getReturnItemId();

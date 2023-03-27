@@ -48,9 +48,19 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
         return this;
     }
 
+    /**
+     *  <p>URL with authorization header.</p>
+     * @return url
+     */
+
     public String getUrl() {
         return this.url;
     }
+
+    /**
+     *  <p>Must not contain any leading or trailing whitespaces. Partially hidden on retrieval.</p>
+     * @return authorizationHeader
+     */
 
     public String getAuthorizationHeader() {
         return this.authorizationHeader;
@@ -74,10 +84,19 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
         return new ExternalOAuthImpl(url, authorizationHeader);
     }
 
+    /**
+     * factory method for an instance of ExternalOAuthBuilder
+     * @return builder
+     */
     public static ExternalOAuthBuilder of() {
         return new ExternalOAuthBuilder();
     }
 
+    /**
+     * create builder for ExternalOAuth instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalOAuthBuilder of(final ExternalOAuth template) {
         ExternalOAuthBuilder builder = new ExternalOAuthBuilder();
         builder.url = template.getUrl();

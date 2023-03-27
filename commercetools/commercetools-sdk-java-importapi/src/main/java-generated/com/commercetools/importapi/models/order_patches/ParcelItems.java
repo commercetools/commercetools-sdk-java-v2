@@ -47,17 +47,41 @@ public interface ParcelItems {
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     * set parcelId
+     * @param parcelId value to be set
+     */
+
     public void setParcelId(final String parcelId);
+
+    /**
+     * set items
+     * @param items values to be set
+     */
 
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
 
+    /**
+     * factory method
+     * @return instance of ParcelItems
+     */
     public static ParcelItems of() {
         return new ParcelItemsImpl();
     }
 
+    /**
+     * factory method to copy an instance of ParcelItems
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ParcelItems of(final ParcelItems template) {
         ParcelItemsImpl instance = new ParcelItemsImpl();
         instance.setParcelId(template.getParcelId());
@@ -65,18 +89,37 @@ public interface ParcelItems {
         return instance;
     }
 
+    /**
+     * builder factory method for ParcelItems
+     * @return builder
+     */
     public static ParcelItemsBuilder builder() {
         return ParcelItemsBuilder.of();
     }
 
+    /**
+     * create builder for ParcelItems instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelItemsBuilder builder(final ParcelItems template) {
         return ParcelItemsBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcelItems(Function<ParcelItems, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ParcelItems> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ParcelItems>() {
             @Override

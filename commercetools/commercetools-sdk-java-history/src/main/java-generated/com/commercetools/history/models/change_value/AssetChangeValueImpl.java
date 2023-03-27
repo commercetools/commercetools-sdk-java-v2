@@ -24,6 +24,9 @@ public class AssetChangeValueImpl implements AssetChangeValue, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssetChangeValueImpl(@JsonProperty("id") final String id,
             @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class AssetChangeValueImpl implements AssetChangeValue, ModelBase {
         this.name = name;
     }
 
+    /**
+     * create empty instance
+     */
     public AssetChangeValueImpl() {
     }
 

@@ -24,7 +24,7 @@ public class UpdateActionBuilder implements Builder<UpdateAction> {
     private String action;
 
     /**
-     *
+     * set the value to the action
      * @param action value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class UpdateActionBuilder implements Builder<UpdateAction> {
         this.action = action;
         return this;
     }
+
+    /**
+     * value of action}
+     * @return action
+     */
 
     public String getAction() {
         return this.action;
@@ -55,10 +60,19 @@ public class UpdateActionBuilder implements Builder<UpdateAction> {
         return new UpdateActionImpl(action);
     }
 
+    /**
+     * factory method for an instance of UpdateActionBuilder
+     * @return builder
+     */
     public static UpdateActionBuilder of() {
         return new UpdateActionBuilder();
     }
 
+    /**
+     * create builder for UpdateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UpdateActionBuilder of(final UpdateAction template) {
         UpdateActionBuilder builder = new UpdateActionBuilder();
         builder.action = template.getAction();

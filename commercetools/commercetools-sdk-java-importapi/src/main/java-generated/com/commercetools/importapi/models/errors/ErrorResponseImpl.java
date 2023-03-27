@@ -30,6 +30,9 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ErrorResponseImpl(@JsonProperty("statusCode") final Integer statusCode,
             @JsonProperty("message") final String message, @JsonProperty("error") final String error,
@@ -42,6 +45,9 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
         this.errors = errors;
     }
 
+    /**
+     * create empty instance
+     */
     public ErrorResponseImpl() {
     }
 

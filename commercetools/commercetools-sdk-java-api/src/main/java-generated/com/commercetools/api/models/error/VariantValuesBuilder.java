@@ -172,14 +172,29 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
+    /**
+     *  <p>SKU of the ProductVariant.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Embedded Prices of the ProductVariant.</p>
+     * @return prices
+     */
+
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
+
+    /**
+     *  <p>Attributes of the ProductVariant.</p>
+     * @return attributes
+     */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
@@ -203,10 +218,19 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return new VariantValuesImpl(sku, prices, attributes);
     }
 
+    /**
+     * factory method for an instance of VariantValuesBuilder
+     * @return builder
+     */
     public static VariantValuesBuilder of() {
         return new VariantValuesBuilder();
     }
 
+    /**
+     * create builder for VariantValues instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static VariantValuesBuilder of(final VariantValues template) {
         VariantValuesBuilder builder = new VariantValuesBuilder();
         builder.sku = template.getSku();

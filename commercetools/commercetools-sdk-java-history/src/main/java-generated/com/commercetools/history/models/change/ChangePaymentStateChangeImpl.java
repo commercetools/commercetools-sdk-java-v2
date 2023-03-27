@@ -28,6 +28,9 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
 
     private com.commercetools.history.models.common.PaymentState previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangePaymentStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.PaymentState nextValue,
@@ -38,6 +41,9 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
         this.type = CHANGE_PAYMENT_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangePaymentStateChangeImpl() {
         this.type = CHANGE_PAYMENT_STATE_CHANGE;
     }

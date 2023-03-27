@@ -26,6 +26,9 @@ public class InvalidInputErrorImpl implements InvalidInputError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidInputErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class InvalidInputErrorImpl implements InvalidInputError, ModelBase {
         this.code = INVALID_INPUT;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidInputErrorImpl() {
         this.code = INVALID_INPUT;
     }

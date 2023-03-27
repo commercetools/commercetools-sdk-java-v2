@@ -80,25 +80,69 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
 
+    /**
+     * set name
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     * set amount
+     * @param amount value to be set
+     */
 
     public void setAmount(final Double amount);
 
+    /**
+     * set country
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
 
+    /**
+     * set state
+     * @param state value to be set
+     */
+
     public void setState(final String state);
+
+    /**
+     * set subRates
+     * @param subRates values to be set
+     */
 
     @JsonIgnore
     public void setSubRates(final SubRate... subRates);
 
+    /**
+     * set subRates
+     * @param subRates values to be set
+     */
+
     public void setSubRates(final List<SubRate> subRates);
+
+    /**
+     * set includedInPrice
+     * @param includedInPrice value to be set
+     */
 
     public void setIncludedInPrice(final Boolean includedInPrice);
 
+    /**
+     * factory method
+     * @return instance of ExternalTaxRateDraft
+     */
     public static ExternalTaxRateDraft of() {
         return new ExternalTaxRateDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExternalTaxRateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExternalTaxRateDraft of(final ExternalTaxRateDraft template) {
         ExternalTaxRateDraftImpl instance = new ExternalTaxRateDraftImpl();
         instance.setName(template.getName());
@@ -110,18 +154,37 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
         return instance;
     }
 
+    /**
+     * builder factory method for ExternalTaxRateDraft
+     * @return builder
+     */
     public static ExternalTaxRateDraftBuilder builder() {
         return ExternalTaxRateDraftBuilder.of();
     }
 
+    /**
+     * create builder for ExternalTaxRateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalTaxRateDraftBuilder builder(final ExternalTaxRateDraft template) {
         return ExternalTaxRateDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExternalTaxRateDraft(Function<ExternalTaxRateDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExternalTaxRateDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExternalTaxRateDraft>() {
             @Override

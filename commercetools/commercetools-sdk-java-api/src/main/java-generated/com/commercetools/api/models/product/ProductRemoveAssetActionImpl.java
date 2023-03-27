@@ -32,6 +32,9 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
 
     private String assetKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRemoveAssetActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("staged") final Boolean staged, @JsonProperty("assetId") final String assetId,
@@ -44,6 +47,9 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
         this.action = REMOVE_ASSET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRemoveAssetActionImpl() {
         this.action = REMOVE_ASSET;
     }

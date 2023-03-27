@@ -24,6 +24,9 @@ public class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundin
 
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartChangeTaxRoundingModeActionImpl(
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
@@ -31,6 +34,9 @@ public class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundin
         this.action = CHANGE_TAX_ROUNDING_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartChangeTaxRoundingModeActionImpl() {
         this.action = CHANGE_TAX_ROUNDING_MODE;
     }

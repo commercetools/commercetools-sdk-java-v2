@@ -122,33 +122,97 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
     @JsonProperty("locations")
     public List<Location> getLocations();
 
+    /**
+     *  <p>Unique identifier of the Zone.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Zone.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the Zone was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the Zone was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the Zone.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Name of the Zone.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>Description of the Zone.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final String description);
+
+    /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @param locations values to be set
+     */
 
     @JsonIgnore
     public void setLocations(final Location... locations);
 
+    /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @param locations values to be set
+     */
+
     public void setLocations(final List<Location> locations);
 
+    /**
+     * factory method
+     * @return instance of Zone
+     */
     public static Zone of() {
         return new ZoneImpl();
     }
 
+    /**
+     * factory method to copy an instance of Zone
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Zone of(final Zone template) {
         ZoneImpl instance = new ZoneImpl();
         instance.setId(template.getId());
@@ -164,14 +228,29 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
         return instance;
     }
 
+    /**
+     * builder factory method for Zone
+     * @return builder
+     */
     public static ZoneBuilder builder() {
         return ZoneBuilder.of();
     }
 
+    /**
+     * create builder for Zone instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneBuilder builder(final Zone template) {
         return ZoneBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZone(Function<Zone, T> helper) {
         return helper.apply(this);
     }
@@ -180,6 +259,10 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
         return com.commercetools.api.models.common.ReferenceTypeId.ZONE;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Zone> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Zone>() {
             @Override

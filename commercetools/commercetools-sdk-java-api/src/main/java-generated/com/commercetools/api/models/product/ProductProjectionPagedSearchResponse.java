@@ -85,25 +85,69 @@ public interface ProductProjectionPagedSearchResponse
     @JsonProperty("facets")
     public FacetResults getFacets();
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @param limit value to be set
+     */
+
     public void setLimit(final Long limit);
+
+    /**
+     * set count
+     * @param count value to be set
+     */
 
     public void setCount(final Long count);
 
+    /**
+     * set total
+     * @param total value to be set
+     */
+
     public void setTotal(final Long total);
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
+
     public void setOffset(final Long offset);
+
+    /**
+     * set results
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final ProductProjection... results);
 
+    /**
+     * set results
+     * @param results values to be set
+     */
+
     public void setResults(final List<ProductProjection> results);
+
+    /**
+     * set facets
+     * @param facets value to be set
+     */
 
     public void setFacets(final FacetResults facets);
 
+    /**
+     * factory method
+     * @return instance of ProductProjectionPagedSearchResponse
+     */
     public static ProductProjectionPagedSearchResponse of() {
         return new ProductProjectionPagedSearchResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductProjectionPagedSearchResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductProjectionPagedSearchResponse of(final ProductProjectionPagedSearchResponse template) {
         ProductProjectionPagedSearchResponseImpl instance = new ProductProjectionPagedSearchResponseImpl();
         instance.setLimit(template.getLimit());
@@ -115,19 +159,38 @@ public interface ProductProjectionPagedSearchResponse
         return instance;
     }
 
+    /**
+     * builder factory method for ProductProjectionPagedSearchResponse
+     * @return builder
+     */
     public static ProductProjectionPagedSearchResponseBuilder builder() {
         return ProductProjectionPagedSearchResponseBuilder.of();
     }
 
+    /**
+     * create builder for ProductProjectionPagedSearchResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductProjectionPagedSearchResponseBuilder builder(
             final ProductProjectionPagedSearchResponse template) {
         return ProductProjectionPagedSearchResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductProjectionPagedSearchResponse(Function<ProductProjectionPagedSearchResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductProjectionPagedSearchResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductProjectionPagedSearchResponse>() {
             @Override

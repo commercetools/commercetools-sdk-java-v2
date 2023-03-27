@@ -22,12 +22,18 @@ public class ImportResponseImpl implements ImportResponse, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportResponseImpl(
             @JsonProperty("operationStatus") final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus) {
         this.operationStatus = operationStatus;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportResponseImpl() {
     }
 

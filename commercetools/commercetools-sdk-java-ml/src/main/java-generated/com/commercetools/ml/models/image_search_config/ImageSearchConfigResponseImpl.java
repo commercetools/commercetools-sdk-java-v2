@@ -24,6 +24,9 @@ public class ImageSearchConfigResponseImpl implements ImageSearchConfigResponse,
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImageSearchConfigResponseImpl(
             @JsonProperty("status") final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status,
@@ -32,6 +35,9 @@ public class ImageSearchConfigResponseImpl implements ImageSearchConfigResponse,
         this.lastModifiedAt = lastModifiedAt;
     }
 
+    /**
+     * create empty instance
+     */
     public ImageSearchConfigResponseImpl() {
     }
 

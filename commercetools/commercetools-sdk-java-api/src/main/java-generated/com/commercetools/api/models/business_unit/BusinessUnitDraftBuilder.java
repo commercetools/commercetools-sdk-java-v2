@@ -19,6 +19,10 @@ public class BusinessUnitDraftBuilder {
         return com.commercetools.api.models.business_unit.DivisionDraftBuilder.of();
     }
 
+    /**
+     * factory method for an instance of BusinessUnitDraftBuilder
+     * @return builder
+     */
     public static BusinessUnitDraftBuilder of() {
         return new BusinessUnitDraftBuilder();
     }

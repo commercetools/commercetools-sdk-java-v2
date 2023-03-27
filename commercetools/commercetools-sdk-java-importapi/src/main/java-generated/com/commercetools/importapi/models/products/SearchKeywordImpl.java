@@ -24,6 +24,9 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
 
     private com.commercetools.importapi.models.products.SuggestTokenizer suggestTokenizer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SearchKeywordImpl(@JsonProperty("text") final String text,
             @JsonProperty("suggestTokenizer") final com.commercetools.importapi.models.products.SuggestTokenizer suggestTokenizer) {
@@ -31,6 +34,9 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
         this.suggestTokenizer = suggestTokenizer;
     }
 
+    /**
+     * create empty instance
+     */
     public SearchKeywordImpl() {
     }
 

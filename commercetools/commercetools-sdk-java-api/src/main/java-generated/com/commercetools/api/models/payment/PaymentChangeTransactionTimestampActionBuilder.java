@@ -49,9 +49,19 @@ public class PaymentChangeTransactionTimestampActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Transaction.</p>
+     * @return transactionId
+     */
+
     public String getTransactionId() {
         return this.transactionId;
     }
+
+    /**
+     *  <p>Timestamp of the Transaction as reported by the payment service.</p>
+     * @return timestamp
+     */
 
     public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;
@@ -76,10 +86,19 @@ public class PaymentChangeTransactionTimestampActionBuilder
         return new PaymentChangeTransactionTimestampActionImpl(transactionId, timestamp);
     }
 
+    /**
+     * factory method for an instance of PaymentChangeTransactionTimestampActionBuilder
+     * @return builder
+     */
     public static PaymentChangeTransactionTimestampActionBuilder of() {
         return new PaymentChangeTransactionTimestampActionBuilder();
     }
 
+    /**
+     * create builder for PaymentChangeTransactionTimestampAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentChangeTransactionTimestampActionBuilder of(
             final PaymentChangeTransactionTimestampAction template) {
         PaymentChangeTransactionTimestampActionBuilder builder = new PaymentChangeTransactionTimestampActionBuilder();

@@ -36,10 +36,19 @@ public class BusinessUnitDeletedMessagePayloadBuilder implements Builder<Busines
         return new BusinessUnitDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method for an instance of BusinessUnitDeletedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitDeletedMessagePayloadBuilder of() {
         return new BusinessUnitDeletedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitDeletedMessagePayloadBuilder of(final BusinessUnitDeletedMessagePayload template) {
         BusinessUnitDeletedMessagePayloadBuilder builder = new BusinessUnitDeletedMessagePayloadBuilder();
         return builder;

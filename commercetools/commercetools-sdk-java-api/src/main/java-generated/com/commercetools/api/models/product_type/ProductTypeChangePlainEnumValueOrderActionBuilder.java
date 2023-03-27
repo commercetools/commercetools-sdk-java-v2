@@ -108,9 +108,19 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @return values
+     */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues() {
         return this.values;
@@ -135,10 +145,19 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
         return new ProductTypeChangePlainEnumValueOrderActionImpl(attributeName, values);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangePlainEnumValueOrderActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangePlainEnumValueOrderActionBuilder of() {
         return new ProductTypeChangePlainEnumValueOrderActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangePlainEnumValueOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangePlainEnumValueOrderActionBuilder of(
             final ProductTypeChangePlainEnumValueOrderAction template) {
         ProductTypeChangePlainEnumValueOrderActionBuilder builder = new ProductTypeChangePlainEnumValueOrderActionBuilder();

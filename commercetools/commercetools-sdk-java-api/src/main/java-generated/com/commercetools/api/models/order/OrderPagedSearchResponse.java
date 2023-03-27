@@ -64,21 +64,55 @@ public interface OrderPagedSearchResponse {
     @JsonProperty("hits")
     public List<Hit> getHits();
 
+    /**
+     *  <p>Total number of results matching the query.</p>
+     * @param total value to be set
+     */
+
     public void setTotal(final Long total);
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
 
     public void setOffset(final Long offset);
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @param limit value to be set
+     */
+
     public void setLimit(final Long limit);
+
+    /**
+     *  <p>Actual results.</p>
+     * @param hits values to be set
+     */
 
     @JsonIgnore
     public void setHits(final Hit... hits);
 
+    /**
+     *  <p>Actual results.</p>
+     * @param hits values to be set
+     */
+
     public void setHits(final List<Hit> hits);
 
+    /**
+     * factory method
+     * @return instance of OrderPagedSearchResponse
+     */
     public static OrderPagedSearchResponse of() {
         return new OrderPagedSearchResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderPagedSearchResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderPagedSearchResponse of(final OrderPagedSearchResponse template) {
         OrderPagedSearchResponseImpl instance = new OrderPagedSearchResponseImpl();
         instance.setTotal(template.getTotal());
@@ -88,18 +122,37 @@ public interface OrderPagedSearchResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderPagedSearchResponse
+     * @return builder
+     */
     public static OrderPagedSearchResponseBuilder builder() {
         return OrderPagedSearchResponseBuilder.of();
     }
 
+    /**
+     * create builder for OrderPagedSearchResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPagedSearchResponseBuilder builder(final OrderPagedSearchResponse template) {
         return OrderPagedSearchResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderPagedSearchResponse(Function<OrderPagedSearchResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderPagedSearchResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderPagedSearchResponse>() {
             @Override

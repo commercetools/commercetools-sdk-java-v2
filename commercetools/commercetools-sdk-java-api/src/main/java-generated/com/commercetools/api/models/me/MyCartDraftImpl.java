@@ -52,6 +52,9 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartDraftImpl(@JsonProperty("currency") final String currency,
             @JsonProperty("customerEmail") final String customerEmail,
@@ -86,6 +89,9 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartDraftImpl() {
     }
 

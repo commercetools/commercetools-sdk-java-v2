@@ -26,6 +26,9 @@ public class ProductLabelImpl implements ProductLabel, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductLabelImpl(@JsonProperty("slug") final com.commercetools.history.models.common.LocalizedString slug,
             @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name) {
@@ -34,6 +37,9 @@ public class ProductLabelImpl implements ProductLabel, ModelBase {
         this.type = PRODUCT_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductLabelImpl() {
         this.type = PRODUCT_LABEL;
     }

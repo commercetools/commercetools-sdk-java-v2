@@ -46,14 +46,33 @@ public interface ParcelChangeValue {
     @JsonProperty("createdAt")
     public String getCreatedAt();
 
+    /**
+     * set id
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set createdAt
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final String createdAt);
 
+    /**
+     * factory method
+     * @return instance of ParcelChangeValue
+     */
     public static ParcelChangeValue of() {
         return new ParcelChangeValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of ParcelChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ParcelChangeValue of(final ParcelChangeValue template) {
         ParcelChangeValueImpl instance = new ParcelChangeValueImpl();
         instance.setId(template.getId());
@@ -61,18 +80,37 @@ public interface ParcelChangeValue {
         return instance;
     }
 
+    /**
+     * builder factory method for ParcelChangeValue
+     * @return builder
+     */
     public static ParcelChangeValueBuilder builder() {
         return ParcelChangeValueBuilder.of();
     }
 
+    /**
+     * create builder for ParcelChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelChangeValueBuilder builder(final ParcelChangeValue template) {
         return ParcelChangeValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcelChangeValue(Function<ParcelChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ParcelChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ParcelChangeValue>() {
             @Override

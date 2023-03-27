@@ -48,6 +48,11 @@ public class MyPaymentAddTransactionActionBuilder implements Builder<MyPaymentAd
         return this;
     }
 
+    /**
+     *  <p>Transaction to add to the Payment.</p>
+     * @return transaction
+     */
+
     public com.commercetools.api.models.payment.TransactionDraft getTransaction() {
         return this.transaction;
     }
@@ -69,10 +74,19 @@ public class MyPaymentAddTransactionActionBuilder implements Builder<MyPaymentAd
         return new MyPaymentAddTransactionActionImpl(transaction);
     }
 
+    /**
+     * factory method for an instance of MyPaymentAddTransactionActionBuilder
+     * @return builder
+     */
     public static MyPaymentAddTransactionActionBuilder of() {
         return new MyPaymentAddTransactionActionBuilder();
     }
 
+    /**
+     * create builder for MyPaymentAddTransactionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyPaymentAddTransactionActionBuilder of(final MyPaymentAddTransactionAction template) {
         MyPaymentAddTransactionActionBuilder builder = new MyPaymentAddTransactionActionBuilder();
         builder.transaction = template.getTransaction();

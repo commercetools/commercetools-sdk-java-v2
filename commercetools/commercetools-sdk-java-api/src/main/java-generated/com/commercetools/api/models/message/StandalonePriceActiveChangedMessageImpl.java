@@ -46,6 +46,9 @@ public class StandalonePriceActiveChangedMessageImpl implements StandalonePriceA
 
     private Boolean oldActive;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceActiveChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -73,6 +76,9 @@ public class StandalonePriceActiveChangedMessageImpl implements StandalonePriceA
         this.type = STANDALONE_PRICE_ACTIVE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceActiveChangedMessageImpl() {
         this.type = STANDALONE_PRICE_ACTIVE_CHANGED;
     }

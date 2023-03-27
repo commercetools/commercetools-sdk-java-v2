@@ -24,6 +24,9 @@ public class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction,
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerRemoveStoreActionImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
@@ -31,6 +34,9 @@ public class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction,
         this.action = REMOVE_STORE;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerRemoveStoreActionImpl() {
         this.action = REMOVE_STORE;
     }

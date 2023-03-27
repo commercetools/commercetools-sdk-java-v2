@@ -27,6 +27,9 @@ public class SetCartClassificationShippingRateInputValueImpl
 
     private com.commercetools.history.models.common.LocalizedString label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCartClassificationShippingRateInputValueImpl(@JsonProperty("type") final String type,
             @JsonProperty("key") final String key,
@@ -36,6 +39,9 @@ public class SetCartClassificationShippingRateInputValueImpl
         this.label = label;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCartClassificationShippingRateInputValueImpl() {
     }
 

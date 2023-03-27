@@ -91,19 +91,39 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Value to add to <code>images</code>.</p>
+     * @return image
+     */
+
     public com.commercetools.api.models.common.Image getImage() {
         return this.image;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -127,10 +147,19 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
         return new ProductAddExternalImageActionImpl(variantId, sku, image, staged);
     }
 
+    /**
+     * factory method for an instance of ProductAddExternalImageActionBuilder
+     * @return builder
+     */
     public static ProductAddExternalImageActionBuilder of() {
         return new ProductAddExternalImageActionBuilder();
     }
 
+    /**
+     * create builder for ProductAddExternalImageAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAddExternalImageActionBuilder of(final ProductAddExternalImageAction template) {
         ProductAddExternalImageActionBuilder builder = new ProductAddExternalImageActionBuilder();
         builder.variantId = template.getVariantId();

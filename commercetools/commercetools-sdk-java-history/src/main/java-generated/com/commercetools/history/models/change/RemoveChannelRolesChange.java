@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveChannelRolesChangeImpl.class)
 public interface RemoveChannelRolesChange extends Change {
 
+    /**
+     * discriminator value for RemoveChannelRolesChange
+     */
     String REMOVE_CHANNEL_ROLES_CHANGE = "RemoveChannelRolesChange";
 
     /**
@@ -66,22 +69,56 @@ public interface RemoveChannelRolesChange extends Change {
     @JsonProperty("nextValue")
     public List<ChannelRole> getNextValue();
 
+    /**
+     * set change
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
 
     @JsonIgnore
     public void setPreviousValue(final ChannelRole... previousValue);
 
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
+
     public void setPreviousValue(final List<ChannelRole> previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
 
     @JsonIgnore
     public void setNextValue(final ChannelRole... nextValue);
 
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
+
     public void setNextValue(final List<ChannelRole> nextValue);
 
+    /**
+     * factory method
+     * @return instance of RemoveChannelRolesChange
+     */
     public static RemoveChannelRolesChange of() {
         return new RemoveChannelRolesChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveChannelRolesChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveChannelRolesChange of(final RemoveChannelRolesChange template) {
         RemoveChannelRolesChangeImpl instance = new RemoveChannelRolesChangeImpl();
         instance.setChange(template.getChange());
@@ -90,18 +127,37 @@ public interface RemoveChannelRolesChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveChannelRolesChange
+     * @return builder
+     */
     public static RemoveChannelRolesChangeBuilder builder() {
         return RemoveChannelRolesChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveChannelRolesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveChannelRolesChangeBuilder builder(final RemoveChannelRolesChange template) {
         return RemoveChannelRolesChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveChannelRolesChange(Function<RemoveChannelRolesChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveChannelRolesChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveChannelRolesChange>() {
             @Override

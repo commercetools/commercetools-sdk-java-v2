@@ -36,6 +36,11 @@ public class ShippingMethodSetPredicateActionBuilder implements Builder<Shipping
         return this;
     }
 
+    /**
+     *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     * @return predicate
+     */
+
     @Nullable
     public String getPredicate() {
         return this.predicate;
@@ -57,10 +62,19 @@ public class ShippingMethodSetPredicateActionBuilder implements Builder<Shipping
         return new ShippingMethodSetPredicateActionImpl(predicate);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodSetPredicateActionBuilder
+     * @return builder
+     */
     public static ShippingMethodSetPredicateActionBuilder of() {
         return new ShippingMethodSetPredicateActionBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodSetPredicateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodSetPredicateActionBuilder of(final ShippingMethodSetPredicateAction template) {
         ShippingMethodSetPredicateActionBuilder builder = new ShippingMethodSetPredicateActionBuilder();
         builder.predicate = template.getPredicate();

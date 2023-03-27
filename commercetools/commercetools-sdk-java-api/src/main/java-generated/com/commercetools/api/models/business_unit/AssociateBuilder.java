@@ -87,9 +87,19 @@ public class AssociateBuilder implements Builder<Associate> {
         return this;
     }
 
+    /**
+     *  <p>Roles the Associate holds within the Business Unit.</p>
+     * @return roles
+     */
+
     public java.util.List<com.commercetools.api.models.business_unit.AssociateRole> getRoles() {
         return this.roles;
     }
+
+    /**
+     *  <p>The Customer that is part of the Business Unit.</p>
+     * @return customer
+     */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
@@ -113,10 +123,19 @@ public class AssociateBuilder implements Builder<Associate> {
         return new AssociateImpl(roles, customer);
     }
 
+    /**
+     * factory method for an instance of AssociateBuilder
+     * @return builder
+     */
     public static AssociateBuilder of() {
         return new AssociateBuilder();
     }
 
+    /**
+     * create builder for Associate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssociateBuilder of(final Associate template) {
         AssociateBuilder builder = new AssociateBuilder();
         builder.roles = template.getRoles();

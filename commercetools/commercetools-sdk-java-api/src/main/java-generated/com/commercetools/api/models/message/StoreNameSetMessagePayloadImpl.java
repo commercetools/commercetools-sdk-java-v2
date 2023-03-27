@@ -26,6 +26,9 @@ public class StoreNameSetMessagePayloadImpl implements StoreNameSetMessagePayloa
 
     private java.util.List<com.commercetools.api.models.common.LocalizedString> nameAllLocales;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreNameSetMessagePayloadImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("nameAllLocales") final java.util.List<com.commercetools.api.models.common.LocalizedString> nameAllLocales) {
@@ -34,6 +37,9 @@ public class StoreNameSetMessagePayloadImpl implements StoreNameSetMessagePayloa
         this.type = STORE_NAME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreNameSetMessagePayloadImpl() {
         this.type = STORE_NAME_SET;
     }

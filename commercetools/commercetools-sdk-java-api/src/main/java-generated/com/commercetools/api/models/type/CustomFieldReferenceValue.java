@@ -76,29 +76,68 @@ public interface CustomFieldReferenceValue {
     */
     CustomFieldReferenceValue ZONE = CustomFieldReferenceValueEnum.ZONE;
 
+    /**
+     * possible values of CustomFieldReferenceValue
+     */
     enum CustomFieldReferenceValueEnum implements CustomFieldReferenceValue {
+        /**
+         * cart
+         */
         CART("cart"),
 
+        /**
+         * category
+         */
         CATEGORY("category"),
 
+        /**
+         * channel
+         */
         CHANNEL("channel"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * key-value-document
+         */
         KEY_VALUE_DOCUMENT("key-value-document"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * product
+         */
         PRODUCT("product"),
 
+        /**
+         * product-type
+         */
         PRODUCT_TYPE("product-type"),
 
+        /**
+         * review
+         */
         REVIEW("review"),
 
+        /**
+         * state
+         */
         STATE("state"),
 
+        /**
+         * shipping-method
+         */
         SHIPPING_METHOD("shipping-method"),
 
+        /**
+         * zone
+         */
         ZONE("zone");
         private final String jsonName;
 
@@ -115,13 +154,30 @@ public interface CustomFieldReferenceValue {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of CustomFieldReferenceValue
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static CustomFieldReferenceValue findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new CustomFieldReferenceValue() {
@@ -141,10 +197,18 @@ public interface CustomFieldReferenceValue {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<CustomFieldReferenceValue> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static CustomFieldReferenceValue[] values() {
         return CustomFieldReferenceValueEnum.values();
     }

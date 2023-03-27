@@ -24,7 +24,7 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
     private String code;
 
     /**
-     *
+     * set the value to the code
      * @param code value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
         this.code = code;
         return this;
     }
+
+    /**
+     * value of code}
+     * @return code
+     */
 
     public String getCode() {
         return this.code;
@@ -55,10 +60,19 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
         return new StagedOrderAddDiscountCodeActionImpl(code);
     }
 
+    /**
+     * factory method for an instance of StagedOrderAddDiscountCodeActionBuilder
+     * @return builder
+     */
     public static StagedOrderAddDiscountCodeActionBuilder of() {
         return new StagedOrderAddDiscountCodeActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderAddDiscountCodeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddDiscountCodeActionBuilder of(final StagedOrderAddDiscountCodeAction template) {
         StagedOrderAddDiscountCodeActionBuilder builder = new StagedOrderAddDiscountCodeActionBuilder();
         builder.code = template.getCode();

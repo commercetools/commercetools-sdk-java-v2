@@ -75,13 +75,28 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     * @return variantId
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p>Image that was added.</p>
+     * @return image
+     */
+
     public com.commercetools.api.models.common.Image getImage() {
         return this.image;
     }
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
+     */
 
     public Boolean getStaged() {
         return this.staged;
@@ -106,10 +121,19 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
         return new ProductImageAddedMessagePayloadImpl(variantId, image, staged);
     }
 
+    /**
+     * factory method for an instance of ProductImageAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductImageAddedMessagePayloadBuilder of() {
         return new ProductImageAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductImageAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductImageAddedMessagePayloadBuilder of(final ProductImageAddedMessagePayload template) {
         ProductImageAddedMessagePayloadBuilder builder = new ProductImageAddedMessagePayloadBuilder();
         builder.variantId = template.getVariantId();

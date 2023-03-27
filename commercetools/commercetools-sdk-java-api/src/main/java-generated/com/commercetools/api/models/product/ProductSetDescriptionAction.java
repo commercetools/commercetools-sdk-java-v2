@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetDescriptionActionImpl.class)
 public interface ProductSetDescriptionAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetDescriptionAction
+     */
     String SET_DESCRIPTION = "setDescription";
 
     /**
@@ -47,14 +50,33 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductSetDescriptionAction
+     */
     public static ProductSetDescriptionAction of() {
         return new ProductSetDescriptionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetDescriptionAction of(final ProductSetDescriptionAction template) {
         ProductSetDescriptionActionImpl instance = new ProductSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
@@ -62,18 +84,37 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetDescriptionAction
+     * @return builder
+     */
     public static ProductSetDescriptionActionBuilder builder() {
         return ProductSetDescriptionActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetDescriptionActionBuilder builder(final ProductSetDescriptionAction template) {
         return ProductSetDescriptionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetDescriptionAction(Function<ProductSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetDescriptionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetDescriptionAction>() {
             @Override

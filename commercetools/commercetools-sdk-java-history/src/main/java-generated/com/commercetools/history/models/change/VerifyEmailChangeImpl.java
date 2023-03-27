@@ -24,12 +24,18 @@ public class VerifyEmailChangeImpl implements VerifyEmailChange, ModelBase {
 
     private String change;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     VerifyEmailChangeImpl(@JsonProperty("change") final String change) {
         this.change = change;
         this.type = VERIFY_EMAIL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public VerifyEmailChangeImpl() {
         this.type = VERIFY_EMAIL_CHANGE;
     }

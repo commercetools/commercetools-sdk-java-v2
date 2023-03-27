@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetReturnShipmentStateChangeImpl.class)
 public interface SetReturnShipmentStateChange extends Change {
 
+    /**
+     * discriminator value for SetReturnShipmentStateChange
+     */
     String SET_RETURN_SHIPMENT_STATE_CHANGE = "SetReturnShipmentStateChange";
 
     /**
@@ -66,16 +69,40 @@ public interface SetReturnShipmentStateChange extends Change {
     @JsonProperty("previousValue")
     public ReturnShipmentState getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setReturnShipmentState</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final ReturnShipmentState nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final ReturnShipmentState previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetReturnShipmentStateChange
+     */
     public static SetReturnShipmentStateChange of() {
         return new SetReturnShipmentStateChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetReturnShipmentStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetReturnShipmentStateChange of(final SetReturnShipmentStateChange template) {
         SetReturnShipmentStateChangeImpl instance = new SetReturnShipmentStateChangeImpl();
         instance.setChange(template.getChange());
@@ -84,18 +111,37 @@ public interface SetReturnShipmentStateChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetReturnShipmentStateChange
+     * @return builder
+     */
     public static SetReturnShipmentStateChangeBuilder builder() {
         return SetReturnShipmentStateChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetReturnShipmentStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetReturnShipmentStateChangeBuilder builder(final SetReturnShipmentStateChange template) {
         return SetReturnShipmentStateChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetReturnShipmentStateChange(Function<SetReturnShipmentStateChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetReturnShipmentStateChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetReturnShipmentStateChange>() {
             @Override

@@ -356,6 +356,10 @@ public class StagedOrderUpdateActionBuilder {
         return com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of StagedOrderUpdateActionBuilder
+     * @return builder
+     */
     public static StagedOrderUpdateActionBuilder of() {
         return new StagedOrderUpdateActionBuilder();
     }

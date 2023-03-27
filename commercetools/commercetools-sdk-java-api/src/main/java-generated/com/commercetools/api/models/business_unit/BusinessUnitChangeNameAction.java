@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitChangeNameActionImpl.class)
 public interface BusinessUnitChangeNameAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitChangeNameAction
+     */
     String CHANGE_NAME = "changeName";
 
     /**
@@ -39,30 +42,63 @@ public interface BusinessUnitChangeNameAction extends BusinessUnitUpdateAction {
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *  <p>New name to set.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitChangeNameAction
+     */
     public static BusinessUnitChangeNameAction of() {
         return new BusinessUnitChangeNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitChangeNameAction of(final BusinessUnitChangeNameAction template) {
         BusinessUnitChangeNameActionImpl instance = new BusinessUnitChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitChangeNameAction
+     * @return builder
+     */
     public static BusinessUnitChangeNameActionBuilder builder() {
         return BusinessUnitChangeNameActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitChangeNameActionBuilder builder(final BusinessUnitChangeNameAction template) {
         return BusinessUnitChangeNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitChangeNameAction(Function<BusinessUnitChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeNameAction>() {
             @Override

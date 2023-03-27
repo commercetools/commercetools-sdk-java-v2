@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteReferenceImpl.class)
 public interface QuoteReference extends Reference, com.commercetools.api.models.Identifiable<Quote> {
 
+    /**
+     * discriminator value for QuoteReference
+     */
     String QUOTE = "quote";
 
     /**
@@ -40,12 +43,26 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
     @JsonProperty("obj")
     public Quote getObj();
 
+    /**
+     *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final Quote obj);
 
+    /**
+     * factory method
+     * @return instance of QuoteReference
+     */
     public static QuoteReference of() {
         return new QuoteReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteReference of(final QuoteReference template) {
         QuoteReferenceImpl instance = new QuoteReferenceImpl();
         instance.setId(template.getId());
@@ -53,18 +70,37 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteReference
+     * @return builder
+     */
     public static QuoteReferenceBuilder builder() {
         return QuoteReferenceBuilder.of();
     }
 
+    /**
+     * create builder for QuoteReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteReferenceBuilder builder(final QuoteReference template) {
         return QuoteReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteReference(Function<QuoteReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteReference>() {
             @Override

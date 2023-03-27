@@ -64,10 +64,20 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -90,10 +100,19 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
         return new ProductSetDescriptionActionImpl(description, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetDescriptionActionBuilder
+     * @return builder
+     */
     public static ProductSetDescriptionActionBuilder of() {
         return new ProductSetDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetDescriptionActionBuilder of(final ProductSetDescriptionAction template) {
         ProductSetDescriptionActionBuilder builder = new ProductSetDescriptionActionBuilder();
         builder.description = template.getDescription();

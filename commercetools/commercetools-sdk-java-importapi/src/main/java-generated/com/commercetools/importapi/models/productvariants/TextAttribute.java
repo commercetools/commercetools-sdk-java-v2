@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TextAttributeImpl.class)
 public interface TextAttribute extends Attribute {
 
+    /**
+     * discriminator value for TextAttribute
+     */
     String TEXT = "text";
 
     /**
@@ -39,12 +42,26 @@ public interface TextAttribute extends Attribute {
     @JsonProperty("value")
     public String getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final String value);
 
+    /**
+     * factory method
+     * @return instance of TextAttribute
+     */
     public static TextAttribute of() {
         return new TextAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of TextAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TextAttribute of(final TextAttribute template) {
         TextAttributeImpl instance = new TextAttributeImpl();
         instance.setName(template.getName());
@@ -52,18 +69,37 @@ public interface TextAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for TextAttribute
+     * @return builder
+     */
     public static TextAttributeBuilder builder() {
         return TextAttributeBuilder.of();
     }
 
+    /**
+     * create builder for TextAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TextAttributeBuilder builder(final TextAttribute template) {
         return TextAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTextAttribute(Function<TextAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TextAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TextAttribute>() {
             @Override

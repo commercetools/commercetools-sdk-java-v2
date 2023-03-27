@@ -70,21 +70,58 @@ public interface TaxedPrice {
     @JsonProperty("totalTax")
     public CentPrecisionMoney getTotalTax();
 
+    /**
+     *  <p>Total net price of the Cart or Order.</p>
+     * @param totalNet value to be set
+     */
+
     public void setTotalNet(final CentPrecisionMoney totalNet);
 
+    /**
+     *  <p>Total gross price of the Cart or Order.</p>
+     * @param totalGross value to be set
+     */
+
     public void setTotalGross(final CentPrecisionMoney totalGross);
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions values to be set
+     */
 
     @JsonIgnore
     public void setTaxPortions(final TaxPortion... taxPortions);
 
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions values to be set
+     */
+
     public void setTaxPortions(final List<TaxPortion> taxPortions);
+
+    /**
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     *  <p>Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param totalTax value to be set
+     */
 
     public void setTotalTax(final CentPrecisionMoney totalTax);
 
+    /**
+     * factory method
+     * @return instance of TaxedPrice
+     */
     public static TaxedPrice of() {
         return new TaxedPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxedPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxedPrice of(final TaxedPrice template) {
         TaxedPriceImpl instance = new TaxedPriceImpl();
         instance.setTotalNet(template.getTotalNet());
@@ -94,18 +131,37 @@ public interface TaxedPrice {
         return instance;
     }
 
+    /**
+     * builder factory method for TaxedPrice
+     * @return builder
+     */
     public static TaxedPriceBuilder builder() {
         return TaxedPriceBuilder.of();
     }
 
+    /**
+     * create builder for TaxedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxedPriceBuilder builder(final TaxedPrice template) {
         return TaxedPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxedPrice(Function<TaxedPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxedPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxedPrice>() {
             @Override

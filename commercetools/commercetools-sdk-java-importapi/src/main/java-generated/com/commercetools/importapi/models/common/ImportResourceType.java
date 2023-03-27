@@ -73,29 +73,68 @@ public interface ImportResourceType {
     */
     ImportResourceType STANDALONE_PRICE = ImportResourceTypeEnum.STANDALONE_PRICE;
 
+    /**
+     * possible values of ImportResourceType
+     */
     enum ImportResourceTypeEnum implements ImportResourceType {
+        /**
+         * category
+         */
         CATEGORY("category"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * order-patch
+         */
         ORDER_PATCH("order-patch"),
 
+        /**
+         * price
+         */
         PRICE("price"),
 
+        /**
+         * product
+         */
         PRODUCT("product"),
 
+        /**
+         * product-draft
+         */
         PRODUCT_DRAFT("product-draft"),
 
+        /**
+         * product-type
+         */
         PRODUCT_TYPE("product-type"),
 
+        /**
+         * product-variant
+         */
         PRODUCT_VARIANT("product-variant"),
 
+        /**
+         * product-variant-patch
+         */
         PRODUCT_VARIANT_PATCH("product-variant-patch"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * inventory
+         */
         INVENTORY("inventory"),
 
+        /**
+         * standalone-price
+         */
         STANDALONE_PRICE("standalone-price");
         private final String jsonName;
 
@@ -112,13 +151,30 @@ public interface ImportResourceType {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ImportResourceType
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ImportResourceType findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ImportResourceType() {
@@ -138,10 +194,18 @@ public interface ImportResourceType {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ImportResourceType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ImportResourceType[] values() {
         return ImportResourceTypeEnum.values();
     }

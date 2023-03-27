@@ -42,22 +42,44 @@ public interface FacetResult {
     @JsonProperty("type")
     public FacetTypes getType();
 
+    /**
+     * builder for filter subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product.FilteredFacetResultBuilder filterBuilder() {
         return com.commercetools.api.models.product.FilteredFacetResultBuilder.of();
     }
 
+    /**
+     * builder for range subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product.RangeFacetResultBuilder rangeBuilder() {
         return com.commercetools.api.models.product.RangeFacetResultBuilder.of();
     }
 
+    /**
+     * builder for terms subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product.TermFacetResultBuilder termsBuilder() {
         return com.commercetools.api.models.product.TermFacetResultBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withFacetResult(Function<FacetResult, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<FacetResult> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<FacetResult>() {
             @Override

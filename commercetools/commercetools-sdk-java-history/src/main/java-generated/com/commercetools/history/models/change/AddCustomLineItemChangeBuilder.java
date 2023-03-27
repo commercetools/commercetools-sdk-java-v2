@@ -42,7 +42,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -89,13 +89,28 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
         return this;
     }
 
+    /**
+     *  <p>Update action for adding and removing custom line items</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.CustomLineItem getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.CustomLineItem getPreviousValue() {
         return this.previousValue;
@@ -120,10 +135,19 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
         return new AddCustomLineItemChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of AddCustomLineItemChangeBuilder
+     * @return builder
+     */
     public static AddCustomLineItemChangeBuilder of() {
         return new AddCustomLineItemChangeBuilder();
     }
 
+    /**
+     * create builder for AddCustomLineItemChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddCustomLineItemChangeBuilder of(final AddCustomLineItemChange template) {
         AddCustomLineItemChangeBuilder builder = new AddCustomLineItemChangeBuilder();
         builder.change = template.getChange();

@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangePaymentStateChangeImpl.class)
 public interface ChangePaymentStateChange extends Change {
 
+    /**
+     * discriminator value for ChangePaymentStateChange
+     */
     String CHANGE_PAYMENT_STATE_CHANGE = "ChangePaymentStateChange";
 
     /**
@@ -66,16 +69,40 @@ public interface ChangePaymentStateChange extends Change {
     @JsonProperty("previousValue")
     public PaymentState getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>changePaymentState</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final PaymentState nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final PaymentState previousValue);
 
+    /**
+     * factory method
+     * @return instance of ChangePaymentStateChange
+     */
     public static ChangePaymentStateChange of() {
         return new ChangePaymentStateChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangePaymentStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangePaymentStateChange of(final ChangePaymentStateChange template) {
         ChangePaymentStateChangeImpl instance = new ChangePaymentStateChangeImpl();
         instance.setChange(template.getChange());
@@ -84,18 +111,37 @@ public interface ChangePaymentStateChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangePaymentStateChange
+     * @return builder
+     */
     public static ChangePaymentStateChangeBuilder builder() {
         return ChangePaymentStateChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangePaymentStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangePaymentStateChangeBuilder builder(final ChangePaymentStateChange template) {
         return ChangePaymentStateChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangePaymentStateChange(Function<ChangePaymentStateChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangePaymentStateChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangePaymentStateChange>() {
             @Override

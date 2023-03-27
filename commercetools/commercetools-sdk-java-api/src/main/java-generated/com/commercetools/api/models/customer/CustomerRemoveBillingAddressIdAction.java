@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerRemoveBillingAddressIdActionImpl.class)
 public interface CustomerRemoveBillingAddressIdAction extends CustomerUpdateAction {
 
+    /**
+     * discriminator value for CustomerRemoveBillingAddressIdAction
+     */
     String REMOVE_BILLING_ADDRESS_ID = "removeBillingAddressId";
 
     /**
@@ -44,14 +47,33 @@ public interface CustomerRemoveBillingAddressIdAction extends CustomerUpdateActi
     @JsonProperty("addressKey")
     public String getAddressKey();
 
+    /**
+     *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     * @param addressId value to be set
+     */
+
     public void setAddressId(final String addressId);
+
+    /**
+     *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     * @param addressKey value to be set
+     */
 
     public void setAddressKey(final String addressKey);
 
+    /**
+     * factory method
+     * @return instance of CustomerRemoveBillingAddressIdAction
+     */
     public static CustomerRemoveBillingAddressIdAction of() {
         return new CustomerRemoveBillingAddressIdActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerRemoveBillingAddressIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerRemoveBillingAddressIdAction of(final CustomerRemoveBillingAddressIdAction template) {
         CustomerRemoveBillingAddressIdActionImpl instance = new CustomerRemoveBillingAddressIdActionImpl();
         instance.setAddressId(template.getAddressId());
@@ -59,19 +81,38 @@ public interface CustomerRemoveBillingAddressIdAction extends CustomerUpdateActi
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerRemoveBillingAddressIdAction
+     * @return builder
+     */
     public static CustomerRemoveBillingAddressIdActionBuilder builder() {
         return CustomerRemoveBillingAddressIdActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerRemoveBillingAddressIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerRemoveBillingAddressIdActionBuilder builder(
             final CustomerRemoveBillingAddressIdAction template) {
         return CustomerRemoveBillingAddressIdActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerRemoveBillingAddressIdAction(Function<CustomerRemoveBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveBillingAddressIdAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveBillingAddressIdAction>() {
             @Override

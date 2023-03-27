@@ -24,6 +24,9 @@ public class ShippingMethodUpdateImpl implements ShippingMethodUpdate, ModelBase
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class ShippingMethodUpdateImpl implements ShippingMethodUpdate, ModelBase
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodUpdateImpl() {
     }
 

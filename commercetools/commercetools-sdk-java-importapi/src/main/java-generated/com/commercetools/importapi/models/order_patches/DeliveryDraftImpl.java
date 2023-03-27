@@ -26,6 +26,9 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> parcels;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryDraftImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items,
@@ -36,6 +39,9 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
         this.parcels = parcels;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryDraftImpl() {
     }
 

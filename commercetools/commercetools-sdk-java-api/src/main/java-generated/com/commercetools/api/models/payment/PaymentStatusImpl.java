@@ -26,6 +26,9 @@ public class PaymentStatusImpl implements PaymentStatus, ModelBase {
 
     private com.commercetools.api.models.state.StateReference state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentStatusImpl(@JsonProperty("interfaceCode") final String interfaceCode,
             @JsonProperty("interfaceText") final String interfaceText,
@@ -35,6 +38,9 @@ public class PaymentStatusImpl implements PaymentStatus, ModelBase {
         this.state = state;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentStatusImpl() {
     }
 

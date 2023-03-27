@@ -25,7 +25,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
     /**
-     *
+     * set values to the errors
      * @param errors value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     }
 
     /**
-     *
+     * set value to the errors
      * @param errors value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     }
 
     /**
-     *
+     * add values to the errors
      * @param errors value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     }
 
     /**
-     *
+     * add a value to the errors using the builder function
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     }
 
     /**
-     *
+     * set the value to the errors using the builder function
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -88,6 +88,11 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
         this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
         return this;
     }
+
+    /**
+     * value of errors}
+     * @return errors
+     */
 
     public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {
         return this.errors;
@@ -110,10 +115,19 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
         return new OrderEditPreviewFailureImpl(errors);
     }
 
+    /**
+     * factory method for an instance of OrderEditPreviewFailureBuilder
+     * @return builder
+     */
     public static OrderEditPreviewFailureBuilder of() {
         return new OrderEditPreviewFailureBuilder();
     }
 
+    /**
+     * create builder for OrderEditPreviewFailure instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditPreviewFailureBuilder of(final OrderEditPreviewFailure template) {
         OrderEditPreviewFailureBuilder builder = new OrderEditPreviewFailureBuilder();
         builder.errors = template.getErrors();

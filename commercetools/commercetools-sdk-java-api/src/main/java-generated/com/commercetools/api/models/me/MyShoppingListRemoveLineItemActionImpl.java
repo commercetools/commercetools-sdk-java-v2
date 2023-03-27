@@ -26,6 +26,9 @@ public class MyShoppingListRemoveLineItemActionImpl implements MyShoppingListRem
 
     private Long quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyShoppingListRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("quantity") final Long quantity) {
@@ -34,6 +37,9 @@ public class MyShoppingListRemoveLineItemActionImpl implements MyShoppingListRem
         this.action = REMOVE_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public MyShoppingListRemoveLineItemActionImpl() {
         this.action = REMOVE_LINE_ITEM;
     }

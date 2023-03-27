@@ -37,7 +37,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     private com.commercetools.history.models.common.SelectionMode selectionMode;
 
     /**
-     *
+     * set the value to the predicate
      * @param predicate value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     *
+     * set the value to the selectionMode
      * @param selectionMode value to be set
      * @return Builder
      */
@@ -92,21 +92,46 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
         return this;
     }
 
+    /**
+     * value of predicate}
+     * @return predicate
+     */
+
     public String getPredicate() {
         return this.predicate;
     }
+
+    /**
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     * @return triggerQuantity
+     */
 
     public Integer getTriggerQuantity() {
         return this.triggerQuantity;
     }
 
+    /**
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     * @return discountedQuantity
+     */
+
     public Integer getDiscountedQuantity() {
         return this.discountedQuantity;
     }
 
+    /**
+     *  <p>Maximum number of applications of this discount.</p>
+     * @return maxOccurrence
+     */
+
     public Integer getMaxOccurrence() {
         return this.maxOccurrence;
     }
+
+    /**
+     * value of selectionMode}
+     * @return selectionMode
+     */
 
     public com.commercetools.history.models.common.SelectionMode getSelectionMode() {
         return this.selectionMode;
@@ -140,10 +165,19 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
             maxOccurrence, selectionMode);
     }
 
+    /**
+     * factory method for an instance of ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
+     * @return builder
+     */
     public static ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder of() {
         return new ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder();
     }
 
+    /**
+     * create builder for ChangeTargetMultiBuyCustomLineItemsChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder of(
             final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
         ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder builder = new ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder();

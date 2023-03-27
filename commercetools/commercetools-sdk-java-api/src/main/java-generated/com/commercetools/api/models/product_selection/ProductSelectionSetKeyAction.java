@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionSetKeyActionImpl.class)
 public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateAction {
 
+    /**
+     * discriminator value for ProductSelectionSetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,26 +39,55 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionSetKeyAction
+     */
     public static ProductSelectionSetKeyAction of() {
         return new ProductSelectionSetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionSetKeyAction of(final ProductSelectionSetKeyAction template) {
         ProductSelectionSetKeyActionImpl instance = new ProductSelectionSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionSetKeyAction
+     * @return builder
+     */
     public static ProductSelectionSetKeyActionBuilder builder() {
         return ProductSelectionSetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionSetKeyActionBuilder builder(final ProductSelectionSetKeyAction template) {
         return ProductSelectionSetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionSetKeyAction(Function<ProductSelectionSetKeyAction, T> helper) {
         return helper.apply(this);
     }
@@ -64,6 +96,10 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
         return ProductSelectionSetKeyAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetKeyAction>() {
             @Override

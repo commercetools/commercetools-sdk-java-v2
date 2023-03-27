@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedQuoteDeletedMessagePayloadImpl.class)
 public interface StagedQuoteDeletedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StagedQuoteDeletedMessagePayload
+     */
     String STAGED_QUOTE_DELETED = "StagedQuoteDeleted";
 
+    /**
+     * factory method
+     * @return instance of StagedQuoteDeletedMessagePayload
+     */
     public static StagedQuoteDeletedMessagePayload of() {
         return new StagedQuoteDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedQuoteDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedQuoteDeletedMessagePayload of(final StagedQuoteDeletedMessagePayload template) {
         StagedQuoteDeletedMessagePayloadImpl instance = new StagedQuoteDeletedMessagePayloadImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for StagedQuoteDeletedMessagePayload
+     * @return builder
+     */
     public static StagedQuoteDeletedMessagePayloadBuilder builder() {
         return StagedQuoteDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StagedQuoteDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteDeletedMessagePayloadBuilder builder(final StagedQuoteDeletedMessagePayload template) {
         return StagedQuoteDeletedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedQuoteDeletedMessagePayload(Function<StagedQuoteDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteDeletedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteDeletedMessagePayload>() {
             @Override

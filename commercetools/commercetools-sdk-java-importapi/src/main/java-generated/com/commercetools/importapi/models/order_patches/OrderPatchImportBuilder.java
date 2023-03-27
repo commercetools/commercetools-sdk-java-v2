@@ -61,9 +61,19 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     * @return orderNumber
+     */
+
     public String getOrderNumber() {
         return this.orderNumber;
     }
+
+    /**
+     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     * @return fields
+     */
 
     public com.commercetools.importapi.models.order_patches.OrderField getFields() {
         return this.fields;
@@ -87,10 +97,19 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
         return new OrderPatchImportImpl(orderNumber, fields);
     }
 
+    /**
+     * factory method for an instance of OrderPatchImportBuilder
+     * @return builder
+     */
     public static OrderPatchImportBuilder of() {
         return new OrderPatchImportBuilder();
     }
 
+    /**
+     * create builder for OrderPatchImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPatchImportBuilder of(final OrderPatchImport template) {
         OrderPatchImportBuilder builder = new OrderPatchImportBuilder();
         builder.orderNumber = template.getOrderNumber();

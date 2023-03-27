@@ -49,17 +49,41 @@ public interface OrderUpdate
     @JsonProperty("actions")
     public List<OrderUpdateAction> getActions();
 
+    /**
+     * set version
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     * set actions
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final OrderUpdateAction... actions);
 
+    /**
+     * set actions
+     * @param actions values to be set
+     */
+
     public void setActions(final List<OrderUpdateAction> actions);
 
+    /**
+     * factory method
+     * @return instance of OrderUpdate
+     */
     public static OrderUpdate of() {
         return new OrderUpdateImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderUpdate of(final OrderUpdate template) {
         OrderUpdateImpl instance = new OrderUpdateImpl();
         instance.setVersion(template.getVersion());
@@ -67,18 +91,37 @@ public interface OrderUpdate
         return instance;
     }
 
+    /**
+     * builder factory method for OrderUpdate
+     * @return builder
+     */
     public static OrderUpdateBuilder builder() {
         return OrderUpdateBuilder.of();
     }
 
+    /**
+     * create builder for OrderUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderUpdateBuilder builder(final OrderUpdate template) {
         return OrderUpdateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderUpdate(Function<OrderUpdate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderUpdate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderUpdate>() {
             @Override

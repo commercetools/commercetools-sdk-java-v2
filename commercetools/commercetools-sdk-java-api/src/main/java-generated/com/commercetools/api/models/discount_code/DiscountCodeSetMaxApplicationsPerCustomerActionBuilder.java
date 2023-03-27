@@ -38,6 +38,11 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return maxApplicationsPerCustomer
+     */
+
     @Nullable
     public Long getMaxApplicationsPerCustomer() {
         return this.maxApplicationsPerCustomer;
@@ -59,10 +64,19 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder
         return new DiscountCodeSetMaxApplicationsPerCustomerActionImpl(maxApplicationsPerCustomer);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeSetMaxApplicationsPerCustomerActionBuilder
+     * @return builder
+     */
     public static DiscountCodeSetMaxApplicationsPerCustomerActionBuilder of() {
         return new DiscountCodeSetMaxApplicationsPerCustomerActionBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeSetMaxApplicationsPerCustomerAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeSetMaxApplicationsPerCustomerActionBuilder of(
             final DiscountCodeSetMaxApplicationsPerCustomerAction template) {
         DiscountCodeSetMaxApplicationsPerCustomerActionBuilder builder = new DiscountCodeSetMaxApplicationsPerCustomerActionBuilder();

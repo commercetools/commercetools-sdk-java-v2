@@ -69,7 +69,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,21 +92,46 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>The name of the field definition updated.</p>
+     * @return fieldName
+     */
 
     public String getFieldName() {
         return this.fieldName;
     }
 
+    /**
+     *  <p>The name of the attribute updated.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.TextInputHint getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.TextInputHint getPreviousValue() {
         return this.previousValue;
@@ -133,10 +158,19 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
         return new ChangeInputHintChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeInputHintChangeBuilder
+     * @return builder
+     */
     public static ChangeInputHintChangeBuilder of() {
         return new ChangeInputHintChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeInputHintChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeInputHintChangeBuilder of(final ChangeInputHintChange template) {
         ChangeInputHintChangeBuilder builder = new ChangeInputHintChangeBuilder();
         builder.change = template.getChange();

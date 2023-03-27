@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreSetLanguagesActionImpl.class)
 public interface StoreSetLanguagesAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreSetLanguagesAction
+     */
     String SET_LANGUAGES = "setLanguages";
 
     /**
@@ -36,33 +39,71 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     @JsonProperty("languages")
     public List<String> getLanguages();
 
+    /**
+     *  <p>Value to set.</p>
+     * @param languages values to be set
+     */
+
     @JsonIgnore
     public void setLanguages(final String... languages);
 
+    /**
+     *  <p>Value to set.</p>
+     * @param languages values to be set
+     */
+
     public void setLanguages(final List<String> languages);
 
+    /**
+     * factory method
+     * @return instance of StoreSetLanguagesAction
+     */
     public static StoreSetLanguagesAction of() {
         return new StoreSetLanguagesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreSetLanguagesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreSetLanguagesAction of(final StoreSetLanguagesAction template) {
         StoreSetLanguagesActionImpl instance = new StoreSetLanguagesActionImpl();
         instance.setLanguages(template.getLanguages());
         return instance;
     }
 
+    /**
+     * builder factory method for StoreSetLanguagesAction
+     * @return builder
+     */
     public static StoreSetLanguagesActionBuilder builder() {
         return StoreSetLanguagesActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreSetLanguagesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetLanguagesActionBuilder builder(final StoreSetLanguagesAction template) {
         return StoreSetLanguagesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreSetLanguagesAction(Function<StoreSetLanguagesAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreSetLanguagesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreSetLanguagesAction>() {
             @Override

@@ -245,69 +245,218 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     @JsonProperty("origin")
     public CartOrigin getOrigin();
 
+    /**
+     *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
+     * @param orderNumber value to be set
+     */
+
     public void setOrderNumber(final String orderNumber);
+
+    /**
+     *  <p>If given the customer with that ID must exist in the project.</p>
+     * @param customerId value to be set
+     */
 
     public void setCustomerId(final String customerId);
 
+    /**
+     *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
+     * @param customerEmail value to be set
+     */
+
     public void setCustomerEmail(final String customerEmail);
+
+    /**
+     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @param lineItems values to be set
+     */
 
     @JsonIgnore
     public void setLineItems(final LineItemImportDraft... lineItems);
 
+    /**
+     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @param lineItems values to be set
+     */
+
     public void setLineItems(final List<LineItemImportDraft> lineItems);
+
+    /**
+     *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @param customLineItems values to be set
+     */
 
     @JsonIgnore
     public void setCustomLineItems(final CustomLineItemImportDraft... customLineItems);
 
+    /**
+     *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @param customLineItems values to be set
+     */
+
     public void setCustomLineItems(final List<CustomLineItemImportDraft> customLineItems);
+
+    /**
+     * set totalPrice
+     * @param totalPrice value to be set
+     */
 
     public void setTotalPrice(final Money totalPrice);
 
+    /**
+     *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     * @param taxedPrice value to be set
+     */
+
     public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
+
+    /**
+     * set shippingAddress
+     * @param shippingAddress value to be set
+     */
 
     public void setShippingAddress(final BaseAddress shippingAddress);
 
+    /**
+     * set billingAddress
+     * @param billingAddress value to be set
+     */
+
     public void setBillingAddress(final BaseAddress billingAddress);
+
+    /**
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @param customerGroup value to be set
+     */
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
+    /**
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
+
+    /**
+     *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
+     * @param orderState value to be set
+     */
 
     public void setOrderState(final OrderState orderState);
 
+    /**
+     *  <p>This reference can point to a state in a custom workflow.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     * set shipmentState
+     * @param shipmentState value to be set
+     */
 
     public void setShipmentState(final ShipmentState shipmentState);
 
+    /**
+     * set paymentState
+     * @param paymentState value to be set
+     */
+
     public void setPaymentState(final PaymentState paymentState);
+
+    /**
+     *  <p>Set if the ShippingMethod is set.</p>
+     * @param shippingInfo value to be set
+     */
 
     public void setShippingInfo(final ShippingInfoImportDraft shippingInfo);
 
+    /**
+     * set paymentInfo
+     * @param paymentInfo value to be set
+     */
+
     public void setPaymentInfo(final PaymentInfo paymentInfo);
+
+    /**
+     * set completedAt
+     * @param completedAt value to be set
+     */
 
     public void setCompletedAt(final ZonedDateTime completedAt);
 
+    /**
+     *  <p>The custom fields.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
+     * @param inventoryMode value to be set
+     */
 
     public void setInventoryMode(final InventoryMode inventoryMode);
 
+    /**
+     *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
+     * @param taxRoundingMode value to be set
+     */
+
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
+
+    /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param itemShippingAddresses values to be set
+     */
 
     @JsonIgnore
     public void setItemShippingAddresses(final BaseAddress... itemShippingAddresses);
 
+    /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param itemShippingAddresses values to be set
+     */
+
     public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
+
+    /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     * @param businessUnit value to be set
+     */
 
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
+    /**
+     * set store
+     * @param store value to be set
+     */
+
     public void setStore(final StoreResourceIdentifier store);
+
+    /**
+     *  <p>The default origin is <code>Customer</code>.</p>
+     * @param origin value to be set
+     */
 
     public void setOrigin(final CartOrigin origin);
 
+    /**
+     * factory method
+     * @return instance of OrderImportDraft
+     */
     public static OrderImportDraft of() {
         return new OrderImportDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderImportDraft of(final OrderImportDraft template) {
         OrderImportDraftImpl instance = new OrderImportDraftImpl();
         instance.setOrderNumber(template.getOrderNumber());
@@ -338,18 +487,37 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
         return instance;
     }
 
+    /**
+     * builder factory method for OrderImportDraft
+     * @return builder
+     */
     public static OrderImportDraftBuilder builder() {
         return OrderImportDraftBuilder.of();
     }
 
+    /**
+     * create builder for OrderImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderImportDraftBuilder builder(final OrderImportDraft template) {
         return OrderImportDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderImportDraft(Function<OrderImportDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderImportDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderImportDraft>() {
             @Override

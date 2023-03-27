@@ -478,68 +478,140 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Business Unit.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     * @return status
+     */
 
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitStatus getStatus() {
         return this.status;
     }
 
+    /**
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return stores
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
         return this.stores;
     }
+
+    /**
+     *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     * @return storeMode
+     */
 
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
         return this.storeMode;
     }
 
+    /**
+     *  <p>Name of the Business Unit.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Email address of the Business Unit.</p>
+     * @return contactEmail
+     */
 
     @Nullable
     public String getContactEmail() {
         return this.contactEmail;
     }
 
+    /**
+     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @return associates
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates() {
         return this.associates;
     }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @return addresses
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
         return this.addresses;
     }
 
+    /**
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @return shippingAddresses
+     */
+
     @Nullable
     public java.util.List<Integer> getShippingAddresses() {
         return this.shippingAddresses;
     }
+
+    /**
+     *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
+     * @return defaultShippingAddress
+     */
 
     @Nullable
     public Integer getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
 
+    /**
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @return billingAddresses
+     */
+
     @Nullable
     public java.util.List<Integer> getBillingAddresses() {
         return this.billingAddresses;
     }
+
+    /**
+     *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
+     * @return defaultBillingAddress
+     */
 
     @Nullable
     public Integer getDefaultBillingAddress() {
         return this.defaultBillingAddress;
     }
 
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @return parentUnit
+     */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {
         return this.parentUnit;
@@ -566,10 +638,19 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
             shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom, parentUnit);
     }
 
+    /**
+     * factory method for an instance of DivisionDraftBuilder
+     * @return builder
+     */
     public static DivisionDraftBuilder of() {
         return new DivisionDraftBuilder();
     }
 
+    /**
+     * create builder for DivisionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DivisionDraftBuilder of(final DivisionDraft template) {
         DivisionDraftBuilder builder = new DivisionDraftBuilder();
         builder.key = template.getKey();

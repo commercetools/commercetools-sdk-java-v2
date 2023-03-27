@@ -22,12 +22,18 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
 
     private Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantChannelAvailabilityMapImpl(
             @JsonProperty("values") final Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantChannelAvailabilityMapImpl() {
     }
 

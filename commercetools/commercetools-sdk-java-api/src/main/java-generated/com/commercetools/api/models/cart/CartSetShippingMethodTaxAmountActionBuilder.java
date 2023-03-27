@@ -51,6 +51,11 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return externalTaxAmount
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
         return this.externalTaxAmount;
@@ -72,10 +77,19 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
         return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
     }
 
+    /**
+     * factory method for an instance of CartSetShippingMethodTaxAmountActionBuilder
+     * @return builder
+     */
     public static CartSetShippingMethodTaxAmountActionBuilder of() {
         return new CartSetShippingMethodTaxAmountActionBuilder();
     }
 
+    /**
+     * create builder for CartSetShippingMethodTaxAmountAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetShippingMethodTaxAmountActionBuilder of(final CartSetShippingMethodTaxAmountAction template) {
         CartSetShippingMethodTaxAmountActionBuilder builder = new CartSetShippingMethodTaxAmountActionBuilder();
         builder.externalTaxAmount = template.getExternalTaxAmount();

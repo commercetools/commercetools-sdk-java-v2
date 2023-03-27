@@ -41,6 +41,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionVariantSelectionChangedMessageImpl.class)
 public interface ProductSelectionVariantSelectionChangedMessage extends Message {
 
+    /**
+     * discriminator value for ProductSelectionVariantSelectionChangedMessage
+     */
     String PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED = "ProductSelectionVariantSelectionChanged";
 
     /**
@@ -70,16 +73,40 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     @JsonProperty("newVariantSelection")
     public ProductVariantSelection getNewVariantSelection();
 
+    /**
+     *  <p>Product for which the Product Variant Selection changed.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductReference product);
+
+    /**
+     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     * @param oldVariantSelection value to be set
+     */
 
     public void setOldVariantSelection(final ProductVariantSelection oldVariantSelection);
 
+    /**
+     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     * @param newVariantSelection value to be set
+     */
+
     public void setNewVariantSelection(final ProductVariantSelection newVariantSelection);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionVariantSelectionChangedMessage
+     */
     public static ProductSelectionVariantSelectionChangedMessage of() {
         return new ProductSelectionVariantSelectionChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionVariantSelectionChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionVariantSelectionChangedMessage of(
             final ProductSelectionVariantSelectionChangedMessage template) {
         ProductSelectionVariantSelectionChangedMessageImpl instance = new ProductSelectionVariantSelectionChangedMessageImpl();
@@ -99,20 +126,39 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionVariantSelectionChangedMessage
+     * @return builder
+     */
     public static ProductSelectionVariantSelectionChangedMessageBuilder builder() {
         return ProductSelectionVariantSelectionChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionVariantSelectionChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionVariantSelectionChangedMessageBuilder builder(
             final ProductSelectionVariantSelectionChangedMessage template) {
         return ProductSelectionVariantSelectionChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionVariantSelectionChangedMessage(
             Function<ProductSelectionVariantSelectionChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionVariantSelectionChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionVariantSelectionChangedMessage>() {
             @Override

@@ -329,45 +329,100 @@ public class RecordBuilder implements Builder<Record> {
         return this;
     }
 
+    /**
+     *  <p>Version of the resource after the change.</p>
+     * @return version
+     */
+
     public Integer getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Version of the resource before the change.</p>
+     * @return previousVersion
+     */
 
     public Integer getPreviousVersion() {
         return this.previousVersion;
     }
 
+    /**
+     *  <p>Type of the change (creation, update or deletion).</p>
+     * @return type
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Information about the user or the API client who performed the change.</p>
+     * @return modifiedBy
+     */
 
     public com.commercetools.history.models.change_history.ModifiedBy getModifiedBy() {
         return this.modifiedBy;
     }
 
+    /**
+     *  <p>Date and time when the change was made.</p>
+     * @return modifiedAt
+     */
+
     public String getModifiedAt() {
         return this.modifiedAt;
     }
+
+    /**
+     *  <p>Information that describes the resource after the change.</p>
+     * @return label
+     */
 
     public com.commercetools.history.models.label.Label getLabel() {
         return this.label;
     }
 
+    /**
+     *  <p>Information that describes the resource before the change.</p>
+     * @return previousLabel
+     */
+
     public com.commercetools.history.models.label.Label getPreviousLabel() {
         return this.previousLabel;
     }
+
+    /**
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @return changes
+     */
 
     public java.util.List<com.commercetools.history.models.change.Change> getChanges() {
         return this.changes;
     }
 
+    /**
+     *  <p>Reference to the changed resource.</p>
+     * @return resource
+     */
+
     public com.commercetools.history.models.common.Reference getResource() {
         return this.resource;
     }
 
+    /**
+     *  <p>References to the Stores attached to the Change.</p>
+     * @return stores
+     */
+
     public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
         return this.stores;
     }
+
+    /**
+     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     * @return withoutChanges
+     */
 
     public Boolean getWithoutChanges() {
         return this.withoutChanges;
@@ -402,10 +457,19 @@ public class RecordBuilder implements Builder<Record> {
             resource, stores, withoutChanges);
     }
 
+    /**
+     * factory method for an instance of RecordBuilder
+     * @return builder
+     */
     public static RecordBuilder of() {
         return new RecordBuilder();
     }
 
+    /**
+     * create builder for Record instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RecordBuilder of(final Record template) {
         RecordBuilder builder = new RecordBuilder();
         builder.version = template.getVersion();

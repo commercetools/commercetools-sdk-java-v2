@@ -42,7 +42,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -88,13 +88,28 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setSupplyChannel</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.Reference getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Reference getNextValue() {
         return this.nextValue;
@@ -119,10 +134,19 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
         return new SetSupplyChannelChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetSupplyChannelChangeBuilder
+     * @return builder
+     */
     public static SetSupplyChannelChangeBuilder of() {
         return new SetSupplyChannelChangeBuilder();
     }
 
+    /**
+     * create builder for SetSupplyChannelChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetSupplyChannelChangeBuilder of(final SetSupplyChannelChange template) {
         SetSupplyChannelChangeBuilder builder = new SetSupplyChannelChangeBuilder();
         builder.change = template.getChange();

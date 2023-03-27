@@ -50,6 +50,11 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
@@ -71,10 +76,19 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
         return new ChannelSetAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of ChannelSetAddressActionBuilder
+     * @return builder
+     */
     public static ChannelSetAddressActionBuilder of() {
         return new ChannelSetAddressActionBuilder();
     }
 
+    /**
+     * create builder for ChannelSetAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelSetAddressActionBuilder of(final ChannelSetAddressAction template) {
         ChannelSetAddressActionBuilder builder = new ChannelSetAddressActionBuilder();
         builder.address = template.getAddress();

@@ -25,6 +25,9 @@ public class OrderPatchImportRequestImpl implements OrderPatchImportRequest, Mod
 
     private java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderPatchImportRequestImpl(
             @JsonProperty("patches") final java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches) {
@@ -32,6 +35,9 @@ public class OrderPatchImportRequestImpl implements OrderPatchImportRequest, Mod
         this.type = ImportResourceType.findEnum("order-patch");
     }
 
+    /**
+     * create empty instance
+     */
     public OrderPatchImportRequestImpl() {
         this.type = ImportResourceType.findEnum("order-patch");
     }

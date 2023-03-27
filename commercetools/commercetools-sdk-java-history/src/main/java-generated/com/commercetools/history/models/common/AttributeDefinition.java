@@ -104,26 +104,75 @@ public interface AttributeDefinition {
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();
 
+    /**
+     * set type
+     * @param type value to be set
+     */
+
     public void setType(final AttributeType type);
+
+    /**
+     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     * set label
+     * @param label value to be set
+     */
+
     public void setLabel(final LocalizedString label);
+
+    /**
+     *  <p>Whether the attribute is required to have a value.</p>
+     * @param isRequired value to be set
+     */
 
     public void setIsRequired(final Boolean isRequired);
 
+    /**
+     * set attributeConstraint
+     * @param attributeConstraint value to be set
+     */
+
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
+
+    /**
+     * set inputTip
+     * @param inputTip value to be set
+     */
 
     public void setInputTip(final LocalizedString inputTip);
 
+    /**
+     * set inputHint
+     * @param inputHint value to be set
+     */
+
     public void setInputHint(final TextInputHint inputHint);
+
+    /**
+     *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     * @param isSearchable value to be set
+     */
 
     public void setIsSearchable(final Boolean isSearchable);
 
+    /**
+     * factory method
+     * @return instance of AttributeDefinition
+     */
     public static AttributeDefinition of() {
         return new AttributeDefinitionImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeDefinition
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeDefinition of(final AttributeDefinition template) {
         AttributeDefinitionImpl instance = new AttributeDefinitionImpl();
         instance.setType(template.getType());
@@ -137,18 +186,37 @@ public interface AttributeDefinition {
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeDefinition
+     * @return builder
+     */
     public static AttributeDefinitionBuilder builder() {
         return AttributeDefinitionBuilder.of();
     }
 
+    /**
+     * create builder for AttributeDefinition instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDefinitionBuilder builder(final AttributeDefinition template) {
         return AttributeDefinitionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition>() {
             @Override

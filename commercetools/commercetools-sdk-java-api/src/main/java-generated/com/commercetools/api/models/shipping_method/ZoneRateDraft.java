@@ -50,17 +50,41 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
     @JsonProperty("shippingRates")
     public List<ShippingRateDraft> getShippingRates();
 
+    /**
+     *  <p>Sets the Zone for which the shippng rates are valid.</p>
+     * @param zone value to be set
+     */
+
     public void setZone(final ZoneResourceIdentifier zone);
+
+    /**
+     *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @param shippingRates values to be set
+     */
 
     @JsonIgnore
     public void setShippingRates(final ShippingRateDraft... shippingRates);
 
+    /**
+     *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @param shippingRates values to be set
+     */
+
     public void setShippingRates(final List<ShippingRateDraft> shippingRates);
 
+    /**
+     * factory method
+     * @return instance of ZoneRateDraft
+     */
     public static ZoneRateDraft of() {
         return new ZoneRateDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ZoneRateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ZoneRateDraft of(final ZoneRateDraft template) {
         ZoneRateDraftImpl instance = new ZoneRateDraftImpl();
         instance.setZone(template.getZone());
@@ -68,18 +92,37 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
         return instance;
     }
 
+    /**
+     * builder factory method for ZoneRateDraft
+     * @return builder
+     */
     public static ZoneRateDraftBuilder builder() {
         return ZoneRateDraftBuilder.of();
     }
 
+    /**
+     * create builder for ZoneRateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneRateDraftBuilder builder(final ZoneRateDraft template) {
         return ZoneRateDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZoneRateDraft(Function<ZoneRateDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ZoneRateDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ZoneRateDraft>() {
             @Override

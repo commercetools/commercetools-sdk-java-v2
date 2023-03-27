@@ -24,6 +24,9 @@ public class KeyReferenceImpl implements KeyReference, ModelBase {
 
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     KeyReferenceImpl(@JsonProperty("key") final String key,
             @JsonProperty("typeId") final com.commercetools.history.models.common.ReferenceTypeId typeId) {
@@ -31,6 +34,9 @@ public class KeyReferenceImpl implements KeyReference, ModelBase {
         this.typeId = typeId;
     }
 
+    /**
+     * create empty instance
+     */
     public KeyReferenceImpl() {
     }
 

@@ -44,6 +44,9 @@ public class CustomerFirstNameSetMessageImpl implements CustomerFirstNameSetMess
 
     private String firstName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerFirstNameSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerFirstNameSetMessageImpl implements CustomerFirstNameSetMess
         this.type = CUSTOMER_FIRST_NAME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerFirstNameSetMessageImpl() {
         this.type = CUSTOMER_FIRST_NAME_SET;
     }

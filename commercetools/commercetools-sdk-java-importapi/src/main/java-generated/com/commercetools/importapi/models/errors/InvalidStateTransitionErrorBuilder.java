@@ -30,7 +30,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     private com.commercetools.importapi.models.common.ProcessingState newState;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     * @return currentState
+     */
+
     public com.commercetools.importapi.models.common.ProcessingState getCurrentState() {
         return this.currentState;
     }
+
+    /**
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     * @return newState
+     */
 
     public com.commercetools.importapi.models.common.ProcessingState getNewState() {
         return this.newState;
@@ -95,10 +110,19 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
         return new InvalidStateTransitionErrorImpl(message, currentState, newState);
     }
 
+    /**
+     * factory method for an instance of InvalidStateTransitionErrorBuilder
+     * @return builder
+     */
     public static InvalidStateTransitionErrorBuilder of() {
         return new InvalidStateTransitionErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidStateTransitionError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidStateTransitionErrorBuilder of(final InvalidStateTransitionError template) {
         InvalidStateTransitionErrorBuilder builder = new InvalidStateTransitionErrorBuilder();
         builder.message = template.getMessage();

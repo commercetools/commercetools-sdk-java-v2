@@ -186,40 +186,85 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the CustomerGroup.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the CustomerGroup.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Unique name of the CustomerGroup.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -249,10 +294,19 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
             custom);
     }
 
+    /**
+     * factory method for an instance of CustomerGroupBuilder
+     * @return builder
+     */
     public static CustomerGroupBuilder of() {
         return new CustomerGroupBuilder();
     }
 
+    /**
+     * create builder for CustomerGroup instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupBuilder of(final CustomerGroup template) {
         CustomerGroupBuilder builder = new CustomerGroupBuilder();
         builder.id = template.getId();

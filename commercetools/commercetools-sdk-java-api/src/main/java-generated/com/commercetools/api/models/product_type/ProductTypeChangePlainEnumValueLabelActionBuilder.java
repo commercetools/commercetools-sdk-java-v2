@@ -64,9 +64,19 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>New value to set. Must be different from the existing value.</p>
+     * @return newValue
+     */
 
     public com.commercetools.api.models.product_type.AttributePlainEnumValue getNewValue() {
         return this.newValue;
@@ -91,10 +101,19 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
         return new ProductTypeChangePlainEnumValueLabelActionImpl(attributeName, newValue);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangePlainEnumValueLabelActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangePlainEnumValueLabelActionBuilder of() {
         return new ProductTypeChangePlainEnumValueLabelActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangePlainEnumValueLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangePlainEnumValueLabelActionBuilder of(
             final ProductTypeChangePlainEnumValueLabelAction template) {
         ProductTypeChangePlainEnumValueLabelActionBuilder builder = new ProductTypeChangePlainEnumValueLabelActionBuilder();

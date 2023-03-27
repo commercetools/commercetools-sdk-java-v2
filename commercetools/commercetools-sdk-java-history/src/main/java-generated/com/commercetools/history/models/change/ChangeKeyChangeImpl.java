@@ -28,6 +28,9 @@ public class ChangeKeyChangeImpl implements ChangeKeyChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeKeyChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class ChangeKeyChangeImpl implements ChangeKeyChange, ModelBase {
         this.type = CHANGE_KEY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeKeyChangeImpl() {
         this.type = CHANGE_KEY_CHANGE;
     }

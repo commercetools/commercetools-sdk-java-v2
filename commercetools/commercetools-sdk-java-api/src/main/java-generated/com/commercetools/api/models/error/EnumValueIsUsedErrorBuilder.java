@@ -62,9 +62,19 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
         return this;
     }
 
+    /**
+     *  <p><code>"$enumKeysTranscript is used by some products and cannot be deleted because the $attributeName attribute is required."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
         return new EnumValueIsUsedErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of EnumValueIsUsedErrorBuilder
+     * @return builder
+     */
     public static EnumValueIsUsedErrorBuilder of() {
         return new EnumValueIsUsedErrorBuilder();
     }
 
+    /**
+     * create builder for EnumValueIsUsedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumValueIsUsedErrorBuilder of(final EnumValueIsUsedError template) {
         EnumValueIsUsedErrorBuilder builder = new EnumValueIsUsedErrorBuilder();
         builder.message = template.getMessage();

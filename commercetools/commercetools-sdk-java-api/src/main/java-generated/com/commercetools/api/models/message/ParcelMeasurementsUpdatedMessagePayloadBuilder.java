@@ -93,18 +93,38 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @return parcelId
+     */
 
     public String getParcelId() {
         return this.parcelId;
     }
 
+    /**
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     * @return measurements
+     */
+
     @Nullable
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -129,10 +149,19 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
         return new ParcelMeasurementsUpdatedMessagePayloadImpl(deliveryId, parcelId, measurements, shippingKey);
     }
 
+    /**
+     * factory method for an instance of ParcelMeasurementsUpdatedMessagePayloadBuilder
+     * @return builder
+     */
     public static ParcelMeasurementsUpdatedMessagePayloadBuilder of() {
         return new ParcelMeasurementsUpdatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ParcelMeasurementsUpdatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelMeasurementsUpdatedMessagePayloadBuilder of(
             final ParcelMeasurementsUpdatedMessagePayload template) {
         ParcelMeasurementsUpdatedMessagePayloadBuilder builder = new ParcelMeasurementsUpdatedMessagePayloadBuilder();

@@ -24,12 +24,18 @@ public class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeField
 
     private java.util.List<String> fieldNames;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeChangeFieldDefinitionOrderActionImpl(@JsonProperty("fieldNames") final java.util.List<String> fieldNames) {
         this.fieldNames = fieldNames;
         this.action = CHANGE_FIELD_DEFINITION_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeChangeFieldDefinitionOrderActionImpl() {
         this.action = CHANGE_FIELD_DEFINITION_ORDER;
     }

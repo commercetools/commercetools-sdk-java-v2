@@ -45,7 +45,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     *
+     * set the value to the taxMode
      * @param taxMode value to be set
      * @return Builder
      */
@@ -104,17 +104,37 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of taxMode}
+     * @return taxMode
+     */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.TaxRate getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {
         return this.previousValue;
@@ -140,10 +160,19 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
         return new SetShippingMethodTaxRateChangeImpl(change, taxMode, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetShippingMethodTaxRateChangeBuilder
+     * @return builder
+     */
     public static SetShippingMethodTaxRateChangeBuilder of() {
         return new SetShippingMethodTaxRateChangeBuilder();
     }
 
+    /**
+     * create builder for SetShippingMethodTaxRateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetShippingMethodTaxRateChangeBuilder of(final SetShippingMethodTaxRateChange template) {
         SetShippingMethodTaxRateChangeBuilder builder = new SetShippingMethodTaxRateChangeBuilder();
         builder.change = template.getChange();

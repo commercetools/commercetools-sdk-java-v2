@@ -63,9 +63,19 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>Value to append to the array.</p>
+     * @return value
+     */
 
     public com.commercetools.api.models.product_type.AttributePlainEnumValue getValue() {
         return this.value;
@@ -89,10 +99,19 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
         return new ProductTypeAddPlainEnumValueActionImpl(attributeName, value);
     }
 
+    /**
+     * factory method for an instance of ProductTypeAddPlainEnumValueActionBuilder
+     * @return builder
+     */
     public static ProductTypeAddPlainEnumValueActionBuilder of() {
         return new ProductTypeAddPlainEnumValueActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeAddPlainEnumValueAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeAddPlainEnumValueActionBuilder of(final ProductTypeAddPlainEnumValueAction template) {
         ProductTypeAddPlainEnumValueActionBuilder builder = new ProductTypeAddPlainEnumValueActionBuilder();
         builder.attributeName = template.getAttributeName();

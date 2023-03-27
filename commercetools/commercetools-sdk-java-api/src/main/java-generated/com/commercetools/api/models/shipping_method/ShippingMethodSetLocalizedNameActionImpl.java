@@ -24,6 +24,9 @@ public class ShippingMethodSetLocalizedNameActionImpl implements ShippingMethodS
 
     private com.commercetools.api.models.common.LocalizedString localizedName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodSetLocalizedNameActionImpl(
             @JsonProperty("localizedName") final com.commercetools.api.models.common.LocalizedString localizedName) {
@@ -31,6 +34,9 @@ public class ShippingMethodSetLocalizedNameActionImpl implements ShippingMethodS
         this.action = SET_LOCALIZED_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodSetLocalizedNameActionImpl() {
         this.action = SET_LOCALIZED_NAME;
     }

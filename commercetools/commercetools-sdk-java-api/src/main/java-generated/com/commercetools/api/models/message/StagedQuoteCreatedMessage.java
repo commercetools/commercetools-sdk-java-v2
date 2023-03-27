@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedQuoteCreatedMessageImpl.class)
 public interface StagedQuoteCreatedMessage extends Message {
 
+    /**
+     * discriminator value for StagedQuoteCreatedMessage
+     */
     String STAGED_QUOTE_CREATED = "StagedQuoteCreated";
 
     /**
@@ -49,12 +52,26 @@ public interface StagedQuoteCreatedMessage extends Message {
     @JsonProperty("stagedQuote")
     public StagedQuote getStagedQuote();
 
+    /**
+     *  <p>Staged Quote that was created.</p>
+     * @param stagedQuote value to be set
+     */
+
     public void setStagedQuote(final StagedQuote stagedQuote);
 
+    /**
+     * factory method
+     * @return instance of StagedQuoteCreatedMessage
+     */
     public static StagedQuoteCreatedMessage of() {
         return new StagedQuoteCreatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedQuoteCreatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedQuoteCreatedMessage of(final StagedQuoteCreatedMessage template) {
         StagedQuoteCreatedMessageImpl instance = new StagedQuoteCreatedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface StagedQuoteCreatedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StagedQuoteCreatedMessage
+     * @return builder
+     */
     public static StagedQuoteCreatedMessageBuilder builder() {
         return StagedQuoteCreatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StagedQuoteCreatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteCreatedMessageBuilder builder(final StagedQuoteCreatedMessage template) {
         return StagedQuoteCreatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedQuoteCreatedMessage(Function<StagedQuoteCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteCreatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteCreatedMessage>() {
             @Override

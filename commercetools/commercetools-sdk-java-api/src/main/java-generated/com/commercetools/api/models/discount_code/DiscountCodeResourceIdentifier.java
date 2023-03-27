@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountCodeResourceIdentifier
         extends ResourceIdentifier, com.commercetools.api.models.Identifiable<DiscountCode> {
 
+    /**
+     * discriminator value for DiscountCodeResourceIdentifier
+     */
     String DISCOUNT_CODE = "discount-code";
 
     /**
@@ -46,14 +49,33 @@ public interface DiscountCodeResourceIdentifier
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced DiscountCode. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced DiscountCode. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodeResourceIdentifier
+     */
     public static DiscountCodeResourceIdentifier of() {
         return new DiscountCodeResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodeResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodeResourceIdentifier of(final DiscountCodeResourceIdentifier template) {
         DiscountCodeResourceIdentifierImpl instance = new DiscountCodeResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -61,18 +83,37 @@ public interface DiscountCodeResourceIdentifier
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodeResourceIdentifier
+     * @return builder
+     */
     public static DiscountCodeResourceIdentifierBuilder builder() {
         return DiscountCodeResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodeResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeResourceIdentifierBuilder builder(final DiscountCodeResourceIdentifier template) {
         return DiscountCodeResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodeResourceIdentifier(Function<DiscountCodeResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeResourceIdentifier>() {
             @Override

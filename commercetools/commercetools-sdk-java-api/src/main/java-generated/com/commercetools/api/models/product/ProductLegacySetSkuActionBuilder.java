@@ -29,7 +29,7 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
     private Integer variantId;
 
     /**
-     *
+     * set the value to the sku
      * @param sku value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
     }
 
     /**
-     *
+     * set the value to the variantId
      * @param variantId value to be set
      * @return Builder
      */
@@ -50,10 +50,20 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
         return this;
     }
 
+    /**
+     * value of sku}
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     * value of variantId}
+     * @return variantId
+     */
 
     public Integer getVariantId() {
         return this.variantId;
@@ -76,10 +86,19 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
         return new ProductLegacySetSkuActionImpl(sku, variantId);
     }
 
+    /**
+     * factory method for an instance of ProductLegacySetSkuActionBuilder
+     * @return builder
+     */
     public static ProductLegacySetSkuActionBuilder of() {
         return new ProductLegacySetSkuActionBuilder();
     }
 
+    /**
+     * create builder for ProductLegacySetSkuAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductLegacySetSkuActionBuilder of(final ProductLegacySetSkuAction template) {
         ProductLegacySetSkuActionBuilder builder = new ProductLegacySetSkuActionBuilder();
         builder.sku = template.getSku();

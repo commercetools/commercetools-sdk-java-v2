@@ -26,6 +26,9 @@ public class CartDiscountSetValidFromAndUntilActionImpl implements CartDiscountS
 
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountSetValidFromAndUntilActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
@@ -34,6 +37,9 @@ public class CartDiscountSetValidFromAndUntilActionImpl implements CartDiscountS
         this.action = SET_VALID_FROM_AND_UNTIL;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountSetValidFromAndUntilActionImpl() {
         this.action = SET_VALID_FROM_AND_UNTIL;
     }

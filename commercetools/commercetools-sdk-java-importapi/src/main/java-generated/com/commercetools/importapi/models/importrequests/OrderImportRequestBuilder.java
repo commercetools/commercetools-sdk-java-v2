@@ -91,6 +91,11 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
         return this;
     }
 
+    /**
+     *  <p>The order import resources of this request.</p>
+     * @return resources
+     */
+
     public java.util.List<com.commercetools.importapi.models.orders.OrderImport> getResources() {
         return this.resources;
     }
@@ -112,10 +117,19 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
         return new OrderImportRequestImpl(resources);
     }
 
+    /**
+     * factory method for an instance of OrderImportRequestBuilder
+     * @return builder
+     */
     public static OrderImportRequestBuilder of() {
         return new OrderImportRequestBuilder();
     }
 
+    /**
+     * create builder for OrderImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderImportRequestBuilder of(final OrderImportRequest template) {
         OrderImportRequestBuilder builder = new OrderImportRequestBuilder();
         builder.resources = template.getResources();

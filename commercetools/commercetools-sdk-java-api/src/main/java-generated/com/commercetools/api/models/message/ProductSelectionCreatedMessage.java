@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionCreatedMessageImpl.class)
 public interface ProductSelectionCreatedMessage extends Message {
 
+    /**
+     * discriminator value for ProductSelectionCreatedMessage
+     */
     String PRODUCT_SELECTION_CREATED = "ProductSelectionCreated";
 
     /**
@@ -49,12 +52,26 @@ public interface ProductSelectionCreatedMessage extends Message {
     @JsonProperty("productSelection")
     public ProductSelectionType getProductSelection();
 
+    /**
+     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     * @param productSelection value to be set
+     */
+
     public void setProductSelection(final ProductSelectionType productSelection);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionCreatedMessage
+     */
     public static ProductSelectionCreatedMessage of() {
         return new ProductSelectionCreatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionCreatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionCreatedMessage of(final ProductSelectionCreatedMessage template) {
         ProductSelectionCreatedMessageImpl instance = new ProductSelectionCreatedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface ProductSelectionCreatedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionCreatedMessage
+     * @return builder
+     */
     public static ProductSelectionCreatedMessageBuilder builder() {
         return ProductSelectionCreatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionCreatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionCreatedMessageBuilder builder(final ProductSelectionCreatedMessage template) {
         return ProductSelectionCreatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionCreatedMessage(Function<ProductSelectionCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionCreatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionCreatedMessage>() {
             @Override

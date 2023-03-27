@@ -27,6 +27,10 @@ public class ExtensionUpdateActionBuilder {
         return com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ExtensionUpdateActionBuilder
+     * @return builder
+     */
     public static ExtensionUpdateActionBuilder of() {
         return new ExtensionUpdateActionBuilder();
     }

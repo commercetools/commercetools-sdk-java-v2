@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomObjectReferenceImpl.class)
 public interface CustomObjectReference extends Reference, com.commercetools.api.models.Identifiable<CustomObject> {
 
+    /**
+     * discriminator value for CustomObjectReference
+     */
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
     /**
@@ -49,14 +52,33 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final CustomObject obj);
+
+    /**
+     *  <p>Unique identifier of the referenced CustomObject.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of CustomObjectReference
+     */
     public static CustomObjectReference of() {
         return new CustomObjectReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomObjectReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomObjectReference of(final CustomObjectReference template) {
         CustomObjectReferenceImpl instance = new CustomObjectReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
         return instance;
     }
 
+    /**
+     * builder factory method for CustomObjectReference
+     * @return builder
+     */
     public static CustomObjectReferenceBuilder builder() {
         return CustomObjectReferenceBuilder.of();
     }
 
+    /**
+     * create builder for CustomObjectReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomObjectReferenceBuilder builder(final CustomObjectReference template) {
         return CustomObjectReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomObjectReference(Function<CustomObjectReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomObjectReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomObjectReference>() {
             @Override

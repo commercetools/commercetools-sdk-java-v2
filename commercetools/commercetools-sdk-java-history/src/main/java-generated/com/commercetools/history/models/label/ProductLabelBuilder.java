@@ -28,7 +28,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     private com.commercetools.history.models.common.LocalizedString name;
 
     /**
-     *
+     * set the value to the slug using the builder function
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     *
+     * set the value to the slug
      * @param slug value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     *
+     * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -73,9 +73,19 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
         return this;
     }
 
+    /**
+     * value of slug}
+     * @return slug
+     */
+
     public com.commercetools.history.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
         return this.name;
@@ -99,10 +109,19 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
         return new ProductLabelImpl(slug, name);
     }
 
+    /**
+     * factory method for an instance of ProductLabelBuilder
+     * @return builder
+     */
     public static ProductLabelBuilder of() {
         return new ProductLabelBuilder();
     }
 
+    /**
+     * create builder for ProductLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductLabelBuilder of(final ProductLabel template) {
         ProductLabelBuilder builder = new ProductLabelBuilder();
         builder.slug = template.getSlug();

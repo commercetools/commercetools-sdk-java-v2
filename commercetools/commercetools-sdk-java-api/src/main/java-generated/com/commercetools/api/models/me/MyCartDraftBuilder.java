@@ -472,79 +472,161 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
         return this;
     }
 
+    /**
+     *  <p>Currency the Cart uses.</p>
+     * @return currency
+     */
+
     public String getCurrency() {
         return this.currency;
     }
+
+    /**
+     *  <p>Email address of the Customer the Cart belongs to.</p>
+     * @return customerEmail
+     */
 
     @Nullable
     public String getCustomerEmail() {
         return this.customerEmail;
     }
 
+    /**
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     * @return businessUnit
+     */
+
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
         return this.businessUnit;
     }
+
+    /**
+     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     * @return store
+     */
 
     @Nullable
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
 
+    /**
+     *  <p>Line Items to add to the Cart.</p>
+     * @return lineItems
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.me.MyLineItemDraft> getLineItems() {
         return this.lineItems;
     }
+
+    /**
+     *  <p>Determines how Tax Rates are set. The <code>Disabled</code> TaxMode <strong>cannot</strong> be set.</p>
+     * @return taxMode
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
+    /**
+     *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
+     * @return inventoryMode
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
+
+    /**
+     *  <p>Billing address associated with the Cart.</p>
+     * @return billingAddress
+     */
 
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
         return this.billingAddress;
     }
 
+    /**
+     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @return shippingAddress
+     */
+
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
+
+    /**
+     *  <p>Shipping Method for the Cart. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     * @return shippingMethod
+     */
 
     @Nullable
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
 
+    /**
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return itemShippingAddresses
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
+
+    /**
+     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     * @return discountCodes
+     */
 
     @Nullable
     public java.util.List<String> getDiscountCodes() {
         return this.discountCodes;
     }
 
+    /**
+     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     * @return country
+     */
+
     @Nullable
     public String getCountry() {
         return this.country;
     }
+
+    /**
+     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     * @return locale
+     */
 
     @Nullable
     public String getLocale() {
         return this.locale;
     }
 
+    /**
+     *  <p>Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
+     * @return deleteDaysAfterLastModification
+     */
+
     @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
+
+    /**
+     *  <p>Custom Fields for the Cart.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -572,10 +654,19 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
             deleteDaysAfterLastModification, custom);
     }
 
+    /**
+     * factory method for an instance of MyCartDraftBuilder
+     * @return builder
+     */
     public static MyCartDraftBuilder of() {
         return new MyCartDraftBuilder();
     }
 
+    /**
+     * create builder for MyCartDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartDraftBuilder of(final MyCartDraft template) {
         MyCartDraftBuilder builder = new MyCartDraftBuilder();
         builder.currency = template.getCurrency();

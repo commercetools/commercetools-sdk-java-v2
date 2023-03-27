@@ -107,7 +107,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the title
      * @param title value to be set
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the salutation
      * @param salutation value to be set
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the firstName
      * @param firstName value to be set
      * @return Builder
      */
@@ -151,7 +151,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the lastName
      * @param lastName value to be set
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the streetName
      * @param streetName value to be set
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the streetNumber
      * @param streetNumber value to be set
      * @return Builder
      */
@@ -184,7 +184,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the additionalStreetInfo
      * @param additionalStreetInfo value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the postalCode
      * @param postalCode value to be set
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the city
      * @param city value to be set
      * @return Builder
      */
@@ -217,7 +217,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the region
      * @param region value to be set
      * @return Builder
      */
@@ -228,7 +228,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -250,7 +250,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the company
      * @param company value to be set
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the department
      * @param department value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the building
      * @param building value to be set
      * @return Builder
      */
@@ -283,7 +283,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the apartment
      * @param apartment value to be set
      * @return Builder
      */
@@ -294,7 +294,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the pOBox
      * @param pOBox value to be set
      * @return Builder
      */
@@ -305,7 +305,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the phone
      * @param phone value to be set
      * @return Builder
      */
@@ -316,7 +316,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the mobile
      * @param mobile value to be set
      * @return Builder
      */
@@ -327,7 +327,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the email
      * @param email value to be set
      * @return Builder
      */
@@ -338,7 +338,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the fax
      * @param fax value to be set
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the additionalAddressInfo
      * @param additionalAddressInfo value to be set
      * @return Builder
      */
@@ -360,7 +360,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *
+     * set the value to the externalId
      * @param externalId value to be set
      * @return Builder
      */
@@ -370,101 +370,226 @@ public class AddressBuilder implements Builder<Address> {
         return this;
     }
 
+    /**
+     *  <p>Unique ID of the Address.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
     }
 
+    /**
+     * value of title}
+     * @return title
+     */
+
     public String getTitle() {
         return this.title;
     }
+
+    /**
+     * value of salutation}
+     * @return salutation
+     */
 
     public String getSalutation() {
         return this.salutation;
     }
 
+    /**
+     * value of firstName}
+     * @return firstName
+     */
+
     public String getFirstName() {
         return this.firstName;
     }
+
+    /**
+     * value of lastName}
+     * @return lastName
+     */
 
     public String getLastName() {
         return this.lastName;
     }
 
+    /**
+     * value of streetName}
+     * @return streetName
+     */
+
     public String getStreetName() {
         return this.streetName;
     }
+
+    /**
+     * value of streetNumber}
+     * @return streetNumber
+     */
 
     public String getStreetNumber() {
         return this.streetNumber;
     }
 
+    /**
+     * value of additionalStreetInfo}
+     * @return additionalStreetInfo
+     */
+
     public String getAdditionalStreetInfo() {
         return this.additionalStreetInfo;
     }
+
+    /**
+     * value of postalCode}
+     * @return postalCode
+     */
 
     public String getPostalCode() {
         return this.postalCode;
     }
 
+    /**
+     * value of city}
+     * @return city
+     */
+
     public String getCity() {
         return this.city;
     }
+
+    /**
+     * value of region}
+     * @return region
+     */
 
     public String getRegion() {
         return this.region;
     }
 
+    /**
+     * value of state}
+     * @return state
+     */
+
     public String getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return country
+     */
 
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     * value of company}
+     * @return company
+     */
+
     public String getCompany() {
         return this.company;
     }
+
+    /**
+     * value of department}
+     * @return department
+     */
 
     public String getDepartment() {
         return this.department;
     }
 
+    /**
+     * value of building}
+     * @return building
+     */
+
     public String getBuilding() {
         return this.building;
     }
+
+    /**
+     * value of apartment}
+     * @return apartment
+     */
 
     public String getApartment() {
         return this.apartment;
     }
 
+    /**
+     * value of pOBox}
+     * @return pOBox
+     */
+
     public String getPOBox() {
         return this.pOBox;
     }
+
+    /**
+     * value of phone}
+     * @return phone
+     */
 
     public String getPhone() {
         return this.phone;
     }
 
+    /**
+     * value of mobile}
+     * @return mobile
+     */
+
     public String getMobile() {
         return this.mobile;
     }
+
+    /**
+     * value of email}
+     * @return email
+     */
 
     public String getEmail() {
         return this.email;
     }
 
+    /**
+     * value of fax}
+     * @return fax
+     */
+
     public String getFax() {
         return this.fax;
     }
 
+    /**
+     * value of additionalAddressInfo}
+     * @return additionalAddressInfo
+     */
+
     public String getAdditionalAddressInfo() {
         return this.additionalAddressInfo;
     }
+
+    /**
+     * value of externalId}
+     * @return externalId
+     */
 
     public String getExternalId() {
         return this.externalId;
@@ -515,10 +640,19 @@ public class AddressBuilder implements Builder<Address> {
             pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);
     }
 
+    /**
+     * factory method for an instance of AddressBuilder
+     * @return builder
+     */
     public static AddressBuilder of() {
         return new AddressBuilder();
     }
 
+    /**
+     * create builder for Address instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddressBuilder of(final Address template) {
         AddressBuilder builder = new AddressBuilder();
         builder.id = template.getId();

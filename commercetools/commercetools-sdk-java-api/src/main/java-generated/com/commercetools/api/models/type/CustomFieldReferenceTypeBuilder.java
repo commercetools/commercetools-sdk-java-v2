@@ -35,6 +35,11 @@ public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldRefer
         return this;
     }
 
+    /**
+     *  <p>Resource type the Custom Field can reference.</p>
+     * @return referenceTypeId
+     */
+
     public com.commercetools.api.models.type.CustomFieldReferenceValue getReferenceTypeId() {
         return this.referenceTypeId;
     }
@@ -56,10 +61,19 @@ public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldRefer
         return new CustomFieldReferenceTypeImpl(referenceTypeId);
     }
 
+    /**
+     * factory method for an instance of CustomFieldReferenceTypeBuilder
+     * @return builder
+     */
     public static CustomFieldReferenceTypeBuilder of() {
         return new CustomFieldReferenceTypeBuilder();
     }
 
+    /**
+     * create builder for CustomFieldReferenceType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldReferenceTypeBuilder of(final CustomFieldReferenceType template) {
         CustomFieldReferenceTypeBuilder builder = new CustomFieldReferenceTypeBuilder();
         builder.referenceTypeId = template.getReferenceTypeId();

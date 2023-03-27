@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReferenceAttributeImpl.class)
 public interface ReferenceAttribute extends Attribute {
 
+    /**
+     * discriminator value for ReferenceAttribute
+     */
     String REFERENCE = "reference";
 
     /**
@@ -42,12 +45,26 @@ public interface ReferenceAttribute extends Attribute {
     @JsonProperty("value")
     public KeyReference getValue();
 
+    /**
+     *  <p>References a resource by key.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final KeyReference value);
 
+    /**
+     * factory method
+     * @return instance of ReferenceAttribute
+     */
     public static ReferenceAttribute of() {
         return new ReferenceAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReferenceAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReferenceAttribute of(final ReferenceAttribute template) {
         ReferenceAttributeImpl instance = new ReferenceAttributeImpl();
         instance.setName(template.getName());
@@ -55,18 +72,37 @@ public interface ReferenceAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for ReferenceAttribute
+     * @return builder
+     */
     public static ReferenceAttributeBuilder builder() {
         return ReferenceAttributeBuilder.of();
     }
 
+    /**
+     * create builder for ReferenceAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferenceAttributeBuilder builder(final ReferenceAttribute template) {
         return ReferenceAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReferenceAttribute(Function<ReferenceAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReferenceAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReferenceAttribute>() {
             @Override

@@ -24,12 +24,18 @@ public class EnumFieldImpl implements EnumField, ModelBase {
 
     private String value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EnumFieldImpl(@JsonProperty("value") final String value) {
         this.value = value;
         this.type = ENUM;
     }
 
+    /**
+     * create empty instance
+     */
     public EnumFieldImpl() {
         this.type = ENUM;
     }

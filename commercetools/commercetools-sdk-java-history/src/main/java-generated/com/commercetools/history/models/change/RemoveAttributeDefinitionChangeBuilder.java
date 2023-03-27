@@ -39,7 +39,7 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -63,9 +63,19 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.AttributeDefinition getPreviousValue() {
         return this.previousValue;
@@ -89,10 +99,19 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
         return new RemoveAttributeDefinitionChangeImpl(change, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemoveAttributeDefinitionChangeBuilder
+     * @return builder
+     */
     public static RemoveAttributeDefinitionChangeBuilder of() {
         return new RemoveAttributeDefinitionChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveAttributeDefinitionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveAttributeDefinitionChangeBuilder of(final RemoveAttributeDefinitionChange template) {
         RemoveAttributeDefinitionChangeBuilder builder = new RemoveAttributeDefinitionChangeBuilder();
         builder.change = template.getChange();

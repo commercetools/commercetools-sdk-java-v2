@@ -28,6 +28,9 @@ public class SetStateRolesChangeImpl implements SetStateRolesChange, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.StateRole> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetStateRolesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.StateRole> previousValue,
@@ -38,6 +41,9 @@ public class SetStateRolesChangeImpl implements SetStateRolesChange, ModelBase {
         this.type = SET_STATE_ROLES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetStateRolesChangeImpl() {
         this.type = SET_STATE_ROLES_CHANGE;
     }

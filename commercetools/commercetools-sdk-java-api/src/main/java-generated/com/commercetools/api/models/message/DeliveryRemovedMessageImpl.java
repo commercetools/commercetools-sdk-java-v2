@@ -46,6 +46,9 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryRemovedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
         this.type = DELIVERY_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryRemovedMessageImpl() {
         this.type = DELIVERY_REMOVED;
     }

@@ -30,6 +30,9 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddToCategoryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("category") final com.commercetools.history.models.common.Reference category,
@@ -42,6 +45,9 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
         this.type = ADD_TO_CATEGORY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddToCategoryChangeImpl() {
         this.type = ADD_TO_CATEGORY_CHANGE;
     }

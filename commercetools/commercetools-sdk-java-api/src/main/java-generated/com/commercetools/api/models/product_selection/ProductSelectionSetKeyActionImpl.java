@@ -24,12 +24,18 @@ public class ProductSelectionSetKeyActionImpl implements ProductSelectionSetKeyA
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionSetKeyActionImpl() {
         this.action = SET_KEY;
     }

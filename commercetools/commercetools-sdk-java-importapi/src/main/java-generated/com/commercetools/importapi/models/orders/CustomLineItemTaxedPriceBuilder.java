@@ -28,7 +28,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
     private com.commercetools.importapi.models.common.TypedMoney totalGross;
 
     /**
-     *
+     * set the value to the totalNet
      * @param totalNet value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
     }
 
     /**
-     *
+     * set the value to the totalNet using the builder function
      * @param builder function to build the totalNet value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
     }
 
     /**
-     *
+     * set the value to the totalGross
      * @param totalGross value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
     }
 
     /**
-     *
+     * set the value to the totalGross using the builder function
      * @param builder function to build the totalGross value
      * @return Builder
      */
@@ -75,9 +75,19 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
         return this;
     }
 
+    /**
+     * value of totalNet}
+     * @return totalNet
+     */
+
     public com.commercetools.importapi.models.common.TypedMoney getTotalNet() {
         return this.totalNet;
     }
+
+    /**
+     * value of totalGross}
+     * @return totalGross
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getTotalGross() {
         return this.totalGross;
@@ -101,10 +111,19 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
         return new CustomLineItemTaxedPriceImpl(totalNet, totalGross);
     }
 
+    /**
+     * factory method for an instance of CustomLineItemTaxedPriceBuilder
+     * @return builder
+     */
     public static CustomLineItemTaxedPriceBuilder of() {
         return new CustomLineItemTaxedPriceBuilder();
     }
 
+    /**
+     * create builder for CustomLineItemTaxedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemTaxedPriceBuilder of(final CustomLineItemTaxedPrice template) {
         CustomLineItemTaxedPriceBuilder builder = new CustomLineItemTaxedPriceBuilder();
         builder.totalNet = template.getTotalNet();

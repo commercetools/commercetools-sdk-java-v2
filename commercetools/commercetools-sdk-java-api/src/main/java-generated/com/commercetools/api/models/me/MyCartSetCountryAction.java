@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartSetCountryActionImpl.class)
 public interface MyCartSetCountryAction extends MyCartUpdateAction {
 
+    /**
+     * discriminator value for MyCartSetCountryAction
+     */
     String SET_COUNTRY = "setCountry";
 
     /**
@@ -37,30 +40,64 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
     @JsonProperty("country")
     public String getCountry();
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
 
+    /**
+     * factory method
+     * @return instance of MyCartSetCountryAction
+     */
     public static MyCartSetCountryAction of() {
         return new MyCartSetCountryActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCartSetCountryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCartSetCountryAction of(final MyCartSetCountryAction template) {
         MyCartSetCountryActionImpl instance = new MyCartSetCountryActionImpl();
         instance.setCountry(template.getCountry());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCartSetCountryAction
+     * @return builder
+     */
     public static MyCartSetCountryActionBuilder builder() {
         return MyCartSetCountryActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCartSetCountryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetCountryActionBuilder builder(final MyCartSetCountryAction template) {
         return MyCartSetCountryActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCartSetCountryAction(Function<MyCartSetCountryAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetCountryAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetCountryAction>() {
             @Override

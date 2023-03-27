@@ -28,6 +28,9 @@ public class ChangeEmailChangeImpl implements ChangeEmailChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeEmailChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class ChangeEmailChangeImpl implements ChangeEmailChange, ModelBase {
         this.type = CHANGE_EMAIL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeEmailChangeImpl() {
         this.type = CHANGE_EMAIL_CHANGE;
     }

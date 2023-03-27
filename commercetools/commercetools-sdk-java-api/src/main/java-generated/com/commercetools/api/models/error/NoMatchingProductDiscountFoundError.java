@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = NoMatchingProductDiscountFoundErrorImpl.class)
 public interface NoMatchingProductDiscountFoundError extends ErrorObject {
 
+    /**
+     * discriminator value for NoMatchingProductDiscountFoundError
+     */
     String NO_MATCHING_PRODUCT_DISCOUNT_FOUND = "NoMatchingProductDiscountFound";
 
     /**
@@ -48,12 +51,26 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of NoMatchingProductDiscountFoundError
+     */
     public static NoMatchingProductDiscountFoundError of() {
         return new NoMatchingProductDiscountFoundErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of NoMatchingProductDiscountFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static NoMatchingProductDiscountFoundError of(final NoMatchingProductDiscountFoundError template) {
         NoMatchingProductDiscountFoundErrorImpl instance = new NoMatchingProductDiscountFoundErrorImpl();
         instance.setMessage(template.getMessage());
@@ -61,19 +78,38 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for NoMatchingProductDiscountFoundError
+     * @return builder
+     */
     public static NoMatchingProductDiscountFoundErrorBuilder builder() {
         return NoMatchingProductDiscountFoundErrorBuilder.of();
     }
 
+    /**
+     * create builder for NoMatchingProductDiscountFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static NoMatchingProductDiscountFoundErrorBuilder builder(
             final NoMatchingProductDiscountFoundError template) {
         return NoMatchingProductDiscountFoundErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withNoMatchingProductDiscountFoundError(Function<NoMatchingProductDiscountFoundError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<NoMatchingProductDiscountFoundError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<NoMatchingProductDiscountFoundError>() {
             @Override

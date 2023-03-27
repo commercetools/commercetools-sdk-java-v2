@@ -48,6 +48,11 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
         return this;
     }
 
+    /**
+     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
@@ -68,10 +73,19 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
         return new FieldContainerImpl(values);
     }
 
+    /**
+     * factory method for an instance of FieldContainerBuilder
+     * @return builder
+     */
     public static FieldContainerBuilder of() {
         return new FieldContainerBuilder();
     }
 
+    /**
+     * create builder for FieldContainer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldContainerBuilder of(final FieldContainer template) {
         FieldContainerBuilder builder = new FieldContainerBuilder();
         builder.values = template.values();

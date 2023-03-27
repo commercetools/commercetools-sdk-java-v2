@@ -28,6 +28,9 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name,
             @JsonProperty("description") final String description,
@@ -38,6 +41,9 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
         this.attributes = attributes;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeDraftImpl() {
     }
 

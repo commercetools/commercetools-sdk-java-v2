@@ -48,9 +48,19 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
+     * @return isSearchable
+     */
 
     public Boolean getIsSearchable() {
         return this.isSearchable;
@@ -74,10 +84,19 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
         return new ProductTypeChangeIsSearchableActionImpl(attributeName, isSearchable);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeIsSearchableActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeIsSearchableActionBuilder of() {
         return new ProductTypeChangeIsSearchableActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeIsSearchableAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeIsSearchableActionBuilder of(final ProductTypeChangeIsSearchableAction template) {
         ProductTypeChangeIsSearchableActionBuilder builder = new ProductTypeChangeIsSearchableActionBuilder();
         builder.attributeName = template.getAttributeName();

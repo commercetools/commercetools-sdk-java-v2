@@ -64,6 +64,9 @@ public class DivisionImpl implements Division, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DivisionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -108,6 +111,9 @@ public class DivisionImpl implements Division, ModelBase {
         this.unitType = BusinessUnitType.findEnum("Division");
     }
 
+    /**
+     * create empty instance
+     */
     public DivisionImpl() {
         this.unitType = BusinessUnitType.findEnum("Division");
     }

@@ -24,12 +24,18 @@ public class SubRateImpl implements SubRate, ModelBase {
 
     private Integer amount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubRateImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Integer amount) {
         this.name = name;
         this.amount = amount;
     }
 
+    /**
+     * create empty instance
+     */
     public SubRateImpl() {
     }
 

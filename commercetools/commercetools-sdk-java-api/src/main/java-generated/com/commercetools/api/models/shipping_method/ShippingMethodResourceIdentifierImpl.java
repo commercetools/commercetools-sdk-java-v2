@@ -27,6 +27,9 @@ public class ShippingMethodResourceIdentifierImpl implements ShippingMethodResou
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class ShippingMethodResourceIdentifierImpl implements ShippingMethodResou
         this.typeId = ReferenceTypeId.findEnum("shipping-method");
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("shipping-method");
     }

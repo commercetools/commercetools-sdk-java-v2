@@ -27,6 +27,9 @@ public class StateResourceIdentifierImpl implements StateResourceIdentifier, Mod
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class StateResourceIdentifierImpl implements StateResourceIdentifier, Mod
         this.typeId = ReferenceTypeId.findEnum("state");
     }
 
+    /**
+     * create empty instance
+     */
     public StateResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("state");
     }

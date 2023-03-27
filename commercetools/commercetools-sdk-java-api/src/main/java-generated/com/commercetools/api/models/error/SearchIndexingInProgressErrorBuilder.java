@@ -62,9 +62,19 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
         return this;
     }
 
+    /**
+     *  <p><code>"The indexing is currently in progress. Please wait until the status is "Activated" to execute search requests."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
         return new SearchIndexingInProgressErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of SearchIndexingInProgressErrorBuilder
+     * @return builder
+     */
     public static SearchIndexingInProgressErrorBuilder of() {
         return new SearchIndexingInProgressErrorBuilder();
     }
 
+    /**
+     * create builder for SearchIndexingInProgressError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchIndexingInProgressErrorBuilder of(final SearchIndexingInProgressError template) {
         SearchIndexingInProgressErrorBuilder builder = new SearchIndexingInProgressErrorBuilder();
         builder.message = template.getMessage();

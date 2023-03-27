@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteRequestCreatedMessagePayloadImpl.class)
 public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for QuoteRequestCreatedMessagePayload
+     */
     String QUOTE_REQUEST_CREATED = "QuoteRequestCreated";
 
     /**
@@ -42,30 +45,63 @@ public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
     @JsonProperty("quoteRequest")
     public QuoteRequest getQuoteRequest();
 
+    /**
+     *  <p>Quote Request that was created.</p>
+     * @param quoteRequest value to be set
+     */
+
     public void setQuoteRequest(final QuoteRequest quoteRequest);
 
+    /**
+     * factory method
+     * @return instance of QuoteRequestCreatedMessagePayload
+     */
     public static QuoteRequestCreatedMessagePayload of() {
         return new QuoteRequestCreatedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteRequestCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteRequestCreatedMessagePayload of(final QuoteRequestCreatedMessagePayload template) {
         QuoteRequestCreatedMessagePayloadImpl instance = new QuoteRequestCreatedMessagePayloadImpl();
         instance.setQuoteRequest(template.getQuoteRequest());
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteRequestCreatedMessagePayload
+     * @return builder
+     */
     public static QuoteRequestCreatedMessagePayloadBuilder builder() {
         return QuoteRequestCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for QuoteRequestCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestCreatedMessagePayloadBuilder builder(final QuoteRequestCreatedMessagePayload template) {
         return QuoteRequestCreatedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteRequestCreatedMessagePayload(Function<QuoteRequestCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestCreatedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestCreatedMessagePayload>() {
             @Override

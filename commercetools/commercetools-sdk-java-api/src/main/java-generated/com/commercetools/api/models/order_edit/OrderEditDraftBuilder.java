@@ -189,29 +189,59 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the OrderEdit.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>The order to be updated with this edit.</p>
+     * @return resource
+     */
+
     public com.commercetools.api.models.order.OrderReference getResource() {
         return this.resource;
     }
+
+    /**
+     *  <p>The actions to apply to <code>resource</code>.</p>
+     * @return stagedActions
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
         return this.stagedActions;
     }
 
+    /**
+     *  <p>The custom fields.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>This field can be used to add additional textual information regarding the edit.</p>
+     * @return comment
+     */
+
     @Nullable
     public String getComment() {
         return this.comment;
     }
+
+    /**
+     *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
+     * @return dryRun
+     */
 
     @Nullable
     public Boolean getDryRun() {
@@ -235,10 +265,19 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
         return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);
     }
 
+    /**
+     * factory method for an instance of OrderEditDraftBuilder
+     * @return builder
+     */
     public static OrderEditDraftBuilder of() {
         return new OrderEditDraftBuilder();
     }
 
+    /**
+     * create builder for OrderEditDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditDraftBuilder of(final OrderEditDraft template) {
         OrderEditDraftBuilder builder = new OrderEditDraftBuilder();
         builder.key = template.getKey();

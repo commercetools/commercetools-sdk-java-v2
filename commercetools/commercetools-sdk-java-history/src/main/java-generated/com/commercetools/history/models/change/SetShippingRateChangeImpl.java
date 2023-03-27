@@ -28,6 +28,9 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetShippingRateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Money nextValue,
@@ -38,6 +41,9 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
         this.type = SET_SHIPPING_RATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetShippingRateChangeImpl() {
         this.type = SET_SHIPPING_RATE_CHANGE;
     }

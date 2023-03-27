@@ -93,22 +93,47 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @return resourceType
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;
     }
 
+    /**
+     *  <p>The version of the ImportContainer.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>The time when the ImportContainer was created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *  <p>The last time when the ImportContainer was modified.</p>
+     * @return lastModifiedAt
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
@@ -134,10 +159,19 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
         return new ImportContainerImpl(key, resourceType, version, createdAt, lastModifiedAt);
     }
 
+    /**
+     * factory method for an instance of ImportContainerBuilder
+     * @return builder
+     */
     public static ImportContainerBuilder of() {
         return new ImportContainerBuilder();
     }
 
+    /**
+     * create builder for ImportContainer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportContainerBuilder of(final ImportContainer template) {
         ImportContainerBuilder builder = new ImportContainerBuilder();
         builder.key = template.getKey();

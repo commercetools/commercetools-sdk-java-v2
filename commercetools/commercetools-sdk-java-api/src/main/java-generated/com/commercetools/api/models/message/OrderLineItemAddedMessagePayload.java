@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderLineItemAddedMessagePayloadImpl.class)
 public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderLineItemAddedMessagePayload
+     */
     String ORDER_LINE_ITEM_ADDED = "OrderLineItemAdded";
 
     /**
@@ -51,14 +54,33 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
     @JsonProperty("addedQuantity")
     public Long getAddedQuantity();
 
+    /**
+     *  <p>Line Item that was added to the Order.</p>
+     * @param lineItem value to be set
+     */
+
     public void setLineItem(final LineItem lineItem);
+
+    /**
+     *  <p>Quantity of Line Items that were added to the Order.</p>
+     * @param addedQuantity value to be set
+     */
 
     public void setAddedQuantity(final Long addedQuantity);
 
+    /**
+     * factory method
+     * @return instance of OrderLineItemAddedMessagePayload
+     */
     public static OrderLineItemAddedMessagePayload of() {
         return new OrderLineItemAddedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderLineItemAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderLineItemAddedMessagePayload of(final OrderLineItemAddedMessagePayload template) {
         OrderLineItemAddedMessagePayloadImpl instance = new OrderLineItemAddedMessagePayloadImpl();
         instance.setLineItem(template.getLineItem());
@@ -66,18 +88,37 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderLineItemAddedMessagePayload
+     * @return builder
+     */
     public static OrderLineItemAddedMessagePayloadBuilder builder() {
         return OrderLineItemAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderLineItemAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLineItemAddedMessagePayloadBuilder builder(final OrderLineItemAddedMessagePayload template) {
         return OrderLineItemAddedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderLineItemAddedMessagePayload(Function<OrderLineItemAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemAddedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemAddedMessagePayload>() {
             @Override

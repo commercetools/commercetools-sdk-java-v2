@@ -31,6 +31,9 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
 
     private com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectCategoryRecommendationPagedQueryResponseImpl(@JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
@@ -43,6 +46,9 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
         this.meta = meta;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectCategoryRecommendationPagedQueryResponseImpl() {
     }
 

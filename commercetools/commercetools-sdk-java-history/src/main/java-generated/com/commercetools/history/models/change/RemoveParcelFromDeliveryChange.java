@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveParcelFromDeliveryChangeImpl.class)
 public interface RemoveParcelFromDeliveryChange extends Change {
 
+    /**
+     * discriminator value for RemoveParcelFromDeliveryChange
+     */
     String REMOVE_PARCEL_FROM_DELIVERY_CHANGE = "RemoveParcelFromDeliveryChange";
 
     /**
@@ -68,16 +71,40 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     @JsonProperty("previousValue")
     public Parcel getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set deliveryId
+     * @param deliveryId value to be set
+     */
 
     public void setDeliveryId(final String deliveryId);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Parcel previousValue);
 
+    /**
+     * factory method
+     * @return instance of RemoveParcelFromDeliveryChange
+     */
     public static RemoveParcelFromDeliveryChange of() {
         return new RemoveParcelFromDeliveryChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveParcelFromDeliveryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveParcelFromDeliveryChange of(final RemoveParcelFromDeliveryChange template) {
         RemoveParcelFromDeliveryChangeImpl instance = new RemoveParcelFromDeliveryChangeImpl();
         instance.setChange(template.getChange());
@@ -86,18 +113,37 @@ public interface RemoveParcelFromDeliveryChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveParcelFromDeliveryChange
+     * @return builder
+     */
     public static RemoveParcelFromDeliveryChangeBuilder builder() {
         return RemoveParcelFromDeliveryChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveParcelFromDeliveryChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveParcelFromDeliveryChangeBuilder builder(final RemoveParcelFromDeliveryChange template) {
         return RemoveParcelFromDeliveryChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveParcelFromDeliveryChange(Function<RemoveParcelFromDeliveryChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveParcelFromDeliveryChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveParcelFromDeliveryChange>() {
             @Override

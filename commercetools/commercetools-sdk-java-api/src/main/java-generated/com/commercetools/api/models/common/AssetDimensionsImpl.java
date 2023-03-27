@@ -24,12 +24,18 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
 
     private Integer h;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssetDimensionsImpl(@JsonProperty("w") final Integer w, @JsonProperty("h") final Integer h) {
         this.w = w;
         this.h = h;
     }
 
+    /**
+     * create empty instance
+     */
     public AssetDimensionsImpl() {
     }
 

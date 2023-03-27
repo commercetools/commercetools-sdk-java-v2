@@ -24,12 +24,18 @@ public class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAction, M
 
     private com.commercetools.api.models.zone.Location location;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneRemoveLocationActionImpl(@JsonProperty("location") final com.commercetools.api.models.zone.Location location) {
         this.location = location;
         this.action = REMOVE_LOCATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneRemoveLocationActionImpl() {
         this.action = REMOVE_LOCATION;
     }

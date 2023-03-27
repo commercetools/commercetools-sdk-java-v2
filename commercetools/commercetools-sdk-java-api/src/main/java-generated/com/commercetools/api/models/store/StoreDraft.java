@@ -105,41 +105,127 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     *  <p>Name of the Store.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     * @param languages values to be set
+     */
 
     @JsonIgnore
     public void setLanguages(final String... languages);
 
+    /**
+     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     * @param languages values to be set
+     */
+
     public void setLanguages(final List<String> languages);
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     * @param countries values to be set
+     */
 
     @JsonIgnore
     public void setCountries(final StoreCountry... countries);
 
+    /**
+     *  <p>Countries defined for the Store.</p>
+     * @param countries values to be set
+     */
+
     public void setCountries(final List<StoreCountry> countries);
+
+    /**
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param distributionChannels values to be set
+     */
 
     @JsonIgnore
     public void setDistributionChannels(final ChannelResourceIdentifier... distributionChannels);
 
+    /**
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param distributionChannels values to be set
+     */
+
     public void setDistributionChannels(final List<ChannelResourceIdentifier> distributionChannels);
+
+    /**
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannels values to be set
+     */
 
     @JsonIgnore
     public void setSupplyChannels(final ChannelResourceIdentifier... supplyChannels);
 
+    /**
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannels values to be set
+     */
+
     public void setSupplyChannels(final List<ChannelResourceIdentifier> supplyChannels);
+
+    /**
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
+     *  <ul>
+     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *  </ul>
+     * @param productSelections values to be set
+     */
 
     @JsonIgnore
     public void setProductSelections(final ProductSelectionSettingDraft... productSelections);
 
+    /**
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
+     *  <ul>
+     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *  </ul>
+     * @param productSelections values to be set
+     */
+
     public void setProductSelections(final List<ProductSelectionSettingDraft> productSelections);
+
+    /**
+     *  <p>Custom fields for the Store.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of StoreDraft
+     */
     public static StoreDraft of() {
         return new StoreDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreDraft of(final StoreDraft template) {
         StoreDraftImpl instance = new StoreDraftImpl();
         instance.setKey(template.getKey());
@@ -153,18 +239,37 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
         return instance;
     }
 
+    /**
+     * builder factory method for StoreDraft
+     * @return builder
+     */
     public static StoreDraftBuilder builder() {
         return StoreDraftBuilder.of();
     }
 
+    /**
+     * create builder for StoreDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreDraftBuilder builder(final StoreDraft template) {
         return StoreDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreDraft(Function<StoreDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreDraft>() {
             @Override

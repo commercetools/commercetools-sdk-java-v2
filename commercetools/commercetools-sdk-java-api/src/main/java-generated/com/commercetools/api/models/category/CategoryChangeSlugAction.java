@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryChangeSlugActionImpl.class)
 public interface CategoryChangeSlugAction extends CategoryUpdateAction {
 
+    /**
+     * discriminator value for CategoryChangeSlugAction
+     */
     String CHANGE_SLUG = "changeSlug";
 
     /**
@@ -42,30 +45,63 @@ public interface CategoryChangeSlugAction extends CategoryUpdateAction {
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
+    /**
+     *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @param slug value to be set
+     */
+
     public void setSlug(final LocalizedString slug);
 
+    /**
+     * factory method
+     * @return instance of CategoryChangeSlugAction
+     */
     public static CategoryChangeSlugAction of() {
         return new CategoryChangeSlugActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryChangeSlugAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryChangeSlugAction of(final CategoryChangeSlugAction template) {
         CategoryChangeSlugActionImpl instance = new CategoryChangeSlugActionImpl();
         instance.setSlug(template.getSlug());
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryChangeSlugAction
+     * @return builder
+     */
     public static CategoryChangeSlugActionBuilder builder() {
         return CategoryChangeSlugActionBuilder.of();
     }
 
+    /**
+     * create builder for CategoryChangeSlugAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryChangeSlugActionBuilder builder(final CategoryChangeSlugAction template) {
         return CategoryChangeSlugActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryChangeSlugAction(Function<CategoryChangeSlugAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeSlugAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeSlugAction>() {
             @Override

@@ -56,21 +56,48 @@ public interface StateTypeEnum {
     */
     StateTypeEnum QUOTE_STATE = StateTypeEnumEnum.QUOTE_STATE;
 
+    /**
+     * possible values of StateTypeEnum
+     */
     enum StateTypeEnumEnum implements StateTypeEnum {
+        /**
+         * OrderState
+         */
         ORDER_STATE("OrderState"),
 
+        /**
+         * LineItemState
+         */
         LINE_ITEM_STATE("LineItemState"),
 
+        /**
+         * ProductState
+         */
         PRODUCT_STATE("ProductState"),
 
+        /**
+         * ReviewState
+         */
         REVIEW_STATE("ReviewState"),
 
+        /**
+         * PaymentState
+         */
         PAYMENT_STATE("PaymentState"),
 
+        /**
+         * QuoteRequestState
+         */
         QUOTE_REQUEST_STATE("QuoteRequestState"),
 
+        /**
+         * StagedQuoteState
+         */
         STAGED_QUOTE_STATE("StagedQuoteState"),
 
+        /**
+         * QuoteState
+         */
         QUOTE_STATE("QuoteState");
         private final String jsonName;
 
@@ -87,13 +114,30 @@ public interface StateTypeEnum {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of StateTypeEnum
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static StateTypeEnum findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new StateTypeEnum() {
@@ -113,10 +157,18 @@ public interface StateTypeEnum {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<StateTypeEnum> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static StateTypeEnum[] values() {
         return StateTypeEnumEnum.values();
     }

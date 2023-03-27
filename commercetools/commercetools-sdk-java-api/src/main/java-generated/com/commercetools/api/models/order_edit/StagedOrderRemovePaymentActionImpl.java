@@ -24,6 +24,9 @@ public class StagedOrderRemovePaymentActionImpl implements StagedOrderRemovePaym
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderRemovePaymentActionImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
@@ -31,6 +34,9 @@ public class StagedOrderRemovePaymentActionImpl implements StagedOrderRemovePaym
         this.action = REMOVE_PAYMENT;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderRemovePaymentActionImpl() {
         this.action = REMOVE_PAYMENT;
     }

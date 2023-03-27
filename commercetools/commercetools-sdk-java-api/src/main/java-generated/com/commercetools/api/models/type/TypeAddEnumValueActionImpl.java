@@ -26,6 +26,9 @@ public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, Model
 
     private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeAddEnumValueActionImpl(@JsonProperty("fieldName") final String fieldName,
             @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldEnumValue value) {
@@ -34,6 +37,9 @@ public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, Model
         this.action = ADD_ENUM_VALUE;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeAddEnumValueActionImpl() {
         this.action = ADD_ENUM_VALUE;
     }

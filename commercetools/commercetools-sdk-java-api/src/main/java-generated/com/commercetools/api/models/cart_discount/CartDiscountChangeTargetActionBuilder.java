@@ -48,6 +48,11 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return target
+     */
+
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
         return this.target;
     }
@@ -69,10 +74,19 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
         return new CartDiscountChangeTargetActionImpl(target);
     }
 
+    /**
+     * factory method for an instance of CartDiscountChangeTargetActionBuilder
+     * @return builder
+     */
     public static CartDiscountChangeTargetActionBuilder of() {
         return new CartDiscountChangeTargetActionBuilder();
     }
 
+    /**
+     * create builder for CartDiscountChangeTargetAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeTargetActionBuilder of(final CartDiscountChangeTargetAction template) {
         CartDiscountChangeTargetActionBuilder builder = new CartDiscountChangeTargetActionBuilder();
         builder.target = template.getTarget();

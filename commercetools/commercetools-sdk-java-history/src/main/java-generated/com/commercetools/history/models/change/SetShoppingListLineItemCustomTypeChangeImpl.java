@@ -30,6 +30,9 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetShoppingListLineItemCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem,
@@ -42,6 +45,9 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
         this.type = SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetShoppingListLineItemCustomTypeChangeImpl() {
         this.type = SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }

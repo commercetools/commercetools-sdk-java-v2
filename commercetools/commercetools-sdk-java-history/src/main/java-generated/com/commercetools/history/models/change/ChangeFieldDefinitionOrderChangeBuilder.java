@@ -42,7 +42,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -179,13 +179,28 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> getNextValue() {
         return this.nextValue;
@@ -210,10 +225,19 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return new ChangeFieldDefinitionOrderChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeFieldDefinitionOrderChangeBuilder
+     * @return builder
+     */
     public static ChangeFieldDefinitionOrderChangeBuilder of() {
         return new ChangeFieldDefinitionOrderChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeFieldDefinitionOrderChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeFieldDefinitionOrderChangeBuilder of(final ChangeFieldDefinitionOrderChange template) {
         ChangeFieldDefinitionOrderChangeBuilder builder = new ChangeFieldDefinitionOrderChangeBuilder();
         builder.change = template.getChange();

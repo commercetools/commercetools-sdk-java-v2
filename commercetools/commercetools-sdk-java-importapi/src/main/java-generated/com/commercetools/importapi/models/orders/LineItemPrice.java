@@ -110,31 +110,90 @@ public interface LineItemPrice {
     @JsonProperty("custom")
     public Custom getCustom();
 
+    /**
+     *  <p>Maps to <code>Price.value</code>.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final TypedMoney value);
+
+    /**
+     *  <p>Maps to <code>Price.county</code>.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>Maps to <code>Price.validFrom</code>.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
+
+    /**
+     *  <p>Maps to <code>Price.validUntil</code>.</p>
+     * @param validUntil value to be set
+     */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     *  <p>References a customer group by key.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
+
+    /**
+     *  <p>References a channel by key.</p>
+     * @param channel value to be set
+     */
 
     public void setChannel(final ChannelKeyReference channel);
 
+    /**
+     *  <p>Sets a discounted price from an external service.</p>
+     * @param discounted value to be set
+     */
+
     public void setDiscounted(final DiscountedPrice discounted);
+
+    /**
+     *  <p>The tiered prices for this price.</p>
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final PriceTier... tiers);
 
+    /**
+     *  <p>The tiered prices for this price.</p>
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<PriceTier> tiers);
+
+    /**
+     *  <p>Maps to <code>Price.custom</code>.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final Custom custom);
 
+    /**
+     * factory method
+     * @return instance of LineItemPrice
+     */
     public static LineItemPrice of() {
         return new LineItemPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of LineItemPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LineItemPrice of(final LineItemPrice template) {
         LineItemPriceImpl instance = new LineItemPriceImpl();
         instance.setValue(template.getValue());
@@ -149,18 +208,37 @@ public interface LineItemPrice {
         return instance;
     }
 
+    /**
+     * builder factory method for LineItemPrice
+     * @return builder
+     */
     public static LineItemPriceBuilder builder() {
         return LineItemPriceBuilder.of();
     }
 
+    /**
+     * create builder for LineItemPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemPriceBuilder builder(final LineItemPrice template) {
         return LineItemPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLineItemPrice(Function<LineItemPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LineItemPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LineItemPrice>() {
             @Override

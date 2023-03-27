@@ -78,9 +78,19 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Product that was excluded from the Product Selection.</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     * @return variantExclusion
+     */
 
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
         return this.variantExclusion;
@@ -105,10 +115,19 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
         return new ProductSelectionProductExcludedMessagePayloadImpl(product, variantExclusion);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionProductExcludedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductSelectionProductExcludedMessagePayloadBuilder of() {
         return new ProductSelectionProductExcludedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionProductExcludedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionProductExcludedMessagePayloadBuilder of(
             final ProductSelectionProductExcludedMessagePayload template) {
         ProductSelectionProductExcludedMessagePayloadBuilder builder = new ProductSelectionProductExcludedMessagePayloadBuilder();

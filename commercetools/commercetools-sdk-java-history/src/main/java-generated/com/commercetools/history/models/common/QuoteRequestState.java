@@ -25,15 +25,33 @@ public interface QuoteRequestState {
 
     QuoteRequestState CANCELLED = QuoteRequestStateEnum.CANCELLED;
 
+    /**
+     * possible values of QuoteRequestState
+     */
     enum QuoteRequestStateEnum implements QuoteRequestState {
+        /**
+         * Submitted
+         */
         SUBMITTED("Submitted"),
 
+        /**
+         * Accepted
+         */
         ACCEPTED("Accepted"),
 
+        /**
+         * Closed
+         */
         CLOSED("Closed"),
 
+        /**
+         * Rejected
+         */
         REJECTED("Rejected"),
 
+        /**
+         * Cancelled
+         */
         CANCELLED("Cancelled");
         private final String jsonName;
 
@@ -50,13 +68,30 @@ public interface QuoteRequestState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of QuoteRequestState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static QuoteRequestState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new QuoteRequestState() {
@@ -76,10 +111,18 @@ public interface QuoteRequestState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<QuoteRequestState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static QuoteRequestState[] values() {
         return QuoteRequestStateEnum.values();
     }

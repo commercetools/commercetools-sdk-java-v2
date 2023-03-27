@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCustomerSetDateOfBirthActionImpl.class)
 public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
 
+    /**
+     * discriminator value for MyCustomerSetDateOfBirthAction
+     */
     String SET_DATE_OF_BIRTH = "setDateOfBirth";
 
     /**
@@ -37,30 +40,63 @@ public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param dateOfBirth value to be set
+     */
+
     public void setDateOfBirth(final LocalDate dateOfBirth);
 
+    /**
+     * factory method
+     * @return instance of MyCustomerSetDateOfBirthAction
+     */
     public static MyCustomerSetDateOfBirthAction of() {
         return new MyCustomerSetDateOfBirthActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCustomerSetDateOfBirthAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCustomerSetDateOfBirthAction of(final MyCustomerSetDateOfBirthAction template) {
         MyCustomerSetDateOfBirthActionImpl instance = new MyCustomerSetDateOfBirthActionImpl();
         instance.setDateOfBirth(template.getDateOfBirth());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCustomerSetDateOfBirthAction
+     * @return builder
+     */
     public static MyCustomerSetDateOfBirthActionBuilder builder() {
         return MyCustomerSetDateOfBirthActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCustomerSetDateOfBirthAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetDateOfBirthActionBuilder builder(final MyCustomerSetDateOfBirthAction template) {
         return MyCustomerSetDateOfBirthActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCustomerSetDateOfBirthAction(Function<MyCustomerSetDateOfBirthAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDateOfBirthAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDateOfBirthAction>() {
             @Override

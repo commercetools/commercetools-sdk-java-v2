@@ -31,6 +31,9 @@ public class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordEr
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidCurrentPasswordErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -39,6 +42,9 @@ public class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordEr
         this.code = INVALID_CURRENT_PASSWORD;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidCurrentPasswordErrorImpl() {
         this.code = INVALID_CURRENT_PASSWORD;
     }

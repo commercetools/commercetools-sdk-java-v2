@@ -45,7 +45,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -189,17 +189,37 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setDeliveryItems</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getPreviousValue() {
         return this.previousValue;
@@ -225,10 +245,19 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return new SetDeliveryItemsChangeImpl(change, deliveryId, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetDeliveryItemsChangeBuilder
+     * @return builder
+     */
     public static SetDeliveryItemsChangeBuilder of() {
         return new SetDeliveryItemsChangeBuilder();
     }
 
+    /**
+     * create builder for SetDeliveryItemsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDeliveryItemsChangeBuilder of(final SetDeliveryItemsChange template) {
         SetDeliveryItemsChangeBuilder builder = new SetDeliveryItemsChangeBuilder();
         builder.change = template.getChange();

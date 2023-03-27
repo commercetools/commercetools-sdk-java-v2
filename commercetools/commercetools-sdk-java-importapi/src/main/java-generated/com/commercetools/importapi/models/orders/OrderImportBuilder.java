@@ -107,7 +107,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *
+     * set the value to the customer using the builder function
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *
+     * set the value to the customer
      * @param customer value to be set
      * @return Builder
      */
@@ -669,118 +669,238 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     * @return orderNumber
+     */
+
     public String getOrderNumber() {
         return this.orderNumber;
     }
+
+    /**
+     * value of customer}
+     * @return customer
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.CustomerKeyReference getCustomer() {
         return this.customer;
     }
 
+    /**
+     *  <p>Maps to <code>Order.customerEmail</code>.</p>
+     * @return customerEmail
+     */
+
     @Nullable
     public String getCustomerEmail() {
         return this.customerEmail;
     }
+
+    /**
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     * @return lineItems
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.LineItemImportDraft> getLineItems() {
         return this.lineItems;
     }
 
+    /**
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     * @return customLineItems
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.CustomLineItemDraft> getCustomLineItems() {
         return this.customLineItems;
     }
 
+    /**
+     *  <p>Maps to <code>Order.totalPrice</code>.</p>
+     * @return totalPrice
+     */
+
     public com.commercetools.importapi.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
+
+    /**
+     *  <p>Maps to <code>Order.taxedPrice</code>.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.importapi.models.orders.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
+    /**
+     *  <p>Maps to <code>Order.shippingAddress</code>.</p>
+     * @return shippingAddress
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.Address getShippingAddress() {
         return this.shippingAddress;
     }
+
+    /**
+     *  <p>Maps to <code>Order.billingAddress</code>.</p>
+     * @return billingAddress
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.Address getBillingAddress() {
         return this.billingAddress;
     }
 
+    /**
+     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Maps to <code>Order.country</code>.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>Maps to <code>Order.orderState</code>.</p>
+     * @return orderState
+     */
+
     @Nullable
     public com.commercetools.importapi.models.orders.OrderState getOrderState() {
         return this.orderState;
     }
+
+    /**
+     *  <p>Maps to <code>Order.shipmentState</code>.</p>
+     * @return shipmentState
+     */
 
     @Nullable
     public com.commercetools.importapi.models.orders.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
 
+    /**
+     *  <p>Maps to <code>Order.paymentState</code>.</p>
+     * @return paymentState
+     */
+
     @Nullable
     public com.commercetools.importapi.models.orders.PaymentState getPaymentState() {
         return this.paymentState;
     }
+
+    /**
+     *  <p>Maps to <code>Order.shippingInfo</code>.</p>
+     * @return shippingInfo
+     */
 
     @Nullable
     public com.commercetools.importapi.models.orders.ShippingInfoImportDraft getShippingInfo() {
         return this.shippingInfo;
     }
 
+    /**
+     *  <p>Maps to <code>Order.completedAt</code>.</p>
+     * @return completedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getCompletedAt() {
         return this.completedAt;
     }
+
+    /**
+     *  <p>Maps to <code>Order.custom</code>.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Maps to <code>Order.inventoryMode</code>.</p>
+     * @return inventoryMode
+     */
+
     @Nullable
     public com.commercetools.importapi.models.orders.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
+
+    /**
+     *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
+     * @return taxRoundingMode
+     */
 
     @Nullable
     public com.commercetools.importapi.models.orders.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
 
+    /**
+     *  <p>Maps to <code>Order.taxCalculationMode</code>.</p>
+     * @return taxCalculationMode
+     */
+
     @Nullable
     public com.commercetools.importapi.models.orders.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
+
+    /**
+     *  <p>Maps to <code>Order.origin</code>.</p>
+     * @return origin
+     */
 
     @Nullable
     public com.commercetools.importapi.models.orders.CartOrigin getOrigin() {
         return this.origin;
     }
 
+    /**
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     * @return itemShippingAddresses
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Address> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
 
+    /**
+     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     * @return store
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.StoreKeyReference getStore() {
         return this.store;
     }
+
+    /**
+     *  <p>Reference to a State in a custom workflow.</p>
+     * @return state
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.StateKeyReference getState() {
@@ -811,10 +931,19 @@ public class OrderImportBuilder implements Builder<OrderImport> {
             itemShippingAddresses, store, state);
     }
 
+    /**
+     * factory method for an instance of OrderImportBuilder
+     * @return builder
+     */
     public static OrderImportBuilder of() {
         return new OrderImportBuilder();
     }
 
+    /**
+     * create builder for OrderImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderImportBuilder of(final OrderImport template) {
         OrderImportBuilder builder = new OrderImportBuilder();
         builder.orderNumber = template.getOrderNumber();

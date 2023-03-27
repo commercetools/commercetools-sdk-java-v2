@@ -116,31 +116,95 @@ public interface CustomShippingDraft
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>User-defined unique identifier of the custom Shipping Method in the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Name of the custom Shipping Method.</p>
+     * @param shippingMethodName value to be set
+     */
 
     public void setShippingMethodName(final String shippingMethodName);
 
+    /**
+     *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @param shippingAddress value to be set
+     */
+
     public void setShippingAddress(final BaseAddress shippingAddress);
+
+    /**
+     *  <p>Determines the shipping price.</p>
+     * @param shippingRate value to be set
+     */
 
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
+     * @param shippingRateInput value to be set
+     */
+
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
+
+    /**
+     *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
+     * @param taxCategory value to be set
+     */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
+    /**
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @param externalTaxRate value to be set
+     */
+
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    /**
+     *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param deliveries values to be set
+     */
 
     @JsonIgnore
     public void setDeliveries(final DeliveryDraft... deliveries);
 
+    /**
+     *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @param deliveries values to be set
+     */
+
     public void setDeliveries(final List<DeliveryDraft> deliveries);
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of CustomShippingDraft
+     */
     public static CustomShippingDraft of() {
         return new CustomShippingDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomShippingDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomShippingDraft of(final CustomShippingDraft template) {
         CustomShippingDraftImpl instance = new CustomShippingDraftImpl();
         instance.setKey(template.getKey());
@@ -155,18 +219,37 @@ public interface CustomShippingDraft
         return instance;
     }
 
+    /**
+     * builder factory method for CustomShippingDraft
+     * @return builder
+     */
     public static CustomShippingDraftBuilder builder() {
         return CustomShippingDraftBuilder.of();
     }
 
+    /**
+     * create builder for CustomShippingDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomShippingDraftBuilder builder(final CustomShippingDraft template) {
         return CustomShippingDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomShippingDraft(Function<CustomShippingDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomShippingDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomShippingDraft>() {
             @Override

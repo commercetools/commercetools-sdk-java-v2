@@ -28,6 +28,9 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
 
     private com.commercetools.history.models.common.ReviewRatingStatistics previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeReviewRatingStatisticsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ReviewRatingStatistics nextValue,
@@ -38,6 +41,9 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
         this.type = CHANGE_REVIEW_RATING_STATISTICS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeReviewRatingStatisticsChangeImpl() {
         this.type = CHANGE_REVIEW_RATING_STATISTICS_CHANGE;
     }

@@ -40,6 +40,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPriceAddedMessageImpl.class)
 public interface ProductPriceAddedMessage extends Message {
 
+    /**
+     * discriminator value for ProductPriceAddedMessage
+     */
     String PRODUCT_PRICE_ADDED = "ProductPriceAdded";
 
     /**
@@ -67,16 +70,40 @@ public interface ProductPriceAddedMessage extends Message {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>Unique identifier of the ProductVariant for which the Price was added.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Long variantId);
+
+    /**
+     *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     * @param price value to be set
+     */
 
     public void setPrice(final Price price);
 
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductPriceAddedMessage
+     */
     public static ProductPriceAddedMessage of() {
         return new ProductPriceAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductPriceAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductPriceAddedMessage of(final ProductPriceAddedMessage template) {
         ProductPriceAddedMessageImpl instance = new ProductPriceAddedMessageImpl();
         instance.setId(template.getId());
@@ -95,18 +122,37 @@ public interface ProductPriceAddedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductPriceAddedMessage
+     * @return builder
+     */
     public static ProductPriceAddedMessageBuilder builder() {
         return ProductPriceAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductPriceAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceAddedMessageBuilder builder(final ProductPriceAddedMessage template) {
         return ProductPriceAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductPriceAddedMessage(Function<ProductPriceAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceAddedMessage>() {
             @Override

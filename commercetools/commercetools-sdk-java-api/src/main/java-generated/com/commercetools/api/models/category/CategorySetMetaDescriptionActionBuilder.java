@@ -50,6 +50,11 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
         return this;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     * @return metaDescription
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
@@ -71,10 +76,19 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
         return new CategorySetMetaDescriptionActionImpl(metaDescription);
     }
 
+    /**
+     * factory method for an instance of CategorySetMetaDescriptionActionBuilder
+     * @return builder
+     */
     public static CategorySetMetaDescriptionActionBuilder of() {
         return new CategorySetMetaDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for CategorySetMetaDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetMetaDescriptionActionBuilder of(final CategorySetMetaDescriptionAction template) {
         CategorySetMetaDescriptionActionBuilder builder = new CategorySetMetaDescriptionActionBuilder();
         builder.metaDescription = template.getMetaDescription();

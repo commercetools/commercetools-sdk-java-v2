@@ -61,6 +61,11 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
         return this;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     * @return languages
+     */
+
     @Nullable
     public java.util.List<String> getLanguages() {
         return this.languages;
@@ -82,10 +87,19 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
         return new StoreSetLanguagesActionImpl(languages);
     }
 
+    /**
+     * factory method for an instance of StoreSetLanguagesActionBuilder
+     * @return builder
+     */
     public static StoreSetLanguagesActionBuilder of() {
         return new StoreSetLanguagesActionBuilder();
     }
 
+    /**
+     * create builder for StoreSetLanguagesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetLanguagesActionBuilder of(final StoreSetLanguagesAction template) {
         StoreSetLanguagesActionBuilder builder = new StoreSetLanguagesActionBuilder();
         builder.languages = template.getLanguages();

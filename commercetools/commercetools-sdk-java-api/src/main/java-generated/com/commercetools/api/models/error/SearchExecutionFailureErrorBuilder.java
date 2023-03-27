@@ -62,9 +62,19 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
         return this;
     }
 
+    /**
+     *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
         return new SearchExecutionFailureErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of SearchExecutionFailureErrorBuilder
+     * @return builder
+     */
     public static SearchExecutionFailureErrorBuilder of() {
         return new SearchExecutionFailureErrorBuilder();
     }
 
+    /**
+     * create builder for SearchExecutionFailureError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchExecutionFailureErrorBuilder of(final SearchExecutionFailureError template) {
         SearchExecutionFailureErrorBuilder builder = new SearchExecutionFailureErrorBuilder();
         builder.message = template.getMessage();

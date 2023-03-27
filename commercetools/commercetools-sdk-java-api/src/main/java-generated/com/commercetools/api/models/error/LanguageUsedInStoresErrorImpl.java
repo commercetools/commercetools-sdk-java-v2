@@ -27,6 +27,9 @@ public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError,
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LanguageUsedInStoresErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError,
         this.code = LANGUAGE_USED_IN_STORES;
     }
 
+    /**
+     * create empty instance
+     */
     public LanguageUsedInStoresErrorImpl() {
         this.code = LANGUAGE_USED_IN_STORES;
     }

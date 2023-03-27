@@ -59,6 +59,11 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
         return this;
     }
 
+    /**
+     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+     * @return fieldNames
+     */
+
     public java.util.List<String> getFieldNames() {
         return this.fieldNames;
     }
@@ -80,10 +85,19 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
         return new TypeChangeFieldDefinitionOrderActionImpl(fieldNames);
     }
 
+    /**
+     * factory method for an instance of TypeChangeFieldDefinitionOrderActionBuilder
+     * @return builder
+     */
     public static TypeChangeFieldDefinitionOrderActionBuilder of() {
         return new TypeChangeFieldDefinitionOrderActionBuilder();
     }
 
+    /**
+     * create builder for TypeChangeFieldDefinitionOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeFieldDefinitionOrderActionBuilder of(final TypeChangeFieldDefinitionOrderAction template) {
         TypeChangeFieldDefinitionOrderActionBuilder builder = new TypeChangeFieldDefinitionOrderActionBuilder();
         builder.fieldNames = template.getFieldNames();

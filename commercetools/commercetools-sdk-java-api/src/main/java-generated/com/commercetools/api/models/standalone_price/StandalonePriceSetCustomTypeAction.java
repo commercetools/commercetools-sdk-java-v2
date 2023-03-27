@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceSetCustomTypeActionImpl.class)
 public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdateAction {
 
+    /**
+     * discriminator value for StandalonePriceSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the StandalonePrice with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceSetCustomTypeAction
+     */
     public static StandalonePriceSetCustomTypeAction of() {
         return new StandalonePriceSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceSetCustomTypeAction of(final StandalonePriceSetCustomTypeAction template) {
         StandalonePriceSetCustomTypeActionImpl instance = new StandalonePriceSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceSetCustomTypeAction
+     * @return builder
+     */
     public static StandalonePriceSetCustomTypeActionBuilder builder() {
         return StandalonePriceSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceSetCustomTypeActionBuilder builder(final StandalonePriceSetCustomTypeAction template) {
         return StandalonePriceSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceSetCustomTypeAction(Function<StandalonePriceSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetCustomTypeAction>() {
             @Override

@@ -49,6 +49,11 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
         return this;
     }
 
+    /**
+     *  <p>Standalone Price that was created.</p>
+     * @return standalonePrice
+     */
+
     public com.commercetools.api.models.standalone_price.StandalonePrice getStandalonePrice() {
         return this.standalonePrice;
     }
@@ -71,10 +76,19 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
         return new StandalonePriceCreatedMessagePayloadImpl(standalonePrice);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static StandalonePriceCreatedMessagePayloadBuilder of() {
         return new StandalonePriceCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceCreatedMessagePayloadBuilder of(final StandalonePriceCreatedMessagePayload template) {
         StandalonePriceCreatedMessagePayloadBuilder builder = new StandalonePriceCreatedMessagePayloadBuilder();
         builder.standalonePrice = template.getStandalonePrice();

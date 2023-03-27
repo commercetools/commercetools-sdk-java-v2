@@ -44,6 +44,9 @@ public class BusinessUnitNameChangedMessageImpl implements BusinessUnitNameChang
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitNameChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class BusinessUnitNameChangedMessageImpl implements BusinessUnitNameChang
         this.type = BUSINESS_UNIT_NAME_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitNameChangedMessageImpl() {
         this.type = BUSINESS_UNIT_NAME_CHANGED;
     }

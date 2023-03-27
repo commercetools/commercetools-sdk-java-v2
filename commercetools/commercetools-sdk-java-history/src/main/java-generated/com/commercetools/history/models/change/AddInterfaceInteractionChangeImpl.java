@@ -26,6 +26,9 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
 
     private com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddInterfaceInteractionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue) {
@@ -34,6 +37,9 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
         this.type = ADD_INTERFACE_INTERACTION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddInterfaceInteractionChangeImpl() {
         this.type = ADD_INTERFACE_INTERACTION_CHANGE;
     }

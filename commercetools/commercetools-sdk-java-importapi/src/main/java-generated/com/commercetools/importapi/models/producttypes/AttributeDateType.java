@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeDateTypeImpl.class)
 public interface AttributeDateType extends AttributeType {
 
+    /**
+     * discriminator value for AttributeDateType
+     */
     String DATE = "date";
 
+    /**
+     * factory method
+     * @return instance of AttributeDateType
+     */
     public static AttributeDateType of() {
         return new AttributeDateTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeDateType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeDateType of(final AttributeDateType template) {
         AttributeDateTypeImpl instance = new AttributeDateTypeImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeDateType
+     * @return builder
+     */
     public static AttributeDateTypeBuilder builder() {
         return AttributeDateTypeBuilder.of();
     }
 
+    /**
+     * create builder for AttributeDateType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDateTypeBuilder builder(final AttributeDateType template) {
         return AttributeDateTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeDateType(Function<AttributeDateType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeDateType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeDateType>() {
             @Override

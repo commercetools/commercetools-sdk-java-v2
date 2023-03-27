@@ -26,6 +26,9 @@ public class OrderSetBillingAddressCustomFieldActionImpl implements OrderSetBill
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetBillingAddressCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class OrderSetBillingAddressCustomFieldActionImpl implements OrderSetBill
         this.action = SET_BILLING_ADDRESS_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetBillingAddressCustomFieldActionImpl() {
         this.action = SET_BILLING_ADDRESS_CUSTOM_FIELD;
     }

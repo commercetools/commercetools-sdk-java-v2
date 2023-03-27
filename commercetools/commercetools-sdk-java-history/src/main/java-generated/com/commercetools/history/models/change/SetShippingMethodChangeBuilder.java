@@ -42,7 +42,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -93,13 +93,28 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setShippingMethod</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.change_value.ShippingMethodChangeValue getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.change_value.ShippingMethodChangeValue getPreviousValue() {
         return this.previousValue;
@@ -124,10 +139,19 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
         return new SetShippingMethodChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetShippingMethodChangeBuilder
+     * @return builder
+     */
     public static SetShippingMethodChangeBuilder of() {
         return new SetShippingMethodChangeBuilder();
     }
 
+    /**
+     * create builder for SetShippingMethodChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetShippingMethodChangeBuilder of(final SetShippingMethodChange template) {
         SetShippingMethodChangeBuilder builder = new SetShippingMethodChangeBuilder();
         builder.change = template.getChange();

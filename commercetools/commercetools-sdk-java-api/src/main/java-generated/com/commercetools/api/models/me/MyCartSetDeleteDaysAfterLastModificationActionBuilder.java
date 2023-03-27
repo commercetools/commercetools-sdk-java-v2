@@ -38,6 +38,11 @@ public class MyCartSetDeleteDaysAfterLastModificationActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     * @return deleteDaysAfterLastModification
+     */
+
     @Nullable
     public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
@@ -59,10 +64,19 @@ public class MyCartSetDeleteDaysAfterLastModificationActionBuilder
         return new MyCartSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
     }
 
+    /**
+     * factory method for an instance of MyCartSetDeleteDaysAfterLastModificationActionBuilder
+     * @return builder
+     */
     public static MyCartSetDeleteDaysAfterLastModificationActionBuilder of() {
         return new MyCartSetDeleteDaysAfterLastModificationActionBuilder();
     }
 
+    /**
+     * create builder for MyCartSetDeleteDaysAfterLastModificationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetDeleteDaysAfterLastModificationActionBuilder of(
             final MyCartSetDeleteDaysAfterLastModificationAction template) {
         MyCartSetDeleteDaysAfterLastModificationActionBuilder builder = new MyCartSetDeleteDaysAfterLastModificationActionBuilder();

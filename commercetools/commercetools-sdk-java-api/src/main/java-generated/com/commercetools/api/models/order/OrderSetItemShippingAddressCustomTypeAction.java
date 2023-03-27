@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderSetItemShippingAddressCustomTypeActionImpl.class)
 public interface OrderSetItemShippingAddressCustomTypeAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderSetItemShippingAddressCustomTypeAction
+     */
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE = "setItemShippingAddressCustomType";
 
     /**
@@ -58,16 +61,40 @@ public interface OrderSetItemShippingAddressCustomTypeAction extends OrderUpdate
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     * set addressKey
+     * @param addressKey value to be set
+     */
+
     public void setAddressKey(final String addressKey);
+
+    /**
+     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     * @param type value to be set
+     */
 
     public void setType(final TypeResourceIdentifier type);
 
+    /**
+     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     * @param fields value to be set
+     */
+
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of OrderSetItemShippingAddressCustomTypeAction
+     */
     public static OrderSetItemShippingAddressCustomTypeAction of() {
         return new OrderSetItemShippingAddressCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderSetItemShippingAddressCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderSetItemShippingAddressCustomTypeAction of(
             final OrderSetItemShippingAddressCustomTypeAction template) {
         OrderSetItemShippingAddressCustomTypeActionImpl instance = new OrderSetItemShippingAddressCustomTypeActionImpl();
@@ -77,20 +104,39 @@ public interface OrderSetItemShippingAddressCustomTypeAction extends OrderUpdate
         return instance;
     }
 
+    /**
+     * builder factory method for OrderSetItemShippingAddressCustomTypeAction
+     * @return builder
+     */
     public static OrderSetItemShippingAddressCustomTypeActionBuilder builder() {
         return OrderSetItemShippingAddressCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderSetItemShippingAddressCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetItemShippingAddressCustomTypeActionBuilder builder(
             final OrderSetItemShippingAddressCustomTypeAction template) {
         return OrderSetItemShippingAddressCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderSetItemShippingAddressCustomTypeAction(
             Function<OrderSetItemShippingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetItemShippingAddressCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetItemShippingAddressCustomTypeAction>() {
             @Override

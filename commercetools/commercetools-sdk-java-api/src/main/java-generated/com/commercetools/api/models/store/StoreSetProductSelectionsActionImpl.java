@@ -24,6 +24,9 @@ public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelec
 
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreSetProductSelectionsActionImpl(
             @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections) {
@@ -31,6 +34,9 @@ public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelec
         this.action = SET_PRODUCT_SELECTIONS;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreSetProductSelectionsActionImpl() {
         this.action = SET_PRODUCT_SELECTIONS;
     }

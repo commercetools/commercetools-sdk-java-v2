@@ -30,6 +30,9 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
 
     private java.util.List<com.commercetools.history.models.change_history.Record> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RecordPagedQueryResponseImpl(@JsonProperty("limit") final Integer limit, @JsonProperty("count") final Integer count,
             @JsonProperty("total") final Integer total, @JsonProperty("offset") final Integer offset,
@@ -41,6 +44,9 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public RecordPagedQueryResponseImpl() {
     }
 

@@ -44,6 +44,9 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
 
     private com.commercetools.api.models.quote.Quote quote;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
         this.type = QUOTE_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteCreatedMessageImpl() {
         this.type = QUOTE_CREATED;
     }

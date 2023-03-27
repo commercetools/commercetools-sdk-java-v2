@@ -44,6 +44,9 @@ public class PaymentInteractionAddedMessageImpl implements PaymentInteractionAdd
 
     private com.commercetools.api.models.type.CustomFields interaction;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentInteractionAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class PaymentInteractionAddedMessageImpl implements PaymentInteractionAdd
         this.type = PAYMENT_INTERACTION_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentInteractionAddedMessageImpl() {
         this.type = PAYMENT_INTERACTION_ADDED;
     }

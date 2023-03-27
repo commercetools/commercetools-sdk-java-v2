@@ -24,6 +24,9 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
 
     private com.commercetools.importapi.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryAddressDraftImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("address") final com.commercetools.importapi.models.common.Address address) {
@@ -31,6 +34,9 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
         this.address = address;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryAddressDraftImpl() {
     }
 

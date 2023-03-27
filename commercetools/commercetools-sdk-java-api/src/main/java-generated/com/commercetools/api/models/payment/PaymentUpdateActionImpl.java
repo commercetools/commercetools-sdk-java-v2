@@ -22,11 +22,17 @@ public class PaymentUpdateActionImpl implements PaymentUpdateAction, ModelBase {
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentUpdateActionImpl() {
     }
 

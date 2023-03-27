@@ -45,7 +45,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * set the value to the parcel using the builder function
      * @param builder function to build the parcel value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * set the value to the parcel
      * @param parcel value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -191,7 +191,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -203,17 +203,37 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setParcelItems</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of parcel}
+     * @return parcel
+     */
 
     public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
         return this.parcel;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getPreviousValue() {
         return this.previousValue;
@@ -239,10 +259,19 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return new SetParcelItemsChangeImpl(change, parcel, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetParcelItemsChangeBuilder
+     * @return builder
+     */
     public static SetParcelItemsChangeBuilder of() {
         return new SetParcelItemsChangeBuilder();
     }
 
+    /**
+     * create builder for SetParcelItemsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetParcelItemsChangeBuilder of(final SetParcelItemsChange template) {
         SetParcelItemsChangeBuilder builder = new SetParcelItemsChangeBuilder();
         builder.change = template.getChange();

@@ -26,6 +26,9 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
 
     private String container;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomObjectLabelImpl(@JsonProperty("key") final String key, @JsonProperty("container") final String container) {
         this.key = key;
@@ -33,6 +36,9 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
         this.type = CUSTOM_OBJECT_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomObjectLabelImpl() {
         this.type = CUSTOM_OBJECT_LABEL;
     }

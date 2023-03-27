@@ -24,6 +24,9 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
 
     private Long ttlMinutes;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerCreatePasswordResetTokenImpl(@JsonProperty("email") final String email,
             @JsonProperty("ttlMinutes") final Long ttlMinutes) {
@@ -31,6 +34,9 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
         this.ttlMinutes = ttlMinutes;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerCreatePasswordResetTokenImpl() {
     }
 

@@ -91,14 +91,29 @@ public class MyCartSetLineItemCustomTypeActionBuilder implements Builder<MyCartS
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
+     * @return type
+     */
 
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -122,10 +137,19 @@ public class MyCartSetLineItemCustomTypeActionBuilder implements Builder<MyCartS
         return new MyCartSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
     }
 
+    /**
+     * factory method for an instance of MyCartSetLineItemCustomTypeActionBuilder
+     * @return builder
+     */
     public static MyCartSetLineItemCustomTypeActionBuilder of() {
         return new MyCartSetLineItemCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for MyCartSetLineItemCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetLineItemCustomTypeActionBuilder of(final MyCartSetLineItemCustomTypeAction template) {
         MyCartSetLineItemCustomTypeActionBuilder builder = new MyCartSetLineItemCustomTypeActionBuilder();
         builder.lineItemId = template.getLineItemId();

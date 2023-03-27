@@ -28,6 +28,9 @@ public class ChangeSortOrderChangeImpl implements ChangeSortOrderChange, ModelBa
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeSortOrderChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class ChangeSortOrderChangeImpl implements ChangeSortOrderChange, ModelBa
         this.type = CHANGE_SORT_ORDER_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeSortOrderChangeImpl() {
         this.type = CHANGE_SORT_ORDER_CHANGE;
     }

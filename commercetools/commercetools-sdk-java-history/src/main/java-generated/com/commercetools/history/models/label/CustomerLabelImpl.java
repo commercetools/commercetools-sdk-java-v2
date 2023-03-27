@@ -28,6 +28,9 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
 
     private String customerNumber;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerLabelImpl(@JsonProperty("firstName") final String firstName,
             @JsonProperty("lastName") final String lastName,
@@ -38,6 +41,9 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
         this.type = CUSTOMER_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerLabelImpl() {
         this.type = CUSTOMER_LABEL;
     }

@@ -59,6 +59,11 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
         return this;
     }
 
+    /**
+     *  <p>Contains custom tokens.</p>
+     * @return inputs
+     */
+
     public java.util.List<String> getInputs() {
         return this.inputs;
     }
@@ -80,10 +85,19 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
         return new CustomTokenizerImpl(inputs);
     }
 
+    /**
+     * factory method for an instance of CustomTokenizerBuilder
+     * @return builder
+     */
     public static CustomTokenizerBuilder of() {
         return new CustomTokenizerBuilder();
     }
 
+    /**
+     * create builder for CustomTokenizer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomTokenizerBuilder of(final CustomTokenizer template) {
         CustomTokenizerBuilder builder = new CustomTokenizerBuilder();
         builder.inputs = template.getInputs();

@@ -93,13 +93,31 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
         return this;
     }
 
+    /**
+     *  <p>For Product Selection of type Individual, the message is:</p>
+     *  <p><code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code></p>
+     *  <p>For Product Selection of type Individual Exclusion, the message is:</p>
+     *  <p><code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Reference to the Product for which the error was returned.</p>
+     * @return product
+     */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
@@ -123,10 +141,19 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
         return new ProductAssignmentMissingErrorImpl(message, values, product);
     }
 
+    /**
+     * factory method for an instance of ProductAssignmentMissingErrorBuilder
+     * @return builder
+     */
     public static ProductAssignmentMissingErrorBuilder of() {
         return new ProductAssignmentMissingErrorBuilder();
     }
 
+    /**
+     * create builder for ProductAssignmentMissingError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAssignmentMissingErrorBuilder of(final ProductAssignmentMissingError template) {
         ProductAssignmentMissingErrorBuilder builder = new ProductAssignmentMissingErrorBuilder();
         builder.message = template.getMessage();

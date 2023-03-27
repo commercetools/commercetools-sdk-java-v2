@@ -45,6 +45,9 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
 
     private com.commercetools.api.models.channel.ChannelReference channel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MatchingPriceNotFoundErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -63,6 +66,9 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
         this.code = MATCHING_PRICE_NOT_FOUND;
     }
 
+    /**
+     * create empty instance
+     */
     public MatchingPriceNotFoundErrorImpl() {
         this.code = MATCHING_PRICE_NOT_FOUND;
     }

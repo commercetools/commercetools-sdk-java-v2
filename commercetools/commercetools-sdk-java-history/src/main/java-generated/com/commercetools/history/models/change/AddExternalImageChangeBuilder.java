@@ -45,7 +45,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -188,17 +188,37 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         return this;
     }
 
+    /**
+     *  <p>Update actions for adding an external image</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of catalogData}
+     * @return catalogData
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<com.commercetools.history.models.common.Image> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<com.commercetools.history.models.common.Image> getNextValue() {
         return this.nextValue;
@@ -224,10 +244,19 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         return new AddExternalImageChangeImpl(change, catalogData, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddExternalImageChangeBuilder
+     * @return builder
+     */
     public static AddExternalImageChangeBuilder of() {
         return new AddExternalImageChangeBuilder();
     }
 
+    /**
+     * create builder for AddExternalImageChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddExternalImageChangeBuilder of(final AddExternalImageChange template) {
         AddExternalImageChangeBuilder builder = new AddExternalImageChangeBuilder();
         builder.change = template.getChange();

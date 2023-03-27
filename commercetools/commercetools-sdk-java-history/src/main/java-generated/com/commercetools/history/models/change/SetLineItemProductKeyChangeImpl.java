@@ -34,6 +34,9 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLineItemProductKeyChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
@@ -49,6 +52,9 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
         this.type = SET_LINE_ITEM_PRODUCT_KEY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLineItemProductKeyChangeImpl() {
         this.type = SET_LINE_ITEM_PRODUCT_KEY_CHANGE;
     }

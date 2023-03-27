@@ -33,7 +33,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
     /**
-     *
+     * set the value to the sku
      * @param sku value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * set values to the prices
      * @param prices value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * set value to the prices
      * @param prices value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * add values to the prices
      * @param prices value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * add the value to the prices using the builder function
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * set the value to the prices using the builder function
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * set values to the attributes
      * @param attributes value to be set
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * set value to the attributes
      * @param attributes value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * add values to the attributes
      * @param attributes value to be set
      * @return Builder
      */
@@ -148,7 +148,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * add a value to the attributes using the builder function
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     * set the value to the attributes using the builder function
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -177,14 +177,29 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
+    /**
+     * value of sku}
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     * value of prices}
+     * @return prices
+     */
+
     public java.util.List<com.commercetools.importapi.models.prices.PriceImport> getPrices() {
         return this.prices;
     }
+
+    /**
+     * value of attributes}
+     * @return attributes
+     */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
@@ -208,10 +223,19 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return new VariantValuesImpl(sku, prices, attributes);
     }
 
+    /**
+     * factory method for an instance of VariantValuesBuilder
+     * @return builder
+     */
     public static VariantValuesBuilder of() {
         return new VariantValuesBuilder();
     }
 
+    /**
+     * create builder for VariantValues instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static VariantValuesBuilder of(final VariantValues template) {
         VariantValuesBuilder builder = new VariantValuesBuilder();
         builder.sku = template.getSku();

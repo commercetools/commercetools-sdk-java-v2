@@ -50,6 +50,11 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return name
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
@@ -71,10 +76,19 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
         return new PaymentSetMethodInfoNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of PaymentSetMethodInfoNameActionBuilder
+     * @return builder
+     */
     public static PaymentSetMethodInfoNameActionBuilder of() {
         return new PaymentSetMethodInfoNameActionBuilder();
     }
 
+    /**
+     * create builder for PaymentSetMethodInfoNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetMethodInfoNameActionBuilder of(final PaymentSetMethodInfoNameAction template) {
         PaymentSetMethodInfoNameActionBuilder builder = new PaymentSetMethodInfoNameActionBuilder();
         builder.name = template.getName();

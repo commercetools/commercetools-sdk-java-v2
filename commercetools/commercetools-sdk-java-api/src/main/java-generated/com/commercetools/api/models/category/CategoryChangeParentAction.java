@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryChangeParentActionImpl.class)
 public interface CategoryChangeParentAction extends CategoryUpdateAction {
 
+    /**
+     * discriminator value for CategoryChangeParentAction
+     */
     String CHANGE_PARENT = "changeParent";
 
     /**
@@ -41,30 +44,63 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
     @JsonProperty("parent")
     public CategoryResourceIdentifier getParent();
 
+    /**
+     *  <p>New value to set as parent.</p>
+     * @param parent value to be set
+     */
+
     public void setParent(final CategoryResourceIdentifier parent);
 
+    /**
+     * factory method
+     * @return instance of CategoryChangeParentAction
+     */
     public static CategoryChangeParentAction of() {
         return new CategoryChangeParentActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryChangeParentAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryChangeParentAction of(final CategoryChangeParentAction template) {
         CategoryChangeParentActionImpl instance = new CategoryChangeParentActionImpl();
         instance.setParent(template.getParent());
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryChangeParentAction
+     * @return builder
+     */
     public static CategoryChangeParentActionBuilder builder() {
         return CategoryChangeParentActionBuilder.of();
     }
 
+    /**
+     * create builder for CategoryChangeParentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryChangeParentActionBuilder builder(final CategoryChangeParentAction template) {
         return CategoryChangeParentActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryChangeParentAction(Function<CategoryChangeParentAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeParentAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeParentAction>() {
             @Override

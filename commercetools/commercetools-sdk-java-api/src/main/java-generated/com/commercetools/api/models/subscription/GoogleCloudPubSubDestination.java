@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = GoogleCloudPubSubDestinationImpl.class)
 public interface GoogleCloudPubSubDestination extends Destination {
 
+    /**
+     * discriminator value for GoogleCloudPubSubDestination
+     */
     String GOOGLE_CLOUD_PUB_SUB = "GoogleCloudPubSub";
 
     /**
@@ -48,14 +51,33 @@ public interface GoogleCloudPubSubDestination extends Destination {
     @JsonProperty("topic")
     public String getTopic();
 
+    /**
+     *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
+     * @param projectId value to be set
+     */
+
     public void setProjectId(final String projectId);
+
+    /**
+     *  <p>Name of the topic.</p>
+     * @param topic value to be set
+     */
 
     public void setTopic(final String topic);
 
+    /**
+     * factory method
+     * @return instance of GoogleCloudPubSubDestination
+     */
     public static GoogleCloudPubSubDestination of() {
         return new GoogleCloudPubSubDestinationImpl();
     }
 
+    /**
+     * factory method to copy an instance of GoogleCloudPubSubDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GoogleCloudPubSubDestination of(final GoogleCloudPubSubDestination template) {
         GoogleCloudPubSubDestinationImpl instance = new GoogleCloudPubSubDestinationImpl();
         instance.setProjectId(template.getProjectId());
@@ -63,18 +85,37 @@ public interface GoogleCloudPubSubDestination extends Destination {
         return instance;
     }
 
+    /**
+     * builder factory method for GoogleCloudPubSubDestination
+     * @return builder
+     */
     public static GoogleCloudPubSubDestinationBuilder builder() {
         return GoogleCloudPubSubDestinationBuilder.of();
     }
 
+    /**
+     * create builder for GoogleCloudPubSubDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GoogleCloudPubSubDestinationBuilder builder(final GoogleCloudPubSubDestination template) {
         return GoogleCloudPubSubDestinationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGoogleCloudPubSubDestination(Function<GoogleCloudPubSubDestination, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GoogleCloudPubSubDestination> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GoogleCloudPubSubDestination>() {
             @Override

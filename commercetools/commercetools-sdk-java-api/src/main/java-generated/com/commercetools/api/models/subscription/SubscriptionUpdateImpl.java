@@ -24,6 +24,9 @@ public class SubscriptionUpdateImpl implements SubscriptionUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubscriptionUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class SubscriptionUpdateImpl implements SubscriptionUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public SubscriptionUpdateImpl() {
     }
 

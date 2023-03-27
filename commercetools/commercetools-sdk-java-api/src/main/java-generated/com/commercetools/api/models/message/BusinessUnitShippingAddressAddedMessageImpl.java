@@ -44,6 +44,9 @@ public class BusinessUnitShippingAddressAddedMessageImpl implements BusinessUnit
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitShippingAddressAddedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class BusinessUnitShippingAddressAddedMessageImpl implements BusinessUnit
         this.type = BUSINESS_UNIT_SHIPPING_ADDRESS_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitShippingAddressAddedMessageImpl() {
         this.type = BUSINESS_UNIT_SHIPPING_ADDRESS_ADDED;
     }

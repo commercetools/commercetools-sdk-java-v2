@@ -49,9 +49,19 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     * @return active
+     */
+
     public Boolean getActive() {
         return this.active;
     }
+
+    /**
+     *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     * @return oldActive
+     */
 
     public Boolean getOldActive() {
         return this.oldActive;
@@ -75,10 +85,19 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
         return new StandalonePriceActiveChangedMessagePayloadImpl(active, oldActive);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceActiveChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static StandalonePriceActiveChangedMessagePayloadBuilder of() {
         return new StandalonePriceActiveChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceActiveChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceActiveChangedMessagePayloadBuilder of(
             final StandalonePriceActiveChangedMessagePayload template) {
         StandalonePriceActiveChangedMessagePayloadBuilder builder = new StandalonePriceActiveChangedMessagePayloadBuilder();

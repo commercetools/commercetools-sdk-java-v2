@@ -104,9 +104,19 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Customer.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.me.MyCustomerUpdateAction> getActions() {
         return this.actions;
@@ -130,10 +140,19 @@ public class MyCustomerUpdateBuilder implements Builder<MyCustomerUpdate> {
         return new MyCustomerUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of MyCustomerUpdateBuilder
+     * @return builder
+     */
     public static MyCustomerUpdateBuilder of() {
         return new MyCustomerUpdateBuilder();
     }
 
+    /**
+     * create builder for MyCustomerUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerUpdateBuilder of(final MyCustomerUpdate template) {
         MyCustomerUpdateBuilder builder = new MyCustomerUpdateBuilder();
         builder.version = template.getVersion();

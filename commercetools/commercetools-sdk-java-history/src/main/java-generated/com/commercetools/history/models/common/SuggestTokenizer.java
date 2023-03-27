@@ -37,30 +37,63 @@ public interface SuggestTokenizer {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * set type
+     * @param type value to be set
+     */
+
     public void setType(final String type);
 
+    /**
+     * factory method
+     * @return instance of SuggestTokenizer
+     */
     public static SuggestTokenizer of() {
         return new SuggestTokenizerImpl();
     }
 
+    /**
+     * factory method to copy an instance of SuggestTokenizer
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SuggestTokenizer of(final SuggestTokenizer template) {
         SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
         instance.setType(template.getType());
         return instance;
     }
 
+    /**
+     * builder factory method for SuggestTokenizer
+     * @return builder
+     */
     public static SuggestTokenizerBuilder builder() {
         return SuggestTokenizerBuilder.of();
     }
 
+    /**
+     * create builder for SuggestTokenizer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SuggestTokenizerBuilder builder(final SuggestTokenizer template) {
         return SuggestTokenizerBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSuggestTokenizer(Function<SuggestTokenizer, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer>() {
             @Override

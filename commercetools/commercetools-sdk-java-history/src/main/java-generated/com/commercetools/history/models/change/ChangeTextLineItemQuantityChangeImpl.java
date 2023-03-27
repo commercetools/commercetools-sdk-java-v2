@@ -30,6 +30,9 @@ public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQ
 
     private Integer nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTextLineItemQuantityChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem,
@@ -42,6 +45,9 @@ public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQ
         this.type = CHANGE_TEXT_LINE_ITEM_QUANTITY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTextLineItemQuantityChangeImpl() {
         this.type = CHANGE_TEXT_LINE_ITEM_QUANTITY_CHANGE;
     }

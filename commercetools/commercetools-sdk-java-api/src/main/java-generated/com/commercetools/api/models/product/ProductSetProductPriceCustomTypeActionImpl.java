@@ -30,6 +30,9 @@ public class ProductSetProductPriceCustomTypeActionImpl implements ProductSetPro
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetProductPriceCustomTypeActionImpl(@JsonProperty("priceId") final String priceId,
             @JsonProperty("staged") final Boolean staged,
@@ -42,6 +45,9 @@ public class ProductSetProductPriceCustomTypeActionImpl implements ProductSetPro
         this.action = SET_PRODUCT_PRICE_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetProductPriceCustomTypeActionImpl() {
         this.action = SET_PRODUCT_PRICE_CUSTOM_TYPE;
     }

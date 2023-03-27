@@ -447,89 +447,184 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the StandalonePrice.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the StandalonePrice.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the StandalonePrice.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     * @return sku
+     */
+
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Money value of this Price.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Country for which this Price is valid.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>CustomerGroup for which this Price is valid.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Product distribution Channel for which this Price is valid.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Date from which the Price is valid.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>Price tiers if any are defined.</p>
+     * @return tiers
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
+
+    /**
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     * @return discounted
+     */
 
     @Nullable
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     * @return staged
+     */
+
     @Nullable
     public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     * @return active
+     */
 
     public Boolean getActive() {
         return this.active;
@@ -560,10 +655,19 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
             value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged, active);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceBuilder
+     * @return builder
+     */
     public static StandalonePriceBuilder of() {
         return new StandalonePriceBuilder();
     }
 
+    /**
+     * create builder for StandalonePrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceBuilder of(final StandalonePrice template) {
         StandalonePriceBuilder builder = new StandalonePriceBuilder();
         builder.id = template.getId();

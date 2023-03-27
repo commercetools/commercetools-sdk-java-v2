@@ -24,6 +24,9 @@ public class DiscountCodeUpdateImpl implements DiscountCodeUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class DiscountCodeUpdateImpl implements DiscountCodeUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeUpdateImpl() {
     }
 

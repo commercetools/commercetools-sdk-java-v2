@@ -48,6 +48,9 @@ public class OrderStateTransitionMessageImpl implements OrderStateTransitionMess
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderStateTransitionMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -77,6 +80,9 @@ public class OrderStateTransitionMessageImpl implements OrderStateTransitionMess
         this.type = ORDER_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderStateTransitionMessageImpl() {
         this.type = ORDER_STATE_TRANSITION;
     }

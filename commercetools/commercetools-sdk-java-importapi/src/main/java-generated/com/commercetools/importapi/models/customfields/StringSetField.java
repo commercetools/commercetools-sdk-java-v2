@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StringSetFieldImpl.class)
 public interface StringSetField extends CustomField {
 
+    /**
+     * discriminator value for StringSetField
+     */
     String STRING_SET = "StringSet";
 
     /**
@@ -39,33 +42,71 @@ public interface StringSetField extends CustomField {
     @JsonProperty("value")
     public List<String> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final String... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<String> value);
 
+    /**
+     * factory method
+     * @return instance of StringSetField
+     */
     public static StringSetField of() {
         return new StringSetFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of StringSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StringSetField of(final StringSetField template) {
         StringSetFieldImpl instance = new StringSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for StringSetField
+     * @return builder
+     */
     public static StringSetFieldBuilder builder() {
         return StringSetFieldBuilder.of();
     }
 
+    /**
+     * create builder for StringSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StringSetFieldBuilder builder(final StringSetField template) {
         return StringSetFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStringSetField(Function<StringSetField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StringSetField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StringSetField>() {
             @Override

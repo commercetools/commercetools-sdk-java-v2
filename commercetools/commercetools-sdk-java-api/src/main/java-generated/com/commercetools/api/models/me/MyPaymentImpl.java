@@ -36,6 +36,9 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyPaymentImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
@@ -54,6 +57,9 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public MyPaymentImpl() {
     }
 

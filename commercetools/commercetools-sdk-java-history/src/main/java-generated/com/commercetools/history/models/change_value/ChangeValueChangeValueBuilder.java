@@ -27,6 +27,10 @@ public class ChangeValueChangeValueBuilder {
         return com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ChangeValueChangeValueBuilder
+     * @return builder
+     */
     public static ChangeValueChangeValueBuilder of() {
         return new ChangeValueChangeValueBuilder();
     }

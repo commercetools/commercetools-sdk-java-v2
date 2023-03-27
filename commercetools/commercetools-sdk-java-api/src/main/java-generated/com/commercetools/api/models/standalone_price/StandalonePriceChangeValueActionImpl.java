@@ -26,6 +26,9 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceChangeValueActionImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value,
             @JsonProperty("staged") final Boolean staged) {
@@ -34,6 +37,9 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
         this.action = CHANGE_VALUE;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceChangeValueActionImpl() {
         this.action = CHANGE_VALUE;
     }

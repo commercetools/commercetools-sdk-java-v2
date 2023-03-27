@@ -123,6 +123,10 @@ public class MyCartUpdateActionBuilder {
         return com.commercetools.api.models.me.MyCartUpdateItemShippingAddressActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of MyCartUpdateActionBuilder
+     * @return builder
+     */
     public static MyCartUpdateActionBuilder of() {
         return new MyCartUpdateActionBuilder();
     }

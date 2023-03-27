@@ -50,10 +50,20 @@ public class StateResourceIdentifierBuilder implements Builder<StateResourceIden
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class StateResourceIdentifierBuilder implements Builder<StateResourceIden
         return new StateResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of StateResourceIdentifierBuilder
+     * @return builder
+     */
     public static StateResourceIdentifierBuilder of() {
         return new StateResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for StateResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateResourceIdentifierBuilder of(final StateResourceIdentifier template) {
         StateResourceIdentifierBuilder builder = new StateResourceIdentifierBuilder();
         builder.id = template.getId();

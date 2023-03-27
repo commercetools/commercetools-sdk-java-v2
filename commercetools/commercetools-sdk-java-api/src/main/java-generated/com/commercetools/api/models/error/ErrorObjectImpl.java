@@ -26,6 +26,9 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ErrorObjectImpl(@JsonProperty("code") final String code, @JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public ErrorObjectImpl() {
     }
 

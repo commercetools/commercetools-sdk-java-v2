@@ -27,6 +27,9 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
 
     private com.commercetools.api.models.payment.TransactionState state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentTransactionStateChangedMessagePayloadImpl(@JsonProperty("transactionId") final String transactionId,
             @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
@@ -35,6 +38,9 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
         this.type = PAYMENT_TRANSACTION_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentTransactionStateChangedMessagePayloadImpl() {
         this.type = PAYMENT_TRANSACTION_STATE_CHANGED;
     }

@@ -24,6 +24,9 @@ public class ChannelSetAddressActionImpl implements ChannelSetAddressAction, Mod
 
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelSetAddressActionImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
@@ -31,6 +34,9 @@ public class ChannelSetAddressActionImpl implements ChannelSetAddressAction, Mod
         this.action = SET_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelSetAddressActionImpl() {
         this.action = SET_ADDRESS;
     }

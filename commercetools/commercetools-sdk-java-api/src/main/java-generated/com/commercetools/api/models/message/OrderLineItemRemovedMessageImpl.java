@@ -58,6 +58,9 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
 
     private com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderLineItemRemovedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -97,6 +100,9 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
         this.type = ORDER_LINE_ITEM_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderLineItemRemovedMessageImpl() {
         this.type = ORDER_LINE_ITEM_REMOVED;
     }

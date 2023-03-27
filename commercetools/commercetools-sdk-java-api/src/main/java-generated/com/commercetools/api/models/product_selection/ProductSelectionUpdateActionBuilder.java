@@ -47,6 +47,10 @@ public class ProductSelectionUpdateActionBuilder {
         return com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ProductSelectionUpdateActionBuilder
+     * @return builder
+     */
     public static ProductSelectionUpdateActionBuilder of() {
         return new ProductSelectionUpdateActionBuilder();
     }

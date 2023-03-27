@@ -24,6 +24,9 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
 
     private com.commercetools.history.models.common.LocalizedString label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FieldDefinitionOrderValueImpl(@JsonProperty("name") final String name,
             @JsonProperty("label") final com.commercetools.history.models.common.LocalizedString label) {
@@ -31,6 +34,9 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
         this.label = label;
     }
 
+    /**
+     * create empty instance
+     */
     public FieldDefinitionOrderValueImpl() {
     }
 

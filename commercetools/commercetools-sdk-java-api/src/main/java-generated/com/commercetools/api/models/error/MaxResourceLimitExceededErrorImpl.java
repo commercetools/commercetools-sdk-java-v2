@@ -29,6 +29,9 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
 
     private com.commercetools.api.models.common.ReferenceTypeId exceededResource;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MaxResourceLimitExceededErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -39,6 +42,9 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
         this.code = MAX_RESOURCE_LIMIT_EXCEEDED;
     }
 
+    /**
+     * create empty instance
+     */
     public MaxResourceLimitExceededErrorImpl() {
         this.code = MAX_RESOURCE_LIMIT_EXCEEDED;
     }

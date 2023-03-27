@@ -137,18 +137,38 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the ProductType.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the ProductType.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Description of the ProductType.</p>
+     * @return description
+     */
+
     public String getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @return attributes
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes() {
@@ -173,10 +193,19 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
         return new ProductTypeDraftImpl(key, name, description, attributes);
     }
 
+    /**
+     * factory method for an instance of ProductTypeDraftBuilder
+     * @return builder
+     */
     public static ProductTypeDraftBuilder of() {
         return new ProductTypeDraftBuilder();
     }
 
+    /**
+     * create builder for ProductTypeDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeDraftBuilder of(final ProductTypeDraft template) {
         ProductTypeDraftBuilder builder = new ProductTypeDraftBuilder();
         builder.key = template.getKey();

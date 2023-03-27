@@ -145,31 +145,66 @@ public class TransactionBuilder implements Builder<Transaction> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Transaction.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @return timestamp
+     */
 
     @Nullable
     public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;
     }
 
+    /**
+     *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.payment.TransactionType getType() {
         return this.type;
     }
 
+    /**
+     *  <p>Money value of the Transaction.</p>
+     * @return amount
+     */
+
     public com.commercetools.api.models.common.CentPrecisionMoney getAmount() {
         return this.amount;
     }
+
+    /**
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
+     * @return interactionId
+     */
 
     @Nullable
     public String getInteractionId() {
         return this.interactionId;
     }
 
+    /**
+     *  <p>State of the Transaction.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.payment.TransactionState getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -196,10 +231,19 @@ public class TransactionBuilder implements Builder<Transaction> {
         return new TransactionImpl(id, timestamp, type, amount, interactionId, state, custom);
     }
 
+    /**
+     * factory method for an instance of TransactionBuilder
+     * @return builder
+     */
     public static TransactionBuilder of() {
         return new TransactionBuilder();
     }
 
+    /**
+     * create builder for Transaction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransactionBuilder of(final Transaction template) {
         TransactionBuilder builder = new TransactionBuilder();
         builder.id = template.getId();

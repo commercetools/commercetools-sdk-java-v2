@@ -28,7 +28,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
     private java.util.List<com.commercetools.api.models.me.MyQuoteRequestUpdateAction> actions;
 
     /**
-     *
+     * set the value to the version
      * @param version value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
     }
 
     /**
-     *
+     * set values to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
     }
 
     /**
-     *
+     * set value to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
     }
 
     /**
-     *
+     * add values to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
     }
 
     /**
-     *
+     * add a value to the actions using the builder function
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
     }
 
     /**
-     *
+     * set the value to the actions using the builder function
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -105,9 +105,19 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
         return this;
     }
 
+    /**
+     * value of version}
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     * value of actions}
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.me.MyQuoteRequestUpdateAction> getActions() {
         return this.actions;
@@ -131,10 +141,19 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
         return new MyQuoteRequestUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of MyQuoteRequestUpdateBuilder
+     * @return builder
+     */
     public static MyQuoteRequestUpdateBuilder of() {
         return new MyQuoteRequestUpdateBuilder();
     }
 
+    /**
+     * create builder for MyQuoteRequestUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyQuoteRequestUpdateBuilder of(final MyQuoteRequestUpdate template) {
         MyQuoteRequestUpdateBuilder builder = new MyQuoteRequestUpdateBuilder();
         builder.version = template.getVersion();

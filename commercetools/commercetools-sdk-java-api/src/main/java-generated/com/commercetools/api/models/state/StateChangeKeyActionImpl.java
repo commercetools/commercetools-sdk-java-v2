@@ -24,12 +24,18 @@ public class StateChangeKeyActionImpl implements StateChangeKeyAction, ModelBase
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateChangeKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = CHANGE_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public StateChangeKeyActionImpl() {
         this.action = CHANGE_KEY;
     }

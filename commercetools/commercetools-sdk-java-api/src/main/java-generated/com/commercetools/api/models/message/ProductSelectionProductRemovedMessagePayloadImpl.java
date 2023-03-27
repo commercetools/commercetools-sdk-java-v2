@@ -25,6 +25,9 @@ public class ProductSelectionProductRemovedMessagePayloadImpl
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionProductRemovedMessagePayloadImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product) {
@@ -32,6 +35,9 @@ public class ProductSelectionProductRemovedMessagePayloadImpl
         this.type = PRODUCT_SELECTION_PRODUCT_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionProductRemovedMessagePayloadImpl() {
         this.type = PRODUCT_SELECTION_PRODUCT_REMOVED;
     }

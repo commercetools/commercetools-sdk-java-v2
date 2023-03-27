@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeReferenceImpl.class)
 public interface TypeReference extends Reference, com.commercetools.api.models.Identifiable<Type> {
 
+    /**
+     * discriminator value for TypeReference
+     */
     String TYPE = "type";
 
     /**
@@ -49,14 +52,33 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     @JsonProperty("obj")
     public Type getObj();
 
+    /**
+     *  <p>Unique identifier of the referenced Type.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     * @param obj value to be set
+     */
 
     public void setObj(final Type obj);
 
+    /**
+     * factory method
+     * @return instance of TypeReference
+     */
     public static TypeReference of() {
         return new TypeReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeReference of(final TypeReference template) {
         TypeReferenceImpl instance = new TypeReferenceImpl();
         instance.setId(template.getId());
@@ -64,14 +86,29 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
         return instance;
     }
 
+    /**
+     * builder factory method for TypeReference
+     * @return builder
+     */
     public static TypeReferenceBuilder builder() {
         return TypeReferenceBuilder.of();
     }
 
+    /**
+     * create builder for TypeReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeReferenceBuilder builder(final TypeReference template) {
         return TypeReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeReference(Function<TypeReference, T> helper) {
         return helper.apply(this);
     }
@@ -81,6 +118,10 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
         return TypeResourceIdentifier.builder().id(this.getId()).build();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeReference>() {
             @Override

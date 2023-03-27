@@ -44,6 +44,9 @@ public class OrderDeletedMessageImpl implements OrderDeletedMessage, ModelBase {
 
     private com.commercetools.api.models.order.Order order;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class OrderDeletedMessageImpl implements OrderDeletedMessage, ModelBase {
         this.type = ORDER_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderDeletedMessageImpl() {
         this.type = ORDER_DELETED;
     }

@@ -24,12 +24,18 @@ public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAct
 
     private String interfaceId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetInterfaceIdActionImpl(@JsonProperty("interfaceId") final String interfaceId) {
         this.interfaceId = interfaceId;
         this.action = SET_INTERFACE_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetInterfaceIdActionImpl() {
         this.action = SET_INTERFACE_ID;
     }

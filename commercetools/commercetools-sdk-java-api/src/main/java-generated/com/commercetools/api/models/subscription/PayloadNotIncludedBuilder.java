@@ -48,9 +48,19 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
         return this;
     }
 
+    /**
+     *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
+     * @return reason
+     */
+
     public String getReason() {
         return this.reason;
     }
+
+    /**
+     *  <p>Value of the <code>type</code> field in the original payload.</p>
+     * @return payloadType
+     */
 
     public String getPayloadType() {
         return this.payloadType;
@@ -74,10 +84,19 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
         return new PayloadNotIncludedImpl(reason, payloadType);
     }
 
+    /**
+     * factory method for an instance of PayloadNotIncludedBuilder
+     * @return builder
+     */
     public static PayloadNotIncludedBuilder of() {
         return new PayloadNotIncludedBuilder();
     }
 
+    /**
+     * create builder for PayloadNotIncluded instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PayloadNotIncludedBuilder of(final PayloadNotIncluded template) {
         PayloadNotIncludedBuilder builder = new PayloadNotIncludedBuilder();
         builder.reason = template.getReason();

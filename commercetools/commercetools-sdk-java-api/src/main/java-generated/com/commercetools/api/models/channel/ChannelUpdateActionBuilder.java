@@ -59,6 +59,10 @@ public class ChannelUpdateActionBuilder {
         return com.commercetools.api.models.channel.ChannelSetRolesActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ChannelUpdateActionBuilder
+     * @return builder
+     */
     public static ChannelUpdateActionBuilder of() {
         return new ChannelUpdateActionBuilder();
     }

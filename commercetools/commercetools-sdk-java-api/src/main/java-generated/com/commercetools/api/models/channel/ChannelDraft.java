@@ -91,27 +91,76 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     @JsonProperty("geoLocation")
     public GeoJson getGeoLocation();
 
+    /**
+     *  <p>User-defined unique identifier for the Channel.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     * @param roles values to be set
+     */
 
     @JsonIgnore
     public void setRoles(final ChannelRoleEnum... roles);
 
+    /**
+     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     * @param roles values to be set
+     */
+
     public void setRoles(final List<ChannelRoleEnum> roles);
+
+    /**
+     *  <p>Name of the Channel.</p>
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     *  <p>Description of the Channel.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Address where the Channel is located.</p>
+     * @param address value to be set
+     */
 
     public void setAddress(final BaseAddress address);
 
+    /**
+     *  <p>Custom fields defined for the Channel.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     * @param geoLocation value to be set
+     */
 
     public void setGeoLocation(final GeoJson geoLocation);
 
+    /**
+     * factory method
+     * @return instance of ChannelDraft
+     */
     public static ChannelDraft of() {
         return new ChannelDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChannelDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChannelDraft of(final ChannelDraft template) {
         ChannelDraftImpl instance = new ChannelDraftImpl();
         instance.setKey(template.getKey());
@@ -124,18 +173,37 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
         return instance;
     }
 
+    /**
+     * builder factory method for ChannelDraft
+     * @return builder
+     */
     public static ChannelDraftBuilder builder() {
         return ChannelDraftBuilder.of();
     }
 
+    /**
+     * create builder for ChannelDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelDraftBuilder builder(final ChannelDraft template) {
         return ChannelDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChannelDraft(Function<ChannelDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChannelDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChannelDraft>() {
             @Override

@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetProductPriceCustomTypeActionImpl.class)
 public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetProductPriceCustomTypeAction
+     */
     String SET_PRODUCT_PRICE_CUSTOM_TYPE = "setProductPriceCustomType";
 
     /**
@@ -66,18 +69,47 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
+     * @param priceId value to be set
+     */
+
     public void setPriceId(final String priceId);
+
+    /**
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of ProductSetProductPriceCustomTypeAction
+     */
     public static ProductSetProductPriceCustomTypeAction of() {
         return new ProductSetProductPriceCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetProductPriceCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetProductPriceCustomTypeAction of(final ProductSetProductPriceCustomTypeAction template) {
         ProductSetProductPriceCustomTypeActionImpl instance = new ProductSetProductPriceCustomTypeActionImpl();
         instance.setPriceId(template.getPriceId());
@@ -87,20 +119,39 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetProductPriceCustomTypeAction
+     * @return builder
+     */
     public static ProductSetProductPriceCustomTypeActionBuilder builder() {
         return ProductSetProductPriceCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetProductPriceCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetProductPriceCustomTypeActionBuilder builder(
             final ProductSetProductPriceCustomTypeAction template) {
         return ProductSetProductPriceCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetProductPriceCustomTypeAction(
             Function<ProductSetProductPriceCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction>() {
             @Override

@@ -30,7 +30,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -106,9 +106,19 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
         return this;
     }
 
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     * value of items}
+     * @return items
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
@@ -132,10 +142,19 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
         return new ParcelItemsImpl(parcelId, items);
     }
 
+    /**
+     * factory method for an instance of ParcelItemsBuilder
+     * @return builder
+     */
     public static ParcelItemsBuilder of() {
         return new ParcelItemsBuilder();
     }
 
+    /**
+     * create builder for ParcelItems instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelItemsBuilder of(final ParcelItems template) {
         ParcelItemsBuilder builder = new ParcelItemsBuilder();
         builder.parcelId = template.getParcelId();

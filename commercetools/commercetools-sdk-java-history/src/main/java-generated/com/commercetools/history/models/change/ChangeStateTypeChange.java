@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeStateTypeChangeImpl.class)
 public interface ChangeStateTypeChange extends Change {
 
+    /**
+     * discriminator value for ChangeStateTypeChange
+     */
     String CHANGE_STATE_TYPE_CHANGE = "ChangeStateTypeChange";
 
     /**
@@ -66,16 +69,40 @@ public interface ChangeStateTypeChange extends Change {
     @JsonProperty("nextValue")
     public StateType getNextValue();
 
+    /**
+     *  <p>Update action for <code>changeType</code> on state</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final StateType previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final StateType nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeStateTypeChange
+     */
     public static ChangeStateTypeChange of() {
         return new ChangeStateTypeChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeStateTypeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeStateTypeChange of(final ChangeStateTypeChange template) {
         ChangeStateTypeChangeImpl instance = new ChangeStateTypeChangeImpl();
         instance.setChange(template.getChange());
@@ -84,18 +111,37 @@ public interface ChangeStateTypeChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeStateTypeChange
+     * @return builder
+     */
     public static ChangeStateTypeChangeBuilder builder() {
         return ChangeStateTypeChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeStateTypeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeStateTypeChangeBuilder builder(final ChangeStateTypeChange template) {
         return ChangeStateTypeChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeStateTypeChange(Function<ChangeStateTypeChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeStateTypeChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeStateTypeChange>() {
             @Override

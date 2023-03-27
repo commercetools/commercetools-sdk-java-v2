@@ -101,17 +101,37 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
         return this;
     }
 
+    /**
+     *  <p><code>true</code> if the Product is published.</p>
+     * @return published
+     */
+
     public Boolean getPublished() {
         return this.published;
     }
+
+    /**
+     *  <p>Current (published) data of the Product.</p>
+     * @return current
+     */
 
     public com.commercetools.api.models.product.ProductData getCurrent() {
         return this.current;
     }
 
+    /**
+     *  <p>Staged (unpublished) data of the Product.</p>
+     * @return staged
+     */
+
     public com.commercetools.api.models.product.ProductData getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     * @return hasStagedChanges
+     */
 
     public Boolean getHasStagedChanges() {
         return this.hasStagedChanges;
@@ -137,10 +157,19 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
         return new ProductCatalogDataImpl(published, current, staged, hasStagedChanges);
     }
 
+    /**
+     * factory method for an instance of ProductCatalogDataBuilder
+     * @return builder
+     */
     public static ProductCatalogDataBuilder of() {
         return new ProductCatalogDataBuilder();
     }
 
+    /**
+     * create builder for ProductCatalogData instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductCatalogDataBuilder of(final ProductCatalogData template) {
         ProductCatalogDataBuilder builder = new ProductCatalogDataBuilder();
         builder.published = template.getPublished();

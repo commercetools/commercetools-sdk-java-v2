@@ -63,10 +63,20 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>References a resource by key.</p>
+     * @return value
+     */
 
     public com.commercetools.importapi.models.common.KeyReference getValue() {
         return this.value;
@@ -89,10 +99,19 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
         return new ReferenceAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of ReferenceAttributeBuilder
+     * @return builder
+     */
     public static ReferenceAttributeBuilder of() {
         return new ReferenceAttributeBuilder();
     }
 
+    /**
+     * create builder for ReferenceAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferenceAttributeBuilder of(final ReferenceAttribute template) {
         ReferenceAttributeBuilder builder = new ReferenceAttributeBuilder();
         builder.name = template.getName();

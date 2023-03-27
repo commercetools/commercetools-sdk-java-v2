@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddFieldDefinitionChangeImpl.class)
 public interface AddFieldDefinitionChange extends Change {
 
+    /**
+     * discriminator value for AddFieldDefinitionChange
+     */
     String ADD_FIELD_DEFINITION_CHANGE = "AddFieldDefinitionChange";
 
     /**
@@ -59,14 +62,33 @@ public interface AddFieldDefinitionChange extends Change {
     @JsonProperty("nextValue")
     public FieldDefinition getNextValue();
 
+    /**
+     *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final FieldDefinition nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddFieldDefinitionChange
+     */
     public static AddFieldDefinitionChange of() {
         return new AddFieldDefinitionChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddFieldDefinitionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddFieldDefinitionChange of(final AddFieldDefinitionChange template) {
         AddFieldDefinitionChangeImpl instance = new AddFieldDefinitionChangeImpl();
         instance.setChange(template.getChange());
@@ -74,18 +96,37 @@ public interface AddFieldDefinitionChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddFieldDefinitionChange
+     * @return builder
+     */
     public static AddFieldDefinitionChangeBuilder builder() {
         return AddFieldDefinitionChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddFieldDefinitionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddFieldDefinitionChangeBuilder builder(final AddFieldDefinitionChange template) {
         return AddFieldDefinitionChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddFieldDefinitionChange(Function<AddFieldDefinitionChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddFieldDefinitionChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddFieldDefinitionChange>() {
             @Override

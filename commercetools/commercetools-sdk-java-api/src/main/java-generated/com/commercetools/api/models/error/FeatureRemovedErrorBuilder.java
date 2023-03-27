@@ -62,9 +62,19 @@ public class FeatureRemovedErrorBuilder implements Builder<FeatureRemovedError> 
         return this;
     }
 
+    /**
+     *  <p>Description of the feature that is removed.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class FeatureRemovedErrorBuilder implements Builder<FeatureRemovedError> 
         return new FeatureRemovedErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of FeatureRemovedErrorBuilder
+     * @return builder
+     */
     public static FeatureRemovedErrorBuilder of() {
         return new FeatureRemovedErrorBuilder();
     }
 
+    /**
+     * create builder for FeatureRemovedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FeatureRemovedErrorBuilder of(final FeatureRemovedError template) {
         FeatureRemovedErrorBuilder builder = new FeatureRemovedErrorBuilder();
         builder.message = template.getMessage();

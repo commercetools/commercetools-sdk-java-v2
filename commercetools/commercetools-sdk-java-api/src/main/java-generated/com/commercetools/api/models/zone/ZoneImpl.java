@@ -40,6 +40,9 @@ public class ZoneImpl implements Zone, ModelBase {
 
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -61,6 +64,9 @@ public class ZoneImpl implements Zone, ModelBase {
         this.locations = locations;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneImpl() {
     }
 

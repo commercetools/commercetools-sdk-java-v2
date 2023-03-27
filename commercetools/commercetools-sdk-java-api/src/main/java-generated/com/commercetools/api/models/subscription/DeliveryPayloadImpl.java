@@ -28,6 +28,9 @@ public class DeliveryPayloadImpl implements DeliveryPayload, ModelBase {
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryPayloadImpl(@JsonProperty("projectKey") final String projectKey,
             @JsonProperty("notificationType") final String notificationType,
@@ -39,6 +42,9 @@ public class DeliveryPayloadImpl implements DeliveryPayload, ModelBase {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryPayloadImpl() {
     }
 

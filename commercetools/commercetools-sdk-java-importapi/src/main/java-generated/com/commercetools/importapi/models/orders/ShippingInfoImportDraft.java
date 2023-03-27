@@ -110,31 +110,90 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @JsonProperty("shippingMethodState")
     public ShippingMethodState getShippingMethodState();
 
+    /**
+     * set shippingMethodName
+     * @param shippingMethodName value to be set
+     */
+
     public void setShippingMethodName(final String shippingMethodName);
+
+    /**
+     * set price
+     * @param price value to be set
+     */
 
     public void setPrice(final TypedMoney price);
 
+    /**
+     * set shippingRate
+     * @param shippingRate value to be set
+     */
+
     public void setShippingRate(final ShippingRateDraft shippingRate);
+
+    /**
+     * set taxRate
+     * @param taxRate value to be set
+     */
 
     public void setTaxRate(final TaxRate taxRate);
 
+    /**
+     *  <p>References a tax category by key.</p>
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
 
+    /**
+     *  <p>References a shipping method by key.</p>
+     * @param shippingMethod value to be set
+     */
+
     public void setShippingMethod(final ShippingMethodKeyReference shippingMethod);
+
+    /**
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     * @param deliveries values to be set
+     */
 
     @JsonIgnore
     public void setDeliveries(final Delivery... deliveries);
 
+    /**
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     * @param deliveries values to be set
+     */
+
     public void setDeliveries(final List<Delivery> deliveries);
+
+    /**
+     * set discountedPrice
+     * @param discountedPrice value to be set
+     */
 
     public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);
 
+    /**
+     * set shippingMethodState
+     * @param shippingMethodState value to be set
+     */
+
     public void setShippingMethodState(final ShippingMethodState shippingMethodState);
 
+    /**
+     * factory method
+     * @return instance of ShippingInfoImportDraft
+     */
     public static ShippingInfoImportDraft of() {
         return new ShippingInfoImportDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingInfoImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingInfoImportDraft of(final ShippingInfoImportDraft template) {
         ShippingInfoImportDraftImpl instance = new ShippingInfoImportDraftImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
@@ -149,18 +208,37 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingInfoImportDraft
+     * @return builder
+     */
     public static ShippingInfoImportDraftBuilder builder() {
         return ShippingInfoImportDraftBuilder.of();
     }
 
+    /**
+     * create builder for ShippingInfoImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingInfoImportDraftBuilder builder(final ShippingInfoImportDraft template) {
         return ShippingInfoImportDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingInfoImportDraft(Function<ShippingInfoImportDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft>() {
             @Override

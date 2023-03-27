@@ -54,19 +54,48 @@ public interface ExtensionTrigger {
     @JsonProperty("condition")
     public String getCondition();
 
+    /**
+     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     * @param resourceTypeId value to be set
+     */
+
     public void setResourceTypeId(final ExtensionResourceTypeId resourceTypeId);
+
+    /**
+     *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final ExtensionAction... actions);
 
+    /**
+     *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     * @param actions values to be set
+     */
+
     public void setActions(final List<ExtensionAction> actions);
+
+    /**
+     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     * @param condition value to be set
+     */
 
     public void setCondition(final String condition);
 
+    /**
+     * factory method
+     * @return instance of ExtensionTrigger
+     */
     public static ExtensionTrigger of() {
         return new ExtensionTriggerImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExtensionTrigger
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExtensionTrigger of(final ExtensionTrigger template) {
         ExtensionTriggerImpl instance = new ExtensionTriggerImpl();
         instance.setResourceTypeId(template.getResourceTypeId());
@@ -75,18 +104,37 @@ public interface ExtensionTrigger {
         return instance;
     }
 
+    /**
+     * builder factory method for ExtensionTrigger
+     * @return builder
+     */
     public static ExtensionTriggerBuilder builder() {
         return ExtensionTriggerBuilder.of();
     }
 
+    /**
+     * create builder for ExtensionTrigger instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionTriggerBuilder builder(final ExtensionTrigger template) {
         return ExtensionTriggerBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtensionTrigger(Function<ExtensionTrigger, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionTrigger> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionTrigger>() {
             @Override

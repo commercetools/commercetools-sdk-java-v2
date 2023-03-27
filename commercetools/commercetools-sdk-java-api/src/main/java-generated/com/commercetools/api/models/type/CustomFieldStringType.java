@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldStringTypeImpl.class)
 public interface CustomFieldStringType extends FieldType {
 
+    /**
+     * discriminator value for CustomFieldStringType
+     */
     String STRING = "String";
 
+    /**
+     * factory method
+     * @return instance of CustomFieldStringType
+     */
     public static CustomFieldStringType of() {
         return new CustomFieldStringTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomFieldStringType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomFieldStringType of(final CustomFieldStringType template) {
         CustomFieldStringTypeImpl instance = new CustomFieldStringTypeImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for CustomFieldStringType
+     * @return builder
+     */
     public static CustomFieldStringTypeBuilder builder() {
         return CustomFieldStringTypeBuilder.of();
     }
 
+    /**
+     * create builder for CustomFieldStringType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldStringTypeBuilder builder(final CustomFieldStringType template) {
         return CustomFieldStringTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomFieldStringType(Function<CustomFieldStringType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldStringType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldStringType>() {
             @Override

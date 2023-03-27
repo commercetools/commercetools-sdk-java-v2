@@ -76,9 +76,19 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
         return this;
     }
 
+    /**
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
+     * @return resourceTypeId
+     */
+
     public com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }
+
+    /**
+     *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
+     * @return types
+     */
 
     @Nullable
     public java.util.List<String> getTypes() {
@@ -102,10 +112,19 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
         return new MessageSubscriptionImpl(resourceTypeId, types);
     }
 
+    /**
+     * factory method for an instance of MessageSubscriptionBuilder
+     * @return builder
+     */
     public static MessageSubscriptionBuilder of() {
         return new MessageSubscriptionBuilder();
     }
 
+    /**
+     * create builder for MessageSubscription instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MessageSubscriptionBuilder of(final MessageSubscription template) {
         MessageSubscriptionBuilder builder = new MessageSubscriptionBuilder();
         builder.resourceTypeId = template.getResourceTypeId();

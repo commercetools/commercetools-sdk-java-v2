@@ -47,14 +47,33 @@ public interface ParcelTrackingData {
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
+    /**
+     * set parcelId
+     * @param parcelId value to be set
+     */
+
     public void setParcelId(final String parcelId);
+
+    /**
+     * set trackingData
+     * @param trackingData value to be set
+     */
 
     public void setTrackingData(final TrackingData trackingData);
 
+    /**
+     * factory method
+     * @return instance of ParcelTrackingData
+     */
     public static ParcelTrackingData of() {
         return new ParcelTrackingDataImpl();
     }
 
+    /**
+     * factory method to copy an instance of ParcelTrackingData
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ParcelTrackingData of(final ParcelTrackingData template) {
         ParcelTrackingDataImpl instance = new ParcelTrackingDataImpl();
         instance.setParcelId(template.getParcelId());
@@ -62,18 +81,37 @@ public interface ParcelTrackingData {
         return instance;
     }
 
+    /**
+     * builder factory method for ParcelTrackingData
+     * @return builder
+     */
     public static ParcelTrackingDataBuilder builder() {
         return ParcelTrackingDataBuilder.of();
     }
 
+    /**
+     * create builder for ParcelTrackingData instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelTrackingDataBuilder builder(final ParcelTrackingData template) {
         return ParcelTrackingDataBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcelTrackingData(Function<ParcelTrackingData, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingData> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingData>() {
             @Override

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodReferenceImpl.class)
 public interface ShippingMethodReference extends Reference, com.commercetools.api.models.Identifiable<ShippingMethod> {
 
+    /**
+     * discriminator value for ShippingMethodReference
+     */
     String SHIPPING_METHOD = "shipping-method";
 
     /**
@@ -49,14 +52,33 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final ShippingMethod obj);
+
+    /**
+     *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodReference
+     */
     public static ShippingMethodReference of() {
         return new ShippingMethodReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodReference of(final ShippingMethodReference template) {
         ShippingMethodReferenceImpl instance = new ShippingMethodReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodReference
+     * @return builder
+     */
     public static ShippingMethodReferenceBuilder builder() {
         return ShippingMethodReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodReferenceBuilder builder(final ShippingMethodReference template) {
         return ShippingMethodReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodReference(Function<ShippingMethodReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodReference>() {
             @Override

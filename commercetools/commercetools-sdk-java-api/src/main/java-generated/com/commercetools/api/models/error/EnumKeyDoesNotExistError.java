@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = EnumKeyDoesNotExistErrorImpl.class)
 public interface EnumKeyDoesNotExistError extends ErrorObject {
 
+    /**
+     * discriminator value for EnumKeyDoesNotExistError
+     */
     String ENUM_KEY_DOES_NOT_EXIST = "EnumKeyDoesNotExist";
 
     /**
@@ -66,16 +69,40 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();
 
+    /**
+     *  <p><code>"The $fieldName field definition does not contain an enum value with the key $enumKey."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Conflicting enum key.</p>
+     * @param conflictingEnumKey value to be set
+     */
 
     public void setConflictingEnumKey(final String conflictingEnumKey);
 
+    /**
+     *  <p>Name of the conflicting Attribute.</p>
+     * @param conflictingAttributeName value to be set
+     */
+
     public void setConflictingAttributeName(final String conflictingAttributeName);
 
+    /**
+     * factory method
+     * @return instance of EnumKeyDoesNotExistError
+     */
     public static EnumKeyDoesNotExistError of() {
         return new EnumKeyDoesNotExistErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of EnumKeyDoesNotExistError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static EnumKeyDoesNotExistError of(final EnumKeyDoesNotExistError template) {
         EnumKeyDoesNotExistErrorImpl instance = new EnumKeyDoesNotExistErrorImpl();
         instance.setMessage(template.getMessage());
@@ -85,18 +112,37 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for EnumKeyDoesNotExistError
+     * @return builder
+     */
     public static EnumKeyDoesNotExistErrorBuilder builder() {
         return EnumKeyDoesNotExistErrorBuilder.of();
     }
 
+    /**
+     * create builder for EnumKeyDoesNotExistError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumKeyDoesNotExistErrorBuilder builder(final EnumKeyDoesNotExistError template) {
         return EnumKeyDoesNotExistErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withEnumKeyDoesNotExistError(Function<EnumKeyDoesNotExistError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<EnumKeyDoesNotExistError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<EnumKeyDoesNotExistError>() {
             @Override

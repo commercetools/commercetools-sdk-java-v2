@@ -44,6 +44,9 @@ public class OrderStoreSetMessageImpl implements OrderStoreSetMessage, ModelBase
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderStoreSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class OrderStoreSetMessageImpl implements OrderStoreSetMessage, ModelBase
         this.type = ORDER_STORE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderStoreSetMessageImpl() {
         this.type = ORDER_STORE_SET;
     }

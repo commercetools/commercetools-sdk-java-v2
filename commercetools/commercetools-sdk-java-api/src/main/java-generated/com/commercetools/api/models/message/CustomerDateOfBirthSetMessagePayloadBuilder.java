@@ -36,6 +36,11 @@ public class CustomerDateOfBirthSetMessagePayloadBuilder implements Builder<Cust
         return this;
     }
 
+    /**
+     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     * @return dateOfBirth
+     */
+
     @Nullable
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
@@ -57,10 +62,19 @@ public class CustomerDateOfBirthSetMessagePayloadBuilder implements Builder<Cust
         return new CustomerDateOfBirthSetMessagePayloadImpl(dateOfBirth);
     }
 
+    /**
+     * factory method for an instance of CustomerDateOfBirthSetMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerDateOfBirthSetMessagePayloadBuilder of() {
         return new CustomerDateOfBirthSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerDateOfBirthSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerDateOfBirthSetMessagePayloadBuilder of(final CustomerDateOfBirthSetMessagePayload template) {
         CustomerDateOfBirthSetMessagePayloadBuilder builder = new CustomerDateOfBirthSetMessagePayloadBuilder();
         builder.dateOfBirth = template.getDateOfBirth();

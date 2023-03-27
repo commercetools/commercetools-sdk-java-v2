@@ -24,12 +24,18 @@ public class CartDiscountSetValidFromActionImpl implements CartDiscountSetValidF
 
     private java.time.ZonedDateTime validFrom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountSetValidFromActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         this.action = SET_VALID_FROM;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountSetValidFromActionImpl() {
         this.action = SET_VALID_FROM;
     }

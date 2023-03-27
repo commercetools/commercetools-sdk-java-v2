@@ -298,42 +298,92 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the custom Shipping Method in the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the custom Shipping Method.</p>
+     * @return shippingMethodName
+     */
+
     public String getShippingMethodName() {
         return this.shippingMethodName;
     }
+
+    /**
+     *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @return shippingAddress
+     */
 
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
 
+    /**
+     *  <p>Determines the shipping price.</p>
+     * @return shippingRate
+     */
+
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
+
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
+     * @return shippingRateInput
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
         return this.shippingRateInput;
     }
 
+    /**
+     *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
+     */
+
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
+    /**
+     *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @return deliveries
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryDraft> getDeliveries() {
         return this.deliveries;
     }
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -361,10 +411,19 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
             taxCategory, externalTaxRate, deliveries, custom);
     }
 
+    /**
+     * factory method for an instance of CustomShippingDraftBuilder
+     * @return builder
+     */
     public static CustomShippingDraftBuilder of() {
         return new CustomShippingDraftBuilder();
     }
 
+    /**
+     * create builder for CustomShippingDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomShippingDraftBuilder of(final CustomShippingDraft template) {
         CustomShippingDraftBuilder builder = new CustomShippingDraftBuilder();
         builder.key = template.getKey();

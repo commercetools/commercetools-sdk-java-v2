@@ -27,6 +27,9 @@ public class CartChangeCustomLineItemQuantityActionImpl implements CartChangeCus
 
     private Long quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("quantity") final Long quantity) {
@@ -35,6 +38,9 @@ public class CartChangeCustomLineItemQuantityActionImpl implements CartChangeCus
         this.action = CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
     }
 
+    /**
+     * create empty instance
+     */
     public CartChangeCustomLineItemQuantityActionImpl() {
         this.action = CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
     }

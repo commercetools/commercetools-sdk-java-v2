@@ -50,6 +50,11 @@ public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMet
         return this;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     * @return metaTitle
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
@@ -71,10 +76,19 @@ public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMet
         return new CategorySetMetaTitleActionImpl(metaTitle);
     }
 
+    /**
+     * factory method for an instance of CategorySetMetaTitleActionBuilder
+     * @return builder
+     */
     public static CategorySetMetaTitleActionBuilder of() {
         return new CategorySetMetaTitleActionBuilder();
     }
 
+    /**
+     * create builder for CategorySetMetaTitleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetMetaTitleActionBuilder of(final CategorySetMetaTitleAction template) {
         CategorySetMetaTitleActionBuilder builder = new CategorySetMetaTitleActionBuilder();
         builder.metaTitle = template.getMetaTitle();

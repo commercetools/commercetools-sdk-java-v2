@@ -24,6 +24,9 @@ public class OrderSetStoreActionImpl implements OrderSetStoreAction, ModelBase {
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetStoreActionImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
@@ -31,6 +34,9 @@ public class OrderSetStoreActionImpl implements OrderSetStoreAction, ModelBase {
         this.action = SET_STORE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetStoreActionImpl() {
         this.action = SET_STORE;
     }

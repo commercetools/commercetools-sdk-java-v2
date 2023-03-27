@@ -24,7 +24,7 @@ public class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryDraft> 
     private String id;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryDraft> 
         this.id = id;
         return this;
     }
+
+    /**
+     * value of id}
+     * @return id
+     */
 
     public String getId() {
         return this.id;
@@ -55,10 +60,19 @@ public class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryDraft> 
         return new RemoveDeliveryDraftImpl(id);
     }
 
+    /**
+     * factory method for an instance of RemoveDeliveryDraftBuilder
+     * @return builder
+     */
     public static RemoveDeliveryDraftBuilder of() {
         return new RemoveDeliveryDraftBuilder();
     }
 
+    /**
+     * create builder for RemoveDeliveryDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveDeliveryDraftBuilder of(final RemoveDeliveryDraft template) {
         RemoveDeliveryDraftBuilder builder = new RemoveDeliveryDraftBuilder();
         builder.id = template.getId();

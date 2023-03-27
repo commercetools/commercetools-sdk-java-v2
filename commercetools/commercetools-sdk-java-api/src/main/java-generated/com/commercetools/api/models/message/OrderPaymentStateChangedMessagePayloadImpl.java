@@ -26,6 +26,9 @@ public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentS
 
     private com.commercetools.api.models.order.PaymentState oldPaymentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderPaymentStateChangedMessagePayloadImpl(
             @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState,
@@ -35,6 +38,9 @@ public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentS
         this.type = ORDER_PAYMENT_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderPaymentStateChangedMessagePayloadImpl() {
         this.type = ORDER_PAYMENT_STATE_CHANGED;
     }

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentChangeTransactionTimestampActionImpl.class)
 public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAction {
 
+    /**
+     * discriminator value for PaymentChangeTransactionTimestampAction
+     */
     String CHANGE_TRANSACTION_TIMESTAMP = "changeTransactionTimestamp";
 
     /**
@@ -49,14 +52,33 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
     @JsonProperty("timestamp")
     public ZonedDateTime getTimestamp();
 
+    /**
+     *  <p>Unique identifier of the Transaction.</p>
+     * @param transactionId value to be set
+     */
+
     public void setTransactionId(final String transactionId);
+
+    /**
+     *  <p>Timestamp of the Transaction as reported by the payment service.</p>
+     * @param timestamp value to be set
+     */
 
     public void setTimestamp(final ZonedDateTime timestamp);
 
+    /**
+     * factory method
+     * @return instance of PaymentChangeTransactionTimestampAction
+     */
     public static PaymentChangeTransactionTimestampAction of() {
         return new PaymentChangeTransactionTimestampActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentChangeTransactionTimestampAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentChangeTransactionTimestampAction of(final PaymentChangeTransactionTimestampAction template) {
         PaymentChangeTransactionTimestampActionImpl instance = new PaymentChangeTransactionTimestampActionImpl();
         instance.setTransactionId(template.getTransactionId());
@@ -64,20 +86,39 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentChangeTransactionTimestampAction
+     * @return builder
+     */
     public static PaymentChangeTransactionTimestampActionBuilder builder() {
         return PaymentChangeTransactionTimestampActionBuilder.of();
     }
 
+    /**
+     * create builder for PaymentChangeTransactionTimestampAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentChangeTransactionTimestampActionBuilder builder(
             final PaymentChangeTransactionTimestampAction template) {
         return PaymentChangeTransactionTimestampActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentChangeTransactionTimestampAction(
             Function<PaymentChangeTransactionTimestampAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentChangeTransactionTimestampAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentChangeTransactionTimestampAction>() {
             @Override

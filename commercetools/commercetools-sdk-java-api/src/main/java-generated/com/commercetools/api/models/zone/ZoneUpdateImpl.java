@@ -24,6 +24,9 @@ public class ZoneUpdateImpl implements ZoneUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class ZoneUpdateImpl implements ZoneUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneUpdateImpl() {
     }
 

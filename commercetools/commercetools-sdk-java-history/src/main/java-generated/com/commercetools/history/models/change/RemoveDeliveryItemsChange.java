@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveDeliveryItemsChangeImpl.class)
 public interface RemoveDeliveryItemsChange extends Change {
 
+    /**
+     * discriminator value for RemoveDeliveryItemsChange
+     */
     String REMOVE_DELIVERY_ITEMS_CHANGE = "RemoveDeliveryItemsChange";
 
     /**
@@ -59,14 +62,33 @@ public interface RemoveDeliveryItemsChange extends Change {
     @JsonProperty("previousValue")
     public Delivery getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>removeDelivery</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Delivery previousValue);
 
+    /**
+     * factory method
+     * @return instance of RemoveDeliveryItemsChange
+     */
     public static RemoveDeliveryItemsChange of() {
         return new RemoveDeliveryItemsChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveDeliveryItemsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveDeliveryItemsChange of(final RemoveDeliveryItemsChange template) {
         RemoveDeliveryItemsChangeImpl instance = new RemoveDeliveryItemsChangeImpl();
         instance.setChange(template.getChange());
@@ -74,18 +96,37 @@ public interface RemoveDeliveryItemsChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveDeliveryItemsChange
+     * @return builder
+     */
     public static RemoveDeliveryItemsChangeBuilder builder() {
         return RemoveDeliveryItemsChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveDeliveryItemsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveDeliveryItemsChangeBuilder builder(final RemoveDeliveryItemsChange template) {
         return RemoveDeliveryItemsChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveDeliveryItemsChange(Function<RemoveDeliveryItemsChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveDeliveryItemsChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveDeliveryItemsChange>() {
             @Override

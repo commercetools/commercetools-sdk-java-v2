@@ -56,16 +56,41 @@ public interface MyCustomerChangePassword {
     @JsonProperty("newPassword")
     public String getNewPassword();
 
+    /**
+     *  <p>Expected version of the Customer on which the changes should be applied.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>Current password of the Customer.</p>
+     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+     * @param currentPassword value to be set
+     */
 
     public void setCurrentPassword(final String currentPassword);
 
+    /**
+     *  <p>New password to be set.</p>
+     * @param newPassword value to be set
+     */
+
     public void setNewPassword(final String newPassword);
 
+    /**
+     * factory method
+     * @return instance of MyCustomerChangePassword
+     */
     public static MyCustomerChangePassword of() {
         return new MyCustomerChangePasswordImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCustomerChangePassword
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCustomerChangePassword of(final MyCustomerChangePassword template) {
         MyCustomerChangePasswordImpl instance = new MyCustomerChangePasswordImpl();
         instance.setVersion(template.getVersion());
@@ -74,18 +99,37 @@ public interface MyCustomerChangePassword {
         return instance;
     }
 
+    /**
+     * builder factory method for MyCustomerChangePassword
+     * @return builder
+     */
     public static MyCustomerChangePasswordBuilder builder() {
         return MyCustomerChangePasswordBuilder.of();
     }
 
+    /**
+     * create builder for MyCustomerChangePassword instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerChangePasswordBuilder builder(final MyCustomerChangePassword template) {
         return MyCustomerChangePasswordBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCustomerChangePassword(Function<MyCustomerChangePassword, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangePassword> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangePassword>() {
             @Override

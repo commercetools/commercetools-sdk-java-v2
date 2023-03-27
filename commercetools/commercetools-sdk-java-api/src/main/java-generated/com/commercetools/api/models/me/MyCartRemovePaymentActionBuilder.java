@@ -49,6 +49,11 @@ public class MyCartRemovePaymentActionBuilder implements Builder<MyCartRemovePay
         return this;
     }
 
+    /**
+     *  <p>Payment to remove from the Cart.</p>
+     * @return payment
+     */
+
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
         return this.payment;
     }
@@ -70,10 +75,19 @@ public class MyCartRemovePaymentActionBuilder implements Builder<MyCartRemovePay
         return new MyCartRemovePaymentActionImpl(payment);
     }
 
+    /**
+     * factory method for an instance of MyCartRemovePaymentActionBuilder
+     * @return builder
+     */
     public static MyCartRemovePaymentActionBuilder of() {
         return new MyCartRemovePaymentActionBuilder();
     }
 
+    /**
+     * create builder for MyCartRemovePaymentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartRemovePaymentActionBuilder of(final MyCartRemovePaymentAction template) {
         MyCartRemovePaymentActionBuilder builder = new MyCartRemovePaymentActionBuilder();
         builder.payment = template.getPayment();

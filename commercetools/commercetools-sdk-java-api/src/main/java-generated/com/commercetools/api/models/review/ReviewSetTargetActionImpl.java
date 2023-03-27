@@ -27,12 +27,18 @@ public class ReviewSetTargetActionImpl implements ReviewSetTargetAction, ModelBa
 
     private java.lang.Object target;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewSetTargetActionImpl(@JsonProperty("target") final java.lang.Object target) {
         this.target = target;
         this.action = SET_TARGET;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewSetTargetActionImpl() {
         this.action = SET_TARGET;
     }

@@ -24,6 +24,9 @@ public class PriceTierDraftImpl implements PriceTierDraft, ModelBase {
 
     private com.commercetools.api.models.common.Money value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceTierDraftImpl(@JsonProperty("minimumQuantity") final Long minimumQuantity,
             @JsonProperty("value") final com.commercetools.api.models.common.Money value) {
@@ -31,6 +34,9 @@ public class PriceTierDraftImpl implements PriceTierDraft, ModelBase {
         this.value = value;
     }
 
+    /**
+     * create empty instance
+     */
     public PriceTierDraftImpl() {
     }
 

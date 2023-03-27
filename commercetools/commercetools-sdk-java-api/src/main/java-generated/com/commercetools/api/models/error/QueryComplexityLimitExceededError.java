@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QueryComplexityLimitExceededErrorImpl.class)
 public interface QueryComplexityLimitExceededError extends ErrorObject {
 
+    /**
+     * discriminator value for QueryComplexityLimitExceededError
+     */
     String QUERY_COMPLEXITY_LIMIT_EXCEEDED = "QueryComplexityLimitExceeded";
 
     /**
@@ -47,12 +50,26 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     * set message
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of QueryComplexityLimitExceededError
+     */
     public static QueryComplexityLimitExceededError of() {
         return new QueryComplexityLimitExceededErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of QueryComplexityLimitExceededError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QueryComplexityLimitExceededError of(final QueryComplexityLimitExceededError template) {
         QueryComplexityLimitExceededErrorImpl instance = new QueryComplexityLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
@@ -60,18 +77,37 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for QueryComplexityLimitExceededError
+     * @return builder
+     */
     public static QueryComplexityLimitExceededErrorBuilder builder() {
         return QueryComplexityLimitExceededErrorBuilder.of();
     }
 
+    /**
+     * create builder for QueryComplexityLimitExceededError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QueryComplexityLimitExceededErrorBuilder builder(final QueryComplexityLimitExceededError template) {
         return QueryComplexityLimitExceededErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQueryComplexityLimitExceededError(Function<QueryComplexityLimitExceededError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QueryComplexityLimitExceededError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QueryComplexityLimitExceededError>() {
             @Override

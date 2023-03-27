@@ -37,6 +37,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPriceDiscountsSetMessageImpl.class)
 public interface ProductPriceDiscountsSetMessage extends Message {
 
+    /**
+     * discriminator value for ProductPriceDiscountsSetMessage
+     */
     String PRODUCT_PRICE_DISCOUNTS_SET = "ProductPriceDiscountsSet";
 
     /**
@@ -48,15 +51,34 @@ public interface ProductPriceDiscountsSetMessage extends Message {
     @JsonProperty("updatedPrices")
     public List<ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices();
 
+    /**
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @param updatedPrices values to be set
+     */
+
     @JsonIgnore
     public void setUpdatedPrices(final ProductPriceDiscountsSetUpdatedPrice... updatedPrices);
 
+    /**
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @param updatedPrices values to be set
+     */
+
     public void setUpdatedPrices(final List<ProductPriceDiscountsSetUpdatedPrice> updatedPrices);
 
+    /**
+     * factory method
+     * @return instance of ProductPriceDiscountsSetMessage
+     */
     public static ProductPriceDiscountsSetMessage of() {
         return new ProductPriceDiscountsSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductPriceDiscountsSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductPriceDiscountsSetMessage of(final ProductPriceDiscountsSetMessage template) {
         ProductPriceDiscountsSetMessageImpl instance = new ProductPriceDiscountsSetMessageImpl();
         instance.setId(template.getId());
@@ -73,18 +95,37 @@ public interface ProductPriceDiscountsSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductPriceDiscountsSetMessage
+     * @return builder
+     */
     public static ProductPriceDiscountsSetMessageBuilder builder() {
         return ProductPriceDiscountsSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductPriceDiscountsSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceDiscountsSetMessageBuilder builder(final ProductPriceDiscountsSetMessage template) {
         return ProductPriceDiscountsSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductPriceDiscountsSetMessage(Function<ProductPriceDiscountsSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage>() {
             @Override

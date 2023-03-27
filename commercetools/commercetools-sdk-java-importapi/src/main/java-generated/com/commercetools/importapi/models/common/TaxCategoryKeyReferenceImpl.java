@@ -24,12 +24,18 @@ public class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReference, Mod
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("tax-category");
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("tax-category");
     }

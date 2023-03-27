@@ -49,6 +49,11 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     *  <p>DiscountCode that was removed.</p>
+     * @return discountCode
+     */
+
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
@@ -71,10 +76,19 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
         return new OrderDiscountCodeRemovedMessagePayloadImpl(discountCode);
     }
 
+    /**
+     * factory method for an instance of OrderDiscountCodeRemovedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderDiscountCodeRemovedMessagePayloadBuilder of() {
         return new OrderDiscountCodeRemovedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderDiscountCodeRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderDiscountCodeRemovedMessagePayloadBuilder of(
             final OrderDiscountCodeRemovedMessagePayload template) {
         OrderDiscountCodeRemovedMessagePayloadBuilder builder = new OrderDiscountCodeRemovedMessagePayloadBuilder();

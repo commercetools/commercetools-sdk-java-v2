@@ -24,12 +24,18 @@ public class OrderSetCustomerIdActionImpl implements OrderSetCustomerIdAction, M
 
     private String customerId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
         this.customerId = customerId;
         this.action = SET_CUSTOMER_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetCustomerIdActionImpl() {
         this.action = SET_CUSTOMER_ID;
     }

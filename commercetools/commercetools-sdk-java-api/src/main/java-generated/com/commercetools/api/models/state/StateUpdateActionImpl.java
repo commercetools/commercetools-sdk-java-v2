@@ -22,11 +22,17 @@ public class StateUpdateActionImpl implements StateUpdateAction, ModelBase {
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public StateUpdateActionImpl() {
     }
 

@@ -28,6 +28,9 @@ public class ChangeLocalizedDescriptionChangeImpl implements ChangeLocalizedDesc
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeLocalizedDescriptionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
@@ -38,6 +41,9 @@ public class ChangeLocalizedDescriptionChangeImpl implements ChangeLocalizedDesc
         this.type = CHANGE_LOCALIZED_DESCRIPTION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeLocalizedDescriptionChangeImpl() {
         this.type = CHANGE_LOCALIZED_DESCRIPTION_CHANGE;
     }

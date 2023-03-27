@@ -51,14 +51,33 @@ public interface ShippingMethodTaxAmountChangeValue {
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
+    /**
+     * set taxedPrice
+     * @param taxedPrice value to be set
+     */
+
     public void setTaxedPrice(final TaxedPrice taxedPrice);
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param taxRate value to be set
+     */
 
     public void setTaxRate(final TaxRate taxRate);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodTaxAmountChangeValue
+     */
     public static ShippingMethodTaxAmountChangeValue of() {
         return new ShippingMethodTaxAmountChangeValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodTaxAmountChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodTaxAmountChangeValue of(final ShippingMethodTaxAmountChangeValue template) {
         ShippingMethodTaxAmountChangeValueImpl instance = new ShippingMethodTaxAmountChangeValueImpl();
         instance.setTaxedPrice(template.getTaxedPrice());
@@ -66,18 +85,37 @@ public interface ShippingMethodTaxAmountChangeValue {
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodTaxAmountChangeValue
+     * @return builder
+     */
     public static ShippingMethodTaxAmountChangeValueBuilder builder() {
         return ShippingMethodTaxAmountChangeValueBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodTaxAmountChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodTaxAmountChangeValueBuilder builder(final ShippingMethodTaxAmountChangeValue template) {
         return ShippingMethodTaxAmountChangeValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodTaxAmountChangeValue(Function<ShippingMethodTaxAmountChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodTaxAmountChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodTaxAmountChangeValue>() {
             @Override

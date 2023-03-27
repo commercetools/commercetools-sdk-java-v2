@@ -44,6 +44,9 @@ public class CustomerAddressAddedMessageImpl implements CustomerAddressAddedMess
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerAddressAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerAddressAddedMessageImpl implements CustomerAddressAddedMess
         this.type = CUSTOMER_ADDRESS_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerAddressAddedMessageImpl() {
         this.type = CUSTOMER_ADDRESS_ADDED;
     }

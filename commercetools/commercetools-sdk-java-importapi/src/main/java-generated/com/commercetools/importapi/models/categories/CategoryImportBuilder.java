@@ -261,7 +261,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *
+     * set values to the assets
      * @param assets value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *
+     * set value to the assets
      * @param assets value to be set
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *
+     * add values to the assets
      * @param assets value to be set
      * @return Builder
      */
@@ -298,7 +298,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *
+     * add the value to the assets using the builder function
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *
+     * set the value to the assets using the builder function
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -348,57 +348,117 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Maps to <code>Category.name</code>.</p>
+     * @return name
+     */
 
     public com.commercetools.importapi.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     * @return slug
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>Maps to <code>Category.description</code>.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     * @return parent
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {
         return this.parent;
     }
+
+    /**
+     *  <p>Maps to <code>Category.orderHint</code>.</p>
+     * @return orderHint
+     */
 
     @Nullable
     public String getOrderHint() {
         return this.orderHint;
     }
 
+    /**
+     *  <p>Maps to <code>Category.externalId</code>.</p>
+     * @return externalId
+     */
+
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
+
+    /**
+     *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     * @return metaTitle
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
 
+    /**
+     *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     * @return metaDescription
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
+
+    /**
+     *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     * @return metaKeywords
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
 
+    /**
+     * value of assets}
+     * @return assets
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
         return this.assets;
     }
+
+    /**
+     *  <p>The custom fields for this Category.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -426,10 +486,19 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
             metaDescription, metaKeywords, assets, custom);
     }
 
+    /**
+     * factory method for an instance of CategoryImportBuilder
+     * @return builder
+     */
     public static CategoryImportBuilder of() {
         return new CategoryImportBuilder();
     }
 
+    /**
+     * create builder for CategoryImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryImportBuilder of(final CategoryImport template) {
         CategoryImportBuilder builder = new CategoryImportBuilder();
         builder.key = template.getKey();

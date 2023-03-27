@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderChangeOrderStateActionImpl.class)
 public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderChangeOrderStateAction
+     */
     String CHANGE_ORDER_STATE = "changeOrderState";
 
     /**
@@ -41,30 +44,63 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
     @JsonProperty("orderState")
     public OrderState getOrderState();
 
+    /**
+     * set orderState
+     * @param orderState value to be set
+     */
+
     public void setOrderState(final OrderState orderState);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderChangeOrderStateAction
+     */
     public static StagedOrderChangeOrderStateAction of() {
         return new StagedOrderChangeOrderStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderChangeOrderStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderChangeOrderStateAction of(final StagedOrderChangeOrderStateAction template) {
         StagedOrderChangeOrderStateActionImpl instance = new StagedOrderChangeOrderStateActionImpl();
         instance.setOrderState(template.getOrderState());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderChangeOrderStateAction
+     * @return builder
+     */
     public static StagedOrderChangeOrderStateActionBuilder builder() {
         return StagedOrderChangeOrderStateActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderChangeOrderStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeOrderStateActionBuilder builder(final StagedOrderChangeOrderStateAction template) {
         return StagedOrderChangeOrderStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderChangeOrderStateAction(Function<StagedOrderChangeOrderStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeOrderStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeOrderStateAction>() {
             @Override

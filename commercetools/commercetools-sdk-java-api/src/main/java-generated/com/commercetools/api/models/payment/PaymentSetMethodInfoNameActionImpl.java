@@ -24,6 +24,9 @@ public class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoN
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetMethodInfoNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoN
         this.action = SET_METHOD_INFO_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetMethodInfoNameActionImpl() {
         this.action = SET_METHOD_INFO_NAME;
     }

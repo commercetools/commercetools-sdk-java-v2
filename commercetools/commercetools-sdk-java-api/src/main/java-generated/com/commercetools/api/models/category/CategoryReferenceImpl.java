@@ -27,6 +27,9 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
 
     private com.commercetools.api.models.category.Category obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.category.Category obj) {
@@ -35,6 +38,9 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("category");
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("category");
     }

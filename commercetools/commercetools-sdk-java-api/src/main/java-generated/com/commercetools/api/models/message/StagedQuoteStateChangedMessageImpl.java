@@ -46,6 +46,9 @@ public class StagedQuoteStateChangedMessageImpl implements StagedQuoteStateChang
 
     private com.commercetools.api.models.staged_quote.StagedQuoteState oldStagedQuoteState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteStateChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class StagedQuoteStateChangedMessageImpl implements StagedQuoteStateChang
         this.type = STAGED_QUOTE_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteStateChangedMessageImpl() {
         this.type = STAGED_QUOTE_STATE_CHANGED;
     }

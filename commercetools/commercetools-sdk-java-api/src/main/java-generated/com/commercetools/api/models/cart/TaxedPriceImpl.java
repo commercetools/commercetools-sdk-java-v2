@@ -28,6 +28,9 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
 
     private com.commercetools.api.models.common.CentPrecisionMoney totalTax;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxedPriceImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.CentPrecisionMoney totalNet,
             @JsonProperty("totalGross") final com.commercetools.api.models.common.CentPrecisionMoney totalGross,
@@ -39,6 +42,9 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
         this.totalTax = totalTax;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxedPriceImpl() {
     }
 

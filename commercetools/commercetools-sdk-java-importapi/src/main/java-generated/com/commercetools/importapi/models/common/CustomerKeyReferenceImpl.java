@@ -24,12 +24,18 @@ public class CustomerKeyReferenceImpl implements CustomerKeyReference, ModelBase
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("customer");
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("customer");
     }

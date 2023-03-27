@@ -77,15 +77,30 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
         return this;
     }
 
+    /**
+     *  <p>External reference that identifies the current status of the Payment.</p>
+     * @return interfaceCode
+     */
+
     @Nullable
     public String getInterfaceCode() {
         return this.interfaceCode;
     }
 
+    /**
+     *  <p>Text describing the current status of the Payment.</p>
+     * @return interfaceText
+     */
+
     @Nullable
     public String getInterfaceText() {
         return this.interfaceText;
     }
+
+    /**
+     *  <p>Reference to a State.</p>
+     * @return state
+     */
 
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
@@ -108,10 +123,19 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
         return new PaymentStatusImpl(interfaceCode, interfaceText, state);
     }
 
+    /**
+     * factory method for an instance of PaymentStatusBuilder
+     * @return builder
+     */
     public static PaymentStatusBuilder of() {
         return new PaymentStatusBuilder();
     }
 
+    /**
+     * create builder for PaymentStatus instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentStatusBuilder of(final PaymentStatus template) {
         PaymentStatusBuilder builder = new PaymentStatusBuilder();
         builder.interfaceCode = template.getInterfaceCode();

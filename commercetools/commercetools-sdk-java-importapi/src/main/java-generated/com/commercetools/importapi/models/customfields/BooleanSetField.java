@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BooleanSetFieldImpl.class)
 public interface BooleanSetField extends CustomField {
 
+    /**
+     * discriminator value for BooleanSetField
+     */
     String BOOLEAN_SET = "BooleanSet";
 
     /**
@@ -39,33 +42,71 @@ public interface BooleanSetField extends CustomField {
     @JsonProperty("value")
     public List<Boolean> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final Boolean... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<Boolean> value);
 
+    /**
+     * factory method
+     * @return instance of BooleanSetField
+     */
     public static BooleanSetField of() {
         return new BooleanSetFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of BooleanSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BooleanSetField of(final BooleanSetField template) {
         BooleanSetFieldImpl instance = new BooleanSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for BooleanSetField
+     * @return builder
+     */
     public static BooleanSetFieldBuilder builder() {
         return BooleanSetFieldBuilder.of();
     }
 
+    /**
+     * create builder for BooleanSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BooleanSetFieldBuilder builder(final BooleanSetField template) {
         return BooleanSetFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBooleanSetField(Function<BooleanSetField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BooleanSetField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BooleanSetField>() {
             @Override

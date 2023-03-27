@@ -37,7 +37,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *
+     * set the value to the externalTotalPrice using the builder function
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *
+     * set the value to the externalTotalPrice
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -110,18 +110,39 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     * value of quantity}
+     * @return quantity
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return externalPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Money getExternalPrice() {
         return this.externalPrice;
     }
+
+    /**
+     * value of externalTotalPrice}
+     * @return externalTotalPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -146,10 +167,19 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
         return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
     }
 
+    /**
+     * factory method for an instance of StagedOrderChangeLineItemQuantityActionBuilder
+     * @return builder
+     */
     public static StagedOrderChangeLineItemQuantityActionBuilder of() {
         return new StagedOrderChangeLineItemQuantityActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderChangeLineItemQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeLineItemQuantityActionBuilder of(
             final StagedOrderChangeLineItemQuantityAction template) {
         StagedOrderChangeLineItemQuantityActionBuilder builder = new StagedOrderChangeLineItemQuantityActionBuilder();

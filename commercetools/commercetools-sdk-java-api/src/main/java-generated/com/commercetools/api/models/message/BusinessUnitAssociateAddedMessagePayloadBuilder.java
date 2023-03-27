@@ -49,6 +49,11 @@ public class BusinessUnitAssociateAddedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>The Associate that was added to the Business Unit.</p>
+     * @return associate
+     */
+
     public com.commercetools.api.models.business_unit.Associate getAssociate() {
         return this.associate;
     }
@@ -70,10 +75,19 @@ public class BusinessUnitAssociateAddedMessagePayloadBuilder
         return new BusinessUnitAssociateAddedMessagePayloadImpl(associate);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitAssociateAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitAssociateAddedMessagePayloadBuilder of() {
         return new BusinessUnitAssociateAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitAssociateAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAssociateAddedMessagePayloadBuilder of(
             final BusinessUnitAssociateAddedMessagePayload template) {
         BusinessUnitAssociateAddedMessagePayloadBuilder builder = new BusinessUnitAssociateAddedMessagePayloadBuilder();

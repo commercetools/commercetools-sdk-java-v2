@@ -34,6 +34,11 @@ public class StagedOrderChangeTaxModeActionBuilder implements Builder<StagedOrde
         return this;
     }
 
+    /**
+     *  <p>Indicates how taxes are set on the Cart.</p>
+     * @return taxMode
+     */
+
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
     }
@@ -55,10 +60,19 @@ public class StagedOrderChangeTaxModeActionBuilder implements Builder<StagedOrde
         return new StagedOrderChangeTaxModeActionImpl(taxMode);
     }
 
+    /**
+     * factory method for an instance of StagedOrderChangeTaxModeActionBuilder
+     * @return builder
+     */
     public static StagedOrderChangeTaxModeActionBuilder of() {
         return new StagedOrderChangeTaxModeActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderChangeTaxModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeTaxModeActionBuilder of(final StagedOrderChangeTaxModeAction template) {
         StagedOrderChangeTaxModeActionBuilder builder = new StagedOrderChangeTaxModeActionBuilder();
         builder.taxMode = template.getTaxMode();

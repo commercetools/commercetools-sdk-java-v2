@@ -24,12 +24,18 @@ public class ExtensionSetKeyActionImpl implements ExtensionSetKeyAction, ModelBa
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionSetKeyActionImpl() {
         this.action = SET_KEY;
     }

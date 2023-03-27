@@ -27,6 +27,9 @@ public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBa
 
     private com.commercetools.api.models.cart_discount.CartDiscount obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.cart_discount.CartDiscount obj) {
@@ -35,6 +38,9 @@ public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBa
         this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }

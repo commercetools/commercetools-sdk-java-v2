@@ -27,6 +27,9 @@ public class PaymentResourceIdentifierImpl implements PaymentResourceIdentifier,
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class PaymentResourceIdentifierImpl implements PaymentResourceIdentifier,
         this.typeId = ReferenceTypeId.findEnum("payment");
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("payment");
     }

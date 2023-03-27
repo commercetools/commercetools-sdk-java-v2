@@ -24,6 +24,9 @@ public class OrderCustomLineItemAddedMessagePayloadImpl implements OrderCustomLi
 
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomLineItemAddedMessagePayloadImpl(
             @JsonProperty("customLineItem") final com.commercetools.api.models.cart.CustomLineItem customLineItem) {
@@ -31,6 +34,9 @@ public class OrderCustomLineItemAddedMessagePayloadImpl implements OrderCustomLi
         this.type = ORDER_CUSTOM_LINE_ITEM_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomLineItemAddedMessagePayloadImpl() {
         this.type = ORDER_CUSTOM_LINE_ITEM_ADDED;
     }

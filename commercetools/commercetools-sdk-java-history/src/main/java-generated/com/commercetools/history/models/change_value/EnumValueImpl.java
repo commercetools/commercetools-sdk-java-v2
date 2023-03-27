@@ -24,12 +24,18 @@ public class EnumValueImpl implements EnumValue, ModelBase {
 
     private String label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final String label) {
         this.key = key;
         this.label = label;
     }
 
+    /**
+     * create empty instance
+     */
     public EnumValueImpl() {
     }
 

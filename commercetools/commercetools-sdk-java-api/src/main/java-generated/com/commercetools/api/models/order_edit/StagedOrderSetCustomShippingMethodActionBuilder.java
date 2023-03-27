@@ -37,7 +37,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *
+     * set the value to the shippingMethodName
      * @param shippingMethodName value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *
+     * set the value to the shippingRate using the builder function
      * @param builder function to build the shippingRate value
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *
+     * set the value to the shippingRate
      * @param shippingRate value to be set
      * @return Builder
      */
@@ -123,18 +123,38 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
         return this;
     }
 
+    /**
+     * value of shippingMethodName}
+     * @return shippingMethodName
+     */
+
     public String getShippingMethodName() {
         return this.shippingMethodName;
     }
+
+    /**
+     * value of shippingRate}
+     * @return shippingRate
+     */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @return taxCategory
+     */
+
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -163,10 +183,19 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
             externalTaxRate);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetCustomShippingMethodActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetCustomShippingMethodActionBuilder of() {
         return new StagedOrderSetCustomShippingMethodActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomShippingMethodActionBuilder of(
             final StagedOrderSetCustomShippingMethodAction template) {
         StagedOrderSetCustomShippingMethodActionBuilder builder = new StagedOrderSetCustomShippingMethodActionBuilder();

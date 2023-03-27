@@ -38,6 +38,9 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
 
     private com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderLineItemRemovedMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("removedQuantity") final Long removedQuantity,
@@ -58,6 +61,9 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
         this.type = ORDER_LINE_ITEM_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderLineItemRemovedMessagePayloadImpl() {
         this.type = ORDER_LINE_ITEM_REMOVED;
     }

@@ -24,6 +24,9 @@ public class StateSetRolesActionImpl implements StateSetRolesAction, ModelBase {
 
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateSetRolesActionImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
@@ -31,6 +34,9 @@ public class StateSetRolesActionImpl implements StateSetRolesAction, ModelBase {
         this.action = SET_ROLES;
     }
 
+    /**
+     * create empty instance
+     */
     public StateSetRolesActionImpl() {
         this.action = SET_ROLES;
     }

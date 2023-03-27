@@ -45,7 +45,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     *
+     * set the value to the asset using the builder function
      * @param builder function to build the asset value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     *
+     * set the value to the asset
      * @param asset value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -139,17 +139,37 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setAssetTags</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of asset}
+     * @return asset
+     */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
         return this.asset;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.util.List<String> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
@@ -175,10 +195,19 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
         return new SetAssetTagsChangeImpl(change, asset, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetAssetTagsChangeBuilder
+     * @return builder
+     */
     public static SetAssetTagsChangeBuilder of() {
         return new SetAssetTagsChangeBuilder();
     }
 
+    /**
+     * create builder for SetAssetTagsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetAssetTagsChangeBuilder of(final SetAssetTagsChange template) {
         SetAssetTagsChangeBuilder builder = new SetAssetTagsChangeBuilder();
         builder.change = template.getChange();

@@ -166,45 +166,138 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @JsonProperty("priceMode")
     public CustomLineItemPriceMode getPriceMode();
 
+    /**
+     *  <p>Unique identifier of the Custom Line Item.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Name of the Custom Line Item.</p>
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     *  <p>Money value of the Custom Line Item.</p>
+     * @param money value to be set
+     */
+
     public void setMoney(final TypedMoney money);
+
+    /**
+     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     * @param taxedPrice value to be set
+     */
 
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
+    /**
+     *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
+     *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     * @param totalPrice value to be set
+     */
+
     public void setTotalPrice(final CentPrecisionMoney totalPrice);
+
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It matches the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final String slug);
 
+    /**
+     *  <p>Number of Custom Line Items in the Cart.</p>
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Long quantity);
+
+    /**
+     *  <p>State of the Custom Line Item in the Cart.</p>
+     * @param state values to be set
+     */
 
     @JsonIgnore
     public void setState(final ItemState... state);
 
+    /**
+     *  <p>State of the Custom Line Item in the Cart.</p>
+     * @param state values to be set
+     */
+
     public void setState(final List<ItemState> state);
+
+    /**
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     * @param taxCategory value to be set
+     */
 
     public void setTaxCategory(final TaxCategoryReference taxCategory);
 
+    /**
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using ExternalTaxRateDraft.</li>
+     *  </ul>
+     * @param taxRate value to be set
+     */
+
     public void setTaxRate(final TaxRate taxRate);
+
+    /**
+     *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
+     * @param discountedPricePerQuantity values to be set
+     */
 
     @JsonIgnore
     public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity... discountedPricePerQuantity);
 
+    /**
+     *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
+     * @param discountedPricePerQuantity values to be set
+     */
+
     public void setDiscountedPricePerQuantity(
             final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
 
+    /**
+     *  <p>Custom Fields of the Custom Line Item.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param shippingDetails value to be set
+     */
 
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
 
+    /**
+     *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
+     * @param priceMode value to be set
+     */
+
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
 
+    /**
+     * factory method
+     * @return instance of CustomLineItem
+     */
     public static CustomLineItem of() {
         return new CustomLineItemImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomLineItem of(final CustomLineItem template) {
         CustomLineItemImpl instance = new CustomLineItemImpl();
         instance.setId(template.getId());
@@ -224,18 +317,37 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         return instance;
     }
 
+    /**
+     * builder factory method for CustomLineItem
+     * @return builder
+     */
     public static CustomLineItemBuilder builder() {
         return CustomLineItemBuilder.of();
     }
 
+    /**
+     * create builder for CustomLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemBuilder builder(final CustomLineItem template) {
         return CustomLineItemBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomLineItem(Function<CustomLineItem, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItem> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItem>() {
             @Override

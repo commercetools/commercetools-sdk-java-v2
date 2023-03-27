@@ -28,6 +28,9 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
 
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetAssetSourcesActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey,
@@ -38,6 +41,9 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
         this.action = SET_ASSET_SOURCES;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetAssetSourcesActionImpl() {
         this.action = SET_ASSET_SOURCES;
     }

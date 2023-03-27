@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAction,
         com.commercetools.api.models.CustomizableDraft<MyShoppingListAddLineItemAction> {
 
+    /**
+     * discriminator value for MyShoppingListAddLineItemAction
+     */
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
@@ -81,22 +84,61 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
+
+    /**
+     *  <p>Unique identifier of a Product.</p>
+     * @param productId value to be set
+     */
 
     public void setProductId(final String productId);
 
+    /**
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Long variantId);
+
+    /**
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @param addedAt value to be set
+     */
+
     public void setAddedAt(final ZonedDateTime addedAt);
+
+    /**
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of MyShoppingListAddLineItemAction
+     */
     public static MyShoppingListAddLineItemAction of() {
         return new MyShoppingListAddLineItemActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyShoppingListAddLineItemAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyShoppingListAddLineItemAction of(final MyShoppingListAddLineItemAction template) {
         MyShoppingListAddLineItemActionImpl instance = new MyShoppingListAddLineItemActionImpl();
         instance.setSku(template.getSku());
@@ -108,18 +150,37 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
         return instance;
     }
 
+    /**
+     * builder factory method for MyShoppingListAddLineItemAction
+     * @return builder
+     */
     public static MyShoppingListAddLineItemActionBuilder builder() {
         return MyShoppingListAddLineItemActionBuilder.of();
     }
 
+    /**
+     * create builder for MyShoppingListAddLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyShoppingListAddLineItemActionBuilder builder(final MyShoppingListAddLineItemAction template) {
         return MyShoppingListAddLineItemActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyShoppingListAddLineItemAction(Function<MyShoppingListAddLineItemAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListAddLineItemAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListAddLineItemAction>() {
             @Override

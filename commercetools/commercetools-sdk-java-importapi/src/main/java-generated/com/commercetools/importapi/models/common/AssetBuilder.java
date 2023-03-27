@@ -53,7 +53,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set values to the sources
      * @param sources value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set value to the sources
      * @param sources value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * add values to the sources
      * @param sources value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * add the value to the sources using the builder function
      * @param builder function to build the sources value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set the value to the sources using the builder function
      * @param builder function to build the sources value
      * @return Builder
      */
@@ -184,7 +184,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set values to the tags
      * @param tags value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set value to the tags
      * @param tags value to be set
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * add values to the tags
      * @param tags value to be set
      * @return Builder
      */
@@ -242,27 +242,67 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of sources}
+     * @return sources
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.AssetSource> getSources() {
         return this.sources;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return name
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     * value of tags}
+     * @return tags
+     */
+
     @Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
+
+    /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -288,10 +328,19 @@ public class AssetBuilder implements Builder<Asset> {
         return new AssetImpl(key, sources, name, description, tags, custom);
     }
 
+    /**
+     * factory method for an instance of AssetBuilder
+     * @return builder
+     */
     public static AssetBuilder of() {
         return new AssetBuilder();
     }
 
+    /**
+     * create builder for Asset instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssetBuilder of(final Asset template) {
         AssetBuilder builder = new AssetBuilder();
         builder.key = template.getKey();

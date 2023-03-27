@@ -56,7 +56,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * set values to the externalTaxPortions
      * @param externalTaxPortions value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * set value to the externalTaxPortions
      * @param externalTaxPortions value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * add values to the externalTaxPortions
      * @param externalTaxPortions value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * add the value to the externalTaxPortions using the builder function
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * set the value to the externalTaxPortions using the builder function
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
@@ -124,9 +124,20 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
         return this;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return externalTotalGross
+     */
+
     public com.commercetools.api.models.common.Money getExternalTotalGross() {
         return this.externalTotalGross;
     }
+
+    /**
+     * value of externalTaxPortions}
+     * @return externalTaxPortions
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions() {
@@ -151,10 +162,19 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
         return new StagedOrderSetOrderTotalTaxActionImpl(externalTotalGross, externalTaxPortions);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetOrderTotalTaxActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetOrderTotalTaxActionBuilder of() {
         return new StagedOrderSetOrderTotalTaxActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetOrderTotalTaxAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetOrderTotalTaxActionBuilder of(final StagedOrderSetOrderTotalTaxAction template) {
         StagedOrderSetOrderTotalTaxActionBuilder builder = new StagedOrderSetOrderTotalTaxActionBuilder();
         builder.externalTotalGross = template.getExternalTotalGross();

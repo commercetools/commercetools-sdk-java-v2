@@ -37,7 +37,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     private Long resourceIndex;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     *
+     * set the value to the resourceIndex
      * @param resourceIndex value to be set
      * @return Builder
      */
@@ -116,22 +116,47 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>The name of the field.</p>
+     * @return field
+     */
 
     public String getField() {
         return this.field;
     }
 
+    /**
+     *  <p>The invalid value.</p>
+     * @return invalidValue
+     */
+
     public java.lang.Object getInvalidValue() {
         return this.invalidValue;
     }
+
+    /**
+     *  <p>The set of allowed values for the field, if any.</p>
+     * @return allowedValues
+     */
 
     @Nullable
     public java.util.List<java.lang.Object> getAllowedValues() {
         return this.allowedValues;
     }
+
+    /**
+     * value of resourceIndex}
+     * @return resourceIndex
+     */
 
     @Nullable
     public Long getResourceIndex() {
@@ -157,10 +182,19 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return new InvalidFieldErrorImpl(message, field, invalidValue, allowedValues, resourceIndex);
     }
 
+    /**
+     * factory method for an instance of InvalidFieldErrorBuilder
+     * @return builder
+     */
     public static InvalidFieldErrorBuilder of() {
         return new InvalidFieldErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidFieldError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidFieldErrorBuilder of(final InvalidFieldError template) {
         InvalidFieldErrorBuilder builder = new InvalidFieldErrorBuilder();
         builder.message = template.getMessage();

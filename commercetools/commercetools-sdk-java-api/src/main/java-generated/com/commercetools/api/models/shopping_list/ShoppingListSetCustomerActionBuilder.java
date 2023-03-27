@@ -51,6 +51,11 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
         return this;
     }
 
+    /**
+     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
@@ -72,10 +77,19 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
         return new ShoppingListSetCustomerActionImpl(customer);
     }
 
+    /**
+     * factory method for an instance of ShoppingListSetCustomerActionBuilder
+     * @return builder
+     */
     public static ShoppingListSetCustomerActionBuilder of() {
         return new ShoppingListSetCustomerActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListSetCustomerAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListSetCustomerActionBuilder of(final ShoppingListSetCustomerAction template) {
         ShoppingListSetCustomerActionBuilder builder = new ShoppingListSetCustomerActionBuilder();
         builder.customer = template.getCustomer();

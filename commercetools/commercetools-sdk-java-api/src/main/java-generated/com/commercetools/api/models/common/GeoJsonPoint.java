@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = GeoJsonPointImpl.class)
 public interface GeoJsonPoint extends GeoJson {
 
+    /**
+     * discriminator value for GeoJsonPoint
+     */
     String POINT = "Point";
 
     /**
@@ -39,33 +42,71 @@ public interface GeoJsonPoint extends GeoJson {
     @JsonProperty("coordinates")
     public List<Double> getCoordinates();
 
+    /**
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     * @param coordinates values to be set
+     */
+
     @JsonIgnore
     public void setCoordinates(final Double... coordinates);
 
+    /**
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     * @param coordinates values to be set
+     */
+
     public void setCoordinates(final List<Double> coordinates);
 
+    /**
+     * factory method
+     * @return instance of GeoJsonPoint
+     */
     public static GeoJsonPoint of() {
         return new GeoJsonPointImpl();
     }
 
+    /**
+     * factory method to copy an instance of GeoJsonPoint
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GeoJsonPoint of(final GeoJsonPoint template) {
         GeoJsonPointImpl instance = new GeoJsonPointImpl();
         instance.setCoordinates(template.getCoordinates());
         return instance;
     }
 
+    /**
+     * builder factory method for GeoJsonPoint
+     * @return builder
+     */
     public static GeoJsonPointBuilder builder() {
         return GeoJsonPointBuilder.of();
     }
 
+    /**
+     * create builder for GeoJsonPoint instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GeoJsonPointBuilder builder(final GeoJsonPoint template) {
         return GeoJsonPointBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGeoJsonPoint(Function<GeoJsonPoint, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GeoJsonPoint> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GeoJsonPoint>() {
             @Override

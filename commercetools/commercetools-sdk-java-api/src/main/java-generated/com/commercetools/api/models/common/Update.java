@@ -48,17 +48,41 @@ public interface Update extends com.commercetools.api.models.ResourceUpdate<Upda
     @JsonProperty("actions")
     public List<UpdateAction> getActions();
 
+    /**
+     * set version
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     * set actions
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final UpdateAction... actions);
 
+    /**
+     * set actions
+     * @param actions values to be set
+     */
+
     public void setActions(final List<UpdateAction> actions);
 
+    /**
+     * factory method
+     * @return instance of Update
+     */
     public static Update of() {
         return new UpdateImpl();
     }
 
+    /**
+     * factory method to copy an instance of Update
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Update of(final Update template) {
         UpdateImpl instance = new UpdateImpl();
         instance.setVersion(template.getVersion());
@@ -66,18 +90,37 @@ public interface Update extends com.commercetools.api.models.ResourceUpdate<Upda
         return instance;
     }
 
+    /**
+     * builder factory method for Update
+     * @return builder
+     */
     public static UpdateBuilder builder() {
         return UpdateBuilder.of();
     }
 
+    /**
+     * create builder for Update instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UpdateBuilder builder(final Update template) {
         return UpdateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withUpdate(Function<Update, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Update> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Update>() {
             @Override

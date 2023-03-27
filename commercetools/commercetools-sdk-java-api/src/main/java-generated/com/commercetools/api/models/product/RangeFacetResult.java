@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RangeFacetResultImpl.class)
 public interface RangeFacetResult extends FacetResult {
 
+    /**
+     * discriminator value for RangeFacetResult
+     */
     String RANGE = "range";
 
     /**
@@ -41,33 +44,71 @@ public interface RangeFacetResult extends FacetResult {
     @JsonProperty("ranges")
     public List<FacetRange> getRanges();
 
+    /**
+     * set ranges
+     * @param ranges values to be set
+     */
+
     @JsonIgnore
     public void setRanges(final FacetRange... ranges);
 
+    /**
+     * set ranges
+     * @param ranges values to be set
+     */
+
     public void setRanges(final List<FacetRange> ranges);
 
+    /**
+     * factory method
+     * @return instance of RangeFacetResult
+     */
     public static RangeFacetResult of() {
         return new RangeFacetResultImpl();
     }
 
+    /**
+     * factory method to copy an instance of RangeFacetResult
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RangeFacetResult of(final RangeFacetResult template) {
         RangeFacetResultImpl instance = new RangeFacetResultImpl();
         instance.setRanges(template.getRanges());
         return instance;
     }
 
+    /**
+     * builder factory method for RangeFacetResult
+     * @return builder
+     */
     public static RangeFacetResultBuilder builder() {
         return RangeFacetResultBuilder.of();
     }
 
+    /**
+     * create builder for RangeFacetResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RangeFacetResultBuilder builder(final RangeFacetResult template) {
         return RangeFacetResultBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRangeFacetResult(Function<RangeFacetResult, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RangeFacetResult> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RangeFacetResult>() {
             @Override

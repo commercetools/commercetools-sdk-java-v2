@@ -105,20 +105,40 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
         return this;
     }
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
+     */
+
     @Nullable
     public String getAssetId() {
         return this.assetId;
     }
+
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
+     */
 
     @Nullable
     public String getAssetKey() {
         return this.assetKey;
     }
 
+    /**
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -141,10 +161,19 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
         return new CategorySetAssetCustomTypeActionImpl(assetId, assetKey, type, fields);
     }
 
+    /**
+     * factory method for an instance of CategorySetAssetCustomTypeActionBuilder
+     * @return builder
+     */
     public static CategorySetAssetCustomTypeActionBuilder of() {
         return new CategorySetAssetCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for CategorySetAssetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetAssetCustomTypeActionBuilder of(final CategorySetAssetCustomTypeAction template) {
         CategorySetAssetCustomTypeActionBuilder builder = new CategorySetAssetCustomTypeActionBuilder();
         builder.assetId = template.getAssetId();

@@ -41,7 +41,7 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -63,10 +63,20 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
@@ -89,10 +99,19 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
         return new MoneyAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of MoneyAttributeBuilder
+     * @return builder
+     */
     public static MoneyAttributeBuilder of() {
         return new MoneyAttributeBuilder();
     }
 
+    /**
+     * create builder for MoneyAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoneyAttributeBuilder of(final MoneyAttribute template) {
         MoneyAttributeBuilder builder = new MoneyAttributeBuilder();
         builder.name = template.getName();

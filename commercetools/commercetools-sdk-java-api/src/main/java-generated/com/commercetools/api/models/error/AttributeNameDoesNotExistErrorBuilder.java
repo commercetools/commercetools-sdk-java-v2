@@ -76,13 +76,28 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
         return this;
     }
 
+    /**
+     *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Non-existent Attribute name.</p>
+     * @return invalidAttributeName
+     */
 
     public String getInvalidAttributeName() {
         return this.invalidAttributeName;
@@ -107,10 +122,19 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
         return new AttributeNameDoesNotExistErrorImpl(message, values, invalidAttributeName);
     }
 
+    /**
+     * factory method for an instance of AttributeNameDoesNotExistErrorBuilder
+     * @return builder
+     */
     public static AttributeNameDoesNotExistErrorBuilder of() {
         return new AttributeNameDoesNotExistErrorBuilder();
     }
 
+    /**
+     * create builder for AttributeNameDoesNotExistError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeNameDoesNotExistErrorBuilder of(final AttributeNameDoesNotExistError template) {
         AttributeNameDoesNotExistErrorBuilder builder = new AttributeNameDoesNotExistErrorBuilder();
         builder.message = template.getMessage();

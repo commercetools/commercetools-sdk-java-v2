@@ -36,6 +36,9 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreCreatedMessagePayloadImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("languages") final java.util.List<String> languages,
@@ -54,6 +57,9 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
         this.type = STORE_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreCreatedMessagePayloadImpl() {
         this.type = STORE_CREATED;
     }

@@ -24,12 +24,18 @@ public class MyPaymentSetMethodInfoMethodActionImpl implements MyPaymentSetMetho
 
     private String method;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyPaymentSetMethodInfoMethodActionImpl(@JsonProperty("method") final String method) {
         this.method = method;
         this.action = SET_METHOD_INFO_METHOD;
     }
 
+    /**
+     * create empty instance
+     */
     public MyPaymentSetMethodInfoMethodActionImpl() {
         this.action = SET_METHOD_INFO_METHOD;
     }

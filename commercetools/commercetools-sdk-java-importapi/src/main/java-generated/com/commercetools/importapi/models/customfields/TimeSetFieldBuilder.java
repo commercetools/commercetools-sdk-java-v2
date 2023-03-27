@@ -24,7 +24,7 @@ public class TimeSetFieldBuilder implements Builder<TimeSetField> {
     private java.util.List<java.time.LocalTime> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class TimeSetFieldBuilder implements Builder<TimeSetField> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class TimeSetFieldBuilder implements Builder<TimeSetField> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -58,6 +58,11 @@ public class TimeSetFieldBuilder implements Builder<TimeSetField> {
         this.value.addAll(Arrays.asList(value));
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<java.time.LocalTime> getValue() {
         return this.value;
@@ -80,10 +85,19 @@ public class TimeSetFieldBuilder implements Builder<TimeSetField> {
         return new TimeSetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of TimeSetFieldBuilder
+     * @return builder
+     */
     public static TimeSetFieldBuilder of() {
         return new TimeSetFieldBuilder();
     }
 
+    /**
+     * create builder for TimeSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TimeSetFieldBuilder of(final TimeSetField template) {
         TimeSetFieldBuilder builder = new TimeSetFieldBuilder();
         builder.value = template.getValue();

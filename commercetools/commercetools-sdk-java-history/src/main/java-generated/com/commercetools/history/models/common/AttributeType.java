@@ -37,30 +37,63 @@ public interface AttributeType {
     @JsonProperty("name")
     public String getName();
 
+    /**
+     * set name
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     * factory method
+     * @return instance of AttributeType
+     */
     public static AttributeType of() {
         return new AttributeTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeType of(final AttributeType template) {
         AttributeTypeImpl instance = new AttributeTypeImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeType
+     * @return builder
+     */
     public static AttributeTypeBuilder builder() {
         return AttributeTypeBuilder.of();
     }
 
+    /**
+     * create builder for AttributeType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeTypeBuilder builder(final AttributeType template) {
         return AttributeTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeType(Function<AttributeType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeType>() {
             @Override

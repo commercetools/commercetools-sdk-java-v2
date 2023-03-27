@@ -24,6 +24,9 @@ public class GeneralCategoryRecommendationImpl implements GeneralCategoryRecomme
 
     private Double confidence;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GeneralCategoryRecommendationImpl(@JsonProperty("categoryName") final String categoryName,
             @JsonProperty("confidence") final Double confidence) {
@@ -31,6 +34,9 @@ public class GeneralCategoryRecommendationImpl implements GeneralCategoryRecomme
         this.confidence = confidence;
     }
 
+    /**
+     * create empty instance
+     */
     public GeneralCategoryRecommendationImpl() {
     }
 

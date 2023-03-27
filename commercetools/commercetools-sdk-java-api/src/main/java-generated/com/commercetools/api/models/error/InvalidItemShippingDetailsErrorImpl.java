@@ -31,6 +31,9 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
 
     private String itemId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidItemShippingDetailsErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -42,6 +45,9 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
         this.code = INVALID_ITEM_SHIPPING_DETAILS;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidItemShippingDetailsErrorImpl() {
         this.code = INVALID_ITEM_SHIPPING_DETAILS;
     }

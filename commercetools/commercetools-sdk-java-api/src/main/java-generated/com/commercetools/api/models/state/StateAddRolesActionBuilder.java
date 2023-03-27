@@ -60,6 +60,11 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
         return this;
     }
 
+    /**
+     *  <p>Value to append to the array.</p>
+     * @return roles
+     */
+
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }
@@ -81,10 +86,19 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
         return new StateAddRolesActionImpl(roles);
     }
 
+    /**
+     * factory method for an instance of StateAddRolesActionBuilder
+     * @return builder
+     */
     public static StateAddRolesActionBuilder of() {
         return new StateAddRolesActionBuilder();
     }
 
+    /**
+     * create builder for StateAddRolesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateAddRolesActionBuilder of(final StateAddRolesAction template) {
         StateAddRolesActionBuilder builder = new StateAddRolesActionBuilder();
         builder.roles = template.getRoles();

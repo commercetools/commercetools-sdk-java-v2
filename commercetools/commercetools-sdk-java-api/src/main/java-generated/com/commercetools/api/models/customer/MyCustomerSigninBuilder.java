@@ -85,18 +85,44 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
         return this;
     }
 
+    /**
+     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     * @return email
+     */
+
     public String getEmail() {
         return this.email;
     }
+
+    /**
+     *  <p>Password of the Customer.</p>
+     * @return password
+     */
 
     public String getPassword() {
         return this.password;
     }
 
+    /**
+     *  <ul>
+     *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
+     *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no LineItems are merged.</li>
+     *  </ul>
+     * @return activeCartSignInMode
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.AnonymousCartSignInMode getActiveCartSignInMode() {
         return this.activeCartSignInMode;
     }
+
+    /**
+     *  <ul>
+     *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
+     *   <li>If <code>false</code>, only the prices, discounts, and tax rates are updated.</li>
+     *  </ul>
+     * @return updateProductData
+     */
 
     @Nullable
     public Boolean getUpdateProductData() {
@@ -121,10 +147,19 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
         return new MyCustomerSigninImpl(email, password, activeCartSignInMode, updateProductData);
     }
 
+    /**
+     * factory method for an instance of MyCustomerSigninBuilder
+     * @return builder
+     */
     public static MyCustomerSigninBuilder of() {
         return new MyCustomerSigninBuilder();
     }
 
+    /**
+     * create builder for MyCustomerSignin instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSigninBuilder of(final MyCustomerSignin template) {
         MyCustomerSigninBuilder builder = new MyCustomerSigninBuilder();
         builder.email = template.getEmail();

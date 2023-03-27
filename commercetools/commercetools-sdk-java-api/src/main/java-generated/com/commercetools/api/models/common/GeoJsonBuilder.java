@@ -15,6 +15,10 @@ public class GeoJsonBuilder {
         return com.commercetools.api.models.common.GeoJsonPointBuilder.of();
     }
 
+    /**
+     * factory method for an instance of GeoJsonBuilder
+     * @return builder
+     */
     public static GeoJsonBuilder of() {
         return new GeoJsonBuilder();
     }

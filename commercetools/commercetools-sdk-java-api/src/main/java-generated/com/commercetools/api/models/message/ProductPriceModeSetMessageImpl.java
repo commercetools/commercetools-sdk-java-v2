@@ -44,6 +44,9 @@ public class ProductPriceModeSetMessageImpl implements ProductPriceModeSetMessag
 
     private com.commercetools.api.models.product.ProductPriceModeEnum to;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceModeSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class ProductPriceModeSetMessageImpl implements ProductPriceModeSetMessag
         this.type = PRODUCT_PRICE_MODE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceModeSetMessageImpl() {
         this.type = PRODUCT_PRICE_MODE_SET;
     }

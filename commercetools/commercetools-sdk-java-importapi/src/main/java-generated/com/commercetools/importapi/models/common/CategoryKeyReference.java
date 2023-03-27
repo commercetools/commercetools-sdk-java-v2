@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryKeyReferenceImpl.class)
 public interface CategoryKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for CategoryKeyReference
+     */
     String CATEGORY = "category";
 
+    /**
+     * factory method
+     * @return instance of CategoryKeyReference
+     */
     public static CategoryKeyReference of() {
         return new CategoryKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryKeyReference of(final CategoryKeyReference template) {
         CategoryKeyReferenceImpl instance = new CategoryKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryKeyReference
+     * @return builder
+     */
     public static CategoryKeyReferenceBuilder builder() {
         return CategoryKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for CategoryKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryKeyReferenceBuilder builder(final CategoryKeyReference template) {
         return CategoryKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryKeyReference(Function<CategoryKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryKeyReference>() {
             @Override

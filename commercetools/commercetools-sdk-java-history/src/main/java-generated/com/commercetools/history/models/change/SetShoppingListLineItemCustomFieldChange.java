@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetShoppingListLineItemCustomFieldChangeImpl.class)
 public interface SetShoppingListLineItemCustomFieldChange extends Change {
 
+    /**
+     * discriminator value for SetShoppingListLineItemCustomFieldChange
+     */
     String SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_FIELD_CHANGE = "SetShoppingListLineItemCustomFieldChange";
 
     /**
@@ -93,22 +96,61 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
     @JsonProperty("previousValue")
     public Object getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set name
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     * set customTypeId
+     * @param customTypeId value to be set
+     */
+
     public void setCustomTypeId(final String customTypeId);
+
+    /**
+     * set lineItem
+     * @param lineItem value to be set
+     */
 
     public void setLineItem(final ShoppingListLineItemValue lineItem);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Object nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Object previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetShoppingListLineItemCustomFieldChange
+     */
     public static SetShoppingListLineItemCustomFieldChange of() {
         return new SetShoppingListLineItemCustomFieldChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetShoppingListLineItemCustomFieldChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetShoppingListLineItemCustomFieldChange of(final SetShoppingListLineItemCustomFieldChange template) {
         SetShoppingListLineItemCustomFieldChangeImpl instance = new SetShoppingListLineItemCustomFieldChangeImpl();
         instance.setChange(template.getChange());
@@ -120,20 +162,39 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetShoppingListLineItemCustomFieldChange
+     * @return builder
+     */
     public static SetShoppingListLineItemCustomFieldChangeBuilder builder() {
         return SetShoppingListLineItemCustomFieldChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetShoppingListLineItemCustomFieldChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetShoppingListLineItemCustomFieldChangeBuilder builder(
             final SetShoppingListLineItemCustomFieldChange template) {
         return SetShoppingListLineItemCustomFieldChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetShoppingListLineItemCustomFieldChange(
             Function<SetShoppingListLineItemCustomFieldChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetShoppingListLineItemCustomFieldChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetShoppingListLineItemCustomFieldChange>() {
             @Override

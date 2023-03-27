@@ -32,6 +32,9 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
 
     private Long quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListLineItemDraftImpl(@JsonProperty("productId") final String productId,
             @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
@@ -46,6 +49,9 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
         this.quantity = quantity;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListLineItemDraftImpl() {
     }
 

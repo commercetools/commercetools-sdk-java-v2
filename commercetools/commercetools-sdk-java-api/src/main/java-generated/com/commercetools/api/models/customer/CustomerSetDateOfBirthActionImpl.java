@@ -24,12 +24,18 @@ public class CustomerSetDateOfBirthActionImpl implements CustomerSetDateOfBirthA
 
     private java.time.LocalDate dateOfBirth;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetDateOfBirthActionImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         this.action = SET_DATE_OF_BIRTH;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetDateOfBirthActionImpl() {
         this.action = SET_DATE_OF_BIRTH;
     }

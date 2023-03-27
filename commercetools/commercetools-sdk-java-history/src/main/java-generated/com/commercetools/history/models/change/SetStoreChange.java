@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetStoreChangeImpl.class)
 public interface SetStoreChange extends Change {
 
+    /**
+     * discriminator value for SetStoreChange
+     */
     String SET_STORE_CHANGE = "SetStoreChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetStoreChange extends Change {
     @JsonProperty("nextValue")
     public Reference getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setStore</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Reference previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Reference nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetStoreChange
+     */
     public static SetStoreChange of() {
         return new SetStoreChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetStoreChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetStoreChange of(final SetStoreChange template) {
         SetStoreChangeImpl instance = new SetStoreChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetStoreChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetStoreChange
+     * @return builder
+     */
     public static SetStoreChangeBuilder builder() {
         return SetStoreChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetStoreChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetStoreChangeBuilder builder(final SetStoreChange template) {
         return SetStoreChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetStoreChange(Function<SetStoreChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetStoreChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetStoreChange>() {
             @Override

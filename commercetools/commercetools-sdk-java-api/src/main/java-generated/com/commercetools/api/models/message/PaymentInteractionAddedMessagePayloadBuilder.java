@@ -48,6 +48,11 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
         return this;
     }
 
+    /**
+     *  <p>The interface interaction that was added to the Payment.</p>
+     * @return interaction
+     */
+
     public com.commercetools.api.models.type.CustomFields getInteraction() {
         return this.interaction;
     }
@@ -69,10 +74,19 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
         return new PaymentInteractionAddedMessagePayloadImpl(interaction);
     }
 
+    /**
+     * factory method for an instance of PaymentInteractionAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static PaymentInteractionAddedMessagePayloadBuilder of() {
         return new PaymentInteractionAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for PaymentInteractionAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentInteractionAddedMessagePayloadBuilder of(
             final PaymentInteractionAddedMessagePayload template) {
         PaymentInteractionAddedMessagePayloadBuilder builder = new PaymentInteractionAddedMessagePayloadBuilder();

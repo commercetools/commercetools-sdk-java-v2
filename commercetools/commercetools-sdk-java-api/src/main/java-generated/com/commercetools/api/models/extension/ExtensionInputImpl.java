@@ -24,6 +24,9 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
 
     private com.commercetools.api.models.common.Reference resource;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionInputImpl(@JsonProperty("action") final com.commercetools.api.models.extension.ExtensionAction action,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource) {
@@ -31,6 +34,9 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
         this.resource = resource;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionInputImpl() {
     }
 

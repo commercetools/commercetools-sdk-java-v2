@@ -52,6 +52,9 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerDraftImpl(@JsonProperty("email") final String email, @JsonProperty("password") final String password,
             @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,
@@ -83,6 +86,9 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
         this.stores = stores;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerDraftImpl() {
     }
 

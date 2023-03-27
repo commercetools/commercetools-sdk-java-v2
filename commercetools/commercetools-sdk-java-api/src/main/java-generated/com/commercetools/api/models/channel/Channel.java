@@ -158,41 +158,125 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
     @JsonProperty("geoLocation")
     public GeoJson getGeoLocation();
 
+    /**
+     *  <p>Unique identifier of the Channel.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Channel.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the Channel was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the Channel was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the Channel.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Roles of the Channel.</p>
+     * @param roles values to be set
+     */
 
     @JsonIgnore
     public void setRoles(final ChannelRoleEnum... roles);
 
+    /**
+     *  <p>Roles of the Channel.</p>
+     * @param roles values to be set
+     */
+
     public void setRoles(final List<ChannelRoleEnum> roles);
+
+    /**
+     *  <p>Name of the Channel.</p>
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     *  <p>Description of the Channel.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
+     * @param address value to be set
+     */
 
     public void setAddress(final Address address);
 
+    /**
+     *  <p>Statistics about the review ratings taken into account for the Channel.</p>
+     * @param reviewRatingStatistics value to be set
+     */
+
     public void setReviewRatingStatistics(final ReviewRatingStatistics reviewRatingStatistics);
+
+    /**
+     *  <p>Custom Fields defined for the Channel.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
+     * @param geoLocation value to be set
+     */
+
     public void setGeoLocation(final GeoJson geoLocation);
 
+    /**
+     * factory method
+     * @return instance of Channel
+     */
     public static Channel of() {
         return new ChannelImpl();
     }
 
+    /**
+     * factory method to copy an instance of Channel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Channel of(final Channel template) {
         ChannelImpl instance = new ChannelImpl();
         instance.setId(template.getId());
@@ -212,14 +296,29 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
         return instance;
     }
 
+    /**
+     * builder factory method for Channel
+     * @return builder
+     */
     public static ChannelBuilder builder() {
         return ChannelBuilder.of();
     }
 
+    /**
+     * create builder for Channel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelBuilder builder(final Channel template) {
         return ChannelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChannel(Function<Channel, T> helper) {
         return helper.apply(this);
     }
@@ -228,6 +327,10 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
         return com.commercetools.api.models.common.ReferenceTypeId.CHANNEL;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Channel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Channel>() {
             @Override

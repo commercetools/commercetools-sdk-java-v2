@@ -61,9 +61,19 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
         return this;
     }
 
+    /**
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Descriptive localized label of the value.</p>
+     * @return label
+     */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
@@ -87,10 +97,19 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
         return new CustomFieldLocalizedEnumValueImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of CustomFieldLocalizedEnumValueBuilder
+     * @return builder
+     */
     public static CustomFieldLocalizedEnumValueBuilder of() {
         return new CustomFieldLocalizedEnumValueBuilder();
     }
 
+    /**
+     * create builder for CustomFieldLocalizedEnumValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldLocalizedEnumValueBuilder of(final CustomFieldLocalizedEnumValue template) {
         CustomFieldLocalizedEnumValueBuilder builder = new CustomFieldLocalizedEnumValueBuilder();
         builder.key = template.getKey();

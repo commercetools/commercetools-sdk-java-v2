@@ -41,7 +41,7 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setLastName</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
         return new SetLastNameChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetLastNameChangeBuilder
+     * @return builder
+     */
     public static SetLastNameChangeBuilder of() {
         return new SetLastNameChangeBuilder();
     }
 
+    /**
+     * create builder for SetLastNameChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLastNameChangeBuilder of(final SetLastNameChange template) {
         SetLastNameChangeBuilder builder = new SetLastNameChangeBuilder();
         builder.change = template.getChange();

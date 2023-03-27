@@ -93,30 +93,94 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     @JsonProperty("transitions")
     public List<StateResourceIdentifier> getTransitions();
 
+    /**
+     *  <p>User-defined unique identifier for the State.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Specify to which resource or object type the State is assigned to.</p>
+     * @param type value to be set
+     */
 
     public void setType(final StateTypeEnum type);
 
+    /**
+     *  <p>Name of the State.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Description of the State.</p>
+     * @param description value to be set
+     */
 
     public void setDescription(final LocalizedString description);
 
+    /**
+     *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
+     * @param initial value to be set
+     */
+
     public void setInitial(final Boolean initial);
+
+    /**
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     * @param roles values to be set
+     */
 
     @JsonIgnore
     public void setRoles(final StateRoleEnum... roles);
 
+    /**
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     * @param roles values to be set
+     */
+
     public void setRoles(final List<StateRoleEnum> roles);
+
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     * @param transitions values to be set
+     */
 
     @JsonIgnore
     public void setTransitions(final StateResourceIdentifier... transitions);
 
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     * @param transitions values to be set
+     */
+
     public void setTransitions(final List<StateResourceIdentifier> transitions);
 
+    /**
+     * factory method
+     * @return instance of StateDraft
+     */
     public static StateDraft of() {
         return new StateDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of StateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StateDraft of(final StateDraft template) {
         StateDraftImpl instance = new StateDraftImpl();
         instance.setKey(template.getKey());
@@ -129,18 +193,37 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
         return instance;
     }
 
+    /**
+     * builder factory method for StateDraft
+     * @return builder
+     */
     public static StateDraftBuilder builder() {
         return StateDraftBuilder.of();
     }
 
+    /**
+     * create builder for StateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateDraftBuilder builder(final StateDraft template) {
         return StateDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStateDraft(Function<StateDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StateDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StateDraft>() {
             @Override

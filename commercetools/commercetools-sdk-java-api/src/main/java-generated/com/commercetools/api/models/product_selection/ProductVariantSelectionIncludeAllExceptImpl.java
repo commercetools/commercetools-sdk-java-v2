@@ -24,12 +24,18 @@ public class ProductVariantSelectionIncludeAllExceptImpl implements ProductVaria
 
     private java.util.List<String> skus;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantSelectionIncludeAllExceptImpl(@JsonProperty("skus") final java.util.List<String> skus) {
         this.skus = skus;
         this.type = ProductVariantSelectionTypeEnum.findEnum("includeAllExcept");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantSelectionIncludeAllExceptImpl() {
         this.type = ProductVariantSelectionTypeEnum.findEnum("includeAllExcept");
     }

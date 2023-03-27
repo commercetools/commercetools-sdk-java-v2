@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountValueGiftLineItemImpl.class)
 public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
 
+    /**
+     * discriminator value for CartDiscountValueGiftLineItem
+     */
     String GIFT_LINE_ITEM = "giftLineItem";
 
     /**
@@ -68,18 +71,47 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     @JsonProperty("distributionChannel")
     public ChannelReference getDistributionChannel();
 
+    /**
+     *  <p>Reference to a Product.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductReference product);
+
+    /**
+     *  <p>ProductVariant of the Product.</p>
+     * @param variantId value to be set
+     */
 
     public void setVariantId(final Long variantId);
 
+    /**
+     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     * @param supplyChannel value to be set
+     */
+
     public void setSupplyChannel(final ChannelReference supplyChannel);
+
+    /**
+     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     * @param distributionChannel value to be set
+     */
 
     public void setDistributionChannel(final ChannelReference distributionChannel);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountValueGiftLineItem
+     */
     public static CartDiscountValueGiftLineItem of() {
         return new CartDiscountValueGiftLineItemImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountValueGiftLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountValueGiftLineItem of(final CartDiscountValueGiftLineItem template) {
         CartDiscountValueGiftLineItemImpl instance = new CartDiscountValueGiftLineItemImpl();
         instance.setProduct(template.getProduct());
@@ -89,18 +121,37 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountValueGiftLineItem
+     * @return builder
+     */
     public static CartDiscountValueGiftLineItemBuilder builder() {
         return CartDiscountValueGiftLineItemBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountValueGiftLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueGiftLineItemBuilder builder(final CartDiscountValueGiftLineItem template) {
         return CartDiscountValueGiftLineItemBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountValueGiftLineItem(Function<CartDiscountValueGiftLineItem, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueGiftLineItem> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueGiftLineItem>() {
             @Override

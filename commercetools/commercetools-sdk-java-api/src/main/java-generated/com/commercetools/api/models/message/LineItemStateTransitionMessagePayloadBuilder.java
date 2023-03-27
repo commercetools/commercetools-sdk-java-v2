@@ -117,21 +117,46 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Line Item.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
+     * @return transitionDate
+     */
 
     public java.time.ZonedDateTime getTransitionDate() {
         return this.transitionDate;
     }
 
+    /**
+     *  <p>Number of Line Items for which the State was transitioned.</p>
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>State the Line Item was transitioned from.</p>
+     * @return fromState
+     */
+
     public com.commercetools.api.models.state.StateReference getFromState() {
         return this.fromState;
     }
+
+    /**
+     *  <p>State the Line Item was transitioned to.</p>
+     * @return toState
+     */
 
     public com.commercetools.api.models.state.StateReference getToState() {
         return this.toState;
@@ -159,10 +184,19 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
         return new LineItemStateTransitionMessagePayloadImpl(lineItemId, transitionDate, quantity, fromState, toState);
     }
 
+    /**
+     * factory method for an instance of LineItemStateTransitionMessagePayloadBuilder
+     * @return builder
+     */
     public static LineItemStateTransitionMessagePayloadBuilder of() {
         return new LineItemStateTransitionMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for LineItemStateTransitionMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemStateTransitionMessagePayloadBuilder of(
             final LineItemStateTransitionMessagePayload template) {
         LineItemStateTransitionMessagePayloadBuilder builder = new LineItemStateTransitionMessagePayloadBuilder();

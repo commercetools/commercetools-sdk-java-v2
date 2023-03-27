@@ -111,18 +111,41 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
         return this;
     }
 
+    /**
+     *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a given Channel.</p>
+     * @return channel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
+
+    /**
+     *  <ul>
+     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
+     *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
+     *  </ul>
+     * @return missingRole
+     */
 
     public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole() {
         return this.missingRole;
@@ -146,10 +169,19 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
         return new MissingRoleOnChannelErrorImpl(message, values, channel, missingRole);
     }
 
+    /**
+     * factory method for an instance of MissingRoleOnChannelErrorBuilder
+     * @return builder
+     */
     public static MissingRoleOnChannelErrorBuilder of() {
         return new MissingRoleOnChannelErrorBuilder();
     }
 
+    /**
+     * create builder for MissingRoleOnChannelError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MissingRoleOnChannelErrorBuilder of(final MissingRoleOnChannelError template) {
         MissingRoleOnChannelErrorBuilder builder = new MissingRoleOnChannelErrorBuilder();
         builder.message = template.getMessage();

@@ -48,6 +48,11 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     *  <p>Custom Line Item that was added to the Order.</p>
+     * @return customLineItem
+     */
+
     public com.commercetools.api.models.cart.CustomLineItem getCustomLineItem() {
         return this.customLineItem;
     }
@@ -70,10 +75,19 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
         return new OrderCustomLineItemAddedMessagePayloadImpl(customLineItem);
     }
 
+    /**
+     * factory method for an instance of OrderCustomLineItemAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderCustomLineItemAddedMessagePayloadBuilder of() {
         return new OrderCustomLineItemAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderCustomLineItemAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomLineItemAddedMessagePayloadBuilder of(
             final OrderCustomLineItemAddedMessagePayload template) {
         OrderCustomLineItemAddedMessagePayloadBuilder builder = new OrderCustomLineItemAddedMessagePayloadBuilder();

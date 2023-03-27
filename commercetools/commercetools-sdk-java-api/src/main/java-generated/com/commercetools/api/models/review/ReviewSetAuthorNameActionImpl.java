@@ -24,12 +24,18 @@ public class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameAction,
 
     private String authorName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewSetAuthorNameActionImpl(@JsonProperty("authorName") final String authorName) {
         this.authorName = authorName;
         this.action = SET_AUTHOR_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewSetAuthorNameActionImpl() {
         this.action = SET_AUTHOR_NAME;
     }

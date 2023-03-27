@@ -81,25 +81,69 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set createdAt
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    /**
+     * set measurements
+     * @param measurements value to be set
+     */
+
     public void setMeasurements(final ParcelMeasurements measurements);
 
+    /**
+     * set trackingData
+     * @param trackingData value to be set
+     */
+
     public void setTrackingData(final TrackingData trackingData);
+
+    /**
+     *  <p>The delivery items contained in this parcel.</p>
+     * @param items values to be set
+     */
 
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     *  <p>The delivery items contained in this parcel.</p>
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
+
+    /**
+     *  <p>Custom Fields of this parcel.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of Parcel
+     */
     public static Parcel of() {
         return new ParcelImpl();
     }
 
+    /**
+     * factory method to copy an instance of Parcel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Parcel of(final Parcel template) {
         ParcelImpl instance = new ParcelImpl();
         instance.setId(template.getId());
@@ -111,18 +155,37 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
         return instance;
     }
 
+    /**
+     * builder factory method for Parcel
+     * @return builder
+     */
     public static ParcelBuilder builder() {
         return ParcelBuilder.of();
     }
 
+    /**
+     * create builder for Parcel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelBuilder builder(final Parcel template) {
         return ParcelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcel(Function<Parcel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Parcel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Parcel>() {
             @Override

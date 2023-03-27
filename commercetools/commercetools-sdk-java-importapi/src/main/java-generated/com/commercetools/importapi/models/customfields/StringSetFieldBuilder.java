@@ -24,7 +24,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     private java.util.List<String> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -58,6 +58,11 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
         this.value.addAll(Arrays.asList(value));
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<String> getValue() {
         return this.value;
@@ -80,10 +85,19 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
         return new StringSetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of StringSetFieldBuilder
+     * @return builder
+     */
     public static StringSetFieldBuilder of() {
         return new StringSetFieldBuilder();
     }
 
+    /**
+     * create builder for StringSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StringSetFieldBuilder of(final StringSetField template) {
         StringSetFieldBuilder builder = new StringSetFieldBuilder();
         builder.value = template.getValue();

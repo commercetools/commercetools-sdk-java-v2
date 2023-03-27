@@ -22,11 +22,17 @@ public class ProductTypeUpdateActionImpl implements ProductTypeUpdateAction, Mod
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeUpdateActionImpl() {
     }
 

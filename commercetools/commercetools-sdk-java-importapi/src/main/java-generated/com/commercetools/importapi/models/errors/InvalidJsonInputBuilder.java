@@ -24,7 +24,7 @@ public class InvalidJsonInputBuilder implements Builder<InvalidJsonInput> {
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class InvalidJsonInputBuilder implements Builder<InvalidJsonInput> {
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class InvalidJsonInputBuilder implements Builder<InvalidJsonInput> {
         return new InvalidJsonInputImpl(message);
     }
 
+    /**
+     * factory method for an instance of InvalidJsonInputBuilder
+     * @return builder
+     */
     public static InvalidJsonInputBuilder of() {
         return new InvalidJsonInputBuilder();
     }
 
+    /**
+     * create builder for InvalidJsonInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidJsonInputBuilder of(final InvalidJsonInput template) {
         InvalidJsonInputBuilder builder = new InvalidJsonInputBuilder();
         builder.message = template.getMessage();

@@ -34,7 +34,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     private java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> tiers;
 
     /**
-     *
+     * set the value to the price using the builder function
      * @param builder function to build the price value
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *
+     * set the value to the price
      * @param price value to be set
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *
+     * set the value to the freeAbove using the builder function
      * @param builder function to build the freeAbove value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *
+     * set the value to the freeAbove
      * @param freeAbove value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *
+     * set values to the tiers
      * @param tiers value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *
+     * set value to the tiers
      * @param tiers value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *
+     * add values to the tiers
      * @param tiers value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *
+     * add the value to the tiers using the builder function
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *
+     * set the value to the tiers using the builder function
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -157,17 +157,37 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return this;
     }
 
+    /**
+     * value of price}
+     * @return price
+     */
+
     public com.commercetools.history.models.common.Money getPrice() {
         return this.price;
     }
+
+    /**
+     * value of freeAbove}
+     * @return freeAbove
+     */
 
     public com.commercetools.history.models.common.Money getFreeAbove() {
         return this.freeAbove;
     }
 
+    /**
+     *  <p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p>
+     * @return isMatching
+     */
+
     public Boolean getIsMatching() {
         return this.isMatching;
     }
+
+    /**
+     * value of tiers}
+     * @return tiers
+     */
 
     public java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> getTiers() {
         return this.tiers;
@@ -193,10 +213,19 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return new ShippingRateImpl(price, freeAbove, isMatching, tiers);
     }
 
+    /**
+     * factory method for an instance of ShippingRateBuilder
+     * @return builder
+     */
     public static ShippingRateBuilder of() {
         return new ShippingRateBuilder();
     }
 
+    /**
+     * create builder for ShippingRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingRateBuilder of(final ShippingRate template) {
         ShippingRateBuilder builder = new ShippingRateBuilder();
         builder.price = template.getPrice();

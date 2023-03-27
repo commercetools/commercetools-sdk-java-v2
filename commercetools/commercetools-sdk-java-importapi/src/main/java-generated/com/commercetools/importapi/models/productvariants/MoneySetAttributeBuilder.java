@@ -41,7 +41,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     *
+     * add a value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -105,10 +105,20 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.TypedMoney> getValue() {
         return this.value;
@@ -131,10 +141,19 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
         return new MoneySetAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of MoneySetAttributeBuilder
+     * @return builder
+     */
     public static MoneySetAttributeBuilder of() {
         return new MoneySetAttributeBuilder();
     }
 
+    /**
+     * create builder for MoneySetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoneySetAttributeBuilder of(final MoneySetAttribute template) {
         MoneySetAttributeBuilder builder = new MoneySetAttributeBuilder();
         builder.name = template.getName();

@@ -91,6 +91,10 @@ public class ProductTypeUpdateActionBuilder {
         return com.commercetools.api.models.product_type.ProductTypeSetKeyActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ProductTypeUpdateActionBuilder
+     * @return builder
+     */
     public static ProductTypeUpdateActionBuilder of() {
         return new ProductTypeUpdateActionBuilder();
     }

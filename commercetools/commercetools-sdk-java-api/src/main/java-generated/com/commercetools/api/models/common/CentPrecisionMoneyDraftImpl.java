@@ -28,6 +28,9 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
 
     private Integer fractionDigits;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CentPrecisionMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount,
             @JsonProperty("currencyCode") final String currencyCode,
@@ -38,6 +41,9 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
         this.type = MoneyType.findEnum("centPrecision");
     }
 
+    /**
+     * create empty instance
+     */
     public CentPrecisionMoneyDraftImpl() {
         this.type = MoneyType.findEnum("centPrecision");
     }

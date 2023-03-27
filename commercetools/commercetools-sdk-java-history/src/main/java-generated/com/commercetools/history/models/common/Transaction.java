@@ -84,22 +84,61 @@ public interface Transaction {
     @JsonProperty("state")
     public TransactionState getState();
 
+    /**
+     *  <p>Unique identifier of the Transaction.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Time at which the transaction took place.</p>
+     * @param timestamp value to be set
+     */
 
     public void setTimestamp(final String timestamp);
 
+    /**
+     * set type
+     * @param type value to be set
+     */
+
     public void setType(final TransactionType type);
+
+    /**
+     * set amount
+     * @param amount value to be set
+     */
 
     public void setAmount(final Money amount);
 
+    /**
+     *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     * @param interactionId value to be set
+     */
+
     public void setInteractionId(final String interactionId);
+
+    /**
+     * set state
+     * @param state value to be set
+     */
 
     public void setState(final TransactionState state);
 
+    /**
+     * factory method
+     * @return instance of Transaction
+     */
     public static Transaction of() {
         return new TransactionImpl();
     }
 
+    /**
+     * factory method to copy an instance of Transaction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Transaction of(final Transaction template) {
         TransactionImpl instance = new TransactionImpl();
         instance.setId(template.getId());
@@ -111,18 +150,37 @@ public interface Transaction {
         return instance;
     }
 
+    /**
+     * builder factory method for Transaction
+     * @return builder
+     */
     public static TransactionBuilder builder() {
         return TransactionBuilder.of();
     }
 
+    /**
+     * create builder for Transaction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransactionBuilder builder(final Transaction template) {
         return TransactionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTransaction(Function<Transaction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Transaction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Transaction>() {
             @Override

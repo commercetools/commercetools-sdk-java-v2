@@ -50,10 +50,20 @@ public class AttributeGroupResourceIdentifierBuilder implements Builder<Attribut
         return this;
     }
 
+    /**
+     *  <p>Platform-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class AttributeGroupResourceIdentifierBuilder implements Builder<Attribut
         return new AttributeGroupResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of AttributeGroupResourceIdentifierBuilder
+     * @return builder
+     */
     public static AttributeGroupResourceIdentifierBuilder of() {
         return new AttributeGroupResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for AttributeGroupResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupResourceIdentifierBuilder of(final AttributeGroupResourceIdentifier template) {
         AttributeGroupResourceIdentifierBuilder builder = new AttributeGroupResourceIdentifierBuilder();
         builder.id = template.getId();

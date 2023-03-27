@@ -28,7 +28,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -105,9 +105,19 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
         return this;
     }
 
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     * value of items}
+     * @return items
+     */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
@@ -131,10 +141,19 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
         return new StagedOrderSetParcelItemsActionImpl(parcelId, items);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetParcelItemsActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetParcelItemsActionBuilder of() {
         return new StagedOrderSetParcelItemsActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetParcelItemsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetParcelItemsActionBuilder of(final StagedOrderSetParcelItemsAction template) {
         StagedOrderSetParcelItemsActionBuilder builder = new StagedOrderSetParcelItemsActionBuilder();
         builder.parcelId = template.getParcelId();

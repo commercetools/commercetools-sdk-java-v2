@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeLabelActionImpl.class)
 public interface TypeChangeLabelAction extends TypeUpdateAction {
 
+    /**
+     * discriminator value for TypeChangeLabelAction
+     */
     String CHANGE_LABEL = "changeLabel";
 
     /**
@@ -51,14 +54,33 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     @JsonProperty("label")
     public LocalizedString getLabel();
 
+    /**
+     *  <p>Name of the Field Definition to update.</p>
+     * @param fieldName value to be set
+     */
+
     public void setFieldName(final String fieldName);
+
+    /**
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @param label value to be set
+     */
 
     public void setLabel(final LocalizedString label);
 
+    /**
+     * factory method
+     * @return instance of TypeChangeLabelAction
+     */
     public static TypeChangeLabelAction of() {
         return new TypeChangeLabelActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeChangeLabelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeChangeLabelAction of(final TypeChangeLabelAction template) {
         TypeChangeLabelActionImpl instance = new TypeChangeLabelActionImpl();
         instance.setFieldName(template.getFieldName());
@@ -66,18 +88,37 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for TypeChangeLabelAction
+     * @return builder
+     */
     public static TypeChangeLabelActionBuilder builder() {
         return TypeChangeLabelActionBuilder.of();
     }
 
+    /**
+     * create builder for TypeChangeLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeLabelActionBuilder builder(final TypeChangeLabelAction template) {
         return TypeChangeLabelActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeChangeLabelAction(Function<TypeChangeLabelAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeLabelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeLabelAction>() {
             @Override

@@ -34,6 +34,11 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
         return this;
     }
 
+    /**
+     *  <p>Key of the attribute.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
@@ -55,10 +60,19 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
         return new AttributeReferenceImpl(key);
     }
 
+    /**
+     * factory method for an instance of AttributeReferenceBuilder
+     * @return builder
+     */
     public static AttributeReferenceBuilder of() {
         return new AttributeReferenceBuilder();
     }
 
+    /**
+     * create builder for AttributeReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeReferenceBuilder of(final AttributeReference template) {
         AttributeReferenceBuilder builder = new AttributeReferenceBuilder();
         builder.key = template.getKey();

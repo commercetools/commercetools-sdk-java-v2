@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = EnumValueIsUsedErrorImpl.class)
 public interface EnumValueIsUsedError extends ErrorObject {
 
+    /**
+     * discriminator value for EnumValueIsUsedError
+     */
     String ENUM_VALUE_IS_USED = "EnumValueIsUsed";
 
     /**
@@ -48,12 +51,26 @@ public interface EnumValueIsUsedError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p><code>"$enumKeysTranscript is used by some products and cannot be deleted because the $attributeName attribute is required."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of EnumValueIsUsedError
+     */
     public static EnumValueIsUsedError of() {
         return new EnumValueIsUsedErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of EnumValueIsUsedError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static EnumValueIsUsedError of(final EnumValueIsUsedError template) {
         EnumValueIsUsedErrorImpl instance = new EnumValueIsUsedErrorImpl();
         instance.setMessage(template.getMessage());
@@ -61,18 +78,37 @@ public interface EnumValueIsUsedError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for EnumValueIsUsedError
+     * @return builder
+     */
     public static EnumValueIsUsedErrorBuilder builder() {
         return EnumValueIsUsedErrorBuilder.of();
     }
 
+    /**
+     * create builder for EnumValueIsUsedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumValueIsUsedErrorBuilder builder(final EnumValueIsUsedError template) {
         return EnumValueIsUsedErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withEnumValueIsUsedError(Function<EnumValueIsUsedError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<EnumValueIsUsedError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<EnumValueIsUsedError>() {
             @Override

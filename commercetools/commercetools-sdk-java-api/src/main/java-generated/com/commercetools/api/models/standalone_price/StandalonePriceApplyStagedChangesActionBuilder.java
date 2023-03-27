@@ -37,10 +37,19 @@ public class StandalonePriceApplyStagedChangesActionBuilder
         return new StandalonePriceApplyStagedChangesActionImpl();
     }
 
+    /**
+     * factory method for an instance of StandalonePriceApplyStagedChangesActionBuilder
+     * @return builder
+     */
     public static StandalonePriceApplyStagedChangesActionBuilder of() {
         return new StandalonePriceApplyStagedChangesActionBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceApplyStagedChangesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceApplyStagedChangesActionBuilder of(
             final StandalonePriceApplyStagedChangesAction template) {
         StandalonePriceApplyStagedChangesActionBuilder builder = new StandalonePriceApplyStagedChangesActionBuilder();

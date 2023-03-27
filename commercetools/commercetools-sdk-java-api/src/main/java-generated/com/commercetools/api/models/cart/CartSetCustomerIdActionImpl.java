@@ -25,12 +25,18 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
 
     private String customerId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
         this.customerId = customerId;
         this.action = SET_CUSTOMER_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetCustomerIdActionImpl() {
         this.action = SET_CUSTOMER_ID;
     }

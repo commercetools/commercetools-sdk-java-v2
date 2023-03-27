@@ -149,18 +149,39 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Extension.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Defines where the Extension can be reached.</p>
+     * @return destination
+     */
+
     public com.commercetools.api.models.extension.ExtensionDestination getDestination() {
         return this.destination;
     }
 
+    /**
+     *  <p>Describes what triggers the Extension.</p>
+     * @return triggers
+     */
+
     public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
         return this.triggers;
     }
+
+    /**
+     *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
+     * @return timeoutInMs
+     */
 
     @Nullable
     public Integer getTimeoutInMs() {
@@ -185,10 +206,19 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
         return new ExtensionDraftImpl(key, destination, triggers, timeoutInMs);
     }
 
+    /**
+     * factory method for an instance of ExtensionDraftBuilder
+     * @return builder
+     */
     public static ExtensionDraftBuilder of() {
         return new ExtensionDraftBuilder();
     }
 
+    /**
+     * create builder for ExtensionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionDraftBuilder of(final ExtensionDraft template) {
         ExtensionDraftBuilder builder = new ExtensionDraftBuilder();
         builder.key = template.getKey();

@@ -24,12 +24,18 @@ public class AzureServiceBusDestinationImpl implements AzureServiceBusDestinatio
 
     private String connectionString;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AzureServiceBusDestinationImpl(@JsonProperty("connectionString") final String connectionString) {
         this.connectionString = connectionString;
         this.type = AZURE_SERVICE_BUS;
     }
 
+    /**
+     * create empty instance
+     */
     public AzureServiceBusDestinationImpl() {
         this.type = AZURE_SERVICE_BUS;
     }

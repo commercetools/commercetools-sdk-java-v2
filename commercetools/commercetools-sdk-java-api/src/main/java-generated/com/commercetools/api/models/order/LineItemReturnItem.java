@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LineItemReturnItemImpl.class)
 public interface LineItemReturnItem extends ReturnItem {
 
+    /**
+     * discriminator value for LineItemReturnItem
+     */
     String LINE_ITEM_RETURN_ITEM = "LineItemReturnItem";
 
     /**
@@ -45,12 +48,26 @@ public interface LineItemReturnItem extends ReturnItem {
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
 
+    /**
+     * factory method
+     * @return instance of LineItemReturnItem
+     */
     public static LineItemReturnItem of() {
         return new LineItemReturnItemImpl();
     }
 
+    /**
+     * factory method to copy an instance of LineItemReturnItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LineItemReturnItem of(final LineItemReturnItem template) {
         LineItemReturnItemImpl instance = new LineItemReturnItemImpl();
         instance.setId(template.getId());
@@ -65,18 +82,37 @@ public interface LineItemReturnItem extends ReturnItem {
         return instance;
     }
 
+    /**
+     * builder factory method for LineItemReturnItem
+     * @return builder
+     */
     public static LineItemReturnItemBuilder builder() {
         return LineItemReturnItemBuilder.of();
     }
 
+    /**
+     * create builder for LineItemReturnItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemReturnItemBuilder builder(final LineItemReturnItem template) {
         return LineItemReturnItemBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLineItemReturnItem(Function<LineItemReturnItem, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LineItemReturnItem> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LineItemReturnItem>() {
             @Override

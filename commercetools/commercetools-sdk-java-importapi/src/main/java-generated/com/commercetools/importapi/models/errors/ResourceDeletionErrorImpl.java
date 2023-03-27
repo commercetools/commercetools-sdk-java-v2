@@ -26,6 +26,9 @@ public class ResourceDeletionErrorImpl implements ResourceDeletionError, ModelBa
 
     private java.lang.Object resource;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ResourceDeletionErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("resource") final java.lang.Object resource) {
@@ -34,6 +37,9 @@ public class ResourceDeletionErrorImpl implements ResourceDeletionError, ModelBa
         this.code = RESOURCE_DELETION;
     }
 
+    /**
+     * create empty instance
+     */
     public ResourceDeletionErrorImpl() {
         this.code = RESOURCE_DELETION;
     }

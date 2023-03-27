@@ -92,13 +92,28 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
         return this;
     }
 
+    /**
+     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     * @return resourceTypeId
+     */
+
     public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }
 
+    /**
+     *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     * @return actions
+     */
+
     public java.util.List<com.commercetools.api.models.extension.ExtensionAction> getActions() {
         return this.actions;
     }
+
+    /**
+     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     * @return condition
+     */
 
     @Nullable
     public String getCondition() {
@@ -123,10 +138,19 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
         return new ExtensionTriggerImpl(resourceTypeId, actions, condition);
     }
 
+    /**
+     * factory method for an instance of ExtensionTriggerBuilder
+     * @return builder
+     */
     public static ExtensionTriggerBuilder of() {
         return new ExtensionTriggerBuilder();
     }
 
+    /**
+     * create builder for ExtensionTrigger instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionTriggerBuilder of(final ExtensionTrigger template) {
         ExtensionTriggerBuilder builder = new ExtensionTriggerBuilder();
         builder.resourceTypeId = template.getResourceTypeId();

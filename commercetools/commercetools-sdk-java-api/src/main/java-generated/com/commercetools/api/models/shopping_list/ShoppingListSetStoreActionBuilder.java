@@ -50,6 +50,11 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
         return this;
     }
 
+    /**
+     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     * @return store
+     */
+
     @Nullable
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
@@ -71,10 +76,19 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
         return new ShoppingListSetStoreActionImpl(store);
     }
 
+    /**
+     * factory method for an instance of ShoppingListSetStoreActionBuilder
+     * @return builder
+     */
     public static ShoppingListSetStoreActionBuilder of() {
         return new ShoppingListSetStoreActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListSetStoreAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListSetStoreActionBuilder of(final ShoppingListSetStoreAction template) {
         ShoppingListSetStoreActionBuilder builder = new ShoppingListSetStoreActionBuilder();
         builder.store = template.getStore();

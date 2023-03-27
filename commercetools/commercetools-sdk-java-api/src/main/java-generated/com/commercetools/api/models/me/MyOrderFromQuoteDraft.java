@@ -54,16 +54,40 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     @JsonProperty("quoteStateToAccepted")
     public Boolean getQuoteStateToAccepted();
 
+    /**
+     *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
+     * @param quoteStateToAccepted value to be set
+     */
+
     public void setQuoteStateToAccepted(final Boolean quoteStateToAccepted);
 
+    /**
+     * factory method
+     * @return instance of MyOrderFromQuoteDraft
+     */
     public static MyOrderFromQuoteDraft of() {
         return new MyOrderFromQuoteDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyOrderFromQuoteDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyOrderFromQuoteDraft of(final MyOrderFromQuoteDraft template) {
         MyOrderFromQuoteDraftImpl instance = new MyOrderFromQuoteDraftImpl();
         instance.setId(template.getId());
@@ -72,18 +96,37 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
         return instance;
     }
 
+    /**
+     * builder factory method for MyOrderFromQuoteDraft
+     * @return builder
+     */
     public static MyOrderFromQuoteDraftBuilder builder() {
         return MyOrderFromQuoteDraftBuilder.of();
     }
 
+    /**
+     * create builder for MyOrderFromQuoteDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyOrderFromQuoteDraftBuilder builder(final MyOrderFromQuoteDraft template) {
         return MyOrderFromQuoteDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyOrderFromQuoteDraft(Function<MyOrderFromQuoteDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyOrderFromQuoteDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyOrderFromQuoteDraft>() {
             @Override

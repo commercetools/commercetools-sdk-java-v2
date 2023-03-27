@@ -28,7 +28,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     * set values to the attributes
      * @param attributes value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     * set value to the attributes
      * @param attributes value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     * add values to the attributes
      * @param attributes value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     * add a value to the attributes using the builder function
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     * set the value to the attributes using the builder function
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -107,9 +107,19 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     * value of attributes}
+     * @return attributes
+     */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
@@ -133,10 +143,19 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return new DuplicateAttributeValuesErrorImpl(message, attributes);
     }
 
+    /**
+     * factory method for an instance of DuplicateAttributeValuesErrorBuilder
+     * @return builder
+     */
     public static DuplicateAttributeValuesErrorBuilder of() {
         return new DuplicateAttributeValuesErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicateAttributeValuesError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateAttributeValuesErrorBuilder of(final DuplicateAttributeValuesError template) {
         DuplicateAttributeValuesErrorBuilder builder = new DuplicateAttributeValuesErrorBuilder();
         builder.message = template.getMessage();

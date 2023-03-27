@@ -24,12 +24,18 @@ public class TypeChangeKeyActionImpl implements TypeChangeKeyAction, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeChangeKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = CHANGE_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeChangeKeyActionImpl() {
         this.action = CHANGE_KEY;
     }

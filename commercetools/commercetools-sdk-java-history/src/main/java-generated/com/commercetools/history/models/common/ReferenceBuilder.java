@@ -27,7 +27,7 @@ public class ReferenceBuilder implements Builder<Reference> {
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ReferenceBuilder implements Builder<Reference> {
     }
 
     /**
-     *
+     * set the value to the typeId
      * @param typeId value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class ReferenceBuilder implements Builder<Reference> {
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of typeId}
+     * @return typeId
+     */
 
     public com.commercetools.history.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
@@ -74,10 +84,19 @@ public class ReferenceBuilder implements Builder<Reference> {
         return new ReferenceImpl(id, typeId);
     }
 
+    /**
+     * factory method for an instance of ReferenceBuilder
+     * @return builder
+     */
     public static ReferenceBuilder of() {
         return new ReferenceBuilder();
     }
 
+    /**
+     * create builder for Reference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferenceBuilder of(final Reference template) {
         ReferenceBuilder builder = new ReferenceBuilder();
         builder.id = template.getId();

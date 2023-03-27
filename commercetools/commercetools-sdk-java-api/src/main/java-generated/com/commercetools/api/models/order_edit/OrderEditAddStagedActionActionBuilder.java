@@ -25,7 +25,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
     private com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction;
 
     /**
-     *
+     * set the value to the stagedAction
      * @param stagedAction value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
     }
 
     /**
-     *
+     * set the value to the stagedAction using the builder function
      * @param builder function to build the stagedAction value
      * @return Builder
      */
@@ -48,6 +48,11 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
                 .build();
         return this;
     }
+
+    /**
+     * value of stagedAction}
+     * @return stagedAction
+     */
 
     public com.commercetools.api.models.order.StagedOrderUpdateAction getStagedAction() {
         return this.stagedAction;
@@ -70,10 +75,19 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
         return new OrderEditAddStagedActionActionImpl(stagedAction);
     }
 
+    /**
+     * factory method for an instance of OrderEditAddStagedActionActionBuilder
+     * @return builder
+     */
     public static OrderEditAddStagedActionActionBuilder of() {
         return new OrderEditAddStagedActionActionBuilder();
     }
 
+    /**
+     * create builder for OrderEditAddStagedActionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditAddStagedActionActionBuilder of(final OrderEditAddStagedActionAction template) {
         OrderEditAddStagedActionActionBuilder builder = new OrderEditAddStagedActionActionBuilder();
         builder.stagedAction = template.getStagedAction();

@@ -24,12 +24,18 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InsufficientScopeErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
         this.code = INSUFFICIENT_SCOPE;
     }
 
+    /**
+     * create empty instance
+     */
     public InsufficientScopeErrorImpl() {
         this.code = INSUFFICIENT_SCOPE;
     }

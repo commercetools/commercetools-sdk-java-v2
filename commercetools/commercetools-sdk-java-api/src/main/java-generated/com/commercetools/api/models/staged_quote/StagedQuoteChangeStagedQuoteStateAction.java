@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedQuoteChangeStagedQuoteStateActionImpl.class)
 public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpdateAction {
 
+    /**
+     * discriminator value for StagedQuoteChangeStagedQuoteStateAction
+     */
     String CHANGE_STAGED_QUOTE_STATE = "changeStagedQuoteState";
 
     /**
@@ -39,32 +42,65 @@ public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpda
     @JsonProperty("stagedQuoteState")
     public StagedQuoteState getStagedQuoteState();
 
+    /**
+     *  <p>New state to be set for the Staged Quote.</p>
+     * @param stagedQuoteState value to be set
+     */
+
     public void setStagedQuoteState(final StagedQuoteState stagedQuoteState);
 
+    /**
+     * factory method
+     * @return instance of StagedQuoteChangeStagedQuoteStateAction
+     */
     public static StagedQuoteChangeStagedQuoteStateAction of() {
         return new StagedQuoteChangeStagedQuoteStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedQuoteChangeStagedQuoteStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedQuoteChangeStagedQuoteStateAction of(final StagedQuoteChangeStagedQuoteStateAction template) {
         StagedQuoteChangeStagedQuoteStateActionImpl instance = new StagedQuoteChangeStagedQuoteStateActionImpl();
         instance.setStagedQuoteState(template.getStagedQuoteState());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedQuoteChangeStagedQuoteStateAction
+     * @return builder
+     */
     public static StagedQuoteChangeStagedQuoteStateActionBuilder builder() {
         return StagedQuoteChangeStagedQuoteStateActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedQuoteChangeStagedQuoteStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteChangeStagedQuoteStateActionBuilder builder(
             final StagedQuoteChangeStagedQuoteStateAction template) {
         return StagedQuoteChangeStagedQuoteStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedQuoteChangeStagedQuoteStateAction(
             Function<StagedQuoteChangeStagedQuoteStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteChangeStagedQuoteStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteChangeStagedQuoteStateAction>() {
             @Override

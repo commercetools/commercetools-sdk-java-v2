@@ -27,6 +27,9 @@ public class ResourceIdentifierImpl implements ResourceIdentifier, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ResourceIdentifierImpl(@JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId,
             @JsonProperty("id") final String id, @JsonProperty("key") final String key) {
@@ -35,6 +38,9 @@ public class ResourceIdentifierImpl implements ResourceIdentifier, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public ResourceIdentifierImpl() {
     }
 

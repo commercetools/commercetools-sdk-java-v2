@@ -24,12 +24,18 @@ public class ReferenceFieldImpl implements ReferenceField, ModelBase {
 
     private com.commercetools.importapi.models.common.KeyReference value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReferenceFieldImpl(@JsonProperty("value") final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
         this.type = REFERENCE;
     }
 
+    /**
+     * create empty instance
+     */
     public ReferenceFieldImpl() {
         this.type = REFERENCE;
     }

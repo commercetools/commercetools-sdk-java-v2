@@ -28,6 +28,9 @@ public class OrderSetParcelCustomFieldActionImpl implements OrderSetParcelCustom
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetParcelCustomFieldActionImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -37,6 +40,9 @@ public class OrderSetParcelCustomFieldActionImpl implements OrderSetParcelCustom
         this.action = SET_PARCEL_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetParcelCustomFieldActionImpl() {
         this.action = SET_PARCEL_CUSTOM_FIELD;
     }

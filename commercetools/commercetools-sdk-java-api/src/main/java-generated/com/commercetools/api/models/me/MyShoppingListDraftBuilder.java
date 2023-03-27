@@ -289,34 +289,69 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *  <p>Name of the ShoppingList.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the ShoppingList.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @return lineItems
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems() {
         return this.lineItems;
     }
+
+    /**
+     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @return textLineItems
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems() {
         return this.textLineItems;
     }
 
+    /**
+     *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     * @return deleteDaysAfterLastModification
+     */
+
     @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
+
+    /**
+     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     * @return store
+     */
 
     @Nullable
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
@@ -342,10 +377,19 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
             deleteDaysAfterLastModification, store);
     }
 
+    /**
+     * factory method for an instance of MyShoppingListDraftBuilder
+     * @return builder
+     */
     public static MyShoppingListDraftBuilder of() {
         return new MyShoppingListDraftBuilder();
     }
 
+    /**
+     * create builder for MyShoppingListDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyShoppingListDraftBuilder of(final MyShoppingListDraft template) {
         MyShoppingListDraftBuilder builder = new MyShoppingListDraftBuilder();
         builder.name = template.getName();

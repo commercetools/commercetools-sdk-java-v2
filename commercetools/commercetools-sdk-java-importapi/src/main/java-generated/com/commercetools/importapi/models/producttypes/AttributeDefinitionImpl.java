@@ -36,6 +36,9 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
 
     private Boolean isSearchable;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeDefinitionImpl(
             @JsonProperty("type") final com.commercetools.importapi.models.producttypes.AttributeType type,
@@ -56,6 +59,9 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         this.isSearchable = isSearchable;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeDefinitionImpl() {
     }
 

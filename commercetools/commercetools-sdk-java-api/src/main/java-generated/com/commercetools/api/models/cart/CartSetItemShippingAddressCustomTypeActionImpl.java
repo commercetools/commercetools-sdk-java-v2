@@ -29,6 +29,9 @@ public class CartSetItemShippingAddressCustomTypeActionImpl
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetItemShippingAddressCustomTypeActionImpl(@JsonProperty("addressKey") final String addressKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -39,6 +42,9 @@ public class CartSetItemShippingAddressCustomTypeActionImpl
         this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetItemShippingAddressCustomTypeActionImpl() {
         this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE;
     }

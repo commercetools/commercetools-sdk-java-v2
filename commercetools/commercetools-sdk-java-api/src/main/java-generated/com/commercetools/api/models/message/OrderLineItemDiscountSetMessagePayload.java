@@ -37,6 +37,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderLineItemDiscountSetMessagePayloadImpl.class)
 public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderLineItemDiscountSetMessagePayload
+     */
     String ORDER_LINE_ITEM_DISCOUNT_SET = "OrderLineItemDiscountSet";
 
     /**
@@ -82,27 +85,71 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     @JsonProperty("taxedPricePortions")
     public List<MethodTaxedPrice> getTaxedPricePortions();
 
+    /**
+     *  <p>Unique identifier for the Line Item.</p>
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param discountedPricePerQuantity values to be set
+     */
 
     @JsonIgnore
     public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity... discountedPricePerQuantity);
 
+    /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param discountedPricePerQuantity values to be set
+     */
+
     public void setDiscountedPricePerQuantity(
             final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
 
+    /**
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     * @param totalPrice value to be set
+     */
+
     public void setTotalPrice(final Money totalPrice);
 
+    /**
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     * @param taxedPrice value to be set
+     */
+
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @param taxedPricePortions values to be set
+     */
 
     @JsonIgnore
     public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
 
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @param taxedPricePortions values to be set
+     */
+
     public void setTaxedPricePortions(final List<MethodTaxedPrice> taxedPricePortions);
 
+    /**
+     * factory method
+     * @return instance of OrderLineItemDiscountSetMessagePayload
+     */
     public static OrderLineItemDiscountSetMessagePayload of() {
         return new OrderLineItemDiscountSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderLineItemDiscountSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderLineItemDiscountSetMessagePayload of(final OrderLineItemDiscountSetMessagePayload template) {
         OrderLineItemDiscountSetMessagePayloadImpl instance = new OrderLineItemDiscountSetMessagePayloadImpl();
         instance.setLineItemId(template.getLineItemId());
@@ -113,20 +160,39 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
         return instance;
     }
 
+    /**
+     * builder factory method for OrderLineItemDiscountSetMessagePayload
+     * @return builder
+     */
     public static OrderLineItemDiscountSetMessagePayloadBuilder builder() {
         return OrderLineItemDiscountSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderLineItemDiscountSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLineItemDiscountSetMessagePayloadBuilder builder(
             final OrderLineItemDiscountSetMessagePayload template) {
         return OrderLineItemDiscountSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderLineItemDiscountSetMessagePayload(
             Function<OrderLineItemDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessagePayload>() {
             @Override

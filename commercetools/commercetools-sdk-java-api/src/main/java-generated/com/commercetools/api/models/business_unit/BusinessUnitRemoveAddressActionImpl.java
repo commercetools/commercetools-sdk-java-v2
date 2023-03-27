@@ -26,6 +26,9 @@ public class BusinessUnitRemoveAddressActionImpl implements BusinessUnitRemoveAd
 
     private String addressKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitRemoveAddressActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("addressKey") final String addressKey) {
@@ -34,6 +37,9 @@ public class BusinessUnitRemoveAddressActionImpl implements BusinessUnitRemoveAd
         this.action = REMOVE_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitRemoveAddressActionImpl() {
         this.action = REMOVE_ADDRESS;
     }

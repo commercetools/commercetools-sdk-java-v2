@@ -15,6 +15,10 @@ public class MyQuoteRequestUpdateActionBuilder {
         return com.commercetools.api.models.me.MyQuoteRequestCancelActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of MyQuoteRequestUpdateActionBuilder
+     * @return builder
+     */
     public static MyQuoteRequestUpdateActionBuilder of() {
         return new MyQuoteRequestUpdateActionBuilder();
     }

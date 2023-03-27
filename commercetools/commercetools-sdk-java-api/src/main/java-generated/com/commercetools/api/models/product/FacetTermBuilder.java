@@ -31,7 +31,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     private Long productCount;
 
     /**
-     *
+     * set the value to the term
      * @param term value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     *
+     * set the value to the count
      * @param count value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     *
+     * set the value to the productCount
      * @param productCount value to be set
      * @return Builder
      */
@@ -63,13 +63,28 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
         return this;
     }
 
+    /**
+     * value of term}
+     * @return term
+     */
+
     public java.lang.Object getTerm() {
         return this.term;
     }
 
+    /**
+     * value of count}
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     * value of productCount}
+     * @return productCount
+     */
 
     @Nullable
     public Long getProductCount() {
@@ -94,10 +109,19 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
         return new FacetTermImpl(term, count, productCount);
     }
 
+    /**
+     * factory method for an instance of FacetTermBuilder
+     * @return builder
+     */
     public static FacetTermBuilder of() {
         return new FacetTermBuilder();
     }
 
+    /**
+     * create builder for FacetTerm instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FacetTermBuilder of(final FacetTerm template) {
         FacetTermBuilder builder = new FacetTermBuilder();
         builder.term = template.getTerm();

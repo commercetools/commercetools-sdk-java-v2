@@ -50,10 +50,20 @@ public class MyCustomerAddShippingAddressIdActionBuilder implements Builder<MyCu
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Address to become a shipping address.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     *  <p><code>key</code> of the Address to become a shipping address.</p>
+     * @return addressKey
+     */
 
     @Nullable
     public String getAddressKey() {
@@ -76,10 +86,19 @@ public class MyCustomerAddShippingAddressIdActionBuilder implements Builder<MyCu
         return new MyCustomerAddShippingAddressIdActionImpl(addressId, addressKey);
     }
 
+    /**
+     * factory method for an instance of MyCustomerAddShippingAddressIdActionBuilder
+     * @return builder
+     */
     public static MyCustomerAddShippingAddressIdActionBuilder of() {
         return new MyCustomerAddShippingAddressIdActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerAddShippingAddressIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerAddShippingAddressIdActionBuilder of(final MyCustomerAddShippingAddressIdAction template) {
         MyCustomerAddShippingAddressIdActionBuilder builder = new MyCustomerAddShippingAddressIdActionBuilder();
         builder.addressId = template.getAddressId();

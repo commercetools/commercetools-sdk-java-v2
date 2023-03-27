@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderShippingAddressSetMessagePayloadImpl.class)
 public interface OrderShippingAddressSetMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderShippingAddressSetMessagePayload
+     */
     String ORDER_SHIPPING_ADDRESS_SET = "OrderShippingAddressSet";
 
     /**
@@ -47,14 +50,33 @@ public interface OrderShippingAddressSetMessagePayload extends OrderMessagePaylo
     @JsonProperty("oldAddress")
     public Address getOldAddress();
 
+    /**
+     *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final Address address);
+
+    /**
+     *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     * @param oldAddress value to be set
+     */
 
     public void setOldAddress(final Address oldAddress);
 
+    /**
+     * factory method
+     * @return instance of OrderShippingAddressSetMessagePayload
+     */
     public static OrderShippingAddressSetMessagePayload of() {
         return new OrderShippingAddressSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderShippingAddressSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderShippingAddressSetMessagePayload of(final OrderShippingAddressSetMessagePayload template) {
         OrderShippingAddressSetMessagePayloadImpl instance = new OrderShippingAddressSetMessagePayloadImpl();
         instance.setAddress(template.getAddress());
@@ -62,19 +84,38 @@ public interface OrderShippingAddressSetMessagePayload extends OrderMessagePaylo
         return instance;
     }
 
+    /**
+     * builder factory method for OrderShippingAddressSetMessagePayload
+     * @return builder
+     */
     public static OrderShippingAddressSetMessagePayloadBuilder builder() {
         return OrderShippingAddressSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderShippingAddressSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderShippingAddressSetMessagePayloadBuilder builder(
             final OrderShippingAddressSetMessagePayload template) {
         return OrderShippingAddressSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderShippingAddressSetMessagePayload(Function<OrderShippingAddressSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderShippingAddressSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderShippingAddressSetMessagePayload>() {
             @Override

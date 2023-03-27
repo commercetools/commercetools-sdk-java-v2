@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeNestedTypeImpl.class)
 public interface AttributeNestedType extends AttributeType {
 
+    /**
+     * discriminator value for AttributeNestedType
+     */
     String NESTED = "nested";
 
     /**
@@ -42,30 +45,63 @@ public interface AttributeNestedType extends AttributeType {
     @JsonProperty("typeReference")
     public ProductTypeKeyReference getTypeReference();
 
+    /**
+     *  <p>References a product type by key.</p>
+     * @param typeReference value to be set
+     */
+
     public void setTypeReference(final ProductTypeKeyReference typeReference);
 
+    /**
+     * factory method
+     * @return instance of AttributeNestedType
+     */
     public static AttributeNestedType of() {
         return new AttributeNestedTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeNestedType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeNestedType of(final AttributeNestedType template) {
         AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();
         instance.setTypeReference(template.getTypeReference());
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeNestedType
+     * @return builder
+     */
     public static AttributeNestedTypeBuilder builder() {
         return AttributeNestedTypeBuilder.of();
     }
 
+    /**
+     * create builder for AttributeNestedType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeNestedTypeBuilder builder(final AttributeNestedType template) {
         return AttributeNestedTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeNestedType(Function<AttributeNestedType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeNestedType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeNestedType>() {
             @Override

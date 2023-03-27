@@ -49,6 +49,11 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Product that was removed from the Product Selection.</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
@@ -70,10 +75,19 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
         return new ProductSelectionProductRemovedMessagePayloadImpl(product);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionProductRemovedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductSelectionProductRemovedMessagePayloadBuilder of() {
         return new ProductSelectionProductRemovedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionProductRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionProductRemovedMessagePayloadBuilder of(
             final ProductSelectionProductRemovedMessagePayload template) {
         ProductSelectionProductRemovedMessagePayloadBuilder builder = new ProductSelectionProductRemovedMessagePayloadBuilder();

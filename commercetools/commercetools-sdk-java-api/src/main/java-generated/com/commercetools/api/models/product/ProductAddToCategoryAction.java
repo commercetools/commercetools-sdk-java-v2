@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductAddToCategoryActionImpl.class)
 public interface ProductAddToCategoryAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductAddToCategoryAction
+     */
     String ADD_TO_CATEGORY = "addToCategory";
 
     /**
@@ -58,16 +61,40 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The Category to add.</p>
+     * @param category value to be set
+     */
+
     public void setCategory(final CategoryResourceIdentifier category);
+
+    /**
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     * @param orderHint value to be set
+     */
 
     public void setOrderHint(final String orderHint);
 
+    /**
+     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductAddToCategoryAction
+     */
     public static ProductAddToCategoryAction of() {
         return new ProductAddToCategoryActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductAddToCategoryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductAddToCategoryAction of(final ProductAddToCategoryAction template) {
         ProductAddToCategoryActionImpl instance = new ProductAddToCategoryActionImpl();
         instance.setCategory(template.getCategory());
@@ -76,18 +103,37 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductAddToCategoryAction
+     * @return builder
+     */
     public static ProductAddToCategoryActionBuilder builder() {
         return ProductAddToCategoryActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductAddToCategoryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAddToCategoryActionBuilder builder(final ProductAddToCategoryAction template) {
         return ProductAddToCategoryActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductAddToCategoryAction(Function<ProductAddToCategoryAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductAddToCategoryAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductAddToCategoryAction>() {
             @Override

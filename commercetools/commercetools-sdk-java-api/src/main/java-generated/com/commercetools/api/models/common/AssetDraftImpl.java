@@ -32,6 +32,9 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssetDraftImpl(
             @JsonProperty("sources") final java.util.List<com.commercetools.api.models.common.AssetSource> sources,
@@ -48,6 +51,9 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public AssetDraftImpl() {
     }
 

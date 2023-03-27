@@ -107,9 +107,19 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the CartDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the CartDiscount.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
         return new CartDiscountUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of CartDiscountUpdateBuilder
+     * @return builder
+     */
     public static CartDiscountUpdateBuilder of() {
         return new CartDiscountUpdateBuilder();
     }
 
+    /**
+     * create builder for CartDiscountUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountUpdateBuilder of(final CartDiscountUpdate template) {
         CartDiscountUpdateBuilder builder = new CartDiscountUpdateBuilder();
         builder.version = template.getVersion();

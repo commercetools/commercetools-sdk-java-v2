@@ -24,12 +24,18 @@ public class PublishChangeImpl implements PublishChange, ModelBase {
 
     private String change;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PublishChangeImpl(@JsonProperty("change") final String change) {
         this.change = change;
         this.type = PUBLISH_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public PublishChangeImpl() {
         this.type = PUBLISH_CHANGE;
     }

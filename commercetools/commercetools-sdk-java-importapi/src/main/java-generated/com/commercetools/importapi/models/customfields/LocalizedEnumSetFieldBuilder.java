@@ -24,7 +24,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
     private java.util.List<String> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -58,6 +58,11 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
         this.value.addAll(Arrays.asList(value));
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<String> getValue() {
         return this.value;
@@ -80,10 +85,19 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
         return new LocalizedEnumSetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of LocalizedEnumSetFieldBuilder
+     * @return builder
+     */
     public static LocalizedEnumSetFieldBuilder of() {
         return new LocalizedEnumSetFieldBuilder();
     }
 
+    /**
+     * create builder for LocalizedEnumSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedEnumSetFieldBuilder of(final LocalizedEnumSetField template) {
         LocalizedEnumSetFieldBuilder builder = new LocalizedEnumSetFieldBuilder();
         builder.value = template.getValue();

@@ -28,12 +28,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MoneyImpl.class)
 public interface Money extends TypedMoney {
 
+    /**
+     * discriminator value for Money
+     */
     String CENT_PRECISION = "centPrecision";
 
+    /**
+     * factory method
+     * @return instance of Money
+     */
     public static Money of() {
         return new MoneyImpl();
     }
 
+    /**
+     * factory method to copy an instance of Money
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Money of(final Money template) {
         MoneyImpl instance = new MoneyImpl();
         instance.setFractionDigits(template.getFractionDigits());
@@ -42,18 +54,37 @@ public interface Money extends TypedMoney {
         return instance;
     }
 
+    /**
+     * builder factory method for Money
+     * @return builder
+     */
     public static MoneyBuilder builder() {
         return MoneyBuilder.of();
     }
 
+    /**
+     * create builder for Money instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoneyBuilder builder(final Money template) {
         return MoneyBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMoney(Function<Money, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Money> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Money>() {
             @Override

@@ -27,6 +27,9 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
 
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomLineItemRemovedMessagePayloadImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("customLineItem") final com.commercetools.api.models.cart.CustomLineItem customLineItem) {
@@ -35,6 +38,9 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
         this.type = ORDER_CUSTOM_LINE_ITEM_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomLineItemRemovedMessagePayloadImpl() {
         this.type = ORDER_CUSTOM_LINE_ITEM_REMOVED;
     }

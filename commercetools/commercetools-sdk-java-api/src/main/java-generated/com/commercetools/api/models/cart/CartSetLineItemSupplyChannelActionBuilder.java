@@ -71,9 +71,22 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
+     *  </ul>
+     * @return supplyChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -97,10 +110,19 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
         return new CartSetLineItemSupplyChannelActionImpl(lineItemId, supplyChannel);
     }
 
+    /**
+     * factory method for an instance of CartSetLineItemSupplyChannelActionBuilder
+     * @return builder
+     */
     public static CartSetLineItemSupplyChannelActionBuilder of() {
         return new CartSetLineItemSupplyChannelActionBuilder();
     }
 
+    /**
+     * create builder for CartSetLineItemSupplyChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetLineItemSupplyChannelActionBuilder of(final CartSetLineItemSupplyChannelAction template) {
         CartSetLineItemSupplyChannelActionBuilder builder = new CartSetLineItemSupplyChannelActionBuilder();
         builder.lineItemId = template.getLineItemId();

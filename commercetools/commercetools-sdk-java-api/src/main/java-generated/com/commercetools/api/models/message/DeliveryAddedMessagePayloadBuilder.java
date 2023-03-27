@@ -63,9 +63,19 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
         return this;
     }
 
+    /**
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     * @return delivery
+     */
+
     public com.commercetools.api.models.order.Delivery getDelivery() {
         return this.delivery;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -89,10 +99,19 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
         return new DeliveryAddedMessagePayloadImpl(delivery, shippingKey);
     }
 
+    /**
+     * factory method for an instance of DeliveryAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static DeliveryAddedMessagePayloadBuilder of() {
         return new DeliveryAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for DeliveryAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryAddedMessagePayloadBuilder of(final DeliveryAddedMessagePayload template) {
         DeliveryAddedMessagePayloadBuilder builder = new DeliveryAddedMessagePayloadBuilder();
         builder.delivery = template.getDelivery();

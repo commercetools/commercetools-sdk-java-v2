@@ -24,12 +24,18 @@ public class InventoryEntryChangeQuantityActionImpl implements InventoryEntryCha
 
     private Long quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryChangeQuantityActionImpl(@JsonProperty("quantity") final Long quantity) {
         this.quantity = quantity;
         this.action = CHANGE_QUANTITY;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryChangeQuantityActionImpl() {
         this.action = CHANGE_QUANTITY;
     }

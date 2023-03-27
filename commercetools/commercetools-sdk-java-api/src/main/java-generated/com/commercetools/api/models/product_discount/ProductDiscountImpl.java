@@ -52,6 +52,9 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
 
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -85,6 +88,9 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
         this.validUntil = validUntil;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountImpl() {
     }
 

@@ -27,6 +27,9 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
 
     private java.util.List<String> keys;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeRemoveEnumValuesActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("keys") final java.util.List<String> keys) {
@@ -35,6 +38,9 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
         this.action = REMOVE_ENUM_VALUES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeRemoveEnumValuesActionImpl() {
         this.action = REMOVE_ENUM_VALUES;
     }

@@ -28,6 +28,9 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetExternalIdChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
         this.type = SET_EXTERNAL_ID_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetExternalIdChangeImpl() {
         this.type = SET_EXTERNAL_ID_CHANGE;
     }

@@ -43,6 +43,9 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
 
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DuplicateStandalonePriceScopeErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -66,6 +69,9 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
         this.code = DUPLICATE_STANDALONE_PRICE_SCOPE;
     }
 
+    /**
+     * create empty instance
+     */
     public DuplicateStandalonePriceScopeErrorImpl() {
         this.code = DUPLICATE_STANDALONE_PRICE_SCOPE;
     }

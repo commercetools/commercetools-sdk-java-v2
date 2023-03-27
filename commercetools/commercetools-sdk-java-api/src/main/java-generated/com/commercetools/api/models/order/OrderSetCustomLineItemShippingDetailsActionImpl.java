@@ -27,6 +27,9 @@ public class OrderSetCustomLineItemShippingDetailsActionImpl
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetCustomLineItemShippingDetailsActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
@@ -35,6 +38,9 @@ public class OrderSetCustomLineItemShippingDetailsActionImpl
         this.action = SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetCustomLineItemShippingDetailsActionImpl() {
         this.action = SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS;
     }

@@ -77,10 +77,20 @@ public class CartSetBillingAddressCustomTypeActionBuilder implements Builder<Car
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class CartSetBillingAddressCustomTypeActionBuilder implements Builder<Car
         return new CartSetBillingAddressCustomTypeActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of CartSetBillingAddressCustomTypeActionBuilder
+     * @return builder
+     */
     public static CartSetBillingAddressCustomTypeActionBuilder of() {
         return new CartSetBillingAddressCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for CartSetBillingAddressCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetBillingAddressCustomTypeActionBuilder of(
             final CartSetBillingAddressCustomTypeAction template) {
         CartSetBillingAddressCustomTypeActionBuilder builder = new CartSetBillingAddressCustomTypeActionBuilder();

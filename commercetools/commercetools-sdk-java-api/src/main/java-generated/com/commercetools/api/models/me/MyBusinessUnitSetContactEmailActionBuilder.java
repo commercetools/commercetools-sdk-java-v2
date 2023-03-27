@@ -36,6 +36,11 @@ public class MyBusinessUnitSetContactEmailActionBuilder implements Builder<MyBus
         return this;
     }
 
+    /**
+     *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
+     * @return contactEmail
+     */
+
     @Nullable
     public String getContactEmail() {
         return this.contactEmail;
@@ -57,10 +62,19 @@ public class MyBusinessUnitSetContactEmailActionBuilder implements Builder<MyBus
         return new MyBusinessUnitSetContactEmailActionImpl(contactEmail);
     }
 
+    /**
+     * factory method for an instance of MyBusinessUnitSetContactEmailActionBuilder
+     * @return builder
+     */
     public static MyBusinessUnitSetContactEmailActionBuilder of() {
         return new MyBusinessUnitSetContactEmailActionBuilder();
     }
 
+    /**
+     * create builder for MyBusinessUnitSetContactEmailAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyBusinessUnitSetContactEmailActionBuilder of(final MyBusinessUnitSetContactEmailAction template) {
         MyBusinessUnitSetContactEmailActionBuilder builder = new MyBusinessUnitSetContactEmailActionBuilder();
         builder.contactEmail = template.getContactEmail();

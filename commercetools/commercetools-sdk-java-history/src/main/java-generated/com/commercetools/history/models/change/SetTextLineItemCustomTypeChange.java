@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetTextLineItemCustomTypeChangeImpl.class)
 public interface SetTextLineItemCustomTypeChange extends Change {
 
+    /**
+     * discriminator value for SetTextLineItemCustomTypeChange
+     */
     String SET_TEXT_LINE_ITEM_CUSTOM_TYPE_CHANGE = "SetTextLineItemCustomTypeChange";
 
     /**
@@ -80,18 +83,47 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     @JsonProperty("previousValue")
     public CustomFields getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setTextLineItemCustomType</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set textLineItem
+     * @param textLineItem value to be set
+     */
 
     public void setTextLineItem(final TextLineItemValue textLineItem);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final CustomFields nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final CustomFields previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetTextLineItemCustomTypeChange
+     */
     public static SetTextLineItemCustomTypeChange of() {
         return new SetTextLineItemCustomTypeChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetTextLineItemCustomTypeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetTextLineItemCustomTypeChange of(final SetTextLineItemCustomTypeChange template) {
         SetTextLineItemCustomTypeChangeImpl instance = new SetTextLineItemCustomTypeChangeImpl();
         instance.setChange(template.getChange());
@@ -101,18 +133,37 @@ public interface SetTextLineItemCustomTypeChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetTextLineItemCustomTypeChange
+     * @return builder
+     */
     public static SetTextLineItemCustomTypeChangeBuilder builder() {
         return SetTextLineItemCustomTypeChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetTextLineItemCustomTypeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetTextLineItemCustomTypeChangeBuilder builder(final SetTextLineItemCustomTypeChange template) {
         return SetTextLineItemCustomTypeChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetTextLineItemCustomTypeChange(Function<SetTextLineItemCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetTextLineItemCustomTypeChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetTextLineItemCustomTypeChange>() {
             @Override

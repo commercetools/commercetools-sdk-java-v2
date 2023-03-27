@@ -22,11 +22,17 @@ public class OrderEditUpdateActionImpl implements OrderEditUpdateAction, ModelBa
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditUpdateActionImpl() {
     }
 

@@ -64,13 +64,28 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
         return this;
     }
 
+    /**
+     *  <p>Value of the token to reset the Customer password.</p>
+     * @return tokenValue
+     */
+
     public String getTokenValue() {
         return this.tokenValue;
     }
 
+    /**
+     *  <p>New password to be set.</p>
+     * @return newPassword
+     */
+
     public String getNewPassword() {
         return this.newPassword;
     }
+
+    /**
+     *  <p>Expected version of the Customer.</p>
+     * @return version
+     */
 
     @Nullable
     public Long getVersion() {
@@ -95,10 +110,19 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
         return new CustomerResetPasswordImpl(tokenValue, newPassword, version);
     }
 
+    /**
+     * factory method for an instance of CustomerResetPasswordBuilder
+     * @return builder
+     */
     public static CustomerResetPasswordBuilder of() {
         return new CustomerResetPasswordBuilder();
     }
 
+    /**
+     * create builder for CustomerResetPassword instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerResetPasswordBuilder of(final CustomerResetPassword template) {
         CustomerResetPasswordBuilder builder = new CustomerResetPasswordBuilder();
         builder.tokenValue = template.getTokenValue();

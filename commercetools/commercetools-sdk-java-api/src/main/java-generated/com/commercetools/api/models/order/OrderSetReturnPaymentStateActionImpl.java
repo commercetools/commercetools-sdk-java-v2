@@ -26,6 +26,9 @@ public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPayme
 
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetReturnPaymentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId,
             @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
@@ -34,6 +37,9 @@ public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPayme
         this.action = SET_RETURN_PAYMENT_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetReturnPaymentStateActionImpl() {
         this.action = SET_RETURN_PAYMENT_STATE;
     }

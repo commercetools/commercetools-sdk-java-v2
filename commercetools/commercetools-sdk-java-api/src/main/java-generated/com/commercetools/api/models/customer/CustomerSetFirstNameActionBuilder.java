@@ -36,6 +36,11 @@ public class CustomerSetFirstNameActionBuilder implements Builder<CustomerSetFir
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return firstName
+     */
+
     @Nullable
     public String getFirstName() {
         return this.firstName;
@@ -57,10 +62,19 @@ public class CustomerSetFirstNameActionBuilder implements Builder<CustomerSetFir
         return new CustomerSetFirstNameActionImpl(firstName);
     }
 
+    /**
+     * factory method for an instance of CustomerSetFirstNameActionBuilder
+     * @return builder
+     */
     public static CustomerSetFirstNameActionBuilder of() {
         return new CustomerSetFirstNameActionBuilder();
     }
 
+    /**
+     * create builder for CustomerSetFirstNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetFirstNameActionBuilder of(final CustomerSetFirstNameAction template) {
         CustomerSetFirstNameActionBuilder builder = new CustomerSetFirstNameActionBuilder();
         builder.firstName = template.getFirstName();

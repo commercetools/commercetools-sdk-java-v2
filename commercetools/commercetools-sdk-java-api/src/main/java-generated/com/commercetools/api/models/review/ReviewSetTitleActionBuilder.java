@@ -36,6 +36,11 @@ public class ReviewSetTitleActionBuilder implements Builder<ReviewSetTitleAction
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return title
+     */
+
     @Nullable
     public String getTitle() {
         return this.title;
@@ -57,10 +62,19 @@ public class ReviewSetTitleActionBuilder implements Builder<ReviewSetTitleAction
         return new ReviewSetTitleActionImpl(title);
     }
 
+    /**
+     * factory method for an instance of ReviewSetTitleActionBuilder
+     * @return builder
+     */
     public static ReviewSetTitleActionBuilder of() {
         return new ReviewSetTitleActionBuilder();
     }
 
+    /**
+     * create builder for ReviewSetTitleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetTitleActionBuilder of(final ReviewSetTitleAction template) {
         ReviewSetTitleActionBuilder builder = new ReviewSetTitleActionBuilder();
         builder.title = template.getTitle();

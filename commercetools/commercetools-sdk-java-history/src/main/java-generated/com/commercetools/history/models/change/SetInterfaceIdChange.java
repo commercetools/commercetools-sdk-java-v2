@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetInterfaceIdChangeImpl.class)
 public interface SetInterfaceIdChange extends Change {
 
+    /**
+     * discriminator value for SetInterfaceIdChange
+     */
     String SET_INTERFACE_ID_CHANGE = "SetInterfaceIdChange";
 
     /**
@@ -65,16 +68,40 @@ public interface SetInterfaceIdChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setInterfaceId</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetInterfaceIdChange
+     */
     public static SetInterfaceIdChange of() {
         return new SetInterfaceIdChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetInterfaceIdChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetInterfaceIdChange of(final SetInterfaceIdChange template) {
         SetInterfaceIdChangeImpl instance = new SetInterfaceIdChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface SetInterfaceIdChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetInterfaceIdChange
+     * @return builder
+     */
     public static SetInterfaceIdChangeBuilder builder() {
         return SetInterfaceIdChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetInterfaceIdChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetInterfaceIdChangeBuilder builder(final SetInterfaceIdChange template) {
         return SetInterfaceIdChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetInterfaceIdChange(Function<SetInterfaceIdChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetInterfaceIdChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetInterfaceIdChange>() {
             @Override

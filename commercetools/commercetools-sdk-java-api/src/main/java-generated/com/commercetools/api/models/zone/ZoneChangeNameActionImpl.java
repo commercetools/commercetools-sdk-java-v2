@@ -24,12 +24,18 @@ public class ZoneChangeNameActionImpl implements ZoneChangeNameAction, ModelBase
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

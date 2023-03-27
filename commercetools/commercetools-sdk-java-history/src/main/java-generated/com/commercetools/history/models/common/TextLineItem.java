@@ -86,22 +86,61 @@ public interface TextLineItem {
     @JsonProperty("quantity")
     public Integer getQuantity();
 
+    /**
+     * set addedAt
+     * @param addedAt value to be set
+     */
+
     public void setAddedAt(final String addedAt);
+
+    /**
+     * set custom
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     * set description
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     * set id
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * set name
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Integer quantity);
 
+    /**
+     * factory method
+     * @return instance of TextLineItem
+     */
     public static TextLineItem of() {
         return new TextLineItemImpl();
     }
 
+    /**
+     * factory method to copy an instance of TextLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TextLineItem of(final TextLineItem template) {
         TextLineItemImpl instance = new TextLineItemImpl();
         instance.setAddedAt(template.getAddedAt());
@@ -113,18 +152,37 @@ public interface TextLineItem {
         return instance;
     }
 
+    /**
+     * builder factory method for TextLineItem
+     * @return builder
+     */
     public static TextLineItemBuilder builder() {
         return TextLineItemBuilder.of();
     }
 
+    /**
+     * create builder for TextLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TextLineItemBuilder builder(final TextLineItem template) {
         return TextLineItemBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTextLineItem(Function<TextLineItem, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TextLineItem> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TextLineItem>() {
             @Override

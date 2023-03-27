@@ -1166,181 +1166,391 @@ public class CartBuilder implements Builder<Cart> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Cart.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Cart.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Cart was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Cart was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Cart.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     * @return customerId
+     */
+
     @Nullable
     public String getCustomerId() {
         return this.customerId;
     }
+
+    /**
+     *  <p>Email address of the Customer that the Cart belongs to.</p>
+     * @return customerEmail
+     */
 
     @Nullable
     public String getCustomerEmail() {
         return this.customerEmail;
     }
 
+    /**
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Anonymous session associated with the Cart.</p>
+     * @return anonymousId
+     */
 
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
+    /**
+     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     * @return businessUnit
+     */
+
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
         return this.businessUnit;
     }
+
+    /**
+     *  <p>Reference to a Store the Cart belongs to.</p>
+     * @return store
+     */
 
     @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
 
+    /**
+     *  <p>Line Items added to the Cart.</p>
+     * @return lineItems
+     */
+
     public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
         return this.lineItems;
     }
 
+    /**
+     *  <p>Custom Line Items added to the Cart.</p>
+     * @return customLineItems
+     */
+
     public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
         return this.customLineItems;
     }
+
+    /**
+     *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
+     * @return totalLineItemQuantity
+     */
 
     @Nullable
     public Long getTotalLineItemQuantity() {
         return this.totalLineItemQuantity;
     }
 
+    /**
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @return totalPrice
+     */
+
     public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
+
+    /**
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *  </ul>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
+    /**
+     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @return taxedShippingPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
         return this.taxedShippingPrice;
     }
 
+    /**
+     *  <p>Indicates how Tax Rates are set.</p>
+     * @return taxMode
+     */
+
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
     }
+
+    /**
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxRoundingMode
+     */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
 
+    /**
+     *  <p>Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxCalculationMode
+     */
+
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
+
+    /**
+     *  <p>Indicates how stock quantities are tracked for Line Items in the Cart.</p>
+     * @return inventoryMode
+     */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
 
+    /**
+     *  <p>Current status of the Cart.</p>
+     * @return cartState
+     */
+
     public com.commercetools.api.models.cart.CartState getCartState() {
         return this.cartState;
     }
+
+    /**
+     *  <p>Billing address associated with the Cart.</p>
+     * @return billingAddress
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Address getBillingAddress() {
         return this.billingAddress;
     }
 
+    /**
+     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @return shippingAddress
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Address getShippingAddress() {
         return this.shippingAddress;
     }
 
+    /**
+     *  <p>Indicates whether the Cart has one or multiple Shipping Methods.</p>
+     * @return shippingMode
+     */
+
     public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
         return this.shippingMode;
     }
+
+    /**
+     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @return shippingInfo
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
     }
 
+    /**
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @return shipping
+     */
+
     public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
         return this.shipping;
     }
+
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @return shippingRateInput
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
         return this.shippingRateInput;
     }
 
+    /**
+     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return itemShippingAddresses
+     */
+
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
+
+    /**
+     *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @return discountCodes
+     */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
         return this.discountCodes;
     }
 
+    /**
+     *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @return directDiscounts
+     */
+
     public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
         return this.directDiscounts;
     }
 
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @return refusedGifts
+     */
+
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
         return this.refusedGifts;
     }
+
+    /**
+     *  <p>Payment information related to the Cart.</p>
+     * @return paymentInfo
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
         return this.paymentInfo;
     }
 
+    /**
+     *  <p>Used for LineItem Price selection.</p>
+     * @return country
+     */
+
     @Nullable
     public String getCountry() {
         return this.country;
     }
+
+    /**
+     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     * @return locale
+     */
 
     @Nullable
     public String getLocale() {
         return this.locale;
     }
 
+    /**
+     *  <p>Indicates how the Cart was created.</p>
+     * @return origin
+     */
+
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
         return this.origin;
     }
+
+    /**
+     *  <p>Custom Fields of the Cart.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
+     * @return deleteDaysAfterLastModification
+     */
+
     @Nullable
     public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -1392,10 +1602,19 @@ public class CartBuilder implements Builder<Cart> {
             deleteDaysAfterLastModification, lastModifiedBy, createdBy);
     }
 
+    /**
+     * factory method for an instance of CartBuilder
+     * @return builder
+     */
     public static CartBuilder of() {
         return new CartBuilder();
     }
 
+    /**
+     * create builder for Cart instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartBuilder of(final Cart template) {
         CartBuilder builder = new CartBuilder();
         builder.id = template.getId();

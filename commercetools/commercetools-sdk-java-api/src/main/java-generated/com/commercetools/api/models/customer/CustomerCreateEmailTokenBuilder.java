@@ -64,14 +64,29 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Customer.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Expected version of the Customer.</p>
+     * @return version
+     */
 
     @Nullable
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Validity period of the generated token in minutes.</p>
+     * @return ttlMinutes
+     */
 
     public Long getTtlMinutes() {
         return this.ttlMinutes;
@@ -95,10 +110,19 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
         return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes);
     }
 
+    /**
+     * factory method for an instance of CustomerCreateEmailTokenBuilder
+     * @return builder
+     */
     public static CustomerCreateEmailTokenBuilder of() {
         return new CustomerCreateEmailTokenBuilder();
     }
 
+    /**
+     * create builder for CustomerCreateEmailToken instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerCreateEmailTokenBuilder of(final CustomerCreateEmailToken template) {
         CustomerCreateEmailTokenBuilder builder = new CustomerCreateEmailTokenBuilder();
         builder.id = template.getId();

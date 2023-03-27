@@ -63,9 +63,19 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
         return this;
     }
 
+    /**
+     *  <p>Unique ID of the referenced resource.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.staged_quote.StagedQuote getObj() {
@@ -89,10 +99,19 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
         return new StagedQuoteReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteReferenceBuilder
+     * @return builder
+     */
     public static StagedQuoteReferenceBuilder of() {
         return new StagedQuoteReferenceBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteReferenceBuilder of(final StagedQuoteReference template) {
         StagedQuoteReferenceBuilder builder = new StagedQuoteReferenceBuilder();
         builder.id = template.getId();

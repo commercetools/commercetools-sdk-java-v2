@@ -42,6 +42,9 @@ public class ProductSelectionDeletedMessageImpl implements ProductSelectionDelet
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class ProductSelectionDeletedMessageImpl implements ProductSelectionDelet
         this.type = PRODUCT_SELECTION_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionDeletedMessageImpl() {
         this.type = PRODUCT_SELECTION_DELETED;
     }

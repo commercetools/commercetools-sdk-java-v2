@@ -44,6 +44,9 @@ public class CategoryCreatedMessageImpl implements CategoryCreatedMessage, Model
 
     private com.commercetools.api.models.category.Category category;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CategoryCreatedMessageImpl implements CategoryCreatedMessage, Model
         this.type = CATEGORY_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryCreatedMessageImpl() {
         this.type = CATEGORY_CREATED;
     }

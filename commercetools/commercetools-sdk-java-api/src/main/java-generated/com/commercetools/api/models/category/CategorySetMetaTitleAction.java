@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySetMetaTitleActionImpl.class)
 public interface CategorySetMetaTitleAction extends CategoryUpdateAction {
 
+    /**
+     * discriminator value for CategorySetMetaTitleAction
+     */
     String SET_META_TITLE = "setMetaTitle";
 
     /**
@@ -39,30 +42,63 @@ public interface CategorySetMetaTitleAction extends CategoryUpdateAction {
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
+    /**
+     *  <p>Value to set.</p>
+     * @param metaTitle value to be set
+     */
+
     public void setMetaTitle(final LocalizedString metaTitle);
 
+    /**
+     * factory method
+     * @return instance of CategorySetMetaTitleAction
+     */
     public static CategorySetMetaTitleAction of() {
         return new CategorySetMetaTitleActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategorySetMetaTitleAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategorySetMetaTitleAction of(final CategorySetMetaTitleAction template) {
         CategorySetMetaTitleActionImpl instance = new CategorySetMetaTitleActionImpl();
         instance.setMetaTitle(template.getMetaTitle());
         return instance;
     }
 
+    /**
+     * builder factory method for CategorySetMetaTitleAction
+     * @return builder
+     */
     public static CategorySetMetaTitleActionBuilder builder() {
         return CategorySetMetaTitleActionBuilder.of();
     }
 
+    /**
+     * create builder for CategorySetMetaTitleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetMetaTitleActionBuilder builder(final CategorySetMetaTitleAction template) {
         return CategorySetMetaTitleActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategorySetMetaTitleAction(Function<CategorySetMetaTitleAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategorySetMetaTitleAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategorySetMetaTitleAction>() {
             @Override

@@ -106,22 +106,47 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
         return this;
     }
 
+    /**
+     *  <p><code>"Tax category $taxCategoryId is missing a tax rate for country $countriesAndStates."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Unique identifier of the TaxCategory.</p>
+     * @return taxCategoryId
+     */
+
     public String getTaxCategoryId() {
         return this.taxCategoryId;
     }
+
+    /**
+     *  <p>Country code of the geographic location.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
+
+    /**
+     *  <p>State within the country, such as Texas in the United States.</p>
+     * @return state
+     */
 
     @Nullable
     public String getState() {
@@ -146,10 +171,19 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
         return new MissingTaxRateForCountryErrorImpl(message, values, taxCategoryId, country, state);
     }
 
+    /**
+     * factory method for an instance of MissingTaxRateForCountryErrorBuilder
+     * @return builder
+     */
     public static MissingTaxRateForCountryErrorBuilder of() {
         return new MissingTaxRateForCountryErrorBuilder();
     }
 
+    /**
+     * create builder for MissingTaxRateForCountryError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MissingTaxRateForCountryErrorBuilder of(final MissingTaxRateForCountryError template) {
         MissingTaxRateForCountryErrorBuilder builder = new MissingTaxRateForCountryErrorBuilder();
         builder.message = template.getMessage();

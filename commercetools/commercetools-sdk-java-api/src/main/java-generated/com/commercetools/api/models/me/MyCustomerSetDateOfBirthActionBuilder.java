@@ -36,6 +36,11 @@ public class MyCustomerSetDateOfBirthActionBuilder implements Builder<MyCustomer
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return dateOfBirth
+     */
+
     @Nullable
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
@@ -57,10 +62,19 @@ public class MyCustomerSetDateOfBirthActionBuilder implements Builder<MyCustomer
         return new MyCustomerSetDateOfBirthActionImpl(dateOfBirth);
     }
 
+    /**
+     * factory method for an instance of MyCustomerSetDateOfBirthActionBuilder
+     * @return builder
+     */
     public static MyCustomerSetDateOfBirthActionBuilder of() {
         return new MyCustomerSetDateOfBirthActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerSetDateOfBirthAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetDateOfBirthActionBuilder of(final MyCustomerSetDateOfBirthAction template) {
         MyCustomerSetDateOfBirthActionBuilder builder = new MyCustomerSetDateOfBirthActionBuilder();
         builder.dateOfBirth = template.getDateOfBirth();

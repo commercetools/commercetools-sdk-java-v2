@@ -24,6 +24,9 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
 
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountedLineItemPriceDraftImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value,
             @JsonProperty("includedDiscounts") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
@@ -31,6 +34,9 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
         this.includedDiscounts = includedDiscounts;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountedLineItemPriceDraftImpl() {
     }
 

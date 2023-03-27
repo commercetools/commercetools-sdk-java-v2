@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeRemoveFieldDefinitionActionImpl.class)
 public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
 
+    /**
+     * discriminator value for TypeRemoveFieldDefinitionAction
+     */
     String REMOVE_FIELD_DEFINITION = "removeFieldDefinition";
 
     /**
@@ -39,30 +42,63 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     @JsonProperty("fieldName")
     public String getFieldName();
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
+     * @param fieldName value to be set
+     */
+
     public void setFieldName(final String fieldName);
 
+    /**
+     * factory method
+     * @return instance of TypeRemoveFieldDefinitionAction
+     */
     public static TypeRemoveFieldDefinitionAction of() {
         return new TypeRemoveFieldDefinitionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeRemoveFieldDefinitionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeRemoveFieldDefinitionAction of(final TypeRemoveFieldDefinitionAction template) {
         TypeRemoveFieldDefinitionActionImpl instance = new TypeRemoveFieldDefinitionActionImpl();
         instance.setFieldName(template.getFieldName());
         return instance;
     }
 
+    /**
+     * builder factory method for TypeRemoveFieldDefinitionAction
+     * @return builder
+     */
     public static TypeRemoveFieldDefinitionActionBuilder builder() {
         return TypeRemoveFieldDefinitionActionBuilder.of();
     }
 
+    /**
+     * create builder for TypeRemoveFieldDefinitionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeRemoveFieldDefinitionActionBuilder builder(final TypeRemoveFieldDefinitionAction template) {
         return TypeRemoveFieldDefinitionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeRemoveFieldDefinitionAction(Function<TypeRemoveFieldDefinitionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction>() {
             @Override

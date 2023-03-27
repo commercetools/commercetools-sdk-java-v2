@@ -24,12 +24,18 @@ public class MyBusinessUnitChangeNameActionImpl implements MyBusinessUnitChangeN
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

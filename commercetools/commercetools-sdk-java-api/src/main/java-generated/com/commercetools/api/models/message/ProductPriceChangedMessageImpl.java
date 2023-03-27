@@ -52,6 +52,9 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
 
     private com.commercetools.api.models.common.Price oldStagedPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -85,6 +88,9 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
         this.type = PRODUCT_PRICE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceChangedMessageImpl() {
         this.type = PRODUCT_PRICE_CHANGED;
     }

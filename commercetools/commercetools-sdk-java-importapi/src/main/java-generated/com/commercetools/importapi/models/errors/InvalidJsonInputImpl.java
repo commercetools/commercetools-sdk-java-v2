@@ -24,12 +24,18 @@ public class InvalidJsonInputImpl implements InvalidJsonInput, ModelBase {
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidJsonInputImpl(@JsonProperty("message") final String message) {
         this.message = message;
         this.code = INVALID_JSON_INPUT;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidJsonInputImpl() {
         this.code = INVALID_JSON_INPUT;
     }

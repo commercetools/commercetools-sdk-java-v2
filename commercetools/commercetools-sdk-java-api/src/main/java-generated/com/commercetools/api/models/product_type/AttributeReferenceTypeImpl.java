@@ -24,6 +24,9 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
 
     private com.commercetools.api.models.product_type.AttributeReferenceTypeId referenceTypeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeReferenceTypeImpl(
             @JsonProperty("referenceTypeId") final com.commercetools.api.models.product_type.AttributeReferenceTypeId referenceTypeId) {
@@ -31,6 +34,9 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
         this.name = REFERENCE;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeReferenceTypeImpl() {
         this.name = REFERENCE;
     }

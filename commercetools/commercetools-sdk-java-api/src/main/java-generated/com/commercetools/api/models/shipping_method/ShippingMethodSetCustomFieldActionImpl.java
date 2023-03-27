@@ -26,6 +26,9 @@ public class ShippingMethodSetCustomFieldActionImpl implements ShippingMethodSet
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class ShippingMethodSetCustomFieldActionImpl implements ShippingMethodSet
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

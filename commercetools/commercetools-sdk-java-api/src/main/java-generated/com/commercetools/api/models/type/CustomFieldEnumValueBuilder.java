@@ -48,9 +48,19 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
         return this;
     }
 
+    /**
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Descriptive label of the value.</p>
+     * @return label
+     */
 
     public String getLabel() {
         return this.label;
@@ -74,10 +84,19 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
         return new CustomFieldEnumValueImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of CustomFieldEnumValueBuilder
+     * @return builder
+     */
     public static CustomFieldEnumValueBuilder of() {
         return new CustomFieldEnumValueBuilder();
     }
 
+    /**
+     * create builder for CustomFieldEnumValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldEnumValueBuilder of(final CustomFieldEnumValue template) {
         CustomFieldEnumValueBuilder builder = new CustomFieldEnumValueBuilder();
         builder.key = template.getKey();

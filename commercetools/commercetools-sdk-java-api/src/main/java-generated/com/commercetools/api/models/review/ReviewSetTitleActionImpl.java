@@ -24,12 +24,18 @@ public class ReviewSetTitleActionImpl implements ReviewSetTitleAction, ModelBase
 
     private String title;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewSetTitleActionImpl(@JsonProperty("title") final String title) {
         this.title = title;
         this.action = SET_TITLE;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewSetTitleActionImpl() {
         this.action = SET_TITLE;
     }

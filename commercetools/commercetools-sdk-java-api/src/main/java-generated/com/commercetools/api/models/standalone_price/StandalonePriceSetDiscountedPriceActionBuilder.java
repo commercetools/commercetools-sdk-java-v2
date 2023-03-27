@@ -51,6 +51,11 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return discounted
+     */
+
     @Nullable
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
@@ -72,10 +77,19 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
         return new StandalonePriceSetDiscountedPriceActionImpl(discounted);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceSetDiscountedPriceActionBuilder
+     * @return builder
+     */
     public static StandalonePriceSetDiscountedPriceActionBuilder of() {
         return new StandalonePriceSetDiscountedPriceActionBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceSetDiscountedPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceSetDiscountedPriceActionBuilder of(
             final StandalonePriceSetDiscountedPriceAction template) {
         StandalonePriceSetDiscountedPriceActionBuilder builder = new StandalonePriceSetDiscountedPriceActionBuilder();

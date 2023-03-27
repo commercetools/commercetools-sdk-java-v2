@@ -116,20 +116,40 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
         return this;
     }
 
+    /**
+     *  <p>Localized product name used for similarity estimation.</p>
+     * @return name
+     */
+
     @Nullable
     public com.commercetools.ml.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Localized product description used for similarity estimation.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.ml.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+     * @return price
+     */
+
     @Nullable
     public com.commercetools.ml.models.common.Money getPrice() {
         return this.price;
     }
+
+    /**
+     *  <p>Total number of variants associated with the product.</p>
+     * @return variantCount
+     */
 
     @Nullable
     public Long getVariantCount() {
@@ -152,10 +172,19 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
         return new SimilarProductMetaImpl(name, description, price, variantCount);
     }
 
+    /**
+     * factory method for an instance of SimilarProductMetaBuilder
+     * @return builder
+     */
     public static SimilarProductMetaBuilder of() {
         return new SimilarProductMetaBuilder();
     }
 
+    /**
+     * create builder for SimilarProductMeta instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SimilarProductMetaBuilder of(final SimilarProductMeta template) {
         SimilarProductMetaBuilder builder = new SimilarProductMetaBuilder();
         builder.name = template.getName();

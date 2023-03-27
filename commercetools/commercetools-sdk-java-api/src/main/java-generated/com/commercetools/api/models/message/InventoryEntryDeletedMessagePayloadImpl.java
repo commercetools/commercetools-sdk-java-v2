@@ -26,6 +26,9 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
 
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryDeletedMessagePayloadImpl(@JsonProperty("sku") final String sku,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
@@ -34,6 +37,9 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
         this.type = INVENTORY_ENTRY_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryDeletedMessagePayloadImpl() {
         this.type = INVENTORY_ENTRY_DELETED;
     }

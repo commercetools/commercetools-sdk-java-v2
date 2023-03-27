@@ -22,11 +22,17 @@ public class ChangeTargetChangeValueImpl implements ChangeTargetChangeValue, Mod
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTargetChangeValueImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTargetChangeValueImpl() {
     }
 

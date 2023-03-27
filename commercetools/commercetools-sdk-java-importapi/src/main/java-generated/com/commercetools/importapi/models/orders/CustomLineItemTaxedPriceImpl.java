@@ -24,6 +24,9 @@ public class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPrice, M
 
     private com.commercetools.importapi.models.common.TypedMoney totalGross;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomLineItemTaxedPriceImpl(
             @JsonProperty("totalNet") final com.commercetools.importapi.models.common.TypedMoney totalNet,
@@ -32,6 +35,9 @@ public class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPrice, M
         this.totalGross = totalGross;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomLineItemTaxedPriceImpl() {
     }
 

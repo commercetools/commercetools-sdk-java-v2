@@ -62,9 +62,19 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
         return this;
     }
 
+    /**
+     *  <p><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
         return new NoMatchingProductDiscountFoundErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of NoMatchingProductDiscountFoundErrorBuilder
+     * @return builder
+     */
     public static NoMatchingProductDiscountFoundErrorBuilder of() {
         return new NoMatchingProductDiscountFoundErrorBuilder();
     }
 
+    /**
+     * create builder for NoMatchingProductDiscountFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static NoMatchingProductDiscountFoundErrorBuilder of(final NoMatchingProductDiscountFoundError template) {
         NoMatchingProductDiscountFoundErrorBuilder builder = new NoMatchingProductDiscountFoundErrorBuilder();
         builder.message = template.getMessage();

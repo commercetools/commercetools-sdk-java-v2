@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TransitionLineItemStateChangeImpl.class)
 public interface TransitionLineItemStateChange extends Change {
 
+    /**
+     * discriminator value for TransitionLineItemStateChange
+     */
     String TRANSITION_LINE_ITEM_STATE_CHANGE = "TransitionLineItemStateChange";
 
     /**
@@ -87,26 +90,70 @@ public interface TransitionLineItemStateChange extends Change {
     @JsonProperty("previousValue")
     public List<ItemState> getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>transitionLineItemState</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
 
     public void setLineItemId(final String lineItemId);
 
+    /**
+     * set stateId
+     * @param stateId value to be set
+     */
+
     public void setStateId(final String stateId);
+
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
 
     @JsonIgnore
     public void setNextValue(final ItemState... nextValue);
 
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
+
     public void setNextValue(final List<ItemState> nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
 
     @JsonIgnore
     public void setPreviousValue(final ItemState... previousValue);
 
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
+
     public void setPreviousValue(final List<ItemState> previousValue);
 
+    /**
+     * factory method
+     * @return instance of TransitionLineItemStateChange
+     */
     public static TransitionLineItemStateChange of() {
         return new TransitionLineItemStateChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of TransitionLineItemStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TransitionLineItemStateChange of(final TransitionLineItemStateChange template) {
         TransitionLineItemStateChangeImpl instance = new TransitionLineItemStateChangeImpl();
         instance.setChange(template.getChange());
@@ -117,18 +164,37 @@ public interface TransitionLineItemStateChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for TransitionLineItemStateChange
+     * @return builder
+     */
     public static TransitionLineItemStateChangeBuilder builder() {
         return TransitionLineItemStateChangeBuilder.of();
     }
 
+    /**
+     * create builder for TransitionLineItemStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransitionLineItemStateChangeBuilder builder(final TransitionLineItemStateChange template) {
         return TransitionLineItemStateChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTransitionLineItemStateChange(Function<TransitionLineItemStateChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TransitionLineItemStateChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TransitionLineItemStateChange>() {
             @Override

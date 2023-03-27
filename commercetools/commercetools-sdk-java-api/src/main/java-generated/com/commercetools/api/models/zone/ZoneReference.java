@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ZoneReferenceImpl.class)
 public interface ZoneReference extends Reference, com.commercetools.api.models.Identifiable<Zone> {
 
+    /**
+     * discriminator value for ZoneReference
+     */
     String ZONE = "zone";
 
     /**
@@ -49,14 +52,33 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final Zone obj);
+
+    /**
+     *  <p>Unique identifier of the referenced Zone.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of ZoneReference
+     */
     public static ZoneReference of() {
         return new ZoneReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ZoneReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ZoneReference of(final ZoneReference template) {
         ZoneReferenceImpl instance = new ZoneReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
         return instance;
     }
 
+    /**
+     * builder factory method for ZoneReference
+     * @return builder
+     */
     public static ZoneReferenceBuilder builder() {
         return ZoneReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ZoneReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneReferenceBuilder builder(final ZoneReference template) {
         return ZoneReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZoneReference(Function<ZoneReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ZoneReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ZoneReference>() {
             @Override

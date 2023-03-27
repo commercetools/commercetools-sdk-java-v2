@@ -234,67 +234,211 @@ public interface OrderImport {
     @JsonProperty("state")
     public StateKeyReference getState();
 
+    /**
+     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     * @param orderNumber value to be set
+     */
+
     public void setOrderNumber(final String orderNumber);
+
+    /**
+     * set customer
+     * @param customer value to be set
+     */
 
     public void setCustomer(final CustomerKeyReference customer);
 
+    /**
+     *  <p>Maps to <code>Order.customerEmail</code>.</p>
+     * @param customerEmail value to be set
+     */
+
     public void setCustomerEmail(final String customerEmail);
+
+    /**
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     * @param lineItems values to be set
+     */
 
     @JsonIgnore
     public void setLineItems(final LineItemImportDraft... lineItems);
 
+    /**
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     * @param lineItems values to be set
+     */
+
     public void setLineItems(final List<LineItemImportDraft> lineItems);
+
+    /**
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     * @param customLineItems values to be set
+     */
 
     @JsonIgnore
     public void setCustomLineItems(final CustomLineItemDraft... customLineItems);
 
+    /**
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     * @param customLineItems values to be set
+     */
+
     public void setCustomLineItems(final List<CustomLineItemDraft> customLineItems);
+
+    /**
+     *  <p>Maps to <code>Order.totalPrice</code>.</p>
+     * @param totalPrice value to be set
+     */
 
     public void setTotalPrice(final TypedMoney totalPrice);
 
+    /**
+     *  <p>Maps to <code>Order.taxedPrice</code>.</p>
+     * @param taxedPrice value to be set
+     */
+
     public void setTaxedPrice(final TaxedPrice taxedPrice);
+
+    /**
+     *  <p>Maps to <code>Order.shippingAddress</code>.</p>
+     * @param shippingAddress value to be set
+     */
 
     public void setShippingAddress(final Address shippingAddress);
 
+    /**
+     *  <p>Maps to <code>Order.billingAddress</code>.</p>
+     * @param billingAddress value to be set
+     */
+
     public void setBillingAddress(final Address billingAddress);
+
+    /**
+     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     * @param customerGroup value to be set
+     */
 
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
 
+    /**
+     *  <p>Maps to <code>Order.country</code>.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
+
+    /**
+     *  <p>Maps to <code>Order.orderState</code>.</p>
+     * @param orderState value to be set
+     */
 
     public void setOrderState(final OrderState orderState);
 
+    /**
+     *  <p>Maps to <code>Order.shipmentState</code>.</p>
+     * @param shipmentState value to be set
+     */
+
     public void setShipmentState(final ShipmentState shipmentState);
+
+    /**
+     *  <p>Maps to <code>Order.paymentState</code>.</p>
+     * @param paymentState value to be set
+     */
 
     public void setPaymentState(final PaymentState paymentState);
 
+    /**
+     *  <p>Maps to <code>Order.shippingInfo</code>.</p>
+     * @param shippingInfo value to be set
+     */
+
     public void setShippingInfo(final ShippingInfoImportDraft shippingInfo);
+
+    /**
+     *  <p>Maps to <code>Order.completedAt</code>.</p>
+     * @param completedAt value to be set
+     */
 
     public void setCompletedAt(final ZonedDateTime completedAt);
 
+    /**
+     *  <p>Maps to <code>Order.custom</code>.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final Custom custom);
+
+    /**
+     *  <p>Maps to <code>Order.inventoryMode</code>.</p>
+     * @param inventoryMode value to be set
+     */
 
     public void setInventoryMode(final InventoryMode inventoryMode);
 
+    /**
+     *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
+     * @param taxRoundingMode value to be set
+     */
+
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
+
+    /**
+     *  <p>Maps to <code>Order.taxCalculationMode</code>.</p>
+     * @param taxCalculationMode value to be set
+     */
 
     public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
 
+    /**
+     *  <p>Maps to <code>Order.origin</code>.</p>
+     * @param origin value to be set
+     */
+
     public void setOrigin(final CartOrigin origin);
+
+    /**
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses values to be set
+     */
 
     @JsonIgnore
     public void setItemShippingAddresses(final Address... itemShippingAddresses);
 
+    /**
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses values to be set
+     */
+
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
+
+    /**
+     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     * @param store value to be set
+     */
 
     public void setStore(final StoreKeyReference store);
 
+    /**
+     *  <p>Reference to a State in a custom workflow.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateKeyReference state);
 
+    /**
+     * factory method
+     * @return instance of OrderImport
+     */
     public static OrderImport of() {
         return new OrderImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderImport of(final OrderImport template) {
         OrderImportImpl instance = new OrderImportImpl();
         instance.setOrderNumber(template.getOrderNumber());
@@ -324,18 +468,37 @@ public interface OrderImport {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderImport
+     * @return builder
+     */
     public static OrderImportBuilder builder() {
         return OrderImportBuilder.of();
     }
 
+    /**
+     * create builder for OrderImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderImportBuilder builder(final OrderImport template) {
         return OrderImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderImport(Function<OrderImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderImport>() {
             @Override

@@ -438,62 +438,136 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Custom Line Item.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Name of the Custom Line Item.</p>
+     * @return name
+     */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Money value of the Custom Line Item.</p>
+     * @return money
+     */
+
     public com.commercetools.api.models.common.TypedMoney getMoney() {
         return this.money;
     }
+
+    /**
+     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
+    /**
+     *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
+     *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     * @return totalPrice
+     */
+
     public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
+
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It matches the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @return slug
+     */
 
     public String getSlug() {
         return this.slug;
     }
 
+    /**
+     *  <p>Number of Custom Line Items in the Cart.</p>
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>State of the Custom Line Item in the Cart.</p>
+     * @return state
+     */
+
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
+     */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
         return this.taxCategory;
     }
 
+    /**
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using ExternalTaxRateDraft.</li>
+     *  </ul>
+     * @return taxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
     }
 
+    /**
+     *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
+     * @return discountedPricePerQuantity
+     */
+
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
         return this.discountedPricePerQuantity;
     }
+
+    /**
+     *  <p>Custom Fields of the Custom Line Item.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @return shippingDetails
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails() {
         return this.shippingDetails;
     }
+
+    /**
+     *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
+     * @return priceMode
+     */
 
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
         return this.priceMode;
@@ -527,10 +601,19 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
             taxRate, discountedPricePerQuantity, custom, shippingDetails, priceMode);
     }
 
+    /**
+     * factory method for an instance of CustomLineItemBuilder
+     * @return builder
+     */
     public static CustomLineItemBuilder of() {
         return new CustomLineItemBuilder();
     }
 
+    /**
+     * create builder for CustomLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemBuilder of(final CustomLineItem template) {
         CustomLineItemBuilder builder = new CustomLineItemBuilder();
         builder.id = template.getId();

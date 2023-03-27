@@ -36,6 +36,11 @@ public class AttributeGroupSetKeyActionBuilder implements Builder<AttributeGroup
         return this;
     }
 
+    /**
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -57,10 +62,19 @@ public class AttributeGroupSetKeyActionBuilder implements Builder<AttributeGroup
         return new AttributeGroupSetKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of AttributeGroupSetKeyActionBuilder
+     * @return builder
+     */
     public static AttributeGroupSetKeyActionBuilder of() {
         return new AttributeGroupSetKeyActionBuilder();
     }
 
+    /**
+     * create builder for AttributeGroupSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupSetKeyActionBuilder of(final AttributeGroupSetKeyAction template) {
         AttributeGroupSetKeyActionBuilder builder = new AttributeGroupSetKeyActionBuilder();
         builder.key = template.getKey();

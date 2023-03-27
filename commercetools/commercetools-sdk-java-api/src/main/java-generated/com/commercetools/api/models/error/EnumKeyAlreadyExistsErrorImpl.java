@@ -30,6 +30,9 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
 
     private String conflictingAttributeName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EnumKeyAlreadyExistsErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -42,6 +45,9 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
         this.code = ENUM_KEY_ALREADY_EXISTS;
     }
 
+    /**
+     * create empty instance
+     */
     public EnumKeyAlreadyExistsErrorImpl() {
         this.code = ENUM_KEY_ALREADY_EXISTS;
     }

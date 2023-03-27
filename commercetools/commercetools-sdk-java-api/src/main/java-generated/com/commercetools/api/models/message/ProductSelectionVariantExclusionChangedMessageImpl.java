@@ -49,6 +49,9 @@ public class ProductSelectionVariantExclusionChangedMessageImpl
 
     private com.commercetools.api.models.product_selection.ProductVariantExclusion newVariantExclusion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionVariantExclusionChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -79,6 +82,9 @@ public class ProductSelectionVariantExclusionChangedMessageImpl
         this.type = PRODUCT_SELECTION_VARIANT_EXCLUSION_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionVariantExclusionChangedMessageImpl() {
         this.type = PRODUCT_SELECTION_VARIANT_EXCLUSION_CHANGED;
     }

@@ -24,12 +24,18 @@ public class CustomerSetCustomerNumberActionImpl implements CustomerSetCustomerN
 
     private String customerNumber;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetCustomerNumberActionImpl(@JsonProperty("customerNumber") final String customerNumber) {
         this.customerNumber = customerNumber;
         this.action = SET_CUSTOMER_NUMBER;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetCustomerNumberActionImpl() {
         this.action = SET_CUSTOMER_NUMBER;
     }

@@ -24,12 +24,18 @@ public class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAction, M
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListSetKeyActionImpl() {
         this.action = SET_KEY;
     }

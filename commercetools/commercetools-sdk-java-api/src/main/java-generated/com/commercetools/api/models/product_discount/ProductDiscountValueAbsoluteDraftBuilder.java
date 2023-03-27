@@ -90,6 +90,11 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @return money
+     */
+
     public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
         return this.money;
     }
@@ -111,10 +116,19 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
         return new ProductDiscountValueAbsoluteDraftImpl(money);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountValueAbsoluteDraftBuilder
+     * @return builder
+     */
     public static ProductDiscountValueAbsoluteDraftBuilder of() {
         return new ProductDiscountValueAbsoluteDraftBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountValueAbsoluteDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountValueAbsoluteDraftBuilder of(final ProductDiscountValueAbsoluteDraft template) {
         ProductDiscountValueAbsoluteDraftBuilder builder = new ProductDiscountValueAbsoluteDraftBuilder();
         builder.money = template.getMoney();

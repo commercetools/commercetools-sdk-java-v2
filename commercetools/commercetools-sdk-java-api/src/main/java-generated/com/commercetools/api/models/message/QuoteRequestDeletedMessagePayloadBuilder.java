@@ -36,10 +36,19 @@ public class QuoteRequestDeletedMessagePayloadBuilder implements Builder<QuoteRe
         return new QuoteRequestDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method for an instance of QuoteRequestDeletedMessagePayloadBuilder
+     * @return builder
+     */
     public static QuoteRequestDeletedMessagePayloadBuilder of() {
         return new QuoteRequestDeletedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestDeletedMessagePayloadBuilder of(final QuoteRequestDeletedMessagePayload template) {
         QuoteRequestDeletedMessagePayloadBuilder builder = new QuoteRequestDeletedMessagePayloadBuilder();
         return builder;

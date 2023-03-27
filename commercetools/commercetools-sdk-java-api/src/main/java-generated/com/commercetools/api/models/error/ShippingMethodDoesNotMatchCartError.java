@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodDoesNotMatchCartErrorImpl.class)
 public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
 
+    /**
+     * discriminator value for ShippingMethodDoesNotMatchCartError
+     */
     String SHIPPING_METHOD_DOES_NOT_MATCH_CART = "ShippingMethodDoesNotMatchCart";
 
     /**
@@ -48,12 +51,26 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p><code>"The predicate does not match the cart."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodDoesNotMatchCartError
+     */
     public static ShippingMethodDoesNotMatchCartError of() {
         return new ShippingMethodDoesNotMatchCartErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodDoesNotMatchCartError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodDoesNotMatchCartError of(final ShippingMethodDoesNotMatchCartError template) {
         ShippingMethodDoesNotMatchCartErrorImpl instance = new ShippingMethodDoesNotMatchCartErrorImpl();
         instance.setMessage(template.getMessage());
@@ -61,19 +78,38 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodDoesNotMatchCartError
+     * @return builder
+     */
     public static ShippingMethodDoesNotMatchCartErrorBuilder builder() {
         return ShippingMethodDoesNotMatchCartErrorBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodDoesNotMatchCartError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodDoesNotMatchCartErrorBuilder builder(
             final ShippingMethodDoesNotMatchCartError template) {
         return ShippingMethodDoesNotMatchCartErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodDoesNotMatchCartError(Function<ShippingMethodDoesNotMatchCartError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDoesNotMatchCartError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDoesNotMatchCartError>() {
             @Override

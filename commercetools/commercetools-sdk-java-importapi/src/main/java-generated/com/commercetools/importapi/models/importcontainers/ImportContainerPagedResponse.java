@@ -75,23 +75,62 @@ public interface ImportContainerPagedResponse {
     @JsonProperty("results")
     public List<ImportContainer> getResults();
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @param limit value to be set
+     */
+
     public void setLimit(final Integer limit);
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
 
     public void setOffset(final Long offset);
 
+    /**
+     *  <p>The actual number of results returned.</p>
+     * @param count value to be set
+     */
+
     public void setCount(final Long count);
 
+    /**
+     *  <p>The total number of results matching the query.</p>
+     * @param total value to be set
+     */
+
     public void setTotal(final Long total);
+
+    /**
+     *  <p>The array of Import Containers matching the query.</p>
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final ImportContainer... results);
 
+    /**
+     *  <p>The array of Import Containers matching the query.</p>
+     * @param results values to be set
+     */
+
     public void setResults(final List<ImportContainer> results);
 
+    /**
+     * factory method
+     * @return instance of ImportContainerPagedResponse
+     */
     public static ImportContainerPagedResponse of() {
         return new ImportContainerPagedResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of ImportContainerPagedResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ImportContainerPagedResponse of(final ImportContainerPagedResponse template) {
         ImportContainerPagedResponseImpl instance = new ImportContainerPagedResponseImpl();
         instance.setLimit(template.getLimit());
@@ -102,18 +141,37 @@ public interface ImportContainerPagedResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for ImportContainerPagedResponse
+     * @return builder
+     */
     public static ImportContainerPagedResponseBuilder builder() {
         return ImportContainerPagedResponseBuilder.of();
     }
 
+    /**
+     * create builder for ImportContainerPagedResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportContainerPagedResponseBuilder builder(final ImportContainerPagedResponse template) {
         return ImportContainerPagedResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImportContainerPagedResponse(Function<ImportContainerPagedResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImportContainerPagedResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImportContainerPagedResponse>() {
             @Override

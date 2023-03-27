@@ -40,7 +40,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     private java.time.ZonedDateTime actualTransitionDate;
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *
+     * set the value to the actualTransitionDate
      * @param actualTransitionDate value to be set
      * @return Builder
      */
@@ -121,21 +121,46 @@ public class OrderTransitionCustomLineItemStateActionBuilder
         return this;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     * value of quantity}
+     * @return quantity
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @return fromState
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
         return this.fromState;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @return toState
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
         return this.toState;
     }
+
+    /**
+     * value of actualTransitionDate}
+     * @return actualTransitionDate
+     */
 
     @Nullable
     public java.time.ZonedDateTime getActualTransitionDate() {
@@ -165,10 +190,19 @@ public class OrderTransitionCustomLineItemStateActionBuilder
             actualTransitionDate);
     }
 
+    /**
+     * factory method for an instance of OrderTransitionCustomLineItemStateActionBuilder
+     * @return builder
+     */
     public static OrderTransitionCustomLineItemStateActionBuilder of() {
         return new OrderTransitionCustomLineItemStateActionBuilder();
     }
 
+    /**
+     * create builder for OrderTransitionCustomLineItemStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderTransitionCustomLineItemStateActionBuilder of(
             final OrderTransitionCustomLineItemStateAction template) {
         OrderTransitionCustomLineItemStateActionBuilder builder = new OrderTransitionCustomLineItemStateActionBuilder();

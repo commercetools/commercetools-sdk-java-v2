@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductAddedToCategoryMessagePayloadImpl.class)
 public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for ProductAddedToCategoryMessagePayload
+     */
     String PRODUCT_ADDED_TO_CATEGORY = "ProductAddedToCategory";
 
     /**
@@ -51,14 +54,33 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>Category the Product was added to.</p>
+     * @param category value to be set
+     */
+
     public void setCategory(final CategoryReference category);
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductAddedToCategoryMessagePayload
+     */
     public static ProductAddedToCategoryMessagePayload of() {
         return new ProductAddedToCategoryMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductAddedToCategoryMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductAddedToCategoryMessagePayload of(final ProductAddedToCategoryMessagePayload template) {
         ProductAddedToCategoryMessagePayloadImpl instance = new ProductAddedToCategoryMessagePayloadImpl();
         instance.setCategory(template.getCategory());
@@ -66,19 +88,38 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductAddedToCategoryMessagePayload
+     * @return builder
+     */
     public static ProductAddedToCategoryMessagePayloadBuilder builder() {
         return ProductAddedToCategoryMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ProductAddedToCategoryMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAddedToCategoryMessagePayloadBuilder builder(
             final ProductAddedToCategoryMessagePayload template) {
         return ProductAddedToCategoryMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductAddedToCategoryMessagePayload(Function<ProductAddedToCategoryMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductAddedToCategoryMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductAddedToCategoryMessagePayload>() {
             @Override

@@ -77,10 +77,20 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Category.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
         return new CategorySetCustomTypeActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of CategorySetCustomTypeActionBuilder
+     * @return builder
+     */
     public static CategorySetCustomTypeActionBuilder of() {
         return new CategorySetCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for CategorySetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetCustomTypeActionBuilder of(final CategorySetCustomTypeAction template) {
         CategorySetCustomTypeActionBuilder builder = new CategorySetCustomTypeActionBuilder();
         builder.type = template.getType();

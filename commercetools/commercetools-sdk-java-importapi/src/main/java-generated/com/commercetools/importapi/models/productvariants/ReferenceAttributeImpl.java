@@ -26,6 +26,9 @@ public class ReferenceAttributeImpl implements ReferenceAttribute, ModelBase {
 
     private com.commercetools.importapi.models.common.KeyReference value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReferenceAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final com.commercetools.importapi.models.common.KeyReference value) {
@@ -34,6 +37,9 @@ public class ReferenceAttributeImpl implements ReferenceAttribute, ModelBase {
         this.type = REFERENCE;
     }
 
+    /**
+     * create empty instance
+     */
     public ReferenceAttributeImpl() {
         this.type = REFERENCE;
     }

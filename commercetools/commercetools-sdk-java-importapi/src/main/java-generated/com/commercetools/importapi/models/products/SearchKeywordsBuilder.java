@@ -24,7 +24,7 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
     private Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> values = new HashMap<>();
 
     /**
-     *
+     * assign pattern properties to the builder
      * @param values properties to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
     }
 
     /**
-     *
+     * assign a pattern property to the builder
      * @param key property name
      * @param value property value
      * @return Builder
@@ -50,6 +50,11 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
         values.put(key, value);
         return this;
     }
+
+    /**
+     * values of pattern properties
+     * @return pattern properties
+     */
 
     public Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> getValues() {
         return this.values;
@@ -71,10 +76,19 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
         return new SearchKeywordsImpl(values);
     }
 
+    /**
+     * factory method for an instance of SearchKeywordsBuilder
+     * @return builder
+     */
     public static SearchKeywordsBuilder of() {
         return new SearchKeywordsBuilder();
     }
 
+    /**
+     * create builder for SearchKeywords instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchKeywordsBuilder of(final SearchKeywords template) {
         SearchKeywordsBuilder builder = new SearchKeywordsBuilder();
         builder.values = template.values();

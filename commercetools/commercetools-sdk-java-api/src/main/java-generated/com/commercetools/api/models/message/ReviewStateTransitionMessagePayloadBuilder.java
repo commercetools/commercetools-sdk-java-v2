@@ -146,27 +146,57 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
         return this;
     }
 
+    /**
+     *  <p>State of the Review before the Transition State update action.</p>
+     * @return oldState
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
 
+    /**
+     *  <p>State of the Review after the Transition State update action.</p>
+     * @return newState
+     */
+
     public com.commercetools.api.models.state.StateReference getNewState() {
         return this.newState;
     }
+
+    /**
+     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     * @return oldIncludedInStatistics
+     */
 
     public Boolean getOldIncludedInStatistics() {
         return this.oldIncludedInStatistics;
     }
 
+    /**
+     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     * @return newIncludedInStatistics
+     */
+
     public Boolean getNewIncludedInStatistics() {
         return this.newIncludedInStatistics;
     }
+
+    /**
+     *  <p>Reference to the resource that the Review belongs to.</p>
+     * @return target
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }
+
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @return force
+     */
 
     public Boolean getForce() {
         return this.force;
@@ -196,10 +226,19 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
             newIncludedInStatistics, target, force);
     }
 
+    /**
+     * factory method for an instance of ReviewStateTransitionMessagePayloadBuilder
+     * @return builder
+     */
     public static ReviewStateTransitionMessagePayloadBuilder of() {
         return new ReviewStateTransitionMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ReviewStateTransitionMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewStateTransitionMessagePayloadBuilder of(final ReviewStateTransitionMessagePayload template) {
         ReviewStateTransitionMessagePayloadBuilder builder = new ReviewStateTransitionMessagePayloadBuilder();
         builder.oldState = template.getOldState();

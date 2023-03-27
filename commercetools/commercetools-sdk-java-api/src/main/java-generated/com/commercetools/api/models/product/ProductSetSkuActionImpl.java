@@ -28,6 +28,9 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetSkuActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("staged") final Boolean staged) {
@@ -37,6 +40,9 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
         this.action = SET_SKU;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetSkuActionImpl() {
         this.action = SET_SKU;
     }

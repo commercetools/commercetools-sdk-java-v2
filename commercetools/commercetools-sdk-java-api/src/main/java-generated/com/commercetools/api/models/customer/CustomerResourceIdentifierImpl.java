@@ -27,6 +27,9 @@ public class CustomerResourceIdentifierImpl implements CustomerResourceIdentifie
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class CustomerResourceIdentifierImpl implements CustomerResourceIdentifie
         this.typeId = ReferenceTypeId.findEnum("customer");
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("customer");
     }

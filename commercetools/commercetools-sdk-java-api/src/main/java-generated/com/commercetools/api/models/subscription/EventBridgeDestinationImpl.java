@@ -26,6 +26,9 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
 
     private String accountId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EventBridgeDestinationImpl(@JsonProperty("region") final String region,
             @JsonProperty("accountId") final String accountId) {
@@ -34,6 +37,9 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         this.type = EVENT_BRIDGE;
     }
 
+    /**
+     * create empty instance
+     */
     public EventBridgeDestinationImpl() {
         this.type = EVENT_BRIDGE;
     }

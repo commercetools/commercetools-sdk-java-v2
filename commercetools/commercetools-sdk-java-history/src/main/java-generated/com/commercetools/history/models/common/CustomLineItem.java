@@ -96,24 +96,68 @@ public interface CustomLineItem {
     @JsonProperty("quantity")
     public Integer getQuantity();
 
+    /**
+     *  <p>The unique ID of this CustomLineItem.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set name
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     * set money
+     * @param money value to be set
+     */
+
     public void setMoney(final Money money);
+
+    /**
+     * set taxedPrice
+     * @param taxedPrice value to be set
+     */
 
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
+    /**
+     * set totalPrice
+     * @param totalPrice value to be set
+     */
+
     public void setTotalPrice(final Money totalPrice);
+
+    /**
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final String slug);
 
+    /**
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Integer quantity);
 
+    /**
+     * factory method
+     * @return instance of CustomLineItem
+     */
     public static CustomLineItem of() {
         return new CustomLineItemImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomLineItem of(final CustomLineItem template) {
         CustomLineItemImpl instance = new CustomLineItemImpl();
         instance.setId(template.getId());
@@ -126,18 +170,37 @@ public interface CustomLineItem {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomLineItem
+     * @return builder
+     */
     public static CustomLineItemBuilder builder() {
         return CustomLineItemBuilder.of();
     }
 
+    /**
+     * create builder for CustomLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemBuilder builder(final CustomLineItem template) {
         return CustomLineItemBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomLineItem(Function<CustomLineItem, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItem> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItem>() {
             @Override

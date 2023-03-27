@@ -28,6 +28,9 @@ public class SetRatingChangeImpl implements SetRatingChange, ModelBase {
 
     private Integer nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetRatingChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Integer previousValue,
@@ -38,6 +41,9 @@ public class SetRatingChangeImpl implements SetRatingChange, ModelBase {
         this.type = SET_RATING_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetRatingChangeImpl() {
         this.type = SET_RATING_CHANGE;
     }

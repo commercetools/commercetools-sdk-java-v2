@@ -24,12 +24,18 @@ public class GeoJsonPointImpl implements GeoJsonPoint, ModelBase {
 
     private java.util.List<Double> coordinates;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GeoJsonPointImpl(@JsonProperty("coordinates") final java.util.List<Double> coordinates) {
         this.coordinates = coordinates;
         this.type = POINT;
     }
 
+    /**
+     * create empty instance
+     */
     public GeoJsonPointImpl() {
         this.type = POINT;
     }

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeKeyActionImpl.class)
 public interface TypeChangeKeyAction extends TypeUpdateAction {
 
+    /**
+     * discriminator value for TypeChangeKeyAction
+     */
     String CHANGE_KEY = "changeKey";
 
     /**
@@ -39,30 +42,63 @@ public interface TypeChangeKeyAction extends TypeUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of TypeChangeKeyAction
+     */
     public static TypeChangeKeyAction of() {
         return new TypeChangeKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeChangeKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeChangeKeyAction of(final TypeChangeKeyAction template) {
         TypeChangeKeyActionImpl instance = new TypeChangeKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for TypeChangeKeyAction
+     * @return builder
+     */
     public static TypeChangeKeyActionBuilder builder() {
         return TypeChangeKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for TypeChangeKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeKeyActionBuilder builder(final TypeChangeKeyAction template) {
         return TypeChangeKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeChangeKeyAction(Function<TypeChangeKeyAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeKeyAction>() {
             @Override

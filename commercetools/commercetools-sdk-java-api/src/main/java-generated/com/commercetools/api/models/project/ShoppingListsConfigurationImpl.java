@@ -22,12 +22,18 @@ public class ShoppingListsConfigurationImpl implements ShoppingListsConfiguratio
 
     private Long deleteDaysAfterLastModification;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListsConfigurationImpl(
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListsConfigurationImpl() {
     }
 

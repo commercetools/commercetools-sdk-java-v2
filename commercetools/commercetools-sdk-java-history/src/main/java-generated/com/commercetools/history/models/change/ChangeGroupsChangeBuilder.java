@@ -41,7 +41,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -112,13 +112,28 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeGroups</code> on stores</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<String> getNextValue() {
         return this.nextValue;
@@ -143,10 +158,19 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
         return new ChangeGroupsChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeGroupsChangeBuilder
+     * @return builder
+     */
     public static ChangeGroupsChangeBuilder of() {
         return new ChangeGroupsChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeGroupsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeGroupsChangeBuilder of(final ChangeGroupsChange template) {
         ChangeGroupsChangeBuilder builder = new ChangeGroupsChangeBuilder();
         builder.change = template.getChange();

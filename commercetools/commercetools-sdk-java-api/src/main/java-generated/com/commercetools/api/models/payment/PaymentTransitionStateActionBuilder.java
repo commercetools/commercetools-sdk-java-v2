@@ -64,9 +64,19 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     * @return force
+     */
 
     @Nullable
     public Boolean getForce() {
@@ -90,10 +100,19 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
         return new PaymentTransitionStateActionImpl(state, force);
     }
 
+    /**
+     * factory method for an instance of PaymentTransitionStateActionBuilder
+     * @return builder
+     */
     public static PaymentTransitionStateActionBuilder of() {
         return new PaymentTransitionStateActionBuilder();
     }
 
+    /**
+     * create builder for PaymentTransitionStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentTransitionStateActionBuilder of(final PaymentTransitionStateAction template) {
         PaymentTransitionStateActionBuilder builder = new PaymentTransitionStateActionBuilder();
         builder.state = template.getState();

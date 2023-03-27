@@ -63,9 +63,19 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
         return this;
     }
 
+    /**
+     *  <p>Value to append.</p>
+     * @return asset
+     */
+
     public com.commercetools.api.models.common.AssetDraft getAsset() {
         return this.asset;
     }
+
+    /**
+     *  <p>Position in the array at which the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
+     * @return position
+     */
 
     @Nullable
     public Integer getPosition() {
@@ -89,10 +99,19 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
         return new CategoryAddAssetActionImpl(asset, position);
     }
 
+    /**
+     * factory method for an instance of CategoryAddAssetActionBuilder
+     * @return builder
+     */
     public static CategoryAddAssetActionBuilder of() {
         return new CategoryAddAssetActionBuilder();
     }
 
+    /**
+     * create builder for CategoryAddAssetAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryAddAssetActionBuilder of(final CategoryAddAssetAction template) {
         CategoryAddAssetActionBuilder builder = new CategoryAddAssetActionBuilder();
         builder.asset = template.getAsset();

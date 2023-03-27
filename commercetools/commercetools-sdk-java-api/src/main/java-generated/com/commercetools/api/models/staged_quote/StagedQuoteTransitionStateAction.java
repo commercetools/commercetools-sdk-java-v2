@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedQuoteTransitionStateActionImpl.class)
 public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateAction {
 
+    /**
+     * discriminator value for StagedQuoteTransitionStateAction
+     */
     String TRANSITION_STATE = "transitionState";
 
     /**
@@ -50,14 +53,33 @@ public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateActio
     @JsonProperty("force")
     public Boolean getForce();
 
+    /**
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateResourceIdentifier state);
+
+    /**
+     *  <p>Switch validations on or off.</p>
+     * @param force value to be set
+     */
 
     public void setForce(final Boolean force);
 
+    /**
+     * factory method
+     * @return instance of StagedQuoteTransitionStateAction
+     */
     public static StagedQuoteTransitionStateAction of() {
         return new StagedQuoteTransitionStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedQuoteTransitionStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedQuoteTransitionStateAction of(final StagedQuoteTransitionStateAction template) {
         StagedQuoteTransitionStateActionImpl instance = new StagedQuoteTransitionStateActionImpl();
         instance.setState(template.getState());
@@ -65,18 +87,37 @@ public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateActio
         return instance;
     }
 
+    /**
+     * builder factory method for StagedQuoteTransitionStateAction
+     * @return builder
+     */
     public static StagedQuoteTransitionStateActionBuilder builder() {
         return StagedQuoteTransitionStateActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedQuoteTransitionStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteTransitionStateActionBuilder builder(final StagedQuoteTransitionStateAction template) {
         return StagedQuoteTransitionStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedQuoteTransitionStateAction(Function<StagedQuoteTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteTransitionStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteTransitionStateAction>() {
             @Override

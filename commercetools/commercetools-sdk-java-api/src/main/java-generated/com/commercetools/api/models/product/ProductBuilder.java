@@ -299,59 +299,125 @@ public class ProductBuilder implements Builder<Product> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Product.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Product.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Product was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Product was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
+     * @return productType
+     */
+
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
 
+    /**
+     *  <p>Contains the current and the staged representation of the product information.</p>
+     * @return masterData
+     */
+
     public com.commercetools.api.models.product.ProductCatalogData getMasterData() {
         return this.masterData;
     }
+
+    /**
+     *  <p>The TaxCategory of the Product.</p>
+     * @return taxCategory
+     */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
         return this.taxCategory;
     }
 
+    /**
+     *  <p>State of the Product.</p>
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
+    /**
+     *  <p>Review statistics of the Product.</p>
+     * @return reviewRatingStatistics
+     */
+
     @Nullable
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
         return this.reviewRatingStatistics;
     }
+
+    /**
+     *  <p>Type of Price to be used when looking up a price for the Product.</p>
+     * @return priceMode
+     */
 
     @Nullable
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
@@ -382,10 +448,19 @@ public class ProductBuilder implements Builder<Product> {
             masterData, taxCategory, state, reviewRatingStatistics, priceMode);
     }
 
+    /**
+     * factory method for an instance of ProductBuilder
+     * @return builder
+     */
     public static ProductBuilder of() {
         return new ProductBuilder();
     }
 
+    /**
+     * create builder for Product instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductBuilder of(final Product template) {
         ProductBuilder builder = new ProductBuilder();
         builder.id = template.getId();

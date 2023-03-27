@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewReferenceImpl.class)
 public interface ReviewReference extends Reference, com.commercetools.api.models.Identifiable<Review> {
 
+    /**
+     * discriminator value for ReviewReference
+     */
     String REVIEW = "review";
 
     /**
@@ -49,14 +52,33 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final Review obj);
+
+    /**
+     *  <p>Unique identifier of the referenced Review.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of ReviewReference
+     */
     public static ReviewReference of() {
         return new ReviewReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReviewReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReviewReference of(final ReviewReference template) {
         ReviewReferenceImpl instance = new ReviewReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
         return instance;
     }
 
+    /**
+     * builder factory method for ReviewReference
+     * @return builder
+     */
     public static ReviewReferenceBuilder builder() {
         return ReviewReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ReviewReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewReferenceBuilder builder(final ReviewReference template) {
         return ReviewReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReviewReference(Function<ReviewReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewReference>() {
             @Override

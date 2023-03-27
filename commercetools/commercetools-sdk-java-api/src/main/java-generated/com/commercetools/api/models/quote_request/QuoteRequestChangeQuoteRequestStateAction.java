@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteRequestChangeQuoteRequestStateActionImpl.class)
 public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestUpdateAction {
 
+    /**
+     * discriminator value for QuoteRequestChangeQuoteRequestStateAction
+     */
     String CHANGE_QUOTE_REQUEST_STATE = "changeQuoteRequestState";
 
     /**
@@ -39,12 +42,26 @@ public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestU
     @JsonProperty("quoteRequestState")
     public QuoteRequestState getQuoteRequestState();
 
+    /**
+     *  <p>New state to be set for the Quote Request.</p>
+     * @param quoteRequestState value to be set
+     */
+
     public void setQuoteRequestState(final QuoteRequestState quoteRequestState);
 
+    /**
+     * factory method
+     * @return instance of QuoteRequestChangeQuoteRequestStateAction
+     */
     public static QuoteRequestChangeQuoteRequestStateAction of() {
         return new QuoteRequestChangeQuoteRequestStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteRequestChangeQuoteRequestStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteRequestChangeQuoteRequestStateAction of(
             final QuoteRequestChangeQuoteRequestStateAction template) {
         QuoteRequestChangeQuoteRequestStateActionImpl instance = new QuoteRequestChangeQuoteRequestStateActionImpl();
@@ -52,20 +69,39 @@ public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestU
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteRequestChangeQuoteRequestStateAction
+     * @return builder
+     */
     public static QuoteRequestChangeQuoteRequestStateActionBuilder builder() {
         return QuoteRequestChangeQuoteRequestStateActionBuilder.of();
     }
 
+    /**
+     * create builder for QuoteRequestChangeQuoteRequestStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestChangeQuoteRequestStateActionBuilder builder(
             final QuoteRequestChangeQuoteRequestStateAction template) {
         return QuoteRequestChangeQuoteRequestStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteRequestChangeQuoteRequestStateAction(
             Function<QuoteRequestChangeQuoteRequestStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestChangeQuoteRequestStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestChangeQuoteRequestStateAction>() {
             @Override

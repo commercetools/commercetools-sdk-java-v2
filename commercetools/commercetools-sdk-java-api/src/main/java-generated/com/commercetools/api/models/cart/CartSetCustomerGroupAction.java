@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomerGroupActionImpl.class)
 public interface CartSetCustomerGroupAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetCustomerGroupAction
+     */
     String SET_CUSTOMER_GROUP = "setCustomerGroup";
 
     /**
@@ -40,30 +43,63 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
+    /**
+     * factory method
+     * @return instance of CartSetCustomerGroupAction
+     */
     public static CartSetCustomerGroupAction of() {
         return new CartSetCustomerGroupActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetCustomerGroupAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetCustomerGroupAction of(final CartSetCustomerGroupAction template) {
         CartSetCustomerGroupActionImpl instance = new CartSetCustomerGroupActionImpl();
         instance.setCustomerGroup(template.getCustomerGroup());
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetCustomerGroupAction
+     * @return builder
+     */
     public static CartSetCustomerGroupActionBuilder builder() {
         return CartSetCustomerGroupActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetCustomerGroupAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomerGroupActionBuilder builder(final CartSetCustomerGroupAction template) {
         return CartSetCustomerGroupActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetCustomerGroupAction(Function<CartSetCustomerGroupAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerGroupAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerGroupAction>() {
             @Override

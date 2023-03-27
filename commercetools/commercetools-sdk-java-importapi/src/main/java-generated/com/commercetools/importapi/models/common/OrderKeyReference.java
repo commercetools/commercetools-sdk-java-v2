@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderKeyReferenceImpl.class)
 public interface OrderKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for OrderKeyReference
+     */
     String ORDER = "order";
 
+    /**
+     * factory method
+     * @return instance of OrderKeyReference
+     */
     public static OrderKeyReference of() {
         return new OrderKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderKeyReference of(final OrderKeyReference template) {
         OrderKeyReferenceImpl instance = new OrderKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for OrderKeyReference
+     * @return builder
+     */
     public static OrderKeyReferenceBuilder builder() {
         return OrderKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for OrderKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderKeyReferenceBuilder builder(final OrderKeyReference template) {
         return OrderKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderKeyReference(Function<OrderKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderKeyReference>() {
             @Override

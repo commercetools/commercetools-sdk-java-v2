@@ -24,6 +24,9 @@ public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReplicaCartDraftImpl(@JsonProperty("reference") final com.commercetools.api.models.common.Reference reference,
             @JsonProperty("key") final String key) {
@@ -31,6 +34,9 @@ public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public ReplicaCartDraftImpl() {
     }
 

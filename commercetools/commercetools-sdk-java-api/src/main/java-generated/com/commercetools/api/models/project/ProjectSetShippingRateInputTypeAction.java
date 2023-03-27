@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectSetShippingRateInputTypeActionImpl.class)
 public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateAction {
 
+    /**
+     * discriminator value for ProjectSetShippingRateInputTypeAction
+     */
     String SET_SHIPPING_RATE_INPUT_TYPE = "setShippingRateInputType";
 
     /**
@@ -38,27 +41,56 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     @JsonProperty("shippingRateInputType")
     public ShippingRateInputType getShippingRateInputType();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param shippingRateInputType value to be set
+     */
+
     public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
 
+    /**
+     * factory method
+     * @return instance of ProjectSetShippingRateInputTypeAction
+     */
     public static ProjectSetShippingRateInputTypeAction of() {
         return new ProjectSetShippingRateInputTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectSetShippingRateInputTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectSetShippingRateInputTypeAction of(final ProjectSetShippingRateInputTypeAction template) {
         ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();
         instance.setShippingRateInputType(template.getShippingRateInputType());
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectSetShippingRateInputTypeAction
+     * @return builder
+     */
     public static ProjectSetShippingRateInputTypeActionBuilder builder() {
         return ProjectSetShippingRateInputTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for ProjectSetShippingRateInputTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectSetShippingRateInputTypeActionBuilder builder(
             final ProjectSetShippingRateInputTypeAction template) {
         return ProjectSetShippingRateInputTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectSetShippingRateInputTypeAction(Function<ProjectSetShippingRateInputTypeAction, T> helper) {
         return helper.apply(this);
     }
@@ -67,6 +99,10 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
         return ProjectSetShippingRateInputTypeAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction>() {
             @Override

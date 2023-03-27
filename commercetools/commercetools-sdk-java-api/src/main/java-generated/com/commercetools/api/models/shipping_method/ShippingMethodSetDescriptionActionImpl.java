@@ -25,12 +25,18 @@ public class ShippingMethodSetDescriptionActionImpl implements ShippingMethodSet
 
     private String description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodSetDescriptionActionImpl(@JsonProperty("description") final String description) {
         this.description = description;
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodSetDescriptionActionImpl() {
         this.action = SET_DESCRIPTION;
     }

@@ -77,9 +77,19 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
         return this;
     }
 
+    /**
+     *  <p>The slug of the Category after the Change Slug update action.</p>
+     * @return slug
+     */
+
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>The slug of the Category before the Change Slug update action.</p>
+     * @return oldSlug
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getOldSlug() {
@@ -103,10 +113,19 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
         return new CategorySlugChangedMessagePayloadImpl(slug, oldSlug);
     }
 
+    /**
+     * factory method for an instance of CategorySlugChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static CategorySlugChangedMessagePayloadBuilder of() {
         return new CategorySlugChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CategorySlugChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySlugChangedMessagePayloadBuilder of(final CategorySlugChangedMessagePayload template) {
         CategorySlugChangedMessagePayloadBuilder builder = new CategorySlugChangedMessagePayloadBuilder();
         builder.slug = template.getSlug();

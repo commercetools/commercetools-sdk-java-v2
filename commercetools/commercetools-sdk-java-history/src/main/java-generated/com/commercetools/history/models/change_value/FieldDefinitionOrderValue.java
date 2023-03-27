@@ -49,14 +49,33 @@ public interface FieldDefinitionOrderValue {
     @JsonProperty("label")
     public LocalizedString getLabel();
 
+    /**
+     * set name
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     * set label
+     * @param label value to be set
+     */
 
     public void setLabel(final LocalizedString label);
 
+    /**
+     * factory method
+     * @return instance of FieldDefinitionOrderValue
+     */
     public static FieldDefinitionOrderValue of() {
         return new FieldDefinitionOrderValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of FieldDefinitionOrderValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static FieldDefinitionOrderValue of(final FieldDefinitionOrderValue template) {
         FieldDefinitionOrderValueImpl instance = new FieldDefinitionOrderValueImpl();
         instance.setName(template.getName());
@@ -64,18 +83,37 @@ public interface FieldDefinitionOrderValue {
         return instance;
     }
 
+    /**
+     * builder factory method for FieldDefinitionOrderValue
+     * @return builder
+     */
     public static FieldDefinitionOrderValueBuilder builder() {
         return FieldDefinitionOrderValueBuilder.of();
     }
 
+    /**
+     * create builder for FieldDefinitionOrderValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldDefinitionOrderValueBuilder builder(final FieldDefinitionOrderValue template) {
         return FieldDefinitionOrderValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withFieldDefinitionOrderValue(Function<FieldDefinitionOrderValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<FieldDefinitionOrderValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<FieldDefinitionOrderValue>() {
             @Override

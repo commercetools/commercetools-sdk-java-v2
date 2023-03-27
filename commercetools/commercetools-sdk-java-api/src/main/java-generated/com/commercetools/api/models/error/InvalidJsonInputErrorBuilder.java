@@ -76,13 +76,28 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
         return this;
     }
 
+    /**
+     *  <p><code>"Request body does not contain valid JSON."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Further explanation about why the JSON is invalid.</p>
+     * @return detailedErrorMessage
+     */
 
     public String getDetailedErrorMessage() {
         return this.detailedErrorMessage;
@@ -106,10 +121,19 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
         return new InvalidJsonInputErrorImpl(message, values, detailedErrorMessage);
     }
 
+    /**
+     * factory method for an instance of InvalidJsonInputErrorBuilder
+     * @return builder
+     */
     public static InvalidJsonInputErrorBuilder of() {
         return new InvalidJsonInputErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidJsonInputError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidJsonInputErrorBuilder of(final InvalidJsonInputError template) {
         InvalidJsonInputErrorBuilder builder = new InvalidJsonInputErrorBuilder();
         builder.message = template.getMessage();

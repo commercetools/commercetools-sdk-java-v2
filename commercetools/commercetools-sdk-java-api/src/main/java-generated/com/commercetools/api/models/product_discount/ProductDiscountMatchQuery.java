@@ -67,18 +67,47 @@ public interface ProductDiscountMatchQuery {
     @JsonProperty("price")
     public QueryPrice getPrice();
 
+    /**
+     *  <p>ID of the specified Product.</p>
+     * @param productId value to be set
+     */
+
     public void setProductId(final String productId);
+
+    /**
+     *  <p>ID of the specified Product Variant.</p>
+     * @param variantId value to be set
+     */
 
     public void setVariantId(final Integer variantId);
 
+    /**
+     *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
+
+    /**
+     *  <p>Specified Price of the specified Product Variant.</p>
+     * @param price value to be set
+     */
 
     public void setPrice(final QueryPrice price);
 
+    /**
+     * factory method
+     * @return instance of ProductDiscountMatchQuery
+     */
     public static ProductDiscountMatchQuery of() {
         return new ProductDiscountMatchQueryImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDiscountMatchQuery
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDiscountMatchQuery of(final ProductDiscountMatchQuery template) {
         ProductDiscountMatchQueryImpl instance = new ProductDiscountMatchQueryImpl();
         instance.setProductId(template.getProductId());
@@ -88,18 +117,37 @@ public interface ProductDiscountMatchQuery {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDiscountMatchQuery
+     * @return builder
+     */
     public static ProductDiscountMatchQueryBuilder builder() {
         return ProductDiscountMatchQueryBuilder.of();
     }
 
+    /**
+     * create builder for ProductDiscountMatchQuery instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountMatchQueryBuilder builder(final ProductDiscountMatchQuery template) {
         return ProductDiscountMatchQueryBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountMatchQuery(Function<ProductDiscountMatchQuery, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountMatchQuery> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountMatchQuery>() {
             @Override

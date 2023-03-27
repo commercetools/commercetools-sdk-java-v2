@@ -28,6 +28,9 @@ public class SetAuthorNameChangeImpl implements SetAuthorNameChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAuthorNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetAuthorNameChangeImpl implements SetAuthorNameChange, ModelBase {
         this.type = SET_AUTHOR_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAuthorNameChangeImpl() {
         this.type = SET_AUTHOR_NAME_CHANGE;
     }

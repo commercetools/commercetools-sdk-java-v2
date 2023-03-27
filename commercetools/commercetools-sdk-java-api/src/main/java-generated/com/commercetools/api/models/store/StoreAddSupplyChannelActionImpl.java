@@ -26,6 +26,9 @@ public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAct
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreAddSupplyChannelActionImpl(
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
@@ -33,6 +36,9 @@ public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAct
         this.action = ADD_SUPPLY_CHANNEL;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreAddSupplyChannelActionImpl() {
         this.action = ADD_SUPPLY_CHANNEL;
     }

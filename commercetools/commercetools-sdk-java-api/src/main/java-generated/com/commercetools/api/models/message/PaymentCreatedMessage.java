@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentCreatedMessageImpl.class)
 public interface PaymentCreatedMessage extends Message {
 
+    /**
+     * discriminator value for PaymentCreatedMessage
+     */
     String PAYMENT_CREATED = "PaymentCreated";
 
     /**
@@ -49,12 +52,26 @@ public interface PaymentCreatedMessage extends Message {
     @JsonProperty("payment")
     public Payment getPayment();
 
+    /**
+     *  <p>Payment that was created.</p>
+     * @param payment value to be set
+     */
+
     public void setPayment(final Payment payment);
 
+    /**
+     * factory method
+     * @return instance of PaymentCreatedMessage
+     */
     public static PaymentCreatedMessage of() {
         return new PaymentCreatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentCreatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentCreatedMessage of(final PaymentCreatedMessage template) {
         PaymentCreatedMessageImpl instance = new PaymentCreatedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface PaymentCreatedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentCreatedMessage
+     * @return builder
+     */
     public static PaymentCreatedMessageBuilder builder() {
         return PaymentCreatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for PaymentCreatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentCreatedMessageBuilder builder(final PaymentCreatedMessage template) {
         return PaymentCreatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentCreatedMessage(Function<PaymentCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentCreatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentCreatedMessage>() {
             @Override

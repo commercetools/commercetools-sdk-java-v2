@@ -24,12 +24,18 @@ public class StagedOrderSetCustomerEmailActionImpl implements StagedOrderSetCust
 
     private String email;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetCustomerEmailActionImpl(@JsonProperty("email") final String email) {
         this.email = email;
         this.action = SET_CUSTOMER_EMAIL;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetCustomerEmailActionImpl() {
         this.action = SET_CUSTOMER_EMAIL;
     }

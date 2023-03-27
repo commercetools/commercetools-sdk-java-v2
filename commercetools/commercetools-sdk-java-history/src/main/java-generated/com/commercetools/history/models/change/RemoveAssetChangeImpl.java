@@ -26,6 +26,9 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
 
     private com.commercetools.history.models.common.Asset previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveAssetChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Asset previousValue) {
@@ -34,6 +37,9 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
         this.type = REMOVE_ASSET_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveAssetChangeImpl() {
         this.type = REMOVE_ASSET_CHANGE;
     }

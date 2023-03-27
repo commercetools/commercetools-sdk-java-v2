@@ -48,6 +48,9 @@ public class QuoteRequestStateTransitionMessageImpl implements QuoteRequestState
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestStateTransitionMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -78,6 +81,9 @@ public class QuoteRequestStateTransitionMessageImpl implements QuoteRequestState
         this.type = QUOTE_REQUEST_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestStateTransitionMessageImpl() {
         this.type = QUOTE_REQUEST_STATE_TRANSITION;
     }

@@ -42,6 +42,9 @@ public class ProductUnpublishedMessageImpl implements ProductUnpublishedMessage,
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductUnpublishedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class ProductUnpublishedMessageImpl implements ProductUnpublishedMessage,
         this.type = PRODUCT_UNPUBLISHED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductUnpublishedMessageImpl() {
         this.type = PRODUCT_UNPUBLISHED;
     }

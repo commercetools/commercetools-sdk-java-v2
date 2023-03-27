@@ -60,7 +60,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     *
+     * set the value to the provider
      * @param provider value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     *
+     * set the value to the providerTransaction
      * @param providerTransaction value to be set
      * @return Builder
      */
@@ -92,25 +92,50 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
         return this;
     }
 
+    /**
+     *  <p>The ID to track one parcel.</p>
+     * @return trackingId
+     */
+
     @Nullable
     public String getTrackingId() {
         return this.trackingId;
     }
+
+    /**
+     *  <p>The carrier that delivers the parcel.</p>
+     * @return carrier
+     */
 
     @Nullable
     public String getCarrier() {
         return this.carrier;
     }
 
+    /**
+     * value of provider}
+     * @return provider
+     */
+
     @Nullable
     public String getProvider() {
         return this.provider;
     }
 
+    /**
+     * value of providerTransaction}
+     * @return providerTransaction
+     */
+
     @Nullable
     public String getProviderTransaction() {
         return this.providerTransaction;
     }
+
+    /**
+     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     * @return isReturn
+     */
 
     @Nullable
     public Boolean getIsReturn() {
@@ -133,10 +158,19 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
         return new TrackingDataImpl(trackingId, carrier, provider, providerTransaction, isReturn);
     }
 
+    /**
+     * factory method for an instance of TrackingDataBuilder
+     * @return builder
+     */
     public static TrackingDataBuilder of() {
         return new TrackingDataBuilder();
     }
 
+    /**
+     * create builder for TrackingData instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TrackingDataBuilder of(final TrackingData template) {
         TrackingDataBuilder builder = new TrackingDataBuilder();
         builder.trackingId = template.getTrackingId();

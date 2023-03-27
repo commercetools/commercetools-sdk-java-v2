@@ -51,7 +51,7 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
     }
 
     /**
-     *
+     * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
     }
 
     /**
-     *
+     * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
     }
 
     /**
-     *
+     * set the value to the variant
      * @param variant value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
     }
 
     /**
-     *
+     * set the value to the taxMode
      * @param taxMode value to be set
      * @return Builder
      */
@@ -144,25 +144,55 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setLineItemTaxAmount</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of lineItem}
+     * @return lineItem
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
     }
 
+    /**
+     * value of variant}
+     * @return variant
+     */
+
     public String getVariant() {
         return this.variant;
     }
+
+    /**
+     * value of taxMode}
+     * @return taxMode
+     */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.TaxRate getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {
         return this.previousValue;
@@ -190,10 +220,19 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
         return new SetLineItemTaxAmountChangeImpl(change, lineItem, variant, taxMode, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetLineItemTaxAmountChangeBuilder
+     * @return builder
+     */
     public static SetLineItemTaxAmountChangeBuilder of() {
         return new SetLineItemTaxAmountChangeBuilder();
     }
 
+    /**
+     * create builder for SetLineItemTaxAmountChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLineItemTaxAmountChangeBuilder of(final SetLineItemTaxAmountChange template) {
         SetLineItemTaxAmountChangeBuilder builder = new SetLineItemTaxAmountChangeBuilder();
         builder.change = template.getChange();

@@ -59,6 +59,10 @@ public class ImportRequestBuilder {
         return com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ImportRequestBuilder
+     * @return builder
+     */
     public static ImportRequestBuilder of() {
         return new ImportRequestBuilder();
     }

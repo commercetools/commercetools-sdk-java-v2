@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyShoppingListSetCustomTypeActionImpl.class)
 public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateAction {
 
+    /**
+     * discriminator value for MyShoppingListSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of MyShoppingListSetCustomTypeAction
+     */
     public static MyShoppingListSetCustomTypeAction of() {
         return new MyShoppingListSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyShoppingListSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyShoppingListSetCustomTypeAction of(final MyShoppingListSetCustomTypeAction template) {
         MyShoppingListSetCustomTypeActionImpl instance = new MyShoppingListSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
         return instance;
     }
 
+    /**
+     * builder factory method for MyShoppingListSetCustomTypeAction
+     * @return builder
+     */
     public static MyShoppingListSetCustomTypeActionBuilder builder() {
         return MyShoppingListSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for MyShoppingListSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyShoppingListSetCustomTypeActionBuilder builder(final MyShoppingListSetCustomTypeAction template) {
         return MyShoppingListSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyShoppingListSetCustomTypeAction(Function<MyShoppingListSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetCustomTypeAction>() {
             @Override

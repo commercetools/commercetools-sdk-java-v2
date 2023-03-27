@@ -30,6 +30,9 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
 
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddExternalImageChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
         this.type = ADD_EXTERNAL_IMAGE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddExternalImageChangeImpl() {
         this.type = ADD_EXTERNAL_IMAGE_CHANGE;
     }

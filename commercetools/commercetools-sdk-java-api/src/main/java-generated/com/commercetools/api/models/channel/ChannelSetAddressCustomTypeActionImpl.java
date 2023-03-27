@@ -26,6 +26,9 @@ public class ChannelSetAddressCustomTypeActionImpl implements ChannelSetAddressC
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelSetAddressCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class ChannelSetAddressCustomTypeActionImpl implements ChannelSetAddressC
         this.action = SET_ADDRESS_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelSetAddressCustomTypeActionImpl() {
         this.action = SET_ADDRESS_CUSTOM_TYPE;
     }

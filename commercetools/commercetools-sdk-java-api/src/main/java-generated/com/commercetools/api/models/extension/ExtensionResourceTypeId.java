@@ -56,21 +56,48 @@ public interface ExtensionResourceTypeId {
     */
     ExtensionResourceTypeId BUSINESS_UNIT = ExtensionResourceTypeIdEnum.BUSINESS_UNIT;
 
+    /**
+     * possible values of ExtensionResourceTypeId
+     */
     enum ExtensionResourceTypeIdEnum implements ExtensionResourceTypeId {
+        /**
+         * cart
+         */
         CART("cart"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * payment
+         */
         PAYMENT("payment"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * quote-request
+         */
         QUOTE_REQUEST("quote-request"),
 
+        /**
+         * staged-quote
+         */
         STAGED_QUOTE("staged-quote"),
 
+        /**
+         * quote
+         */
         QUOTE("quote"),
 
+        /**
+         * business-unit
+         */
         BUSINESS_UNIT("business-unit");
         private final String jsonName;
 
@@ -87,13 +114,30 @@ public interface ExtensionResourceTypeId {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ExtensionResourceTypeId
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ExtensionResourceTypeId findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ExtensionResourceTypeId() {
@@ -113,10 +157,18 @@ public interface ExtensionResourceTypeId {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ExtensionResourceTypeId> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ExtensionResourceTypeId[] values() {
         return ExtensionResourceTypeIdEnum.values();
     }

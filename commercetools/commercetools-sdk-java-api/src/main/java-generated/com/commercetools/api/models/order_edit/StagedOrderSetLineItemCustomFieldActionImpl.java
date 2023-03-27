@@ -28,6 +28,9 @@ public class StagedOrderSetLineItemCustomFieldActionImpl implements StagedOrderS
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -37,6 +40,9 @@ public class StagedOrderSetLineItemCustomFieldActionImpl implements StagedOrderS
         this.action = SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetLineItemCustomFieldActionImpl() {
         this.action = SET_LINE_ITEM_CUSTOM_FIELD;
     }

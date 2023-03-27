@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeTransactionTimestampChangeImpl.class)
 public interface ChangeTransactionTimestampChange extends Change {
 
+    /**
+     * discriminator value for ChangeTransactionTimestampChange
+     */
     String CHANGE_TRANSACTION_TIMESTAMP_CHANGE = "ChangeTransactionTimestampChange";
 
     /**
@@ -77,18 +80,47 @@ public interface ChangeTransactionTimestampChange extends Change {
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set transaction
+     * @param transaction value to be set
+     */
 
     public void setTransaction(final TransactionChangeValue transaction);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeTransactionTimestampChange
+     */
     public static ChangeTransactionTimestampChange of() {
         return new ChangeTransactionTimestampChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeTransactionTimestampChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeTransactionTimestampChange of(final ChangeTransactionTimestampChange template) {
         ChangeTransactionTimestampChangeImpl instance = new ChangeTransactionTimestampChangeImpl();
         instance.setChange(template.getChange());
@@ -98,18 +130,37 @@ public interface ChangeTransactionTimestampChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeTransactionTimestampChange
+     * @return builder
+     */
     public static ChangeTransactionTimestampChangeBuilder builder() {
         return ChangeTransactionTimestampChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeTransactionTimestampChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTransactionTimestampChangeBuilder builder(final ChangeTransactionTimestampChange template) {
         return ChangeTransactionTimestampChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeTransactionTimestampChange(Function<ChangeTransactionTimestampChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeTransactionTimestampChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeTransactionTimestampChange>() {
             @Override

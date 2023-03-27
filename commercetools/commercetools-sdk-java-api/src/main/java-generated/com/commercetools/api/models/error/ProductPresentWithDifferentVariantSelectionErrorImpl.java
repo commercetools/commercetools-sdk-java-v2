@@ -32,6 +32,9 @@ public class ProductPresentWithDifferentVariantSelectionErrorImpl
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection existingVariantSelection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPresentWithDifferentVariantSelectionErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -44,6 +47,9 @@ public class ProductPresentWithDifferentVariantSelectionErrorImpl
         this.code = PRODUCT_PRESENT_WITH_DIFFERENT_VARIANT_SELECTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPresentWithDifferentVariantSelectionErrorImpl() {
         this.code = PRODUCT_PRESENT_WITH_DIFFERENT_VARIANT_SELECTION;
     }

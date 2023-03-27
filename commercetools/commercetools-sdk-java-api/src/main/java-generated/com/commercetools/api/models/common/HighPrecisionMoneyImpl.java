@@ -30,6 +30,9 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
 
     private Long preciseAmount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     HighPrecisionMoneyImpl(@JsonProperty("centAmount") final Long centAmount,
             @JsonProperty("currencyCode") final String currencyCode,
@@ -42,6 +45,9 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
         this.type = MoneyType.findEnum("highPrecision");
     }
 
+    /**
+     * create empty instance
+     */
     public HighPrecisionMoneyImpl() {
         this.type = MoneyType.findEnum("highPrecision");
     }

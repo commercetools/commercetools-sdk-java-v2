@@ -38,6 +38,9 @@ public class ApiClientImpl implements ApiClient, ModelBase {
 
     private Integer refreshTokenValiditySeconds;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ApiClientImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name,
             @JsonProperty("scope") final String scope, @JsonProperty("secret") final String secret,
@@ -57,6 +60,9 @@ public class ApiClientImpl implements ApiClient, ModelBase {
         this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;
     }
 
+    /**
+     * create empty instance
+     */
     public ApiClientImpl() {
     }
 

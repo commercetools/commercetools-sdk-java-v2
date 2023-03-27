@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetShippingMethodTaxAmountActionImpl.class)
 public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetShippingMethodTaxAmountAction
+     */
     String SET_SHIPPING_METHOD_TAX_AMOUNT = "setShippingMethodTaxAmount";
 
     /**
@@ -38,31 +41,64 @@ public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
     @JsonProperty("externalTaxAmount")
     public ExternalTaxAmountDraft getExternalTaxAmount();
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param externalTaxAmount value to be set
+     */
+
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
+    /**
+     * factory method
+     * @return instance of CartSetShippingMethodTaxAmountAction
+     */
     public static CartSetShippingMethodTaxAmountAction of() {
         return new CartSetShippingMethodTaxAmountActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetShippingMethodTaxAmountAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetShippingMethodTaxAmountAction of(final CartSetShippingMethodTaxAmountAction template) {
         CartSetShippingMethodTaxAmountActionImpl instance = new CartSetShippingMethodTaxAmountActionImpl();
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetShippingMethodTaxAmountAction
+     * @return builder
+     */
     public static CartSetShippingMethodTaxAmountActionBuilder builder() {
         return CartSetShippingMethodTaxAmountActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetShippingMethodTaxAmountAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetShippingMethodTaxAmountActionBuilder builder(
             final CartSetShippingMethodTaxAmountAction template) {
         return CartSetShippingMethodTaxAmountActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetShippingMethodTaxAmountAction(Function<CartSetShippingMethodTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetShippingMethodTaxAmountAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetShippingMethodTaxAmountAction>() {
             @Override

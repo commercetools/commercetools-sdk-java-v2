@@ -40,6 +40,9 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
 
     private Double mean;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FacetRangeImpl(@JsonProperty("from") final Double from, @JsonProperty("fromStr") final String fromStr,
             @JsonProperty("to") final Double to, @JsonProperty("toStr") final String toStr,
@@ -58,6 +61,9 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
         this.mean = mean;
     }
 
+    /**
+     * create empty instance
+     */
     public FacetRangeImpl() {
     }
 

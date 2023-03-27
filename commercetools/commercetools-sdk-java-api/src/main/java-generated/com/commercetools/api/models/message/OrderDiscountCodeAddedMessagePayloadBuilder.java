@@ -49,6 +49,11 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
         return this;
     }
 
+    /**
+     *  <p>DiscountCode that was added.</p>
+     * @return discountCode
+     */
+
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
@@ -70,10 +75,19 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
         return new OrderDiscountCodeAddedMessagePayloadImpl(discountCode);
     }
 
+    /**
+     * factory method for an instance of OrderDiscountCodeAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderDiscountCodeAddedMessagePayloadBuilder of() {
         return new OrderDiscountCodeAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderDiscountCodeAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderDiscountCodeAddedMessagePayloadBuilder of(final OrderDiscountCodeAddedMessagePayload template) {
         OrderDiscountCodeAddedMessagePayloadBuilder builder = new OrderDiscountCodeAddedMessagePayloadBuilder();
         builder.discountCode = template.getDiscountCode();

@@ -24,6 +24,9 @@ public class ChannelChangeDescriptionActionImpl implements ChannelChangeDescript
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelChangeDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
@@ -31,6 +34,9 @@ public class ChannelChangeDescriptionActionImpl implements ChannelChangeDescript
         this.action = CHANGE_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelChangeDescriptionActionImpl() {
         this.action = CHANGE_DESCRIPTION;
     }

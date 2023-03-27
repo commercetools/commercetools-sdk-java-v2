@@ -28,6 +28,9 @@ public class ProductChangeMasterVariantActionImpl implements ProductChangeMaster
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductChangeMasterVariantActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged) {
@@ -37,6 +40,9 @@ public class ProductChangeMasterVariantActionImpl implements ProductChangeMaster
         this.action = CHANGE_MASTER_VARIANT;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductChangeMasterVariantActionImpl() {
         this.action = CHANGE_MASTER_VARIANT;
     }

@@ -27,6 +27,9 @@ public class InventoryEntryResourceIdentifierImpl implements InventoryEntryResou
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class InventoryEntryResourceIdentifierImpl implements InventoryEntryResou
         this.typeId = ReferenceTypeId.findEnum("inventory-entry");
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("inventory-entry");
     }

@@ -107,29 +107,83 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Unique identifier of the Payment.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Payment.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerReference customer);
+
+    /**
+     *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @param anonymousId value to be set
+     */
 
     public void setAnonymousId(final String anonymousId);
 
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param amountPlanned value to be set
+     */
+
     public void setAmountPlanned(final CentPrecisionMoney amountPlanned);
 
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param paymentMethodInfo value to be set
+     */
+
     public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
+
+    /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions values to be set
+     */
 
     @JsonIgnore
     public void setTransactions(final Transaction... transactions);
 
+    /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions values to be set
+     */
+
     public void setTransactions(final List<Transaction> transactions);
+
+    /**
+     *  <p>Custom Fields defined for the Payment.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of MyPayment
+     */
     public static MyPayment of() {
         return new MyPaymentImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyPayment
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyPayment of(final MyPayment template) {
         MyPaymentImpl instance = new MyPaymentImpl();
         instance.setId(template.getId());
@@ -143,18 +197,37 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
         return instance;
     }
 
+    /**
+     * builder factory method for MyPayment
+     * @return builder
+     */
     public static MyPaymentBuilder builder() {
         return MyPaymentBuilder.of();
     }
 
+    /**
+     * create builder for MyPayment instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyPaymentBuilder builder(final MyPayment template) {
         return MyPaymentBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyPayment(Function<MyPayment, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyPayment> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyPayment>() {
             @Override

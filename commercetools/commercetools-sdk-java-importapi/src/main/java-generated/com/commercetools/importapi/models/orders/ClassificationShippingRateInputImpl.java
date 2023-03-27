@@ -26,6 +26,9 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
 
     private com.commercetools.importapi.models.common.LocalizedString label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ClassificationShippingRateInputImpl(@JsonProperty("key") final String key,
             @JsonProperty("label") final com.commercetools.importapi.models.common.LocalizedString label) {
@@ -34,6 +37,9 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
         this.type = ShippingRateInputType.findEnum("Classification");
     }
 
+    /**
+     * create empty instance
+     */
     public ClassificationShippingRateInputImpl() {
         this.type = ShippingRateInputType.findEnum("Classification");
     }

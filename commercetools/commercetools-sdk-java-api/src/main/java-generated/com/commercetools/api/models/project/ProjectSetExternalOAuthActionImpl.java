@@ -24,6 +24,9 @@ public class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAut
 
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectSetExternalOAuthActionImpl(
             @JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
@@ -31,6 +34,9 @@ public class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAut
         this.action = SET_EXTERNAL_O_AUTH;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectSetExternalOAuthActionImpl() {
         this.action = SET_EXTERNAL_O_AUTH;
     }

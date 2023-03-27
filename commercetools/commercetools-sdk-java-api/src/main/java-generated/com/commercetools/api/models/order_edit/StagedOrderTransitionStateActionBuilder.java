@@ -54,7 +54,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *
+     * set the value to the force
      * @param force value to be set
      * @return Builder
      */
@@ -64,9 +64,19 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
+
+    /**
+     * value of force}
+     * @return force
+     */
 
     @Nullable
     public Boolean getForce() {
@@ -90,10 +100,19 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
         return new StagedOrderTransitionStateActionImpl(state, force);
     }
 
+    /**
+     * factory method for an instance of StagedOrderTransitionStateActionBuilder
+     * @return builder
+     */
     public static StagedOrderTransitionStateActionBuilder of() {
         return new StagedOrderTransitionStateActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderTransitionStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderTransitionStateActionBuilder of(final StagedOrderTransitionStateAction template) {
         StagedOrderTransitionStateActionBuilder builder = new StagedOrderTransitionStateActionBuilder();
         builder.state = template.getState();

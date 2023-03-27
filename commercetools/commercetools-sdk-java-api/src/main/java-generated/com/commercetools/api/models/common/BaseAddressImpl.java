@@ -70,6 +70,9 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
 
     private String externalId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BaseAddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("country") final String country, @JsonProperty("title") final String title,
@@ -113,6 +116,9 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
         this.externalId = externalId;
     }
 
+    /**
+     * create empty instance
+     */
     public BaseAddressImpl() {
     }
 

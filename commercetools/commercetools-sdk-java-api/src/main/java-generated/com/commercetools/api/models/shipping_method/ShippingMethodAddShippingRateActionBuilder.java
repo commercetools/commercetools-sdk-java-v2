@@ -76,9 +76,19 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
         return this;
     }
 
+    /**
+     *  <p>Zone to which the ShippingRate should be added.</p>
+     * @return zone
+     */
+
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
         return this.zone;
     }
+
+    /**
+     *  <p>Value to add to <code>shippingRates</code>.</p>
+     * @return shippingRate
+     */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
@@ -102,10 +112,19 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
         return new ShippingMethodAddShippingRateActionImpl(zone, shippingRate);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodAddShippingRateActionBuilder
+     * @return builder
+     */
     public static ShippingMethodAddShippingRateActionBuilder of() {
         return new ShippingMethodAddShippingRateActionBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodAddShippingRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodAddShippingRateActionBuilder of(final ShippingMethodAddShippingRateAction template) {
         ShippingMethodAddShippingRateActionBuilder builder = new ShippingMethodAddShippingRateActionBuilder();
         builder.zone = template.getZone();

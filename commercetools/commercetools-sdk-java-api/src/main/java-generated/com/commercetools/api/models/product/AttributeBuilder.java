@@ -55,9 +55,27 @@ public class AttributeBuilder implements Builder<Attribute> {
         return this;
     }
 
+    /**
+     *  <p>Name of the Attribute.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
+     * @return value
+     */
 
     public java.lang.Object getValue() {
         return this.value;
@@ -81,10 +99,19 @@ public class AttributeBuilder implements Builder<Attribute> {
         return new AttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of AttributeBuilder
+     * @return builder
+     */
     public static AttributeBuilder of() {
         return new AttributeBuilder();
     }
 
+    /**
+     * create builder for Attribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeBuilder of(final Attribute template) {
         AttributeBuilder builder = new AttributeBuilder();
         builder.name = template.getName();

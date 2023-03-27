@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListSetStoreActionImpl.class)
 public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
 
+    /**
+     * discriminator value for ShoppingListSetStoreAction
+     */
     String SET_STORE = "setStore";
 
     /**
@@ -39,30 +42,63 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     @JsonProperty("store")
     public StoreResourceIdentifier getStore();
 
+    /**
+     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     * @param store value to be set
+     */
+
     public void setStore(final StoreResourceIdentifier store);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListSetStoreAction
+     */
     public static ShoppingListSetStoreAction of() {
         return new ShoppingListSetStoreActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListSetStoreAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListSetStoreAction of(final ShoppingListSetStoreAction template) {
         ShoppingListSetStoreActionImpl instance = new ShoppingListSetStoreActionImpl();
         instance.setStore(template.getStore());
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListSetStoreAction
+     * @return builder
+     */
     public static ShoppingListSetStoreActionBuilder builder() {
         return ShoppingListSetStoreActionBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListSetStoreAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListSetStoreActionBuilder builder(final ShoppingListSetStoreAction template) {
         return ShoppingListSetStoreActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListSetStoreAction(Function<ShoppingListSetStoreAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetStoreAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetStoreAction>() {
             @Override

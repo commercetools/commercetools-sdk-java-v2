@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddCustomLineItemChangeImpl.class)
 public interface AddCustomLineItemChange extends Change {
 
+    /**
+     * discriminator value for AddCustomLineItemChange
+     */
     String ADD_CUSTOM_LINE_ITEM_CHANGE = "AddCustomLineItemChange";
 
     /**
@@ -69,16 +72,40 @@ public interface AddCustomLineItemChange extends Change {
     @JsonProperty("previousValue")
     public CustomLineItem getPreviousValue();
 
+    /**
+     *  <p>Update action for adding and removing custom line items</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final CustomLineItem nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final CustomLineItem previousValue);
 
+    /**
+     * factory method
+     * @return instance of AddCustomLineItemChange
+     */
     public static AddCustomLineItemChange of() {
         return new AddCustomLineItemChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddCustomLineItemChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddCustomLineItemChange of(final AddCustomLineItemChange template) {
         AddCustomLineItemChangeImpl instance = new AddCustomLineItemChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface AddCustomLineItemChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddCustomLineItemChange
+     * @return builder
+     */
     public static AddCustomLineItemChangeBuilder builder() {
         return AddCustomLineItemChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddCustomLineItemChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddCustomLineItemChangeBuilder builder(final AddCustomLineItemChange template) {
         return AddCustomLineItemChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddCustomLineItemChange(Function<AddCustomLineItemChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddCustomLineItemChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddCustomLineItemChange>() {
             @Override

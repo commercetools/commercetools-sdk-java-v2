@@ -46,6 +46,9 @@ public class OrderShippingInfoSetMessageImpl implements OrderShippingInfoSetMess
 
     private com.commercetools.api.models.cart.ShippingInfo oldShippingInfo;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderShippingInfoSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class OrderShippingInfoSetMessageImpl implements OrderShippingInfoSetMess
         this.type = ORDER_SHIPPING_INFO_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderShippingInfoSetMessageImpl() {
         this.type = ORDER_SHIPPING_INFO_SET;
     }

@@ -35,6 +35,11 @@ public class ProductRevertStagedVariantChangesActionBuilder
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to revert.</p>
+     * @return variantId
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
@@ -56,10 +61,19 @@ public class ProductRevertStagedVariantChangesActionBuilder
         return new ProductRevertStagedVariantChangesActionImpl(variantId);
     }
 
+    /**
+     * factory method for an instance of ProductRevertStagedVariantChangesActionBuilder
+     * @return builder
+     */
     public static ProductRevertStagedVariantChangesActionBuilder of() {
         return new ProductRevertStagedVariantChangesActionBuilder();
     }
 
+    /**
+     * create builder for ProductRevertStagedVariantChangesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRevertStagedVariantChangesActionBuilder of(
             final ProductRevertStagedVariantChangesAction template) {
         ProductRevertStagedVariantChangesActionBuilder builder = new ProductRevertStagedVariantChangesActionBuilder();

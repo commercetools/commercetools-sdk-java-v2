@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetDiscountedPriceChangeImpl.class)
 public interface SetDiscountedPriceChange extends Change {
 
+    /**
+     * discriminator value for SetDiscountedPriceChange
+     */
     String SET_DISCOUNTED_PRICE_CHANGE = "SetDiscountedPriceChange";
 
     /**
@@ -96,22 +99,61 @@ public interface SetDiscountedPriceChange extends Change {
     @JsonProperty("nextValue")
     public Price getNextValue();
 
+    /**
+     *  <p>Update action for <code>setDiscountedPrice</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set variant
+     * @param variant value to be set
+     */
+
     public void setVariant(final String variant);
+
+    /**
+     * set priceId
+     * @param priceId value to be set
+     */
 
     public void setPriceId(final String priceId);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Price previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Price nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetDiscountedPriceChange
+     */
     public static SetDiscountedPriceChange of() {
         return new SetDiscountedPriceChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetDiscountedPriceChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetDiscountedPriceChange of(final SetDiscountedPriceChange template) {
         SetDiscountedPriceChangeImpl instance = new SetDiscountedPriceChangeImpl();
         instance.setChange(template.getChange());
@@ -123,18 +165,37 @@ public interface SetDiscountedPriceChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetDiscountedPriceChange
+     * @return builder
+     */
     public static SetDiscountedPriceChangeBuilder builder() {
         return SetDiscountedPriceChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetDiscountedPriceChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDiscountedPriceChangeBuilder builder(final SetDiscountedPriceChange template) {
         return SetDiscountedPriceChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetDiscountedPriceChange(Function<SetDiscountedPriceChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetDiscountedPriceChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetDiscountedPriceChange>() {
             @Override

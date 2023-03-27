@@ -28,6 +28,9 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
 
     private String contentType;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssetSourceImpl(@JsonProperty("uri") final String uri, @JsonProperty("key") final String key,
             @JsonProperty("dimensions") final com.commercetools.history.models.common.AssetDimensions dimensions,
@@ -38,6 +41,9 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
         this.contentType = contentType;
     }
 
+    /**
+     * create empty instance
+     */
     public AssetSourceImpl() {
     }
 

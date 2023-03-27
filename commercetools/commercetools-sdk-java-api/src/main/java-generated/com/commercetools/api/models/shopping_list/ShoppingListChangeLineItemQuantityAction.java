@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListChangeLineItemQuantityActionImpl.class)
 public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUpdateAction {
 
+    /**
+     * discriminator value for ShoppingListChangeLineItemQuantityAction
+     */
     String CHANGE_LINE_ITEM_QUANTITY = "changeLineItemQuantity";
 
     /**
@@ -48,14 +51,33 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>New value to set. If <code>0</code>, the ShoppingListLineItem is removed from the ShoppingList.</p>
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListChangeLineItemQuantityAction
+     */
     public static ShoppingListChangeLineItemQuantityAction of() {
         return new ShoppingListChangeLineItemQuantityActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListChangeLineItemQuantityAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListChangeLineItemQuantityAction of(final ShoppingListChangeLineItemQuantityAction template) {
         ShoppingListChangeLineItemQuantityActionImpl instance = new ShoppingListChangeLineItemQuantityActionImpl();
         instance.setLineItemId(template.getLineItemId());
@@ -63,20 +85,39 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListChangeLineItemQuantityAction
+     * @return builder
+     */
     public static ShoppingListChangeLineItemQuantityActionBuilder builder() {
         return ShoppingListChangeLineItemQuantityActionBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListChangeLineItemQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListChangeLineItemQuantityActionBuilder builder(
             final ShoppingListChangeLineItemQuantityAction template) {
         return ShoppingListChangeLineItemQuantityActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListChangeLineItemQuantityAction(
             Function<ShoppingListChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeLineItemQuantityAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeLineItemQuantityAction>() {
             @Override

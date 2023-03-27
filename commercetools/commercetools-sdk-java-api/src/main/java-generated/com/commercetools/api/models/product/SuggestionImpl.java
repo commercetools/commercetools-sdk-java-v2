@@ -22,11 +22,17 @@ public class SuggestionImpl implements Suggestion, ModelBase {
 
     private String text;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SuggestionImpl(@JsonProperty("text") final String text) {
         this.text = text;
     }
 
+    /**
+     * create empty instance
+     */
     public SuggestionImpl() {
     }
 

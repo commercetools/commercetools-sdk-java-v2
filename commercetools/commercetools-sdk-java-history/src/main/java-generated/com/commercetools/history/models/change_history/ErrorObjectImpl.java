@@ -24,12 +24,18 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ErrorObjectImpl(@JsonProperty("code") final String code, @JsonProperty("message") final String message) {
         this.code = code;
         this.message = message;
     }
 
+    /**
+     * create empty instance
+     */
     public ErrorObjectImpl() {
     }
 

@@ -205,21 +205,46 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @return parcelId
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @return deliveryId
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @return items
+     */
+
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
 
+    /**
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @return oldItems
+     */
+
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems() {
         return this.oldItems;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -246,10 +271,19 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return new ParcelItemsUpdatedMessagePayloadImpl(parcelId, deliveryId, items, oldItems, shippingKey);
     }
 
+    /**
+     * factory method for an instance of ParcelItemsUpdatedMessagePayloadBuilder
+     * @return builder
+     */
     public static ParcelItemsUpdatedMessagePayloadBuilder of() {
         return new ParcelItemsUpdatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ParcelItemsUpdatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelItemsUpdatedMessagePayloadBuilder of(final ParcelItemsUpdatedMessagePayload template) {
         ParcelItemsUpdatedMessagePayloadBuilder builder = new ParcelItemsUpdatedMessagePayloadBuilder();
         builder.parcelId = template.getParcelId();

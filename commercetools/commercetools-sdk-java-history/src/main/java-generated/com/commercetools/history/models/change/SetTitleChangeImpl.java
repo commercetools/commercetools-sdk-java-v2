@@ -28,6 +28,9 @@ public class SetTitleChangeImpl implements SetTitleChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetTitleChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetTitleChangeImpl implements SetTitleChange, ModelBase {
         this.type = SET_TITLE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetTitleChangeImpl() {
         this.type = SET_TITLE_CHANGE;
     }

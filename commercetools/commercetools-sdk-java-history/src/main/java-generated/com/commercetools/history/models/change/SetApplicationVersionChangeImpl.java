@@ -28,6 +28,9 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
 
     private Integer nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetApplicationVersionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Integer previousValue,
@@ -38,6 +41,9 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
         this.type = SET_APPLICATION_VERSION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetApplicationVersionChangeImpl() {
         this.type = SET_APPLICATION_VERSION_CHANGE;
     }

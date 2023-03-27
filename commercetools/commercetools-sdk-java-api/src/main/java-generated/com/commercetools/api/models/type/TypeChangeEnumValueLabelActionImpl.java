@@ -26,6 +26,9 @@ public class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumValueLa
 
     private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeChangeEnumValueLabelActionImpl(@JsonProperty("fieldName") final String fieldName,
             @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldEnumValue value) {
@@ -34,6 +37,9 @@ public class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumValueLa
         this.action = CHANGE_ENUM_VALUE_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeChangeEnumValueLabelActionImpl() {
         this.action = CHANGE_ENUM_VALUE_LABEL;
     }

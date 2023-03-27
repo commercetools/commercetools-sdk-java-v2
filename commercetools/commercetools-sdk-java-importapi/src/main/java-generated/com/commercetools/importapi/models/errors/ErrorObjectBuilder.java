@@ -99,6 +99,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.importapi.models.errors.ResourceUpdateErrorBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ErrorObjectBuilder
+     * @return builder
+     */
     public static ErrorObjectBuilder of() {
         return new ErrorObjectBuilder();
     }

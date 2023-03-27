@@ -24,12 +24,18 @@ public class NumberSetFieldImpl implements NumberSetField, ModelBase {
 
     private java.util.List<Double> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     NumberSetFieldImpl(@JsonProperty("value") final java.util.List<Double> value) {
         this.value = value;
         this.type = NUMBER_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public NumberSetFieldImpl() {
         this.type = NUMBER_SET;
     }

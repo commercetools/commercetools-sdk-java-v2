@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionProductRemovedMessagePayloadImpl.class)
 public interface ProductSelectionProductRemovedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for ProductSelectionProductRemovedMessagePayload
+     */
     String PRODUCT_SELECTION_PRODUCT_REMOVED = "ProductSelectionProductRemoved";
 
     /**
@@ -42,12 +45,26 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
     @JsonProperty("product")
     public ProductReference getProduct();
 
+    /**
+     *  <p>Product that was removed from the Product Selection.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductReference product);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionProductRemovedMessagePayload
+     */
     public static ProductSelectionProductRemovedMessagePayload of() {
         return new ProductSelectionProductRemovedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionProductRemovedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionProductRemovedMessagePayload of(
             final ProductSelectionProductRemovedMessagePayload template) {
         ProductSelectionProductRemovedMessagePayloadImpl instance = new ProductSelectionProductRemovedMessagePayloadImpl();
@@ -55,20 +72,39 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionProductRemovedMessagePayload
+     * @return builder
+     */
     public static ProductSelectionProductRemovedMessagePayloadBuilder builder() {
         return ProductSelectionProductRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionProductRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionProductRemovedMessagePayloadBuilder builder(
             final ProductSelectionProductRemovedMessagePayload template) {
         return ProductSelectionProductRemovedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionProductRemovedMessagePayload(
             Function<ProductSelectionProductRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessagePayload>() {
             @Override

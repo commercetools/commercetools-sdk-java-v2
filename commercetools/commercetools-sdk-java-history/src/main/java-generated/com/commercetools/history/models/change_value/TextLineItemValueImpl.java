@@ -24,6 +24,9 @@ public class TextLineItemValueImpl implements TextLineItemValue, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TextLineItemValueImpl(@JsonProperty("id") final String id,
             @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class TextLineItemValueImpl implements TextLineItemValue, ModelBase {
         this.name = name;
     }
 
+    /**
+     * create empty instance
+     */
     public TextLineItemValueImpl() {
     }
 

@@ -38,6 +38,9 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
 
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LineItemPriceImpl(@JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value,
             @JsonProperty("country") final String country,
@@ -59,6 +62,9 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public LineItemPriceImpl() {
     }
 

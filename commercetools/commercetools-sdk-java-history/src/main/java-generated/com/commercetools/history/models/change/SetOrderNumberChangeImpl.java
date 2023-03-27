@@ -28,6 +28,9 @@ public class SetOrderNumberChangeImpl implements SetOrderNumberChange, ModelBase
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetOrderNumberChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetOrderNumberChangeImpl implements SetOrderNumberChange, ModelBase
         this.type = SET_ORDER_NUMBER_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetOrderNumberChangeImpl() {
         this.type = SET_ORDER_NUMBER_CHANGE;
     }

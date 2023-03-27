@@ -47,6 +47,11 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
         return this;
     }
 
+    /**
+     *  <p>References a resource by key</p>
+     * @return value
+     */
+
     public com.commercetools.importapi.models.common.KeyReference getValue() {
         return this.value;
     }
@@ -68,10 +73,19 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
         return new ReferenceFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of ReferenceFieldBuilder
+     * @return builder
+     */
     public static ReferenceFieldBuilder of() {
         return new ReferenceFieldBuilder();
     }
 
+    /**
+     * create builder for ReferenceField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferenceFieldBuilder of(final ReferenceField template) {
         ReferenceFieldBuilder builder = new ReferenceFieldBuilder();
         builder.value = template.getValue();

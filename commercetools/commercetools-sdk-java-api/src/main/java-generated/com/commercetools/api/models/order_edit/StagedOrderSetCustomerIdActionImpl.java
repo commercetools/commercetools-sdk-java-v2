@@ -24,12 +24,18 @@ public class StagedOrderSetCustomerIdActionImpl implements StagedOrderSetCustome
 
     private String customerId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
         this.customerId = customerId;
         this.action = SET_CUSTOMER_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetCustomerIdActionImpl() {
         this.action = SET_CUSTOMER_ID;
     }

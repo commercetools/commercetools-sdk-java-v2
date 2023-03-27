@@ -27,6 +27,9 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
 
     private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeLocalizedEnumValueOrderActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
@@ -35,6 +38,9 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeLocalizedEnumValueOrderActionImpl() {
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }

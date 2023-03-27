@@ -24,6 +24,9 @@ public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedAc
 
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditSetStagedActionsActionImpl(
             @JsonProperty("stagedActions") final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
@@ -31,6 +34,9 @@ public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedAc
         this.action = SET_STAGED_ACTIONS;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditSetStagedActionsActionImpl() {
         this.action = SET_STAGED_ACTIONS;
     }

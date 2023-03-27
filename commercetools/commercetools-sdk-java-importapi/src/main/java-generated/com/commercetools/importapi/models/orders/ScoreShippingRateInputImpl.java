@@ -24,12 +24,18 @@ public class ScoreShippingRateInputImpl implements ScoreShippingRateInput, Model
 
     private Double score;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ScoreShippingRateInputImpl(@JsonProperty("score") final Double score) {
         this.score = score;
         this.type = ShippingRateInputType.findEnum("Score");
     }
 
+    /**
+     * create empty instance
+     */
     public ScoreShippingRateInputImpl() {
         this.type = ShippingRateInputType.findEnum("Score");
     }

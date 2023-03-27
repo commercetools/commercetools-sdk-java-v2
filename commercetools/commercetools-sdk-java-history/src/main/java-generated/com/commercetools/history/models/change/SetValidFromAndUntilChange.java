@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetValidFromAndUntilChangeImpl.class)
 public interface SetValidFromAndUntilChange extends Change {
 
+    /**
+     * discriminator value for SetValidFromAndUntilChange
+     */
     String SET_VALID_FROM_AND_UNTIL_CHANGE = "SetValidFromAndUntilChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetValidFromAndUntilChange extends Change {
     @JsonProperty("nextValue")
     public ValidFromAndUntilValue getNextValue();
 
+    /**
+     * set change
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final ValidFromAndUntilValue previousValue);
 
+    /**
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final ValidFromAndUntilValue nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetValidFromAndUntilChange
+     */
     public static SetValidFromAndUntilChange of() {
         return new SetValidFromAndUntilChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetValidFromAndUntilChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetValidFromAndUntilChange of(final SetValidFromAndUntilChange template) {
         SetValidFromAndUntilChangeImpl instance = new SetValidFromAndUntilChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetValidFromAndUntilChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetValidFromAndUntilChange
+     * @return builder
+     */
     public static SetValidFromAndUntilChangeBuilder builder() {
         return SetValidFromAndUntilChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetValidFromAndUntilChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetValidFromAndUntilChangeBuilder builder(final SetValidFromAndUntilChange template) {
         return SetValidFromAndUntilChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetValidFromAndUntilChange(Function<SetValidFromAndUntilChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetValidFromAndUntilChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetValidFromAndUntilChange>() {
             @Override

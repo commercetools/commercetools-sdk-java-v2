@@ -35,6 +35,10 @@ public class AttributeGroupUpdateActionBuilder {
         return com.commercetools.api.models.attribute_group.AttributeGroupSetKeyActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of AttributeGroupUpdateActionBuilder
+     * @return builder
+     */
     public static AttributeGroupUpdateActionBuilder of() {
         return new AttributeGroupUpdateActionBuilder();
     }

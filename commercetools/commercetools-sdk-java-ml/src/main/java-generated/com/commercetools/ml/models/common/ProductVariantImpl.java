@@ -26,6 +26,9 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
 
     private Integer variantId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantImpl(@JsonProperty("product") final com.commercetools.ml.models.common.ProductReference product,
             @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Integer variantId) {
@@ -34,6 +37,9 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
         this.variantId = variantId;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantImpl() {
     }
 

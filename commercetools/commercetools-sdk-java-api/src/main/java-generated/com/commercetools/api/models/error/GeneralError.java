@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = GeneralErrorImpl.class)
 public interface GeneralError extends ErrorObject {
 
+    /**
+     * discriminator value for GeneralError
+     */
     String GENERAL = "General";
 
     /**
@@ -48,12 +51,26 @@ public interface GeneralError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Description about any known details of the problem, for example, <code>"Write operations are temporarily unavailable"</code>.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of GeneralError
+     */
     public static GeneralError of() {
         return new GeneralErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of GeneralError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GeneralError of(final GeneralError template) {
         GeneralErrorImpl instance = new GeneralErrorImpl();
         instance.setMessage(template.getMessage());
@@ -61,18 +78,37 @@ public interface GeneralError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for GeneralError
+     * @return builder
+     */
     public static GeneralErrorBuilder builder() {
         return GeneralErrorBuilder.of();
     }
 
+    /**
+     * create builder for GeneralError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GeneralErrorBuilder builder(final GeneralError template) {
         return GeneralErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGeneralError(Function<GeneralError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GeneralError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GeneralError>() {
             @Override

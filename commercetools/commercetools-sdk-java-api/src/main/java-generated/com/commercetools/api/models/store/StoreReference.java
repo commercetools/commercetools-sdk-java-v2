@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreReferenceImpl.class)
 public interface StoreReference extends Reference, com.commercetools.api.models.Identifiable<Store> {
 
+    /**
+     * discriminator value for StoreReference
+     */
     String STORE = "store";
 
     /**
@@ -49,14 +52,33 @@ public interface StoreReference extends Reference, com.commercetools.api.models.
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final Store obj);
+
+    /**
+     *  <p>Unique ID of the referenced Store.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of StoreReference
+     */
     public static StoreReference of() {
         return new StoreReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreReference of(final StoreReference template) {
         StoreReferenceImpl instance = new StoreReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface StoreReference extends Reference, com.commercetools.api.models.
         return instance;
     }
 
+    /**
+     * builder factory method for StoreReference
+     * @return builder
+     */
     public static StoreReferenceBuilder builder() {
         return StoreReferenceBuilder.of();
     }
 
+    /**
+     * create builder for StoreReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreReferenceBuilder builder(final StoreReference template) {
         return StoreReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreReference(Function<StoreReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreReference>() {
             @Override

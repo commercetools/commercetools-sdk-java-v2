@@ -61,6 +61,11 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
+     * @return textLineItemOrder
+     */
+
     public java.util.List<String> getTextLineItemOrder() {
         return this.textLineItemOrder;
     }
@@ -83,10 +88,19 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
         return new ShoppingListChangeTextLineItemsOrderActionImpl(textLineItemOrder);
     }
 
+    /**
+     * factory method for an instance of ShoppingListChangeTextLineItemsOrderActionBuilder
+     * @return builder
+     */
     public static ShoppingListChangeTextLineItemsOrderActionBuilder of() {
         return new ShoppingListChangeTextLineItemsOrderActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListChangeTextLineItemsOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListChangeTextLineItemsOrderActionBuilder of(
             final ShoppingListChangeTextLineItemsOrderAction template) {
         ShoppingListChangeTextLineItemsOrderActionBuilder builder = new ShoppingListChangeTextLineItemsOrderActionBuilder();

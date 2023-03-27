@@ -62,9 +62,19 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
         return this;
     }
 
+    /**
+     *  <p>Plain text description of the constraints that were violated.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
         return new InternalConstraintViolatedErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of InternalConstraintViolatedErrorBuilder
+     * @return builder
+     */
     public static InternalConstraintViolatedErrorBuilder of() {
         return new InternalConstraintViolatedErrorBuilder();
     }
 
+    /**
+     * create builder for InternalConstraintViolatedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InternalConstraintViolatedErrorBuilder of(final InternalConstraintViolatedError template) {
         InternalConstraintViolatedErrorBuilder builder = new InternalConstraintViolatedErrorBuilder();
         builder.message = template.getMessage();

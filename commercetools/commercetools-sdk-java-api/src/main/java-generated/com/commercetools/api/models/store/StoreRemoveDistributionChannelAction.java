@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreRemoveDistributionChannelActionImpl.class)
 public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreRemoveDistributionChannelAction
+     */
     String REMOVE_DISTRIBUTION_CHANNEL = "removeDistributionChannel";
 
     /**
@@ -42,31 +45,64 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
 
+    /**
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param distributionChannel value to be set
+     */
+
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
+    /**
+     * factory method
+     * @return instance of StoreRemoveDistributionChannelAction
+     */
     public static StoreRemoveDistributionChannelAction of() {
         return new StoreRemoveDistributionChannelActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreRemoveDistributionChannelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreRemoveDistributionChannelAction of(final StoreRemoveDistributionChannelAction template) {
         StoreRemoveDistributionChannelActionImpl instance = new StoreRemoveDistributionChannelActionImpl();
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
 
+    /**
+     * builder factory method for StoreRemoveDistributionChannelAction
+     * @return builder
+     */
     public static StoreRemoveDistributionChannelActionBuilder builder() {
         return StoreRemoveDistributionChannelActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreRemoveDistributionChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreRemoveDistributionChannelActionBuilder builder(
             final StoreRemoveDistributionChannelAction template) {
         return StoreRemoveDistributionChannelActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreRemoveDistributionChannelAction(Function<StoreRemoveDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreRemoveDistributionChannelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreRemoveDistributionChannelAction>() {
             @Override

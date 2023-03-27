@@ -36,10 +36,19 @@ public class CustomerEmailVerifiedMessagePayloadBuilder implements Builder<Custo
         return new CustomerEmailVerifiedMessagePayloadImpl();
     }
 
+    /**
+     * factory method for an instance of CustomerEmailVerifiedMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerEmailVerifiedMessagePayloadBuilder of() {
         return new CustomerEmailVerifiedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerEmailVerifiedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerEmailVerifiedMessagePayloadBuilder of(final CustomerEmailVerifiedMessagePayload template) {
         CustomerEmailVerifiedMessagePayloadBuilder builder = new CustomerEmailVerifiedMessagePayloadBuilder();
         return builder;

@@ -62,9 +62,19 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
         return this;
     }
 
+    /**
+     *  <p><code>"Facet path $path not found."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
         return new SearchFacetPathNotFoundErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of SearchFacetPathNotFoundErrorBuilder
+     * @return builder
+     */
     public static SearchFacetPathNotFoundErrorBuilder of() {
         return new SearchFacetPathNotFoundErrorBuilder();
     }
 
+    /**
+     * create builder for SearchFacetPathNotFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchFacetPathNotFoundErrorBuilder of(final SearchFacetPathNotFoundError template) {
         SearchFacetPathNotFoundErrorBuilder builder = new SearchFacetPathNotFoundErrorBuilder();
         builder.message = template.getMessage();

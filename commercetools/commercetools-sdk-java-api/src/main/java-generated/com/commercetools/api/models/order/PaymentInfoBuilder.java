@@ -25,7 +25,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     private java.util.List<com.commercetools.api.models.payment.PaymentReference> payments;
 
     /**
-     *
+     * set values to the payments
      * @param payments value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
-     *
+     * set value to the payments
      * @param payments value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
-     *
+     * add values to the payments
      * @param payments value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
-     *
+     * add the value to the payments using the builder function
      * @param builder function to build the payments value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
-     *
+     * set the value to the payments using the builder function
      * @param builder function to build the payments value
      * @return Builder
      */
@@ -88,6 +88,11 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
         this.payments.add(builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     * value of payments}
+     * @return payments
+     */
 
     public java.util.List<com.commercetools.api.models.payment.PaymentReference> getPayments() {
         return this.payments;
@@ -110,10 +115,19 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
         return new PaymentInfoImpl(payments);
     }
 
+    /**
+     * factory method for an instance of PaymentInfoBuilder
+     * @return builder
+     */
     public static PaymentInfoBuilder of() {
         return new PaymentInfoBuilder();
     }
 
+    /**
+     * create builder for PaymentInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentInfoBuilder of(final PaymentInfo template) {
         PaymentInfoBuilder builder = new PaymentInfoBuilder();
         builder.payments = template.getPayments();

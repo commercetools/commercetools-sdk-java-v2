@@ -28,6 +28,9 @@ public class SetValidToChangeImpl implements SetValidToChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetValidToChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetValidToChangeImpl implements SetValidToChange, ModelBase {
         this.type = SET_VALID_TO_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetValidToChangeImpl() {
         this.type = SET_VALID_TO_CHANGE;
     }

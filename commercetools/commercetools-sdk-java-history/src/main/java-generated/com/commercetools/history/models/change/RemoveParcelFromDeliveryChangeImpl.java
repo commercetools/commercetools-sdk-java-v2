@@ -28,6 +28,9 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
 
     private com.commercetools.history.models.common.Parcel previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveParcelFromDeliveryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("deliveryId") final String deliveryId,
@@ -38,6 +41,9 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
         this.type = REMOVE_PARCEL_FROM_DELIVERY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveParcelFromDeliveryChangeImpl() {
         this.type = REMOVE_PARCEL_FROM_DELIVERY_CHANGE;
     }

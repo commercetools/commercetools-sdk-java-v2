@@ -28,6 +28,9 @@ public class SetOrderTotalPriceChangeImpl implements SetOrderTotalPriceChange, M
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetOrderTotalPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Money nextValue,
@@ -38,6 +41,9 @@ public class SetOrderTotalPriceChangeImpl implements SetOrderTotalPriceChange, M
         this.type = SET_ORDER_TOTAL_PRICE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetOrderTotalPriceChangeImpl() {
         this.type = SET_ORDER_TOTAL_PRICE_CHANGE;
     }

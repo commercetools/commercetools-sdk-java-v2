@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PendingOperationErrorImpl.class)
 public interface PendingOperationError extends ErrorObject {
 
+    /**
+     * discriminator value for PendingOperationError
+     */
     String PENDING_OPERATION = "PendingOperation";
 
     /**
@@ -48,12 +51,26 @@ public interface PendingOperationError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Plain text description of the error.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of PendingOperationError
+     */
     public static PendingOperationError of() {
         return new PendingOperationErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of PendingOperationError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PendingOperationError of(final PendingOperationError template) {
         PendingOperationErrorImpl instance = new PendingOperationErrorImpl();
         instance.setMessage(template.getMessage());
@@ -61,18 +78,37 @@ public interface PendingOperationError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for PendingOperationError
+     * @return builder
+     */
     public static PendingOperationErrorBuilder builder() {
         return PendingOperationErrorBuilder.of();
     }
 
+    /**
+     * create builder for PendingOperationError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PendingOperationErrorBuilder builder(final PendingOperationError template) {
         return PendingOperationErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPendingOperationError(Function<PendingOperationError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PendingOperationError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PendingOperationError>() {
             @Override

@@ -26,6 +26,9 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
 
     private Long addedQuantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderLineItemAddedMessagePayloadImpl(
             @JsonProperty("lineItem") final com.commercetools.api.models.cart.LineItem lineItem,
@@ -35,6 +38,9 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
         this.type = ORDER_LINE_ITEM_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderLineItemAddedMessagePayloadImpl() {
         this.type = ORDER_LINE_ITEM_ADDED;
     }

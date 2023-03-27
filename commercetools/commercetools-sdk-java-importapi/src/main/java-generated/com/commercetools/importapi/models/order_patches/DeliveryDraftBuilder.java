@@ -33,7 +33,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     private java.util.List<com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> parcels;
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set the value to the address
      * @param address value to be set
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set value to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -145,7 +145,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * add values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * add the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -189,14 +189,29 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
         return this;
     }
 
+    /**
+     * value of items}
+     * @return items
+     */
+
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
         return this.items;
     }
+
+    /**
+     * value of address}
+     * @return address
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.Address getAddress() {
         return this.address;
     }
+
+    /**
+     * value of parcels}
+     * @return parcels
+     */
 
     public java.util.List<com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> getParcels() {
         return this.parcels;
@@ -220,10 +235,19 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
         return new DeliveryDraftImpl(items, address, parcels);
     }
 
+    /**
+     * factory method for an instance of DeliveryDraftBuilder
+     * @return builder
+     */
     public static DeliveryDraftBuilder of() {
         return new DeliveryDraftBuilder();
     }
 
+    /**
+     * create builder for DeliveryDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryDraftBuilder of(final DeliveryDraft template) {
         DeliveryDraftBuilder builder = new DeliveryDraftBuilder();
         builder.items = template.getItems();

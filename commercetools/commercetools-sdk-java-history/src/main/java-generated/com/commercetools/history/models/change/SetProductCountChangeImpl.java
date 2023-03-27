@@ -28,6 +28,9 @@ public class SetProductCountChangeImpl implements SetProductCountChange, ModelBa
 
     private Integer nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetProductCountChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Integer previousValue,
@@ -38,6 +41,9 @@ public class SetProductCountChangeImpl implements SetProductCountChange, ModelBa
         this.type = SET_PRODUCT_COUNT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetProductCountChangeImpl() {
         this.type = SET_PRODUCT_COUNT_CHANGE;
     }

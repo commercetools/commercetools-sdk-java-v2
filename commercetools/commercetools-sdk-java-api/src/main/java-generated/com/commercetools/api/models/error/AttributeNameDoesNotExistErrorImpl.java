@@ -29,6 +29,9 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
 
     private String invalidAttributeName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeNameDoesNotExistErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -39,6 +42,9 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
         this.code = ATTRIBUTE_NAME_DOES_NOT_EXIST;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeNameDoesNotExistErrorImpl() {
         this.code = ATTRIBUTE_NAME_DOES_NOT_EXIST;
     }

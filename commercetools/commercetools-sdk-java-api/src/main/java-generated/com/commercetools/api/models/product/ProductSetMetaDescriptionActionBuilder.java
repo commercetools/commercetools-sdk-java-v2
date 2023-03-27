@@ -64,10 +64,20 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return metaDescription
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -90,10 +100,19 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
         return new ProductSetMetaDescriptionActionImpl(metaDescription, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetMetaDescriptionActionBuilder
+     * @return builder
+     */
     public static ProductSetMetaDescriptionActionBuilder of() {
         return new ProductSetMetaDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetMetaDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetMetaDescriptionActionBuilder of(final ProductSetMetaDescriptionAction template) {
         ProductSetMetaDescriptionActionBuilder builder = new ProductSetMetaDescriptionActionBuilder();
         builder.metaDescription = template.getMetaDescription();

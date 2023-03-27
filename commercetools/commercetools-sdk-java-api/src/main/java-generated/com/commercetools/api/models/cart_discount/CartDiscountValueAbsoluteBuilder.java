@@ -91,6 +91,11 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
         return this;
     }
 
+    /**
+     *  <p>Cent precision money values in different currencies.</p>
+     * @return money
+     */
+
     public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {
         return this.money;
     }
@@ -112,10 +117,19 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
         return new CartDiscountValueAbsoluteImpl(money);
     }
 
+    /**
+     * factory method for an instance of CartDiscountValueAbsoluteBuilder
+     * @return builder
+     */
     public static CartDiscountValueAbsoluteBuilder of() {
         return new CartDiscountValueAbsoluteBuilder();
     }
 
+    /**
+     * create builder for CartDiscountValueAbsolute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueAbsoluteBuilder of(final CartDiscountValueAbsolute template) {
         CartDiscountValueAbsoluteBuilder builder = new CartDiscountValueAbsoluteBuilder();
         builder.money = template.getMoney();

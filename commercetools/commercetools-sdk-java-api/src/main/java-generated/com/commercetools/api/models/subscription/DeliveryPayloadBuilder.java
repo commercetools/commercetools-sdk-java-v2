@@ -27,6 +27,10 @@ public class DeliveryPayloadBuilder {
         return com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayloadBuilder.of();
     }
 
+    /**
+     * factory method for an instance of DeliveryPayloadBuilder
+     * @return builder
+     */
     public static DeliveryPayloadBuilder of() {
         return new DeliveryPayloadBuilder();
     }

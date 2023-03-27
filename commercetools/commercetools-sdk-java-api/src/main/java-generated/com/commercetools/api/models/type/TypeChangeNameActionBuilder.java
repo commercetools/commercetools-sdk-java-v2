@@ -47,6 +47,11 @@ public class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -68,10 +73,19 @@ public class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction
         return new TypeChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of TypeChangeNameActionBuilder
+     * @return builder
+     */
     public static TypeChangeNameActionBuilder of() {
         return new TypeChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for TypeChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeNameActionBuilder of(final TypeChangeNameAction template) {
         TypeChangeNameActionBuilder builder = new TypeChangeNameActionBuilder();
         builder.name = template.getName();

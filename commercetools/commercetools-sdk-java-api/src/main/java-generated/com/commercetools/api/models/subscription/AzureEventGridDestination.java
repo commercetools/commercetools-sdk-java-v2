@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AzureEventGridDestinationImpl.class)
 public interface AzureEventGridDestination extends Destination {
 
+    /**
+     * discriminator value for AzureEventGridDestination
+     */
     String EVENT_GRID = "EventGrid";
 
     /**
@@ -48,14 +51,33 @@ public interface AzureEventGridDestination extends Destination {
     @JsonProperty("accessKey")
     public String getAccessKey();
 
+    /**
+     *  <p>URI of the topic.</p>
+     * @param uri value to be set
+     */
+
     public void setUri(final String uri);
+
+    /**
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @param accessKey value to be set
+     */
 
     public void setAccessKey(final String accessKey);
 
+    /**
+     * factory method
+     * @return instance of AzureEventGridDestination
+     */
     public static AzureEventGridDestination of() {
         return new AzureEventGridDestinationImpl();
     }
 
+    /**
+     * factory method to copy an instance of AzureEventGridDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AzureEventGridDestination of(final AzureEventGridDestination template) {
         AzureEventGridDestinationImpl instance = new AzureEventGridDestinationImpl();
         instance.setUri(template.getUri());
@@ -63,18 +85,37 @@ public interface AzureEventGridDestination extends Destination {
         return instance;
     }
 
+    /**
+     * builder factory method for AzureEventGridDestination
+     * @return builder
+     */
     public static AzureEventGridDestinationBuilder builder() {
         return AzureEventGridDestinationBuilder.of();
     }
 
+    /**
+     * create builder for AzureEventGridDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AzureEventGridDestinationBuilder builder(final AzureEventGridDestination template) {
         return AzureEventGridDestinationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAzureEventGridDestination(Function<AzureEventGridDestination, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AzureEventGridDestination> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AzureEventGridDestination>() {
             @Override

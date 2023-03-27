@@ -24,6 +24,9 @@ public class CategoryChangeParentActionImpl implements CategoryChangeParentActio
 
     private com.commercetools.api.models.category.CategoryResourceIdentifier parent;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryChangeParentActionImpl(
             @JsonProperty("parent") final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {
@@ -31,6 +34,9 @@ public class CategoryChangeParentActionImpl implements CategoryChangeParentActio
         this.action = CHANGE_PARENT;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryChangeParentActionImpl() {
         this.action = CHANGE_PARENT;
     }

@@ -30,6 +30,9 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
 
     private com.commercetools.history.models.common.Variant nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeMasterVariantChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
         this.type = CHANGE_MASTER_VARIANT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeMasterVariantChangeImpl() {
         this.type = CHANGE_MASTER_VARIANT_CHANGE;
     }

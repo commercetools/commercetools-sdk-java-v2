@@ -141,18 +141,40 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         return this;
     }
 
+    /**
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @return productSelection
+     */
 
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
         return this.productSelection;
     }
 
+    /**
+     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     * @return variantSelection
+     */
+
     @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
     }
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     * @return variantExclusion
+     */
 
     @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
@@ -177,10 +199,19 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         return new ProductSelectionAssignmentImpl(product, productSelection, variantSelection, variantExclusion);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionAssignmentBuilder
+     * @return builder
+     */
     public static ProductSelectionAssignmentBuilder of() {
         return new ProductSelectionAssignmentBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionAssignment instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionAssignmentBuilder of(final ProductSelectionAssignment template) {
         ProductSelectionAssignmentBuilder builder = new ProductSelectionAssignmentBuilder();
         builder.product = template.getProduct();

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeNameActionImpl.class)
 public interface TypeChangeNameAction extends TypeUpdateAction {
 
+    /**
+     * discriminator value for TypeChangeNameAction
+     */
     String CHANGE_NAME = "changeName";
 
     /**
@@ -42,30 +45,63 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
 
+    /**
+     * factory method
+     * @return instance of TypeChangeNameAction
+     */
     public static TypeChangeNameAction of() {
         return new TypeChangeNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeChangeNameAction of(final TypeChangeNameAction template) {
         TypeChangeNameActionImpl instance = new TypeChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for TypeChangeNameAction
+     * @return builder
+     */
     public static TypeChangeNameActionBuilder builder() {
         return TypeChangeNameActionBuilder.of();
     }
 
+    /**
+     * create builder for TypeChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeNameActionBuilder builder(final TypeChangeNameAction template) {
         return TypeChangeNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeChangeNameAction(Function<TypeChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeNameAction>() {
             @Override

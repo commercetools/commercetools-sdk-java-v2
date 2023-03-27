@@ -24,7 +24,7 @@ public class TimeFieldBuilder implements Builder<TimeField> {
     private java.time.LocalTime value;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class TimeFieldBuilder implements Builder<TimeField> {
         this.value = value;
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.time.LocalTime getValue() {
         return this.value;
@@ -55,10 +60,19 @@ public class TimeFieldBuilder implements Builder<TimeField> {
         return new TimeFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of TimeFieldBuilder
+     * @return builder
+     */
     public static TimeFieldBuilder of() {
         return new TimeFieldBuilder();
     }
 
+    /**
+     * create builder for TimeField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TimeFieldBuilder of(final TimeField template) {
         TimeFieldBuilder builder = new TimeFieldBuilder();
         builder.value = template.getValue();

@@ -24,6 +24,9 @@ public class ProjectChangeCartsConfigurationActionImpl implements ProjectChangeC
 
     private com.commercetools.api.models.project.CartsConfiguration cartsConfiguration;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeCartsConfigurationActionImpl(
             @JsonProperty("cartsConfiguration") final com.commercetools.api.models.project.CartsConfiguration cartsConfiguration) {
@@ -31,6 +34,9 @@ public class ProjectChangeCartsConfigurationActionImpl implements ProjectChangeC
         this.action = CHANGE_CARTS_CONFIGURATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeCartsConfigurationActionImpl() {
         this.action = CHANGE_CARTS_CONFIGURATION;
     }

@@ -24,12 +24,18 @@ public class CustomerSetSalutationActionImpl implements CustomerSetSalutationAct
 
     private String salutation;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetSalutationActionImpl(@JsonProperty("salutation") final String salutation) {
         this.salutation = salutation;
         this.action = SET_SALUTATION;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetSalutationActionImpl() {
         this.action = SET_SALUTATION;
     }

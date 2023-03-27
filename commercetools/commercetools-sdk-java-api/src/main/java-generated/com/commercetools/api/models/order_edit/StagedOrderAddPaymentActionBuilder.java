@@ -49,6 +49,11 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of a Payment.</p>
+     * @return payment
+     */
+
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
         return this.payment;
     }
@@ -70,10 +75,19 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
         return new StagedOrderAddPaymentActionImpl(payment);
     }
 
+    /**
+     * factory method for an instance of StagedOrderAddPaymentActionBuilder
+     * @return builder
+     */
     public static StagedOrderAddPaymentActionBuilder of() {
         return new StagedOrderAddPaymentActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderAddPaymentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddPaymentActionBuilder of(final StagedOrderAddPaymentAction template) {
         StagedOrderAddPaymentActionBuilder builder = new StagedOrderAddPaymentActionBuilder();
         builder.payment = template.getPayment();

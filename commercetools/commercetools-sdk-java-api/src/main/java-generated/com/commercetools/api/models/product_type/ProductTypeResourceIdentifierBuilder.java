@@ -50,10 +50,20 @@ public class ProductTypeResourceIdentifierBuilder implements Builder<ProductType
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced ProductType. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced ProductType. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class ProductTypeResourceIdentifierBuilder implements Builder<ProductType
         return new ProductTypeResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of ProductTypeResourceIdentifierBuilder
+     * @return builder
+     */
     public static ProductTypeResourceIdentifierBuilder of() {
         return new ProductTypeResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for ProductTypeResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeResourceIdentifierBuilder of(final ProductTypeResourceIdentifier template) {
         ProductTypeResourceIdentifierBuilder builder = new ProductTypeResourceIdentifierBuilder();
         builder.id = template.getId();

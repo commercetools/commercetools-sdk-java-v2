@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderChangePaymentStateActionImpl.class)
 public interface OrderChangePaymentStateAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderChangePaymentStateAction
+     */
     String CHANGE_PAYMENT_STATE = "changePaymentState";
 
     /**
@@ -36,30 +39,63 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
 
+    /**
+     * set paymentState
+     * @param paymentState value to be set
+     */
+
     public void setPaymentState(final PaymentState paymentState);
 
+    /**
+     * factory method
+     * @return instance of OrderChangePaymentStateAction
+     */
     public static OrderChangePaymentStateAction of() {
         return new OrderChangePaymentStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderChangePaymentStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderChangePaymentStateAction of(final OrderChangePaymentStateAction template) {
         OrderChangePaymentStateActionImpl instance = new OrderChangePaymentStateActionImpl();
         instance.setPaymentState(template.getPaymentState());
         return instance;
     }
 
+    /**
+     * builder factory method for OrderChangePaymentStateAction
+     * @return builder
+     */
     public static OrderChangePaymentStateActionBuilder builder() {
         return OrderChangePaymentStateActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderChangePaymentStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderChangePaymentStateActionBuilder builder(final OrderChangePaymentStateAction template) {
         return OrderChangePaymentStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderChangePaymentStateAction(Function<OrderChangePaymentStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderChangePaymentStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderChangePaymentStateAction>() {
             @Override

@@ -32,6 +32,9 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("stagedQuote") final com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote,
@@ -47,6 +50,9 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteDraftImpl() {
     }
 

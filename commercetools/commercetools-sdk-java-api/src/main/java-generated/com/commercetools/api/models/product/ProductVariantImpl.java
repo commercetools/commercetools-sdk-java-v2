@@ -44,6 +44,9 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
 
     private Boolean scopedPriceDiscounted;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantImpl(@JsonProperty("id") final Long id, @JsonProperty("sku") final String sku,
             @JsonProperty("key") final String key,
@@ -70,6 +73,9 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
         this.scopedPriceDiscounted = scopedPriceDiscounted;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantImpl() {
     }
 

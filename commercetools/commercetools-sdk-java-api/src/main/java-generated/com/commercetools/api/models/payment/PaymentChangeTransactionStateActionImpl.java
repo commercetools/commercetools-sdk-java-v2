@@ -26,6 +26,9 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
 
     private com.commercetools.api.models.payment.TransactionState state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentChangeTransactionStateActionImpl(@JsonProperty("transactionId") final String transactionId,
             @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
@@ -34,6 +37,9 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
         this.action = CHANGE_TRANSACTION_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentChangeTransactionStateActionImpl() {
         this.action = CHANGE_TRANSACTION_STATE;
     }

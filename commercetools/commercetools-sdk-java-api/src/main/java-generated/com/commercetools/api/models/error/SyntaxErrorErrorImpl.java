@@ -26,6 +26,9 @@ public class SyntaxErrorErrorImpl implements SyntaxErrorError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SyntaxErrorErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class SyntaxErrorErrorImpl implements SyntaxErrorError, ModelBase {
         this.code = SYNTAX_ERROR;
     }
 
+    /**
+     * create empty instance
+     */
     public SyntaxErrorErrorImpl() {
         this.code = SYNTAX_ERROR;
     }

@@ -28,6 +28,9 @@ public class SetExpectedDeliveryChangeImpl implements SetExpectedDeliveryChange,
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetExpectedDeliveryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetExpectedDeliveryChangeImpl implements SetExpectedDeliveryChange,
         this.type = SET_EXPECTED_DELIVERY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetExpectedDeliveryChangeImpl() {
         this.type = SET_EXPECTED_DELIVERY_CHANGE;
     }

@@ -67,6 +67,10 @@ public class TypeUpdateActionBuilder {
         return com.commercetools.api.models.type.TypeSetDescriptionActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of TypeUpdateActionBuilder
+     * @return builder
+     */
     public static TypeUpdateActionBuilder of() {
         return new TypeUpdateActionBuilder();
     }

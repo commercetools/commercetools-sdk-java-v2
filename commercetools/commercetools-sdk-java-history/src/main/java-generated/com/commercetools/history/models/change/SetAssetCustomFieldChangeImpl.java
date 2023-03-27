@@ -34,6 +34,9 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
 
     private java.lang.Object previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAssetCustomFieldChangeImpl(@JsonProperty("change") final String change, @JsonProperty("name") final String name,
             @JsonProperty("customTypeId") final String customTypeId,
@@ -49,6 +52,9 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
         this.type = SET_ASSET_CUSTOM_FIELD_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAssetCustomFieldChangeImpl() {
         this.type = SET_ASSET_CUSTOM_FIELD_CHANGE;
     }

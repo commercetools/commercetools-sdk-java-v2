@@ -46,14 +46,33 @@ public interface PayloadNotIncluded {
     @JsonProperty("payloadType")
     public String getPayloadType();
 
+    /**
+     *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
+     * @param reason value to be set
+     */
+
     public void setReason(final String reason);
+
+    /**
+     *  <p>Value of the <code>type</code> field in the original payload.</p>
+     * @param payloadType value to be set
+     */
 
     public void setPayloadType(final String payloadType);
 
+    /**
+     * factory method
+     * @return instance of PayloadNotIncluded
+     */
     public static PayloadNotIncluded of() {
         return new PayloadNotIncludedImpl();
     }
 
+    /**
+     * factory method to copy an instance of PayloadNotIncluded
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PayloadNotIncluded of(final PayloadNotIncluded template) {
         PayloadNotIncludedImpl instance = new PayloadNotIncludedImpl();
         instance.setReason(template.getReason());
@@ -61,18 +80,37 @@ public interface PayloadNotIncluded {
         return instance;
     }
 
+    /**
+     * builder factory method for PayloadNotIncluded
+     * @return builder
+     */
     public static PayloadNotIncludedBuilder builder() {
         return PayloadNotIncludedBuilder.of();
     }
 
+    /**
+     * create builder for PayloadNotIncluded instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PayloadNotIncludedBuilder builder(final PayloadNotIncluded template) {
         return PayloadNotIncludedBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPayloadNotIncluded(Function<PayloadNotIncluded, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PayloadNotIncluded> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PayloadNotIncluded>() {
             @Override

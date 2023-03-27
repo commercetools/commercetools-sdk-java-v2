@@ -227,48 +227,103 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the ProductSelection.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the ProductSelection.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the ProductSelection.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the ProductSelection.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
+     * @return productCount
+     */
 
     public Integer getProductCount() {
         return this.productCount;
     }
 
+    /**
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Custom Fields of the ProductSelection.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -300,10 +355,19 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
             productCount, type, custom);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionBuilder
+     * @return builder
+     */
     public static ProductSelectionBuilder of() {
         return new ProductSelectionBuilder();
     }
 
+    /**
+     * create builder for ProductSelection instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionBuilder of(final ProductSelection template) {
         ProductSelectionBuilder builder = new ProductSelectionBuilder();
         builder.id = template.getId();

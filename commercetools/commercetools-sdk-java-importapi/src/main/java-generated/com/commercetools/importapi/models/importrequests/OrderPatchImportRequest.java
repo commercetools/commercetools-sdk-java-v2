@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderPatchImportRequestImpl.class)
 public interface OrderPatchImportRequest extends ImportRequest {
 
+    /**
+     * discriminator value for OrderPatchImportRequest
+     */
     String ORDER_PATCH = "order-patch";
 
     /**
@@ -42,33 +45,71 @@ public interface OrderPatchImportRequest extends ImportRequest {
     @JsonProperty("patches")
     public List<OrderPatchImport> getPatches();
 
+    /**
+     *  <p>The order patches of this request</p>
+     * @param patches values to be set
+     */
+
     @JsonIgnore
     public void setPatches(final OrderPatchImport... patches);
 
+    /**
+     *  <p>The order patches of this request</p>
+     * @param patches values to be set
+     */
+
     public void setPatches(final List<OrderPatchImport> patches);
 
+    /**
+     * factory method
+     * @return instance of OrderPatchImportRequest
+     */
     public static OrderPatchImportRequest of() {
         return new OrderPatchImportRequestImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderPatchImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderPatchImportRequest of(final OrderPatchImportRequest template) {
         OrderPatchImportRequestImpl instance = new OrderPatchImportRequestImpl();
         instance.setPatches(template.getPatches());
         return instance;
     }
 
+    /**
+     * builder factory method for OrderPatchImportRequest
+     * @return builder
+     */
     public static OrderPatchImportRequestBuilder builder() {
         return OrderPatchImportRequestBuilder.of();
     }
 
+    /**
+     * create builder for OrderPatchImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPatchImportRequestBuilder builder(final OrderPatchImportRequest template) {
         return OrderPatchImportRequestBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderPatchImportRequest(Function<OrderPatchImportRequest, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderPatchImportRequest> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderPatchImportRequest>() {
             @Override

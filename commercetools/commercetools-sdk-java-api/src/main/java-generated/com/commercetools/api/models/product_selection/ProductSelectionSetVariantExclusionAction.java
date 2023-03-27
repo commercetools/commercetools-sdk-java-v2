@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionSetVariantExclusionActionImpl.class)
 public interface ProductSelectionSetVariantExclusionAction extends ProductSelectionUpdateAction {
 
+    /**
+     * discriminator value for ProductSelectionSetVariantExclusionAction
+     */
     String SET_VARIANT_EXCLUSION = "setVariantExclusion";
 
     /**
@@ -51,14 +54,33 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
     @JsonProperty("variantExclusion")
     public ProductVariantExclusion getVariantExclusion();
 
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductResourceIdentifier product);
+
+    /**
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
+     * @param variantExclusion value to be set
+     */
 
     public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionSetVariantExclusionAction
+     */
     public static ProductSelectionSetVariantExclusionAction of() {
         return new ProductSelectionSetVariantExclusionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionSetVariantExclusionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionSetVariantExclusionAction of(
             final ProductSelectionSetVariantExclusionAction template) {
         ProductSelectionSetVariantExclusionActionImpl instance = new ProductSelectionSetVariantExclusionActionImpl();
@@ -67,20 +89,39 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionSetVariantExclusionAction
+     * @return builder
+     */
     public static ProductSelectionSetVariantExclusionActionBuilder builder() {
         return ProductSelectionSetVariantExclusionActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionSetVariantExclusionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionSetVariantExclusionActionBuilder builder(
             final ProductSelectionSetVariantExclusionAction template) {
         return ProductSelectionSetVariantExclusionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionSetVariantExclusionAction(
             Function<ProductSelectionSetVariantExclusionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetVariantExclusionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetVariantExclusionAction>() {
             @Override

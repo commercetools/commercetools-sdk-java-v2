@@ -35,6 +35,11 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     * @return resourceTypeId
+     */
+
     public com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }
@@ -56,10 +61,19 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
         return new ChangeSubscriptionImpl(resourceTypeId);
     }
 
+    /**
+     * factory method for an instance of ChangeSubscriptionBuilder
+     * @return builder
+     */
     public static ChangeSubscriptionBuilder of() {
         return new ChangeSubscriptionBuilder();
     }
 
+    /**
+     * create builder for ChangeSubscription instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeSubscriptionBuilder of(final ChangeSubscription template) {
         ChangeSubscriptionBuilder builder = new ChangeSubscriptionBuilder();
         builder.resourceTypeId = template.getResourceTypeId();

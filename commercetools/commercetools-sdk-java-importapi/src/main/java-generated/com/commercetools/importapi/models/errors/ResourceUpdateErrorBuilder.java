@@ -29,7 +29,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
     private java.lang.Object resource;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
     }
 
     /**
-     *
+     * set the value to the resource
      * @param resource value to be set
      * @return Builder
      */
@@ -50,9 +50,19 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     * value of resource}
+     * @return resource
+     */
 
     @Nullable
     public java.lang.Object getResource() {
@@ -76,10 +86,19 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
         return new ResourceUpdateErrorImpl(message, resource);
     }
 
+    /**
+     * factory method for an instance of ResourceUpdateErrorBuilder
+     * @return builder
+     */
     public static ResourceUpdateErrorBuilder of() {
         return new ResourceUpdateErrorBuilder();
     }
 
+    /**
+     * create builder for ResourceUpdateError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceUpdateErrorBuilder of(final ResourceUpdateError template) {
         ResourceUpdateErrorBuilder builder = new ResourceUpdateErrorBuilder();
         builder.message = template.getMessage();

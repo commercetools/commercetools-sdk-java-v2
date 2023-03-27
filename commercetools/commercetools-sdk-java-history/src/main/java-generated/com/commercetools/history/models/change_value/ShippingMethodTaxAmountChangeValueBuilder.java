@@ -28,7 +28,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     private com.commercetools.history.models.common.TaxRate taxRate;
 
     /**
-     *
+     * set the value to the taxedPrice using the builder function
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     *
+     * set the value to the taxedPrice
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -75,9 +75,19 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
         return this;
     }
 
+    /**
+     * value of taxedPrice}
+     * @return taxedPrice
+     */
+
     public com.commercetools.history.models.common.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return taxRate
+     */
 
     public com.commercetools.history.models.common.TaxRate getTaxRate() {
         return this.taxRate;
@@ -101,10 +111,19 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
         return new ShippingMethodTaxAmountChangeValueImpl(taxedPrice, taxRate);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodTaxAmountChangeValueBuilder
+     * @return builder
+     */
     public static ShippingMethodTaxAmountChangeValueBuilder of() {
         return new ShippingMethodTaxAmountChangeValueBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodTaxAmountChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodTaxAmountChangeValueBuilder of(final ShippingMethodTaxAmountChangeValue template) {
         ShippingMethodTaxAmountChangeValueBuilder builder = new ShippingMethodTaxAmountChangeValueBuilder();
         builder.taxedPrice = template.getTaxedPrice();

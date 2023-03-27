@@ -24,7 +24,7 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
     private String parcelId;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
         this.parcelId = parcelId;
         return this;
     }
+
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
 
     public String getParcelId() {
         return this.parcelId;
@@ -55,10 +60,19 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
         return new OrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
 
+    /**
+     * factory method for an instance of OrderRemoveParcelFromDeliveryActionBuilder
+     * @return builder
+     */
     public static OrderRemoveParcelFromDeliveryActionBuilder of() {
         return new OrderRemoveParcelFromDeliveryActionBuilder();
     }
 
+    /**
+     * create builder for OrderRemoveParcelFromDeliveryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderRemoveParcelFromDeliveryActionBuilder of(final OrderRemoveParcelFromDeliveryAction template) {
         OrderRemoveParcelFromDeliveryActionBuilder builder = new OrderRemoveParcelFromDeliveryActionBuilder();
         builder.parcelId = template.getParcelId();

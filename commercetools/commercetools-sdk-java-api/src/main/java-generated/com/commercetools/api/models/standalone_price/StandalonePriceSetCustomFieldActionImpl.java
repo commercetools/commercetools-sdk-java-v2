@@ -26,6 +26,9 @@ public class StandalonePriceSetCustomFieldActionImpl implements StandalonePriceS
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class StandalonePriceSetCustomFieldActionImpl implements StandalonePriceS
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

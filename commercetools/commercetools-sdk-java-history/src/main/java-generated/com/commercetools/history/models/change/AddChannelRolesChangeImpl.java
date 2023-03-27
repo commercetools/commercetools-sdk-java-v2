@@ -28,6 +28,9 @@ public class AddChannelRolesChangeImpl implements AddChannelRolesChange, ModelBa
 
     private java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddChannelRolesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue,
@@ -38,6 +41,9 @@ public class AddChannelRolesChangeImpl implements AddChannelRolesChange, ModelBa
         this.type = ADD_CHANNEL_ROLES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddChannelRolesChangeImpl() {
         this.type = ADD_CHANNEL_ROLES_CHANGE;
     }

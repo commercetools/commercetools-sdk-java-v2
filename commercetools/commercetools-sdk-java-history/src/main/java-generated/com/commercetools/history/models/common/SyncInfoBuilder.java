@@ -31,7 +31,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     private String syncedAt;
 
     /**
-     *
+     * set the value to the channel using the builder function
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *
+     * set the value to the channel
      * @param channel value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *
+     * set the value to the syncedAt
      * @param syncedAt value to be set
      * @return Builder
      */
@@ -75,13 +75,28 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
         return this;
     }
 
+    /**
+     * value of channel}
+     * @return channel
+     */
+
     public com.commercetools.history.models.common.Reference getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Can be used to reference an external order instance, file etc.</p>
+     * @return externalId
+     */
+
     public String getExternalId() {
         return this.externalId;
     }
+
+    /**
+     * value of syncedAt}
+     * @return syncedAt
+     */
 
     public String getSyncedAt() {
         return this.syncedAt;
@@ -106,10 +121,19 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
         return new SyncInfoImpl(channel, externalId, syncedAt);
     }
 
+    /**
+     * factory method for an instance of SyncInfoBuilder
+     * @return builder
+     */
     public static SyncInfoBuilder of() {
         return new SyncInfoBuilder();
     }
 
+    /**
+     * create builder for SyncInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SyncInfoBuilder of(final SyncInfo template) {
         SyncInfoBuilder builder = new SyncInfoBuilder();
         builder.channel = template.getChannel();

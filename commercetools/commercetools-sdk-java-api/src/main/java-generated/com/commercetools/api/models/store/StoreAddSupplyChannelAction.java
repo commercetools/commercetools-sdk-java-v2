@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreAddSupplyChannelActionImpl.class)
 public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreAddSupplyChannelAction
+     */
     String ADD_SUPPLY_CHANNEL = "addSupplyChannel";
 
     /**
@@ -44,30 +47,63 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
+    /**
+     *  <p>Value to append.</p>
+     * @param supplyChannel value to be set
+     */
+
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
+    /**
+     * factory method
+     * @return instance of StoreAddSupplyChannelAction
+     */
     public static StoreAddSupplyChannelAction of() {
         return new StoreAddSupplyChannelActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreAddSupplyChannelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreAddSupplyChannelAction of(final StoreAddSupplyChannelAction template) {
         StoreAddSupplyChannelActionImpl instance = new StoreAddSupplyChannelActionImpl();
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
 
+    /**
+     * builder factory method for StoreAddSupplyChannelAction
+     * @return builder
+     */
     public static StoreAddSupplyChannelActionBuilder builder() {
         return StoreAddSupplyChannelActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreAddSupplyChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreAddSupplyChannelActionBuilder builder(final StoreAddSupplyChannelAction template) {
         return StoreAddSupplyChannelActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreAddSupplyChannelAction(Function<StoreAddSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreAddSupplyChannelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreAddSupplyChannelAction>() {
             @Override

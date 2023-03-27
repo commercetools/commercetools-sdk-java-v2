@@ -24,6 +24,9 @@ public class ShoppingListSetCustomerActionImpl implements ShoppingListSetCustome
 
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListSetCustomerActionImpl(
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
@@ -31,6 +34,9 @@ public class ShoppingListSetCustomerActionImpl implements ShoppingListSetCustome
         this.action = SET_CUSTOMER;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListSetCustomerActionImpl() {
         this.action = SET_CUSTOMER;
     }

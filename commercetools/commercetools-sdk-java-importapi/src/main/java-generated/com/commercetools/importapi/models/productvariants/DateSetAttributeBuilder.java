@@ -40,7 +40,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
     }
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -75,10 +75,20 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<java.time.LocalDate> getValue() {
         return this.value;
@@ -101,10 +111,19 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
         return new DateSetAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of DateSetAttributeBuilder
+     * @return builder
+     */
     public static DateSetAttributeBuilder of() {
         return new DateSetAttributeBuilder();
     }
 
+    /**
+     * create builder for DateSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DateSetAttributeBuilder of(final DateSetAttribute template) {
         DateSetAttributeBuilder builder = new DateSetAttributeBuilder();
         builder.name = template.getName();

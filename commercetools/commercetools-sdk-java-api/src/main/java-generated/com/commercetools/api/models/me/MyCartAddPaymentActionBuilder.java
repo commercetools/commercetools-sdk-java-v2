@@ -49,6 +49,11 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
         return this;
     }
 
+    /**
+     *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
+     * @return payment
+     */
+
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
         return this.payment;
     }
@@ -70,10 +75,19 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
         return new MyCartAddPaymentActionImpl(payment);
     }
 
+    /**
+     * factory method for an instance of MyCartAddPaymentActionBuilder
+     * @return builder
+     */
     public static MyCartAddPaymentActionBuilder of() {
         return new MyCartAddPaymentActionBuilder();
     }
 
+    /**
+     * create builder for MyCartAddPaymentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartAddPaymentActionBuilder of(final MyCartAddPaymentAction template) {
         MyCartAddPaymentActionBuilder builder = new MyCartAddPaymentActionBuilder();
         builder.payment = template.getPayment();

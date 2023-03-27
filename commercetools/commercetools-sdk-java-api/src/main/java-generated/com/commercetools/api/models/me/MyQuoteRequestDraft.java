@@ -55,16 +55,40 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
     @JsonProperty("comment")
     public String getComment();
 
+    /**
+     *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
+     * @param cartId value to be set
+     */
+
     public void setCartId(final String cartId);
+
+    /**
+     *  <p>Current version of the Cart.</p>
+     * @param cartVersion value to be set
+     */
 
     public void setCartVersion(final Long cartVersion);
 
+    /**
+     *  <p>Message from the Buyer included in the Quote Request.</p>
+     * @param comment value to be set
+     */
+
     public void setComment(final String comment);
 
+    /**
+     * factory method
+     * @return instance of MyQuoteRequestDraft
+     */
     public static MyQuoteRequestDraft of() {
         return new MyQuoteRequestDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyQuoteRequestDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyQuoteRequestDraft of(final MyQuoteRequestDraft template) {
         MyQuoteRequestDraftImpl instance = new MyQuoteRequestDraftImpl();
         instance.setCartId(template.getCartId());
@@ -73,18 +97,37 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
         return instance;
     }
 
+    /**
+     * builder factory method for MyQuoteRequestDraft
+     * @return builder
+     */
     public static MyQuoteRequestDraftBuilder builder() {
         return MyQuoteRequestDraftBuilder.of();
     }
 
+    /**
+     * create builder for MyQuoteRequestDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyQuoteRequestDraftBuilder builder(final MyQuoteRequestDraft template) {
         return MyQuoteRequestDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyQuoteRequestDraft(Function<MyQuoteRequestDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyQuoteRequestDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyQuoteRequestDraft>() {
             @Override

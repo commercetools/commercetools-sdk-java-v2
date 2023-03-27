@@ -24,6 +24,9 @@ public class BusinessUnitCreatedMessagePayloadImpl implements BusinessUnitCreate
 
     private com.commercetools.api.models.business_unit.BusinessUnit businessUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitCreatedMessagePayloadImpl(
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnit businessUnit) {
@@ -31,6 +34,9 @@ public class BusinessUnitCreatedMessagePayloadImpl implements BusinessUnitCreate
         this.type = BUSINESS_UNIT_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitCreatedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_CREATED;
     }

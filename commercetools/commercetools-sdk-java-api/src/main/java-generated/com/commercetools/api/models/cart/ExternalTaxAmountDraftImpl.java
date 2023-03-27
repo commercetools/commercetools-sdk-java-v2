@@ -29,6 +29,9 @@ public class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft, Model
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExternalTaxAmountDraftImpl(@JsonProperty("totalGross") final com.commercetools.api.models.common.Money totalGross,
             @JsonProperty("taxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate) {
@@ -36,6 +39,9 @@ public class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft, Model
         this.taxRate = taxRate;
     }
 
+    /**
+     * create empty instance
+     */
     public ExternalTaxAmountDraftImpl() {
     }
 

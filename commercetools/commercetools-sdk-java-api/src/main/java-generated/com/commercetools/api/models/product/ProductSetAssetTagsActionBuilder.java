@@ -131,30 +131,60 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @return staged
+     */
+
     @Nullable
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>The <code>id</code> of the Asset to update.</p>
+     * @return assetId
+     */
 
     @Nullable
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     *  <p>The <code>key</code> of the Asset to update.</p>
+     * @return assetKey
+     */
+
     @Nullable
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
+     */
 
     @Nullable
     public java.util.List<String> getTags() {
@@ -177,10 +207,19 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
         return new ProductSetAssetTagsActionImpl(variantId, sku, staged, assetId, assetKey, tags);
     }
 
+    /**
+     * factory method for an instance of ProductSetAssetTagsActionBuilder
+     * @return builder
+     */
     public static ProductSetAssetTagsActionBuilder of() {
         return new ProductSetAssetTagsActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetAssetTagsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetAssetTagsActionBuilder of(final ProductSetAssetTagsAction template) {
         ProductSetAssetTagsActionBuilder builder = new ProductSetAssetTagsActionBuilder();
         builder.variantId = template.getVariantId();

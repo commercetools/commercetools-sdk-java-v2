@@ -149,23 +149,48 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this;
     }
 
+    /**
+     *  <p>The http status code of the response.</p>
+     * @return statusCode
+     */
+
     public Integer getStatusCode() {
         return this.statusCode;
     }
 
+    /**
+     *  <p>Describes the error.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>This property is only used for OAuth2 errors. Contains the error code.</p>
+     * @return error
+     */
 
     @Nullable
     public String getError() {
         return this.error;
     }
 
+    /**
+     *  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>
+     * @return error_description
+     */
+
     @Nullable
     public String getError_description() {
         return this.error_description;
     }
+
+    /**
+     *  <p>The errors that caused this error response.</p>
+     * @return errors
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
@@ -190,10 +215,19 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
     }
 
+    /**
+     * factory method for an instance of ErrorResponseBuilder
+     * @return builder
+     */
     public static ErrorResponseBuilder of() {
         return new ErrorResponseBuilder();
     }
 
+    /**
+     * create builder for ErrorResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ErrorResponseBuilder of(final ErrorResponse template) {
         ErrorResponseBuilder builder = new ErrorResponseBuilder();
         builder.statusCode = template.getStatusCode();

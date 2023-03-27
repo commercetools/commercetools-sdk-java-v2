@@ -80,6 +80,9 @@ public class CustomerImpl implements Customer, ModelBase {
 
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -136,6 +139,9 @@ public class CustomerImpl implements Customer, ModelBase {
         this.authenticationMode = authenticationMode;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerImpl() {
     }
 

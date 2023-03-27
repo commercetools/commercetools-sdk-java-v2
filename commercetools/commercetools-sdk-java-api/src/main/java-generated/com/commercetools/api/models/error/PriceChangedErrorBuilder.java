@@ -115,17 +115,37 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
         return this;
     }
 
+    /**
+     *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     * @return lineItems
+     */
+
     public java.util.List<String> getLineItems() {
         return this.lineItems;
     }
+
+    /**
+     *  <p><code>true</code> if the ShippingRate has changed.</p>
+     * @return shipping
+     */
 
     public Boolean getShipping() {
         return this.shipping;
@@ -150,10 +170,19 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
         return new PriceChangedErrorImpl(message, values, lineItems, shipping);
     }
 
+    /**
+     * factory method for an instance of PriceChangedErrorBuilder
+     * @return builder
+     */
     public static PriceChangedErrorBuilder of() {
         return new PriceChangedErrorBuilder();
     }
 
+    /**
+     * create builder for PriceChangedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceChangedErrorBuilder of(final PriceChangedError template) {
         PriceChangedErrorBuilder builder = new PriceChangedErrorBuilder();
         builder.message = template.getMessage();

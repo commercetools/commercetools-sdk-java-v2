@@ -91,6 +91,11 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return triggers
+     */
+
     public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
         return this.triggers;
     }
@@ -112,10 +117,19 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
         return new ExtensionChangeTriggersActionImpl(triggers);
     }
 
+    /**
+     * factory method for an instance of ExtensionChangeTriggersActionBuilder
+     * @return builder
+     */
     public static ExtensionChangeTriggersActionBuilder of() {
         return new ExtensionChangeTriggersActionBuilder();
     }
 
+    /**
+     * create builder for ExtensionChangeTriggersAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionChangeTriggersActionBuilder of(final ExtensionChangeTriggersAction template) {
         ExtensionChangeTriggersActionBuilder builder = new ExtensionChangeTriggersActionBuilder();
         builder.triggers = template.getTriggers();

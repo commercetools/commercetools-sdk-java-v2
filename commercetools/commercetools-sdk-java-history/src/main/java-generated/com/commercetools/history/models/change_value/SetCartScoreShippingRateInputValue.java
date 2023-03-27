@@ -46,14 +46,33 @@ public interface SetCartScoreShippingRateInputValue {
     @JsonProperty("score")
     public Integer getScore();
 
+    /**
+     * set type
+     * @param type value to be set
+     */
+
     public void setType(final String type);
+
+    /**
+     * set score
+     * @param score value to be set
+     */
 
     public void setScore(final Integer score);
 
+    /**
+     * factory method
+     * @return instance of SetCartScoreShippingRateInputValue
+     */
     public static SetCartScoreShippingRateInputValue of() {
         return new SetCartScoreShippingRateInputValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetCartScoreShippingRateInputValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetCartScoreShippingRateInputValue of(final SetCartScoreShippingRateInputValue template) {
         SetCartScoreShippingRateInputValueImpl instance = new SetCartScoreShippingRateInputValueImpl();
         instance.setType(template.getType());
@@ -61,18 +80,37 @@ public interface SetCartScoreShippingRateInputValue {
         return instance;
     }
 
+    /**
+     * builder factory method for SetCartScoreShippingRateInputValue
+     * @return builder
+     */
     public static SetCartScoreShippingRateInputValueBuilder builder() {
         return SetCartScoreShippingRateInputValueBuilder.of();
     }
 
+    /**
+     * create builder for SetCartScoreShippingRateInputValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCartScoreShippingRateInputValueBuilder builder(final SetCartScoreShippingRateInputValue template) {
         return SetCartScoreShippingRateInputValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetCartScoreShippingRateInputValue(Function<SetCartScoreShippingRateInputValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetCartScoreShippingRateInputValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetCartScoreShippingRateInputValue>() {
             @Override

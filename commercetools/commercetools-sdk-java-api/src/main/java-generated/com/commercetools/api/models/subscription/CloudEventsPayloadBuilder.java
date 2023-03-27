@@ -175,44 +175,94 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
         return this;
     }
 
+    /**
+     *  <p>The version of the CloudEvents specification which the event uses.</p>
+     * @return specversion
+     */
+
     public String getSpecversion() {
         return this.specversion;
     }
+
+    /**
+     *  <p>Unique identifier of the event.</p>
+     * @return id
+     */
 
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the ReferenceTypeId, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
+     * @return type
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *  <p>The default REST URI of the ReferenceTypeId that triggered this event, including the project key.</p>
+     * @return source
+     */
 
     public String getSource() {
         return this.source;
     }
 
+    /**
+     *  <p>Unique identifier of the resource that triggered the event.</p>
+     * @return subject
+     */
+
     public String getSubject() {
         return this.subject;
     }
 
+    /**
+     *  <p>Corresponds to the <code>lastModifiedAt</code> of the resource at the time the event was triggered.</p>
+     * @return time
+     */
+
     public java.time.ZonedDateTime getTime() {
         return this.time;
     }
+
+    /**
+     *  <p>Corresponds to the <code>sequenceNumber</code> of a MessageSubscription. Can be used to process messages in the correct order.</p>
+     * @return sequence
+     */
 
     @Nullable
     public String getSequence() {
         return this.sequence;
     }
 
+    /**
+     *  <p><code>"Integer"</code></p>
+     * @return sequencetype
+     */
+
     @Nullable
     public String getSequencetype() {
         return this.sequencetype;
     }
 
+    /**
+     *  <p>The URI from which the message can be retrieved if messages are enabled. Only set for MessageSubscriptions.</p>
+     * @return dataref
+     */
+
     @Nullable
     public String getDataref() {
         return this.dataref;
     }
+
+    /**
+     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
+     * @return data
+     */
 
     public com.commercetools.api.models.subscription.DeliveryPayload getData() {
         return this.data;
@@ -243,10 +293,19 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
             data);
     }
 
+    /**
+     * factory method for an instance of CloudEventsPayloadBuilder
+     * @return builder
+     */
     public static CloudEventsPayloadBuilder of() {
         return new CloudEventsPayloadBuilder();
     }
 
+    /**
+     * create builder for CloudEventsPayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CloudEventsPayloadBuilder of(final CloudEventsPayload template) {
         CloudEventsPayloadBuilder builder = new CloudEventsPayloadBuilder();
         builder.specversion = template.getSpecversion();

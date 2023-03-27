@@ -77,13 +77,28 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
         return this;
     }
 
+    /**
+     *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
+     * @return exceededResource
+     */
 
     public com.commercetools.api.models.common.ReferenceTypeId getExceededResource() {
         return this.exceededResource;
@@ -107,10 +122,19 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
         return new MaxResourceLimitExceededErrorImpl(message, values, exceededResource);
     }
 
+    /**
+     * factory method for an instance of MaxResourceLimitExceededErrorBuilder
+     * @return builder
+     */
     public static MaxResourceLimitExceededErrorBuilder of() {
         return new MaxResourceLimitExceededErrorBuilder();
     }
 
+    /**
+     * create builder for MaxResourceLimitExceededError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MaxResourceLimitExceededErrorBuilder of(final MaxResourceLimitExceededError template) {
         MaxResourceLimitExceededErrorBuilder builder = new MaxResourceLimitExceededErrorBuilder();
         builder.message = template.getMessage();

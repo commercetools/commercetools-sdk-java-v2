@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReferenceSetAttributeImpl.class)
 public interface ReferenceSetAttribute extends Attribute {
 
+    /**
+     * discriminator value for ReferenceSetAttribute
+     */
     String REFERENCE_SET = "reference-set";
 
     /**
@@ -42,15 +45,34 @@ public interface ReferenceSetAttribute extends Attribute {
     @JsonProperty("value")
     public List<KeyReference> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final KeyReference... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<KeyReference> value);
 
+    /**
+     * factory method
+     * @return instance of ReferenceSetAttribute
+     */
     public static ReferenceSetAttribute of() {
         return new ReferenceSetAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReferenceSetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReferenceSetAttribute of(final ReferenceSetAttribute template) {
         ReferenceSetAttributeImpl instance = new ReferenceSetAttributeImpl();
         instance.setName(template.getName());
@@ -58,18 +80,37 @@ public interface ReferenceSetAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for ReferenceSetAttribute
+     * @return builder
+     */
     public static ReferenceSetAttributeBuilder builder() {
         return ReferenceSetAttributeBuilder.of();
     }
 
+    /**
+     * create builder for ReferenceSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferenceSetAttributeBuilder builder(final ReferenceSetAttribute template) {
         return ReferenceSetAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReferenceSetAttribute(Function<ReferenceSetAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReferenceSetAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReferenceSetAttribute>() {
             @Override

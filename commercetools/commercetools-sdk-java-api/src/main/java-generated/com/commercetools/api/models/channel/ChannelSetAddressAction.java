@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelSetAddressActionImpl.class)
 public interface ChannelSetAddressAction extends ChannelUpdateAction {
 
+    /**
+     * discriminator value for ChannelSetAddressAction
+     */
     String SET_ADDRESS = "setAddress";
 
     /**
@@ -39,30 +42,63 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
 
+    /**
+     * factory method
+     * @return instance of ChannelSetAddressAction
+     */
     public static ChannelSetAddressAction of() {
         return new ChannelSetAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChannelSetAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChannelSetAddressAction of(final ChannelSetAddressAction template) {
         ChannelSetAddressActionImpl instance = new ChannelSetAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
 
+    /**
+     * builder factory method for ChannelSetAddressAction
+     * @return builder
+     */
     public static ChannelSetAddressActionBuilder builder() {
         return ChannelSetAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for ChannelSetAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelSetAddressActionBuilder builder(final ChannelSetAddressAction template) {
         return ChannelSetAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChannelSetAddressAction(Function<ChannelSetAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressAction>() {
             @Override

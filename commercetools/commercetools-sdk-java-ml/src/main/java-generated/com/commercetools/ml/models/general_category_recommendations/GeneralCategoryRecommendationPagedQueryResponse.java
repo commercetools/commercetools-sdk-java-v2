@@ -66,21 +66,55 @@ public interface GeneralCategoryRecommendationPagedQueryResponse {
     @JsonProperty("results")
     public List<GeneralCategoryRecommendation> getResults();
 
+    /**
+     * set count
+     * @param count value to be set
+     */
+
     public void setCount(final Long count);
+
+    /**
+     * set total
+     * @param total value to be set
+     */
 
     public void setTotal(final Long total);
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
+
     public void setOffset(final Long offset);
+
+    /**
+     * set results
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final GeneralCategoryRecommendation... results);
 
+    /**
+     * set results
+     * @param results values to be set
+     */
+
     public void setResults(final List<GeneralCategoryRecommendation> results);
 
+    /**
+     * factory method
+     * @return instance of GeneralCategoryRecommendationPagedQueryResponse
+     */
     public static GeneralCategoryRecommendationPagedQueryResponse of() {
         return new GeneralCategoryRecommendationPagedQueryResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of GeneralCategoryRecommendationPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GeneralCategoryRecommendationPagedQueryResponse of(
             final GeneralCategoryRecommendationPagedQueryResponse template) {
         GeneralCategoryRecommendationPagedQueryResponseImpl instance = new GeneralCategoryRecommendationPagedQueryResponseImpl();
@@ -91,20 +125,39 @@ public interface GeneralCategoryRecommendationPagedQueryResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for GeneralCategoryRecommendationPagedQueryResponse
+     * @return builder
+     */
     public static GeneralCategoryRecommendationPagedQueryResponseBuilder builder() {
         return GeneralCategoryRecommendationPagedQueryResponseBuilder.of();
     }
 
+    /**
+     * create builder for GeneralCategoryRecommendationPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GeneralCategoryRecommendationPagedQueryResponseBuilder builder(
             final GeneralCategoryRecommendationPagedQueryResponse template) {
         return GeneralCategoryRecommendationPagedQueryResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGeneralCategoryRecommendationPagedQueryResponse(
             Function<GeneralCategoryRecommendationPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GeneralCategoryRecommendationPagedQueryResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GeneralCategoryRecommendationPagedQueryResponse>() {
             @Override

@@ -27,6 +27,9 @@ public class ReviewReferenceImpl implements ReviewReference, ModelBase {
 
     private com.commercetools.api.models.review.Review obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.review.Review obj) {
@@ -35,6 +38,9 @@ public class ReviewReferenceImpl implements ReviewReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("review");
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("review");
     }

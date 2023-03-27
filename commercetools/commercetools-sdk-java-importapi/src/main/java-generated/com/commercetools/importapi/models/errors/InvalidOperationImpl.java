@@ -24,12 +24,18 @@ public class InvalidOperationImpl implements InvalidOperation, ModelBase {
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidOperationImpl(@JsonProperty("message") final String message) {
         this.message = message;
         this.code = INVALID_OPERATION;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidOperationImpl() {
         this.code = INVALID_OPERATION;
     }

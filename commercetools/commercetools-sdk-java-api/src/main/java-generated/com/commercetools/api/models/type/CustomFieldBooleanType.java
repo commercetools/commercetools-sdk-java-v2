@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldBooleanTypeImpl.class)
 public interface CustomFieldBooleanType extends FieldType {
 
+    /**
+     * discriminator value for CustomFieldBooleanType
+     */
     String BOOLEAN = "Boolean";
 
+    /**
+     * factory method
+     * @return instance of CustomFieldBooleanType
+     */
     public static CustomFieldBooleanType of() {
         return new CustomFieldBooleanTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomFieldBooleanType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomFieldBooleanType of(final CustomFieldBooleanType template) {
         CustomFieldBooleanTypeImpl instance = new CustomFieldBooleanTypeImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for CustomFieldBooleanType
+     * @return builder
+     */
     public static CustomFieldBooleanTypeBuilder builder() {
         return CustomFieldBooleanTypeBuilder.of();
     }
 
+    /**
+     * create builder for CustomFieldBooleanType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldBooleanTypeBuilder builder(final CustomFieldBooleanType template) {
         return CustomFieldBooleanTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomFieldBooleanType(Function<CustomFieldBooleanType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldBooleanType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldBooleanType>() {
             @Override

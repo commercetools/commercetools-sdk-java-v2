@@ -28,7 +28,7 @@ public class PriceBuilder implements Builder<Price> {
     private com.commercetools.history.models.common.Money value;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class PriceBuilder implements Builder<Price> {
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public com.commercetools.history.models.common.Money getValue() {
         return this.value;
@@ -87,10 +97,19 @@ public class PriceBuilder implements Builder<Price> {
         return new PriceImpl(id, value);
     }
 
+    /**
+     * factory method for an instance of PriceBuilder
+     * @return builder
+     */
     public static PriceBuilder of() {
         return new PriceBuilder();
     }
 
+    /**
+     * create builder for Price instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceBuilder of(final Price template) {
         PriceBuilder builder = new PriceBuilder();
         builder.id = template.getId();

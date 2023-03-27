@@ -24,12 +24,18 @@ public class CustomerTitleSetMessagePayloadImpl implements CustomerTitleSetMessa
 
     private String title;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerTitleSetMessagePayloadImpl(@JsonProperty("title") final String title) {
         this.title = title;
         this.type = CUSTOMER_TITLE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerTitleSetMessagePayloadImpl() {
         this.type = CUSTOMER_TITLE_SET;
     }

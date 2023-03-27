@@ -133,13 +133,28 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this;
     }
 
+    /**
+     *  <p><code>"The set of attributes must be unique across all variants."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Conflicting Attributes.</p>
+     * @return attributes
+     */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
@@ -163,10 +178,19 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return new DuplicateAttributeValuesErrorImpl(message, values, attributes);
     }
 
+    /**
+     * factory method for an instance of DuplicateAttributeValuesErrorBuilder
+     * @return builder
+     */
     public static DuplicateAttributeValuesErrorBuilder of() {
         return new DuplicateAttributeValuesErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicateAttributeValuesError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateAttributeValuesErrorBuilder of(final DuplicateAttributeValuesError template) {
         DuplicateAttributeValuesErrorBuilder builder = new DuplicateAttributeValuesErrorBuilder();
         builder.message = template.getMessage();

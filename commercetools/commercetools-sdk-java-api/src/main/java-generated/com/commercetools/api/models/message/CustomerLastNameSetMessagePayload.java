@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerLastNameSetMessagePayloadImpl.class)
 public interface CustomerLastNameSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for CustomerLastNameSetMessagePayload
+     */
     String CUSTOMER_LAST_NAME_SET = "CustomerLastNameSet";
 
     /**
@@ -36,30 +39,63 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
     @JsonProperty("lastName")
     public String getLastName();
 
+    /**
+     *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
+     * @param lastName value to be set
+     */
+
     public void setLastName(final String lastName);
 
+    /**
+     * factory method
+     * @return instance of CustomerLastNameSetMessagePayload
+     */
     public static CustomerLastNameSetMessagePayload of() {
         return new CustomerLastNameSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerLastNameSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerLastNameSetMessagePayload of(final CustomerLastNameSetMessagePayload template) {
         CustomerLastNameSetMessagePayloadImpl instance = new CustomerLastNameSetMessagePayloadImpl();
         instance.setLastName(template.getLastName());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerLastNameSetMessagePayload
+     * @return builder
+     */
     public static CustomerLastNameSetMessagePayloadBuilder builder() {
         return CustomerLastNameSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for CustomerLastNameSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerLastNameSetMessagePayloadBuilder builder(final CustomerLastNameSetMessagePayload template) {
         return CustomerLastNameSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerLastNameSetMessagePayload(Function<CustomerLastNameSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerLastNameSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerLastNameSetMessagePayload>() {
             @Override

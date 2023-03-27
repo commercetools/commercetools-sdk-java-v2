@@ -27,6 +27,9 @@ public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EnumValueIsUsedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase
         this.code = ENUM_VALUE_IS_USED;
     }
 
+    /**
+     * create empty instance
+     */
     public EnumValueIsUsedErrorImpl() {
         this.code = ENUM_VALUE_IS_USED;
     }

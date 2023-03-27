@@ -24,6 +24,9 @@ public class StagedStandalonePriceImpl implements StagedStandalonePrice, ModelBa
 
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedStandalonePriceImpl(@JsonProperty("value") final com.commercetools.api.models.common.TypedMoney value,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted) {
@@ -31,6 +34,9 @@ public class StagedStandalonePriceImpl implements StagedStandalonePrice, ModelBa
         this.discounted = discounted;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedStandalonePriceImpl() {
     }
 

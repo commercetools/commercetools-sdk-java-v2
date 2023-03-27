@@ -39,7 +39,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for when a product is assigned to a product selection</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Reference getNextValue() {
         return this.nextValue;
@@ -87,10 +97,19 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
         return new AddProductChangeImpl(change, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddProductChangeBuilder
+     * @return builder
+     */
     public static AddProductChangeBuilder of() {
         return new AddProductChangeBuilder();
     }
 
+    /**
+     * create builder for AddProductChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddProductChangeBuilder of(final AddProductChange template) {
         AddProductChangeBuilder builder = new AddProductChangeBuilder();
         builder.change = template.getChange();

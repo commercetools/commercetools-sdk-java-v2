@@ -77,17 +77,37 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
         return this;
     }
 
+    /**
+     *  <p>Namespace to group CustomObjects.</p>
+     * @return container
+     */
+
     public String getContainer() {
         return this.container;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     * @return value
+     */
+
     public java.lang.Object getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Current version of the CustomObject.</p>
+     * @return version
+     */
 
     @Nullable
     public Long getVersion() {
@@ -113,10 +133,19 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
         return new CustomObjectDraftImpl(container, key, value, version);
     }
 
+    /**
+     * factory method for an instance of CustomObjectDraftBuilder
+     * @return builder
+     */
     public static CustomObjectDraftBuilder of() {
         return new CustomObjectDraftBuilder();
     }
 
+    /**
+     * create builder for CustomObjectDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomObjectDraftBuilder of(final CustomObjectDraft template) {
         CustomObjectDraftBuilder builder = new CustomObjectDraftBuilder();
         builder.container = template.getContainer();

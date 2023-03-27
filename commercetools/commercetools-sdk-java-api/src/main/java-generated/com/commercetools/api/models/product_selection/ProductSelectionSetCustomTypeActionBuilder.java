@@ -77,10 +77,20 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
         return new ProductSelectionSetCustomTypeActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionSetCustomTypeActionBuilder
+     * @return builder
+     */
     public static ProductSelectionSetCustomTypeActionBuilder of() {
         return new ProductSelectionSetCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionSetCustomTypeActionBuilder of(final ProductSelectionSetCustomTypeAction template) {
         ProductSelectionSetCustomTypeActionBuilder builder = new ProductSelectionSetCustomTypeActionBuilder();
         builder.type = template.getType();

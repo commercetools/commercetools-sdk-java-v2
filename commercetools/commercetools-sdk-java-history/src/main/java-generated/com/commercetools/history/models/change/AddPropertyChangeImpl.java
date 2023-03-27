@@ -28,6 +28,9 @@ public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {
 
     private java.lang.Object nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddPropertyChangeImpl(@JsonProperty("change") final String change, @JsonProperty("path") final String path,
             @JsonProperty("nextValue") final java.lang.Object nextValue) {
@@ -37,6 +40,9 @@ public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {
         this.type = ADD_PROPERTY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddPropertyChangeImpl() {
         this.type = ADD_PROPERTY_CHANGE;
     }

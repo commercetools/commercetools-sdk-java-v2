@@ -152,22 +152,47 @@ public class ProductSelectionProductPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Long getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
 
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
 
     @Nullable
     public Long getTotal() {
         return this.total;
     }
+
+    /**
+     *  <p>References to Products that are assigned to the ProductSelection.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.api.models.product_selection.AssignedProductReference> getResults() {
         return this.results;
@@ -193,10 +218,19 @@ public class ProductSelectionProductPagedQueryResponseBuilder
         return new ProductSelectionProductPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionProductPagedQueryResponseBuilder
+     * @return builder
+     */
     public static ProductSelectionProductPagedQueryResponseBuilder of() {
         return new ProductSelectionProductPagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionProductPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionProductPagedQueryResponseBuilder of(
             final ProductSelectionProductPagedQueryResponse template) {
         ProductSelectionProductPagedQueryResponseBuilder builder = new ProductSelectionProductPagedQueryResponseBuilder();

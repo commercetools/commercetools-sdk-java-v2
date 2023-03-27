@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CentPrecisionMoneyDraft
         extends TypedMoneyDraft, io.vrap.rmf.base.client.Draft<CentPrecisionMoneyDraft> {
 
+    /**
+     * discriminator value for CentPrecisionMoneyDraft
+     */
     String CENT_PRECISION = "centPrecision";
 
     /**
@@ -39,12 +42,26 @@ public interface CentPrecisionMoneyDraft
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
+    /**
+     *  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>
+     * @param fractionDigits value to be set
+     */
+
     public void setFractionDigits(final Integer fractionDigits);
 
+    /**
+     * factory method
+     * @return instance of CentPrecisionMoneyDraft
+     */
     public static CentPrecisionMoneyDraft of() {
         return new CentPrecisionMoneyDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CentPrecisionMoneyDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CentPrecisionMoneyDraft of(final CentPrecisionMoneyDraft template) {
         CentPrecisionMoneyDraftImpl instance = new CentPrecisionMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());
@@ -53,14 +70,29 @@ public interface CentPrecisionMoneyDraft
         return instance;
     }
 
+    /**
+     * builder factory method for CentPrecisionMoneyDraft
+     * @return builder
+     */
     public static CentPrecisionMoneyDraftBuilder builder() {
         return CentPrecisionMoneyDraftBuilder.of();
     }
 
+    /**
+     * create builder for CentPrecisionMoneyDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CentPrecisionMoneyDraftBuilder builder(final CentPrecisionMoneyDraft template) {
         return CentPrecisionMoneyDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCentPrecisionMoneyDraft(Function<CentPrecisionMoneyDraft, T> helper) {
         return helper.apply(this);
     }
@@ -77,6 +109,10 @@ public interface CentPrecisionMoneyDraft
         return instance;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoneyDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoneyDraft>() {
             @Override

@@ -26,6 +26,9 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
 
     private String oldEmail;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomerEmailSetMessagePayloadImpl(@JsonProperty("email") final String email,
             @JsonProperty("oldEmail") final String oldEmail) {
@@ -34,6 +37,9 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
         this.type = ORDER_CUSTOMER_EMAIL_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomerEmailSetMessagePayloadImpl() {
         this.type = ORDER_CUSTOMER_EMAIL_SET;
     }

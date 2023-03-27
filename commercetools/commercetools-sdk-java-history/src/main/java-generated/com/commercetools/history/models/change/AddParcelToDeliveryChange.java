@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddParcelToDeliveryChangeImpl.class)
 public interface AddParcelToDeliveryChange extends Change {
 
+    /**
+     * discriminator value for AddParcelToDeliveryChange
+     */
     String ADD_PARCEL_TO_DELIVERY_CHANGE = "AddParcelToDeliveryChange";
 
     /**
@@ -68,16 +71,40 @@ public interface AddParcelToDeliveryChange extends Change {
     @JsonProperty("nextValue")
     public Parcel getNextValue();
 
+    /**
+     *  <p>Update action for <code>addParcelToDelivery</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set deliveryId
+     * @param deliveryId value to be set
+     */
 
     public void setDeliveryId(final String deliveryId);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Parcel nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddParcelToDeliveryChange
+     */
     public static AddParcelToDeliveryChange of() {
         return new AddParcelToDeliveryChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddParcelToDeliveryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddParcelToDeliveryChange of(final AddParcelToDeliveryChange template) {
         AddParcelToDeliveryChangeImpl instance = new AddParcelToDeliveryChangeImpl();
         instance.setChange(template.getChange());
@@ -86,18 +113,37 @@ public interface AddParcelToDeliveryChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddParcelToDeliveryChange
+     * @return builder
+     */
     public static AddParcelToDeliveryChangeBuilder builder() {
         return AddParcelToDeliveryChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddParcelToDeliveryChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddParcelToDeliveryChangeBuilder builder(final AddParcelToDeliveryChange template) {
         return AddParcelToDeliveryChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddParcelToDeliveryChange(Function<AddParcelToDeliveryChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddParcelToDeliveryChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddParcelToDeliveryChange>() {
             @Override

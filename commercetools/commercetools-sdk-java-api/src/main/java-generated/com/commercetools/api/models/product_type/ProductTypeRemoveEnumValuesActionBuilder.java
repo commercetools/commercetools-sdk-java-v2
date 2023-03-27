@@ -73,9 +73,19 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     * @return keys
+     */
 
     public java.util.List<String> getKeys() {
         return this.keys;
@@ -99,10 +109,19 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
         return new ProductTypeRemoveEnumValuesActionImpl(attributeName, keys);
     }
 
+    /**
+     * factory method for an instance of ProductTypeRemoveEnumValuesActionBuilder
+     * @return builder
+     */
     public static ProductTypeRemoveEnumValuesActionBuilder of() {
         return new ProductTypeRemoveEnumValuesActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeRemoveEnumValuesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeRemoveEnumValuesActionBuilder of(final ProductTypeRemoveEnumValuesAction template) {
         ProductTypeRemoveEnumValuesActionBuilder builder = new ProductTypeRemoveEnumValuesActionBuilder();
         builder.attributeName = template.getAttributeName();

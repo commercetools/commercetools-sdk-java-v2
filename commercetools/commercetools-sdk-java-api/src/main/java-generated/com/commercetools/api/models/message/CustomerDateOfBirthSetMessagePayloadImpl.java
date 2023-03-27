@@ -24,12 +24,18 @@ public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfB
 
     private java.time.LocalDate dateOfBirth;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerDateOfBirthSetMessagePayloadImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         this.type = CUSTOMER_DATE_OF_BIRTH_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerDateOfBirthSetMessagePayloadImpl() {
         this.type = CUSTOMER_DATE_OF_BIRTH_SET;
     }

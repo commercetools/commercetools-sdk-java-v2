@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountKeyReferenceImpl.class)
 public interface ProductDiscountKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for ProductDiscountKeyReference
+     */
     String PRODUCT_DISCOUNT = "product-discount";
 
+    /**
+     * factory method
+     * @return instance of ProductDiscountKeyReference
+     */
     public static ProductDiscountKeyReference of() {
         return new ProductDiscountKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDiscountKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDiscountKeyReference of(final ProductDiscountKeyReference template) {
         ProductDiscountKeyReferenceImpl instance = new ProductDiscountKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDiscountKeyReference
+     * @return builder
+     */
     public static ProductDiscountKeyReferenceBuilder builder() {
         return ProductDiscountKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ProductDiscountKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountKeyReferenceBuilder builder(final ProductDiscountKeyReference template) {
         return ProductDiscountKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountKeyReference(Function<ProductDiscountKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountKeyReference>() {
             @Override

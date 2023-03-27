@@ -26,6 +26,9 @@ public class DiscountCodeSetCustomFieldActionImpl implements DiscountCodeSetCust
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class DiscountCodeSetCustomFieldActionImpl implements DiscountCodeSetCust
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

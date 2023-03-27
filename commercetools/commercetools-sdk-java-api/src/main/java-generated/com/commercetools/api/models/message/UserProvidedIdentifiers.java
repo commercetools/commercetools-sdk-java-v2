@@ -85,24 +85,68 @@ public interface UserProvidedIdentifiers {
     @JsonProperty("containerAndKey")
     public ContainerAndKey getContainerAndKey();
 
+    /**
+     *  <p>User-provided unique identifier of the resource.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>User-provided unique identifier of the resource.</p>
+     * @param externalId value to be set
+     */
 
     public void setExternalId(final String externalId);
 
+    /**
+     *  <p>User-provided unique identifier of an Order.</p>
+     * @param orderNumber value to be set
+     */
+
     public void setOrderNumber(final String orderNumber);
+
+    /**
+     *  <p>User-provided unique identifier of a Customer.</p>
+     * @param customerNumber value to be set
+     */
 
     public void setCustomerNumber(final String customerNumber);
 
+    /**
+     *  <p>Unique SKU of a Product Variant.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
+
+    /**
+     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final LocalizedString slug);
 
+    /**
+     *  <p>Unique identifier of a Custom Object.</p>
+     * @param containerAndKey value to be set
+     */
+
     public void setContainerAndKey(final ContainerAndKey containerAndKey);
 
+    /**
+     * factory method
+     * @return instance of UserProvidedIdentifiers
+     */
     public static UserProvidedIdentifiers of() {
         return new UserProvidedIdentifiersImpl();
     }
 
+    /**
+     * factory method to copy an instance of UserProvidedIdentifiers
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static UserProvidedIdentifiers of(final UserProvidedIdentifiers template) {
         UserProvidedIdentifiersImpl instance = new UserProvidedIdentifiersImpl();
         instance.setKey(template.getKey());
@@ -115,18 +159,37 @@ public interface UserProvidedIdentifiers {
         return instance;
     }
 
+    /**
+     * builder factory method for UserProvidedIdentifiers
+     * @return builder
+     */
     public static UserProvidedIdentifiersBuilder builder() {
         return UserProvidedIdentifiersBuilder.of();
     }
 
+    /**
+     * create builder for UserProvidedIdentifiers instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UserProvidedIdentifiersBuilder builder(final UserProvidedIdentifiers template) {
         return UserProvidedIdentifiersBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withUserProvidedIdentifiers(Function<UserProvidedIdentifiers, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<UserProvidedIdentifiers> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<UserProvidedIdentifiers>() {
             @Override

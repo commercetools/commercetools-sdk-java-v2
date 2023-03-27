@@ -46,6 +46,9 @@ public class ProductImpl implements Product, ModelBase {
 
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -74,6 +77,9 @@ public class ProductImpl implements Product, ModelBase {
         this.priceMode = priceMode;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductImpl() {
     }
 

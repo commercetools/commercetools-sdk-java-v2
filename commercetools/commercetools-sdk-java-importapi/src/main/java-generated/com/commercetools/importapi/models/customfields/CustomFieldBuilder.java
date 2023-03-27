@@ -99,6 +99,10 @@ public class CustomFieldBuilder {
         return com.commercetools.importapi.models.customfields.TimeSetFieldBuilder.of();
     }
 
+    /**
+     * factory method for an instance of CustomFieldBuilder
+     * @return builder
+     */
     public static CustomFieldBuilder of() {
         return new CustomFieldBuilder();
     }

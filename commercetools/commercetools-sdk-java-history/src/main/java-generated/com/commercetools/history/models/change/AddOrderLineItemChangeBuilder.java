@@ -31,7 +31,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     private com.commercetools.history.models.common.LineItem nextValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -88,13 +88,28 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.LineItem getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.LineItem getNextValue() {
         return this.nextValue;
@@ -119,10 +134,19 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
         return new AddOrderLineItemChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddOrderLineItemChangeBuilder
+     * @return builder
+     */
     public static AddOrderLineItemChangeBuilder of() {
         return new AddOrderLineItemChangeBuilder();
     }
 
+    /**
+     * create builder for AddOrderLineItemChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddOrderLineItemChangeBuilder of(final AddOrderLineItemChange template) {
         AddOrderLineItemChangeBuilder builder = new AddOrderLineItemChangeBuilder();
         builder.change = template.getChange();

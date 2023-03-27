@@ -48,9 +48,19 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
         return this;
     }
 
+    /**
+     *  <p>An English category name that is recommended for a product.</p>
+     * @return categoryName
+     */
+
     public String getCategoryName() {
         return this.categoryName;
     }
+
+    /**
+     *  <p>Probability score for the category recommendation.</p>
+     * @return confidence
+     */
 
     public Double getConfidence() {
         return this.confidence;
@@ -74,10 +84,19 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
         return new GeneralCategoryRecommendationImpl(categoryName, confidence);
     }
 
+    /**
+     * factory method for an instance of GeneralCategoryRecommendationBuilder
+     * @return builder
+     */
     public static GeneralCategoryRecommendationBuilder of() {
         return new GeneralCategoryRecommendationBuilder();
     }
 
+    /**
+     * create builder for GeneralCategoryRecommendation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GeneralCategoryRecommendationBuilder of(final GeneralCategoryRecommendation template) {
         GeneralCategoryRecommendationBuilder builder = new GeneralCategoryRecommendationBuilder();
         builder.categoryName = template.getCategoryName();

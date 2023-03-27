@@ -26,6 +26,9 @@ public class OrderSetCustomTypeActionImpl implements OrderSetCustomTypeAction, M
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class OrderSetCustomTypeActionImpl implements OrderSetCustomTypeAction, M
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

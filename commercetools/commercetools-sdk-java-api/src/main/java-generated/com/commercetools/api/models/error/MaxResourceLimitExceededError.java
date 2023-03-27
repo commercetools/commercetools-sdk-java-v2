@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MaxResourceLimitExceededErrorImpl.class)
 public interface MaxResourceLimitExceededError extends ErrorObject {
 
+    /**
+     * discriminator value for MaxResourceLimitExceededError
+     */
     String MAX_RESOURCE_LIMIT_EXCEEDED = "MaxResourceLimitExceeded";
 
     /**
@@ -58,14 +61,33 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     @JsonProperty("exceededResource")
     public ReferenceTypeId getExceededResource();
 
+    /**
+     *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
+     * @param exceededResource value to be set
+     */
 
     public void setExceededResource(final ReferenceTypeId exceededResource);
 
+    /**
+     * factory method
+     * @return instance of MaxResourceLimitExceededError
+     */
     public static MaxResourceLimitExceededError of() {
         return new MaxResourceLimitExceededErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of MaxResourceLimitExceededError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MaxResourceLimitExceededError of(final MaxResourceLimitExceededError template) {
         MaxResourceLimitExceededErrorImpl instance = new MaxResourceLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
@@ -74,18 +96,37 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for MaxResourceLimitExceededError
+     * @return builder
+     */
     public static MaxResourceLimitExceededErrorBuilder builder() {
         return MaxResourceLimitExceededErrorBuilder.of();
     }
 
+    /**
+     * create builder for MaxResourceLimitExceededError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MaxResourceLimitExceededErrorBuilder builder(final MaxResourceLimitExceededError template) {
         return MaxResourceLimitExceededErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMaxResourceLimitExceededError(Function<MaxResourceLimitExceededError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MaxResourceLimitExceededError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MaxResourceLimitExceededError>() {
             @Override

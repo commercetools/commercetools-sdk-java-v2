@@ -24,6 +24,9 @@ public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraf
 
     private Integer deleteDaysAfterCreation;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MessagesConfigurationDraftImpl(@JsonProperty("enabled") final Boolean enabled,
             @JsonProperty("deleteDaysAfterCreation") final Integer deleteDaysAfterCreation) {
@@ -31,6 +34,9 @@ public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraf
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
     }
 
+    /**
+     * create empty instance
+     */
     public MessagesConfigurationDraftImpl() {
     }
 

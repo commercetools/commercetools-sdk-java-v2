@@ -77,10 +77,20 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
         return new MyShoppingListSetCustomTypeActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of MyShoppingListSetCustomTypeActionBuilder
+     * @return builder
+     */
     public static MyShoppingListSetCustomTypeActionBuilder of() {
         return new MyShoppingListSetCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for MyShoppingListSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyShoppingListSetCustomTypeActionBuilder of(final MyShoppingListSetCustomTypeAction template) {
         MyShoppingListSetCustomTypeActionBuilder builder = new MyShoppingListSetCustomTypeActionBuilder();
         builder.type = template.getType();

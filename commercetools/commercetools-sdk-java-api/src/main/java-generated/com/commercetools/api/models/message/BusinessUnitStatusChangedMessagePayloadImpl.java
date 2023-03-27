@@ -24,6 +24,9 @@ public class BusinessUnitStatusChangedMessagePayloadImpl implements BusinessUnit
 
     private com.commercetools.api.models.business_unit.BusinessUnitStatus active;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitStatusChangedMessagePayloadImpl(
             @JsonProperty("active") final com.commercetools.api.models.business_unit.BusinessUnitStatus active) {
@@ -31,6 +34,9 @@ public class BusinessUnitStatusChangedMessagePayloadImpl implements BusinessUnit
         this.type = BUSINESS_UNIT_STATUS_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitStatusChangedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_STATUS_CHANGED;
     }

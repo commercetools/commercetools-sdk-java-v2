@@ -26,6 +26,9 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
 
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryReplaceTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
@@ -34,6 +37,9 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
         this.action = REPLACE_TAX_RATE;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryReplaceTaxRateActionImpl() {
         this.action = REPLACE_TAX_RATE;
     }

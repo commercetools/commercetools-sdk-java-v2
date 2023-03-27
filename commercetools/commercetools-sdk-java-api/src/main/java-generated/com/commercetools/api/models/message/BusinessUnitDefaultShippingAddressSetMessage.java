@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitDefaultShippingAddressSetMessageImpl.class)
 public interface BusinessUnitDefaultShippingAddressSetMessage extends Message {
 
+    /**
+     * discriminator value for BusinessUnitDefaultShippingAddressSetMessage
+     */
     String BUSINESS_UNIT_DEFAULT_SHIPPING_ADDRESS_SET = "BusinessUnitDefaultShippingAddressSet";
 
     /**
@@ -46,12 +49,26 @@ public interface BusinessUnitDefaultShippingAddressSetMessage extends Message {
     @JsonProperty("address")
     public Address getAddress();
 
+    /**
+     *  <p>The address that was set as the default shipping address.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final Address address);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitDefaultShippingAddressSetMessage
+     */
     public static BusinessUnitDefaultShippingAddressSetMessage of() {
         return new BusinessUnitDefaultShippingAddressSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitDefaultShippingAddressSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitDefaultShippingAddressSetMessage of(
             final BusinessUnitDefaultShippingAddressSetMessage template) {
         BusinessUnitDefaultShippingAddressSetMessageImpl instance = new BusinessUnitDefaultShippingAddressSetMessageImpl();
@@ -69,20 +86,39 @@ public interface BusinessUnitDefaultShippingAddressSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitDefaultShippingAddressSetMessage
+     * @return builder
+     */
     public static BusinessUnitDefaultShippingAddressSetMessageBuilder builder() {
         return BusinessUnitDefaultShippingAddressSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitDefaultShippingAddressSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitDefaultShippingAddressSetMessageBuilder builder(
             final BusinessUnitDefaultShippingAddressSetMessage template) {
         return BusinessUnitDefaultShippingAddressSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitDefaultShippingAddressSetMessage(
             Function<BusinessUnitDefaultShippingAddressSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDefaultShippingAddressSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDefaultShippingAddressSetMessage>() {
             @Override

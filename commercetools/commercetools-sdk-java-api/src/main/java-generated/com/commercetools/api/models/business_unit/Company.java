@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CompanyImpl.class)
 public interface Company extends BusinessUnit {
 
+    /**
+     * discriminator value for Company
+     */
     String COMPANY = "Company";
 
     /**
@@ -49,12 +52,26 @@ public interface Company extends BusinessUnit {
     @JsonProperty("storeMode")
     public BusinessUnitStoreMode getStoreMode();
 
+    /**
+     *  <p>Is always <code>Explicit</code> since a Company does not have a parent Business Unit the Stores can be inherited from.</p>
+     * @param storeMode value to be set
+     */
+
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
 
+    /**
+     * factory method
+     * @return instance of Company
+     */
     public static Company of() {
         return new CompanyImpl();
     }
 
+    /**
+     * factory method to copy an instance of Company
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Company of(final Company template) {
         CompanyImpl instance = new CompanyImpl();
         instance.setId(template.getId());
@@ -81,18 +98,37 @@ public interface Company extends BusinessUnit {
         return instance;
     }
 
+    /**
+     * builder factory method for Company
+     * @return builder
+     */
     public static CompanyBuilder builder() {
         return CompanyBuilder.of();
     }
 
+    /**
+     * create builder for Company instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CompanyBuilder builder(final Company template) {
         return CompanyBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCompany(Function<Company, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Company> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Company>() {
             @Override

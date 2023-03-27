@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeChangeCartDiscountsActionImpl.class)
 public interface DiscountCodeChangeCartDiscountsAction extends DiscountCodeUpdateAction {
 
+    /**
+     * discriminator value for DiscountCodeChangeCartDiscountsAction
+     */
     String CHANGE_CART_DISCOUNTS = "changeCartDiscounts";
 
     /**
@@ -42,34 +45,72 @@ public interface DiscountCodeChangeCartDiscountsAction extends DiscountCodeUpdat
     @JsonProperty("cartDiscounts")
     public List<CartDiscountResourceIdentifier> getCartDiscounts();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param cartDiscounts values to be set
+     */
+
     @JsonIgnore
     public void setCartDiscounts(final CartDiscountResourceIdentifier... cartDiscounts);
 
+    /**
+     *  <p>New value to set.</p>
+     * @param cartDiscounts values to be set
+     */
+
     public void setCartDiscounts(final List<CartDiscountResourceIdentifier> cartDiscounts);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodeChangeCartDiscountsAction
+     */
     public static DiscountCodeChangeCartDiscountsAction of() {
         return new DiscountCodeChangeCartDiscountsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodeChangeCartDiscountsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodeChangeCartDiscountsAction of(final DiscountCodeChangeCartDiscountsAction template) {
         DiscountCodeChangeCartDiscountsActionImpl instance = new DiscountCodeChangeCartDiscountsActionImpl();
         instance.setCartDiscounts(template.getCartDiscounts());
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodeChangeCartDiscountsAction
+     * @return builder
+     */
     public static DiscountCodeChangeCartDiscountsActionBuilder builder() {
         return DiscountCodeChangeCartDiscountsActionBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodeChangeCartDiscountsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeChangeCartDiscountsActionBuilder builder(
             final DiscountCodeChangeCartDiscountsAction template) {
         return DiscountCodeChangeCartDiscountsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodeChangeCartDiscountsAction(Function<DiscountCodeChangeCartDiscountsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeCartDiscountsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeCartDiscountsAction>() {
             @Override

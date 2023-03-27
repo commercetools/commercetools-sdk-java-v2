@@ -24,7 +24,7 @@ public class CustomerGroupKeyReferenceBuilder implements Builder<CustomerGroupKe
     private String key;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class CustomerGroupKeyReferenceBuilder implements Builder<CustomerGroupKe
         this.key = key;
         return this;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
@@ -55,10 +60,19 @@ public class CustomerGroupKeyReferenceBuilder implements Builder<CustomerGroupKe
         return new CustomerGroupKeyReferenceImpl(key);
     }
 
+    /**
+     * factory method for an instance of CustomerGroupKeyReferenceBuilder
+     * @return builder
+     */
     public static CustomerGroupKeyReferenceBuilder of() {
         return new CustomerGroupKeyReferenceBuilder();
     }
 
+    /**
+     * create builder for CustomerGroupKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupKeyReferenceBuilder of(final CustomerGroupKeyReference template) {
         CustomerGroupKeyReferenceBuilder builder = new CustomerGroupKeyReferenceBuilder();
         builder.key = template.getKey();

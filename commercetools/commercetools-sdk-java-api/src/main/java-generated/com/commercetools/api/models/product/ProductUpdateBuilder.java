@@ -103,9 +103,19 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Product on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Product.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.product.ProductUpdateAction> getActions() {
         return this.actions;
@@ -129,10 +139,19 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
         return new ProductUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of ProductUpdateBuilder
+     * @return builder
+     */
     public static ProductUpdateBuilder of() {
         return new ProductUpdateBuilder();
     }
 
+    /**
+     * create builder for ProductUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductUpdateBuilder of(final ProductUpdate template) {
         ProductUpdateBuilder builder = new ProductUpdateBuilder();
         builder.version = template.getVersion();

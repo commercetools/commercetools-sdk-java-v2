@@ -67,18 +67,47 @@ public interface ProductCatalogData {
     @JsonProperty("hasStagedChanges")
     public Boolean getHasStagedChanges();
 
+    /**
+     *  <p><code>true</code> if the Product is published.</p>
+     * @param published value to be set
+     */
+
     public void setPublished(final Boolean published);
+
+    /**
+     *  <p>Current (published) data of the Product.</p>
+     * @param current value to be set
+     */
 
     public void setCurrent(final ProductData current);
 
+    /**
+     *  <p>Staged (unpublished) data of the Product.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final ProductData staged);
+
+    /**
+     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     * @param hasStagedChanges value to be set
+     */
 
     public void setHasStagedChanges(final Boolean hasStagedChanges);
 
+    /**
+     * factory method
+     * @return instance of ProductCatalogData
+     */
     public static ProductCatalogData of() {
         return new ProductCatalogDataImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductCatalogData
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductCatalogData of(final ProductCatalogData template) {
         ProductCatalogDataImpl instance = new ProductCatalogDataImpl();
         instance.setPublished(template.getPublished());
@@ -88,18 +117,37 @@ public interface ProductCatalogData {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductCatalogData
+     * @return builder
+     */
     public static ProductCatalogDataBuilder builder() {
         return ProductCatalogDataBuilder.of();
     }
 
+    /**
+     * create builder for ProductCatalogData instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductCatalogDataBuilder builder(final ProductCatalogData template) {
         return ProductCatalogDataBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductCatalogData(Function<ProductCatalogData, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductCatalogData> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductCatalogData>() {
             @Override

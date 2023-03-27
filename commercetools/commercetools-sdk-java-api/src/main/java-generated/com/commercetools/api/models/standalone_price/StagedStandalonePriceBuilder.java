@@ -76,9 +76,19 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
         return this;
     }
 
+    /**
+     *  <p>Money value of the StagedStandalonePrice.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Discounted price for the StagedStandalonePrice.</p>
+     * @return discounted
+     */
 
     @Nullable
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -102,10 +112,19 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
         return new StagedStandalonePriceImpl(value, discounted);
     }
 
+    /**
+     * factory method for an instance of StagedStandalonePriceBuilder
+     * @return builder
+     */
     public static StagedStandalonePriceBuilder of() {
         return new StagedStandalonePriceBuilder();
     }
 
+    /**
+     * create builder for StagedStandalonePrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedStandalonePriceBuilder of(final StagedStandalonePrice template) {
         StagedStandalonePriceBuilder builder = new StagedStandalonePriceBuilder();
         builder.value = template.getValue();

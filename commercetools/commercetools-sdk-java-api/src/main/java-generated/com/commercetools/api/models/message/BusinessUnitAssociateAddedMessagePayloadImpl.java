@@ -25,6 +25,9 @@ public class BusinessUnitAssociateAddedMessagePayloadImpl
 
     private com.commercetools.api.models.business_unit.Associate associate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitAssociateAddedMessagePayloadImpl(
             @JsonProperty("associate") final com.commercetools.api.models.business_unit.Associate associate) {
@@ -32,6 +35,9 @@ public class BusinessUnitAssociateAddedMessagePayloadImpl
         this.type = BUSINESS_UNIT_ASSOCIATE_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitAssociateAddedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_ASSOCIATE_ADDED;
     }

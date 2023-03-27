@@ -51,10 +51,20 @@ public class BusinessUnitRemoveBillingAddressIdActionBuilder
         return this;
     }
 
+    /**
+     *  <p>ID of the address to be removed from <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     *  <p>Key of the address to be removed from <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressKey
+     */
 
     @Nullable
     public String getAddressKey() {
@@ -77,10 +87,19 @@ public class BusinessUnitRemoveBillingAddressIdActionBuilder
         return new BusinessUnitRemoveBillingAddressIdActionImpl(addressId, addressKey);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitRemoveBillingAddressIdActionBuilder
+     * @return builder
+     */
     public static BusinessUnitRemoveBillingAddressIdActionBuilder of() {
         return new BusinessUnitRemoveBillingAddressIdActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitRemoveBillingAddressIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitRemoveBillingAddressIdActionBuilder of(
             final BusinessUnitRemoveBillingAddressIdAction template) {
         BusinessUnitRemoveBillingAddressIdActionBuilder builder = new BusinessUnitRemoveBillingAddressIdActionBuilder();

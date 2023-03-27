@@ -93,6 +93,11 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
         return this;
     }
 
+    /**
+     *  <p>The customer import resources of this request.</p>
+     * @return resources
+     */
+
     public java.util.List<com.commercetools.importapi.models.customers.CustomerImport> getResources() {
         return this.resources;
     }
@@ -114,10 +119,19 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
         return new CustomerImportRequestImpl(resources);
     }
 
+    /**
+     * factory method for an instance of CustomerImportRequestBuilder
+     * @return builder
+     */
     public static CustomerImportRequestBuilder of() {
         return new CustomerImportRequestBuilder();
     }
 
+    /**
+     * create builder for CustomerImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerImportRequestBuilder of(final CustomerImportRequest template) {
         CustomerImportRequestBuilder builder = new CustomerImportRequestBuilder();
         builder.resources = template.getResources();

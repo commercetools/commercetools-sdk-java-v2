@@ -47,6 +47,11 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
         return this;
     }
 
+    /**
+     *  <p>Location to be added to the Zone.</p>
+     * @return location
+     */
+
     public com.commercetools.api.models.zone.Location getLocation() {
         return this.location;
     }
@@ -68,10 +73,19 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
         return new ZoneAddLocationActionImpl(location);
     }
 
+    /**
+     * factory method for an instance of ZoneAddLocationActionBuilder
+     * @return builder
+     */
     public static ZoneAddLocationActionBuilder of() {
         return new ZoneAddLocationActionBuilder();
     }
 
+    /**
+     * create builder for ZoneAddLocationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneAddLocationActionBuilder of(final ZoneAddLocationAction template) {
         ZoneAddLocationActionBuilder builder = new ZoneAddLocationActionBuilder();
         builder.location = template.getLocation();

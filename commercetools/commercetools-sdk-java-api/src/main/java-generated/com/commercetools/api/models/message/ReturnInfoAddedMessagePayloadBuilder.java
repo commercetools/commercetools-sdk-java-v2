@@ -48,6 +48,11 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
         return this;
     }
 
+    /**
+     *  <p>The ReturnInfo that was added to the Order.</p>
+     * @return returnInfo
+     */
+
     public com.commercetools.api.models.order.ReturnInfo getReturnInfo() {
         return this.returnInfo;
     }
@@ -69,10 +74,19 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
         return new ReturnInfoAddedMessagePayloadImpl(returnInfo);
     }
 
+    /**
+     * factory method for an instance of ReturnInfoAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static ReturnInfoAddedMessagePayloadBuilder of() {
         return new ReturnInfoAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ReturnInfoAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnInfoAddedMessagePayloadBuilder of(final ReturnInfoAddedMessagePayload template) {
         ReturnInfoAddedMessagePayloadBuilder builder = new ReturnInfoAddedMessagePayloadBuilder();
         builder.returnInfo = template.getReturnInfo();

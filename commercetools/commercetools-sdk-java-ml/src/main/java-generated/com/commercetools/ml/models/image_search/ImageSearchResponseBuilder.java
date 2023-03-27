@@ -132,17 +132,37 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
         return this;
     }
 
+    /**
+     *  <p>The maximum number of results to return from a query.</p>
+     * @return count
+     */
+
     public Integer getCount() {
         return this.count;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
 
     public Double getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>The total number of product images that were have been analyzed.</p>
+     * @return total
+     */
+
     public Integer getTotal() {
         return this.total;
     }
+
+    /**
+     *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.ml.models.image_search.ResultItem> getResults() {
         return this.results;
@@ -168,10 +188,19 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
         return new ImageSearchResponseImpl(count, offset, total, results);
     }
 
+    /**
+     * factory method for an instance of ImageSearchResponseBuilder
+     * @return builder
+     */
     public static ImageSearchResponseBuilder of() {
         return new ImageSearchResponseBuilder();
     }
 
+    /**
+     * create builder for ImageSearchResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImageSearchResponseBuilder of(final ImageSearchResponse template) {
         ImageSearchResponseBuilder builder = new ImageSearchResponseBuilder();
         builder.count = template.getCount();

@@ -35,6 +35,11 @@ public class QuoteChangeQuoteStateActionBuilder implements Builder<QuoteChangeQu
         return this;
     }
 
+    /**
+     *  <p>New state to be set for the Quote.</p>
+     * @return quoteState
+     */
+
     public com.commercetools.api.models.quote.QuoteState getQuoteState() {
         return this.quoteState;
     }
@@ -56,10 +61,19 @@ public class QuoteChangeQuoteStateActionBuilder implements Builder<QuoteChangeQu
         return new QuoteChangeQuoteStateActionImpl(quoteState);
     }
 
+    /**
+     * factory method for an instance of QuoteChangeQuoteStateActionBuilder
+     * @return builder
+     */
     public static QuoteChangeQuoteStateActionBuilder of() {
         return new QuoteChangeQuoteStateActionBuilder();
     }
 
+    /**
+     * create builder for QuoteChangeQuoteStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteChangeQuoteStateActionBuilder of(final QuoteChangeQuoteStateAction template) {
         QuoteChangeQuoteStateActionBuilder builder = new QuoteChangeQuoteStateActionBuilder();
         builder.quoteState = template.getQuoteState();

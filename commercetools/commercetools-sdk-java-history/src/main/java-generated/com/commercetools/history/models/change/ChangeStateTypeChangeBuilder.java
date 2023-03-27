@@ -41,7 +41,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -63,13 +63,28 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeType</code> on state</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.StateType getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.StateType getNextValue() {
         return this.nextValue;
@@ -94,10 +109,19 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
         return new ChangeStateTypeChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeStateTypeChangeBuilder
+     * @return builder
+     */
     public static ChangeStateTypeChangeBuilder of() {
         return new ChangeStateTypeChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeStateTypeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeStateTypeChangeBuilder of(final ChangeStateTypeChange template) {
         ChangeStateTypeChangeBuilder builder = new ChangeStateTypeChangeBuilder();
         builder.change = template.getChange();

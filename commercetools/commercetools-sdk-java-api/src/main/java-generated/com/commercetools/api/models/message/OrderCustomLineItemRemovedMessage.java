@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomLineItemRemovedMessageImpl.class)
 public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderCustomLineItemRemovedMessage
+     */
     String ORDER_CUSTOM_LINE_ITEM_REMOVED = "OrderCustomLineItemRemoved";
 
     /**
@@ -58,14 +61,33 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     @JsonProperty("customLineItem")
     public CustomLineItem getCustomLineItem();
 
+    /**
+     *  <p>Unique identifier of the Custom Line Item.</p>
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Custom Line Item that was removed from the Order.</p>
+     * @param customLineItem value to be set
+     */
 
     public void setCustomLineItem(final CustomLineItem customLineItem);
 
+    /**
+     * factory method
+     * @return instance of OrderCustomLineItemRemovedMessage
+     */
     public static OrderCustomLineItemRemovedMessage of() {
         return new OrderCustomLineItemRemovedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderCustomLineItemRemovedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderCustomLineItemRemovedMessage of(final OrderCustomLineItemRemovedMessage template) {
         OrderCustomLineItemRemovedMessageImpl instance = new OrderCustomLineItemRemovedMessageImpl();
         instance.setId(template.getId());
@@ -83,18 +105,37 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderCustomLineItemRemovedMessage
+     * @return builder
+     */
     public static OrderCustomLineItemRemovedMessageBuilder builder() {
         return OrderCustomLineItemRemovedMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderCustomLineItemRemovedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomLineItemRemovedMessageBuilder builder(final OrderCustomLineItemRemovedMessage template) {
         return OrderCustomLineItemRemovedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderCustomLineItemRemovedMessage(Function<OrderCustomLineItemRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemRemovedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemRemovedMessage>() {
             @Override

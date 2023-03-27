@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderChangeTaxModeActionImpl.class)
 public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderChangeTaxModeAction
+     */
     String CHANGE_TAX_MODE = "changeTaxMode";
 
     /**
@@ -41,30 +44,63 @@ public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction 
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
+    /**
+     *  <p>Indicates how taxes are set on the Cart.</p>
+     * @param taxMode value to be set
+     */
+
     public void setTaxMode(final TaxMode taxMode);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderChangeTaxModeAction
+     */
     public static StagedOrderChangeTaxModeAction of() {
         return new StagedOrderChangeTaxModeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderChangeTaxModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderChangeTaxModeAction of(final StagedOrderChangeTaxModeAction template) {
         StagedOrderChangeTaxModeActionImpl instance = new StagedOrderChangeTaxModeActionImpl();
         instance.setTaxMode(template.getTaxMode());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderChangeTaxModeAction
+     * @return builder
+     */
     public static StagedOrderChangeTaxModeActionBuilder builder() {
         return StagedOrderChangeTaxModeActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderChangeTaxModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeTaxModeActionBuilder builder(final StagedOrderChangeTaxModeAction template) {
         return StagedOrderChangeTaxModeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderChangeTaxModeAction(Function<StagedOrderChangeTaxModeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeTaxModeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeTaxModeAction>() {
             @Override

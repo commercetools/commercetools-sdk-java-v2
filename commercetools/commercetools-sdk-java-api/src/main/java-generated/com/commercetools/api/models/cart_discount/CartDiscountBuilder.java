@@ -445,88 +445,188 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the CartDiscount.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the CartDiscount.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Name of the CartDiscount.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the CartDiscount.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Description of the CartDiscount.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Effect of the CartDiscount.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
         return this.value;
     }
 
+    /**
+     *  <p>Valid Cart Predicate.</p>
+     * @return cartPredicate
+     */
+
     public String getCartPredicate() {
         return this.cartPredicate;
     }
+
+    /**
+     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     * @return target
+     */
 
     @Nullable
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
         return this.target;
     }
 
+    /**
+     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     * @return sortOrder
+     */
+
     public String getSortOrder() {
         return this.sortOrder;
     }
 
+    /**
+     *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
+     * @return isActive
+     */
+
     public Boolean getIsActive() {
         return this.isActive;
     }
+
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
+     * @return validFrom
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
+     * @return validUntil
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
+     * @return requiresDiscountCode
+     */
+
     public Boolean getRequiresDiscountCode() {
         return this.requiresDiscountCode;
     }
+
+    /**
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     * @return references
+     */
 
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
         return this.references;
     }
 
+    /**
+     *  <p>Indicates whether the application of the CartDiscount causes other discounts to be ignored.</p>
+     * @return stackingMode
+     */
+
     public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
         return this.stackingMode;
     }
+
+    /**
+     *  <p>Custom Fields of the CartDiscount.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -565,10 +665,19 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
             references, stackingMode, custom);
     }
 
+    /**
+     * factory method for an instance of CartDiscountBuilder
+     * @return builder
+     */
     public static CartDiscountBuilder of() {
         return new CartDiscountBuilder();
     }
 
+    /**
+     * create builder for CartDiscount instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountBuilder of(final CartDiscount template) {
         CartDiscountBuilder builder = new CartDiscountBuilder();
         builder.id = template.getId();

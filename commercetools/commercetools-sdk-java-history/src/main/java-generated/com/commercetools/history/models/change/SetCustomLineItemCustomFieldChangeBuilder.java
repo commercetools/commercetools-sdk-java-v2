@@ -49,7 +49,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *
+     * set the value to the customLineItem using the builder function
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *
+     * set the value to the customLineItem
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -117,25 +117,55 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     * value of customLineItem}
+     * @return customLineItem
+     */
+
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
         return this.customLineItem;
     }
+
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
@@ -167,10 +197,19 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
             previousValue);
     }
 
+    /**
+     * factory method for an instance of SetCustomLineItemCustomFieldChangeBuilder
+     * @return builder
+     */
     public static SetCustomLineItemCustomFieldChangeBuilder of() {
         return new SetCustomLineItemCustomFieldChangeBuilder();
     }
 
+    /**
+     * create builder for SetCustomLineItemCustomFieldChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCustomLineItemCustomFieldChangeBuilder of(final SetCustomLineItemCustomFieldChange template) {
         SetCustomLineItemCustomFieldChangeBuilder builder = new SetCustomLineItemCustomFieldChangeBuilder();
         builder.change = template.getChange();

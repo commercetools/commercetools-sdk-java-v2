@@ -22,6 +22,9 @@ public class CartScoreTypeImpl implements CartScoreType, ModelBase {
 
     private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartScoreTypeImpl() {
         this.type = ShippingRateTierType.findEnum("CartScore");

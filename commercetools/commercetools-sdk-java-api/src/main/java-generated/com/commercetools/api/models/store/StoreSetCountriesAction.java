@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreSetCountriesActionImpl.class)
 public interface StoreSetCountriesAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreSetCountriesAction
+     */
     String SET_COUNTRIES = "setCountries";
 
     /**
@@ -39,33 +42,71 @@ public interface StoreSetCountriesAction extends StoreUpdateAction {
     @JsonProperty("countries")
     public List<StoreCountry> getCountries();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param countries values to be set
+     */
+
     @JsonIgnore
     public void setCountries(final StoreCountry... countries);
 
+    /**
+     *  <p>New value to set.</p>
+     * @param countries values to be set
+     */
+
     public void setCountries(final List<StoreCountry> countries);
 
+    /**
+     * factory method
+     * @return instance of StoreSetCountriesAction
+     */
     public static StoreSetCountriesAction of() {
         return new StoreSetCountriesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreSetCountriesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreSetCountriesAction of(final StoreSetCountriesAction template) {
         StoreSetCountriesActionImpl instance = new StoreSetCountriesActionImpl();
         instance.setCountries(template.getCountries());
         return instance;
     }
 
+    /**
+     * builder factory method for StoreSetCountriesAction
+     * @return builder
+     */
     public static StoreSetCountriesActionBuilder builder() {
         return StoreSetCountriesActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreSetCountriesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetCountriesActionBuilder builder(final StoreSetCountriesAction template) {
         return StoreSetCountriesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreSetCountriesAction(Function<StoreSetCountriesAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreSetCountriesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreSetCountriesAction>() {
             @Override

@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemovePaymentChangeImpl.class)
 public interface RemovePaymentChange extends Change {
 
+    /**
+     * discriminator value for RemovePaymentChange
+     */
     String REMOVE_PAYMENT_CHANGE = "RemovePaymentChange";
 
     /**
@@ -69,16 +72,40 @@ public interface RemovePaymentChange extends Change {
     @JsonProperty("previousValue")
     public PaymentInfo getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final PaymentInfo nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final PaymentInfo previousValue);
 
+    /**
+     * factory method
+     * @return instance of RemovePaymentChange
+     */
     public static RemovePaymentChange of() {
         return new RemovePaymentChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemovePaymentChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemovePaymentChange of(final RemovePaymentChange template) {
         RemovePaymentChangeImpl instance = new RemovePaymentChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface RemovePaymentChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemovePaymentChange
+     * @return builder
+     */
     public static RemovePaymentChangeBuilder builder() {
         return RemovePaymentChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemovePaymentChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemovePaymentChangeBuilder builder(final RemovePaymentChange template) {
         return RemovePaymentChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemovePaymentChange(Function<RemovePaymentChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemovePaymentChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemovePaymentChange>() {
             @Override

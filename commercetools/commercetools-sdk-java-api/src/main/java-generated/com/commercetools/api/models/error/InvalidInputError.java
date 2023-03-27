@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidInputErrorImpl.class)
 public interface InvalidInputError extends ErrorObject {
 
+    /**
+     * discriminator value for InvalidInputError
+     */
     String INVALID_INPUT = "InvalidInput";
 
     /**
@@ -47,12 +50,26 @@ public interface InvalidInputError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Description of the constraints that are not met by the request. For example, <code>"Invalid $propertyName. It may be a non-empty string up to $maxLength"</code>.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of InvalidInputError
+     */
     public static InvalidInputError of() {
         return new InvalidInputErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of InvalidInputError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InvalidInputError of(final InvalidInputError template) {
         InvalidInputErrorImpl instance = new InvalidInputErrorImpl();
         instance.setMessage(template.getMessage());
@@ -60,18 +77,37 @@ public interface InvalidInputError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for InvalidInputError
+     * @return builder
+     */
     public static InvalidInputErrorBuilder builder() {
         return InvalidInputErrorBuilder.of();
     }
 
+    /**
+     * create builder for InvalidInputError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidInputErrorBuilder builder(final InvalidInputError template) {
         return InvalidInputErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInvalidInputError(Function<InvalidInputError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InvalidInputError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InvalidInputError>() {
             @Override

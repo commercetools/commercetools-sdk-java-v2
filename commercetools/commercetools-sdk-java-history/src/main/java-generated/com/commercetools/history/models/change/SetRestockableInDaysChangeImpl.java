@@ -28,6 +28,9 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
 
     private Integer nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetRestockableInDaysChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Integer previousValue,
@@ -38,6 +41,9 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
         this.type = SET_RESTOCKABLE_IN_DAYS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetRestockableInDaysChangeImpl() {
         this.type = SET_RESTOCKABLE_IN_DAYS_CHANGE;
     }

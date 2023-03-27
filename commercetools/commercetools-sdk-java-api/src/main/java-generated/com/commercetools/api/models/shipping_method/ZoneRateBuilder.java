@@ -119,9 +119,19 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return this;
     }
 
+    /**
+     *  <p>Zone for which the shipping rates are valid.</p>
+     * @return zone
+     */
+
     public com.commercetools.api.models.zone.ZoneReference getZone() {
         return this.zone;
     }
+
+    /**
+     *  <p>Shipping rates defined per currency.</p>
+     * @return shippingRates
+     */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> getShippingRates() {
         return this.shippingRates;
@@ -145,10 +155,19 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return new ZoneRateImpl(zone, shippingRates);
     }
 
+    /**
+     * factory method for an instance of ZoneRateBuilder
+     * @return builder
+     */
     public static ZoneRateBuilder of() {
         return new ZoneRateBuilder();
     }
 
+    /**
+     * create builder for ZoneRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneRateBuilder of(final ZoneRate template) {
         ZoneRateBuilder builder = new ZoneRateBuilder();
         builder.zone = template.getZone();

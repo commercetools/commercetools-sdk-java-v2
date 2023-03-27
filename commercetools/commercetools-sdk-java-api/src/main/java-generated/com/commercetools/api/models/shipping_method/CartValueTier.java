@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartValueTierImpl.class)
 public interface CartValueTier extends ShippingRatePriceTier {
 
+    /**
+     * discriminator value for CartValueTier
+     */
     String CART_VALUE = "CartValue";
 
     /**
@@ -59,16 +62,40 @@ public interface CartValueTier extends ShippingRatePriceTier {
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
 
+    /**
+     *  <p>Minimum total price of a Cart for which a shipping rate applies.</p>
+     * @param minimumCentAmount value to be set
+     */
+
     public void setMinimumCentAmount(final Long minimumCentAmount);
+
+    /**
+     *  <p>Fixed shipping rate Price for a CartValue.</p>
+     * @param price value to be set
+     */
 
     public void setPrice(final Money price);
 
+    /**
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     * @param isMatching value to be set
+     */
+
     public void setIsMatching(final Boolean isMatching);
 
+    /**
+     * factory method
+     * @return instance of CartValueTier
+     */
     public static CartValueTier of() {
         return new CartValueTierImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartValueTier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartValueTier of(final CartValueTier template) {
         CartValueTierImpl instance = new CartValueTierImpl();
         instance.setMinimumCentAmount(template.getMinimumCentAmount());
@@ -77,18 +104,37 @@ public interface CartValueTier extends ShippingRatePriceTier {
         return instance;
     }
 
+    /**
+     * builder factory method for CartValueTier
+     * @return builder
+     */
     public static CartValueTierBuilder builder() {
         return CartValueTierBuilder.of();
     }
 
+    /**
+     * create builder for CartValueTier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartValueTierBuilder builder(final CartValueTier template) {
         return CartValueTierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartValueTier(Function<CartValueTier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartValueTier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartValueTier>() {
             @Override

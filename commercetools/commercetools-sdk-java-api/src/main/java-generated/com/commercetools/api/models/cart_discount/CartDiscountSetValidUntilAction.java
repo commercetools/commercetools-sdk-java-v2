@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountSetValidUntilActionImpl.class)
 public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateAction {
 
+    /**
+     * discriminator value for CartDiscountSetValidUntilAction
+     */
     String SET_VALID_UNTIL = "setValidUntil";
 
     /**
@@ -37,30 +40,63 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountSetValidUntilAction
+     */
     public static CartDiscountSetValidUntilAction of() {
         return new CartDiscountSetValidUntilActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountSetValidUntilAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountSetValidUntilAction of(final CartDiscountSetValidUntilAction template) {
         CartDiscountSetValidUntilActionImpl instance = new CartDiscountSetValidUntilActionImpl();
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountSetValidUntilAction
+     * @return builder
+     */
     public static CartDiscountSetValidUntilActionBuilder builder() {
         return CartDiscountSetValidUntilActionBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountSetValidUntilAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountSetValidUntilActionBuilder builder(final CartDiscountSetValidUntilAction template) {
         return CartDiscountSetValidUntilActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountSetValidUntilAction(Function<CartDiscountSetValidUntilAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidUntilAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidUntilAction>() {
             @Override

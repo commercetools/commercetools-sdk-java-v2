@@ -52,7 +52,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     private Integer variantId;
 
     /**
-     *
+     * set the value to the addedAt
      * @param addedAt value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the custom using the builder function
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the custom
      * @param custom value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the productId
      * @param productId value to be set
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the productSlug using the builder function
      * @param builder function to build the productSlug value
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the productSlug
      * @param productSlug value to be set
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the productType using the builder function
      * @param builder function to build the productType value
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the productType
      * @param productType value to be set
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the variant using the builder function
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the variant
      * @param variant value to be set
      * @return Builder
      */
@@ -211,7 +211,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *
+     * set the value to the variantId
      * @param variantId value to be set
      * @return Builder
      */
@@ -221,41 +221,91 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     * value of addedAt}
+     * @return addedAt
+     */
+
     public String getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     * value of custom}
+     * @return custom
+     */
 
     public com.commercetools.history.models.common.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     * value of productId}
+     * @return productId
+     */
+
     public String getProductId() {
         return this.productId;
     }
+
+    /**
+     * value of productSlug}
+     * @return productSlug
+     */
 
     public com.commercetools.history.models.common.LocalizedString getProductSlug() {
         return this.productSlug;
     }
 
+    /**
+     * value of productType}
+     * @return productType
+     */
+
     public com.commercetools.history.models.common.Reference getProductType() {
         return this.productType;
     }
+
+    /**
+     * value of quantity}
+     * @return quantity
+     */
 
     public Integer getQuantity() {
         return this.quantity;
     }
 
+    /**
+     * value of variant}
+     * @return variant
+     */
+
     public com.commercetools.history.models.common.Variant getVariant() {
         return this.variant;
     }
+
+    /**
+     * value of variantId}
+     * @return variantId
+     */
 
     public Integer getVariantId() {
         return this.variantId;
@@ -289,10 +339,19 @@ public class LineItemBuilder implements Builder<LineItem> {
             variantId);
     }
 
+    /**
+     * factory method for an instance of LineItemBuilder
+     * @return builder
+     */
     public static LineItemBuilder of() {
         return new LineItemBuilder();
     }
 
+    /**
+     * create builder for LineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemBuilder of(final LineItem template) {
         LineItemBuilder builder = new LineItemBuilder();
         builder.addedAt = template.getAddedAt();

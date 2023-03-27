@@ -24,12 +24,18 @@ public class ShippingMethodChangeValueImpl implements ShippingMethodChangeValue,
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodChangeValueImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name) {
         this.id = id;
         this.name = name;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodChangeValueImpl() {
     }
 

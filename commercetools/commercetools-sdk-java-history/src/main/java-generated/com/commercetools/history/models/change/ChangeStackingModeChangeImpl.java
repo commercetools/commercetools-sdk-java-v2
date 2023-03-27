@@ -28,6 +28,9 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
 
     private com.commercetools.history.models.common.StackingMode previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeStackingModeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.StackingMode nextValue,
@@ -38,6 +41,9 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
         this.type = CHANGE_STACKING_MODE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeStackingModeChangeImpl() {
         this.type = CHANGE_STACKING_MODE_CHANGE;
     }

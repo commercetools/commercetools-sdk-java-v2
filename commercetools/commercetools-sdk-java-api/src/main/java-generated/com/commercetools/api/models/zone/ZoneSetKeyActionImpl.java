@@ -24,12 +24,18 @@ public class ZoneSetKeyActionImpl implements ZoneSetKeyAction, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneSetKeyActionImpl() {
         this.action = SET_KEY;
     }

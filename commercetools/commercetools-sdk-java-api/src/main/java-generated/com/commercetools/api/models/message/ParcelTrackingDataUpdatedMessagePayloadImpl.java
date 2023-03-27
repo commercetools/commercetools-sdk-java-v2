@@ -30,6 +30,9 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelTrackingDataUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("parcelId") final String parcelId,
@@ -42,6 +45,9 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
         this.type = PARCEL_TRACKING_DATA_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelTrackingDataUpdatedMessagePayloadImpl() {
         this.type = PARCEL_TRACKING_DATA_UPDATED;
     }

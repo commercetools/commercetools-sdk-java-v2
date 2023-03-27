@@ -235,22 +235,47 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     *  <p>Unique identifier for the Line Item.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @return discountedPricePerQuantity
+     */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
         return this.discountedPricePerQuantity;
     }
 
+    /**
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     * @return totalPrice
+     */
+
     public com.commercetools.api.models.common.Money getTotalPrice() {
         return this.totalPrice;
     }
+
+    /**
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
         return this.taxedPrice;
     }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @return taxedPricePortions
+     */
 
     public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
         return this.taxedPricePortions;
@@ -280,10 +305,19 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
             taxedPrice, taxedPricePortions);
     }
 
+    /**
+     * factory method for an instance of OrderLineItemDiscountSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderLineItemDiscountSetMessagePayloadBuilder of() {
         return new OrderLineItemDiscountSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderLineItemDiscountSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLineItemDiscountSetMessagePayloadBuilder of(
             final OrderLineItemDiscountSetMessagePayload template) {
         OrderLineItemDiscountSetMessagePayloadBuilder builder = new OrderLineItemDiscountSetMessagePayloadBuilder();

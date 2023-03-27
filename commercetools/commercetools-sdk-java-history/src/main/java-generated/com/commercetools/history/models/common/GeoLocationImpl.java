@@ -24,6 +24,9 @@ public class GeoLocationImpl implements GeoLocation, ModelBase {
 
     private java.util.List<Integer> coordinates;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GeoLocationImpl(@JsonProperty("type") final String type,
             @JsonProperty("coordinates") final java.util.List<Integer> coordinates) {
@@ -31,6 +34,9 @@ public class GeoLocationImpl implements GeoLocation, ModelBase {
         this.coordinates = coordinates;
     }
 
+    /**
+     * create empty instance
+     */
     public GeoLocationImpl() {
     }
 

@@ -24,6 +24,9 @@ public class OrderChangeShipmentStateActionImpl implements OrderChangeShipmentSt
 
     private com.commercetools.api.models.order.ShipmentState shipmentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderChangeShipmentStateActionImpl(
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState) {
@@ -31,6 +34,9 @@ public class OrderChangeShipmentStateActionImpl implements OrderChangeShipmentSt
         this.action = CHANGE_SHIPMENT_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderChangeShipmentStateActionImpl() {
         this.action = CHANGE_SHIPMENT_STATE;
     }

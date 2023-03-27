@@ -26,6 +26,9 @@ public class ResourceCreationErrorImpl implements ResourceCreationError, ModelBa
 
     private java.lang.Object resource;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ResourceCreationErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("resource") final java.lang.Object resource) {
@@ -34,6 +37,9 @@ public class ResourceCreationErrorImpl implements ResourceCreationError, ModelBa
         this.code = RESOURCE_CREATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ResourceCreationErrorImpl() {
         this.code = RESOURCE_CREATION;
     }

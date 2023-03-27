@@ -28,7 +28,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
     }
 
     /**
-     *
+     * set the value to the label using the builder function
      * @param builder function to build the label value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
     }
 
     /**
-     *
+     * set the value to the label
      * @param label value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of label}
+     * @return label
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {
         return this.label;
@@ -87,10 +97,19 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
         return new LocalizedEnumValueImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of LocalizedEnumValueBuilder
+     * @return builder
+     */
     public static LocalizedEnumValueBuilder of() {
         return new LocalizedEnumValueBuilder();
     }
 
+    /**
+     * create builder for LocalizedEnumValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedEnumValueBuilder of(final LocalizedEnumValue template) {
         LocalizedEnumValueBuilder builder = new LocalizedEnumValueBuilder();
         builder.key = template.getKey();

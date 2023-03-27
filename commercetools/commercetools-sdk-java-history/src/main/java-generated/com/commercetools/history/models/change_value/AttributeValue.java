@@ -45,14 +45,33 @@ public interface AttributeValue {
     @JsonProperty("value")
     public Object getValue();
 
+    /**
+     * set name
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     * set value
+     * @param value value to be set
+     */
 
     public void setValue(final Object value);
 
+    /**
+     * factory method
+     * @return instance of AttributeValue
+     */
     public static AttributeValue of() {
         return new AttributeValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeValue of(final AttributeValue template) {
         AttributeValueImpl instance = new AttributeValueImpl();
         instance.setName(template.getName());
@@ -60,18 +79,37 @@ public interface AttributeValue {
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeValue
+     * @return builder
+     */
     public static AttributeValueBuilder builder() {
         return AttributeValueBuilder.of();
     }
 
+    /**
+     * create builder for AttributeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeValueBuilder builder(final AttributeValue template) {
         return AttributeValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeValue(Function<AttributeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeValue>() {
             @Override

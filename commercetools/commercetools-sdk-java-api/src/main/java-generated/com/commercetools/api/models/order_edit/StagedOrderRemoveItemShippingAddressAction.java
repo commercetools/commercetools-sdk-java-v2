@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderRemoveItemShippingAddressActionImpl.class)
 public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderRemoveItemShippingAddressAction
+     */
     String REMOVE_ITEM_SHIPPING_ADDRESS = "removeItemShippingAddress";
 
     /**
@@ -40,12 +43,26 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
     @JsonProperty("addressKey")
     public String getAddressKey();
 
+    /**
+     * set addressKey
+     * @param addressKey value to be set
+     */
+
     public void setAddressKey(final String addressKey);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderRemoveItemShippingAddressAction
+     */
     public static StagedOrderRemoveItemShippingAddressAction of() {
         return new StagedOrderRemoveItemShippingAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderRemoveItemShippingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderRemoveItemShippingAddressAction of(
             final StagedOrderRemoveItemShippingAddressAction template) {
         StagedOrderRemoveItemShippingAddressActionImpl instance = new StagedOrderRemoveItemShippingAddressActionImpl();
@@ -53,20 +70,39 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderRemoveItemShippingAddressAction
+     * @return builder
+     */
     public static StagedOrderRemoveItemShippingAddressActionBuilder builder() {
         return StagedOrderRemoveItemShippingAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderRemoveItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderRemoveItemShippingAddressActionBuilder builder(
             final StagedOrderRemoveItemShippingAddressAction template) {
         return StagedOrderRemoveItemShippingAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderRemoveItemShippingAddressAction(
             Function<StagedOrderRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveItemShippingAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveItemShippingAddressAction>() {
             @Override

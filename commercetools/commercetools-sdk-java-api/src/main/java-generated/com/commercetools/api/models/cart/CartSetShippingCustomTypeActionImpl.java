@@ -28,6 +28,9 @@ public class CartSetShippingCustomTypeActionImpl implements CartSetShippingCusto
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetShippingCustomTypeActionImpl(@JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -38,6 +41,9 @@ public class CartSetShippingCustomTypeActionImpl implements CartSetShippingCusto
         this.action = SET_SHIPPING_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetShippingCustomTypeActionImpl() {
         this.action = SET_SHIPPING_CUSTOM_TYPE;
     }

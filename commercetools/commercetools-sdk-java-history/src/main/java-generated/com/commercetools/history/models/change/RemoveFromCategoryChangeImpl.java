@@ -30,6 +30,9 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveFromCategoryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("category") final com.commercetools.history.models.common.Reference category,
@@ -42,6 +45,9 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
         this.type = REMOVE_FROM_CATEGORY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveFromCategoryChangeImpl() {
         this.type = REMOVE_FROM_CATEGORY_CHANGE;
     }

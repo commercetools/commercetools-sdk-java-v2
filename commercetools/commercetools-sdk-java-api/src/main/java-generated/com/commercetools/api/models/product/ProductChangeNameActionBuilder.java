@@ -63,9 +63,19 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
         return this;
     }
 
+    /**
+     *  <p>Value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -89,10 +99,19 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
         return new ProductChangeNameActionImpl(name, staged);
     }
 
+    /**
+     * factory method for an instance of ProductChangeNameActionBuilder
+     * @return builder
+     */
     public static ProductChangeNameActionBuilder of() {
         return new ProductChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for ProductChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductChangeNameActionBuilder of(final ProductChangeNameAction template) {
         ProductChangeNameActionBuilder builder = new ProductChangeNameActionBuilder();
         builder.name = template.getName();

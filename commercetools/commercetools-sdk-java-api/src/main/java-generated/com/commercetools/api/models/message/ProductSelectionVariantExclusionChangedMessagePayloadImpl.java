@@ -29,6 +29,9 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadImpl
 
     private com.commercetools.api.models.product_selection.ProductVariantExclusion newVariantExclusion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionVariantExclusionChangedMessagePayloadImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
@@ -40,6 +43,9 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadImpl
         this.type = PRODUCT_SELECTION_VARIANT_EXCLUSION_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionVariantExclusionChangedMessagePayloadImpl() {
         this.type = PRODUCT_SELECTION_VARIANT_EXCLUSION_CHANGED;
     }

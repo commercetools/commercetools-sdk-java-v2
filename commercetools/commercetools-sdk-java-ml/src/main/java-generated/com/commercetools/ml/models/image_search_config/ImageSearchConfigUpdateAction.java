@@ -40,14 +40,28 @@ public interface ImageSearchConfigUpdateAction {
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for changeStatus subtype
+     * @return builder
+     */
     public static com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionBuilder changeStatusBuilder() {
         return com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImageSearchConfigUpdateAction(Function<ImageSearchConfigUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImageSearchConfigUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImageSearchConfigUpdateAction>() {
             @Override

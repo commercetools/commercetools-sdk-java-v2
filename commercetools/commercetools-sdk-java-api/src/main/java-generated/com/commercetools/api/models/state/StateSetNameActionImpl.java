@@ -24,12 +24,18 @@ public class StateSetNameActionImpl implements StateSetNameAction, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateSetNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         this.action = SET_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public StateSetNameActionImpl() {
         this.action = SET_NAME;
     }

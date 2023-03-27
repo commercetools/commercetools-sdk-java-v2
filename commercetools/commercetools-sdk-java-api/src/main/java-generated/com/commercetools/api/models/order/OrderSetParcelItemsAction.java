@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderSetParcelItemsActionImpl.class)
 public interface OrderSetParcelItemsAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderSetParcelItemsAction
+     */
     String SET_PARCEL_ITEMS = "setParcelItems";
 
     /**
@@ -50,17 +53,41 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     * set parcelId
+     * @param parcelId value to be set
+     */
+
     public void setParcelId(final String parcelId);
+
+    /**
+     * set items
+     * @param items values to be set
+     */
 
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
 
+    /**
+     * factory method
+     * @return instance of OrderSetParcelItemsAction
+     */
     public static OrderSetParcelItemsAction of() {
         return new OrderSetParcelItemsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderSetParcelItemsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderSetParcelItemsAction of(final OrderSetParcelItemsAction template) {
         OrderSetParcelItemsActionImpl instance = new OrderSetParcelItemsActionImpl();
         instance.setParcelId(template.getParcelId());
@@ -68,18 +95,37 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderSetParcelItemsAction
+     * @return builder
+     */
     public static OrderSetParcelItemsActionBuilder builder() {
         return OrderSetParcelItemsActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderSetParcelItemsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetParcelItemsActionBuilder builder(final OrderSetParcelItemsAction template) {
         return OrderSetParcelItemsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderSetParcelItemsAction(Function<OrderSetParcelItemsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelItemsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelItemsAction>() {
             @Override

@@ -62,9 +62,19 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
         return this;
     }
 
+    /**
+     *  <p><code>"The given values must be equal to the existing enum values."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
         return new EnumValuesMustMatchErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of EnumValuesMustMatchErrorBuilder
+     * @return builder
+     */
     public static EnumValuesMustMatchErrorBuilder of() {
         return new EnumValuesMustMatchErrorBuilder();
     }
 
+    /**
+     * create builder for EnumValuesMustMatchError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumValuesMustMatchErrorBuilder of(final EnumValuesMustMatchError template) {
         EnumValuesMustMatchErrorBuilder builder = new EnumValuesMustMatchErrorBuilder();
         builder.message = template.getMessage();

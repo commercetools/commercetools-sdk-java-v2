@@ -40,14 +40,28 @@ public interface GeoJson {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for point subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.common.GeoJsonPointBuilder pointBuilder() {
         return com.commercetools.api.models.common.GeoJsonPointBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGeoJson(Function<GeoJson, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GeoJson> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GeoJson>() {
             @Override

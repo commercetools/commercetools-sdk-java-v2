@@ -64,10 +64,20 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
         return this;
     }
 
+    /**
+     *  <p>The State to transition to. If there is no existing State, this must be an initial State.</p>
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
+
+    /**
+     *  <p>If <code>true</code>, validations are disabled.</p>
+     * @return force
+     */
 
     @Nullable
     public Boolean getForce() {
@@ -90,10 +100,19 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
         return new ProductTransitionStateActionImpl(state, force);
     }
 
+    /**
+     * factory method for an instance of ProductTransitionStateActionBuilder
+     * @return builder
+     */
     public static ProductTransitionStateActionBuilder of() {
         return new ProductTransitionStateActionBuilder();
     }
 
+    /**
+     * create builder for ProductTransitionStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTransitionStateActionBuilder of(final ProductTransitionStateAction template) {
         ProductTransitionStateActionBuilder builder = new ProductTransitionStateActionBuilder();
         builder.state = template.getState();

@@ -23,6 +23,10 @@ public class ProductDiscountValueBuilder {
         return com.commercetools.api.models.product_discount.ProductDiscountValueRelativeBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ProductDiscountValueBuilder
+     * @return builder
+     */
     public static ProductDiscountValueBuilder of() {
         return new ProductDiscountValueBuilder();
     }

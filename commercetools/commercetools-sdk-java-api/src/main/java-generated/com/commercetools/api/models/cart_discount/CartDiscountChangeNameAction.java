@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountChangeNameActionImpl.class)
 public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
 
+    /**
+     * discriminator value for CartDiscountChangeNameAction
+     */
     String CHANGE_NAME = "changeName";
 
     /**
@@ -42,30 +45,63 @@ public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountChangeNameAction
+     */
     public static CartDiscountChangeNameAction of() {
         return new CartDiscountChangeNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountChangeNameAction of(final CartDiscountChangeNameAction template) {
         CartDiscountChangeNameActionImpl instance = new CartDiscountChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountChangeNameAction
+     * @return builder
+     */
     public static CartDiscountChangeNameActionBuilder builder() {
         return CartDiscountChangeNameActionBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeNameActionBuilder builder(final CartDiscountChangeNameAction template) {
         return CartDiscountChangeNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountChangeNameAction(Function<CartDiscountChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeNameAction>() {
             @Override

@@ -93,6 +93,11 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
         return this;
     }
 
+    /**
+     *  <p>Available values that can be assigned to Products.</p>
+     * @return values
+     */
+
     public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues() {
         return this.values;
     }
@@ -114,10 +119,19 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
         return new AttributeLocalizedEnumTypeImpl(values);
     }
 
+    /**
+     * factory method for an instance of AttributeLocalizedEnumTypeBuilder
+     * @return builder
+     */
     public static AttributeLocalizedEnumTypeBuilder of() {
         return new AttributeLocalizedEnumTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeLocalizedEnumType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeLocalizedEnumTypeBuilder of(final AttributeLocalizedEnumType template) {
         AttributeLocalizedEnumTypeBuilder builder = new AttributeLocalizedEnumTypeBuilder();
         builder.values = template.getValues();

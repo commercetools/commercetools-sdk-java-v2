@@ -44,6 +44,9 @@ public class CustomerTitleSetMessageImpl implements CustomerTitleSetMessage, Mod
 
     private String title;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerTitleSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerTitleSetMessageImpl implements CustomerTitleSetMessage, Mod
         this.type = CUSTOMER_TITLE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerTitleSetMessageImpl() {
         this.type = CUSTOMER_TITLE_SET;
     }

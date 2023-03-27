@@ -65,9 +65,19 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @return textLineItemId
+     */
+
     public String getTextLineItemId() {
         return this.textLineItemId;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -92,10 +102,19 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
         return new ShoppingListSetTextLineItemDescriptionActionImpl(textLineItemId, description);
     }
 
+    /**
+     * factory method for an instance of ShoppingListSetTextLineItemDescriptionActionBuilder
+     * @return builder
+     */
     public static ShoppingListSetTextLineItemDescriptionActionBuilder of() {
         return new ShoppingListSetTextLineItemDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListSetTextLineItemDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListSetTextLineItemDescriptionActionBuilder of(
             final ShoppingListSetTextLineItemDescriptionAction template) {
         ShoppingListSetTextLineItemDescriptionActionBuilder builder = new ShoppingListSetTextLineItemDescriptionActionBuilder();

@@ -25,6 +25,9 @@ public class BusinessUnitBillingAddressAddedMessagePayloadImpl
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitBillingAddressAddedMessagePayloadImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
@@ -32,6 +35,9 @@ public class BusinessUnitBillingAddressAddedMessagePayloadImpl
         this.type = BUSINESS_UNIT_BILLING_ADDRESS_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitBillingAddressAddedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_BILLING_ADDRESS_ADDED;
     }

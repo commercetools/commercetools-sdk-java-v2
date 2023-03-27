@@ -24,6 +24,9 @@ public class StoreAddCountryActionImpl implements StoreAddCountryAction, ModelBa
 
     private com.commercetools.api.models.store_country.StoreCountry country;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreAddCountryActionImpl(
             @JsonProperty("country") final com.commercetools.api.models.store_country.StoreCountry country) {
@@ -31,6 +34,9 @@ public class StoreAddCountryActionImpl implements StoreAddCountryAction, ModelBa
         this.action = ADD_COUNTRY;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreAddCountryActionImpl() {
         this.action = ADD_COUNTRY;
     }

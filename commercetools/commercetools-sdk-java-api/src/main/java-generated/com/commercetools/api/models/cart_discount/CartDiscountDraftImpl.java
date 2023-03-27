@@ -46,6 +46,9 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("key") final String key,
@@ -74,6 +77,9 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountDraftImpl() {
     }
 

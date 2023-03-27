@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeTextTypeImpl.class)
 public interface AttributeTextType extends AttributeType {
 
+    /**
+     * discriminator value for AttributeTextType
+     */
     String TEXT = "text";
 
+    /**
+     * factory method
+     * @return instance of AttributeTextType
+     */
     public static AttributeTextType of() {
         return new AttributeTextTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeTextType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeTextType of(final AttributeTextType template) {
         AttributeTextTypeImpl instance = new AttributeTextTypeImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeTextType
+     * @return builder
+     */
     public static AttributeTextTypeBuilder builder() {
         return AttributeTextTypeBuilder.of();
     }
 
+    /**
+     * create builder for AttributeTextType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeTextTypeBuilder builder(final AttributeTextType template) {
         return AttributeTextTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeTextType(Function<AttributeTextType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeTextType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeTextType>() {
             @Override

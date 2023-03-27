@@ -33,6 +33,11 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
         return this;
     }
 
+    /**
+     *  <p>Reference to a Cart or Order that is replicated.</p>
+     * @return reference
+     */
+
     public java.lang.Object getReference() {
         return this.reference;
     }
@@ -54,10 +59,19 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
         return new ReplicaMyCartDraftImpl(reference);
     }
 
+    /**
+     * factory method for an instance of ReplicaMyCartDraftBuilder
+     * @return builder
+     */
     public static ReplicaMyCartDraftBuilder of() {
         return new ReplicaMyCartDraftBuilder();
     }
 
+    /**
+     * create builder for ReplicaMyCartDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReplicaMyCartDraftBuilder of(final ReplicaMyCartDraft template) {
         ReplicaMyCartDraftBuilder builder = new ReplicaMyCartDraftBuilder();
         builder.reference = template.getReference();

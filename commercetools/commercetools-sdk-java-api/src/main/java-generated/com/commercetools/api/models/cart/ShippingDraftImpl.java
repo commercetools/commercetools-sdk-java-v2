@@ -34,6 +34,9 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod,
@@ -51,6 +54,9 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingDraftImpl() {
     }
 

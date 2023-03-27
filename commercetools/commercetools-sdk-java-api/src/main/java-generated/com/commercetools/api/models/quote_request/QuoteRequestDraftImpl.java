@@ -34,6 +34,9 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
 
     private String purchaseOrderNumber;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestDraftImpl(@JsonProperty("cart") final com.commercetools.api.models.cart.CartResourceIdentifier cart,
             @JsonProperty("cartVersion") final Long cartVersion, @JsonProperty("key") final String key,
@@ -50,6 +53,9 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
         this.purchaseOrderNumber = purchaseOrderNumber;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestDraftImpl() {
     }
 

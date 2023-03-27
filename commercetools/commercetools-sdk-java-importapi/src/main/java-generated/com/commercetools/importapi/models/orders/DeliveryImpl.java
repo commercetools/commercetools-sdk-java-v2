@@ -30,6 +30,9 @@ public class DeliveryImpl implements Delivery, ModelBase {
 
     private com.commercetools.importapi.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryImpl(@JsonProperty("id") final String id,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -43,6 +46,9 @@ public class DeliveryImpl implements Delivery, ModelBase {
         this.address = address;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryImpl() {
     }
 

@@ -33,12 +33,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteDeletedMessageImpl.class)
 public interface QuoteDeletedMessage extends Message {
 
+    /**
+     * discriminator value for QuoteDeletedMessage
+     */
     String QUOTE_DELETED = "QuoteDeleted";
 
+    /**
+     * factory method
+     * @return instance of QuoteDeletedMessage
+     */
     public static QuoteDeletedMessage of() {
         return new QuoteDeletedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteDeletedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteDeletedMessage of(final QuoteDeletedMessage template) {
         QuoteDeletedMessageImpl instance = new QuoteDeletedMessageImpl();
         instance.setId(template.getId());
@@ -54,18 +66,37 @@ public interface QuoteDeletedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteDeletedMessage
+     * @return builder
+     */
     public static QuoteDeletedMessageBuilder builder() {
         return QuoteDeletedMessageBuilder.of();
     }
 
+    /**
+     * create builder for QuoteDeletedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteDeletedMessageBuilder builder(final QuoteDeletedMessage template) {
         return QuoteDeletedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteDeletedMessage(Function<QuoteDeletedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteDeletedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteDeletedMessage>() {
             @Override

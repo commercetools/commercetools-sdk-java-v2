@@ -27,6 +27,9 @@ public class CustomerGroupResourceIdentifierImpl implements CustomerGroupResourc
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class CustomerGroupResourceIdentifierImpl implements CustomerGroupResourc
         this.typeId = ReferenceTypeId.findEnum("customer-group");
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("customer-group");
     }

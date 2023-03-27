@@ -24,12 +24,18 @@ public class TaskTokenImpl implements TaskToken, ModelBase {
 
     private String uriPath;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaskTokenImpl(@JsonProperty("taskId") final String taskId, @JsonProperty("uriPath") final String uriPath) {
         this.taskId = taskId;
         this.uriPath = uriPath;
     }
 
+    /**
+     * create empty instance
+     */
     public TaskTokenImpl() {
     }
 

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderSetDeliveryAddressActionImpl.class)
 public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderSetDeliveryAddressAction
+     */
     String SET_DELIVERY_ADDRESS = "setDeliveryAddress";
 
     /**
@@ -49,14 +52,33 @@ public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     * set deliveryId
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address value to be set
+     */
 
     public void setAddress(final BaseAddress address);
 
+    /**
+     * factory method
+     * @return instance of OrderSetDeliveryAddressAction
+     */
     public static OrderSetDeliveryAddressAction of() {
         return new OrderSetDeliveryAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderSetDeliveryAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderSetDeliveryAddressAction of(final OrderSetDeliveryAddressAction template) {
         OrderSetDeliveryAddressActionImpl instance = new OrderSetDeliveryAddressActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
@@ -64,14 +86,29 @@ public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderSetDeliveryAddressAction
+     * @return builder
+     */
     public static OrderSetDeliveryAddressActionBuilder builder() {
         return OrderSetDeliveryAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderSetDeliveryAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetDeliveryAddressActionBuilder builder(final OrderSetDeliveryAddressAction template) {
         return OrderSetDeliveryAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderSetDeliveryAddressAction(Function<OrderSetDeliveryAddressAction, T> helper) {
         return helper.apply(this);
     }
@@ -80,6 +117,10 @@ public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
         return OrderSetDeliveryAddressActionBuilder.of().deliveryId(deliveryId).build();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryAddressAction>() {
             @Override

@@ -27,6 +27,9 @@ public class AttributeGroupReferenceImpl implements AttributeGroupReference, Mod
 
     private com.commercetools.api.models.attribute_group.AttributeGroup obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.attribute_group.AttributeGroup obj) {
@@ -35,6 +38,9 @@ public class AttributeGroupReferenceImpl implements AttributeGroupReference, Mod
         this.typeId = ReferenceTypeId.findEnum("attribute-group");
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("attribute-group");
     }

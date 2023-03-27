@@ -34,6 +34,11 @@ public class MyCustomerEmailVerifyBuilder implements Builder<MyCustomerEmailVeri
         return this;
     }
 
+    /**
+     *  <p>Value of the token to verify Customer email.</p>
+     * @return tokenValue
+     */
+
     public String getTokenValue() {
         return this.tokenValue;
     }
@@ -55,10 +60,19 @@ public class MyCustomerEmailVerifyBuilder implements Builder<MyCustomerEmailVeri
         return new MyCustomerEmailVerifyImpl(tokenValue);
     }
 
+    /**
+     * factory method for an instance of MyCustomerEmailVerifyBuilder
+     * @return builder
+     */
     public static MyCustomerEmailVerifyBuilder of() {
         return new MyCustomerEmailVerifyBuilder();
     }
 
+    /**
+     * create builder for MyCustomerEmailVerify instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerEmailVerifyBuilder of(final MyCustomerEmailVerify template) {
         MyCustomerEmailVerifyBuilder builder = new MyCustomerEmailVerifyBuilder();
         builder.tokenValue = template.getTokenValue();

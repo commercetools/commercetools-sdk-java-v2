@@ -28,6 +28,9 @@ public class SetAuthenticationModeChangeImpl implements SetAuthenticationModeCha
 
     private com.commercetools.history.models.common.AuthenticationMode nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAuthenticationModeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.AuthenticationMode previousValue,
@@ -38,6 +41,9 @@ public class SetAuthenticationModeChangeImpl implements SetAuthenticationModeCha
         this.type = SET_AUTHENTICATION_MODE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAuthenticationModeChangeImpl() {
         this.type = SET_AUTHENTICATION_MODE_CHANGE;
     }

@@ -27,6 +27,9 @@ public class QueryTimedOutErrorImpl implements QueryTimedOutError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QueryTimedOutErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class QueryTimedOutErrorImpl implements QueryTimedOutError, ModelBase {
         this.code = QUERY_TIMED_OUT;
     }
 
+    /**
+     * create empty instance
+     */
     public QueryTimedOutErrorImpl() {
         this.code = QUERY_TIMED_OUT;
     }

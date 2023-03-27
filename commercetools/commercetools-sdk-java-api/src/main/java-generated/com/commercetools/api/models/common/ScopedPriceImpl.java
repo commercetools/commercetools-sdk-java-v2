@@ -40,6 +40,9 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ScopedPriceImpl(@JsonProperty("id") final String id,
             @JsonProperty("value") final com.commercetools.api.models.common.TypedMoney value,
@@ -63,6 +66,9 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public ScopedPriceImpl() {
     }
 

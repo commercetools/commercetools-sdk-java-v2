@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OutOfStockErrorImpl.class)
 public interface OutOfStockError extends ErrorObject {
 
+    /**
+     * discriminator value for OutOfStockError
+     */
     String OUT_OF_STOCK = "OutOfStock";
 
     /**
@@ -70,22 +73,56 @@ public interface OutOfStockError extends ErrorObject {
     @JsonProperty("skus")
     public List<String> getSkus();
 
+    /**
+     *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Unique identifiers of the Line Items that are out of stock.</p>
+     * @param lineItems values to be set
+     */
 
     @JsonIgnore
     public void setLineItems(final String... lineItems);
 
+    /**
+     *  <p>Unique identifiers of the Line Items that are out of stock.</p>
+     * @param lineItems values to be set
+     */
+
     public void setLineItems(final List<String> lineItems);
+
+    /**
+     *  <p>SKUs of the Line Items that are out of stock.</p>
+     * @param skus values to be set
+     */
 
     @JsonIgnore
     public void setSkus(final String... skus);
 
+    /**
+     *  <p>SKUs of the Line Items that are out of stock.</p>
+     * @param skus values to be set
+     */
+
     public void setSkus(final List<String> skus);
 
+    /**
+     * factory method
+     * @return instance of OutOfStockError
+     */
     public static OutOfStockError of() {
         return new OutOfStockErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of OutOfStockError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OutOfStockError of(final OutOfStockError template) {
         OutOfStockErrorImpl instance = new OutOfStockErrorImpl();
         instance.setMessage(template.getMessage());
@@ -95,18 +132,37 @@ public interface OutOfStockError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for OutOfStockError
+     * @return builder
+     */
     public static OutOfStockErrorBuilder builder() {
         return OutOfStockErrorBuilder.of();
     }
 
+    /**
+     * create builder for OutOfStockError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OutOfStockErrorBuilder builder(final OutOfStockError template) {
         return OutOfStockErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOutOfStockError(Function<OutOfStockError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OutOfStockError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OutOfStockError>() {
             @Override

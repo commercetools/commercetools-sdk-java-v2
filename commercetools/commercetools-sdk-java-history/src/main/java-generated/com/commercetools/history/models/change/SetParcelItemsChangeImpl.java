@@ -30,6 +30,9 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetParcelItemsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel,
@@ -42,6 +45,9 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
         this.type = SET_PARCEL_ITEMS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetParcelItemsChangeImpl() {
         this.type = SET_PARCEL_ITEMS_CHANGE;
     }

@@ -90,15 +90,30 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
         return this;
     }
 
+    /**
+     *  <p>The product name that was used to generate recommendations.</p>
+     * @return productName
+     */
+
     @Nullable
     public String getProductName() {
         return this.productName;
     }
 
+    /**
+     *  <p>The product image that was used to generate recommendations.</p>
+     * @return productImageUrl
+     */
+
     @Nullable
     public String getProductImageUrl() {
         return this.productImageUrl;
     }
+
+    /**
+     *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+     * @return generalCategoryNames
+     */
 
     public java.util.List<String> getGeneralCategoryNames() {
         return this.generalCategoryNames;
@@ -122,10 +137,19 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
         return new ProjectCategoryRecommendationMetaImpl(productName, productImageUrl, generalCategoryNames);
     }
 
+    /**
+     * factory method for an instance of ProjectCategoryRecommendationMetaBuilder
+     * @return builder
+     */
     public static ProjectCategoryRecommendationMetaBuilder of() {
         return new ProjectCategoryRecommendationMetaBuilder();
     }
 
+    /**
+     * create builder for ProjectCategoryRecommendationMeta instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectCategoryRecommendationMetaBuilder of(final ProjectCategoryRecommendationMeta template) {
         ProjectCategoryRecommendationMetaBuilder builder = new ProjectCategoryRecommendationMetaBuilder();
         builder.productName = template.getProductName();

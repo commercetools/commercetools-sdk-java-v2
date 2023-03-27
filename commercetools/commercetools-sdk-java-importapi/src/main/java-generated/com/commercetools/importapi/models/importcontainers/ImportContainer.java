@@ -74,20 +74,54 @@ public interface ImportContainer {
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
+    /**
+     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @param resourceType value to be set
+     */
 
     public void setResourceType(final ImportResourceType resourceType);
 
+    /**
+     *  <p>The version of the ImportContainer.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>The time when the ImportContainer was created.</p>
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    /**
+     *  <p>The last time when the ImportContainer was modified.</p>
+     * @param lastModifiedAt value to be set
+     */
+
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     * factory method
+     * @return instance of ImportContainer
+     */
     public static ImportContainer of() {
         return new ImportContainerImpl();
     }
 
+    /**
+     * factory method to copy an instance of ImportContainer
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ImportContainer of(final ImportContainer template) {
         ImportContainerImpl instance = new ImportContainerImpl();
         instance.setKey(template.getKey());
@@ -98,18 +132,37 @@ public interface ImportContainer {
         return instance;
     }
 
+    /**
+     * builder factory method for ImportContainer
+     * @return builder
+     */
     public static ImportContainerBuilder builder() {
         return ImportContainerBuilder.of();
     }
 
+    /**
+     * create builder for ImportContainer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportContainerBuilder builder(final ImportContainer template) {
         return ImportContainerBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImportContainer(Function<ImportContainer, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImportContainer> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImportContainer>() {
             @Override

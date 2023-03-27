@@ -167,10 +167,20 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
         return this;
     }
 
+    /**
+     *  <p>Countries added to the Store.</p>
+     * @return addedCountries
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getAddedCountries() {
         return this.addedCountries;
     }
+
+    /**
+     *  <p>Countries removed from the Store.</p>
+     * @return removedCountries
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getRemovedCountries() {
@@ -193,10 +203,19 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
         return new StoreCountriesChangedMessagePayloadImpl(addedCountries, removedCountries);
     }
 
+    /**
+     * factory method for an instance of StoreCountriesChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static StoreCountriesChangedMessagePayloadBuilder of() {
         return new StoreCountriesChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StoreCountriesChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreCountriesChangedMessagePayloadBuilder of(final StoreCountriesChangedMessagePayload template) {
         StoreCountriesChangedMessagePayloadBuilder builder = new StoreCountriesChangedMessagePayloadBuilder();
         builder.addedCountries = template.getAddedCountries();

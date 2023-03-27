@@ -28,6 +28,9 @@ public class SetMethodInfoMethodChangeImpl implements SetMethodInfoMethodChange,
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetMethodInfoMethodChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetMethodInfoMethodChangeImpl implements SetMethodInfoMethodChange,
         this.type = SET_METHOD_INFO_METHOD_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetMethodInfoMethodChangeImpl() {
         this.type = SET_METHOD_INFO_METHOD_CHANGE;
     }

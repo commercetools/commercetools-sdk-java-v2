@@ -54,6 +54,9 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -90,6 +93,9 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.businessUnit = businessUnit;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteImpl() {
     }
 

@@ -460,129 +460,420 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     @JsonProperty("refusedGifts")
     public List<CartDiscountReference> getRefusedGifts();
 
+    /**
+     *  <p>Unique identifier of the Order.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>The current version of the order.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     * set createdAt
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     * set lastModifiedAt
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>This field will only be present if it was set for Order Import</p>
+     * @param completedAt value to be set
+     */
+
     public void setCompletedAt(final ZonedDateTime completedAt);
+
+    /**
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     * @param orderNumber value to be set
+     */
 
     public void setOrderNumber(final String orderNumber);
 
+    /**
+     * set customerId
+     * @param customerId value to be set
+     */
+
     public void setCustomerId(final String customerId);
+
+    /**
+     * set customerEmail
+     * @param customerEmail value to be set
+     */
 
     public void setCustomerEmail(final String customerEmail);
 
+    /**
+     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     * @param anonymousId value to be set
+     */
+
     public void setAnonymousId(final String anonymousId);
+
+    /**
+     *  <p>The Business Unit the Order belongs to.</p>
+     * @param businessUnit value to be set
+     */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
+    /**
+     * set store
+     * @param store value to be set
+     */
+
     public void setStore(final StoreKeyReference store);
+
+    /**
+     * set lineItems
+     * @param lineItems values to be set
+     */
 
     @JsonIgnore
     public void setLineItems(final LineItem... lineItems);
 
+    /**
+     * set lineItems
+     * @param lineItems values to be set
+     */
+
     public void setLineItems(final List<LineItem> lineItems);
+
+    /**
+     * set customLineItems
+     * @param customLineItems values to be set
+     */
 
     @JsonIgnore
     public void setCustomLineItems(final CustomLineItem... customLineItems);
 
+    /**
+     * set customLineItems
+     * @param customLineItems values to be set
+     */
+
     public void setCustomLineItems(final List<CustomLineItem> customLineItems);
+
+    /**
+     * set totalPrice
+     * @param totalPrice value to be set
+     */
 
     public void setTotalPrice(final TypedMoney totalPrice);
 
+    /**
+     *  <p>The taxes are calculated based on the shipping address.</p>
+     * @param taxedPrice value to be set
+     */
+
     public void setTaxedPrice(final TaxedPrice taxedPrice);
+
+    /**
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     * @param taxedShippingPrice value to be set
+     */
 
     public void setTaxedShippingPrice(final TaxedPrice taxedShippingPrice);
 
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method.</p>
+     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
+     * @param shippingAddress value to be set
+     */
+
     public void setShippingAddress(final Address shippingAddress);
+
+    /**
+     * set billingAddress
+     * @param billingAddress value to be set
+     */
 
     public void setBillingAddress(final Address billingAddress);
 
+    /**
+     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
+     * @param shippingMode value to be set
+     */
+
     public void setShippingMode(final ShippingMode shippingMode);
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     * @param shipping values to be set
+     */
 
     @JsonIgnore
     public void setShipping(final Shipping... shipping);
 
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     * @param shipping values to be set
+     */
+
     public void setShipping(final List<Shipping> shipping);
+
+    /**
+     * set taxMode
+     * @param taxMode value to be set
+     */
 
     public void setTaxMode(final TaxMode taxMode);
 
+    /**
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
+     * @param taxRoundingMode value to be set
+     */
+
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
+
+    /**
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @param customerGroup value to be set
+     */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
+    /**
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
+
+    /**
+     *  <p>One of the four predefined OrderStates.</p>
+     * @param orderState value to be set
+     */
 
     public void setOrderState(final OrderState orderState);
 
+    /**
+     *  <p>This reference can point to a state in a custom workflow.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     * set shipmentState
+     * @param shipmentState value to be set
+     */
 
     public void setShipmentState(final ShipmentState shipmentState);
 
+    /**
+     * set paymentState
+     * @param paymentState value to be set
+     */
+
     public void setPaymentState(final PaymentState paymentState);
 
+    /**
+     *  <p>Set if the ShippingMethod is set.</p>
+     * @param shippingInfo value to be set
+     */
+
     public void setShippingInfo(final ShippingInfo shippingInfo);
+
+    /**
+     * set syncInfo
+     * @param syncInfo values to be set
+     */
 
     @JsonIgnore
     public void setSyncInfo(final SyncInfo... syncInfo);
 
+    /**
+     * set syncInfo
+     * @param syncInfo values to be set
+     */
+
     public void setSyncInfo(final List<SyncInfo> syncInfo);
+
+    /**
+     * set returnInfo
+     * @param returnInfo values to be set
+     */
 
     @JsonIgnore
     public void setReturnInfo(final ReturnInfo... returnInfo);
 
+    /**
+     * set returnInfo
+     * @param returnInfo values to be set
+     */
+
     public void setReturnInfo(final List<ReturnInfo> returnInfo);
 
+    /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
+    /**
+     * set discountCodes
+     * @param discountCodes values to be set
+     */
 
     @JsonIgnore
     public void setDiscountCodes(final DiscountCodeInfo... discountCodes);
 
+    /**
+     * set discountCodes
+     * @param discountCodes values to be set
+     */
+
     public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
 
+    /**
+     *  <p>Internal-only field.</p>
+     * @param lastMessageSequenceNumber value to be set
+     */
     @Deprecated
     public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber);
 
+    /**
+     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+     * @param cart value to be set
+     */
+
     public void setCart(final CartReference cart);
+
+    /**
+     *  <p>Set when this order was created from a quote.</p>
+     * @param quote value to be set
+     */
 
     public void setQuote(final QuoteReference quote);
 
+    /**
+     * set custom
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     * set paymentInfo
+     * @param paymentInfo value to be set
+     */
 
     public void setPaymentInfo(final PaymentInfo paymentInfo);
 
+    /**
+     * set locale
+     * @param locale value to be set
+     */
+
     public void setLocale(final String locale);
+
+    /**
+     * set inventoryMode
+     * @param inventoryMode value to be set
+     */
 
     public void setInventoryMode(final InventoryMode inventoryMode);
 
+    /**
+     * set origin
+     * @param origin value to be set
+     */
+
     public void setOrigin(final CartOrigin origin);
+
+    /**
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
+     * @param taxCalculationMode value to be set
+     */
 
     public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
 
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @param shippingRateInput value to be set
+     */
+
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
+
+    /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param itemShippingAddresses values to be set
+     */
 
     @JsonIgnore
     public void setItemShippingAddresses(final Address... itemShippingAddresses);
 
+    /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param itemShippingAddresses values to be set
+     */
+
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
+
+    /**
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     * @param refusedGifts values to be set
+     */
 
     @JsonIgnore
     public void setRefusedGifts(final CartDiscountReference... refusedGifts);
 
+    /**
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     * @param refusedGifts values to be set
+     */
+
     public void setRefusedGifts(final List<CartDiscountReference> refusedGifts);
 
+    /**
+     * factory method
+     * @return instance of Order
+     */
     public static Order of() {
         return new OrderImpl();
     }
 
+    /**
+     * factory method to copy an instance of Order
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Order of(final Order template) {
         OrderImpl instance = new OrderImpl();
         instance.setId(template.getId());
@@ -635,14 +926,29 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         return instance;
     }
 
+    /**
+     * builder factory method for Order
+     * @return builder
+     */
     public static OrderBuilder builder() {
         return OrderBuilder.of();
     }
 
+    /**
+     * create builder for Order instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderBuilder builder(final Order template) {
         return OrderBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrder(Function<Order, T> helper) {
         return helper.apply(this);
     }
@@ -651,6 +957,10 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         return com.commercetools.api.models.common.ReferenceTypeId.ORDER;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Order> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Order>() {
             @Override

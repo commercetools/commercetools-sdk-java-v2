@@ -36,10 +36,19 @@ public class CustomFieldBooleanTypeBuilder implements Builder<CustomFieldBoolean
         return new CustomFieldBooleanTypeImpl();
     }
 
+    /**
+     * factory method for an instance of CustomFieldBooleanTypeBuilder
+     * @return builder
+     */
     public static CustomFieldBooleanTypeBuilder of() {
         return new CustomFieldBooleanTypeBuilder();
     }
 
+    /**
+     * create builder for CustomFieldBooleanType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldBooleanTypeBuilder of(final CustomFieldBooleanType template) {
         CustomFieldBooleanTypeBuilder builder = new CustomFieldBooleanTypeBuilder();
         return builder;

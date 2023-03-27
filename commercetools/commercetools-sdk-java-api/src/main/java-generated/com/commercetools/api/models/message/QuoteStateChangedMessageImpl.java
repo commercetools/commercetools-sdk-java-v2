@@ -46,6 +46,9 @@ public class QuoteStateChangedMessageImpl implements QuoteStateChangedMessage, M
 
     private com.commercetools.api.models.quote.QuoteState oldQuoteState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteStateChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class QuoteStateChangedMessageImpl implements QuoteStateChangedMessage, M
         this.type = QUOTE_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteStateChangedMessageImpl() {
         this.type = QUOTE_STATE_CHANGED;
     }

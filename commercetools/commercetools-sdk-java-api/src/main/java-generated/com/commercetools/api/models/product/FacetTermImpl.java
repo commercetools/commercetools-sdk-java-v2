@@ -26,6 +26,9 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
 
     private Long productCount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FacetTermImpl(@JsonProperty("term") final java.lang.Object term, @JsonProperty("count") final Long count,
             @JsonProperty("productCount") final Long productCount) {
@@ -34,6 +37,9 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
         this.productCount = productCount;
     }
 
+    /**
+     * create empty instance
+     */
     public FacetTermImpl() {
     }
 

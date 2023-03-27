@@ -91,6 +91,11 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
         return this;
     }
 
+    /**
+     *  <p>The price import resources of this request.</p>
+     * @return resources
+     */
+
     public java.util.List<com.commercetools.importapi.models.prices.PriceImport> getResources() {
         return this.resources;
     }
@@ -112,10 +117,19 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
         return new PriceImportRequestImpl(resources);
     }
 
+    /**
+     * factory method for an instance of PriceImportRequestBuilder
+     * @return builder
+     */
     public static PriceImportRequestBuilder of() {
         return new PriceImportRequestBuilder();
     }
 
+    /**
+     * create builder for PriceImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceImportRequestBuilder of(final PriceImportRequest template) {
         PriceImportRequestBuilder builder = new PriceImportRequestBuilder();
         builder.resources = template.getResources();

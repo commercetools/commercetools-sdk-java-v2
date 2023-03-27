@@ -27,6 +27,9 @@ public class BadGatewayErrorImpl implements BadGatewayError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BadGatewayErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class BadGatewayErrorImpl implements BadGatewayError, ModelBase {
         this.code = BAD_GATEWAY;
     }
 
+    /**
+     * create empty instance
+     */
     public BadGatewayErrorImpl() {
         this.code = BAD_GATEWAY;
     }

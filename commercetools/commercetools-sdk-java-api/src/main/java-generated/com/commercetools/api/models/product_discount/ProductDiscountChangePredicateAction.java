@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountChangePredicateActionImpl.class)
 public interface ProductDiscountChangePredicateAction extends ProductDiscountUpdateAction {
 
+    /**
+     * discriminator value for ProductDiscountChangePredicateAction
+     */
     String CHANGE_PREDICATE = "changePredicate";
 
     /**
@@ -39,31 +42,64 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     @JsonProperty("predicate")
     public String getPredicate();
 
+    /**
+     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     * @param predicate value to be set
+     */
+
     public void setPredicate(final String predicate);
 
+    /**
+     * factory method
+     * @return instance of ProductDiscountChangePredicateAction
+     */
     public static ProductDiscountChangePredicateAction of() {
         return new ProductDiscountChangePredicateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDiscountChangePredicateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDiscountChangePredicateAction of(final ProductDiscountChangePredicateAction template) {
         ProductDiscountChangePredicateActionImpl instance = new ProductDiscountChangePredicateActionImpl();
         instance.setPredicate(template.getPredicate());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDiscountChangePredicateAction
+     * @return builder
+     */
     public static ProductDiscountChangePredicateActionBuilder builder() {
         return ProductDiscountChangePredicateActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductDiscountChangePredicateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountChangePredicateActionBuilder builder(
             final ProductDiscountChangePredicateAction template) {
         return ProductDiscountChangePredicateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountChangePredicateAction(Function<ProductDiscountChangePredicateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangePredicateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangePredicateAction>() {
             @Override

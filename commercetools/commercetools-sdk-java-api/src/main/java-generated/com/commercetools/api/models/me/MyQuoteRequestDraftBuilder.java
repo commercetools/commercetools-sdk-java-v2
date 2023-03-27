@@ -62,13 +62,28 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
+     * @return cartId
+     */
+
     public String getCartId() {
         return this.cartId;
     }
 
+    /**
+     *  <p>Current version of the Cart.</p>
+     * @return cartVersion
+     */
+
     public Long getCartVersion() {
         return this.cartVersion;
     }
+
+    /**
+     *  <p>Message from the Buyer included in the Quote Request.</p>
+     * @return comment
+     */
 
     public String getComment() {
         return this.comment;
@@ -93,10 +108,19 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
         return new MyQuoteRequestDraftImpl(cartId, cartVersion, comment);
     }
 
+    /**
+     * factory method for an instance of MyQuoteRequestDraftBuilder
+     * @return builder
+     */
     public static MyQuoteRequestDraftBuilder of() {
         return new MyQuoteRequestDraftBuilder();
     }
 
+    /**
+     * create builder for MyQuoteRequestDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyQuoteRequestDraftBuilder of(final MyQuoteRequestDraft template) {
         MyQuoteRequestDraftBuilder builder = new MyQuoteRequestDraftBuilder();
         builder.cartId = template.getCartId();

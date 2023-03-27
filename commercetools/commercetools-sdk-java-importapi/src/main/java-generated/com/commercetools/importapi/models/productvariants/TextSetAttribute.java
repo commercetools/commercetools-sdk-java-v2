@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TextSetAttributeImpl.class)
 public interface TextSetAttribute extends Attribute {
 
+    /**
+     * discriminator value for TextSetAttribute
+     */
     String TEXT_SET = "text-set";
 
     /**
@@ -39,15 +42,34 @@ public interface TextSetAttribute extends Attribute {
     @JsonProperty("value")
     public List<String> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final String... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<String> value);
 
+    /**
+     * factory method
+     * @return instance of TextSetAttribute
+     */
     public static TextSetAttribute of() {
         return new TextSetAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of TextSetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TextSetAttribute of(final TextSetAttribute template) {
         TextSetAttributeImpl instance = new TextSetAttributeImpl();
         instance.setName(template.getName());
@@ -55,18 +77,37 @@ public interface TextSetAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for TextSetAttribute
+     * @return builder
+     */
     public static TextSetAttributeBuilder builder() {
         return TextSetAttributeBuilder.of();
     }
 
+    /**
+     * create builder for TextSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TextSetAttributeBuilder builder(final TextSetAttribute template) {
         return TextSetAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTextSetAttribute(Function<TextSetAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TextSetAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TextSetAttribute>() {
             @Override

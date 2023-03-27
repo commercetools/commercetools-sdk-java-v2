@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceDiscountSetMessagePayloadImpl.class)
 public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StandalonePriceDiscountSetMessagePayload
+     */
     String STANDALONE_PRICE_DISCOUNT_SET = "StandalonePriceDiscountSet";
 
     /**
@@ -39,32 +42,65 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
+    /**
+     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     * @param discounted value to be set
+     */
+
     public void setDiscounted(final DiscountedPrice discounted);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceDiscountSetMessagePayload
+     */
     public static StandalonePriceDiscountSetMessagePayload of() {
         return new StandalonePriceDiscountSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceDiscountSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceDiscountSetMessagePayload of(final StandalonePriceDiscountSetMessagePayload template) {
         StandalonePriceDiscountSetMessagePayloadImpl instance = new StandalonePriceDiscountSetMessagePayloadImpl();
         instance.setDiscounted(template.getDiscounted());
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceDiscountSetMessagePayload
+     * @return builder
+     */
     public static StandalonePriceDiscountSetMessagePayloadBuilder builder() {
         return StandalonePriceDiscountSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceDiscountSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceDiscountSetMessagePayloadBuilder builder(
             final StandalonePriceDiscountSetMessagePayload template) {
         return StandalonePriceDiscountSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceDiscountSetMessagePayload(
             Function<StandalonePriceDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDiscountSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDiscountSetMessagePayload>() {
             @Override

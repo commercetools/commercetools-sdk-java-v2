@@ -44,6 +44,9 @@ public class PaymentCreatedMessageImpl implements PaymentCreatedMessage, ModelBa
 
     private com.commercetools.api.models.payment.Payment payment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class PaymentCreatedMessageImpl implements PaymentCreatedMessage, ModelBa
         this.type = PAYMENT_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentCreatedMessageImpl() {
         this.type = PAYMENT_CREATED;
     }

@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddDeliveryChangeImpl.class)
 public interface AddDeliveryChange extends Change {
 
+    /**
+     * discriminator value for AddDeliveryChange
+     */
     String ADD_DELIVERY_CHANGE = "AddDeliveryChange";
 
     /**
@@ -69,16 +72,40 @@ public interface AddDeliveryChange extends Change {
     @JsonProperty("previousValue")
     public DeliveryChangeValue getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>addDelivery</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final DeliveryChangeValue nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final DeliveryChangeValue previousValue);
 
+    /**
+     * factory method
+     * @return instance of AddDeliveryChange
+     */
     public static AddDeliveryChange of() {
         return new AddDeliveryChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddDeliveryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddDeliveryChange of(final AddDeliveryChange template) {
         AddDeliveryChangeImpl instance = new AddDeliveryChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface AddDeliveryChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddDeliveryChange
+     * @return builder
+     */
     public static AddDeliveryChangeBuilder builder() {
         return AddDeliveryChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddDeliveryChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddDeliveryChangeBuilder builder(final AddDeliveryChange template) {
         return AddDeliveryChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddDeliveryChange(Function<AddDeliveryChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddDeliveryChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddDeliveryChange>() {
             @Override

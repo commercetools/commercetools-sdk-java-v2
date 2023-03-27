@@ -22,11 +22,17 @@ public class CartDiscountUpdateActionImpl implements CartDiscountUpdateAction, M
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountUpdateActionImpl() {
     }
 

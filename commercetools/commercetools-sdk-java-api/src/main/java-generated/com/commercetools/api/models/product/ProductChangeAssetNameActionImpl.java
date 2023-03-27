@@ -34,6 +34,9 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductChangeAssetNameActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged,
@@ -48,6 +51,9 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
         this.action = CHANGE_ASSET_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductChangeAssetNameActionImpl() {
         this.action = CHANGE_ASSET_NAME;
     }

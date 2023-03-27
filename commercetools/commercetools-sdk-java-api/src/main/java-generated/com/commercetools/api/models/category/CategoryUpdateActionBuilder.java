@@ -99,6 +99,10 @@ public class CategoryUpdateActionBuilder {
         return com.commercetools.api.models.category.CategorySetMetaTitleActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of CategoryUpdateActionBuilder
+     * @return builder
+     */
     public static CategoryUpdateActionBuilder of() {
         return new CategoryUpdateActionBuilder();
     }

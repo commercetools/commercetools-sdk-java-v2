@@ -26,6 +26,9 @@ public class DateSetAttributeImpl implements DateSetAttribute, ModelBase {
 
     private java.util.List<java.time.LocalDate> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DateSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<java.time.LocalDate> value) {
@@ -34,6 +37,9 @@ public class DateSetAttributeImpl implements DateSetAttribute, ModelBase {
         this.type = DATE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public DateSetAttributeImpl() {
         this.type = DATE_SET;
     }

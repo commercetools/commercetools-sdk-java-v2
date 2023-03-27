@@ -38,6 +38,9 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
 
     private com.commercetools.importapi.models.orders.ShippingMethodState shippingMethodState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingInfoImportDraftImpl(@JsonProperty("shippingMethodName") final String shippingMethodName,
             @JsonProperty("price") final com.commercetools.importapi.models.common.TypedMoney price,
@@ -59,6 +62,9 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
         this.shippingMethodState = shippingMethodState;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingInfoImportDraftImpl() {
     }
 

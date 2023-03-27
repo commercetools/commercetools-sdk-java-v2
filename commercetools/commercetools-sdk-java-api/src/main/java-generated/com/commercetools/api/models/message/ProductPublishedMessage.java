@@ -41,6 +41,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPublishedMessageImpl.class)
 public interface ProductPublishedMessage extends Message {
 
+    /**
+     * discriminator value for ProductPublishedMessage
+     */
     String PRODUCT_PUBLISHED = "ProductPublished";
 
     /**
@@ -68,19 +71,48 @@ public interface ProductPublishedMessage extends Message {
     @JsonProperty("scope")
     public ProductPublishScope getScope();
 
+    /**
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     * @param removedImageUrls values to be set
+     */
+
     @JsonIgnore
     public void setRemovedImageUrls(final String... removedImageUrls);
 
+    /**
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     * @param removedImageUrls values to be set
+     */
+
     public void setRemovedImageUrls(final List<String> removedImageUrls);
+
+    /**
+     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     * @param productProjection value to be set
+     */
 
     public void setProductProjection(final ProductProjection productProjection);
 
+    /**
+     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     * @param scope value to be set
+     */
+
     public void setScope(final ProductPublishScope scope);
 
+    /**
+     * factory method
+     * @return instance of ProductPublishedMessage
+     */
     public static ProductPublishedMessage of() {
         return new ProductPublishedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductPublishedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductPublishedMessage of(final ProductPublishedMessage template) {
         ProductPublishedMessageImpl instance = new ProductPublishedMessageImpl();
         instance.setId(template.getId());
@@ -99,18 +131,37 @@ public interface ProductPublishedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductPublishedMessage
+     * @return builder
+     */
     public static ProductPublishedMessageBuilder builder() {
         return ProductPublishedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductPublishedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPublishedMessageBuilder builder(final ProductPublishedMessage template) {
         return ProductPublishedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductPublishedMessage(Function<ProductPublishedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductPublishedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductPublishedMessage>() {
             @Override

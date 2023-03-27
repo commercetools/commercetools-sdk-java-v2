@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductCreatedMessageImpl.class)
 public interface ProductCreatedMessage extends Message {
 
+    /**
+     * discriminator value for ProductCreatedMessage
+     */
     String PRODUCT_CREATED = "ProductCreated";
 
     /**
@@ -49,12 +52,26 @@ public interface ProductCreatedMessage extends Message {
     @JsonProperty("productProjection")
     public ProductProjection getProductProjection();
 
+    /**
+     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     * @param productProjection value to be set
+     */
+
     public void setProductProjection(final ProductProjection productProjection);
 
+    /**
+     * factory method
+     * @return instance of ProductCreatedMessage
+     */
     public static ProductCreatedMessage of() {
         return new ProductCreatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductCreatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductCreatedMessage of(final ProductCreatedMessage template) {
         ProductCreatedMessageImpl instance = new ProductCreatedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface ProductCreatedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductCreatedMessage
+     * @return builder
+     */
     public static ProductCreatedMessageBuilder builder() {
         return ProductCreatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductCreatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductCreatedMessageBuilder builder(final ProductCreatedMessage template) {
         return ProductCreatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductCreatedMessage(Function<ProductCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductCreatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductCreatedMessage>() {
             @Override

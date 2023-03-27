@@ -26,6 +26,9 @@ public class StagedOrderSetLineItemPriceActionImpl implements StagedOrderSetLine
 
     private com.commercetools.api.models.common.Money externalPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetLineItemPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice) {
@@ -34,6 +37,9 @@ public class StagedOrderSetLineItemPriceActionImpl implements StagedOrderSetLine
         this.action = SET_LINE_ITEM_PRICE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetLineItemPriceActionImpl() {
         this.action = SET_LINE_ITEM_PRICE;
     }

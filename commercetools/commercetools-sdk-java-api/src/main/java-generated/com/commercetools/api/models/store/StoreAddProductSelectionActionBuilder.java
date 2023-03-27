@@ -66,9 +66,19 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
         return this;
     }
 
+    /**
+     *  <p>Product Selection to add to the Store either activated or deactivated.</p>
+     * @return productSelection
+     */
+
     public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
         return this.productSelection;
     }
+
+    /**
+     *  <p>Set to <code>true</code> to make all Products assigned to the referenced Product Selection available in the Store.</p>
+     * @return active
+     */
 
     @Nullable
     public Boolean getActive() {
@@ -93,10 +103,19 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
         return new StoreAddProductSelectionActionImpl(productSelection, active);
     }
 
+    /**
+     * factory method for an instance of StoreAddProductSelectionActionBuilder
+     * @return builder
+     */
     public static StoreAddProductSelectionActionBuilder of() {
         return new StoreAddProductSelectionActionBuilder();
     }
 
+    /**
+     * create builder for StoreAddProductSelectionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreAddProductSelectionActionBuilder of(final StoreAddProductSelectionAction template) {
         StoreAddProductSelectionActionBuilder builder = new StoreAddProductSelectionActionBuilder();
         builder.productSelection = template.getProductSelection();

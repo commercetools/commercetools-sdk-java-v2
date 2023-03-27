@@ -50,14 +50,33 @@ public interface DiscountedPrice {
     @JsonProperty("discount")
     public ProductDiscountReference getDiscount();
 
+    /**
+     *  <p>Money value of the discounted price.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final TypedMoney value);
+
+    /**
+     *  <p>ProductDiscount related to the discounted price.</p>
+     * @param discount value to be set
+     */
 
     public void setDiscount(final ProductDiscountReference discount);
 
+    /**
+     * factory method
+     * @return instance of DiscountedPrice
+     */
     public static DiscountedPrice of() {
         return new DiscountedPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountedPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountedPrice of(final DiscountedPrice template) {
         DiscountedPriceImpl instance = new DiscountedPriceImpl();
         instance.setValue(template.getValue());
@@ -65,18 +84,37 @@ public interface DiscountedPrice {
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountedPrice
+     * @return builder
+     */
     public static DiscountedPriceBuilder builder() {
         return DiscountedPriceBuilder.of();
     }
 
+    /**
+     * create builder for DiscountedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedPriceBuilder builder(final DiscountedPrice template) {
         return DiscountedPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountedPrice(Function<DiscountedPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountedPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountedPrice>() {
             @Override

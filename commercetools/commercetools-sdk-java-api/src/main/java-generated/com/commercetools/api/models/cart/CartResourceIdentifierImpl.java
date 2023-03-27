@@ -27,6 +27,9 @@ public class CartResourceIdentifierImpl implements CartResourceIdentifier, Model
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class CartResourceIdentifierImpl implements CartResourceIdentifier, Model
         this.typeId = ReferenceTypeId.findEnum("cart");
     }
 
+    /**
+     * create empty instance
+     */
     public CartResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("cart");
     }

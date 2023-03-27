@@ -36,6 +36,11 @@ public class ReviewSetTextActionBuilder implements Builder<ReviewSetTextAction> 
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return text
+     */
+
     @Nullable
     public String getText() {
         return this.text;
@@ -57,10 +62,19 @@ public class ReviewSetTextActionBuilder implements Builder<ReviewSetTextAction> 
         return new ReviewSetTextActionImpl(text);
     }
 
+    /**
+     * factory method for an instance of ReviewSetTextActionBuilder
+     * @return builder
+     */
     public static ReviewSetTextActionBuilder of() {
         return new ReviewSetTextActionBuilder();
     }
 
+    /**
+     * create builder for ReviewSetTextAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetTextActionBuilder of(final ReviewSetTextAction template) {
         ReviewSetTextActionBuilder builder = new ReviewSetTextActionBuilder();
         builder.text = template.getText();

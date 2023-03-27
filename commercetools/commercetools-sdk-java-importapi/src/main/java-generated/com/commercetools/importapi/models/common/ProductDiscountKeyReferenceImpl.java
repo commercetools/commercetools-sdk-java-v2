@@ -24,12 +24,18 @@ public class ProductDiscountKeyReferenceImpl implements ProductDiscountKeyRefere
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("product-discount");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("product-discount");
     }

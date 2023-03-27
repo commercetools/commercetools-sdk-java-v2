@@ -31,7 +31,7 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -76,9 +76,24 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
         return this;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+     *  <p>Can only be set by these update actions:</p>
+     *  <ul>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+     *  </ul>
+     * @return externalTaxAmount
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
@@ -103,10 +118,19 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
         return new StagedOrderSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetCustomLineItemTaxAmountActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemTaxAmountActionBuilder of() {
         return new StagedOrderSetCustomLineItemTaxAmountActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomLineItemTaxAmountAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemTaxAmountActionBuilder of(
             final StagedOrderSetCustomLineItemTaxAmountAction template) {
         StagedOrderSetCustomLineItemTaxAmountActionBuilder builder = new StagedOrderSetCustomLineItemTaxAmountActionBuilder();

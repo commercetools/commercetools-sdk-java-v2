@@ -46,6 +46,9 @@ public class StoreSupplyChannelsChangedMessageImpl implements StoreSupplyChannel
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> removedSupplyChannels;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreSupplyChannelsChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class StoreSupplyChannelsChangedMessageImpl implements StoreSupplyChannel
         this.type = STORE_SUPPLY_CHANNELS_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreSupplyChannelsChangedMessageImpl() {
         this.type = STORE_SUPPLY_CHANNELS_CHANGED;
     }

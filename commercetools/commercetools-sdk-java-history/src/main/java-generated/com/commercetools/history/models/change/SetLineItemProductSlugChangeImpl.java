@@ -32,6 +32,9 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLineItemProductSlugChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
@@ -46,6 +49,9 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
         this.type = SET_LINE_ITEM_PRODUCT_SLUG_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLineItemProductSlugChangeImpl() {
         this.type = SET_LINE_ITEM_PRODUCT_SLUG_CHANGE;
     }

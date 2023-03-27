@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DateTimeSetAttributeImpl.class)
 public interface DateTimeSetAttribute extends Attribute {
 
+    /**
+     * discriminator value for DateTimeSetAttribute
+     */
     String DATETIME_SET = "datetime-set";
 
     /**
@@ -40,15 +43,34 @@ public interface DateTimeSetAttribute extends Attribute {
     @JsonProperty("value")
     public List<ZonedDateTime> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final ZonedDateTime... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<ZonedDateTime> value);
 
+    /**
+     * factory method
+     * @return instance of DateTimeSetAttribute
+     */
     public static DateTimeSetAttribute of() {
         return new DateTimeSetAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of DateTimeSetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DateTimeSetAttribute of(final DateTimeSetAttribute template) {
         DateTimeSetAttributeImpl instance = new DateTimeSetAttributeImpl();
         instance.setName(template.getName());
@@ -56,18 +78,37 @@ public interface DateTimeSetAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for DateTimeSetAttribute
+     * @return builder
+     */
     public static DateTimeSetAttributeBuilder builder() {
         return DateTimeSetAttributeBuilder.of();
     }
 
+    /**
+     * create builder for DateTimeSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DateTimeSetAttributeBuilder builder(final DateTimeSetAttribute template) {
         return DateTimeSetAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDateTimeSetAttribute(Function<DateTimeSetAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DateTimeSetAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DateTimeSetAttribute>() {
             @Override

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountChangeStackingModeActionImpl.class)
 public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdateAction {
 
+    /**
+     * discriminator value for CartDiscountChangeStackingModeAction
+     */
     String CHANGE_STACKING_MODE = "changeStackingMode";
 
     /**
@@ -39,31 +42,64 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
     @JsonProperty("stackingMode")
     public StackingMode getStackingMode();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param stackingMode value to be set
+     */
+
     public void setStackingMode(final StackingMode stackingMode);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountChangeStackingModeAction
+     */
     public static CartDiscountChangeStackingModeAction of() {
         return new CartDiscountChangeStackingModeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountChangeStackingModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountChangeStackingModeAction of(final CartDiscountChangeStackingModeAction template) {
         CartDiscountChangeStackingModeActionImpl instance = new CartDiscountChangeStackingModeActionImpl();
         instance.setStackingMode(template.getStackingMode());
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountChangeStackingModeAction
+     * @return builder
+     */
     public static CartDiscountChangeStackingModeActionBuilder builder() {
         return CartDiscountChangeStackingModeActionBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountChangeStackingModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeStackingModeActionBuilder builder(
             final CartDiscountChangeStackingModeAction template) {
         return CartDiscountChangeStackingModeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountChangeStackingModeAction(Function<CartDiscountChangeStackingModeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeStackingModeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeStackingModeAction>() {
             @Override

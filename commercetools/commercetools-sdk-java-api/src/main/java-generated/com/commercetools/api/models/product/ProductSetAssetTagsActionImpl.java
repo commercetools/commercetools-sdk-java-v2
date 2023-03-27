@@ -34,6 +34,9 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
 
     private java.util.List<String> tags;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetAssetTagsActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged,
@@ -48,6 +51,9 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
         this.action = SET_ASSET_TAGS;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetAssetTagsActionImpl() {
         this.action = SET_ASSET_TAGS;
     }

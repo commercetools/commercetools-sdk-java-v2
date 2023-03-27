@@ -151,24 +151,49 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     @Nullable
     public Long getLimit() {
         return this.limit;
     }
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
 
     @Nullable
     public Long getTotal() {
         return this.total;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
+
     @Nullable
     public Long getOffset() {
         return this.offset;
     }
+
+    /**
+     *  <p>Shipping Methods matching the query.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> getResults() {
         return this.results;
@@ -192,10 +217,19 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
         return new ShippingMethodPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodPagedQueryResponseBuilder
+     * @return builder
+     */
     public static ShippingMethodPagedQueryResponseBuilder of() {
         return new ShippingMethodPagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodPagedQueryResponseBuilder of(final ShippingMethodPagedQueryResponse template) {
         ShippingMethodPagedQueryResponseBuilder builder = new ShippingMethodPagedQueryResponseBuilder();
         builder.limit = template.getLimit();

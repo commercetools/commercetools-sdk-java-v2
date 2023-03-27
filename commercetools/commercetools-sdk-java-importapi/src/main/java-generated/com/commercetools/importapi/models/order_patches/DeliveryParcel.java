@@ -65,21 +65,55 @@ public interface DeliveryParcel {
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     * set deliveryId
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     * set measurements
+     * @param measurements value to be set
+     */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
+    /**
+     * set trackingData
+     * @param trackingData value to be set
+     */
+
     public void setTrackingData(final TrackingData trackingData);
+
+    /**
+     * set items
+     * @param items values to be set
+     */
 
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
 
+    /**
+     * factory method
+     * @return instance of DeliveryParcel
+     */
     public static DeliveryParcel of() {
         return new DeliveryParcelImpl();
     }
 
+    /**
+     * factory method to copy an instance of DeliveryParcel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DeliveryParcel of(final DeliveryParcel template) {
         DeliveryParcelImpl instance = new DeliveryParcelImpl();
         instance.setDeliveryId(template.getDeliveryId());
@@ -89,18 +123,37 @@ public interface DeliveryParcel {
         return instance;
     }
 
+    /**
+     * builder factory method for DeliveryParcel
+     * @return builder
+     */
     public static DeliveryParcelBuilder builder() {
         return DeliveryParcelBuilder.of();
     }
 
+    /**
+     * create builder for DeliveryParcel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryParcelBuilder builder(final DeliveryParcel template) {
         return DeliveryParcelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDeliveryParcel(Function<DeliveryParcel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DeliveryParcel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DeliveryParcel>() {
             @Override

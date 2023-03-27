@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CentPrecisionMoneyImpl.class)
 public interface CentPrecisionMoney extends TypedMoney {
 
+    /**
+     * discriminator value for CentPrecisionMoney
+     */
     String CENT_PRECISION = "centPrecision";
 
     /**
@@ -41,12 +44,26 @@ public interface CentPrecisionMoney extends TypedMoney {
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
+    /**
+     *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
+     * @param fractionDigits value to be set
+     */
+
     public void setFractionDigits(final Integer fractionDigits);
 
+    /**
+     * factory method
+     * @return instance of CentPrecisionMoney
+     */
     public static CentPrecisionMoney of() {
         return new CentPrecisionMoneyImpl();
     }
 
+    /**
+     * factory method to copy an instance of CentPrecisionMoney
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CentPrecisionMoney of(final CentPrecisionMoney template) {
         CentPrecisionMoneyImpl instance = new CentPrecisionMoneyImpl();
         instance.setCentAmount(template.getCentAmount());
@@ -55,14 +72,29 @@ public interface CentPrecisionMoney extends TypedMoney {
         return instance;
     }
 
+    /**
+     * builder factory method for CentPrecisionMoney
+     * @return builder
+     */
     public static CentPrecisionMoneyBuilder builder() {
         return CentPrecisionMoneyBuilder.of();
     }
 
+    /**
+     * create builder for CentPrecisionMoney instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CentPrecisionMoneyBuilder builder(final CentPrecisionMoney template) {
         return CentPrecisionMoneyBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCentPrecisionMoney(Function<CentPrecisionMoney, T> helper) {
         return helper.apply(this);
     }
@@ -75,6 +107,10 @@ public interface CentPrecisionMoney extends TypedMoney {
         return CentPrecisionMoneyDraft.of(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoney> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoney>() {
             @Override

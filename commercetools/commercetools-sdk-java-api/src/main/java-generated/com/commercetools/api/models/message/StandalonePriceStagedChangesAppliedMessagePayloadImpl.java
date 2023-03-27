@@ -25,6 +25,9 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadImpl
 
     private com.commercetools.api.models.standalone_price.StagedStandalonePrice stagedChanges;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceStagedChangesAppliedMessagePayloadImpl(
             @JsonProperty("stagedChanges") final com.commercetools.api.models.standalone_price.StagedStandalonePrice stagedChanges) {
@@ -32,6 +35,9 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadImpl
         this.type = STANDALONE_PRICE_STAGED_CHANGES_APPLIED;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceStagedChangesAppliedMessagePayloadImpl() {
         this.type = STANDALONE_PRICE_STAGED_CHANGES_APPLIED;
     }

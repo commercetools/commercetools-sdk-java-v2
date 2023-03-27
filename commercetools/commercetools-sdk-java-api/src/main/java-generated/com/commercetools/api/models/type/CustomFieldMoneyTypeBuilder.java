@@ -36,10 +36,19 @@ public class CustomFieldMoneyTypeBuilder implements Builder<CustomFieldMoneyType
         return new CustomFieldMoneyTypeImpl();
     }
 
+    /**
+     * factory method for an instance of CustomFieldMoneyTypeBuilder
+     * @return builder
+     */
     public static CustomFieldMoneyTypeBuilder of() {
         return new CustomFieldMoneyTypeBuilder();
     }
 
+    /**
+     * create builder for CustomFieldMoneyType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldMoneyTypeBuilder of(final CustomFieldMoneyType template) {
         CustomFieldMoneyTypeBuilder builder = new CustomFieldMoneyTypeBuilder();
         return builder;

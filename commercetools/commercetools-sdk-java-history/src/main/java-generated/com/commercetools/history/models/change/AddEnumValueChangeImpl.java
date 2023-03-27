@@ -28,6 +28,9 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
 
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddEnumValueChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("fieldName") final String fieldName,
@@ -38,6 +41,9 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
         this.type = ADD_ENUM_VALUE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddEnumValueChangeImpl() {
         this.type = ADD_ENUM_VALUE_CHANGE;
     }

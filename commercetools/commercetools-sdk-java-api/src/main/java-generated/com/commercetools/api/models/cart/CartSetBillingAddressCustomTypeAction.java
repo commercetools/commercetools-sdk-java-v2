@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetBillingAddressCustomTypeActionImpl.class)
 public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetBillingAddressCustomTypeAction
+     */
     String SET_BILLING_ADDRESS_CUSTOM_TYPE = "setBillingAddressCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of CartSetBillingAddressCustomTypeAction
+     */
     public static CartSetBillingAddressCustomTypeAction of() {
         return new CartSetBillingAddressCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetBillingAddressCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetBillingAddressCustomTypeAction of(final CartSetBillingAddressCustomTypeAction template) {
         CartSetBillingAddressCustomTypeActionImpl instance = new CartSetBillingAddressCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,19 +85,38 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetBillingAddressCustomTypeAction
+     * @return builder
+     */
     public static CartSetBillingAddressCustomTypeActionBuilder builder() {
         return CartSetBillingAddressCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetBillingAddressCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetBillingAddressCustomTypeActionBuilder builder(
             final CartSetBillingAddressCustomTypeAction template) {
         return CartSetBillingAddressCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetBillingAddressCustomTypeAction(Function<CartSetBillingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressCustomTypeAction>() {
             @Override

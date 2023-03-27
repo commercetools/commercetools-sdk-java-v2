@@ -105,9 +105,19 @@ public class ResultItemBuilder implements Builder<ResultItem> {
         return this;
     }
 
+    /**
+     *  <p>The URL of the image.</p>
+     * @return imageUrl
+     */
+
     public String getImageUrl() {
         return this.imageUrl;
     }
+
+    /**
+     *  <p>An array of product variants containing the image URL.</p>
+     * @return productVariants
+     */
 
     public java.util.List<com.commercetools.ml.models.common.ProductVariant> getProductVariants() {
         return this.productVariants;
@@ -131,10 +141,19 @@ public class ResultItemBuilder implements Builder<ResultItem> {
         return new ResultItemImpl(imageUrl, productVariants);
     }
 
+    /**
+     * factory method for an instance of ResultItemBuilder
+     * @return builder
+     */
     public static ResultItemBuilder of() {
         return new ResultItemBuilder();
     }
 
+    /**
+     * create builder for ResultItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResultItemBuilder of(final ResultItem template) {
         ResultItemBuilder builder = new ResultItemBuilder();
         builder.imageUrl = template.getImageUrl();

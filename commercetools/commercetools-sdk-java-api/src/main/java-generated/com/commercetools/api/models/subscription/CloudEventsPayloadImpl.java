@@ -40,6 +40,9 @@ public class CloudEventsPayloadImpl implements CloudEventsPayload, ModelBase {
 
     private com.commercetools.api.models.subscription.DeliveryPayload data;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CloudEventsPayloadImpl(@JsonProperty("specversion") final String specversion, @JsonProperty("id") final String id,
             @JsonProperty("type") final String type, @JsonProperty("source") final String source,
@@ -59,6 +62,9 @@ public class CloudEventsPayloadImpl implements CloudEventsPayload, ModelBase {
         this.data = data;
     }
 
+    /**
+     * create empty instance
+     */
     public CloudEventsPayloadImpl() {
     }
 

@@ -135,26 +135,56 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
         return this;
     }
 
+    /**
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @return projectKey
+     */
+
     public String getProjectKey() {
         return this.projectKey;
     }
 
+    /**
+     *  <p>Reference to the resource that triggered the message.</p>
+     * @return resource
+     */
+
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
+
+    /**
+     *  <p>User-defined unique identifiers of the resource.</p>
+     * @return resourceUserProvidedIdentifiers
+     */
 
     @Nullable
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *  <p>Last seen version of the resource.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the resource was last deleted.</p>
+     * @return modifiedAt
+     */
+
     public java.time.ZonedDateTime getModifiedAt() {
         return this.modifiedAt;
     }
+
+    /**
+     *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     * @return dataErasure
+     */
 
     @Nullable
     public Boolean getDataErasure() {
@@ -183,10 +213,19 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
             modifiedAt, dataErasure);
     }
 
+    /**
+     * factory method for an instance of ResourceDeletedDeliveryPayloadBuilder
+     * @return builder
+     */
     public static ResourceDeletedDeliveryPayloadBuilder of() {
         return new ResourceDeletedDeliveryPayloadBuilder();
     }
 
+    /**
+     * create builder for ResourceDeletedDeliveryPayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceDeletedDeliveryPayloadBuilder of(final ResourceDeletedDeliveryPayload template) {
         ResourceDeletedDeliveryPayloadBuilder builder = new ResourceDeletedDeliveryPayloadBuilder();
         builder.projectKey = template.getProjectKey();

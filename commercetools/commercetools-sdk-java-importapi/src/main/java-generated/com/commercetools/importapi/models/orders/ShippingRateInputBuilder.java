@@ -19,6 +19,10 @@ public class ShippingRateInputBuilder {
         return com.commercetools.importapi.models.orders.ScoreShippingRateInputBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ShippingRateInputBuilder
+     * @return builder
+     */
     public static ShippingRateInputBuilder of() {
         return new ShippingRateInputBuilder();
     }

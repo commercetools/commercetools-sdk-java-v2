@@ -42,7 +42,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -88,13 +88,28 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setShippingRate</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.Money getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {
         return this.previousValue;
@@ -119,10 +134,19 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
         return new SetShippingRateChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetShippingRateChangeBuilder
+     * @return builder
+     */
     public static SetShippingRateChangeBuilder of() {
         return new SetShippingRateChangeBuilder();
     }
 
+    /**
+     * create builder for SetShippingRateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetShippingRateChangeBuilder of(final SetShippingRateChange template) {
         SetShippingRateChangeBuilder builder = new SetShippingRateChangeBuilder();
         builder.change = template.getChange();

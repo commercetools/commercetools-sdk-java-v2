@@ -77,10 +77,20 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
         return new InventoryEntrySetCustomTypeActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of InventoryEntrySetCustomTypeActionBuilder
+     * @return builder
+     */
     public static InventoryEntrySetCustomTypeActionBuilder of() {
         return new InventoryEntrySetCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for InventoryEntrySetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntrySetCustomTypeActionBuilder of(final InventoryEntrySetCustomTypeAction template) {
         InventoryEntrySetCustomTypeActionBuilder builder = new InventoryEntrySetCustomTypeActionBuilder();
         builder.type = template.getType();

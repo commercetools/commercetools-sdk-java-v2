@@ -110,6 +110,14 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
+     *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
+     *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
+     * @return transitions
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> getTransitions() {
         return this.transitions;
@@ -131,10 +139,19 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
         return new StateSetTransitionsActionImpl(transitions);
     }
 
+    /**
+     * factory method for an instance of StateSetTransitionsActionBuilder
+     * @return builder
+     */
     public static StateSetTransitionsActionBuilder of() {
         return new StateSetTransitionsActionBuilder();
     }
 
+    /**
+     * create builder for StateSetTransitionsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateSetTransitionsActionBuilder of(final StateSetTransitionsAction template) {
         StateSetTransitionsActionBuilder builder = new StateSetTransitionsActionBuilder();
         builder.transitions = template.getTransitions();

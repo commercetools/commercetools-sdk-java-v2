@@ -64,13 +64,28 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
+     * @return quoteStateToAccepted
+     */
 
     @Nullable
     public Boolean getQuoteStateToAccepted() {
@@ -95,10 +110,19 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
         return new MyOrderFromQuoteDraftImpl(id, version, quoteStateToAccepted);
     }
 
+    /**
+     * factory method for an instance of MyOrderFromQuoteDraftBuilder
+     * @return builder
+     */
     public static MyOrderFromQuoteDraftBuilder of() {
         return new MyOrderFromQuoteDraftBuilder();
     }
 
+    /**
+     * create builder for MyOrderFromQuoteDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyOrderFromQuoteDraftBuilder of(final MyOrderFromQuoteDraft template) {
         MyOrderFromQuoteDraftBuilder builder = new MyOrderFromQuoteDraftBuilder();
         builder.id = template.getId();

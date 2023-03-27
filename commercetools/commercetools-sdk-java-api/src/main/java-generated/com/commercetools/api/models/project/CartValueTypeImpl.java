@@ -22,6 +22,9 @@ public class CartValueTypeImpl implements CartValueType, ModelBase {
 
     private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartValueTypeImpl() {
         this.type = ShippingRateTierType.findEnum("CartValue");

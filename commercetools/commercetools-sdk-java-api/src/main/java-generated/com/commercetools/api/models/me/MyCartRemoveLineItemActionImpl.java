@@ -32,6 +32,9 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("quantity") final Long quantity,
@@ -46,6 +49,9 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
         this.action = REMOVE_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartRemoveLineItemActionImpl() {
         this.action = REMOVE_LINE_ITEM;
     }

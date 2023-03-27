@@ -54,7 +54,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
     /**
-     *
+     * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set the value to the slug
      * @param slug value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * add values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * add the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -189,7 +189,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set the value to the taxRate using the builder function
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set the value to the taxRate
      * @param taxRate value to be set
      * @return Builder
      */
@@ -213,7 +213,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set the value to the taxCategory using the builder function
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -227,7 +227,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set the value to the taxCategory
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -263,7 +263,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set the value to the shippingDetails using the builder function
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -276,7 +276,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *
+     * set the value to the shippingDetails
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -302,46 +302,99 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
         return this;
     }
 
+    /**
+     * value of name}
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     * @return quantity
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     * @return money
+     */
+
     public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
     }
 
+    /**
+     * value of slug}
+     * @return slug
+     */
+
     public String getSlug() {
         return this.slug;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;
     }
 
+    /**
+     * value of taxRate}
+     * @return taxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
     }
+
+    /**
+     * value of taxCategory}
+     * @return taxCategory
+     */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
 
+    /**
+     *  <p>The custom fields.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+     * value of shippingDetails}
+     * @return shippingDetails
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
+
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     * @return priceMode
+     */
 
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
         return this.priceMode;
@@ -370,10 +423,19 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
             shippingDetails, priceMode);
     }
 
+    /**
+     * factory method for an instance of CustomLineItemImportDraftBuilder
+     * @return builder
+     */
     public static CustomLineItemImportDraftBuilder of() {
         return new CustomLineItemImportDraftBuilder();
     }
 
+    /**
+     * create builder for CustomLineItemImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemImportDraftBuilder of(final CustomLineItemImportDraft template) {
         CustomLineItemImportDraftBuilder builder = new CustomLineItemImportDraftBuilder();
         builder.name = template.getName();

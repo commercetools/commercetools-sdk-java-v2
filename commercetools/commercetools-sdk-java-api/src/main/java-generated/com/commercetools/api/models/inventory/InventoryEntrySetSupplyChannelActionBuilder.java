@@ -51,6 +51,11 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
@@ -72,10 +77,19 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
         return new InventoryEntrySetSupplyChannelActionImpl(supplyChannel);
     }
 
+    /**
+     * factory method for an instance of InventoryEntrySetSupplyChannelActionBuilder
+     * @return builder
+     */
     public static InventoryEntrySetSupplyChannelActionBuilder of() {
         return new InventoryEntrySetSupplyChannelActionBuilder();
     }
 
+    /**
+     * create builder for InventoryEntrySetSupplyChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntrySetSupplyChannelActionBuilder of(final InventoryEntrySetSupplyChannelAction template) {
         InventoryEntrySetSupplyChannelActionBuilder builder = new InventoryEntrySetSupplyChannelActionBuilder();
         builder.supplyChannel = template.getSupplyChannel();

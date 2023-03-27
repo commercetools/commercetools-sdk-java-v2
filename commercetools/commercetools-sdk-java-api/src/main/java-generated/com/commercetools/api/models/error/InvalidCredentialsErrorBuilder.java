@@ -62,9 +62,19 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
         return this;
     }
 
+    /**
+     *  <p><code>"Account with the given credentials not found."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
         return new InvalidCredentialsErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of InvalidCredentialsErrorBuilder
+     * @return builder
+     */
     public static InvalidCredentialsErrorBuilder of() {
         return new InvalidCredentialsErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidCredentialsError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidCredentialsErrorBuilder of(final InvalidCredentialsError template) {
         InvalidCredentialsErrorBuilder builder = new InvalidCredentialsErrorBuilder();
         builder.message = template.getMessage();

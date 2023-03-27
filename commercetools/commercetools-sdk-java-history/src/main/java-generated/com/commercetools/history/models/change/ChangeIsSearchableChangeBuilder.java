@@ -55,7 +55,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -76,17 +76,37 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>The name of the updated attribute.</p>
+     * @return attributeName
+     */
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public Boolean getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public Boolean getPreviousValue() {
         return this.previousValue;
@@ -112,10 +132,19 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
         return new ChangeIsSearchableChangeImpl(change, attributeName, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeIsSearchableChangeBuilder
+     * @return builder
+     */
     public static ChangeIsSearchableChangeBuilder of() {
         return new ChangeIsSearchableChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeIsSearchableChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeIsSearchableChangeBuilder of(final ChangeIsSearchableChange template) {
         ChangeIsSearchableChangeBuilder builder = new ChangeIsSearchableChangeBuilder();
         builder.change = template.getChange();

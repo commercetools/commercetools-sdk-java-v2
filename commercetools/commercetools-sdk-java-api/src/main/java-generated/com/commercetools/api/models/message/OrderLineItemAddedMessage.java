@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderLineItemAddedMessageImpl.class)
 public interface OrderLineItemAddedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderLineItemAddedMessage
+     */
     String ORDER_LINE_ITEM_ADDED = "OrderLineItemAdded";
 
     /**
@@ -58,14 +61,33 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     @JsonProperty("addedQuantity")
     public Long getAddedQuantity();
 
+    /**
+     *  <p>Line Item that was added to the Order.</p>
+     * @param lineItem value to be set
+     */
+
     public void setLineItem(final LineItem lineItem);
+
+    /**
+     *  <p>Quantity of Line Items that were added to the Order.</p>
+     * @param addedQuantity value to be set
+     */
 
     public void setAddedQuantity(final Long addedQuantity);
 
+    /**
+     * factory method
+     * @return instance of OrderLineItemAddedMessage
+     */
     public static OrderLineItemAddedMessage of() {
         return new OrderLineItemAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderLineItemAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderLineItemAddedMessage of(final OrderLineItemAddedMessage template) {
         OrderLineItemAddedMessageImpl instance = new OrderLineItemAddedMessageImpl();
         instance.setId(template.getId());
@@ -83,18 +105,37 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderLineItemAddedMessage
+     * @return builder
+     */
     public static OrderLineItemAddedMessageBuilder builder() {
         return OrderLineItemAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderLineItemAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLineItemAddedMessageBuilder builder(final OrderLineItemAddedMessage template) {
         return OrderLineItemAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderLineItemAddedMessage(Function<OrderLineItemAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemAddedMessage>() {
             @Override

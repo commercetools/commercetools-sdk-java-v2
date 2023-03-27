@@ -24,6 +24,9 @@ public class ReviewSetCustomerActionImpl implements ReviewSetCustomerAction, Mod
 
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewSetCustomerActionImpl(
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
@@ -31,6 +34,9 @@ public class ReviewSetCustomerActionImpl implements ReviewSetCustomerAction, Mod
         this.action = SET_CUSTOMER;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewSetCustomerActionImpl() {
         this.action = SET_CUSTOMER;
     }

@@ -26,6 +26,9 @@ public class PaymentLabelImpl implements PaymentLabel, ModelBase {
 
     private com.commercetools.history.models.common.Money amountPlanned;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentLabelImpl(@JsonProperty("key") final String key,
             @JsonProperty("amountPlanned") final com.commercetools.history.models.common.Money amountPlanned) {
@@ -34,6 +37,9 @@ public class PaymentLabelImpl implements PaymentLabel, ModelBase {
         this.type = PAYMENT_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentLabelImpl() {
         this.type = PAYMENT_LABEL;
     }

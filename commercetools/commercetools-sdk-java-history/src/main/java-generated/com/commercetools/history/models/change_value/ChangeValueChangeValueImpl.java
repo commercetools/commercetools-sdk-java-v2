@@ -22,11 +22,17 @@ public class ChangeValueChangeValueImpl implements ChangeValueChangeValue, Model
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeValueChangeValueImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeValueChangeValueImpl() {
     }
 

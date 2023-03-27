@@ -40,6 +40,9 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceDraftImportImpl(@JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value,
             @JsonProperty("country") final String country,
@@ -63,6 +66,9 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public PriceDraftImportImpl() {
     }
 

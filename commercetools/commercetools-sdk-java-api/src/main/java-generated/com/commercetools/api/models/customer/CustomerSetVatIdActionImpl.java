@@ -24,12 +24,18 @@ public class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction, Model
 
     private String vatId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetVatIdActionImpl(@JsonProperty("vatId") final String vatId) {
         this.vatId = vatId;
         this.action = SET_VAT_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetVatIdActionImpl() {
         this.action = SET_VAT_ID;
     }

@@ -155,46 +155,140 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Reference to a Customer associated with the Payment.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerResourceIdentifier customer);
+
+    /**
+     *  <p>Anonymous session associated with the Payment.</p>
+     * @param anonymousId value to be set
+     */
 
     public void setAnonymousId(final String anonymousId);
 
+    /**
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @param externalId value to be set
+     */
+
     public void setExternalId(final String externalId);
+
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
+     * @param interfaceId value to be set
+     */
 
     public void setInterfaceId(final String interfaceId);
 
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param amountPlanned value to be set
+     */
+
     public void setAmountPlanned(final Money amountPlanned);
+
+    /**
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param amountAuthorized value to be set
+     */
 
     public void setAmountAuthorized(final Money amountAuthorized);
 
+    /**
+     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
+     * @param authorizedUntil value to be set
+     */
+
     public void setAuthorizedUntil(final String authorizedUntil);
+
+    /**
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param amountPaid value to be set
+     */
 
     public void setAmountPaid(final Money amountPaid);
 
+    /**
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param amountRefunded value to be set
+     */
+
     public void setAmountRefunded(final Money amountRefunded);
+
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param paymentMethodInfo value to be set
+     */
 
     public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
 
+    /**
+     *  <p>Current status of the Payment.</p>
+     * @param paymentStatus value to be set
+     */
+
     public void setPaymentStatus(final PaymentStatusDraft paymentStatus);
+
+    /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions values to be set
+     */
 
     @JsonIgnore
     public void setTransactions(final TransactionDraft... transactions);
 
+    /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions values to be set
+     */
+
     public void setTransactions(final List<TransactionDraft> transactions);
+
+    /**
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param interfaceInteractions values to be set
+     */
 
     @JsonIgnore
     public void setInterfaceInteractions(final CustomFieldsDraft... interfaceInteractions);
 
+    /**
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param interfaceInteractions values to be set
+     */
+
     public void setInterfaceInteractions(final List<CustomFieldsDraft> interfaceInteractions);
+
+    /**
+     *  <p>Custom Fields for the Payment.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     *  <p>User-defined unique identifier for the Payment.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of PaymentDraft
+     */
     public static PaymentDraft of() {
         return new PaymentDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentDraft of(final PaymentDraft template) {
         PaymentDraftImpl instance = new PaymentDraftImpl();
         instance.setCustomer(template.getCustomer());
@@ -215,18 +309,37 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentDraft
+     * @return builder
+     */
     public static PaymentDraftBuilder builder() {
         return PaymentDraftBuilder.of();
     }
 
+    /**
+     * create builder for PaymentDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentDraftBuilder builder(final PaymentDraft template) {
         return PaymentDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentDraft(Function<PaymentDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentDraft>() {
             @Override

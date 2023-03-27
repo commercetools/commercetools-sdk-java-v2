@@ -48,6 +48,9 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomLineItemDiscountSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -78,6 +81,9 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
         this.type = ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomLineItemDiscountSetMessageImpl() {
         this.type = ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
     }

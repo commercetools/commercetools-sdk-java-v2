@@ -62,7 +62,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *
+     * set the value to the comment
      * @param comment value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *
+     * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *
+     * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *
+     * set the value to the lastModifiedAt
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *
+     * set the value to the createdAt
      * @param createdAt value to be set
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -164,39 +164,84 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the ReturnItem.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     * value of quantity}
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     * value of comment}
+     * @return comment
+     */
 
     @Nullable
     public String getComment() {
         return this.comment;
     }
 
+    /**
+     * value of shipmentState}
+     * @return shipmentState
+     */
+
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
         return this.shipmentState;
     }
 
+    /**
+     * value of paymentState}
+     * @return paymentState
+     */
+
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
         return this.paymentState;
     }
+
+    /**
+     *  <p>Custom Fields of this return item.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     * value of lastModifiedAt}
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
+    /**
+     * value of createdAt}
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
@@ -227,10 +272,19 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
             lastModifiedAt, createdAt, customLineItemId);
     }
 
+    /**
+     * factory method for an instance of CustomLineItemReturnItemBuilder
+     * @return builder
+     */
     public static CustomLineItemReturnItemBuilder of() {
         return new CustomLineItemReturnItemBuilder();
     }
 
+    /**
+     * create builder for CustomLineItemReturnItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemReturnItemBuilder of(final CustomLineItemReturnItem template) {
         CustomLineItemReturnItemBuilder builder = new CustomLineItemReturnItemBuilder();
         builder.id = template.getId();

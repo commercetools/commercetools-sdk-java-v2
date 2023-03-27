@@ -28,6 +28,9 @@ public class OrderSetReturnItemCustomFieldActionImpl implements OrderSetReturnIt
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetReturnItemCustomFieldActionImpl(@JsonProperty("returnItemId") final String returnItemId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -37,6 +40,9 @@ public class OrderSetReturnItemCustomFieldActionImpl implements OrderSetReturnIt
         this.action = SET_RETURN_ITEM_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetReturnItemCustomFieldActionImpl() {
         this.action = SET_RETURN_ITEM_CUSTOM_FIELD;
     }

@@ -24,7 +24,7 @@ public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTi
     private com.commercetools.history.models.common.ShippingRateTierType type;
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTi
         this.type = type;
         return this;
     }
+
+    /**
+     * value of type}
+     * @return type
+     */
 
     public com.commercetools.history.models.common.ShippingRateTierType getType() {
         return this.type;
@@ -55,10 +60,19 @@ public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTi
         return new ShippingRatePriceTierImpl(type);
     }
 
+    /**
+     * factory method for an instance of ShippingRatePriceTierBuilder
+     * @return builder
+     */
     public static ShippingRatePriceTierBuilder of() {
         return new ShippingRatePriceTierBuilder();
     }
 
+    /**
+     * create builder for ShippingRatePriceTier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingRatePriceTierBuilder of(final ShippingRatePriceTier template) {
         ShippingRatePriceTierBuilder builder = new ShippingRatePriceTierBuilder();
         builder.type = template.getType();

@@ -78,15 +78,30 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
         return this;
     }
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
+     */
+
     @Nullable
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
+     */
+
     @Nullable
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -109,10 +124,19 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
         return new CategorySetAssetDescriptionActionImpl(assetId, assetKey, description);
     }
 
+    /**
+     * factory method for an instance of CategorySetAssetDescriptionActionBuilder
+     * @return builder
+     */
     public static CategorySetAssetDescriptionActionBuilder of() {
         return new CategorySetAssetDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for CategorySetAssetDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetAssetDescriptionActionBuilder of(final CategorySetAssetDescriptionAction template) {
         CategorySetAssetDescriptionActionBuilder builder = new CategorySetAssetDescriptionActionBuilder();
         builder.assetId = template.getAssetId();

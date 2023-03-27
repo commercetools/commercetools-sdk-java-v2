@@ -24,6 +24,9 @@ public class StagedOrderChangeTaxModeActionImpl implements StagedOrderChangeTaxM
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderChangeTaxModeActionImpl(
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode) {
@@ -31,6 +34,9 @@ public class StagedOrderChangeTaxModeActionImpl implements StagedOrderChangeTaxM
         this.action = CHANGE_TAX_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderChangeTaxModeActionImpl() {
         this.action = CHANGE_TAX_MODE;
     }

@@ -24,12 +24,18 @@ public class OrderRemoveDeliveryActionImpl implements OrderRemoveDeliveryAction,
 
     private String deliveryId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderRemoveDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId) {
         this.deliveryId = deliveryId;
         this.action = REMOVE_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderRemoveDeliveryActionImpl() {
         this.action = REMOVE_DELIVERY;
     }

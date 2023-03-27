@@ -42,6 +42,9 @@ public class BusinessUnitDeletedMessageImpl implements BusinessUnitDeletedMessag
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class BusinessUnitDeletedMessageImpl implements BusinessUnitDeletedMessag
         this.type = BUSINESS_UNIT_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitDeletedMessageImpl() {
         this.type = BUSINESS_UNIT_DELETED;
     }

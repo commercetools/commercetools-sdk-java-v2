@@ -1071,6 +1071,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.VerifyEmailChangeBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ChangeBuilder
+     * @return builder
+     */
     public static ChangeBuilder of() {
         return new ChangeBuilder();
     }

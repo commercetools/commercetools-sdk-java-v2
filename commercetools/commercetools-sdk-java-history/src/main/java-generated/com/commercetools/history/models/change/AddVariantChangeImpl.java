@@ -30,6 +30,9 @@ public class AddVariantChangeImpl implements AddVariantChange, ModelBase {
 
     private com.commercetools.history.models.common.Variant nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddVariantChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class AddVariantChangeImpl implements AddVariantChange, ModelBase {
         this.type = ADD_VARIANT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddVariantChangeImpl() {
         this.type = ADD_VARIANT_CHANGE;
     }

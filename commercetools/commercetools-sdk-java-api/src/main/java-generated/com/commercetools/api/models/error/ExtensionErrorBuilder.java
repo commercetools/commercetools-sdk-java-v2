@@ -106,22 +106,47 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
         return this;
     }
 
+    /**
+     *  <p>Error code caused by the Extension. For example, <code>InvalidField</code>.</p>
+     * @return code
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     *  <p>Plain text description of the error.</p>
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Unique identifier of the Extension.</p>
+     * @return extensionId
+     */
+
     public String getExtensionId() {
         return this.extensionId;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Extension.</p>
+     * @return extensionKey
+     */
 
     @Nullable
     public String getExtensionKey() {
         return this.extensionKey;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -146,10 +171,19 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
         return new ExtensionErrorImpl(code, message, extensionId, extensionKey, values);
     }
 
+    /**
+     * factory method for an instance of ExtensionErrorBuilder
+     * @return builder
+     */
     public static ExtensionErrorBuilder of() {
         return new ExtensionErrorBuilder();
     }
 
+    /**
+     * create builder for ExtensionError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionErrorBuilder of(final ExtensionError template) {
         ExtensionErrorBuilder builder = new ExtensionErrorBuilder();
         builder.code = template.getCode();

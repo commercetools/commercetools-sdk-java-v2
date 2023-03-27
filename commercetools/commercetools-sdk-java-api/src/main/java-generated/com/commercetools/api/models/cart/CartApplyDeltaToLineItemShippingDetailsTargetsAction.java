@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl.class)
 public interface CartApplyDeltaToLineItemShippingDetailsTargetsAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartApplyDeltaToLineItemShippingDetailsTargetsAction
+     */
     String APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS = "applyDeltaToLineItemShippingDetailsTargets";
 
     /**
@@ -50,17 +53,41 @@ public interface CartApplyDeltaToLineItemShippingDetailsTargetsAction extends Ca
     @JsonProperty("targetsDelta")
     public List<ItemShippingTarget> getTargetsDelta();
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param targetsDelta values to be set
+     */
 
     @JsonIgnore
     public void setTargetsDelta(final ItemShippingTarget... targetsDelta);
 
+    /**
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param targetsDelta values to be set
+     */
+
     public void setTargetsDelta(final List<ItemShippingTarget> targetsDelta);
 
+    /**
+     * factory method
+     * @return instance of CartApplyDeltaToLineItemShippingDetailsTargetsAction
+     */
     public static CartApplyDeltaToLineItemShippingDetailsTargetsAction of() {
         return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartApplyDeltaToLineItemShippingDetailsTargetsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartApplyDeltaToLineItemShippingDetailsTargetsAction of(
             final CartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
@@ -69,20 +96,39 @@ public interface CartApplyDeltaToLineItemShippingDetailsTargetsAction extends Ca
         return instance;
     }
 
+    /**
+     * builder factory method for CartApplyDeltaToLineItemShippingDetailsTargetsAction
+     * @return builder
+     */
     public static CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder() {
         return CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder.of();
     }
 
+    /**
+     * create builder for CartApplyDeltaToLineItemShippingDetailsTargetsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder(
             final CartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         return CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartApplyDeltaToLineItemShippingDetailsTargetsAction(
             Function<CartApplyDeltaToLineItemShippingDetailsTargetsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartApplyDeltaToLineItemShippingDetailsTargetsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartApplyDeltaToLineItemShippingDetailsTargetsAction>() {
             @Override

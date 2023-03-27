@@ -44,6 +44,9 @@ public class SubscriptionImpl implements Subscription, ModelBase {
 
     private com.commercetools.api.models.subscription.SubscriptionHealthStatus status;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubscriptionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -70,6 +73,9 @@ public class SubscriptionImpl implements Subscription, ModelBase {
         this.status = status;
     }
 
+    /**
+     * create empty instance
+     */
     public SubscriptionImpl() {
     }
 

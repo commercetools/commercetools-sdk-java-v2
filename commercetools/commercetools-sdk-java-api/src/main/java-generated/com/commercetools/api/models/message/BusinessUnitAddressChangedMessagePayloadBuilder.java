@@ -49,6 +49,11 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Updated address of the Business Unit.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
@@ -70,10 +75,19 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
         return new BusinessUnitAddressChangedMessagePayloadImpl(address);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitAddressChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitAddressChangedMessagePayloadBuilder of() {
         return new BusinessUnitAddressChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitAddressChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAddressChangedMessagePayloadBuilder of(
             final BusinessUnitAddressChangedMessagePayload template) {
         BusinessUnitAddressChangedMessagePayloadBuilder builder = new BusinessUnitAddressChangedMessagePayloadBuilder();

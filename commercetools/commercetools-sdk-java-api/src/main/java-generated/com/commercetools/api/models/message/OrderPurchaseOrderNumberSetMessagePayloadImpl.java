@@ -27,6 +27,9 @@ public class OrderPurchaseOrderNumberSetMessagePayloadImpl
 
     private String oldPurchaseOrderNumber;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderPurchaseOrderNumberSetMessagePayloadImpl(@JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("oldPurchaseOrderNumber") final String oldPurchaseOrderNumber) {
@@ -35,6 +38,9 @@ public class OrderPurchaseOrderNumberSetMessagePayloadImpl
         this.type = ORDER_PURCHASE_ORDER_NUMBER_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderPurchaseOrderNumberSetMessagePayloadImpl() {
         this.type = ORDER_PURCHASE_ORDER_NUMBER_SET;
     }

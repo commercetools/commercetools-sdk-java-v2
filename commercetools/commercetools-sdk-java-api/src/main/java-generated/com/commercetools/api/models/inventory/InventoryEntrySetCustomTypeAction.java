@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntrySetCustomTypeActionImpl.class)
 public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateAction {
 
+    /**
+     * discriminator value for InventoryEntrySetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateA
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of InventoryEntrySetCustomTypeAction
+     */
     public static InventoryEntrySetCustomTypeAction of() {
         return new InventoryEntrySetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryEntrySetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryEntrySetCustomTypeAction of(final InventoryEntrySetCustomTypeAction template) {
         InventoryEntrySetCustomTypeActionImpl instance = new InventoryEntrySetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateA
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryEntrySetCustomTypeAction
+     * @return builder
+     */
     public static InventoryEntrySetCustomTypeActionBuilder builder() {
         return InventoryEntrySetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for InventoryEntrySetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntrySetCustomTypeActionBuilder builder(final InventoryEntrySetCustomTypeAction template) {
         return InventoryEntrySetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryEntrySetCustomTypeAction(Function<InventoryEntrySetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetCustomTypeAction>() {
             @Override

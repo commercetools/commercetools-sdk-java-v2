@@ -29,6 +29,9 @@ public class StoreProductSelectionsChangedMessagePayloadImpl
 
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreProductSelectionsChangedMessagePayloadImpl(
             @JsonProperty("addedProductSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> addedProductSelections,
@@ -40,6 +43,9 @@ public class StoreProductSelectionsChangedMessagePayloadImpl
         this.type = STORE_PRODUCT_SELECTIONS_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreProductSelectionsChangedMessagePayloadImpl() {
         this.type = STORE_PRODUCT_SELECTIONS_CHANGED;
     }

@@ -47,6 +47,11 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
         return this;
     }
 
+    /**
+     *  <p>Review that was created.</p>
+     * @return review
+     */
+
     public com.commercetools.api.models.review.Review getReview() {
         return this.review;
     }
@@ -68,10 +73,19 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
         return new ReviewCreatedMessagePayloadImpl(review);
     }
 
+    /**
+     * factory method for an instance of ReviewCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static ReviewCreatedMessagePayloadBuilder of() {
         return new ReviewCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ReviewCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewCreatedMessagePayloadBuilder of(final ReviewCreatedMessagePayload template) {
         ReviewCreatedMessagePayloadBuilder builder = new ReviewCreatedMessagePayloadBuilder();
         builder.review = template.getReview();

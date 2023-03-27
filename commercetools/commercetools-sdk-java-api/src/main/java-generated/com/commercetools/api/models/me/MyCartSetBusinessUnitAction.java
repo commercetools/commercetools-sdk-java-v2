@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartSetBusinessUnitActionImpl.class)
 public interface MyCartSetBusinessUnitAction extends MyCartUpdateAction {
 
+    /**
+     * discriminator value for MyCartSetBusinessUnitAction
+     */
     String SET_BUSINESS_UNIT = "setBusinessUnit";
 
     /**
@@ -42,30 +45,63 @@ public interface MyCartSetBusinessUnitAction extends MyCartUpdateAction {
     @JsonProperty("businessUnit")
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
+    /**
+     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must have Buyer access to the Business Unit.</p>
+     * @param businessUnit value to be set
+     */
+
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
+    /**
+     * factory method
+     * @return instance of MyCartSetBusinessUnitAction
+     */
     public static MyCartSetBusinessUnitAction of() {
         return new MyCartSetBusinessUnitActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCartSetBusinessUnitAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCartSetBusinessUnitAction of(final MyCartSetBusinessUnitAction template) {
         MyCartSetBusinessUnitActionImpl instance = new MyCartSetBusinessUnitActionImpl();
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCartSetBusinessUnitAction
+     * @return builder
+     */
     public static MyCartSetBusinessUnitActionBuilder builder() {
         return MyCartSetBusinessUnitActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCartSetBusinessUnitAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetBusinessUnitActionBuilder builder(final MyCartSetBusinessUnitAction template) {
         return MyCartSetBusinessUnitActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCartSetBusinessUnitAction(Function<MyCartSetBusinessUnitAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetBusinessUnitAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetBusinessUnitAction>() {
             @Override

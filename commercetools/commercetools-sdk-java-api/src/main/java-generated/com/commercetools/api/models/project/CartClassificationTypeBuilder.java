@@ -93,6 +93,11 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
         return this;
     }
 
+    /**
+     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @return values
+     */
+
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {
         return this.values;
     }
@@ -114,10 +119,19 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
         return new CartClassificationTypeImpl(values);
     }
 
+    /**
+     * factory method for an instance of CartClassificationTypeBuilder
+     * @return builder
+     */
     public static CartClassificationTypeBuilder of() {
         return new CartClassificationTypeBuilder();
     }
 
+    /**
+     * create builder for CartClassificationType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartClassificationTypeBuilder of(final CartClassificationType template) {
         CartClassificationTypeBuilder builder = new CartClassificationTypeBuilder();
         builder.values = template.getValues();

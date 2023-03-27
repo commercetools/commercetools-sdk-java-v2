@@ -24,12 +24,18 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
 
     private Integer quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Integer quantity) {
         this.id = id;
         this.quantity = quantity;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryItemImpl() {
     }
 

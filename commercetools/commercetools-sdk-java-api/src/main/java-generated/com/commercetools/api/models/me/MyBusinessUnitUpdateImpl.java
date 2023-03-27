@@ -24,6 +24,9 @@ public class MyBusinessUnitUpdateImpl implements MyBusinessUnitUpdate, ModelBase
 
     private java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class MyBusinessUnitUpdateImpl implements MyBusinessUnitUpdate, ModelBase
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitUpdateImpl() {
     }
 

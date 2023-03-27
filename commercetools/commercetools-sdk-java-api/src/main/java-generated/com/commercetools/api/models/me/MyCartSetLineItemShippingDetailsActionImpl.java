@@ -26,6 +26,9 @@ public class MyCartSetLineItemShippingDetailsActionImpl implements MyCartSetLine
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartSetLineItemShippingDetailsActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
@@ -34,6 +37,9 @@ public class MyCartSetLineItemShippingDetailsActionImpl implements MyCartSetLine
         this.action = SET_LINE_ITEM_SHIPPING_DETAILS;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartSetLineItemShippingDetailsActionImpl() {
         this.action = SET_LINE_ITEM_SHIPPING_DETAILS;
     }

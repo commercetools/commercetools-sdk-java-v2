@@ -26,6 +26,9 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidTokenErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
         this.code = INVALID_TOKEN;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidTokenErrorImpl() {
         this.code = INVALID_TOKEN;
     }

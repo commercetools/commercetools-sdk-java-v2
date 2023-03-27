@@ -40,6 +40,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionProductAddedMessageImpl.class)
 public interface ProductSelectionProductAddedMessage extends Message {
 
+    /**
+     * discriminator value for ProductSelectionProductAddedMessage
+     */
     String PRODUCT_SELECTION_PRODUCT_ADDED = "ProductSelectionProductAdded";
 
     /**
@@ -60,14 +63,33 @@ public interface ProductSelectionProductAddedMessage extends Message {
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();
 
+    /**
+     *  <p>Product that was added to the Product Selection.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductReference product);
+
+    /**
+     *  <p>Product Variant Selection after the Add Product update action.</p>
+     * @param variantSelection value to be set
+     */
 
     public void setVariantSelection(final ProductVariantSelection variantSelection);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionProductAddedMessage
+     */
     public static ProductSelectionProductAddedMessage of() {
         return new ProductSelectionProductAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionProductAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionProductAddedMessage of(final ProductSelectionProductAddedMessage template) {
         ProductSelectionProductAddedMessageImpl instance = new ProductSelectionProductAddedMessageImpl();
         instance.setId(template.getId());
@@ -85,19 +107,38 @@ public interface ProductSelectionProductAddedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionProductAddedMessage
+     * @return builder
+     */
     public static ProductSelectionProductAddedMessageBuilder builder() {
         return ProductSelectionProductAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionProductAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionProductAddedMessageBuilder builder(
             final ProductSelectionProductAddedMessage template) {
         return ProductSelectionProductAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionProductAddedMessage(Function<ProductSelectionProductAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductAddedMessage>() {
             @Override

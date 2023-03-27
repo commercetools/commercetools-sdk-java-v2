@@ -49,6 +49,11 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
@@ -71,10 +76,19 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
         return new BusinessUnitShippingAddressRemovedMessagePayloadImpl(address);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitShippingAddressRemovedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitShippingAddressRemovedMessagePayloadBuilder of() {
         return new BusinessUnitShippingAddressRemovedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitShippingAddressRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitShippingAddressRemovedMessagePayloadBuilder of(
             final BusinessUnitShippingAddressRemovedMessagePayload template) {
         BusinessUnitShippingAddressRemovedMessagePayloadBuilder builder = new BusinessUnitShippingAddressRemovedMessagePayloadBuilder();

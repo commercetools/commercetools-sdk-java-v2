@@ -26,6 +26,9 @@ public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestin
 
     private String topic;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GoogleCloudPubSubDestinationImpl(@JsonProperty("projectId") final String projectId,
             @JsonProperty("topic") final String topic) {
@@ -34,6 +37,9 @@ public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestin
         this.type = GOOGLE_CLOUD_PUB_SUB;
     }
 
+    /**
+     * create empty instance
+     */
     public GoogleCloudPubSubDestinationImpl() {
         this.type = GOOGLE_CLOUD_PUB_SUB;
     }

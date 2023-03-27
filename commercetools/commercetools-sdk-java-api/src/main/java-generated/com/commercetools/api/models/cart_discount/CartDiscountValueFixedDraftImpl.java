@@ -24,6 +24,9 @@ public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDr
 
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountValueFixedDraftImpl(
             @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
@@ -31,6 +34,9 @@ public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDr
         this.type = FIXED;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountValueFixedDraftImpl() {
         this.type = FIXED;
     }

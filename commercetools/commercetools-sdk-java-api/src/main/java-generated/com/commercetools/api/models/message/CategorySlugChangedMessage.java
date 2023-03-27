@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySlugChangedMessageImpl.class)
 public interface CategorySlugChangedMessage extends Message {
 
+    /**
+     * discriminator value for CategorySlugChangedMessage
+     */
     String CATEGORY_SLUG_CHANGED = "CategorySlugChanged";
 
     /**
@@ -57,14 +60,33 @@ public interface CategorySlugChangedMessage extends Message {
     @JsonProperty("oldSlug")
     public LocalizedString getOldSlug();
 
+    /**
+     *  <p>The slug of the Category after the Change Slug update action.</p>
+     * @param slug value to be set
+     */
+
     public void setSlug(final LocalizedString slug);
+
+    /**
+     *  <p>The slug of the Category before the Change Slug update action.</p>
+     * @param oldSlug value to be set
+     */
 
     public void setOldSlug(final LocalizedString oldSlug);
 
+    /**
+     * factory method
+     * @return instance of CategorySlugChangedMessage
+     */
     public static CategorySlugChangedMessage of() {
         return new CategorySlugChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategorySlugChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategorySlugChangedMessage of(final CategorySlugChangedMessage template) {
         CategorySlugChangedMessageImpl instance = new CategorySlugChangedMessageImpl();
         instance.setId(template.getId());
@@ -82,18 +104,37 @@ public interface CategorySlugChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for CategorySlugChangedMessage
+     * @return builder
+     */
     public static CategorySlugChangedMessageBuilder builder() {
         return CategorySlugChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for CategorySlugChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySlugChangedMessageBuilder builder(final CategorySlugChangedMessage template) {
         return CategorySlugChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategorySlugChangedMessage(Function<CategorySlugChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategorySlugChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategorySlugChangedMessage>() {
             @Override

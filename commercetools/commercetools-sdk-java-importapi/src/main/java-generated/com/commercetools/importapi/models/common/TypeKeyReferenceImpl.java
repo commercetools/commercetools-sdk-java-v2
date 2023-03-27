@@ -24,12 +24,18 @@ public class TypeKeyReferenceImpl implements TypeKeyReference, ModelBase {
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("type");
     }
 
+    /**
+     * create empty instance
+     */
     public TypeKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("type");
     }

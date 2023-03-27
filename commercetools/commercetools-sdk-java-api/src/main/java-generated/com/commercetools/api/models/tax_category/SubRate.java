@@ -46,14 +46,33 @@ public interface SubRate {
     @JsonProperty("amount")
     public Double getAmount();
 
+    /**
+     *  <p>Name of the SubRate.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     * set amount
+     * @param amount value to be set
+     */
 
     public void setAmount(final Double amount);
 
+    /**
+     * factory method
+     * @return instance of SubRate
+     */
     public static SubRate of() {
         return new SubRateImpl();
     }
 
+    /**
+     * factory method to copy an instance of SubRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SubRate of(final SubRate template) {
         SubRateImpl instance = new SubRateImpl();
         instance.setName(template.getName());
@@ -61,18 +80,37 @@ public interface SubRate {
         return instance;
     }
 
+    /**
+     * builder factory method for SubRate
+     * @return builder
+     */
     public static SubRateBuilder builder() {
         return SubRateBuilder.of();
     }
 
+    /**
+     * create builder for SubRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubRateBuilder builder(final SubRate template) {
         return SubRateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSubRate(Function<SubRate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SubRate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SubRate>() {
             @Override

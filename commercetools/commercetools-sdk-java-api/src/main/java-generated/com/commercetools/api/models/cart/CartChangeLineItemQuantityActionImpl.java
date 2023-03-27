@@ -32,6 +32,9 @@ public class CartChangeLineItemQuantityActionImpl implements CartChangeLineItemQ
 
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("quantity") final Long quantity,
@@ -44,6 +47,9 @@ public class CartChangeLineItemQuantityActionImpl implements CartChangeLineItemQ
         this.action = CHANGE_LINE_ITEM_QUANTITY;
     }
 
+    /**
+     * create empty instance
+     */
     public CartChangeLineItemQuantityActionImpl() {
         this.action = CHANGE_LINE_ITEM_QUANTITY;
     }

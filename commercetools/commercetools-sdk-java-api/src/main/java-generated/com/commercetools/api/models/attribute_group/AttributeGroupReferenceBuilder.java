@@ -64,9 +64,19 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
         return this;
     }
 
+    /**
+     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.attribute_group.AttributeGroup getObj() {
@@ -90,10 +100,19 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
         return new AttributeGroupReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of AttributeGroupReferenceBuilder
+     * @return builder
+     */
     public static AttributeGroupReferenceBuilder of() {
         return new AttributeGroupReferenceBuilder();
     }
 
+    /**
+     * create builder for AttributeGroupReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupReferenceBuilder of(final AttributeGroupReference template) {
         AttributeGroupReferenceBuilder builder = new AttributeGroupReferenceBuilder();
         builder.id = template.getId();

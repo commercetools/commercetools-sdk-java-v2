@@ -32,7 +32,7 @@ public class OrderSetLineItemCustomFieldActionBuilder implements Builder<OrderSe
     private java.lang.Object value;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class OrderSetLineItemCustomFieldActionBuilder implements Builder<OrderSe
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
 
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
+     */
 
     @Nullable
     public java.lang.Object getValue() {
@@ -95,10 +110,19 @@ public class OrderSetLineItemCustomFieldActionBuilder implements Builder<OrderSe
         return new OrderSetLineItemCustomFieldActionImpl(lineItemId, name, value);
     }
 
+    /**
+     * factory method for an instance of OrderSetLineItemCustomFieldActionBuilder
+     * @return builder
+     */
     public static OrderSetLineItemCustomFieldActionBuilder of() {
         return new OrderSetLineItemCustomFieldActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetLineItemCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetLineItemCustomFieldActionBuilder of(final OrderSetLineItemCustomFieldAction template) {
         OrderSetLineItemCustomFieldActionBuilder builder = new OrderSetLineItemCustomFieldActionBuilder();
         builder.lineItemId = template.getLineItemId();

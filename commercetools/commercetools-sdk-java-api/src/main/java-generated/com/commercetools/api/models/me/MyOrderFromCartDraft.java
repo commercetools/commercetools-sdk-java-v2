@@ -46,14 +46,33 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set version
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     * factory method
+     * @return instance of MyOrderFromCartDraft
+     */
     public static MyOrderFromCartDraft of() {
         return new MyOrderFromCartDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyOrderFromCartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyOrderFromCartDraft of(final MyOrderFromCartDraft template) {
         MyOrderFromCartDraftImpl instance = new MyOrderFromCartDraftImpl();
         instance.setId(template.getId());
@@ -61,18 +80,37 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
         return instance;
     }
 
+    /**
+     * builder factory method for MyOrderFromCartDraft
+     * @return builder
+     */
     public static MyOrderFromCartDraftBuilder builder() {
         return MyOrderFromCartDraftBuilder.of();
     }
 
+    /**
+     * create builder for MyOrderFromCartDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyOrderFromCartDraftBuilder builder(final MyOrderFromCartDraft template) {
         return MyOrderFromCartDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyOrderFromCartDraft(Function<MyOrderFromCartDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyOrderFromCartDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyOrderFromCartDraft>() {
             @Override

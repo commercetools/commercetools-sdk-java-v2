@@ -47,6 +47,11 @@ public class MyPaymentChangeAmountPlannedActionBuilder implements Builder<MyPaym
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return amount
+     */
+
     public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;
     }
@@ -68,10 +73,19 @@ public class MyPaymentChangeAmountPlannedActionBuilder implements Builder<MyPaym
         return new MyPaymentChangeAmountPlannedActionImpl(amount);
     }
 
+    /**
+     * factory method for an instance of MyPaymentChangeAmountPlannedActionBuilder
+     * @return builder
+     */
     public static MyPaymentChangeAmountPlannedActionBuilder of() {
         return new MyPaymentChangeAmountPlannedActionBuilder();
     }
 
+    /**
+     * create builder for MyPaymentChangeAmountPlannedAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyPaymentChangeAmountPlannedActionBuilder of(final MyPaymentChangeAmountPlannedAction template) {
         MyPaymentChangeAmountPlannedActionBuilder builder = new MyPaymentChangeAmountPlannedActionBuilder();
         builder.amount = template.getAmount();

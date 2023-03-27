@@ -24,6 +24,9 @@ public class PriceImpl implements Price, ModelBase {
 
     private com.commercetools.history.models.common.Money value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceImpl(@JsonProperty("id") final String id,
             @JsonProperty("value") final com.commercetools.history.models.common.Money value) {
@@ -31,6 +34,9 @@ public class PriceImpl implements Price, ModelBase {
         this.value = value;
     }
 
+    /**
+     * create empty instance
+     */
     public PriceImpl() {
     }
 

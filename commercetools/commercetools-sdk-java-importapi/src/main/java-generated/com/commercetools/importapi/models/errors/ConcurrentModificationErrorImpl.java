@@ -30,6 +30,9 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
 
     private java.lang.Object conflictedResource;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ConcurrentModificationErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("specifiedVersion") final Long specifiedVersion,
@@ -42,6 +45,9 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
         this.code = CONCURRENT_MODIFICATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ConcurrentModificationErrorImpl() {
         this.code = CONCURRENT_MODIFICATION;
     }

@@ -41,7 +41,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setCustomerNumber</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
         return new SetCustomerNumberChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetCustomerNumberChangeBuilder
+     * @return builder
+     */
     public static SetCustomerNumberChangeBuilder of() {
         return new SetCustomerNumberChangeBuilder();
     }
 
+    /**
+     * create builder for SetCustomerNumberChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCustomerNumberChangeBuilder of(final SetCustomerNumberChange template) {
         SetCustomerNumberChangeBuilder builder = new SetCustomerNumberChangeBuilder();
         builder.change = template.getChange();

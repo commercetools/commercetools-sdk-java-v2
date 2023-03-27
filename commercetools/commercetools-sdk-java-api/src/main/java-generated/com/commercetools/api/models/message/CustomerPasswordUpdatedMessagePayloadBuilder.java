@@ -34,6 +34,11 @@ public class CustomerPasswordUpdatedMessagePayloadBuilder implements Builder<Cus
         return this;
     }
 
+    /**
+     *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
+     * @return reset
+     */
+
     public Boolean getReset() {
         return this.reset;
     }
@@ -55,10 +60,19 @@ public class CustomerPasswordUpdatedMessagePayloadBuilder implements Builder<Cus
         return new CustomerPasswordUpdatedMessagePayloadImpl(reset);
     }
 
+    /**
+     * factory method for an instance of CustomerPasswordUpdatedMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerPasswordUpdatedMessagePayloadBuilder of() {
         return new CustomerPasswordUpdatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerPasswordUpdatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerPasswordUpdatedMessagePayloadBuilder of(
             final CustomerPasswordUpdatedMessagePayload template) {
         CustomerPasswordUpdatedMessagePayloadBuilder builder = new CustomerPasswordUpdatedMessagePayloadBuilder();

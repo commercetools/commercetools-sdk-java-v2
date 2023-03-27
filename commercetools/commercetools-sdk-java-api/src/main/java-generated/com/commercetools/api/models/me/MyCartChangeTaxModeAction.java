@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartChangeTaxModeActionImpl.class)
 public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
 
+    /**
+     * discriminator value for MyCartChangeTaxModeAction
+     */
     String CHANGE_TAX_MODE = "changeTaxMode";
 
     /**
@@ -43,30 +46,63 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
+    /**
+     *  <p>The new TaxMode.</p>
+     * @param taxMode value to be set
+     */
+
     public void setTaxMode(final TaxMode taxMode);
 
+    /**
+     * factory method
+     * @return instance of MyCartChangeTaxModeAction
+     */
     public static MyCartChangeTaxModeAction of() {
         return new MyCartChangeTaxModeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCartChangeTaxModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCartChangeTaxModeAction of(final MyCartChangeTaxModeAction template) {
         MyCartChangeTaxModeActionImpl instance = new MyCartChangeTaxModeActionImpl();
         instance.setTaxMode(template.getTaxMode());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCartChangeTaxModeAction
+     * @return builder
+     */
     public static MyCartChangeTaxModeActionBuilder builder() {
         return MyCartChangeTaxModeActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCartChangeTaxModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartChangeTaxModeActionBuilder builder(final MyCartChangeTaxModeAction template) {
         return MyCartChangeTaxModeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCartChangeTaxModeAction(Function<MyCartChangeTaxModeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCartChangeTaxModeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCartChangeTaxModeAction>() {
             @Override

@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderSetCustomTypeActionImpl.class)
 public interface OrderSetCustomTypeAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the Order with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Order.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of OrderSetCustomTypeAction
+     */
     public static OrderSetCustomTypeAction of() {
         return new OrderSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderSetCustomTypeAction of(final OrderSetCustomTypeAction template) {
         OrderSetCustomTypeActionImpl instance = new OrderSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderSetCustomTypeAction
+     * @return builder
+     */
     public static OrderSetCustomTypeActionBuilder builder() {
         return OrderSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetCustomTypeActionBuilder builder(final OrderSetCustomTypeAction template) {
         return OrderSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderSetCustomTypeAction(Function<OrderSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomTypeAction>() {
             @Override

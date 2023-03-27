@@ -24,7 +24,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     private java.util.List<java.time.LocalDate> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -58,6 +58,11 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
         this.value.addAll(Arrays.asList(value));
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<java.time.LocalDate> getValue() {
         return this.value;
@@ -80,10 +85,19 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
         return new DateSetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of DateSetFieldBuilder
+     * @return builder
+     */
     public static DateSetFieldBuilder of() {
         return new DateSetFieldBuilder();
     }
 
+    /**
+     * create builder for DateSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DateSetFieldBuilder of(final DateSetField template) {
         DateSetFieldBuilder builder = new DateSetFieldBuilder();
         builder.value = template.getValue();

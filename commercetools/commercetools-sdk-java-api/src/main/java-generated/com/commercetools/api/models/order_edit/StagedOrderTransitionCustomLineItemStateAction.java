@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderTransitionCustomLineItemStateActionImpl.class)
 public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderTransitionCustomLineItemStateAction
+     */
     String TRANSITION_CUSTOM_LINE_ITEM_STATE = "transitionCustomLineItemState";
 
     /**
@@ -80,20 +83,54 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     @JsonProperty("actualTransitionDate")
     public ZonedDateTime getActualTransitionDate();
 
+    /**
+     * set customLineItemId
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @param fromState value to be set
+     */
+
     public void setFromState(final StateResourceIdentifier fromState);
+
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @param toState value to be set
+     */
 
     public void setToState(final StateResourceIdentifier toState);
 
+    /**
+     * set actualTransitionDate
+     * @param actualTransitionDate value to be set
+     */
+
     public void setActualTransitionDate(final ZonedDateTime actualTransitionDate);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderTransitionCustomLineItemStateAction
+     */
     public static StagedOrderTransitionCustomLineItemStateAction of() {
         return new StagedOrderTransitionCustomLineItemStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderTransitionCustomLineItemStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderTransitionCustomLineItemStateAction of(
             final StagedOrderTransitionCustomLineItemStateAction template) {
         StagedOrderTransitionCustomLineItemStateActionImpl instance = new StagedOrderTransitionCustomLineItemStateActionImpl();
@@ -105,20 +142,39 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderTransitionCustomLineItemStateAction
+     * @return builder
+     */
     public static StagedOrderTransitionCustomLineItemStateActionBuilder builder() {
         return StagedOrderTransitionCustomLineItemStateActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderTransitionCustomLineItemStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderTransitionCustomLineItemStateActionBuilder builder(
             final StagedOrderTransitionCustomLineItemStateAction template) {
         return StagedOrderTransitionCustomLineItemStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderTransitionCustomLineItemStateAction(
             Function<StagedOrderTransitionCustomLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionCustomLineItemStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionCustomLineItemStateAction>() {
             @Override

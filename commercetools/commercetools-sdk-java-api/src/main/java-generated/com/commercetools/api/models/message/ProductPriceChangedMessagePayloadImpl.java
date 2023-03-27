@@ -32,6 +32,9 @@ public class ProductPriceChangedMessagePayloadImpl implements ProductPriceChange
 
     private com.commercetools.api.models.common.Price oldStagedPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceChangedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("oldPrice") final com.commercetools.api.models.common.Price oldPrice,
@@ -46,6 +49,9 @@ public class ProductPriceChangedMessagePayloadImpl implements ProductPriceChange
         this.type = PRODUCT_PRICE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceChangedMessagePayloadImpl() {
         this.type = PRODUCT_PRICE_CHANGED;
     }

@@ -49,6 +49,11 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of a Payment.</p>
+     * @return payment
+     */
+
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
         return this.payment;
     }
@@ -70,10 +75,19 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
         return new OrderRemovePaymentActionImpl(payment);
     }
 
+    /**
+     * factory method for an instance of OrderRemovePaymentActionBuilder
+     * @return builder
+     */
     public static OrderRemovePaymentActionBuilder of() {
         return new OrderRemovePaymentActionBuilder();
     }
 
+    /**
+     * create builder for OrderRemovePaymentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderRemovePaymentActionBuilder of(final OrderRemovePaymentAction template) {
         OrderRemovePaymentActionBuilder builder = new OrderRemovePaymentActionBuilder();
         builder.payment = template.getPayment();

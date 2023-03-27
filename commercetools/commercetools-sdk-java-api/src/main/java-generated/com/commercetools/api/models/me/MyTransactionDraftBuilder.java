@@ -118,23 +118,48 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @return timestamp
+     */
+
     @Nullable
     public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;
     }
 
+    /**
+     *  <p>Type of the Transaction. Only <code>Authorization</code> or <code>Charge</code> is allowed.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.payment.TransactionType getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Money value for the Transaction.</p>
+     * @return amount
+     */
 
     public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;
     }
 
+    /**
+     *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
+     * @return interactionId
+     */
+
     @Nullable
     public String getInteractionId() {
         return this.interactionId;
     }
+
+    /**
+     *  <p>Custom Fields of the Transaction.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -159,10 +184,19 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
         return new MyTransactionDraftImpl(timestamp, type, amount, interactionId, custom);
     }
 
+    /**
+     * factory method for an instance of MyTransactionDraftBuilder
+     * @return builder
+     */
     public static MyTransactionDraftBuilder of() {
         return new MyTransactionDraftBuilder();
     }
 
+    /**
+     * create builder for MyTransactionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyTransactionDraftBuilder of(final MyTransactionDraft template) {
         MyTransactionDraftBuilder builder = new MyTransactionDraftBuilder();
         builder.timestamp = template.getTimestamp();

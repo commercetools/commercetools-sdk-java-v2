@@ -44,6 +44,9 @@ public class BusinessUnitStoreAddedMessageImpl implements BusinessUnitStoreAdded
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitStoreAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class BusinessUnitStoreAddedMessageImpl implements BusinessUnitStoreAdded
         this.type = BUSINESS_UNIT_STORE_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitStoreAddedMessageImpl() {
         this.type = BUSINESS_UNIT_STORE_ADDED;
     }

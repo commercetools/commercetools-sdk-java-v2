@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveTaxRateChangeImpl.class)
 public interface RemoveTaxRateChange extends Change {
 
+    /**
+     * discriminator value for RemoveTaxRateChange
+     */
     String REMOVE_TAX_RATE_CHANGE = "RemoveTaxRateChange";
 
     /**
@@ -69,16 +72,40 @@ public interface RemoveTaxRateChange extends Change {
     @JsonProperty("nextValue")
     public TaxRate getNextValue();
 
+    /**
+     *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final TaxRate previousValue);
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final TaxRate nextValue);
 
+    /**
+     * factory method
+     * @return instance of RemoveTaxRateChange
+     */
     public static RemoveTaxRateChange of() {
         return new RemoveTaxRateChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveTaxRateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveTaxRateChange of(final RemoveTaxRateChange template) {
         RemoveTaxRateChangeImpl instance = new RemoveTaxRateChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface RemoveTaxRateChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveTaxRateChange
+     * @return builder
+     */
     public static RemoveTaxRateChangeBuilder builder() {
         return RemoveTaxRateChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveTaxRateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveTaxRateChangeBuilder builder(final RemoveTaxRateChange template) {
         return RemoveTaxRateChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveTaxRateChange(Function<RemoveTaxRateChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveTaxRateChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveTaxRateChange>() {
             @Override

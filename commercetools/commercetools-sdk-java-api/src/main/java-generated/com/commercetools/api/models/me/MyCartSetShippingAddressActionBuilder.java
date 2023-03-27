@@ -50,6 +50,11 @@ public class MyCartSetShippingAddressActionBuilder implements Builder<MyCartSetS
         return this;
     }
 
+    /**
+     *  <p>Value to set. If not set, the shipping address is unset, and the <code>taxedPrice</code> and <code>taxRate</code> are unset in all Line Items.</p>
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
@@ -71,10 +76,19 @@ public class MyCartSetShippingAddressActionBuilder implements Builder<MyCartSetS
         return new MyCartSetShippingAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of MyCartSetShippingAddressActionBuilder
+     * @return builder
+     */
     public static MyCartSetShippingAddressActionBuilder of() {
         return new MyCartSetShippingAddressActionBuilder();
     }
 
+    /**
+     * create builder for MyCartSetShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetShippingAddressActionBuilder of(final MyCartSetShippingAddressAction template) {
         MyCartSetShippingAddressActionBuilder builder = new MyCartSetShippingAddressActionBuilder();
         builder.address = template.getAddress();

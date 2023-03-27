@@ -22,11 +22,17 @@ public class CartDiscountValueDraftImpl implements CartDiscountValueDraft, Model
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountValueDraftImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountValueDraftImpl() {
     }
 

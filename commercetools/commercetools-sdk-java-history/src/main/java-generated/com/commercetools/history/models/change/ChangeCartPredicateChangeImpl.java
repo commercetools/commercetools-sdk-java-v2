@@ -28,6 +28,9 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeCartPredicateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
         this.type = CHANGE_CART_PREDICATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeCartPredicateChangeImpl() {
         this.type = CHANGE_CART_PREDICATE_CHANGE;
     }

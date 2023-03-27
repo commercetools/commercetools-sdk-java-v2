@@ -46,17 +46,41 @@ public interface GeoLocation {
     @JsonProperty("coordinates")
     public List<Integer> getCoordinates();
 
+    /**
+     * set type
+     * @param type value to be set
+     */
+
     public void setType(final String type);
+
+    /**
+     * set coordinates
+     * @param coordinates values to be set
+     */
 
     @JsonIgnore
     public void setCoordinates(final Integer... coordinates);
 
+    /**
+     * set coordinates
+     * @param coordinates values to be set
+     */
+
     public void setCoordinates(final List<Integer> coordinates);
 
+    /**
+     * factory method
+     * @return instance of GeoLocation
+     */
     public static GeoLocation of() {
         return new GeoLocationImpl();
     }
 
+    /**
+     * factory method to copy an instance of GeoLocation
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GeoLocation of(final GeoLocation template) {
         GeoLocationImpl instance = new GeoLocationImpl();
         instance.setType(template.getType());
@@ -64,18 +88,37 @@ public interface GeoLocation {
         return instance;
     }
 
+    /**
+     * builder factory method for GeoLocation
+     * @return builder
+     */
     public static GeoLocationBuilder builder() {
         return GeoLocationBuilder.of();
     }
 
+    /**
+     * create builder for GeoLocation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GeoLocationBuilder builder(final GeoLocation template) {
         return GeoLocationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGeoLocation(Function<GeoLocation, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GeoLocation> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GeoLocation>() {
             @Override

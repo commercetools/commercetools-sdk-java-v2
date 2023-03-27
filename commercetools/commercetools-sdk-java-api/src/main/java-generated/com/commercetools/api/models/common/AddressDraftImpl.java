@@ -72,6 +72,9 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddressDraftImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("country") final String country, @JsonProperty("title") final String title,
@@ -117,6 +120,9 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public AddressDraftImpl() {
     }
 

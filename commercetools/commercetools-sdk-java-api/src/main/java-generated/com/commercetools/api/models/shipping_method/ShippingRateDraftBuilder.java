@@ -147,14 +147,29 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return this;
     }
 
+    /**
+     *  <p>Money value of the ShippingRate.</p>
+     * @return price
+     */
+
     public com.commercetools.api.models.common.Money getPrice() {
         return this.price;
     }
+
+    /**
+     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @return freeAbove
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Money getFreeAbove() {
         return this.freeAbove;
     }
+
+    /**
+     *  <p>Price tiers for the ShippingRate.</p>
+     * @return tiers
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers() {
@@ -178,10 +193,19 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return new ShippingRateDraftImpl(price, freeAbove, tiers);
     }
 
+    /**
+     * factory method for an instance of ShippingRateDraftBuilder
+     * @return builder
+     */
     public static ShippingRateDraftBuilder of() {
         return new ShippingRateDraftBuilder();
     }
 
+    /**
+     * create builder for ShippingRateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingRateDraftBuilder of(final ShippingRateDraft template) {
         ShippingRateDraftBuilder builder = new ShippingRateDraftBuilder();
         builder.price = template.getPrice();

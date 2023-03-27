@@ -35,6 +35,10 @@ public class OrderEditUpdateActionBuilder {
         return com.commercetools.api.models.order_edit.OrderEditSetStagedActionsActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of OrderEditUpdateActionBuilder
+     * @return builder
+     */
     public static OrderEditUpdateActionBuilder of() {
         return new OrderEditUpdateActionBuilder();
     }

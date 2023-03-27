@@ -63,9 +63,19 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
         return this;
     }
 
+    /**
+     *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @return slug
+     */
+
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -89,10 +99,19 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
         return new ProductChangeSlugActionImpl(slug, staged);
     }
 
+    /**
+     * factory method for an instance of ProductChangeSlugActionBuilder
+     * @return builder
+     */
     public static ProductChangeSlugActionBuilder of() {
         return new ProductChangeSlugActionBuilder();
     }
 
+    /**
+     * create builder for ProductChangeSlugAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductChangeSlugActionBuilder of(final ProductChangeSlugAction template) {
         ProductChangeSlugActionBuilder builder = new ProductChangeSlugActionBuilder();
         builder.slug = template.getSlug();

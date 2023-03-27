@@ -25,6 +25,9 @@ public class ProductVariantPatchRequestImpl implements ProductVariantPatchReques
 
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantPatchRequestImpl(
             @JsonProperty("patches") final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
@@ -32,6 +35,9 @@ public class ProductVariantPatchRequestImpl implements ProductVariantPatchReques
         this.type = ImportResourceType.findEnum("product-variant-patch");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantPatchRequestImpl() {
         this.type = ImportResourceType.findEnum("product-variant-patch");
     }

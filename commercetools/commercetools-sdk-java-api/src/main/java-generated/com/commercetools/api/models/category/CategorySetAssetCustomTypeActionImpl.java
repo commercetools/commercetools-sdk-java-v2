@@ -30,6 +30,9 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetAssetCustomTypeActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey,
@@ -42,6 +45,9 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
         this.action = SET_ASSET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetAssetCustomTypeActionImpl() {
         this.action = SET_ASSET_CUSTOM_TYPE;
     }

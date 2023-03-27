@@ -36,6 +36,9 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
 
     private java.lang.Object previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetOrderLineItemCustomFieldChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("customTypeId") final String customTypeId, @JsonProperty("name") final String name,
@@ -53,6 +56,9 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
         this.type = SET_ORDER_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetOrderLineItemCustomFieldChangeImpl() {
         this.type = SET_ORDER_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }

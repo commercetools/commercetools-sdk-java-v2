@@ -28,6 +28,9 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductImageAddedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("image") final com.commercetools.api.models.common.Image image,
@@ -38,6 +41,9 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
         this.type = PRODUCT_IMAGE_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductImageAddedMessagePayloadImpl() {
         this.type = PRODUCT_IMAGE_ADDED;
     }

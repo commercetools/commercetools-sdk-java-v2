@@ -26,6 +26,9 @@ public class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction,
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetMetaTitleActionImpl(
             @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle,
@@ -35,6 +38,9 @@ public class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction,
         this.action = SET_META_TITLE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetMetaTitleActionImpl() {
         this.action = SET_META_TITLE;
     }

@@ -28,7 +28,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     private Boolean valid;
 
     /**
-     *
+     * set values to the targets
      * @param targets value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     *
+     * set value to the targets
      * @param targets value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     *
+     * add values to the targets
      * @param targets value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     *
+     * add the value to the targets using the builder function
      * @param builder function to build the targets value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     *
+     * set the value to the targets using the builder function
      * @param builder function to build the targets value
      * @return Builder
      */
@@ -105,9 +105,19 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
         return this;
     }
 
+    /**
+     * value of targets}
+     * @return targets
+     */
+
     public java.util.List<com.commercetools.history.models.common.ItemShippingTarget> getTargets() {
         return this.targets;
     }
+
+    /**
+     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+     * @return valid
+     */
 
     public Boolean getValid() {
         return this.valid;
@@ -131,10 +141,19 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
         return new ItemShippingDetailsImpl(targets, valid);
     }
 
+    /**
+     * factory method for an instance of ItemShippingDetailsBuilder
+     * @return builder
+     */
     public static ItemShippingDetailsBuilder of() {
         return new ItemShippingDetailsBuilder();
     }
 
+    /**
+     * create builder for ItemShippingDetails instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemShippingDetailsBuilder of(final ItemShippingDetails template) {
         ItemShippingDetailsBuilder builder = new ItemShippingDetailsBuilder();
         builder.targets = template.getTargets();

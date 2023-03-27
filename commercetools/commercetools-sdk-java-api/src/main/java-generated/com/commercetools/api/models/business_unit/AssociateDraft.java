@@ -49,17 +49,41 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
     @JsonProperty("customer")
     public CustomerResourceIdentifier getCustomer();
 
+    /**
+     *  <p>Roles the Associate should hold within the Business Unit.</p>
+     * @param roles values to be set
+     */
+
     @JsonIgnore
     public void setRoles(final AssociateRole... roles);
 
+    /**
+     *  <p>Roles the Associate should hold within the Business Unit.</p>
+     * @param roles values to be set
+     */
+
     public void setRoles(final List<AssociateRole> roles);
+
+    /**
+     *  <p>The Customer to be part of the Business Unit.</p>
+     * @param customer value to be set
+     */
 
     public void setCustomer(final CustomerResourceIdentifier customer);
 
+    /**
+     * factory method
+     * @return instance of AssociateDraft
+     */
     public static AssociateDraft of() {
         return new AssociateDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of AssociateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AssociateDraft of(final AssociateDraft template) {
         AssociateDraftImpl instance = new AssociateDraftImpl();
         instance.setRoles(template.getRoles());
@@ -67,18 +91,37 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
         return instance;
     }
 
+    /**
+     * builder factory method for AssociateDraft
+     * @return builder
+     */
     public static AssociateDraftBuilder builder() {
         return AssociateDraftBuilder.of();
     }
 
+    /**
+     * create builder for AssociateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssociateDraftBuilder builder(final AssociateDraft template) {
         return AssociateDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAssociateDraft(Function<AssociateDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AssociateDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AssociateDraft>() {
             @Override

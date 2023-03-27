@@ -55,6 +55,10 @@ public class ReviewUpdateActionBuilder {
         return com.commercetools.api.models.review.ReviewTransitionStateActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ReviewUpdateActionBuilder
+     * @return builder
+     */
     public static ReviewUpdateActionBuilder of() {
         return new ReviewUpdateActionBuilder();
     }

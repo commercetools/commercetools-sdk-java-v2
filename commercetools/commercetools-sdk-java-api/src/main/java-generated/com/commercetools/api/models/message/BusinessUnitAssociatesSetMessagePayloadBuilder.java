@@ -92,6 +92,11 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @return associates
+     */
+
     public java.util.List<com.commercetools.api.models.business_unit.Associate> getAssociates() {
         return this.associates;
     }
@@ -113,10 +118,19 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
         return new BusinessUnitAssociatesSetMessagePayloadImpl(associates);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitAssociatesSetMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitAssociatesSetMessagePayloadBuilder of() {
         return new BusinessUnitAssociatesSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitAssociatesSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAssociatesSetMessagePayloadBuilder of(
             final BusinessUnitAssociatesSetMessagePayload template) {
         BusinessUnitAssociatesSetMessagePayloadBuilder builder = new BusinessUnitAssociatesSetMessagePayloadBuilder();

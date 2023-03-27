@@ -93,6 +93,11 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
         return this;
     }
 
+    /**
+     *  <p>The product variant patches of this request.</p>
+     * @return patches
+     */
+
     public java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> getPatches() {
         return this.patches;
     }
@@ -114,10 +119,19 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
         return new ProductVariantPatchRequestImpl(patches);
     }
 
+    /**
+     * factory method for an instance of ProductVariantPatchRequestBuilder
+     * @return builder
+     */
     public static ProductVariantPatchRequestBuilder of() {
         return new ProductVariantPatchRequestBuilder();
     }
 
+    /**
+     * create builder for ProductVariantPatchRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantPatchRequestBuilder of(final ProductVariantPatchRequest template) {
         ProductVariantPatchRequestBuilder builder = new ProductVariantPatchRequestBuilder();
         builder.patches = template.getPatches();

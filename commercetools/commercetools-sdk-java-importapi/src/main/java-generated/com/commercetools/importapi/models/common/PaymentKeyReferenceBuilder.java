@@ -24,7 +24,7 @@ public class PaymentKeyReferenceBuilder implements Builder<PaymentKeyReference> 
     private String key;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class PaymentKeyReferenceBuilder implements Builder<PaymentKeyReference> 
         this.key = key;
         return this;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
@@ -55,10 +60,19 @@ public class PaymentKeyReferenceBuilder implements Builder<PaymentKeyReference> 
         return new PaymentKeyReferenceImpl(key);
     }
 
+    /**
+     * factory method for an instance of PaymentKeyReferenceBuilder
+     * @return builder
+     */
     public static PaymentKeyReferenceBuilder of() {
         return new PaymentKeyReferenceBuilder();
     }
 
+    /**
+     * create builder for PaymentKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentKeyReferenceBuilder of(final PaymentKeyReference template) {
         PaymentKeyReferenceBuilder builder = new PaymentKeyReferenceBuilder();
         builder.key = template.getKey();

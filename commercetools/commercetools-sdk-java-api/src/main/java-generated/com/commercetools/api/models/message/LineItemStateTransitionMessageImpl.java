@@ -52,6 +52,9 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
 
     private com.commercetools.api.models.state.StateReference toState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LineItemStateTransitionMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -85,6 +88,9 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
         this.type = LINE_ITEM_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public LineItemStateTransitionMessageImpl() {
         this.type = LINE_ITEM_STATE_TRANSITION;
     }

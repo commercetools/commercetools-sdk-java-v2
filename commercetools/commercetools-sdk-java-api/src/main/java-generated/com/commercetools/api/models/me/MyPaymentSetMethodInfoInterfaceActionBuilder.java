@@ -34,6 +34,11 @@ public class MyPaymentSetMethodInfoInterfaceActionBuilder implements Builder<MyP
         return this;
     }
 
+    /**
+     *  <p>Value to set. Once set, the <code>paymentInterface</code> of the <code>paymentMethodInfo</code> cannot be changed.</p>
+     * @return interface
+     */
+
     public String getInterface() {
         return this._interface;
     }
@@ -55,10 +60,19 @@ public class MyPaymentSetMethodInfoInterfaceActionBuilder implements Builder<MyP
         return new MyPaymentSetMethodInfoInterfaceActionImpl(_interface);
     }
 
+    /**
+     * factory method for an instance of MyPaymentSetMethodInfoInterfaceActionBuilder
+     * @return builder
+     */
     public static MyPaymentSetMethodInfoInterfaceActionBuilder of() {
         return new MyPaymentSetMethodInfoInterfaceActionBuilder();
     }
 
+    /**
+     * create builder for MyPaymentSetMethodInfoInterfaceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyPaymentSetMethodInfoInterfaceActionBuilder of(
             final MyPaymentSetMethodInfoInterfaceAction template) {
         MyPaymentSetMethodInfoInterfaceActionBuilder builder = new MyPaymentSetMethodInfoInterfaceActionBuilder();

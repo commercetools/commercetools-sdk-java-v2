@@ -24,7 +24,7 @@ public class GenericErrorBuilder implements Builder<GenericError> {
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class GenericErrorBuilder implements Builder<GenericError> {
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class GenericErrorBuilder implements Builder<GenericError> {
         return new GenericErrorImpl(message);
     }
 
+    /**
+     * factory method for an instance of GenericErrorBuilder
+     * @return builder
+     */
     public static GenericErrorBuilder of() {
         return new GenericErrorBuilder();
     }
 
+    /**
+     * create builder for GenericError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GenericErrorBuilder of(final GenericError template) {
         GenericErrorBuilder builder = new GenericErrorBuilder();
         builder.message = template.getMessage();

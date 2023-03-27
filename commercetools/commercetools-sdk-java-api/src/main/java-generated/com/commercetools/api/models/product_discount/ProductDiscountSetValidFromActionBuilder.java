@@ -36,6 +36,11 @@ public class ProductDiscountSetValidFromActionBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
@@ -57,10 +62,19 @@ public class ProductDiscountSetValidFromActionBuilder implements Builder<Product
         return new ProductDiscountSetValidFromActionImpl(validFrom);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountSetValidFromActionBuilder
+     * @return builder
+     */
     public static ProductDiscountSetValidFromActionBuilder of() {
         return new ProductDiscountSetValidFromActionBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountSetValidFromAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountSetValidFromActionBuilder of(final ProductDiscountSetValidFromAction template) {
         ProductDiscountSetValidFromActionBuilder builder = new ProductDiscountSetValidFromActionBuilder();
         builder.validFrom = template.getValidFrom();

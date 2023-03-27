@@ -46,6 +46,9 @@ public class ProductAddedToCategoryMessageImpl implements ProductAddedToCategory
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductAddedToCategoryMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class ProductAddedToCategoryMessageImpl implements ProductAddedToCategory
         this.type = PRODUCT_ADDED_TO_CATEGORY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductAddedToCategoryMessageImpl() {
         this.type = PRODUCT_ADDED_TO_CATEGORY;
     }

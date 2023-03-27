@@ -62,9 +62,19 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
         return this;
     }
 
+    /**
+     *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
         return new ResourceNotFoundErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of ResourceNotFoundErrorBuilder
+     * @return builder
+     */
     public static ResourceNotFoundErrorBuilder of() {
         return new ResourceNotFoundErrorBuilder();
     }
 
+    /**
+     * create builder for ResourceNotFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceNotFoundErrorBuilder of(final ResourceNotFoundError template) {
         ResourceNotFoundErrorBuilder builder = new ResourceNotFoundErrorBuilder();
         builder.message = template.getMessage();

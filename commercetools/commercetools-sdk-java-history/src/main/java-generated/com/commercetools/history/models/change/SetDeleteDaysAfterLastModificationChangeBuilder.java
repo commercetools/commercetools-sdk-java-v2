@@ -42,7 +42,7 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -63,13 +63,28 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public Integer getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public Integer getNextValue() {
         return this.nextValue;
@@ -95,10 +110,19 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
         return new SetDeleteDaysAfterLastModificationChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetDeleteDaysAfterLastModificationChangeBuilder
+     * @return builder
+     */
     public static SetDeleteDaysAfterLastModificationChangeBuilder of() {
         return new SetDeleteDaysAfterLastModificationChangeBuilder();
     }
 
+    /**
+     * create builder for SetDeleteDaysAfterLastModificationChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDeleteDaysAfterLastModificationChangeBuilder of(
             final SetDeleteDaysAfterLastModificationChange template) {
         SetDeleteDaysAfterLastModificationChangeBuilder builder = new SetDeleteDaysAfterLastModificationChangeBuilder();

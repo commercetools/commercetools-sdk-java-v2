@@ -64,9 +64,19 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>New value to set. Must be different from the existing value.</p>
+     * @return newValue
+     */
 
     public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getNewValue() {
         return this.newValue;
@@ -92,10 +102,19 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionBuilder
         return new ProductTypeChangeLocalizedEnumValueLabelActionImpl(attributeName, newValue);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeLocalizedEnumValueLabelActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder of() {
         return new ProductTypeChangeLocalizedEnumValueLabelActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeLocalizedEnumValueLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder of(
             final ProductTypeChangeLocalizedEnumValueLabelAction template) {
         ProductTypeChangeLocalizedEnumValueLabelActionBuilder builder = new ProductTypeChangeLocalizedEnumValueLabelActionBuilder();

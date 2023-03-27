@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddExternalImageChangeImpl.class)
 public interface AddExternalImageChange extends Change {
 
+    /**
+     * discriminator value for AddExternalImageChange
+     */
     String ADD_EXTERNAL_IMAGE_CHANGE = "AddExternalImageChange";
 
     /**
@@ -78,24 +81,63 @@ public interface AddExternalImageChange extends Change {
     @JsonProperty("nextValue")
     public List<Image> getNextValue();
 
+    /**
+     *  <p>Update actions for adding an external image</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
 
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
+
     public void setCatalogData(final String catalogData);
+
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
 
     @JsonIgnore
     public void setPreviousValue(final Image... previousValue);
 
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
+
     public void setPreviousValue(final List<Image> previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
 
     @JsonIgnore
     public void setNextValue(final Image... nextValue);
 
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
+
     public void setNextValue(final List<Image> nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddExternalImageChange
+     */
     public static AddExternalImageChange of() {
         return new AddExternalImageChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddExternalImageChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddExternalImageChange of(final AddExternalImageChange template) {
         AddExternalImageChangeImpl instance = new AddExternalImageChangeImpl();
         instance.setChange(template.getChange());
@@ -105,18 +147,37 @@ public interface AddExternalImageChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddExternalImageChange
+     * @return builder
+     */
     public static AddExternalImageChangeBuilder builder() {
         return AddExternalImageChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddExternalImageChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddExternalImageChangeBuilder builder(final AddExternalImageChange template) {
         return AddExternalImageChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddExternalImageChange(Function<AddExternalImageChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddExternalImageChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddExternalImageChange>() {
             @Override

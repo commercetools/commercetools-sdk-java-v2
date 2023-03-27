@@ -22,12 +22,18 @@ public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
 
     private Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SearchKeywordsImpl(
             @JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public SearchKeywordsImpl() {
     }
 

@@ -37,30 +37,63 @@ public interface FieldType {
     @JsonProperty("name")
     public String getName();
 
+    /**
+     * set name
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     * factory method
+     * @return instance of FieldType
+     */
     public static FieldType of() {
         return new FieldTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of FieldType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static FieldType of(final FieldType template) {
         FieldTypeImpl instance = new FieldTypeImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for FieldType
+     * @return builder
+     */
     public static FieldTypeBuilder builder() {
         return FieldTypeBuilder.of();
     }
 
+    /**
+     * create builder for FieldType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldTypeBuilder builder(final FieldType template) {
         return FieldTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withFieldType(Function<FieldType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<FieldType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<FieldType>() {
             @Override

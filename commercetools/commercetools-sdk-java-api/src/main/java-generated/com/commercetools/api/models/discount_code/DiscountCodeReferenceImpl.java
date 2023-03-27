@@ -27,6 +27,9 @@ public class DiscountCodeReferenceImpl implements DiscountCodeReference, ModelBa
 
     private com.commercetools.api.models.discount_code.DiscountCode obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.discount_code.DiscountCode obj) {
@@ -35,6 +38,9 @@ public class DiscountCodeReferenceImpl implements DiscountCodeReference, ModelBa
         this.typeId = ReferenceTypeId.findEnum("discount-code");
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("discount-code");
     }

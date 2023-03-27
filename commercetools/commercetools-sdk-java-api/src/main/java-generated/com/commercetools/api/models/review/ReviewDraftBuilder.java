@@ -229,55 +229,111 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Review.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>&nbsp;+ Product <code>id</code>.</p>
+     * @return uniquenessValue
+     */
 
     @Nullable
     public String getUniquenessValue() {
         return this.uniquenessValue;
     }
 
+    /**
+     *  <p>Language in which the content of the Review is written.</p>
+     * @return locale
+     */
+
     @Nullable
     public String getLocale() {
         return this.locale;
     }
+
+    /**
+     *  <p>Name of the author.</p>
+     * @return authorName
+     */
 
     @Nullable
     public String getAuthorName() {
         return this.authorName;
     }
 
+    /**
+     *  <p>Title of the Review.</p>
+     * @return title
+     */
+
     @Nullable
     public String getTitle() {
         return this.title;
     }
+
+    /**
+     *  <p>Content of the Review.</p>
+     * @return text
+     */
 
     @Nullable
     public String getText() {
         return this.text;
     }
 
+    /**
+     *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
+     *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+     * @return target
+     */
+
     @Nullable
     public com.commercetools.api.models.common.ResourceIdentifier getTarget() {
         return this.target;
     }
+
+    /**
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @return state
+     */
 
     @Nullable
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
 
+    /**
+     *  <p>Rating of the targeted Product or Channel. This rating can represent the number of stars, a percentage, or a like (+1)/dislike (-1). A rating is used in the ratings statistics of the targeted object, unless the Review is in a State that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
+     * @return rating
+     */
+
     @Nullable
     public Integer getRating() {
         return this.rating;
     }
 
+    /**
+     *  <p>Customer who created the Review.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>Custom Fields for the Review.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -302,10 +358,19 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
             customer, custom);
     }
 
+    /**
+     * factory method for an instance of ReviewDraftBuilder
+     * @return builder
+     */
     public static ReviewDraftBuilder of() {
         return new ReviewDraftBuilder();
     }
 
+    /**
+     * create builder for ReviewDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewDraftBuilder of(final ReviewDraft template) {
         ReviewDraftBuilder builder = new ReviewDraftBuilder();
         builder.key = template.getKey();

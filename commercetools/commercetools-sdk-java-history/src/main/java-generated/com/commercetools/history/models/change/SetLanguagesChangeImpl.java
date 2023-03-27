@@ -28,6 +28,9 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
 
     private java.util.List<String> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLanguagesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<String> previousValue,
@@ -38,6 +41,9 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
         this.type = SET_LANGUAGES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLanguagesChangeImpl() {
         this.type = SET_LANGUAGES_CHANGE;
     }

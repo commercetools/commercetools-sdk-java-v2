@@ -75,23 +75,62 @@ public interface DiscountCodePagedQueryResponse
     @JsonProperty("results")
     public List<DiscountCode> getResults();
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @param limit value to be set
+     */
+
     public void setLimit(final Long limit);
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
 
     public void setOffset(final Long offset);
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @param count value to be set
+     */
+
     public void setCount(final Long count);
 
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total value to be set
+     */
+
     public void setTotal(final Long total);
+
+    /**
+     *  <p>DiscountCodes matching the query.</p>
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final DiscountCode... results);
 
+    /**
+     *  <p>DiscountCodes matching the query.</p>
+     * @param results values to be set
+     */
+
     public void setResults(final List<DiscountCode> results);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodePagedQueryResponse
+     */
     public static DiscountCodePagedQueryResponse of() {
         return new DiscountCodePagedQueryResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodePagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodePagedQueryResponse of(final DiscountCodePagedQueryResponse template) {
         DiscountCodePagedQueryResponseImpl instance = new DiscountCodePagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
@@ -102,18 +141,37 @@ public interface DiscountCodePagedQueryResponse
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodePagedQueryResponse
+     * @return builder
+     */
     public static DiscountCodePagedQueryResponseBuilder builder() {
         return DiscountCodePagedQueryResponseBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodePagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodePagedQueryResponseBuilder builder(final DiscountCodePagedQueryResponse template) {
         return DiscountCodePagedQueryResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodePagedQueryResponse(Function<DiscountCodePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodePagedQueryResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodePagedQueryResponse>() {
             @Override

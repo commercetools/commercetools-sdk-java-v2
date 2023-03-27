@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ParcelMeasurementsUpdatedMessageImpl.class)
 public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for ParcelMeasurementsUpdatedMessage
+     */
     String PARCEL_MEASUREMENTS_UPDATED = "ParcelMeasurementsUpdated";
 
     /**
@@ -73,18 +76,47 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @param parcelId value to be set
+     */
 
     public void setParcelId(final String parcelId);
 
+    /**
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     * @param measurements value to be set
+     */
+
     public void setMeasurements(final ParcelMeasurements measurements);
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
 
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of ParcelMeasurementsUpdatedMessage
+     */
     public static ParcelMeasurementsUpdatedMessage of() {
         return new ParcelMeasurementsUpdatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ParcelMeasurementsUpdatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ParcelMeasurementsUpdatedMessage of(final ParcelMeasurementsUpdatedMessage template) {
         ParcelMeasurementsUpdatedMessageImpl instance = new ParcelMeasurementsUpdatedMessageImpl();
         instance.setId(template.getId());
@@ -104,18 +136,37 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for ParcelMeasurementsUpdatedMessage
+     * @return builder
+     */
     public static ParcelMeasurementsUpdatedMessageBuilder builder() {
         return ParcelMeasurementsUpdatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ParcelMeasurementsUpdatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelMeasurementsUpdatedMessageBuilder builder(final ParcelMeasurementsUpdatedMessage template) {
         return ParcelMeasurementsUpdatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcelMeasurementsUpdatedMessage(Function<ParcelMeasurementsUpdatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementsUpdatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementsUpdatedMessage>() {
             @Override

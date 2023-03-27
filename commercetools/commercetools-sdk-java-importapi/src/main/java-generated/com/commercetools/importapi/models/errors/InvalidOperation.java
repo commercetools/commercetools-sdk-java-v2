@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidOperationImpl.class)
 public interface InvalidOperation extends ErrorObject {
 
+    /**
+     * discriminator value for InvalidOperation
+     */
     String INVALID_OPERATION = "InvalidOperation";
 
+    /**
+     * factory method
+     * @return instance of InvalidOperation
+     */
     public static InvalidOperation of() {
         return new InvalidOperationImpl();
     }
 
+    /**
+     * factory method to copy an instance of InvalidOperation
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InvalidOperation of(final InvalidOperation template) {
         InvalidOperationImpl instance = new InvalidOperationImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
 
+    /**
+     * builder factory method for InvalidOperation
+     * @return builder
+     */
     public static InvalidOperationBuilder builder() {
         return InvalidOperationBuilder.of();
     }
 
+    /**
+     * create builder for InvalidOperation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidOperationBuilder builder(final InvalidOperation template) {
         return InvalidOperationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInvalidOperation(Function<InvalidOperation, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InvalidOperation> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InvalidOperation>() {
             @Override

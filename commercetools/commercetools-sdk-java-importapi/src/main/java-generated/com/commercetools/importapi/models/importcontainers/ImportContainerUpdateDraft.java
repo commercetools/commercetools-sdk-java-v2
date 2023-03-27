@@ -46,14 +46,33 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();
 
+    /**
+     *  <p>Current version of the ImportContainer.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @param resourceType value to be set
+     */
 
     public void setResourceType(final ImportResourceType resourceType);
 
+    /**
+     * factory method
+     * @return instance of ImportContainerUpdateDraft
+     */
     public static ImportContainerUpdateDraft of() {
         return new ImportContainerUpdateDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ImportContainerUpdateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ImportContainerUpdateDraft of(final ImportContainerUpdateDraft template) {
         ImportContainerUpdateDraftImpl instance = new ImportContainerUpdateDraftImpl();
         instance.setVersion(template.getVersion());
@@ -61,18 +80,37 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
         return instance;
     }
 
+    /**
+     * builder factory method for ImportContainerUpdateDraft
+     * @return builder
+     */
     public static ImportContainerUpdateDraftBuilder builder() {
         return ImportContainerUpdateDraftBuilder.of();
     }
 
+    /**
+     * create builder for ImportContainerUpdateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportContainerUpdateDraftBuilder builder(final ImportContainerUpdateDraft template) {
         return ImportContainerUpdateDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImportContainerUpdateDraft(Function<ImportContainerUpdateDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImportContainerUpdateDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImportContainerUpdateDraft>() {
             @Override

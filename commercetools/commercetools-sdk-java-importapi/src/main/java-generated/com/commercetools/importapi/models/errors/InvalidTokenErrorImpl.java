@@ -24,12 +24,18 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidTokenErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
         this.code = INVALID_TOKEN;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidTokenErrorImpl() {
         this.code = INVALID_TOKEN;
     }

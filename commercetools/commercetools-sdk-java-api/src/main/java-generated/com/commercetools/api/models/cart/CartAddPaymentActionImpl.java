@@ -24,6 +24,9 @@ public class CartAddPaymentActionImpl implements CartAddPaymentAction, ModelBase
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartAddPaymentActionImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
@@ -31,6 +34,9 @@ public class CartAddPaymentActionImpl implements CartAddPaymentAction, ModelBase
         this.action = ADD_PAYMENT;
     }
 
+    /**
+     * create empty instance
+     */
     public CartAddPaymentActionImpl() {
         this.action = ADD_PAYMENT;
     }

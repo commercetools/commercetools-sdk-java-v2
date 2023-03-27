@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryDeletedMessagePayloadImpl.class)
 public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for InventoryEntryDeletedMessagePayload
+     */
     String INVENTORY_ENTRY_DELETED = "InventoryEntryDeleted";
 
     /**
@@ -49,14 +52,33 @@ public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
 
+    /**
+     *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
+
+    /**
+     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     * @param supplyChannel value to be set
+     */
 
     public void setSupplyChannel(final ChannelReference supplyChannel);
 
+    /**
+     * factory method
+     * @return instance of InventoryEntryDeletedMessagePayload
+     */
     public static InventoryEntryDeletedMessagePayload of() {
         return new InventoryEntryDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryEntryDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryEntryDeletedMessagePayload of(final InventoryEntryDeletedMessagePayload template) {
         InventoryEntryDeletedMessagePayloadImpl instance = new InventoryEntryDeletedMessagePayloadImpl();
         instance.setSku(template.getSku());
@@ -64,19 +86,38 @@ public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryEntryDeletedMessagePayload
+     * @return builder
+     */
     public static InventoryEntryDeletedMessagePayloadBuilder builder() {
         return InventoryEntryDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for InventoryEntryDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryDeletedMessagePayloadBuilder builder(
             final InventoryEntryDeletedMessagePayload template) {
         return InventoryEntryDeletedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryEntryDeletedMessagePayload(Function<InventoryEntryDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryDeletedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryDeletedMessagePayload>() {
             @Override

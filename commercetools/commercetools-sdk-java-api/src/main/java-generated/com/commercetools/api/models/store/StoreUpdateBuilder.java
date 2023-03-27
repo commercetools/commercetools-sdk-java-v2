@@ -103,9 +103,19 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Store on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Store.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.store.StoreUpdateAction> getActions() {
         return this.actions;
@@ -129,10 +139,19 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
         return new StoreUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of StoreUpdateBuilder
+     * @return builder
+     */
     public static StoreUpdateBuilder of() {
         return new StoreUpdateBuilder();
     }
 
+    /**
+     * create builder for StoreUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreUpdateBuilder of(final StoreUpdate template) {
         StoreUpdateBuilder builder = new StoreUpdateBuilder();
         builder.version = template.getVersion();

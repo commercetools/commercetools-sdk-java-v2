@@ -24,6 +24,9 @@ public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCust
 
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetCustomerGroupActionImpl(
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
@@ -31,6 +34,9 @@ public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCust
         this.action = SET_CUSTOMER_GROUP;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetCustomerGroupActionImpl() {
         this.action = SET_CUSTOMER_GROUP;
     }

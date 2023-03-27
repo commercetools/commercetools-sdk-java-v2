@@ -22,11 +22,17 @@ public class ChannelUpdateActionImpl implements ChannelUpdateAction, ModelBase {
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelUpdateActionImpl() {
     }
 

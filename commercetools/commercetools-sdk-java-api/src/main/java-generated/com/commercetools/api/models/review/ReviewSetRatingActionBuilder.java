@@ -36,6 +36,11 @@ public class ReviewSetRatingActionBuilder implements Builder<ReviewSetRatingActi
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return rating
+     */
+
     @Nullable
     public Integer getRating() {
         return this.rating;
@@ -57,10 +62,19 @@ public class ReviewSetRatingActionBuilder implements Builder<ReviewSetRatingActi
         return new ReviewSetRatingActionImpl(rating);
     }
 
+    /**
+     * factory method for an instance of ReviewSetRatingActionBuilder
+     * @return builder
+     */
     public static ReviewSetRatingActionBuilder of() {
         return new ReviewSetRatingActionBuilder();
     }
 
+    /**
+     * create builder for ReviewSetRatingAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetRatingActionBuilder of(final ReviewSetRatingAction template) {
         ReviewSetRatingActionBuilder builder = new ReviewSetRatingActionBuilder();
         builder.rating = template.getRating();

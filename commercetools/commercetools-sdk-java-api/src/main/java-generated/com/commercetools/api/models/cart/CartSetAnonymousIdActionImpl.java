@@ -24,12 +24,18 @@ public class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAction, M
 
     private String anonymousId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
         this.anonymousId = anonymousId;
         this.action = SET_ANONYMOUS_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetAnonymousIdActionImpl() {
         this.action = SET_ANONYMOUS_ID;
     }

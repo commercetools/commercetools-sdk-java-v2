@@ -30,6 +30,9 @@ public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
 
     private com.commercetools.history.models.common.Image nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetImageLabelChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
         this.type = SET_IMAGE_LABEL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetImageLabelChangeImpl() {
         this.type = SET_IMAGE_LABEL_CHANGE;
     }

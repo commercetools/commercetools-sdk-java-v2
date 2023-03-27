@@ -24,12 +24,18 @@ public class BusinessUnitSetContactEmailActionImpl implements BusinessUnitSetCon
 
     private String contactEmail;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitSetContactEmailActionImpl(@JsonProperty("contactEmail") final String contactEmail) {
         this.contactEmail = contactEmail;
         this.action = SET_CONTACT_EMAIL;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitSetContactEmailActionImpl() {
         this.action = SET_CONTACT_EMAIL;
     }

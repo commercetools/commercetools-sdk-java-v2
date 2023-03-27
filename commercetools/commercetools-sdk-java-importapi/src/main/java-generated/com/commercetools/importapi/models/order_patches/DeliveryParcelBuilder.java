@@ -36,7 +36,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     *
+     * set the value to the measurements using the builder function
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     *
+     * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     *
+     * set the value to the trackingData using the builder function
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     *
+     * set the value to the trackingData
      * @param trackingData value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -162,19 +162,39 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
         return this;
     }
 
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     * value of measurements}
+     * @return measurements
+     */
 
     @Nullable
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
 
+    /**
+     * value of trackingData}
+     * @return trackingData
+     */
+
     @Nullable
     public com.commercetools.importapi.models.orders.TrackingData getTrackingData() {
         return this.trackingData;
     }
+
+    /**
+     * value of items}
+     * @return items
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
@@ -198,10 +218,19 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
         return new DeliveryParcelImpl(deliveryId, measurements, trackingData, items);
     }
 
+    /**
+     * factory method for an instance of DeliveryParcelBuilder
+     * @return builder
+     */
     public static DeliveryParcelBuilder of() {
         return new DeliveryParcelBuilder();
     }
 
+    /**
+     * create builder for DeliveryParcel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryParcelBuilder of(final DeliveryParcel template) {
         DeliveryParcelBuilder builder = new DeliveryParcelBuilder();
         builder.deliveryId = template.getDeliveryId();

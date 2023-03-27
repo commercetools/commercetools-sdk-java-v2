@@ -27,6 +27,9 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
 
     private java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangePlainEnumValueOrderActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
@@ -35,6 +38,9 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
         this.action = CHANGE_PLAIN_ENUM_VALUE_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangePlainEnumValueOrderActionImpl() {
         this.action = CHANGE_PLAIN_ENUM_VALUE_ORDER;
     }

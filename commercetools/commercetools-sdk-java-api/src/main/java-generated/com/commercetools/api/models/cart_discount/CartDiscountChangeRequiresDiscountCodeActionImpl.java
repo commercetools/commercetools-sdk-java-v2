@@ -25,6 +25,9 @@ public class CartDiscountChangeRequiresDiscountCodeActionImpl
 
     private Boolean requiresDiscountCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountChangeRequiresDiscountCodeActionImpl(
             @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode) {
@@ -32,6 +35,9 @@ public class CartDiscountChangeRequiresDiscountCodeActionImpl
         this.action = CHANGE_REQUIRES_DISCOUNT_CODE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountChangeRequiresDiscountCodeActionImpl() {
         this.action = CHANGE_REQUIRES_DISCOUNT_CODE;
     }

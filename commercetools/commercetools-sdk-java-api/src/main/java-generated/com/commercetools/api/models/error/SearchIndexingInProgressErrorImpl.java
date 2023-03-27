@@ -26,6 +26,9 @@ public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgre
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SearchIndexingInProgressErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgre
         this.code = SEARCH_INDEXING_IN_PROGRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public SearchIndexingInProgressErrorImpl() {
         this.code = SEARCH_INDEXING_IN_PROGRESS;
     }

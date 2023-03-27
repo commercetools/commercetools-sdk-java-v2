@@ -21,6 +21,9 @@ public class ProductDiscountValueExternalDraftImpl implements ProductDiscountVal
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountValueExternalDraftImpl() {
         this.type = EXTERNAL;

@@ -53,7 +53,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -74,17 +74,37 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setProperty</code> on custom objects</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>Value path to the property that was changed</p>
+     * @return path
+     */
 
     public String getPath() {
         return this.path;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
@@ -110,10 +130,19 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
         return new SetPropertyChangeImpl(change, path, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetPropertyChangeBuilder
+     * @return builder
+     */
     public static SetPropertyChangeBuilder of() {
         return new SetPropertyChangeBuilder();
     }
 
+    /**
+     * create builder for SetPropertyChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetPropertyChangeBuilder of(final SetPropertyChange template) {
         SetPropertyChangeBuilder builder = new SetPropertyChangeBuilder();
         builder.change = template.getChange();

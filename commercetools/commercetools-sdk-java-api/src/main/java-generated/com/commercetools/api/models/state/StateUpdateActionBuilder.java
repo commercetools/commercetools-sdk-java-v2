@@ -47,6 +47,10 @@ public class StateUpdateActionBuilder {
         return com.commercetools.api.models.state.StateSetTransitionsActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of StateUpdateActionBuilder
+     * @return builder
+     */
     public static StateUpdateActionBuilder of() {
         return new StateUpdateActionBuilder();
     }

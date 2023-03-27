@@ -34,6 +34,11 @@ public class BusinessUnitKeyReferenceBuilder implements Builder<BusinessUnitKeyR
         return this;
     }
 
+    /**
+     *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
@@ -55,10 +60,19 @@ public class BusinessUnitKeyReferenceBuilder implements Builder<BusinessUnitKeyR
         return new BusinessUnitKeyReferenceImpl(key);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitKeyReferenceBuilder
+     * @return builder
+     */
     public static BusinessUnitKeyReferenceBuilder of() {
         return new BusinessUnitKeyReferenceBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitKeyReferenceBuilder of(final BusinessUnitKeyReference template) {
         BusinessUnitKeyReferenceBuilder builder = new BusinessUnitKeyReferenceBuilder();
         builder.key = template.getKey();

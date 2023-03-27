@@ -41,7 +41,7 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setCartPredicate</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
         return new SetCartPredicateChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetCartPredicateChangeBuilder
+     * @return builder
+     */
     public static SetCartPredicateChangeBuilder of() {
         return new SetCartPredicateChangeBuilder();
     }
 
+    /**
+     * create builder for SetCartPredicateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCartPredicateChangeBuilder of(final SetCartPredicateChange template) {
         SetCartPredicateChangeBuilder builder = new SetCartPredicateChangeBuilder();
         builder.change = template.getChange();

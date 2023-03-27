@@ -41,7 +41,7 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setValidUntil</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
         return new SetValidUntilChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetValidUntilChangeBuilder
+     * @return builder
+     */
     public static SetValidUntilChangeBuilder of() {
         return new SetValidUntilChangeBuilder();
     }
 
+    /**
+     * create builder for SetValidUntilChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetValidUntilChangeBuilder of(final SetValidUntilChange template) {
         SetValidUntilChangeBuilder builder = new SetValidUntilChangeBuilder();
         builder.change = template.getChange();

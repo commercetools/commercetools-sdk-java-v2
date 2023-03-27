@@ -26,6 +26,9 @@ public class NumberAttributeImpl implements NumberAttribute, ModelBase {
 
     private Double value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     NumberAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Double value) {
         this.name = name;
@@ -33,6 +36,9 @@ public class NumberAttributeImpl implements NumberAttribute, ModelBase {
         this.type = NUMBER;
     }
 
+    /**
+     * create empty instance
+     */
     public NumberAttributeImpl() {
         this.type = NUMBER;
     }

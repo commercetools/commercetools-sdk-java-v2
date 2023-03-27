@@ -24,12 +24,18 @@ public class NumberFieldImpl implements NumberField, ModelBase {
 
     private Double value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     NumberFieldImpl(@JsonProperty("value") final Double value) {
         this.value = value;
         this.type = NUMBER;
     }
 
+    /**
+     * create empty instance
+     */
     public NumberFieldImpl() {
         this.type = NUMBER;
     }

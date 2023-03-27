@@ -36,10 +36,19 @@ public class ProductDiscountValueExternalDraftBuilder implements Builder<Product
         return new ProductDiscountValueExternalDraftImpl();
     }
 
+    /**
+     * factory method for an instance of ProductDiscountValueExternalDraftBuilder
+     * @return builder
+     */
     public static ProductDiscountValueExternalDraftBuilder of() {
         return new ProductDiscountValueExternalDraftBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountValueExternalDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountValueExternalDraftBuilder of(final ProductDiscountValueExternalDraft template) {
         ProductDiscountValueExternalDraftBuilder builder = new ProductDiscountValueExternalDraftBuilder();
         return builder;

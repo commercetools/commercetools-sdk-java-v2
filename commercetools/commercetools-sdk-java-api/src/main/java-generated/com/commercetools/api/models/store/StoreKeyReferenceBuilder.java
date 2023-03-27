@@ -34,6 +34,11 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique and immutable key of the referenced Store.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
@@ -55,10 +60,19 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
         return new StoreKeyReferenceImpl(key);
     }
 
+    /**
+     * factory method for an instance of StoreKeyReferenceBuilder
+     * @return builder
+     */
     public static StoreKeyReferenceBuilder of() {
         return new StoreKeyReferenceBuilder();
     }
 
+    /**
+     * create builder for StoreKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreKeyReferenceBuilder of(final StoreKeyReference template) {
         StoreKeyReferenceBuilder builder = new StoreKeyReferenceBuilder();
         builder.key = template.getKey();

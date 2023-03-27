@@ -24,6 +24,9 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
 
     private com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldReferenceTypeImpl(
             @JsonProperty("referenceTypeId") final com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId) {
@@ -31,6 +34,9 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
         this.name = REFERENCE;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomFieldReferenceTypeImpl() {
         this.name = REFERENCE;
     }

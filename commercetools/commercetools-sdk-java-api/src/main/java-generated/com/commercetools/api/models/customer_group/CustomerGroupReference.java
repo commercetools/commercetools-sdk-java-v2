@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerGroupReferenceImpl.class)
 public interface CustomerGroupReference extends Reference, com.commercetools.api.models.Identifiable<CustomerGroup> {
 
+    /**
+     * discriminator value for CustomerGroupReference
+     */
     String CUSTOMER_GROUP = "customer-group";
 
     /**
@@ -49,14 +52,33 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final CustomerGroup obj);
+
+    /**
+     *  <p>Unique identifier of the referenced CustomerGroup.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of CustomerGroupReference
+     */
     public static CustomerGroupReference of() {
         return new CustomerGroupReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerGroupReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerGroupReference of(final CustomerGroupReference template) {
         CustomerGroupReferenceImpl instance = new CustomerGroupReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerGroupReference
+     * @return builder
+     */
     public static CustomerGroupReferenceBuilder builder() {
         return CustomerGroupReferenceBuilder.of();
     }
 
+    /**
+     * create builder for CustomerGroupReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupReferenceBuilder builder(final CustomerGroupReference template) {
         return CustomerGroupReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerGroupReference(Function<CustomerGroupReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupReference>() {
             @Override

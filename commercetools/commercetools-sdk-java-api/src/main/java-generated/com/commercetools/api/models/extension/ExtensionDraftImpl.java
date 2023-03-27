@@ -28,6 +28,9 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
 
     private Integer timeoutInMs;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination,
@@ -39,6 +42,9 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
         this.timeoutInMs = timeoutInMs;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionDraftImpl() {
     }
 

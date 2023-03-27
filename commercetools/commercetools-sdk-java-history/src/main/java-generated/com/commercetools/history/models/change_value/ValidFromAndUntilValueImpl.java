@@ -24,6 +24,9 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
 
     private String validUntil;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ValidFromAndUntilValueImpl(@JsonProperty("validFrom") final String validFrom,
             @JsonProperty("validUntil") final String validUntil) {
@@ -31,6 +34,9 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
         this.validUntil = validUntil;
     }
 
+    /**
+     * create empty instance
+     */
     public ValidFromAndUntilValueImpl() {
     }
 

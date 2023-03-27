@@ -34,6 +34,11 @@ public class ProductDiscountValueRelativeDraftBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
+     * @return permyriad
+     */
+
     public Long getPermyriad() {
         return this.permyriad;
     }
@@ -55,10 +60,19 @@ public class ProductDiscountValueRelativeDraftBuilder implements Builder<Product
         return new ProductDiscountValueRelativeDraftImpl(permyriad);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountValueRelativeDraftBuilder
+     * @return builder
+     */
     public static ProductDiscountValueRelativeDraftBuilder of() {
         return new ProductDiscountValueRelativeDraftBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountValueRelativeDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountValueRelativeDraftBuilder of(final ProductDiscountValueRelativeDraft template) {
         ProductDiscountValueRelativeDraftBuilder builder = new ProductDiscountValueRelativeDraftBuilder();
         builder.permyriad = template.getPermyriad();

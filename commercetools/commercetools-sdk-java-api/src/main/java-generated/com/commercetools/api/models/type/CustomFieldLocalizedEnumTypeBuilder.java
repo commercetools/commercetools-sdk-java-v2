@@ -93,6 +93,11 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
         return this;
     }
 
+    /**
+     *  <p>Allowed values.</p>
+     * @return values
+     */
+
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {
         return this.values;
     }
@@ -114,10 +119,19 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
         return new CustomFieldLocalizedEnumTypeImpl(values);
     }
 
+    /**
+     * factory method for an instance of CustomFieldLocalizedEnumTypeBuilder
+     * @return builder
+     */
     public static CustomFieldLocalizedEnumTypeBuilder of() {
         return new CustomFieldLocalizedEnumTypeBuilder();
     }
 
+    /**
+     * create builder for CustomFieldLocalizedEnumType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldLocalizedEnumTypeBuilder of(final CustomFieldLocalizedEnumType template) {
         CustomFieldLocalizedEnumTypeBuilder builder = new CustomFieldLocalizedEnumTypeBuilder();
         builder.values = template.getValues();

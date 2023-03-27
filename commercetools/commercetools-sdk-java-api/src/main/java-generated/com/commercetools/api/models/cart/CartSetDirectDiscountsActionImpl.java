@@ -24,6 +24,9 @@ public class CartSetDirectDiscountsActionImpl implements CartSetDirectDiscountsA
 
     private java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> discounts;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetDirectDiscountsActionImpl(
             @JsonProperty("discounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> discounts) {
@@ -31,6 +34,9 @@ public class CartSetDirectDiscountsActionImpl implements CartSetDirectDiscountsA
         this.action = SET_DIRECT_DISCOUNTS;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetDirectDiscountsActionImpl() {
         this.action = SET_DIRECT_DISCOUNTS;
     }

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetMaxApplicationsPerCustomerChangeImpl.class)
 public interface SetMaxApplicationsPerCustomerChange extends Change {
 
+    /**
+     * discriminator value for SetMaxApplicationsPerCustomerChange
+     */
     String SET_MAX_APPLICATIONS_PER_CUSTOMER_CHANGE = "SetMaxApplicationsPerCustomerChange";
 
     /**
@@ -65,16 +68,40 @@ public interface SetMaxApplicationsPerCustomerChange extends Change {
     @JsonProperty("nextValue")
     public Integer getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Integer previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Integer nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetMaxApplicationsPerCustomerChange
+     */
     public static SetMaxApplicationsPerCustomerChange of() {
         return new SetMaxApplicationsPerCustomerChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetMaxApplicationsPerCustomerChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetMaxApplicationsPerCustomerChange of(final SetMaxApplicationsPerCustomerChange template) {
         SetMaxApplicationsPerCustomerChangeImpl instance = new SetMaxApplicationsPerCustomerChangeImpl();
         instance.setChange(template.getChange());
@@ -83,19 +110,38 @@ public interface SetMaxApplicationsPerCustomerChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetMaxApplicationsPerCustomerChange
+     * @return builder
+     */
     public static SetMaxApplicationsPerCustomerChangeBuilder builder() {
         return SetMaxApplicationsPerCustomerChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetMaxApplicationsPerCustomerChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetMaxApplicationsPerCustomerChangeBuilder builder(
             final SetMaxApplicationsPerCustomerChange template) {
         return SetMaxApplicationsPerCustomerChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetMaxApplicationsPerCustomerChange(Function<SetMaxApplicationsPerCustomerChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetMaxApplicationsPerCustomerChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetMaxApplicationsPerCustomerChange>() {
             @Override

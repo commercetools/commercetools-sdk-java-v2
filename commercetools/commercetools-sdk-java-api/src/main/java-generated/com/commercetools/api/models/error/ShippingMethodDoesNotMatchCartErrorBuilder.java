@@ -62,9 +62,19 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
         return this;
     }
 
+    /**
+     *  <p><code>"The predicate does not match the cart."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
         return new ShippingMethodDoesNotMatchCartErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodDoesNotMatchCartErrorBuilder
+     * @return builder
+     */
     public static ShippingMethodDoesNotMatchCartErrorBuilder of() {
         return new ShippingMethodDoesNotMatchCartErrorBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodDoesNotMatchCartError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodDoesNotMatchCartErrorBuilder of(final ShippingMethodDoesNotMatchCartError template) {
         ShippingMethodDoesNotMatchCartErrorBuilder builder = new ShippingMethodDoesNotMatchCartErrorBuilder();
         builder.message = template.getMessage();

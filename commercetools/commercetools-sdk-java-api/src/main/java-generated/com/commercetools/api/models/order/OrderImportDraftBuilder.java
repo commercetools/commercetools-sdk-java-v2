@@ -268,7 +268,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the totalPrice using the builder function
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -280,7 +280,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the totalPrice
      * @param totalPrice value to be set
      * @return Builder
      */
@@ -315,7 +315,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the shippingAddress using the builder function
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -327,7 +327,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the shippingAddress
      * @param shippingAddress value to be set
      * @return Builder
      */
@@ -339,7 +339,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the billingAddress using the builder function
      * @param builder function to build the billingAddress value
      * @return Builder
      */
@@ -351,7 +351,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the billingAddress
      * @param billingAddress value to be set
      * @return Builder
      */
@@ -435,7 +435,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -447,7 +447,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
@@ -484,7 +484,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the paymentInfo using the builder function
      * @param builder function to build the paymentInfo value
      * @return Builder
      */
@@ -496,7 +496,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the paymentInfo
      * @param paymentInfo value to be set
      * @return Builder
      */
@@ -508,7 +508,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the completedAt
      * @param completedAt value to be set
      * @return Builder
      */
@@ -661,7 +661,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the store using the builder function
      * @param builder function to build the store value
      * @return Builder
      */
@@ -673,7 +673,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *
+     * set the value to the store
      * @param store value to be set
      * @return Builder
      */
@@ -695,124 +695,249 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return this;
     }
 
+    /**
+     *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
+     * @return orderNumber
+     */
+
     @Nullable
     public String getOrderNumber() {
         return this.orderNumber;
     }
+
+    /**
+     *  <p>If given the customer with that ID must exist in the project.</p>
+     * @return customerId
+     */
 
     @Nullable
     public String getCustomerId() {
         return this.customerId;
     }
 
+    /**
+     *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
+     * @return customerEmail
+     */
+
     @Nullable
     public String getCustomerEmail() {
         return this.customerEmail;
     }
+
+    /**
+     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @return lineItems
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.LineItemImportDraft> getLineItems() {
         return this.lineItems;
     }
 
+    /**
+     *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @return customLineItems
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> getCustomLineItems() {
         return this.customLineItems;
     }
 
+    /**
+     * value of totalPrice}
+     * @return totalPrice
+     */
+
     public com.commercetools.api.models.common.Money getTotalPrice() {
         return this.totalPrice;
     }
+
+    /**
+     *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
         return this.taxedPrice;
     }
 
+    /**
+     * value of shippingAddress}
+     * @return shippingAddress
+     */
+
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
+
+    /**
+     * value of billingAddress}
+     * @return billingAddress
+     */
 
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
         return this.billingAddress;
     }
 
+    /**
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
+     * @return orderState
+     */
+
     @Nullable
     public com.commercetools.api.models.order.OrderState getOrderState() {
         return this.orderState;
     }
+
+    /**
+     *  <p>This reference can point to a state in a custom workflow.</p>
+     * @return state
+     */
 
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
+    /**
+     * value of shipmentState}
+     * @return shipmentState
+     */
+
     @Nullable
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     * value of paymentState}
+     * @return paymentState
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;
     }
 
+    /**
+     *  <p>Set if the ShippingMethod is set.</p>
+     * @return shippingInfo
+     */
+
     @Nullable
     public com.commercetools.api.models.order.ShippingInfoImportDraft getShippingInfo() {
         return this.shippingInfo;
     }
+
+    /**
+     * value of paymentInfo}
+     * @return paymentInfo
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
         return this.paymentInfo;
     }
 
+    /**
+     * value of completedAt}
+     * @return completedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getCompletedAt() {
         return this.completedAt;
     }
+
+    /**
+     *  <p>The custom fields.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
+     * @return inventoryMode
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
+
+    /**
+     *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
+     * @return taxRoundingMode
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
 
+    /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @return itemShippingAddresses
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
+
+    /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     * @return businessUnit
+     */
 
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
         return this.businessUnit;
     }
 
+    /**
+     * value of store}
+     * @return store
+     */
+
     @Nullable
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
+
+    /**
+     *  <p>The default origin is <code>Customer</code>.</p>
+     * @return origin
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
@@ -842,10 +967,19 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
             itemShippingAddresses, businessUnit, store, origin);
     }
 
+    /**
+     * factory method for an instance of OrderImportDraftBuilder
+     * @return builder
+     */
     public static OrderImportDraftBuilder of() {
         return new OrderImportDraftBuilder();
     }
 
+    /**
+     * create builder for OrderImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderImportDraftBuilder of(final OrderImportDraft template) {
         OrderImportDraftBuilder builder = new OrderImportDraftBuilder();
         builder.orderNumber = template.getOrderNumber();

@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodAddShippingRateActionImpl.class)
 public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdateAction {
 
+    /**
+     * discriminator value for ShippingMethodAddShippingRateAction
+     */
     String ADD_SHIPPING_RATE = "addShippingRate";
 
     /**
@@ -52,14 +55,33 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     @JsonProperty("shippingRate")
     public ShippingRateDraft getShippingRate();
 
+    /**
+     *  <p>Zone to which the ShippingRate should be added.</p>
+     * @param zone value to be set
+     */
+
     public void setZone(final ZoneResourceIdentifier zone);
+
+    /**
+     *  <p>Value to add to <code>shippingRates</code>.</p>
+     * @param shippingRate value to be set
+     */
 
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodAddShippingRateAction
+     */
     public static ShippingMethodAddShippingRateAction of() {
         return new ShippingMethodAddShippingRateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodAddShippingRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodAddShippingRateAction of(final ShippingMethodAddShippingRateAction template) {
         ShippingMethodAddShippingRateActionImpl instance = new ShippingMethodAddShippingRateActionImpl();
         instance.setZone(template.getZone());
@@ -67,19 +89,38 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodAddShippingRateAction
+     * @return builder
+     */
     public static ShippingMethodAddShippingRateActionBuilder builder() {
         return ShippingMethodAddShippingRateActionBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodAddShippingRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodAddShippingRateActionBuilder builder(
             final ShippingMethodAddShippingRateAction template) {
         return ShippingMethodAddShippingRateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodAddShippingRateAction(Function<ShippingMethodAddShippingRateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodAddShippingRateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodAddShippingRateAction>() {
             @Override

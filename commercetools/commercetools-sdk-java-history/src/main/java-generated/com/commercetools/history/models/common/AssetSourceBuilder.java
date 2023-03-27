@@ -34,7 +34,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     private String contentType;
 
     /**
-     *
+     * set the value to the uri
      * @param uri value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *
+     * set the value to the dimensions using the builder function
      * @param builder function to build the dimensions value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *
+     * set the value to the dimensions
      * @param dimensions value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *
+     * set the value to the contentType
      * @param contentType value to be set
      * @return Builder
      */
@@ -89,17 +89,37 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         return this;
     }
 
+    /**
+     * value of uri}
+     * @return uri
+     */
+
     public String getUri() {
         return this.uri;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
     }
 
+    /**
+     * value of dimensions}
+     * @return dimensions
+     */
+
     public com.commercetools.history.models.common.AssetDimensions getDimensions() {
         return this.dimensions;
     }
+
+    /**
+     * value of contentType}
+     * @return contentType
+     */
 
     public String getContentType() {
         return this.contentType;
@@ -125,10 +145,19 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         return new AssetSourceImpl(uri, key, dimensions, contentType);
     }
 
+    /**
+     * factory method for an instance of AssetSourceBuilder
+     * @return builder
+     */
     public static AssetSourceBuilder of() {
         return new AssetSourceBuilder();
     }
 
+    /**
+     * create builder for AssetSource instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssetSourceBuilder of(final AssetSource template) {
         AssetSourceBuilder builder = new AssetSourceBuilder();
         builder.uri = template.getUri();

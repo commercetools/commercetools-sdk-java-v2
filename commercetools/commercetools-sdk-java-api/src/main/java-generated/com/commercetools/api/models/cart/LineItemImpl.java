@@ -70,6 +70,9 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LineItemImpl(@JsonProperty("id") final String id, @JsonProperty("productId") final String productId,
             @JsonProperty("productKey") final String productKey,
@@ -122,6 +125,9 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
     }
 
+    /**
+     * create empty instance
+     */
     public LineItemImpl() {
     }
 

@@ -24,6 +24,9 @@ public class ExtensionChangeDestinationActionImpl implements ExtensionChangeDest
 
     private com.commercetools.api.models.extension.ExtensionDestination destination;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionChangeDestinationActionImpl(
             @JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination) {
@@ -31,6 +34,9 @@ public class ExtensionChangeDestinationActionImpl implements ExtensionChangeDest
         this.action = CHANGE_DESTINATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionChangeDestinationActionImpl() {
         this.action = CHANGE_DESTINATION;
     }

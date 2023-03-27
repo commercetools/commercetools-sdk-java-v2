@@ -92,23 +92,48 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>The URL of the image to update.</p>
+     * @return imageUrl
+     */
+
     public String getImageUrl() {
         return this.imageUrl;
     }
 
+    /**
+     *  <p>Position in <code>images</code> where the image should be moved. Must be between <code>0</code> and the total number of images minus <code>1</code>.</p>
+     * @return position
+     */
+
     public Long getPosition() {
         return this.position;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -133,10 +158,19 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
         return new ProductMoveImageToPositionActionImpl(variantId, sku, imageUrl, position, staged);
     }
 
+    /**
+     * factory method for an instance of ProductMoveImageToPositionActionBuilder
+     * @return builder
+     */
     public static ProductMoveImageToPositionActionBuilder of() {
         return new ProductMoveImageToPositionActionBuilder();
     }
 
+    /**
+     * create builder for ProductMoveImageToPositionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductMoveImageToPositionActionBuilder of(final ProductMoveImageToPositionAction template) {
         ProductMoveImageToPositionActionBuilder builder = new ProductMoveImageToPositionActionBuilder();
         builder.variantId = template.getVariantId();

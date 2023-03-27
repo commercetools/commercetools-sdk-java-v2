@@ -43,26 +43,52 @@ public interface ChangeValueChangeValue {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for absolute subtype
+     * @return builder
+     */
     public static com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder absoluteBuilder() {
         return com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder.of();
     }
 
+    /**
+     * builder for external subtype
+     * @return builder
+     */
     public static com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder externalBuilder() {
         return com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder.of();
     }
 
+    /**
+     * builder for giftLineItem subtype
+     * @return builder
+     */
     public static com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder giftLineItemBuilder() {
         return com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder.of();
     }
 
+    /**
+     * builder for relative subtype
+     * @return builder
+     */
     public static com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder relativeBuilder() {
         return com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeValueChangeValue(Function<ChangeValueChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueChangeValue>() {
             @Override

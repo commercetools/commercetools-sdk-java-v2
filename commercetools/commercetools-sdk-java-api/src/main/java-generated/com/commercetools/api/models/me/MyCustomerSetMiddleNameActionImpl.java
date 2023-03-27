@@ -24,12 +24,18 @@ public class MyCustomerSetMiddleNameActionImpl implements MyCustomerSetMiddleNam
 
     private String middleName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerSetMiddleNameActionImpl(@JsonProperty("middleName") final String middleName) {
         this.middleName = middleName;
         this.action = SET_MIDDLE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerSetMiddleNameActionImpl() {
         this.action = SET_MIDDLE_NAME;
     }

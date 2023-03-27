@@ -26,6 +26,9 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
 
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportOperationStatusImpl(@JsonProperty("operationId") final String operationId,
             @JsonProperty("state") final com.commercetools.importapi.models.importoperations.ImportOperationState state,
@@ -35,6 +38,9 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
         this.errors = errors;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportOperationStatusImpl() {
     }
 

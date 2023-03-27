@@ -26,6 +26,9 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
 
     private String newPassword;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerChangePasswordImpl(@JsonProperty("version") final Long version,
             @JsonProperty("currentPassword") final String currentPassword,
@@ -35,6 +38,9 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
         this.newPassword = newPassword;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerChangePasswordImpl() {
     }
 

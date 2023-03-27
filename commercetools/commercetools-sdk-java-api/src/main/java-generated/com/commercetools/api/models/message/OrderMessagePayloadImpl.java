@@ -22,11 +22,17 @@ public class OrderMessagePayloadImpl implements OrderMessagePayload, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderMessagePayloadImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderMessagePayloadImpl() {
     }
 

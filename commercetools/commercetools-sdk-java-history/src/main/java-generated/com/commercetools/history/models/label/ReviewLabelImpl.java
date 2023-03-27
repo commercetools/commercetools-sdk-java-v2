@@ -26,6 +26,9 @@ public class ReviewLabelImpl implements ReviewLabel, ModelBase {
 
     private String title;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewLabelImpl(@JsonProperty("key") final String key, @JsonProperty("title") final String title) {
         this.key = key;
@@ -33,6 +36,9 @@ public class ReviewLabelImpl implements ReviewLabel, ModelBase {
         this.type = REVIEW_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewLabelImpl() {
         this.type = REVIEW_LABEL;
     }

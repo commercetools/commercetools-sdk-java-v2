@@ -25,7 +25,7 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
     private String parcelId;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -34,6 +34,11 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
         this.parcelId = parcelId;
         return this;
     }
+
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
 
     public String getParcelId() {
         return this.parcelId;
@@ -56,10 +61,19 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
         return new StagedOrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
 
+    /**
+     * factory method for an instance of StagedOrderRemoveParcelFromDeliveryActionBuilder
+     * @return builder
+     */
     public static StagedOrderRemoveParcelFromDeliveryActionBuilder of() {
         return new StagedOrderRemoveParcelFromDeliveryActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderRemoveParcelFromDeliveryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderRemoveParcelFromDeliveryActionBuilder of(
             final StagedOrderRemoveParcelFromDeliveryAction template) {
         StagedOrderRemoveParcelFromDeliveryActionBuilder builder = new StagedOrderRemoveParcelFromDeliveryActionBuilder();

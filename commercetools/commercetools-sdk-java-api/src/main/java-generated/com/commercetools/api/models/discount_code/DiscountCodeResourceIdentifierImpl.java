@@ -27,6 +27,9 @@ public class DiscountCodeResourceIdentifierImpl implements DiscountCodeResourceI
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class DiscountCodeResourceIdentifierImpl implements DiscountCodeResourceI
         this.typeId = ReferenceTypeId.findEnum("discount-code");
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("discount-code");
     }

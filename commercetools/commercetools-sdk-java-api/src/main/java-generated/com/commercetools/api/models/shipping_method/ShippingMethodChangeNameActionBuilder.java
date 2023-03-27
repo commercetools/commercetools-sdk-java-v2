@@ -34,6 +34,11 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
         return this;
     }
 
+    /**
+     *  <p>Value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
@@ -55,10 +60,19 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
         return new ShippingMethodChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodChangeNameActionBuilder
+     * @return builder
+     */
     public static ShippingMethodChangeNameActionBuilder of() {
         return new ShippingMethodChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodChangeNameActionBuilder of(final ShippingMethodChangeNameAction template) {
         ShippingMethodChangeNameActionBuilder builder = new ShippingMethodChangeNameActionBuilder();
         builder.name = template.getName();

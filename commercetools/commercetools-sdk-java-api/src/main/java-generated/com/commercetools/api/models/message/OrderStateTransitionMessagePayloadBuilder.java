@@ -91,14 +91,29 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
         return this;
     }
 
+    /**
+     *  <p>OrderState after the Transition State update action.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
+
+    /**
+     *  <p>OrderState before the Transition State update action.</p>
+     * @return oldState
+     */
 
     @Nullable
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
+
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @return force
+     */
 
     public Boolean getForce() {
         return this.force;
@@ -122,10 +137,19 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
         return new OrderStateTransitionMessagePayloadImpl(state, oldState, force);
     }
 
+    /**
+     * factory method for an instance of OrderStateTransitionMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderStateTransitionMessagePayloadBuilder of() {
         return new OrderStateTransitionMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderStateTransitionMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderStateTransitionMessagePayloadBuilder of(final OrderStateTransitionMessagePayload template) {
         OrderStateTransitionMessagePayloadBuilder builder = new OrderStateTransitionMessagePayloadBuilder();
         builder.state = template.getState();

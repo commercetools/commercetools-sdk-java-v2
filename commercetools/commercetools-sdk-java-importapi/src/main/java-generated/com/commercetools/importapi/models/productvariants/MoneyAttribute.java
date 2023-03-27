@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MoneyAttributeImpl.class)
 public interface MoneyAttribute extends Attribute {
 
+    /**
+     * discriminator value for MoneyAttribute
+     */
     String MONEY = "money";
 
     /**
@@ -42,12 +45,26 @@ public interface MoneyAttribute extends Attribute {
     @JsonProperty("value")
     public TypedMoney getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final TypedMoney value);
 
+    /**
+     * factory method
+     * @return instance of MoneyAttribute
+     */
     public static MoneyAttribute of() {
         return new MoneyAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of MoneyAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MoneyAttribute of(final MoneyAttribute template) {
         MoneyAttributeImpl instance = new MoneyAttributeImpl();
         instance.setName(template.getName());
@@ -55,18 +72,37 @@ public interface MoneyAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for MoneyAttribute
+     * @return builder
+     */
     public static MoneyAttributeBuilder builder() {
         return MoneyAttributeBuilder.of();
     }
 
+    /**
+     * create builder for MoneyAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoneyAttributeBuilder builder(final MoneyAttribute template) {
         return MoneyAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMoneyAttribute(Function<MoneyAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MoneyAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MoneyAttribute>() {
             @Override

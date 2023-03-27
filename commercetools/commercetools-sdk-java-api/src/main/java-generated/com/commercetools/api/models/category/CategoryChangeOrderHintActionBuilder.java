@@ -34,6 +34,11 @@ public class CategoryChangeOrderHintActionBuilder implements Builder<CategoryCha
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
+     * @return orderHint
+     */
+
     public String getOrderHint() {
         return this.orderHint;
     }
@@ -55,10 +60,19 @@ public class CategoryChangeOrderHintActionBuilder implements Builder<CategoryCha
         return new CategoryChangeOrderHintActionImpl(orderHint);
     }
 
+    /**
+     * factory method for an instance of CategoryChangeOrderHintActionBuilder
+     * @return builder
+     */
     public static CategoryChangeOrderHintActionBuilder of() {
         return new CategoryChangeOrderHintActionBuilder();
     }
 
+    /**
+     * create builder for CategoryChangeOrderHintAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryChangeOrderHintActionBuilder of(final CategoryChangeOrderHintAction template) {
         CategoryChangeOrderHintActionBuilder builder = new CategoryChangeOrderHintActionBuilder();
         builder.orderHint = template.getOrderHint();

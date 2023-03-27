@@ -51,9 +51,19 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
         return this;
     }
 
+    /**
+     *  <p>Current version of the ImportContainer.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @return resourceType
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
@@ -77,10 +87,19 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
         return new ImportContainerUpdateDraftImpl(version, resourceType);
     }
 
+    /**
+     * factory method for an instance of ImportContainerUpdateDraftBuilder
+     * @return builder
+     */
     public static ImportContainerUpdateDraftBuilder of() {
         return new ImportContainerUpdateDraftBuilder();
     }
 
+    /**
+     * create builder for ImportContainerUpdateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportContainerUpdateDraftBuilder of(final ImportContainerUpdateDraft template) {
         ImportContainerUpdateDraftBuilder builder = new ImportContainerUpdateDraftBuilder();
         builder.version = template.getVersion();

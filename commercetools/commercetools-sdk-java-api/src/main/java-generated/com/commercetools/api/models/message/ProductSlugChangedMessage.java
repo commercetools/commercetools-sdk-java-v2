@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSlugChangedMessageImpl.class)
 public interface ProductSlugChangedMessage extends Message {
 
+    /**
+     * discriminator value for ProductSlugChangedMessage
+     */
     String PRODUCT_SLUG_CHANGED = "ProductSlugChanged";
 
     /**
@@ -57,14 +60,33 @@ public interface ProductSlugChangedMessage extends Message {
     @JsonProperty("oldSlug")
     public LocalizedString getOldSlug();
 
+    /**
+     *  <p>The slug of the Product after the Change Slug update action.</p>
+     * @param slug value to be set
+     */
+
     public void setSlug(final LocalizedString slug);
+
+    /**
+     *  <p>The slug of the Product before the Change Slug update action.</p>
+     * @param oldSlug value to be set
+     */
 
     public void setOldSlug(final LocalizedString oldSlug);
 
+    /**
+     * factory method
+     * @return instance of ProductSlugChangedMessage
+     */
     public static ProductSlugChangedMessage of() {
         return new ProductSlugChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSlugChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSlugChangedMessage of(final ProductSlugChangedMessage template) {
         ProductSlugChangedMessageImpl instance = new ProductSlugChangedMessageImpl();
         instance.setId(template.getId());
@@ -82,18 +104,37 @@ public interface ProductSlugChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSlugChangedMessage
+     * @return builder
+     */
     public static ProductSlugChangedMessageBuilder builder() {
         return ProductSlugChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductSlugChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSlugChangedMessageBuilder builder(final ProductSlugChangedMessage template) {
         return ProductSlugChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSlugChangedMessage(Function<ProductSlugChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSlugChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSlugChangedMessage>() {
             @Override

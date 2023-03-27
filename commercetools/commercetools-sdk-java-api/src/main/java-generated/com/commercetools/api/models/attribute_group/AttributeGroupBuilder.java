@@ -271,44 +271,94 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
         return this;
     }
 
+    /**
+     *  <p>Platform-generated unique identifier of the AttributeGroup.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the AttributeGroup.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the AttributeGroup was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the AttributeGroup was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Name of the AttributeGroup.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the AttributeGroup.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Attributes with unique values.</p>
+     * @return attributes
+     */
+
     public java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> getAttributes() {
         return this.attributes;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the AttributeGroup.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -339,10 +389,19 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
             description, attributes, key);
     }
 
+    /**
+     * factory method for an instance of AttributeGroupBuilder
+     * @return builder
+     */
     public static AttributeGroupBuilder of() {
         return new AttributeGroupBuilder();
     }
 
+    /**
+     * create builder for AttributeGroup instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupBuilder of(final AttributeGroup template) {
         AttributeGroupBuilder builder = new AttributeGroupBuilder();
         builder.id = template.getId();

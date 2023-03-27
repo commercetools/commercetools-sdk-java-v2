@@ -26,6 +26,9 @@ public class ResourceUpdateErrorImpl implements ResourceUpdateError, ModelBase {
 
     private java.lang.Object resource;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ResourceUpdateErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("resource") final java.lang.Object resource) {
@@ -34,6 +37,9 @@ public class ResourceUpdateErrorImpl implements ResourceUpdateError, ModelBase {
         this.code = RESOURCE_UPDATE;
     }
 
+    /**
+     * create empty instance
+     */
     public ResourceUpdateErrorImpl() {
         this.code = RESOURCE_UPDATE;
     }

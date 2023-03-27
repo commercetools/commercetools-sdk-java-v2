@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingMethodResourceIdentifier
         extends ResourceIdentifier, com.commercetools.api.models.Identifiable<ShippingMethod> {
 
+    /**
+     * discriminator value for ShippingMethodResourceIdentifier
+     */
     String SHIPPING_METHOD = "shipping-method";
 
     /**
@@ -46,14 +49,33 @@ public interface ShippingMethodResourceIdentifier
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodResourceIdentifier
+     */
     public static ShippingMethodResourceIdentifier of() {
         return new ShippingMethodResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodResourceIdentifier of(final ShippingMethodResourceIdentifier template) {
         ShippingMethodResourceIdentifierImpl instance = new ShippingMethodResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -61,18 +83,37 @@ public interface ShippingMethodResourceIdentifier
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodResourceIdentifier
+     * @return builder
+     */
     public static ShippingMethodResourceIdentifierBuilder builder() {
         return ShippingMethodResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodResourceIdentifierBuilder builder(final ShippingMethodResourceIdentifier template) {
         return ShippingMethodResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodResourceIdentifier(Function<ShippingMethodResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodResourceIdentifier>() {
             @Override

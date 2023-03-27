@@ -65,9 +65,19 @@ public class MyCartSetLineItemShippingDetailsActionBuilder implements Builder<My
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Value to set. If empty, the existing value is removed.</p>
+     * @return shippingDetails
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -91,10 +101,19 @@ public class MyCartSetLineItemShippingDetailsActionBuilder implements Builder<My
         return new MyCartSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
     }
 
+    /**
+     * factory method for an instance of MyCartSetLineItemShippingDetailsActionBuilder
+     * @return builder
+     */
     public static MyCartSetLineItemShippingDetailsActionBuilder of() {
         return new MyCartSetLineItemShippingDetailsActionBuilder();
     }
 
+    /**
+     * create builder for MyCartSetLineItemShippingDetailsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetLineItemShippingDetailsActionBuilder of(
             final MyCartSetLineItemShippingDetailsAction template) {
         MyCartSetLineItemShippingDetailsActionBuilder builder = new MyCartSetLineItemShippingDetailsActionBuilder();

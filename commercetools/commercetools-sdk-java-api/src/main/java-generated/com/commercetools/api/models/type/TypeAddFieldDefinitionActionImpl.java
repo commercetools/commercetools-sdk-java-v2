@@ -25,6 +25,9 @@ public class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionA
 
     private com.commercetools.api.models.type.FieldDefinition fieldDefinition;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeAddFieldDefinitionActionImpl(
             @JsonProperty("fieldDefinition") final com.commercetools.api.models.type.FieldDefinition fieldDefinition) {
@@ -32,6 +35,9 @@ public class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionA
         this.action = ADD_FIELD_DEFINITION;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeAddFieldDefinitionActionImpl() {
         this.action = ADD_FIELD_DEFINITION;
     }

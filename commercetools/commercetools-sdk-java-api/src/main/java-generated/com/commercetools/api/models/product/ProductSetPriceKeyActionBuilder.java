@@ -64,14 +64,29 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the Price to set the key.</p>
+     * @return priceId
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -95,10 +110,19 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
         return new ProductSetPriceKeyActionImpl(priceId, staged, key);
     }
 
+    /**
+     * factory method for an instance of ProductSetPriceKeyActionBuilder
+     * @return builder
+     */
     public static ProductSetPriceKeyActionBuilder of() {
         return new ProductSetPriceKeyActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetPriceKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetPriceKeyActionBuilder of(final ProductSetPriceKeyAction template) {
         ProductSetPriceKeyActionBuilder builder = new ProductSetPriceKeyActionBuilder();
         builder.priceId = template.getPriceId();

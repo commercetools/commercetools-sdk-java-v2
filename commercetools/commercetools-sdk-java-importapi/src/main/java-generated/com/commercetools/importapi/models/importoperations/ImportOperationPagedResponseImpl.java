@@ -30,6 +30,9 @@ public class ImportOperationPagedResponseImpl implements ImportOperationPagedRes
 
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportOperationPagedResponseImpl(@JsonProperty("limit") final Integer limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class ImportOperationPagedResponseImpl implements ImportOperationPagedRes
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportOperationPagedResponseImpl() {
     }
 

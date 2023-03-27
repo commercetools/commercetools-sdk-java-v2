@@ -120,34 +120,69 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @return staged
+     */
+
     @Nullable
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>The <code>id</code> of the Asset to update.</p>
+     * @return assetId
+     */
 
     @Nullable
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     *  <p>The <code>key</code> of the Asset to update.</p>
+     * @return assetKey
+     */
+
     @Nullable
     public String getAssetKey() {
         return this.assetKey;
     }
 
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
+     */
 
     @Nullable
     public java.lang.Object getValue() {
@@ -171,10 +206,19 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
         return new ProductSetAssetCustomFieldActionImpl(variantId, sku, staged, assetId, assetKey, name, value);
     }
 
+    /**
+     * factory method for an instance of ProductSetAssetCustomFieldActionBuilder
+     * @return builder
+     */
     public static ProductSetAssetCustomFieldActionBuilder of() {
         return new ProductSetAssetCustomFieldActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetAssetCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetAssetCustomFieldActionBuilder of(final ProductSetAssetCustomFieldAction template) {
         ProductSetAssetCustomFieldActionBuilder builder = new ProductSetAssetCustomFieldActionBuilder();
         builder.variantId = template.getVariantId();

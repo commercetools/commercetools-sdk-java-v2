@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderTransitionCustomLineItemStateActionImpl.class)
 public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderTransitionCustomLineItemStateAction
+     */
     String TRANSITION_CUSTOM_LINE_ITEM_STATE = "transitionCustomLineItemState";
 
     /**
@@ -79,20 +82,54 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
     @JsonProperty("actualTransitionDate")
     public ZonedDateTime getActualTransitionDate();
 
+    /**
+     * set customLineItemId
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @param fromState value to be set
+     */
+
     public void setFromState(final StateResourceIdentifier fromState);
+
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @param toState value to be set
+     */
 
     public void setToState(final StateResourceIdentifier toState);
 
+    /**
+     * set actualTransitionDate
+     * @param actualTransitionDate value to be set
+     */
+
     public void setActualTransitionDate(final ZonedDateTime actualTransitionDate);
 
+    /**
+     * factory method
+     * @return instance of OrderTransitionCustomLineItemStateAction
+     */
     public static OrderTransitionCustomLineItemStateAction of() {
         return new OrderTransitionCustomLineItemStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderTransitionCustomLineItemStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderTransitionCustomLineItemStateAction of(final OrderTransitionCustomLineItemStateAction template) {
         OrderTransitionCustomLineItemStateActionImpl instance = new OrderTransitionCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
@@ -103,20 +140,39 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
         return instance;
     }
 
+    /**
+     * builder factory method for OrderTransitionCustomLineItemStateAction
+     * @return builder
+     */
     public static OrderTransitionCustomLineItemStateActionBuilder builder() {
         return OrderTransitionCustomLineItemStateActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderTransitionCustomLineItemStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderTransitionCustomLineItemStateActionBuilder builder(
             final OrderTransitionCustomLineItemStateAction template) {
         return OrderTransitionCustomLineItemStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderTransitionCustomLineItemStateAction(
             Function<OrderTransitionCustomLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderTransitionCustomLineItemStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderTransitionCustomLineItemStateAction>() {
             @Override

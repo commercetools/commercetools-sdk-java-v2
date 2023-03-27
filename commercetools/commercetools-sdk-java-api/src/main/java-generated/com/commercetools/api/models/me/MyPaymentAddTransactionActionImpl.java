@@ -24,6 +24,9 @@ public class MyPaymentAddTransactionActionImpl implements MyPaymentAddTransactio
 
     private com.commercetools.api.models.payment.TransactionDraft transaction;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyPaymentAddTransactionActionImpl(
             @JsonProperty("transaction") final com.commercetools.api.models.payment.TransactionDraft transaction) {
@@ -31,6 +34,9 @@ public class MyPaymentAddTransactionActionImpl implements MyPaymentAddTransactio
         this.action = ADD_TRANSACTION;
     }
 
+    /**
+     * create empty instance
+     */
     public MyPaymentAddTransactionActionImpl() {
         this.action = ADD_TRANSACTION;
     }

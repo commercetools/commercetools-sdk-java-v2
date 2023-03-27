@@ -24,12 +24,18 @@ public class ExtensionSetTimeoutInMsActionImpl implements ExtensionSetTimeoutInM
 
     private Integer timeoutInMs;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionSetTimeoutInMsActionImpl(@JsonProperty("timeoutInMs") final Integer timeoutInMs) {
         this.timeoutInMs = timeoutInMs;
         this.action = SET_TIMEOUT_IN_MS;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionSetTimeoutInMsActionImpl() {
         this.action = SET_TIMEOUT_IN_MS;
     }

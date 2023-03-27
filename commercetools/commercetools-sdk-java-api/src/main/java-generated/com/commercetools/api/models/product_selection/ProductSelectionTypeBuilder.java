@@ -19,6 +19,10 @@ public class ProductSelectionTypeBuilder {
         return com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ProductSelectionTypeBuilder
+     * @return builder
+     */
     public static ProductSelectionTypeBuilder of() {
         return new ProductSelectionTypeBuilder();
     }

@@ -24,12 +24,18 @@ public class ProjectChangeCurrenciesActionImpl implements ProjectChangeCurrencie
 
     private java.util.List<String> currencies;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeCurrenciesActionImpl(@JsonProperty("currencies") final java.util.List<String> currencies) {
         this.currencies = currencies;
         this.action = CHANGE_CURRENCIES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeCurrenciesActionImpl() {
         this.action = CHANGE_CURRENCIES;
     }

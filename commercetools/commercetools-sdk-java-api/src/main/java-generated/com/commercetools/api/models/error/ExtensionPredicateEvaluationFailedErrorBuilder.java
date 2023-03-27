@@ -91,13 +91,28 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
         return this;
     }
 
+    /**
+     *  <p><code>"The compared field $fieldName is not present."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Details about the API Extension that was involved in the error.</p>
+     * @return errorByExtension
+     */
 
     public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {
         return this.errorByExtension;
@@ -122,10 +137,19 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
         return new ExtensionPredicateEvaluationFailedErrorImpl(message, values, errorByExtension);
     }
 
+    /**
+     * factory method for an instance of ExtensionPredicateEvaluationFailedErrorBuilder
+     * @return builder
+     */
     public static ExtensionPredicateEvaluationFailedErrorBuilder of() {
         return new ExtensionPredicateEvaluationFailedErrorBuilder();
     }
 
+    /**
+     * create builder for ExtensionPredicateEvaluationFailedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionPredicateEvaluationFailedErrorBuilder of(
             final ExtensionPredicateEvaluationFailedError template) {
         ExtensionPredicateEvaluationFailedErrorBuilder builder = new ExtensionPredicateEvaluationFailedErrorBuilder();

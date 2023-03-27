@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeSetNameActionImpl.class)
 public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
 
+    /**
+     * discriminator value for DiscountCodeSetNameAction
+     */
     String SET_NAME = "setName";
 
     /**
@@ -39,30 +42,63 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodeSetNameAction
+     */
     public static DiscountCodeSetNameAction of() {
         return new DiscountCodeSetNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodeSetNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodeSetNameAction of(final DiscountCodeSetNameAction template) {
         DiscountCodeSetNameActionImpl instance = new DiscountCodeSetNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodeSetNameAction
+     * @return builder
+     */
     public static DiscountCodeSetNameActionBuilder builder() {
         return DiscountCodeSetNameActionBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodeSetNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeSetNameActionBuilder builder(final DiscountCodeSetNameAction template) {
         return DiscountCodeSetNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodeSetNameAction(Function<DiscountCodeSetNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetNameAction>() {
             @Override

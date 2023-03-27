@@ -24,7 +24,7 @@ public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpda
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
 
     /**
-     *
+     * set the value to the status
      * @param status value to be set
      * @return Builder
      */
@@ -34,6 +34,11 @@ public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpda
         this.status = status;
         return this;
     }
+
+    /**
+     * value of status}
+     * @return status
+     */
 
     public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus() {
         return this.status;
@@ -56,10 +61,19 @@ public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpda
         return new ChangeStatusUpdateActionImpl(status);
     }
 
+    /**
+     * factory method for an instance of ChangeStatusUpdateActionBuilder
+     * @return builder
+     */
     public static ChangeStatusUpdateActionBuilder of() {
         return new ChangeStatusUpdateActionBuilder();
     }
 
+    /**
+     * create builder for ChangeStatusUpdateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeStatusUpdateActionBuilder of(final ChangeStatusUpdateAction template) {
         ChangeStatusUpdateActionBuilder builder = new ChangeStatusUpdateActionBuilder();
         builder.status = template.getStatus();

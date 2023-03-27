@@ -50,10 +50,20 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
         return this;
     }
 
+    /**
+     *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressKey
+     */
 
     @Nullable
     public String getAddressKey() {
@@ -76,10 +86,19 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
         return new BusinessUnitAddBillingAddressIdActionImpl(addressId, addressKey);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitAddBillingAddressIdActionBuilder
+     * @return builder
+     */
     public static BusinessUnitAddBillingAddressIdActionBuilder of() {
         return new BusinessUnitAddBillingAddressIdActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitAddBillingAddressIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAddBillingAddressIdActionBuilder of(
             final BusinessUnitAddBillingAddressIdAction template) {
         BusinessUnitAddBillingAddressIdActionBuilder builder = new BusinessUnitAddBillingAddressIdActionBuilder();

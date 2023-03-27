@@ -48,14 +48,33 @@ public interface Custom {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>The type that provides the field definitions for this object.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeKeyReference type);
+
+    /**
+     *  <p>The custom fields of this object.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of Custom
+     */
     public static Custom of() {
         return new CustomImpl();
     }
 
+    /**
+     * factory method to copy an instance of Custom
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Custom of(final Custom template) {
         CustomImpl instance = new CustomImpl();
         instance.setType(template.getType());
@@ -63,18 +82,37 @@ public interface Custom {
         return instance;
     }
 
+    /**
+     * builder factory method for Custom
+     * @return builder
+     */
     public static CustomBuilder builder() {
         return CustomBuilder.of();
     }
 
+    /**
+     * create builder for Custom instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomBuilder builder(final Custom template) {
         return CustomBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustom(Function<Custom, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Custom> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Custom>() {
             @Override

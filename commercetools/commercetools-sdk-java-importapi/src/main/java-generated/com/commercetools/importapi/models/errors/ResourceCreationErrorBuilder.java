@@ -29,7 +29,7 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
     private java.lang.Object resource;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
     }
 
     /**
-     *
+     * set the value to the resource
      * @param resource value to be set
      * @return Builder
      */
@@ -50,9 +50,19 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     * value of resource}
+     * @return resource
+     */
 
     @Nullable
     public java.lang.Object getResource() {
@@ -76,10 +86,19 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
         return new ResourceCreationErrorImpl(message, resource);
     }
 
+    /**
+     * factory method for an instance of ResourceCreationErrorBuilder
+     * @return builder
+     */
     public static ResourceCreationErrorBuilder of() {
         return new ResourceCreationErrorBuilder();
     }
 
+    /**
+     * create builder for ResourceCreationError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceCreationErrorBuilder of(final ResourceCreationError template) {
         ResourceCreationErrorBuilder builder = new ResourceCreationErrorBuilder();
         builder.message = template.getMessage();

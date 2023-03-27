@@ -34,6 +34,11 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
         return this;
     }
 
+    /**
+     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
+     * @return interfaceId
+     */
+
     public String getInterfaceId() {
         return this.interfaceId;
     }
@@ -55,10 +60,19 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
         return new PaymentSetInterfaceIdActionImpl(interfaceId);
     }
 
+    /**
+     * factory method for an instance of PaymentSetInterfaceIdActionBuilder
+     * @return builder
+     */
     public static PaymentSetInterfaceIdActionBuilder of() {
         return new PaymentSetInterfaceIdActionBuilder();
     }
 
+    /**
+     * create builder for PaymentSetInterfaceIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetInterfaceIdActionBuilder of(final PaymentSetInterfaceIdAction template) {
         PaymentSetInterfaceIdActionBuilder builder = new PaymentSetInterfaceIdActionBuilder();
         builder.interfaceId = template.getInterfaceId();

@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RequiredFieldErrorImpl.class)
 public interface RequiredFieldError extends ErrorObject {
 
+    /**
+     * discriminator value for RequiredFieldError
+     */
     String REQUIRED_FIELD = "RequiredField";
 
     /**
@@ -56,14 +59,33 @@ public interface RequiredFieldError extends ErrorObject {
     @JsonProperty("field")
     public String getField();
 
+    /**
+     *  <p><code>"A value is required for field $field."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Name of the field missing the value.</p>
+     * @param field value to be set
+     */
 
     public void setField(final String field);
 
+    /**
+     * factory method
+     * @return instance of RequiredFieldError
+     */
     public static RequiredFieldError of() {
         return new RequiredFieldErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of RequiredFieldError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RequiredFieldError of(final RequiredFieldError template) {
         RequiredFieldErrorImpl instance = new RequiredFieldErrorImpl();
         instance.setMessage(template.getMessage());
@@ -72,18 +94,37 @@ public interface RequiredFieldError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for RequiredFieldError
+     * @return builder
+     */
     public static RequiredFieldErrorBuilder builder() {
         return RequiredFieldErrorBuilder.of();
     }
 
+    /**
+     * create builder for RequiredFieldError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RequiredFieldErrorBuilder builder(final RequiredFieldError template) {
         return RequiredFieldErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRequiredFieldError(Function<RequiredFieldError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RequiredFieldError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RequiredFieldError>() {
             @Override

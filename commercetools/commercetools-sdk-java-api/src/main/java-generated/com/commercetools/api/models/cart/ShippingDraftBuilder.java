@@ -254,33 +254,73 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Shipping Methods added to the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingMethod
+     */
 
     @Nullable
     public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {
         return this.shippingMethod;
     }
 
+    /**
+     *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @return shippingAddress
+     */
+
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
+
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
+     * @return shippingRateInput
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
         return this.shippingRateInput;
     }
 
+    /**
+     *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
+    /**
+     *  <p>Deliveries to be shipped with the Shipping Method.</p>
+     * @return deliveries
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryDraft> getDeliveries() {
         return this.deliveries;
     }
+
+    /**
+     *  <p>Custom Fields for Shipping.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -307,10 +347,19 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
             deliveries, custom);
     }
 
+    /**
+     * factory method for an instance of ShippingDraftBuilder
+     * @return builder
+     */
     public static ShippingDraftBuilder of() {
         return new ShippingDraftBuilder();
     }
 
+    /**
+     * create builder for ShippingDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingDraftBuilder of(final ShippingDraft template) {
         ShippingDraftBuilder builder = new ShippingDraftBuilder();
         builder.key = template.getKey();

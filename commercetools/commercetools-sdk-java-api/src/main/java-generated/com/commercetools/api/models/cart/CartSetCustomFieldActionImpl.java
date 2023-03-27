@@ -26,6 +26,9 @@ public class CartSetCustomFieldActionImpl implements CartSetCustomFieldAction, M
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class CartSetCustomFieldActionImpl implements CartSetCustomFieldAction, M
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

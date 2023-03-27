@@ -24,12 +24,18 @@ public class StandalonePriceChangeActiveActionImpl implements StandalonePriceCha
 
     private Boolean active;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceChangeActiveActionImpl(@JsonProperty("active") final Boolean active) {
         this.active = active;
         this.action = CHANGE_ACTIVE;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceChangeActiveActionImpl() {
         this.action = CHANGE_ACTIVE;
     }

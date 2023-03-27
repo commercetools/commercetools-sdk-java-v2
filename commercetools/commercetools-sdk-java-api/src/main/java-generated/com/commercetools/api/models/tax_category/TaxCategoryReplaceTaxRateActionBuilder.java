@@ -62,9 +62,19 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
         return this;
     }
 
+    /**
+     *  <p>ID of the TaxRate to replace.</p>
+     * @return taxRateId
+     */
+
     public String getTaxRateId() {
         return this.taxRateId;
     }
+
+    /**
+     *  <p>New TaxRate to replace with.</p>
+     * @return taxRate
+     */
 
     public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate() {
         return this.taxRate;
@@ -88,10 +98,19 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
         return new TaxCategoryReplaceTaxRateActionImpl(taxRateId, taxRate);
     }
 
+    /**
+     * factory method for an instance of TaxCategoryReplaceTaxRateActionBuilder
+     * @return builder
+     */
     public static TaxCategoryReplaceTaxRateActionBuilder of() {
         return new TaxCategoryReplaceTaxRateActionBuilder();
     }
 
+    /**
+     * create builder for TaxCategoryReplaceTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryReplaceTaxRateActionBuilder of(final TaxCategoryReplaceTaxRateAction template) {
         TaxCategoryReplaceTaxRateActionBuilder builder = new TaxCategoryReplaceTaxRateActionBuilder();
         builder.taxRateId = template.getTaxRateId();

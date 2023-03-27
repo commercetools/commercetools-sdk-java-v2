@@ -26,6 +26,9 @@ public class SearchExecutionFailureErrorImpl implements SearchExecutionFailureEr
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SearchExecutionFailureErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class SearchExecutionFailureErrorImpl implements SearchExecutionFailureEr
         this.code = SEARCH_EXECUTION_FAILURE;
     }
 
+    /**
+     * create empty instance
+     */
     public SearchExecutionFailureErrorImpl() {
         this.code = SEARCH_EXECUTION_FAILURE;
     }

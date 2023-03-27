@@ -25,6 +25,9 @@ public class PriceImportRequestImpl implements PriceImportRequest, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceImportRequestImpl(
             @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources) {
@@ -32,6 +35,9 @@ public class PriceImportRequestImpl implements PriceImportRequest, ModelBase {
         this.type = ImportResourceType.findEnum("price");
     }
 
+    /**
+     * create empty instance
+     */
     public PriceImportRequestImpl() {
         this.type = ImportResourceType.findEnum("price");
     }

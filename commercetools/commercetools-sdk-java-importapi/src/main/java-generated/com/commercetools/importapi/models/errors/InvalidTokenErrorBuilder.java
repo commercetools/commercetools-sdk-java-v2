@@ -24,7 +24,7 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
         return new InvalidTokenErrorImpl(message);
     }
 
+    /**
+     * factory method for an instance of InvalidTokenErrorBuilder
+     * @return builder
+     */
     public static InvalidTokenErrorBuilder of() {
         return new InvalidTokenErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidTokenError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidTokenErrorBuilder of(final InvalidTokenError template) {
         InvalidTokenErrorBuilder builder = new InvalidTokenErrorBuilder();
         builder.message = template.getMessage();

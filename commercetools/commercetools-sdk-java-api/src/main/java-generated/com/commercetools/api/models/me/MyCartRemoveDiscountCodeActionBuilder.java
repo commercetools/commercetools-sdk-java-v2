@@ -49,6 +49,11 @@ public class MyCartRemoveDiscountCodeActionBuilder implements Builder<MyCartRemo
         return this;
     }
 
+    /**
+     *  <p>Discount Code to remove from the Cart.</p>
+     * @return discountCode
+     */
+
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
@@ -70,10 +75,19 @@ public class MyCartRemoveDiscountCodeActionBuilder implements Builder<MyCartRemo
         return new MyCartRemoveDiscountCodeActionImpl(discountCode);
     }
 
+    /**
+     * factory method for an instance of MyCartRemoveDiscountCodeActionBuilder
+     * @return builder
+     */
     public static MyCartRemoveDiscountCodeActionBuilder of() {
         return new MyCartRemoveDiscountCodeActionBuilder();
     }
 
+    /**
+     * create builder for MyCartRemoveDiscountCodeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartRemoveDiscountCodeActionBuilder of(final MyCartRemoveDiscountCodeAction template) {
         MyCartRemoveDiscountCodeActionBuilder builder = new MyCartRemoveDiscountCodeActionBuilder();
         builder.discountCode = template.getDiscountCode();

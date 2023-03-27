@@ -26,6 +26,9 @@ public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessage
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryRemovedMessagePayloadImpl(
             @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery,
@@ -35,6 +38,9 @@ public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessage
         this.type = DELIVERY_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryRemovedMessagePayloadImpl() {
         this.type = DELIVERY_REMOVED;
     }

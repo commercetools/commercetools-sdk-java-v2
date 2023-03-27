@@ -29,7 +29,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     private com.commercetools.api.models.common.Money money;
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -65,9 +65,20 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
         return this;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return money
+     */
 
     public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
@@ -92,10 +103,19 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
         return new StagedOrderChangeCustomLineItemMoneyActionImpl(customLineItemId, money);
     }
 
+    /**
+     * factory method for an instance of StagedOrderChangeCustomLineItemMoneyActionBuilder
+     * @return builder
+     */
     public static StagedOrderChangeCustomLineItemMoneyActionBuilder of() {
         return new StagedOrderChangeCustomLineItemMoneyActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderChangeCustomLineItemMoneyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeCustomLineItemMoneyActionBuilder of(
             final StagedOrderChangeCustomLineItemMoneyAction template) {
         StagedOrderChangeCustomLineItemMoneyActionBuilder builder = new StagedOrderChangeCustomLineItemMoneyActionBuilder();

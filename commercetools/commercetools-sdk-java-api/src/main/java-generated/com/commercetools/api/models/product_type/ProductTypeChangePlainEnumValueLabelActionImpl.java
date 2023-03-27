@@ -28,6 +28,9 @@ public class ProductTypeChangePlainEnumValueLabelActionImpl
 
     private com.commercetools.api.models.product_type.AttributePlainEnumValue newValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangePlainEnumValueLabelActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("newValue") final com.commercetools.api.models.product_type.AttributePlainEnumValue newValue) {
@@ -36,6 +39,9 @@ public class ProductTypeChangePlainEnumValueLabelActionImpl
         this.action = CHANGE_PLAIN_ENUM_VALUE_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangePlainEnumValueLabelActionImpl() {
         this.action = CHANGE_PLAIN_ENUM_VALUE_LABEL;
     }

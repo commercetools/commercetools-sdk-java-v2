@@ -24,6 +24,9 @@ public class ShoppingListSetStoreActionImpl implements ShoppingListSetStoreActio
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListSetStoreActionImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
@@ -31,6 +34,9 @@ public class ShoppingListSetStoreActionImpl implements ShoppingListSetStoreActio
         this.action = SET_STORE;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListSetStoreActionImpl() {
         this.action = SET_STORE;
     }

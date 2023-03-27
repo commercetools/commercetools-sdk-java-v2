@@ -25,7 +25,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> values;
 
     /**
-     *
+     * set values to the values
      * @param values value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     }
 
     /**
-     *
+     * set value to the values
      * @param values value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     }
 
     /**
-     *
+     * add values to the values
      * @param values value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     }
 
     /**
-     *
+     * add the value to the values using the builder function
      * @param builder function to build the values value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     }
 
     /**
-     *
+     * set the value to the values using the builder function
      * @param builder function to build the values value
      * @return Builder
      */
@@ -92,6 +92,11 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
             builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()).build());
         return this;
     }
+
+    /**
+     * value of values}
+     * @return values
+     */
 
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> getValues() {
         return this.values;
@@ -114,10 +119,19 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
         return new AttributeEnumTypeImpl(values);
     }
 
+    /**
+     * factory method for an instance of AttributeEnumTypeBuilder
+     * @return builder
+     */
     public static AttributeEnumTypeBuilder of() {
         return new AttributeEnumTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeEnumType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeEnumTypeBuilder of(final AttributeEnumType template) {
         AttributeEnumTypeBuilder builder = new AttributeEnumTypeBuilder();
         builder.values = template.getValues();

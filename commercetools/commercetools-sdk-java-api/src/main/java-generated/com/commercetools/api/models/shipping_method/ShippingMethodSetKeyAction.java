@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodSetKeyActionImpl.class)
 public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
 
+    /**
+     * discriminator value for ShippingMethodSetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,26 +39,55 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodSetKeyAction
+     */
     public static ShippingMethodSetKeyAction of() {
         return new ShippingMethodSetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodSetKeyAction of(final ShippingMethodSetKeyAction template) {
         ShippingMethodSetKeyActionImpl instance = new ShippingMethodSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodSetKeyAction
+     * @return builder
+     */
     public static ShippingMethodSetKeyActionBuilder builder() {
         return ShippingMethodSetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodSetKeyActionBuilder builder(final ShippingMethodSetKeyAction template) {
         return ShippingMethodSetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodSetKeyAction(Function<ShippingMethodSetKeyAction, T> helper) {
         return helper.apply(this);
     }
@@ -64,6 +96,10 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
         return ShippingMethodSetKeyAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetKeyAction>() {
             @Override

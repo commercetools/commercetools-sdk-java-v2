@@ -47,14 +47,33 @@ public interface ExternalOAuth {
     @JsonProperty("authorizationHeader")
     public String getAuthorizationHeader();
 
+    /**
+     *  <p>URL with authorization header.</p>
+     * @param url value to be set
+     */
+
     public void setUrl(final String url);
+
+    /**
+     *  <p>Must not contain any leading or trailing whitespaces. Partially hidden on retrieval.</p>
+     * @param authorizationHeader value to be set
+     */
 
     public void setAuthorizationHeader(final String authorizationHeader);
 
+    /**
+     * factory method
+     * @return instance of ExternalOAuth
+     */
     public static ExternalOAuth of() {
         return new ExternalOAuthImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExternalOAuth
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExternalOAuth of(final ExternalOAuth template) {
         ExternalOAuthImpl instance = new ExternalOAuthImpl();
         instance.setUrl(template.getUrl());
@@ -62,18 +81,37 @@ public interface ExternalOAuth {
         return instance;
     }
 
+    /**
+     * builder factory method for ExternalOAuth
+     * @return builder
+     */
     public static ExternalOAuthBuilder builder() {
         return ExternalOAuthBuilder.of();
     }
 
+    /**
+     * create builder for ExternalOAuth instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalOAuthBuilder builder(final ExternalOAuth template) {
         return ExternalOAuthBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExternalOAuth(Function<ExternalOAuth, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExternalOAuth> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExternalOAuth>() {
             @Override

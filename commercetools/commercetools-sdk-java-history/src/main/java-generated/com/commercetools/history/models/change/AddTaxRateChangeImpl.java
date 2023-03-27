@@ -26,6 +26,9 @@ public class AddTaxRateChangeImpl implements AddTaxRateChange, ModelBase {
 
     private com.commercetools.history.models.common.TaxRate nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddTaxRateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxRate nextValue) {
@@ -34,6 +37,9 @@ public class AddTaxRateChangeImpl implements AddTaxRateChange, ModelBase {
         this.type = ADD_TAX_RATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddTaxRateChangeImpl() {
         this.type = ADD_TAX_RATE_CHANGE;
     }

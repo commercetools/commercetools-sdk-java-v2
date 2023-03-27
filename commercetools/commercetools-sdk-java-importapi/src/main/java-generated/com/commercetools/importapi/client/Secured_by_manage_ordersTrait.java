@@ -5,6 +5,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * Secured_by_manage_ordersTrait
+ * @param <T> type of extending interface
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Secured_by_manage_ordersTrait<T extends Secured_by_manage_ordersTrait<T>> {

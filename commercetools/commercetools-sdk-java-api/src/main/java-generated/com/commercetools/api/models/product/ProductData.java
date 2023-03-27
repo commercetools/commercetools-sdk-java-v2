@@ -131,38 +131,112 @@ public interface ProductData extends ProductDataLike {
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
 
+    /**
+     *  <p>Name of the Product.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param categories values to be set
+     */
 
     @JsonIgnore
     public void setCategories(final CategoryReference... categories);
 
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param categories values to be set
+     */
+
     public void setCategories(final List<CategoryReference> categories);
+
+    /**
+     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @param categoryOrderHints value to be set
+     */
 
     public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
 
+    /**
+     *  <p>Description of the Product.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final LocalizedString slug);
 
+    /**
+     *  <p>Title of the Product displayed in search results.</p>
+     * @param metaTitle value to be set
+     */
+
     public void setMetaTitle(final LocalizedString metaTitle);
+
+    /**
+     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @param metaDescription value to be set
+     */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
+    /**
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param metaKeywords value to be set
+     */
+
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
+    /**
+     *  <p>The Master Variant of the Product.</p>
+     * @param masterVariant value to be set
+     */
+
     public void setMasterVariant(final ProductVariant masterVariant);
+
+    /**
+     *  <p>Additional Product Variants.</p>
+     * @param variants values to be set
+     */
 
     @JsonIgnore
     public void setVariants(final ProductVariant... variants);
 
+    /**
+     *  <p>Additional Product Variants.</p>
+     * @param variants values to be set
+     */
+
     public void setVariants(final List<ProductVariant> variants);
+
+    /**
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param searchKeywords value to be set
+     */
 
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
+    /**
+     * factory method
+     * @return instance of ProductData
+     */
     public static ProductData of() {
         return new ProductDataImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductData
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductData of(final ProductData template) {
         ProductDataImpl instance = new ProductDataImpl();
         instance.setName(template.getName());
@@ -179,18 +253,37 @@ public interface ProductData extends ProductDataLike {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductData
+     * @return builder
+     */
     public static ProductDataBuilder builder() {
         return ProductDataBuilder.of();
     }
 
+    /**
+     * create builder for ProductData instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDataBuilder builder(final ProductData template) {
         return ProductDataBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductData(Function<ProductData, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductData> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductData>() {
             @Override

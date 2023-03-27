@@ -30,6 +30,9 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTextLineItemNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem,
@@ -42,6 +45,9 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
         this.type = CHANGE_TEXT_LINE_ITEM_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTextLineItemNameChangeImpl() {
         this.type = CHANGE_TEXT_LINE_ITEM_NAME_CHANGE;
     }

@@ -30,6 +30,9 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetOrderTotalTaxChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode,
@@ -42,6 +45,9 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
         this.type = SET_ORDER_TOTAL_TAX_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetOrderTotalTaxChangeImpl() {
         this.type = SET_ORDER_TOTAL_TAX_CHANGE;
     }

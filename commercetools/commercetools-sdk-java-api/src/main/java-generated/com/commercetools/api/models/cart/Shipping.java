@@ -81,20 +81,59 @@ public interface Shipping {
     @JsonProperty("shippingCustomFields")
     public CustomFields getShippingCustomFields();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
     public void setShippingKey(final String shippingKey);
+
+    /**
+     *  <p>Automatically set when the Shipping Method is added.</p>
+     * @param shippingInfo value to be set
+     */
 
     public void setShippingInfo(final ShippingInfo shippingInfo);
 
+    /**
+     *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @param shippingAddress value to be set
+     */
+
     public void setShippingAddress(final Address shippingAddress);
+
+    /**
+     *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @param shippingRateInput value to be set
+     */
 
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
 
+    /**
+     *  <p>Custom Fields of Shipping.</p>
+     * @param shippingCustomFields value to be set
+     */
+
     public void setShippingCustomFields(final CustomFields shippingCustomFields);
 
+    /**
+     * factory method
+     * @return instance of Shipping
+     */
     public static Shipping of() {
         return new ShippingImpl();
     }
 
+    /**
+     * factory method to copy an instance of Shipping
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Shipping of(final Shipping template) {
         ShippingImpl instance = new ShippingImpl();
         instance.setShippingKey(template.getShippingKey());
@@ -105,18 +144,37 @@ public interface Shipping {
         return instance;
     }
 
+    /**
+     * builder factory method for Shipping
+     * @return builder
+     */
     public static ShippingBuilder builder() {
         return ShippingBuilder.of();
     }
 
+    /**
+     * create builder for Shipping instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingBuilder builder(final Shipping template) {
         return ShippingBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShipping(Function<Shipping, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Shipping> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Shipping>() {
             @Override

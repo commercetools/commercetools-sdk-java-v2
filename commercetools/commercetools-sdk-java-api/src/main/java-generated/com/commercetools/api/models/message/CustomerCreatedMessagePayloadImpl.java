@@ -24,6 +24,9 @@ public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessage
 
     private com.commercetools.api.models.customer.Customer customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerCreatedMessagePayloadImpl(
             @JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer) {
@@ -31,6 +34,9 @@ public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessage
         this.type = CUSTOMER_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerCreatedMessagePayloadImpl() {
         this.type = CUSTOMER_CREATED;
     }

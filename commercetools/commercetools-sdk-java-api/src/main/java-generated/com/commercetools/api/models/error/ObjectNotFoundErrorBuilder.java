@@ -62,9 +62,19 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
         return this;
     }
 
+    /**
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
         return new ObjectNotFoundErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of ObjectNotFoundErrorBuilder
+     * @return builder
+     */
     public static ObjectNotFoundErrorBuilder of() {
         return new ObjectNotFoundErrorBuilder();
     }
 
+    /**
+     * create builder for ObjectNotFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ObjectNotFoundErrorBuilder of(final ObjectNotFoundError template) {
         ObjectNotFoundErrorBuilder builder = new ObjectNotFoundErrorBuilder();
         builder.message = template.getMessage();

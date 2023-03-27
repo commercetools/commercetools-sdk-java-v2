@@ -135,7 +135,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set the value to the productId
      * @param productId value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set the value to the variantId
      * @param variantId value to be set
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set the value to the sku
      * @param sku value to be set
      * @return Builder
      */
@@ -168,7 +168,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -179,7 +179,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set the value to the addedAt
      * @param addedAt value to be set
      * @return Builder
      */
@@ -241,7 +241,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set the value to the externalTotalPrice using the builder function
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -255,7 +255,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set the value to the externalTotalPrice
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -291,60 +291,121 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
         return this;
     }
 
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
 
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
+
+    /**
+     * value of productId}
+     * @return productId
+     */
 
     @Nullable
     public String getProductId() {
         return this.productId;
     }
 
+    /**
+     * value of variantId}
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     * value of sku}
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     * value of quantity}
+     * @return quantity
+     */
+
     @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     * value of addedAt}
+     * @return addedAt
+     */
 
     @Nullable
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return externalPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Money getExternalPrice() {
         return this.externalPrice;
     }
 
+    /**
+     * value of externalTotalPrice}
+     * @return externalTotalPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
         return this.externalTotalPrice;
     }
+
+    /**
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @return shippingDetails
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -369,10 +430,19 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
             sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
     }
 
+    /**
+     * factory method for an instance of StagedOrderAddLineItemActionBuilder
+     * @return builder
+     */
     public static StagedOrderAddLineItemActionBuilder of() {
         return new StagedOrderAddLineItemActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderAddLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddLineItemActionBuilder of(final StagedOrderAddLineItemAction template) {
         StagedOrderAddLineItemActionBuilder builder = new StagedOrderAddLineItemActionBuilder();
         builder.custom = template.getCustom();

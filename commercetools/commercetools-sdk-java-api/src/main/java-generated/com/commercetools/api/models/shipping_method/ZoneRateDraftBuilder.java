@@ -119,9 +119,19 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
         return this;
     }
 
+    /**
+     *  <p>Sets the Zone for which the shippng rates are valid.</p>
+     * @return zone
+     */
+
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
         return this.zone;
     }
+
+    /**
+     *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @return shippingRates
+     */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> getShippingRates() {
         return this.shippingRates;
@@ -145,10 +155,19 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
         return new ZoneRateDraftImpl(zone, shippingRates);
     }
 
+    /**
+     * factory method for an instance of ZoneRateDraftBuilder
+     * @return builder
+     */
     public static ZoneRateDraftBuilder of() {
         return new ZoneRateDraftBuilder();
     }
 
+    /**
+     * create builder for ZoneRateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneRateDraftBuilder of(final ZoneRateDraft template) {
         ZoneRateDraftBuilder builder = new ZoneRateDraftBuilder();
         builder.zone = template.getZone();

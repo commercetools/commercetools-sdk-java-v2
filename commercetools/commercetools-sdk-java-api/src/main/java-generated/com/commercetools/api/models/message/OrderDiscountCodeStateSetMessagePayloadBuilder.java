@@ -82,13 +82,28 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>DiscountCode that changed due to the recalculation.</p>
+     * @return discountCode
+     */
+
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
 
+    /**
+     *  <p>DiscountCodeState after the recalculation.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.cart.DiscountCodeState getState() {
         return this.state;
     }
+
+    /**
+     *  <p>DiscountCodeState before the recalculation.</p>
+     * @return oldState
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.DiscountCodeState getOldState() {
@@ -114,10 +129,19 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
         return new OrderDiscountCodeStateSetMessagePayloadImpl(discountCode, state, oldState);
     }
 
+    /**
+     * factory method for an instance of OrderDiscountCodeStateSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderDiscountCodeStateSetMessagePayloadBuilder of() {
         return new OrderDiscountCodeStateSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderDiscountCodeStateSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderDiscountCodeStateSetMessagePayloadBuilder of(
             final OrderDiscountCodeStateSetMessagePayload template) {
         OrderDiscountCodeStateSetMessagePayloadBuilder builder = new OrderDiscountCodeStateSetMessagePayloadBuilder();

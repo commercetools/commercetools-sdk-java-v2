@@ -30,6 +30,9 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryItemsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
@@ -42,6 +45,9 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
         this.type = DELIVERY_ITEMS_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryItemsUpdatedMessagePayloadImpl() {
         this.type = DELIVERY_ITEMS_UPDATED;
     }

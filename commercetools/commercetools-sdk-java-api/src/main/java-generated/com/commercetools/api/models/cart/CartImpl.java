@@ -100,6 +100,9 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -180,6 +183,9 @@ public class CartImpl implements Cart, ModelBase {
         this.createdBy = createdBy;
     }
 
+    /**
+     * create empty instance
+     */
     public CartImpl() {
     }
 

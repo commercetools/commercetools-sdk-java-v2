@@ -67,18 +67,47 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     @JsonProperty("transaction")
     public MyTransactionDraft getTransaction();
 
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     * @param amountPlanned value to be set
+     */
+
     public void setAmountPlanned(final Money amountPlanned);
+
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param paymentMethodInfo value to be set
+     */
 
     public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
 
+    /**
+     *  <p>Custom Fields for the Payment.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     * @param transaction value to be set
+     */
 
     public void setTransaction(final MyTransactionDraft transaction);
 
+    /**
+     * factory method
+     * @return instance of MyPaymentDraft
+     */
     public static MyPaymentDraft of() {
         return new MyPaymentDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyPaymentDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyPaymentDraft of(final MyPaymentDraft template) {
         MyPaymentDraftImpl instance = new MyPaymentDraftImpl();
         instance.setAmountPlanned(template.getAmountPlanned());
@@ -88,18 +117,37 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
         return instance;
     }
 
+    /**
+     * builder factory method for MyPaymentDraft
+     * @return builder
+     */
     public static MyPaymentDraftBuilder builder() {
         return MyPaymentDraftBuilder.of();
     }
 
+    /**
+     * create builder for MyPaymentDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyPaymentDraftBuilder builder(final MyPaymentDraft template) {
         return MyPaymentDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyPaymentDraft(Function<MyPaymentDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentDraft>() {
             @Override

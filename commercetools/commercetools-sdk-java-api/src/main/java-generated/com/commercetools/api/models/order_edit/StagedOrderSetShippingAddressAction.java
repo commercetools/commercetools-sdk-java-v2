@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetShippingAddressActionImpl.class)
 public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetShippingAddressAction
+     */
     String SET_SHIPPING_ADDRESS = "setShippingAddress";
 
     /**
@@ -40,31 +43,64 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetShippingAddressAction
+     */
     public static StagedOrderSetShippingAddressAction of() {
         return new StagedOrderSetShippingAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetShippingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetShippingAddressAction of(final StagedOrderSetShippingAddressAction template) {
         StagedOrderSetShippingAddressActionImpl instance = new StagedOrderSetShippingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetShippingAddressAction
+     * @return builder
+     */
     public static StagedOrderSetShippingAddressActionBuilder builder() {
         return StagedOrderSetShippingAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingAddressActionBuilder builder(
             final StagedOrderSetShippingAddressAction template) {
         return StagedOrderSetShippingAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetShippingAddressAction(Function<StagedOrderSetShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAction>() {
             @Override

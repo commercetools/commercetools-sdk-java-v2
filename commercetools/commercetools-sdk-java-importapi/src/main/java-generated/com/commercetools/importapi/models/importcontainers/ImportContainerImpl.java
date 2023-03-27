@@ -30,6 +30,9 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportContainerImpl(@JsonProperty("key") final String key,
             @JsonProperty("resourceType") final com.commercetools.importapi.models.common.ImportResourceType resourceType,
@@ -43,6 +46,9 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportContainerImpl() {
     }
 

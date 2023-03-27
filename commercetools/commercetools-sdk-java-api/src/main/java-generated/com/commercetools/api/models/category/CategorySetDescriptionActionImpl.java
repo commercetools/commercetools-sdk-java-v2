@@ -24,6 +24,9 @@ public class CategorySetDescriptionActionImpl implements CategorySetDescriptionA
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
@@ -31,6 +34,9 @@ public class CategorySetDescriptionActionImpl implements CategorySetDescriptionA
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetDescriptionActionImpl() {
         this.action = SET_DESCRIPTION;
     }

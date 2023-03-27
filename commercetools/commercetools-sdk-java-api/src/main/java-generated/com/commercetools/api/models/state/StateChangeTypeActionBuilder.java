@@ -34,6 +34,11 @@ public class StateChangeTypeActionBuilder implements Builder<StateChangeTypeActi
         return this;
     }
 
+    /**
+     *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.state.StateTypeEnum getType() {
         return this.type;
     }
@@ -55,10 +60,19 @@ public class StateChangeTypeActionBuilder implements Builder<StateChangeTypeActi
         return new StateChangeTypeActionImpl(type);
     }
 
+    /**
+     * factory method for an instance of StateChangeTypeActionBuilder
+     * @return builder
+     */
     public static StateChangeTypeActionBuilder of() {
         return new StateChangeTypeActionBuilder();
     }
 
+    /**
+     * create builder for StateChangeTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateChangeTypeActionBuilder of(final StateChangeTypeAction template) {
         StateChangeTypeActionBuilder builder = new StateChangeTypeActionBuilder();
         builder.type = template.getType();

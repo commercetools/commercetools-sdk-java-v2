@@ -48,6 +48,11 @@ public class MyBusinessUnitAddAddressActionBuilder implements Builder<MyBusiness
         return this;
     }
 
+    /**
+     *  <p>The address to add to <code>addresses</code>.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
@@ -69,10 +74,19 @@ public class MyBusinessUnitAddAddressActionBuilder implements Builder<MyBusiness
         return new MyBusinessUnitAddAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of MyBusinessUnitAddAddressActionBuilder
+     * @return builder
+     */
     public static MyBusinessUnitAddAddressActionBuilder of() {
         return new MyBusinessUnitAddAddressActionBuilder();
     }
 
+    /**
+     * create builder for MyBusinessUnitAddAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyBusinessUnitAddAddressActionBuilder of(final MyBusinessUnitAddAddressAction template) {
         MyBusinessUnitAddAddressActionBuilder builder = new MyBusinessUnitAddAddressActionBuilder();
         builder.address = template.getAddress();

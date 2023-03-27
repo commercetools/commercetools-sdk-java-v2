@@ -107,9 +107,19 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
         return this;
     }
 
+    /**
+     *  <p>Expected version of the ShippingMethod on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
         return new ShippingMethodUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodUpdateBuilder
+     * @return builder
+     */
     public static ShippingMethodUpdateBuilder of() {
         return new ShippingMethodUpdateBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodUpdateBuilder of(final ShippingMethodUpdate template) {
         ShippingMethodUpdateBuilder builder = new ShippingMethodUpdateBuilder();
         builder.version = template.getVersion();

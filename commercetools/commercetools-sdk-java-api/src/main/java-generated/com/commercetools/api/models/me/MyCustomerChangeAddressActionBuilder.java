@@ -77,15 +77,30 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Address to change.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
 
+    /**
+     *  <p><code>key</code> of the Address to change.</p>
+     * @return addressKey
+     */
+
     @Nullable
     public String getAddressKey() {
         return this.addressKey;
     }
+
+    /**
+     *  <p>Value to set.</p>
+     * @return address
+     */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
@@ -108,10 +123,19 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
         return new MyCustomerChangeAddressActionImpl(addressId, addressKey, address);
     }
 
+    /**
+     * factory method for an instance of MyCustomerChangeAddressActionBuilder
+     * @return builder
+     */
     public static MyCustomerChangeAddressActionBuilder of() {
         return new MyCustomerChangeAddressActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerChangeAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerChangeAddressActionBuilder of(final MyCustomerChangeAddressAction template) {
         MyCustomerChangeAddressActionBuilder builder = new MyCustomerChangeAddressActionBuilder();
         builder.addressId = template.getAddressId();

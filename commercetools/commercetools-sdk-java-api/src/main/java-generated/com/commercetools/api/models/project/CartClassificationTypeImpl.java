@@ -25,6 +25,9 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
 
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartClassificationTypeImpl(
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
@@ -32,6 +35,9 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
         this.type = ShippingRateTierType.findEnum("CartClassification");
     }
 
+    /**
+     * create empty instance
+     */
     public CartClassificationTypeImpl() {
         this.type = ShippingRateTierType.findEnum("CartClassification");
     }

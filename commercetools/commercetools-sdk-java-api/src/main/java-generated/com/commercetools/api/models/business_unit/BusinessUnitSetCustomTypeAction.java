@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitSetCustomTypeActionImpl.class)
 public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitSetCustomTypeAction
+     */
     public static BusinessUnitSetCustomTypeAction of() {
         return new BusinessUnitSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitSetCustomTypeAction of(final BusinessUnitSetCustomTypeAction template) {
         BusinessUnitSetCustomTypeActionImpl instance = new BusinessUnitSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitSetCustomTypeAction
+     * @return builder
+     */
     public static BusinessUnitSetCustomTypeActionBuilder builder() {
         return BusinessUnitSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitSetCustomTypeActionBuilder builder(final BusinessUnitSetCustomTypeAction template) {
         return BusinessUnitSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitSetCustomTypeAction(Function<BusinessUnitSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetCustomTypeAction>() {
             @Override

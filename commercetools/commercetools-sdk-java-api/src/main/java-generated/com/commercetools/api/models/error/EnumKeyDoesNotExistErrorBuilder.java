@@ -90,17 +90,37 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
         return this;
     }
 
+    /**
+     *  <p><code>"The $fieldName field definition does not contain an enum value with the key $enumKey."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Conflicting enum key.</p>
+     * @return conflictingEnumKey
+     */
+
     public String getConflictingEnumKey() {
         return this.conflictingEnumKey;
     }
+
+    /**
+     *  <p>Name of the conflicting Attribute.</p>
+     * @return conflictingAttributeName
+     */
 
     public String getConflictingAttributeName() {
         return this.conflictingAttributeName;
@@ -126,10 +146,19 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
         return new EnumKeyDoesNotExistErrorImpl(message, values, conflictingEnumKey, conflictingAttributeName);
     }
 
+    /**
+     * factory method for an instance of EnumKeyDoesNotExistErrorBuilder
+     * @return builder
+     */
     public static EnumKeyDoesNotExistErrorBuilder of() {
         return new EnumKeyDoesNotExistErrorBuilder();
     }
 
+    /**
+     * create builder for EnumKeyDoesNotExistError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumKeyDoesNotExistErrorBuilder of(final EnumKeyDoesNotExistError template) {
         EnumKeyDoesNotExistErrorBuilder builder = new EnumKeyDoesNotExistErrorBuilder();
         builder.message = template.getMessage();

@@ -48,9 +48,19 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
         return this;
     }
 
+    /**
+     *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
+     * @return projectId
+     */
+
     public String getProjectId() {
         return this.projectId;
     }
+
+    /**
+     *  <p>Name of the topic.</p>
+     * @return topic
+     */
 
     public String getTopic() {
         return this.topic;
@@ -74,10 +84,19 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
         return new GoogleCloudPubSubDestinationImpl(projectId, topic);
     }
 
+    /**
+     * factory method for an instance of GoogleCloudPubSubDestinationBuilder
+     * @return builder
+     */
     public static GoogleCloudPubSubDestinationBuilder of() {
         return new GoogleCloudPubSubDestinationBuilder();
     }
 
+    /**
+     * create builder for GoogleCloudPubSubDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GoogleCloudPubSubDestinationBuilder of(final GoogleCloudPubSubDestination template) {
         GoogleCloudPubSubDestinationBuilder builder = new GoogleCloudPubSubDestinationBuilder();
         builder.projectId = template.getProjectId();

@@ -35,6 +35,9 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
 
     private java.util.List<String> skus;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OutOfStockErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -47,6 +50,9 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
         this.code = OUT_OF_STOCK;
     }
 
+    /**
+     * create empty instance
+     */
     public OutOfStockErrorImpl() {
         this.code = OUT_OF_STOCK;
     }

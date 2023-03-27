@@ -28,6 +28,9 @@ public class SetStatusInterfaceCodeChangeImpl implements SetStatusInterfaceCodeC
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetStatusInterfaceCodeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetStatusInterfaceCodeChangeImpl implements SetStatusInterfaceCodeC
         this.type = SET_STATUS_INTERFACE_CODE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetStatusInterfaceCodeChangeImpl() {
         this.type = SET_STATUS_INTERFACE_CODE_CHANGE;
     }

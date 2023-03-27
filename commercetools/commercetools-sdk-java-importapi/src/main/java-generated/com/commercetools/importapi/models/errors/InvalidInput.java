@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidInputImpl.class)
 public interface InvalidInput extends ErrorObject {
 
+    /**
+     * discriminator value for InvalidInput
+     */
     String INVALID_INPUT = "InvalidInput";
 
+    /**
+     * factory method
+     * @return instance of InvalidInput
+     */
     public static InvalidInput of() {
         return new InvalidInputImpl();
     }
 
+    /**
+     * factory method to copy an instance of InvalidInput
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InvalidInput of(final InvalidInput template) {
         InvalidInputImpl instance = new InvalidInputImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
 
+    /**
+     * builder factory method for InvalidInput
+     * @return builder
+     */
     public static InvalidInputBuilder builder() {
         return InvalidInputBuilder.of();
     }
 
+    /**
+     * create builder for InvalidInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidInputBuilder builder(final InvalidInput template) {
         return InvalidInputBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInvalidInput(Function<InvalidInput, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InvalidInput> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InvalidInput>() {
             @Override

@@ -24,6 +24,9 @@ public class CustomerAddressAddedMessagePayloadImpl implements CustomerAddressAd
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerAddressAddedMessagePayloadImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
@@ -31,6 +34,9 @@ public class CustomerAddressAddedMessagePayloadImpl implements CustomerAddressAd
         this.type = CUSTOMER_ADDRESS_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerAddressAddedMessagePayloadImpl() {
         this.type = CUSTOMER_ADDRESS_ADDED;
     }

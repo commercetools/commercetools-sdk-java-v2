@@ -24,12 +24,18 @@ public class BooleanSetFieldImpl implements BooleanSetField, ModelBase {
 
     private java.util.List<Boolean> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BooleanSetFieldImpl(@JsonProperty("value") final java.util.List<Boolean> value) {
         this.value = value;
         this.type = BOOLEAN_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public BooleanSetFieldImpl() {
         this.type = BOOLEAN_SET;
     }

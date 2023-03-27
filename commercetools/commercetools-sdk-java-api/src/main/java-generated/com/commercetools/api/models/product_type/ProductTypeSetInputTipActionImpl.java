@@ -26,6 +26,9 @@ public class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipA
 
     private com.commercetools.api.models.common.LocalizedString inputTip;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeSetInputTipActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip) {
@@ -34,6 +37,9 @@ public class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipA
         this.action = SET_INPUT_TIP;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeSetInputTipActionImpl() {
         this.action = SET_INPUT_TIP;
     }

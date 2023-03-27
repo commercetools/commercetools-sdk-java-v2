@@ -48,14 +48,33 @@ public interface ItemState {
     @JsonProperty("state")
     public Reference getState();
 
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Integer quantity);
+
+    /**
+     * set state
+     * @param state value to be set
+     */
 
     public void setState(final Reference state);
 
+    /**
+     * factory method
+     * @return instance of ItemState
+     */
     public static ItemState of() {
         return new ItemStateImpl();
     }
 
+    /**
+     * factory method to copy an instance of ItemState
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ItemState of(final ItemState template) {
         ItemStateImpl instance = new ItemStateImpl();
         instance.setQuantity(template.getQuantity());
@@ -63,18 +82,37 @@ public interface ItemState {
         return instance;
     }
 
+    /**
+     * builder factory method for ItemState
+     * @return builder
+     */
     public static ItemStateBuilder builder() {
         return ItemStateBuilder.of();
     }
 
+    /**
+     * create builder for ItemState instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemStateBuilder builder(final ItemState template) {
         return ItemStateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withItemState(Function<ItemState, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ItemState> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ItemState>() {
             @Override

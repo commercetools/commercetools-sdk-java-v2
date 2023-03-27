@@ -41,6 +41,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DivisionImpl.class)
 public interface Division extends BusinessUnit {
 
+    /**
+     * discriminator value for Division
+     */
     String DIVISION = "Division";
 
     /**
@@ -60,14 +63,33 @@ public interface Division extends BusinessUnit {
     @JsonProperty("storeMode")
     public BusinessUnitStoreMode getStoreMode();
 
+    /**
+     *  <p>Parent unit of the Division.</p>
+     * @param parentUnit value to be set
+     */
+
     public void setParentUnit(final BusinessUnitKeyReference parentUnit);
+
+    /**
+     *  <p>Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.</p>
+     * @param storeMode value to be set
+     */
 
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
 
+    /**
+     * factory method
+     * @return instance of Division
+     */
     public static Division of() {
         return new DivisionImpl();
     }
 
+    /**
+     * factory method to copy an instance of Division
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Division of(final Division template) {
         DivisionImpl instance = new DivisionImpl();
         instance.setId(template.getId());
@@ -94,18 +116,37 @@ public interface Division extends BusinessUnit {
         return instance;
     }
 
+    /**
+     * builder factory method for Division
+     * @return builder
+     */
     public static DivisionBuilder builder() {
         return DivisionBuilder.of();
     }
 
+    /**
+     * create builder for Division instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DivisionBuilder builder(final Division template) {
         return DivisionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDivision(Function<Division, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Division> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Division>() {
             @Override

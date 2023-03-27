@@ -24,7 +24,7 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
     private String value;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
         this.value = value;
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public String getValue() {
         return this.value;
@@ -55,10 +60,19 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
         return new LocalizedEnumFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of LocalizedEnumFieldBuilder
+     * @return builder
+     */
     public static LocalizedEnumFieldBuilder of() {
         return new LocalizedEnumFieldBuilder();
     }
 
+    /**
+     * create builder for LocalizedEnumField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedEnumFieldBuilder of(final LocalizedEnumField template) {
         LocalizedEnumFieldBuilder builder = new LocalizedEnumFieldBuilder();
         builder.value = template.getValue();

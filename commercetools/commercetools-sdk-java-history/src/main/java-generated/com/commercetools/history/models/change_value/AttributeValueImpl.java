@@ -24,12 +24,18 @@ public class AttributeValueImpl implements AttributeValue, ModelBase {
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeValueImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
         this.name = name;
         this.value = value;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeValueImpl() {
     }
 

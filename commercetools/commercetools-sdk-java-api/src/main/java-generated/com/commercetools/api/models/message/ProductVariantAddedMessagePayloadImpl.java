@@ -26,6 +26,9 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantAddedMessagePayloadImpl(
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
@@ -35,6 +38,9 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
         this.type = PRODUCT_VARIANT_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantAddedMessagePayloadImpl() {
         this.type = PRODUCT_VARIANT_ADDED;
     }

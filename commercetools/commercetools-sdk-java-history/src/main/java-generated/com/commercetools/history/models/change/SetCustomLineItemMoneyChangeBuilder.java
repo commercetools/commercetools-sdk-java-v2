@@ -48,7 +48,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     *
+     * set the value to the customLineItem using the builder function
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     *
+     * set the value to the customLineItem
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -131,21 +131,46 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of customLineItem}
+     * @return customLineItem
+     */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
         return this.customLineItem;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.Money getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {
         return this.previousValue;
@@ -172,10 +197,19 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
         return new SetCustomLineItemMoneyChangeImpl(change, customLineItem, customLineItemId, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetCustomLineItemMoneyChangeBuilder
+     * @return builder
+     */
     public static SetCustomLineItemMoneyChangeBuilder of() {
         return new SetCustomLineItemMoneyChangeBuilder();
     }
 
+    /**
+     * create builder for SetCustomLineItemMoneyChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCustomLineItemMoneyChangeBuilder of(final SetCustomLineItemMoneyChange template) {
         SetCustomLineItemMoneyChangeBuilder builder = new SetCustomLineItemMoneyChangeBuilder();
         builder.change = template.getChange();

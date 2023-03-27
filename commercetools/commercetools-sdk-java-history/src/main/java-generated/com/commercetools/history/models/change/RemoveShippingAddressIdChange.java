@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveShippingAddressIdChangeImpl.class)
 public interface RemoveShippingAddressIdChange extends Change {
 
+    /**
+     * discriminator value for RemoveShippingAddressIdChange
+     */
     String REMOVE_SHIPPING_ADDRESS_ID_CHANGE = "RemoveShippingAddressIdChange";
 
     /**
@@ -77,24 +80,63 @@ public interface RemoveShippingAddressIdChange extends Change {
     @JsonProperty("address")
     public Address getAddress();
 
+    /**
+     *  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
 
     @JsonIgnore
     public void setNextValue(final String... nextValue);
 
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
+
     public void setNextValue(final List<String> nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
 
     @JsonIgnore
     public void setPreviousValue(final String... previousValue);
 
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
+
     public void setPreviousValue(final List<String> previousValue);
+
+    /**
+     * set address
+     * @param address value to be set
+     */
 
     public void setAddress(final Address address);
 
+    /**
+     * factory method
+     * @return instance of RemoveShippingAddressIdChange
+     */
     public static RemoveShippingAddressIdChange of() {
         return new RemoveShippingAddressIdChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveShippingAddressIdChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveShippingAddressIdChange of(final RemoveShippingAddressIdChange template) {
         RemoveShippingAddressIdChangeImpl instance = new RemoveShippingAddressIdChangeImpl();
         instance.setChange(template.getChange());
@@ -104,18 +146,37 @@ public interface RemoveShippingAddressIdChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveShippingAddressIdChange
+     * @return builder
+     */
     public static RemoveShippingAddressIdChangeBuilder builder() {
         return RemoveShippingAddressIdChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveShippingAddressIdChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveShippingAddressIdChangeBuilder builder(final RemoveShippingAddressIdChange template) {
         return RemoveShippingAddressIdChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveShippingAddressIdChange(Function<RemoveShippingAddressIdChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveShippingAddressIdChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveShippingAddressIdChange>() {
             @Override

@@ -23,6 +23,10 @@ public class ShippingRateInputTypeBuilder {
         return com.commercetools.api.models.project.CartValueTypeBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ShippingRateInputTypeBuilder
+     * @return builder
+     */
     public static ShippingRateInputTypeBuilder of() {
         return new ShippingRateInputTypeBuilder();
     }

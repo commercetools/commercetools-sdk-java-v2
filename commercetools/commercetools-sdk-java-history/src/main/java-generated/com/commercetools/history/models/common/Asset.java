@@ -77,20 +77,54 @@ public interface Asset {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     * set id
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set name
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     * set description
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     * set custom
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of Asset
+     */
     public static Asset of() {
         return new AssetImpl();
     }
 
+    /**
+     * factory method to copy an instance of Asset
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Asset of(final Asset template) {
         AssetImpl instance = new AssetImpl();
         instance.setId(template.getId());
@@ -101,18 +135,37 @@ public interface Asset {
         return instance;
     }
 
+    /**
+     * builder factory method for Asset
+     * @return builder
+     */
     public static AssetBuilder builder() {
         return AssetBuilder.of();
     }
 
+    /**
+     * create builder for Asset instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssetBuilder builder(final Asset template) {
         return AssetBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAsset(Function<Asset, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Asset> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Asset>() {
             @Override

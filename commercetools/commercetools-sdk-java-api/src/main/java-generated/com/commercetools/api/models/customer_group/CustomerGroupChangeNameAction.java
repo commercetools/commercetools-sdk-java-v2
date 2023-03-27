@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerGroupChangeNameActionImpl.class)
 public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction {
 
+    /**
+     * discriminator value for CustomerGroupChangeNameAction
+     */
     String CHANGE_NAME = "changeName";
 
     /**
@@ -39,30 +42,63 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *  <p>New name of the CustomerGroup.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     * factory method
+     * @return instance of CustomerGroupChangeNameAction
+     */
     public static CustomerGroupChangeNameAction of() {
         return new CustomerGroupChangeNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerGroupChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerGroupChangeNameAction of(final CustomerGroupChangeNameAction template) {
         CustomerGroupChangeNameActionImpl instance = new CustomerGroupChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerGroupChangeNameAction
+     * @return builder
+     */
     public static CustomerGroupChangeNameActionBuilder builder() {
         return CustomerGroupChangeNameActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerGroupChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupChangeNameActionBuilder builder(final CustomerGroupChangeNameAction template) {
         return CustomerGroupChangeNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerGroupChangeNameAction(Function<CustomerGroupChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupChangeNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupChangeNameAction>() {
             @Override

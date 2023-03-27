@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryAddQuantityActionImpl.class)
 public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAction {
 
+    /**
+     * discriminator value for InventoryEntryAddQuantityAction
+     */
     String ADD_QUANTITY = "addQuantity";
 
     /**
@@ -39,30 +42,63 @@ public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAct
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+     *  <p>Value to add to <code>quantityOnStock</code>.</p>
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Long quantity);
 
+    /**
+     * factory method
+     * @return instance of InventoryEntryAddQuantityAction
+     */
     public static InventoryEntryAddQuantityAction of() {
         return new InventoryEntryAddQuantityActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryEntryAddQuantityAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryEntryAddQuantityAction of(final InventoryEntryAddQuantityAction template) {
         InventoryEntryAddQuantityActionImpl instance = new InventoryEntryAddQuantityActionImpl();
         instance.setQuantity(template.getQuantity());
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryEntryAddQuantityAction
+     * @return builder
+     */
     public static InventoryEntryAddQuantityActionBuilder builder() {
         return InventoryEntryAddQuantityActionBuilder.of();
     }
 
+    /**
+     * create builder for InventoryEntryAddQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryAddQuantityActionBuilder builder(final InventoryEntryAddQuantityAction template) {
         return InventoryEntryAddQuantityActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryEntryAddQuantityAction(Function<InventoryEntryAddQuantityAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction>() {
             @Override

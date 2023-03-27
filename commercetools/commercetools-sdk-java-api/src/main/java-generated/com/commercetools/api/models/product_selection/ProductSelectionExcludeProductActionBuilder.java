@@ -80,9 +80,19 @@ public class ProductSelectionExcludeProductActionBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection. If not supplied all Variants are deemed to be excluded.</p>
+     * @return variantExclusion
+     */
 
     @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
@@ -106,10 +116,19 @@ public class ProductSelectionExcludeProductActionBuilder implements Builder<Prod
         return new ProductSelectionExcludeProductActionImpl(product, variantExclusion);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionExcludeProductActionBuilder
+     * @return builder
+     */
     public static ProductSelectionExcludeProductActionBuilder of() {
         return new ProductSelectionExcludeProductActionBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionExcludeProductAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionExcludeProductActionBuilder of(final ProductSelectionExcludeProductAction template) {
         ProductSelectionExcludeProductActionBuilder builder = new ProductSelectionExcludeProductActionBuilder();
         builder.product = template.getProduct();

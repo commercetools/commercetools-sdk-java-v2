@@ -24,7 +24,7 @@ public class PriceKeyReferenceBuilder implements Builder<PriceKeyReference> {
     private String key;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class PriceKeyReferenceBuilder implements Builder<PriceKeyReference> {
         this.key = key;
         return this;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
@@ -55,10 +60,19 @@ public class PriceKeyReferenceBuilder implements Builder<PriceKeyReference> {
         return new PriceKeyReferenceImpl(key);
     }
 
+    /**
+     * factory method for an instance of PriceKeyReferenceBuilder
+     * @return builder
+     */
     public static PriceKeyReferenceBuilder of() {
         return new PriceKeyReferenceBuilder();
     }
 
+    /**
+     * create builder for PriceKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceKeyReferenceBuilder of(final PriceKeyReference template) {
         PriceKeyReferenceBuilder builder = new PriceKeyReferenceBuilder();
         builder.key = template.getKey();

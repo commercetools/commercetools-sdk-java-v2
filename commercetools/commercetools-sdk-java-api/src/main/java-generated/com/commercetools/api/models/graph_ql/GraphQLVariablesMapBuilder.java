@@ -23,7 +23,7 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     * assign pattern properties to the builder
      * @param values properties to be set
      * @return Builder
      */
@@ -34,7 +34,7 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
     }
 
     /**
-     *
+     * assign a pattern property to the builder
      * @param key property name
      * @param value property value
      * @return Builder
@@ -47,6 +47,11 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
         values.put(key, value);
         return this;
     }
+
+    /**
+     * values of pattern properties
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -68,10 +73,19 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
         return new GraphQLVariablesMapImpl(values);
     }
 
+    /**
+     * factory method for an instance of GraphQLVariablesMapBuilder
+     * @return builder
+     */
     public static GraphQLVariablesMapBuilder of() {
         return new GraphQLVariablesMapBuilder();
     }
 
+    /**
+     * create builder for GraphQLVariablesMap instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GraphQLVariablesMapBuilder of(final GraphQLVariablesMap template) {
         GraphQLVariablesMapBuilder builder = new GraphQLVariablesMapBuilder();
         builder.values = template.values();

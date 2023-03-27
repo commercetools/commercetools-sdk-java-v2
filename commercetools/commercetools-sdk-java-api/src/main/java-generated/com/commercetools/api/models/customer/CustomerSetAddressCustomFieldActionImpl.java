@@ -28,6 +28,9 @@ public class CustomerSetAddressCustomFieldActionImpl implements CustomerSetAddre
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetAddressCustomFieldActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -37,6 +40,9 @@ public class CustomerSetAddressCustomFieldActionImpl implements CustomerSetAddre
         this.action = SET_ADDRESS_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetAddressCustomFieldActionImpl() {
         this.action = SET_ADDRESS_CUSTOM_FIELD;
     }

@@ -41,18 +41,36 @@ public interface HttpDestinationAuthentication {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for authorizationHeader subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.extension.AuthorizationHeaderAuthenticationBuilder authorizationHeaderBuilder() {
         return com.commercetools.api.models.extension.AuthorizationHeaderAuthenticationBuilder.of();
     }
 
+    /**
+     * builder for azureFunctions subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.extension.AzureFunctionsAuthenticationBuilder azureFunctionsBuilder() {
         return com.commercetools.api.models.extension.AzureFunctionsAuthenticationBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withHttpDestinationAuthentication(Function<HttpDestinationAuthentication, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<HttpDestinationAuthentication> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<HttpDestinationAuthentication>() {
             @Override

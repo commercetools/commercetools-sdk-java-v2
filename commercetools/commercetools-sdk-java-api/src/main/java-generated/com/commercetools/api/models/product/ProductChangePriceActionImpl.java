@@ -28,6 +28,9 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductChangePriceActionImpl(@JsonProperty("priceId") final String priceId,
             @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
@@ -38,6 +41,9 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
         this.action = CHANGE_PRICE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductChangePriceActionImpl() {
         this.action = CHANGE_PRICE;
     }

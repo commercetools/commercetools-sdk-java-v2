@@ -38,6 +38,11 @@ public class StagedOrderSetPurchaseOrderNumberActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     * @return purchaseOrderNumber
+     */
+
     @Nullable
     public String getPurchaseOrderNumber() {
         return this.purchaseOrderNumber;
@@ -59,10 +64,19 @@ public class StagedOrderSetPurchaseOrderNumberActionBuilder
         return new StagedOrderSetPurchaseOrderNumberActionImpl(purchaseOrderNumber);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetPurchaseOrderNumberActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetPurchaseOrderNumberActionBuilder of() {
         return new StagedOrderSetPurchaseOrderNumberActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetPurchaseOrderNumberAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetPurchaseOrderNumberActionBuilder of(
             final StagedOrderSetPurchaseOrderNumberAction template) {
         StagedOrderSetPurchaseOrderNumberActionBuilder builder = new StagedOrderSetPurchaseOrderNumberActionBuilder();

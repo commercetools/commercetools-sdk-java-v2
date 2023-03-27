@@ -63,9 +63,19 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Category the Product was removed from.</p>
+     * @return category
+     */
+
     public com.commercetools.api.models.category.CategoryReference getCategory() {
         return this.category;
     }
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
+     */
 
     public Boolean getStaged() {
         return this.staged;
@@ -89,10 +99,19 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
         return new ProductRemovedFromCategoryMessagePayloadImpl(category, staged);
     }
 
+    /**
+     * factory method for an instance of ProductRemovedFromCategoryMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductRemovedFromCategoryMessagePayloadBuilder of() {
         return new ProductRemovedFromCategoryMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductRemovedFromCategoryMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRemovedFromCategoryMessagePayloadBuilder of(
             final ProductRemovedFromCategoryMessagePayload template) {
         ProductRemovedFromCategoryMessagePayloadBuilder builder = new ProductRemovedFromCategoryMessagePayloadBuilder();

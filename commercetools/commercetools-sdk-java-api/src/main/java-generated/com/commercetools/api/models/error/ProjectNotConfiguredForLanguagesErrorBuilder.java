@@ -103,13 +103,28 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
         return this;
     }
 
+    /**
+     *  <p><code>"The project is not configured for given languages."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Languages configured for the Store.</p>
+     * @return languages
+     */
 
     @Nullable
     public java.util.List<String> getLanguages() {
@@ -133,10 +148,19 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
         return new ProjectNotConfiguredForLanguagesErrorImpl(message, values, languages);
     }
 
+    /**
+     * factory method for an instance of ProjectNotConfiguredForLanguagesErrorBuilder
+     * @return builder
+     */
     public static ProjectNotConfiguredForLanguagesErrorBuilder of() {
         return new ProjectNotConfiguredForLanguagesErrorBuilder();
     }
 
+    /**
+     * create builder for ProjectNotConfiguredForLanguagesError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectNotConfiguredForLanguagesErrorBuilder of(
             final ProjectNotConfiguredForLanguagesError template) {
         ProjectNotConfiguredForLanguagesErrorBuilder builder = new ProjectNotConfiguredForLanguagesErrorBuilder();

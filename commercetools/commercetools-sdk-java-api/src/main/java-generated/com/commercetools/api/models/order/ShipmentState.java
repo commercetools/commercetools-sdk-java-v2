@@ -29,19 +29,43 @@ public interface ShipmentState {
 
     ShipmentState BACKORDER = ShipmentStateEnum.BACKORDER;
 
+    /**
+     * possible values of ShipmentState
+     */
     enum ShipmentStateEnum implements ShipmentState {
+        /**
+         * Shipped
+         */
         SHIPPED("Shipped"),
 
+        /**
+         * Delivered
+         */
         DELIVERED("Delivered"),
 
+        /**
+         * Ready
+         */
         READY("Ready"),
 
+        /**
+         * Pending
+         */
         PENDING("Pending"),
 
+        /**
+         * Delayed
+         */
         DELAYED("Delayed"),
 
+        /**
+         * Partial
+         */
         PARTIAL("Partial"),
 
+        /**
+         * Backorder
+         */
         BACKORDER("Backorder");
         private final String jsonName;
 
@@ -58,13 +82,30 @@ public interface ShipmentState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ShipmentState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ShipmentState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ShipmentState() {
@@ -84,10 +125,18 @@ public interface ShipmentState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ShipmentState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ShipmentState[] values() {
         return ShipmentStateEnum.values();
     }

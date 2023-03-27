@@ -27,7 +27,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     private java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items;
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -92,6 +92,11 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
         this.items.add(builder.apply(com.commercetools.api.models.order.ReturnInfoDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     * value of items}
+     * @return items
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> getItems() {
@@ -114,10 +119,19 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
         return new OrderSetReturnInfoActionImpl(items);
     }
 
+    /**
+     * factory method for an instance of OrderSetReturnInfoActionBuilder
+     * @return builder
+     */
     public static OrderSetReturnInfoActionBuilder of() {
         return new OrderSetReturnInfoActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetReturnInfoAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetReturnInfoActionBuilder of(final OrderSetReturnInfoAction template) {
         OrderSetReturnInfoActionBuilder builder = new OrderSetReturnInfoActionBuilder();
         builder.items = template.getItems();

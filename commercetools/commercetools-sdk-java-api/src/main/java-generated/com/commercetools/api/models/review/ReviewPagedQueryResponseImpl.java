@@ -30,6 +30,9 @@ public class ReviewPagedQueryResponseImpl implements ReviewPagedQueryResponse, M
 
     private java.util.List<com.commercetools.api.models.review.Review> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
@@ -41,6 +44,9 @@ public class ReviewPagedQueryResponseImpl implements ReviewPagedQueryResponse, M
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewPagedQueryResponseImpl() {
     }
 

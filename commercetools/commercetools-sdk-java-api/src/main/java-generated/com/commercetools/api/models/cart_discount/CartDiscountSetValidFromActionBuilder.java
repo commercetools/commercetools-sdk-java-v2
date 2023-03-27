@@ -36,6 +36,11 @@ public class CartDiscountSetValidFromActionBuilder implements Builder<CartDiscou
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
@@ -57,10 +62,19 @@ public class CartDiscountSetValidFromActionBuilder implements Builder<CartDiscou
         return new CartDiscountSetValidFromActionImpl(validFrom);
     }
 
+    /**
+     * factory method for an instance of CartDiscountSetValidFromActionBuilder
+     * @return builder
+     */
     public static CartDiscountSetValidFromActionBuilder of() {
         return new CartDiscountSetValidFromActionBuilder();
     }
 
+    /**
+     * create builder for CartDiscountSetValidFromAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountSetValidFromActionBuilder of(final CartDiscountSetValidFromAction template) {
         CartDiscountSetValidFromActionBuilder builder = new CartDiscountSetValidFromActionBuilder();
         builder.validFrom = template.getValidFrom();

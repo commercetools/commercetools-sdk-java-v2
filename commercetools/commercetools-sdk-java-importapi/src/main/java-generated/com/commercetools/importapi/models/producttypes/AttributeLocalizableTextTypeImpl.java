@@ -21,6 +21,9 @@ public class AttributeLocalizableTextTypeImpl implements AttributeLocalizableTex
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeLocalizableTextTypeImpl() {
         this.name = LTEXT;

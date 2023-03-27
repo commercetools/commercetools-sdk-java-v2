@@ -40,6 +40,9 @@ public class ExtensionImpl implements Extension, ModelBase {
 
     private Integer timeoutInMs;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -62,6 +65,9 @@ public class ExtensionImpl implements Extension, ModelBase {
         this.timeoutInMs = timeoutInMs;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionImpl() {
     }
 

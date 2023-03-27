@@ -75,23 +75,62 @@ public interface ImportOperationPagedResponse {
     @JsonProperty("results")
     public List<ImportOperation> getResults();
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @param limit value to be set
+     */
+
     public void setLimit(final Integer limit);
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
 
     public void setOffset(final Long offset);
 
+    /**
+     *  <p>The actual number of results returned.</p>
+     * @param count value to be set
+     */
+
     public void setCount(final Long count);
 
+    /**
+     *  <p>The total number of import operations matching the query.</p>
+     * @param total value to be set
+     */
+
     public void setTotal(final Long total);
+
+    /**
+     *  <p>The array of Import Operations matching the query.</p>
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final ImportOperation... results);
 
+    /**
+     *  <p>The array of Import Operations matching the query.</p>
+     * @param results values to be set
+     */
+
     public void setResults(final List<ImportOperation> results);
 
+    /**
+     * factory method
+     * @return instance of ImportOperationPagedResponse
+     */
     public static ImportOperationPagedResponse of() {
         return new ImportOperationPagedResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of ImportOperationPagedResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ImportOperationPagedResponse of(final ImportOperationPagedResponse template) {
         ImportOperationPagedResponseImpl instance = new ImportOperationPagedResponseImpl();
         instance.setLimit(template.getLimit());
@@ -102,18 +141,37 @@ public interface ImportOperationPagedResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for ImportOperationPagedResponse
+     * @return builder
+     */
     public static ImportOperationPagedResponseBuilder builder() {
         return ImportOperationPagedResponseBuilder.of();
     }
 
+    /**
+     * create builder for ImportOperationPagedResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportOperationPagedResponseBuilder builder(final ImportOperationPagedResponse template) {
         return ImportOperationPagedResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImportOperationPagedResponse(Function<ImportOperationPagedResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImportOperationPagedResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImportOperationPagedResponse>() {
             @Override

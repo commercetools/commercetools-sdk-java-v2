@@ -46,14 +46,33 @@ public interface ShippingMethodChangeValue {
     @JsonProperty("name")
     public String getName();
 
+    /**
+     * set id
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set name
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodChangeValue
+     */
     public static ShippingMethodChangeValue of() {
         return new ShippingMethodChangeValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodChangeValue of(final ShippingMethodChangeValue template) {
         ShippingMethodChangeValueImpl instance = new ShippingMethodChangeValueImpl();
         instance.setId(template.getId());
@@ -61,18 +80,37 @@ public interface ShippingMethodChangeValue {
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodChangeValue
+     * @return builder
+     */
     public static ShippingMethodChangeValueBuilder builder() {
         return ShippingMethodChangeValueBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodChangeValueBuilder builder(final ShippingMethodChangeValue template) {
         return ShippingMethodChangeValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodChangeValue(Function<ShippingMethodChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeValue>() {
             @Override

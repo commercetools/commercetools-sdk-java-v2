@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetLineItemShippingDetailsActionImpl.class)
 public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetLineItemShippingDetailsAction
+     */
     String SET_LINE_ITEM_SHIPPING_DETAILS = "setLineItemShippingDetails";
 
     /**
@@ -50,14 +53,33 @@ public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrder
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
 
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param shippingDetails value to be set
+     */
 
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetLineItemShippingDetailsAction
+     */
     public static StagedOrderSetLineItemShippingDetailsAction of() {
         return new StagedOrderSetLineItemShippingDetailsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetLineItemShippingDetailsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetLineItemShippingDetailsAction of(
             final StagedOrderSetLineItemShippingDetailsAction template) {
         StagedOrderSetLineItemShippingDetailsActionImpl instance = new StagedOrderSetLineItemShippingDetailsActionImpl();
@@ -66,20 +88,39 @@ public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrder
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetLineItemShippingDetailsAction
+     * @return builder
+     */
     public static StagedOrderSetLineItemShippingDetailsActionBuilder builder() {
         return StagedOrderSetLineItemShippingDetailsActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetLineItemShippingDetailsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetLineItemShippingDetailsActionBuilder builder(
             final StagedOrderSetLineItemShippingDetailsAction template) {
         return StagedOrderSetLineItemShippingDetailsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetLineItemShippingDetailsAction(
             Function<StagedOrderSetLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemShippingDetailsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemShippingDetailsAction>() {
             @Override

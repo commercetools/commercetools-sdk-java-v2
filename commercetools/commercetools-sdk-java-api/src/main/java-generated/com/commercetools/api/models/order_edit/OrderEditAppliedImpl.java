@@ -28,6 +28,9 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
 
     private com.commercetools.api.models.order_edit.OrderExcerpt excerptAfterEdit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditAppliedImpl(@JsonProperty("appliedAt") final java.time.ZonedDateTime appliedAt,
             @JsonProperty("excerptBeforeEdit") final com.commercetools.api.models.order_edit.OrderExcerpt excerptBeforeEdit,
@@ -38,6 +41,9 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
         this.type = APPLIED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditAppliedImpl() {
         this.type = APPLIED;
     }

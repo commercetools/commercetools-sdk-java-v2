@@ -53,10 +53,20 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
+     * @return purchaseOrderNumber
+     */
+
     @Nullable
     public String getPurchaseOrderNumber() {
         return this.purchaseOrderNumber;
     }
+
+    /**
+     *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
+     * @return oldPurchaseOrderNumber
+     */
 
     @Nullable
     public String getOldPurchaseOrderNumber() {
@@ -79,10 +89,19 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
         return new OrderPurchaseOrderNumberSetMessagePayloadImpl(purchaseOrderNumber, oldPurchaseOrderNumber);
     }
 
+    /**
+     * factory method for an instance of OrderPurchaseOrderNumberSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderPurchaseOrderNumberSetMessagePayloadBuilder of() {
         return new OrderPurchaseOrderNumberSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderPurchaseOrderNumberSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPurchaseOrderNumberSetMessagePayloadBuilder of(
             final OrderPurchaseOrderNumberSetMessagePayload template) {
         OrderPurchaseOrderNumberSetMessagePayloadBuilder builder = new OrderPurchaseOrderNumberSetMessagePayloadBuilder();

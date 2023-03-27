@@ -38,6 +38,9 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomObjectImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -57,6 +60,9 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
         this.value = value;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomObjectImpl() {
     }
 

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductChangeAssetOrderActionImpl.class)
 public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductChangeAssetOrderAction
+     */
     String CHANGE_ASSET_ORDER = "changeAssetOrder";
 
     /**
@@ -63,21 +66,55 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
     @JsonProperty("assetOrder")
     public List<String> getAssetOrder();
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Long variantId);
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
+
+    /**
+     *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
+     * @param assetOrder values to be set
+     */
 
     @JsonIgnore
     public void setAssetOrder(final String... assetOrder);
 
+    /**
+     *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
+     * @param assetOrder values to be set
+     */
+
     public void setAssetOrder(final List<String> assetOrder);
 
+    /**
+     * factory method
+     * @return instance of ProductChangeAssetOrderAction
+     */
     public static ProductChangeAssetOrderAction of() {
         return new ProductChangeAssetOrderActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductChangeAssetOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductChangeAssetOrderAction of(final ProductChangeAssetOrderAction template) {
         ProductChangeAssetOrderActionImpl instance = new ProductChangeAssetOrderActionImpl();
         instance.setVariantId(template.getVariantId());
@@ -87,18 +124,37 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductChangeAssetOrderAction
+     * @return builder
+     */
     public static ProductChangeAssetOrderActionBuilder builder() {
         return ProductChangeAssetOrderActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductChangeAssetOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductChangeAssetOrderActionBuilder builder(final ProductChangeAssetOrderAction template) {
         return ProductChangeAssetOrderActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductChangeAssetOrderAction(Function<ProductChangeAssetOrderAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeAssetOrderAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeAssetOrderAction>() {
             @Override

@@ -24,12 +24,18 @@ public class ChangeTargetLineItemsChangeValueImpl implements ChangeTargetLineIte
 
     private String predicate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTargetLineItemsChangeValueImpl(@JsonProperty("predicate") final String predicate) {
         this.predicate = predicate;
         this.type = LINE_ITEMS;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTargetLineItemsChangeValueImpl() {
         this.type = LINE_ITEMS;
     }

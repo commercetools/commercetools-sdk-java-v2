@@ -25,6 +25,9 @@ public class ProductDraftImportRequestImpl implements ProductDraftImportRequest,
 
     private java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDraftImportRequestImpl(
             @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources) {
@@ -32,6 +35,9 @@ public class ProductDraftImportRequestImpl implements ProductDraftImportRequest,
         this.type = ImportResourceType.findEnum("product-draft");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDraftImportRequestImpl() {
         this.type = ImportResourceType.findEnum("product-draft");
     }

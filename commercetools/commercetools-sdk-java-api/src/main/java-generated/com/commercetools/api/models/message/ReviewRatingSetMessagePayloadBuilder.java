@@ -92,19 +92,39 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
         return this;
     }
 
+    /**
+     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     * @return oldRating
+     */
+
     @Nullable
     public Double getOldRating() {
         return this.oldRating;
     }
+
+    /**
+     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     * @return newRating
+     */
 
     @Nullable
     public Double getNewRating() {
         return this.newRating;
     }
 
+    /**
+     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     * @return includedInStatistics
+     */
+
     public Boolean getIncludedInStatistics() {
         return this.includedInStatistics;
     }
+
+    /**
+     *  <p>Reference to the resource that the Review belongs to.</p>
+     * @return target
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Reference getTarget() {
@@ -129,10 +149,19 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
         return new ReviewRatingSetMessagePayloadImpl(oldRating, newRating, includedInStatistics, target);
     }
 
+    /**
+     * factory method for an instance of ReviewRatingSetMessagePayloadBuilder
+     * @return builder
+     */
     public static ReviewRatingSetMessagePayloadBuilder of() {
         return new ReviewRatingSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ReviewRatingSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewRatingSetMessagePayloadBuilder of(final ReviewRatingSetMessagePayload template) {
         ReviewRatingSetMessagePayloadBuilder builder = new ReviewRatingSetMessagePayloadBuilder();
         builder.oldRating = template.getOldRating();

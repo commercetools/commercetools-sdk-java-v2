@@ -26,6 +26,9 @@ public class RemoveAttributeDefinitionChangeImpl implements RemoveAttributeDefin
 
     private com.commercetools.history.models.common.AttributeDefinition previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveAttributeDefinitionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.AttributeDefinition previousValue) {
@@ -34,6 +37,9 @@ public class RemoveAttributeDefinitionChangeImpl implements RemoveAttributeDefin
         this.type = REMOVE_ATTRIBUTE_DEFINITION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveAttributeDefinitionChangeImpl() {
         this.type = REMOVE_ATTRIBUTE_DEFINITION_CHANGE;
     }

@@ -121,28 +121,58 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Product Variant for which the Discount was set.</p>
+     * @return variantId
+     */
+
     public Integer getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>Key of the Product Variant for which the Discount was set.</p>
+     * @return variantKey
+     */
 
     @Nullable
     public String getVariantKey() {
         return this.variantKey;
     }
 
+    /**
+     *  <p>SKU of the Product Variant for which Discount was set.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Unique identifier of the Price.</p>
+     * @return priceId
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
+
+    /**
+     *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
+     * @return discounted
+     */
 
     @Nullable
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
+     */
 
     public Boolean getStaged() {
         return this.staged;
@@ -170,10 +200,19 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
             staged);
     }
 
+    /**
+     * factory method for an instance of ProductPriceExternalDiscountSetMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductPriceExternalDiscountSetMessagePayloadBuilder of() {
         return new ProductPriceExternalDiscountSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductPriceExternalDiscountSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceExternalDiscountSetMessagePayloadBuilder of(
             final ProductPriceExternalDiscountSetMessagePayload template) {
         ProductPriceExternalDiscountSetMessagePayloadBuilder builder = new ProductPriceExternalDiscountSetMessagePayloadBuilder();

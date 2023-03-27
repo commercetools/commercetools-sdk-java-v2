@@ -42,6 +42,9 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
 
     private com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MessageDeliveryPayloadImpl(@JsonProperty("projectKey") final String projectKey,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
@@ -65,6 +68,9 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
         this.notificationType = MESSAGE;
     }
 
+    /**
+     * create empty instance
+     */
     public MessageDeliveryPayloadImpl() {
         this.notificationType = MESSAGE;
     }

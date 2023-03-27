@@ -121,22 +121,47 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
         return this;
     }
 
+    /**
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @return projectKey
+     */
+
     public String getProjectKey() {
         return this.projectKey;
     }
 
+    /**
+     *  <p>Reference to the resource that triggered the message.</p>
+     * @return resource
+     */
+
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
+
+    /**
+     *  <p>User-defined unique identifiers of the resource.</p>
+     * @return resourceUserProvidedIdentifiers
+     */
 
     @Nullable
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *  <p>Last seen version of the resource.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Date and time (UTC) the resource was last modified.</p>
+     * @return modifiedAt
+     */
 
     public java.time.ZonedDateTime getModifiedAt() {
         return this.modifiedAt;
@@ -164,10 +189,19 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
             modifiedAt);
     }
 
+    /**
+     * factory method for an instance of ResourceCreatedDeliveryPayloadBuilder
+     * @return builder
+     */
     public static ResourceCreatedDeliveryPayloadBuilder of() {
         return new ResourceCreatedDeliveryPayloadBuilder();
     }
 
+    /**
+     * create builder for ResourceCreatedDeliveryPayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceCreatedDeliveryPayloadBuilder of(final ResourceCreatedDeliveryPayload template) {
         ResourceCreatedDeliveryPayloadBuilder builder = new ResourceCreatedDeliveryPayloadBuilder();
         builder.projectKey = template.getProjectKey();

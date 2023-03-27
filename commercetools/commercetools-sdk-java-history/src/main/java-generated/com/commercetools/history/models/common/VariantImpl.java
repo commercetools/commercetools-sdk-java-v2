@@ -26,6 +26,9 @@ public class VariantImpl implements Variant, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     VariantImpl(@JsonProperty("id") final Integer id, @JsonProperty("sku") final String sku,
             @JsonProperty("key") final String key) {
@@ -34,6 +37,9 @@ public class VariantImpl implements Variant, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public VariantImpl() {
     }
 

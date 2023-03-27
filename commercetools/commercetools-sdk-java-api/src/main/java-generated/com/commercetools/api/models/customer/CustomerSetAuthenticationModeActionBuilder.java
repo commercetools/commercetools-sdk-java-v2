@@ -51,9 +51,19 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
         return this;
     }
 
+    /**
+     *  <p>Value to set. Changing a Customer's <code>authMode</code> from <code>Password</code> to <code>ExternalAuth</code> deletes the Customer's password.</p>
+     * @return authMode
+     */
+
     public com.commercetools.api.models.customer.AuthenticationMode getAuthMode() {
         return this.authMode;
     }
+
+    /**
+     *  <p>Required when <code>authMode</code> is <code>Password</code>.</p>
+     * @return password
+     */
 
     @Nullable
     public String getPassword() {
@@ -77,10 +87,19 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
         return new CustomerSetAuthenticationModeActionImpl(authMode, password);
     }
 
+    /**
+     * factory method for an instance of CustomerSetAuthenticationModeActionBuilder
+     * @return builder
+     */
     public static CustomerSetAuthenticationModeActionBuilder of() {
         return new CustomerSetAuthenticationModeActionBuilder();
     }
 
+    /**
+     * create builder for CustomerSetAuthenticationModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetAuthenticationModeActionBuilder of(final CustomerSetAuthenticationModeAction template) {
         CustomerSetAuthenticationModeActionBuilder builder = new CustomerSetAuthenticationModeActionBuilder();
         builder.authMode = template.getAuthMode();

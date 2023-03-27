@@ -28,6 +28,9 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
 
     private java.util.List<String> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeAttributeOrderByNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<String> previousValue,
@@ -38,6 +41,9 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
         this.type = CHANGE_ATTRIBUTE_ORDER_BY_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeAttributeOrderByNameChangeImpl() {
         this.type = CHANGE_ATTRIBUTE_ORDER_BY_NAME_CHANGE;
     }

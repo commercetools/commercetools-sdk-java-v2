@@ -64,13 +64,28 @@ public class HitBuilder implements Builder<Hit> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Order.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>Current version of the Order.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
+     * @return relevance
+     */
 
     @Nullable
     public Double getRelevance() {
@@ -95,10 +110,19 @@ public class HitBuilder implements Builder<Hit> {
         return new HitImpl(id, version, relevance);
     }
 
+    /**
+     * factory method for an instance of HitBuilder
+     * @return builder
+     */
     public static HitBuilder of() {
         return new HitBuilder();
     }
 
+    /**
+     * create builder for Hit instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static HitBuilder of(final Hit template) {
         HitBuilder builder = new HitBuilder();
         builder.id = template.getId();

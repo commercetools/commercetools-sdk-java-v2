@@ -108,9 +108,19 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
         return this;
     }
 
+    /**
+     *  <p>Set to <code>Explicit</code> to specify Stores for the Business Unit. Set to <code>FromParent</code> to inherit Stores from a parent.</p>
+     * @return storeMode
+     */
+
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
         return this.storeMode;
     }
+
+    /**
+     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @return stores
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
@@ -134,10 +144,19 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
         return new BusinessUnitSetStoreModeActionImpl(storeMode, stores);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitSetStoreModeActionBuilder
+     * @return builder
+     */
     public static BusinessUnitSetStoreModeActionBuilder of() {
         return new BusinessUnitSetStoreModeActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitSetStoreModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitSetStoreModeActionBuilder of(final BusinessUnitSetStoreModeAction template) {
         BusinessUnitSetStoreModeActionBuilder builder = new BusinessUnitSetStoreModeActionBuilder();
         builder.storeMode = template.getStoreMode();

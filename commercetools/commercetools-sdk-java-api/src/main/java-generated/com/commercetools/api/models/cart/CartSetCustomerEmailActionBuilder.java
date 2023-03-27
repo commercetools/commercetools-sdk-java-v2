@@ -36,6 +36,11 @@ public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustome
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return email
+     */
+
     @Nullable
     public String getEmail() {
         return this.email;
@@ -57,10 +62,19 @@ public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustome
         return new CartSetCustomerEmailActionImpl(email);
     }
 
+    /**
+     * factory method for an instance of CartSetCustomerEmailActionBuilder
+     * @return builder
+     */
     public static CartSetCustomerEmailActionBuilder of() {
         return new CartSetCustomerEmailActionBuilder();
     }
 
+    /**
+     * create builder for CartSetCustomerEmailAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomerEmailActionBuilder of(final CartSetCustomerEmailAction template) {
         CartSetCustomerEmailActionBuilder builder = new CartSetCustomerEmailActionBuilder();
         builder.email = template.getEmail();

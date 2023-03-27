@@ -107,9 +107,22 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
         return this;
     }
 
+    /**
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @return targets
+     */
+
     public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargets() {
         return this.targets;
     }
+
+    /**
+     *  <ul>
+     *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
+     *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an InvalidItemShippingDetails error.</li>
+     *  </ul>
+     * @return valid
+     */
 
     public Boolean getValid() {
         return this.valid;
@@ -133,10 +146,19 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
         return new ItemShippingDetailsImpl(targets, valid);
     }
 
+    /**
+     * factory method for an instance of ItemShippingDetailsBuilder
+     * @return builder
+     */
     public static ItemShippingDetailsBuilder of() {
         return new ItemShippingDetailsBuilder();
     }
 
+    /**
+     * create builder for ItemShippingDetails instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemShippingDetailsBuilder of(final ItemShippingDetails template) {
         ItemShippingDetailsBuilder builder = new ItemShippingDetailsBuilder();
         builder.targets = template.getTargets();

@@ -24,6 +24,9 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
 
     private com.commercetools.importapi.models.orders.ParcelMeasurements measurements;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelMeasurementDraftImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("measurements") final com.commercetools.importapi.models.orders.ParcelMeasurements measurements) {
@@ -31,6 +34,9 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
         this.measurements = measurements;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelMeasurementDraftImpl() {
     }
 

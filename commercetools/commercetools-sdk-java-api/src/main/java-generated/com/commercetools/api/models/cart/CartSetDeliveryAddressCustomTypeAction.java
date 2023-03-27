@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetDeliveryAddressCustomTypeActionImpl.class)
 public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetDeliveryAddressCustomTypeAction
+     */
     String SET_DELIVERY_ADDRESS_CUSTOM_TYPE = "setDeliveryAddressCustomType";
 
     /**
@@ -58,16 +61,40 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p><code>id</code> of the Delivery.</p>
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
+     * @param type value to be set
+     */
 
     public void setType(final TypeResourceIdentifier type);
 
+    /**
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
+     * @param fields value to be set
+     */
+
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of CartSetDeliveryAddressCustomTypeAction
+     */
     public static CartSetDeliveryAddressCustomTypeAction of() {
         return new CartSetDeliveryAddressCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetDeliveryAddressCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetDeliveryAddressCustomTypeAction of(final CartSetDeliveryAddressCustomTypeAction template) {
         CartSetDeliveryAddressCustomTypeActionImpl instance = new CartSetDeliveryAddressCustomTypeActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
@@ -76,20 +103,39 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetDeliveryAddressCustomTypeAction
+     * @return builder
+     */
     public static CartSetDeliveryAddressCustomTypeActionBuilder builder() {
         return CartSetDeliveryAddressCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetDeliveryAddressCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetDeliveryAddressCustomTypeActionBuilder builder(
             final CartSetDeliveryAddressCustomTypeAction template) {
         return CartSetDeliveryAddressCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetDeliveryAddressCustomTypeAction(
             Function<CartSetDeliveryAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetDeliveryAddressCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetDeliveryAddressCustomTypeAction>() {
             @Override

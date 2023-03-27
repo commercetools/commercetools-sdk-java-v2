@@ -63,9 +63,19 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced Channel.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.Channel getObj() {
@@ -89,10 +99,19 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
         return new ChannelReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of ChannelReferenceBuilder
+     * @return builder
+     */
     public static ChannelReferenceBuilder of() {
         return new ChannelReferenceBuilder();
     }
 
+    /**
+     * create builder for ChannelReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelReferenceBuilder of(final ChannelReference template) {
         ChannelReferenceBuilder builder = new ChannelReferenceBuilder();
         builder.id = template.getId();

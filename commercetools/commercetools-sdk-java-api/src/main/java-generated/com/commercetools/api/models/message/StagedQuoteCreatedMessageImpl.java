@@ -44,6 +44,9 @@ public class StagedQuoteCreatedMessageImpl implements StagedQuoteCreatedMessage,
 
     private com.commercetools.api.models.staged_quote.StagedQuote stagedQuote;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class StagedQuoteCreatedMessageImpl implements StagedQuoteCreatedMessage,
         this.type = STAGED_QUOTE_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteCreatedMessageImpl() {
         this.type = STAGED_QUOTE_CREATED;
     }

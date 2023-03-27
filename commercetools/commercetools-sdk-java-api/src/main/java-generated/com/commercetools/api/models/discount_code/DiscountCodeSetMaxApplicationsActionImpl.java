@@ -24,12 +24,18 @@ public class DiscountCodeSetMaxApplicationsActionImpl implements DiscountCodeSet
 
     private Long maxApplications;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeSetMaxApplicationsActionImpl(@JsonProperty("maxApplications") final Long maxApplications) {
         this.maxApplications = maxApplications;
         this.action = SET_MAX_APPLICATIONS;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeSetMaxApplicationsActionImpl() {
         this.action = SET_MAX_APPLICATIONS;
     }

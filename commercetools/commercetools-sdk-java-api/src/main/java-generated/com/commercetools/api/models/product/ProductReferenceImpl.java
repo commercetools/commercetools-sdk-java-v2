@@ -27,6 +27,9 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
 
     private com.commercetools.api.models.product.Product obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.product.Product obj) {
@@ -35,6 +38,9 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("product");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("product");
     }

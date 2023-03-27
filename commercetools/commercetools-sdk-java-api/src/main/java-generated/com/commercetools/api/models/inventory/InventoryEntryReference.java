@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryReferenceImpl.class)
 public interface InventoryEntryReference extends Reference, com.commercetools.api.models.Identifiable<InventoryEntry> {
 
+    /**
+     * discriminator value for InventoryEntryReference
+     */
     String INVENTORY_ENTRY = "inventory-entry";
 
     /**
@@ -49,14 +52,33 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final InventoryEntry obj);
+
+    /**
+     *  <p>Unique identifier of the referenced InventoryEntry.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of InventoryEntryReference
+     */
     public static InventoryEntryReference of() {
         return new InventoryEntryReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryEntryReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryEntryReference of(final InventoryEntryReference template) {
         InventoryEntryReferenceImpl instance = new InventoryEntryReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryEntryReference
+     * @return builder
+     */
     public static InventoryEntryReferenceBuilder builder() {
         return InventoryEntryReferenceBuilder.of();
     }
 
+    /**
+     * create builder for InventoryEntryReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryReferenceBuilder builder(final InventoryEntryReference template) {
         return InventoryEntryReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryEntryReference(Function<InventoryEntryReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReference>() {
             @Override

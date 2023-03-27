@@ -30,6 +30,9 @@ public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, Mod
 
     private java.util.List<com.commercetools.api.models.state.State> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StatePagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -41,6 +44,9 @@ public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, Mod
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public StatePagedQueryResponseImpl() {
     }
 

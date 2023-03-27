@@ -36,6 +36,11 @@ public class CartSetAnonymousIdActionBuilder implements Builder<CartSetAnonymous
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return anonymousId
+     */
+
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
@@ -57,10 +62,19 @@ public class CartSetAnonymousIdActionBuilder implements Builder<CartSetAnonymous
         return new CartSetAnonymousIdActionImpl(anonymousId);
     }
 
+    /**
+     * factory method for an instance of CartSetAnonymousIdActionBuilder
+     * @return builder
+     */
     public static CartSetAnonymousIdActionBuilder of() {
         return new CartSetAnonymousIdActionBuilder();
     }
 
+    /**
+     * create builder for CartSetAnonymousIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetAnonymousIdActionBuilder of(final CartSetAnonymousIdAction template) {
         CartSetAnonymousIdActionBuilder builder = new CartSetAnonymousIdActionBuilder();
         builder.anonymousId = template.getAnonymousId();

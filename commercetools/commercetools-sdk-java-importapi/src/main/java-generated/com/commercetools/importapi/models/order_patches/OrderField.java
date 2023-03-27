@@ -100,34 +100,98 @@ public interface OrderField {
     @JsonProperty("setParcelItems")
     public List<ParcelItems> getSetParcelItems();
 
+    /**
+     *  <p>Maps to <code>Order.returnInfo</code></p>
+     * @param addReturnInfo value to be set
+     */
+
     public void setAddReturnInfo(final ReturnInfo addReturnInfo);
 
+    /**
+     *  <p>Maps to <code>Order.delivery</code></p>
+     * @param addParcelToDelivery value to be set
+     */
+
     public void setAddParcelToDelivery(final DeliveryParcel addParcelToDelivery);
+
+    /**
+     *  <p>Maps to <code>Order.delivery</code></p>
+     * @param addDeliveries values to be set
+     */
 
     @JsonIgnore
     public void setAddDeliveries(final DeliveryDraft... addDeliveries);
 
+    /**
+     *  <p>Maps to <code>Order.delivery</code></p>
+     * @param addDeliveries values to be set
+     */
+
     public void setAddDeliveries(final List<DeliveryDraft> addDeliveries);
+
+    /**
+     *  <p>Maps to <code>Order.removeDelivery</code></p>
+     * @param removeDelivery value to be set
+     */
 
     public void setRemoveDelivery(final RemoveDeliveryDraft removeDelivery);
 
+    /**
+     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     * @param removeParcelFromDelivery value to be set
+     */
+
     public void setRemoveParcelFromDelivery(final RemoveParcelFromDeliveryDraft removeParcelFromDelivery);
+
+    /**
+     *  <p>Maps to <code>Order.addressDraft</code></p>
+     * @param setDeliveryAddress value to be set
+     */
 
     public void setSetDeliveryAddress(final DeliveryAddressDraft setDeliveryAddress);
 
+    /**
+     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     * @param setParcelMeasurements value to be set
+     */
+
     public void setSetParcelMeasurements(final ParcelMeasurementDraft setParcelMeasurements);
 
+    /**
+     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     * @param setParcelTrackingData value to be set
+     */
+
     public void setSetParcelTrackingData(final ParcelTrackingData setParcelTrackingData);
+
+    /**
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @param setParcelItems values to be set
+     */
 
     @JsonIgnore
     public void setSetParcelItems(final ParcelItems... setParcelItems);
 
+    /**
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @param setParcelItems values to be set
+     */
+
     public void setSetParcelItems(final List<ParcelItems> setParcelItems);
 
+    /**
+     * factory method
+     * @return instance of OrderField
+     */
     public static OrderField of() {
         return new OrderFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderField of(final OrderField template) {
         OrderFieldImpl instance = new OrderFieldImpl();
         instance.setAddReturnInfo(template.getAddReturnInfo());
@@ -142,18 +206,37 @@ public interface OrderField {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderField
+     * @return builder
+     */
     public static OrderFieldBuilder builder() {
         return OrderFieldBuilder.of();
     }
 
+    /**
+     * create builder for OrderField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderFieldBuilder builder(final OrderField template) {
         return OrderFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderField(Function<OrderField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderField>() {
             @Override

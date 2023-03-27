@@ -46,14 +46,33 @@ public interface MyCustomerResetPassword {
     @JsonProperty("newPassword")
     public String getNewPassword();
 
+    /**
+     *  <p>Value of the token to reset the Customer password.</p>
+     * @param tokenValue value to be set
+     */
+
     public void setTokenValue(final String tokenValue);
+
+    /**
+     *  <p>New password to be set.</p>
+     * @param newPassword value to be set
+     */
 
     public void setNewPassword(final String newPassword);
 
+    /**
+     * factory method
+     * @return instance of MyCustomerResetPassword
+     */
     public static MyCustomerResetPassword of() {
         return new MyCustomerResetPasswordImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCustomerResetPassword
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCustomerResetPassword of(final MyCustomerResetPassword template) {
         MyCustomerResetPasswordImpl instance = new MyCustomerResetPasswordImpl();
         instance.setTokenValue(template.getTokenValue());
@@ -61,18 +80,37 @@ public interface MyCustomerResetPassword {
         return instance;
     }
 
+    /**
+     * builder factory method for MyCustomerResetPassword
+     * @return builder
+     */
     public static MyCustomerResetPasswordBuilder builder() {
         return MyCustomerResetPasswordBuilder.of();
     }
 
+    /**
+     * create builder for MyCustomerResetPassword instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerResetPasswordBuilder builder(final MyCustomerResetPassword template) {
         return MyCustomerResetPasswordBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCustomerResetPassword(Function<MyCustomerResetPassword, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerResetPassword> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerResetPassword>() {
             @Override

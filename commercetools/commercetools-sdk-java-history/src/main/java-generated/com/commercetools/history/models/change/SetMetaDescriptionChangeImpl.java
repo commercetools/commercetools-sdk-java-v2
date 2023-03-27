@@ -28,6 +28,9 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetMetaDescriptionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
@@ -38,6 +41,9 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
         this.type = SET_META_DESCRIPTION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetMetaDescriptionChangeImpl() {
         this.type = SET_META_DESCRIPTION_CHANGE;
     }

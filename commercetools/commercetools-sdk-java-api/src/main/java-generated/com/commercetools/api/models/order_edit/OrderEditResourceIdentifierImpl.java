@@ -27,6 +27,9 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
         this.typeId = ReferenceTypeId.findEnum("order-edit");
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("order-edit");
     }

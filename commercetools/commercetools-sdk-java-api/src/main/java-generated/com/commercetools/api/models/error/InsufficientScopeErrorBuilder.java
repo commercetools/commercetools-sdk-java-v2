@@ -62,9 +62,19 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
         return this;
     }
 
+    /**
+     *  <p>Plain text description of the cause of the error.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
         return new InsufficientScopeErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of InsufficientScopeErrorBuilder
+     * @return builder
+     */
     public static InsufficientScopeErrorBuilder of() {
         return new InsufficientScopeErrorBuilder();
     }
 
+    /**
+     * create builder for InsufficientScopeError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InsufficientScopeErrorBuilder of(final InsufficientScopeError template) {
         InsufficientScopeErrorBuilder builder = new InsufficientScopeErrorBuilder();
         builder.message = template.getMessage();

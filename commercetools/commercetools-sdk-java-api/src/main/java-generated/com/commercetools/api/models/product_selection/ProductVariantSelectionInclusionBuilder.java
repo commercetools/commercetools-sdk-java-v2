@@ -60,6 +60,11 @@ public class ProductVariantSelectionInclusionBuilder implements Builder<ProductV
         return this;
     }
 
+    /**
+     *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
+     * @return skus
+     */
+
     public java.util.List<String> getSkus() {
         return this.skus;
     }
@@ -81,10 +86,19 @@ public class ProductVariantSelectionInclusionBuilder implements Builder<ProductV
         return new ProductVariantSelectionInclusionImpl(skus);
     }
 
+    /**
+     * factory method for an instance of ProductVariantSelectionInclusionBuilder
+     * @return builder
+     */
     public static ProductVariantSelectionInclusionBuilder of() {
         return new ProductVariantSelectionInclusionBuilder();
     }
 
+    /**
+     * create builder for ProductVariantSelectionInclusion instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantSelectionInclusionBuilder of(final ProductVariantSelectionInclusion template) {
         ProductVariantSelectionInclusionBuilder builder = new ProductVariantSelectionInclusionBuilder();
         builder.skus = template.getSkus();

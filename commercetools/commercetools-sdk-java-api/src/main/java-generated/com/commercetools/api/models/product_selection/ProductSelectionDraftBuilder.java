@@ -105,19 +105,39 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the ProductSelection.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Custom Fields of this ProductSelection.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>Type of the Product Selection.</p>
+     * @return type
+     */
 
     @Nullable
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
@@ -141,10 +161,19 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         return new ProductSelectionDraftImpl(key, name, custom, type);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionDraftBuilder
+     * @return builder
+     */
     public static ProductSelectionDraftBuilder of() {
         return new ProductSelectionDraftBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionDraftBuilder of(final ProductSelectionDraft template) {
         ProductSelectionDraftBuilder builder = new ProductSelectionDraftBuilder();
         builder.key = template.getKey();

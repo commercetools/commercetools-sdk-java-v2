@@ -66,21 +66,55 @@ public interface ShippingRate {
     @JsonProperty("tiers")
     public List<ShippingRatePriceTier> getTiers();
 
+    /**
+     *  <p>Currency amount of the ShippingRate.</p>
+     * @param price value to be set
+     */
+
     public void setPrice(final TypedMoney price);
+
+    /**
+     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @param freeAbove value to be set
+     */
 
     public void setFreeAbove(final TypedMoney freeAbove);
 
+    /**
+     *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
+     * @param isMatching value to be set
+     */
+
     public void setIsMatching(final Boolean isMatching);
+
+    /**
+     *  <p>Price tiers for the ShippingRate.</p>
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final ShippingRatePriceTier... tiers);
 
+    /**
+     *  <p>Price tiers for the ShippingRate.</p>
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<ShippingRatePriceTier> tiers);
 
+    /**
+     * factory method
+     * @return instance of ShippingRate
+     */
     public static ShippingRate of() {
         return new ShippingRateImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingRate of(final ShippingRate template) {
         ShippingRateImpl instance = new ShippingRateImpl();
         instance.setPrice(template.getPrice());
@@ -90,18 +124,37 @@ public interface ShippingRate {
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingRate
+     * @return builder
+     */
     public static ShippingRateBuilder builder() {
         return ShippingRateBuilder.of();
     }
 
+    /**
+     * create builder for ShippingRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingRateBuilder builder(final ShippingRate template) {
         return ShippingRateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingRate(Function<ShippingRate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingRate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingRate>() {
             @Override

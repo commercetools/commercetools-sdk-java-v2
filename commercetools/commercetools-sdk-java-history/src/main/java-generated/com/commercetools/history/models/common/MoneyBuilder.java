@@ -44,7 +44,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     *
+     * set the value to the centAmount
      * @param centAmount value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     *
+     * set the value to the fractionDigits
      * @param fractionDigits value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -76,17 +76,37 @@ public class MoneyBuilder implements Builder<Money> {
         return this;
     }
 
+    /**
+     *  <p>Currency code compliant to ISO 4217.</p>
+     * @return currencyCode
+     */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }
+
+    /**
+     * value of centAmount}
+     * @return centAmount
+     */
 
     public Integer getCentAmount() {
         return this.centAmount;
     }
 
+    /**
+     * value of fractionDigits}
+     * @return fractionDigits
+     */
+
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }
+
+    /**
+     * value of type}
+     * @return type
+     */
 
     public com.commercetools.history.models.common.MoneyType getType() {
         return this.type;
@@ -112,10 +132,19 @@ public class MoneyBuilder implements Builder<Money> {
         return new MoneyImpl(currencyCode, centAmount, fractionDigits, type);
     }
 
+    /**
+     * factory method for an instance of MoneyBuilder
+     * @return builder
+     */
     public static MoneyBuilder of() {
         return new MoneyBuilder();
     }
 
+    /**
+     * create builder for Money instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoneyBuilder of(final Money template) {
         MoneyBuilder builder = new MoneyBuilder();
         builder.currencyCode = template.getCurrencyCode();

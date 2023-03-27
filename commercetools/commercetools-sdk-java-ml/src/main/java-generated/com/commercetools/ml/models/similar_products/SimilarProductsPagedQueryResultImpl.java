@@ -30,6 +30,9 @@ public class SimilarProductsPagedQueryResultImpl implements SimilarProductsPaged
 
     private com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta meta;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SimilarProductsPagedQueryResultImpl(@JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
@@ -42,6 +45,9 @@ public class SimilarProductsPagedQueryResultImpl implements SimilarProductsPaged
         this.meta = meta;
     }
 
+    /**
+     * create empty instance
+     */
     public SimilarProductsPagedQueryResultImpl() {
     }
 

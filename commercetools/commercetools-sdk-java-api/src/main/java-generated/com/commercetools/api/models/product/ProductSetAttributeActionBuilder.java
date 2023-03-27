@@ -101,24 +101,58 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>The name of the Attribute to set.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Value to set for the Attribute. If empty, any existing value will be removed.</p>
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
+     * @return value
+     */
 
     @Nullable
     public java.lang.Object getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -142,10 +176,19 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
         return new ProductSetAttributeActionImpl(variantId, sku, name, value, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetAttributeActionBuilder
+     * @return builder
+     */
     public static ProductSetAttributeActionBuilder of() {
         return new ProductSetAttributeActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetAttributeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetAttributeActionBuilder of(final ProductSetAttributeAction template) {
         ProductSetAttributeActionBuilder builder = new ProductSetAttributeActionBuilder();
         builder.variantId = template.getVariantId();

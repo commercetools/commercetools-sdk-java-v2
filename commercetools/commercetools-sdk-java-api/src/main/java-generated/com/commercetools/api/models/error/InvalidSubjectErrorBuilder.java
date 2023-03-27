@@ -62,9 +62,19 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
         return this;
     }
 
+    /**
+     *  <p>Plain text description of the cause of the error.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
         return new InvalidSubjectErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of InvalidSubjectErrorBuilder
+     * @return builder
+     */
     public static InvalidSubjectErrorBuilder of() {
         return new InvalidSubjectErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidSubjectError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidSubjectErrorBuilder of(final InvalidSubjectError template) {
         InvalidSubjectErrorBuilder builder = new InvalidSubjectErrorBuilder();
         builder.message = template.getMessage();

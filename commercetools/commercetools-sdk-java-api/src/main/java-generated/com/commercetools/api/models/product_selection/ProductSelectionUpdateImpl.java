@@ -24,6 +24,9 @@ public class ProductSelectionUpdateImpl implements ProductSelectionUpdate, Model
 
     private java.util.List<com.commercetools.api.models.product_selection.ProductSelectionUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.product_selection.ProductSelectionUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class ProductSelectionUpdateImpl implements ProductSelectionUpdate, Model
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionUpdateImpl() {
     }
 

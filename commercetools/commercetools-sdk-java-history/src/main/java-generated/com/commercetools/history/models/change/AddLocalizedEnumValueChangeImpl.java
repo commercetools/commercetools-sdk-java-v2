@@ -30,6 +30,9 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
 
     private com.commercetools.history.models.change_value.LocalizedEnumValue nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddLocalizedEnumValueChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("fieldName") final String fieldName,
@@ -42,6 +45,9 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
         this.type = ADD_LOCALIZED_ENUM_VALUE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddLocalizedEnumValueChangeImpl() {
         this.type = ADD_LOCALIZED_ENUM_VALUE_CHANGE;
     }

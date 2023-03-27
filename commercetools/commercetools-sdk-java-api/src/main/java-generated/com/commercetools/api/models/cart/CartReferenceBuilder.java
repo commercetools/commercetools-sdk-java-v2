@@ -63,9 +63,19 @@ public class CartReferenceBuilder implements Builder<CartReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced Cart.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.Cart getObj() {
@@ -89,10 +99,19 @@ public class CartReferenceBuilder implements Builder<CartReference> {
         return new CartReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of CartReferenceBuilder
+     * @return builder
+     */
     public static CartReferenceBuilder of() {
         return new CartReferenceBuilder();
     }
 
+    /**
+     * create builder for CartReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartReferenceBuilder of(final CartReference template) {
         CartReferenceBuilder builder = new CartReferenceBuilder();
         builder.id = template.getId();

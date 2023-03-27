@@ -26,6 +26,9 @@ public class MyCartSetDeleteDaysAfterLastModificationActionImpl
 
     private Integer deleteDaysAfterLastModification;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartSetDeleteDaysAfterLastModificationActionImpl(
             @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification) {
@@ -33,6 +36,9 @@ public class MyCartSetDeleteDaysAfterLastModificationActionImpl
         this.action = SET_DELETE_DAYS_AFTER_LAST_MODIFICATION;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartSetDeleteDaysAfterLastModificationActionImpl() {
         this.action = SET_DELETE_DAYS_AFTER_LAST_MODIFICATION;
     }

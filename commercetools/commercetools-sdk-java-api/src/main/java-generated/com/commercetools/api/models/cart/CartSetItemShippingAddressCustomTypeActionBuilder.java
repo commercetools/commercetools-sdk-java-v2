@@ -92,14 +92,29 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
         return this;
     }
 
+    /**
+     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     * @return addressKey
+     */
+
     public String getAddressKey() {
         return this.addressKey;
     }
+
+    /**
+     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     * @return type
+     */
 
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -124,10 +139,19 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
         return new CartSetItemShippingAddressCustomTypeActionImpl(addressKey, type, fields);
     }
 
+    /**
+     * factory method for an instance of CartSetItemShippingAddressCustomTypeActionBuilder
+     * @return builder
+     */
     public static CartSetItemShippingAddressCustomTypeActionBuilder of() {
         return new CartSetItemShippingAddressCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for CartSetItemShippingAddressCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetItemShippingAddressCustomTypeActionBuilder of(
             final CartSetItemShippingAddressCustomTypeAction template) {
         CartSetItemShippingAddressCustomTypeActionBuilder builder = new CartSetItemShippingAddressCustomTypeActionBuilder();

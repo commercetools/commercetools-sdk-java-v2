@@ -295,82 +295,270 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     @JsonProperty("authenticationMode")
     public AuthenticationMode getAuthenticationMode();
 
+    /**
+     *  <p>Unique identifier of the Customer.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Customer.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>User-defined unique identifier of the Customer.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>User-defined unique identifier of the Customer.</p>
+     *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     * @param customerNumber value to be set
+     */
 
     public void setCustomerNumber(final String customerNumber);
 
+    /**
+     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @param externalId value to be set
+     */
+
     public void setExternalId(final String externalId);
+
+    /**
+     *  <p>Date and time (UTC) the Customer was initially created.</p>
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    /**
+     *  <p>Date and time (UTC) the Customer was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
+
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
+
     public void setCreatedBy(final CreatedBy createdBy);
+
+    /**
+     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     * @param email value to be set
+     */
 
     public void setEmail(final String email);
 
+    /**
+     *  <p>Present only when <code>authenticationMode</code> is set to <code>Password</code>.</p>
+     * @param password value to be set
+     */
+
     public void setPassword(final String password);
+
+    /**
+     *  <p>Given name (first name) of the Customer.</p>
+     * @param firstName value to be set
+     */
 
     public void setFirstName(final String firstName);
 
+    /**
+     *  <p>Family name (last name) of the Customer.</p>
+     * @param lastName value to be set
+     */
+
     public void setLastName(final String lastName);
+
+    /**
+     *  <p>Middle name of the Customer.</p>
+     * @param middleName value to be set
+     */
 
     public void setMiddleName(final String middleName);
 
+    /**
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     * @param title value to be set
+     */
+
     public void setTitle(final String title);
+
+    /**
+     *  <p>Date of birth of the Customer.</p>
+     * @param dateOfBirth value to be set
+     */
 
     public void setDateOfBirth(final LocalDate dateOfBirth);
 
+    /**
+     *  <p>Company name of the Customer.</p>
+     * @param companyName value to be set
+     */
+
     public void setCompanyName(final String companyName);
 
+    /**
+     *  <p>Unique VAT ID of the Customer.</p>
+     * @param vatId value to be set
+     */
+
     public void setVatId(final String vatId);
+
+    /**
+     *  <p>Addresses used by the Customer.</p>
+     * @param addresses values to be set
+     */
 
     @JsonIgnore
     public void setAddresses(final Address... addresses);
 
+    /**
+     *  <p>Addresses used by the Customer.</p>
+     * @param addresses values to be set
+     */
+
     public void setAddresses(final List<Address> addresses);
 
+    /**
+     *  <p>ID of the address in <code>addresses</code> used as the default shipping address.</p>
+     * @param defaultShippingAddressId value to be set
+     */
+
     public void setDefaultShippingAddressId(final String defaultShippingAddressId);
+
+    /**
+     *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
+     * @param shippingAddressIds values to be set
+     */
 
     @JsonIgnore
     public void setShippingAddressIds(final String... shippingAddressIds);
 
+    /**
+     *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
+     * @param shippingAddressIds values to be set
+     */
+
     public void setShippingAddressIds(final List<String> shippingAddressIds);
 
+    /**
+     *  <p>ID of the address in <code>addresses</code> used as the default billing address.</p>
+     * @param defaultBillingAddressId value to be set
+     */
+
     public void setDefaultBillingAddressId(final String defaultBillingAddressId);
+
+    /**
+     *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
+     * @param billingAddressIds values to be set
+     */
 
     @JsonIgnore
     public void setBillingAddressIds(final String... billingAddressIds);
 
+    /**
+     *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
+     * @param billingAddressIds values to be set
+     */
+
     public void setBillingAddressIds(final List<String> billingAddressIds);
+
+    /**
+     *  <p>Indicates whether the email address of the Customer is verified.</p>
+     * @param isEmailVerified value to be set
+     */
 
     public void setIsEmailVerified(final Boolean isEmailVerified);
 
+    /**
+     *  <p>CustomerGroup to which the Customer belongs.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
+
+    /**
+     *  <p>Custom Fields for the Customer.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     *  <p>Preferred language of the Customer.</p>
+     * @param locale value to be set
+     */
+
     public void setLocale(final String locale);
 
+    /**
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     * @param salutation value to be set
+     */
+
     public void setSalutation(final String salutation);
+
+    /**
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
+     * @param stores values to be set
+     */
 
     @JsonIgnore
     public void setStores(final StoreKeyReference... stores);
 
+    /**
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
     public void setStores(final List<StoreKeyReference> stores);
+
+    /**
+     *  <p>Indicates whether the <code>password</code> is required for the Customer.</p>
+     * @param authenticationMode value to be set
+     */
 
     public void setAuthenticationMode(final AuthenticationMode authenticationMode);
 
+    /**
+     * factory method
+     * @return instance of Customer
+     */
     public static Customer of() {
         return new CustomerImpl();
     }
 
+    /**
+     * factory method to copy an instance of Customer
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Customer of(final Customer template) {
         CustomerImpl instance = new CustomerImpl();
         instance.setId(template.getId());
@@ -406,14 +594,29 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
         return instance;
     }
 
+    /**
+     * builder factory method for Customer
+     * @return builder
+     */
     public static CustomerBuilder builder() {
         return CustomerBuilder.of();
     }
 
+    /**
+     * create builder for Customer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerBuilder builder(final Customer template) {
         return CustomerBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomer(Function<Customer, T> helper) {
         return helper.apply(this);
     }
@@ -422,6 +625,10 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
         return com.commercetools.api.models.common.ReferenceTypeId.CUSTOMER;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Customer> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Customer>() {
             @Override

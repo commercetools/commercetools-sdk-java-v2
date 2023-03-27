@@ -30,6 +30,9 @@ public class AssetImpl implements Asset, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssetImpl(@JsonProperty("id") final String id,
             @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name,
@@ -43,6 +46,9 @@ public class AssetImpl implements Asset, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public AssetImpl() {
     }
 

@@ -24,7 +24,7 @@ public class InvalidInputBuilder implements Builder<InvalidInput> {
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class InvalidInputBuilder implements Builder<InvalidInput> {
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class InvalidInputBuilder implements Builder<InvalidInput> {
         return new InvalidInputImpl(message);
     }
 
+    /**
+     * factory method for an instance of InvalidInputBuilder
+     * @return builder
+     */
     public static InvalidInputBuilder of() {
         return new InvalidInputBuilder();
     }
 
+    /**
+     * create builder for InvalidInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidInputBuilder of(final InvalidInput template) {
         InvalidInputBuilder builder = new InvalidInputBuilder();
         builder.message = template.getMessage();

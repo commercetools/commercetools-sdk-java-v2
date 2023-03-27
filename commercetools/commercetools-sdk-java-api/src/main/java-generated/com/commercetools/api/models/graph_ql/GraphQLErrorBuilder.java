@@ -31,7 +31,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     private java.util.List<java.lang.Object> path;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *
+     * set values to the locations
      * @param locations value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *
+     * set value to the locations
      * @param locations value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *
+     * add values to the locations
      * @param locations value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *
+     * add the value to the locations using the builder function
      * @param builder function to build the locations value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *
+     * set the value to the locations using the builder function
      * @param builder function to build the locations value
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *
+     * set values to the path
      * @param path value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *
+     * set value to the path
      * @param path value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *
+     * add values to the path
      * @param path value to be set
      * @return Builder
      */
@@ -146,13 +146,28 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     * value of locations}
+     * @return locations
+     */
+
     public java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> getLocations() {
         return this.locations;
     }
+
+    /**
+     * value of path}
+     * @return path
+     */
 
     public java.util.List<java.lang.Object> getPath() {
         return this.path;
@@ -177,10 +192,19 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         return new GraphQLErrorImpl(message, locations, path);
     }
 
+    /**
+     * factory method for an instance of GraphQLErrorBuilder
+     * @return builder
+     */
     public static GraphQLErrorBuilder of() {
         return new GraphQLErrorBuilder();
     }
 
+    /**
+     * create builder for GraphQLError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GraphQLErrorBuilder of(final GraphQLError template) {
         GraphQLErrorBuilder builder = new GraphQLErrorBuilder();
         builder.message = template.getMessage();

@@ -94,7 +94,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the variant using the builder function
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the variant
      * @param variant value to be set
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the price using the builder function
      * @param builder function to build the price value
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the price
      * @param price value to be set
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -163,7 +163,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -175,7 +175,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * add values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -189,7 +189,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * add the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -268,7 +268,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the taxRate using the builder function
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -280,7 +280,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the taxRate
      * @param taxRate value to be set
      * @return Builder
      */
@@ -328,7 +328,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the shippingDetails using the builder function
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -341,7 +341,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the shippingDetails
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -352,56 +352,116 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
+     * @return productId
+     */
+
     @Nullable
     public String getProductId() {
         return this.productId;
     }
 
+    /**
+     *  <p>The product name.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     * value of variant}
+     * @return variant
+     */
 
     public com.commercetools.api.models.order.ProductVariantImportDraft getVariant() {
         return this.variant;
     }
 
+    /**
+     * value of price}
+     * @return price
+     */
+
     public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
 
+    /**
+     * value of quantity}
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;
     }
 
+    /**
+     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
 
+    /**
+     * value of taxRate}
+     * @return taxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
     }
+
+    /**
+     *  <p>The custom fields.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     * @return inventoryMode
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
+
+    /**
+     * value of shippingDetails}
+     * @return shippingDetails
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -430,10 +490,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
             distributionChannel, taxRate, custom, inventoryMode, shippingDetails);
     }
 
+    /**
+     * factory method for an instance of LineItemImportDraftBuilder
+     * @return builder
+     */
     public static LineItemImportDraftBuilder of() {
         return new LineItemImportDraftBuilder();
     }
 
+    /**
+     * create builder for LineItemImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemImportDraftBuilder of(final LineItemImportDraft template) {
         LineItemImportDraftBuilder builder = new LineItemImportDraftBuilder();
         builder.productId = template.getProductId();

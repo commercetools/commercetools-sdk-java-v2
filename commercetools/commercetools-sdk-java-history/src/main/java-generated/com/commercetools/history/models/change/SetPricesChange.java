@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetPricesChangeImpl.class)
 public interface SetPricesChange extends Change {
 
+    /**
+     * discriminator value for SetPricesChange
+     */
     String SET_PRICES_CHANGE = "SetPricesChange";
 
     /**
@@ -87,26 +90,70 @@ public interface SetPricesChange extends Change {
     @JsonProperty("nextValue")
     public List<Price> getNextValue();
 
+    /**
+     *  <p>Update action for <code>setPrices</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set variant
+     * @param variant value to be set
+     */
+
     public void setVariant(final String variant);
+
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
 
     @JsonIgnore
     public void setPreviousValue(final Price... previousValue);
 
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
+
     public void setPreviousValue(final List<Price> previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
 
     @JsonIgnore
     public void setNextValue(final Price... nextValue);
 
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
+
     public void setNextValue(final List<Price> nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetPricesChange
+     */
     public static SetPricesChange of() {
         return new SetPricesChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetPricesChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetPricesChange of(final SetPricesChange template) {
         SetPricesChangeImpl instance = new SetPricesChangeImpl();
         instance.setChange(template.getChange());
@@ -117,18 +164,37 @@ public interface SetPricesChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetPricesChange
+     * @return builder
+     */
     public static SetPricesChangeBuilder builder() {
         return SetPricesChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetPricesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetPricesChangeBuilder builder(final SetPricesChange template) {
         return SetPricesChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetPricesChange(Function<SetPricesChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetPricesChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetPricesChange>() {
             @Override

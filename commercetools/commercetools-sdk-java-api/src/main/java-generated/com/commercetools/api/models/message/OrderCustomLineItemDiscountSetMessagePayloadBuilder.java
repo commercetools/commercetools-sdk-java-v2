@@ -137,13 +137,28 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier for the Custom Line Item.</p>
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @return discountedPricePerQuantity
+     */
+
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
         return this.discountedPricePerQuantity;
     }
+
+    /**
+     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
@@ -172,10 +187,19 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
             taxedPrice);
     }
 
+    /**
+     * factory method for an instance of OrderCustomLineItemDiscountSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderCustomLineItemDiscountSetMessagePayloadBuilder of() {
         return new OrderCustomLineItemDiscountSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderCustomLineItemDiscountSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomLineItemDiscountSetMessagePayloadBuilder of(
             final OrderCustomLineItemDiscountSetMessagePayload template) {
         OrderCustomLineItemDiscountSetMessagePayloadBuilder builder = new OrderCustomLineItemDiscountSetMessagePayloadBuilder();

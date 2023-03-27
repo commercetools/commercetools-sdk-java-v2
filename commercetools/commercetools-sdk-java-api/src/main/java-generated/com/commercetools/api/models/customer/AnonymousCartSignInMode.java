@@ -26,9 +26,18 @@ public interface AnonymousCartSignInMode {
     */
     AnonymousCartSignInMode USE_AS_NEW_ACTIVE_CUSTOMER_CART = AnonymousCartSignInModeEnum.USE_AS_NEW_ACTIVE_CUSTOMER_CART;
 
+    /**
+     * possible values of AnonymousCartSignInMode
+     */
     enum AnonymousCartSignInModeEnum implements AnonymousCartSignInMode {
+        /**
+         * MergeWithExistingCustomerCart
+         */
         MERGE_WITH_EXISTING_CUSTOMER_CART("MergeWithExistingCustomerCart"),
 
+        /**
+         * UseAsNewActiveCustomerCart
+         */
         USE_AS_NEW_ACTIVE_CUSTOMER_CART("UseAsNewActiveCustomerCart");
         private final String jsonName;
 
@@ -45,13 +54,30 @@ public interface AnonymousCartSignInMode {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of AnonymousCartSignInMode
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static AnonymousCartSignInMode findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new AnonymousCartSignInMode() {
@@ -71,10 +97,18 @@ public interface AnonymousCartSignInMode {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<AnonymousCartSignInMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static AnonymousCartSignInMode[] values() {
         return AnonymousCartSignInModeEnum.values();
     }

@@ -35,6 +35,11 @@ public class CartDiscountChangeStackingModeActionBuilder implements Builder<Cart
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return stackingMode
+     */
+
     public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
         return this.stackingMode;
     }
@@ -56,10 +61,19 @@ public class CartDiscountChangeStackingModeActionBuilder implements Builder<Cart
         return new CartDiscountChangeStackingModeActionImpl(stackingMode);
     }
 
+    /**
+     * factory method for an instance of CartDiscountChangeStackingModeActionBuilder
+     * @return builder
+     */
     public static CartDiscountChangeStackingModeActionBuilder of() {
         return new CartDiscountChangeStackingModeActionBuilder();
     }
 
+    /**
+     * create builder for CartDiscountChangeStackingModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeStackingModeActionBuilder of(final CartDiscountChangeStackingModeAction template) {
         CartDiscountChangeStackingModeActionBuilder builder = new CartDiscountChangeStackingModeActionBuilder();
         builder.stackingMode = template.getStackingMode();

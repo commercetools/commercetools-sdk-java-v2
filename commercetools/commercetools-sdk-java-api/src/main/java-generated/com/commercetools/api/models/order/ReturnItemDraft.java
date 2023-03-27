@@ -81,22 +81,61 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Long quantity);
+
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
 
     public void setLineItemId(final String lineItemId);
 
+    /**
+     * set customLineItemId
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     * set comment
+     * @param comment value to be set
+     */
 
     public void setComment(final String comment);
 
+    /**
+     * set shipmentState
+     * @param shipmentState value to be set
+     */
+
     public void setShipmentState(final ReturnShipmentState shipmentState);
+
+    /**
+     *  <p>Custom Fields of this return item.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of ReturnItemDraft
+     */
     public static ReturnItemDraft of() {
         return new ReturnItemDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReturnItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReturnItemDraft of(final ReturnItemDraft template) {
         ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
         instance.setQuantity(template.getQuantity());
@@ -108,18 +147,37 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
         return instance;
     }
 
+    /**
+     * builder factory method for ReturnItemDraft
+     * @return builder
+     */
     public static ReturnItemDraftBuilder builder() {
         return ReturnItemDraftBuilder.of();
     }
 
+    /**
+     * create builder for ReturnItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnItemDraftBuilder builder(final ReturnItemDraft template) {
         return ReturnItemDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReturnItemDraft(Function<ReturnItemDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReturnItemDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReturnItemDraft>() {
             @Override

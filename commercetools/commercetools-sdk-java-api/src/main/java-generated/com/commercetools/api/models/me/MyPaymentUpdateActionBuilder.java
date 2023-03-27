@@ -39,6 +39,10 @@ public class MyPaymentUpdateActionBuilder {
         return com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of MyPaymentUpdateActionBuilder
+     * @return builder
+     */
     public static MyPaymentUpdateActionBuilder of() {
         return new MyPaymentUpdateActionBuilder();
     }

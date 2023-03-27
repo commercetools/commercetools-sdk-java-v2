@@ -36,10 +36,19 @@ public class ProductSelectionDeletedMessagePayloadBuilder implements Builder<Pro
         return new ProductSelectionDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method for an instance of ProductSelectionDeletedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductSelectionDeletedMessagePayloadBuilder of() {
         return new ProductSelectionDeletedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionDeletedMessagePayloadBuilder of(
             final ProductSelectionDeletedMessagePayload template) {
         ProductSelectionDeletedMessagePayloadBuilder builder = new ProductSelectionDeletedMessagePayloadBuilder();

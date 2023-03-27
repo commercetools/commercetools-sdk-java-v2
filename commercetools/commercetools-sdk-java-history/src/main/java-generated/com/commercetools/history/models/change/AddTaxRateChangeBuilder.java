@@ -61,9 +61,19 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.TaxRate getNextValue() {
         return this.nextValue;
@@ -87,10 +97,19 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
         return new AddTaxRateChangeImpl(change, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddTaxRateChangeBuilder
+     * @return builder
+     */
     public static AddTaxRateChangeBuilder of() {
         return new AddTaxRateChangeBuilder();
     }
 
+    /**
+     * create builder for AddTaxRateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddTaxRateChangeBuilder of(final AddTaxRateChange template) {
         AddTaxRateChangeBuilder builder = new AddTaxRateChangeBuilder();
         builder.change = template.getChange();

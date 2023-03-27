@@ -24,12 +24,18 @@ public class CategoryChangeNameActionImpl implements CategoryChangeNameAction, M
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryChangeNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

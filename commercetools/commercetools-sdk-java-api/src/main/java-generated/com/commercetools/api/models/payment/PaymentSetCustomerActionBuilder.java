@@ -51,6 +51,11 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing reference is removed.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
@@ -72,10 +77,19 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
         return new PaymentSetCustomerActionImpl(customer);
     }
 
+    /**
+     * factory method for an instance of PaymentSetCustomerActionBuilder
+     * @return builder
+     */
     public static PaymentSetCustomerActionBuilder of() {
         return new PaymentSetCustomerActionBuilder();
     }
 
+    /**
+     * create builder for PaymentSetCustomerAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetCustomerActionBuilder of(final PaymentSetCustomerAction template) {
         PaymentSetCustomerActionBuilder builder = new PaymentSetCustomerActionBuilder();
         builder.customer = template.getCustomer();

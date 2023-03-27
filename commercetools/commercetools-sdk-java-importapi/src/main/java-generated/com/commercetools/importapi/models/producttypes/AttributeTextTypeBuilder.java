@@ -36,10 +36,19 @@ public class AttributeTextTypeBuilder implements Builder<AttributeTextType> {
         return new AttributeTextTypeImpl();
     }
 
+    /**
+     * factory method for an instance of AttributeTextTypeBuilder
+     * @return builder
+     */
     public static AttributeTextTypeBuilder of() {
         return new AttributeTextTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeTextType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeTextTypeBuilder of(final AttributeTextType template) {
         AttributeTextTypeBuilder builder = new AttributeTextTypeBuilder();
         return builder;

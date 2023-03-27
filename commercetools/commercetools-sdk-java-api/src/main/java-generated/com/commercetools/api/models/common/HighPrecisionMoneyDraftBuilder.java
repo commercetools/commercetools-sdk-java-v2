@@ -80,18 +80,40 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
         return this;
     }
 
+    /**
+     *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
+     *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
+     *  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p>
+     * @return centAmount
+     */
+
     @Nullable
     public Long getCentAmount() {
         return this.centAmount;
     }
 
+    /**
+     *  <p>Currency code compliant to ISO 4217.</p>
+     * @return currencyCode
+     */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }
 
+    /**
+     *  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>
+     * @return fractionDigits
+     */
+
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }
+
+    /**
+     *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     * @return preciseAmount
+     */
 
     public Long getPreciseAmount() {
         return this.preciseAmount;
@@ -116,10 +138,19 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
         return new HighPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits, preciseAmount);
     }
 
+    /**
+     * factory method for an instance of HighPrecisionMoneyDraftBuilder
+     * @return builder
+     */
     public static HighPrecisionMoneyDraftBuilder of() {
         return new HighPrecisionMoneyDraftBuilder();
     }
 
+    /**
+     * create builder for HighPrecisionMoneyDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static HighPrecisionMoneyDraftBuilder of(final HighPrecisionMoneyDraft template) {
         HighPrecisionMoneyDraftBuilder builder = new HighPrecisionMoneyDraftBuilder();
         builder.centAmount = template.getCentAmount();

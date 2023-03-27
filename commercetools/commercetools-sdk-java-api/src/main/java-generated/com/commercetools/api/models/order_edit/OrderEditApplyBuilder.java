@@ -27,7 +27,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     private Long resourceVersion;
 
     /**
-     *
+     * set the value to the editVersion
      * @param editVersion value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     }
 
     /**
-     *
+     * set the value to the resourceVersion
      * @param resourceVersion value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
         return this;
     }
 
+    /**
+     * value of editVersion}
+     * @return editVersion
+     */
+
     public Long getEditVersion() {
         return this.editVersion;
     }
+
+    /**
+     * value of resourceVersion}
+     * @return resourceVersion
+     */
 
     public Long getResourceVersion() {
         return this.resourceVersion;
@@ -74,10 +84,19 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
         return new OrderEditApplyImpl(editVersion, resourceVersion);
     }
 
+    /**
+     * factory method for an instance of OrderEditApplyBuilder
+     * @return builder
+     */
     public static OrderEditApplyBuilder of() {
         return new OrderEditApplyBuilder();
     }
 
+    /**
+     * create builder for OrderEditApply instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditApplyBuilder of(final OrderEditApply template) {
         OrderEditApplyBuilder builder = new OrderEditApplyBuilder();
         builder.editVersion = template.getEditVersion();

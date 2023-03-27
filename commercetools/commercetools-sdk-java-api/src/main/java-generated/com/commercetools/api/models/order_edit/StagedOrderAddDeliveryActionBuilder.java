@@ -36,7 +36,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set value to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -151,7 +151,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * add values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * add the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     * set the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -217,20 +217,40 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
         return this;
     }
 
+    /**
+     * value of items}
+     * @return items
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
+
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
+     */
 
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
+    /**
+     * value of parcels}
+     * @return parcels
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {
         return this.parcels;
     }
+
+    /**
+     *  <p>Custom Fields for the Transaction.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -253,10 +273,19 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
         return new StagedOrderAddDeliveryActionImpl(items, address, parcels, custom);
     }
 
+    /**
+     * factory method for an instance of StagedOrderAddDeliveryActionBuilder
+     * @return builder
+     */
     public static StagedOrderAddDeliveryActionBuilder of() {
         return new StagedOrderAddDeliveryActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderAddDeliveryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddDeliveryActionBuilder of(final StagedOrderAddDeliveryAction template) {
         StagedOrderAddDeliveryActionBuilder builder = new StagedOrderAddDeliveryActionBuilder();
         builder.items = template.getItems();

@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeRemoveAttributeDefinitionActionImpl.class)
 public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeUpdateAction {
 
+    /**
+     * discriminator value for ProductTypeRemoveAttributeDefinitionAction
+     */
     String REMOVE_ATTRIBUTE_DEFINITION = "removeAttributeDefinition";
 
     /**
@@ -40,12 +43,26 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *  <p>Name of the Attribute to remove.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     * factory method
+     * @return instance of ProductTypeRemoveAttributeDefinitionAction
+     */
     public static ProductTypeRemoveAttributeDefinitionAction of() {
         return new ProductTypeRemoveAttributeDefinitionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductTypeRemoveAttributeDefinitionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductTypeRemoveAttributeDefinitionAction of(
             final ProductTypeRemoveAttributeDefinitionAction template) {
         ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();
@@ -53,20 +70,39 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
         return instance;
     }
 
+    /**
+     * builder factory method for ProductTypeRemoveAttributeDefinitionAction
+     * @return builder
+     */
     public static ProductTypeRemoveAttributeDefinitionActionBuilder builder() {
         return ProductTypeRemoveAttributeDefinitionActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductTypeRemoveAttributeDefinitionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(
             final ProductTypeRemoveAttributeDefinitionAction template) {
         return ProductTypeRemoveAttributeDefinitionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductTypeRemoveAttributeDefinitionAction(
             Function<ProductTypeRemoveAttributeDefinitionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveAttributeDefinitionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveAttributeDefinitionAction>() {
             @Override

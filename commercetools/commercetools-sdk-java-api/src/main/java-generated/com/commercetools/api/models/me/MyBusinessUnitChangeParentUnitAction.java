@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyBusinessUnitChangeParentUnitActionImpl.class)
 public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for MyBusinessUnitChangeParentUnitAction
+     */
     String CHANGE_PARENT_UNIT = "changeParentUnit";
 
     /**
@@ -42,31 +45,64 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
     @JsonProperty("parentUnit")
     public BusinessUnitResourceIdentifier getParentUnit();
 
+    /**
+     *  <p>New parent unit of the Business Unit.</p>
+     * @param parentUnit value to be set
+     */
+
     public void setParentUnit(final BusinessUnitResourceIdentifier parentUnit);
 
+    /**
+     * factory method
+     * @return instance of MyBusinessUnitChangeParentUnitAction
+     */
     public static MyBusinessUnitChangeParentUnitAction of() {
         return new MyBusinessUnitChangeParentUnitActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyBusinessUnitChangeParentUnitAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyBusinessUnitChangeParentUnitAction of(final MyBusinessUnitChangeParentUnitAction template) {
         MyBusinessUnitChangeParentUnitActionImpl instance = new MyBusinessUnitChangeParentUnitActionImpl();
         instance.setParentUnit(template.getParentUnit());
         return instance;
     }
 
+    /**
+     * builder factory method for MyBusinessUnitChangeParentUnitAction
+     * @return builder
+     */
     public static MyBusinessUnitChangeParentUnitActionBuilder builder() {
         return MyBusinessUnitChangeParentUnitActionBuilder.of();
     }
 
+    /**
+     * create builder for MyBusinessUnitChangeParentUnitAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyBusinessUnitChangeParentUnitActionBuilder builder(
             final MyBusinessUnitChangeParentUnitAction template) {
         return MyBusinessUnitChangeParentUnitActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyBusinessUnitChangeParentUnitAction(Function<MyBusinessUnitChangeParentUnitAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitChangeParentUnitAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitChangeParentUnitAction>() {
             @Override

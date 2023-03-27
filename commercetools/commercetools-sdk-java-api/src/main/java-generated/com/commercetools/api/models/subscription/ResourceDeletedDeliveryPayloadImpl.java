@@ -34,6 +34,9 @@ public class ResourceDeletedDeliveryPayloadImpl implements ResourceDeletedDelive
 
     private Boolean dataErasure;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ResourceDeletedDeliveryPayloadImpl(@JsonProperty("projectKey") final String projectKey,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
@@ -50,6 +53,9 @@ public class ResourceDeletedDeliveryPayloadImpl implements ResourceDeletedDelive
         this.notificationType = RESOURCE_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public ResourceDeletedDeliveryPayloadImpl() {
         this.notificationType = RESOURCE_DELETED;
     }

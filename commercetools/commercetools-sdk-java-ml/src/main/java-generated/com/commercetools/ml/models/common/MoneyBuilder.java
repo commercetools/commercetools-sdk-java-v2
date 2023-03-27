@@ -27,7 +27,7 @@ public class MoneyBuilder implements Builder<Money> {
     private String currencyCode;
 
     /**
-     *
+     * set the value to the centAmount
      * @param centAmount value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class MoneyBuilder implements Builder<Money> {
         return this;
     }
 
+    /**
+     * value of centAmount}
+     * @return centAmount
+     */
+
     public Long getCentAmount() {
         return this.centAmount;
     }
+
+    /**
+     *  <p>The currency code compliant to ISO 4217.</p>
+     * @return currencyCode
+     */
 
     public String getCurrencyCode() {
         return this.currencyCode;
@@ -74,10 +84,19 @@ public class MoneyBuilder implements Builder<Money> {
         return new MoneyImpl(centAmount, currencyCode);
     }
 
+    /**
+     * factory method for an instance of MoneyBuilder
+     * @return builder
+     */
     public static MoneyBuilder of() {
         return new MoneyBuilder();
     }
 
+    /**
+     * create builder for Money instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoneyBuilder of(final Money template) {
         MoneyBuilder builder = new MoneyBuilder();
         builder.centAmount = template.getCentAmount();

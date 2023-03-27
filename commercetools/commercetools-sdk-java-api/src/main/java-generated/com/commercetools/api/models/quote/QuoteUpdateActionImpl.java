@@ -22,11 +22,17 @@ public class QuoteUpdateActionImpl implements QuoteUpdateAction, ModelBase {
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteUpdateActionImpl() {
     }
 

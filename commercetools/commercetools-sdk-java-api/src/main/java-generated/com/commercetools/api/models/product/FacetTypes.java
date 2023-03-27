@@ -21,11 +21,23 @@ public interface FacetTypes {
 
     FacetTypes FILTER = FacetTypesEnum.FILTER;
 
+    /**
+     * possible values of FacetTypes
+     */
     enum FacetTypesEnum implements FacetTypes {
+        /**
+         * terms
+         */
         TERMS("terms"),
 
+        /**
+         * range
+         */
         RANGE("range"),
 
+        /**
+         * filter
+         */
         FILTER("filter");
         private final String jsonName;
 
@@ -42,13 +54,30 @@ public interface FacetTypes {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of FacetTypes
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static FacetTypes findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new FacetTypes() {
@@ -68,10 +97,18 @@ public interface FacetTypes {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<FacetTypes> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static FacetTypes[] values() {
         return FacetTypesEnum.values();
     }

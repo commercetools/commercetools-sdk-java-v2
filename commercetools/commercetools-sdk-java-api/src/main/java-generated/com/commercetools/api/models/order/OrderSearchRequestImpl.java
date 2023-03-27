@@ -28,6 +28,9 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
 
     private Integer offset;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSearchRequestImpl(@JsonProperty("query") final com.commercetools.api.models.order.OrderSearchQuery query,
             @JsonProperty("sort") final java.util.List<com.commercetools.api.models.order.OrderSearchSorting> sort,
@@ -38,6 +41,9 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
         this.offset = offset;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSearchRequestImpl() {
     }
 

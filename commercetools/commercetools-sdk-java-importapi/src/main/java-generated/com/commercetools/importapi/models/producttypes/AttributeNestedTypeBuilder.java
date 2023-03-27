@@ -50,6 +50,11 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
         return this;
     }
 
+    /**
+     *  <p>References a product type by key.</p>
+     * @return typeReference
+     */
+
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getTypeReference() {
         return this.typeReference;
     }
@@ -71,10 +76,19 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
         return new AttributeNestedTypeImpl(typeReference);
     }
 
+    /**
+     * factory method for an instance of AttributeNestedTypeBuilder
+     * @return builder
+     */
     public static AttributeNestedTypeBuilder of() {
         return new AttributeNestedTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeNestedType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeNestedTypeBuilder of(final AttributeNestedType template) {
         AttributeNestedTypeBuilder builder = new AttributeNestedTypeBuilder();
         builder.typeReference = template.getTypeReference();

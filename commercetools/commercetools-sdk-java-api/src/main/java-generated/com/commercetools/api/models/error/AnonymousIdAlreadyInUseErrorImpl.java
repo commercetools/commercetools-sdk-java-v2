@@ -27,6 +27,9 @@ public class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlreadyInUse
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AnonymousIdAlreadyInUseErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlreadyInUse
         this.code = ANONYMOUS_ID_ALREADY_IN_USE;
     }
 
+    /**
+     * create empty instance
+     */
     public AnonymousIdAlreadyInUseErrorImpl() {
         this.code = ANONYMOUS_ID_ALREADY_IN_USE;
     }

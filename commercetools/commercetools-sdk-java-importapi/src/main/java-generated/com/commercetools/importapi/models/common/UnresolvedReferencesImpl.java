@@ -24,6 +24,9 @@ public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     UnresolvedReferencesImpl(@JsonProperty("key") final String key,
             @JsonProperty("typeId") final com.commercetools.importapi.models.common.ReferenceType typeId) {
@@ -31,6 +34,9 @@ public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase
         this.typeId = typeId;
     }
 
+    /**
+     * create empty instance
+     */
     public UnresolvedReferencesImpl() {
     }
 

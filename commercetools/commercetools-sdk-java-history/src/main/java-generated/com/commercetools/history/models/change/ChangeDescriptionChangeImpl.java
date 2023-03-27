@@ -28,6 +28,9 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeDescriptionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
         this.type = CHANGE_DESCRIPTION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeDescriptionChangeImpl() {
         this.type = CHANGE_DESCRIPTION_CHANGE;
     }

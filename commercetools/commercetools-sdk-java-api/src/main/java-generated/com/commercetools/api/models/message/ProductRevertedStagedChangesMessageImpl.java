@@ -44,6 +44,9 @@ public class ProductRevertedStagedChangesMessageImpl implements ProductRevertedS
 
     private java.util.List<String> removedImageUrls;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRevertedStagedChangesMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class ProductRevertedStagedChangesMessageImpl implements ProductRevertedS
         this.type = PRODUCT_REVERTED_STAGED_CHANGES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRevertedStagedChangesMessageImpl() {
         this.type = PRODUCT_REVERTED_STAGED_CHANGES;
     }

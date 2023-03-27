@@ -66,13 +66,30 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return this;
     }
 
+    /**
+     *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
+     * @return addressKey
+     */
+
     public String getAddressKey() {
         return this.addressKey;
     }
 
+    /**
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
+     *  <p>If a quantity is updated to <code>0</code> when defining ItemShippingDetailsDraft, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting ItemShippingDetails.</p>
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>It connects Line Item quantities with individual shipping addresses.</p>
+     * @return shippingMethodKey
+     */
 
     @Nullable
     public String getShippingMethodKey() {
@@ -97,10 +114,19 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return new ItemShippingTargetImpl(addressKey, quantity, shippingMethodKey);
     }
 
+    /**
+     * factory method for an instance of ItemShippingTargetBuilder
+     * @return builder
+     */
     public static ItemShippingTargetBuilder of() {
         return new ItemShippingTargetBuilder();
     }
 
+    /**
+     * create builder for ItemShippingTarget instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemShippingTargetBuilder of(final ItemShippingTarget template) {
         ItemShippingTargetBuilder builder = new ItemShippingTargetBuilder();
         builder.addressKey = template.getAddressKey();

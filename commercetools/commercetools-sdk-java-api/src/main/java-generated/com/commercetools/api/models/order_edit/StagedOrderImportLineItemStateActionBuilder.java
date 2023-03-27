@@ -28,7 +28,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * add values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * add the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     *
+     * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -105,9 +105,19 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;
@@ -131,10 +141,19 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
         return new StagedOrderImportLineItemStateActionImpl(lineItemId, state);
     }
 
+    /**
+     * factory method for an instance of StagedOrderImportLineItemStateActionBuilder
+     * @return builder
+     */
     public static StagedOrderImportLineItemStateActionBuilder of() {
         return new StagedOrderImportLineItemStateActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderImportLineItemStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderImportLineItemStateActionBuilder of(final StagedOrderImportLineItemStateAction template) {
         StagedOrderImportLineItemStateActionBuilder builder = new StagedOrderImportLineItemStateActionBuilder();
         builder.lineItemId = template.getLineItemId();

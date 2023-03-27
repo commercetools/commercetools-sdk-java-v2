@@ -63,9 +63,19 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
         return this;
     }
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     * @return reference
+     */
+
     public com.commercetools.api.models.common.Reference getReference() {
         return this.reference;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the Cart.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -89,10 +99,19 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
         return new ReplicaCartDraftImpl(reference, key);
     }
 
+    /**
+     * factory method for an instance of ReplicaCartDraftBuilder
+     * @return builder
+     */
     public static ReplicaCartDraftBuilder of() {
         return new ReplicaCartDraftBuilder();
     }
 
+    /**
+     * create builder for ReplicaCartDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReplicaCartDraftBuilder of(final ReplicaCartDraft template) {
         ReplicaCartDraftBuilder builder = new ReplicaCartDraftBuilder();
         builder.reference = template.getReference();

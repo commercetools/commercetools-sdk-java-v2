@@ -75,9 +75,19 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
         return this;
     }
 
+    /**
+     *  <p>Customer signed up or signed in after authentication.</p>
+     * @return customer
+     */
+
     public com.commercetools.api.models.customer.Customer getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     * @return cart
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.Cart getCart() {
@@ -101,10 +111,19 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
         return new CustomerSignInResultImpl(customer, cart);
     }
 
+    /**
+     * factory method for an instance of CustomerSignInResultBuilder
+     * @return builder
+     */
     public static CustomerSignInResultBuilder of() {
         return new CustomerSignInResultBuilder();
     }
 
+    /**
+     * create builder for CustomerSignInResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSignInResultBuilder of(final CustomerSignInResult template) {
         CustomerSignInResultBuilder builder = new CustomerSignInResultBuilder();
         builder.customer = template.getCustomer();

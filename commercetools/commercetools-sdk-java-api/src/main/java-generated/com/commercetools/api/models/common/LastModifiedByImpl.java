@@ -28,6 +28,9 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
 
     private String anonymousId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LastModifiedByImpl(@JsonProperty("clientId") final String clientId,
             @JsonProperty("externalUserId") final String externalUserId,
@@ -39,6 +42,9 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
         this.anonymousId = anonymousId;
     }
 
+    /**
+     * create empty instance
+     */
     public LastModifiedByImpl() {
     }
 

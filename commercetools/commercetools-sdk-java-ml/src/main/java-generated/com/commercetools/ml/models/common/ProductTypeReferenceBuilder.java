@@ -24,7 +24,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     private String id;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
         this.id = id;
         return this;
     }
+
+    /**
+     * value of id}
+     * @return id
+     */
 
     public String getId() {
         return this.id;
@@ -55,10 +60,19 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
         return new ProductTypeReferenceImpl(id);
     }
 
+    /**
+     * factory method for an instance of ProductTypeReferenceBuilder
+     * @return builder
+     */
     public static ProductTypeReferenceBuilder of() {
         return new ProductTypeReferenceBuilder();
     }
 
+    /**
+     * create builder for ProductTypeReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeReferenceBuilder of(final ProductTypeReference template) {
         ProductTypeReferenceBuilder builder = new ProductTypeReferenceBuilder();
         builder.id = template.getId();

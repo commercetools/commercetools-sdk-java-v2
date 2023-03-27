@@ -26,6 +26,9 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
 
     private Integer availableQuantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantChannelAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock,
             @JsonProperty("restockableInDays") final Integer restockableInDays,
@@ -35,6 +38,9 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
         this.availableQuantity = availableQuantity;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantChannelAvailabilityImpl() {
     }
 

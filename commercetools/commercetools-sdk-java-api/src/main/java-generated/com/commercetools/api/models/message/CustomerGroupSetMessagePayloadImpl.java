@@ -24,6 +24,9 @@ public class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSetMessa
 
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupSetMessagePayloadImpl(
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
@@ -31,6 +34,9 @@ public class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSetMessa
         this.type = CUSTOMER_GROUP_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupSetMessagePayloadImpl() {
         this.type = CUSTOMER_GROUP_SET;
     }

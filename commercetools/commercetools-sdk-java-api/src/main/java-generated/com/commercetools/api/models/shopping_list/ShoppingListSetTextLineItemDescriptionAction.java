@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListSetTextLineItemDescriptionActionImpl.class)
 public interface ShoppingListSetTextLineItemDescriptionAction extends ShoppingListUpdateAction {
 
+    /**
+     * discriminator value for ShoppingListSetTextLineItemDescriptionAction
+     */
     String SET_TEXT_LINE_ITEM_DESCRIPTION = "setTextLineItemDescription";
 
     /**
@@ -49,14 +52,33 @@ public interface ShoppingListSetTextLineItemDescriptionAction extends ShoppingLi
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @param textLineItemId value to be set
+     */
+
     public void setTextLineItemId(final String textLineItemId);
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description value to be set
+     */
 
     public void setDescription(final LocalizedString description);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListSetTextLineItemDescriptionAction
+     */
     public static ShoppingListSetTextLineItemDescriptionAction of() {
         return new ShoppingListSetTextLineItemDescriptionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListSetTextLineItemDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListSetTextLineItemDescriptionAction of(
             final ShoppingListSetTextLineItemDescriptionAction template) {
         ShoppingListSetTextLineItemDescriptionActionImpl instance = new ShoppingListSetTextLineItemDescriptionActionImpl();
@@ -65,20 +87,39 @@ public interface ShoppingListSetTextLineItemDescriptionAction extends ShoppingLi
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListSetTextLineItemDescriptionAction
+     * @return builder
+     */
     public static ShoppingListSetTextLineItemDescriptionActionBuilder builder() {
         return ShoppingListSetTextLineItemDescriptionActionBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListSetTextLineItemDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListSetTextLineItemDescriptionActionBuilder builder(
             final ShoppingListSetTextLineItemDescriptionAction template) {
         return ShoppingListSetTextLineItemDescriptionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListSetTextLineItemDescriptionAction(
             Function<ShoppingListSetTextLineItemDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetTextLineItemDescriptionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetTextLineItemDescriptionAction>() {
             @Override

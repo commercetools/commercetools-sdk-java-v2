@@ -314,47 +314,98 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         return this;
     }
 
+    /**
+     *  <p>Name of the Shipping Method.</p>
+     * @return shippingMethodName
+     */
+
     public String getShippingMethodName() {
         return this.shippingMethodName;
     }
+
+    /**
+     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     * @return price
+     */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getPrice() {
         return this.price;
     }
 
+    /**
+     *  <p>Used to determine the price.</p>
+     * @return shippingRate
+     */
+
     public com.commercetools.api.models.shipping_method.ShippingRate getShippingRate() {
         return this.shippingRate;
     }
+
+    /**
+     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
+    /**
+     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
+     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     * @return taxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
     }
+
+    /**
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
+     */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
         return this.taxCategory;
     }
 
+    /**
+     *  <p>Not set if a custom Shipping Method is used.</p>
+     * @return shippingMethod
+     */
+
     @Nullable
     public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {
         return this.shippingMethod;
     }
+
+    /**
+     *  <p>Information on how items are delivered to customers.</p>
+     * @return deliveries
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
         return this.deliveries;
     }
 
+    /**
+     *  <p>Discounted price of the Shipping Method.</p>
+     * @return discountedPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice() {
         return this.discountedPrice;
     }
+
+    /**
+     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     * @return shippingMethodState
+     */
 
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {
         return this.shippingMethodState;
@@ -382,10 +433,19 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
             shippingMethod, deliveries, discountedPrice, shippingMethodState);
     }
 
+    /**
+     * factory method for an instance of ShippingInfoBuilder
+     * @return builder
+     */
     public static ShippingInfoBuilder of() {
         return new ShippingInfoBuilder();
     }
 
+    /**
+     * create builder for ShippingInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingInfoBuilder of(final ShippingInfo template) {
         ShippingInfoBuilder builder = new ShippingInfoBuilder();
         builder.shippingMethodName = template.getShippingMethodName();

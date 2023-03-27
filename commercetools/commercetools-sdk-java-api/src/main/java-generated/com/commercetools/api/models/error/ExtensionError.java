@@ -71,21 +71,56 @@ public interface ExtensionError {
     @JsonAnyGetter
     public Map<String, Object> values();
 
+    /**
+     *  <p>Error code caused by the Extension. For example, <code>InvalidField</code>.</p>
+     * @param code value to be set
+     */
+
     public void setCode(final String code);
+
+    /**
+     *  <p>Plain text description of the error.</p>
+     * @param message value to be set
+     */
 
     public void setMessage(final String message);
 
+    /**
+     *  <p>Unique identifier of the Extension.</p>
+     * @param extensionId value to be set
+     */
+
     public void setExtensionId(final String extensionId);
 
+    /**
+     *  <p>User-defined unique identifier of the Extension.</p>
+     * @param extensionKey value to be set
+     */
+
     public void setExtensionKey(final String extensionKey);
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     */
 
     @JsonAnySetter
     public void setValue(String key, Object value);
 
+    /**
+     * factory method
+     * @return instance of ExtensionError
+     */
     public static ExtensionError of() {
         return new ExtensionErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExtensionError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExtensionError of(final ExtensionError template) {
         ExtensionErrorImpl instance = new ExtensionErrorImpl();
         instance.setCode(template.getCode());
@@ -96,18 +131,37 @@ public interface ExtensionError {
         return instance;
     }
 
+    /**
+     * builder factory method for ExtensionError
+     * @return builder
+     */
     public static ExtensionErrorBuilder builder() {
         return ExtensionErrorBuilder.of();
     }
 
+    /**
+     * create builder for ExtensionError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionErrorBuilder builder(final ExtensionError template) {
         return ExtensionErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtensionError(Function<ExtensionError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionError>() {
             @Override

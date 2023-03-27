@@ -178,46 +178,139 @@ public interface ShippingMethod
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Unique identifier of the ShippingMethod.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the ShippingMethod.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the ShippingMethod was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the ShippingMethod was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the ShippingMethod.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Name of the ShippingMethod.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>Localized name of the ShippingMethod.</p>
+     * @param localizedName value to be set
+     */
+
     public void setLocalizedName(final LocalizedString localizedName);
 
+    /**
+     *  <p>Description of the ShippingMethod.</p>
+     * @param description value to be set
+     */
     @Deprecated
     public void setDescription(final String description);
 
+    /**
+     *  <p>Localized description of the ShippingMethod.</p>
+     * @param localizedDescription value to be set
+     */
+
     public void setLocalizedDescription(final LocalizedString localizedDescription);
 
+    /**
+     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryReference taxCategory);
+
+    /**
+     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @param zoneRates values to be set
+     */
 
     @JsonIgnore
     public void setZoneRates(final ZoneRate... zoneRates);
 
+    /**
+     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @param zoneRates values to be set
+     */
+
     public void setZoneRates(final List<ZoneRate> zoneRates);
+
+    /**
+     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     * @param isDefault value to be set
+     */
 
     public void setIsDefault(final Boolean isDefault);
 
+    /**
+     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     * @param predicate value to be set
+     */
+
     public void setPredicate(final String predicate);
+
+    /**
+     *  <p>Custom Fields of the ShippingMethod.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethod
+     */
     public static ShippingMethod of() {
         return new ShippingMethodImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethod
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethod of(final ShippingMethod template) {
         ShippingMethodImpl instance = new ShippingMethodImpl();
         instance.setId(template.getId());
@@ -239,14 +332,29 @@ public interface ShippingMethod
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethod
+     * @return builder
+     */
     public static ShippingMethodBuilder builder() {
         return ShippingMethodBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethod instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodBuilder builder(final ShippingMethod template) {
         return ShippingMethodBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethod(Function<ShippingMethod, T> helper) {
         return helper.apply(this);
     }
@@ -255,6 +363,10 @@ public interface ShippingMethod
         return com.commercetools.api.models.common.ReferenceTypeId.SHIPPING_METHOD;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethod> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethod>() {
             @Override

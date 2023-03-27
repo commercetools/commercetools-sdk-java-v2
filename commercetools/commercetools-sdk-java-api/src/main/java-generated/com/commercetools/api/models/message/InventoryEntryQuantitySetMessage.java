@@ -41,6 +41,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryQuantitySetMessageImpl.class)
 public interface InventoryEntryQuantitySetMessage extends Message {
 
+    /**
+     * discriminator value for InventoryEntryQuantitySetMessage
+     */
     String INVENTORY_ENTRY_QUANTITY_SET = "InventoryEntryQuantitySet";
 
     /**
@@ -83,20 +86,54 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
 
+    /**
+     *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
+     * @param oldQuantityOnStock value to be set
+     */
+
     public void setOldQuantityOnStock(final Long oldQuantityOnStock);
+
+    /**
+     *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
+     * @param newQuantityOnStock value to be set
+     */
 
     public void setNewQuantityOnStock(final Long newQuantityOnStock);
 
+    /**
+     *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
+     * @param oldAvailableQuantity value to be set
+     */
+
     public void setOldAvailableQuantity(final Long oldAvailableQuantity);
+
+    /**
+     *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
+     * @param newAvailableQuantity value to be set
+     */
 
     public void setNewAvailableQuantity(final Long newAvailableQuantity);
 
+    /**
+     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     * @param supplyChannel value to be set
+     */
+
     public void setSupplyChannel(final ChannelReference supplyChannel);
 
+    /**
+     * factory method
+     * @return instance of InventoryEntryQuantitySetMessage
+     */
     public static InventoryEntryQuantitySetMessage of() {
         return new InventoryEntryQuantitySetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryEntryQuantitySetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryEntryQuantitySetMessage of(final InventoryEntryQuantitySetMessage template) {
         InventoryEntryQuantitySetMessageImpl instance = new InventoryEntryQuantitySetMessageImpl();
         instance.setId(template.getId());
@@ -117,18 +154,37 @@ public interface InventoryEntryQuantitySetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryEntryQuantitySetMessage
+     * @return builder
+     */
     public static InventoryEntryQuantitySetMessageBuilder builder() {
         return InventoryEntryQuantitySetMessageBuilder.of();
     }
 
+    /**
+     * create builder for InventoryEntryQuantitySetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryQuantitySetMessageBuilder builder(final InventoryEntryQuantitySetMessage template) {
         return InventoryEntryQuantitySetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryEntryQuantitySetMessage(Function<InventoryEntryQuantitySetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessage>() {
             @Override

@@ -57,16 +57,40 @@ public interface ProductVariant {
     @JsonProperty("variantId")
     public Integer getVariantId();
 
+    /**
+     *  <p>The product that contains this variant.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductReference product);
+
+    /**
+     *  <p>The state of the product variant.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     *  <p>The id of the product variant.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Integer variantId);
 
+    /**
+     * factory method
+     * @return instance of ProductVariant
+     */
     public static ProductVariant of() {
         return new ProductVariantImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariant
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariant of(final ProductVariant template) {
         ProductVariantImpl instance = new ProductVariantImpl();
         instance.setProduct(template.getProduct());
@@ -75,18 +99,37 @@ public interface ProductVariant {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariant
+     * @return builder
+     */
     public static ProductVariantBuilder builder() {
         return ProductVariantBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariant instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantBuilder builder(final ProductVariant template) {
         return ProductVariantBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariant(Function<ProductVariant, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariant> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariant>() {
             @Override

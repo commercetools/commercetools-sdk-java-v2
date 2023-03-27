@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeDefinitionAlreadyExistsErrorImpl.class)
 public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
 
+    /**
+     * discriminator value for AttributeDefinitionAlreadyExistsError
+     */
     String ATTRIBUTE_DEFINITION_ALREADY_EXISTS = "AttributeDefinitionAlreadyExists";
 
     /**
@@ -75,18 +78,47 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();
 
+    /**
+     *  <p><code>"An attribute definition with name $attributeName already exists on product type $productTypeName."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
+     * @param conflictingProductTypeId value to be set
+     */
 
     public void setConflictingProductTypeId(final String conflictingProductTypeId);
 
+    /**
+     *  <p>Name of the Product Type containing the conflicting name.</p>
+     * @param conflictingProductTypeName value to be set
+     */
+
     public void setConflictingProductTypeName(final String conflictingProductTypeName);
+
+    /**
+     *  <p>Name of the conflicting Attribute.</p>
+     * @param conflictingAttributeName value to be set
+     */
 
     public void setConflictingAttributeName(final String conflictingAttributeName);
 
+    /**
+     * factory method
+     * @return instance of AttributeDefinitionAlreadyExistsError
+     */
     public static AttributeDefinitionAlreadyExistsError of() {
         return new AttributeDefinitionAlreadyExistsErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeDefinitionAlreadyExistsError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeDefinitionAlreadyExistsError of(final AttributeDefinitionAlreadyExistsError template) {
         AttributeDefinitionAlreadyExistsErrorImpl instance = new AttributeDefinitionAlreadyExistsErrorImpl();
         instance.setMessage(template.getMessage());
@@ -97,19 +129,38 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeDefinitionAlreadyExistsError
+     * @return builder
+     */
     public static AttributeDefinitionAlreadyExistsErrorBuilder builder() {
         return AttributeDefinitionAlreadyExistsErrorBuilder.of();
     }
 
+    /**
+     * create builder for AttributeDefinitionAlreadyExistsError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDefinitionAlreadyExistsErrorBuilder builder(
             final AttributeDefinitionAlreadyExistsError template) {
         return AttributeDefinitionAlreadyExistsErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeDefinitionAlreadyExistsError(Function<AttributeDefinitionAlreadyExistsError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionAlreadyExistsError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionAlreadyExistsError>() {
             @Override

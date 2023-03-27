@@ -130,21 +130,46 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this;
     }
 
+    /**
+     *  <p><code>"The value $invalidValue is not valid for field $field."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Name of the field with the invalid value.</p>
+     * @return field
+     */
+
     public String getField() {
         return this.field;
     }
 
+    /**
+     *  <p>Value invalid for the field.</p>
+     * @return invalidValue
+     */
+
     public java.lang.Object getInvalidValue() {
         return this.invalidValue;
     }
+
+    /**
+     *  <p>Fixed set of allowed values for the field, if any.</p>
+     * @return allowedValues
+     */
 
     @Nullable
     public java.util.List<java.lang.Object> getAllowedValues() {
@@ -170,10 +195,19 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return new InvalidFieldErrorImpl(message, values, field, invalidValue, allowedValues);
     }
 
+    /**
+     * factory method for an instance of InvalidFieldErrorBuilder
+     * @return builder
+     */
     public static InvalidFieldErrorBuilder of() {
         return new InvalidFieldErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidFieldError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidFieldErrorBuilder of(final InvalidFieldError template) {
         InvalidFieldErrorBuilder builder = new InvalidFieldErrorBuilder();
         builder.message = template.getMessage();

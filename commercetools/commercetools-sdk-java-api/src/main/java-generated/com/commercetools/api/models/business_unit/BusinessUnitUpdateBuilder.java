@@ -107,9 +107,19 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class BusinessUnitUpdateBuilder implements Builder<BusinessUnitUpdate> {
         return new BusinessUnitUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitUpdateBuilder
+     * @return builder
+     */
     public static BusinessUnitUpdateBuilder of() {
         return new BusinessUnitUpdateBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitUpdateBuilder of(final BusinessUnitUpdate template) {
         BusinessUnitUpdateBuilder builder = new BusinessUnitUpdateBuilder();
         builder.version = template.getVersion();

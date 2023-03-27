@@ -26,6 +26,9 @@ public class BusinessUnitAddShippingAddressIdActionImpl implements BusinessUnitA
 
     private String addressKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitAddShippingAddressIdActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("addressKey") final String addressKey) {
@@ -34,6 +37,9 @@ public class BusinessUnitAddShippingAddressIdActionImpl implements BusinessUnitA
         this.action = ADD_SHIPPING_ADDRESS_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitAddShippingAddressIdActionImpl() {
         this.action = ADD_SHIPPING_ADDRESS_ID;
     }

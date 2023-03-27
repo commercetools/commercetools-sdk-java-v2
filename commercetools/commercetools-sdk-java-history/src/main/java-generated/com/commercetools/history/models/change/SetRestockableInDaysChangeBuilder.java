@@ -41,7 +41,7 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setRestockableInDays</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public Integer getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public Integer getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
         return new SetRestockableInDaysChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetRestockableInDaysChangeBuilder
+     * @return builder
+     */
     public static SetRestockableInDaysChangeBuilder of() {
         return new SetRestockableInDaysChangeBuilder();
     }
 
+    /**
+     * create builder for SetRestockableInDaysChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetRestockableInDaysChangeBuilder of(final SetRestockableInDaysChange template) {
         SetRestockableInDaysChangeBuilder builder = new SetRestockableInDaysChangeBuilder();
         builder.change = template.getChange();

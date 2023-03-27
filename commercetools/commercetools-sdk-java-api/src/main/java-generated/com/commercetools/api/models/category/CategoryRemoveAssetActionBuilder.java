@@ -50,10 +50,20 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
         return this;
     }
 
+    /**
+     *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
+     */
+
     @Nullable
     public String getAssetId() {
         return this.assetId;
     }
+
+    /**
+     *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
+     */
 
     @Nullable
     public String getAssetKey() {
@@ -76,10 +86,19 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
         return new CategoryRemoveAssetActionImpl(assetId, assetKey);
     }
 
+    /**
+     * factory method for an instance of CategoryRemoveAssetActionBuilder
+     * @return builder
+     */
     public static CategoryRemoveAssetActionBuilder of() {
         return new CategoryRemoveAssetActionBuilder();
     }
 
+    /**
+     * create builder for CategoryRemoveAssetAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryRemoveAssetActionBuilder of(final CategoryRemoveAssetAction template) {
         CategoryRemoveAssetActionBuilder builder = new CategoryRemoveAssetActionBuilder();
         builder.assetId = template.getAssetId();

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizedLabelImpl.class)
 public interface LocalizedLabel extends Label {
 
+    /**
+     * discriminator value for LocalizedLabel
+     */
     String LOCALIZED_LABEL = "LocalizedLabel";
 
     /**
@@ -50,30 +53,63 @@ public interface LocalizedLabel extends Label {
     @JsonProperty("value")
     public LocalizedString getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final LocalizedString value);
 
+    /**
+     * factory method
+     * @return instance of LocalizedLabel
+     */
     public static LocalizedLabel of() {
         return new LocalizedLabelImpl();
     }
 
+    /**
+     * factory method to copy an instance of LocalizedLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LocalizedLabel of(final LocalizedLabel template) {
         LocalizedLabelImpl instance = new LocalizedLabelImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for LocalizedLabel
+     * @return builder
+     */
     public static LocalizedLabelBuilder builder() {
         return LocalizedLabelBuilder.of();
     }
 
+    /**
+     * create builder for LocalizedLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedLabelBuilder builder(final LocalizedLabel template) {
         return LocalizedLabelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLocalizedLabel(Function<LocalizedLabel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LocalizedLabel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LocalizedLabel>() {
             @Override

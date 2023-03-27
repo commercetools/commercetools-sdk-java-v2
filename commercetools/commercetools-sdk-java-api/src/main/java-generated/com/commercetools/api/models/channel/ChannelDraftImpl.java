@@ -34,6 +34,9 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
 
     private com.commercetools.api.models.common.GeoJson geoLocation;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles,
@@ -51,6 +54,9 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
         this.geoLocation = geoLocation;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelDraftImpl() {
     }
 

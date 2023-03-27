@@ -42,6 +42,9 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
@@ -67,6 +70,9 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListDraftImpl() {
     }
 

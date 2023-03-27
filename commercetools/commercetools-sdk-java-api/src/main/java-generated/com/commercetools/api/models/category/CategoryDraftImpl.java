@@ -44,6 +44,9 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
@@ -70,6 +73,9 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryDraftImpl() {
     }
 

@@ -41,18 +41,36 @@ public interface DeliveryFormat {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for cloudEvents subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.CloudEventsFormatBuilder cloudEventsBuilder() {
         return com.commercetools.api.models.subscription.CloudEventsFormatBuilder.of();
     }
 
+    /**
+     * builder for platform subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.PlatformFormatBuilder platformBuilder() {
         return com.commercetools.api.models.subscription.PlatformFormatBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDeliveryFormat(Function<DeliveryFormat, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DeliveryFormat> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DeliveryFormat>() {
             @Override

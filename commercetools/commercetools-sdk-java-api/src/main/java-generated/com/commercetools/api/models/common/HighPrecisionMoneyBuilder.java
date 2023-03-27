@@ -80,17 +80,41 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
         return this;
     }
 
+    /**
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     * @return centAmount
+     */
+
     public Long getCentAmount() {
         return this.centAmount;
     }
+
+    /**
+     *  <p>Currency code compliant to ISO 4217.</p>
+     * @return currencyCode
+     */
 
     public String getCurrencyCode() {
         return this.currencyCode;
     }
 
+    /**
+     *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
+     * @return fractionDigits
+     */
+
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }
+
+    /**
+     *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     * @return preciseAmount
+     */
 
     public Long getPreciseAmount() {
         return this.preciseAmount;
@@ -116,10 +140,19 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
         return new HighPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits, preciseAmount);
     }
 
+    /**
+     * factory method for an instance of HighPrecisionMoneyBuilder
+     * @return builder
+     */
     public static HighPrecisionMoneyBuilder of() {
         return new HighPrecisionMoneyBuilder();
     }
 
+    /**
+     * create builder for HighPrecisionMoney instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static HighPrecisionMoneyBuilder of(final HighPrecisionMoney template) {
         HighPrecisionMoneyBuilder builder = new HighPrecisionMoneyBuilder();
         builder.centAmount = template.getCentAmount();

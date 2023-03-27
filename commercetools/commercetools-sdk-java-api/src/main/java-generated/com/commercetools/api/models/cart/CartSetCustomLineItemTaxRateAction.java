@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomLineItemTaxRateActionImpl.class)
 public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetCustomLineItemTaxRateAction
+     */
     String SET_CUSTOM_LINE_ITEM_TAX_RATE = "setCustomLineItemTaxRate";
 
     /**
@@ -48,14 +51,33 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Value to set. If empty, an existing value is removed.</p>
+     * @param externalTaxRate value to be set
+     */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
+    /**
+     * factory method
+     * @return instance of CartSetCustomLineItemTaxRateAction
+     */
     public static CartSetCustomLineItemTaxRateAction of() {
         return new CartSetCustomLineItemTaxRateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetCustomLineItemTaxRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetCustomLineItemTaxRateAction of(final CartSetCustomLineItemTaxRateAction template) {
         CartSetCustomLineItemTaxRateActionImpl instance = new CartSetCustomLineItemTaxRateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
@@ -63,18 +85,37 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetCustomLineItemTaxRateAction
+     * @return builder
+     */
     public static CartSetCustomLineItemTaxRateActionBuilder builder() {
         return CartSetCustomLineItemTaxRateActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetCustomLineItemTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomLineItemTaxRateActionBuilder builder(final CartSetCustomLineItemTaxRateAction template) {
         return CartSetCustomLineItemTaxRateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetCustomLineItemTaxRateAction(Function<CartSetCustomLineItemTaxRateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomLineItemTaxRateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomLineItemTaxRateAction>() {
             @Override

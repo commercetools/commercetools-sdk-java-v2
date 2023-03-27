@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddPropertyChangeImpl.class)
 public interface AddPropertyChange extends Change {
 
+    /**
+     * discriminator value for AddPropertyChange
+     */
     String ADD_PROPERTY_CHANGE = "AddPropertyChange";
 
     /**
@@ -64,16 +67,40 @@ public interface AddPropertyChange extends Change {
     @JsonProperty("nextValue")
     public Object getNextValue();
 
+    /**
+     *  <p>Update action for <code>addProperty</code> on custom objects</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     *  <p>Value path to the property that was added</p>
+     * @param path value to be set
+     */
 
     public void setPath(final String path);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Object nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddPropertyChange
+     */
     public static AddPropertyChange of() {
         return new AddPropertyChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddPropertyChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddPropertyChange of(final AddPropertyChange template) {
         AddPropertyChangeImpl instance = new AddPropertyChangeImpl();
         instance.setChange(template.getChange());
@@ -82,18 +109,37 @@ public interface AddPropertyChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddPropertyChange
+     * @return builder
+     */
     public static AddPropertyChangeBuilder builder() {
         return AddPropertyChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddPropertyChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddPropertyChangeBuilder builder(final AddPropertyChange template) {
         return AddPropertyChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddPropertyChange(Function<AddPropertyChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddPropertyChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddPropertyChange>() {
             @Override

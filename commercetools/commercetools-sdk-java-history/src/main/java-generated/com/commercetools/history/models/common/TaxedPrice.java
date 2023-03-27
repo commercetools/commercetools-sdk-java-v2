@@ -49,14 +49,33 @@ public interface TaxedPrice {
     @JsonProperty("totalGross")
     public Money getTotalGross();
 
+    /**
+     * set totalNet
+     * @param totalNet value to be set
+     */
+
     public void setTotalNet(final Money totalNet);
+
+    /**
+     * set totalGross
+     * @param totalGross value to be set
+     */
 
     public void setTotalGross(final Money totalGross);
 
+    /**
+     * factory method
+     * @return instance of TaxedPrice
+     */
     public static TaxedPrice of() {
         return new TaxedPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxedPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxedPrice of(final TaxedPrice template) {
         TaxedPriceImpl instance = new TaxedPriceImpl();
         instance.setTotalNet(template.getTotalNet());
@@ -64,18 +83,37 @@ public interface TaxedPrice {
         return instance;
     }
 
+    /**
+     * builder factory method for TaxedPrice
+     * @return builder
+     */
     public static TaxedPriceBuilder builder() {
         return TaxedPriceBuilder.of();
     }
 
+    /**
+     * create builder for TaxedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxedPriceBuilder builder(final TaxedPrice template) {
         return TaxedPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxedPrice(Function<TaxedPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxedPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxedPrice>() {
             @Override

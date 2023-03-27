@@ -28,6 +28,9 @@ public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase
 
     private java.lang.Object previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemovePropertyChangeImpl(@JsonProperty("change") final String change, @JsonProperty("path") final String path,
             @JsonProperty("previousValue") final java.lang.Object previousValue) {
@@ -37,6 +40,9 @@ public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase
         this.type = REMOVE_PROPERTY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemovePropertyChangeImpl() {
         this.type = REMOVE_PROPERTY_CHANGE;
     }

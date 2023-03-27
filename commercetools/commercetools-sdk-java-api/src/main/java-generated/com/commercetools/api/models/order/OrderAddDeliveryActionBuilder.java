@@ -39,7 +39,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *
+     * set values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *
+     * set value to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -165,7 +165,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *
+     * add values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -180,7 +180,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *
+     * add the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *
+     * set the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -231,25 +231,50 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return this;
     }
 
+    /**
+     * value of items}
+     * @return items
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
         return this.shippingKey;
     }
 
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
+    /**
+     * value of parcels}
+     * @return parcels
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {
         return this.parcels;
     }
+
+    /**
+     *  <p>Custom Fields for the Transaction.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -272,10 +297,19 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return new OrderAddDeliveryActionImpl(items, shippingKey, address, parcels, custom);
     }
 
+    /**
+     * factory method for an instance of OrderAddDeliveryActionBuilder
+     * @return builder
+     */
     public static OrderAddDeliveryActionBuilder of() {
         return new OrderAddDeliveryActionBuilder();
     }
 
+    /**
+     * create builder for OrderAddDeliveryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderAddDeliveryActionBuilder of(final OrderAddDeliveryAction template) {
         OrderAddDeliveryActionBuilder builder = new OrderAddDeliveryActionBuilder();
         builder.items = template.getItems();

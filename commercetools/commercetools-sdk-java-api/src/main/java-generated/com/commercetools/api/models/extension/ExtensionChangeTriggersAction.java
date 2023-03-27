@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionChangeTriggersActionImpl.class)
 public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
 
+    /**
+     * discriminator value for ExtensionChangeTriggersAction
+     */
     String CHANGE_TRIGGERS = "changeTriggers";
 
     /**
@@ -41,33 +44,71 @@ public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
     @JsonProperty("triggers")
     public List<ExtensionTrigger> getTriggers();
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param triggers values to be set
+     */
+
     @JsonIgnore
     public void setTriggers(final ExtensionTrigger... triggers);
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param triggers values to be set
+     */
+
     public void setTriggers(final List<ExtensionTrigger> triggers);
 
+    /**
+     * factory method
+     * @return instance of ExtensionChangeTriggersAction
+     */
     public static ExtensionChangeTriggersAction of() {
         return new ExtensionChangeTriggersActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExtensionChangeTriggersAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExtensionChangeTriggersAction of(final ExtensionChangeTriggersAction template) {
         ExtensionChangeTriggersActionImpl instance = new ExtensionChangeTriggersActionImpl();
         instance.setTriggers(template.getTriggers());
         return instance;
     }
 
+    /**
+     * builder factory method for ExtensionChangeTriggersAction
+     * @return builder
+     */
     public static ExtensionChangeTriggersActionBuilder builder() {
         return ExtensionChangeTriggersActionBuilder.of();
     }
 
+    /**
+     * create builder for ExtensionChangeTriggersAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionChangeTriggersActionBuilder builder(final ExtensionChangeTriggersAction template) {
         return ExtensionChangeTriggersActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtensionChangeTriggersAction(Function<ExtensionChangeTriggersAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionChangeTriggersAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionChangeTriggersAction>() {
             @Override

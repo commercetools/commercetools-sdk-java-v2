@@ -21,11 +21,23 @@ public interface ShippingRateTierType {
 
     ShippingRateTierType CART_SCORE = ShippingRateTierTypeEnum.CART_SCORE;
 
+    /**
+     * possible values of ShippingRateTierType
+     */
     enum ShippingRateTierTypeEnum implements ShippingRateTierType {
+        /**
+         * CartValue
+         */
         CART_VALUE("CartValue"),
 
+        /**
+         * CartClassification
+         */
         CART_CLASSIFICATION("CartClassification"),
 
+        /**
+         * CartScore
+         */
         CART_SCORE("CartScore");
         private final String jsonName;
 
@@ -42,13 +54,30 @@ public interface ShippingRateTierType {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ShippingRateTierType
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ShippingRateTierType findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ShippingRateTierType() {
@@ -68,10 +97,18 @@ public interface ShippingRateTierType {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ShippingRateTierType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ShippingRateTierType[] values() {
         return ShippingRateTierTypeEnum.values();
     }

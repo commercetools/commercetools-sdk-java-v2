@@ -61,51 +61,123 @@ public interface ReferenceTypeId {
 
     ReferenceTypeId ORDER_EDIT = ReferenceTypeIdEnum.ORDER_EDIT;
 
+    /**
+     * possible values of ReferenceTypeId
+     */
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
+        /**
+         * cart
+         */
         CART("cart"),
 
+        /**
+         * cart-discount
+         */
         CART_DISCOUNT("cart-discount"),
 
+        /**
+         * category
+         */
         CATEGORY("category"),
 
+        /**
+         * channel
+         */
         CHANNEL("channel"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * customer-group
+         */
         CUSTOMER_GROUP("customer-group"),
 
+        /**
+         * discount-code
+         */
         DISCOUNT_CODE("discount-code"),
 
+        /**
+         * key-value-document
+         */
         KEY_VALUE_DOCUMENT("key-value-document"),
 
+        /**
+         * payment
+         */
         PAYMENT("payment"),
 
+        /**
+         * product
+         */
         PRODUCT("product"),
 
+        /**
+         * product-type
+         */
         PRODUCT_TYPE("product-type"),
 
+        /**
+         * product-discount
+         */
         PRODUCT_DISCOUNT("product-discount"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * review
+         */
         REVIEW("review"),
 
+        /**
+         * shopping-list
+         */
         SHOPPING_LIST("shopping-list"),
 
+        /**
+         * shipping-method
+         */
         SHIPPING_METHOD("shipping-method"),
 
+        /**
+         * state
+         */
         STATE("state"),
 
+        /**
+         * store
+         */
         STORE("store"),
 
+        /**
+         * tax-category
+         */
         TAX_CATEGORY("tax-category"),
 
+        /**
+         * type
+         */
         TYPE("type"),
 
+        /**
+         * zone
+         */
         ZONE("zone"),
 
+        /**
+         * inventory-entry
+         */
         INVENTORY_ENTRY("inventory-entry"),
 
+        /**
+         * order-edit
+         */
         ORDER_EDIT("order-edit");
         private final String jsonName;
 
@@ -122,13 +194,30 @@ public interface ReferenceTypeId {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ReferenceTypeId
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ReferenceTypeId findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ReferenceTypeId() {
@@ -148,10 +237,18 @@ public interface ReferenceTypeId {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ReferenceTypeId> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ReferenceTypeId[] values() {
         return ReferenceTypeIdEnum.values();
     }

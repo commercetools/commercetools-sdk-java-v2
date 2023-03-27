@@ -26,6 +26,9 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
 
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetCartTotalTaxActionImpl(
             @JsonProperty("externalTotalGross") final com.commercetools.api.models.common.Money externalTotalGross,
@@ -35,6 +38,9 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
         this.action = SET_CART_TOTAL_TAX;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetCartTotalTaxActionImpl() {
         this.action = SET_CART_TOTAL_TAX;
     }

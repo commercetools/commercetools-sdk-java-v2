@@ -35,6 +35,11 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
         return this;
     }
 
+    /**
+     *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
+     * @return myBusinessUnitStatusOnCreation
+     */
+
     public com.commercetools.api.models.project.BusinessUnitConfigurationStatus getMyBusinessUnitStatusOnCreation() {
         return this.myBusinessUnitStatusOnCreation;
     }
@@ -57,10 +62,19 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
         return new BusinessUnitConfigurationImpl(myBusinessUnitStatusOnCreation);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitConfigurationBuilder
+     * @return builder
+     */
     public static BusinessUnitConfigurationBuilder of() {
         return new BusinessUnitConfigurationBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitConfiguration instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitConfigurationBuilder of(final BusinessUnitConfiguration template) {
         BusinessUnitConfigurationBuilder builder = new BusinessUnitConfigurationBuilder();
         builder.myBusinessUnitStatusOnCreation = template.getMyBusinessUnitStatusOnCreation();

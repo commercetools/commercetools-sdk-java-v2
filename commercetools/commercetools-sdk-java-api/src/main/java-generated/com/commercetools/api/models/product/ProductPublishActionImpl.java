@@ -24,12 +24,18 @@ public class ProductPublishActionImpl implements ProductPublishAction, ModelBase
 
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPublishActionImpl(@JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
         this.scope = scope;
         this.action = PUBLISH;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPublishActionImpl() {
         this.action = PUBLISH;
     }

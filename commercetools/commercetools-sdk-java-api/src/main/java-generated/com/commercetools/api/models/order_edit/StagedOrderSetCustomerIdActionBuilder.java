@@ -26,7 +26,7 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
     private String customerId;
 
     /**
-     *
+     * set the value to the customerId
      * @param customerId value to be set
      * @return Builder
      */
@@ -35,6 +35,11 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
         this.customerId = customerId;
         return this;
     }
+
+    /**
+     * value of customerId}
+     * @return customerId
+     */
 
     @Nullable
     public String getCustomerId() {
@@ -57,10 +62,19 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
         return new StagedOrderSetCustomerIdActionImpl(customerId);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetCustomerIdActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetCustomerIdActionBuilder of() {
         return new StagedOrderSetCustomerIdActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomerIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomerIdActionBuilder of(final StagedOrderSetCustomerIdAction template) {
         StagedOrderSetCustomerIdActionBuilder builder = new StagedOrderSetCustomerIdActionBuilder();
         builder.customerId = template.getCustomerId();

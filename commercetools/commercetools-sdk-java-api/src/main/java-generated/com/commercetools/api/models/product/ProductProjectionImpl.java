@@ -66,6 +66,9 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
 
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductProjectionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -114,6 +117,9 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
         this.priceMode = priceMode;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductProjectionImpl() {
     }
 

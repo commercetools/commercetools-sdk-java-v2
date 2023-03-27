@@ -28,6 +28,9 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
 
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddPlainEnumValueChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("attributeName") final String attributeName,
@@ -38,6 +41,9 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
         this.type = ADD_PLAIN_ENUM_VALUE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddPlainEnumValueChangeImpl() {
         this.type = ADD_PLAIN_ENUM_VALUE_CHANGE;
     }

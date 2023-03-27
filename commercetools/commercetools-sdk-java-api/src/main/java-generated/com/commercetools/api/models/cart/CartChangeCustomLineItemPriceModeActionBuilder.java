@@ -50,9 +50,19 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return mode
+     */
 
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getMode() {
         return this.mode;
@@ -77,10 +87,19 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
         return new CartChangeCustomLineItemPriceModeActionImpl(customLineItemId, mode);
     }
 
+    /**
+     * factory method for an instance of CartChangeCustomLineItemPriceModeActionBuilder
+     * @return builder
+     */
     public static CartChangeCustomLineItemPriceModeActionBuilder of() {
         return new CartChangeCustomLineItemPriceModeActionBuilder();
     }
 
+    /**
+     * create builder for CartChangeCustomLineItemPriceModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartChangeCustomLineItemPriceModeActionBuilder of(
             final CartChangeCustomLineItemPriceModeAction template) {
         CartChangeCustomLineItemPriceModeActionBuilder builder = new CartChangeCustomLineItemPriceModeActionBuilder();

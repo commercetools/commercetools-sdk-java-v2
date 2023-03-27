@@ -28,6 +28,9 @@ public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange,
 
     private com.commercetools.history.models.common.Money nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeAmountPlannedChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Money previousValue,
@@ -38,6 +41,9 @@ public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange,
         this.type = CHANGE_AMOUNT_PLANNED_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeAmountPlannedChangeImpl() {
         this.type = CHANGE_AMOUNT_PLANNED_CHANGE;
     }

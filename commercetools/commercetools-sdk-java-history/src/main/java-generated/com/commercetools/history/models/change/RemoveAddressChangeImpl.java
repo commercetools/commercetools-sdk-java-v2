@@ -26,6 +26,9 @@ public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveAddressChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Address previousValue) {
@@ -34,6 +37,9 @@ public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
         this.type = REMOVE_ADDRESS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveAddressChangeImpl() {
         this.type = REMOVE_ADDRESS_CHANGE;
     }

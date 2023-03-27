@@ -27,29 +27,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductDiscountValueExternalDraft
         extends ProductDiscountValueDraft, io.vrap.rmf.base.client.Draft<ProductDiscountValueExternalDraft> {
 
+    /**
+     * discriminator value for ProductDiscountValueExternalDraft
+     */
     String EXTERNAL = "external";
 
+    /**
+     * factory method
+     * @return instance of ProductDiscountValueExternalDraft
+     */
     public static ProductDiscountValueExternalDraft of() {
         return new ProductDiscountValueExternalDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDiscountValueExternalDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDiscountValueExternalDraft of(final ProductDiscountValueExternalDraft template) {
         ProductDiscountValueExternalDraftImpl instance = new ProductDiscountValueExternalDraftImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDiscountValueExternalDraft
+     * @return builder
+     */
     public static ProductDiscountValueExternalDraftBuilder builder() {
         return ProductDiscountValueExternalDraftBuilder.of();
     }
 
+    /**
+     * create builder for ProductDiscountValueExternalDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountValueExternalDraftBuilder builder(final ProductDiscountValueExternalDraft template) {
         return ProductDiscountValueExternalDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountValueExternalDraft(Function<ProductDiscountValueExternalDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueExternalDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueExternalDraft>() {
             @Override

@@ -62,21 +62,55 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
     @JsonProperty("locations")
     public List<Location> getLocations();
 
+    /**
+     *  <p>User-defined unique identifier for the Zone.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Name of the Zone.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>Description of the Zone.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final String description);
+
+    /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @param locations values to be set
+     */
 
     @JsonIgnore
     public void setLocations(final Location... locations);
 
+    /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @param locations values to be set
+     */
+
     public void setLocations(final List<Location> locations);
 
+    /**
+     * factory method
+     * @return instance of ZoneDraft
+     */
     public static ZoneDraft of() {
         return new ZoneDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ZoneDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ZoneDraft of(final ZoneDraft template) {
         ZoneDraftImpl instance = new ZoneDraftImpl();
         instance.setKey(template.getKey());
@@ -86,18 +120,37 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
         return instance;
     }
 
+    /**
+     * builder factory method for ZoneDraft
+     * @return builder
+     */
     public static ZoneDraftBuilder builder() {
         return ZoneDraftBuilder.of();
     }
 
+    /**
+     * create builder for ZoneDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneDraftBuilder builder(final ZoneDraft template) {
         return ZoneDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZoneDraft(Function<ZoneDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ZoneDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ZoneDraft>() {
             @Override

@@ -281,49 +281,99 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the given Price.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>Money value of the given Price.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Country for which the given Price is valid.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>CustomerGroup for which the given Price is valid.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Date from which the given Price is valid.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Date until which the given Price is valid.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>DiscountedPrice you specify for the given Price.</p>
+     * @return discounted
+     */
+
     @Nullable
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 
+    /**
+     *  <p>Custom Fields for the Price.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     * @return tiers
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
@@ -349,10 +399,19 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
             tiers);
     }
 
+    /**
+     * factory method for an instance of QueryPriceBuilder
+     * @return builder
+     */
     public static QueryPriceBuilder of() {
         return new QueryPriceBuilder();
     }
 
+    /**
+     * create builder for QueryPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QueryPriceBuilder of(final QueryPrice template) {
         QueryPriceBuilder builder = new QueryPriceBuilder();
         builder.id = template.getId();

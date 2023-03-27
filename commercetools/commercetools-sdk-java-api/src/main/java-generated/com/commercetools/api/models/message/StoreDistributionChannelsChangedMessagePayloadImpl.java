@@ -27,6 +27,9 @@ public class StoreDistributionChannelsChangedMessagePayloadImpl
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> removedDistributionChannels;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreDistributionChannelsChangedMessagePayloadImpl(
             @JsonProperty("addedDistributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> addedDistributionChannels,
@@ -36,6 +39,9 @@ public class StoreDistributionChannelsChangedMessagePayloadImpl
         this.type = STORE_DISTRIBUTION_CHANNELS_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreDistributionChannelsChangedMessagePayloadImpl() {
         this.type = STORE_DISTRIBUTION_CHANNELS_CHANGED;
     }

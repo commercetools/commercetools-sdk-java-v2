@@ -32,6 +32,9 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
 
     private java.util.List<com.commercetools.api.models.product.FacetTerm> terms;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TermFacetResultImpl(
             @JsonProperty("dataType") final com.commercetools.api.models.product.TermFacetResultType dataType,
@@ -46,6 +49,9 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
         this.type = FacetTypes.findEnum("terms");
     }
 
+    /**
+     * create empty instance
+     */
     public TermFacetResultImpl() {
         this.type = FacetTypes.findEnum("terms");
     }

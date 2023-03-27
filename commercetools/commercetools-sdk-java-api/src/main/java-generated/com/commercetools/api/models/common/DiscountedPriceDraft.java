@@ -50,14 +50,33 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
     @JsonProperty("discount")
     public ProductDiscountReference getDiscount();
 
+    /**
+     *  <p>Sets the money value for the discounted price.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Money value);
+
+    /**
+     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     * @param discount value to be set
+     */
 
     public void setDiscount(final ProductDiscountReference discount);
 
+    /**
+     * factory method
+     * @return instance of DiscountedPriceDraft
+     */
     public static DiscountedPriceDraft of() {
         return new DiscountedPriceDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountedPriceDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountedPriceDraft of(final DiscountedPriceDraft template) {
         DiscountedPriceDraftImpl instance = new DiscountedPriceDraftImpl();
         instance.setValue(template.getValue());
@@ -65,18 +84,37 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountedPriceDraft
+     * @return builder
+     */
     public static DiscountedPriceDraftBuilder builder() {
         return DiscountedPriceDraftBuilder.of();
     }
 
+    /**
+     * create builder for DiscountedPriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedPriceDraftBuilder builder(final DiscountedPriceDraft template) {
         return DiscountedPriceDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountedPriceDraft(Function<DiscountedPriceDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountedPriceDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountedPriceDraft>() {
             @Override

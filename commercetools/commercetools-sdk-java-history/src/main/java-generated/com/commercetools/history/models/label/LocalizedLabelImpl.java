@@ -24,12 +24,18 @@ public class LocalizedLabelImpl implements LocalizedLabel, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizedLabelImpl(@JsonProperty("value") final com.commercetools.history.models.common.LocalizedString value) {
         this.value = value;
         this.type = LOCALIZED_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizedLabelImpl() {
         this.type = LOCALIZED_LABEL;
     }

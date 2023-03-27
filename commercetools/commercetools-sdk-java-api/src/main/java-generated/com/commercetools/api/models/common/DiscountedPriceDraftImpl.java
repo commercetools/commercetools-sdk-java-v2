@@ -24,6 +24,9 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
 
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountedPriceDraftImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value,
             @JsonProperty("discount") final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {
@@ -31,6 +34,9 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
         this.discount = discount;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountedPriceDraftImpl() {
     }
 

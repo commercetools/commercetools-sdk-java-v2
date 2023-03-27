@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreSupplyChannelsChangedMessageImpl.class)
 public interface StoreSupplyChannelsChangedMessage extends Message {
 
+    /**
+     * discriminator value for StoreSupplyChannelsChangedMessage
+     */
     String STORE_SUPPLY_CHANNELS_CHANGED = "StoreSupplyChannelsChanged";
 
     /**
@@ -54,20 +57,49 @@ public interface StoreSupplyChannelsChangedMessage extends Message {
     @JsonProperty("removedSupplyChannels")
     public List<ChannelReference> getRemovedSupplyChannels();
 
+    /**
+     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param addedSupplyChannels values to be set
+     */
+
     @JsonIgnore
     public void setAddedSupplyChannels(final ChannelReference... addedSupplyChannels);
 
+    /**
+     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param addedSupplyChannels values to be set
+     */
+
     public void setAddedSupplyChannels(final List<ChannelReference> addedSupplyChannels);
+
+    /**
+     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param removedSupplyChannels values to be set
+     */
 
     @JsonIgnore
     public void setRemovedSupplyChannels(final ChannelReference... removedSupplyChannels);
 
+    /**
+     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param removedSupplyChannels values to be set
+     */
+
     public void setRemovedSupplyChannels(final List<ChannelReference> removedSupplyChannels);
 
+    /**
+     * factory method
+     * @return instance of StoreSupplyChannelsChangedMessage
+     */
     public static StoreSupplyChannelsChangedMessage of() {
         return new StoreSupplyChannelsChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreSupplyChannelsChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreSupplyChannelsChangedMessage of(final StoreSupplyChannelsChangedMessage template) {
         StoreSupplyChannelsChangedMessageImpl instance = new StoreSupplyChannelsChangedMessageImpl();
         instance.setId(template.getId());
@@ -85,18 +117,37 @@ public interface StoreSupplyChannelsChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreSupplyChannelsChangedMessage
+     * @return builder
+     */
     public static StoreSupplyChannelsChangedMessageBuilder builder() {
         return StoreSupplyChannelsChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StoreSupplyChannelsChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSupplyChannelsChangedMessageBuilder builder(final StoreSupplyChannelsChangedMessage template) {
         return StoreSupplyChannelsChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreSupplyChannelsChangedMessage(Function<StoreSupplyChannelsChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreSupplyChannelsChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreSupplyChannelsChangedMessage>() {
             @Override

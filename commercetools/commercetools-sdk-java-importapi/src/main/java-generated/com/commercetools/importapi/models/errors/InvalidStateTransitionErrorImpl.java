@@ -28,6 +28,9 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
 
     private com.commercetools.importapi.models.common.ProcessingState newState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidStateTransitionErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("currentState") final com.commercetools.importapi.models.common.ProcessingState currentState,
@@ -38,6 +41,9 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
         this.code = INVALID_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidStateTransitionErrorImpl() {
         this.code = INVALID_TRANSITION;
     }

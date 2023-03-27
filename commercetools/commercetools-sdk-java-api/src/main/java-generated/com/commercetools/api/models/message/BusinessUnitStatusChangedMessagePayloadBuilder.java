@@ -36,6 +36,11 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Updated status of the Business Unit.</p>
+     * @return active
+     */
+
     public com.commercetools.api.models.business_unit.BusinessUnitStatus getActive() {
         return this.active;
     }
@@ -57,10 +62,19 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
         return new BusinessUnitStatusChangedMessagePayloadImpl(active);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitStatusChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitStatusChangedMessagePayloadBuilder of() {
         return new BusinessUnitStatusChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitStatusChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStatusChangedMessagePayloadBuilder of(
             final BusinessUnitStatusChangedMessagePayload template) {
         BusinessUnitStatusChangedMessagePayloadBuilder builder = new BusinessUnitStatusChangedMessagePayloadBuilder();

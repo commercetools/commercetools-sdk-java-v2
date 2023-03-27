@@ -76,29 +76,68 @@ public interface AttributeReferenceTypeId {
     */
     AttributeReferenceTypeId ZONE = AttributeReferenceTypeIdEnum.ZONE;
 
+    /**
+     * possible values of AttributeReferenceTypeId
+     */
     enum AttributeReferenceTypeIdEnum implements AttributeReferenceTypeId {
+        /**
+         * cart
+         */
         CART("cart"),
 
+        /**
+         * category
+         */
         CATEGORY("category"),
 
+        /**
+         * channel
+         */
         CHANNEL("channel"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * key-value-document
+         */
         KEY_VALUE_DOCUMENT("key-value-document"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * product
+         */
         PRODUCT("product"),
 
+        /**
+         * product-type
+         */
         PRODUCT_TYPE("product-type"),
 
+        /**
+         * review
+         */
         REVIEW("review"),
 
+        /**
+         * shipping-method
+         */
         SHIPPING_METHOD("shipping-method"),
 
+        /**
+         * state
+         */
         STATE("state"),
 
+        /**
+         * zone
+         */
         ZONE("zone");
         private final String jsonName;
 
@@ -115,13 +154,30 @@ public interface AttributeReferenceTypeId {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of AttributeReferenceTypeId
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static AttributeReferenceTypeId findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new AttributeReferenceTypeId() {
@@ -141,10 +197,18 @@ public interface AttributeReferenceTypeId {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<AttributeReferenceTypeId> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static AttributeReferenceTypeId[] values() {
         return AttributeReferenceTypeIdEnum.values();
     }

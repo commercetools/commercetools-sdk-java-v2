@@ -39,6 +39,10 @@ public class StandalonePriceUpdateActionBuilder {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of StandalonePriceUpdateActionBuilder
+     * @return builder
+     */
     public static StandalonePriceUpdateActionBuilder of() {
         return new StandalonePriceUpdateActionBuilder();
     }

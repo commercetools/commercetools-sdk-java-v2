@@ -31,6 +31,9 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidCredentialsErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -39,6 +42,9 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
         this.code = INVALID_CREDENTIALS;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidCredentialsErrorImpl() {
         this.code = INVALID_CREDENTIALS;
     }

@@ -26,6 +26,9 @@ public class StagedQuoteStateChangedMessagePayloadImpl implements StagedQuoteSta
 
     private com.commercetools.api.models.staged_quote.StagedQuoteState oldStagedQuoteState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteStateChangedMessagePayloadImpl(
             @JsonProperty("stagedQuoteState") final com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState,
@@ -35,6 +38,9 @@ public class StagedQuoteStateChangedMessagePayloadImpl implements StagedQuoteSta
         this.type = STAGED_QUOTE_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteStateChangedMessagePayloadImpl() {
         this.type = STAGED_QUOTE_STATE_CHANGED;
     }

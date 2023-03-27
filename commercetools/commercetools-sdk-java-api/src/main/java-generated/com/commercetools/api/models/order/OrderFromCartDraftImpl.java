@@ -41,6 +41,9 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderFromCartDraftImpl(@JsonProperty("id") final String id,
             @JsonProperty("cart") final com.commercetools.api.models.cart.CartResourceIdentifier cart,
@@ -63,6 +66,9 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderFromCartDraftImpl() {
     }
 

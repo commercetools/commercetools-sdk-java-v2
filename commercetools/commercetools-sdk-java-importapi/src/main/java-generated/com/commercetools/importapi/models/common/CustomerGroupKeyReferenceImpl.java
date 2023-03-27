@@ -24,12 +24,18 @@ public class CustomerGroupKeyReferenceImpl implements CustomerGroupKeyReference,
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("customer-group");
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("customer-group");
     }

@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddOrderLineItemChangeImpl.class)
 public interface AddOrderLineItemChange extends Change {
 
+    /**
+     * discriminator value for AddOrderLineItemChange
+     */
     String ADD_ORDER_LINE_ITEM_CHANGE = "AddOrderLineItemChange";
 
     /**
@@ -69,16 +72,40 @@ public interface AddOrderLineItemChange extends Change {
     @JsonProperty("nextValue")
     public LineItem getNextValue();
 
+    /**
+     * set change
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final LineItem previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final LineItem nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddOrderLineItemChange
+     */
     public static AddOrderLineItemChange of() {
         return new AddOrderLineItemChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddOrderLineItemChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddOrderLineItemChange of(final AddOrderLineItemChange template) {
         AddOrderLineItemChangeImpl instance = new AddOrderLineItemChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface AddOrderLineItemChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddOrderLineItemChange
+     * @return builder
+     */
     public static AddOrderLineItemChangeBuilder builder() {
         return AddOrderLineItemChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddOrderLineItemChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddOrderLineItemChangeBuilder builder(final AddOrderLineItemChange template) {
         return AddOrderLineItemChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddOrderLineItemChange(Function<AddOrderLineItemChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddOrderLineItemChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddOrderLineItemChange>() {
             @Override

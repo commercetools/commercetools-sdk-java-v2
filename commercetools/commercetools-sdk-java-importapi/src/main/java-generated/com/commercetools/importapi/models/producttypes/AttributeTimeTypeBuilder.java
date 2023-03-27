@@ -36,10 +36,19 @@ public class AttributeTimeTypeBuilder implements Builder<AttributeTimeType> {
         return new AttributeTimeTypeImpl();
     }
 
+    /**
+     * factory method for an instance of AttributeTimeTypeBuilder
+     * @return builder
+     */
     public static AttributeTimeTypeBuilder of() {
         return new AttributeTimeTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeTimeType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeTimeTypeBuilder of(final AttributeTimeType template) {
         AttributeTimeTypeBuilder builder = new AttributeTimeTypeBuilder();
         return builder;

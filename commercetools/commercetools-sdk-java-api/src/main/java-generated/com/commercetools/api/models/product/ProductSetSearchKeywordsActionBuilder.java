@@ -64,9 +64,19 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
         return this;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     * @return searchKeywords
+     */
+
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -90,10 +100,19 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
         return new ProductSetSearchKeywordsActionImpl(searchKeywords, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetSearchKeywordsActionBuilder
+     * @return builder
+     */
     public static ProductSetSearchKeywordsActionBuilder of() {
         return new ProductSetSearchKeywordsActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetSearchKeywordsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetSearchKeywordsActionBuilder of(final ProductSetSearchKeywordsAction template) {
         ProductSetSearchKeywordsActionBuilder builder = new ProductSetSearchKeywordsActionBuilder();
         builder.searchKeywords = template.getSearchKeywords();

@@ -50,10 +50,20 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
         return this;
     }
 
+    /**
+     *  <p>Unique ID of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Unique key of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
         return new StoreResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of StoreResourceIdentifierBuilder
+     * @return builder
+     */
     public static StoreResourceIdentifierBuilder of() {
         return new StoreResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for StoreResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreResourceIdentifierBuilder of(final StoreResourceIdentifier template) {
         StoreResourceIdentifierBuilder builder = new StoreResourceIdentifierBuilder();
         builder.id = template.getId();

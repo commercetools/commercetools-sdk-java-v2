@@ -89,17 +89,37 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
         return this;
     }
 
+    /**
+     *  <p>ID of the specified Product.</p>
+     * @return productId
+     */
+
     public String getProductId() {
         return this.productId;
     }
+
+    /**
+     *  <p>ID of the specified Product Variant.</p>
+     * @return variantId
+     */
 
     public Integer getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     * @return staged
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>Specified Price of the specified Product Variant.</p>
+     * @return price
+     */
 
     public com.commercetools.api.models.common.QueryPrice getPrice() {
         return this.price;
@@ -125,10 +145,19 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
         return new ProductDiscountMatchQueryImpl(productId, variantId, staged, price);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountMatchQueryBuilder
+     * @return builder
+     */
     public static ProductDiscountMatchQueryBuilder of() {
         return new ProductDiscountMatchQueryBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountMatchQuery instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountMatchQueryBuilder of(final ProductDiscountMatchQuery template) {
         ProductDiscountMatchQueryBuilder builder = new ProductDiscountMatchQueryBuilder();
         builder.productId = template.getProductId();

@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeBooleanTypeImpl.class)
 public interface AttributeBooleanType extends AttributeType {
 
+    /**
+     * discriminator value for AttributeBooleanType
+     */
     String BOOLEAN = "boolean";
 
+    /**
+     * factory method
+     * @return instance of AttributeBooleanType
+     */
     public static AttributeBooleanType of() {
         return new AttributeBooleanTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeBooleanType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeBooleanType of(final AttributeBooleanType template) {
         AttributeBooleanTypeImpl instance = new AttributeBooleanTypeImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeBooleanType
+     * @return builder
+     */
     public static AttributeBooleanTypeBuilder builder() {
         return AttributeBooleanTypeBuilder.of();
     }
 
+    /**
+     * create builder for AttributeBooleanType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeBooleanTypeBuilder builder(final AttributeBooleanType template) {
         return AttributeBooleanTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeBooleanType(Function<AttributeBooleanType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeBooleanType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeBooleanType>() {
             @Override

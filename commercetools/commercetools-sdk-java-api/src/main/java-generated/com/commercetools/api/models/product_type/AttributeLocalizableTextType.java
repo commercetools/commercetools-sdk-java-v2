@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeLocalizableTextTypeImpl.class)
 public interface AttributeLocalizableTextType extends AttributeType {
 
+    /**
+     * discriminator value for AttributeLocalizableTextType
+     */
     String LTEXT = "ltext";
 
+    /**
+     * factory method
+     * @return instance of AttributeLocalizableTextType
+     */
     public static AttributeLocalizableTextType of() {
         return new AttributeLocalizableTextTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeLocalizableTextType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeLocalizableTextType of(final AttributeLocalizableTextType template) {
         AttributeLocalizableTextTypeImpl instance = new AttributeLocalizableTextTypeImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeLocalizableTextType
+     * @return builder
+     */
     public static AttributeLocalizableTextTypeBuilder builder() {
         return AttributeLocalizableTextTypeBuilder.of();
     }
 
+    /**
+     * create builder for AttributeLocalizableTextType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeLocalizableTextTypeBuilder builder(final AttributeLocalizableTextType template) {
         return AttributeLocalizableTextTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeLocalizableTextType(Function<AttributeLocalizableTextType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizableTextType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizableTextType>() {
             @Override

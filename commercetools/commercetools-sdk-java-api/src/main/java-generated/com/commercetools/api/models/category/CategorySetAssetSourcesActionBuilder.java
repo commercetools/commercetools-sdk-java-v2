@@ -121,15 +121,30 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
         return this;
     }
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
+     */
+
     @Nullable
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
+     */
+
     @Nullable
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     *  <p>Must not be empty. At least one entry is required.</p>
+     * @return sources
+     */
 
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
         return this.sources;
@@ -152,10 +167,19 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
         return new CategorySetAssetSourcesActionImpl(assetId, assetKey, sources);
     }
 
+    /**
+     * factory method for an instance of CategorySetAssetSourcesActionBuilder
+     * @return builder
+     */
     public static CategorySetAssetSourcesActionBuilder of() {
         return new CategorySetAssetSourcesActionBuilder();
     }
 
+    /**
+     * create builder for CategorySetAssetSourcesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetAssetSourcesActionBuilder of(final CategorySetAssetSourcesAction template) {
         CategorySetAssetSourcesActionBuilder builder = new CategorySetAssetSourcesActionBuilder();
         builder.assetId = template.getAssetId();

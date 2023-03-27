@@ -22,11 +22,17 @@ public class StandalonePriceUpdateActionImpl implements StandalonePriceUpdateAct
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceUpdateActionImpl() {
     }
 

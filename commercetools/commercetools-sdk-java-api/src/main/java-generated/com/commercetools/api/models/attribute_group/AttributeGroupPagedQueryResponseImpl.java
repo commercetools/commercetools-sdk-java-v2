@@ -30,6 +30,9 @@ public class AttributeGroupPagedQueryResponseImpl implements AttributeGroupPaged
 
     private java.util.List<com.commercetools.api.models.attribute_group.AttributeGroup> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class AttributeGroupPagedQueryResponseImpl implements AttributeGroupPaged
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupPagedQueryResponseImpl() {
     }
 

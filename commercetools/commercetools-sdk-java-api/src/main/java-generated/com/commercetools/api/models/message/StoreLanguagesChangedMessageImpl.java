@@ -46,6 +46,9 @@ public class StoreLanguagesChangedMessageImpl implements StoreLanguagesChangedMe
 
     private java.util.List<String> removedLanguages;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreLanguagesChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class StoreLanguagesChangedMessageImpl implements StoreLanguagesChangedMe
         this.type = STORE_LANGUAGES_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreLanguagesChangedMessageImpl() {
         this.type = STORE_LANGUAGES_CHANGED;
     }

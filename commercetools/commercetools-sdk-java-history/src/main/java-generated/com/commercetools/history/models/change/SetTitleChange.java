@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetTitleChangeImpl.class)
 public interface SetTitleChange extends Change {
 
+    /**
+     * discriminator value for SetTitleChange
+     */
     String SET_TITLE_CHANGE = "SetTitleChange";
 
     /**
@@ -65,16 +68,40 @@ public interface SetTitleChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setTitle</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetTitleChange
+     */
     public static SetTitleChange of() {
         return new SetTitleChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetTitleChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetTitleChange of(final SetTitleChange template) {
         SetTitleChangeImpl instance = new SetTitleChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface SetTitleChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetTitleChange
+     * @return builder
+     */
     public static SetTitleChangeBuilder builder() {
         return SetTitleChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetTitleChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetTitleChangeBuilder builder(final SetTitleChange template) {
         return SetTitleChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetTitleChange(Function<SetTitleChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetTitleChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetTitleChange>() {
             @Override

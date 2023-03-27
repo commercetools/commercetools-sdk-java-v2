@@ -22,11 +22,17 @@ public class DestinationImpl implements Destination, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DestinationImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public DestinationImpl() {
     }
 

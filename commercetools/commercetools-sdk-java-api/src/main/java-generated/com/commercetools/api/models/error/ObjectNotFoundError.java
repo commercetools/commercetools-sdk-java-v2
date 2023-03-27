@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ObjectNotFoundErrorImpl.class)
 public interface ObjectNotFoundError extends ErrorObject {
 
+    /**
+     * discriminator value for ObjectNotFoundError
+     */
     String OBJECT_NOT_FOUND = "ObjectNotFound";
 
     /**
@@ -47,12 +50,26 @@ public interface ObjectNotFoundError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of ObjectNotFoundError
+     */
     public static ObjectNotFoundError of() {
         return new ObjectNotFoundErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ObjectNotFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ObjectNotFoundError of(final ObjectNotFoundError template) {
         ObjectNotFoundErrorImpl instance = new ObjectNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
@@ -60,18 +77,37 @@ public interface ObjectNotFoundError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ObjectNotFoundError
+     * @return builder
+     */
     public static ObjectNotFoundErrorBuilder builder() {
         return ObjectNotFoundErrorBuilder.of();
     }
 
+    /**
+     * create builder for ObjectNotFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ObjectNotFoundErrorBuilder builder(final ObjectNotFoundError template) {
         return ObjectNotFoundErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withObjectNotFoundError(Function<ObjectNotFoundError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ObjectNotFoundError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ObjectNotFoundError>() {
             @Override

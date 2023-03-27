@@ -28,6 +28,9 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
@@ -38,6 +41,9 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
         this.type = SET_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetNameChangeImpl() {
         this.type = SET_NAME_CHANGE;
     }

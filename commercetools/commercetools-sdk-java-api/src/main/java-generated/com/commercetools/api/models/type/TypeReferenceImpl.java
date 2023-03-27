@@ -27,6 +27,9 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
 
     private com.commercetools.api.models.type.Type obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.type.Type obj) {
@@ -35,6 +38,9 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("type");
     }
 
+    /**
+     * create empty instance
+     */
     public TypeReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("type");
     }

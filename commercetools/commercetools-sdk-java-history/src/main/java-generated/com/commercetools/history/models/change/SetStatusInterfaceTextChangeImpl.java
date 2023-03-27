@@ -28,6 +28,9 @@ public class SetStatusInterfaceTextChangeImpl implements SetStatusInterfaceTextC
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetStatusInterfaceTextChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetStatusInterfaceTextChangeImpl implements SetStatusInterfaceTextC
         this.type = SET_STATUS_INTERFACE_TEXT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetStatusInterfaceTextChangeImpl() {
         this.type = SET_STATUS_INTERFACE_TEXT_CHANGE;
     }

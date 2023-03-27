@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StateRemoveRolesActionImpl.class)
 public interface StateRemoveRolesAction extends StateUpdateAction {
 
+    /**
+     * discriminator value for StateRemoveRolesAction
+     */
     String REMOVE_ROLES = "removeRoles";
 
     /**
@@ -39,33 +42,71 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
     @JsonProperty("roles")
     public List<StateRoleEnum> getRoles();
 
+    /**
+     *  <p>Roles to remove from the State.</p>
+     * @param roles values to be set
+     */
+
     @JsonIgnore
     public void setRoles(final StateRoleEnum... roles);
 
+    /**
+     *  <p>Roles to remove from the State.</p>
+     * @param roles values to be set
+     */
+
     public void setRoles(final List<StateRoleEnum> roles);
 
+    /**
+     * factory method
+     * @return instance of StateRemoveRolesAction
+     */
     public static StateRemoveRolesAction of() {
         return new StateRemoveRolesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StateRemoveRolesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StateRemoveRolesAction of(final StateRemoveRolesAction template) {
         StateRemoveRolesActionImpl instance = new StateRemoveRolesActionImpl();
         instance.setRoles(template.getRoles());
         return instance;
     }
 
+    /**
+     * builder factory method for StateRemoveRolesAction
+     * @return builder
+     */
     public static StateRemoveRolesActionBuilder builder() {
         return StateRemoveRolesActionBuilder.of();
     }
 
+    /**
+     * create builder for StateRemoveRolesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateRemoveRolesActionBuilder builder(final StateRemoveRolesAction template) {
         return StateRemoveRolesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStateRemoveRolesAction(Function<StateRemoveRolesAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StateRemoveRolesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StateRemoveRolesAction>() {
             @Override

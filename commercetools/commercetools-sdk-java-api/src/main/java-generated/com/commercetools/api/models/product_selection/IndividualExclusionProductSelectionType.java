@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = IndividualExclusionProductSelectionTypeImpl.class)
 public interface IndividualExclusionProductSelectionType extends ProductSelectionType {
 
+    /**
+     * discriminator value for IndividualExclusionProductSelectionType
+     */
     String INDIVIDUAL_EXCLUSION = "individualExclusion";
 
     /**
@@ -42,32 +45,65 @@ public interface IndividualExclusionProductSelectionType extends ProductSelectio
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
 
+    /**
+     * factory method
+     * @return instance of IndividualExclusionProductSelectionType
+     */
     public static IndividualExclusionProductSelectionType of() {
         return new IndividualExclusionProductSelectionTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of IndividualExclusionProductSelectionType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static IndividualExclusionProductSelectionType of(final IndividualExclusionProductSelectionType template) {
         IndividualExclusionProductSelectionTypeImpl instance = new IndividualExclusionProductSelectionTypeImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for IndividualExclusionProductSelectionType
+     * @return builder
+     */
     public static IndividualExclusionProductSelectionTypeBuilder builder() {
         return IndividualExclusionProductSelectionTypeBuilder.of();
     }
 
+    /**
+     * create builder for IndividualExclusionProductSelectionType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static IndividualExclusionProductSelectionTypeBuilder builder(
             final IndividualExclusionProductSelectionType template) {
         return IndividualExclusionProductSelectionTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withIndividualExclusionProductSelectionType(
             Function<IndividualExclusionProductSelectionType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<IndividualExclusionProductSelectionType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<IndividualExclusionProductSelectionType>() {
             @Override

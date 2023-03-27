@@ -44,6 +44,9 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
 
     private String email;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerEmailChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
         this.type = CUSTOMER_EMAIL_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerEmailChangedMessageImpl() {
         this.type = CUSTOMER_EMAIL_CHANGED;
     }

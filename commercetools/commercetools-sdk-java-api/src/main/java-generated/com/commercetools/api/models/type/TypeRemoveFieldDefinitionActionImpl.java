@@ -24,12 +24,18 @@ public class TypeRemoveFieldDefinitionActionImpl implements TypeRemoveFieldDefin
 
     private String fieldName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeRemoveFieldDefinitionActionImpl(@JsonProperty("fieldName") final String fieldName) {
         this.fieldName = fieldName;
         this.action = REMOVE_FIELD_DEFINITION;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeRemoveFieldDefinitionActionImpl() {
         this.action = REMOVE_FIELD_DEFINITION;
     }

@@ -30,6 +30,9 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelMeasurementsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("parcelId") final String parcelId,
@@ -42,6 +45,9 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
         this.type = PARCEL_MEASUREMENTS_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelMeasurementsUpdatedMessagePayloadImpl() {
         this.type = PARCEL_MEASUREMENTS_UPDATED;
     }

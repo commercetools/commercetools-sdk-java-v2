@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCartTotalTaxActionImpl.class)
 public interface CartSetCartTotalTaxAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetCartTotalTaxAction
+     */
     String SET_CART_TOTAL_TAX = "setCartTotalTax";
 
     /**
@@ -50,17 +53,41 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     @JsonProperty("externalTaxPortions")
     public List<TaxPortionDraft> getExternalTaxPortions();
 
+    /**
+     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     * @param externalTotalGross value to be set
+     */
+
     public void setExternalTotalGross(final Money externalTotalGross);
+
+    /**
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
+     * @param externalTaxPortions values to be set
+     */
 
     @JsonIgnore
     public void setExternalTaxPortions(final TaxPortionDraft... externalTaxPortions);
 
+    /**
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
+     * @param externalTaxPortions values to be set
+     */
+
     public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
 
+    /**
+     * factory method
+     * @return instance of CartSetCartTotalTaxAction
+     */
     public static CartSetCartTotalTaxAction of() {
         return new CartSetCartTotalTaxActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetCartTotalTaxAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetCartTotalTaxAction of(final CartSetCartTotalTaxAction template) {
         CartSetCartTotalTaxActionImpl instance = new CartSetCartTotalTaxActionImpl();
         instance.setExternalTotalGross(template.getExternalTotalGross());
@@ -68,18 +95,37 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetCartTotalTaxAction
+     * @return builder
+     */
     public static CartSetCartTotalTaxActionBuilder builder() {
         return CartSetCartTotalTaxActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetCartTotalTaxAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCartTotalTaxActionBuilder builder(final CartSetCartTotalTaxAction template) {
         return CartSetCartTotalTaxActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetCartTotalTaxAction(Function<CartSetCartTotalTaxAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetCartTotalTaxAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetCartTotalTaxAction>() {
             @Override

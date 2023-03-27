@@ -34,6 +34,11 @@ public class DiscountCodeChangeIsActiveActionBuilder implements Builder<Discount
         return this;
     }
 
+    /**
+     *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
+     * @return isActive
+     */
+
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -55,10 +60,19 @@ public class DiscountCodeChangeIsActiveActionBuilder implements Builder<Discount
         return new DiscountCodeChangeIsActiveActionImpl(isActive);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeChangeIsActiveActionBuilder
+     * @return builder
+     */
     public static DiscountCodeChangeIsActiveActionBuilder of() {
         return new DiscountCodeChangeIsActiveActionBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeChangeIsActiveAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeChangeIsActiveActionBuilder of(final DiscountCodeChangeIsActiveAction template) {
         DiscountCodeChangeIsActiveActionBuilder builder = new DiscountCodeChangeIsActiveActionBuilder();
         builder.isActive = template.getIsActive();

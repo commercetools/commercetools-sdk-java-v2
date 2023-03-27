@@ -30,6 +30,9 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAssetDescriptionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
@@ -42,6 +45,9 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
         this.type = SET_ASSET_DESCRIPTION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAssetDescriptionChangeImpl() {
         this.type = SET_ASSET_DESCRIPTION_CHANGE;
     }

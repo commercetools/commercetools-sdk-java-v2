@@ -63,9 +63,19 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced ProductType.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.product_type.ProductType getObj() {
@@ -89,10 +99,19 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
         return new ProductTypeReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of ProductTypeReferenceBuilder
+     * @return builder
+     */
     public static ProductTypeReferenceBuilder of() {
         return new ProductTypeReferenceBuilder();
     }
 
+    /**
+     * create builder for ProductTypeReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeReferenceBuilder of(final ProductTypeReference template) {
         ProductTypeReferenceBuilder builder = new ProductTypeReferenceBuilder();
         builder.id = template.getId();

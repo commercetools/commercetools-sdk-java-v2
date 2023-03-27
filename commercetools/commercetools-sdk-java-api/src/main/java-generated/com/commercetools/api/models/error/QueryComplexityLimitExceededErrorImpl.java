@@ -26,6 +26,9 @@ public class QueryComplexityLimitExceededErrorImpl implements QueryComplexityLim
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QueryComplexityLimitExceededErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class QueryComplexityLimitExceededErrorImpl implements QueryComplexityLim
         this.code = QUERY_COMPLEXITY_LIMIT_EXCEEDED;
     }
 
+    /**
+     * create empty instance
+     */
     public QueryComplexityLimitExceededErrorImpl() {
         this.code = QUERY_COMPLEXITY_LIMIT_EXCEEDED;
     }

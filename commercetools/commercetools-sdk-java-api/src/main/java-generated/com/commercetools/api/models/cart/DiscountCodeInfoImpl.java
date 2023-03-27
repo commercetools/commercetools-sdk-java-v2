@@ -24,6 +24,9 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
 
     private com.commercetools.api.models.cart.DiscountCodeState state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeInfoImpl(
             @JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode,
@@ -32,6 +35,9 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
         this.state = state;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeInfoImpl() {
     }
 

@@ -34,6 +34,11 @@ public class ProductTypeChangeDescriptionActionBuilder implements Builder<Produc
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return description
+     */
+
     public String getDescription() {
         return this.description;
     }
@@ -55,10 +60,19 @@ public class ProductTypeChangeDescriptionActionBuilder implements Builder<Produc
         return new ProductTypeChangeDescriptionActionImpl(description);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeDescriptionActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeDescriptionActionBuilder of() {
         return new ProductTypeChangeDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeDescriptionActionBuilder of(final ProductTypeChangeDescriptionAction template) {
         ProductTypeChangeDescriptionActionBuilder builder = new ProductTypeChangeDescriptionActionBuilder();
         builder.description = template.getDescription();

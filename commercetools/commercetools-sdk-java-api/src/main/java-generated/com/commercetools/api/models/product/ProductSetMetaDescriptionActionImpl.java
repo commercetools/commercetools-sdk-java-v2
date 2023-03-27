@@ -26,6 +26,9 @@ public class ProductSetMetaDescriptionActionImpl implements ProductSetMetaDescri
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetMetaDescriptionActionImpl(
             @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,
@@ -35,6 +38,9 @@ public class ProductSetMetaDescriptionActionImpl implements ProductSetMetaDescri
         this.action = SET_META_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetMetaDescriptionActionImpl() {
         this.action = SET_META_DESCRIPTION;
     }

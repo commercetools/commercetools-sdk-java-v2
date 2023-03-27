@@ -27,7 +27,7 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>The type of the referenced resource.</p>
+     * @return typeId
+     */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
@@ -74,10 +84,19 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
         return new UnresolvedReferencesImpl(key, typeId);
     }
 
+    /**
+     * factory method for an instance of UnresolvedReferencesBuilder
+     * @return builder
+     */
     public static UnresolvedReferencesBuilder of() {
         return new UnresolvedReferencesBuilder();
     }
 
+    /**
+     * create builder for UnresolvedReferences instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UnresolvedReferencesBuilder of(final UnresolvedReferences template) {
         UnresolvedReferencesBuilder builder = new UnresolvedReferencesBuilder();
         builder.key = template.getKey();

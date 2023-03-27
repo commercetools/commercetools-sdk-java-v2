@@ -269,44 +269,89 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>Price.value</code>.</p>
+     * @return value
+     */
+
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Maps to <code>Price.county</code>.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>Maps to <code>Price.validFrom</code>.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Maps to <code>Price.validUntil</code>.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>References a customer group by key.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>References a channel by key.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Sets a discounted price from an external service.</p>
+     * @return discounted
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
+    /**
+     *  <p>The tiered prices for this price.</p>
+     * @return tiers
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
+
+    /**
+     *  <p>Maps to <code>Price.custom</code>.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -332,10 +377,19 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
             custom);
     }
 
+    /**
+     * factory method for an instance of LineItemPriceBuilder
+     * @return builder
+     */
     public static LineItemPriceBuilder of() {
         return new LineItemPriceBuilder();
     }
 
+    /**
+     * create builder for LineItemPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemPriceBuilder of(final LineItemPrice template) {
         LineItemPriceBuilder builder = new LineItemPriceBuilder();
         builder.value = template.getValue();

@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionProductRemovedMessageImpl.class)
 public interface ProductSelectionProductRemovedMessage extends Message {
 
+    /**
+     * discriminator value for ProductSelectionProductRemovedMessage
+     */
     String PRODUCT_SELECTION_PRODUCT_REMOVED = "ProductSelectionProductRemoved";
 
     /**
@@ -49,12 +52,26 @@ public interface ProductSelectionProductRemovedMessage extends Message {
     @JsonProperty("product")
     public ProductReference getProduct();
 
+    /**
+     *  <p>Product that was removed from the Product Selection.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductReference product);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionProductRemovedMessage
+     */
     public static ProductSelectionProductRemovedMessage of() {
         return new ProductSelectionProductRemovedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionProductRemovedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionProductRemovedMessage of(final ProductSelectionProductRemovedMessage template) {
         ProductSelectionProductRemovedMessageImpl instance = new ProductSelectionProductRemovedMessageImpl();
         instance.setId(template.getId());
@@ -71,19 +88,38 @@ public interface ProductSelectionProductRemovedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionProductRemovedMessage
+     * @return builder
+     */
     public static ProductSelectionProductRemovedMessageBuilder builder() {
         return ProductSelectionProductRemovedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionProductRemovedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionProductRemovedMessageBuilder builder(
             final ProductSelectionProductRemovedMessage template) {
         return ProductSelectionProductRemovedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionProductRemovedMessage(Function<ProductSelectionProductRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessage>() {
             @Override

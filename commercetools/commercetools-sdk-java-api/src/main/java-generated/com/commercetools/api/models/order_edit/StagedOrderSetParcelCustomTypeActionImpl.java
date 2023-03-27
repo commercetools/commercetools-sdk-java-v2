@@ -28,6 +28,9 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetParcelCustomTypeActionImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -38,6 +41,9 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
         this.action = SET_PARCEL_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetParcelCustomTypeActionImpl() {
         this.action = SET_PARCEL_CUSTOM_TYPE;
     }

@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentAddTransactionActionImpl.class)
 public interface PaymentAddTransactionAction extends PaymentUpdateAction {
 
+    /**
+     * discriminator value for PaymentAddTransactionAction
+     */
     String ADD_TRANSACTION = "addTransaction";
 
     /**
@@ -41,30 +44,63 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
     @JsonProperty("transaction")
     public TransactionDraft getTransaction();
 
+    /**
+     *  <p>Value to append to the <code>transactions</code> array.</p>
+     * @param transaction value to be set
+     */
+
     public void setTransaction(final TransactionDraft transaction);
 
+    /**
+     * factory method
+     * @return instance of PaymentAddTransactionAction
+     */
     public static PaymentAddTransactionAction of() {
         return new PaymentAddTransactionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentAddTransactionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentAddTransactionAction of(final PaymentAddTransactionAction template) {
         PaymentAddTransactionActionImpl instance = new PaymentAddTransactionActionImpl();
         instance.setTransaction(template.getTransaction());
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentAddTransactionAction
+     * @return builder
+     */
     public static PaymentAddTransactionActionBuilder builder() {
         return PaymentAddTransactionActionBuilder.of();
     }
 
+    /**
+     * create builder for PaymentAddTransactionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentAddTransactionActionBuilder builder(final PaymentAddTransactionAction template) {
         return PaymentAddTransactionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentAddTransactionAction(Function<PaymentAddTransactionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentAddTransactionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentAddTransactionAction>() {
             @Override

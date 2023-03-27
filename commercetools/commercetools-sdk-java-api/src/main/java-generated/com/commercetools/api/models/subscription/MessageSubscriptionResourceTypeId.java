@@ -86,33 +86,78 @@ public interface MessageSubscriptionResourceTypeId {
     */
     MessageSubscriptionResourceTypeId STORE = MessageSubscriptionResourceTypeIdEnum.STORE;
 
+    /**
+     * possible values of MessageSubscriptionResourceTypeId
+     */
     enum MessageSubscriptionResourceTypeIdEnum implements MessageSubscriptionResourceTypeId {
+        /**
+         * business-unit
+         */
         BUSINESS_UNIT("business-unit"),
 
+        /**
+         * category
+         */
         CATEGORY("category"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * inventory-entry
+         */
         INVENTORY_ENTRY("inventory-entry"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * payment
+         */
         PAYMENT("payment"),
 
+        /**
+         * product
+         */
         PRODUCT("product"),
 
+        /**
+         * product-selection
+         */
         PRODUCT_SELECTION("product-selection"),
 
+        /**
+         * quote
+         */
         QUOTE("quote"),
 
+        /**
+         * quote-request
+         */
         QUOTE_REQUEST("quote-request"),
 
+        /**
+         * review
+         */
         REVIEW("review"),
 
+        /**
+         * staged-quote
+         */
         STAGED_QUOTE("staged-quote"),
 
+        /**
+         * standalone-price
+         */
         STANDALONE_PRICE("standalone-price"),
 
+        /**
+         * store
+         */
         STORE("store");
         private final String jsonName;
 
@@ -129,13 +174,30 @@ public interface MessageSubscriptionResourceTypeId {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of MessageSubscriptionResourceTypeId
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static MessageSubscriptionResourceTypeId findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new MessageSubscriptionResourceTypeId() {
@@ -155,10 +217,18 @@ public interface MessageSubscriptionResourceTypeId {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<MessageSubscriptionResourceTypeId> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static MessageSubscriptionResourceTypeId[] values() {
         return MessageSubscriptionResourceTypeIdEnum.values();
     }

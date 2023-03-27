@@ -26,7 +26,7 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
     private String comment;
 
     /**
-     *
+     * set the value to the comment
      * @param comment value to be set
      * @return Builder
      */
@@ -35,6 +35,11 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
         this.comment = comment;
         return this;
     }
+
+    /**
+     * value of comment}
+     * @return comment
+     */
 
     @Nullable
     public String getComment() {
@@ -57,10 +62,19 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
         return new OrderEditSetCommentActionImpl(comment);
     }
 
+    /**
+     * factory method for an instance of OrderEditSetCommentActionBuilder
+     * @return builder
+     */
     public static OrderEditSetCommentActionBuilder of() {
         return new OrderEditSetCommentActionBuilder();
     }
 
+    /**
+     * create builder for OrderEditSetCommentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditSetCommentActionBuilder of(final OrderEditSetCommentAction template) {
         OrderEditSetCommentActionBuilder builder = new OrderEditSetCommentActionBuilder();
         builder.comment = template.getComment();

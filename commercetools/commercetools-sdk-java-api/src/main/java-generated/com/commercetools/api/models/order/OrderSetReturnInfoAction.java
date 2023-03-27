@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderSetReturnInfoActionImpl.class)
 public interface OrderSetReturnInfoAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderSetReturnInfoAction
+     */
     String SET_RETURN_INFO = "setReturnInfo";
 
     /**
@@ -38,33 +41,71 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     @JsonProperty("items")
     public List<ReturnInfoDraft> getItems();
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     @JsonIgnore
     public void setItems(final ReturnInfoDraft... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<ReturnInfoDraft> items);
 
+    /**
+     * factory method
+     * @return instance of OrderSetReturnInfoAction
+     */
     public static OrderSetReturnInfoAction of() {
         return new OrderSetReturnInfoActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderSetReturnInfoAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderSetReturnInfoAction of(final OrderSetReturnInfoAction template) {
         OrderSetReturnInfoActionImpl instance = new OrderSetReturnInfoActionImpl();
         instance.setItems(template.getItems());
         return instance;
     }
 
+    /**
+     * builder factory method for OrderSetReturnInfoAction
+     * @return builder
+     */
     public static OrderSetReturnInfoActionBuilder builder() {
         return OrderSetReturnInfoActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderSetReturnInfoAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetReturnInfoActionBuilder builder(final OrderSetReturnInfoAction template) {
         return OrderSetReturnInfoActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderSetReturnInfoAction(Function<OrderSetReturnInfoAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnInfoAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnInfoAction>() {
             @Override

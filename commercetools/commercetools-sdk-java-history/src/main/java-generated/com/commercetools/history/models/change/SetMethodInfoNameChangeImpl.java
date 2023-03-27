@@ -28,6 +28,9 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetMethodInfoNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
@@ -38,6 +41,9 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
         this.type = SET_METHOD_INFO_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetMethodInfoNameChangeImpl() {
         this.type = SET_METHOD_INFO_NAME_CHANGE;
     }

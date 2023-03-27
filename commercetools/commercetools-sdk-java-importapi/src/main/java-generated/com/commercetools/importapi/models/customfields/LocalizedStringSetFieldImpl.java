@@ -24,6 +24,9 @@ public class LocalizedStringSetFieldImpl implements LocalizedStringSetField, Mod
 
     private java.util.List<com.commercetools.importapi.models.common.LocalizedString> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizedStringSetFieldImpl(
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.LocalizedString> value) {
@@ -31,6 +34,9 @@ public class LocalizedStringSetFieldImpl implements LocalizedStringSetField, Mod
         this.type = LOCALIZED_STRING_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizedStringSetFieldImpl() {
         this.type = LOCALIZED_STRING_SET;
     }

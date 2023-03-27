@@ -41,6 +41,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionVariantExclusionChangedMessageImpl.class)
 public interface ProductSelectionVariantExclusionChangedMessage extends Message {
 
+    /**
+     * discriminator value for ProductSelectionVariantExclusionChangedMessage
+     */
     String PRODUCT_SELECTION_VARIANT_EXCLUSION_CHANGED = "ProductSelectionVariantExclusionChanged";
 
     /**
@@ -70,16 +73,40 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
     @JsonProperty("newVariantExclusion")
     public ProductVariantExclusion getNewVariantExclusion();
 
+    /**
+     *  <p>Product for which the Product Variant Exclusion changed.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductReference product);
+
+    /**
+     *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     * @param oldVariantExclusion value to be set
+     */
 
     public void setOldVariantExclusion(final ProductVariantExclusion oldVariantExclusion);
 
+    /**
+     *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     * @param newVariantExclusion value to be set
+     */
+
     public void setNewVariantExclusion(final ProductVariantExclusion newVariantExclusion);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionVariantExclusionChangedMessage
+     */
     public static ProductSelectionVariantExclusionChangedMessage of() {
         return new ProductSelectionVariantExclusionChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionVariantExclusionChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionVariantExclusionChangedMessage of(
             final ProductSelectionVariantExclusionChangedMessage template) {
         ProductSelectionVariantExclusionChangedMessageImpl instance = new ProductSelectionVariantExclusionChangedMessageImpl();
@@ -99,20 +126,39 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionVariantExclusionChangedMessage
+     * @return builder
+     */
     public static ProductSelectionVariantExclusionChangedMessageBuilder builder() {
         return ProductSelectionVariantExclusionChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionVariantExclusionChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionVariantExclusionChangedMessageBuilder builder(
             final ProductSelectionVariantExclusionChangedMessage template) {
         return ProductSelectionVariantExclusionChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionVariantExclusionChangedMessage(
             Function<ProductSelectionVariantExclusionChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionVariantExclusionChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionVariantExclusionChangedMessage>() {
             @Override

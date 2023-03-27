@@ -28,6 +28,9 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
 
     private com.commercetools.history.models.common.TaxRate nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveTaxRateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxRate previousValue,
@@ -38,6 +41,9 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
         this.type = REMOVE_TAX_RATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveTaxRateChangeImpl() {
         this.type = REMOVE_TAX_RATE_CHANGE;
     }

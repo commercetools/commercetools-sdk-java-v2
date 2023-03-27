@@ -29,7 +29,7 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
     private java.lang.Object resource;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
     }
 
     /**
-     *
+     * set the value to the resource
      * @param resource value to be set
      * @return Builder
      */
@@ -50,9 +50,19 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     * value of resource}
+     * @return resource
+     */
 
     @Nullable
     public java.lang.Object getResource() {
@@ -76,10 +86,19 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
         return new ResourceDeletionErrorImpl(message, resource);
     }
 
+    /**
+     * factory method for an instance of ResourceDeletionErrorBuilder
+     * @return builder
+     */
     public static ResourceDeletionErrorBuilder of() {
         return new ResourceDeletionErrorBuilder();
     }
 
+    /**
+     * create builder for ResourceDeletionError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceDeletionErrorBuilder of(final ResourceDeletionError template) {
         ResourceDeletionErrorBuilder builder = new ResourceDeletionErrorBuilder();
         builder.message = template.getMessage();

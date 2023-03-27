@@ -962,167 +962,347 @@ public class QuoteBuilder implements Builder<Quote> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Quote.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Quote.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Quote was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Quote was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Quote.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Quote Request related to the Quote.</p>
+     * @return quoteRequest
+     */
+
     public com.commercetools.api.models.quote_request.QuoteRequestReference getQuoteRequest() {
         return this.quoteRequest;
     }
 
+    /**
+     *  <p>Staged Quote related to the Quote.</p>
+     * @return stagedQuote
+     */
+
     public com.commercetools.api.models.staged_quote.StagedQuoteReference getStagedQuote() {
         return this.stagedQuote;
     }
+
+    /**
+     *  <p>The Buyer who requested the Quote.</p>
+     * @return customer
+     */
 
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
+    /**
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Expiration date for the Quote.</p>
+     * @return validTo
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidTo() {
         return this.validTo;
     }
 
+    /**
+     *  <p>Message from the Seller included in the offer.</p>
+     * @return sellerComment
+     */
+
     @Nullable
     public String getSellerComment() {
         return this.sellerComment;
     }
+
+    /**
+     *  <p>Message from the Buyer included in the renegotiation request.</p>
+     * @return buyerComment
+     */
 
     @Nullable
     public String getBuyerComment() {
         return this.buyerComment;
     }
 
+    /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     * @return store
+     */
+
     @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
 
+    /**
+     *  <p>The Line Items for which the Quote is requested.</p>
+     * @return lineItems
+     */
+
     public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
         return this.lineItems;
     }
+
+    /**
+     *  <p>The Custom Line Items for which the Quote is requested.</p>
+     * @return customLineItems
+     */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
         return this.customLineItems;
     }
 
+    /**
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     * @return totalPrice
+     */
+
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
+
+    /**
+     *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
+    /**
+     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     * @return shippingAddress
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Address getShippingAddress() {
         return this.shippingAddress;
     }
+
+    /**
+     *  <p>Address used for invoicing.</p>
+     * @return billingAddress
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Address getBillingAddress() {
         return this.billingAddress;
     }
 
+    /**
+     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @return inventoryMode
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
 
+    /**
+     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @return taxMode
+     */
+
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
     }
+
+    /**
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
+     * @return taxRoundingMode
+     */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
 
+    /**
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
+     * @return taxCalculationMode
+     */
+
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
+
+    /**
+     *  <p>Used for Product Variant price selection.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>Set automatically once the ShippingMethod is set.</p>
+     * @return shippingInfo
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
     }
+
+    /**
+     *  <p>Log of payment transactions related to the Quote.</p>
+     * @return paymentInfo
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
         return this.paymentInfo;
     }
 
+    /**
+     *  <p>Used to select a ShippingRatePriceTier.</p>
+     * @return shippingRateInput
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
         return this.shippingRateInput;
     }
+
+    /**
+     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @return itemShippingAddresses
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
 
+    /**
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @return directDiscounts
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
         return this.directDiscounts;
     }
+
+    /**
+     *  <p>Custom Fields on the Quote.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Predefined states tracking the status of the Quote.</p>
+     * @return quoteState
+     */
+
     public com.commercetools.api.models.quote.QuoteState getQuoteState() {
         return this.quoteState;
     }
+
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @return state
+     */
 
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
+    /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     * @return purchaseOrderNumber
+     */
+
     @Nullable
     public String getPurchaseOrderNumber() {
         return this.purchaseOrderNumber;
     }
+
+    /**
+     *  <p>The BusinessUnit for the Quote.</p>
+     * @return businessUnit
+     */
 
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -1166,10 +1346,19 @@ public class QuoteBuilder implements Builder<Quote> {
             itemShippingAddresses, directDiscounts, custom, quoteState, state, purchaseOrderNumber, businessUnit);
     }
 
+    /**
+     * factory method for an instance of QuoteBuilder
+     * @return builder
+     */
     public static QuoteBuilder of() {
         return new QuoteBuilder();
     }
 
+    /**
+     * create builder for Quote instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteBuilder of(final Quote template) {
         QuoteBuilder builder = new QuoteBuilder();
         builder.id = template.getId();

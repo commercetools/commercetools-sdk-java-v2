@@ -66,18 +66,47 @@ public interface Reservation {
     @JsonProperty("checkoutStartedAt")
     public String getCheckoutStartedAt();
 
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Integer quantity);
+
+    /**
+     * set owner
+     * @param owner value to be set
+     */
 
     public void setOwner(final Reference owner);
 
+    /**
+     * set createdAt
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final String createdAt);
+
+    /**
+     * set checkoutStartedAt
+     * @param checkoutStartedAt value to be set
+     */
 
     public void setCheckoutStartedAt(final String checkoutStartedAt);
 
+    /**
+     * factory method
+     * @return instance of Reservation
+     */
     public static Reservation of() {
         return new ReservationImpl();
     }
 
+    /**
+     * factory method to copy an instance of Reservation
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Reservation of(final Reservation template) {
         ReservationImpl instance = new ReservationImpl();
         instance.setQuantity(template.getQuantity());
@@ -87,18 +116,37 @@ public interface Reservation {
         return instance;
     }
 
+    /**
+     * builder factory method for Reservation
+     * @return builder
+     */
     public static ReservationBuilder builder() {
         return ReservationBuilder.of();
     }
 
+    /**
+     * create builder for Reservation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReservationBuilder builder(final Reservation template) {
         return ReservationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReservation(Function<Reservation, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Reservation> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Reservation>() {
             @Override

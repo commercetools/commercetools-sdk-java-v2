@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveAddressChangeImpl.class)
 public interface RemoveAddressChange extends Change {
 
+    /**
+     * discriminator value for RemoveAddressChange
+     */
     String REMOVE_ADDRESS_CHANGE = "RemoveAddressChange";
 
     /**
@@ -59,14 +62,33 @@ public interface RemoveAddressChange extends Change {
     @JsonProperty("previousValue")
     public Address getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>removeAddress</code> action.</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Address previousValue);
 
+    /**
+     * factory method
+     * @return instance of RemoveAddressChange
+     */
     public static RemoveAddressChange of() {
         return new RemoveAddressChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveAddressChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveAddressChange of(final RemoveAddressChange template) {
         RemoveAddressChangeImpl instance = new RemoveAddressChangeImpl();
         instance.setChange(template.getChange());
@@ -74,18 +96,37 @@ public interface RemoveAddressChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveAddressChange
+     * @return builder
+     */
     public static RemoveAddressChangeBuilder builder() {
         return RemoveAddressChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveAddressChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveAddressChangeBuilder builder(final RemoveAddressChange template) {
         return RemoveAddressChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveAddressChange(Function<RemoveAddressChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveAddressChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveAddressChange>() {
             @Override

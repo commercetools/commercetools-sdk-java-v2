@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetPriceKeyActionImpl.class)
 public interface ProductSetPriceKeyAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetPriceKeyAction
+     */
     String SET_PRICE_KEY = "setPriceKey";
 
     /**
@@ -55,16 +58,40 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>The <code>id</code> of the Price to set the key.</p>
+     * @param priceId value to be set
+     */
+
     public void setPriceId(final String priceId);
+
+    /**
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ProductSetPriceKeyAction
+     */
     public static ProductSetPriceKeyAction of() {
         return new ProductSetPriceKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetPriceKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetPriceKeyAction of(final ProductSetPriceKeyAction template) {
         ProductSetPriceKeyActionImpl instance = new ProductSetPriceKeyActionImpl();
         instance.setPriceId(template.getPriceId());
@@ -73,18 +100,37 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetPriceKeyAction
+     * @return builder
+     */
     public static ProductSetPriceKeyActionBuilder builder() {
         return ProductSetPriceKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetPriceKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetPriceKeyActionBuilder builder(final ProductSetPriceKeyAction template) {
         return ProductSetPriceKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetPriceKeyAction(Function<ProductSetPriceKeyAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetPriceKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetPriceKeyAction>() {
             @Override

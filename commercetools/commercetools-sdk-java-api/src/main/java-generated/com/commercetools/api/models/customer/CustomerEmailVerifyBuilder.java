@@ -50,10 +50,20 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Customer.</p>
+     * @return version
+     */
+
     @Nullable
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Value of the token to verify Customer email.</p>
+     * @return tokenValue
+     */
 
     public String getTokenValue() {
         return this.tokenValue;
@@ -76,10 +86,19 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
         return new CustomerEmailVerifyImpl(version, tokenValue);
     }
 
+    /**
+     * factory method for an instance of CustomerEmailVerifyBuilder
+     * @return builder
+     */
     public static CustomerEmailVerifyBuilder of() {
         return new CustomerEmailVerifyBuilder();
     }
 
+    /**
+     * create builder for CustomerEmailVerify instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerEmailVerifyBuilder of(final CustomerEmailVerify template) {
         CustomerEmailVerifyBuilder builder = new CustomerEmailVerifyBuilder();
         builder.version = template.getVersion();

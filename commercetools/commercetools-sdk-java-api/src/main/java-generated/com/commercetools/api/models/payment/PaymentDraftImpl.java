@@ -50,6 +50,9 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentDraftImpl(
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer,
@@ -83,6 +86,9 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentDraftImpl() {
     }
 

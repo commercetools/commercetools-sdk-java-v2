@@ -51,10 +51,20 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
@@ -77,10 +87,19 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
         return new CartDiscountSetValidFromAndUntilActionImpl(validFrom, validUntil);
     }
 
+    /**
+     * factory method for an instance of CartDiscountSetValidFromAndUntilActionBuilder
+     * @return builder
+     */
     public static CartDiscountSetValidFromAndUntilActionBuilder of() {
         return new CartDiscountSetValidFromAndUntilActionBuilder();
     }
 
+    /**
+     * create builder for CartDiscountSetValidFromAndUntilAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountSetValidFromAndUntilActionBuilder of(
             final CartDiscountSetValidFromAndUntilAction template) {
         CartDiscountSetValidFromAndUntilActionBuilder builder = new CartDiscountSetValidFromAndUntilActionBuilder();

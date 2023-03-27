@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyShoppingListSetDescriptionActionImpl.class)
 public interface MyShoppingListSetDescriptionAction extends MyShoppingListUpdateAction {
 
+    /**
+     * discriminator value for MyShoppingListSetDescriptionAction
+     */
     String SET_DESCRIPTION = "setDescription";
 
     /**
@@ -39,30 +42,63 @@ public interface MyShoppingListSetDescriptionAction extends MyShoppingListUpdate
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
 
+    /**
+     * factory method
+     * @return instance of MyShoppingListSetDescriptionAction
+     */
     public static MyShoppingListSetDescriptionAction of() {
         return new MyShoppingListSetDescriptionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyShoppingListSetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyShoppingListSetDescriptionAction of(final MyShoppingListSetDescriptionAction template) {
         MyShoppingListSetDescriptionActionImpl instance = new MyShoppingListSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
 
+    /**
+     * builder factory method for MyShoppingListSetDescriptionAction
+     * @return builder
+     */
     public static MyShoppingListSetDescriptionActionBuilder builder() {
         return MyShoppingListSetDescriptionActionBuilder.of();
     }
 
+    /**
+     * create builder for MyShoppingListSetDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyShoppingListSetDescriptionActionBuilder builder(final MyShoppingListSetDescriptionAction template) {
         return MyShoppingListSetDescriptionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyShoppingListSetDescriptionAction(Function<MyShoppingListSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetDescriptionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetDescriptionAction>() {
             @Override

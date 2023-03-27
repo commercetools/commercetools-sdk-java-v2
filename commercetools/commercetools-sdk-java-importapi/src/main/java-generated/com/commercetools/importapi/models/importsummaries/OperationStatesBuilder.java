@@ -104,25 +104,55 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
         return this;
     }
 
+    /**
+     *  <p>The number of resources in the <code>processing</code> state.</p>
+     * @return processing
+     */
+
     public Long getProcessing() {
         return this.processing;
     }
+
+    /**
+     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     * @return validationFailed
+     */
 
     public Long getValidationFailed() {
         return this.validationFailed;
     }
 
+    /**
+     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     * @return unresolved
+     */
+
     public Long getUnresolved() {
         return this.unresolved;
     }
+
+    /**
+     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     * @return waitForMasterVariant
+     */
 
     public Long getWaitForMasterVariant() {
         return this.waitForMasterVariant;
     }
 
+    /**
+     *  <p>The number of resources in the <code>imported</code> state.</p>
+     * @return imported
+     */
+
     public Long getImported() {
         return this.imported;
     }
+
+    /**
+     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     * @return rejected
+     */
 
     public Long getRejected() {
         return this.rejected;
@@ -152,10 +182,19 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
             rejected);
     }
 
+    /**
+     * factory method for an instance of OperationStatesBuilder
+     * @return builder
+     */
     public static OperationStatesBuilder of() {
         return new OperationStatesBuilder();
     }
 
+    /**
+     * create builder for OperationStates instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OperationStatesBuilder of(final OperationStates template) {
         OperationStatesBuilder builder = new OperationStatesBuilder();
         builder.processing = template.getProcessing();

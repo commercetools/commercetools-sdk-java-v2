@@ -44,6 +44,9 @@ public class BusinessUnitCreatedMessageImpl implements BusinessUnitCreatedMessag
 
     private com.commercetools.api.models.business_unit.BusinessUnit businessUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class BusinessUnitCreatedMessageImpl implements BusinessUnitCreatedMessag
         this.type = BUSINESS_UNIT_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitCreatedMessageImpl() {
         this.type = BUSINESS_UNIT_CREATED;
     }

@@ -47,6 +47,11 @@ public class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
         return this;
     }
 
+    /**
+     *  <p>Field type of the elements in the set.</p>
+     * @return elementType
+     */
+
     public com.commercetools.api.models.type.FieldType getElementType() {
         return this.elementType;
     }
@@ -68,10 +73,19 @@ public class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
         return new CustomFieldSetTypeImpl(elementType);
     }
 
+    /**
+     * factory method for an instance of CustomFieldSetTypeBuilder
+     * @return builder
+     */
     public static CustomFieldSetTypeBuilder of() {
         return new CustomFieldSetTypeBuilder();
     }
 
+    /**
+     * create builder for CustomFieldSetType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldSetTypeBuilder of(final CustomFieldSetType template) {
         CustomFieldSetTypeBuilder builder = new CustomFieldSetTypeBuilder();
         builder.elementType = template.getElementType();

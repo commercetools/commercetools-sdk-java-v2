@@ -24,7 +24,7 @@ public class OrderRemoveItemShippingAddressActionBuilder implements Builder<Orde
     private String addressKey;
 
     /**
-     *
+     * set the value to the addressKey
      * @param addressKey value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class OrderRemoveItemShippingAddressActionBuilder implements Builder<Orde
         this.addressKey = addressKey;
         return this;
     }
+
+    /**
+     * value of addressKey}
+     * @return addressKey
+     */
 
     public String getAddressKey() {
         return this.addressKey;
@@ -55,10 +60,19 @@ public class OrderRemoveItemShippingAddressActionBuilder implements Builder<Orde
         return new OrderRemoveItemShippingAddressActionImpl(addressKey);
     }
 
+    /**
+     * factory method for an instance of OrderRemoveItemShippingAddressActionBuilder
+     * @return builder
+     */
     public static OrderRemoveItemShippingAddressActionBuilder of() {
         return new OrderRemoveItemShippingAddressActionBuilder();
     }
 
+    /**
+     * create builder for OrderRemoveItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderRemoveItemShippingAddressActionBuilder of(final OrderRemoveItemShippingAddressAction template) {
         OrderRemoveItemShippingAddressActionBuilder builder = new OrderRemoveItemShippingAddressActionBuilder();
         builder.addressKey = template.getAddressKey();

@@ -25,7 +25,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> values;
 
     /**
-     *
+     * set values to the values
      * @param values value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     }
 
     /**
-     *
+     * set value to the values
      * @param values value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     }
 
     /**
-     *
+     * add values to the values
      * @param values value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     }
 
     /**
-     *
+     * add the value to the values using the builder function
      * @param builder function to build the values value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     }
 
     /**
-     *
+     * set the value to the values using the builder function
      * @param builder function to build the values value
      * @return Builder
      */
@@ -94,6 +94,11 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
                     .build());
         return this;
     }
+
+    /**
+     * value of values}
+     * @return values
+     */
 
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> getValues() {
         return this.values;
@@ -116,10 +121,19 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
         return new AttributeLocalizedEnumTypeImpl(values);
     }
 
+    /**
+     * factory method for an instance of AttributeLocalizedEnumTypeBuilder
+     * @return builder
+     */
     public static AttributeLocalizedEnumTypeBuilder of() {
         return new AttributeLocalizedEnumTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeLocalizedEnumType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeLocalizedEnumTypeBuilder of(final AttributeLocalizedEnumType template) {
         AttributeLocalizedEnumTypeBuilder builder = new AttributeLocalizedEnumTypeBuilder();
         builder.values = template.getValues();

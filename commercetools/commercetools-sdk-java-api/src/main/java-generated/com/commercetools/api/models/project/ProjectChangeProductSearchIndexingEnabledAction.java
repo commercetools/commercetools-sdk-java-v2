@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeProductSearchIndexingEnabledActionImpl.class)
 public interface ProjectChangeProductSearchIndexingEnabledAction extends ProjectUpdateAction {
 
+    /**
+     * discriminator value for ProjectChangeProductSearchIndexingEnabledAction
+     */
     String CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED = "changeProductSearchIndexingEnabled";
 
     /**
@@ -42,12 +45,29 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     @JsonProperty("enabled")
     public Boolean getEnabled();
 
+    /**
+     *  <ul>
+     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Product Suggestions endpoint will not be available anymore for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
+     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Product Suggestions endpoint will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned endpoints fully available for this Project.</li>
+     *  </ul>
+     * @param enabled value to be set
+     */
+
     public void setEnabled(final Boolean enabled);
 
+    /**
+     * factory method
+     * @return instance of ProjectChangeProductSearchIndexingEnabledAction
+     */
     public static ProjectChangeProductSearchIndexingEnabledAction of() {
         return new ProjectChangeProductSearchIndexingEnabledActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectChangeProductSearchIndexingEnabledAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectChangeProductSearchIndexingEnabledAction of(
             final ProjectChangeProductSearchIndexingEnabledAction template) {
         ProjectChangeProductSearchIndexingEnabledActionImpl instance = new ProjectChangeProductSearchIndexingEnabledActionImpl();
@@ -55,20 +75,39 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectChangeProductSearchIndexingEnabledAction
+     * @return builder
+     */
     public static ProjectChangeProductSearchIndexingEnabledActionBuilder builder() {
         return ProjectChangeProductSearchIndexingEnabledActionBuilder.of();
     }
 
+    /**
+     * create builder for ProjectChangeProductSearchIndexingEnabledAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeProductSearchIndexingEnabledActionBuilder builder(
             final ProjectChangeProductSearchIndexingEnabledAction template) {
         return ProjectChangeProductSearchIndexingEnabledActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectChangeProductSearchIndexingEnabledAction(
             Function<ProjectChangeProductSearchIndexingEnabledAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction>() {
             @Override

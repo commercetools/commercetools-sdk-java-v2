@@ -630,135 +630,277 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>User-defined unique identifier for a Customer. Once set, it cannot be changed.</p>
+     *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     * @return customerNumber
+     */
 
     @Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
     }
 
+    /**
+     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
+     */
+
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
 
+    /**
+     *  <p>Email address of the Customer that must be unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     * @return email
+     */
+
     public String getEmail() {
         return this.email;
     }
+
+    /**
+     *  <p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Provide the Customer's password in plain text. The API stores passwords in an encrypted format.</p>
+     * @return password
+     */
 
     @Nullable
     public String getPassword() {
         return this.password;
     }
 
+    /**
+     *  <p>Given name (first name) of the Customer.</p>
+     * @return firstName
+     */
+
     @Nullable
     public String getFirstName() {
         return this.firstName;
     }
+
+    /**
+     *  <p>Family name (last name) of the Customer.</p>
+     * @return lastName
+     */
 
     @Nullable
     public String getLastName() {
         return this.lastName;
     }
 
+    /**
+     *  <p>Middle name of the Customer.</p>
+     * @return middleName
+     */
+
     @Nullable
     public String getMiddleName() {
         return this.middleName;
     }
+
+    /**
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     * @return title
+     */
 
     @Nullable
     public String getTitle() {
         return this.title;
     }
 
+    /**
+     *  <p>Deprecated since an anonymous Cart can be identified by its <code>id</code> or external <code>key</code>.</p>
+     * @return anonymousCartId
+     */
     @Deprecated
     @Nullable
     public String getAnonymousCartId() {
         return this.anonymousCartId;
     }
 
+    /**
+     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     * @return anonymousCart
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
         return this.anonymousCart;
     }
+
+    /**
+     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     * @return anonymousId
+     */
 
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
+    /**
+     *  <p>Date of birth of the Customer.</p>
+     * @return dateOfBirth
+     */
+
     @Nullable
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
     }
+
+    /**
+     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     * @return companyName
+     */
 
     @Nullable
     public String getCompanyName() {
         return this.companyName;
     }
 
+    /**
+     *  <p>Unique VAT ID of the Customer.</p>
+     * @return vatId
+     */
+
     @Nullable
     public String getVatId() {
         return this.vatId;
     }
+
+    /**
+     *  <p>Addresses of the Customer.</p>
+     * @return addresses
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
         return this.addresses;
     }
 
+    /**
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @return defaultShippingAddress
+     */
+
     @Nullable
     public Integer getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
+
+    /**
+     *  <p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of these addresses.</p>
+     * @return shippingAddresses
+     */
 
     @Nullable
     public java.util.List<Integer> getShippingAddresses() {
         return this.shippingAddresses;
     }
 
+    /**
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @return defaultBillingAddress
+     */
+
     @Nullable
     public Integer getDefaultBillingAddress() {
         return this.defaultBillingAddress;
     }
+
+    /**
+     *  <p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the IDs of these addresses.</p>
+     * @return billingAddresses
+     */
 
     @Nullable
     public java.util.List<Integer> getBillingAddresses() {
         return this.billingAddresses;
     }
 
+    /**
+     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the email verification afterwards.</p>
+     * @return isEmailVerified
+     */
+
     @Nullable
     public Boolean getIsEmailVerified() {
         return this.isEmailVerified;
     }
+
+    /**
+     *  <p>Sets the CustomerGroup for the Customer.</p>
+     * @return customerGroup
+     */
 
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
+    /**
+     *  <p>Custom Fields for the Customer.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     * @return locale
+     */
 
     @Nullable
     public String getLocale() {
         return this.locale;
     }
 
+    /**
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     * @return salutation
+     */
+
     @Nullable
     public String getSalutation() {
         return this.salutation;
     }
 
+    /**
+     *  <p>Sets the Stores for the Customer.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
+     * @return stores
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
         return this.stores;
     }
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
+     *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
+     *  </ul>
+     * @return authenticationMode
+     */
 
     @Nullable
     public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
@@ -788,10 +930,19 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
             customerGroup, custom, locale, salutation, stores, authenticationMode);
     }
 
+    /**
+     * factory method for an instance of CustomerDraftBuilder
+     * @return builder
+     */
     public static CustomerDraftBuilder of() {
         return new CustomerDraftBuilder();
     }
 
+    /**
+     * create builder for CustomerDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerDraftBuilder of(final CustomerDraft template) {
         CustomerDraftBuilder builder = new CustomerDraftBuilder();
         builder.key = template.getKey();

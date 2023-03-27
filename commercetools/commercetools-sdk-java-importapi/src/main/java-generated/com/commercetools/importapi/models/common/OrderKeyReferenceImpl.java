@@ -24,12 +24,18 @@ public class OrderKeyReferenceImpl implements OrderKeyReference, ModelBase {
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("order");
     }
 
+    /**
+     * create empty instance
+     */
     public OrderKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("order");
     }

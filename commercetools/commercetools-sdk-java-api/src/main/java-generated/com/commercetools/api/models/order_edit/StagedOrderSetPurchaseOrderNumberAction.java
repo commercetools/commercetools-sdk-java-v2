@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetPurchaseOrderNumberActionImpl.class)
 public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetPurchaseOrderNumberAction
+     */
     String SET_PURCHASE_ORDER_NUMBER = "setPurchaseOrderNumber";
 
     /**
@@ -37,32 +40,65 @@ public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpda
     @JsonProperty("purchaseOrderNumber")
     public String getPurchaseOrderNumber();
 
+    /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetPurchaseOrderNumberAction
+     */
     public static StagedOrderSetPurchaseOrderNumberAction of() {
         return new StagedOrderSetPurchaseOrderNumberActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetPurchaseOrderNumberAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetPurchaseOrderNumberAction of(final StagedOrderSetPurchaseOrderNumberAction template) {
         StagedOrderSetPurchaseOrderNumberActionImpl instance = new StagedOrderSetPurchaseOrderNumberActionImpl();
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetPurchaseOrderNumberAction
+     * @return builder
+     */
     public static StagedOrderSetPurchaseOrderNumberActionBuilder builder() {
         return StagedOrderSetPurchaseOrderNumberActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetPurchaseOrderNumberAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetPurchaseOrderNumberActionBuilder builder(
             final StagedOrderSetPurchaseOrderNumberAction template) {
         return StagedOrderSetPurchaseOrderNumberActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetPurchaseOrderNumberAction(
             Function<StagedOrderSetPurchaseOrderNumberAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetPurchaseOrderNumberAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetPurchaseOrderNumberAction>() {
             @Override

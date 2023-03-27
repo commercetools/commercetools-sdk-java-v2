@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderChangeCustomLineItemMoneyActionImpl.class)
 public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderChangeCustomLineItemMoneyAction
+     */
     String CHANGE_CUSTOM_LINE_ITEM_MONEY = "changeCustomLineItemMoney";
 
     /**
@@ -53,14 +56,34 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
     @JsonProperty("money")
     public Money getMoney();
 
+    /**
+     * set customLineItemId
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param money value to be set
+     */
 
     public void setMoney(final Money money);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderChangeCustomLineItemMoneyAction
+     */
     public static StagedOrderChangeCustomLineItemMoneyAction of() {
         return new StagedOrderChangeCustomLineItemMoneyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderChangeCustomLineItemMoneyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderChangeCustomLineItemMoneyAction of(
             final StagedOrderChangeCustomLineItemMoneyAction template) {
         StagedOrderChangeCustomLineItemMoneyActionImpl instance = new StagedOrderChangeCustomLineItemMoneyActionImpl();
@@ -69,20 +92,39 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderChangeCustomLineItemMoneyAction
+     * @return builder
+     */
     public static StagedOrderChangeCustomLineItemMoneyActionBuilder builder() {
         return StagedOrderChangeCustomLineItemMoneyActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderChangeCustomLineItemMoneyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeCustomLineItemMoneyActionBuilder builder(
             final StagedOrderChangeCustomLineItemMoneyAction template) {
         return StagedOrderChangeCustomLineItemMoneyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderChangeCustomLineItemMoneyAction(
             Function<StagedOrderChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeCustomLineItemMoneyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeCustomLineItemMoneyAction>() {
             @Override

@@ -93,6 +93,11 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @return targets
+     */
+
     public java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> getTargets() {
         return this.targets;
     }
@@ -114,10 +119,19 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return new ItemShippingDetailsDraftImpl(targets);
     }
 
+    /**
+     * factory method for an instance of ItemShippingDetailsDraftBuilder
+     * @return builder
+     */
     public static ItemShippingDetailsDraftBuilder of() {
         return new ItemShippingDetailsDraftBuilder();
     }
 
+    /**
+     * create builder for ItemShippingDetailsDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemShippingDetailsDraftBuilder of(final ItemShippingDetailsDraft template) {
         ItemShippingDetailsDraftBuilder builder = new ItemShippingDetailsDraftBuilder();
         builder.targets = template.getTargets();

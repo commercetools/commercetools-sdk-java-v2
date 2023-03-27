@@ -209,34 +209,69 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Channel.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     * @return roles
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }
 
+    /**
+     *  <p>Name of the Channel.</p>
+     * @return name
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the Channel.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Address where the Channel is located.</p>
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
+    /**
+     *  <p>Custom fields defined for the Channel.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     * @return geoLocation
+     */
 
     @Nullable
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {
@@ -260,10 +295,19 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
         return new ChannelDraftImpl(key, roles, name, description, address, custom, geoLocation);
     }
 
+    /**
+     * factory method for an instance of ChannelDraftBuilder
+     * @return builder
+     */
     public static ChannelDraftBuilder of() {
         return new ChannelDraftBuilder();
     }
 
+    /**
+     * create builder for ChannelDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelDraftBuilder of(final ChannelDraft template) {
         ChannelDraftBuilder builder = new ChannelDraftBuilder();
         builder.key = template.getKey();

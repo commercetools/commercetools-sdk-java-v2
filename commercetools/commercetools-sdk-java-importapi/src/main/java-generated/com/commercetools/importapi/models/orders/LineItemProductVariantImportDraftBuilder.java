@@ -278,25 +278,50 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     * @return productVariant
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
         return this.productVariant;
     }
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @return prices
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> getPrices() {
         return this.prices;
     }
 
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @return attributes
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
     }
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @return images
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
@@ -319,10 +344,19 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return new LineItemProductVariantImportDraftImpl(productVariant, sku, prices, attributes, images);
     }
 
+    /**
+     * factory method for an instance of LineItemProductVariantImportDraftBuilder
+     * @return builder
+     */
     public static LineItemProductVariantImportDraftBuilder of() {
         return new LineItemProductVariantImportDraftBuilder();
     }
 
+    /**
+     * create builder for LineItemProductVariantImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemProductVariantImportDraftBuilder of(final LineItemProductVariantImportDraft template) {
         LineItemProductVariantImportDraftBuilder builder = new LineItemProductVariantImportDraftBuilder();
         builder.productVariant = template.getProductVariant();

@@ -54,6 +54,9 @@ public class ReviewStateTransitionMessageImpl implements ReviewStateTransitionMe
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewStateTransitionMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -89,6 +92,9 @@ public class ReviewStateTransitionMessageImpl implements ReviewStateTransitionMe
         this.type = REVIEW_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewStateTransitionMessageImpl() {
         this.type = REVIEW_STATE_TRANSITION;
     }

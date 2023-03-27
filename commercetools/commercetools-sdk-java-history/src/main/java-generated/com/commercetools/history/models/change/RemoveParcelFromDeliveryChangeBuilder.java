@@ -42,7 +42,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -76,13 +76,28 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.Parcel getPreviousValue() {
         return this.previousValue;
@@ -107,10 +122,19 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
         return new RemoveParcelFromDeliveryChangeImpl(change, deliveryId, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemoveParcelFromDeliveryChangeBuilder
+     * @return builder
+     */
     public static RemoveParcelFromDeliveryChangeBuilder of() {
         return new RemoveParcelFromDeliveryChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveParcelFromDeliveryChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveParcelFromDeliveryChangeBuilder of(final RemoveParcelFromDeliveryChange template) {
         RemoveParcelFromDeliveryChangeBuilder builder = new RemoveParcelFromDeliveryChangeBuilder();
         builder.change = template.getChange();

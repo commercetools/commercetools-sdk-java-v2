@@ -26,6 +26,9 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
 
     private String condition;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionTriggerImpl(
             @JsonProperty("resourceTypeId") final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId,
@@ -36,6 +39,9 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
         this.condition = condition;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionTriggerImpl() {
     }
 

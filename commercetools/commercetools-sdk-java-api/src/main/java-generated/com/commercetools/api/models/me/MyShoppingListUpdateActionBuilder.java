@@ -87,6 +87,10 @@ public class MyShoppingListUpdateActionBuilder {
         return com.commercetools.api.models.me.MyShoppingListSetTextLineItemDescriptionActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of MyShoppingListUpdateActionBuilder
+     * @return builder
+     */
     public static MyShoppingListUpdateActionBuilder of() {
         return new MyShoppingListUpdateActionBuilder();
     }

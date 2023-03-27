@@ -28,6 +28,9 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
 
     private com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetShippingMethodChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue,
@@ -38,6 +41,9 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
         this.type = SET_SHIPPING_METHOD_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetShippingMethodChangeImpl() {
         this.type = SET_SHIPPING_METHOD_CHANGE;
     }

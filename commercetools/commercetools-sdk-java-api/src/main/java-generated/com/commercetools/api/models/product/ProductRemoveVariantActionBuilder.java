@@ -64,15 +64,30 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to remove.</p>
+     * @return id
+     */
+
     @Nullable
     public Long getId() {
         return this.id;
     }
 
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to remove.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -95,10 +110,19 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
         return new ProductRemoveVariantActionImpl(id, sku, staged);
     }
 
+    /**
+     * factory method for an instance of ProductRemoveVariantActionBuilder
+     * @return builder
+     */
     public static ProductRemoveVariantActionBuilder of() {
         return new ProductRemoveVariantActionBuilder();
     }
 
+    /**
+     * create builder for ProductRemoveVariantAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRemoveVariantActionBuilder of(final ProductRemoveVariantAction template) {
         ProductRemoveVariantActionBuilder builder = new ProductRemoveVariantActionBuilder();
         builder.id = template.getId();

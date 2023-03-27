@@ -27,6 +27,9 @@ public class AttributeGroupResourceIdentifierImpl implements AttributeGroupResou
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class AttributeGroupResourceIdentifierImpl implements AttributeGroupResou
         this.typeId = ReferenceTypeId.findEnum("attribute-group");
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("attribute-group");
     }

@@ -40,6 +40,9 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartAddCustomShippingMethodActionImpl(@JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("shippingMethodName") final String shippingMethodName,
@@ -62,6 +65,9 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
         this.action = ADD_CUSTOM_SHIPPING_METHOD;
     }
 
+    /**
+     * create empty instance
+     */
     public CartAddCustomShippingMethodActionImpl() {
         this.action = ADD_CUSTOM_SHIPPING_METHOD;
     }

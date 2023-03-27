@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomerIdActionImpl.class)
 public interface CartSetCustomerIdAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetCustomerIdAction
+     */
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
@@ -37,30 +40,63 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     @JsonProperty("customerId")
     public String getCustomerId();
 
+    /**
+     *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
+     * @param customerId value to be set
+     */
+
     public void setCustomerId(final String customerId);
 
+    /**
+     * factory method
+     * @return instance of CartSetCustomerIdAction
+     */
     public static CartSetCustomerIdAction of() {
         return new CartSetCustomerIdActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetCustomerIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetCustomerIdAction of(final CartSetCustomerIdAction template) {
         CartSetCustomerIdActionImpl instance = new CartSetCustomerIdActionImpl();
         instance.setCustomerId(template.getCustomerId());
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetCustomerIdAction
+     * @return builder
+     */
     public static CartSetCustomerIdActionBuilder builder() {
         return CartSetCustomerIdActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetCustomerIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomerIdActionBuilder builder(final CartSetCustomerIdAction template) {
         return CartSetCustomerIdActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetCustomerIdAction(Function<CartSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerIdAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerIdAction>() {
             @Override

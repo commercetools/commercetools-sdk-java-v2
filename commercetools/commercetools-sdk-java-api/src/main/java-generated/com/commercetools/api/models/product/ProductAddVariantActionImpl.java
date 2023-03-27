@@ -36,6 +36,9 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
 
     private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductAddVariantActionImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
             @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices,
@@ -53,6 +56,9 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
         this.action = ADD_VARIANT;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductAddVariantActionImpl() {
         this.action = ADD_VARIANT;
     }

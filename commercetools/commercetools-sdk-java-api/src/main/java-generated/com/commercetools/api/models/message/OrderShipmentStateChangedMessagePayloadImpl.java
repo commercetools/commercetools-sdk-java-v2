@@ -26,6 +26,9 @@ public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmen
 
     private com.commercetools.api.models.order.ShipmentState oldShipmentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderShipmentStateChangedMessagePayloadImpl(
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState,
@@ -35,6 +38,9 @@ public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmen
         this.type = ORDER_SHIPMENT_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderShipmentStateChangedMessagePayloadImpl() {
         this.type = ORDER_SHIPMENT_STATE_CHANGED;
     }

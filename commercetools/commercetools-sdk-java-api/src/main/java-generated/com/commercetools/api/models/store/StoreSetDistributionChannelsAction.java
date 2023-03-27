@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreSetDistributionChannelsActionImpl.class)
 public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreSetDistributionChannelsAction
+     */
     String SET_DISTRIBUTION_CHANNELS = "setDistributionChannels";
 
     /**
@@ -40,33 +43,71 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
     @JsonProperty("distributionChannels")
     public List<ChannelResourceIdentifier> getDistributionChannels();
 
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @param distributionChannels values to be set
+     */
+
     @JsonIgnore
     public void setDistributionChannels(final ChannelResourceIdentifier... distributionChannels);
 
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @param distributionChannels values to be set
+     */
+
     public void setDistributionChannels(final List<ChannelResourceIdentifier> distributionChannels);
 
+    /**
+     * factory method
+     * @return instance of StoreSetDistributionChannelsAction
+     */
     public static StoreSetDistributionChannelsAction of() {
         return new StoreSetDistributionChannelsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreSetDistributionChannelsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreSetDistributionChannelsAction of(final StoreSetDistributionChannelsAction template) {
         StoreSetDistributionChannelsActionImpl instance = new StoreSetDistributionChannelsActionImpl();
         instance.setDistributionChannels(template.getDistributionChannels());
         return instance;
     }
 
+    /**
+     * builder factory method for StoreSetDistributionChannelsAction
+     * @return builder
+     */
     public static StoreSetDistributionChannelsActionBuilder builder() {
         return StoreSetDistributionChannelsActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreSetDistributionChannelsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetDistributionChannelsActionBuilder builder(final StoreSetDistributionChannelsAction template) {
         return StoreSetDistributionChannelsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreSetDistributionChannelsAction(Function<StoreSetDistributionChannelsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreSetDistributionChannelsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreSetDistributionChannelsAction>() {
             @Override

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreSetNameActionImpl.class)
 public interface StoreSetNameAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreSetNameAction
+     */
     String SET_NAME = "setName";
 
     /**
@@ -39,30 +42,63 @@ public interface StoreSetNameAction extends StoreUpdateAction {
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *  <p>Value to set.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
 
+    /**
+     * factory method
+     * @return instance of StoreSetNameAction
+     */
     public static StoreSetNameAction of() {
         return new StoreSetNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreSetNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreSetNameAction of(final StoreSetNameAction template) {
         StoreSetNameActionImpl instance = new StoreSetNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for StoreSetNameAction
+     * @return builder
+     */
     public static StoreSetNameActionBuilder builder() {
         return StoreSetNameActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreSetNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetNameActionBuilder builder(final StoreSetNameAction template) {
         return StoreSetNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreSetNameAction(Function<StoreSetNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreSetNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreSetNameAction>() {
             @Override

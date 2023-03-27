@@ -36,10 +36,19 @@ public class CartValueTypeBuilder implements Builder<CartValueType> {
         return new CartValueTypeImpl();
     }
 
+    /**
+     * factory method for an instance of CartValueTypeBuilder
+     * @return builder
+     */
     public static CartValueTypeBuilder of() {
         return new CartValueTypeBuilder();
     }
 
+    /**
+     * create builder for CartValueType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartValueTypeBuilder of(final CartValueType template) {
         CartValueTypeBuilder builder = new CartValueTypeBuilder();
         return builder;

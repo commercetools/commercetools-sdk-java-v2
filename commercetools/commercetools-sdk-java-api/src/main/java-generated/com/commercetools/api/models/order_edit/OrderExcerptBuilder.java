@@ -33,7 +33,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     private Long version;
 
     /**
-     *
+     * set the value to the totalPrice
      * @param totalPrice value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     *
+     * set the value to the totalPrice using the builder function
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     *
+     * set the value to the taxedPrice using the builder function
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     *
+     * set the value to the taxedPrice
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     *
+     * set the value to the version
      * @param version value to be set
      * @return Builder
      */
@@ -89,14 +89,29 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
         return this;
     }
 
+    /**
+     * value of totalPrice}
+     * @return totalPrice
+     */
+
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
+
+    /**
+     * value of taxedPrice}
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
+
+    /**
+     * value of version}
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
@@ -120,10 +135,19 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
         return new OrderExcerptImpl(totalPrice, taxedPrice, version);
     }
 
+    /**
+     * factory method for an instance of OrderExcerptBuilder
+     * @return builder
+     */
     public static OrderExcerptBuilder of() {
         return new OrderExcerptBuilder();
     }
 
+    /**
+     * create builder for OrderExcerpt instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderExcerptBuilder of(final OrderExcerpt template) {
         OrderExcerptBuilder builder = new OrderExcerptBuilder();
         builder.totalPrice = template.getTotalPrice();

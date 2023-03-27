@@ -34,6 +34,9 @@ public class TransactionImpl implements Transaction, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TransactionImpl(@JsonProperty("id") final String id,
             @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,
@@ -51,6 +54,9 @@ public class TransactionImpl implements Transaction, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public TransactionImpl() {
     }
 

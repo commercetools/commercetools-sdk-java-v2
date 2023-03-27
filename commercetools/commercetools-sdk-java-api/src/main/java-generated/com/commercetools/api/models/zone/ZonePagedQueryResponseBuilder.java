@@ -146,22 +146,47 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Long getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
 
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
 
     @Nullable
     public Long getTotal() {
         return this.total;
     }
+
+    /**
+     *  <p>Zones matching the query.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.api.models.zone.Zone> getResults() {
         return this.results;
@@ -187,10 +212,19 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
         return new ZonePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
+    /**
+     * factory method for an instance of ZonePagedQueryResponseBuilder
+     * @return builder
+     */
     public static ZonePagedQueryResponseBuilder of() {
         return new ZonePagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for ZonePagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZonePagedQueryResponseBuilder of(final ZonePagedQueryResponse template) {
         ZonePagedQueryResponseBuilder builder = new ZonePagedQueryResponseBuilder();
         builder.limit = template.getLimit();

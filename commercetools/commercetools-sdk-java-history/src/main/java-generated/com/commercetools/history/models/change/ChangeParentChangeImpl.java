@@ -28,6 +28,9 @@ public class ChangeParentChangeImpl implements ChangeParentChange, ModelBase {
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeParentChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue,
@@ -38,6 +41,9 @@ public class ChangeParentChangeImpl implements ChangeParentChange, ModelBase {
         this.type = CHANGE_PARENT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeParentChangeImpl() {
         this.type = CHANGE_PARENT_CHANGE;
     }

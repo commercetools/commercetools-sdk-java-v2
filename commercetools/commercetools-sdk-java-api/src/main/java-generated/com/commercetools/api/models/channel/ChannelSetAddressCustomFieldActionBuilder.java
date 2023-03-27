@@ -50,9 +50,19 @@ public class ChannelSetAddressCustomFieldActionBuilder implements Builder<Channe
         return this;
     }
 
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Removing a field that does not exist returns an InvalidOperation error.</p>
+     * @return value
+     */
 
     @Nullable
     public java.lang.Object getValue() {
@@ -76,10 +86,19 @@ public class ChannelSetAddressCustomFieldActionBuilder implements Builder<Channe
         return new ChannelSetAddressCustomFieldActionImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of ChannelSetAddressCustomFieldActionBuilder
+     * @return builder
+     */
     public static ChannelSetAddressCustomFieldActionBuilder of() {
         return new ChannelSetAddressCustomFieldActionBuilder();
     }
 
+    /**
+     * create builder for ChannelSetAddressCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelSetAddressCustomFieldActionBuilder of(final ChannelSetAddressCustomFieldAction template) {
         ChannelSetAddressCustomFieldActionBuilder builder = new ChannelSetAddressCustomFieldActionBuilder();
         builder.name = template.getName();

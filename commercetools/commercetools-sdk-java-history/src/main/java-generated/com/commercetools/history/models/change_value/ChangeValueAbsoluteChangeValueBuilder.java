@@ -25,7 +25,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     private java.util.List<com.commercetools.history.models.common.Money> money;
 
     /**
-     *
+     * set values to the money
      * @param money value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     *
+     * set value to the money
      * @param money value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     *
+     * add values to the money
      * @param money value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     *
+     * add the value to the money using the builder function
      * @param builder function to build the money value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     *
+     * set the value to the money using the builder function
      * @param builder function to build the money value
      * @return Builder
      */
@@ -89,6 +89,11 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
         this.money.add(builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build());
         return this;
     }
+
+    /**
+     * value of money}
+     * @return money
+     */
 
     public java.util.List<com.commercetools.history.models.common.Money> getMoney() {
         return this.money;
@@ -111,10 +116,19 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
         return new ChangeValueAbsoluteChangeValueImpl(money);
     }
 
+    /**
+     * factory method for an instance of ChangeValueAbsoluteChangeValueBuilder
+     * @return builder
+     */
     public static ChangeValueAbsoluteChangeValueBuilder of() {
         return new ChangeValueAbsoluteChangeValueBuilder();
     }
 
+    /**
+     * create builder for ChangeValueAbsoluteChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeValueAbsoluteChangeValueBuilder of(final ChangeValueAbsoluteChangeValue template) {
         ChangeValueAbsoluteChangeValueBuilder builder = new ChangeValueAbsoluteChangeValueBuilder();
         builder.money = template.getMoney();

@@ -31,7 +31,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -66,9 +66,19 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
         return this;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -93,10 +103,19 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
         return new StagedOrderSetCustomLineItemTaxRateActionImpl(customLineItemId, externalTaxRate);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetCustomLineItemTaxRateActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemTaxRateActionBuilder of() {
         return new StagedOrderSetCustomLineItemTaxRateActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomLineItemTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemTaxRateActionBuilder of(
             final StagedOrderSetCustomLineItemTaxRateAction template) {
         StagedOrderSetCustomLineItemTaxRateActionBuilder builder = new StagedOrderSetCustomLineItemTaxRateActionBuilder();

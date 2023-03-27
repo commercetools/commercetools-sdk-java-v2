@@ -54,7 +54,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     private String key;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *
+     * set the value to the validFrom
      * @param validFrom value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *
+     * set the value to the validUntil
      * @param validUntil value to be set
      * @return Builder
      */
@@ -284,49 +284,99 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
         return this;
     }
 
+    /**
+     * value of value}
+     * @return value
+     */
+
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>References a customer group by key.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>References a channel by key.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;
     }
 
+    /**
+     * value of validFrom}
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     * value of validUntil}
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>The custom fields for this category.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>Sets a discounted price from an external service.</p>
+     * @return discounted
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
+    /**
+     *  <p>The tiered prices for this price.</p>
+     * @return tiers
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the Embedded Price.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -352,10 +402,19 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
             discounted, tiers, key);
     }
 
+    /**
+     * factory method for an instance of PriceDraftImportBuilder
+     * @return builder
+     */
     public static PriceDraftImportBuilder of() {
         return new PriceDraftImportBuilder();
     }
 
+    /**
+     * create builder for PriceDraftImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceDraftImportBuilder of(final PriceDraftImport template) {
         PriceDraftImportBuilder builder = new PriceDraftImportBuilder();
         builder.value = template.getValue();

@@ -93,6 +93,11 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return countries
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
         return this.countries;
@@ -114,10 +119,19 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
         return new StoreSetCountriesActionImpl(countries);
     }
 
+    /**
+     * factory method for an instance of StoreSetCountriesActionBuilder
+     * @return builder
+     */
     public static StoreSetCountriesActionBuilder of() {
         return new StoreSetCountriesActionBuilder();
     }
 
+    /**
+     * create builder for StoreSetCountriesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetCountriesActionBuilder of(final StoreSetCountriesAction template) {
         StoreSetCountriesActionBuilder builder = new StoreSetCountriesActionBuilder();
         builder.countries = template.getCountries();

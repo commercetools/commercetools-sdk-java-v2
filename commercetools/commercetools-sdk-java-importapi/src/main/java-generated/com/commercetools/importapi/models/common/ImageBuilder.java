@@ -77,13 +77,28 @@ public class ImageBuilder implements Builder<Image> {
         return this;
     }
 
+    /**
+     *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
+     * @return url
+     */
+
     public String getUrl() {
         return this.url;
     }
 
+    /**
+     *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
+     * @return dimensions
+     */
+
     public com.commercetools.importapi.models.common.AssetDimensions getDimensions() {
         return this.dimensions;
     }
+
+    /**
+     *  <p>Custom label that can be used, for example, as an image description.</p>
+     * @return label
+     */
 
     @Nullable
     public String getLabel() {
@@ -108,10 +123,19 @@ public class ImageBuilder implements Builder<Image> {
         return new ImageImpl(url, dimensions, label);
     }
 
+    /**
+     * factory method for an instance of ImageBuilder
+     * @return builder
+     */
     public static ImageBuilder of() {
         return new ImageBuilder();
     }
 
+    /**
+     * create builder for Image instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImageBuilder of(final Image template) {
         ImageBuilder builder = new ImageBuilder();
         builder.url = template.getUrl();

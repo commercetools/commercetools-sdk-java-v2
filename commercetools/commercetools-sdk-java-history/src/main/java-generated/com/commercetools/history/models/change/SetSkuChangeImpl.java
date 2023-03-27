@@ -30,6 +30,9 @@ public class SetSkuChangeImpl implements SetSkuChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetSkuChangeImpl(@JsonProperty("change") final String change, @JsonProperty("catalogData") final String catalogData,
             @JsonProperty("previousValue") final String previousValue,
@@ -41,6 +44,9 @@ public class SetSkuChangeImpl implements SetSkuChange, ModelBase {
         this.type = SET_SKU_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetSkuChangeImpl() {
         this.type = SET_SKU_CHANGE;
     }

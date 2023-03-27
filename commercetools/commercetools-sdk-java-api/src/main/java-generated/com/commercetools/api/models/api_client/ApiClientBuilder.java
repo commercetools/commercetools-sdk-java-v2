@@ -148,42 +148,87 @@ public class ApiClientBuilder implements Builder<ApiClient> {
         return this;
     }
 
+    /**
+     *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Name of the APIClient.</p>
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     * @return scope
+     */
+
     public String getScope() {
         return this.scope;
     }
+
+    /**
+     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     * @return secret
+     */
 
     @Nullable
     public String getSecret() {
         return this.secret;
     }
 
+    /**
+     *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     * @return lastUsedAt
+     */
+
     @Nullable
     public java.time.LocalDate getLastUsedAt() {
         return this.lastUsedAt;
     }
+
+    /**
+     *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
+     * @return deleteAt
+     */
 
     @Nullable
     public java.time.ZonedDateTime getDeleteAt() {
         return this.deleteAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the APIClient was initially created at.</p>
+     * @return createdAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     * @return accessTokenValiditySeconds
+     */
+
     @Nullable
     public Integer getAccessTokenValiditySeconds() {
         return this.accessTokenValiditySeconds;
     }
+
+    /**
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     * @return refreshTokenValiditySeconds
+     */
 
     @Nullable
     public Integer getRefreshTokenValiditySeconds() {
@@ -211,10 +256,19 @@ public class ApiClientBuilder implements Builder<ApiClient> {
             refreshTokenValiditySeconds);
     }
 
+    /**
+     * factory method for an instance of ApiClientBuilder
+     * @return builder
+     */
     public static ApiClientBuilder of() {
         return new ApiClientBuilder();
     }
 
+    /**
+     * create builder for ApiClient instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ApiClientBuilder of(final ApiClient template) {
         ApiClientBuilder builder = new ApiClientBuilder();
         builder.id = template.getId();

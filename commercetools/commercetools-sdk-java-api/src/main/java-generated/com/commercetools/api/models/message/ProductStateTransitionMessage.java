@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductStateTransitionMessageImpl.class)
 public interface ProductStateTransitionMessage extends Message {
 
+    /**
+     * discriminator value for ProductStateTransitionMessage
+     */
     String PRODUCT_STATE_TRANSITION = "ProductStateTransition";
 
     /**
@@ -58,14 +61,33 @@ public interface ProductStateTransitionMessage extends Message {
     @JsonProperty("force")
     public Boolean getForce();
 
+    /**
+     *  <p>Product State after the Transition State update action.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force value to be set
+     */
 
     public void setForce(final Boolean force);
 
+    /**
+     * factory method
+     * @return instance of ProductStateTransitionMessage
+     */
     public static ProductStateTransitionMessage of() {
         return new ProductStateTransitionMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductStateTransitionMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductStateTransitionMessage of(final ProductStateTransitionMessage template) {
         ProductStateTransitionMessageImpl instance = new ProductStateTransitionMessageImpl();
         instance.setId(template.getId());
@@ -83,18 +105,37 @@ public interface ProductStateTransitionMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductStateTransitionMessage
+     * @return builder
+     */
     public static ProductStateTransitionMessageBuilder builder() {
         return ProductStateTransitionMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductStateTransitionMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductStateTransitionMessageBuilder builder(final ProductStateTransitionMessage template) {
         return ProductStateTransitionMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductStateTransitionMessage(Function<ProductStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductStateTransitionMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductStateTransitionMessage>() {
             @Override

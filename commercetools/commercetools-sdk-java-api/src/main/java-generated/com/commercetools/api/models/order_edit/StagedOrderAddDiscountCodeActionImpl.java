@@ -24,12 +24,18 @@ public class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDisco
 
     private String code;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderAddDiscountCodeActionImpl(@JsonProperty("code") final String code) {
         this.code = code;
         this.action = ADD_DISCOUNT_CODE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderAddDiscountCodeActionImpl() {
         this.action = ADD_DISCOUNT_CODE;
     }

@@ -119,45 +119,123 @@ public interface MyBusinessUnitDraft
     @JsonProperty("defaultBillingAddress")
     public Integer getDefaultBillingAddress();
 
+    /**
+     *  <p>User-defined unique identifier for the BusinessUnit.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Name of the Business Unit.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>Email address of the Business Unit.</p>
+     * @param contactEmail value to be set
+     */
+
     public void setContactEmail(final String contactEmail);
 
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses values to be set
+     */
 
     @JsonIgnore
     public void setAddresses(final BaseAddress... addresses);
 
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses values to be set
+     */
+
     public void setAddresses(final List<BaseAddress> addresses);
+
+    /**
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses values to be set
+     */
 
     @JsonIgnore
     public void setShippingAddresses(final Integer... shippingAddresses);
 
+    /**
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses values to be set
+     */
+
     public void setShippingAddresses(final List<Integer> shippingAddresses);
 
+    /**
+     *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
+     * @param defaultShippingAddress value to be set
+     */
+
     public void setDefaultShippingAddress(final Integer defaultShippingAddress);
+
+    /**
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses values to be set
+     */
 
     @JsonIgnore
     public void setBillingAddresses(final Integer... billingAddresses);
 
+    /**
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses values to be set
+     */
+
     public void setBillingAddresses(final List<Integer> billingAddresses);
+
+    /**
+     *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
+     * @param defaultBillingAddress value to be set
+     */
 
     public void setDefaultBillingAddress(final Integer defaultBillingAddress);
 
+    /**
+     * builder for company subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyCompanyDraftBuilder companyBuilder() {
         return com.commercetools.api.models.me.MyCompanyDraftBuilder.of();
     }
 
+    /**
+     * builder for division subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyDivisionDraftBuilder divisionBuilder() {
         return com.commercetools.api.models.me.MyDivisionDraftBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyBusinessUnitDraft(Function<MyBusinessUnitDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitDraft>() {
             @Override

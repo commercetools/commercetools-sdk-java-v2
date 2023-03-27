@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetMetaTitleActionImpl.class)
 public interface ProductSetMetaTitleAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetMetaTitleAction
+     */
     String SET_META_TITLE = "setMetaTitle";
 
     /**
@@ -47,14 +50,33 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param metaTitle value to be set
+     */
+
     public void setMetaTitle(final LocalizedString metaTitle);
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductSetMetaTitleAction
+     */
     public static ProductSetMetaTitleAction of() {
         return new ProductSetMetaTitleActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetMetaTitleAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetMetaTitleAction of(final ProductSetMetaTitleAction template) {
         ProductSetMetaTitleActionImpl instance = new ProductSetMetaTitleActionImpl();
         instance.setMetaTitle(template.getMetaTitle());
@@ -62,18 +84,37 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetMetaTitleAction
+     * @return builder
+     */
     public static ProductSetMetaTitleActionBuilder builder() {
         return ProductSetMetaTitleActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetMetaTitleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetMetaTitleActionBuilder builder(final ProductSetMetaTitleAction template) {
         return ProductSetMetaTitleActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetMetaTitleAction(Function<ProductSetMetaTitleAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetMetaTitleAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetMetaTitleAction>() {
             @Override

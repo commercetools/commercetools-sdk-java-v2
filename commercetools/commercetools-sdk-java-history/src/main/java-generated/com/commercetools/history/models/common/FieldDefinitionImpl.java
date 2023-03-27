@@ -28,6 +28,9 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
 
     private com.commercetools.history.models.common.TextInputHint inputHint;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FieldDefinitionImpl(@JsonProperty("type") final com.commercetools.history.models.common.FieldType type,
             @JsonProperty("name") final String name,
@@ -39,6 +42,9 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
         this.inputHint = inputHint;
     }
 
+    /**
+     * create empty instance
+     */
     public FieldDefinitionImpl() {
     }
 

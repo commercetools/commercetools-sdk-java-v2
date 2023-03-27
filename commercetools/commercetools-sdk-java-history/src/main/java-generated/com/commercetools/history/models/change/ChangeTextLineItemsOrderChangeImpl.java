@@ -28,6 +28,9 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
 
     private java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTextLineItemsOrderChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> previousValue,
@@ -38,6 +41,9 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
         this.type = CHANGE_TEXT_LINE_ITEMS_ORDER_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTextLineItemsOrderChangeImpl() {
         this.type = CHANGE_TEXT_LINE_ITEMS_ORDER_CHANGE;
     }

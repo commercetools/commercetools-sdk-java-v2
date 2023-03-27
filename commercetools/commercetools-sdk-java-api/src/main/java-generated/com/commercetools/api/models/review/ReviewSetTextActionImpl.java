@@ -24,12 +24,18 @@ public class ReviewSetTextActionImpl implements ReviewSetTextAction, ModelBase {
 
     private String text;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewSetTextActionImpl(@JsonProperty("text") final String text) {
         this.text = text;
         this.action = SET_TEXT;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewSetTextActionImpl() {
         this.action = SET_TEXT;
     }

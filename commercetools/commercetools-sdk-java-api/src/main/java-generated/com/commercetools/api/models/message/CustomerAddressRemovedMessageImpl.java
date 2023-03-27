@@ -44,6 +44,9 @@ public class CustomerAddressRemovedMessageImpl implements CustomerAddressRemoved
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerAddressRemovedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerAddressRemovedMessageImpl implements CustomerAddressRemoved
         this.type = CUSTOMER_ADDRESS_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerAddressRemovedMessageImpl() {
         this.type = CUSTOMER_ADDRESS_REMOVED;
     }

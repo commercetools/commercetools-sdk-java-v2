@@ -95,6 +95,11 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
         return this;
     }
 
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @return distributionChannels
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels() {
         return this.distributionChannels;
@@ -116,10 +121,19 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
         return new StoreSetDistributionChannelsActionImpl(distributionChannels);
     }
 
+    /**
+     * factory method for an instance of StoreSetDistributionChannelsActionBuilder
+     * @return builder
+     */
     public static StoreSetDistributionChannelsActionBuilder of() {
         return new StoreSetDistributionChannelsActionBuilder();
     }
 
+    /**
+     * create builder for StoreSetDistributionChannelsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetDistributionChannelsActionBuilder of(final StoreSetDistributionChannelsAction template) {
         StoreSetDistributionChannelsActionBuilder builder = new StoreSetDistributionChannelsActionBuilder();
         builder.distributionChannels = template.getDistributionChannels();

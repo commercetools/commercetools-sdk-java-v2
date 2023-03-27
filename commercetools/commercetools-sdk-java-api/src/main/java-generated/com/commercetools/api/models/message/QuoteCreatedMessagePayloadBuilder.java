@@ -47,6 +47,11 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
         return this;
     }
 
+    /**
+     *  <p>Quote that was created.</p>
+     * @return quote
+     */
+
     public com.commercetools.api.models.quote.Quote getQuote() {
         return this.quote;
     }
@@ -68,10 +73,19 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
         return new QuoteCreatedMessagePayloadImpl(quote);
     }
 
+    /**
+     * factory method for an instance of QuoteCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static QuoteCreatedMessagePayloadBuilder of() {
         return new QuoteCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for QuoteCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteCreatedMessagePayloadBuilder of(final QuoteCreatedMessagePayload template) {
         QuoteCreatedMessagePayloadBuilder builder = new QuoteCreatedMessagePayloadBuilder();
         builder.quote = template.getQuote();

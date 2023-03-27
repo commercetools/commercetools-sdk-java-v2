@@ -26,6 +26,9 @@ public class NumberSetAttributeImpl implements NumberSetAttribute, ModelBase {
 
     private java.util.List<Double> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     NumberSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<Double> value) {
@@ -34,6 +37,9 @@ public class NumberSetAttributeImpl implements NumberSetAttribute, ModelBase {
         this.type = NUMBER_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public NumberSetAttributeImpl() {
         this.type = NUMBER_SET;
     }

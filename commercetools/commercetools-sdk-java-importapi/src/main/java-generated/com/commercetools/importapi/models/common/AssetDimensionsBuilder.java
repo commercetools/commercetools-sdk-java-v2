@@ -48,9 +48,19 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
         return this;
     }
 
+    /**
+     *  <p>The width of the asset source.</p>
+     * @return w
+     */
+
     public Integer getW() {
         return this.w;
     }
+
+    /**
+     *  <p>The height of the asset source.</p>
+     * @return h
+     */
 
     public Integer getH() {
         return this.h;
@@ -74,10 +84,19 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
         return new AssetDimensionsImpl(w, h);
     }
 
+    /**
+     * factory method for an instance of AssetDimensionsBuilder
+     * @return builder
+     */
     public static AssetDimensionsBuilder of() {
         return new AssetDimensionsBuilder();
     }
 
+    /**
+     * create builder for AssetDimensions instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssetDimensionsBuilder of(final AssetDimensions template) {
         AssetDimensionsBuilder builder = new AssetDimensionsBuilder();
         builder.w = template.getW();

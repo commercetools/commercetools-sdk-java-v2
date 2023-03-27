@@ -24,12 +24,18 @@ public class OrderCreatedMessagePayloadImpl implements OrderCreatedMessagePayloa
 
     private com.commercetools.api.models.order.Order order;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCreatedMessagePayloadImpl(@JsonProperty("order") final com.commercetools.api.models.order.Order order) {
         this.order = order;
         this.type = ORDER_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCreatedMessagePayloadImpl() {
         this.type = ORDER_CREATED;
     }

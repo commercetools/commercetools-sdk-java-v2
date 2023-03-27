@@ -113,31 +113,89 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>Unique identifier of the Cart from which you can create an Order.</p>
+     * @param id value to be set
+     */
     @Deprecated
     public void setId(final String id);
 
+    /**
+     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     * @param cart value to be set
+     */
+
     public void setCart(final CartResourceIdentifier cart);
+
+    /**
+     * set version
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     * @param orderNumber value to be set
+     */
+
     public void setOrderNumber(final String orderNumber);
+
+    /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     * @param purchaseOrderNumber value to be set
+     */
 
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
+    /**
+     * set paymentState
+     * @param paymentState value to be set
+     */
+
     public void setPaymentState(final PaymentState paymentState);
+
+    /**
+     * set shipmentState
+     * @param shipmentState value to be set
+     */
 
     public void setShipmentState(final ShipmentState shipmentState);
 
+    /**
+     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     * @param orderState value to be set
+     */
+
     public void setOrderState(final OrderState orderState);
+
+    /**
+     * set state
+     * @param state value to be set
+     */
 
     public void setState(final StateResourceIdentifier state);
 
+    /**
+     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of OrderFromCartDraft
+     */
     public static OrderFromCartDraft of() {
         return new OrderFromCartDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderFromCartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderFromCartDraft of(final OrderFromCartDraft template) {
         OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();
         instance.setId(template.getId());
@@ -153,18 +211,37 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
         return instance;
     }
 
+    /**
+     * builder factory method for OrderFromCartDraft
+     * @return builder
+     */
     public static OrderFromCartDraftBuilder builder() {
         return OrderFromCartDraftBuilder.of();
     }
 
+    /**
+     * create builder for OrderFromCartDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderFromCartDraftBuilder builder(final OrderFromCartDraft template) {
         return OrderFromCartDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderFromCartDraft(Function<OrderFromCartDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderFromCartDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderFromCartDraft>() {
             @Override

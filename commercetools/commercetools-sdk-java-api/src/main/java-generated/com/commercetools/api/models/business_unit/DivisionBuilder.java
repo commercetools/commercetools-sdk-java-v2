@@ -604,94 +604,201 @@ public class DivisionBuilder implements Builder<Division> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Business Unit.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Business Unit.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Business Unit was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Business Unit was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Business Unit.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     * @return status
+     */
+
     public com.commercetools.api.models.business_unit.BusinessUnitStatus getStatus() {
         return this.status;
     }
+
+    /**
+     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return stores
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
     }
 
+    /**
+     *  <p>Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.</p>
+     * @return storeMode
+     */
+
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
         return this.storeMode;
     }
 
+    /**
+     *  <p>Name of the Business Unit.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Email address of the Business Unit.</p>
+     * @return contactEmail
+     */
 
     @Nullable
     public String getContactEmail() {
         return this.contactEmail;
     }
 
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @return addresses
+     */
+
     public java.util.List<com.commercetools.api.models.common.Address> getAddresses() {
         return this.addresses;
     }
+
+    /**
+     *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @return shippingAddressIds
+     */
 
     @Nullable
     public java.util.List<String> getShippingAddressIds() {
         return this.shippingAddressIds;
     }
 
+    /**
+     *  <p>Unique identifier of the address used as the default shipping address.</p>
+     * @return defaultShippingAddressId
+     */
+
     @Nullable
     public String getDefaultShippingAddressId() {
         return this.defaultShippingAddressId;
     }
+
+    /**
+     *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @return billingAddressIds
+     */
 
     @Nullable
     public java.util.List<String> getBillingAddressIds() {
         return this.billingAddressIds;
     }
 
+    /**
+     *  <p>Unique identifier of the address used as the default billing address.</p>
+     * @return defaultBillingAddressId
+     */
+
     @Nullable
     public String getDefaultBillingAddressId() {
         return this.defaultBillingAddressId;
     }
 
+    /**
+     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @return associates
+     */
+
     public java.util.List<com.commercetools.api.models.business_unit.Associate> getAssociates() {
         return this.associates;
     }
 
+    /**
+     *  <p>Parent unit of the Division.</p>
+     * @return parentUnit
+     */
+
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getParentUnit() {
         return this.parentUnit;
     }
+
+    /**
+     *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
+     * @return topLevelUnit
+     */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getTopLevelUnit() {
         return this.topLevelUnit;
@@ -729,10 +836,19 @@ public class DivisionBuilder implements Builder<Division> {
             billingAddressIds, defaultBillingAddressId, associates, parentUnit, topLevelUnit);
     }
 
+    /**
+     * factory method for an instance of DivisionBuilder
+     * @return builder
+     */
     public static DivisionBuilder of() {
         return new DivisionBuilder();
     }
 
+    /**
+     * create builder for Division instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DivisionBuilder of(final Division template) {
         DivisionBuilder builder = new DivisionBuilder();
         builder.id = template.getId();

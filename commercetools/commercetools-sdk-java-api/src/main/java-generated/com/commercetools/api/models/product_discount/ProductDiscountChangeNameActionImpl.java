@@ -24,6 +24,9 @@ public class ProductDiscountChangeNameActionImpl implements ProductDiscountChang
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountChangeNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class ProductDiscountChangeNameActionImpl implements ProductDiscountChang
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

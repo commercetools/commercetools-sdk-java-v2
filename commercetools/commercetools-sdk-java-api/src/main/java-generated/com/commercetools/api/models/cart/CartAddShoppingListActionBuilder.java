@@ -109,14 +109,29 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
         return this;
     }
 
+    /**
+     *  <p>Shopping List that contains the Line Items to be added.</p>
+     * @return shoppingList
+     */
+
     public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList() {
         return this.shoppingList;
     }
+
+    /**
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
+
+    /**
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -140,10 +155,19 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
         return new CartAddShoppingListActionImpl(shoppingList, distributionChannel, supplyChannel);
     }
 
+    /**
+     * factory method for an instance of CartAddShoppingListActionBuilder
+     * @return builder
+     */
     public static CartAddShoppingListActionBuilder of() {
         return new CartAddShoppingListActionBuilder();
     }
 
+    /**
+     * create builder for CartAddShoppingListAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartAddShoppingListActionBuilder of(final CartAddShoppingListAction template) {
         CartAddShoppingListActionBuilder builder = new CartAddShoppingListActionBuilder();
         builder.shoppingList = template.getShoppingList();

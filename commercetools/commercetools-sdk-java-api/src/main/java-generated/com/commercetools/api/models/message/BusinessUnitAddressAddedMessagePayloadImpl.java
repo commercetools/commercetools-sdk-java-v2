@@ -24,6 +24,9 @@ public class BusinessUnitAddressAddedMessagePayloadImpl implements BusinessUnitA
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitAddressAddedMessagePayloadImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
@@ -31,6 +34,9 @@ public class BusinessUnitAddressAddedMessagePayloadImpl implements BusinessUnitA
         this.type = BUSINESS_UNIT_ADDRESS_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitAddressAddedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_ADDRESS_ADDED;
     }

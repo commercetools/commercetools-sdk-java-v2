@@ -34,6 +34,9 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyShoppingListDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
@@ -51,6 +54,9 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
         this.store = store;
     }
 
+    /**
+     * create empty instance
+     */
     public MyShoppingListDraftImpl() {
     }
 

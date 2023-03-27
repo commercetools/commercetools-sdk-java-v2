@@ -28,6 +28,9 @@ public class RemoveOrderLineItemChangeImpl implements RemoveOrderLineItemChange,
 
     private com.commercetools.history.models.common.LineItem nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveOrderLineItemChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LineItem previousValue,
@@ -38,6 +41,9 @@ public class RemoveOrderLineItemChangeImpl implements RemoveOrderLineItemChange,
         this.type = REMOVE_ORDER_LINE_ITEM_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveOrderLineItemChangeImpl() {
         this.type = REMOVE_ORDER_LINE_ITEM_CHANGE;
     }

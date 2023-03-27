@@ -34,6 +34,11 @@ public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGro
         return this;
     }
 
+    /**
+     *  <p>New name of the CustomerGroup.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
@@ -55,10 +60,19 @@ public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGro
         return new CustomerGroupChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of CustomerGroupChangeNameActionBuilder
+     * @return builder
+     */
     public static CustomerGroupChangeNameActionBuilder of() {
         return new CustomerGroupChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for CustomerGroupChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupChangeNameActionBuilder of(final CustomerGroupChangeNameAction template) {
         CustomerGroupChangeNameActionBuilder builder = new CustomerGroupChangeNameActionBuilder();
         builder.name = template.getName();

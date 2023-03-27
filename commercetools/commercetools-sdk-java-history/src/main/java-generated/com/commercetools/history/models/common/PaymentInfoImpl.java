@@ -22,12 +22,18 @@ public class PaymentInfoImpl implements PaymentInfo, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.Reference> payments;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentInfoImpl(
             @JsonProperty("payments") final java.util.List<com.commercetools.history.models.common.Reference> payments) {
         this.payments = payments;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentInfoImpl() {
     }
 

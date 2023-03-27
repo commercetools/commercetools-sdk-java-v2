@@ -70,20 +70,54 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     @JsonProperty("refreshTokenValiditySeconds")
     public Integer getRefreshTokenValiditySeconds();
 
+    /**
+     *  <p>Name of the APIClient.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     * @param scope value to be set
+     */
 
     public void setScope(final String scope);
 
+    /**
+     *  <p>If set, the Client will be deleted after the specified amount of days.</p>
+     * @param deleteDaysAfterCreation value to be set
+     */
+
     public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation);
+
+    /**
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     * @param accessTokenValiditySeconds value to be set
+     */
 
     public void setAccessTokenValiditySeconds(final Integer accessTokenValiditySeconds);
 
+    /**
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
+     * @param refreshTokenValiditySeconds value to be set
+     */
+
     public void setRefreshTokenValiditySeconds(final Integer refreshTokenValiditySeconds);
 
+    /**
+     * factory method
+     * @return instance of ApiClientDraft
+     */
     public static ApiClientDraft of() {
         return new ApiClientDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ApiClientDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ApiClientDraft of(final ApiClientDraft template) {
         ApiClientDraftImpl instance = new ApiClientDraftImpl();
         instance.setName(template.getName());
@@ -94,18 +128,37 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
         return instance;
     }
 
+    /**
+     * builder factory method for ApiClientDraft
+     * @return builder
+     */
     public static ApiClientDraftBuilder builder() {
         return ApiClientDraftBuilder.of();
     }
 
+    /**
+     * create builder for ApiClientDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ApiClientDraftBuilder builder(final ApiClientDraft template) {
         return ApiClientDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withApiClientDraft(Function<ApiClientDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft>() {
             @Override

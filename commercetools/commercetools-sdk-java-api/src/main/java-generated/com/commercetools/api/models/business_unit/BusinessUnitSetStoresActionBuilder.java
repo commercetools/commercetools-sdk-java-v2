@@ -93,6 +93,11 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
         return this;
     }
 
+    /**
+     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @return stores
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
         return this.stores;
@@ -114,10 +119,19 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
         return new BusinessUnitSetStoresActionImpl(stores);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitSetStoresActionBuilder
+     * @return builder
+     */
     public static BusinessUnitSetStoresActionBuilder of() {
         return new BusinessUnitSetStoresActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitSetStoresAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitSetStoresActionBuilder of(final BusinessUnitSetStoresAction template) {
         BusinessUnitSetStoresActionBuilder builder = new BusinessUnitSetStoresActionBuilder();
         builder.stores = template.getStores();

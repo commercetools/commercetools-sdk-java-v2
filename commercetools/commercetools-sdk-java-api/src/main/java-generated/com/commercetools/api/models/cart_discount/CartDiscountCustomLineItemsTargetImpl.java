@@ -24,12 +24,18 @@ public class CartDiscountCustomLineItemsTargetImpl implements CartDiscountCustom
 
     private String predicate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountCustomLineItemsTargetImpl(@JsonProperty("predicate") final String predicate) {
         this.predicate = predicate;
         this.type = CUSTOM_LINE_ITEMS;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountCustomLineItemsTargetImpl() {
         this.type = CUSTOM_LINE_ITEMS;
     }

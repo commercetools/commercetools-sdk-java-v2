@@ -106,14 +106,35 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
         return this;
     }
 
+    /**
+     *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     * @return productVariant
+     */
+
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
         return this.productVariant;
     }
+
+    /**
+     *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
+     *  <ul>
+     *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
+     *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
+     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
+     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can also delete localized fields by setting their value to <code>null</code>.</li>
+     *  </ul>
+     * @return attributes
+     */
 
     @Nullable
     public com.commercetools.importapi.models.productvariants.Attributes getAttributes() {
         return this.attributes;
     }
+
+    /**
+     *  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -137,10 +158,19 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
         return new ProductVariantPatchImpl(productVariant, attributes, staged);
     }
 
+    /**
+     * factory method for an instance of ProductVariantPatchBuilder
+     * @return builder
+     */
     public static ProductVariantPatchBuilder of() {
         return new ProductVariantPatchBuilder();
     }
 
+    /**
+     * create builder for ProductVariantPatch instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantPatchBuilder of(final ProductVariantPatch template) {
         ProductVariantPatchBuilder builder = new ProductVariantPatchBuilder();
         builder.productVariant = template.getProductVariant();

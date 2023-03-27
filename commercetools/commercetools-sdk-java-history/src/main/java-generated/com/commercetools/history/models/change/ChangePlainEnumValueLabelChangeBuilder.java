@@ -69,7 +69,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -90,21 +90,46 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>The name of the attribute updated.</p>
+     * @return attributeName
+     */
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
+    /**
+     *  <p>Key of the values that was updated</p>
+     * @return valueKey
+     */
+
     public String getValueKey() {
         return this.valueKey;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -131,10 +156,19 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
         return new ChangePlainEnumValueLabelChangeImpl(change, attributeName, valueKey, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangePlainEnumValueLabelChangeBuilder
+     * @return builder
+     */
     public static ChangePlainEnumValueLabelChangeBuilder of() {
         return new ChangePlainEnumValueLabelChangeBuilder();
     }
 
+    /**
+     * create builder for ChangePlainEnumValueLabelChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangePlainEnumValueLabelChangeBuilder of(final ChangePlainEnumValueLabelChange template) {
         ChangePlainEnumValueLabelChangeBuilder builder = new ChangePlainEnumValueLabelChangeBuilder();
         builder.change = template.getChange();

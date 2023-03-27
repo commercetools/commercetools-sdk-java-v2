@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerEmailChangedMessageImpl.class)
 public interface CustomerEmailChangedMessage extends Message {
 
+    /**
+     * discriminator value for CustomerEmailChangedMessage
+     */
     String CUSTOMER_EMAIL_CHANGED = "CustomerEmailChanged";
 
     /**
@@ -46,12 +49,26 @@ public interface CustomerEmailChangedMessage extends Message {
     @JsonProperty("email")
     public String getEmail();
 
+    /**
+     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     * @param email value to be set
+     */
+
     public void setEmail(final String email);
 
+    /**
+     * factory method
+     * @return instance of CustomerEmailChangedMessage
+     */
     public static CustomerEmailChangedMessage of() {
         return new CustomerEmailChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerEmailChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerEmailChangedMessage of(final CustomerEmailChangedMessage template) {
         CustomerEmailChangedMessageImpl instance = new CustomerEmailChangedMessageImpl();
         instance.setId(template.getId());
@@ -68,18 +85,37 @@ public interface CustomerEmailChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerEmailChangedMessage
+     * @return builder
+     */
     public static CustomerEmailChangedMessageBuilder builder() {
         return CustomerEmailChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for CustomerEmailChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerEmailChangedMessageBuilder builder(final CustomerEmailChangedMessage template) {
         return CustomerEmailChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerEmailChangedMessage(Function<CustomerEmailChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerEmailChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerEmailChangedMessage>() {
             @Override

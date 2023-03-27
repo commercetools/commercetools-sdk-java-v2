@@ -24,6 +24,9 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
 
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportContainerUpdateDraftImpl(@JsonProperty("version") final Long version,
             @JsonProperty("resourceType") final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
@@ -31,6 +34,9 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
         this.resourceType = resourceType;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportContainerUpdateDraftImpl() {
     }
 

@@ -24,6 +24,9 @@ public class StoreUpdateImpl implements StoreUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class StoreUpdateImpl implements StoreUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreUpdateImpl() {
     }
 

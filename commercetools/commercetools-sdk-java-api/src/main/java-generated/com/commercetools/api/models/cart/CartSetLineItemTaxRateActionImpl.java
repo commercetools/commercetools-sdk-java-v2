@@ -28,6 +28,9 @@ public class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTaxRateA
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetLineItemTaxRateActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
@@ -38,6 +41,9 @@ public class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTaxRateA
         this.action = SET_LINE_ITEM_TAX_RATE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetLineItemTaxRateActionImpl() {
         this.action = SET_LINE_ITEM_TAX_RATE;
     }

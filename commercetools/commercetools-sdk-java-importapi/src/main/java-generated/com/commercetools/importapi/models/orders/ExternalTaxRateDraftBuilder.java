@@ -42,7 +42,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     private Boolean includedInPrice;
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *
+     * set the value to the amount
      * @param amount value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *
+     * set the value to the country
      * @param country value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *
+     * set the value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *
+     * set values to the subRates
      * @param subRates value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *
+     * set value to the subRates
      * @param subRates value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *
+     * add values to the subRates
      * @param subRates value to be set
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *
+     * add the value to the subRates using the builder function
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *
+     * set the value to the subRates using the builder function
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *
+     * set the value to the includedInPrice
      * @param includedInPrice value to be set
      * @return Builder
      */
@@ -163,28 +163,58 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return this;
     }
 
+    /**
+     * value of name}
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of amount}
+     * @return amount
+     */
 
     @Nullable
     public Double getAmount() {
         return this.amount;
     }
 
+    /**
+     * value of country}
+     * @return country
+     */
+
     public String getCountry() {
         return this.country;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     @Nullable
     public String getState() {
         return this.state;
     }
 
+    /**
+     * value of subRates}
+     * @return subRates
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates() {
         return this.subRates;
     }
+
+    /**
+     * value of includedInPrice}
+     * @return includedInPrice
+     */
 
     @Nullable
     public Boolean getIncludedInPrice() {
@@ -209,10 +239,19 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return new ExternalTaxRateDraftImpl(name, amount, country, state, subRates, includedInPrice);
     }
 
+    /**
+     * factory method for an instance of ExternalTaxRateDraftBuilder
+     * @return builder
+     */
     public static ExternalTaxRateDraftBuilder of() {
         return new ExternalTaxRateDraftBuilder();
     }
 
+    /**
+     * create builder for ExternalTaxRateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalTaxRateDraftBuilder of(final ExternalTaxRateDraft template) {
         ExternalTaxRateDraftBuilder builder = new ExternalTaxRateDraftBuilder();
         builder.name = template.getName();

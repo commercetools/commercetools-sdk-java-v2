@@ -27,7 +27,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     private Integer quantity;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of quantity}
+     * @return quantity
+     */
 
     public Integer getQuantity() {
         return this.quantity;
@@ -74,10 +84,19 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
         return new DeliveryItemImpl(id, quantity);
     }
 
+    /**
+     * factory method for an instance of DeliveryItemBuilder
+     * @return builder
+     */
     public static DeliveryItemBuilder of() {
         return new DeliveryItemBuilder();
     }
 
+    /**
+     * create builder for DeliveryItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryItemBuilder of(final DeliveryItem template) {
         DeliveryItemBuilder builder = new DeliveryItemBuilder();
         builder.id = template.getId();

@@ -37,6 +37,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetShippingAddressAndCustomShippingMethodAction
+     */
     String SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD = "setShippingAddressAndCustomShippingMethod";
 
     /**
@@ -81,20 +84,54 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
+
+    /**
+     * set shippingMethodName
+     * @param shippingMethodName value to be set
+     */
 
     public void setShippingMethodName(final String shippingMethodName);
 
+    /**
+     * set shippingRate
+     * @param shippingRate value to be set
+     */
+
     public void setShippingRate(final ShippingRateDraft shippingRate);
+
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param taxCategory value to be set
+     */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate value to be set
+     */
+
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetShippingAddressAndCustomShippingMethodAction
+     */
     public static StagedOrderSetShippingAddressAndCustomShippingMethodAction of() {
         return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetShippingAddressAndCustomShippingMethodAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetShippingAddressAndCustomShippingMethodAction of(
             final StagedOrderSetShippingAddressAndCustomShippingMethodAction template) {
         StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl();
@@ -106,20 +143,39 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetShippingAddressAndCustomShippingMethodAction
+     * @return builder
+     */
     public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder() {
         return StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingAddressAndCustomShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder(
             final StagedOrderSetShippingAddressAndCustomShippingMethodAction template) {
         return StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetShippingAddressAndCustomShippingMethodAction(
             Function<StagedOrderSetShippingAddressAndCustomShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndCustomShippingMethodAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndCustomShippingMethodAction>() {
             @Override

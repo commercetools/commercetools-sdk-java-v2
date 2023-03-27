@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodKeyReferenceImpl.class)
 public interface ShippingMethodKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for ShippingMethodKeyReference
+     */
     String SHIPPING_METHOD = "shipping-method";
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodKeyReference
+     */
     public static ShippingMethodKeyReference of() {
         return new ShippingMethodKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodKeyReference of(final ShippingMethodKeyReference template) {
         ShippingMethodKeyReferenceImpl instance = new ShippingMethodKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodKeyReference
+     * @return builder
+     */
     public static ShippingMethodKeyReferenceBuilder builder() {
         return ShippingMethodKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodKeyReferenceBuilder builder(final ShippingMethodKeyReference template) {
         return ShippingMethodKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodKeyReference(Function<ShippingMethodKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodKeyReference>() {
             @Override

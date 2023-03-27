@@ -28,7 +28,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     private java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions;
 
     /**
-     *
+     * set the value to the version
      * @param version value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     *
+     * set values to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     *
+     * set value to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     *
+     * add values to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     *
+     * add a value to the actions using the builder function
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     *
+     * set the value to the actions using the builder function
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -103,9 +103,19 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
         return this;
     }
 
+    /**
+     * value of version}
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     * value of actions}
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.order.OrderUpdateAction> getActions() {
         return this.actions;
@@ -129,10 +139,19 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
         return new OrderUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of OrderUpdateBuilder
+     * @return builder
+     */
     public static OrderUpdateBuilder of() {
         return new OrderUpdateBuilder();
     }
 
+    /**
+     * create builder for OrderUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderUpdateBuilder of(final OrderUpdate template) {
         OrderUpdateBuilder builder = new OrderUpdateBuilder();
         builder.version = template.getVersion();

@@ -58,7 +58,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
     }
 
     /**
-     *
+     * set the value to the externalId
      * @param externalId value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
     }
 
     /**
-     *
+     * set the value to the syncedAt
      * @param syncedAt value to be set
      * @return Builder
      */
@@ -79,14 +79,29 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @return channel
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
+
+    /**
+     * value of externalId}
+     * @return externalId
+     */
 
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
+
+    /**
+     * value of syncedAt}
+     * @return syncedAt
+     */
 
     @Nullable
     public java.time.ZonedDateTime getSyncedAt() {
@@ -110,10 +125,19 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
         return new OrderUpdateSyncInfoActionImpl(channel, externalId, syncedAt);
     }
 
+    /**
+     * factory method for an instance of OrderUpdateSyncInfoActionBuilder
+     * @return builder
+     */
     public static OrderUpdateSyncInfoActionBuilder of() {
         return new OrderUpdateSyncInfoActionBuilder();
     }
 
+    /**
+     * create builder for OrderUpdateSyncInfoAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderUpdateSyncInfoActionBuilder of(final OrderUpdateSyncInfoAction template) {
         OrderUpdateSyncInfoActionBuilder builder = new OrderUpdateSyncInfoActionBuilder();
         builder.channel = template.getChannel();

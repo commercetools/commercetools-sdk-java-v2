@@ -72,6 +72,9 @@ public class AddressImpl implements Address, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("country") final String country, @JsonProperty("title") final String title,
@@ -117,6 +120,9 @@ public class AddressImpl implements Address, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public AddressImpl() {
     }
 

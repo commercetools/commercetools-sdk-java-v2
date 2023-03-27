@@ -33,7 +33,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     private java.time.ZonedDateTime returnDate;
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *
+     * add a value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *
+     * set the value to the returnDate
      * @param returnDate value to be set
      * @return Builder
      */
@@ -118,14 +118,29 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
+    /**
+     * value of items}
+     * @return items
+     */
+
     public java.util.List<com.commercetools.api.models.order.ReturnItem> getItems() {
         return this.items;
     }
+
+    /**
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     * @return returnTrackingId
+     */
 
     @Nullable
     public String getReturnTrackingId() {
         return this.returnTrackingId;
     }
+
+    /**
+     * value of returnDate}
+     * @return returnDate
+     */
 
     @Nullable
     public java.time.ZonedDateTime getReturnDate() {
@@ -149,10 +164,19 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return new ReturnInfoImpl(items, returnTrackingId, returnDate);
     }
 
+    /**
+     * factory method for an instance of ReturnInfoBuilder
+     * @return builder
+     */
     public static ReturnInfoBuilder of() {
         return new ReturnInfoBuilder();
     }
 
+    /**
+     * create builder for ReturnInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnInfoBuilder of(final ReturnInfo template) {
         ReturnInfoBuilder builder = new ReturnInfoBuilder();
         builder.items = template.getItems();

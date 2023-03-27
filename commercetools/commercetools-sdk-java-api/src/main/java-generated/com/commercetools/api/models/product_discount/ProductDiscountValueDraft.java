@@ -42,22 +42,44 @@ public interface ProductDiscountValueDraft {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for absolute subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraftBuilder absoluteBuilder() {
         return com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraftBuilder.of();
     }
 
+    /**
+     * builder for external subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraftBuilder externalBuilder() {
         return com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraftBuilder.of();
     }
 
+    /**
+     * builder for relative subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraftBuilder relativeBuilder() {
         return com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraftBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountValueDraft(Function<ProductDiscountValueDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueDraft>() {
             @Override

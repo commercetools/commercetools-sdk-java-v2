@@ -24,12 +24,18 @@ public class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesA
 
     private java.util.List<String> languages;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeLanguagesActionImpl(@JsonProperty("languages") final java.util.List<String> languages) {
         this.languages = languages;
         this.action = CHANGE_LANGUAGES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeLanguagesActionImpl() {
         this.action = CHANGE_LANGUAGES;
     }

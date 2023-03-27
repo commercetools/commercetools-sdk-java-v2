@@ -62,9 +62,19 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
         return this;
     }
 
+    /**
+     *  <p><code>"The category recommendations API is not yet enabled for your project."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
         return new NotEnabledErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of NotEnabledErrorBuilder
+     * @return builder
+     */
     public static NotEnabledErrorBuilder of() {
         return new NotEnabledErrorBuilder();
     }
 
+    /**
+     * create builder for NotEnabledError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static NotEnabledErrorBuilder of(final NotEnabledError template) {
         NotEnabledErrorBuilder builder = new NotEnabledErrorBuilder();
         builder.message = template.getMessage();

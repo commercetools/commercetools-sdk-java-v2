@@ -26,6 +26,9 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetParcelItemsActionImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
@@ -34,6 +37,9 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
         this.action = SET_PARCEL_ITEMS;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetParcelItemsActionImpl() {
         this.action = SET_PARCEL_ITEMS;
     }

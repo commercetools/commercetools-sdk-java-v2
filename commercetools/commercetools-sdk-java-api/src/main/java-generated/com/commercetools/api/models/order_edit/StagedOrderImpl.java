@@ -115,6 +115,9 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -210,6 +213,9 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.refusedGifts = refusedGifts;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderImpl() {
     }
 

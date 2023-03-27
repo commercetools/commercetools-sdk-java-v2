@@ -44,6 +44,9 @@ public class CustomerCreatedMessageImpl implements CustomerCreatedMessage, Model
 
     private com.commercetools.api.models.customer.Customer customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerCreatedMessageImpl implements CustomerCreatedMessage, Model
         this.type = CUSTOMER_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerCreatedMessageImpl() {
         this.type = CUSTOMER_CREATED;
     }

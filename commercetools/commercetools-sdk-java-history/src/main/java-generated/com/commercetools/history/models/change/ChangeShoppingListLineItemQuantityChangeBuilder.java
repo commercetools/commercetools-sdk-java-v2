@@ -35,7 +35,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     private Integer nextValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     *
+     * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     *
+     * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -93,17 +93,37 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of lineItem}
+     * @return lineItem
+     */
 
     public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
         return this.lineItem;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public Integer getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public Integer getNextValue() {
         return this.nextValue;
@@ -130,10 +150,19 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
         return new ChangeShoppingListLineItemQuantityChangeImpl(change, lineItem, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeShoppingListLineItemQuantityChangeBuilder
+     * @return builder
+     */
     public static ChangeShoppingListLineItemQuantityChangeBuilder of() {
         return new ChangeShoppingListLineItemQuantityChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeShoppingListLineItemQuantityChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeShoppingListLineItemQuantityChangeBuilder of(
             final ChangeShoppingListLineItemQuantityChange template) {
         ChangeShoppingListLineItemQuantityChangeBuilder builder = new ChangeShoppingListLineItemQuantityChangeBuilder();

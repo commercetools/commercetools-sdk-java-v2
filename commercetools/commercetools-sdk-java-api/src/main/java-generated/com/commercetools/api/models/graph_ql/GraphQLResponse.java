@@ -44,17 +44,41 @@ public interface GraphQLResponse {
     @JsonProperty("errors")
     public List<GraphQLError> getErrors();
 
+    /**
+     * set data
+     * @param data value to be set
+     */
+
     public void setData(final Object data);
+
+    /**
+     * set errors
+     * @param errors values to be set
+     */
 
     @JsonIgnore
     public void setErrors(final GraphQLError... errors);
 
+    /**
+     * set errors
+     * @param errors values to be set
+     */
+
     public void setErrors(final List<GraphQLError> errors);
 
+    /**
+     * factory method
+     * @return instance of GraphQLResponse
+     */
     public static GraphQLResponse of() {
         return new GraphQLResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of GraphQLResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GraphQLResponse of(final GraphQLResponse template) {
         GraphQLResponseImpl instance = new GraphQLResponseImpl();
         instance.setData(template.getData());
@@ -62,18 +86,37 @@ public interface GraphQLResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for GraphQLResponse
+     * @return builder
+     */
     public static GraphQLResponseBuilder builder() {
         return GraphQLResponseBuilder.of();
     }
 
+    /**
+     * create builder for GraphQLResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GraphQLResponseBuilder builder(final GraphQLResponse template) {
         return GraphQLResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGraphQLResponse(Function<GraphQLResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GraphQLResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GraphQLResponse>() {
             @Override

@@ -51,6 +51,11 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return externalTaxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
@@ -72,10 +77,19 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
         return new CartSetShippingMethodTaxRateActionImpl(externalTaxRate);
     }
 
+    /**
+     * factory method for an instance of CartSetShippingMethodTaxRateActionBuilder
+     * @return builder
+     */
     public static CartSetShippingMethodTaxRateActionBuilder of() {
         return new CartSetShippingMethodTaxRateActionBuilder();
     }
 
+    /**
+     * create builder for CartSetShippingMethodTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetShippingMethodTaxRateActionBuilder of(final CartSetShippingMethodTaxRateAction template) {
         CartSetShippingMethodTaxRateActionBuilder builder = new CartSetShippingMethodTaxRateActionBuilder();
         builder.externalTaxRate = template.getExternalTaxRate();

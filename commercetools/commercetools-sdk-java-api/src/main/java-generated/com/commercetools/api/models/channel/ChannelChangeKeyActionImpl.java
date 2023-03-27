@@ -24,12 +24,18 @@ public class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction, Model
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelChangeKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = CHANGE_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelChangeKeyActionImpl() {
         this.action = CHANGE_KEY;
     }

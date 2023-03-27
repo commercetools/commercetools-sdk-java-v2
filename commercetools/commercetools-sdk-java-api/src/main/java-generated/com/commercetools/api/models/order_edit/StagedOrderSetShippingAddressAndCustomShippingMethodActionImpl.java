@@ -33,6 +33,9 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
@@ -48,6 +51,9 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
         this.action = SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl() {
         this.action = SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD;
     }

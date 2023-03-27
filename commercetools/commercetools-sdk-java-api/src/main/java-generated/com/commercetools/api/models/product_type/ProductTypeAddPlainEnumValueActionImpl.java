@@ -26,6 +26,9 @@ public class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPla
 
     private com.commercetools.api.models.product_type.AttributePlainEnumValue value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeAddPlainEnumValueActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("value") final com.commercetools.api.models.product_type.AttributePlainEnumValue value) {
@@ -34,6 +37,9 @@ public class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPla
         this.action = ADD_PLAIN_ENUM_VALUE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeAddPlainEnumValueActionImpl() {
         this.action = ADD_PLAIN_ENUM_VALUE;
     }

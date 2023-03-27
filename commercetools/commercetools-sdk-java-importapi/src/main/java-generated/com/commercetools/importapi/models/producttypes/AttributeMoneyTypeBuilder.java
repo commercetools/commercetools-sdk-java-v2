@@ -36,10 +36,19 @@ public class AttributeMoneyTypeBuilder implements Builder<AttributeMoneyType> {
         return new AttributeMoneyTypeImpl();
     }
 
+    /**
+     * factory method for an instance of AttributeMoneyTypeBuilder
+     * @return builder
+     */
     public static AttributeMoneyTypeBuilder of() {
         return new AttributeMoneyTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeMoneyType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeMoneyTypeBuilder of(final AttributeMoneyType template) {
         AttributeMoneyTypeBuilder builder = new AttributeMoneyTypeBuilder();
         return builder;

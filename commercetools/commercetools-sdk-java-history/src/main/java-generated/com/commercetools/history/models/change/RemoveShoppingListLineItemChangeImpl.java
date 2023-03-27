@@ -28,6 +28,9 @@ public class RemoveShoppingListLineItemChangeImpl implements RemoveShoppingListL
 
     private com.commercetools.history.models.common.LineItem nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveShoppingListLineItemChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LineItem previousValue,
@@ -38,6 +41,9 @@ public class RemoveShoppingListLineItemChangeImpl implements RemoveShoppingListL
         this.type = REMOVE_SHOPPING_LIST_LINE_ITEM_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveShoppingListLineItemChangeImpl() {
         this.type = REMOVE_SHOPPING_LIST_LINE_ITEM_CHANGE;
     }

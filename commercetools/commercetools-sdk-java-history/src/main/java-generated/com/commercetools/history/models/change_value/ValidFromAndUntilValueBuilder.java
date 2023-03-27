@@ -27,7 +27,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
     private String validUntil;
 
     /**
-     *
+     * set the value to the validFrom
      * @param validFrom value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
     }
 
     /**
-     *
+     * set the value to the validUntil
      * @param validUntil value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
         return this;
     }
 
+    /**
+     * value of validFrom}
+     * @return validFrom
+     */
+
     public String getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     * value of validUntil}
+     * @return validUntil
+     */
 
     public String getValidUntil() {
         return this.validUntil;
@@ -74,10 +84,19 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
         return new ValidFromAndUntilValueImpl(validFrom, validUntil);
     }
 
+    /**
+     * factory method for an instance of ValidFromAndUntilValueBuilder
+     * @return builder
+     */
     public static ValidFromAndUntilValueBuilder of() {
         return new ValidFromAndUntilValueBuilder();
     }
 
+    /**
+     * create builder for ValidFromAndUntilValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ValidFromAndUntilValueBuilder of(final ValidFromAndUntilValue template) {
         ValidFromAndUntilValueBuilder builder = new ValidFromAndUntilValueBuilder();
         builder.validFrom = template.getValidFrom();

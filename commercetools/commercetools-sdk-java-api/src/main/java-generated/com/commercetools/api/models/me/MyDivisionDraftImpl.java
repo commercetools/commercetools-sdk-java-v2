@@ -43,6 +43,9 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyDivisionDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name,
             @JsonProperty("contactEmail") final String contactEmail,
@@ -66,6 +69,9 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
         this.unitType = BusinessUnitType.findEnum("Division");
     }
 
+    /**
+     * create empty instance
+     */
     public MyDivisionDraftImpl() {
         this.unitType = BusinessUnitType.findEnum("Division");
     }

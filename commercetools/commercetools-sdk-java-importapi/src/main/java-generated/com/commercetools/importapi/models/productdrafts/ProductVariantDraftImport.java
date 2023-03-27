@@ -81,34 +81,93 @@ public interface ProductVariantDraftImport {
     @JsonProperty("assets")
     public List<Asset> getAssets();
 
+    /**
+     * set sku
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     * set prices
+     * @param prices values to be set
+     */
 
     @JsonIgnore
     public void setPrices(final PriceDraftImport... prices);
 
+    /**
+     * set prices
+     * @param prices values to be set
+     */
+
     public void setPrices(final List<PriceDraftImport> prices);
+
+    /**
+     * set attributes
+     * @param attributes values to be set
+     */
 
     @JsonIgnore
     public void setAttributes(final Attribute... attributes);
 
+    /**
+     * set attributes
+     * @param attributes values to be set
+     */
+
     public void setAttributes(final List<Attribute> attributes);
+
+    /**
+     * set images
+     * @param images values to be set
+     */
 
     @JsonIgnore
     public void setImages(final Image... images);
 
+    /**
+     * set images
+     * @param images values to be set
+     */
+
     public void setImages(final List<Image> images);
+
+    /**
+     * set assets
+     * @param assets values to be set
+     */
 
     @JsonIgnore
     public void setAssets(final Asset... assets);
 
+    /**
+     * set assets
+     * @param assets values to be set
+     */
+
     public void setAssets(final List<Asset> assets);
 
+    /**
+     * factory method
+     * @return instance of ProductVariantDraftImport
+     */
     public static ProductVariantDraftImport of() {
         return new ProductVariantDraftImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariantDraftImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariantDraftImport of(final ProductVariantDraftImport template) {
         ProductVariantDraftImportImpl instance = new ProductVariantDraftImportImpl();
         instance.setSku(template.getSku());
@@ -120,18 +179,37 @@ public interface ProductVariantDraftImport {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariantDraftImport
+     * @return builder
+     */
     public static ProductVariantDraftImportBuilder builder() {
         return ProductVariantDraftImportBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariantDraftImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantDraftImportBuilder builder(final ProductVariantDraftImport template) {
         return ProductVariantDraftImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantDraftImport(Function<ProductVariantDraftImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantDraftImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantDraftImport>() {
             @Override

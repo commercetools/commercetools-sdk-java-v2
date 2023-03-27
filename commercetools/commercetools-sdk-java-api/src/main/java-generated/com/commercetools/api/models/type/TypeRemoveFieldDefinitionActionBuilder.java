@@ -34,6 +34,11 @@ public class TypeRemoveFieldDefinitionActionBuilder implements Builder<TypeRemov
         return this;
     }
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
+     * @return fieldName
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
@@ -55,10 +60,19 @@ public class TypeRemoveFieldDefinitionActionBuilder implements Builder<TypeRemov
         return new TypeRemoveFieldDefinitionActionImpl(fieldName);
     }
 
+    /**
+     * factory method for an instance of TypeRemoveFieldDefinitionActionBuilder
+     * @return builder
+     */
     public static TypeRemoveFieldDefinitionActionBuilder of() {
         return new TypeRemoveFieldDefinitionActionBuilder();
     }
 
+    /**
+     * create builder for TypeRemoveFieldDefinitionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeRemoveFieldDefinitionActionBuilder of(final TypeRemoveFieldDefinitionAction template) {
         TypeRemoveFieldDefinitionActionBuilder builder = new TypeRemoveFieldDefinitionActionBuilder();
         builder.fieldName = template.getFieldName();

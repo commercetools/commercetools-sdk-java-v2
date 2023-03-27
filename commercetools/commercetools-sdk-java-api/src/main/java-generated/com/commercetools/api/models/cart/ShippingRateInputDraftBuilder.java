@@ -19,6 +19,10 @@ public class ShippingRateInputDraftBuilder {
         return com.commercetools.api.models.cart.ScoreShippingRateInputDraftBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ShippingRateInputDraftBuilder
+     * @return builder
+     */
     public static ShippingRateInputDraftBuilder of() {
         return new ShippingRateInputDraftBuilder();
     }

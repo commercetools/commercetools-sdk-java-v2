@@ -30,6 +30,9 @@ public class ParcelImpl implements Parcel, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> items;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final String createdAt,
             @JsonProperty("measurements") final com.commercetools.history.models.common.ParcelMeasurements measurements,
@@ -42,6 +45,9 @@ public class ParcelImpl implements Parcel, ModelBase {
         this.items = items;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelImpl() {
     }
 

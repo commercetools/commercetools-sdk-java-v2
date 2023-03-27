@@ -62,9 +62,19 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
         return this;
     }
 
+    /**
+     *  <p>Description of the constraints that are not met by the request. For example, <code>"Invalid $propertyName. It may be a non-empty string up to $maxLength"</code>.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
         return new InvalidInputErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of InvalidInputErrorBuilder
+     * @return builder
+     */
     public static InvalidInputErrorBuilder of() {
         return new InvalidInputErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidInputError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidInputErrorBuilder of(final InvalidInputError template) {
         InvalidInputErrorBuilder builder = new InvalidInputErrorBuilder();
         builder.message = template.getMessage();

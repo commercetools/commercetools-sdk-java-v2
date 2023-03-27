@@ -24,12 +24,18 @@ public class ShippingMethodSetPredicateActionImpl implements ShippingMethodSetPr
 
     private String predicate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodSetPredicateActionImpl(@JsonProperty("predicate") final String predicate) {
         this.predicate = predicate;
         this.action = SET_PREDICATE;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodSetPredicateActionImpl() {
         this.action = SET_PREDICATE;
     }

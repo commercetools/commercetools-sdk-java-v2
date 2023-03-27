@@ -26,6 +26,9 @@ public class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeAction,
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeAction,
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartSetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

@@ -24,12 +24,18 @@ public class BusinessUnitChangeStatusActionImpl implements BusinessUnitChangeSta
 
     private String status;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitChangeStatusActionImpl(@JsonProperty("status") final String status) {
         this.status = status;
         this.action = CHANGE_STATUS;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitChangeStatusActionImpl() {
         this.action = CHANGE_STATUS;
     }

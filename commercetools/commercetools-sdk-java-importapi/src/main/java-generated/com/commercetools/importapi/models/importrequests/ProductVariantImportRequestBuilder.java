@@ -93,6 +93,11 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
         return this;
     }
 
+    /**
+     *  <p>The product variant import resources of this request.</p>
+     * @return resources
+     */
+
     public java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> getResources() {
         return this.resources;
     }
@@ -114,10 +119,19 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
         return new ProductVariantImportRequestImpl(resources);
     }
 
+    /**
+     * factory method for an instance of ProductVariantImportRequestBuilder
+     * @return builder
+     */
     public static ProductVariantImportRequestBuilder of() {
         return new ProductVariantImportRequestBuilder();
     }
 
+    /**
+     * create builder for ProductVariantImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantImportRequestBuilder of(final ProductVariantImportRequest template) {
         ProductVariantImportRequestBuilder builder = new ProductVariantImportRequestBuilder();
         builder.resources = template.getResources();

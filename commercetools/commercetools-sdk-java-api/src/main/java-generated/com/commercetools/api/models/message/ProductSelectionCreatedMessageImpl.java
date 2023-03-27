@@ -44,6 +44,9 @@ public class ProductSelectionCreatedMessageImpl implements ProductSelectionCreat
 
     private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class ProductSelectionCreatedMessageImpl implements ProductSelectionCreat
         this.type = PRODUCT_SELECTION_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionCreatedMessageImpl() {
         this.type = PRODUCT_SELECTION_CREATED;
     }

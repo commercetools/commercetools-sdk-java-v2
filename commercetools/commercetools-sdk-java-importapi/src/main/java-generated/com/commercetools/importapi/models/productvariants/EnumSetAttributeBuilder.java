@@ -40,7 +40,7 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
     }
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -75,10 +75,20 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<String> getValue() {
         return this.value;
@@ -101,10 +111,19 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
         return new EnumSetAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of EnumSetAttributeBuilder
+     * @return builder
+     */
     public static EnumSetAttributeBuilder of() {
         return new EnumSetAttributeBuilder();
     }
 
+    /**
+     * create builder for EnumSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumSetAttributeBuilder of(final EnumSetAttribute template) {
         EnumSetAttributeBuilder builder = new EnumSetAttributeBuilder();
         builder.name = template.getName();

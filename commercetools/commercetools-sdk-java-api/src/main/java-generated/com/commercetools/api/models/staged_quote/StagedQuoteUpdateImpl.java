@@ -24,6 +24,9 @@ public class StagedQuoteUpdateImpl implements StagedQuoteUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class StagedQuoteUpdateImpl implements StagedQuoteUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteUpdateImpl() {
     }
 

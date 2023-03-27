@@ -62,9 +62,19 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
         return this;
     }
 
+    /**
+     *  <p>Description about any known details of the problem, for example, <code>"Write operations are temporarily unavailable"</code>.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
         return new GeneralErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of GeneralErrorBuilder
+     * @return builder
+     */
     public static GeneralErrorBuilder of() {
         return new GeneralErrorBuilder();
     }
 
+    /**
+     * create builder for GeneralError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GeneralErrorBuilder of(final GeneralError template) {
         GeneralErrorBuilder builder = new GeneralErrorBuilder();
         builder.message = template.getMessage();

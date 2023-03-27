@@ -36,6 +36,11 @@ public class StagedOrderChangeTaxCalculationModeActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     * @return taxCalculationMode
+     */
+
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
@@ -58,10 +63,19 @@ public class StagedOrderChangeTaxCalculationModeActionBuilder
         return new StagedOrderChangeTaxCalculationModeActionImpl(taxCalculationMode);
     }
 
+    /**
+     * factory method for an instance of StagedOrderChangeTaxCalculationModeActionBuilder
+     * @return builder
+     */
     public static StagedOrderChangeTaxCalculationModeActionBuilder of() {
         return new StagedOrderChangeTaxCalculationModeActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderChangeTaxCalculationModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeTaxCalculationModeActionBuilder of(
             final StagedOrderChangeTaxCalculationModeAction template) {
         StagedOrderChangeTaxCalculationModeActionBuilder builder = new StagedOrderChangeTaxCalculationModeActionBuilder();

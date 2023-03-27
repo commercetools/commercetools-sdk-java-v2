@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitParentUnitChangedMessageImpl.class)
 public interface BusinessUnitParentUnitChangedMessage extends Message {
 
+    /**
+     * discriminator value for BusinessUnitParentUnitChangedMessage
+     */
     String BUSINESS_UNIT_PARENT_UNIT_CHANGED = "BusinessUnitParentUnitChanged";
 
     /**
@@ -54,14 +57,33 @@ public interface BusinessUnitParentUnitChangedMessage extends Message {
     @JsonProperty("newParentUnit")
     public BusinessUnitKeyReference getNewParentUnit();
 
+    /**
+     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     * @param oldParentUnit value to be set
+     */
+
     public void setOldParentUnit(final BusinessUnitKeyReference oldParentUnit);
+
+    /**
+     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     * @param newParentUnit value to be set
+     */
 
     public void setNewParentUnit(final BusinessUnitKeyReference newParentUnit);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitParentUnitChangedMessage
+     */
     public static BusinessUnitParentUnitChangedMessage of() {
         return new BusinessUnitParentUnitChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitParentUnitChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitParentUnitChangedMessage of(final BusinessUnitParentUnitChangedMessage template) {
         BusinessUnitParentUnitChangedMessageImpl instance = new BusinessUnitParentUnitChangedMessageImpl();
         instance.setId(template.getId());
@@ -79,19 +101,38 @@ public interface BusinessUnitParentUnitChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitParentUnitChangedMessage
+     * @return builder
+     */
     public static BusinessUnitParentUnitChangedMessageBuilder builder() {
         return BusinessUnitParentUnitChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitParentUnitChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitParentUnitChangedMessageBuilder builder(
             final BusinessUnitParentUnitChangedMessage template) {
         return BusinessUnitParentUnitChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitParentUnitChangedMessage(Function<BusinessUnitParentUnitChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitParentUnitChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitParentUnitChangedMessage>() {
             @Override

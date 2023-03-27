@@ -93,24 +93,68 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Unique identifier of the Transaction.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @param timestamp value to be set
+     */
 
     public void setTimestamp(final ZonedDateTime timestamp);
 
+    /**
+     *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TransactionType type);
+
+    /**
+     *  <p>Money value of the Transaction.</p>
+     * @param amount value to be set
+     */
 
     public void setAmount(final CentPrecisionMoney amount);
 
+    /**
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
+     * @param interactionId value to be set
+     */
+
     public void setInteractionId(final String interactionId);
+
+    /**
+     *  <p>State of the Transaction.</p>
+     * @param state value to be set
+     */
 
     public void setState(final TransactionState state);
 
+    /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of Transaction
+     */
     public static Transaction of() {
         return new TransactionImpl();
     }
 
+    /**
+     * factory method to copy an instance of Transaction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Transaction of(final Transaction template) {
         TransactionImpl instance = new TransactionImpl();
         instance.setId(template.getId());
@@ -123,18 +167,37 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
         return instance;
     }
 
+    /**
+     * builder factory method for Transaction
+     * @return builder
+     */
     public static TransactionBuilder builder() {
         return TransactionBuilder.of();
     }
 
+    /**
+     * create builder for Transaction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransactionBuilder builder(final Transaction template) {
         return TransactionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTransaction(Function<Transaction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Transaction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Transaction>() {
             @Override

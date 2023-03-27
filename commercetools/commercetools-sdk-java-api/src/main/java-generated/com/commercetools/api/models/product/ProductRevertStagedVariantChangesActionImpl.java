@@ -24,12 +24,18 @@ public class ProductRevertStagedVariantChangesActionImpl implements ProductRever
 
     private Long variantId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRevertStagedVariantChangesActionImpl(@JsonProperty("variantId") final Long variantId) {
         this.variantId = variantId;
         this.action = REVERT_STAGED_VARIANT_CHANGES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRevertStagedVariantChangesActionImpl() {
         this.action = REVERT_STAGED_VARIANT_CHANGES;
     }

@@ -77,9 +77,21 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
         return this;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return totalNet
+     */
+
     public com.commercetools.api.models.common.Money getTotalNet() {
         return this.totalNet;
     }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return totalGross
+     */
 
     public com.commercetools.api.models.common.Money getTotalGross() {
         return this.totalGross;
@@ -103,10 +115,19 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
         return new TaxedItemPriceDraftImpl(totalNet, totalGross);
     }
 
+    /**
+     * factory method for an instance of TaxedItemPriceDraftBuilder
+     * @return builder
+     */
     public static TaxedItemPriceDraftBuilder of() {
         return new TaxedItemPriceDraftBuilder();
     }
 
+    /**
+     * create builder for TaxedItemPriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxedItemPriceDraftBuilder of(final TaxedItemPriceDraft template) {
         TaxedItemPriceDraftBuilder builder = new TaxedItemPriceDraftBuilder();
         builder.totalNet = template.getTotalNet();

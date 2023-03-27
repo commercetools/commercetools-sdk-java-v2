@@ -30,6 +30,9 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetTextLineItemDescriptionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem,
@@ -42,6 +45,9 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
         this.type = SET_TEXT_LINE_ITEM_DESCRIPTION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetTextLineItemDescriptionChangeImpl() {
         this.type = SET_TEXT_LINE_ITEM_DESCRIPTION_CHANGE;
     }

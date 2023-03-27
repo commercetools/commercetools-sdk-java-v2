@@ -32,6 +32,9 @@ public class DeliveryImpl implements Delivery, ModelBase {
 
     private com.commercetools.history.models.common.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final String createdAt,
             @JsonProperty("items") final java.util.List<com.commercetools.history.models.common.DeliveryItem> items,
@@ -46,6 +49,9 @@ public class DeliveryImpl implements Delivery, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryImpl() {
     }
 

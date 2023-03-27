@@ -28,6 +28,9 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetAddressCustomTypeActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -38,6 +41,9 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
         this.action = SET_ADDRESS_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetAddressCustomTypeActionImpl() {
         this.action = SET_ADDRESS_CUSTOM_TYPE;
     }

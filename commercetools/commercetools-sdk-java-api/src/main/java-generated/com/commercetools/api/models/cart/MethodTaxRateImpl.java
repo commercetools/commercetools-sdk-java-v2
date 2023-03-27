@@ -24,6 +24,9 @@ public class MethodTaxRateImpl implements MethodTaxRate, ModelBase {
 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MethodTaxRateImpl(@JsonProperty("shippingMethodKey") final String shippingMethodKey,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate) {
@@ -31,6 +34,9 @@ public class MethodTaxRateImpl implements MethodTaxRate, ModelBase {
         this.taxRate = taxRate;
     }
 
+    /**
+     * create empty instance
+     */
     public MethodTaxRateImpl() {
     }
 

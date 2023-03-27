@@ -30,6 +30,9 @@ public class SetSearchKeywordsChangeImpl implements SetSearchKeywordsChange, Mod
 
     private com.commercetools.history.models.common.SearchKeywords nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetSearchKeywordsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class SetSearchKeywordsChangeImpl implements SetSearchKeywordsChange, Mod
         this.type = SET_SEARCH_KEYWORDS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetSearchKeywordsChangeImpl() {
         this.type = SET_SEARCH_KEYWORDS_CHANGE;
     }

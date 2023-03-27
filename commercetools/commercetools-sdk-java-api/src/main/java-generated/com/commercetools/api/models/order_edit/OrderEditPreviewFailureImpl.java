@@ -24,6 +24,9 @@ public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, Mod
 
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditPreviewFailureImpl(
             @JsonProperty("errors") final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
@@ -31,6 +34,9 @@ public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, Mod
         this.type = PREVIEW_FAILURE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditPreviewFailureImpl() {
         this.type = PREVIEW_FAILURE;
     }

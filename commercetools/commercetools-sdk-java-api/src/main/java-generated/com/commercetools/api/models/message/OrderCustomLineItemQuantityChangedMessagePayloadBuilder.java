@@ -63,13 +63,28 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Custom Line Item.</p>
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     * @return oldQuantity
+     */
 
     public Long getOldQuantity() {
         return this.oldQuantity;
@@ -97,10 +112,19 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
         return new OrderCustomLineItemQuantityChangedMessagePayloadImpl(customLineItemId, quantity, oldQuantity);
     }
 
+    /**
+     * factory method for an instance of OrderCustomLineItemQuantityChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder of() {
         return new OrderCustomLineItemQuantityChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderCustomLineItemQuantityChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder of(
             final OrderCustomLineItemQuantityChangedMessagePayload template) {
         OrderCustomLineItemQuantityChangedMessagePayloadBuilder builder = new OrderCustomLineItemQuantityChangedMessagePayloadBuilder();

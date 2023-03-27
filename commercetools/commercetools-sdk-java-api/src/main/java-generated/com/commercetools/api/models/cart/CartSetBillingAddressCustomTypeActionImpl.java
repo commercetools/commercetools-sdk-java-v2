@@ -26,6 +26,9 @@ public class CartSetBillingAddressCustomTypeActionImpl implements CartSetBilling
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetBillingAddressCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class CartSetBillingAddressCustomTypeActionImpl implements CartSetBilling
         this.action = SET_BILLING_ADDRESS_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetBillingAddressCustomTypeActionImpl() {
         this.action = SET_BILLING_ADDRESS_CUSTOM_TYPE;
     }

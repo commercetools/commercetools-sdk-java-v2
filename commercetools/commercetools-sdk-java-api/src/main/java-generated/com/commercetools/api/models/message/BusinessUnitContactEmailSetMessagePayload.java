@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitContactEmailSetMessagePayloadImpl.class)
 public interface BusinessUnitContactEmailSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for BusinessUnitContactEmailSetMessagePayload
+     */
     String BUSINESS_UNIT_CONTACT_EMAIL_SET = "BusinessUnitContactEmailSet";
 
     /**
@@ -36,12 +39,26 @@ public interface BusinessUnitContactEmailSetMessagePayload extends MessagePayloa
     @JsonProperty("contactEmail")
     public String getContactEmail();
 
+    /**
+     *  <p>The contact email that was updated on the Business Unit.</p>
+     * @param contactEmail value to be set
+     */
+
     public void setContactEmail(final String contactEmail);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitContactEmailSetMessagePayload
+     */
     public static BusinessUnitContactEmailSetMessagePayload of() {
         return new BusinessUnitContactEmailSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitContactEmailSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitContactEmailSetMessagePayload of(
             final BusinessUnitContactEmailSetMessagePayload template) {
         BusinessUnitContactEmailSetMessagePayloadImpl instance = new BusinessUnitContactEmailSetMessagePayloadImpl();
@@ -49,20 +66,39 @@ public interface BusinessUnitContactEmailSetMessagePayload extends MessagePayloa
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitContactEmailSetMessagePayload
+     * @return builder
+     */
     public static BusinessUnitContactEmailSetMessagePayloadBuilder builder() {
         return BusinessUnitContactEmailSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitContactEmailSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitContactEmailSetMessagePayloadBuilder builder(
             final BusinessUnitContactEmailSetMessagePayload template) {
         return BusinessUnitContactEmailSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitContactEmailSetMessagePayload(
             Function<BusinessUnitContactEmailSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitContactEmailSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitContactEmailSetMessagePayload>() {
             @Override

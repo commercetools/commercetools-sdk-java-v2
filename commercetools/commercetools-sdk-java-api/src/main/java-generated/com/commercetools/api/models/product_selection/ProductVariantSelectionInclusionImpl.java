@@ -25,12 +25,18 @@ public class ProductVariantSelectionInclusionImpl implements ProductVariantSelec
 
     private java.util.List<String> skus;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantSelectionInclusionImpl(@JsonProperty("skus") final java.util.List<String> skus) {
         this.skus = skus;
         this.type = ProductVariantSelectionTypeEnum.findEnum("inclusion");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantSelectionInclusionImpl() {
         this.type = ProductVariantSelectionTypeEnum.findEnum("inclusion");
     }

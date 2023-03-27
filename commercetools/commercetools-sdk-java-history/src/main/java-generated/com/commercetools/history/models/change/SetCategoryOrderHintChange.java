@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetCategoryOrderHintChangeImpl.class)
 public interface SetCategoryOrderHintChange extends Change {
 
+    /**
+     * discriminator value for SetCategoryOrderHintChange
+     */
     String SET_CATEGORY_ORDER_HINT_CHANGE = "SetCategoryOrderHintChange";
 
     /**
@@ -87,20 +90,54 @@ public interface SetCategoryOrderHintChange extends Change {
     @JsonProperty("nextValue")
     public CategoryOrderHints getNextValue();
 
+    /**
+     *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set categoryId
+     * @param categoryId value to be set
+     */
+
     public void setCategoryId(final String categoryId);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final CategoryOrderHints previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final CategoryOrderHints nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetCategoryOrderHintChange
+     */
     public static SetCategoryOrderHintChange of() {
         return new SetCategoryOrderHintChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetCategoryOrderHintChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetCategoryOrderHintChange of(final SetCategoryOrderHintChange template) {
         SetCategoryOrderHintChangeImpl instance = new SetCategoryOrderHintChangeImpl();
         instance.setChange(template.getChange());
@@ -111,18 +148,37 @@ public interface SetCategoryOrderHintChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetCategoryOrderHintChange
+     * @return builder
+     */
     public static SetCategoryOrderHintChangeBuilder builder() {
         return SetCategoryOrderHintChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetCategoryOrderHintChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCategoryOrderHintChangeBuilder builder(final SetCategoryOrderHintChange template) {
         return SetCategoryOrderHintChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetCategoryOrderHintChange(Function<SetCategoryOrderHintChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetCategoryOrderHintChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetCategoryOrderHintChange>() {
             @Override

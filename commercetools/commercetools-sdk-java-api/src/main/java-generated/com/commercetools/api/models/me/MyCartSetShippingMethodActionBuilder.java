@@ -82,10 +82,21 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @return shippingMethod
+     */
+
     @Nullable
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
+
+    /**
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -108,10 +119,19 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
         return new MyCartSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
     }
 
+    /**
+     * factory method for an instance of MyCartSetShippingMethodActionBuilder
+     * @return builder
+     */
     public static MyCartSetShippingMethodActionBuilder of() {
         return new MyCartSetShippingMethodActionBuilder();
     }
 
+    /**
+     * create builder for MyCartSetShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetShippingMethodActionBuilder of(final MyCartSetShippingMethodAction template) {
         MyCartSetShippingMethodActionBuilder builder = new MyCartSetShippingMethodActionBuilder();
         builder.shippingMethod = template.getShippingMethod();

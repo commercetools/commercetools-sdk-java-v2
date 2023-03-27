@@ -27,6 +27,9 @@ public class BusinessUnitSetDefaultBillingAddressActionImpl
 
     private String addressKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitSetDefaultBillingAddressActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("addressKey") final String addressKey) {
@@ -35,6 +38,9 @@ public class BusinessUnitSetDefaultBillingAddressActionImpl
         this.action = SET_DEFAULT_BILLING_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitSetDefaultBillingAddressActionImpl() {
         this.action = SET_DEFAULT_BILLING_ADDRESS;
     }

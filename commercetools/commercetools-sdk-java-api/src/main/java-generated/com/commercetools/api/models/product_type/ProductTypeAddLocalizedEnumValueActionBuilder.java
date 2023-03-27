@@ -63,9 +63,19 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>Value to append to the array.</p>
+     * @return value
+     */
 
     public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getValue() {
         return this.value;
@@ -90,10 +100,19 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
         return new ProductTypeAddLocalizedEnumValueActionImpl(attributeName, value);
     }
 
+    /**
+     * factory method for an instance of ProductTypeAddLocalizedEnumValueActionBuilder
+     * @return builder
+     */
     public static ProductTypeAddLocalizedEnumValueActionBuilder of() {
         return new ProductTypeAddLocalizedEnumValueActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeAddLocalizedEnumValueAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeAddLocalizedEnumValueActionBuilder of(
             final ProductTypeAddLocalizedEnumValueAction template) {
         ProductTypeAddLocalizedEnumValueActionBuilder builder = new ProductTypeAddLocalizedEnumValueActionBuilder();

@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectSetExternalOAuthActionImpl.class)
 public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
 
+    /**
+     * discriminator value for ProjectSetExternalOAuthAction
+     */
     String SET_EXTERNAL_O_AUTH = "setExternalOAuth";
 
     /**
@@ -38,30 +41,63 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     @JsonProperty("externalOAuth")
     public ExternalOAuth getExternalOAuth();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param externalOAuth value to be set
+     */
+
     public void setExternalOAuth(final ExternalOAuth externalOAuth);
 
+    /**
+     * factory method
+     * @return instance of ProjectSetExternalOAuthAction
+     */
     public static ProjectSetExternalOAuthAction of() {
         return new ProjectSetExternalOAuthActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectSetExternalOAuthAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectSetExternalOAuthAction of(final ProjectSetExternalOAuthAction template) {
         ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();
         instance.setExternalOAuth(template.getExternalOAuth());
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectSetExternalOAuthAction
+     * @return builder
+     */
     public static ProjectSetExternalOAuthActionBuilder builder() {
         return ProjectSetExternalOAuthActionBuilder.of();
     }
 
+    /**
+     * create builder for ProjectSetExternalOAuthAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectSetExternalOAuthActionBuilder builder(final ProjectSetExternalOAuthAction template) {
         return ProjectSetExternalOAuthActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectSetExternalOAuthAction(Function<ProjectSetExternalOAuthAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectSetExternalOAuthAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectSetExternalOAuthAction>() {
             @Override

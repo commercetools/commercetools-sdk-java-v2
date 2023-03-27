@@ -25,6 +25,9 @@ public class ProductVariantImportRequestImpl implements ProductVariantImportRequ
 
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantImportRequestImpl(
             @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources) {
@@ -32,6 +35,9 @@ public class ProductVariantImportRequestImpl implements ProductVariantImportRequ
         this.type = ImportResourceType.findEnum("product-variant");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantImportRequestImpl() {
         this.type = ImportResourceType.findEnum("product-variant");
     }

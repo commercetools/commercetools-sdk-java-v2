@@ -36,10 +36,19 @@ public class ChangeValueExternalChangeValueBuilder implements Builder<ChangeValu
         return new ChangeValueExternalChangeValueImpl();
     }
 
+    /**
+     * factory method for an instance of ChangeValueExternalChangeValueBuilder
+     * @return builder
+     */
     public static ChangeValueExternalChangeValueBuilder of() {
         return new ChangeValueExternalChangeValueBuilder();
     }
 
+    /**
+     * create builder for ChangeValueExternalChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeValueExternalChangeValueBuilder of(final ChangeValueExternalChangeValue template) {
         ChangeValueExternalChangeValueBuilder builder = new ChangeValueExternalChangeValueBuilder();
         return builder;

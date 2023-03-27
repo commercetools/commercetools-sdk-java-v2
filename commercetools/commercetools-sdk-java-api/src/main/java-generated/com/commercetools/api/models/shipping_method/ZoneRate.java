@@ -50,17 +50,41 @@ public interface ZoneRate {
     @JsonProperty("shippingRates")
     public List<ShippingRate> getShippingRates();
 
+    /**
+     *  <p>Zone for which the shipping rates are valid.</p>
+     * @param zone value to be set
+     */
+
     public void setZone(final ZoneReference zone);
+
+    /**
+     *  <p>Shipping rates defined per currency.</p>
+     * @param shippingRates values to be set
+     */
 
     @JsonIgnore
     public void setShippingRates(final ShippingRate... shippingRates);
 
+    /**
+     *  <p>Shipping rates defined per currency.</p>
+     * @param shippingRates values to be set
+     */
+
     public void setShippingRates(final List<ShippingRate> shippingRates);
 
+    /**
+     * factory method
+     * @return instance of ZoneRate
+     */
     public static ZoneRate of() {
         return new ZoneRateImpl();
     }
 
+    /**
+     * factory method to copy an instance of ZoneRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ZoneRate of(final ZoneRate template) {
         ZoneRateImpl instance = new ZoneRateImpl();
         instance.setZone(template.getZone());
@@ -68,18 +92,37 @@ public interface ZoneRate {
         return instance;
     }
 
+    /**
+     * builder factory method for ZoneRate
+     * @return builder
+     */
     public static ZoneRateBuilder builder() {
         return ZoneRateBuilder.of();
     }
 
+    /**
+     * create builder for ZoneRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneRateBuilder builder(final ZoneRate template) {
         return ZoneRateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZoneRate(Function<ZoneRate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ZoneRate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ZoneRate>() {
             @Override

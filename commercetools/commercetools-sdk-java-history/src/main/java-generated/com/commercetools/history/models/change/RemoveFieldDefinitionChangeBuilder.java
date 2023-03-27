@@ -39,7 +39,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -62,9 +62,19 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.FieldDefinition getPreviousValue() {
         return this.previousValue;
@@ -88,10 +98,19 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
         return new RemoveFieldDefinitionChangeImpl(change, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemoveFieldDefinitionChangeBuilder
+     * @return builder
+     */
     public static RemoveFieldDefinitionChangeBuilder of() {
         return new RemoveFieldDefinitionChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveFieldDefinitionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveFieldDefinitionChangeBuilder of(final RemoveFieldDefinitionChange template) {
         RemoveFieldDefinitionChangeBuilder builder = new RemoveFieldDefinitionChangeBuilder();
         builder.change = template.getChange();

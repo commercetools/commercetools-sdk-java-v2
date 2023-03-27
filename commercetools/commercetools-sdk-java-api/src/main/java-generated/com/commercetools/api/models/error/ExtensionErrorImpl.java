@@ -30,6 +30,9 @@ public class ExtensionErrorImpl implements ExtensionError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionErrorImpl(@JsonProperty("code") final String code, @JsonProperty("message") final String message,
             @JsonProperty("extensionId") final String extensionId,
@@ -42,6 +45,9 @@ public class ExtensionErrorImpl implements ExtensionError, ModelBase {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionErrorImpl() {
     }
 

@@ -127,35 +127,104 @@ public interface CategoryImport extends ImportResource {
     @JsonProperty("custom")
     public Custom getCustom();
 
+    /**
+     *  <p>Maps to <code>Category.name</code>.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final LocalizedString slug);
 
+    /**
+     *  <p>Maps to <code>Category.description</code>.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     * @param parent value to be set
+     */
 
     public void setParent(final CategoryKeyReference parent);
 
+    /**
+     *  <p>Maps to <code>Category.orderHint</code>.</p>
+     * @param orderHint value to be set
+     */
+
     public void setOrderHint(final String orderHint);
+
+    /**
+     *  <p>Maps to <code>Category.externalId</code>.</p>
+     * @param externalId value to be set
+     */
 
     public void setExternalId(final String externalId);
 
+    /**
+     *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     * @param metaTitle value to be set
+     */
+
     public void setMetaTitle(final LocalizedString metaTitle);
+
+    /**
+     *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     * @param metaDescription value to be set
+     */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
+    /**
+     *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     * @param metaKeywords value to be set
+     */
+
     public void setMetaKeywords(final LocalizedString metaKeywords);
+
+    /**
+     * set assets
+     * @param assets values to be set
+     */
 
     @JsonIgnore
     public void setAssets(final Asset... assets);
 
+    /**
+     * set assets
+     * @param assets values to be set
+     */
+
     public void setAssets(final List<Asset> assets);
+
+    /**
+     *  <p>The custom fields for this Category.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final Custom custom);
 
+    /**
+     * factory method
+     * @return instance of CategoryImport
+     */
     public static CategoryImport of() {
         return new CategoryImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryImport of(final CategoryImport template) {
         CategoryImportImpl instance = new CategoryImportImpl();
         instance.setKey(template.getKey());
@@ -173,18 +242,37 @@ public interface CategoryImport extends ImportResource {
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryImport
+     * @return builder
+     */
     public static CategoryImportBuilder builder() {
         return CategoryImportBuilder.of();
     }
 
+    /**
+     * create builder for CategoryImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryImportBuilder builder(final CategoryImport template) {
         return CategoryImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryImport(Function<CategoryImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryImport>() {
             @Override

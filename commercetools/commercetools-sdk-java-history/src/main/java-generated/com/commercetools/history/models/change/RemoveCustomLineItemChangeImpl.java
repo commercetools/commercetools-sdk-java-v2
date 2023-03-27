@@ -28,6 +28,9 @@ public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChang
 
     private com.commercetools.history.models.common.CustomLineItem previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveCustomLineItemChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomLineItem nextValue,
@@ -38,6 +41,9 @@ public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChang
         this.type = REMOVE_CUSTOM_LINE_ITEM_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveCustomLineItemChangeImpl() {
         this.type = REMOVE_CUSTOM_LINE_ITEM_CHANGE;
     }

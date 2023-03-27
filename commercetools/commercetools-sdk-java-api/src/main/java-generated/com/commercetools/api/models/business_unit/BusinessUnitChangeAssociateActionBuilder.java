@@ -48,6 +48,11 @@ public class BusinessUnitChangeAssociateActionBuilder implements Builder<Busines
         return this;
     }
 
+    /**
+     *  <p>New version of an existing Associate.</p>
+     * @return associate
+     */
+
     public com.commercetools.api.models.business_unit.AssociateDraft getAssociate() {
         return this.associate;
     }
@@ -69,10 +74,19 @@ public class BusinessUnitChangeAssociateActionBuilder implements Builder<Busines
         return new BusinessUnitChangeAssociateActionImpl(associate);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitChangeAssociateActionBuilder
+     * @return builder
+     */
     public static BusinessUnitChangeAssociateActionBuilder of() {
         return new BusinessUnitChangeAssociateActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitChangeAssociateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitChangeAssociateActionBuilder of(final BusinessUnitChangeAssociateAction template) {
         BusinessUnitChangeAssociateActionBuilder builder = new BusinessUnitChangeAssociateActionBuilder();
         builder.associate = template.getAssociate();

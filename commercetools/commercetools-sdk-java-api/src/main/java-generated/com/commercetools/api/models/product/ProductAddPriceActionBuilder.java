@@ -91,19 +91,39 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Embedded Price to add to the Product Variant.</p>
+     * @return price
+     */
+
     public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -127,10 +147,19 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
         return new ProductAddPriceActionImpl(variantId, sku, price, staged);
     }
 
+    /**
+     * factory method for an instance of ProductAddPriceActionBuilder
+     * @return builder
+     */
     public static ProductAddPriceActionBuilder of() {
         return new ProductAddPriceActionBuilder();
     }
 
+    /**
+     * create builder for ProductAddPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAddPriceActionBuilder of(final ProductAddPriceAction template) {
         ProductAddPriceActionBuilder builder = new ProductAddPriceActionBuilder();
         builder.variantId = template.getVariantId();

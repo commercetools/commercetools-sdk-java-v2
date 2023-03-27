@@ -93,22 +93,47 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
         return this;
     }
 
+    /**
+     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     * @return predicate
+     */
+
     public String getPredicate() {
         return this.predicate;
     }
+
+    /**
+     *  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>
+     * @return triggerQuantity
+     */
 
     public Integer getTriggerQuantity() {
         return this.triggerQuantity;
     }
 
+    /**
+     *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
+     * @return discountedQuantity
+     */
+
     public Integer getDiscountedQuantity() {
         return this.discountedQuantity;
     }
+
+    /**
+     *  <p>Maximum number of times this Discount can be applied.</p>
+     * @return maxOccurrence
+     */
 
     @Nullable
     public Integer getMaxOccurrence() {
         return this.maxOccurrence;
     }
+
+    /**
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
+     * @return selectionMode
+     */
 
     public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {
         return this.selectionMode;
@@ -137,10 +162,19 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
             selectionMode);
     }
 
+    /**
+     * factory method for an instance of MultiBuyCustomLineItemsTargetBuilder
+     * @return builder
+     */
     public static MultiBuyCustomLineItemsTargetBuilder of() {
         return new MultiBuyCustomLineItemsTargetBuilder();
     }
 
+    /**
+     * create builder for MultiBuyCustomLineItemsTarget instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MultiBuyCustomLineItemsTargetBuilder of(final MultiBuyCustomLineItemsTarget template) {
         MultiBuyCustomLineItemsTargetBuilder builder = new MultiBuyCustomLineItemsTargetBuilder();
         builder.predicate = template.getPredicate();

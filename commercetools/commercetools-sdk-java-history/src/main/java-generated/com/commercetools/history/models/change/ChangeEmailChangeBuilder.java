@@ -41,7 +41,7 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>changeEmail</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
         return new ChangeEmailChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeEmailChangeBuilder
+     * @return builder
+     */
     public static ChangeEmailChangeBuilder of() {
         return new ChangeEmailChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeEmailChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeEmailChangeBuilder of(final ChangeEmailChange template) {
         ChangeEmailChangeBuilder builder = new ChangeEmailChangeBuilder();
         builder.change = template.getChange();

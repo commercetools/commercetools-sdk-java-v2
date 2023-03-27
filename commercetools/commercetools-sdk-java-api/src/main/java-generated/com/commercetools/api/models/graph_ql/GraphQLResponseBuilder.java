@@ -30,7 +30,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     private java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors;
 
     /**
-     *
+     * set the value to the data
      * @param data value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     *
+     * set values to the errors
      * @param errors value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     *
+     * set value to the errors
      * @param errors value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     *
+     * add values to the errors
      * @param errors value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     *
+     * add the value to the errors using the builder function
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     *
+     * set the value to the errors using the builder function
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -106,10 +106,20 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
         return this;
     }
 
+    /**
+     * value of data}
+     * @return data
+     */
+
     @Nullable
     public java.lang.Object getData() {
         return this.data;
     }
+
+    /**
+     * value of errors}
+     * @return errors
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> getErrors() {
@@ -132,10 +142,19 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
         return new GraphQLResponseImpl(data, errors);
     }
 
+    /**
+     * factory method for an instance of GraphQLResponseBuilder
+     * @return builder
+     */
     public static GraphQLResponseBuilder of() {
         return new GraphQLResponseBuilder();
     }
 
+    /**
+     * create builder for GraphQLResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GraphQLResponseBuilder of(final GraphQLResponse template) {
         GraphQLResponseBuilder builder = new GraphQLResponseBuilder();
         builder.data = template.getData();

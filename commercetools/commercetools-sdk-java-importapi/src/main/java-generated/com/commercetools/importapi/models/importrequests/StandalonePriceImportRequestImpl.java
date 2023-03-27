@@ -25,6 +25,9 @@ public class StandalonePriceImportRequestImpl implements StandalonePriceImportRe
 
     private java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> resources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceImportRequestImpl(
             @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> resources) {
@@ -32,6 +35,9 @@ public class StandalonePriceImportRequestImpl implements StandalonePriceImportRe
         this.type = ImportResourceType.findEnum("standalone-price");
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceImportRequestImpl() {
         this.type = ImportResourceType.findEnum("standalone-price");
     }

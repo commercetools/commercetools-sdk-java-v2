@@ -28,6 +28,9 @@ public class AWSLambdaDestinationImpl implements AWSLambdaDestination, ModelBase
 
     private String accessSecret;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AWSLambdaDestinationImpl(@JsonProperty("arn") final String arn, @JsonProperty("accessKey") final String accessKey,
             @JsonProperty("accessSecret") final String accessSecret) {
@@ -37,6 +40,9 @@ public class AWSLambdaDestinationImpl implements AWSLambdaDestination, ModelBase
         this.type = AWS_LAMBDA;
     }
 
+    /**
+     * create empty instance
+     */
     public AWSLambdaDestinationImpl() {
         this.type = AWS_LAMBDA;
     }

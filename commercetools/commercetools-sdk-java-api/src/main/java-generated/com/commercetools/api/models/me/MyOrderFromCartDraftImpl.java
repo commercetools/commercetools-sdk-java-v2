@@ -24,12 +24,18 @@ public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase
 
     private Long version;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyOrderFromCartDraftImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version) {
         this.id = id;
         this.version = version;
     }
 
+    /**
+     * create empty instance
+     */
     public MyOrderFromCartDraftImpl() {
     }
 

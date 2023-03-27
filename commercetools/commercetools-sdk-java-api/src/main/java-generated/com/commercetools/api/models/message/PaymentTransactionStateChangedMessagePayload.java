@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentTransactionStateChangedMessagePayloadImpl.class)
 public interface PaymentTransactionStateChangedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for PaymentTransactionStateChangedMessagePayload
+     */
     String PAYMENT_TRANSACTION_STATE_CHANGED = "PaymentTransactionStateChanged";
 
     /**
@@ -49,14 +52,33 @@ public interface PaymentTransactionStateChangedMessagePayload extends MessagePay
     @JsonProperty("state")
     public TransactionState getState();
 
+    /**
+     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     * @param transactionId value to be set
+     */
+
     public void setTransactionId(final String transactionId);
+
+    /**
+     *  <p>Transaction State after the Change Transaction State update action.</p>
+     * @param state value to be set
+     */
 
     public void setState(final TransactionState state);
 
+    /**
+     * factory method
+     * @return instance of PaymentTransactionStateChangedMessagePayload
+     */
     public static PaymentTransactionStateChangedMessagePayload of() {
         return new PaymentTransactionStateChangedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentTransactionStateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentTransactionStateChangedMessagePayload of(
             final PaymentTransactionStateChangedMessagePayload template) {
         PaymentTransactionStateChangedMessagePayloadImpl instance = new PaymentTransactionStateChangedMessagePayloadImpl();
@@ -65,20 +87,39 @@ public interface PaymentTransactionStateChangedMessagePayload extends MessagePay
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentTransactionStateChangedMessagePayload
+     * @return builder
+     */
     public static PaymentTransactionStateChangedMessagePayloadBuilder builder() {
         return PaymentTransactionStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for PaymentTransactionStateChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentTransactionStateChangedMessagePayloadBuilder builder(
             final PaymentTransactionStateChangedMessagePayload template) {
         return PaymentTransactionStateChangedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentTransactionStateChangedMessagePayload(
             Function<PaymentTransactionStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentTransactionStateChangedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentTransactionStateChangedMessagePayload>() {
             @Override

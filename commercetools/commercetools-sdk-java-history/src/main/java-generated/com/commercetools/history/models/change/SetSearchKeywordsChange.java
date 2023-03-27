@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetSearchKeywordsChangeImpl.class)
 public interface SetSearchKeywordsChange extends Change {
 
+    /**
+     * discriminator value for SetSearchKeywordsChange
+     */
     String SET_SEARCH_KEYWORDS_CHANGE = "SetSearchKeywordsChange";
 
     /**
@@ -78,18 +81,47 @@ public interface SetSearchKeywordsChange extends Change {
     @JsonProperty("nextValue")
     public SearchKeywords getNextValue();
 
+    /**
+     *  <p>Update action for <code>setSearchKeywords</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final SearchKeywords previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final SearchKeywords nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetSearchKeywordsChange
+     */
     public static SetSearchKeywordsChange of() {
         return new SetSearchKeywordsChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetSearchKeywordsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetSearchKeywordsChange of(final SetSearchKeywordsChange template) {
         SetSearchKeywordsChangeImpl instance = new SetSearchKeywordsChangeImpl();
         instance.setChange(template.getChange());
@@ -99,18 +131,37 @@ public interface SetSearchKeywordsChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetSearchKeywordsChange
+     * @return builder
+     */
     public static SetSearchKeywordsChangeBuilder builder() {
         return SetSearchKeywordsChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetSearchKeywordsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetSearchKeywordsChangeBuilder builder(final SetSearchKeywordsChange template) {
         return SetSearchKeywordsChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetSearchKeywordsChange(Function<SetSearchKeywordsChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetSearchKeywordsChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetSearchKeywordsChange>() {
             @Override

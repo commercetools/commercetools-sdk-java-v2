@@ -31,7 +31,7 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -66,9 +66,19 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @return shippingDetails
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -93,10 +103,19 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
         return new StagedOrderSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetLineItemShippingDetailsActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetLineItemShippingDetailsActionBuilder of() {
         return new StagedOrderSetLineItemShippingDetailsActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetLineItemShippingDetailsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetLineItemShippingDetailsActionBuilder of(
             final StagedOrderSetLineItemShippingDetailsAction template) {
         StagedOrderSetLineItemShippingDetailsActionBuilder builder = new StagedOrderSetLineItemShippingDetailsActionBuilder();

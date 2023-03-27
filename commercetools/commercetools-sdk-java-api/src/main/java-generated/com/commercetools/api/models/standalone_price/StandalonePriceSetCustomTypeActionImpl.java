@@ -26,6 +26,9 @@ public class StandalonePriceSetCustomTypeActionImpl implements StandalonePriceSe
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class StandalonePriceSetCustomTypeActionImpl implements StandalonePriceSe
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceSetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

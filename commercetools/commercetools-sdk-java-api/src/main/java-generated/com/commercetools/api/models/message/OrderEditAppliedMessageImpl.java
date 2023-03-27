@@ -46,6 +46,9 @@ public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, Mod
 
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditAppliedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, Mod
         this.type = ORDER_EDIT_APPLIED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditAppliedMessageImpl() {
         this.type = ORDER_EDIT_APPLIED;
     }

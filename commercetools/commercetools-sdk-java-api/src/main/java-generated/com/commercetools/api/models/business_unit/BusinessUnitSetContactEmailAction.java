@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitSetContactEmailActionImpl.class)
 public interface BusinessUnitSetContactEmailAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitSetContactEmailAction
+     */
     String SET_CONTACT_EMAIL = "setContactEmail";
 
     /**
@@ -36,30 +39,63 @@ public interface BusinessUnitSetContactEmailAction extends BusinessUnitUpdateAct
     @JsonProperty("contactEmail")
     public String getContactEmail();
 
+    /**
+     *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
+     * @param contactEmail value to be set
+     */
+
     public void setContactEmail(final String contactEmail);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitSetContactEmailAction
+     */
     public static BusinessUnitSetContactEmailAction of() {
         return new BusinessUnitSetContactEmailActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitSetContactEmailAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitSetContactEmailAction of(final BusinessUnitSetContactEmailAction template) {
         BusinessUnitSetContactEmailActionImpl instance = new BusinessUnitSetContactEmailActionImpl();
         instance.setContactEmail(template.getContactEmail());
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitSetContactEmailAction
+     * @return builder
+     */
     public static BusinessUnitSetContactEmailActionBuilder builder() {
         return BusinessUnitSetContactEmailActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitSetContactEmailAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitSetContactEmailActionBuilder builder(final BusinessUnitSetContactEmailAction template) {
         return BusinessUnitSetContactEmailActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitSetContactEmailAction(Function<BusinessUnitSetContactEmailAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetContactEmailAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetContactEmailAction>() {
             @Override

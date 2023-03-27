@@ -147,35 +147,70 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
         return this;
     }
 
+    /**
+     *  <p>User-provided unique identifier of the resource.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>User-provided unique identifier of the resource.</p>
+     * @return externalId
+     */
 
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
 
+    /**
+     *  <p>User-provided unique identifier of an Order.</p>
+     * @return orderNumber
+     */
+
     @Nullable
     public String getOrderNumber() {
         return this.orderNumber;
     }
+
+    /**
+     *  <p>User-provided unique identifier of a Customer.</p>
+     * @return customerNumber
+     */
 
     @Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
     }
 
+    /**
+     *  <p>Unique SKU of a Product Variant.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     * @return slug
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>Unique identifier of a Custom Object.</p>
+     * @return containerAndKey
+     */
 
     @Nullable
     public com.commercetools.api.models.message.ContainerAndKey getContainerAndKey() {
@@ -200,10 +235,19 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
             containerAndKey);
     }
 
+    /**
+     * factory method for an instance of UserProvidedIdentifiersBuilder
+     * @return builder
+     */
     public static UserProvidedIdentifiersBuilder of() {
         return new UserProvidedIdentifiersBuilder();
     }
 
+    /**
+     * create builder for UserProvidedIdentifiers instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UserProvidedIdentifiersBuilder of(final UserProvidedIdentifiers template) {
         UserProvidedIdentifiersBuilder builder = new UserProvidedIdentifiersBuilder();
         builder.key = template.getKey();

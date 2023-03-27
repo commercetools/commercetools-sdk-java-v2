@@ -48,6 +48,9 @@ public class StateImpl implements State, ModelBase {
 
     private java.util.List<com.commercetools.api.models.state.StateReference> transitions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -77,6 +80,9 @@ public class StateImpl implements State, ModelBase {
         this.transitions = transitions;
     }
 
+    /**
+     * create empty instance
+     */
     public StateImpl() {
     }
 

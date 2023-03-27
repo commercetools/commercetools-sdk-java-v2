@@ -39,33 +39,71 @@ public interface PaymentInfo {
     @JsonProperty("payments")
     public List<Reference> getPayments();
 
+    /**
+     * set payments
+     * @param payments values to be set
+     */
+
     @JsonIgnore
     public void setPayments(final Reference... payments);
 
+    /**
+     * set payments
+     * @param payments values to be set
+     */
+
     public void setPayments(final List<Reference> payments);
 
+    /**
+     * factory method
+     * @return instance of PaymentInfo
+     */
     public static PaymentInfo of() {
         return new PaymentInfoImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentInfo of(final PaymentInfo template) {
         PaymentInfoImpl instance = new PaymentInfoImpl();
         instance.setPayments(template.getPayments());
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentInfo
+     * @return builder
+     */
     public static PaymentInfoBuilder builder() {
         return PaymentInfoBuilder.of();
     }
 
+    /**
+     * create builder for PaymentInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentInfoBuilder builder(final PaymentInfo template) {
         return PaymentInfoBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentInfo(Function<PaymentInfo, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentInfo> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentInfo>() {
             @Override

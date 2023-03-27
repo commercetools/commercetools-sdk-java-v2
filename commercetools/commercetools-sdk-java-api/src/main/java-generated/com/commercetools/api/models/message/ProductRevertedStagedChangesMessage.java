@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRevertedStagedChangesMessageImpl.class)
 public interface ProductRevertedStagedChangesMessage extends Message {
 
+    /**
+     * discriminator value for ProductRevertedStagedChangesMessage
+     */
     String PRODUCT_REVERTED_STAGED_CHANGES = "ProductRevertedStagedChanges";
 
     /**
@@ -46,15 +49,34 @@ public interface ProductRevertedStagedChangesMessage extends Message {
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
 
+    /**
+     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     * @param removedImageUrls values to be set
+     */
+
     @JsonIgnore
     public void setRemovedImageUrls(final String... removedImageUrls);
 
+    /**
+     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     * @param removedImageUrls values to be set
+     */
+
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
+    /**
+     * factory method
+     * @return instance of ProductRevertedStagedChangesMessage
+     */
     public static ProductRevertedStagedChangesMessage of() {
         return new ProductRevertedStagedChangesMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductRevertedStagedChangesMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductRevertedStagedChangesMessage of(final ProductRevertedStagedChangesMessage template) {
         ProductRevertedStagedChangesMessageImpl instance = new ProductRevertedStagedChangesMessageImpl();
         instance.setId(template.getId());
@@ -71,19 +93,38 @@ public interface ProductRevertedStagedChangesMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductRevertedStagedChangesMessage
+     * @return builder
+     */
     public static ProductRevertedStagedChangesMessageBuilder builder() {
         return ProductRevertedStagedChangesMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductRevertedStagedChangesMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRevertedStagedChangesMessageBuilder builder(
             final ProductRevertedStagedChangesMessage template) {
         return ProductRevertedStagedChangesMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductRevertedStagedChangesMessage(Function<ProductRevertedStagedChangesMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessage>() {
             @Override

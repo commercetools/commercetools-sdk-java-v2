@@ -44,6 +44,9 @@ public class OrderDiscountCodeAddedMessageImpl implements OrderDiscountCodeAdded
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderDiscountCodeAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class OrderDiscountCodeAddedMessageImpl implements OrderDiscountCodeAdded
         this.type = ORDER_DISCOUNT_CODE_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderDiscountCodeAddedMessageImpl() {
         this.type = ORDER_DISCOUNT_CODE_ADDED;
     }

@@ -30,6 +30,9 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
 
     private java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupPagedQueryResponseImpl() {
     }
 

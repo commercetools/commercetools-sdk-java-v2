@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelSetCustomTypeActionImpl.class)
 public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
 
+    /**
+     * discriminator value for ChannelSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Channel.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of ChannelSetCustomTypeAction
+     */
     public static ChannelSetCustomTypeAction of() {
         return new ChannelSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChannelSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChannelSetCustomTypeAction of(final ChannelSetCustomTypeAction template) {
         ChannelSetCustomTypeActionImpl instance = new ChannelSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ChannelSetCustomTypeAction
+     * @return builder
+     */
     public static ChannelSetCustomTypeActionBuilder builder() {
         return ChannelSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for ChannelSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelSetCustomTypeActionBuilder builder(final ChannelSetCustomTypeAction template) {
         return ChannelSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChannelSetCustomTypeAction(Function<ChannelSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetCustomTypeAction>() {
             @Override

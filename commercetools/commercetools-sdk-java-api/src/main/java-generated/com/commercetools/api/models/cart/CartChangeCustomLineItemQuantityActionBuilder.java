@@ -49,9 +49,20 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *  <p>New value to set.</p>
+     *  <p>If <code>0</code>, the Custom Line Item is removed from the Cart.</p>
+     * @return quantity
+     */
 
     public Long getQuantity() {
         return this.quantity;
@@ -76,10 +87,19 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
         return new CartChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
     }
 
+    /**
+     * factory method for an instance of CartChangeCustomLineItemQuantityActionBuilder
+     * @return builder
+     */
     public static CartChangeCustomLineItemQuantityActionBuilder of() {
         return new CartChangeCustomLineItemQuantityActionBuilder();
     }
 
+    /**
+     * create builder for CartChangeCustomLineItemQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartChangeCustomLineItemQuantityActionBuilder of(
             final CartChangeCustomLineItemQuantityAction template) {
         CartChangeCustomLineItemQuantityActionBuilder builder = new CartChangeCustomLineItemQuantityActionBuilder();

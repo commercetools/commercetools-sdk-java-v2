@@ -60,6 +60,9 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
 
     private Long applicationVersion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -101,6 +104,9 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
         this.applicationVersion = applicationVersion;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeImpl() {
     }
 

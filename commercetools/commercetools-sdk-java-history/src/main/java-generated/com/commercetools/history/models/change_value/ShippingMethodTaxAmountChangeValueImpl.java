@@ -24,6 +24,9 @@ public class ShippingMethodTaxAmountChangeValueImpl implements ShippingMethodTax
 
     private com.commercetools.history.models.common.TaxRate taxRate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodTaxAmountChangeValueImpl(
             @JsonProperty("taxedPrice") final com.commercetools.history.models.common.TaxedPrice taxedPrice,
@@ -32,6 +35,9 @@ public class ShippingMethodTaxAmountChangeValueImpl implements ShippingMethodTax
         this.taxRate = taxRate;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodTaxAmountChangeValueImpl() {
     }
 

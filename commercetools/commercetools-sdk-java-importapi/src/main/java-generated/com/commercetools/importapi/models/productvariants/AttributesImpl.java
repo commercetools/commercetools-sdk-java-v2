@@ -22,12 +22,18 @@ public class AttributesImpl implements Attributes, ModelBase {
 
     private Map<String, com.commercetools.importapi.models.productvariants.Attribute> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributesImpl(
             @JsonProperty("values") final Map<String, com.commercetools.importapi.models.productvariants.Attribute> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributesImpl() {
     }
 

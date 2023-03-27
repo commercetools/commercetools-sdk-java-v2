@@ -29,7 +29,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     *
+     * set values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     *
+     * set value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     *
+     * add values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     *
+     * add the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     *
+     * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -106,9 +106,19 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
         return this;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;
@@ -133,10 +143,19 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
         return new StagedOrderImportCustomLineItemStateActionImpl(customLineItemId, state);
     }
 
+    /**
+     * factory method for an instance of StagedOrderImportCustomLineItemStateActionBuilder
+     * @return builder
+     */
     public static StagedOrderImportCustomLineItemStateActionBuilder of() {
         return new StagedOrderImportCustomLineItemStateActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderImportCustomLineItemStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderImportCustomLineItemStateActionBuilder of(
             final StagedOrderImportCustomLineItemStateAction template) {
         StagedOrderImportCustomLineItemStateActionBuilder builder = new StagedOrderImportCustomLineItemStateActionBuilder();

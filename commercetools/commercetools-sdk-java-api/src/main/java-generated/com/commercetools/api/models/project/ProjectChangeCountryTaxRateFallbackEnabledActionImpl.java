@@ -25,6 +25,9 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
 
     private Boolean countryTaxRateFallbackEnabled;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeCountryTaxRateFallbackEnabledActionImpl(
             @JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
@@ -32,6 +35,9 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
         this.action = CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeCountryTaxRateFallbackEnabledActionImpl() {
         this.action = CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED;
     }

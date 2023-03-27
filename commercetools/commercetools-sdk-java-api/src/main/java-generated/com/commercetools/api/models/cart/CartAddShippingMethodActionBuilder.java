@@ -256,32 +256,72 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
         return this;
     }
 
+    /**
+     *  <p>User-defined identifier for the Shipping that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
     public String getShippingKey() {
         return this.shippingKey;
     }
+
+    /**
+     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @return shippingMethod
+     */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
 
+    /**
+     *  <p>Determines the shipping rate and Tax Rate of the Line Items.</p>
+     * @return shippingAddress
+     */
+
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
+
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
+     * @return shippingRateInput
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
         return this.shippingRateInput;
     }
 
+    /**
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
+    /**
+     *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     * @return deliveries
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryDraft> getDeliveries() {
         return this.deliveries;
     }
+
+    /**
+     *  <p>Custom Fields for the Shipping Method.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -309,10 +349,19 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
             externalTaxRate, deliveries, custom);
     }
 
+    /**
+     * factory method for an instance of CartAddShippingMethodActionBuilder
+     * @return builder
+     */
     public static CartAddShippingMethodActionBuilder of() {
         return new CartAddShippingMethodActionBuilder();
     }
 
+    /**
+     * create builder for CartAddShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartAddShippingMethodActionBuilder of(final CartAddShippingMethodAction template) {
         CartAddShippingMethodActionBuilder builder = new CartAddShippingMethodActionBuilder();
         builder.shippingKey = template.getShippingKey();

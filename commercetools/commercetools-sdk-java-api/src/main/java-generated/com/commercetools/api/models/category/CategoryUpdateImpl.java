@@ -24,6 +24,9 @@ public class CategoryUpdateImpl implements CategoryUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class CategoryUpdateImpl implements CategoryUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryUpdateImpl() {
     }
 

@@ -24,12 +24,18 @@ public class InventoryEntryAddQuantityActionImpl implements InventoryEntryAddQua
 
     private Long quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryAddQuantityActionImpl(@JsonProperty("quantity") final Long quantity) {
         this.quantity = quantity;
         this.action = ADD_QUANTITY;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryAddQuantityActionImpl() {
         this.action = ADD_QUANTITY;
     }

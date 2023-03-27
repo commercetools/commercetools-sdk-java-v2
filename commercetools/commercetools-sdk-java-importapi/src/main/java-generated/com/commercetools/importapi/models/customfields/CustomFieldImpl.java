@@ -22,11 +22,17 @@ public class CustomFieldImpl implements CustomField, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomFieldImpl() {
     }
 

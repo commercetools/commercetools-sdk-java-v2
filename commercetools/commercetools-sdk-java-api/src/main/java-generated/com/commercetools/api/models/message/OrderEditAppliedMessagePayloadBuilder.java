@@ -74,9 +74,19 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
         return this;
     }
 
+    /**
+     *  <p>OrderEdit that was applied.</p>
+     * @return edit
+     */
+
     public com.commercetools.api.models.order_edit.OrderEdit getEdit() {
         return this.edit;
     }
+
+    /**
+     *  <p>Information about a successfully applied OrderEdit.</p>
+     * @return result
+     */
 
     public com.commercetools.api.models.order_edit.OrderEditApplied getResult() {
         return this.result;
@@ -100,10 +110,19 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
         return new OrderEditAppliedMessagePayloadImpl(edit, result);
     }
 
+    /**
+     * factory method for an instance of OrderEditAppliedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderEditAppliedMessagePayloadBuilder of() {
         return new OrderEditAppliedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderEditAppliedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditAppliedMessagePayloadBuilder of(final OrderEditAppliedMessagePayload template) {
         OrderEditAppliedMessagePayloadBuilder builder = new OrderEditAppliedMessagePayloadBuilder();
         builder.edit = template.getEdit();

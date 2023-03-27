@@ -161,19 +161,39 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return this;
     }
 
+    /**
+     *  <p>Currency amount of the ShippingRate.</p>
+     * @return price
+     */
+
     public com.commercetools.api.models.common.TypedMoney getPrice() {
         return this.price;
     }
+
+    /**
+     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @return freeAbove
+     */
 
     @Nullable
     public com.commercetools.api.models.common.TypedMoney getFreeAbove() {
         return this.freeAbove;
     }
 
+    /**
+     *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
+     * @return isMatching
+     */
+
     @Nullable
     public Boolean getIsMatching() {
         return this.isMatching;
     }
+
+    /**
+     *  <p>Price tiers for the ShippingRate.</p>
+     * @return tiers
+     */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers() {
         return this.tiers;
@@ -197,10 +217,19 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return new ShippingRateImpl(price, freeAbove, isMatching, tiers);
     }
 
+    /**
+     * factory method for an instance of ShippingRateBuilder
+     * @return builder
+     */
     public static ShippingRateBuilder of() {
         return new ShippingRateBuilder();
     }
 
+    /**
+     * create builder for ShippingRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingRateBuilder of(final ShippingRate template) {
         ShippingRateBuilder builder = new ShippingRateBuilder();
         builder.price = template.getPrice();

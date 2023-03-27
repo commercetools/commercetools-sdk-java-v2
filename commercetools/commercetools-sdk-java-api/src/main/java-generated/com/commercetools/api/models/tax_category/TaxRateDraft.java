@@ -80,25 +80,69 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
 
+    /**
+     *  <p>Name of the TaxRate.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
+     * @param amount value to be set
+     */
 
     public void setAmount(final Double amount);
 
+    /**
+     *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     * @param includedInPrice value to be set
+     */
+
     public void setIncludedInPrice(final Boolean includedInPrice);
+
+    /**
+     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>State within the country, such as Texas in the United States.</p>
+     * @param state value to be set
+     */
+
     public void setState(final String state);
+
+    /**
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param subRates values to be set
+     */
 
     @JsonIgnore
     public void setSubRates(final SubRate... subRates);
 
+    /**
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param subRates values to be set
+     */
+
     public void setSubRates(final List<SubRate> subRates);
 
+    /**
+     * factory method
+     * @return instance of TaxRateDraft
+     */
     public static TaxRateDraft of() {
         return new TaxRateDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxRateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxRateDraft of(final TaxRateDraft template) {
         TaxRateDraftImpl instance = new TaxRateDraftImpl();
         instance.setName(template.getName());
@@ -110,18 +154,37 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
         return instance;
     }
 
+    /**
+     * builder factory method for TaxRateDraft
+     * @return builder
+     */
     public static TaxRateDraftBuilder builder() {
         return TaxRateDraftBuilder.of();
     }
 
+    /**
+     * create builder for TaxRateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxRateDraftBuilder builder(final TaxRateDraft template) {
         return TaxRateDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxRateDraft(Function<TaxRateDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxRateDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxRateDraft>() {
             @Override

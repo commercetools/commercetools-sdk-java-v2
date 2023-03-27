@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryImportRequestImpl.class)
 public interface InventoryImportRequest extends ImportRequest {
 
+    /**
+     * discriminator value for InventoryImportRequest
+     */
     String INVENTORY = "inventory";
 
     /**
@@ -42,33 +45,71 @@ public interface InventoryImportRequest extends ImportRequest {
     @JsonProperty("resources")
     public List<InventoryImport> getResources();
 
+    /**
+     *  <p>The inventory import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     @JsonIgnore
     public void setResources(final InventoryImport... resources);
 
+    /**
+     *  <p>The inventory import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     public void setResources(final List<InventoryImport> resources);
 
+    /**
+     * factory method
+     * @return instance of InventoryImportRequest
+     */
     public static InventoryImportRequest of() {
         return new InventoryImportRequestImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryImportRequest of(final InventoryImportRequest template) {
         InventoryImportRequestImpl instance = new InventoryImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryImportRequest
+     * @return builder
+     */
     public static InventoryImportRequestBuilder builder() {
         return InventoryImportRequestBuilder.of();
     }
 
+    /**
+     * create builder for InventoryImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryImportRequestBuilder builder(final InventoryImportRequest template) {
         return InventoryImportRequestBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryImportRequest(Function<InventoryImportRequest, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryImportRequest> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryImportRequest>() {
             @Override

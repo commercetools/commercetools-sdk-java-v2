@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartScoreTierImpl.class)
 public interface CartScoreTier extends ShippingRatePriceTier {
 
+    /**
+     * discriminator value for CartScoreTier
+     */
     String CART_SCORE = "CartScore";
 
     /**
@@ -65,18 +68,47 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
 
+    /**
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p>
+     * @param score value to be set
+     */
+
     public void setScore(final Integer score);
+
+    /**
+     *  <p>Defines a fixed price for the <code>score</code>.</p>
+     * @param price value to be set
+     */
 
     public void setPrice(final Money price);
 
+    /**
+     *  <p>Dynamically calculates a Price for a range of scores.</p>
+     * @param priceFunction value to be set
+     */
+
     public void setPriceFunction(final PriceFunction priceFunction);
+
+    /**
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     * @param isMatching value to be set
+     */
 
     public void setIsMatching(final Boolean isMatching);
 
+    /**
+     * factory method
+     * @return instance of CartScoreTier
+     */
     public static CartScoreTier of() {
         return new CartScoreTierImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartScoreTier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartScoreTier of(final CartScoreTier template) {
         CartScoreTierImpl instance = new CartScoreTierImpl();
         instance.setScore(template.getScore());
@@ -86,18 +118,37 @@ public interface CartScoreTier extends ShippingRatePriceTier {
         return instance;
     }
 
+    /**
+     * builder factory method for CartScoreTier
+     * @return builder
+     */
     public static CartScoreTierBuilder builder() {
         return CartScoreTierBuilder.of();
     }
 
+    /**
+     * create builder for CartScoreTier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartScoreTierBuilder builder(final CartScoreTier template) {
         return CartScoreTierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartScoreTier(Function<CartScoreTier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartScoreTier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartScoreTier>() {
             @Override

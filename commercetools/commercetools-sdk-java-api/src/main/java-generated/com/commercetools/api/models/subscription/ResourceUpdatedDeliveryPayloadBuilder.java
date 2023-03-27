@@ -135,26 +135,56 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
         return this;
     }
 
+    /**
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @return projectKey
+     */
+
     public String getProjectKey() {
         return this.projectKey;
     }
 
+    /**
+     *  <p>Reference to the resource that triggered the message.</p>
+     * @return resource
+     */
+
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
+
+    /**
+     *  <p>User-defined unique identifiers of the resource.</p>
+     * @return resourceUserProvidedIdentifiers
+     */
 
     @Nullable
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *  <p>Last seen version of the resource.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Version of the resource before the update.</p>
+     * @return oldVersion
+     */
+
     public Long getOldVersion() {
         return this.oldVersion;
     }
+
+    /**
+     *  <p>Date and time (UTC) the resource was last updated.</p>
+     * @return modifiedAt
+     */
 
     public java.time.ZonedDateTime getModifiedAt() {
         return this.modifiedAt;
@@ -183,10 +213,19 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
             oldVersion, modifiedAt);
     }
 
+    /**
+     * factory method for an instance of ResourceUpdatedDeliveryPayloadBuilder
+     * @return builder
+     */
     public static ResourceUpdatedDeliveryPayloadBuilder of() {
         return new ResourceUpdatedDeliveryPayloadBuilder();
     }
 
+    /**
+     * create builder for ResourceUpdatedDeliveryPayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceUpdatedDeliveryPayloadBuilder of(final ResourceUpdatedDeliveryPayload template) {
         ResourceUpdatedDeliveryPayloadBuilder builder = new ResourceUpdatedDeliveryPayloadBuilder();
         builder.projectKey = template.getProjectKey();

@@ -78,9 +78,20 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
         return this;
     }
 
+    /**
+     *  <p>Defines the effect the Discount will have.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Defines what part of the Cart will be discounted.</p>
+     *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
+     * @return target
+     */
 
     @Nullable
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
@@ -104,10 +115,19 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
         return new DirectDiscountDraftImpl(value, target);
     }
 
+    /**
+     * factory method for an instance of DirectDiscountDraftBuilder
+     * @return builder
+     */
     public static DirectDiscountDraftBuilder of() {
         return new DirectDiscountDraftBuilder();
     }
 
+    /**
+     * create builder for DirectDiscountDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DirectDiscountDraftBuilder of(final DirectDiscountDraft template) {
         DirectDiscountDraftBuilder builder = new DirectDiscountDraftBuilder();
         builder.value = template.getValue();

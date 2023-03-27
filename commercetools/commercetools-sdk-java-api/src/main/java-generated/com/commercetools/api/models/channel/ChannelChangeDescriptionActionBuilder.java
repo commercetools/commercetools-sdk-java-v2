@@ -48,6 +48,11 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return description
+     */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
@@ -69,10 +74,19 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
         return new ChannelChangeDescriptionActionImpl(description);
     }
 
+    /**
+     * factory method for an instance of ChannelChangeDescriptionActionBuilder
+     * @return builder
+     */
     public static ChannelChangeDescriptionActionBuilder of() {
         return new ChannelChangeDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for ChannelChangeDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelChangeDescriptionActionBuilder of(final ChannelChangeDescriptionAction template) {
         ChannelChangeDescriptionActionBuilder builder = new ChannelChangeDescriptionActionBuilder();
         builder.description = template.getDescription();

@@ -24,12 +24,18 @@ public class TaxCategorySetDescriptionActionImpl implements TaxCategorySetDescri
 
     private String description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategorySetDescriptionActionImpl(@JsonProperty("description") final String description) {
         this.description = description;
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategorySetDescriptionActionImpl() {
         this.action = SET_DESCRIPTION;
     }

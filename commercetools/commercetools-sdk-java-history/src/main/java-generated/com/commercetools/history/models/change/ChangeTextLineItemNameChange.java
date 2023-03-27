@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeTextLineItemNameChangeImpl.class)
 public interface ChangeTextLineItemNameChange extends Change {
 
+    /**
+     * discriminator value for ChangeTextLineItemNameChange
+     */
     String CHANGE_TEXT_LINE_ITEM_NAME_CHANGE = "ChangeTextLineItemNameChange";
 
     /**
@@ -80,18 +83,47 @@ public interface ChangeTextLineItemNameChange extends Change {
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>changeTextLineItemName</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set textLineItem
+     * @param textLineItem value to be set
+     */
 
     public void setTextLineItem(final TextLineItemValue textLineItem);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final LocalizedString nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final LocalizedString previousValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeTextLineItemNameChange
+     */
     public static ChangeTextLineItemNameChange of() {
         return new ChangeTextLineItemNameChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeTextLineItemNameChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeTextLineItemNameChange of(final ChangeTextLineItemNameChange template) {
         ChangeTextLineItemNameChangeImpl instance = new ChangeTextLineItemNameChangeImpl();
         instance.setChange(template.getChange());
@@ -101,18 +133,37 @@ public interface ChangeTextLineItemNameChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeTextLineItemNameChange
+     * @return builder
+     */
     public static ChangeTextLineItemNameChangeBuilder builder() {
         return ChangeTextLineItemNameChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeTextLineItemNameChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTextLineItemNameChangeBuilder builder(final ChangeTextLineItemNameChange template) {
         return ChangeTextLineItemNameChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeTextLineItemNameChange(Function<ChangeTextLineItemNameChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeTextLineItemNameChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeTextLineItemNameChange>() {
             @Override

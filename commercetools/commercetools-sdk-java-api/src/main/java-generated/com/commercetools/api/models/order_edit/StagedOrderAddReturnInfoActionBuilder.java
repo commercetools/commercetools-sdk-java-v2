@@ -33,7 +33,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     private java.time.ZonedDateTime returnDate;
 
     /**
-     *
+     * set the value to the returnTrackingId
      * @param returnTrackingId value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *
+     * set the value to the returnDate
      * @param returnDate value to be set
      * @return Builder
      */
@@ -121,14 +121,29 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
         return this;
     }
 
+    /**
+     * value of returnTrackingId}
+     * @return returnTrackingId
+     */
+
     @Nullable
     public String getReturnTrackingId() {
         return this.returnTrackingId;
     }
 
+    /**
+     * value of items}
+     * @return items
+     */
+
     public java.util.List<com.commercetools.api.models.order.ReturnItemDraft> getItems() {
         return this.items;
     }
+
+    /**
+     * value of returnDate}
+     * @return returnDate
+     */
 
     @Nullable
     public java.time.ZonedDateTime getReturnDate() {
@@ -152,10 +167,19 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
         return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
     }
 
+    /**
+     * factory method for an instance of StagedOrderAddReturnInfoActionBuilder
+     * @return builder
+     */
     public static StagedOrderAddReturnInfoActionBuilder of() {
         return new StagedOrderAddReturnInfoActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderAddReturnInfoAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddReturnInfoActionBuilder of(final StagedOrderAddReturnInfoAction template) {
         StagedOrderAddReturnInfoActionBuilder builder = new StagedOrderAddReturnInfoActionBuilder();
         builder.returnTrackingId = template.getReturnTrackingId();

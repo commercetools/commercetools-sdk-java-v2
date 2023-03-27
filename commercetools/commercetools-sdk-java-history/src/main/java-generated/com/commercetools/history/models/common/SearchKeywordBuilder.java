@@ -28,7 +28,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     private com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer;
 
     /**
-     *
+     * set the value to the text
      * @param text value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     *
+     * set the value to the suggestTokenizer using the builder function
      * @param builder function to build the suggestTokenizer value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     *
+     * set the value to the suggestTokenizer
      * @param suggestTokenizer value to be set
      * @return Builder
      */
@@ -63,9 +63,19 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
         return this;
     }
 
+    /**
+     * value of text}
+     * @return text
+     */
+
     public String getText() {
         return this.text;
     }
+
+    /**
+     * value of suggestTokenizer}
+     * @return suggestTokenizer
+     */
 
     public com.commercetools.history.models.common.SuggestTokenizer getSuggestTokenizer() {
         return this.suggestTokenizer;
@@ -89,10 +99,19 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
         return new SearchKeywordImpl(text, suggestTokenizer);
     }
 
+    /**
+     * factory method for an instance of SearchKeywordBuilder
+     * @return builder
+     */
     public static SearchKeywordBuilder of() {
         return new SearchKeywordBuilder();
     }
 
+    /**
+     * create builder for SearchKeyword instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchKeywordBuilder of(final SearchKeyword template) {
         SearchKeywordBuilder builder = new SearchKeywordBuilder();
         builder.text = template.getText();

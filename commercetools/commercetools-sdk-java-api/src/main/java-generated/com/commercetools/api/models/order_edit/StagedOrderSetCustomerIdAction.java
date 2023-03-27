@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetCustomerIdActionImpl.class)
 public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetCustomerIdAction
+     */
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
@@ -37,30 +40,63 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     @JsonProperty("customerId")
     public String getCustomerId();
 
+    /**
+     * set customerId
+     * @param customerId value to be set
+     */
+
     public void setCustomerId(final String customerId);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetCustomerIdAction
+     */
     public static StagedOrderSetCustomerIdAction of() {
         return new StagedOrderSetCustomerIdActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetCustomerIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetCustomerIdAction of(final StagedOrderSetCustomerIdAction template) {
         StagedOrderSetCustomerIdActionImpl instance = new StagedOrderSetCustomerIdActionImpl();
         instance.setCustomerId(template.getCustomerId());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetCustomerIdAction
+     * @return builder
+     */
     public static StagedOrderSetCustomerIdActionBuilder builder() {
         return StagedOrderSetCustomerIdActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomerIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomerIdActionBuilder builder(final StagedOrderSetCustomerIdAction template) {
         return StagedOrderSetCustomerIdActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetCustomerIdAction(Function<StagedOrderSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerIdAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerIdAction>() {
             @Override

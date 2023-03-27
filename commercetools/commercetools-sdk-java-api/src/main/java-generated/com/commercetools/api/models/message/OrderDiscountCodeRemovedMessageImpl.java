@@ -44,6 +44,9 @@ public class OrderDiscountCodeRemovedMessageImpl implements OrderDiscountCodeRem
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderDiscountCodeRemovedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class OrderDiscountCodeRemovedMessageImpl implements OrderDiscountCodeRem
         this.type = ORDER_DISCOUNT_CODE_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderDiscountCodeRemovedMessageImpl() {
         this.type = ORDER_DISCOUNT_CODE_REMOVED;
     }

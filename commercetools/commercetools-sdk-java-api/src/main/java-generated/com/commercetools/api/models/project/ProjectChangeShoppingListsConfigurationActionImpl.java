@@ -25,6 +25,9 @@ public class ProjectChangeShoppingListsConfigurationActionImpl
 
     private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeShoppingListsConfigurationActionImpl(
             @JsonProperty("shoppingListsConfiguration") final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration) {
@@ -32,6 +35,9 @@ public class ProjectChangeShoppingListsConfigurationActionImpl
         this.action = CHANGE_SHOPPING_LISTS_CONFIGURATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeShoppingListsConfigurationActionImpl() {
         this.action = CHANGE_SHOPPING_LISTS_CONFIGURATION;
     }

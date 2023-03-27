@@ -66,13 +66,32 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
         return this;
     }
 
+    /**
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     * @return centAmount
+     */
+
     public Long getCentAmount() {
         return this.centAmount;
     }
 
+    /**
+     *  <p>Currency code compliant to ISO 4217.</p>
+     * @return currencyCode
+     */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }
+
+    /**
+     *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
+     * @return fractionDigits
+     */
 
     public Integer getFractionDigits() {
         return this.fractionDigits;
@@ -97,10 +116,19 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
         return new CentPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits);
     }
 
+    /**
+     * factory method for an instance of CentPrecisionMoneyBuilder
+     * @return builder
+     */
     public static CentPrecisionMoneyBuilder of() {
         return new CentPrecisionMoneyBuilder();
     }
 
+    /**
+     * create builder for CentPrecisionMoney instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CentPrecisionMoneyBuilder of(final CentPrecisionMoney template) {
         CentPrecisionMoneyBuilder builder = new CentPrecisionMoneyBuilder();
         builder.centAmount = template.getCentAmount();

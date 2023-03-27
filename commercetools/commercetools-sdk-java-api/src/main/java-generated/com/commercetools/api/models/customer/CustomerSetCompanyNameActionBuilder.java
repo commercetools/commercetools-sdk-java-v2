@@ -36,6 +36,11 @@ public class CustomerSetCompanyNameActionBuilder implements Builder<CustomerSetC
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return companyName
+     */
+
     @Nullable
     public String getCompanyName() {
         return this.companyName;
@@ -57,10 +62,19 @@ public class CustomerSetCompanyNameActionBuilder implements Builder<CustomerSetC
         return new CustomerSetCompanyNameActionImpl(companyName);
     }
 
+    /**
+     * factory method for an instance of CustomerSetCompanyNameActionBuilder
+     * @return builder
+     */
     public static CustomerSetCompanyNameActionBuilder of() {
         return new CustomerSetCompanyNameActionBuilder();
     }
 
+    /**
+     * create builder for CustomerSetCompanyNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetCompanyNameActionBuilder of(final CustomerSetCompanyNameAction template) {
         CustomerSetCompanyNameActionBuilder builder = new CustomerSetCompanyNameActionBuilder();
         builder.companyName = template.getCompanyName();

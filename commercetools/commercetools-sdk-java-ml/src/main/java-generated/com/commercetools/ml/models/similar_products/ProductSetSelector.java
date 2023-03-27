@@ -77,28 +77,77 @@ public interface ProductSetSelector {
     @JsonProperty("productSetLimit")
     public Long getProductSetLimit();
 
+    /**
+     *  <p>The project containing the project set.</p>
+     * @param projectKey value to be set
+     */
+
     public void setProjectKey(final String projectKey);
+
+    /**
+     *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
+     * @param productIds values to be set
+     */
 
     @JsonIgnore
     public void setProductIds(final String... productIds);
 
+    /**
+     *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
+     * @param productIds values to be set
+     */
+
     public void setProductIds(final List<String> productIds);
+
+    /**
+     *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
+     * @param productTypeIds values to be set
+     */
 
     @JsonIgnore
     public void setProductTypeIds(final String... productTypeIds);
 
+    /**
+     *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
+     * @param productTypeIds values to be set
+     */
+
     public void setProductTypeIds(final List<String> productTypeIds);
+
+    /**
+     *  <p>Specifies use of staged or current product data.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
+     * @param includeVariants value to be set
+     */
+
     public void setIncludeVariants(final Boolean includeVariants);
+
+    /**
+     *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
+     * @param productSetLimit value to be set
+     */
 
     public void setProductSetLimit(final Long productSetLimit);
 
+    /**
+     * factory method
+     * @return instance of ProductSetSelector
+     */
     public static ProductSetSelector of() {
         return new ProductSetSelectorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetSelector
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetSelector of(final ProductSetSelector template) {
         ProductSetSelectorImpl instance = new ProductSetSelectorImpl();
         instance.setProjectKey(template.getProjectKey());
@@ -110,18 +159,37 @@ public interface ProductSetSelector {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetSelector
+     * @return builder
+     */
     public static ProductSetSelectorBuilder builder() {
         return ProductSetSelectorBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetSelector instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetSelectorBuilder builder(final ProductSetSelector template) {
         return ProductSetSelectorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetSelector(Function<ProductSetSelector, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetSelector> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetSelector>() {
             @Override

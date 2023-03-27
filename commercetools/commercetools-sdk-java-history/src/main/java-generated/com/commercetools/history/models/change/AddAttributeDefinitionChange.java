@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddAttributeDefinitionChangeImpl.class)
 public interface AddAttributeDefinitionChange extends Change {
 
+    /**
+     * discriminator value for AddAttributeDefinitionChange
+     */
     String ADD_ATTRIBUTE_DEFINITION_CHANGE = "AddAttributeDefinitionChange";
 
     /**
@@ -59,14 +62,33 @@ public interface AddAttributeDefinitionChange extends Change {
     @JsonProperty("nextValue")
     public AttributeDefinition getNextValue();
 
+    /**
+     *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final AttributeDefinition nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddAttributeDefinitionChange
+     */
     public static AddAttributeDefinitionChange of() {
         return new AddAttributeDefinitionChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddAttributeDefinitionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddAttributeDefinitionChange of(final AddAttributeDefinitionChange template) {
         AddAttributeDefinitionChangeImpl instance = new AddAttributeDefinitionChangeImpl();
         instance.setChange(template.getChange());
@@ -74,18 +96,37 @@ public interface AddAttributeDefinitionChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddAttributeDefinitionChange
+     * @return builder
+     */
     public static AddAttributeDefinitionChangeBuilder builder() {
         return AddAttributeDefinitionChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddAttributeDefinitionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddAttributeDefinitionChangeBuilder builder(final AddAttributeDefinitionChange template) {
         return AddAttributeDefinitionChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddAttributeDefinitionChange(Function<AddAttributeDefinitionChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddAttributeDefinitionChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddAttributeDefinitionChange>() {
             @Override

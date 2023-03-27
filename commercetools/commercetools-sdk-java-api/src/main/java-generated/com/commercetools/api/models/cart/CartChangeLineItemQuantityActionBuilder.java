@@ -110,18 +110,40 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>New value to set.</p>
+     *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     * @return quantity
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     * @return externalPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Money getExternalPrice() {
         return this.externalPrice;
     }
+
+    /**
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @return externalTotalPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -146,10 +168,19 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
         return new CartChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
     }
 
+    /**
+     * factory method for an instance of CartChangeLineItemQuantityActionBuilder
+     * @return builder
+     */
     public static CartChangeLineItemQuantityActionBuilder of() {
         return new CartChangeLineItemQuantityActionBuilder();
     }
 
+    /**
+     * create builder for CartChangeLineItemQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartChangeLineItemQuantityActionBuilder of(final CartChangeLineItemQuantityAction template) {
         CartChangeLineItemQuantityActionBuilder builder = new CartChangeLineItemQuantityActionBuilder();
         builder.lineItemId = template.getLineItemId();

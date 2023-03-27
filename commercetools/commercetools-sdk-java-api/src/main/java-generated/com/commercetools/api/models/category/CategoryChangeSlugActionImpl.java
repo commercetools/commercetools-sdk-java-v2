@@ -24,12 +24,18 @@ public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, M
 
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryChangeSlugActionImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         this.action = CHANGE_SLUG;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryChangeSlugActionImpl() {
         this.action = CHANGE_SLUG;
     }

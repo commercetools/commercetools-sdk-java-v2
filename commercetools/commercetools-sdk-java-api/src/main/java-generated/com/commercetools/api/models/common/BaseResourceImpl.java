@@ -28,6 +28,9 @@ public class BaseResourceImpl implements BaseResource, ModelBase {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BaseResourceImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -38,6 +41,9 @@ public class BaseResourceImpl implements BaseResource, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
     }
 
+    /**
+     * create empty instance
+     */
     public BaseResourceImpl() {
     }
 

@@ -22,11 +22,17 @@ public class StagedQuoteUpdateActionImpl implements StagedQuoteUpdateAction, Mod
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteUpdateActionImpl() {
     }
 

@@ -24,6 +24,9 @@ public class SetCartScoreShippingRateInputValueImpl implements SetCartScoreShipp
 
     private Integer score;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCartScoreShippingRateInputValueImpl(@JsonProperty("type") final String type,
             @JsonProperty("score") final Integer score) {
@@ -31,6 +34,9 @@ public class SetCartScoreShippingRateInputValueImpl implements SetCartScoreShipp
         this.score = score;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCartScoreShippingRateInputValueImpl() {
     }
 

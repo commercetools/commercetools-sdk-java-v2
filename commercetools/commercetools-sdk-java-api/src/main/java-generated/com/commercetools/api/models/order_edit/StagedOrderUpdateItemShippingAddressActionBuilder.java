@@ -49,6 +49,11 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
@@ -70,10 +75,19 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
         return new StagedOrderUpdateItemShippingAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of StagedOrderUpdateItemShippingAddressActionBuilder
+     * @return builder
+     */
     public static StagedOrderUpdateItemShippingAddressActionBuilder of() {
         return new StagedOrderUpdateItemShippingAddressActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderUpdateItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderUpdateItemShippingAddressActionBuilder of(
             final StagedOrderUpdateItemShippingAddressAction template) {
         StagedOrderUpdateItemShippingAddressActionBuilder builder = new StagedOrderUpdateItemShippingAddressActionBuilder();

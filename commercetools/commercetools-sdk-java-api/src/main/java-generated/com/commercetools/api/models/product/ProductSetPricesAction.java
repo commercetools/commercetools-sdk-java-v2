@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetPricesActionImpl.class)
 public interface ProductSetPricesAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetPricesAction
+     */
     String SET_PRICES = "setPrices";
 
     /**
@@ -66,21 +69,55 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Long variantId);
 
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
+
+    /**
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices values to be set
+     */
 
     @JsonIgnore
     public void setPrices(final PriceDraft... prices);
 
+    /**
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices values to be set
+     */
+
     public void setPrices(final List<PriceDraft> prices);
+
+    /**
+     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductSetPricesAction
+     */
     public static ProductSetPricesAction of() {
         return new ProductSetPricesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetPricesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetPricesAction of(final ProductSetPricesAction template) {
         ProductSetPricesActionImpl instance = new ProductSetPricesActionImpl();
         instance.setVariantId(template.getVariantId());
@@ -90,18 +127,37 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetPricesAction
+     * @return builder
+     */
     public static ProductSetPricesActionBuilder builder() {
         return ProductSetPricesActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetPricesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetPricesActionBuilder builder(final ProductSetPricesAction template) {
         return ProductSetPricesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetPricesAction(Function<ProductSetPricesAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetPricesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetPricesAction>() {
             @Override

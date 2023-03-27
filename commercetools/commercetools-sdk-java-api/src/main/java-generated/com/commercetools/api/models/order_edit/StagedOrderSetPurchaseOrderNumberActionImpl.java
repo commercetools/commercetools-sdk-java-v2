@@ -24,12 +24,18 @@ public class StagedOrderSetPurchaseOrderNumberActionImpl implements StagedOrderS
 
     private String purchaseOrderNumber;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetPurchaseOrderNumberActionImpl(@JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber) {
         this.purchaseOrderNumber = purchaseOrderNumber;
         this.action = SET_PURCHASE_ORDER_NUMBER;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetPurchaseOrderNumberActionImpl() {
         this.action = SET_PURCHASE_ORDER_NUMBER;
     }

@@ -24,6 +24,9 @@ public class OrderSetReturnInfoActionImpl implements OrderSetReturnInfoAction, M
 
     private java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetReturnInfoActionImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items) {
@@ -31,6 +34,9 @@ public class OrderSetReturnInfoActionImpl implements OrderSetReturnInfoAction, M
         this.action = SET_RETURN_INFO;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetReturnInfoActionImpl() {
         this.action = SET_RETURN_INFO;
     }

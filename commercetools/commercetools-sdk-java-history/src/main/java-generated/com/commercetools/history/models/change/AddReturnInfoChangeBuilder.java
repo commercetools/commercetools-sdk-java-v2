@@ -39,7 +39,7 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addReturnInfo</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.ReturnInfo getNextValue() {
         return this.nextValue;
@@ -87,10 +97,19 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
         return new AddReturnInfoChangeImpl(change, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddReturnInfoChangeBuilder
+     * @return builder
+     */
     public static AddReturnInfoChangeBuilder of() {
         return new AddReturnInfoChangeBuilder();
     }
 
+    /**
+     * create builder for AddReturnInfoChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddReturnInfoChangeBuilder of(final AddReturnInfoChange template) {
         AddReturnInfoChangeBuilder builder = new AddReturnInfoChangeBuilder();
         builder.change = template.getChange();

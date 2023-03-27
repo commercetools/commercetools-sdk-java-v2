@@ -80,10 +80,20 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     * @return shippingMethod
+     */
+
     @Nullable
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -106,10 +116,19 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
         return new StagedOrderSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetShippingMethodActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetShippingMethodActionBuilder of() {
         return new StagedOrderSetShippingMethodActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingMethodActionBuilder of(final StagedOrderSetShippingMethodAction template) {
         StagedOrderSetShippingMethodActionBuilder builder = new StagedOrderSetShippingMethodActionBuilder();
         builder.shippingMethod = template.getShippingMethod();

@@ -24,6 +24,9 @@ public class StateSetTransitionsActionImpl implements StateSetTransitionsAction,
 
     private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateSetTransitionsActionImpl(
             @JsonProperty("transitions") final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
@@ -31,6 +34,9 @@ public class StateSetTransitionsActionImpl implements StateSetTransitionsAction,
         this.action = SET_TRANSITIONS;
     }
 
+    /**
+     * create empty instance
+     */
     public StateSetTransitionsActionImpl() {
         this.action = SET_TRANSITIONS;
     }

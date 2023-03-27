@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceNotFoundErrorImpl.class)
 public interface ResourceNotFoundError extends ErrorObject {
 
+    /**
+     * discriminator value for ResourceNotFoundError
+     */
     String RESOURCE_NOT_FOUND = "ResourceNotFound";
 
     /**
@@ -47,12 +50,26 @@ public interface ResourceNotFoundError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of ResourceNotFoundError
+     */
     public static ResourceNotFoundError of() {
         return new ResourceNotFoundErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ResourceNotFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ResourceNotFoundError of(final ResourceNotFoundError template) {
         ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
@@ -60,18 +77,37 @@ public interface ResourceNotFoundError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ResourceNotFoundError
+     * @return builder
+     */
     public static ResourceNotFoundErrorBuilder builder() {
         return ResourceNotFoundErrorBuilder.of();
     }
 
+    /**
+     * create builder for ResourceNotFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceNotFoundErrorBuilder builder(final ResourceNotFoundError template) {
         return ResourceNotFoundErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withResourceNotFoundError(Function<ResourceNotFoundError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ResourceNotFoundError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ResourceNotFoundError>() {
             @Override

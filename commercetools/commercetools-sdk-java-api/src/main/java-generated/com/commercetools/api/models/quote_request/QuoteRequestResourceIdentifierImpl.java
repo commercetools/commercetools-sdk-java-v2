@@ -27,6 +27,9 @@ public class QuoteRequestResourceIdentifierImpl implements QuoteRequestResourceI
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class QuoteRequestResourceIdentifierImpl implements QuoteRequestResourceI
         this.typeId = ReferenceTypeId.findEnum("quote-request");
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("quote-request");
     }

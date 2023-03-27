@@ -49,6 +49,11 @@ public class BusinessUnitBillingAddressAddedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>The address that was added to the Business Unit as billing address.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
@@ -70,10 +75,19 @@ public class BusinessUnitBillingAddressAddedMessagePayloadBuilder
         return new BusinessUnitBillingAddressAddedMessagePayloadImpl(address);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitBillingAddressAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitBillingAddressAddedMessagePayloadBuilder of() {
         return new BusinessUnitBillingAddressAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitBillingAddressAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitBillingAddressAddedMessagePayloadBuilder of(
             final BusinessUnitBillingAddressAddedMessagePayload template) {
         BusinessUnitBillingAddressAddedMessagePayloadBuilder builder = new BusinessUnitBillingAddressAddedMessagePayloadBuilder();

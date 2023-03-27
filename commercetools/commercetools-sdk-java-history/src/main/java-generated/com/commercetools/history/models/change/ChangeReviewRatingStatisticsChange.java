@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeReviewRatingStatisticsChangeImpl.class)
 public interface ChangeReviewRatingStatisticsChange extends Change {
 
+    /**
+     * discriminator value for ChangeReviewRatingStatisticsChange
+     */
     String CHANGE_REVIEW_RATING_STATISTICS_CHANGE = "ChangeReviewRatingStatisticsChange";
 
     /**
@@ -69,16 +72,40 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     @JsonProperty("previousValue")
     public ReviewRatingStatistics getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final ReviewRatingStatistics nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final ReviewRatingStatistics previousValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeReviewRatingStatisticsChange
+     */
     public static ChangeReviewRatingStatisticsChange of() {
         return new ChangeReviewRatingStatisticsChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeReviewRatingStatisticsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeReviewRatingStatisticsChange of(final ChangeReviewRatingStatisticsChange template) {
         ChangeReviewRatingStatisticsChangeImpl instance = new ChangeReviewRatingStatisticsChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeReviewRatingStatisticsChange
+     * @return builder
+     */
     public static ChangeReviewRatingStatisticsChangeBuilder builder() {
         return ChangeReviewRatingStatisticsChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeReviewRatingStatisticsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeReviewRatingStatisticsChangeBuilder builder(final ChangeReviewRatingStatisticsChange template) {
         return ChangeReviewRatingStatisticsChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeReviewRatingStatisticsChange(Function<ChangeReviewRatingStatisticsChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeReviewRatingStatisticsChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeReviewRatingStatisticsChange>() {
             @Override

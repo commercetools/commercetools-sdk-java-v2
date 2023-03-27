@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomerGroupSetMessageImpl.class)
 public interface OrderCustomerGroupSetMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderCustomerGroupSetMessage
+     */
     String ORDER_CUSTOMER_GROUP_SET = "OrderCustomerGroupSet";
 
     /**
@@ -54,14 +57,33 @@ public interface OrderCustomerGroupSetMessage extends OrderMessage {
     @JsonProperty("oldCustomerGroup")
     public CustomerGroupReference getOldCustomerGroup();
 
+    /**
+     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
+
+    /**
+     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     * @param oldCustomerGroup value to be set
+     */
 
     public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
 
+    /**
+     * factory method
+     * @return instance of OrderCustomerGroupSetMessage
+     */
     public static OrderCustomerGroupSetMessage of() {
         return new OrderCustomerGroupSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderCustomerGroupSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderCustomerGroupSetMessage of(final OrderCustomerGroupSetMessage template) {
         OrderCustomerGroupSetMessageImpl instance = new OrderCustomerGroupSetMessageImpl();
         instance.setId(template.getId());
@@ -79,18 +101,37 @@ public interface OrderCustomerGroupSetMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderCustomerGroupSetMessage
+     * @return builder
+     */
     public static OrderCustomerGroupSetMessageBuilder builder() {
         return OrderCustomerGroupSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderCustomerGroupSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomerGroupSetMessageBuilder builder(final OrderCustomerGroupSetMessage template) {
         return OrderCustomerGroupSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderCustomerGroupSetMessage(Function<OrderCustomerGroupSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerGroupSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerGroupSetMessage>() {
             @Override

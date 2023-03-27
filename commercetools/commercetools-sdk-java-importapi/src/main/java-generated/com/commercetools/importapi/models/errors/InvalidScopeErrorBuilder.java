@@ -24,7 +24,7 @@ public class InvalidScopeErrorBuilder implements Builder<InvalidScopeError> {
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class InvalidScopeErrorBuilder implements Builder<InvalidScopeError> {
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class InvalidScopeErrorBuilder implements Builder<InvalidScopeError> {
         return new InvalidScopeErrorImpl(message);
     }
 
+    /**
+     * factory method for an instance of InvalidScopeErrorBuilder
+     * @return builder
+     */
     public static InvalidScopeErrorBuilder of() {
         return new InvalidScopeErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidScopeError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidScopeErrorBuilder of(final InvalidScopeError template) {
         InvalidScopeErrorBuilder builder = new InvalidScopeErrorBuilder();
         builder.message = template.getMessage();

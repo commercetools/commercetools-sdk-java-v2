@@ -36,10 +36,19 @@ public class CustomFieldStringTypeBuilder implements Builder<CustomFieldStringTy
         return new CustomFieldStringTypeImpl();
     }
 
+    /**
+     * factory method for an instance of CustomFieldStringTypeBuilder
+     * @return builder
+     */
     public static CustomFieldStringTypeBuilder of() {
         return new CustomFieldStringTypeBuilder();
     }
 
+    /**
+     * create builder for CustomFieldStringType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldStringTypeBuilder of(final CustomFieldStringType template) {
         CustomFieldStringTypeBuilder builder = new CustomFieldStringTypeBuilder();
         return builder;

@@ -46,6 +46,9 @@ public class PaymentTransactionStateChangedMessageImpl implements PaymentTransac
 
     private com.commercetools.api.models.payment.TransactionState state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentTransactionStateChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class PaymentTransactionStateChangedMessageImpl implements PaymentTransac
         this.type = PAYMENT_TRANSACTION_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentTransactionStateChangedMessageImpl() {
         this.type = PAYMENT_TRANSACTION_STATE_CHANGED;
     }

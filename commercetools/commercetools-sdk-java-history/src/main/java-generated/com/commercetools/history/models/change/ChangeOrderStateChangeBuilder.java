@@ -41,7 +41,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -63,13 +63,28 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeOrderState</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.OrderState getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.OrderState getPreviousValue() {
         return this.previousValue;
@@ -94,10 +109,19 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
         return new ChangeOrderStateChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeOrderStateChangeBuilder
+     * @return builder
+     */
     public static ChangeOrderStateChangeBuilder of() {
         return new ChangeOrderStateChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeOrderStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeOrderStateChangeBuilder of(final ChangeOrderStateChange template) {
         ChangeOrderStateChangeBuilder builder = new ChangeOrderStateChangeBuilder();
         builder.change = template.getChange();

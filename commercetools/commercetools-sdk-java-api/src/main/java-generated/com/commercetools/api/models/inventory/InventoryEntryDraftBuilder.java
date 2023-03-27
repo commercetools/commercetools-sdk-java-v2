@@ -148,33 +148,68 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
         return this;
     }
 
+    /**
+     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     * @return sku
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the InventoryEntry.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Channel that supplies this InventoryEntry.</p>
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
+    /**
+     *  <p>Overall amount of stock.</p>
+     * @return quantityOnStock
+     */
+
     public Long getQuantityOnStock() {
         return this.quantityOnStock;
     }
+
+    /**
+     *  <p>How often the InventoryEntry is restocked (in days).</p>
+     * @return restockableInDays
+     */
 
     @Nullable
     public Long getRestockableInDays() {
         return this.restockableInDays;
     }
 
+    /**
+     *  <p>Date and time of the next restock.</p>
+     * @return expectedDelivery
+     */
+
     @Nullable
     public java.time.ZonedDateTime getExpectedDelivery() {
         return this.expectedDelivery;
     }
+
+    /**
+     *  <p>Custom Fields of the InventoryEntry.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -201,10 +236,19 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
             expectedDelivery, custom);
     }
 
+    /**
+     * factory method for an instance of InventoryEntryDraftBuilder
+     * @return builder
+     */
     public static InventoryEntryDraftBuilder of() {
         return new InventoryEntryDraftBuilder();
     }
 
+    /**
+     * create builder for InventoryEntryDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryDraftBuilder of(final InventoryEntryDraft template) {
         InventoryEntryDraftBuilder builder = new InventoryEntryDraftBuilder();
         builder.sku = template.getSku();

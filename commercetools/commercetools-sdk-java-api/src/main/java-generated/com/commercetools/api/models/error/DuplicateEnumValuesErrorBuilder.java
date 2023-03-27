@@ -101,13 +101,28 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
         return this;
     }
 
+    /**
+     *  <p><code>"The enum values contain duplicate keys: $listOfDuplicateKeys."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Duplicate keys.</p>
+     * @return duplicates
+     */
 
     public java.util.List<String> getDuplicates() {
         return this.duplicates;
@@ -131,10 +146,19 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
         return new DuplicateEnumValuesErrorImpl(message, values, duplicates);
     }
 
+    /**
+     * factory method for an instance of DuplicateEnumValuesErrorBuilder
+     * @return builder
+     */
     public static DuplicateEnumValuesErrorBuilder of() {
         return new DuplicateEnumValuesErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicateEnumValuesError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateEnumValuesErrorBuilder of(final DuplicateEnumValuesError template) {
         DuplicateEnumValuesErrorBuilder builder = new DuplicateEnumValuesErrorBuilder();
         builder.message = template.getMessage();

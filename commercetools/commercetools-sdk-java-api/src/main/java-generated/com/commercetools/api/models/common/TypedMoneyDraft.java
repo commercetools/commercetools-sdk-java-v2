@@ -48,16 +48,35 @@ public interface TypedMoneyDraft extends Money {
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
+    /**
+     *  <p>Must be equal to the default number of fraction digits for the specified currency.</p>
+     * @param fractionDigits value to be set
+     */
+
     public void setFractionDigits(final Integer fractionDigits);
 
+    /**
+     * builder for centPrecision subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder centPrecisionBuilder() {
         return com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder.of();
     }
 
+    /**
+     * builder for highPrecision subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder highPrecisionBuilder() {
         return com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypedMoneyDraft(Function<TypedMoneyDraft, T> helper) {
         return helper.apply(this);
     }
@@ -67,6 +86,10 @@ public interface TypedMoneyDraft extends Money {
         return MoneyUtil::draftOf;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypedMoneyDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypedMoneyDraft>() {
             @Override

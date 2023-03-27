@@ -28,6 +28,9 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCustomerNumberChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
         this.type = SET_CUSTOMER_NUMBER_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCustomerNumberChangeImpl() {
         this.type = SET_CUSTOMER_NUMBER_CHANGE;
     }

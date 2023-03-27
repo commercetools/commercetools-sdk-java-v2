@@ -24,7 +24,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
     private java.util.List<Boolean> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -58,6 +58,11 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
         this.value.addAll(Arrays.asList(value));
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<Boolean> getValue() {
         return this.value;
@@ -80,10 +85,19 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
         return new BooleanSetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of BooleanSetFieldBuilder
+     * @return builder
+     */
     public static BooleanSetFieldBuilder of() {
         return new BooleanSetFieldBuilder();
     }
 
+    /**
+     * create builder for BooleanSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BooleanSetFieldBuilder of(final BooleanSetField template) {
         BooleanSetFieldBuilder builder = new BooleanSetFieldBuilder();
         builder.value = template.getValue();

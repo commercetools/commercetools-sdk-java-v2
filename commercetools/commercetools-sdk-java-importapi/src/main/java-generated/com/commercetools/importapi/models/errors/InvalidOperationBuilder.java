@@ -24,7 +24,7 @@ public class InvalidOperationBuilder implements Builder<InvalidOperation> {
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class InvalidOperationBuilder implements Builder<InvalidOperation> {
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class InvalidOperationBuilder implements Builder<InvalidOperation> {
         return new InvalidOperationImpl(message);
     }
 
+    /**
+     * factory method for an instance of InvalidOperationBuilder
+     * @return builder
+     */
     public static InvalidOperationBuilder of() {
         return new InvalidOperationBuilder();
     }
 
+    /**
+     * create builder for InvalidOperation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidOperationBuilder of(final InvalidOperation template) {
         InvalidOperationBuilder builder = new InvalidOperationBuilder();
         builder.message = template.getMessage();

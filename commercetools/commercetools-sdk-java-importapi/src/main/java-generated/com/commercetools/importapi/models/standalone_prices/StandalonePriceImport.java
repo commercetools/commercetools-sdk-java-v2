@@ -129,35 +129,104 @@ public interface StandalonePriceImport extends ImportResource {
     @JsonProperty("custom")
     public Custom getCustom();
 
+    /**
+     *  <p>User-defined unique identifier for the Standalone Price.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     *  <p>Sets the money value of this Price.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final TypedMoney value);
+
+    /**
+     *  <p>Sets the country for which this Price is valid.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
+
+    /**
+     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     * @param channel value to be set
+     */
 
     public void setChannel(final ChannelKeyReference channel);
 
+    /**
+     *  <p>Sets the date from which the Price is valid.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Sets the date until the Price is valid.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
+
+    /**
+     *  <p>Sets price tiers.</p>
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final PriceTier... tiers);
 
+    /**
+     *  <p>Sets price tiers.</p>
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<PriceTier> tiers);
+
+    /**
+     *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
+     * @param discounted value to be set
+     */
 
     public void setDiscounted(final DiscountedPrice discounted);
 
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final Custom custom);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceImport
+     */
     public static StandalonePriceImport of() {
         return new StandalonePriceImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceImport of(final StandalonePriceImport template) {
         StandalonePriceImportImpl instance = new StandalonePriceImportImpl();
         instance.setKey(template.getKey());
@@ -174,18 +243,37 @@ public interface StandalonePriceImport extends ImportResource {
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceImport
+     * @return builder
+     */
     public static StandalonePriceImportBuilder builder() {
         return StandalonePriceImportBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceImportBuilder builder(final StandalonePriceImport template) {
         return StandalonePriceImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceImport(Function<StandalonePriceImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceImport>() {
             @Override

@@ -24,6 +24,9 @@ public class BusinessUnitStoreAddedMessagePayloadImpl implements BusinessUnitSto
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitStoreAddedMessagePayloadImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store) {
@@ -31,6 +34,9 @@ public class BusinessUnitStoreAddedMessagePayloadImpl implements BusinessUnitSto
         this.type = BUSINESS_UNIT_STORE_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitStoreAddedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_STORE_ADDED;
     }

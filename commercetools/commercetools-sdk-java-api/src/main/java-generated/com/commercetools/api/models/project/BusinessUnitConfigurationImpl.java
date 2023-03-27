@@ -22,12 +22,18 @@ public class BusinessUnitConfigurationImpl implements BusinessUnitConfiguration,
 
     private com.commercetools.api.models.project.BusinessUnitConfigurationStatus myBusinessUnitStatusOnCreation;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitConfigurationImpl(
             @JsonProperty("myBusinessUnitStatusOnCreation") final com.commercetools.api.models.project.BusinessUnitConfigurationStatus myBusinessUnitStatusOnCreation) {
         this.myBusinessUnitStatusOnCreation = myBusinessUnitStatusOnCreation;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitConfigurationImpl() {
     }
 

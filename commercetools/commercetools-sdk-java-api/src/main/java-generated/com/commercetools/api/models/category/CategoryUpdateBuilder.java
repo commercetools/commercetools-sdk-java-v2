@@ -104,9 +104,19 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Category.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions() {
         return this.actions;
@@ -130,10 +140,19 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
         return new CategoryUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of CategoryUpdateBuilder
+     * @return builder
+     */
     public static CategoryUpdateBuilder of() {
         return new CategoryUpdateBuilder();
     }
 
+    /**
+     * create builder for CategoryUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryUpdateBuilder of(final CategoryUpdate template) {
         CategoryUpdateBuilder builder = new CategoryUpdateBuilder();
         builder.version = template.getVersion();

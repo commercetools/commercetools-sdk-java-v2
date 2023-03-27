@@ -26,6 +26,9 @@ public class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocalizedEnum
 
     private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeAddLocalizedEnumValueActionImpl(@JsonProperty("fieldName") final String fieldName,
             @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
@@ -34,6 +37,9 @@ public class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocalizedEnum
         this.action = ADD_LOCALIZED_ENUM_VALUE;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeAddLocalizedEnumValueActionImpl() {
         this.action = ADD_LOCALIZED_ENUM_VALUE;
     }

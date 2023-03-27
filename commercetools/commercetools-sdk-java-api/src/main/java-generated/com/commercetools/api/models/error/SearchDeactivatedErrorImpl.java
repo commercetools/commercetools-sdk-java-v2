@@ -27,6 +27,9 @@ public class SearchDeactivatedErrorImpl implements SearchDeactivatedError, Model
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SearchDeactivatedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class SearchDeactivatedErrorImpl implements SearchDeactivatedError, Model
         this.code = SEARCH_DEACTIVATED;
     }
 
+    /**
+     * create empty instance
+     */
     public SearchDeactivatedErrorImpl() {
         this.code = SEARCH_DEACTIVATED;
     }

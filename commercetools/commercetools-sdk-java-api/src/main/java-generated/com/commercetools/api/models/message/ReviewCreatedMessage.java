@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewCreatedMessageImpl.class)
 public interface ReviewCreatedMessage extends Message {
 
+    /**
+     * discriminator value for ReviewCreatedMessage
+     */
     String REVIEW_CREATED = "ReviewCreated";
 
     /**
@@ -49,12 +52,26 @@ public interface ReviewCreatedMessage extends Message {
     @JsonProperty("review")
     public Review getReview();
 
+    /**
+     *  <p>Review that was created.</p>
+     * @param review value to be set
+     */
+
     public void setReview(final Review review);
 
+    /**
+     * factory method
+     * @return instance of ReviewCreatedMessage
+     */
     public static ReviewCreatedMessage of() {
         return new ReviewCreatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReviewCreatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReviewCreatedMessage of(final ReviewCreatedMessage template) {
         ReviewCreatedMessageImpl instance = new ReviewCreatedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface ReviewCreatedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ReviewCreatedMessage
+     * @return builder
+     */
     public static ReviewCreatedMessageBuilder builder() {
         return ReviewCreatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ReviewCreatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewCreatedMessageBuilder builder(final ReviewCreatedMessage template) {
         return ReviewCreatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReviewCreatedMessage(Function<ReviewCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewCreatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewCreatedMessage>() {
             @Override

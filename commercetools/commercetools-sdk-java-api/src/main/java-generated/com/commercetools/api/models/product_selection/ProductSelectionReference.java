@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionReference
         extends Reference, com.commercetools.api.models.Identifiable<ProductSelection> {
 
+    /**
+     * discriminator value for ProductSelectionReference
+     */
     String PRODUCT_SELECTION = "product-selection";
 
     /**
@@ -50,14 +53,33 @@ public interface ProductSelectionReference
     @JsonProperty("obj")
     public ProductSelection getObj();
 
+    /**
+     *  <p>Unique identifier of the referenced ProductSelection.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     * @param obj value to be set
+     */
 
     public void setObj(final ProductSelection obj);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionReference
+     */
     public static ProductSelectionReference of() {
         return new ProductSelectionReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionReference of(final ProductSelectionReference template) {
         ProductSelectionReferenceImpl instance = new ProductSelectionReferenceImpl();
         instance.setId(template.getId());
@@ -65,18 +87,37 @@ public interface ProductSelectionReference
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionReference
+     * @return builder
+     */
     public static ProductSelectionReferenceBuilder builder() {
         return ProductSelectionReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionReferenceBuilder builder(final ProductSelectionReference template) {
         return ProductSelectionReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionReference(Function<ProductSelectionReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionReference>() {
             @Override

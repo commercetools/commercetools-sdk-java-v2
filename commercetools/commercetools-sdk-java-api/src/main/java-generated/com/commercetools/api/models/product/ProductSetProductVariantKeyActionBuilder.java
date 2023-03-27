@@ -78,20 +78,40 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -114,10 +134,19 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
         return new ProductSetProductVariantKeyActionImpl(variantId, sku, key, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetProductVariantKeyActionBuilder
+     * @return builder
+     */
     public static ProductSetProductVariantKeyActionBuilder of() {
         return new ProductSetProductVariantKeyActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetProductVariantKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetProductVariantKeyActionBuilder of(final ProductSetProductVariantKeyAction template) {
         ProductSetProductVariantKeyActionBuilder builder = new ProductSetProductVariantKeyActionBuilder();
         builder.variantId = template.getVariantId();

@@ -78,9 +78,19 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Product that was added to the Product Selection.</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>Product Variant Selection after the Add Product update action.</p>
+     * @return variantSelection
+     */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
@@ -105,10 +115,19 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
         return new ProductSelectionProductAddedMessagePayloadImpl(product, variantSelection);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionProductAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductSelectionProductAddedMessagePayloadBuilder of() {
         return new ProductSelectionProductAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionProductAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionProductAddedMessagePayloadBuilder of(
             final ProductSelectionProductAddedMessagePayload template) {
         ProductSelectionProductAddedMessagePayloadBuilder builder = new ProductSelectionProductAddedMessagePayloadBuilder();

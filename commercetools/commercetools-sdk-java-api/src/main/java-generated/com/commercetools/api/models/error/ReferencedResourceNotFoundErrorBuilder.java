@@ -107,22 +107,47 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
         return this;
     }
 
+    /**
+     *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Type of referenced resource.</p>
+     * @return typeId
+     */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
+
+    /**
+     *  <p>Unique identifier of the referenced resource, if known.</p>
+     * @return id
+     */
 
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced resource, if known.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -147,10 +172,19 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
         return new ReferencedResourceNotFoundErrorImpl(message, values, typeId, id, key);
     }
 
+    /**
+     * factory method for an instance of ReferencedResourceNotFoundErrorBuilder
+     * @return builder
+     */
     public static ReferencedResourceNotFoundErrorBuilder of() {
         return new ReferencedResourceNotFoundErrorBuilder();
     }
 
+    /**
+     * create builder for ReferencedResourceNotFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferencedResourceNotFoundErrorBuilder of(final ReferencedResourceNotFoundError template) {
         ReferencedResourceNotFoundErrorBuilder builder = new ReferencedResourceNotFoundErrorBuilder();
         builder.message = template.getMessage();

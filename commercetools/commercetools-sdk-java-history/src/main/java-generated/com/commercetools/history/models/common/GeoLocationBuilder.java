@@ -27,7 +27,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     private java.util.List<Integer> coordinates;
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     }
 
     /**
-     *
+     * set values to the coordinates
      * @param coordinates value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     }
 
     /**
-     *
+     * set value to the coordinates
      * @param coordinates value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     }
 
     /**
-     *
+     * add values to the coordinates
      * @param coordinates value to be set
      * @return Builder
      */
@@ -73,9 +73,19 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
         return this;
     }
 
+    /**
+     * value of type}
+     * @return type
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     * value of coordinates}
+     * @return coordinates
+     */
 
     public java.util.List<Integer> getCoordinates() {
         return this.coordinates;
@@ -99,10 +109,19 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
         return new GeoLocationImpl(type, coordinates);
     }
 
+    /**
+     * factory method for an instance of GeoLocationBuilder
+     * @return builder
+     */
     public static GeoLocationBuilder of() {
         return new GeoLocationBuilder();
     }
 
+    /**
+     * create builder for GeoLocation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GeoLocationBuilder of(final GeoLocation template) {
         GeoLocationBuilder builder = new GeoLocationBuilder();
         builder.type = template.getType();

@@ -26,6 +26,9 @@ public class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAd
 
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodAddShippingRateActionImpl(
             @JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone,
@@ -35,6 +38,9 @@ public class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAd
         this.action = ADD_SHIPPING_RATE;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodAddShippingRateActionImpl() {
         this.action = ADD_SHIPPING_RATE;
     }

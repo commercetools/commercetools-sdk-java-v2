@@ -103,13 +103,28 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
         return this;
     }
 
+    /**
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     * @return removedImageUrls
+     */
+
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
     }
 
+    /**
+     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     * @return productProjection
+     */
+
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
         return this.productProjection;
     }
+
+    /**
+     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     * @return scope
+     */
 
     public com.commercetools.api.models.cart.ProductPublishScope getScope() {
         return this.scope;
@@ -136,10 +151,19 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
         return new ProductPublishedMessagePayloadImpl(removedImageUrls, productProjection, scope);
     }
 
+    /**
+     * factory method for an instance of ProductPublishedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductPublishedMessagePayloadBuilder of() {
         return new ProductPublishedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductPublishedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPublishedMessagePayloadBuilder of(final ProductPublishedMessagePayload template) {
         ProductPublishedMessagePayloadBuilder builder = new ProductPublishedMessagePayloadBuilder();
         builder.removedImageUrls = template.getRemovedImageUrls();

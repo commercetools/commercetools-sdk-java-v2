@@ -95,6 +95,11 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
         return this;
     }
 
+    /**
+     *  <p>The Standalone Price import resources of this request.</p>
+     * @return resources
+     */
+
     public java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> getResources() {
         return this.resources;
     }
@@ -116,10 +121,19 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
         return new StandalonePriceImportRequestImpl(resources);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceImportRequestBuilder
+     * @return builder
+     */
     public static StandalonePriceImportRequestBuilder of() {
         return new StandalonePriceImportRequestBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceImportRequestBuilder of(final StandalonePriceImportRequest template) {
         StandalonePriceImportRequestBuilder builder = new StandalonePriceImportRequestBuilder();
         builder.resources = template.getResources();

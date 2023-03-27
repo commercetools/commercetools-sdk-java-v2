@@ -24,6 +24,9 @@ public class StagedOrderChangePaymentStateActionImpl implements StagedOrderChang
 
     private com.commercetools.api.models.order.PaymentState paymentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderChangePaymentStateActionImpl(
             @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState) {
@@ -31,6 +34,9 @@ public class StagedOrderChangePaymentStateActionImpl implements StagedOrderChang
         this.action = CHANGE_PAYMENT_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderChangePaymentStateActionImpl() {
         this.action = CHANGE_PAYMENT_STATE;
     }

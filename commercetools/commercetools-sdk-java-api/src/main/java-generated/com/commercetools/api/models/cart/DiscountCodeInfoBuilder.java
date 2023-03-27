@@ -63,9 +63,19 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
         return this;
     }
 
+    /**
+     *  <p>Discount Code associated with the Cart or Order.</p>
+     * @return discountCode
+     */
+
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
+
+    /**
+     *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
+     * @return state
+     */
 
     public com.commercetools.api.models.cart.DiscountCodeState getState() {
         return this.state;
@@ -89,10 +99,19 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
         return new DiscountCodeInfoImpl(discountCode, state);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeInfoBuilder
+     * @return builder
+     */
     public static DiscountCodeInfoBuilder of() {
         return new DiscountCodeInfoBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeInfoBuilder of(final DiscountCodeInfo template) {
         DiscountCodeInfoBuilder builder = new DiscountCodeInfoBuilder();
         builder.discountCode = template.getDiscountCode();

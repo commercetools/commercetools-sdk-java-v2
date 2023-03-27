@@ -30,6 +30,9 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
 
     private com.commercetools.history.models.common.Reference distributionChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeValueGiftLineItemChangeValueImpl(
             @JsonProperty("product") final com.commercetools.history.models.common.Reference product,
@@ -43,6 +46,9 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
         this.type = GIFT_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeValueGiftLineItemChangeValueImpl() {
         this.type = GIFT_LINE_ITEM;
     }

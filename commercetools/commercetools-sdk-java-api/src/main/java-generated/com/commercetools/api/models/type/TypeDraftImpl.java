@@ -30,6 +30,9 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -43,6 +46,9 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
         this.fieldDefinitions = fieldDefinitions;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeDraftImpl() {
     }
 

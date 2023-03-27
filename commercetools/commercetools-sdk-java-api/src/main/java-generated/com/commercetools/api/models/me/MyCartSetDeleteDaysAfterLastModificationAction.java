@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartSetDeleteDaysAfterLastModificationActionImpl.class)
 public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUpdateAction {
 
+    /**
+     * discriminator value for MyCartSetDeleteDaysAfterLastModificationAction
+     */
     String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION = "setDeleteDaysAfterLastModification";
 
     /**
@@ -37,12 +40,26 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
     @JsonProperty("deleteDaysAfterLastModification")
     public Integer getDeleteDaysAfterLastModification();
 
+    /**
+     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     * @param deleteDaysAfterLastModification value to be set
+     */
+
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
+    /**
+     * factory method
+     * @return instance of MyCartSetDeleteDaysAfterLastModificationAction
+     */
     public static MyCartSetDeleteDaysAfterLastModificationAction of() {
         return new MyCartSetDeleteDaysAfterLastModificationActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCartSetDeleteDaysAfterLastModificationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCartSetDeleteDaysAfterLastModificationAction of(
             final MyCartSetDeleteDaysAfterLastModificationAction template) {
         MyCartSetDeleteDaysAfterLastModificationActionImpl instance = new MyCartSetDeleteDaysAfterLastModificationActionImpl();
@@ -50,20 +67,39 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
         return instance;
     }
 
+    /**
+     * builder factory method for MyCartSetDeleteDaysAfterLastModificationAction
+     * @return builder
+     */
     public static MyCartSetDeleteDaysAfterLastModificationActionBuilder builder() {
         return MyCartSetDeleteDaysAfterLastModificationActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCartSetDeleteDaysAfterLastModificationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetDeleteDaysAfterLastModificationActionBuilder builder(
             final MyCartSetDeleteDaysAfterLastModificationAction template) {
         return MyCartSetDeleteDaysAfterLastModificationActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCartSetDeleteDaysAfterLastModificationAction(
             Function<MyCartSetDeleteDaysAfterLastModificationAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetDeleteDaysAfterLastModificationAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetDeleteDaysAfterLastModificationAction>() {
             @Override

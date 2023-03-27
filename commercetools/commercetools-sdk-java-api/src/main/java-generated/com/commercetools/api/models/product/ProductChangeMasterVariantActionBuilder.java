@@ -64,15 +64,30 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to become the Master Variant.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to become the Master Variant.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -95,10 +110,19 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
         return new ProductChangeMasterVariantActionImpl(variantId, sku, staged);
     }
 
+    /**
+     * factory method for an instance of ProductChangeMasterVariantActionBuilder
+     * @return builder
+     */
     public static ProductChangeMasterVariantActionBuilder of() {
         return new ProductChangeMasterVariantActionBuilder();
     }
 
+    /**
+     * create builder for ProductChangeMasterVariantAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductChangeMasterVariantActionBuilder of(final ProductChangeMasterVariantAction template) {
         ProductChangeMasterVariantActionBuilder builder = new ProductChangeMasterVariantActionBuilder();
         builder.variantId = template.getVariantId();

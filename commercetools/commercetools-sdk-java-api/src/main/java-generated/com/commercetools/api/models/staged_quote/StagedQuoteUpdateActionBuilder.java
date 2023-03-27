@@ -35,6 +35,10 @@ public class StagedQuoteUpdateActionBuilder {
         return com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of StagedQuoteUpdateActionBuilder
+     * @return builder
+     */
     public static StagedQuoteUpdateActionBuilder of() {
         return new StagedQuoteUpdateActionBuilder();
     }

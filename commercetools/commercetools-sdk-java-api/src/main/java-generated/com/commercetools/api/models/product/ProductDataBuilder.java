@@ -399,50 +399,105 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *  <p>Name of the Product.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @return categories
+     */
+
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
         return this.categories;
     }
+
+    /**
+     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @return categoryOrderHints
+     */
 
     @Nullable
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
         return this.categoryOrderHints;
     }
 
+    /**
+     *  <p>Description of the Product.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @return slug
+     */
+
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>Title of the Product displayed in search results.</p>
+     * @return metaTitle
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
 
+    /**
+     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @return metaDescription
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
+
+    /**
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @return metaKeywords
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
 
+    /**
+     *  <p>The Master Variant of the Product.</p>
+     * @return masterVariant
+     */
+
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
         return this.masterVariant;
     }
 
+    /**
+     *  <p>Additional Product Variants.</p>
+     * @return variants
+     */
+
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
         return this.variants;
     }
+
+    /**
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @return searchKeywords
+     */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
@@ -472,10 +527,19 @@ public class ProductDataBuilder implements Builder<ProductData> {
             metaKeywords, masterVariant, variants, searchKeywords);
     }
 
+    /**
+     * factory method for an instance of ProductDataBuilder
+     * @return builder
+     */
     public static ProductDataBuilder of() {
         return new ProductDataBuilder();
     }
 
+    /**
+     * create builder for ProductData instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDataBuilder of(final ProductData template) {
         ProductDataBuilder builder = new ProductDataBuilder();
         builder.name = template.getName();

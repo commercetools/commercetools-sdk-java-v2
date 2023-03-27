@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartAddDiscountCodeActionImpl.class)
 public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
 
+    /**
+     * discriminator value for MyCartAddDiscountCodeAction
+     */
     String ADD_DISCOUNT_CODE = "addDiscountCode";
 
     /**
@@ -41,30 +44,63 @@ public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
     @JsonProperty("code")
     public String getCode();
 
+    /**
+     *  <p><code>code</code> of a DiscountCode.</p>
+     * @param code value to be set
+     */
+
     public void setCode(final String code);
 
+    /**
+     * factory method
+     * @return instance of MyCartAddDiscountCodeAction
+     */
     public static MyCartAddDiscountCodeAction of() {
         return new MyCartAddDiscountCodeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCartAddDiscountCodeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCartAddDiscountCodeAction of(final MyCartAddDiscountCodeAction template) {
         MyCartAddDiscountCodeActionImpl instance = new MyCartAddDiscountCodeActionImpl();
         instance.setCode(template.getCode());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCartAddDiscountCodeAction
+     * @return builder
+     */
     public static MyCartAddDiscountCodeActionBuilder builder() {
         return MyCartAddDiscountCodeActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCartAddDiscountCodeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartAddDiscountCodeActionBuilder builder(final MyCartAddDiscountCodeAction template) {
         return MyCartAddDiscountCodeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCartAddDiscountCodeAction(Function<MyCartAddDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCartAddDiscountCodeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCartAddDiscountCodeAction>() {
             @Override

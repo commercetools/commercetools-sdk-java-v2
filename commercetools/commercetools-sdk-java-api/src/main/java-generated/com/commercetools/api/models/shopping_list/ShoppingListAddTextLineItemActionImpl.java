@@ -32,6 +32,9 @@ public class ShoppingListAddTextLineItemActionImpl implements ShoppingListAddTex
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListAddTextLineItemActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -47,6 +50,9 @@ public class ShoppingListAddTextLineItemActionImpl implements ShoppingListAddTex
         this.action = ADD_TEXT_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListAddTextLineItemActionImpl() {
         this.action = ADD_TEXT_LINE_ITEM;
     }

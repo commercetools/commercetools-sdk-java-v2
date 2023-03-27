@@ -28,6 +28,9 @@ public class SetSlugChangeImpl implements SetSlugChange, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetSlugChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
@@ -38,6 +41,9 @@ public class SetSlugChangeImpl implements SetSlugChange, ModelBase {
         this.type = SET_SLUG_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetSlugChangeImpl() {
         this.type = SET_SLUG_CHANGE;
     }

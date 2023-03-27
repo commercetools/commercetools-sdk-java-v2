@@ -38,6 +38,11 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return deleteDaysAfterLastModification
+     */
+
     @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
@@ -59,10 +64,19 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
         return new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
     }
 
+    /**
+     * factory method for an instance of MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
+     * @return builder
+     */
     public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder of() {
         return new MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder();
     }
 
+    /**
+     * create builder for MyShoppingListSetDeleteDaysAfterLastModificationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder of(
             final MyShoppingListSetDeleteDaysAfterLastModificationAction template) {
         MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder builder = new MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder();

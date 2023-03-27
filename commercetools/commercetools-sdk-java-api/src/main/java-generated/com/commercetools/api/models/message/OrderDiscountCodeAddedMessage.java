@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderDiscountCodeAddedMessageImpl.class)
 public interface OrderDiscountCodeAddedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderDiscountCodeAddedMessage
+     */
     String ORDER_DISCOUNT_CODE_ADDED = "OrderDiscountCodeAdded";
 
     /**
@@ -49,12 +52,26 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
     @JsonProperty("discountCode")
     public DiscountCodeReference getDiscountCode();
 
+    /**
+     *  <p>DiscountCode that was added.</p>
+     * @param discountCode value to be set
+     */
+
     public void setDiscountCode(final DiscountCodeReference discountCode);
 
+    /**
+     * factory method
+     * @return instance of OrderDiscountCodeAddedMessage
+     */
     public static OrderDiscountCodeAddedMessage of() {
         return new OrderDiscountCodeAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderDiscountCodeAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderDiscountCodeAddedMessage of(final OrderDiscountCodeAddedMessage template) {
         OrderDiscountCodeAddedMessageImpl instance = new OrderDiscountCodeAddedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderDiscountCodeAddedMessage
+     * @return builder
+     */
     public static OrderDiscountCodeAddedMessageBuilder builder() {
         return OrderDiscountCodeAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderDiscountCodeAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderDiscountCodeAddedMessageBuilder builder(final OrderDiscountCodeAddedMessage template) {
         return OrderDiscountCodeAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderDiscountCodeAddedMessage(Function<OrderDiscountCodeAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeAddedMessage>() {
             @Override

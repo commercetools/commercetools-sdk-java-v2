@@ -64,6 +64,9 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -109,6 +112,9 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
         this.topLevelUnit = topLevelUnit;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitImpl() {
     }
 

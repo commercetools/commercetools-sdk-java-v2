@@ -35,7 +35,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     private java.lang.Object conflictedResource;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -78,18 +78,38 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>The version specified in the failed request.</p>
+     * @return specifiedVersion
+     */
 
     @Nullable
     public Long getSpecifiedVersion() {
         return this.specifiedVersion;
     }
 
+    /**
+     *  <p>The current version of the resource.</p>
+     * @return currentVersion
+     */
+
     public Long getCurrentVersion() {
         return this.currentVersion;
     }
+
+    /**
+     *  <p>The resource in conflict.</p>
+     * @return conflictedResource
+     */
 
     @Nullable
     public java.lang.Object getConflictedResource() {
@@ -114,10 +134,19 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
         return new ConcurrentModificationErrorImpl(message, specifiedVersion, currentVersion, conflictedResource);
     }
 
+    /**
+     * factory method for an instance of ConcurrentModificationErrorBuilder
+     * @return builder
+     */
     public static ConcurrentModificationErrorBuilder of() {
         return new ConcurrentModificationErrorBuilder();
     }
 
+    /**
+     * create builder for ConcurrentModificationError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ConcurrentModificationErrorBuilder of(final ConcurrentModificationError template) {
         ConcurrentModificationErrorBuilder builder = new ConcurrentModificationErrorBuilder();
         builder.message = template.getMessage();

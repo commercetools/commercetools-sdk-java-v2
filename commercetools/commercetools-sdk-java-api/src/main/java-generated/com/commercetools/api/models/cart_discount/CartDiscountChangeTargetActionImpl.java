@@ -24,6 +24,9 @@ public class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTar
 
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountChangeTargetActionImpl(
             @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
@@ -31,6 +34,9 @@ public class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTar
         this.action = CHANGE_TARGET;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountChangeTargetActionImpl() {
         this.action = CHANGE_TARGET;
     }

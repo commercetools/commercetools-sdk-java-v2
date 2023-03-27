@@ -105,19 +105,39 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
+     * @return priceId
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
         return this.staged;
     }
 
+    /**
+     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -141,10 +161,19 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
         return new ProductSetProductPriceCustomTypeActionImpl(priceId, staged, type, fields);
     }
 
+    /**
+     * factory method for an instance of ProductSetProductPriceCustomTypeActionBuilder
+     * @return builder
+     */
     public static ProductSetProductPriceCustomTypeActionBuilder of() {
         return new ProductSetProductPriceCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetProductPriceCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetProductPriceCustomTypeActionBuilder of(
             final ProductSetProductPriceCustomTypeAction template) {
         ProductSetProductPriceCustomTypeActionBuilder builder = new ProductSetProductPriceCustomTypeActionBuilder();

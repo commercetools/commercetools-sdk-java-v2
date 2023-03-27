@@ -49,6 +49,11 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
         return this;
     }
 
+    /**
+     *  <p>Configuration for the Carts feature.</p>
+     * @return cartsConfiguration
+     */
+
     public com.commercetools.api.models.project.CartsConfiguration getCartsConfiguration() {
         return this.cartsConfiguration;
     }
@@ -71,10 +76,19 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
         return new ProjectChangeCartsConfigurationActionImpl(cartsConfiguration);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeCartsConfigurationActionBuilder
+     * @return builder
+     */
     public static ProjectChangeCartsConfigurationActionBuilder of() {
         return new ProjectChangeCartsConfigurationActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeCartsConfigurationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeCartsConfigurationActionBuilder of(
             final ProjectChangeCartsConfigurationAction template) {
         ProjectChangeCartsConfigurationActionBuilder builder = new ProjectChangeCartsConfigurationActionBuilder();

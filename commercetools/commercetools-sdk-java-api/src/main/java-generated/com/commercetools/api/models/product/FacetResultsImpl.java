@@ -22,12 +22,18 @@ public class FacetResultsImpl implements FacetResults, ModelBase {
 
     private Map<String, com.commercetools.api.models.product.FacetResult> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FacetResultsImpl(
             @JsonProperty("values") final Map<String, com.commercetools.api.models.product.FacetResult> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public FacetResultsImpl() {
     }
 

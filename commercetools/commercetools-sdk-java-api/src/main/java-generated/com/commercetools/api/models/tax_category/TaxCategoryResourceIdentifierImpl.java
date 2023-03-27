@@ -27,6 +27,9 @@ public class TaxCategoryResourceIdentifierImpl implements TaxCategoryResourceIde
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class TaxCategoryResourceIdentifierImpl implements TaxCategoryResourceIde
         this.typeId = ReferenceTypeId.findEnum("tax-category");
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("tax-category");
     }

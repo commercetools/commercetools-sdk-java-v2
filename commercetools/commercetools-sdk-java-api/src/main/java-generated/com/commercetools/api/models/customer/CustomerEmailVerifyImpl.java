@@ -24,6 +24,9 @@ public class CustomerEmailVerifyImpl implements CustomerEmailVerify, ModelBase {
 
     private String tokenValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerEmailVerifyImpl(@JsonProperty("version") final Long version,
             @JsonProperty("tokenValue") final String tokenValue) {
@@ -31,6 +34,9 @@ public class CustomerEmailVerifyImpl implements CustomerEmailVerify, ModelBase {
         this.tokenValue = tokenValue;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerEmailVerifyImpl() {
     }
 

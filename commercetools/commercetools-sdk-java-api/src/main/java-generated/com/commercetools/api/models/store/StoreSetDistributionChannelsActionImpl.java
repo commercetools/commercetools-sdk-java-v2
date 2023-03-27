@@ -25,6 +25,9 @@ public class StoreSetDistributionChannelsActionImpl implements StoreSetDistribut
 
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreSetDistributionChannelsActionImpl(
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
@@ -32,6 +35,9 @@ public class StoreSetDistributionChannelsActionImpl implements StoreSetDistribut
         this.action = SET_DISTRIBUTION_CHANNELS;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreSetDistributionChannelsActionImpl() {
         this.action = SET_DISTRIBUTION_CHANNELS;
     }

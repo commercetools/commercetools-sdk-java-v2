@@ -29,6 +29,9 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetCustomLineItemCustomTypeActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -39,6 +42,9 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
         this.action = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetCustomLineItemCustomTypeActionImpl() {
         this.action = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE;
     }

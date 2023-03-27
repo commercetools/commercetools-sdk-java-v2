@@ -27,6 +27,9 @@ public class CustomerSetDefaultShippingAddressActionImpl implements CustomerSetD
 
     private String addressKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetDefaultShippingAddressActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("addressKey") final String addressKey) {
@@ -35,6 +38,9 @@ public class CustomerSetDefaultShippingAddressActionImpl implements CustomerSetD
         this.action = SET_DEFAULT_SHIPPING_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetDefaultShippingAddressActionImpl() {
         this.action = SET_DEFAULT_SHIPPING_ADDRESS;
     }

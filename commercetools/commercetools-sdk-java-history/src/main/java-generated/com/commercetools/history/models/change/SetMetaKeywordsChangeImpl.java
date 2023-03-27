@@ -28,6 +28,9 @@ public class SetMetaKeywordsChangeImpl implements SetMetaKeywordsChange, ModelBa
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetMetaKeywordsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
@@ -38,6 +41,9 @@ public class SetMetaKeywordsChangeImpl implements SetMetaKeywordsChange, ModelBa
         this.type = SET_META_KEYWORDS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetMetaKeywordsChangeImpl() {
         this.type = SET_META_KEYWORDS_CHANGE;
     }

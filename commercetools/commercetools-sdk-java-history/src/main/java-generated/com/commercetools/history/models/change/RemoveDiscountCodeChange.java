@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveDiscountCodeChangeImpl.class)
 public interface RemoveDiscountCodeChange extends Change {
 
+    /**
+     * discriminator value for RemoveDiscountCodeChange
+     */
     String REMOVE_DISCOUNT_CODE_CHANGE = "RemoveDiscountCodeChange";
 
     /**
@@ -59,14 +62,33 @@ public interface RemoveDiscountCodeChange extends Change {
     @JsonProperty("previousValue")
     public DiscountCodeInfo getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>removeDiscountCode</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final DiscountCodeInfo previousValue);
 
+    /**
+     * factory method
+     * @return instance of RemoveDiscountCodeChange
+     */
     public static RemoveDiscountCodeChange of() {
         return new RemoveDiscountCodeChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveDiscountCodeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveDiscountCodeChange of(final RemoveDiscountCodeChange template) {
         RemoveDiscountCodeChangeImpl instance = new RemoveDiscountCodeChangeImpl();
         instance.setChange(template.getChange());
@@ -74,18 +96,37 @@ public interface RemoveDiscountCodeChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveDiscountCodeChange
+     * @return builder
+     */
     public static RemoveDiscountCodeChangeBuilder builder() {
         return RemoveDiscountCodeChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveDiscountCodeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveDiscountCodeChangeBuilder builder(final RemoveDiscountCodeChange template) {
         return RemoveDiscountCodeChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveDiscountCodeChange(Function<RemoveDiscountCodeChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveDiscountCodeChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveDiscountCodeChange>() {
             @Override

@@ -92,20 +92,40 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     * @return clientId
+     */
+
     @Nullable
     public String getClientId() {
         return this.clientId;
     }
+
+    /**
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @return externalUserId
+     */
 
     @Nullable
     public String getExternalUserId() {
         return this.externalUserId;
     }
 
+    /**
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     * @return anonymousId
+     */
 
     @Nullable
     public String getAnonymousId() {
@@ -128,10 +148,19 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
         return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId);
     }
 
+    /**
+     * factory method for an instance of LastModifiedByBuilder
+     * @return builder
+     */
     public static LastModifiedByBuilder of() {
         return new LastModifiedByBuilder();
     }
 
+    /**
+     * create builder for LastModifiedBy instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LastModifiedByBuilder of(final LastModifiedBy template) {
         LastModifiedByBuilder builder = new LastModifiedByBuilder();
         builder.clientId = template.getClientId();

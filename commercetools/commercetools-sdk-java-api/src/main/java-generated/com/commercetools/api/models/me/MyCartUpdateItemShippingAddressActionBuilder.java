@@ -48,6 +48,11 @@ public class MyCartUpdateItemShippingAddressActionBuilder implements Builder<MyC
         return this;
     }
 
+    /**
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
@@ -69,10 +74,19 @@ public class MyCartUpdateItemShippingAddressActionBuilder implements Builder<MyC
         return new MyCartUpdateItemShippingAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of MyCartUpdateItemShippingAddressActionBuilder
+     * @return builder
+     */
     public static MyCartUpdateItemShippingAddressActionBuilder of() {
         return new MyCartUpdateItemShippingAddressActionBuilder();
     }
 
+    /**
+     * create builder for MyCartUpdateItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartUpdateItemShippingAddressActionBuilder of(
             final MyCartUpdateItemShippingAddressAction template) {
         MyCartUpdateItemShippingAddressActionBuilder builder = new MyCartUpdateItemShippingAddressActionBuilder();

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetStatusInterfaceTextActionImpl.class)
 public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction {
 
+    /**
+     * discriminator value for PaymentSetStatusInterfaceTextAction
+     */
     String SET_STATUS_INTERFACE_TEXT = "setStatusInterfaceText";
 
     /**
@@ -39,31 +42,64 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
     @JsonProperty("interfaceText")
     public String getInterfaceText();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param interfaceText value to be set
+     */
+
     public void setInterfaceText(final String interfaceText);
 
+    /**
+     * factory method
+     * @return instance of PaymentSetStatusInterfaceTextAction
+     */
     public static PaymentSetStatusInterfaceTextAction of() {
         return new PaymentSetStatusInterfaceTextActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentSetStatusInterfaceTextAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentSetStatusInterfaceTextAction of(final PaymentSetStatusInterfaceTextAction template) {
         PaymentSetStatusInterfaceTextActionImpl instance = new PaymentSetStatusInterfaceTextActionImpl();
         instance.setInterfaceText(template.getInterfaceText());
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentSetStatusInterfaceTextAction
+     * @return builder
+     */
     public static PaymentSetStatusInterfaceTextActionBuilder builder() {
         return PaymentSetStatusInterfaceTextActionBuilder.of();
     }
 
+    /**
+     * create builder for PaymentSetStatusInterfaceTextAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetStatusInterfaceTextActionBuilder builder(
             final PaymentSetStatusInterfaceTextAction template) {
         return PaymentSetStatusInterfaceTextActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentSetStatusInterfaceTextAction(Function<PaymentSetStatusInterfaceTextAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetStatusInterfaceTextAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetStatusInterfaceTextAction>() {
             @Override

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MoneySetAttributeImpl.class)
 public interface MoneySetAttribute extends Attribute {
 
+    /**
+     * discriminator value for MoneySetAttribute
+     */
     String MONEY_SET = "money-set";
 
     /**
@@ -42,15 +45,34 @@ public interface MoneySetAttribute extends Attribute {
     @JsonProperty("value")
     public List<TypedMoney> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final TypedMoney... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<TypedMoney> value);
 
+    /**
+     * factory method
+     * @return instance of MoneySetAttribute
+     */
     public static MoneySetAttribute of() {
         return new MoneySetAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of MoneySetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MoneySetAttribute of(final MoneySetAttribute template) {
         MoneySetAttributeImpl instance = new MoneySetAttributeImpl();
         instance.setName(template.getName());
@@ -58,18 +80,37 @@ public interface MoneySetAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for MoneySetAttribute
+     * @return builder
+     */
     public static MoneySetAttributeBuilder builder() {
         return MoneySetAttributeBuilder.of();
     }
 
+    /**
+     * create builder for MoneySetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoneySetAttributeBuilder builder(final MoneySetAttribute template) {
         return MoneySetAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMoneySetAttribute(Function<MoneySetAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MoneySetAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MoneySetAttribute>() {
             @Override

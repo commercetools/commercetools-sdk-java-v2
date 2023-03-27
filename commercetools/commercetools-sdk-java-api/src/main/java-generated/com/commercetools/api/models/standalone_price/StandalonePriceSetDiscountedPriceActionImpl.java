@@ -24,6 +24,9 @@ public class StandalonePriceSetDiscountedPriceActionImpl implements StandalonePr
 
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceSetDiscountedPriceActionImpl(
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
@@ -31,6 +34,9 @@ public class StandalonePriceSetDiscountedPriceActionImpl implements StandalonePr
         this.action = SET_DISCOUNTED_PRICE;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceSetDiscountedPriceActionImpl() {
         this.action = SET_DISCOUNTED_PRICE;
     }

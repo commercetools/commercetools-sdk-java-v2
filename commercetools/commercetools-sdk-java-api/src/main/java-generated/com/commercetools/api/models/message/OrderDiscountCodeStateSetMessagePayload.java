@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderDiscountCodeStateSetMessagePayloadImpl.class)
 public interface OrderDiscountCodeStateSetMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderDiscountCodeStateSetMessagePayload
+     */
     String ORDER_DISCOUNT_CODE_STATE_SET = "OrderDiscountCodeStateSet";
 
     /**
@@ -60,16 +63,40 @@ public interface OrderDiscountCodeStateSetMessagePayload extends OrderMessagePay
     @JsonProperty("oldState")
     public DiscountCodeState getOldState();
 
+    /**
+     *  <p>DiscountCode that changed due to the recalculation.</p>
+     * @param discountCode value to be set
+     */
+
     public void setDiscountCode(final DiscountCodeReference discountCode);
+
+    /**
+     *  <p>DiscountCodeState after the recalculation.</p>
+     * @param state value to be set
+     */
 
     public void setState(final DiscountCodeState state);
 
+    /**
+     *  <p>DiscountCodeState before the recalculation.</p>
+     * @param oldState value to be set
+     */
+
     public void setOldState(final DiscountCodeState oldState);
 
+    /**
+     * factory method
+     * @return instance of OrderDiscountCodeStateSetMessagePayload
+     */
     public static OrderDiscountCodeStateSetMessagePayload of() {
         return new OrderDiscountCodeStateSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderDiscountCodeStateSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderDiscountCodeStateSetMessagePayload of(final OrderDiscountCodeStateSetMessagePayload template) {
         OrderDiscountCodeStateSetMessagePayloadImpl instance = new OrderDiscountCodeStateSetMessagePayloadImpl();
         instance.setDiscountCode(template.getDiscountCode());
@@ -78,20 +105,39 @@ public interface OrderDiscountCodeStateSetMessagePayload extends OrderMessagePay
         return instance;
     }
 
+    /**
+     * builder factory method for OrderDiscountCodeStateSetMessagePayload
+     * @return builder
+     */
     public static OrderDiscountCodeStateSetMessagePayloadBuilder builder() {
         return OrderDiscountCodeStateSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderDiscountCodeStateSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderDiscountCodeStateSetMessagePayloadBuilder builder(
             final OrderDiscountCodeStateSetMessagePayload template) {
         return OrderDiscountCodeStateSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderDiscountCodeStateSetMessagePayload(
             Function<OrderDiscountCodeStateSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessagePayload>() {
             @Override

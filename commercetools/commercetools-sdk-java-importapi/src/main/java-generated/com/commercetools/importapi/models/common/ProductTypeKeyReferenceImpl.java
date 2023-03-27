@@ -24,12 +24,18 @@ public class ProductTypeKeyReferenceImpl implements ProductTypeKeyReference, Mod
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("product-type");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("product-type");
     }

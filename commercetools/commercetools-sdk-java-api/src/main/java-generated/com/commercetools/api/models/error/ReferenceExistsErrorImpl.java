@@ -28,6 +28,9 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
 
     private com.commercetools.api.models.common.ReferenceTypeId referencedBy;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReferenceExistsErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -38,6 +41,9 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
         this.code = REFERENCE_EXISTS;
     }
 
+    /**
+     * create empty instance
+     */
     public ReferenceExistsErrorImpl() {
         this.code = REFERENCE_EXISTS;
     }

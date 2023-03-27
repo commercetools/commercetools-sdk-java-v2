@@ -28,6 +28,9 @@ public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemove
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceRemovedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("price") final com.commercetools.api.models.common.Price price,
@@ -38,6 +41,9 @@ public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemove
         this.type = PRODUCT_PRICE_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceRemovedMessagePayloadImpl() {
         this.type = PRODUCT_PRICE_REMOVED;
     }

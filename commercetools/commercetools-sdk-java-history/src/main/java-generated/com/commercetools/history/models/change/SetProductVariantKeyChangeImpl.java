@@ -30,6 +30,9 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetProductVariantKeyChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
         this.type = SET_PRODUCT_VARIANT_KEY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetProductVariantKeyChangeImpl() {
         this.type = SET_PRODUCT_VARIANT_KEY_CHANGE;
     }

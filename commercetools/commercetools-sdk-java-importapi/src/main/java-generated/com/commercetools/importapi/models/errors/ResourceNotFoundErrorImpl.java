@@ -26,6 +26,9 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
 
     private java.lang.Object resource;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ResourceNotFoundErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("resource") final java.lang.Object resource) {
@@ -34,6 +37,9 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
         this.code = RESOURCE_NOT_FOUND;
     }
 
+    /**
+     * create empty instance
+     */
     public ResourceNotFoundErrorImpl() {
         this.code = RESOURCE_NOT_FOUND;
     }

@@ -28,6 +28,9 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
 
     private com.commercetools.history.models.common.Money nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeAmountAuthorizedChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Money previousValue,
@@ -38,6 +41,9 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
         this.type = CHANGE_AMOUNT_AUTHORIZED_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeAmountAuthorizedChangeImpl() {
         this.type = CHANGE_AMOUNT_AUTHORIZED_CHANGE;
     }

@@ -24,6 +24,9 @@ public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, M
 
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetCustomerActionImpl(
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
@@ -31,6 +34,9 @@ public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, M
         this.action = SET_CUSTOMER;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetCustomerActionImpl() {
         this.action = SET_CUSTOMER;
     }

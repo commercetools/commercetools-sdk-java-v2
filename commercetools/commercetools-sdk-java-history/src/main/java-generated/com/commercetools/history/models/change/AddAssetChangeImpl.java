@@ -28,6 +28,9 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
 
     private com.commercetools.history.models.common.Asset previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddAssetChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Asset nextValue,
@@ -38,6 +41,9 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
         this.type = ADD_ASSET_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddAssetChangeImpl() {
         this.type = ADD_ASSET_CHANGE;
     }

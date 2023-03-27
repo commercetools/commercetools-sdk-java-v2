@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetShippingMethodTaxAmountActionImpl.class)
 public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetShippingMethodTaxAmountAction
+     */
     String SET_SHIPPING_METHOD_TAX_AMOUNT = "setShippingMethodTaxAmount";
 
     /**
@@ -45,12 +48,31 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
     @JsonProperty("externalTaxAmount")
     public ExternalTaxAmountDraft getExternalTaxAmount();
 
+    /**
+     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+     *  <p>Can only be set by these update actions:</p>
+     *  <ul>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+     *  </ul>
+     * @param externalTaxAmount value to be set
+     */
+
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetShippingMethodTaxAmountAction
+     */
     public static StagedOrderSetShippingMethodTaxAmountAction of() {
         return new StagedOrderSetShippingMethodTaxAmountActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetShippingMethodTaxAmountAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetShippingMethodTaxAmountAction of(
             final StagedOrderSetShippingMethodTaxAmountAction template) {
         StagedOrderSetShippingMethodTaxAmountActionImpl instance = new StagedOrderSetShippingMethodTaxAmountActionImpl();
@@ -58,20 +80,39 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetShippingMethodTaxAmountAction
+     * @return builder
+     */
     public static StagedOrderSetShippingMethodTaxAmountActionBuilder builder() {
         return StagedOrderSetShippingMethodTaxAmountActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingMethodTaxAmountAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingMethodTaxAmountActionBuilder builder(
             final StagedOrderSetShippingMethodTaxAmountAction template) {
         return StagedOrderSetShippingMethodTaxAmountActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetShippingMethodTaxAmountAction(
             Function<StagedOrderSetShippingMethodTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxAmountAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxAmountAction>() {
             @Override

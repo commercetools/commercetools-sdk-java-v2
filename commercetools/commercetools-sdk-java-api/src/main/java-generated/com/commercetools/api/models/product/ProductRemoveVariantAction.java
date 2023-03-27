@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRemoveVariantActionImpl.class)
 public interface ProductRemoveVariantAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductRemoveVariantAction
+     */
     String REMOVE_VARIANT = "removeVariant";
 
     /**
@@ -52,16 +55,40 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to remove.</p>
+     * @param id value to be set
+     */
+
     public void setId(final Long id);
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to remove.</p>
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductRemoveVariantAction
+     */
     public static ProductRemoveVariantAction of() {
         return new ProductRemoveVariantActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductRemoveVariantAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductRemoveVariantAction of(final ProductRemoveVariantAction template) {
         ProductRemoveVariantActionImpl instance = new ProductRemoveVariantActionImpl();
         instance.setId(template.getId());
@@ -70,18 +97,37 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductRemoveVariantAction
+     * @return builder
+     */
     public static ProductRemoveVariantActionBuilder builder() {
         return ProductRemoveVariantActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductRemoveVariantAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRemoveVariantActionBuilder builder(final ProductRemoveVariantAction template) {
         return ProductRemoveVariantActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductRemoveVariantAction(Function<ProductRemoveVariantAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductRemoveVariantAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductRemoveVariantAction>() {
             @Override

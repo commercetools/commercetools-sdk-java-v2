@@ -24,12 +24,18 @@ public class ProductVariantSelectionIncludeOnlyImpl implements ProductVariantSel
 
     private java.util.List<String> skus;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantSelectionIncludeOnlyImpl(@JsonProperty("skus") final java.util.List<String> skus) {
         this.skus = skus;
         this.type = ProductVariantSelectionTypeEnum.findEnum("includeOnly");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantSelectionIncludeOnlyImpl() {
         this.type = ProductVariantSelectionTypeEnum.findEnum("includeOnly");
     }

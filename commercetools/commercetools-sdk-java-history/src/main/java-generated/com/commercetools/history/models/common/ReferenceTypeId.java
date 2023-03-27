@@ -77,67 +77,163 @@ public interface ReferenceTypeId {
 
     ReferenceTypeId ZONE = ReferenceTypeIdEnum.ZONE;
 
+    /**
+     * possible values of ReferenceTypeId
+     */
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
+        /**
+         * cart
+         */
         CART("cart"),
 
+        /**
+         * cart-discount
+         */
         CART_DISCOUNT("cart-discount"),
 
+        /**
+         * category
+         */
         CATEGORY("category"),
 
+        /**
+         * channel
+         */
         CHANNEL("channel"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * customer-email-token
+         */
         CUSTOMER_EMAIL_TOKEN("customer-email-token"),
 
+        /**
+         * customer-group
+         */
         CUSTOMER_GROUP("customer-group"),
 
+        /**
+         * customer-password-token
+         */
         CUSTOMER_PASSWORD_TOKEN("customer-password-token"),
 
+        /**
+         * discount-code
+         */
         DISCOUNT_CODE("discount-code"),
 
+        /**
+         * extension
+         */
         EXTENSION("extension"),
 
+        /**
+         * inventory-entry
+         */
         INVENTORY_ENTRY("inventory-entry"),
 
+        /**
+         * key-value-document
+         */
         KEY_VALUE_DOCUMENT("key-value-document"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * order-edit
+         */
         ORDER_EDIT("order-edit"),
 
+        /**
+         * payment
+         */
         PAYMENT("payment"),
 
+        /**
+         * product
+         */
         PRODUCT("product"),
 
+        /**
+         * product-discount
+         */
         PRODUCT_DISCOUNT("product-discount"),
 
+        /**
+         * product-selection
+         */
         PRODUCT_SELECTION("product-selection"),
 
+        /**
+         * product-type
+         */
         PRODUCT_TYPE("product-type"),
 
+        /**
+         * quote
+         */
         QUOTE("quote"),
 
+        /**
+         * quote-request
+         */
         QUOTE_REQUEST("quote-request"),
 
+        /**
+         * review
+         */
         REVIEW("review"),
 
+        /**
+         * shipping-method
+         */
         SHIPPING_METHOD("shipping-method"),
 
+        /**
+         * shopping-list
+         */
         SHOPPING_LIST("shopping-list"),
 
+        /**
+         * staged-quote
+         */
         STAGED_QUOTE("staged-quote"),
 
+        /**
+         * state
+         */
         STATE("state"),
 
+        /**
+         * store
+         */
         STORE("store"),
 
+        /**
+         * subscription
+         */
         SUBSCRIPTION("subscription"),
 
+        /**
+         * tax-category
+         */
         TAX_CATEGORY("tax-category"),
 
+        /**
+         * type
+         */
         TYPE("type"),
 
+        /**
+         * zone
+         */
         ZONE("zone");
         private final String jsonName;
 
@@ -154,13 +250,30 @@ public interface ReferenceTypeId {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ReferenceTypeId
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ReferenceTypeId findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ReferenceTypeId() {
@@ -180,10 +293,18 @@ public interface ReferenceTypeId {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ReferenceTypeId> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ReferenceTypeId[] values() {
         return ReferenceTypeIdEnum.values();
     }

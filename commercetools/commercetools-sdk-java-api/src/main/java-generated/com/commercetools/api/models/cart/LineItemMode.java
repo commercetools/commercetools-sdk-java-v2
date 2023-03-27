@@ -31,9 +31,18 @@ public interface LineItemMode {
     */
     LineItemMode GIFT_LINE_ITEM = LineItemModeEnum.GIFT_LINE_ITEM;
 
+    /**
+     * possible values of LineItemMode
+     */
     enum LineItemModeEnum implements LineItemMode {
+        /**
+         * Standard
+         */
         STANDARD("Standard"),
 
+        /**
+         * GiftLineItem
+         */
         GIFT_LINE_ITEM("GiftLineItem");
         private final String jsonName;
 
@@ -50,13 +59,30 @@ public interface LineItemMode {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of LineItemMode
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static LineItemMode findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new LineItemMode() {
@@ -76,10 +102,18 @@ public interface LineItemMode {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<LineItemMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static LineItemMode[] values() {
         return LineItemModeEnum.values();
     }

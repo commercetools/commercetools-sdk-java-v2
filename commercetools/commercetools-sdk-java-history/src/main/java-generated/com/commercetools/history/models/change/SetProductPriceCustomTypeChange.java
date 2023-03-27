@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetProductPriceCustomTypeChangeImpl.class)
 public interface SetProductPriceCustomTypeChange extends Change {
 
+    /**
+     * discriminator value for SetProductPriceCustomTypeChange
+     */
     String SET_PRODUCT_PRICE_CUSTOM_TYPE_CHANGE = "SetProductPriceCustomTypeChange";
 
     /**
@@ -78,18 +81,47 @@ public interface SetProductPriceCustomTypeChange extends Change {
     @JsonProperty("nextValue")
     public CustomFields getNextValue();
 
+    /**
+     *  <p>Update action for <code>setProductPriceCustomType</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final CustomFields previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final CustomFields nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetProductPriceCustomTypeChange
+     */
     public static SetProductPriceCustomTypeChange of() {
         return new SetProductPriceCustomTypeChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetProductPriceCustomTypeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetProductPriceCustomTypeChange of(final SetProductPriceCustomTypeChange template) {
         SetProductPriceCustomTypeChangeImpl instance = new SetProductPriceCustomTypeChangeImpl();
         instance.setChange(template.getChange());
@@ -99,18 +131,37 @@ public interface SetProductPriceCustomTypeChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetProductPriceCustomTypeChange
+     * @return builder
+     */
     public static SetProductPriceCustomTypeChangeBuilder builder() {
         return SetProductPriceCustomTypeChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetProductPriceCustomTypeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetProductPriceCustomTypeChangeBuilder builder(final SetProductPriceCustomTypeChange template) {
         return SetProductPriceCustomTypeChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetProductPriceCustomTypeChange(Function<SetProductPriceCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetProductPriceCustomTypeChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetProductPriceCustomTypeChange>() {
             @Override

@@ -36,30 +36,64 @@ public interface FieldContainer {
     @JsonAnyGetter
     public Map<String, Object> values();
 
+    /**
+     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     * @param key property name
+     * @param value property value
+     */
+
     @JsonAnySetter
     public void setValue(String key, Object value);
 
+    /**
+     * factory method
+     * @return instance of FieldContainer
+     */
     public static FieldContainer of() {
         return new FieldContainerImpl();
     }
 
+    /**
+     * factory method to copy an instance of FieldContainer
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static FieldContainer of(final FieldContainer template) {
         FieldContainerImpl instance = new FieldContainerImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for FieldContainer
+     * @return builder
+     */
     public static FieldContainerBuilder builder() {
         return FieldContainerBuilder.of();
     }
 
+    /**
+     * create builder for FieldContainer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldContainerBuilder builder(final FieldContainer template) {
         return FieldContainerBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withFieldContainer(Function<FieldContainer, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<FieldContainer> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<FieldContainer>() {
             @Override

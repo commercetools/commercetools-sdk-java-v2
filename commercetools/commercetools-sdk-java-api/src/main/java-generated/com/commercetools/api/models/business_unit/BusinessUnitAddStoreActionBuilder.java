@@ -48,6 +48,11 @@ public class BusinessUnitAddStoreActionBuilder implements Builder<BusinessUnitAd
         return this;
     }
 
+    /**
+     *  <p>Store to add.</p>
+     * @return store
+     */
+
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
@@ -69,10 +74,19 @@ public class BusinessUnitAddStoreActionBuilder implements Builder<BusinessUnitAd
         return new BusinessUnitAddStoreActionImpl(store);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitAddStoreActionBuilder
+     * @return builder
+     */
     public static BusinessUnitAddStoreActionBuilder of() {
         return new BusinessUnitAddStoreActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitAddStoreAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAddStoreActionBuilder of(final BusinessUnitAddStoreAction template) {
         BusinessUnitAddStoreActionBuilder builder = new BusinessUnitAddStoreActionBuilder();
         builder.store = template.getStore();

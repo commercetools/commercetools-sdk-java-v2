@@ -28,6 +28,9 @@ public class ChangeGroupsChangeImpl implements ChangeGroupsChange, ModelBase {
 
     private java.util.List<String> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeGroupsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<String> previousValue,
@@ -38,6 +41,9 @@ public class ChangeGroupsChangeImpl implements ChangeGroupsChange, ModelBase {
         this.type = CHANGE_GROUPS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeGroupsChangeImpl() {
         this.type = CHANGE_GROUPS_CHANGE;
     }

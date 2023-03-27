@@ -28,6 +28,9 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
 
     private java.util.List<com.commercetools.history.models.common.StateRole> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveStateRolesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.StateRole> previousValue,
@@ -38,6 +41,9 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
         this.type = REMOVE_STATE_ROLES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveStateRolesChangeImpl() {
         this.type = REMOVE_STATE_ROLES_CHANGE;
     }

@@ -22,11 +22,17 @@ public class FieldTypeImpl implements FieldType, ModelBase {
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FieldTypeImpl(@JsonProperty("name") final String name) {
         this.name = name;
     }
 
+    /**
+     * create empty instance
+     */
     public FieldTypeImpl() {
     }
 

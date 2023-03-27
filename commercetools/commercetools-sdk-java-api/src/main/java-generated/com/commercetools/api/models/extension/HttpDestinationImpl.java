@@ -26,6 +26,9 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
 
     private com.commercetools.api.models.extension.HttpDestinationAuthentication authentication;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     HttpDestinationImpl(@JsonProperty("url") final String url,
             @JsonProperty("authentication") final com.commercetools.api.models.extension.HttpDestinationAuthentication authentication) {
@@ -34,6 +37,9 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
         this.type = HTTP;
     }
 
+    /**
+     * create empty instance
+     */
     public HttpDestinationImpl() {
         this.type = HTTP;
     }

@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreProductSelectionsChangedMessageImpl.class)
 public interface StoreProductSelectionsChangedMessage extends Message {
 
+    /**
+     * discriminator value for StoreProductSelectionsChangedMessage
+     */
     String STORE_PRODUCT_SELECTIONS_CHANGED = "StoreProductSelectionsChanged";
 
     /**
@@ -62,25 +65,64 @@ public interface StoreProductSelectionsChangedMessage extends Message {
     @JsonProperty("updatedProductSelections")
     public List<ProductSelectionSetting> getUpdatedProductSelections();
 
+    /**
+     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @param addedProductSelections values to be set
+     */
+
     @JsonIgnore
     public void setAddedProductSelections(final ProductSelectionSetting... addedProductSelections);
 
+    /**
+     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @param addedProductSelections values to be set
+     */
+
     public void setAddedProductSelections(final List<ProductSelectionSetting> addedProductSelections);
+
+    /**
+     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @param removedProductSelections values to be set
+     */
 
     @JsonIgnore
     public void setRemovedProductSelections(final ProductSelectionSetting... removedProductSelections);
 
+    /**
+     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @param removedProductSelections values to be set
+     */
+
     public void setRemovedProductSelections(final List<ProductSelectionSetting> removedProductSelections);
+
+    /**
+     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @param updatedProductSelections values to be set
+     */
 
     @JsonIgnore
     public void setUpdatedProductSelections(final ProductSelectionSetting... updatedProductSelections);
 
+    /**
+     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @param updatedProductSelections values to be set
+     */
+
     public void setUpdatedProductSelections(final List<ProductSelectionSetting> updatedProductSelections);
 
+    /**
+     * factory method
+     * @return instance of StoreProductSelectionsChangedMessage
+     */
     public static StoreProductSelectionsChangedMessage of() {
         return new StoreProductSelectionsChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreProductSelectionsChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreProductSelectionsChangedMessage of(final StoreProductSelectionsChangedMessage template) {
         StoreProductSelectionsChangedMessageImpl instance = new StoreProductSelectionsChangedMessageImpl();
         instance.setId(template.getId());
@@ -99,19 +141,38 @@ public interface StoreProductSelectionsChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreProductSelectionsChangedMessage
+     * @return builder
+     */
     public static StoreProductSelectionsChangedMessageBuilder builder() {
         return StoreProductSelectionsChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StoreProductSelectionsChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreProductSelectionsChangedMessageBuilder builder(
             final StoreProductSelectionsChangedMessage template) {
         return StoreProductSelectionsChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreProductSelectionsChangedMessage(Function<StoreProductSelectionsChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreProductSelectionsChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreProductSelectionsChangedMessage>() {
             @Override

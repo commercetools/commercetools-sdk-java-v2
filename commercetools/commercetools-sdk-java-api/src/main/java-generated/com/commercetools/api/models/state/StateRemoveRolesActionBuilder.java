@@ -60,6 +60,11 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
         return this;
     }
 
+    /**
+     *  <p>Roles to remove from the State.</p>
+     * @return roles
+     */
+
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }
@@ -81,10 +86,19 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
         return new StateRemoveRolesActionImpl(roles);
     }
 
+    /**
+     * factory method for an instance of StateRemoveRolesActionBuilder
+     * @return builder
+     */
     public static StateRemoveRolesActionBuilder of() {
         return new StateRemoveRolesActionBuilder();
     }
 
+    /**
+     * create builder for StateRemoveRolesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateRemoveRolesActionBuilder of(final StateRemoveRolesAction template) {
         StateRemoveRolesActionBuilder builder = new StateRemoveRolesActionBuilder();
         builder.roles = template.getRoles();

@@ -24,6 +24,9 @@ public class ProductSelectionChangeNameActionImpl implements ProductSelectionCha
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionChangeNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class ProductSelectionChangeNameActionImpl implements ProductSelectionCha
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

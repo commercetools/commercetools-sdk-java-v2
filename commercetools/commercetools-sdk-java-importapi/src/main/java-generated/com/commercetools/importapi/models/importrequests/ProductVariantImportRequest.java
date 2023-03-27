@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductVariantImportRequestImpl.class)
 public interface ProductVariantImportRequest extends ImportRequest {
 
+    /**
+     * discriminator value for ProductVariantImportRequest
+     */
     String PRODUCT_VARIANT = "product-variant";
 
     /**
@@ -42,33 +45,71 @@ public interface ProductVariantImportRequest extends ImportRequest {
     @JsonProperty("resources")
     public List<ProductVariantImport> getResources();
 
+    /**
+     *  <p>The product variant import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     @JsonIgnore
     public void setResources(final ProductVariantImport... resources);
 
+    /**
+     *  <p>The product variant import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     public void setResources(final List<ProductVariantImport> resources);
 
+    /**
+     * factory method
+     * @return instance of ProductVariantImportRequest
+     */
     public static ProductVariantImportRequest of() {
         return new ProductVariantImportRequestImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariantImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariantImportRequest of(final ProductVariantImportRequest template) {
         ProductVariantImportRequestImpl instance = new ProductVariantImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariantImportRequest
+     * @return builder
+     */
     public static ProductVariantImportRequestBuilder builder() {
         return ProductVariantImportRequestBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariantImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantImportRequestBuilder builder(final ProductVariantImportRequest template) {
         return ProductVariantImportRequestBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantImportRequest(Function<ProductVariantImportRequest, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantImportRequest> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantImportRequest>() {
             @Override

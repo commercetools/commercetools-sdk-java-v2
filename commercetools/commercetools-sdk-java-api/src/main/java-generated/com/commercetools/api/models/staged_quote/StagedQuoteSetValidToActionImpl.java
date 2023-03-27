@@ -24,12 +24,18 @@ public class StagedQuoteSetValidToActionImpl implements StagedQuoteSetValidToAct
 
     private java.time.ZonedDateTime validTo;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteSetValidToActionImpl(@JsonProperty("validTo") final java.time.ZonedDateTime validTo) {
         this.validTo = validTo;
         this.action = SET_VALID_TO;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteSetValidToActionImpl() {
         this.action = SET_VALID_TO;
     }

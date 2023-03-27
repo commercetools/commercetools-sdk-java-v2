@@ -24,12 +24,18 @@ public class BooleanFieldImpl implements BooleanField, ModelBase {
 
     private Boolean value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BooleanFieldImpl(@JsonProperty("value") final Boolean value) {
         this.value = value;
         this.type = BOOLEAN;
     }
 
+    /**
+     * create empty instance
+     */
     public BooleanFieldImpl() {
         this.type = BOOLEAN;
     }

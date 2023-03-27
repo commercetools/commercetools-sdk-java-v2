@@ -24,6 +24,9 @@ public class StagedOrderChangeOrderStateActionImpl implements StagedOrderChangeO
 
     private com.commercetools.api.models.order.OrderState orderState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderChangeOrderStateActionImpl(
             @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState) {
@@ -31,6 +34,9 @@ public class StagedOrderChangeOrderStateActionImpl implements StagedOrderChangeO
         this.action = CHANGE_ORDER_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderChangeOrderStateActionImpl() {
         this.action = CHANGE_ORDER_STATE;
     }

@@ -58,6 +58,9 @@ public class CategoryImpl implements Category, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -97,6 +100,9 @@ public class CategoryImpl implements Category, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryImpl() {
     }
 

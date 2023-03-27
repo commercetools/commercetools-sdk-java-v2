@@ -30,6 +30,9 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderAddDeliveryActionImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
@@ -43,6 +46,9 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
         this.action = ADD_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderAddDeliveryActionImpl() {
         this.action = ADD_DELIVERY;
     }

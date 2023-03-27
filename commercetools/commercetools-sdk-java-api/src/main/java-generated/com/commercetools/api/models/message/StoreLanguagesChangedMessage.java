@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreLanguagesChangedMessageImpl.class)
 public interface StoreLanguagesChangedMessage extends Message {
 
+    /**
+     * discriminator value for StoreLanguagesChangedMessage
+     */
     String STORE_LANGUAGES_CHANGED = "StoreLanguagesChanged";
 
     /**
@@ -51,20 +54,49 @@ public interface StoreLanguagesChangedMessage extends Message {
     @JsonProperty("removedLanguages")
     public List<String> getRemovedLanguages();
 
+    /**
+     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     * @param addedLanguages values to be set
+     */
+
     @JsonIgnore
     public void setAddedLanguages(final String... addedLanguages);
 
+    /**
+     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     * @param addedLanguages values to be set
+     */
+
     public void setAddedLanguages(final List<String> addedLanguages);
+
+    /**
+     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     * @param removedLanguages values to be set
+     */
 
     @JsonIgnore
     public void setRemovedLanguages(final String... removedLanguages);
 
+    /**
+     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     * @param removedLanguages values to be set
+     */
+
     public void setRemovedLanguages(final List<String> removedLanguages);
 
+    /**
+     * factory method
+     * @return instance of StoreLanguagesChangedMessage
+     */
     public static StoreLanguagesChangedMessage of() {
         return new StoreLanguagesChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreLanguagesChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreLanguagesChangedMessage of(final StoreLanguagesChangedMessage template) {
         StoreLanguagesChangedMessageImpl instance = new StoreLanguagesChangedMessageImpl();
         instance.setId(template.getId());
@@ -82,18 +114,37 @@ public interface StoreLanguagesChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreLanguagesChangedMessage
+     * @return builder
+     */
     public static StoreLanguagesChangedMessageBuilder builder() {
         return StoreLanguagesChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StoreLanguagesChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreLanguagesChangedMessageBuilder builder(final StoreLanguagesChangedMessage template) {
         return StoreLanguagesChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreLanguagesChangedMessage(Function<StoreLanguagesChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreLanguagesChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreLanguagesChangedMessage>() {
             @Override

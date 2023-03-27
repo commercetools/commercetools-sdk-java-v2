@@ -30,6 +30,9 @@ public class QuoteRequestPagedQueryResponseImpl implements QuoteRequestPagedQuer
 
     private java.util.List<com.commercetools.api.models.quote_request.QuoteRequest> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class QuoteRequestPagedQueryResponseImpl implements QuoteRequestPagedQuer
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestPagedQueryResponseImpl() {
     }
 

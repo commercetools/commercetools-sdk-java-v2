@@ -42,6 +42,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CountryNotConfiguredInStoreErrorImpl.class)
 public interface CountryNotConfiguredInStoreError extends ErrorObject {
 
+    /**
+     * discriminator value for CountryNotConfiguredInStoreError
+     */
     String COUNTRY_NOT_CONFIGURED_IN_STORE = "CountryNotConfiguredInStore";
 
     /**
@@ -76,19 +79,48 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
     @JsonProperty("country")
     public String getCountry();
 
+    /**
+     *  <p><code>"The country $country is not configured for the store $store."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Countries configured for the Store.</p>
+     * @param storeCountries values to be set
+     */
 
     @JsonIgnore
     public void setStoreCountries(final String... storeCountries);
 
+    /**
+     *  <p>Countries configured for the Store.</p>
+     * @param storeCountries values to be set
+     */
+
     public void setStoreCountries(final List<String> storeCountries);
+
+    /**
+     *  <p>The country that is not configured for the Store but referenced on the Cart or Order.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     * factory method
+     * @return instance of CountryNotConfiguredInStoreError
+     */
     public static CountryNotConfiguredInStoreError of() {
         return new CountryNotConfiguredInStoreErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of CountryNotConfiguredInStoreError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CountryNotConfiguredInStoreError of(final CountryNotConfiguredInStoreError template) {
         CountryNotConfiguredInStoreErrorImpl instance = new CountryNotConfiguredInStoreErrorImpl();
         instance.setMessage(template.getMessage());
@@ -98,18 +130,37 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for CountryNotConfiguredInStoreError
+     * @return builder
+     */
     public static CountryNotConfiguredInStoreErrorBuilder builder() {
         return CountryNotConfiguredInStoreErrorBuilder.of();
     }
 
+    /**
+     * create builder for CountryNotConfiguredInStoreError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CountryNotConfiguredInStoreErrorBuilder builder(final CountryNotConfiguredInStoreError template) {
         return CountryNotConfiguredInStoreErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCountryNotConfiguredInStoreError(Function<CountryNotConfiguredInStoreError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CountryNotConfiguredInStoreError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CountryNotConfiguredInStoreError>() {
             @Override

@@ -47,6 +47,11 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -68,10 +73,19 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
         return new StateSetNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of StateSetNameActionBuilder
+     * @return builder
+     */
     public static StateSetNameActionBuilder of() {
         return new StateSetNameActionBuilder();
     }
 
+    /**
+     * create builder for StateSetNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateSetNameActionBuilder of(final StateSetNameAction template) {
         StateSetNameActionBuilder builder = new StateSetNameActionBuilder();
         builder.name = template.getName();

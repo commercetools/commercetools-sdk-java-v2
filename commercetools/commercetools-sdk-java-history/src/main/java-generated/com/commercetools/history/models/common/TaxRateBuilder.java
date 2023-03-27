@@ -54,7 +54,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *
+     * set the value to the includedInPrice
      * @param includedInPrice value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *
+     * set values to the subRates
      * @param subRates value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *
+     * set value to the subRates
      * @param subRates value to be set
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *
+     * add values to the subRates
      * @param subRates value to be set
      * @return Builder
      */
@@ -145,7 +145,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *
+     * add the value to the subRates using the builder function
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *
+     * set the value to the subRates using the builder function
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -172,29 +172,64 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         return this;
     }
 
+    /**
+     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+     * @return amount
+     */
+
     public Integer getAmount() {
         return this.amount;
     }
+
+    /**
+     * value of includedInPrice}
+     * @return includedInPrice
+     */
 
     public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }
 
+    /**
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return country
+     */
+
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>The state in the country</p>
+     * @return state
+     */
+
     public String getState() {
         return this.state;
     }
+
+    /**
+     * value of subRates}
+     * @return subRates
+     */
 
     public java.util.List<com.commercetools.history.models.common.SubRate> getSubRates() {
         return this.subRates;
@@ -223,10 +258,19 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
     }
 
+    /**
+     * factory method for an instance of TaxRateBuilder
+     * @return builder
+     */
     public static TaxRateBuilder of() {
         return new TaxRateBuilder();
     }
 
+    /**
+     * create builder for TaxRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxRateBuilder of(final TaxRate template) {
         TaxRateBuilder builder = new TaxRateBuilder();
         builder.id = template.getId();

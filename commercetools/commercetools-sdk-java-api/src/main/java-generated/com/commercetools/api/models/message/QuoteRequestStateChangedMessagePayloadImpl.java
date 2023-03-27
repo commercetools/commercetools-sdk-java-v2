@@ -26,6 +26,9 @@ public class QuoteRequestStateChangedMessagePayloadImpl implements QuoteRequestS
 
     private com.commercetools.api.models.quote_request.QuoteRequestState oldQuoteRequestState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestStateChangedMessagePayloadImpl(
             @JsonProperty("quoteRequestState") final com.commercetools.api.models.quote_request.QuoteRequestState quoteRequestState,
@@ -35,6 +38,9 @@ public class QuoteRequestStateChangedMessagePayloadImpl implements QuoteRequestS
         this.type = QUOTE_REQUEST_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestStateChangedMessagePayloadImpl() {
         this.type = QUOTE_REQUEST_STATE_CHANGED;
     }

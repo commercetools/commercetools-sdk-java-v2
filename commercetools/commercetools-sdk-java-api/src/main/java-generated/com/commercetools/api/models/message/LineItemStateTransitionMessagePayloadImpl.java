@@ -32,6 +32,9 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
 
     private com.commercetools.api.models.state.StateReference toState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LineItemStateTransitionMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate,
@@ -46,6 +49,9 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
         this.type = LINE_ITEM_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public LineItemStateTransitionMessagePayloadImpl() {
         this.type = LINE_ITEM_STATE_TRANSITION;
     }

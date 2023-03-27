@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountValueRelativeImpl.class)
 public interface CartDiscountValueRelative extends CartDiscountValue {
 
+    /**
+     * discriminator value for CartDiscountValueRelative
+     */
     String RELATIVE = "relative";
 
     /**
@@ -39,30 +42,63 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
     @JsonProperty("permyriad")
     public Long getPermyriad();
 
+    /**
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
+     * @param permyriad value to be set
+     */
+
     public void setPermyriad(final Long permyriad);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountValueRelative
+     */
     public static CartDiscountValueRelative of() {
         return new CartDiscountValueRelativeImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountValueRelative
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountValueRelative of(final CartDiscountValueRelative template) {
         CartDiscountValueRelativeImpl instance = new CartDiscountValueRelativeImpl();
         instance.setPermyriad(template.getPermyriad());
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountValueRelative
+     * @return builder
+     */
     public static CartDiscountValueRelativeBuilder builder() {
         return CartDiscountValueRelativeBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountValueRelative instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueRelativeBuilder builder(final CartDiscountValueRelative template) {
         return CartDiscountValueRelativeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountValueRelative(Function<CartDiscountValueRelative, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueRelative> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueRelative>() {
             @Override

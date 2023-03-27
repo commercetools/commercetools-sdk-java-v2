@@ -51,7 +51,7 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -61,13 +61,28 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addProperty</code> on custom objects</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>Value path to the property that was added</p>
+     * @return path
+     */
+
     public String getPath() {
         return this.path;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.lang.Object getNextValue() {
         return this.nextValue;
@@ -92,10 +107,19 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
         return new AddPropertyChangeImpl(change, path, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddPropertyChangeBuilder
+     * @return builder
+     */
     public static AddPropertyChangeBuilder of() {
         return new AddPropertyChangeBuilder();
     }
 
+    /**
+     * create builder for AddPropertyChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddPropertyChangeBuilder of(final AddPropertyChange template) {
         AddPropertyChangeBuilder builder = new AddPropertyChangeBuilder();
         builder.change = template.getChange();

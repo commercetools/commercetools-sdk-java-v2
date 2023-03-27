@@ -24,12 +24,18 @@ public class LocationImpl implements Location, ModelBase {
 
     private String state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocationImpl(@JsonProperty("country") final String country, @JsonProperty("state") final String state) {
         this.country = country;
         this.state = state;
     }
 
+    /**
+     * create empty instance
+     */
     public LocationImpl() {
     }
 

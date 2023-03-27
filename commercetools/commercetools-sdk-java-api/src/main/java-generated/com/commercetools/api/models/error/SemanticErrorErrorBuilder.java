@@ -62,9 +62,19 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
         return this;
     }
 
+    /**
+     *  <p>Plain text description of the error concerning the predicate. For example, <code>"Invalid country code $countryCode provided for the field $fieldDefinition."</code>.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
         return new SemanticErrorErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of SemanticErrorErrorBuilder
+     * @return builder
+     */
     public static SemanticErrorErrorBuilder of() {
         return new SemanticErrorErrorBuilder();
     }
 
+    /**
+     * create builder for SemanticErrorError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SemanticErrorErrorBuilder of(final SemanticErrorError template) {
         SemanticErrorErrorBuilder builder = new SemanticErrorErrorBuilder();
         builder.message = template.getMessage();

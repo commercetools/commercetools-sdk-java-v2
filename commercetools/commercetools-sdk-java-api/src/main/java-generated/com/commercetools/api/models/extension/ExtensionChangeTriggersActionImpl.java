@@ -24,6 +24,9 @@ public class ExtensionChangeTriggersActionImpl implements ExtensionChangeTrigger
 
     private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionChangeTriggersActionImpl(
             @JsonProperty("triggers") final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
@@ -31,6 +34,9 @@ public class ExtensionChangeTriggersActionImpl implements ExtensionChangeTrigger
         this.action = CHANGE_TRIGGERS;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionChangeTriggersActionImpl() {
         this.action = CHANGE_TRIGGERS;
     }

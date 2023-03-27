@@ -95,6 +95,11 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
         return this;
     }
 
+    /**
+     *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @return changes
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
         return this.changes;
@@ -116,10 +121,19 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
         return new SubscriptionSetChangesActionImpl(changes);
     }
 
+    /**
+     * factory method for an instance of SubscriptionSetChangesActionBuilder
+     * @return builder
+     */
     public static SubscriptionSetChangesActionBuilder of() {
         return new SubscriptionSetChangesActionBuilder();
     }
 
+    /**
+     * create builder for SubscriptionSetChangesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubscriptionSetChangesActionBuilder of(final SubscriptionSetChangesAction template) {
         SubscriptionSetChangesActionBuilder builder = new SubscriptionSetChangesActionBuilder();
         builder.changes = template.getChanges();

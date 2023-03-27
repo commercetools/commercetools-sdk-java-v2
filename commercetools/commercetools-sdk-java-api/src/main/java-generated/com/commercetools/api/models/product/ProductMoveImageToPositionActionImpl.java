@@ -32,6 +32,9 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductMoveImageToPositionActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("imageUrl") final String imageUrl,
@@ -44,6 +47,9 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
         this.action = MOVE_IMAGE_TO_POSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductMoveImageToPositionActionImpl() {
         this.action = MOVE_IMAGE_TO_POSITION;
     }

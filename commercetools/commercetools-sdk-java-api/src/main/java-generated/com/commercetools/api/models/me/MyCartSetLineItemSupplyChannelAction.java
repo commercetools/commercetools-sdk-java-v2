@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartSetLineItemSupplyChannelActionImpl.class)
 public interface MyCartSetLineItemSupplyChannelAction extends MyCartUpdateAction {
 
+    /**
+     * discriminator value for MyCartSetLineItemSupplyChannelAction
+     */
     String SET_LINE_ITEM_SUPPLY_CHANNEL = "setLineItemSupplyChannel";
 
     /**
@@ -52,14 +55,36 @@ public interface MyCartSetLineItemSupplyChannelAction extends MyCartUpdateAction
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
+     *  </ul>
+     * @param supplyChannel value to be set
+     */
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
+    /**
+     * factory method
+     * @return instance of MyCartSetLineItemSupplyChannelAction
+     */
     public static MyCartSetLineItemSupplyChannelAction of() {
         return new MyCartSetLineItemSupplyChannelActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCartSetLineItemSupplyChannelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCartSetLineItemSupplyChannelAction of(final MyCartSetLineItemSupplyChannelAction template) {
         MyCartSetLineItemSupplyChannelActionImpl instance = new MyCartSetLineItemSupplyChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
@@ -67,19 +92,38 @@ public interface MyCartSetLineItemSupplyChannelAction extends MyCartUpdateAction
         return instance;
     }
 
+    /**
+     * builder factory method for MyCartSetLineItemSupplyChannelAction
+     * @return builder
+     */
     public static MyCartSetLineItemSupplyChannelActionBuilder builder() {
         return MyCartSetLineItemSupplyChannelActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCartSetLineItemSupplyChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetLineItemSupplyChannelActionBuilder builder(
             final MyCartSetLineItemSupplyChannelAction template) {
         return MyCartSetLineItemSupplyChannelActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCartSetLineItemSupplyChannelAction(Function<MyCartSetLineItemSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemSupplyChannelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemSupplyChannelAction>() {
             @Override

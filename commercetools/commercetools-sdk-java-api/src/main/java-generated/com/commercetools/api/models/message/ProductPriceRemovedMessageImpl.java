@@ -48,6 +48,9 @@ public class ProductPriceRemovedMessageImpl implements ProductPriceRemovedMessag
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceRemovedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -77,6 +80,9 @@ public class ProductPriceRemovedMessageImpl implements ProductPriceRemovedMessag
         this.type = PRODUCT_PRICE_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceRemovedMessageImpl() {
         this.type = PRODUCT_PRICE_REMOVED;
     }

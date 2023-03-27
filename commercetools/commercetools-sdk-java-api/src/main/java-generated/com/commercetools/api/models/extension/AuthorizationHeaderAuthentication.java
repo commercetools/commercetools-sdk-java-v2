@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AuthorizationHeaderAuthenticationImpl.class)
 public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthentication {
 
+    /**
+     * discriminator value for AuthorizationHeaderAuthentication
+     */
     String AUTHORIZATION_HEADER = "AuthorizationHeader";
 
     /**
@@ -40,30 +43,63 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
     @JsonProperty("headerValue")
     public String getHeaderValue();
 
+    /**
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @param headerValue value to be set
+     */
+
     public void setHeaderValue(final String headerValue);
 
+    /**
+     * factory method
+     * @return instance of AuthorizationHeaderAuthentication
+     */
     public static AuthorizationHeaderAuthentication of() {
         return new AuthorizationHeaderAuthenticationImpl();
     }
 
+    /**
+     * factory method to copy an instance of AuthorizationHeaderAuthentication
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AuthorizationHeaderAuthentication of(final AuthorizationHeaderAuthentication template) {
         AuthorizationHeaderAuthenticationImpl instance = new AuthorizationHeaderAuthenticationImpl();
         instance.setHeaderValue(template.getHeaderValue());
         return instance;
     }
 
+    /**
+     * builder factory method for AuthorizationHeaderAuthentication
+     * @return builder
+     */
     public static AuthorizationHeaderAuthenticationBuilder builder() {
         return AuthorizationHeaderAuthenticationBuilder.of();
     }
 
+    /**
+     * create builder for AuthorizationHeaderAuthentication instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AuthorizationHeaderAuthenticationBuilder builder(final AuthorizationHeaderAuthentication template) {
         return AuthorizationHeaderAuthenticationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAuthorizationHeaderAuthentication(Function<AuthorizationHeaderAuthentication, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AuthorizationHeaderAuthentication> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AuthorizationHeaderAuthentication>() {
             @Override

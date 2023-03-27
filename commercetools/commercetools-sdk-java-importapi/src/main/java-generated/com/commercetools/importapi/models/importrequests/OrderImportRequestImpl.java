@@ -25,6 +25,9 @@ public class OrderImportRequestImpl implements OrderImportRequest, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderImportRequestImpl(
             @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources) {
@@ -32,6 +35,9 @@ public class OrderImportRequestImpl implements OrderImportRequest, ModelBase {
         this.type = ImportResourceType.findEnum("order");
     }
 
+    /**
+     * create empty instance
+     */
     public OrderImportRequestImpl() {
         this.type = ImportResourceType.findEnum("order");
     }

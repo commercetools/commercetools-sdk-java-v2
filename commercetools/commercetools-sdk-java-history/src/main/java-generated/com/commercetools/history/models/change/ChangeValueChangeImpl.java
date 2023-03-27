@@ -28,6 +28,9 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
 
     private com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeValueChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue,
@@ -38,6 +41,9 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
         this.type = CHANGE_VALUE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeValueChangeImpl() {
         this.type = CHANGE_VALUE_CHANGE;
     }

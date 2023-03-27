@@ -24,7 +24,7 @@ public class ChangeTargetCustomLineItemsChangeValueBuilder implements Builder<Ch
     private String predicate;
 
     /**
-     *
+     * set the value to the predicate
      * @param predicate value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class ChangeTargetCustomLineItemsChangeValueBuilder implements Builder<Ch
         this.predicate = predicate;
         return this;
     }
+
+    /**
+     * value of predicate}
+     * @return predicate
+     */
 
     public String getPredicate() {
         return this.predicate;
@@ -55,10 +60,19 @@ public class ChangeTargetCustomLineItemsChangeValueBuilder implements Builder<Ch
         return new ChangeTargetCustomLineItemsChangeValueImpl(predicate);
     }
 
+    /**
+     * factory method for an instance of ChangeTargetCustomLineItemsChangeValueBuilder
+     * @return builder
+     */
     public static ChangeTargetCustomLineItemsChangeValueBuilder of() {
         return new ChangeTargetCustomLineItemsChangeValueBuilder();
     }
 
+    /**
+     * create builder for ChangeTargetCustomLineItemsChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTargetCustomLineItemsChangeValueBuilder of(
             final ChangeTargetCustomLineItemsChangeValue template) {
         ChangeTargetCustomLineItemsChangeValueBuilder builder = new ChangeTargetCustomLineItemsChangeValueBuilder();

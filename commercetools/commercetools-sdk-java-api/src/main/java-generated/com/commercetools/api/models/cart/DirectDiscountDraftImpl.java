@@ -26,6 +26,9 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
 
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DirectDiscountDraftImpl(
             @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValue value,
@@ -34,6 +37,9 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
         this.target = target;
     }
 
+    /**
+     * create empty instance
+     */
     public DirectDiscountDraftImpl() {
     }
 

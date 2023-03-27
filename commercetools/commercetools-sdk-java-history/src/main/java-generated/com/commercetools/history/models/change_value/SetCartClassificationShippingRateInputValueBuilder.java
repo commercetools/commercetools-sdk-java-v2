@@ -32,7 +32,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     *
+     * set the value to the label using the builder function
      * @param builder function to build the label value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     *
+     * set the value to the label
      * @param label value to be set
      * @return Builder
      */
@@ -77,13 +77,28 @@ public class SetCartClassificationShippingRateInputValueBuilder
         return this;
     }
 
+    /**
+     * value of type}
+     * @return type
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of label}
+     * @return label
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {
         return this.label;
@@ -108,10 +123,19 @@ public class SetCartClassificationShippingRateInputValueBuilder
         return new SetCartClassificationShippingRateInputValueImpl(type, key, label);
     }
 
+    /**
+     * factory method for an instance of SetCartClassificationShippingRateInputValueBuilder
+     * @return builder
+     */
     public static SetCartClassificationShippingRateInputValueBuilder of() {
         return new SetCartClassificationShippingRateInputValueBuilder();
     }
 
+    /**
+     * create builder for SetCartClassificationShippingRateInputValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCartClassificationShippingRateInputValueBuilder of(
             final SetCartClassificationShippingRateInputValue template) {
         SetCartClassificationShippingRateInputValueBuilder builder = new SetCartClassificationShippingRateInputValueBuilder();

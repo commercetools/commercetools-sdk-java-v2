@@ -21,6 +21,9 @@ public class CustomFieldDateTimeTypeImpl implements CustomFieldDateTimeType, Mod
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldDateTimeTypeImpl() {
         this.name = DATE_TIME;

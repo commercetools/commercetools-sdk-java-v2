@@ -26,9 +26,18 @@ public interface ImportOperationState {
     */
     ImportOperationState VALIDATION_FAILED = ImportOperationStateEnum.VALIDATION_FAILED;
 
+    /**
+     * possible values of ImportOperationState
+     */
     enum ImportOperationStateEnum implements ImportOperationState {
+        /**
+         * processing
+         */
         PROCESSING("processing"),
 
+        /**
+         * validationFailed
+         */
         VALIDATION_FAILED("validationFailed");
         private final String jsonName;
 
@@ -45,13 +54,30 @@ public interface ImportOperationState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ImportOperationState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ImportOperationState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ImportOperationState() {
@@ -71,10 +97,18 @@ public interface ImportOperationState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ImportOperationState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ImportOperationState[] values() {
         return ImportOperationStateEnum.values();
     }

@@ -48,6 +48,11 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
         return this;
     }
 
+    /**
+     *  <p>Customer that was created.</p>
+     * @return customer
+     */
+
     public com.commercetools.api.models.customer.Customer getCustomer() {
         return this.customer;
     }
@@ -69,10 +74,19 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
         return new CustomerCreatedMessagePayloadImpl(customer);
     }
 
+    /**
+     * factory method for an instance of CustomerCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerCreatedMessagePayloadBuilder of() {
         return new CustomerCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerCreatedMessagePayloadBuilder of(final CustomerCreatedMessagePayload template) {
         CustomerCreatedMessagePayloadBuilder builder = new CustomerCreatedMessagePayloadBuilder();
         builder.customer = template.getCustomer();

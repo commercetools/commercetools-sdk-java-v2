@@ -25,12 +25,18 @@ public class InventoryEntrySetRestockableInDaysActionImpl
 
     private Long restockableInDays;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntrySetRestockableInDaysActionImpl(@JsonProperty("restockableInDays") final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
         this.action = SET_RESTOCKABLE_IN_DAYS;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntrySetRestockableInDaysActionImpl() {
         this.action = SET_RESTOCKABLE_IN_DAYS;
     }

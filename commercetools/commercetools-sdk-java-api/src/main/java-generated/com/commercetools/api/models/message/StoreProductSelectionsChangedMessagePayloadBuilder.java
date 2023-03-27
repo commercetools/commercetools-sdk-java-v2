@@ -240,15 +240,30 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @return addedProductSelections
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getAddedProductSelections() {
         return this.addedProductSelections;
     }
 
+    /**
+     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @return removedProductSelections
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getRemovedProductSelections() {
         return this.removedProductSelections;
     }
+
+    /**
+     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @return updatedProductSelections
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getUpdatedProductSelections() {
@@ -273,10 +288,19 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
             updatedProductSelections);
     }
 
+    /**
+     * factory method for an instance of StoreProductSelectionsChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static StoreProductSelectionsChangedMessagePayloadBuilder of() {
         return new StoreProductSelectionsChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StoreProductSelectionsChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreProductSelectionsChangedMessagePayloadBuilder of(
             final StoreProductSelectionsChangedMessagePayload template) {
         StoreProductSelectionsChangedMessagePayloadBuilder builder = new StoreProductSelectionsChangedMessagePayloadBuilder();

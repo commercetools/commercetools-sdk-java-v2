@@ -28,6 +28,9 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
 
     private com.commercetools.api.models.common.QueryPrice price;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountMatchQueryImpl(@JsonProperty("productId") final String productId,
             @JsonProperty("variantId") final Integer variantId, @JsonProperty("staged") final Boolean staged,
@@ -38,6 +41,9 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
         this.price = price;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountMatchQueryImpl() {
     }
 

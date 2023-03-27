@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderRemoveDiscountCodeActionImpl.class)
 public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderRemoveDiscountCodeAction
+     */
     String REMOVE_DISCOUNT_CODE = "removeDiscountCode";
 
     /**
@@ -43,31 +46,64 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
     @JsonProperty("discountCode")
     public DiscountCodeReference getDiscountCode();
 
+    /**
+     *  <p>Reference to a DiscountCode.</p>
+     * @param discountCode value to be set
+     */
+
     public void setDiscountCode(final DiscountCodeReference discountCode);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderRemoveDiscountCodeAction
+     */
     public static StagedOrderRemoveDiscountCodeAction of() {
         return new StagedOrderRemoveDiscountCodeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderRemoveDiscountCodeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderRemoveDiscountCodeAction of(final StagedOrderRemoveDiscountCodeAction template) {
         StagedOrderRemoveDiscountCodeActionImpl instance = new StagedOrderRemoveDiscountCodeActionImpl();
         instance.setDiscountCode(template.getDiscountCode());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderRemoveDiscountCodeAction
+     * @return builder
+     */
     public static StagedOrderRemoveDiscountCodeActionBuilder builder() {
         return StagedOrderRemoveDiscountCodeActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderRemoveDiscountCodeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderRemoveDiscountCodeActionBuilder builder(
             final StagedOrderRemoveDiscountCodeAction template) {
         return StagedOrderRemoveDiscountCodeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderRemoveDiscountCodeAction(Function<StagedOrderRemoveDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveDiscountCodeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveDiscountCodeAction>() {
             @Override

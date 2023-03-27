@@ -36,6 +36,11 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
         return this;
     }
 
+    /**
+     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
+     * @return requiresDiscountCode
+     */
+
     public Boolean getRequiresDiscountCode() {
         return this.requiresDiscountCode;
     }
@@ -58,10 +63,19 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
         return new CartDiscountChangeRequiresDiscountCodeActionImpl(requiresDiscountCode);
     }
 
+    /**
+     * factory method for an instance of CartDiscountChangeRequiresDiscountCodeActionBuilder
+     * @return builder
+     */
     public static CartDiscountChangeRequiresDiscountCodeActionBuilder of() {
         return new CartDiscountChangeRequiresDiscountCodeActionBuilder();
     }
 
+    /**
+     * create builder for CartDiscountChangeRequiresDiscountCodeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeRequiresDiscountCodeActionBuilder of(
             final CartDiscountChangeRequiresDiscountCodeAction template) {
         CartDiscountChangeRequiresDiscountCodeActionBuilder builder = new CartDiscountChangeRequiresDiscountCodeActionBuilder();

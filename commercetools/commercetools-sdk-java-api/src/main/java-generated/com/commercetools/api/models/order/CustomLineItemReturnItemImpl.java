@@ -40,6 +40,9 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
 
     private String customLineItemId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomLineItemReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("comment") final String comment,
@@ -61,6 +64,9 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
         this.type = CUSTOM_LINE_ITEM_RETURN_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomLineItemReturnItemImpl() {
         this.type = CUSTOM_LINE_ITEM_RETURN_ITEM;
     }

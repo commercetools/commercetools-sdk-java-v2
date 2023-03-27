@@ -45,7 +45,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     *
+     * set the value to the parcel using the builder function
      * @param builder function to build the parcel value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     *
+     * set the value to the parcel
      * @param parcel value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -118,17 +118,37 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setParcelMeasurements</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of parcel}
+     * @return parcel
+     */
 
     public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
         return this.parcel;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.ParcelMeasurements getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.ParcelMeasurements getPreviousValue() {
         return this.previousValue;
@@ -154,10 +174,19 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
         return new SetParcelMeasurementsChangeImpl(change, parcel, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetParcelMeasurementsChangeBuilder
+     * @return builder
+     */
     public static SetParcelMeasurementsChangeBuilder of() {
         return new SetParcelMeasurementsChangeBuilder();
     }
 
+    /**
+     * create builder for SetParcelMeasurementsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetParcelMeasurementsChangeBuilder of(final SetParcelMeasurementsChange template) {
         SetParcelMeasurementsChangeBuilder builder = new SetParcelMeasurementsChangeBuilder();
         builder.change = template.getChange();

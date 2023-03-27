@@ -61,9 +61,19 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
         return this;
     }
 
+    /**
+     *  <p><code>Create</code> or <code>Update</code> request.</p>
+     * @return action
+     */
+
     public com.commercetools.api.models.extension.ExtensionAction getAction() {
         return this.action;
     }
+
+    /**
+     *  <p>Expanded reference to the resource that triggered the Extension.</p>
+     * @return resource
+     */
 
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
@@ -87,10 +97,19 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
         return new ExtensionInputImpl(action, resource);
     }
 
+    /**
+     * factory method for an instance of ExtensionInputBuilder
+     * @return builder
+     */
     public static ExtensionInputBuilder of() {
         return new ExtensionInputBuilder();
     }
 
+    /**
+     * create builder for ExtensionInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionInputBuilder of(final ExtensionInput template) {
         ExtensionInputBuilder builder = new ExtensionInputBuilder();
         builder.action = template.getAction();

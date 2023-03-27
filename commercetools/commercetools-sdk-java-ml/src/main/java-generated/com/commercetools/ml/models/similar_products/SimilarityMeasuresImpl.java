@@ -30,6 +30,9 @@ public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
 
     private Long price;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SimilarityMeasuresImpl(@JsonProperty("name") final Long name, @JsonProperty("description") final Long description,
             @JsonProperty("attribute") final Long attribute, @JsonProperty("variantCount") final Long variantCount,
@@ -41,6 +44,9 @@ public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
         this.price = price;
     }
 
+    /**
+     * create empty instance
+     */
     public SimilarityMeasuresImpl() {
     }
 

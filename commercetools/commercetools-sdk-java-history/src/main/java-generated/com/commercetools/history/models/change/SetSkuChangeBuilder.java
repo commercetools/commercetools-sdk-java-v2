@@ -44,7 +44,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
-     *
+     * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -76,17 +76,37 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setSku</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of catalogData}
+     * @return catalogData
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -112,10 +132,19 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
         return new SetSkuChangeImpl(change, catalogData, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetSkuChangeBuilder
+     * @return builder
+     */
     public static SetSkuChangeBuilder of() {
         return new SetSkuChangeBuilder();
     }
 
+    /**
+     * create builder for SetSkuChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetSkuChangeBuilder of(final SetSkuChange template) {
         SetSkuChangeBuilder builder = new SetSkuChangeBuilder();
         builder.change = template.getChange();

@@ -23,6 +23,10 @@ public class ProductDiscountValueDraftBuilder {
         return com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraftBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ProductDiscountValueDraftBuilder
+     * @return builder
+     */
     public static ProductDiscountValueDraftBuilder of() {
         return new ProductDiscountValueDraftBuilder();
     }

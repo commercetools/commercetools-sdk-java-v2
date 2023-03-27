@@ -30,6 +30,9 @@ public class ProductsInStorePagedQueryResponseImpl implements ProductsInStorePag
 
     private java.util.List<com.commercetools.api.models.product_selection.ProductSelectionAssignment> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductsInStorePagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class ProductsInStorePagedQueryResponseImpl implements ProductsInStorePag
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductsInStorePagedQueryResponseImpl() {
     }
 

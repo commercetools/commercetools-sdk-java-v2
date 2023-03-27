@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeLocalizedDescriptionChangeImpl.class)
 public interface ChangeLocalizedDescriptionChange extends Change {
 
+    /**
+     * discriminator value for ChangeLocalizedDescriptionChange
+     */
     String CHANGE_LOCALIZED_DESCRIPTION_CHANGE = "ChangeLocalizedDescriptionChange";
 
     /**
@@ -69,16 +72,40 @@ public interface ChangeLocalizedDescriptionChange extends Change {
     @JsonProperty("nextValue")
     public LocalizedString getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>changeDescription</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final LocalizedString previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final LocalizedString nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeLocalizedDescriptionChange
+     */
     public static ChangeLocalizedDescriptionChange of() {
         return new ChangeLocalizedDescriptionChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeLocalizedDescriptionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeLocalizedDescriptionChange of(final ChangeLocalizedDescriptionChange template) {
         ChangeLocalizedDescriptionChangeImpl instance = new ChangeLocalizedDescriptionChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface ChangeLocalizedDescriptionChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeLocalizedDescriptionChange
+     * @return builder
+     */
     public static ChangeLocalizedDescriptionChangeBuilder builder() {
         return ChangeLocalizedDescriptionChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeLocalizedDescriptionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeLocalizedDescriptionChangeBuilder builder(final ChangeLocalizedDescriptionChange template) {
         return ChangeLocalizedDescriptionChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeLocalizedDescriptionChange(Function<ChangeLocalizedDescriptionChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedDescriptionChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedDescriptionChange>() {
             @Override

@@ -24,6 +24,9 @@ public class CartDiscountValueAbsoluteDraftImpl implements CartDiscountValueAbso
 
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountValueAbsoluteDraftImpl(
             @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
@@ -31,6 +34,9 @@ public class CartDiscountValueAbsoluteDraftImpl implements CartDiscountValueAbso
         this.type = ABSOLUTE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountValueAbsoluteDraftImpl() {
         this.type = ABSOLUTE;
     }

@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeValueExternalChangeValueImpl.class)
 public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
 
+    /**
+     * discriminator value for ChangeValueExternalChangeValue
+     */
     String EXTERNAL = "external";
 
     /**
@@ -38,27 +41,55 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * factory method
+     * @return instance of ChangeValueExternalChangeValue
+     */
     public static ChangeValueExternalChangeValue of() {
         return new ChangeValueExternalChangeValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeValueExternalChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeValueExternalChangeValue of(final ChangeValueExternalChangeValue template) {
         ChangeValueExternalChangeValueImpl instance = new ChangeValueExternalChangeValueImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeValueExternalChangeValue
+     * @return builder
+     */
     public static ChangeValueExternalChangeValueBuilder builder() {
         return ChangeValueExternalChangeValueBuilder.of();
     }
 
+    /**
+     * create builder for ChangeValueExternalChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeValueExternalChangeValueBuilder builder(final ChangeValueExternalChangeValue template) {
         return ChangeValueExternalChangeValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeValueExternalChangeValue(Function<ChangeValueExternalChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueExternalChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueExternalChangeValue>() {
             @Override

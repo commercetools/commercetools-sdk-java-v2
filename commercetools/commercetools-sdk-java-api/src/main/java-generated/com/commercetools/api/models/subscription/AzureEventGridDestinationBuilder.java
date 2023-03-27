@@ -48,9 +48,19 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
         return this;
     }
 
+    /**
+     *  <p>URI of the topic.</p>
+     * @return uri
+     */
+
     public String getUri() {
         return this.uri;
     }
+
+    /**
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @return accessKey
+     */
 
     public String getAccessKey() {
         return this.accessKey;
@@ -74,10 +84,19 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
         return new AzureEventGridDestinationImpl(uri, accessKey);
     }
 
+    /**
+     * factory method for an instance of AzureEventGridDestinationBuilder
+     * @return builder
+     */
     public static AzureEventGridDestinationBuilder of() {
         return new AzureEventGridDestinationBuilder();
     }
 
+    /**
+     * create builder for AzureEventGridDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AzureEventGridDestinationBuilder of(final AzureEventGridDestination template) {
         AzureEventGridDestinationBuilder builder = new AzureEventGridDestinationBuilder();
         builder.uri = template.getUri();

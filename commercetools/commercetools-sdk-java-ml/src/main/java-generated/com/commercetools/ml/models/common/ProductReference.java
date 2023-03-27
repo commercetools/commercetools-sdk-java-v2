@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductReferenceImpl.class)
 public interface ProductReference extends Reference {
 
+    /**
+     * discriminator value for ProductReference
+     */
     String PRODUCT = "product";
 
+    /**
+     * factory method
+     * @return instance of ProductReference
+     */
     public static ProductReference of() {
         return new ProductReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductReference of(final ProductReference template) {
         ProductReferenceImpl instance = new ProductReferenceImpl();
         instance.setId(template.getId());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductReference
+     * @return builder
+     */
     public static ProductReferenceBuilder builder() {
         return ProductReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ProductReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductReferenceBuilder builder(final ProductReference template) {
         return ProductReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductReference(Function<ProductReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductReference>() {
             @Override

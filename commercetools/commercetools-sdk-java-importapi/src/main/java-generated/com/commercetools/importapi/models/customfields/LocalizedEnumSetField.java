@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizedEnumSetFieldImpl.class)
 public interface LocalizedEnumSetField extends CustomField {
 
+    /**
+     * discriminator value for LocalizedEnumSetField
+     */
     String LOCALIZED_ENUM_SET = "LocalizedEnumSet";
 
     /**
@@ -39,33 +42,71 @@ public interface LocalizedEnumSetField extends CustomField {
     @JsonProperty("value")
     public List<String> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final String... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<String> value);
 
+    /**
+     * factory method
+     * @return instance of LocalizedEnumSetField
+     */
     public static LocalizedEnumSetField of() {
         return new LocalizedEnumSetFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of LocalizedEnumSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LocalizedEnumSetField of(final LocalizedEnumSetField template) {
         LocalizedEnumSetFieldImpl instance = new LocalizedEnumSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for LocalizedEnumSetField
+     * @return builder
+     */
     public static LocalizedEnumSetFieldBuilder builder() {
         return LocalizedEnumSetFieldBuilder.of();
     }
 
+    /**
+     * create builder for LocalizedEnumSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedEnumSetFieldBuilder builder(final LocalizedEnumSetField template) {
         return LocalizedEnumSetFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLocalizedEnumSetField(Function<LocalizedEnumSetField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LocalizedEnumSetField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LocalizedEnumSetField>() {
             @Override

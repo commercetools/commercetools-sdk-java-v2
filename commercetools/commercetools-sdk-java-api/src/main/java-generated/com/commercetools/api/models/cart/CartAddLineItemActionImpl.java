@@ -50,6 +50,9 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartAddLineItemActionImpl(@JsonProperty("productId") final String productId,
             @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
@@ -79,6 +82,9 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
         this.action = ADD_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public CartAddLineItemActionImpl() {
         this.action = ADD_LINE_ITEM;
     }

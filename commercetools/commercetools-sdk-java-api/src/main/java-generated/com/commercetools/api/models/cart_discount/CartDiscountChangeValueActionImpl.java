@@ -24,6 +24,9 @@ public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValu
 
     private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountChangeValueActionImpl(
             @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
@@ -31,6 +34,9 @@ public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValu
         this.action = CHANGE_VALUE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountChangeValueActionImpl() {
         this.action = CHANGE_VALUE;
     }

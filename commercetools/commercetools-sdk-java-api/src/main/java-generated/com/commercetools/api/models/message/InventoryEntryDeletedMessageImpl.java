@@ -46,6 +46,9 @@ public class InventoryEntryDeletedMessageImpl implements InventoryEntryDeletedMe
 
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class InventoryEntryDeletedMessageImpl implements InventoryEntryDeletedMe
         this.type = INVENTORY_ENTRY_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryDeletedMessageImpl() {
         this.type = INVENTORY_ENTRY_DELETED;
     }

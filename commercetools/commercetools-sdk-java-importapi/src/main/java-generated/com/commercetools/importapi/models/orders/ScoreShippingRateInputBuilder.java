@@ -24,7 +24,7 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
     private Double score;
 
     /**
-     *
+     * set the value to the score
      * @param score value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
         this.score = score;
         return this;
     }
+
+    /**
+     * value of score}
+     * @return score
+     */
 
     public Double getScore() {
         return this.score;
@@ -55,10 +60,19 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
         return new ScoreShippingRateInputImpl(score);
     }
 
+    /**
+     * factory method for an instance of ScoreShippingRateInputBuilder
+     * @return builder
+     */
     public static ScoreShippingRateInputBuilder of() {
         return new ScoreShippingRateInputBuilder();
     }
 
+    /**
+     * create builder for ScoreShippingRateInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ScoreShippingRateInputBuilder of(final ScoreShippingRateInput template) {
         ScoreShippingRateInputBuilder builder = new ScoreShippingRateInputBuilder();
         builder.score = template.getScore();

@@ -24,12 +24,18 @@ public class TimeFieldImpl implements TimeField, ModelBase {
 
     private java.time.LocalTime value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TimeFieldImpl(@JsonProperty("value") final java.time.LocalTime value) {
         this.value = value;
         this.type = TIME;
     }
 
+    /**
+     * create empty instance
+     */
     public TimeFieldImpl() {
         this.type = TIME;
     }

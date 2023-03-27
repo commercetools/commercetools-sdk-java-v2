@@ -63,9 +63,19 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced Review.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.review.Review getObj() {
@@ -89,10 +99,19 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
         return new ReviewReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of ReviewReferenceBuilder
+     * @return builder
+     */
     public static ReviewReferenceBuilder of() {
         return new ReviewReferenceBuilder();
     }
 
+    /**
+     * create builder for ReviewReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewReferenceBuilder of(final ReviewReference template) {
         ReviewReferenceBuilder builder = new ReviewReferenceBuilder();
         builder.id = template.getId();

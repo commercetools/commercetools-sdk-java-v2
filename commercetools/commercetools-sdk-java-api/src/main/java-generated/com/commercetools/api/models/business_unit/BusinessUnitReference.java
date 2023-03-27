@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitReferenceImpl.class)
 public interface BusinessUnitReference extends Reference, com.commercetools.api.models.Identifiable<BusinessUnit> {
 
+    /**
+     * discriminator value for BusinessUnitReference
+     */
     String BUSINESS_UNIT = "business-unit";
 
     /**
@@ -49,14 +52,33 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final BusinessUnit obj);
+
+    /**
+     *  <p>Unique identifier of the referenced BusinessUnit.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitReference
+     */
     public static BusinessUnitReference of() {
         return new BusinessUnitReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitReference of(final BusinessUnitReference template) {
         BusinessUnitReferenceImpl instance = new BusinessUnitReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitReference
+     * @return builder
+     */
     public static BusinessUnitReferenceBuilder builder() {
         return BusinessUnitReferenceBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitReferenceBuilder builder(final BusinessUnitReference template) {
         return BusinessUnitReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitReference(Function<BusinessUnitReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitReference>() {
             @Override

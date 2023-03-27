@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerPasswordUpdatedMessageImpl.class)
 public interface CustomerPasswordUpdatedMessage extends Message {
 
+    /**
+     * discriminator value for CustomerPasswordUpdatedMessage
+     */
     String CUSTOMER_PASSWORD_UPDATED = "CustomerPasswordUpdated";
 
     /**
@@ -46,12 +49,26 @@ public interface CustomerPasswordUpdatedMessage extends Message {
     @JsonProperty("reset")
     public Boolean getReset();
 
+    /**
+     *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
+     * @param reset value to be set
+     */
+
     public void setReset(final Boolean reset);
 
+    /**
+     * factory method
+     * @return instance of CustomerPasswordUpdatedMessage
+     */
     public static CustomerPasswordUpdatedMessage of() {
         return new CustomerPasswordUpdatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerPasswordUpdatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerPasswordUpdatedMessage of(final CustomerPasswordUpdatedMessage template) {
         CustomerPasswordUpdatedMessageImpl instance = new CustomerPasswordUpdatedMessageImpl();
         instance.setId(template.getId());
@@ -68,18 +85,37 @@ public interface CustomerPasswordUpdatedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerPasswordUpdatedMessage
+     * @return builder
+     */
     public static CustomerPasswordUpdatedMessageBuilder builder() {
         return CustomerPasswordUpdatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for CustomerPasswordUpdatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerPasswordUpdatedMessageBuilder builder(final CustomerPasswordUpdatedMessage template) {
         return CustomerPasswordUpdatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerPasswordUpdatedMessage(Function<CustomerPasswordUpdatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessage>() {
             @Override

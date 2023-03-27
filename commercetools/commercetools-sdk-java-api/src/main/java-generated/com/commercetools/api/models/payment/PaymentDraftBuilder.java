@@ -450,74 +450,149 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
+    /**
+     *  <p>Reference to a Customer associated with the Payment.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>Anonymous session associated with the Payment.</p>
+     * @return anonymousId
+     */
 
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
+    /**
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
+     */
+
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
+
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
+     * @return interfaceId
+     */
 
     @Nullable
     public String getInterfaceId() {
         return this.interfaceId;
     }
 
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @return amountPlanned
+     */
+
     public com.commercetools.api.models.common.Money getAmountPlanned() {
         return this.amountPlanned;
     }
+
+    /**
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return amountAuthorized
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Money getAmountAuthorized() {
         return this.amountAuthorized;
     }
 
+    /**
+     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
+     * @return authorizedUntil
+     */
+
     @Nullable
     public String getAuthorizedUntil() {
         return this.authorizedUntil;
     }
+
+    /**
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return amountPaid
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Money getAmountPaid() {
         return this.amountPaid;
     }
 
+    /**
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return amountRefunded
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Money getAmountRefunded() {
         return this.amountRefunded;
     }
+
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return paymentMethodInfo
+     */
 
     @Nullable
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
         return this.paymentMethodInfo;
     }
 
+    /**
+     *  <p>Current status of the Payment.</p>
+     * @return paymentStatus
+     */
+
     @Nullable
     public com.commercetools.api.models.payment.PaymentStatusDraft getPaymentStatus() {
         return this.paymentStatus;
     }
+
+    /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return transactions
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.payment.TransactionDraft> getTransactions() {
         return this.transactions;
     }
 
+    /**
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @return interfaceInteractions
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> getInterfaceInteractions() {
         return this.interfaceInteractions;
     }
 
+    /**
+     *  <p>Custom Fields for the Payment.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the Payment.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -545,10 +620,19 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
             interfaceInteractions, custom, key);
     }
 
+    /**
+     * factory method for an instance of PaymentDraftBuilder
+     * @return builder
+     */
     public static PaymentDraftBuilder of() {
         return new PaymentDraftBuilder();
     }
 
+    /**
+     * create builder for PaymentDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentDraftBuilder of(final PaymentDraft template) {
         PaymentDraftBuilder builder = new PaymentDraftBuilder();
         builder.customer = template.getCustomer();

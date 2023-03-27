@@ -32,6 +32,9 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
 
     private com.commercetools.api.models.product.FacetResults facets;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductProjectionPagedSearchResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -46,6 +49,9 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
         this.facets = facets;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductProjectionPagedSearchResponseImpl() {
     }
 

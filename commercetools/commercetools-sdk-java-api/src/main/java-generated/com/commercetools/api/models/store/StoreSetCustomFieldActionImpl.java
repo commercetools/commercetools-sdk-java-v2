@@ -26,6 +26,9 @@ public class StoreSetCustomFieldActionImpl implements StoreSetCustomFieldAction,
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class StoreSetCustomFieldActionImpl implements StoreSetCustomFieldAction,
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

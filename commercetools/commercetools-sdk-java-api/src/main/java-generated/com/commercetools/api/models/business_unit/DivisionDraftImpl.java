@@ -50,6 +50,9 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DivisionDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("status") final com.commercetools.api.models.business_unit.BusinessUnitStatus status,
@@ -81,6 +84,9 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.unitType = BusinessUnitType.findEnum("Division");
     }
 
+    /**
+     * create empty instance
+     */
     public DivisionDraftImpl() {
         this.unitType = BusinessUnitType.findEnum("Division");
     }

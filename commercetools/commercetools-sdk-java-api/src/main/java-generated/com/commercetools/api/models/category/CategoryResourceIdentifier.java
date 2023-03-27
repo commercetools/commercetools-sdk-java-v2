@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CategoryResourceIdentifier
         extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Category> {
 
+    /**
+     * discriminator value for CategoryResourceIdentifier
+     */
     String CATEGORY = "category";
 
     /**
@@ -46,14 +49,33 @@ public interface CategoryResourceIdentifier
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of CategoryResourceIdentifier
+     */
     public static CategoryResourceIdentifier of() {
         return new CategoryResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryResourceIdentifier of(final CategoryResourceIdentifier template) {
         CategoryResourceIdentifierImpl instance = new CategoryResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -61,18 +83,37 @@ public interface CategoryResourceIdentifier
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryResourceIdentifier
+     * @return builder
+     */
     public static CategoryResourceIdentifierBuilder builder() {
         return CategoryResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for CategoryResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryResourceIdentifierBuilder builder(final CategoryResourceIdentifier template) {
         return CategoryResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryResourceIdentifier(Function<CategoryResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryResourceIdentifier>() {
             @Override

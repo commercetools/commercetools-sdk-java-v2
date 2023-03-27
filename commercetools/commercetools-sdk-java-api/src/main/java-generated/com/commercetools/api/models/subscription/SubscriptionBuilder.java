@@ -355,52 +355,112 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Subscription.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Subscription.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Subscription was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Subscription was last modified.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Change notifications subscribed to.</p>
+     * @return changes
+     */
+
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
         return this.changes;
     }
 
+    /**
+     *  <p>Messaging service to which the messages are to be sent.</p>
+     * @return destination
+     */
+
     public com.commercetools.api.models.subscription.Destination getDestination() {
         return this.destination;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Subscription.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Messages subscribed to.</p>
+     * @return messages
+     */
+
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
         return this.messages;
     }
 
+    /**
+     *  <p>Format in which the payload is delivered.</p>
+     * @return format
+     */
+
     public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {
         return this.format;
     }
+
+    /**
+     *  <p>Status of the Subscription.</p>
+     * @return status
+     */
 
     public com.commercetools.api.models.subscription.SubscriptionHealthStatus getStatus() {
         return this.status;
@@ -433,10 +493,19 @@ public class SubscriptionBuilder implements Builder<Subscription> {
             destination, key, messages, format, status);
     }
 
+    /**
+     * factory method for an instance of SubscriptionBuilder
+     * @return builder
+     */
     public static SubscriptionBuilder of() {
         return new SubscriptionBuilder();
     }
 
+    /**
+     * create builder for Subscription instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubscriptionBuilder of(final Subscription template) {
         SubscriptionBuilder builder = new SubscriptionBuilder();
         builder.id = template.getId();

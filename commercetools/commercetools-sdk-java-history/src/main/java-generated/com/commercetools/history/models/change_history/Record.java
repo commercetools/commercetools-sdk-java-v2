@@ -138,38 +138,112 @@ public interface Record {
     @JsonProperty("withoutChanges")
     public Boolean getWithoutChanges();
 
+    /**
+     *  <p>Version of the resource after the change.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Integer version);
+
+    /**
+     *  <p>Version of the resource before the change.</p>
+     * @param previousVersion value to be set
+     */
 
     public void setPreviousVersion(final Integer previousVersion);
 
+    /**
+     *  <p>Type of the change (creation, update or deletion).</p>
+     * @param type value to be set
+     */
+
     public void setType(final String type);
+
+    /**
+     *  <p>Information about the user or the API client who performed the change.</p>
+     * @param modifiedBy value to be set
+     */
 
     public void setModifiedBy(final ModifiedBy modifiedBy);
 
+    /**
+     *  <p>Date and time when the change was made.</p>
+     * @param modifiedAt value to be set
+     */
+
     public void setModifiedAt(final String modifiedAt);
+
+    /**
+     *  <p>Information that describes the resource after the change.</p>
+     * @param label value to be set
+     */
 
     public void setLabel(final Label label);
 
+    /**
+     *  <p>Information that describes the resource before the change.</p>
+     * @param previousLabel value to be set
+     */
+
     public void setPreviousLabel(final Label previousLabel);
+
+    /**
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @param changes values to be set
+     */
 
     @JsonIgnore
     public void setChanges(final Change... changes);
 
+    /**
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @param changes values to be set
+     */
+
     public void setChanges(final List<Change> changes);
 
+    /**
+     *  <p>Reference to the changed resource.</p>
+     * @param resource value to be set
+     */
+
     public void setResource(final Reference resource);
+
+    /**
+     *  <p>References to the Stores attached to the Change.</p>
+     * @param stores values to be set
+     */
 
     @JsonIgnore
     public void setStores(final KeyReference... stores);
 
+    /**
+     *  <p>References to the Stores attached to the Change.</p>
+     * @param stores values to be set
+     */
+
     public void setStores(final List<KeyReference> stores);
+
+    /**
+     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     * @param withoutChanges value to be set
+     */
 
     public void setWithoutChanges(final Boolean withoutChanges);
 
+    /**
+     * factory method
+     * @return instance of Record
+     */
     public static Record of() {
         return new RecordImpl();
     }
 
+    /**
+     * factory method to copy an instance of Record
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Record of(final Record template) {
         RecordImpl instance = new RecordImpl();
         instance.setVersion(template.getVersion());
@@ -186,18 +260,37 @@ public interface Record {
         return instance;
     }
 
+    /**
+     * builder factory method for Record
+     * @return builder
+     */
     public static RecordBuilder builder() {
         return RecordBuilder.of();
     }
 
+    /**
+     * create builder for Record instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RecordBuilder builder(final Record template) {
         return RecordBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRecord(Function<Record, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Record> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Record>() {
             @Override

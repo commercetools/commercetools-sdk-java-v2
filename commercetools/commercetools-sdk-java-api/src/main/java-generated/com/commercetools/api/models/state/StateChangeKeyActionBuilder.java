@@ -34,6 +34,11 @@ public class StateChangeKeyActionBuilder implements Builder<StateChangeKeyAction
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
@@ -55,10 +60,19 @@ public class StateChangeKeyActionBuilder implements Builder<StateChangeKeyAction
         return new StateChangeKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of StateChangeKeyActionBuilder
+     * @return builder
+     */
     public static StateChangeKeyActionBuilder of() {
         return new StateChangeKeyActionBuilder();
     }
 
+    /**
+     * create builder for StateChangeKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateChangeKeyActionBuilder of(final StateChangeKeyAction template) {
         StateChangeKeyActionBuilder builder = new StateChangeKeyActionBuilder();
         builder.key = template.getKey();

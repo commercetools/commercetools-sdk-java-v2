@@ -42,6 +42,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitStoreModeChangedMessageImpl.class)
 public interface BusinessUnitStoreModeChangedMessage extends Message {
 
+    /**
+     * discriminator value for BusinessUnitStoreModeChangedMessage
+     */
     String BUSINESS_UNIT_STORE_MODE_CHANGED = "BusinessUnitStoreModeChanged";
 
     /**
@@ -78,24 +81,63 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
     @JsonProperty("oldStoreMode")
     public BusinessUnitStoreMode getOldStoreMode();
 
+    /**
+     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores values to be set
+     */
+
     @JsonIgnore
     public void setStores(final StoreKeyReference... stores);
 
+    /**
+     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores values to be set
+     */
+
     public void setStores(final List<StoreKeyReference> stores);
 
+    /**
+     *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     * @param storeMode value to be set
+     */
+
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
+
+    /**
+     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores values to be set
+     */
 
     @JsonIgnore
     public void setOldStores(final StoreKeyReference... oldStores);
 
+    /**
+     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores values to be set
+     */
+
     public void setOldStores(final List<StoreKeyReference> oldStores);
+
+    /**
+     *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStoreMode value to be set
+     */
 
     public void setOldStoreMode(final BusinessUnitStoreMode oldStoreMode);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitStoreModeChangedMessage
+     */
     public static BusinessUnitStoreModeChangedMessage of() {
         return new BusinessUnitStoreModeChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitStoreModeChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitStoreModeChangedMessage of(final BusinessUnitStoreModeChangedMessage template) {
         BusinessUnitStoreModeChangedMessageImpl instance = new BusinessUnitStoreModeChangedMessageImpl();
         instance.setId(template.getId());
@@ -115,19 +157,38 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitStoreModeChangedMessage
+     * @return builder
+     */
     public static BusinessUnitStoreModeChangedMessageBuilder builder() {
         return BusinessUnitStoreModeChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitStoreModeChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStoreModeChangedMessageBuilder builder(
             final BusinessUnitStoreModeChangedMessage template) {
         return BusinessUnitStoreModeChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitStoreModeChangedMessage(Function<BusinessUnitStoreModeChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoreModeChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoreModeChangedMessage>() {
             @Override

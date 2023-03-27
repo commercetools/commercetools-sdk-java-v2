@@ -80,15 +80,30 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
         return this;
     }
 
+    /**
+     *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
+     * @return status
+     */
+
     @Nullable
     public com.commercetools.api.models.project.SearchIndexingConfigurationStatus getStatus() {
         return this.status;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
+     * @return lastModifiedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -111,10 +126,19 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
         return new SearchIndexingConfigurationValuesImpl(status, lastModifiedAt, lastModifiedBy);
     }
 
+    /**
+     * factory method for an instance of SearchIndexingConfigurationValuesBuilder
+     * @return builder
+     */
     public static SearchIndexingConfigurationValuesBuilder of() {
         return new SearchIndexingConfigurationValuesBuilder();
     }
 
+    /**
+     * create builder for SearchIndexingConfigurationValues instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchIndexingConfigurationValuesBuilder of(final SearchIndexingConfigurationValues template) {
         SearchIndexingConfigurationValuesBuilder builder = new SearchIndexingConfigurationValuesBuilder();
         builder.status = template.getStatus();

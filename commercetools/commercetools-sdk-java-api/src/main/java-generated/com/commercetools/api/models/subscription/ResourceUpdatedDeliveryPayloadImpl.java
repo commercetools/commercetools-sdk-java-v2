@@ -34,6 +34,9 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
 
     private java.time.ZonedDateTime modifiedAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ResourceUpdatedDeliveryPayloadImpl(@JsonProperty("projectKey") final String projectKey,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
@@ -49,6 +52,9 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
         this.notificationType = RESOURCE_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ResourceUpdatedDeliveryPayloadImpl() {
         this.notificationType = RESOURCE_UPDATED;
     }

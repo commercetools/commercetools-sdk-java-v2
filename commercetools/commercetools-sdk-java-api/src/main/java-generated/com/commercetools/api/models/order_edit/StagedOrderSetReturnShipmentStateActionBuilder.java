@@ -28,7 +28,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     /**
-     *
+     * set the value to the returnItemId
      * @param returnItemId value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     /**
-     *
+     * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -50,9 +50,19 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
         return this;
     }
 
+    /**
+     * value of returnItemId}
+     * @return returnItemId
+     */
+
     public String getReturnItemId() {
         return this.returnItemId;
     }
+
+    /**
+     * value of shipmentState}
+     * @return shipmentState
+     */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
         return this.shipmentState;
@@ -78,10 +88,19 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
         return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetReturnShipmentStateActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetReturnShipmentStateActionBuilder of() {
         return new StagedOrderSetReturnShipmentStateActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetReturnShipmentStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetReturnShipmentStateActionBuilder of(
             final StagedOrderSetReturnShipmentStateAction template) {
         StagedOrderSetReturnShipmentStateActionBuilder builder = new StagedOrderSetReturnShipmentStateActionBuilder();

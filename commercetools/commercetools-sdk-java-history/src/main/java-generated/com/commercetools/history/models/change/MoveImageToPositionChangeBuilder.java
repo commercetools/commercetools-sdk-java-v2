@@ -45,7 +45,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -189,17 +189,37 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         return this;
     }
 
+    /**
+     *  <p>Update actions for moving images</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of catalogData}
+     * @return catalogData
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<com.commercetools.history.models.common.Image> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<com.commercetools.history.models.common.Image> getNextValue() {
         return this.nextValue;
@@ -225,10 +245,19 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         return new MoveImageToPositionChangeImpl(change, catalogData, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of MoveImageToPositionChangeBuilder
+     * @return builder
+     */
     public static MoveImageToPositionChangeBuilder of() {
         return new MoveImageToPositionChangeBuilder();
     }
 
+    /**
+     * create builder for MoveImageToPositionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoveImageToPositionChangeBuilder of(final MoveImageToPositionChange template) {
         MoveImageToPositionChangeBuilder builder = new MoveImageToPositionChangeBuilder();
         builder.change = template.getChange();

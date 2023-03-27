@@ -344,64 +344,134 @@ public class ChannelBuilder implements Builder<Channel> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Channel.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Channel.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Channel was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Channel was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Channel.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Roles of the Channel.</p>
+     * @return roles
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }
+
+    /**
+     *  <p>Name of the Channel.</p>
+     * @return name
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Description of the Channel.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
+     * @return address
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
 
+    /**
+     *  <p>Statistics about the review ratings taken into account for the Channel.</p>
+     * @return reviewRatingStatistics
+     */
+
     @Nullable
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
         return this.reviewRatingStatistics;
     }
 
+    /**
+     *  <p>Custom Fields defined for the Channel.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
+     * @return geoLocation
+     */
 
     @Nullable
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {
@@ -432,10 +502,19 @@ public class ChannelBuilder implements Builder<Channel> {
             description, address, reviewRatingStatistics, custom, geoLocation);
     }
 
+    /**
+     * factory method for an instance of ChannelBuilder
+     * @return builder
+     */
     public static ChannelBuilder of() {
         return new ChannelBuilder();
     }
 
+    /**
+     * create builder for Channel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelBuilder of(final Channel template) {
         ChannelBuilder builder = new ChannelBuilder();
         builder.id = template.getId();

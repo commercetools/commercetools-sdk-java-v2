@@ -36,10 +36,19 @@ public class CartScoreTypeBuilder implements Builder<CartScoreType> {
         return new CartScoreTypeImpl();
     }
 
+    /**
+     * factory method for an instance of CartScoreTypeBuilder
+     * @return builder
+     */
     public static CartScoreTypeBuilder of() {
         return new CartScoreTypeBuilder();
     }
 
+    /**
+     * create builder for CartScoreType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartScoreTypeBuilder of(final CartScoreType template) {
         CartScoreTypeBuilder builder = new CartScoreTypeBuilder();
         return builder;

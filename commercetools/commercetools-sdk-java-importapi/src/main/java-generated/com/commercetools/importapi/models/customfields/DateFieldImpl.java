@@ -24,12 +24,18 @@ public class DateFieldImpl implements DateField, ModelBase {
 
     private java.time.LocalDate value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DateFieldImpl(@JsonProperty("value") final java.time.LocalDate value) {
         this.value = value;
         this.type = DATE;
     }
 
+    /**
+     * create empty instance
+     */
     public DateFieldImpl() {
         this.type = DATE;
     }

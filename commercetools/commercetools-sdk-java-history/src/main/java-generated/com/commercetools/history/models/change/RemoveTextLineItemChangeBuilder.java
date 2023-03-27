@@ -31,7 +31,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     private com.commercetools.history.models.common.TextLineItem nextValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -89,13 +89,28 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.TextLineItem getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.TextLineItem getNextValue() {
         return this.nextValue;
@@ -120,10 +135,19 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
         return new RemoveTextLineItemChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of RemoveTextLineItemChangeBuilder
+     * @return builder
+     */
     public static RemoveTextLineItemChangeBuilder of() {
         return new RemoveTextLineItemChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveTextLineItemChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveTextLineItemChangeBuilder of(final RemoveTextLineItemChange template) {
         RemoveTextLineItemChangeBuilder builder = new RemoveTextLineItemChangeBuilder();
         builder.change = template.getChange();

@@ -24,6 +24,9 @@ public class SubscriptionChangeDestinationActionImpl implements SubscriptionChan
 
     private com.commercetools.api.models.subscription.Destination destination;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubscriptionChangeDestinationActionImpl(
             @JsonProperty("destination") final com.commercetools.api.models.subscription.Destination destination) {
@@ -31,6 +34,9 @@ public class SubscriptionChangeDestinationActionImpl implements SubscriptionChan
         this.action = CHANGE_DESTINATION;
     }
 
+    /**
+     * create empty instance
+     */
     public SubscriptionChangeDestinationActionImpl() {
         this.action = CHANGE_DESTINATION;
     }

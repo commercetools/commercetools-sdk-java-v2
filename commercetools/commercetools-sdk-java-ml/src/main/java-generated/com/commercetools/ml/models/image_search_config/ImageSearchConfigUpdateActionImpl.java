@@ -22,11 +22,17 @@ public class ImageSearchConfigUpdateActionImpl implements ImageSearchConfigUpdat
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImageSearchConfigUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public ImageSearchConfigUpdateActionImpl() {
     }
 

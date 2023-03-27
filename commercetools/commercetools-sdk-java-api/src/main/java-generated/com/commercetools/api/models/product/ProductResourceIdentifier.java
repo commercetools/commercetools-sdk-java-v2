@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductResourceIdentifier
         extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Product> {
 
+    /**
+     * discriminator value for ProductResourceIdentifier
+     */
     String PRODUCT = "product";
 
     /**
@@ -46,14 +49,33 @@ public interface ProductResourceIdentifier
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced Product.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Product.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ProductResourceIdentifier
+     */
     public static ProductResourceIdentifier of() {
         return new ProductResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductResourceIdentifier of(final ProductResourceIdentifier template) {
         ProductResourceIdentifierImpl instance = new ProductResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -61,18 +83,37 @@ public interface ProductResourceIdentifier
         return instance;
     }
 
+    /**
+     * builder factory method for ProductResourceIdentifier
+     * @return builder
+     */
     public static ProductResourceIdentifierBuilder builder() {
         return ProductResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for ProductResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductResourceIdentifierBuilder builder(final ProductResourceIdentifier template) {
         return ProductResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductResourceIdentifier(Function<ProductResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductResourceIdentifier>() {
             @Override

@@ -27,6 +27,10 @@ public class CustomerGroupUpdateActionBuilder {
         return com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of CustomerGroupUpdateActionBuilder
+     * @return builder
+     */
     public static CustomerGroupUpdateActionBuilder of() {
         return new CustomerGroupUpdateActionBuilder();
     }

@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteStateChangedMessageImpl.class)
 public interface QuoteStateChangedMessage extends Message {
 
+    /**
+     * discriminator value for QuoteStateChangedMessage
+     */
     String QUOTE_STATE_CHANGED = "QuoteStateChanged";
 
     /**
@@ -56,14 +59,33 @@ public interface QuoteStateChangedMessage extends Message {
     @JsonProperty("oldQuoteState")
     public QuoteState getOldQuoteState();
 
+    /**
+     *  <p>State of the Quote after the Change Quote State update action.</p>
+     * @param quoteState value to be set
+     */
+
     public void setQuoteState(final QuoteState quoteState);
+
+    /**
+     *  <p>State of the Quote before the Change Quote State update action.</p>
+     * @param oldQuoteState value to be set
+     */
 
     public void setOldQuoteState(final QuoteState oldQuoteState);
 
+    /**
+     * factory method
+     * @return instance of QuoteStateChangedMessage
+     */
     public static QuoteStateChangedMessage of() {
         return new QuoteStateChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteStateChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteStateChangedMessage of(final QuoteStateChangedMessage template) {
         QuoteStateChangedMessageImpl instance = new QuoteStateChangedMessageImpl();
         instance.setId(template.getId());
@@ -81,18 +103,37 @@ public interface QuoteStateChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteStateChangedMessage
+     * @return builder
+     */
     public static QuoteStateChangedMessageBuilder builder() {
         return QuoteStateChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for QuoteStateChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteStateChangedMessageBuilder builder(final QuoteStateChangedMessage template) {
         return QuoteStateChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteStateChangedMessage(Function<QuoteStateChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteStateChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteStateChangedMessage>() {
             @Override

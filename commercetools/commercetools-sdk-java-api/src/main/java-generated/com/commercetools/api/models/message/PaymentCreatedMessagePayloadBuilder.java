@@ -47,6 +47,11 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
         return this;
     }
 
+    /**
+     *  <p>Payment that was created.</p>
+     * @return payment
+     */
+
     public com.commercetools.api.models.payment.Payment getPayment() {
         return this.payment;
     }
@@ -68,10 +73,19 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
         return new PaymentCreatedMessagePayloadImpl(payment);
     }
 
+    /**
+     * factory method for an instance of PaymentCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static PaymentCreatedMessagePayloadBuilder of() {
         return new PaymentCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for PaymentCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentCreatedMessagePayloadBuilder of(final PaymentCreatedMessagePayload template) {
         PaymentCreatedMessagePayloadBuilder builder = new PaymentCreatedMessagePayloadBuilder();
         builder.payment = template.getPayment();

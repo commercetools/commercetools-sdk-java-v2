@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDeletedMessagePayloadImpl.class)
 public interface ProductDeletedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for ProductDeletedMessagePayload
+     */
     String PRODUCT_DELETED = "ProductDeleted";
 
     /**
@@ -49,17 +52,41 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
     @JsonProperty("currentProjection")
     public ProductProjection getCurrentProjection();
 
+    /**
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @param removedImageUrls values to be set
+     */
+
     @JsonIgnore
     public void setRemovedImageUrls(final String... removedImageUrls);
 
+    /**
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @param removedImageUrls values to be set
+     */
+
     public void setRemovedImageUrls(final List<String> removedImageUrls);
+
+    /**
+     *  <p>Current Product Projection of the deleted Product.</p>
+     * @param currentProjection value to be set
+     */
 
     public void setCurrentProjection(final ProductProjection currentProjection);
 
+    /**
+     * factory method
+     * @return instance of ProductDeletedMessagePayload
+     */
     public static ProductDeletedMessagePayload of() {
         return new ProductDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDeletedMessagePayload of(final ProductDeletedMessagePayload template) {
         ProductDeletedMessagePayloadImpl instance = new ProductDeletedMessagePayloadImpl();
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
@@ -67,18 +94,37 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDeletedMessagePayload
+     * @return builder
+     */
     public static ProductDeletedMessagePayloadBuilder builder() {
         return ProductDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ProductDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDeletedMessagePayloadBuilder builder(final ProductDeletedMessagePayload template) {
         return ProductDeletedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDeletedMessagePayload(Function<ProductDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDeletedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDeletedMessagePayload>() {
             @Override

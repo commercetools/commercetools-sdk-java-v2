@@ -108,7 +108,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     *
+     * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -576,76 +576,187 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     * @return productType
+     */
 
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getProductType() {
         return this.productType;
     }
 
+    /**
+     * value of name}
+     * @return name
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     * @return slug
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>Maps to <code>Product.description</code>.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @return categories
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> getCategories() {
         return this.categories;
     }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return metaTitle
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return metaDescription
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return metaKeywords
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
 
+    /**
+     *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     * @return masterVariant
+     */
+
     @Nullable
     public com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport getMasterVariant() {
         return this.masterVariant;
     }
+
+    /**
+     *  <p>An array of related Product Variants.</p>
+     * @return variants
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> getVariants() {
         return this.variants;
     }
 
+    /**
+     *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     * @return taxCategory
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+     *  <pre><code>{
+     *    "en": [
+     *      { "text": "Multi tool" },
+     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
+     *    ],
+     *    "de": [
+     *      {
+     *        "text": "Schweizer Messer",
+     *        "suggestTokenizer": {
+     *          "type": "custom",
+     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
+     *        }
+     *      }
+     *    ]
+     *  }
+     *  </code></pre>
+     * @return searchKeywords
+     */
 
     @Nullable
     public com.commercetools.importapi.models.products.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
     }
 
+    /**
+     *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.StateKeyReference getState() {
         return this.state;
     }
 
+    /**
+     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     * @return publish
+     */
+
     @Nullable
     public Boolean getPublish() {
         return this.publish;
     }
+
+    /**
+     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     * @return priceMode
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.ProductPriceModeEnum getPriceMode() {
@@ -676,10 +787,19 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
             priceMode);
     }
 
+    /**
+     * factory method for an instance of ProductDraftImportBuilder
+     * @return builder
+     */
     public static ProductDraftImportBuilder of() {
         return new ProductDraftImportBuilder();
     }
 
+    /**
+     * create builder for ProductDraftImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDraftImportBuilder of(final ProductDraftImport template) {
         ProductDraftImportBuilder builder = new ProductDraftImportBuilder();
         builder.key = template.getKey();

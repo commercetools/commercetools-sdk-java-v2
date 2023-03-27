@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductVariantKeyReferenceImpl.class)
 public interface ProductVariantKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for ProductVariantKeyReference
+     */
     String PRODUCT_VARIANT = "product-variant";
 
+    /**
+     * factory method
+     * @return instance of ProductVariantKeyReference
+     */
     public static ProductVariantKeyReference of() {
         return new ProductVariantKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariantKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariantKeyReference of(final ProductVariantKeyReference template) {
         ProductVariantKeyReferenceImpl instance = new ProductVariantKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariantKeyReference
+     * @return builder
+     */
     public static ProductVariantKeyReferenceBuilder builder() {
         return ProductVariantKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariantKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantKeyReferenceBuilder builder(final ProductVariantKeyReference template) {
         return ProductVariantKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantKeyReference(Function<ProductVariantKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantKeyReference>() {
             @Override

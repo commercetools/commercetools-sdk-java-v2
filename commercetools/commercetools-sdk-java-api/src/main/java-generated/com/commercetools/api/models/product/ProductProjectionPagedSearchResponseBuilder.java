@@ -53,7 +53,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *
+     * set the value to the count
      * @param count value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *
+     * set the value to the total
      * @param total value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *
+     * set values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *
+     * set value to the results
      * @param results value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *
+     * add values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *
+     * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *
+     * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *
+     * set the value to the facets using the builder function
      * @param builder function to build the facets value
      * @return Builder
      */
@@ -165,7 +165,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *
+     * set the value to the facets
      * @param facets value to be set
      * @return Builder
      */
@@ -176,26 +176,56 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Long getLimit() {
         return this.limit;
     }
 
+    /**
+     * value of count}
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     * value of total}
+     * @return total
+     */
 
     @Nullable
     public Long getTotal() {
         return this.total;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
+
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     * value of results}
+     * @return results
+     */
+
     public java.util.List<com.commercetools.api.models.product.ProductProjection> getResults() {
         return this.results;
     }
+
+    /**
+     * value of facets}
+     * @return facets
+     */
 
     public com.commercetools.api.models.product.FacetResults getFacets() {
         return this.facets;
@@ -222,10 +252,19 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return new ProductProjectionPagedSearchResponseImpl(limit, count, total, offset, results, facets);
     }
 
+    /**
+     * factory method for an instance of ProductProjectionPagedSearchResponseBuilder
+     * @return builder
+     */
     public static ProductProjectionPagedSearchResponseBuilder of() {
         return new ProductProjectionPagedSearchResponseBuilder();
     }
 
+    /**
+     * create builder for ProductProjectionPagedSearchResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductProjectionPagedSearchResponseBuilder of(final ProductProjectionPagedSearchResponse template) {
         ProductProjectionPagedSearchResponseBuilder builder = new ProductProjectionPagedSearchResponseBuilder();
         builder.limit = template.getLimit();

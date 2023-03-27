@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCustomerSetTitleActionImpl.class)
 public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
 
+    /**
+     * discriminator value for MyCustomerSetTitleAction
+     */
     String SET_TITLE = "setTitle";
 
     /**
@@ -36,30 +39,63 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
     @JsonProperty("title")
     public String getTitle();
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param title value to be set
+     */
+
     public void setTitle(final String title);
 
+    /**
+     * factory method
+     * @return instance of MyCustomerSetTitleAction
+     */
     public static MyCustomerSetTitleAction of() {
         return new MyCustomerSetTitleActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCustomerSetTitleAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCustomerSetTitleAction of(final MyCustomerSetTitleAction template) {
         MyCustomerSetTitleActionImpl instance = new MyCustomerSetTitleActionImpl();
         instance.setTitle(template.getTitle());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCustomerSetTitleAction
+     * @return builder
+     */
     public static MyCustomerSetTitleActionBuilder builder() {
         return MyCustomerSetTitleActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCustomerSetTitleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetTitleActionBuilder builder(final MyCustomerSetTitleAction template) {
         return MyCustomerSetTitleActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCustomerSetTitleAction(Function<MyCustomerSetTitleAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetTitleAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetTitleAction>() {
             @Override

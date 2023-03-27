@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DeliveryRemovedMessagePayloadImpl.class)
 public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for DeliveryRemovedMessagePayload
+     */
     String DELIVERY_REMOVED = "DeliveryRemoved";
 
     /**
@@ -50,14 +53,33 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>The Delivery that was removed from the Order.</p>
+     * @param delivery value to be set
+     */
+
     public void setDelivery(final Delivery delivery);
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
 
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of DeliveryRemovedMessagePayload
+     */
     public static DeliveryRemovedMessagePayload of() {
         return new DeliveryRemovedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of DeliveryRemovedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DeliveryRemovedMessagePayload of(final DeliveryRemovedMessagePayload template) {
         DeliveryRemovedMessagePayloadImpl instance = new DeliveryRemovedMessagePayloadImpl();
         instance.setDelivery(template.getDelivery());
@@ -65,18 +87,37 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for DeliveryRemovedMessagePayload
+     * @return builder
+     */
     public static DeliveryRemovedMessagePayloadBuilder builder() {
         return DeliveryRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for DeliveryRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryRemovedMessagePayloadBuilder builder(final DeliveryRemovedMessagePayload template) {
         return DeliveryRemovedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDeliveryRemovedMessagePayload(Function<DeliveryRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DeliveryRemovedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DeliveryRemovedMessagePayload>() {
             @Override

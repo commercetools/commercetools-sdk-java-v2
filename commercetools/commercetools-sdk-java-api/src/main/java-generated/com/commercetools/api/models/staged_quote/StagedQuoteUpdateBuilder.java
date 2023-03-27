@@ -107,9 +107,19 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the StagedQuote.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
         return new StagedQuoteUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteUpdateBuilder
+     * @return builder
+     */
     public static StagedQuoteUpdateBuilder of() {
         return new StagedQuoteUpdateBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteUpdateBuilder of(final StagedQuoteUpdate template) {
         StagedQuoteUpdateBuilder builder = new StagedQuoteUpdateBuilder();
         builder.version = template.getVersion();

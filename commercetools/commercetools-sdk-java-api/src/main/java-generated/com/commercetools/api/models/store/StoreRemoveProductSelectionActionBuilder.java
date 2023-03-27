@@ -50,6 +50,11 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
         return this;
     }
 
+    /**
+     *  <p>Value to remove. The removed Product Selection is made offline.</p>
+     * @return productSelection
+     */
+
     public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
         return this.productSelection;
     }
@@ -72,10 +77,19 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
         return new StoreRemoveProductSelectionActionImpl(productSelection);
     }
 
+    /**
+     * factory method for an instance of StoreRemoveProductSelectionActionBuilder
+     * @return builder
+     */
     public static StoreRemoveProductSelectionActionBuilder of() {
         return new StoreRemoveProductSelectionActionBuilder();
     }
 
+    /**
+     * create builder for StoreRemoveProductSelectionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreRemoveProductSelectionActionBuilder of(final StoreRemoveProductSelectionAction template) {
         StoreRemoveProductSelectionActionBuilder builder = new StoreRemoveProductSelectionActionBuilder();
         builder.productSelection = template.getProductSelection();

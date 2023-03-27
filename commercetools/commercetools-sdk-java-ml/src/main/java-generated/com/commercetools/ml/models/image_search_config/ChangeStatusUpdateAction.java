@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeStatusUpdateActionImpl.class)
 public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction {
 
+    /**
+     * discriminator value for ChangeStatusUpdateAction
+     */
     String CHANGE_STATUS = "changeStatus";
 
     /**
@@ -39,30 +42,63 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
     @JsonProperty("status")
     public ImageSearchConfigStatus getStatus();
 
+    /**
+     * set status
+     * @param status value to be set
+     */
+
     public void setStatus(final ImageSearchConfigStatus status);
 
+    /**
+     * factory method
+     * @return instance of ChangeStatusUpdateAction
+     */
     public static ChangeStatusUpdateAction of() {
         return new ChangeStatusUpdateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeStatusUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeStatusUpdateAction of(final ChangeStatusUpdateAction template) {
         ChangeStatusUpdateActionImpl instance = new ChangeStatusUpdateActionImpl();
         instance.setStatus(template.getStatus());
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeStatusUpdateAction
+     * @return builder
+     */
     public static ChangeStatusUpdateActionBuilder builder() {
         return ChangeStatusUpdateActionBuilder.of();
     }
 
+    /**
+     * create builder for ChangeStatusUpdateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeStatusUpdateActionBuilder builder(final ChangeStatusUpdateAction template) {
         return ChangeStatusUpdateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeStatusUpdateAction(Function<ChangeStatusUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeStatusUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeStatusUpdateAction>() {
             @Override

@@ -24,7 +24,7 @@ public class FieldTypeBuilder implements Builder<FieldType> {
     private String name;
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class FieldTypeBuilder implements Builder<FieldType> {
         this.name = name;
         return this;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public String getName() {
         return this.name;
@@ -55,10 +60,19 @@ public class FieldTypeBuilder implements Builder<FieldType> {
         return new FieldTypeImpl(name);
     }
 
+    /**
+     * factory method for an instance of FieldTypeBuilder
+     * @return builder
+     */
     public static FieldTypeBuilder of() {
         return new FieldTypeBuilder();
     }
 
+    /**
+     * create builder for FieldType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldTypeBuilder of(final FieldType template) {
         FieldTypeBuilder builder = new FieldTypeBuilder();
         builder.name = template.getName();

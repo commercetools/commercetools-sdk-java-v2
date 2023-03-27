@@ -24,6 +24,9 @@ public class BusinessUnitChangeParentUnitActionImpl implements BusinessUnitChang
 
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitChangeParentUnitActionImpl(
             @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
@@ -31,6 +34,9 @@ public class BusinessUnitChangeParentUnitActionImpl implements BusinessUnitChang
         this.action = CHANGE_PARENT_UNIT;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitChangeParentUnitActionImpl() {
         this.action = CHANGE_PARENT_UNIT;
     }

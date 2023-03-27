@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryChangeOrderHintActionImpl.class)
 public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
 
+    /**
+     * discriminator value for CategoryChangeOrderHintAction
+     */
     String CHANGE_ORDER_HINT = "changeOrderHint";
 
     /**
@@ -39,30 +42,63 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
     @JsonProperty("orderHint")
     public String getOrderHint();
 
+    /**
+     *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
+     * @param orderHint value to be set
+     */
+
     public void setOrderHint(final String orderHint);
 
+    /**
+     * factory method
+     * @return instance of CategoryChangeOrderHintAction
+     */
     public static CategoryChangeOrderHintAction of() {
         return new CategoryChangeOrderHintActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryChangeOrderHintAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryChangeOrderHintAction of(final CategoryChangeOrderHintAction template) {
         CategoryChangeOrderHintActionImpl instance = new CategoryChangeOrderHintActionImpl();
         instance.setOrderHint(template.getOrderHint());
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryChangeOrderHintAction
+     * @return builder
+     */
     public static CategoryChangeOrderHintActionBuilder builder() {
         return CategoryChangeOrderHintActionBuilder.of();
     }
 
+    /**
+     * create builder for CategoryChangeOrderHintAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryChangeOrderHintActionBuilder builder(final CategoryChangeOrderHintAction template) {
         return CategoryChangeOrderHintActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryChangeOrderHintAction(Function<CategoryChangeOrderHintAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeOrderHintAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeOrderHintAction>() {
             @Override

@@ -27,7 +27,7 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
     private Integer h;
 
     /**
-     *
+     * set the value to the w
      * @param w value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
     }
 
     /**
-     *
+     * set the value to the h
      * @param h value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
         return this;
     }
 
+    /**
+     * value of w}
+     * @return w
+     */
+
     public Integer getW() {
         return this.w;
     }
+
+    /**
+     * value of h}
+     * @return h
+     */
 
     public Integer getH() {
         return this.h;
@@ -74,10 +84,19 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
         return new ImageDimensionsImpl(w, h);
     }
 
+    /**
+     * factory method for an instance of ImageDimensionsBuilder
+     * @return builder
+     */
     public static ImageDimensionsBuilder of() {
         return new ImageDimensionsBuilder();
     }
 
+    /**
+     * create builder for ImageDimensions instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImageDimensionsBuilder of(final ImageDimensions template) {
         ImageDimensionsBuilder builder = new ImageDimensionsBuilder();
         builder.w = template.getW();

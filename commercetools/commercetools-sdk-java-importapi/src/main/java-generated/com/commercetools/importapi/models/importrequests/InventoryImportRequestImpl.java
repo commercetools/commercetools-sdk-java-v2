@@ -25,6 +25,9 @@ public class InventoryImportRequestImpl implements InventoryImportRequest, Model
 
     private java.util.List<com.commercetools.importapi.models.inventories.InventoryImport> resources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryImportRequestImpl(
             @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.inventories.InventoryImport> resources) {
@@ -32,6 +35,9 @@ public class InventoryImportRequestImpl implements InventoryImportRequest, Model
         this.type = ImportResourceType.findEnum("inventory");
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryImportRequestImpl() {
         this.type = ImportResourceType.findEnum("inventory");
     }

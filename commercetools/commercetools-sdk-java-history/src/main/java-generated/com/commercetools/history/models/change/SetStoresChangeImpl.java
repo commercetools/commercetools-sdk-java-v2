@@ -28,6 +28,9 @@ public class SetStoresChangeImpl implements SetStoresChange, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetStoresChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reference> previousValue,
@@ -38,6 +41,9 @@ public class SetStoresChangeImpl implements SetStoresChange, ModelBase {
         this.type = SET_STORES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetStoresChangeImpl() {
         this.type = SET_STORES_CHANGE;
     }

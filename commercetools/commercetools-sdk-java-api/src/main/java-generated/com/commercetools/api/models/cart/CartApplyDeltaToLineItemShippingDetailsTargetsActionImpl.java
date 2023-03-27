@@ -27,6 +27,9 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
 
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("targetsDelta") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
@@ -35,6 +38,9 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
         this.action = APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }
 
+    /**
+     * create empty instance
+     */
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl() {
         this.action = APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }

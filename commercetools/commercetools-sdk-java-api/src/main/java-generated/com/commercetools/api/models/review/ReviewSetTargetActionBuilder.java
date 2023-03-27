@@ -33,6 +33,11 @@ public class ReviewSetTargetActionBuilder implements Builder<ReviewSetTargetActi
         return this;
     }
 
+    /**
+     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     * @return target
+     */
+
     public java.lang.Object getTarget() {
         return this.target;
     }
@@ -54,10 +59,19 @@ public class ReviewSetTargetActionBuilder implements Builder<ReviewSetTargetActi
         return new ReviewSetTargetActionImpl(target);
     }
 
+    /**
+     * factory method for an instance of ReviewSetTargetActionBuilder
+     * @return builder
+     */
     public static ReviewSetTargetActionBuilder of() {
         return new ReviewSetTargetActionBuilder();
     }
 
+    /**
+     * create builder for ReviewSetTargetAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetTargetActionBuilder of(final ReviewSetTargetAction template) {
         ReviewSetTargetActionBuilder builder = new ReviewSetTargetActionBuilder();
         builder.target = template.getTarget();

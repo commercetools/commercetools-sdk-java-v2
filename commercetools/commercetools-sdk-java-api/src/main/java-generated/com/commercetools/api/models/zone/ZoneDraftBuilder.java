@@ -133,19 +133,39 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Zone.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the Zone.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the Zone.</p>
+     * @return description
+     */
 
     @Nullable
     public String getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @return locations
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.zone.Location> getLocations() {
@@ -169,10 +189,19 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
         return new ZoneDraftImpl(key, name, description, locations);
     }
 
+    /**
+     * factory method for an instance of ZoneDraftBuilder
+     * @return builder
+     */
     public static ZoneDraftBuilder of() {
         return new ZoneDraftBuilder();
     }
 
+    /**
+     * create builder for ZoneDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneDraftBuilder of(final ZoneDraft template) {
         ZoneDraftBuilder builder = new ZoneDraftBuilder();
         builder.key = template.getKey();

@@ -131,28 +131,58 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @return timestamp
+     */
+
     @Nullable
     public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;
     }
 
+    /**
+     *  <p>Type of the Transaction.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.payment.TransactionType getType() {
         return this.type;
     }
 
+    /**
+     *  <p>Money value for the Transaction.</p>
+     * @return amount
+     */
+
     public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;
     }
+
+    /**
+     *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
+     * @return interactionId
+     */
 
     @Nullable
     public String getInteractionId() {
         return this.interactionId;
     }
 
+    /**
+     *  <p>State of the Transaction.</p>
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.api.models.payment.TransactionState getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Custom Fields of the Transaction.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -177,10 +207,19 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
         return new TransactionDraftImpl(timestamp, type, amount, interactionId, state, custom);
     }
 
+    /**
+     * factory method for an instance of TransactionDraftBuilder
+     * @return builder
+     */
     public static TransactionDraftBuilder of() {
         return new TransactionDraftBuilder();
     }
 
+    /**
+     * create builder for TransactionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransactionDraftBuilder of(final TransactionDraft template) {
         TransactionDraftBuilder builder = new TransactionDraftBuilder();
         builder.timestamp = template.getTimestamp();

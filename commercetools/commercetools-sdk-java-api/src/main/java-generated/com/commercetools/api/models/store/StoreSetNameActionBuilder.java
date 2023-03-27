@@ -49,6 +49,11 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
         return this;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     * @return name
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
@@ -70,10 +75,19 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
         return new StoreSetNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of StoreSetNameActionBuilder
+     * @return builder
+     */
     public static StoreSetNameActionBuilder of() {
         return new StoreSetNameActionBuilder();
     }
 
+    /**
+     * create builder for StoreSetNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetNameActionBuilder of(final StoreSetNameAction template) {
         StoreSetNameActionBuilder builder = new StoreSetNameActionBuilder();
         builder.name = template.getName();

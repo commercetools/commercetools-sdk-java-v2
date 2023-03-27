@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BadGatewayErrorImpl.class)
 public interface BadGatewayError extends ErrorObject {
 
+    /**
+     * discriminator value for BadGatewayError
+     */
     String BAD_GATEWAY = "BadGateway";
 
     /**
@@ -48,12 +51,26 @@ public interface BadGatewayError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Plain text description of the error.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of BadGatewayError
+     */
     public static BadGatewayError of() {
         return new BadGatewayErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of BadGatewayError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BadGatewayError of(final BadGatewayError template) {
         BadGatewayErrorImpl instance = new BadGatewayErrorImpl();
         instance.setMessage(template.getMessage());
@@ -61,18 +78,37 @@ public interface BadGatewayError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for BadGatewayError
+     * @return builder
+     */
     public static BadGatewayErrorBuilder builder() {
         return BadGatewayErrorBuilder.of();
     }
 
+    /**
+     * create builder for BadGatewayError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BadGatewayErrorBuilder builder(final BadGatewayError template) {
         return BadGatewayErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBadGatewayError(Function<BadGatewayError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BadGatewayError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BadGatewayError>() {
             @Override

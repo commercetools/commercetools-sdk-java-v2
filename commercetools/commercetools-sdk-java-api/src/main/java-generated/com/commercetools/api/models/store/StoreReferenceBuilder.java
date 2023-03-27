@@ -63,9 +63,19 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique ID of the referenced Store.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.store.Store getObj() {
@@ -89,10 +99,19 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
         return new StoreReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of StoreReferenceBuilder
+     * @return builder
+     */
     public static StoreReferenceBuilder of() {
         return new StoreReferenceBuilder();
     }
 
+    /**
+     * create builder for StoreReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreReferenceBuilder of(final StoreReference template) {
         StoreReferenceBuilder builder = new StoreReferenceBuilder();
         builder.id = template.getId();

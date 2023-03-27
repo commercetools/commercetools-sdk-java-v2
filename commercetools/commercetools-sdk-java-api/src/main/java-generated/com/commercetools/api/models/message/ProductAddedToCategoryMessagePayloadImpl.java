@@ -26,6 +26,9 @@ public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToC
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductAddedToCategoryMessagePayloadImpl(
             @JsonProperty("category") final com.commercetools.api.models.category.CategoryReference category,
@@ -35,6 +38,9 @@ public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToC
         this.type = PRODUCT_ADDED_TO_CATEGORY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductAddedToCategoryMessagePayloadImpl() {
         this.type = PRODUCT_ADDED_TO_CATEGORY;
     }

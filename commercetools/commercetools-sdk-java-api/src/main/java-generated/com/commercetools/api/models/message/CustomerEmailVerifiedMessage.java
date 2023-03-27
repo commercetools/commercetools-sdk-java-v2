@@ -33,12 +33,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerEmailVerifiedMessageImpl.class)
 public interface CustomerEmailVerifiedMessage extends Message {
 
+    /**
+     * discriminator value for CustomerEmailVerifiedMessage
+     */
     String CUSTOMER_EMAIL_VERIFIED = "CustomerEmailVerified";
 
+    /**
+     * factory method
+     * @return instance of CustomerEmailVerifiedMessage
+     */
     public static CustomerEmailVerifiedMessage of() {
         return new CustomerEmailVerifiedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerEmailVerifiedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerEmailVerifiedMessage of(final CustomerEmailVerifiedMessage template) {
         CustomerEmailVerifiedMessageImpl instance = new CustomerEmailVerifiedMessageImpl();
         instance.setId(template.getId());
@@ -54,18 +66,37 @@ public interface CustomerEmailVerifiedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerEmailVerifiedMessage
+     * @return builder
+     */
     public static CustomerEmailVerifiedMessageBuilder builder() {
         return CustomerEmailVerifiedMessageBuilder.of();
     }
 
+    /**
+     * create builder for CustomerEmailVerifiedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerEmailVerifiedMessageBuilder builder(final CustomerEmailVerifiedMessage template) {
         return CustomerEmailVerifiedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerEmailVerifiedMessage(Function<CustomerEmailVerifiedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerEmailVerifiedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerEmailVerifiedMessage>() {
             @Override

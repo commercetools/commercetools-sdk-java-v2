@@ -21,6 +21,9 @@ public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldDateTypeImpl() {
         this.name = DATE;

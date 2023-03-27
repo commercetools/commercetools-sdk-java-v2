@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetRatingChangeImpl.class)
 public interface SetRatingChange extends Change {
 
+    /**
+     * discriminator value for SetRatingChange
+     */
     String SET_RATING_CHANGE = "SetRatingChange";
 
     /**
@@ -65,16 +68,40 @@ public interface SetRatingChange extends Change {
     @JsonProperty("nextValue")
     public Integer getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setRating</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Integer previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Integer nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetRatingChange
+     */
     public static SetRatingChange of() {
         return new SetRatingChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetRatingChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetRatingChange of(final SetRatingChange template) {
         SetRatingChangeImpl instance = new SetRatingChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface SetRatingChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetRatingChange
+     * @return builder
+     */
     public static SetRatingChangeBuilder builder() {
         return SetRatingChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetRatingChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetRatingChangeBuilder builder(final SetRatingChange template) {
         return SetRatingChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetRatingChange(Function<SetRatingChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetRatingChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetRatingChange>() {
             @Override

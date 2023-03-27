@@ -24,12 +24,18 @@ public class MyCustomerChangeEmailActionImpl implements MyCustomerChangeEmailAct
 
     private String email;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerChangeEmailActionImpl(@JsonProperty("email") final String email) {
         this.email = email;
         this.action = CHANGE_EMAIL;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerChangeEmailActionImpl() {
         this.action = CHANGE_EMAIL;
     }

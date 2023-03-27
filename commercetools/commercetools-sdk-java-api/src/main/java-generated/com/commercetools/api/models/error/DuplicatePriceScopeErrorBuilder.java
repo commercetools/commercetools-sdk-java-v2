@@ -90,13 +90,28 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         return this;
     }
 
+    /**
+     *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Conflicting Embedded Price.</p>
+     * @return conflictingPrice
+     */
 
     public com.commercetools.api.models.common.Price getConflictingPrice() {
         return this.conflictingPrice;
@@ -120,10 +135,19 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         return new DuplicatePriceScopeErrorImpl(message, values, conflictingPrice);
     }
 
+    /**
+     * factory method for an instance of DuplicatePriceScopeErrorBuilder
+     * @return builder
+     */
     public static DuplicatePriceScopeErrorBuilder of() {
         return new DuplicatePriceScopeErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicatePriceScopeError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicatePriceScopeErrorBuilder of(final DuplicatePriceScopeError template) {
         DuplicatePriceScopeErrorBuilder builder = new DuplicatePriceScopeErrorBuilder();
         builder.message = template.getMessage();

@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetCustomLineItemCustomTypeActionImpl.class)
 public interface StagedOrderSetCustomLineItemCustomTypeAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetCustomLineItemCustomTypeAction
+     */
     String SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE = "setCustomLineItemCustomType";
 
     /**
@@ -59,16 +62,40 @@ public interface StagedOrderSetCustomLineItemCustomTypeAction extends StagedOrde
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     * set customLineItemId
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @param type value to be set
+     */
 
     public void setType(final TypeResourceIdentifier type);
 
+    /**
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @param fields value to be set
+     */
+
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetCustomLineItemCustomTypeAction
+     */
     public static StagedOrderSetCustomLineItemCustomTypeAction of() {
         return new StagedOrderSetCustomLineItemCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetCustomLineItemCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetCustomLineItemCustomTypeAction of(
             final StagedOrderSetCustomLineItemCustomTypeAction template) {
         StagedOrderSetCustomLineItemCustomTypeActionImpl instance = new StagedOrderSetCustomLineItemCustomTypeActionImpl();
@@ -78,20 +105,39 @@ public interface StagedOrderSetCustomLineItemCustomTypeAction extends StagedOrde
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetCustomLineItemCustomTypeAction
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemCustomTypeActionBuilder builder() {
         return StagedOrderSetCustomLineItemCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomLineItemCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemCustomTypeActionBuilder builder(
             final StagedOrderSetCustomLineItemCustomTypeAction template) {
         return StagedOrderSetCustomLineItemCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetCustomLineItemCustomTypeAction(
             Function<StagedOrderSetCustomLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomTypeAction>() {
             @Override

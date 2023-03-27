@@ -26,6 +26,9 @@ public class MoneyAttributeImpl implements MoneyAttribute, ModelBase {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MoneyAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -34,6 +37,9 @@ public class MoneyAttributeImpl implements MoneyAttribute, ModelBase {
         this.type = MONEY;
     }
 
+    /**
+     * create empty instance
+     */
     public MoneyAttributeImpl() {
         this.type = MONEY;
     }

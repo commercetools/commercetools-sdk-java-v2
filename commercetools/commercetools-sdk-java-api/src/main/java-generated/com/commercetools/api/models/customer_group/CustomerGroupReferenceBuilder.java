@@ -64,9 +64,19 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced CustomerGroup.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroup getObj() {
@@ -90,10 +100,19 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
         return new CustomerGroupReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of CustomerGroupReferenceBuilder
+     * @return builder
+     */
     public static CustomerGroupReferenceBuilder of() {
         return new CustomerGroupReferenceBuilder();
     }
 
+    /**
+     * create builder for CustomerGroupReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupReferenceBuilder of(final CustomerGroupReference template) {
         CustomerGroupReferenceBuilder builder = new CustomerGroupReferenceBuilder();
         builder.id = template.getId();

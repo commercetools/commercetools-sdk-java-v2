@@ -26,6 +26,9 @@ public class LocalizableTextAttributeImpl implements LocalizableTextAttribute, M
 
     private com.commercetools.importapi.models.common.LocalizedString value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizableTextAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final com.commercetools.importapi.models.common.LocalizedString value) {
@@ -34,6 +37,9 @@ public class LocalizableTextAttributeImpl implements LocalizableTextAttribute, M
         this.type = LTEXT;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizableTextAttributeImpl() {
         this.type = LTEXT;
     }

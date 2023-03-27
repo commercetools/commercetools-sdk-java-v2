@@ -28,6 +28,9 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
 
     private String anonymousId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CreatedByImpl(@JsonProperty("clientId") final String clientId,
             @JsonProperty("externalUserId") final String externalUserId,
@@ -39,6 +42,9 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
         this.anonymousId = anonymousId;
     }
 
+    /**
+     * create empty instance
+     */
     public CreatedByImpl() {
     }
 

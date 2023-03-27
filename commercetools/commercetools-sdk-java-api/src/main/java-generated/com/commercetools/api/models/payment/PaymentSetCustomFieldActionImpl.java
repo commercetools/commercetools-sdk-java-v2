@@ -26,6 +26,9 @@ public class PaymentSetCustomFieldActionImpl implements PaymentSetCustomFieldAct
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class PaymentSetCustomFieldActionImpl implements PaymentSetCustomFieldAct
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

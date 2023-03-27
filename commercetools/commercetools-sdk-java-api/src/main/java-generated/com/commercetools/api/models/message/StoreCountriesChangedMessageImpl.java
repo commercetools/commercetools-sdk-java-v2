@@ -46,6 +46,9 @@ public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMe
 
     private java.util.List<com.commercetools.api.models.store_country.StoreCountry> removedCountries;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreCountriesChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMe
         this.type = STORE_COUNTRIES_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreCountriesChangedMessageImpl() {
         this.type = STORE_COUNTRIES_CHANGED;
     }

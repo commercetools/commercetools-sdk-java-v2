@@ -76,13 +76,28 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
         return this;
     }
 
+    /**
+     *  <p><code>"A value is required for field $field."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Name of the field missing the value.</p>
+     * @return field
+     */
 
     public String getField() {
         return this.field;
@@ -106,10 +121,19 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
         return new RequiredFieldErrorImpl(message, values, field);
     }
 
+    /**
+     * factory method for an instance of RequiredFieldErrorBuilder
+     * @return builder
+     */
     public static RequiredFieldErrorBuilder of() {
         return new RequiredFieldErrorBuilder();
     }
 
+    /**
+     * create builder for RequiredFieldError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RequiredFieldErrorBuilder of(final RequiredFieldError template) {
         RequiredFieldErrorBuilder builder = new RequiredFieldErrorBuilder();
         builder.message = template.getMessage();

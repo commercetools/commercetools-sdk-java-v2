@@ -25,6 +25,9 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderChangeTaxCalculationModeActionImpl(
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
@@ -32,6 +35,9 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
         this.action = CHANGE_TAX_CALCULATION_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderChangeTaxCalculationModeActionImpl() {
         this.action = CHANGE_TAX_CALCULATION_MODE;
     }

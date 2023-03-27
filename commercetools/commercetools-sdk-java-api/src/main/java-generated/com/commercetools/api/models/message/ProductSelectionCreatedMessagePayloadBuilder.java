@@ -50,6 +50,11 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
         return this;
     }
 
+    /**
+     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     * @return productSelection
+     */
+
     public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {
         return this.productSelection;
     }
@@ -72,10 +77,19 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
         return new ProductSelectionCreatedMessagePayloadImpl(productSelection);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductSelectionCreatedMessagePayloadBuilder of() {
         return new ProductSelectionCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionCreatedMessagePayloadBuilder of(
             final ProductSelectionCreatedMessagePayload template) {
         ProductSelectionCreatedMessagePayloadBuilder builder = new ProductSelectionCreatedMessagePayloadBuilder();

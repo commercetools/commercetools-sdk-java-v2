@@ -46,6 +46,9 @@ public class StoreDistributionChannelsChangedMessageImpl implements StoreDistrib
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> removedDistributionChannels;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreDistributionChannelsChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class StoreDistributionChannelsChangedMessageImpl implements StoreDistrib
         this.type = STORE_DISTRIBUTION_CHANNELS_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreDistributionChannelsChangedMessageImpl() {
         this.type = STORE_DISTRIBUTION_CHANNELS_CHANGED;
     }

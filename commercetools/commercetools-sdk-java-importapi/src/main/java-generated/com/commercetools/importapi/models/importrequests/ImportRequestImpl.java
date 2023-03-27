@@ -22,11 +22,17 @@ public class ImportRequestImpl implements ImportRequest, ModelBase {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportRequestImpl(@JsonProperty("type") final com.commercetools.importapi.models.common.ImportResourceType type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportRequestImpl() {
     }
 

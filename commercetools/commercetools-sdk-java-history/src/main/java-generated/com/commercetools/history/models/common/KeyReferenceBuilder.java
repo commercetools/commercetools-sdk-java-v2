@@ -27,7 +27,7 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
     }
 
     /**
-     *
+     * set the value to the typeId
      * @param typeId value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of typeId}
+     * @return typeId
+     */
 
     public com.commercetools.history.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
@@ -74,10 +84,19 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
         return new KeyReferenceImpl(key, typeId);
     }
 
+    /**
+     * factory method for an instance of KeyReferenceBuilder
+     * @return builder
+     */
     public static KeyReferenceBuilder of() {
         return new KeyReferenceBuilder();
     }
 
+    /**
+     * create builder for KeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static KeyReferenceBuilder of(final KeyReference template) {
         KeyReferenceBuilder builder = new KeyReferenceBuilder();
         builder.key = template.getKey();

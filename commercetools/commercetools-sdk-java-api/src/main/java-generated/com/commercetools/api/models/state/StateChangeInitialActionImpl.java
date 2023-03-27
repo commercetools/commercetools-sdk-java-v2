@@ -24,12 +24,18 @@ public class StateChangeInitialActionImpl implements StateChangeInitialAction, M
 
     private Boolean initial;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateChangeInitialActionImpl(@JsonProperty("initial") final Boolean initial) {
         this.initial = initial;
         this.action = CHANGE_INITIAL;
     }
 
+    /**
+     * create empty instance
+     */
     public StateChangeInitialActionImpl() {
         this.action = CHANGE_INITIAL;
     }

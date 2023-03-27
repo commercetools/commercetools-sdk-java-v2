@@ -28,6 +28,9 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCustomerGroupChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue,
@@ -38,6 +41,9 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
         this.type = SET_CUSTOMER_GROUP_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCustomerGroupChangeImpl() {
         this.type = SET_CUSTOMER_GROUP_CHANGE;
     }

@@ -29,6 +29,9 @@ public class ProductAssignmentMissingErrorImpl implements ProductAssignmentMissi
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductAssignmentMissingErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -39,6 +42,9 @@ public class ProductAssignmentMissingErrorImpl implements ProductAssignmentMissi
         this.code = PRODUCT_ASSIGNMENT_MISSING;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductAssignmentMissingErrorImpl() {
         this.code = PRODUCT_ASSIGNMENT_MISSING;
     }

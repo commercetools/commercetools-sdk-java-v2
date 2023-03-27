@@ -28,7 +28,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     private com.commercetools.history.models.common.Money totalGross;
 
     /**
-     *
+     * set the value to the totalNet using the builder function
      * @param builder function to build the totalNet value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *
+     * set the value to the totalNet
      * @param totalNet value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *
+     * set the value to the totalGross using the builder function
      * @param builder function to build the totalGross value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *
+     * set the value to the totalGross
      * @param totalGross value to be set
      * @return Builder
      */
@@ -73,9 +73,19 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     * value of totalNet}
+     * @return totalNet
+     */
+
     public com.commercetools.history.models.common.Money getTotalNet() {
         return this.totalNet;
     }
+
+    /**
+     * value of totalGross}
+     * @return totalGross
+     */
 
     public com.commercetools.history.models.common.Money getTotalGross() {
         return this.totalGross;
@@ -99,10 +109,19 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return new TaxedPriceImpl(totalNet, totalGross);
     }
 
+    /**
+     * factory method for an instance of TaxedPriceBuilder
+     * @return builder
+     */
     public static TaxedPriceBuilder of() {
         return new TaxedPriceBuilder();
     }
 
+    /**
+     * create builder for TaxedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxedPriceBuilder of(final TaxedPrice template) {
         TaxedPriceBuilder builder = new TaxedPriceBuilder();
         builder.totalNet = template.getTotalNet();

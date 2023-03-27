@@ -46,17 +46,38 @@ public interface ProcessingState {
     */
     ProcessingState REJECTED = ProcessingStateEnum.REJECTED;
 
+    /**
+     * possible values of ProcessingState
+     */
     enum ProcessingStateEnum implements ProcessingState {
+        /**
+         * processing
+         */
         PROCESSING("processing"),
 
+        /**
+         * validationFailed
+         */
         VALIDATION_FAILED("validationFailed"),
 
+        /**
+         * unresolved
+         */
         UNRESOLVED("unresolved"),
 
+        /**
+         * waitForMasterVariant
+         */
         WAIT_FOR_MASTER_VARIANT("waitForMasterVariant"),
 
+        /**
+         * imported
+         */
         IMPORTED("imported"),
 
+        /**
+         * rejected
+         */
         REJECTED("rejected");
         private final String jsonName;
 
@@ -73,13 +94,30 @@ public interface ProcessingState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ProcessingState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ProcessingState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ProcessingState() {
@@ -99,10 +137,18 @@ public interface ProcessingState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ProcessingState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ProcessingState[] values() {
         return ProcessingStateEnum.values();
     }

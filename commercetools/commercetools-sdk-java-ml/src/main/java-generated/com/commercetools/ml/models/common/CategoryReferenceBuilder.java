@@ -24,7 +24,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     private String id;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
         this.id = id;
         return this;
     }
+
+    /**
+     * value of id}
+     * @return id
+     */
 
     public String getId() {
         return this.id;
@@ -55,10 +60,19 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
         return new CategoryReferenceImpl(id);
     }
 
+    /**
+     * factory method for an instance of CategoryReferenceBuilder
+     * @return builder
+     */
     public static CategoryReferenceBuilder of() {
         return new CategoryReferenceBuilder();
     }
 
+    /**
+     * create builder for CategoryReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryReferenceBuilder of(final CategoryReference template) {
         CategoryReferenceBuilder builder = new CategoryReferenceBuilder();
         builder.id = template.getId();

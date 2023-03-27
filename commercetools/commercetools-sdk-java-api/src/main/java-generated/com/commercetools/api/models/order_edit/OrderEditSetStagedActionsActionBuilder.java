@@ -93,6 +93,11 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
         return this;
     }
 
+    /**
+     *  <p>The actions to edit the <code>resource</code>.</p>
+     * @return stagedActions
+     */
+
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
         return this.stagedActions;
     }
@@ -114,10 +119,19 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
         return new OrderEditSetStagedActionsActionImpl(stagedActions);
     }
 
+    /**
+     * factory method for an instance of OrderEditSetStagedActionsActionBuilder
+     * @return builder
+     */
     public static OrderEditSetStagedActionsActionBuilder of() {
         return new OrderEditSetStagedActionsActionBuilder();
     }
 
+    /**
+     * create builder for OrderEditSetStagedActionsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditSetStagedActionsActionBuilder of(final OrderEditSetStagedActionsAction template) {
         OrderEditSetStagedActionsActionBuilder builder = new OrderEditSetStagedActionsActionBuilder();
         builder.stagedActions = template.getStagedActions();

@@ -24,6 +24,9 @@ public class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice, Mod
 
     private java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountedLineItemPriceImpl(@JsonProperty("value") final com.commercetools.history.models.common.Money value,
             @JsonProperty("includedDiscounts") final java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts) {
@@ -31,6 +34,9 @@ public class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice, Mod
         this.includedDiscounts = includedDiscounts;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountedLineItemPriceImpl() {
     }
 

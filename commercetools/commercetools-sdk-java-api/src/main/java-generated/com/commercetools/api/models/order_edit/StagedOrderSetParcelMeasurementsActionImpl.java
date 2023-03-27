@@ -26,6 +26,9 @@ public class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSe
 
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetParcelMeasurementsActionImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
@@ -34,6 +37,9 @@ public class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSe
         this.action = SET_PARCEL_MEASUREMENTS;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetParcelMeasurementsActionImpl() {
         this.action = SET_PARCEL_MEASUREMENTS;
     }

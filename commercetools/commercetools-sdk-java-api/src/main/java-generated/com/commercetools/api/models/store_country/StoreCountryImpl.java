@@ -22,11 +22,17 @@ public class StoreCountryImpl implements StoreCountry, ModelBase {
 
     private String code;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreCountryImpl(@JsonProperty("code") final String code) {
         this.code = code;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreCountryImpl() {
     }
 

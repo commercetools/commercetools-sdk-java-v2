@@ -24,6 +24,9 @@ public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessage
 
     private com.commercetools.api.models.category.Category category;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryCreatedMessagePayloadImpl(
             @JsonProperty("category") final com.commercetools.api.models.category.Category category) {
@@ -31,6 +34,9 @@ public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessage
         this.type = CATEGORY_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryCreatedMessagePayloadImpl() {
         this.type = CATEGORY_CREATED;
     }

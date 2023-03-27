@@ -108,9 +108,19 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @return values
+     */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues() {
         return this.values;
@@ -135,10 +145,19 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
         return new ProductTypeChangeLocalizedEnumValueOrderActionImpl(attributeName, values);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeLocalizedEnumValueOrderActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeLocalizedEnumValueOrderActionBuilder of() {
         return new ProductTypeChangeLocalizedEnumValueOrderActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeLocalizedEnumValueOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeLocalizedEnumValueOrderActionBuilder of(
             final ProductTypeChangeLocalizedEnumValueOrderAction template) {
         ProductTypeChangeLocalizedEnumValueOrderActionBuilder builder = new ProductTypeChangeLocalizedEnumValueOrderActionBuilder();

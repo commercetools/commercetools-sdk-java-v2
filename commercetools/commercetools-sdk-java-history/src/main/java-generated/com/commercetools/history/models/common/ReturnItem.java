@@ -100,26 +100,75 @@ public interface ReturnItem {
     @JsonProperty("createdAt")
     public String getCreatedAt();
 
+    /**
+     * set id
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Integer quantity);
 
+    /**
+     * set type
+     * @param type value to be set
+     */
+
     public void setType(final String type);
+
+    /**
+     * set comment
+     * @param comment value to be set
+     */
 
     public void setComment(final String comment);
 
+    /**
+     * set shipmentState
+     * @param shipmentState value to be set
+     */
+
     public void setShipmentState(final ReturnShipmentState shipmentState);
+
+    /**
+     * set paymentState
+     * @param paymentState value to be set
+     */
 
     public void setPaymentState(final ReturnPaymentState paymentState);
 
+    /**
+     * set lastModifiedAt
+     * @param lastModifiedAt value to be set
+     */
+
     public void setLastModifiedAt(final String lastModifiedAt);
+
+    /**
+     * set createdAt
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final String createdAt);
 
+    /**
+     * factory method
+     * @return instance of ReturnItem
+     */
     public static ReturnItem of() {
         return new ReturnItemImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReturnItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReturnItem of(final ReturnItem template) {
         ReturnItemImpl instance = new ReturnItemImpl();
         instance.setId(template.getId());
@@ -133,18 +182,37 @@ public interface ReturnItem {
         return instance;
     }
 
+    /**
+     * builder factory method for ReturnItem
+     * @return builder
+     */
     public static ReturnItemBuilder builder() {
         return ReturnItemBuilder.of();
     }
 
+    /**
+     * create builder for ReturnItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnItemBuilder builder(final ReturnItem template) {
         return ReturnItemBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReturnItem(Function<ReturnItem, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReturnItem> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReturnItem>() {
             @Override

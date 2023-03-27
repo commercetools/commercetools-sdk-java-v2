@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetAnonymousIdActionImpl.class)
 public interface PaymentSetAnonymousIdAction extends PaymentUpdateAction {
 
+    /**
+     * discriminator value for PaymentSetAnonymousIdAction
+     */
     String SET_ANONYMOUS_ID = "setAnonymousId";
 
     /**
@@ -36,30 +39,63 @@ public interface PaymentSetAnonymousIdAction extends PaymentUpdateAction {
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param anonymousId value to be set
+     */
+
     public void setAnonymousId(final String anonymousId);
 
+    /**
+     * factory method
+     * @return instance of PaymentSetAnonymousIdAction
+     */
     public static PaymentSetAnonymousIdAction of() {
         return new PaymentSetAnonymousIdActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentSetAnonymousIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentSetAnonymousIdAction of(final PaymentSetAnonymousIdAction template) {
         PaymentSetAnonymousIdActionImpl instance = new PaymentSetAnonymousIdActionImpl();
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentSetAnonymousIdAction
+     * @return builder
+     */
     public static PaymentSetAnonymousIdActionBuilder builder() {
         return PaymentSetAnonymousIdActionBuilder.of();
     }
 
+    /**
+     * create builder for PaymentSetAnonymousIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetAnonymousIdActionBuilder builder(final PaymentSetAnonymousIdAction template) {
         return PaymentSetAnonymousIdActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentSetAnonymousIdAction(Function<PaymentSetAnonymousIdAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetAnonymousIdAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetAnonymousIdAction>() {
             @Override

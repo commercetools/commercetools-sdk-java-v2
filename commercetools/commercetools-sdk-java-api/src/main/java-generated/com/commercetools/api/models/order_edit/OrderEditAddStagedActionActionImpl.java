@@ -24,6 +24,9 @@ public class OrderEditAddStagedActionActionImpl implements OrderEditAddStagedAct
 
     private com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditAddStagedActionActionImpl(
             @JsonProperty("stagedAction") final com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction) {
@@ -31,6 +34,9 @@ public class OrderEditAddStagedActionActionImpl implements OrderEditAddStagedAct
         this.action = ADD_STAGED_ACTION;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditAddStagedActionActionImpl() {
         this.action = ADD_STAGED_ACTION;
     }

@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceValueChangedMessageImpl.class)
 public interface StandalonePriceValueChangedMessage extends Message {
 
+    /**
+     * discriminator value for StandalonePriceValueChangedMessage
+     */
     String STANDALONE_PRICE_VALUE_CHANGED = "StandalonePriceValueChanged";
 
     /**
@@ -66,16 +69,40 @@ public interface StandalonePriceValueChangedMessage extends Message {
     @JsonProperty("oldValue")
     public Money getOldValue();
 
+    /**
+     *  <p>The new value of the updated StandalonePrice.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Money value);
+
+    /**
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     * @param oldValue value to be set
+     */
+
     public void setOldValue(final Money oldValue);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceValueChangedMessage
+     */
     public static StandalonePriceValueChangedMessage of() {
         return new StandalonePriceValueChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceValueChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceValueChangedMessage of(final StandalonePriceValueChangedMessage template) {
         StandalonePriceValueChangedMessageImpl instance = new StandalonePriceValueChangedMessageImpl();
         instance.setId(template.getId());
@@ -94,18 +121,37 @@ public interface StandalonePriceValueChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceValueChangedMessage
+     * @return builder
+     */
     public static StandalonePriceValueChangedMessageBuilder builder() {
         return StandalonePriceValueChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceValueChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceValueChangedMessageBuilder builder(final StandalonePriceValueChangedMessage template) {
         return StandalonePriceValueChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceValueChangedMessage(Function<StandalonePriceValueChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceValueChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceValueChangedMessage>() {
             @Override

@@ -24,12 +24,18 @@ public class CartDiscountValueRelativeImpl implements CartDiscountValueRelative,
 
     private Long permyriad;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountValueRelativeImpl(@JsonProperty("permyriad") final Long permyriad) {
         this.permyriad = permyriad;
         this.type = RELATIVE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountValueRelativeImpl() {
         this.type = RELATIVE;
     }

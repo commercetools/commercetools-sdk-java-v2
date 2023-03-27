@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceReferenceImpl.class)
 public interface StandalonePriceReference extends Reference {
 
+    /**
+     * discriminator value for StandalonePriceReference
+     */
     String STANDALONE_PRICE = "standalone-price";
 
     /**
@@ -40,12 +43,26 @@ public interface StandalonePriceReference extends Reference {
     @JsonProperty("obj")
     public StandalonePrice getObj();
 
+    /**
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final StandalonePrice obj);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceReference
+     */
     public static StandalonePriceReference of() {
         return new StandalonePriceReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceReference of(final StandalonePriceReference template) {
         StandalonePriceReferenceImpl instance = new StandalonePriceReferenceImpl();
         instance.setId(template.getId());
@@ -53,18 +70,37 @@ public interface StandalonePriceReference extends Reference {
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceReference
+     * @return builder
+     */
     public static StandalonePriceReferenceBuilder builder() {
         return StandalonePriceReferenceBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceReferenceBuilder builder(final StandalonePriceReference template) {
         return StandalonePriceReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceReference(Function<StandalonePriceReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceReference>() {
             @Override

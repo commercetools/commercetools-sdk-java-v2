@@ -168,10 +168,20 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @return addedSupplyChannels
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getAddedSupplyChannels() {
         return this.addedSupplyChannels;
     }
+
+    /**
+     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @return removedSupplyChannels
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getRemovedSupplyChannels() {
@@ -194,10 +204,19 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
         return new StoreSupplyChannelsChangedMessagePayloadImpl(addedSupplyChannels, removedSupplyChannels);
     }
 
+    /**
+     * factory method for an instance of StoreSupplyChannelsChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static StoreSupplyChannelsChangedMessagePayloadBuilder of() {
         return new StoreSupplyChannelsChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StoreSupplyChannelsChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSupplyChannelsChangedMessagePayloadBuilder of(
             final StoreSupplyChannelsChangedMessagePayload template) {
         StoreSupplyChannelsChangedMessagePayloadBuilder builder = new StoreSupplyChannelsChangedMessagePayloadBuilder();

@@ -27,6 +27,9 @@ public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, M
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EnumValuesMustMatchErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, M
         this.code = ENUM_VALUES_MUST_MATCH;
     }
 
+    /**
+     * create empty instance
+     */
     public EnumValuesMustMatchErrorImpl() {
         this.code = ENUM_VALUES_MUST_MATCH;
     }

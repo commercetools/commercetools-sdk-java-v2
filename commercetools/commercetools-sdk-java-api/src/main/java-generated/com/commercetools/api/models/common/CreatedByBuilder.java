@@ -91,20 +91,40 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     * @return clientId
+     */
+
     @Nullable
     public String getClientId() {
         return this.clientId;
     }
+
+    /**
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @return externalUserId
+     */
 
     @Nullable
     public String getExternalUserId() {
         return this.externalUserId;
     }
 
+    /**
+     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     * @return anonymousId
+     */
 
     @Nullable
     public String getAnonymousId() {
@@ -127,10 +147,19 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
         return new CreatedByImpl(clientId, externalUserId, customer, anonymousId);
     }
 
+    /**
+     * factory method for an instance of CreatedByBuilder
+     * @return builder
+     */
     public static CreatedByBuilder of() {
         return new CreatedByBuilder();
     }
 
+    /**
+     * create builder for CreatedBy instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CreatedByBuilder of(final CreatedBy template) {
         CreatedByBuilder builder = new CreatedByBuilder();
         builder.clientId = template.getClientId();

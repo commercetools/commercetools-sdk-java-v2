@@ -26,6 +26,9 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
 
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditAppliedMessagePayloadImpl(
             @JsonProperty("edit") final com.commercetools.api.models.order_edit.OrderEdit edit,
@@ -35,6 +38,9 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
         this.type = ORDER_EDIT_APPLIED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditAppliedMessagePayloadImpl() {
         this.type = ORDER_EDIT_APPLIED;
     }

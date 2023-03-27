@@ -299,52 +299,107 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Standalone Price.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
+     * @return sku
+     */
 
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Sets the money value of this Price.</p>
+     * @return value
+     */
+
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Sets the country for which this Price is valid.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Sets the date from which the Price is valid.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Sets the date until the Price is valid.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>Sets price tiers.</p>
+     * @return tiers
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
 
+    /**
+     *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
+     * @return discounted
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
+
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -372,10 +427,19 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
             tiers, discounted, custom);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceImportBuilder
+     * @return builder
+     */
     public static StandalonePriceImportBuilder of() {
         return new StandalonePriceImportBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceImportBuilder of(final StandalonePriceImport template) {
         StandalonePriceImportBuilder builder = new StandalonePriceImportBuilder();
         builder.key = template.getKey();

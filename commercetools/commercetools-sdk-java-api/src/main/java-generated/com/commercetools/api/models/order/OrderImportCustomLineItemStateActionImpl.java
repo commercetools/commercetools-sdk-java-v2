@@ -26,6 +26,9 @@ public class OrderImportCustomLineItemStateActionImpl implements OrderImportCust
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderImportCustomLineItemStateActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state) {
@@ -34,6 +37,9 @@ public class OrderImportCustomLineItemStateActionImpl implements OrderImportCust
         this.action = IMPORT_CUSTOM_LINE_ITEM_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderImportCustomLineItemStateActionImpl() {
         this.action = IMPORT_CUSTOM_LINE_ITEM_STATE;
     }

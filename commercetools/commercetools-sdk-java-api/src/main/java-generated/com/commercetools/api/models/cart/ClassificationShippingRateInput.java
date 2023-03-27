@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ClassificationShippingRateInputImpl.class)
 public interface ClassificationShippingRateInput extends ShippingRateInput {
 
+    /**
+     * discriminator value for ClassificationShippingRateInput
+     */
     String CLASSIFICATION = "Classification";
 
     /**
@@ -51,14 +54,33 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     @JsonProperty("label")
     public LocalizedString getLabel();
 
+    /**
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Descriptive localized label of the value.</p>
+     * @param label value to be set
+     */
 
     public void setLabel(final LocalizedString label);
 
+    /**
+     * factory method
+     * @return instance of ClassificationShippingRateInput
+     */
     public static ClassificationShippingRateInput of() {
         return new ClassificationShippingRateInputImpl();
     }
 
+    /**
+     * factory method to copy an instance of ClassificationShippingRateInput
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ClassificationShippingRateInput of(final ClassificationShippingRateInput template) {
         ClassificationShippingRateInputImpl instance = new ClassificationShippingRateInputImpl();
         instance.setKey(template.getKey());
@@ -66,18 +88,37 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
         return instance;
     }
 
+    /**
+     * builder factory method for ClassificationShippingRateInput
+     * @return builder
+     */
     public static ClassificationShippingRateInputBuilder builder() {
         return ClassificationShippingRateInputBuilder.of();
     }
 
+    /**
+     * create builder for ClassificationShippingRateInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ClassificationShippingRateInputBuilder builder(final ClassificationShippingRateInput template) {
         return ClassificationShippingRateInputBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withClassificationShippingRateInput(Function<ClassificationShippingRateInput, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ClassificationShippingRateInput> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ClassificationShippingRateInput>() {
             @Override

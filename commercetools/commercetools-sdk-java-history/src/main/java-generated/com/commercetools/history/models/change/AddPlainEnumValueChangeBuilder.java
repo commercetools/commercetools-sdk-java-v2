@@ -53,7 +53,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -76,13 +76,28 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>The name of the attribute updated.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.change_value.EnumValue getNextValue() {
         return this.nextValue;
@@ -107,10 +122,19 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
         return new AddPlainEnumValueChangeImpl(change, attributeName, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddPlainEnumValueChangeBuilder
+     * @return builder
+     */
     public static AddPlainEnumValueChangeBuilder of() {
         return new AddPlainEnumValueChangeBuilder();
     }
 
+    /**
+     * create builder for AddPlainEnumValueChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddPlainEnumValueChangeBuilder of(final AddPlainEnumValueChange template) {
         AddPlainEnumValueChangeBuilder builder = new AddPlainEnumValueChangeBuilder();
         builder.change = template.getChange();

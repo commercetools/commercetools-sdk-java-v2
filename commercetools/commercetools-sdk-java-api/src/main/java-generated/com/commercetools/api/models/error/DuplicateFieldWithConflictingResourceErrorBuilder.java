@@ -118,21 +118,46 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
         return this;
     }
 
+    /**
+     *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Name of the conflicting field.</p>
+     * @return field
+     */
+
     public String getField() {
         return this.field;
     }
 
+    /**
+     *  <p>Conflicting duplicate value.</p>
+     * @return duplicateValue
+     */
+
     public java.lang.Object getDuplicateValue() {
         return this.duplicateValue;
     }
+
+    /**
+     *  <p>Reference to the resource that has the conflicting value.</p>
+     * @return conflictingResource
+     */
 
     public com.commercetools.api.models.common.Reference getConflictingResource() {
         return this.conflictingResource;
@@ -162,10 +187,19 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
             conflictingResource);
     }
 
+    /**
+     * factory method for an instance of DuplicateFieldWithConflictingResourceErrorBuilder
+     * @return builder
+     */
     public static DuplicateFieldWithConflictingResourceErrorBuilder of() {
         return new DuplicateFieldWithConflictingResourceErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicateFieldWithConflictingResourceError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateFieldWithConflictingResourceErrorBuilder of(
             final DuplicateFieldWithConflictingResourceError template) {
         DuplicateFieldWithConflictingResourceErrorBuilder builder = new DuplicateFieldWithConflictingResourceErrorBuilder();

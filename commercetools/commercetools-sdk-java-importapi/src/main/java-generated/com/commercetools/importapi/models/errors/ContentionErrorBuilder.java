@@ -24,7 +24,7 @@ public class ContentionErrorBuilder implements Builder<ContentionError> {
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class ContentionErrorBuilder implements Builder<ContentionError> {
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class ContentionErrorBuilder implements Builder<ContentionError> {
         return new ContentionErrorImpl(message);
     }
 
+    /**
+     * factory method for an instance of ContentionErrorBuilder
+     * @return builder
+     */
     public static ContentionErrorBuilder of() {
         return new ContentionErrorBuilder();
     }
 
+    /**
+     * create builder for ContentionError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ContentionErrorBuilder of(final ContentionError template) {
         ContentionErrorBuilder builder = new ContentionErrorBuilder();
         builder.message = template.getMessage();

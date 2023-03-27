@@ -27,6 +27,9 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
 
     private com.commercetools.api.models.order.ReturnShipmentState returnShipmentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderReturnShipmentStateChangedMessagePayloadImpl(@JsonProperty("returnItemId") final String returnItemId,
             @JsonProperty("returnShipmentState") final com.commercetools.api.models.order.ReturnShipmentState returnShipmentState) {
@@ -35,6 +38,9 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
         this.type = ORDER_RETURN_SHIPMENT_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderReturnShipmentStateChangedMessagePayloadImpl() {
         this.type = ORDER_RETURN_SHIPMENT_STATE_CHANGED;
     }

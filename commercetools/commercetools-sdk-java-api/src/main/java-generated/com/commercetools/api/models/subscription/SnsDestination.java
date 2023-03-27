@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SnsDestinationImpl.class)
 public interface SnsDestination extends Destination {
 
+    /**
+     * discriminator value for SnsDestination
+     */
     String SNS = "SNS";
 
     /**
@@ -66,18 +69,47 @@ public interface SnsDestination extends Destination {
     @JsonProperty("authenticationMode")
     public AwsAuthenticationMode getAuthenticationMode();
 
+    /**
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @param accessKey value to be set
+     */
+
     public void setAccessKey(final String accessKey);
+
+    /**
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @param accessSecret value to be set
+     */
 
     public void setAccessSecret(final String accessSecret);
 
+    /**
+     *  <p>Amazon Resource Name (ARN) of the topic.</p>
+     * @param topicArn value to be set
+     */
+
     public void setTopicArn(final String topicArn);
+
+    /**
+     *  <p>Defines the method of authentication for the SNS topic.</p>
+     * @param authenticationMode value to be set
+     */
 
     public void setAuthenticationMode(final AwsAuthenticationMode authenticationMode);
 
+    /**
+     * factory method
+     * @return instance of SnsDestination
+     */
     public static SnsDestination of() {
         return new SnsDestinationImpl();
     }
 
+    /**
+     * factory method to copy an instance of SnsDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SnsDestination of(final SnsDestination template) {
         SnsDestinationImpl instance = new SnsDestinationImpl();
         instance.setAccessKey(template.getAccessKey());
@@ -87,18 +119,37 @@ public interface SnsDestination extends Destination {
         return instance;
     }
 
+    /**
+     * builder factory method for SnsDestination
+     * @return builder
+     */
     public static SnsDestinationBuilder builder() {
         return SnsDestinationBuilder.of();
     }
 
+    /**
+     * create builder for SnsDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SnsDestinationBuilder builder(final SnsDestination template) {
         return SnsDestinationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSnsDestination(Function<SnsDestination, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SnsDestination> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SnsDestination>() {
             @Override

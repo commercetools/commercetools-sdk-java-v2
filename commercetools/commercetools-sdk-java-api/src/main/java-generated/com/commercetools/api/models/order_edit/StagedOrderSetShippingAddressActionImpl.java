@@ -24,6 +24,9 @@ public class StagedOrderSetShippingAddressActionImpl implements StagedOrderSetSh
 
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetShippingAddressActionImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
@@ -31,6 +34,9 @@ public class StagedOrderSetShippingAddressActionImpl implements StagedOrderSetSh
         this.action = SET_SHIPPING_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetShippingAddressActionImpl() {
         this.action = SET_SHIPPING_ADDRESS;
     }

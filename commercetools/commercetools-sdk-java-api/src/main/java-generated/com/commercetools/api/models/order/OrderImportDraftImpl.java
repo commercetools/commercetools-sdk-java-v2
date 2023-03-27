@@ -70,6 +70,9 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
 
     private com.commercetools.api.models.cart.CartOrigin origin;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderImportDraftImpl(@JsonProperty("orderNumber") final String orderNumber,
             @JsonProperty("customerId") final String customerId,
@@ -123,6 +126,9 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
         this.origin = origin;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderImportDraftImpl() {
     }
 

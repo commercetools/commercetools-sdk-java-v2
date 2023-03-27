@@ -152,36 +152,111 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();
 
+    /**
+     *  <p>Unique identifier of the Product.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Product.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the Product was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the Product was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
+     * @param productType value to be set
+     */
 
     public void setProductType(final ProductTypeReference productType);
 
+    /**
+     *  <p>Contains the current and the staged representation of the product information.</p>
+     * @param masterData value to be set
+     */
+
     public void setMasterData(final ProductCatalogData masterData);
+
+    /**
+     *  <p>The TaxCategory of the Product.</p>
+     * @param taxCategory value to be set
+     */
 
     public void setTaxCategory(final TaxCategoryReference taxCategory);
 
+    /**
+     *  <p>State of the Product.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     *  <p>Review statistics of the Product.</p>
+     * @param reviewRatingStatistics value to be set
+     */
 
     public void setReviewRatingStatistics(final ReviewRatingStatistics reviewRatingStatistics);
 
+    /**
+     *  <p>Type of Price to be used when looking up a price for the Product.</p>
+     * @param priceMode value to be set
+     */
+
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
+    /**
+     * factory method
+     * @return instance of Product
+     */
     public static Product of() {
         return new ProductImpl();
     }
 
+    /**
+     * factory method to copy an instance of Product
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Product of(final Product template) {
         ProductImpl instance = new ProductImpl();
         instance.setId(template.getId());
@@ -200,14 +275,29 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
         return instance;
     }
 
+    /**
+     * builder factory method for Product
+     * @return builder
+     */
     public static ProductBuilder builder() {
         return ProductBuilder.of();
     }
 
+    /**
+     * create builder for Product instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductBuilder builder(final Product template) {
         return ProductBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProduct(Function<Product, T> helper) {
         return helper.apply(this);
     }
@@ -216,6 +306,10 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
         return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Product> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Product>() {
             @Override

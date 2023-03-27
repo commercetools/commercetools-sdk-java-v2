@@ -28,6 +28,9 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
 
     private com.commercetools.history.models.common.SyncInfo nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     UpdateSyncInfoChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("channelId") final String channelId,
@@ -38,6 +41,9 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
         this.type = UPDATE_SYNC_INFO_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public UpdateSyncInfoChangeImpl() {
         this.type = UPDATE_SYNC_INFO_CHANGE;
     }

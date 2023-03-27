@@ -26,6 +26,9 @@ public class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTypeActio
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTypeActio
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

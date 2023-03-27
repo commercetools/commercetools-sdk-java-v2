@@ -26,6 +26,9 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantPatchImpl(
             @JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant,
@@ -36,6 +39,9 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
         this.staged = staged;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantPatchImpl() {
     }
 

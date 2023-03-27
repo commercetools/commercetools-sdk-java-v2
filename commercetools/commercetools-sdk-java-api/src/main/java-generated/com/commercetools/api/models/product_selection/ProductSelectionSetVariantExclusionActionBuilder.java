@@ -81,9 +81,19 @@ public class ProductSelectionSetVariantExclusionActionBuilder
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
+     * @return variantExclusion
+     */
 
     @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
@@ -107,10 +117,19 @@ public class ProductSelectionSetVariantExclusionActionBuilder
         return new ProductSelectionSetVariantExclusionActionImpl(product, variantExclusion);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionSetVariantExclusionActionBuilder
+     * @return builder
+     */
     public static ProductSelectionSetVariantExclusionActionBuilder of() {
         return new ProductSelectionSetVariantExclusionActionBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionSetVariantExclusionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionSetVariantExclusionActionBuilder of(
             final ProductSelectionSetVariantExclusionAction template) {
         ProductSelectionSetVariantExclusionActionBuilder builder = new ProductSelectionSetVariantExclusionActionBuilder();

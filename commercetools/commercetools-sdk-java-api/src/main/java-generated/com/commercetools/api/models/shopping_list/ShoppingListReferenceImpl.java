@@ -27,6 +27,9 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
 
     private com.commercetools.api.models.shopping_list.ShoppingList obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.shopping_list.ShoppingList obj) {
@@ -35,6 +38,9 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
         this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }

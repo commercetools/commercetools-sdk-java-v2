@@ -46,6 +46,9 @@ public class ProductDeletedMessageImpl implements ProductDeletedMessage, ModelBa
 
     private com.commercetools.api.models.product.ProductProjection currentProjection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class ProductDeletedMessageImpl implements ProductDeletedMessage, ModelBa
         this.type = PRODUCT_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDeletedMessageImpl() {
         this.type = PRODUCT_DELETED;
     }

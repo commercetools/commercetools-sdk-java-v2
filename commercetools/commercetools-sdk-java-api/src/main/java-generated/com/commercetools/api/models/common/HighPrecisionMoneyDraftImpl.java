@@ -30,6 +30,9 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
 
     private Long preciseAmount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     HighPrecisionMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount,
             @JsonProperty("currencyCode") final String currencyCode,
@@ -42,6 +45,9 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
         this.type = MoneyType.findEnum("highPrecision");
     }
 
+    /**
+     * create empty instance
+     */
     public HighPrecisionMoneyDraftImpl() {
         this.type = MoneyType.findEnum("highPrecision");
     }

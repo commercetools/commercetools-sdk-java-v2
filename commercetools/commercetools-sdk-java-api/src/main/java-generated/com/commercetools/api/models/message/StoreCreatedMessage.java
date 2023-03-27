@@ -44,6 +44,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreCreatedMessageImpl.class)
 public interface StoreCreatedMessage extends Message {
 
+    /**
+     * discriminator value for StoreCreatedMessage
+     */
     String STORE_CREATED = "StoreCreated";
 
     /**
@@ -105,39 +108,108 @@ public interface StoreCreatedMessage extends Message {
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>The <code>name</code> of the Store that was created.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     * @param languages values to be set
+     */
 
     @JsonIgnore
     public void setLanguages(final String... languages);
 
+    /**
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     * @param languages values to be set
+     */
+
     public void setLanguages(final List<String> languages);
+
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     * @param countries values to be set
+     */
 
     @JsonIgnore
     public void setCountries(final StoreCountry... countries);
 
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     * @param countries values to be set
+     */
+
     public void setCountries(final List<StoreCountry> countries);
+
+    /**
+     *  <p>Distribution Channels of the Store that was created.</p>
+     * @param distributionChannels values to be set
+     */
 
     @JsonIgnore
     public void setDistributionChannels(final ChannelReference... distributionChannels);
 
+    /**
+     *  <p>Distribution Channels of the Store that was created.</p>
+     * @param distributionChannels values to be set
+     */
+
     public void setDistributionChannels(final List<ChannelReference> distributionChannels);
+
+    /**
+     *  <p>Supply Channels of the Store that was created.</p>
+     * @param supplyChannels values to be set
+     */
 
     @JsonIgnore
     public void setSupplyChannels(final ChannelReference... supplyChannels);
 
+    /**
+     *  <p>Supply Channels of the Store that was created.</p>
+     * @param supplyChannels values to be set
+     */
+
     public void setSupplyChannels(final List<ChannelReference> supplyChannels);
+
+    /**
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param productSelections values to be set
+     */
 
     @JsonIgnore
     public void setProductSelections(final ProductSelectionSetting... productSelections);
 
+    /**
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param productSelections values to be set
+     */
+
     public void setProductSelections(final List<ProductSelectionSetting> productSelections);
+
+    /**
+     *  <p>Custom Fields on the Store that was created.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of StoreCreatedMessage
+     */
     public static StoreCreatedMessage of() {
         return new StoreCreatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreCreatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreCreatedMessage of(final StoreCreatedMessage template) {
         StoreCreatedMessageImpl instance = new StoreCreatedMessageImpl();
         instance.setId(template.getId());
@@ -160,18 +232,37 @@ public interface StoreCreatedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreCreatedMessage
+     * @return builder
+     */
     public static StoreCreatedMessageBuilder builder() {
         return StoreCreatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StoreCreatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreCreatedMessageBuilder builder(final StoreCreatedMessage template) {
         return StoreCreatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreCreatedMessage(Function<StoreCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessage>() {
             @Override

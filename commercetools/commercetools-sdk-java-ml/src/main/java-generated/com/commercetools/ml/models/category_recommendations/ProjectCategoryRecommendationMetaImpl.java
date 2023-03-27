@@ -26,6 +26,9 @@ public class ProjectCategoryRecommendationMetaImpl implements ProjectCategoryRec
 
     private java.util.List<String> generalCategoryNames;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectCategoryRecommendationMetaImpl(@JsonProperty("productName") final String productName,
             @JsonProperty("productImageUrl") final String productImageUrl,
@@ -35,6 +38,9 @@ public class ProjectCategoryRecommendationMetaImpl implements ProjectCategoryRec
         this.generalCategoryNames = generalCategoryNames;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectCategoryRecommendationMetaImpl() {
     }
 

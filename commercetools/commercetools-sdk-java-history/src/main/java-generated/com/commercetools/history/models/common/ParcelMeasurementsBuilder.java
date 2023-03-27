@@ -33,7 +33,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     private Integer weightInGram;
 
     /**
-     *
+     * set the value to the heightInMillimeter
      * @param heightInMillimeter value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     *
+     * set the value to the lengthInMillimeter
      * @param lengthInMillimeter value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     *
+     * set the value to the widthInMillimeter
      * @param widthInMillimeter value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     *
+     * set the value to the weightInGram
      * @param weightInGram value to be set
      * @return Builder
      */
@@ -76,17 +76,37 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
         return this;
     }
 
+    /**
+     * value of heightInMillimeter}
+     * @return heightInMillimeter
+     */
+
     public Integer getHeightInMillimeter() {
         return this.heightInMillimeter;
     }
+
+    /**
+     * value of lengthInMillimeter}
+     * @return lengthInMillimeter
+     */
 
     public Integer getLengthInMillimeter() {
         return this.lengthInMillimeter;
     }
 
+    /**
+     * value of widthInMillimeter}
+     * @return widthInMillimeter
+     */
+
     public Integer getWidthInMillimeter() {
         return this.widthInMillimeter;
     }
+
+    /**
+     * value of weightInGram}
+     * @return weightInGram
+     */
 
     public Integer getWeightInGram() {
         return this.weightInGram;
@@ -112,10 +132,19 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
         return new ParcelMeasurementsImpl(heightInMillimeter, lengthInMillimeter, widthInMillimeter, weightInGram);
     }
 
+    /**
+     * factory method for an instance of ParcelMeasurementsBuilder
+     * @return builder
+     */
     public static ParcelMeasurementsBuilder of() {
         return new ParcelMeasurementsBuilder();
     }
 
+    /**
+     * create builder for ParcelMeasurements instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelMeasurementsBuilder of(final ParcelMeasurements template) {
         ParcelMeasurementsBuilder builder = new ParcelMeasurementsBuilder();
         builder.heightInMillimeter = template.getHeightInMillimeter();

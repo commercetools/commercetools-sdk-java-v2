@@ -26,6 +26,9 @@ public class InventoryEntrySetCustomTypeActionImpl implements InventoryEntrySetC
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntrySetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class InventoryEntrySetCustomTypeActionImpl implements InventoryEntrySetC
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntrySetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

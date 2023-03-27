@@ -29,6 +29,9 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
 
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerChangeAddressActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("addressKey") final String addressKey,
@@ -39,6 +42,9 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
         this.action = CHANGE_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerChangeAddressActionImpl() {
         this.action = CHANGE_ADDRESS;
     }

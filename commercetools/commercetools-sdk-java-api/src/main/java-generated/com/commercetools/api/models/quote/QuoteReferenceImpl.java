@@ -27,6 +27,9 @@ public class QuoteReferenceImpl implements QuoteReference, ModelBase {
 
     private com.commercetools.api.models.quote.Quote obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.quote.Quote obj) {
@@ -35,6 +38,9 @@ public class QuoteReferenceImpl implements QuoteReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("quote");
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("quote");
     }

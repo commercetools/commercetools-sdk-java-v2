@@ -61,6 +61,11 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
+     * @return attributeNames
+     */
+
     public java.util.List<String> getAttributeNames() {
         return this.attributeNames;
     }
@@ -83,10 +88,19 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
         return new ProductTypeChangeAttributeOrderByNameActionImpl(attributeNames);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeAttributeOrderByNameActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeAttributeOrderByNameActionBuilder of() {
         return new ProductTypeChangeAttributeOrderByNameActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeAttributeOrderByNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeAttributeOrderByNameActionBuilder of(
             final ProductTypeChangeAttributeOrderByNameAction template) {
         ProductTypeChangeAttributeOrderByNameActionBuilder builder = new ProductTypeChangeAttributeOrderByNameActionBuilder();

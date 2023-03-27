@@ -27,6 +27,9 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentTransitionStateActionImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
@@ -36,6 +39,9 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
         this.action = TRANSITION_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentTransitionStateActionImpl() {
         this.action = TRANSITION_STATE;
     }

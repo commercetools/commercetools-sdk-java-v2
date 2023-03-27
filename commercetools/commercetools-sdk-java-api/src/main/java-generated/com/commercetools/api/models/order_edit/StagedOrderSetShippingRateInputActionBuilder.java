@@ -51,6 +51,11 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
         return this;
     }
 
+    /**
+     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     * @return shippingRateInput
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
         return this.shippingRateInput;
@@ -72,10 +77,19 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
         return new StagedOrderSetShippingRateInputActionImpl(shippingRateInput);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetShippingRateInputActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetShippingRateInputActionBuilder of() {
         return new StagedOrderSetShippingRateInputActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingRateInputAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingRateInputActionBuilder of(
             final StagedOrderSetShippingRateInputAction template) {
         StagedOrderSetShippingRateInputActionBuilder builder = new StagedOrderSetShippingRateInputActionBuilder();

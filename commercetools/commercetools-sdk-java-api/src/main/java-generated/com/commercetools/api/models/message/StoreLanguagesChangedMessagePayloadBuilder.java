@@ -102,10 +102,20 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
         return this;
     }
 
+    /**
+     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     * @return addedLanguages
+     */
+
     @Nullable
     public java.util.List<String> getAddedLanguages() {
         return this.addedLanguages;
     }
+
+    /**
+     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     * @return removedLanguages
+     */
 
     @Nullable
     public java.util.List<String> getRemovedLanguages() {
@@ -128,10 +138,19 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
         return new StoreLanguagesChangedMessagePayloadImpl(addedLanguages, removedLanguages);
     }
 
+    /**
+     * factory method for an instance of StoreLanguagesChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static StoreLanguagesChangedMessagePayloadBuilder of() {
         return new StoreLanguagesChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StoreLanguagesChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreLanguagesChangedMessagePayloadBuilder of(final StoreLanguagesChangedMessagePayload template) {
         StoreLanguagesChangedMessagePayloadBuilder builder = new StoreLanguagesChangedMessagePayloadBuilder();
         builder.addedLanguages = template.getAddedLanguages();

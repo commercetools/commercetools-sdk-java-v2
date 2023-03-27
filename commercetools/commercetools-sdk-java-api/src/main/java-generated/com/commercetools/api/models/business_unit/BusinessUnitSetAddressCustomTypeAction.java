@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitSetAddressCustomTypeActionImpl.class)
 public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitSetAddressCustomTypeAction
+     */
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
     /**
@@ -58,16 +61,40 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
     @JsonProperty("addressId")
     public String getAddressId();
 
+    /**
+     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields for the <code>address</code>.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     *  <p>ID of the address to be extended.</p>
+     * @param addressId value to be set
+     */
+
     public void setAddressId(final String addressId);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitSetAddressCustomTypeAction
+     */
     public static BusinessUnitSetAddressCustomTypeAction of() {
         return new BusinessUnitSetAddressCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitSetAddressCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitSetAddressCustomTypeAction of(final BusinessUnitSetAddressCustomTypeAction template) {
         BusinessUnitSetAddressCustomTypeActionImpl instance = new BusinessUnitSetAddressCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -76,20 +103,39 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitSetAddressCustomTypeAction
+     * @return builder
+     */
     public static BusinessUnitSetAddressCustomTypeActionBuilder builder() {
         return BusinessUnitSetAddressCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitSetAddressCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitSetAddressCustomTypeActionBuilder builder(
             final BusinessUnitSetAddressCustomTypeAction template) {
         return BusinessUnitSetAddressCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitSetAddressCustomTypeAction(
             Function<BusinessUnitSetAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomTypeAction>() {
             @Override

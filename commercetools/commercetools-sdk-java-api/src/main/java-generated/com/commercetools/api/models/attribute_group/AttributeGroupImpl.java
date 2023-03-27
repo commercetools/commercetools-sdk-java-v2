@@ -40,6 +40,9 @@ public class AttributeGroupImpl implements AttributeGroup, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -62,6 +65,9 @@ public class AttributeGroupImpl implements AttributeGroup, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupImpl() {
     }
 

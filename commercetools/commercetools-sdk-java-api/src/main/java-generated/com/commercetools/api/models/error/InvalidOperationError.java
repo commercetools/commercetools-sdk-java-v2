@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidOperationErrorImpl.class)
 public interface InvalidOperationError extends ErrorObject {
 
+    /**
+     * discriminator value for InvalidOperationError
+     */
     String INVALID_OPERATION = "InvalidOperation";
 
     /**
@@ -48,12 +51,26 @@ public interface InvalidOperationError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Plain text description of the error.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of InvalidOperationError
+     */
     public static InvalidOperationError of() {
         return new InvalidOperationErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of InvalidOperationError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InvalidOperationError of(final InvalidOperationError template) {
         InvalidOperationErrorImpl instance = new InvalidOperationErrorImpl();
         instance.setMessage(template.getMessage());
@@ -61,18 +78,37 @@ public interface InvalidOperationError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for InvalidOperationError
+     * @return builder
+     */
     public static InvalidOperationErrorBuilder builder() {
         return InvalidOperationErrorBuilder.of();
     }
 
+    /**
+     * create builder for InvalidOperationError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidOperationErrorBuilder builder(final InvalidOperationError template) {
         return InvalidOperationErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInvalidOperationError(Function<InvalidOperationError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InvalidOperationError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InvalidOperationError>() {
             @Override

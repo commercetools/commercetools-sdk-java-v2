@@ -28,6 +28,9 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
 
     private java.util.List<com.commercetools.api.models.order.Hit> hits;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderPagedSearchResponseImpl(@JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
             @JsonProperty("limit") final Long limit,
@@ -38,6 +41,9 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
         this.hits = hits;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderPagedSearchResponseImpl() {
     }
 

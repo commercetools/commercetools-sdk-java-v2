@@ -246,44 +246,94 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the ProductType.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the ProductType.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ProductType was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ProductType was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the ProductType.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the ProductType.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Description of the ProductType.</p>
+     * @return description
+     */
+
     public String getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>Attributes specified for the ProductType.</p>
+     * @return attributes
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> getAttributes() {
@@ -314,10 +364,19 @@ public class ProductTypeBuilder implements Builder<ProductType> {
             description, attributes);
     }
 
+    /**
+     * factory method for an instance of ProductTypeBuilder
+     * @return builder
+     */
     public static ProductTypeBuilder of() {
         return new ProductTypeBuilder();
     }
 
+    /**
+     * create builder for ProductType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeBuilder of(final ProductType template) {
         ProductTypeBuilder builder = new ProductTypeBuilder();
         builder.id = template.getId();

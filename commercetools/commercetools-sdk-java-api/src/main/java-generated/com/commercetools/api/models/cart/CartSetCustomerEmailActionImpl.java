@@ -24,12 +24,18 @@ public class CartSetCustomerEmailActionImpl implements CartSetCustomerEmailActio
 
     private String email;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetCustomerEmailActionImpl(@JsonProperty("email") final String email) {
         this.email = email;
         this.action = SET_CUSTOMER_EMAIL;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetCustomerEmailActionImpl() {
         this.action = SET_CUSTOMER_EMAIL;
     }

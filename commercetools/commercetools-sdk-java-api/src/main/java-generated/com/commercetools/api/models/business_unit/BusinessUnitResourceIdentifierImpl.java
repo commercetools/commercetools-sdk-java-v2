@@ -27,6 +27,9 @@ public class BusinessUnitResourceIdentifierImpl implements BusinessUnitResourceI
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class BusinessUnitResourceIdentifierImpl implements BusinessUnitResourceI
         this.typeId = ReferenceTypeId.findEnum("business-unit");
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("business-unit");
     }

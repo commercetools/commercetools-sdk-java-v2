@@ -30,6 +30,9 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
 
     private com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetShippingMethodTaxAmountChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode,
@@ -42,6 +45,9 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
         this.type = SET_SHIPPING_METHOD_TAX_AMOUNT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetShippingMethodTaxAmountChangeImpl() {
         this.type = SET_SHIPPING_METHOD_TAX_AMOUNT_CHANGE;
     }

@@ -26,6 +26,9 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
 
     private Long version;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerResetPasswordImpl(@JsonProperty("tokenValue") final String tokenValue,
             @JsonProperty("newPassword") final String newPassword, @JsonProperty("version") final Long version) {
@@ -34,6 +37,9 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
         this.version = version;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerResetPasswordImpl() {
     }
 

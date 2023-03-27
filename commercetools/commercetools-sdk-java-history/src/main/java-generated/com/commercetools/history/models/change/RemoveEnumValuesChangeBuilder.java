@@ -53,7 +53,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -76,13 +76,28 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>The name of the attribute updated.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.change_value.EnumValue getPreviousValue() {
         return this.previousValue;
@@ -107,10 +122,19 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
         return new RemoveEnumValuesChangeImpl(change, attributeName, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemoveEnumValuesChangeBuilder
+     * @return builder
+     */
     public static RemoveEnumValuesChangeBuilder of() {
         return new RemoveEnumValuesChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveEnumValuesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveEnumValuesChangeBuilder of(final RemoveEnumValuesChange template) {
         RemoveEnumValuesChangeBuilder builder = new RemoveEnumValuesChangeBuilder();
         builder.change = template.getChange();

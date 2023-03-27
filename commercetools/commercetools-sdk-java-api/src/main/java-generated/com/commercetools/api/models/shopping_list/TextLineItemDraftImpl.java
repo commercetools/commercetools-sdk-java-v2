@@ -30,6 +30,9 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
 
     private Long quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TextLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
@@ -43,6 +46,9 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
         this.quantity = quantity;
     }
 
+    /**
+     * create empty instance
+     */
     public TextLineItemDraftImpl() {
     }
 

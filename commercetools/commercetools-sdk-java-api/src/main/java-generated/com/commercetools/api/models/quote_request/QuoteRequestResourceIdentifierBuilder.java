@@ -50,10 +50,20 @@ public class QuoteRequestResourceIdentifierBuilder implements Builder<QuoteReque
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class QuoteRequestResourceIdentifierBuilder implements Builder<QuoteReque
         return new QuoteRequestResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of QuoteRequestResourceIdentifierBuilder
+     * @return builder
+     */
     public static QuoteRequestResourceIdentifierBuilder of() {
         return new QuoteRequestResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestResourceIdentifierBuilder of(final QuoteRequestResourceIdentifier template) {
         QuoteRequestResourceIdentifierBuilder builder = new QuoteRequestResourceIdentifierBuilder();
         builder.id = template.getId();

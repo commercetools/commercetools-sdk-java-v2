@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ZoneAddLocationActionImpl.class)
 public interface ZoneAddLocationAction extends ZoneUpdateAction {
 
+    /**
+     * discriminator value for ZoneAddLocationAction
+     */
     String ADD_LOCATION = "addLocation";
 
     /**
@@ -41,30 +44,63 @@ public interface ZoneAddLocationAction extends ZoneUpdateAction {
     @JsonProperty("location")
     public Location getLocation();
 
+    /**
+     *  <p>Location to be added to the Zone.</p>
+     * @param location value to be set
+     */
+
     public void setLocation(final Location location);
 
+    /**
+     * factory method
+     * @return instance of ZoneAddLocationAction
+     */
     public static ZoneAddLocationAction of() {
         return new ZoneAddLocationActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ZoneAddLocationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ZoneAddLocationAction of(final ZoneAddLocationAction template) {
         ZoneAddLocationActionImpl instance = new ZoneAddLocationActionImpl();
         instance.setLocation(template.getLocation());
         return instance;
     }
 
+    /**
+     * builder factory method for ZoneAddLocationAction
+     * @return builder
+     */
     public static ZoneAddLocationActionBuilder builder() {
         return ZoneAddLocationActionBuilder.of();
     }
 
+    /**
+     * create builder for ZoneAddLocationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneAddLocationActionBuilder builder(final ZoneAddLocationAction template) {
         return ZoneAddLocationActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZoneAddLocationAction(Function<ZoneAddLocationAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ZoneAddLocationAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ZoneAddLocationAction>() {
             @Override

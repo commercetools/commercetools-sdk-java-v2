@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPublishActionImpl.class)
 public interface ProductPublishAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductPublishAction
+     */
     String PUBLISH = "publish";
 
     /**
@@ -37,30 +40,63 @@ public interface ProductPublishAction extends ProductUpdateAction {
     @JsonProperty("scope")
     public ProductPublishScope getScope();
 
+    /**
+     *  <p><code>All</code> or <code>Prices</code></p>
+     * @param scope value to be set
+     */
+
     public void setScope(final ProductPublishScope scope);
 
+    /**
+     * factory method
+     * @return instance of ProductPublishAction
+     */
     public static ProductPublishAction of() {
         return new ProductPublishActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductPublishAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductPublishAction of(final ProductPublishAction template) {
         ProductPublishActionImpl instance = new ProductPublishActionImpl();
         instance.setScope(template.getScope());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductPublishAction
+     * @return builder
+     */
     public static ProductPublishActionBuilder builder() {
         return ProductPublishActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductPublishAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPublishActionBuilder builder(final ProductPublishAction template) {
         return ProductPublishActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductPublishAction(Function<ProductPublishAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductPublishAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductPublishAction>() {
             @Override

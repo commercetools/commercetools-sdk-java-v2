@@ -27,6 +27,9 @@ public class StagedQuoteReferenceImpl implements StagedQuoteReference, ModelBase
 
     private com.commercetools.api.models.staged_quote.StagedQuote obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.staged_quote.StagedQuote obj) {
@@ -35,6 +38,9 @@ public class StagedQuoteReferenceImpl implements StagedQuoteReference, ModelBase
         this.typeId = ReferenceTypeId.findEnum("staged-quote");
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("staged-quote");
     }

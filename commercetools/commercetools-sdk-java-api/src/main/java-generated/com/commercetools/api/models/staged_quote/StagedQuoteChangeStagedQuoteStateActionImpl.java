@@ -24,6 +24,9 @@ public class StagedQuoteChangeStagedQuoteStateActionImpl implements StagedQuoteC
 
     private com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteChangeStagedQuoteStateActionImpl(
             @JsonProperty("stagedQuoteState") final com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState) {
@@ -31,6 +34,9 @@ public class StagedQuoteChangeStagedQuoteStateActionImpl implements StagedQuoteC
         this.action = CHANGE_STAGED_QUOTE_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteChangeStagedQuoteStateActionImpl() {
         this.action = CHANGE_STAGED_QUOTE_STATE;
     }

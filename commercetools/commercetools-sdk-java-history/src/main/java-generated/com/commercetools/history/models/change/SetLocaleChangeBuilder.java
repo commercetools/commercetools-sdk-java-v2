@@ -62,13 +62,28 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setLocale</code> on reviews</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>A locale of IETF language tag.</p>
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *  <p>A locale of IETF language tag.</p>
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
         return new SetLocaleChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetLocaleChangeBuilder
+     * @return builder
+     */
     public static SetLocaleChangeBuilder of() {
         return new SetLocaleChangeBuilder();
     }
 
+    /**
+     * create builder for SetLocaleChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLocaleChangeBuilder of(final SetLocaleChange template) {
         SetLocaleChangeBuilder builder = new SetLocaleChangeBuilder();
         builder.change = template.getChange();

@@ -24,6 +24,9 @@ public class MyQuoteChangeMyQuoteStateActionImpl implements MyQuoteChangeMyQuote
 
     private com.commercetools.api.models.me.MyQuoteState quoteState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyQuoteChangeMyQuoteStateActionImpl(
             @JsonProperty("quoteState") final com.commercetools.api.models.me.MyQuoteState quoteState) {
@@ -31,6 +34,9 @@ public class MyQuoteChangeMyQuoteStateActionImpl implements MyQuoteChangeMyQuote
         this.action = CHANGE_MY_QUOTE_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyQuoteChangeMyQuoteStateActionImpl() {
         this.action = CHANGE_MY_QUOTE_STATE;
     }

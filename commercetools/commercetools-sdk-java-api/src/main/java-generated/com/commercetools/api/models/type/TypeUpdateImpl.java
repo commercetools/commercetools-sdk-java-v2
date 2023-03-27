@@ -24,6 +24,9 @@ public class TypeUpdateImpl implements TypeUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class TypeUpdateImpl implements TypeUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeUpdateImpl() {
     }
 

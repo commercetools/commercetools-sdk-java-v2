@@ -25,7 +25,7 @@ import okio.GzipSource;
 import okio.Okio;
 
 /**
- *
+ * HttpClient using OkHttp
  */
 @Deprecated
 public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
